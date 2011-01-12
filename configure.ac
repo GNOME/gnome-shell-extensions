@@ -19,7 +19,7 @@ PKG_PROG_PKG_CONFIG([0.22])
 ADDITIONAL_PACKAGES=
 
 dnl keep this in sync with extensions/Makefile.am
-ALL_EXTENSIONS=example
+ALL_EXTENSIONS="example alternate-tab"
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable. Default is that all extensions are built.])],
 	[],
@@ -28,8 +28,8 @@ AC_ARG_ENABLE([extensions],
 ENABLED_EXTENSIONS=
 for e in $enable_extensions; do
 	case $e in
-		*example*)
-			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS example"
+		alternate-tab|example)
+			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			;;
 		*)
 			AC_MSG_ERROR([invalid extension $e])
@@ -49,6 +49,7 @@ AC_CONFIG_FILES([
   Makefile
   extensions/Makefile
   extensions/example/Makefile
+  extensions/alternate-tab/Makefile
   po/Makefile.in
 ])
 AC_OUTPUT
