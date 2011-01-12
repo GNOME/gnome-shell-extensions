@@ -1,0 +1,26 @@
+GNOME Shell Extensions is a collection of extensions providing additional
+and optional functionality to GNOME Shell.
+Since GNOME Shell is not API stable, extensions work only against a very
+specific version of the shell, usually the same as this package (see
+"configure --version"). Also, since extensions are built from many
+individual contributors, we cannot guarantee stability or quality for any
+specific extension.
+For these reasons, distributions are advised to avoid installing or packaging
+this module by defaul.
+
+For more information about GNOME Shell Extensions
+ http://live.gnome.org/GnomeShell/Extensions
+
+For general information about GNOME Shell
+ http://live.gnome.org/GnomeShell
+
+Bugs should be reported at http://bugzilla.gnome.org against the 'gnome-shell'
+product, with the 'extensions' component.
+
+License
+=======
+GNOME Shell Extensions are distributed under the terms of the GNU General Public License,
+version 2 or later. See the COPYING file for details.
+Individual extensions may be licensed under different terms, see each source
+file for details.
+

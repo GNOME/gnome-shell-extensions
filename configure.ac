@@ -1,0 +1,54 @@
+AC_PREREQ(2.63)
+AC_INIT([gnome-shell-extensions],[2.91.5],[https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&component=extensions])
+
+AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_AUX_DIR([config])
+
+AM_INIT_AUTOMAKE([1.10 dist-bzip2 no-dist-gzip foreign])
+
+m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
+
+GETTEXT_PACKAGE=gnome-shell-extensions
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",
+                   [The prefix for our gettext translation domains.])
+IT_PROG_INTLTOOL(0.26)
+
+PKG_PROG_PKG_CONFIG([0.22])
+
+ADDITIONAL_PACKAGES=
+
+dnl keep this in sync with extensions/Makefile.am
+ALL_EXTENSIONS=example
+AC_ARG_ENABLE([extensions],
+	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable. Default is that all extensions are built.])],
+	[],
+	[enable_extensions=$ALL_EXTENSIONS]
+)
+ENABLED_EXTENSIONS=
+for e in $enable_extensions; do
+	case $e in
+		*example*)
+			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS example"
+			;;
+		*)
+			AC_MSG_ERROR([invalid extension $e])
+	esac
+done
+
+AC_SUBST(ENABLED_EXTENSIONS, [$ENABLED_EXTENSIONS])
+
+dnl We don't really need cflags or libdirs, we just check
+dnl to ensure we don't fail at runtime.
+
+if test "x$ADDITIONAL_PACKAGES" != x; then
+	PKG_CHECK_MODULES(ADDITIONAL, [$ADDITIONAL_PACKAGES])
+fi
+
+AC_CONFIG_FILES([
+  Makefile
+  extensions/Makefile
+  extensions/example/Makefile
+  po/Makefile.in
+])
+AC_OUTPUT

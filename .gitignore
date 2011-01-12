@@ -1,0 +1,12 @@
+Makefile
+Makefile.in
+Makefile.in.in
+configure
+config.log
+config.status
+config/
+aclocal.m4
+autom4te.cache/
+m4/
+po/POTFILES
+po/stamp-it
