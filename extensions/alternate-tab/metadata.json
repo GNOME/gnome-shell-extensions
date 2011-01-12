@@ -3,5 +3,5 @@
 "name": "AlternateTab",
 "description": "A replacement for Alt-Tab, allows to cycle between windows and does not group by application",
 "original-author": "thomas.bouffon@gmail.com",
-"shell-version": [ "2.91.5" ]
+"shell-version": [ "2.31.5" ]
 }
