@@ -1,3 +1,3 @@
-DIST_SUBDIRS = example alternate-tab xrandr-indicator
+DIST_SUBDIRS = example alternate-tab
 
 SUBDIRS = $(ENABLED_EXTENSIONS)

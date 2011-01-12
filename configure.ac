@@ -19,7 +19,7 @@ PKG_PROG_PKG_CONFIG([0.22])
 ADDITIONAL_PACKAGES=
 
 dnl keep this in sync with extensions/Makefile.am
-ALL_EXTENSIONS="example alternate-tab xrandr-indicator"
+ALL_EXTENSIONS="example alternate-tab"
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable. Default is that all extensions are built.])],
 	[],
@@ -28,10 +28,6 @@ AC_ARG_ENABLE([extensions],
 ENABLED_EXTENSIONS=
 for e in $enable_extensions; do
 	case $e in
-		xrandr-indicator)
-			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
-			ADDITIONAL_PACKAGES="gnome-desktop-3.0 >= 2.91.6"
-			;;
 		alternate-tab|example)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			;;
@@ -54,7 +50,6 @@ AC_CONFIG_FILES([
   extensions/Makefile
   extensions/example/Makefile
   extensions/alternate-tab/Makefile
-  extensions/xrandr-indicator/Makefile
   po/Makefile.in
 ])
 AC_OUTPUT
