@@ -10,3 +10,4 @@ autom4te.cache/
 m4/
 po/POTFILES
 po/stamp-it
+staging/

@@ -1,0 +1,6 @@
+{
+"uuid": "xrandr-indicator@gnome-shell-extensions.gnome.org",
+"name": "Monitor Status Indicator",
+"description": "Add a systems status menu for rotating monitors (overrides what is currently provided by gnome-settings-daemon)"
+"shell-version": [ "2.91.5" ]
+}
