@@ -224,11 +224,6 @@ WindowList.prototype = {
 	}
     },
 
-    _sortAppIcon : function(appIcon1, appIcon2) {
-        log ("Function not implemented: _sortAppIcon");
-        return 1;
-    },
-
     addSeparator: function () {
         this._separator=null;
     }
