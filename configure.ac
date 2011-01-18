@@ -32,7 +32,7 @@ for e in $enable_extensions; do
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			ADDITIONAL_PACKAGES="gnome-desktop-3.0 >= 2.91.6"
 			;;
-		alternate-tab|example)
+		alternate-tab|example|windowsNavigator)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			;;
 		*)
