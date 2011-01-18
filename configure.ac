@@ -19,7 +19,7 @@ PKG_PROG_PKG_CONFIG([0.22])
 ADDITIONAL_PACKAGES=
 
 dnl keep this in sync with extensions/Makefile.am
-ALL_EXTENSIONS="example alternate-tab xrandr-indicator"
+ALL_EXTENSIONS="example alternate-tab xrandr-indicator windowsNavigator"
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable. Default is that all extensions are built.])],
 	[],
@@ -54,6 +54,7 @@ AC_CONFIG_FILES([
   extensions/Makefile
   extensions/example/Makefile
   extensions/alternate-tab/Makefile
+  extensions/windowsNavigator/Makefile
   extensions/xrandr-indicator/Makefile
   po/Makefile.in
 ])
