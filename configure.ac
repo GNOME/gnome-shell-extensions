@@ -21,8 +21,7 @@ GLIB_GSETTINGS
 ADDITIONAL_PACKAGES=
 
 dnl keep this in sync with extensions/Makefile.am
-ALL_EXTENSIONS="example alternate-tab xrandr-indicator windowsNavigator auto-move-windows
-dock user-theme alternative-status-menu"
+ALL_EXTENSIONS="example alternate-tab xrandr-indicator windowsNavigator auto-move-windows dock user-theme alternative-status-menu gajim"
 DEFAULT_EXTENSIONS="alternate-tab windowsNavigator dock alternative-status-menu"
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable.
@@ -43,7 +42,7 @@ for e in $enable_extensions; do
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			ADDITIONAL_PACKAGES="$ADDITIONAL_PAGKAGES gnome-desktop-3.0 >= 2.91.6"
 			;;
-		alternate-tab|example|windowsNavigator|auto-move-windows|dock|user-theme|alternative-status-menu)
+		alternate-tab|example|windowsNavigator|auto-move-windows|dock|user-theme|alternative-status-menu|gajim)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			;;
 		*)
@@ -68,6 +67,7 @@ AC_CONFIG_FILES([
   extensions/dock/Makefile
   extensions/example/Makefile
   extensions/windowsNavigator/Makefile
+  extensions/gajim/Makefile
   extensions/xrandr-indicator/Makefile
   extensions/user-theme/Makefile
   extensions/Makefile

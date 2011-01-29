@@ -1,8 +1,9 @@
-extensions/example/extension.js
-extensions/windowsNavigator/extension.js
-extensions/xrandr-indicator/extension.js
 extensions/alternate-tab/extension.js
 extensions/auto-move-windows/extension.js
 extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in
-extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in
 extensions/dock/extension.js
+extensions/example/extension.js
+extensions/gajim/extension.js
+extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in
+extensions/windowsNavigator/extension.js
+extensions/xrandr-indicator/extension.js

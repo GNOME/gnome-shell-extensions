@@ -1,0 +1,8 @@
+{
+ "uuid": "@uuid@",
+ "name": "Gajim IM integration",
+ "description": "Display Gajim incoming chats as notifications in the Shell message tray.",
+ "shell-version": [ "@shell_current@" ],
+ "localedir": "@LOCALEDIR@",
+ "url": "http://base-art.net"
+}
