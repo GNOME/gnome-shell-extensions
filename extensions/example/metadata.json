@@ -1,1 +1,6 @@
-{"uuid": "example@gnome-shell-extensions.gnome.org", "name": "Hello, World!", "description": "An example extension to show how it works. Shows Hello, world when clicking on the top panel.", "shell-version": [ "2.91.5" ]}
+{
+ "uuid": "example@gnome-shell-extensions.gnome.org",
+ "name": "Hello, World!",
+ "description": "An example extension to show how it works. Shows Hello, world when clicking on the top panel.",
+ "shell-version": [ "2.91.6" ]
+}

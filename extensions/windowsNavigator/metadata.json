@@ -1,5 +1,5 @@
 {
-    "shell-version": ["2.91.5"],
+    "shell-version": ["2.91.5", "2.91.6"],
     "uuid": "windowsNavigator@gnome-shell-extensions.gnome.org",
     "original-author": "zaspire@rambler.ru",
     "name": "windowNavigator",
