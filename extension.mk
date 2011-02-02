@@ -6,4 +6,5 @@ extensionbase = @gnome-shell-extensions.gnome.org
 
 extensiondir = $(topextensiondir)/$(EXTENSION_ID)$(extensionbase)
 
-extension_DATA = metadata.json extension.js stylesheet.css $(EXTRA_EXTENSION)
+dist_extension_DATA = metadata.json extension.js stylesheet.css
+nodist_extension_DATA = $(EXTRA_EXTENSION)

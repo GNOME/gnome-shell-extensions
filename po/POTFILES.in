@@ -1,1 +1,4 @@
 extensions/example/extension.js
+extensions/windowsNavigator/extension.js
+extensions/xrandr-indicator/extension.js
+extensions/alternate-tab/extension.js
