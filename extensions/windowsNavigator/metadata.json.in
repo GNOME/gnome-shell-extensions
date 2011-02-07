@@ -1,6 +1,7 @@
 {
-    "shell-version": ["2.91.5", "2.91.6"],
-    "uuid": "windowsNavigator@gnome-shell-extensions.gnome.org",
+    "shell-version": ["2.91.5", "@shell_current@"],
+    "uuid": "@uuid@",
+    "localedir": "@LOCALEDIR@",
     "original-author": "zaspire@rambler.ru",
     "name": "windowNavigator",
     "description": "Allow keyboard selection of windows and workspaces in overlay mode"
