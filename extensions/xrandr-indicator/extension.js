@@ -13,7 +13,7 @@ const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 const Panel = imports.ui.panel;
 
-const Gettext = imports.gettext.domain('gnome-shell');
+const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
 const possibleRotations = [ GnomeDesktop.RRRotation.ROTATION_0,
@@ -130,6 +130,8 @@ Indicator.prototype = {
 }
 
 
-function main() {
+function main(metadata) {
+    imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+
     Panel.STANDARD_TRAY_ICON_SHELL_IMPLEMENTATION['display'] = Indicator;
 }
