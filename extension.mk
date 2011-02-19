@@ -12,7 +12,7 @@ nodist_extension_DATA = metadata.json $(EXTRA_EXTENSION)
 EXTRA_DIST = metadata.json.in
 
 metadata.json: metadata.json.in
-	sed -e "s|[@]LOCALEDIR@|$(datadir)/locale|" \
+	$(AM_V_GEN) sed -e "s|[@]LOCALEDIR@|$(datadir)/locale|" \
 	    -e "s|[@]uuid@|$(uuid)|" \
             -e "s|[@]shell_current@|$(PACKAGE_VERSION)|" $< > $@
 
