@@ -58,7 +58,7 @@ Indicator.prototype = {
         }
 
         this._createMenu();
-        this._screen.connect('screen-changed', Lang.bind(this, this._randrEvent));
+        this._screen.connect('changed', Lang.bind(this, this._randrEvent));
     },
 
     _randrEvent: function() {
@@ -70,7 +70,7 @@ Indicator.prototype = {
         let config = GnomeDesktop.RRConfig.new_current(this._screen);
         let outputs = config.get_outputs();
         for (let i = 0; i < outputs.length; i++) {
-            if (outputs[i].get_connected())
+            if (outputs[i].is_connected())
                 this._addOutputItem(config, outputs[i]);
         }
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
@@ -87,10 +87,14 @@ Indicator.prototype = {
         this.menu.addMenuItem(item);
 
         let allowedRotations = this._getAllowedRotations(config, output);
+        let currentRotation = output.get_rotation();
         for (let i = 0; i < rotations.length; i++) {
             let [bitmask, name] = rotations[i];
             if (bitmask & allowedRotations) {
-                this.menu.addAction(name, Lang.bind(this, function(event) {
+                let item = new PopupMenu.PopupMenuItem(name);
+                if (bitmask & currentRotation)
+                    item.setShowDot(true);
+                item.connect('activate', Lang.bind(this, function(item, event) {
                     /* ensure config is saved so we get a backup if anything goes wrong */
                     config.save();
 
@@ -99,9 +103,10 @@ Indicator.prototype = {
                         config.save();
                         this._proxy.ApplyConfigurationRemote(global.stage_xwindow, event.get_time());
                     } catch (e) {
-                        logError ('Could not save monitor configuration: ' + e);
+                        log ('Could not save monitor configuration: ' + e);
                     }
                 }));
+                this.menu.addMenuItem(item);
             }
         }
     },
