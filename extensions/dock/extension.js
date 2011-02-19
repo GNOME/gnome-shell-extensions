@@ -44,7 +44,7 @@ Dock.prototype = {
         this._item_size = DOCKICON_SIZE;
 
         this.actor = new St.BoxLayout({ name: 'dock', vertical: true, reactive: true });
-        //this.actor._delegate = this;
+
         this._grid = new Shell.GenericContainer();
         this.actor.add(this._grid, { expand: true, y_align: St.Align.START });
         this.actor.connect('style-changed', Lang.bind(this, this._onStyleChanged));
@@ -209,7 +209,6 @@ DockIcon.prototype = {
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
         this.actor.connect('notify::hover', Lang.bind(this, this._hoverChanged));
 
-        //this._dragDropTimeoutId = 0;
         this._menuTimeoutId = 0;
         this._stateChangedId = this.app.connect('notify::state',
                                                 Lang.bind(this, this._onStateChanged));
@@ -231,40 +230,12 @@ DockIcon.prototype = {
     },
 
     _hoverChanged: function(actor) {
-        if (actor != this.actor) {
+        if (actor != this.actor)
             this._has_focus = false;
-            // this._removeDragDropTimeout();
-        } else {
+        else
             this._has_focus = true;
-            /* 
-            if (window_chooser) {
-                windows = this.app.get_windows();
-                if (windows.length > 1) {
-                    window_chooser.show(windows, this.actor);
-                } else {
-                    window_chooser.hide();
-                }
-            }*/
-        }
         return false;
     },
-
-    /*
-    _removeDragDropTimeout: function() {
-        if (this._dragDropTimeoutId > 0) {
-            Mainloop.source_remove(this._dragDropTimeoutId);
-            this._dragDropTimeoutId = 0;
-        }
-    },
-
-    _startDNDTimeout: function() {
-        this._menuTimeoutId = Mainloop.timeout_add(DND_RAISE_APP_TIMEOUT,
-                Lang.bind(this, function() {
-                    if (this.app.state == Shell.AppState.RUNNING)
-                        this.app.activate();
-                }));
-    },
-    */
 
     _onStateChanged: function() {
         let tracker = Shell.WindowTracker.get_default();
@@ -319,9 +290,6 @@ DockIcon.prototype = {
 
         if (!this._menu) {
             this._menu = new DockIconMenu(this);
-            /* this._menu.connect('highlight-window', Lang.bind(this, function (menu, window) {
-                this.highlightWindow(window);
-            })); */
             this._menu.connect('activate-window', Lang.bind(this, function (menu, window) {
                 this.activateWindow(window);
             }));
@@ -338,22 +306,11 @@ DockIcon.prototype = {
         return false;
     },
 
-    /*
-    highlightWindow: function(metaWindow) {
-        if (this._didActivateWindow)
-            return;
-        if (!this._getRunning())
-            return;
-        Main.overview.getWorkspacesForWindow(metaWindow).setHighlightWindow(metaWindow);
-    },*/
-
     activateWindow: function(metaWindow) {
         if (metaWindow) {
             this._didActivateWindow = true;
             Main.activateWindow(metaWindow);
-        } /* else {
-            Main.overview.hide();
-        } */
+        }
     },
 
     setSelected: function (isSelected) {
@@ -364,26 +321,8 @@ DockIcon.prototype = {
             this.actor.remove_style_class_name('selected');
     },
 
-    /*
-    _onMenuPoppedUp: function() {
-        if (this._getRunning()) {
-            Main.overview.getWorkspacesForWindow(null).setApplicationWindowSelection(this.app.get_id());
-            this._setWindowSelection = true;
-            this._didActivateWindow = false;
-        }
-    },
-    */
-    
     _onMenuPoppedDown: function() {
         this.actor.sync_hover();
-        /*
-        if (this._didActivateWindow)
-            return;
-        if (!this._setWindowSelection)
-            return;
-
-        Main.overview.getWorkspacesForWindow(null).setApplicationWindowSelection(null);
-        this._setWindowSelection = false;*/
     },
 
     _getRunning: function() {
@@ -506,46 +445,6 @@ DockIconMenu.prototype = {
         this.close();
     }
 }
-
-/*
-function WindowChooser() {
-    this._init();
-}
-
-WindowChooser.prototype = {
-    _init : function() {
-        this.actor = new Shell.GenericContainer({ name: 'dockWindowChooser',
-                                                    reactive: true });
-        this._thumbnailList = null;
-        Main.uiGroup.add_actor(this.actor);
-    },
-
-    hide : function() {
-        if (!this._thumbnailList) {
-            Tweener.addTween(this._thumbnailList.actor,
-                         { opacity: 0,
-                           time: POPUP_FADE_TIME,
-                           transition: 'easeOutQuad',
-                           onComplete: Lang.bind(this,
-                               function() {
-                                   this._thumbnailList.actor.destroy();
-                               })
-                         });
-            this._thumbnailList.destroy();
-            this._thumbnailList = null;
-            this.actor.hide();
-        }
-    },
-
-    show : function(windows, parent) {
-        if (!this._thumbnailList) {
-            this._thumbnailList = AltTab.thumbnailList (windows);
-            this._thumbnailList.actor.show();
-            this.actor.show();
-        }
-    }
-}
-*/
 
 function main(extensionMeta) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', extensionMeta.localedir);
