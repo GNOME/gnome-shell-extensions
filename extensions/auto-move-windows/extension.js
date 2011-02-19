@@ -32,10 +32,24 @@ WindowMover.prototype = {
         }
     },
 
-    _findAndMove: function(display, window) {
+    _findAndMove: function(display, window, noRecurse) {
+	if (!this._windowTracker.is_window_interesting(window))
+	    return;
+
 	let spaces = this._settings.get_strv(SETTINGS_KEY);
 
 	let app = this._windowTracker.get_window_app(window);
+	if (!app) {
+	    if (!noRecurse) {
+		// window is not tracked yet
+		Mainloop.idle_add(Lang.bind(this, function() {
+		    this._findAndMove(display, window, true);
+		    return false;
+		}));
+	    } else
+		log ('Cannot find application for window');
+	    return;
+	}
 	let app_id = app.get_id();
         for ( let j = 0 ; j < spaces.length; j++ ) {
             let apps_to_space = spaces[j].split(":");
