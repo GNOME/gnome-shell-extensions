@@ -16,10 +16,12 @@ IT_PROG_INTLTOOL(0.26)
 
 PKG_PROG_PKG_CONFIG([0.22])
 
+GLIB_GSETTINGS
+
 ADDITIONAL_PACKAGES=
 
 dnl keep this in sync with extensions/Makefile.am
-ALL_EXTENSIONS="example alternate-tab xrandr-indicator windowsNavigator"
+ALL_EXTENSIONS="example alternate-tab xrandr-indicator windowsNavigator auto-move-windows"
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable. Default is that all extensions are built.])],
 	[],
@@ -32,7 +34,7 @@ for e in $enable_extensions; do
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			ADDITIONAL_PACKAGES="gnome-desktop-3.0 >= 2.91.6"
 			;;
-		alternate-tab|example|windowsNavigator)
+		alternate-tab|example|windowsNavigator|auto-move-windows)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			;;
 		*)
@@ -49,13 +51,15 @@ if test "x$ADDITIONAL_PACKAGES" != x; then
 	PKG_CHECK_MODULES(ADDITIONAL, [$ADDITIONAL_PACKAGES])
 fi
 
+dnl Please keep this sorted alphabetically
 AC_CONFIG_FILES([
-  Makefile
-  extensions/Makefile
-  extensions/example/Makefile
   extensions/alternate-tab/Makefile
+  extensions/auto-move-windows/Makefile
+  extensions/example/Makefile
   extensions/windowsNavigator/Makefile
   extensions/xrandr-indicator/Makefile
+  extensions/Makefile
+  Makefile
   po/Makefile.in
 ])
 AC_OUTPUT
