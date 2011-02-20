@@ -260,6 +260,8 @@ DockIcon.prototype = {
             this._menuTimeoutId = Mainloop.timeout_add(AppDisplay.MENU_POPUP_TIMEOUT, Lang.bind(this, function() {
                 this.popupMenu();
             }));
+        } else if (button == 3) {
+            this.popupMenu();
         }
     },
 
@@ -274,8 +276,6 @@ DockIcon.prototype = {
             launchWorkspace.activate(global.get_current_time());
             this.emit('launching');
             this.app.open_new_window(-1);
-        } else if (button == 3) {
-            this.popupMenu();
         }
         return false;
     },
@@ -335,7 +335,8 @@ DockIcon.prototype = {
 
         if (modifiers & Clutter.ModifierType.CONTROL_MASK
             && this.app.state == Shell.AppState.RUNNING) {
-            this.app.open_new_window();
+            let current_workspace = global.screen.get_active_workspace().index();
+            this.app.open_new_window(current_workspace);
         } else {
             let tracker = Shell.WindowTracker.get_default();
             let focusedApp = tracker.focus_app;
@@ -430,7 +431,8 @@ DockIconMenu.prototype = {
             let metaWindow = child._window;
             this.emit('activate-window', metaWindow);
         } else if (child == this._newWindowMenuItem) {
-            this._source.app.open_new_window();
+            let current_workspace = global.screen.get_active_workspace().index();
+            this._source.app.open_new_window(current_workspace);
             this.emit('activate-window', null);
         } else if (child == this._quitAppMenuItem) {
             this._source.app.request_quit();
