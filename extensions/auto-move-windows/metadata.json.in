@@ -4,5 +4,5 @@
  "description": "Move applications to specific workspaces when they create windows",
  "shell-version": [ "@shell_current@" ],
  "localedir": "@LOCALEDIR@",
- "original-author": "alessandro.crismani@gmail.com",
+ "original-authors": [ "alessandro.crismani@gmail.com", "thomas.bouffon@gmail.com" ]
 }

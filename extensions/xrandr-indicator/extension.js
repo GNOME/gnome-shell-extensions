@@ -15,6 +15,7 @@ const Panel = imports.ui.panel;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
+const N_ = function(e) { return e };
 
 const possibleRotations = [ GnomeDesktop.RRRotation.ROTATION_0,
 			    GnomeDesktop.RRRotation.ROTATION_90,
@@ -22,10 +23,10 @@ const possibleRotations = [ GnomeDesktop.RRRotation.ROTATION_0,
 			    GnomeDesktop.RRRotation.ROTATION_270
 			  ];
 
-let rotations = [ [ GnomeDesktop.RRRotation.ROTATION_0, _("Normal") ],
-		  [ GnomeDesktop.RRRotation.ROTATION_90, _("Left") ],
-		  [ GnomeDesktop.RRRotation.ROTATION_270, _("Right") ],
-		  [ GnomeDesktop.RRRotation.ROTATION_180, _("Upside-down") ]
+let rotations = [ [ GnomeDesktop.RRRotation.ROTATION_0, N_("Normal") ],
+		  [ GnomeDesktop.RRRotation.ROTATION_90, N_("Left") ],
+		  [ GnomeDesktop.RRRotation.ROTATION_270, N_("Right") ],
+		  [ GnomeDesktop.RRRotation.ROTATION_180, N_("Upside-down") ]
 		];
 
 const XRandr2Iface = {
@@ -91,7 +92,7 @@ Indicator.prototype = {
         for (let i = 0; i < rotations.length; i++) {
             let [bitmask, name] = rotations[i];
             if (bitmask & allowedRotations) {
-                let item = new PopupMenu.PopupMenuItem(name);
+                let item = new PopupMenu.PopupMenuItem(Gettext.gettext(name));
                 if (bitmask & currentRotation)
                     item.setShowDot(true);
                 item.connect('activate', Lang.bind(this, function(item, event) {
