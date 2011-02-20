@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions 2.91.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-07 22:59+0100\n"
-"PO-Revision-Date: 2011-02-07 23:01+0100\n"
+"POT-Creation-Date: 2011-02-19 20:39+0100\n"
+"PO-Revision-Date: 2011-02-20 18:04+0100\n"
 "Last-Translator: Giovanni Campagna <scampa.giovanni@gmail.com>\n"
 "Language-Team: none <LL@li.org>\n"
 "Language: \n"
@@ -40,3 +40,33 @@ msgstr "Rovesciato"
 #: ../extensions/xrandr-indicator/extension.js:77
 msgid "Configure display settings..."
 msgstr "Configura impostazioni display..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr "Una lista di stringhe, ognuna contenente un id applicazione (nome del file .desktop), seguito da due punti e il numero dello spazio di lavoro"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "Lista applicazioni e spazi di lavoro"
+
+#: ../extensions/dock/extension.js:115
+msgid "Drag here to add favorites"
+msgstr "Trascina qui per aggiungere ai preferiti"
+
+#: ../extensions/dock/extension.js:415
+msgid "New Window"
+msgstr "Nuova finestra"
+
+#: ../extensions/dock/extension.js:417
+msgid "Quit Application"
+msgstr "Chiudi applicazione"
+
+#: ../extensions/dock/extension.js:422
+msgid "Remove from Favorites"
+msgstr "Rimuovi dai preferiti"
+
+#: ../extensions/dock/extension.js:423
+msgid "Add to Favorites"
+msgstr "Aggiungi ai preferiti"
