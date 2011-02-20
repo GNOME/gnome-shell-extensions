@@ -55,8 +55,9 @@ WindowMover.prototype = {
             let apps_to_space = spaces[j].split(":");
             // Match application id
             if (apps_to_space[0] == app_id) {
-		let workspace_num = parseInt(apps_to_space[1]);
-		this._ensureAtLeastWorkspaces(workspace_num);
+		let workspace_num = parseInt(apps_to_space[1]) - 1;
+		// FIXME: does not work with automatic management of workspaces
+		// this._ensureAtLeastWorkspaces(workspace_num);
 
 		window.change_workspace_by_index(workspace_num, false, global.get_current_time());
             }
