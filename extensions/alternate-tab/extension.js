@@ -92,6 +92,7 @@ AltTabPopup2.prototype = {
         this.actor.connect('scroll-event', Lang.bind(this, this._onScroll));
 
         this._appSwitcher = new WindowList(windows);
+	this._appSwitcher._altTabPopup=this;
 	this._appSwitcher.highlight(0,false);
         this.actor.add_actor(this._appSwitcher.actor);
         this._appSwitcher.connect('item-activated', Lang.bind(this, this._appActivated));
