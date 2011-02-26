@@ -63,6 +63,7 @@ Dock.prototype = {
         this._tracker.connect('app-state-changed', Lang.bind(this, this._queueRedisplay));
 
         Main.chrome.addActor(this.actor, { visibleInOverview: false });
+        this.actor.lower_bottom();
     },
 
     _appIdListToHash: function(apps) {
