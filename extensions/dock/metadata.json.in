@@ -5,4 +5,5 @@
 "original-author": "tclaesson@gmail.com",
 "shell-version": [ "@shell_current@" ],
 "localedir": "@LOCALEDIR@",
+"url": "@url@"
 }

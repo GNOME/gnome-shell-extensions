@@ -4,5 +4,6 @@
     "localedir": "@LOCALEDIR@",
     "original-author": "zaspire@rambler.ru",
     "name": "windowNavigator",
-    "description": "Allow keyboard selection of windows and workspaces in overlay mode"
+    "description": "Allow keyboard selection of windows and workspaces in overlay mode",
+    "url": "@url@"
 }
