@@ -1,0 +1,9 @@
+{
+ "uuid": "@uuid@",
+ "name": "User Themes",
+ "description": "Load shell themes from user directory",
+ "shell-version": [ "@shell_current@" ],
+ "localedir": "@LOCALEDIR@",
+ "original-authors": [ "john.stowers@gmail.com" ],
+ "url": "@url@"
+}
