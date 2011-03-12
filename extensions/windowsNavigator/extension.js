@@ -45,9 +45,10 @@ function main() {
     Workspace.Workspace.prototype.showTooltip = function() {
         if (this._tip == null)
             return;
-        if (this.parent)
-            return;
-        this.actor.add_actor(this._tip);
+        this._tip.text = (this.metaWorkspace.index() + 1).toString();
+        this._tip.x = this._x;
+        this._tip.y = this._y;
+        this._tip.show();
         this._tip.raise_top();
     }
     Workspace.Workspace.prototype.hideTooltip = function() {
@@ -55,7 +56,7 @@ function main() {
             return;
         if (!this._tip.get_parent())
             return;
-        this.actor.remove_actor(this._tip);
+        this._tip.hide();
     }
     Workspace.Workspace.prototype.getWindowWithTooltip = function(id) {
         for (let i in this._windowOverlays) {
@@ -153,7 +154,7 @@ function main() {
 
     injectToFunction(Workspace.WindowOverlay.prototype, '_init', function(windowClone, parentActor) {
         this._id = null;
-        this._text = new St.Label({ style_class: 'window-tooltip' });
+        this._text = new St.Label({ style_class: 'extension-windowsNavigator-window-tooltip' });
         this._text.hide();
         parentActor.add_actor(this._text);
     });
@@ -165,8 +166,10 @@ function main() {
     });
     injectToFunction(Workspace.Workspace.prototype, '_init', function(metaWorkspace) {
         if (metaWorkspace.index() < 9) {
-            this._tip = new St.Label({ style_class: 'window-tooltip',
-                                       text: (metaWorkspace.index() + 1).toString() });
+            this._tip = new St.Label({ style_class: 'extension-windowsNavigator-window-tooltip',
+                                       visible: false });
+
+            this.actor.add_actor(this._tip);
             this.actor.connect('notify::scale-x', Lang.bind(this, function() {
                 this._tip.set_scale(1 / this.actor.scale_x, 1 / this.actor.scale_x);
             }));
@@ -174,7 +177,7 @@ function main() {
             this._tip = null;
     });
     injectToFunction(Workspace.Workspace.prototype, 'positionWindows', function(flags) {
-        let visibleClones = this._getVisibleClones();
+        let visibleClones = this._windows.slice();
         if (this._reservedSlot)
             visibleClones.push(this._reservedSlot);
 

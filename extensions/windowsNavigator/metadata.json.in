@@ -1,5 +1,5 @@
 {
-    "shell-version": ["2.91.5", "@shell_current@"],
+    "shell-version": ["@shell_current@"],
     "uuid": "@uuid@",
     "localedir": "@LOCALEDIR@",
     "original-author": "zaspire@rambler.ru",
