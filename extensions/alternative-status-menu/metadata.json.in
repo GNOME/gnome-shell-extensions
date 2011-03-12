@@ -1,0 +1,8 @@
+{
+ "uuid": "@uuid@",
+ "name": "Alternative Status Menu",
+ "description": "Replaces GNOME Shell Status Menu with one showing Suspend/Hibernate and Power Off as separate items",
+ "shell-version": [ "@shell_current@" ],
+ "localedir": "@LOCALEDIR@",
+ "url": "@url@"
+}
