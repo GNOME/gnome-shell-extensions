@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions 2.91.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-19 20:39+0100\n"
-"PO-Revision-Date: 2011-02-20 18:04+0100\n"
+"POT-Creation-Date: 2011-03-12 22:11+0100\n"
+"PO-Revision-Date: 2011-03-12 22:12+0100\n"
 "Last-Translator: Giovanni Campagna <scampa.giovanni@gmail.com>\n"
 "Language-Team: none <LL@li.org>\n"
 "Language: \n"
@@ -21,23 +21,23 @@ msgstr ""
 msgid "Hello, world!"
 msgstr "Ciao, mondo!"
 
-#: ../extensions/xrandr-indicator/extension.js:25
+#: ../extensions/xrandr-indicator/extension.js:26
 msgid "Normal"
 msgstr "Normale"
 
-#: ../extensions/xrandr-indicator/extension.js:26
+#: ../extensions/xrandr-indicator/extension.js:27
 msgid "Left"
 msgstr "Sinistra"
 
-#: ../extensions/xrandr-indicator/extension.js:27
+#: ../extensions/xrandr-indicator/extension.js:28
 msgid "Right"
 msgstr "Destra"
 
-#: ../extensions/xrandr-indicator/extension.js:28
+#: ../extensions/xrandr-indicator/extension.js:29
 msgid "Upside-down"
 msgstr "Rovesciato"
 
-#: ../extensions/xrandr-indicator/extension.js:77
+#: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Configura impostazioni display..."
 
@@ -45,28 +45,38 @@ msgstr "Configura impostazioni display..."
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
-msgstr "Una lista di stringhe, ognuna contenente un id applicazione (nome del file .desktop), seguito da due punti e il numero dello spazio di lavoro"
+msgstr ""
+"Una lista di stringhe, ognuna contenente un id applicazione (nome del file ."
+"desktop), seguito da due punti e il numero dello spazio di lavoro"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
 msgstr "Lista applicazioni e spazi di lavoro"
 
-#: ../extensions/dock/extension.js:115
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Il nome del tema, da caricare in ~/.themes/nome/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Nome del tema"
+
+#: ../extensions/dock/extension.js:116
 msgid "Drag here to add favorites"
 msgstr "Trascina qui per aggiungere ai preferiti"
 
-#: ../extensions/dock/extension.js:415
+#: ../extensions/dock/extension.js:417
 msgid "New Window"
 msgstr "Nuova finestra"
 
-#: ../extensions/dock/extension.js:417
+#: ../extensions/dock/extension.js:419
 msgid "Quit Application"
 msgstr "Chiudi applicazione"
 
-#: ../extensions/dock/extension.js:422
+#: ../extensions/dock/extension.js:424
 msgid "Remove from Favorites"
 msgstr "Rimuovi dai preferiti"
 
-#: ../extensions/dock/extension.js:423
+#: ../extensions/dock/extension.js:425
 msgid "Add to Favorites"
 msgstr "Aggiungi ai preferiti"
