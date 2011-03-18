@@ -23,10 +23,12 @@ ADDITIONAL_PACKAGES=
 dnl keep this in sync with extensions/Makefile.am
 ALL_EXTENSIONS="example alternate-tab xrandr-indicator windowsNavigator auto-move-windows
 dock user-theme alternative-status-menu"
+DEFAULT_EXTENSIONS="alternate-tab windowsNavigator dock alternative-status-menu"
 AC_ARG_ENABLE([extensions],
-	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable. Default is that all extensions are built.])],
+	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable.
+	The default is to build all extensions that can be installed in the home directory and have no external depedencies.])],
 	[],
-	[enable_extensions=$ALL_EXTENSIONS]
+	[enable_extensions=$DEFAULT_EXTENSIONS]
 )
 ENABLED_EXTENSIONS=
 for e in $enable_extensions; do
