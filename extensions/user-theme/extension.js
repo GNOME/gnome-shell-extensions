@@ -31,9 +31,11 @@ ThemeManager.prototype = {
                 _stylesheet = _userCssStylesheet;
         }
 
-        global.log('loading user theme: ' + _stylesheet)
-        Main.setThemeStylesheet(_stylesheet);
-        Main.loadTheme();
+        if (_stylesheet) {
+            global.log('loading user theme: ' + _stylesheet)
+            Main.setThemeStylesheet(_stylesheet);
+            Main.loadTheme();
+        }
     }
 }
 
