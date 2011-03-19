@@ -1,0 +1,83 @@
+# French translation for gnome-shell-extensions.
+# Copyright (C) 2011 Listed translators
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Claude Paroz <claude@2xlibre.net>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2011-03-18 14:07+0000\n"
+"PO-Revision-Date: 2011-03-19 09:37+0100\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"Language-Team: French <gnomefr@traduc.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Bonjour le monde !"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normal"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Gauche"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Droite"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "Renversé"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Configurer les paramètres d'affichage..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Une liste de chaînes, contenant chacune un identifiant d'application (nom "
+"de fichier desktop), suivi par un deux-points et le numéro de l'espace de "
+"travail"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "Liste d'applications et d'espaces de travail"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Le nom du thème, à charger à partir de ~/.themes/name/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Nom du thème"
+
+#: ../extensions/dock/extension.js:116
+msgid "Drag here to add favorites"
+msgstr "Déposez ici pour ajouter aux favoris"
+
+#: ../extensions/dock/extension.js:417
+msgid "New Window"
+msgstr "Nouvelle fenêtre"
+
+#: ../extensions/dock/extension.js:419
+msgid "Quit Application"
+msgstr "Quitter l'application"
+
+#: ../extensions/dock/extension.js:424
+msgid "Remove from Favorites"
+msgstr "Enlever des favoris"
+
+#: ../extensions/dock/extension.js:425
+msgid "Add to Favorites"
+msgstr "Ajouter aux favoris"
