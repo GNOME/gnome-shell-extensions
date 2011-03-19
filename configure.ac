@@ -26,16 +26,22 @@ dock user-theme alternative-status-menu"
 DEFAULT_EXTENSIONS="alternate-tab windowsNavigator dock alternative-status-menu"
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable.
-	The default is to build all extensions that can be installed in the home directory and have no external depedencies.])],
+	The default is to build all extensions that can be installed in the home directory and have no external depedencies.
+	Use "all" to enable all available extensions.])],
 	[],
 	[enable_extensions=$DEFAULT_EXTENSIONS]
 )
+if test x$enable_extensions = xall; then
+   enable_extensions="$ALL_EXTENSIONS"
+fi
+
+ADDITIONAL_PACKAGES=
 ENABLED_EXTENSIONS=
 for e in $enable_extensions; do
 	case $e in
 		xrandr-indicator)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
-			ADDITIONAL_PACKAGES="gnome-desktop-3.0 >= 2.91.6"
+			ADDITIONAL_PACKAGES="$ADDITIONAL_PAGKAGES gnome-desktop-3.0 >= 2.91.6"
 			;;
 		alternate-tab|example|windowsNavigator|auto-move-windows|dock|user-theme|alternative-status-menu)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
