@@ -97,7 +97,7 @@ function createSubMenu() {
     this._upClient.connect('notify::can-hibernate', Lang.bind(this, updateSuspendOrHibernate, item));
     updateSuspendOrHibernate.call(this, null, null, item);
 
-    item = new PopupMenu.PopupMenuItem(_("Power off..."));
+    item = new PopupMenu.PopupMenuItem(_("Power Off..."));
     item.connect('activate', Lang.bind(this, function() {
 	this._session.ShutdownRemote();
     }));
