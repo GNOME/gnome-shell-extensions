@@ -81,7 +81,8 @@ function main() {
     }
 
     WorkspacesView.WorkspacesView.prototype._hideTooltips = function() {
-        global.stage.set_key_focus(this._prevFocusActor);
+        if (global.stage.get_key_focus() == global.stage)
+            global.stage.set_key_focus(this._prevFocusActor);
         this._pickWindow = false;
         for (let i = 0; i < this._workspaces.length; i++)
             this._workspaces[i].hideWindowsTooltips();
