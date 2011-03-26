@@ -165,7 +165,7 @@ function main() {
         this._text.raise_top();
     });
     injectToFunction(Workspace.Workspace.prototype, '_init', function(metaWorkspace) {
-        if (metaWorkspace.index() < 9) {
+        if (metaWorkspace && metaWorkspace.index() < 9) {
             this._tip = new St.Label({ style_class: 'extension-windowsNavigator-window-tooltip',
                                        visible: false });
 
