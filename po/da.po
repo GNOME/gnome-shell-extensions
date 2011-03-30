@@ -1,0 +1,83 @@
+# Danish translation for gnome-shell-extensions.
+# Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+#
+# Kris Thomsen <lakristho@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-03-30 22:37+0200\n"
+"PO-Revision-Date: 2011-03-29 00:18+0000\n"
+"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Hej verden!"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normal"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Venstre"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Højre"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "På hovedet"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Konfigurér skærmindstillinger..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"En liste over strenge, som hver indeholder et program-id "
+"(skrivebordsfilnavn), efterfulgt af et kolon og arbejdsområdets nummer"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "Liste over programmer og arbejdsområder"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Navnet på temaet, som indlæses fra ~/.themes/name/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Temanavn"
+
+#: ../extensions/dock/extension.js:116
+msgid "Drag here to add favorites"
+msgstr "Træk hertil for at føje til favoritter"
+
+#: ../extensions/dock/extension.js:417
+msgid "New Window"
+msgstr "Nyt vindue"
+
+#: ../extensions/dock/extension.js:419
+msgid "Quit Application"
+msgstr "Afslut program"
+
+#: ../extensions/dock/extension.js:424
+msgid "Remove from Favorites"
+msgstr "Fjern fra favoritter"
+
+#: ../extensions/dock/extension.js:425
+msgid "Add to Favorites"
+msgstr "Føj til favoritter"
