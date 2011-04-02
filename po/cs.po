@@ -1,6 +1,7 @@
 # Czech translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
+#
 # Marek Černocký <marek@manet.cz>, 2011.
 #
 msgid ""
@@ -8,39 +9,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-03-13 16:07+0000\n"
-"PO-Revision-Date: 2011-03-14 11:24+0100\n"
+"POT-Creation-Date: 2011-04-01 16:40+0000\n"
+"PO-Revision-Date: 2011-04-02 19:19+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
-"Language: cs\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-
-#: ../extensions/example/extension.js:11
-msgid "Hello, world!"
-msgstr "Ahoj světe!"
-
-#: ../extensions/xrandr-indicator/extension.js:26
-msgid "Normal"
-msgstr "Normální"
-
-#: ../extensions/xrandr-indicator/extension.js:27
-msgid "Left"
-msgstr "Doleva"
-
-#: ../extensions/xrandr-indicator/extension.js:28
-msgid "Right"
-msgstr "Doprava"
-
-#: ../extensions/xrandr-indicator/extension.js:29
-msgid "Upside-down"
-msgstr "Vzhůru nohama"
-
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Upravit nastavení zobrazení…"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -53,14 +30,6 @@ msgstr ""
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
 msgstr "Seznam aplikací a pracovních ploch"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Název motivu, který se má načíst z ~/.themes/name/gnome-shell"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
-msgid "Theme name"
-msgstr "Název motivu"
 
 #: ../extensions/dock/extension.js:116
 msgid "Drag here to add favorites"
@@ -81,3 +50,55 @@ msgstr "Odebrat z oblíbených"
 #: ../extensions/dock/extension.js:425
 msgid "Add to Favorites"
 msgstr "Přidat do oblíbených"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Ahoj světe!"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s je pryč."
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s je odpojen."
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s je připojen."
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s je zaneprázdněn."
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Název motivu, který se má načíst z ~/.themes/name/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Název motivu"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normální"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Doleva"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Doprava"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "Vzhůru nohama"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Upravit nastavení zobrazení…"
