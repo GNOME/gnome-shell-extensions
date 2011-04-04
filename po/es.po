@@ -8,38 +8,14 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-03-12 21:49+0000\n"
-"PO-Revision-Date: 2011-03-13 12:14+0100\n"
+"POT-Creation-Date: 2011-04-01 16:40+0000\n"
+"PO-Revision-Date: 2011-04-04 13:30+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: ../extensions/example/extension.js:11
-msgid "Hello, world!"
-msgstr "¡Hola, Mundo!"
-
-#: ../extensions/xrandr-indicator/extension.js:26
-msgid "Normal"
-msgstr "Normal"
-
-#: ../extensions/xrandr-indicator/extension.js:27
-msgid "Left"
-msgstr "Izquierda"
-
-#: ../extensions/xrandr-indicator/extension.js:28
-msgid "Right"
-msgstr "Derecha"
-
-#: ../extensions/xrandr-indicator/extension.js:29
-msgid "Upside-down"
-msgstr "Hacia abajo"
-
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Configurar las opciones de pantalla…"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -53,14 +29,6 @@ msgstr ""
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
 msgstr "Lista de aplicaciones y espacios de trabajo"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "El nombre del tema, que se carga desde ~/.themes/nombre/gnome-shell"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
-msgid "Theme name"
-msgstr "Nombre del tema"
 
 #: ../extensions/dock/extension.js:116
 msgid "Drag here to add favorites"
@@ -81,3 +49,55 @@ msgstr "Quitar de favoritos"
 #: ../extensions/dock/extension.js:425
 msgid "Add to Favorites"
 msgstr "Añadir a favoritos"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "¡Hola, Mundo!"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s no está disponible."
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s está desconectado."
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s está conectado."
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s está ocupado."
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "El nombre del tema, que se carga desde ~/.themes/nombre/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Nombre del tema"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normal"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Izquierda"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Derecha"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "Hacia abajo"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Configurar las opciones de pantalla…"
