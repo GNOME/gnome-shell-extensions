@@ -3,7 +3,7 @@
 "name": "Dock",
 "description": "A dock for the GNOME Shell -- displays favorite and running applications",
 "original-author": "tclaesson@gmail.com",
-"shell-version": [ "@shell_current@" ],
+"shell-version": [ "3.0" ],
 "localedir": "@LOCALEDIR@",
 "url": "@url@"
 }
