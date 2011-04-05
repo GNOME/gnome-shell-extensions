@@ -17,6 +17,51 @@ For general information about GNOME Shell
 Bugs should be reported at http://bugzilla.gnome.org against the 'gnome-shell'
 product, with the 'extensions' component.
 
+Extensions
+==========
+
+alternate-tab
+
+  Lets you use classic Alt+Tab (window-based instead of app-based) in GNOME Shell.
+
+alternative-status-menu
+
+  For those who want a power off item visible at all the time, replaces GNOME Shell
+status menu with one featuring separate Suspend and Power Off. Adds the ability to
+hibernate as well.
+
+auto-move-windows
+
+  Lets you manage your workspaces more easily, assigning a specific workspace to
+each application as soon as it creates a window, in a manner configurable with a
+GSettings key.
+
+dock
+
+  Shows a dock-style task switcher on the right side of the screen.
+
+example
+
+  A minimal example illustrating how to write extensions.
+
+gajim
+
+  Integration with Gajim, a Jabber/XMPP instant messaging client.
+
+user-theme
+
+  Loads a shell theme from ~/.themes/<name>/gnome-shell.
+
+windowsNavigator
+
+  Allow keyboard selection of windows and workspaces in overlay mode.
+
+xrandr-indicator
+
+  Replace the GTK+ based indicator from gnome-settings-daemon with
+a native one. Lets the user rotate the laptop monitor and open
+display preferences quickly.
+
 License
 =======
 GNOME Shell Extensions are distributed under the terms of the GNU General Public License,
