@@ -2,44 +2,21 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Felipe Borges <felipe10borges@gmail.com>, 2011.
+# Rodrigo Padula <contato@rodrigopadula.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-03-23 16:12+0000\n"
-"PO-Revision-Date: 2011-03-25 18:40-0300\n"
-"Last-Translator: Felipe Borges <felipe10borges@gmail.com>\n"
+"POT-Creation-Date: 2011-04-04 17:57+0000\n"
+"PO-Revision-Date: 2011-04-05 02:39-0300\n"
+"Last-Translator: Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-#: ../extensions/example/extension.js:11
-msgid "Hello, world!"
-msgstr "Olá, mundo!"
-
-#: ../extensions/xrandr-indicator/extension.js:26
-msgid "Normal"
-msgstr "Normal"
-
-#: ../extensions/xrandr-indicator/extension.js:27
-msgid "Left"
-msgstr "Esquerda"
-
-#: ../extensions/xrandr-indicator/extension.js:28
-msgid "Right"
-msgstr "Direita"
-
-#: ../extensions/xrandr-indicator/extension.js:29
-msgid "Upside-down"
-msgstr "De cabeça pra baixo"
-
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Definir configurações de exibição..."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -52,14 +29,6 @@ msgstr ""
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
 msgstr "Aplicativo e lista de área de trabalho"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "O nome do tema, para ser carregado de ~/.themes/name/gnome-shell"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
-msgid "Theme name"
-msgstr "Nome do tema"
 
 #: ../extensions/dock/extension.js:116
 msgid "Drag here to add favorites"
@@ -80,3 +49,55 @@ msgstr "Remover dos favoritos"
 #: ../extensions/dock/extension.js:425
 msgid "Add to Favorites"
 msgstr "Adicionar aos favoritos"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Olá, mundo!"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s está ausente."
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s está desconectado."
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s está conectado."
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s está ocupado."
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "O nome do tema, para ser carregado de ~/.themes/name/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Nome do tema"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normal"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Esquerda"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Direita"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "De cabeça pra baixo"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Definir configurações de exibição..."
