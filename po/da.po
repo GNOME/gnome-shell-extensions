@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-30 22:37+0200\n"
-"PO-Revision-Date: 2011-03-29 00:18+0000\n"
+"POT-Creation-Date: 2011-04-06 22:28+0200\n"
+"PO-Revision-Date: 2011-04-06 09:07+0000\n"
 "Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -17,30 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: ../extensions/example/extension.js:11
-msgid "Hello, world!"
-msgstr "Hej verden!"
-
-#: ../extensions/xrandr-indicator/extension.js:26
-msgid "Normal"
-msgstr "Normal"
-
-#: ../extensions/xrandr-indicator/extension.js:27
-msgid "Left"
-msgstr "Venstre"
-
-#: ../extensions/xrandr-indicator/extension.js:28
-msgid "Right"
-msgstr "Højre"
-
-#: ../extensions/xrandr-indicator/extension.js:29
-msgid "Upside-down"
-msgstr "På hovedet"
-
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Konfigurér skærmindstillinger..."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -53,14 +29,6 @@ msgstr ""
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
 msgstr "Liste over programmer og arbejdsområder"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Navnet på temaet, som indlæses fra ~/.themes/name/gnome-shell"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
-msgid "Theme name"
-msgstr "Temanavn"
 
 #: ../extensions/dock/extension.js:116
 msgid "Drag here to add favorites"
@@ -81,3 +49,55 @@ msgstr "Fjern fra favoritter"
 #: ../extensions/dock/extension.js:425
 msgid "Add to Favorites"
 msgstr "Føj til favoritter"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Hej verden!"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s er ikke til stede."
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s er frakoblet."
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s er tilgængelig."
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s er optaget."
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Navnet på temaet, som indlæses fra ~/.themes/name/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Temanavn"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normal"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Venstre"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Højre"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "På hovedet"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Konfigurér skærmindstillinger..."
