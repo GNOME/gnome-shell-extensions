@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2009-09-10 22:35+0000\n"
-"PO-Revision-Date: 2011-03-16 11:12+0100\n"
+"POT-Creation-Date: 2011-04-05 20:54+0000\n"
+"PO-Revision-Date: 2011-04-06 10:07+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -19,30 +19,6 @@ msgstr ""
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../extensions/example/extension.js:11
-msgid "Hello, world!"
-msgstr "Pozdravljen, svet!"
-
-#: ../extensions/xrandr-indicator/extension.js:26
-msgid "Normal"
-msgstr "Običajno"
-
-#: ../extensions/xrandr-indicator/extension.js:27
-msgid "Left"
-msgstr "Levo"
-
-#: ../extensions/xrandr-indicator/extension.js:28
-msgid "Right"
-msgstr "Desno"
-
-#: ../extensions/xrandr-indicator/extension.js:29
-msgid "Upside-down"
-msgstr "Zgornja stran navzdol"
-
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Nastavitve zaslona ..."
-
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
 msgstr "Seznam nizov z določilom ID programa (namizno ime programa), ki mu sledi dvopičje in nato številka delovne površine."
@@ -50,14 +26,6 @@ msgstr "Seznam nizov z določilom ID programa (namizno ime programa), ki mu sled
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
 msgstr "Seznam programov in delovnih površin"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Ime teme, ki bo naložena iz ~/.themes/name/gnome-shell"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
-msgid "Theme name"
-msgstr "Ime teme"
 
 #: ../extensions/dock/extension.js:116
 msgid "Drag here to add favorites"
@@ -78,4 +46,56 @@ msgstr "Odstrani iz priljubljenih"
 #: ../extensions/dock/extension.js:425
 msgid "Add to Favorites"
 msgstr "Dodaj med priljubljene"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Pozdravljen, svet!"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s ni prisoten."
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s ni povezan."
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s je na zvezi."
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s je zaseden."
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Ime teme, ki bo naložena iz ~/.themes/name/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Ime teme"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Običajno"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Levo"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Desno"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "Zgoraj-navzdol"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Nastavitve zaslona ..."
 
