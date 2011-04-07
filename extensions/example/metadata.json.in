@@ -2,7 +2,7 @@
  "uuid": "@uuid@",
  "name": "Hello, World!",
  "description": "An example extension to show how it works. Shows Hello, world when clicking on the top panel.",
- "shell-version": [ "3.0" ],
+ "shell-version": [ "@shell_current@" ],
  "localedir": "@LOCALEDIR@",
  "url": "@url@"
 }

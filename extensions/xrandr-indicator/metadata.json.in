@@ -2,7 +2,7 @@
 "uuid": "@uuid@",
 "name": "Monitor Status Indicator",
 "description": "Add a systems status menu for rotating monitors (overrides what is currently provided by gnome-settings-daemon)",
-"shell-version": [ "3.0" ],
+"shell-version": [ "@shell_current@" ],
 "localedir": "@LOCALEDIR@",
 "url": "@url@"
 }
