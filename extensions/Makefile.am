@@ -1,3 +1,3 @@
-DIST_SUBDIRS = example alternate-tab xrandr-indicator windowsNavigator auto-move-windows dock user-theme alternative-status-menu gajim
+DIST_SUBDIRS = $(ALL_EXTENSIONS)
 
 SUBDIRS = $(ENABLED_EXTENSIONS)
