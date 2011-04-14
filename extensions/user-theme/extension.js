@@ -29,8 +29,17 @@ ThemeManager.prototype = {
             file = Gio.file_new_for_path(_userCssStylesheet);
             if (file.query_exists(null))
                 _stylesheet = _userCssStylesheet;
-            else
-                _stylesheet = null;
+            else {
+                let sysdirs = GLib.get_system_data_dirs();
+                for (let i = 0; i < sysdirs.length; i++) {
+                    _userCssStylesheet = sysdirs[i] + '/themes/' + _themeName + '/gnome-shell/gnome-shell.css';
+                    file = Gio.file_new_for_path(_userCssStylesheet);
+                    if (file.query_exists(null)) {
+                        _stylesheet = _userCssStylesheet;
+                        break;
+                    }
+                }
+            }
         }
 
         if (_stylesheet)
