@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-04-05 20:54+0000\n"
-"PO-Revision-Date: 2011-04-06 10:07+0100\n"
+"POT-Creation-Date: 2011-04-16 16:32+0000\n"
+"PO-Revision-Date: 2011-04-16 21:08+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,6 +19,49 @@ msgstr ""
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
+
+#: ../extensions/alternative-status-menu/extension.js:23
+#: ../extensions/alternative-status-menu/extension.js:27
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Hibernate"
+msgstr "V mirovanje"
+
+#: ../extensions/alternative-status-menu/extension.js:26
+#: ../extensions/alternative-status-menu/extension.js:92
+msgid "Suspend"
+msgstr "V pripravljenost"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Available"
+msgstr "Na voljo"
+
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "Busy"
+msgstr "Zasedeno"
+
+#: ../extensions/alternative-status-menu/extension.js:65
+msgid "My Account"
+msgstr "Račun"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "System Settings"
+msgstr "Sistemske nastavitve"
+
+#: ../extensions/alternative-status-menu/extension.js:76
+msgid "Lock Screen"
+msgstr "Zakleni zaslon"
+
+#: ../extensions/alternative-status-menu/extension.js:80
+msgid "Switch User"
+msgstr "Preklopi uporabnika"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Log Out..."
+msgstr "Odjava ..."
+
+#: ../extensions/alternative-status-menu/extension.js:100
+msgid "Power Off..."
+msgstr "Izklopi ..."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
