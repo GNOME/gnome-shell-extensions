@@ -1,3 +1,4 @@
+extensions/alternative-status-menu/extension.js
 extensions/alternate-tab/extension.js
 extensions/auto-move-windows/extension.js
 extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in
