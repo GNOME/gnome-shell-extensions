@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-16 18:13+0200\n"
-"PO-Revision-Date: 2011-04-16 18:18+0200\n"
+"POT-Creation-Date: 2011-04-16 18:30+0200\n"
+"PO-Revision-Date: 2011-04-16 18:31+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: \n"
@@ -16,11 +16,56 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: ../extensions/alternative-status-menu/extension.js:23
+#: ../extensions/alternative-status-menu/extension.js:27
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Hibernate"
+msgstr "Dvalemodus"
+
+#: ../extensions/alternative-status-menu/extension.js:26
+#: ../extensions/alternative-status-menu/extension.js:92
+msgid "Suspend"
+msgstr "Hvilemodus"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Available"
+msgstr "Tilgjengelig"
+
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "Busy"
+msgstr "Opptatt"
+
+#: ../extensions/alternative-status-menu/extension.js:65
+msgid "My Account"
+msgstr "Min konto"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "System Settings"
+msgstr "Systeminnstillinger"
+
+#: ../extensions/alternative-status-menu/extension.js:76
+msgid "Lock Screen"
+msgstr "Lås skjem"
+
+#: ../extensions/alternative-status-menu/extension.js:80
+msgid "Switch User"
+msgstr "Bytt bruker"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Log Out..."
+msgstr "Logg ut …"
+
+#: ../extensions/alternative-status-menu/extension.js:100
+msgid "Power Off..."
+msgstr "Slå av …"
+
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
-msgstr "En liste med strenger som inneholder en ID for et program (navn på .desktop-fil), fulgt av et kolon og arbeidsområdenummeret"
+msgstr ""
+"En liste med strenger som inneholder en ID for et program (navn på .desktop-"
+"fil), fulgt av et kolon og arbeidsområdenummeret"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
