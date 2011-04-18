@@ -99,34 +99,34 @@ msgstr "Xin chào!"
 #: ../extensions/gajim/extension.js:219
 #, c-format
 msgid "%s is away."
-msgstr ""
+msgstr "%s không có mặt."
 
 #: ../extensions/gajim/extension.js:222
 #, c-format
 msgid "%s is offline."
-msgstr ""
+msgstr "%s đang ngoại tuyến."
 
 #: ../extensions/gajim/extension.js:225
 #, c-format
 msgid "%s is online."
-msgstr ""
+msgstr "%s đang trực tuyến."
 
 #: ../extensions/gajim/extension.js:228
 #, c-format
 msgid "%s is busy."
-msgstr ""
+msgstr "%s đang bận."
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Tên sắc thái, nạp từ ~/.themes/name/gnome-shell"
+msgstr "Tên chủ đề, nạp từ ~/.themes/name/gnome-shell"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
-msgstr "Tên sắc thái"
+msgstr "Tên chủ đề"
 
 #: ../extensions/xrandr-indicator/extension.js:26
 msgid "Normal"
-msgstr "Chuẩn"
+msgstr "Bình thường"
 
 #: ../extensions/xrandr-indicator/extension.js:27
 msgid "Left"
