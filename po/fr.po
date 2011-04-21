@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-03-18 14:07+0000\n"
-"PO-Revision-Date: 2011-03-19 09:37+0100\n"
+"POT-Creation-Date: 2011-04-16 16:32+0000\n"
+"PO-Revision-Date: 2011-04-21 16:51+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,50 +17,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../extensions/example/extension.js:11
-msgid "Hello, world!"
-msgstr "Bonjour le monde !"
+#: ../extensions/alternative-status-menu/extension.js:23
+#: ../extensions/alternative-status-menu/extension.js:27
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Hibernate"
+msgstr "Hiberner"
 
-#: ../extensions/xrandr-indicator/extension.js:26
-msgid "Normal"
-msgstr "Normal"
+#: ../extensions/alternative-status-menu/extension.js:26
+#: ../extensions/alternative-status-menu/extension.js:92
+msgid "Suspend"
+msgstr "Mettre en veille"
 
-#: ../extensions/xrandr-indicator/extension.js:27
-msgid "Left"
-msgstr "Gauche"
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Available"
+msgstr "Disponible"
 
-#: ../extensions/xrandr-indicator/extension.js:28
-msgid "Right"
-msgstr "Droite"
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "Busy"
+msgstr "Occupé"
 
-#: ../extensions/xrandr-indicator/extension.js:29
-msgid "Upside-down"
-msgstr "Renversé"
+#: ../extensions/alternative-status-menu/extension.js:65
+msgid "My Account"
+msgstr "Mon compte"
 
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Configurer les paramètres d'affichage..."
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "System Settings"
+msgstr "Paramètres système"
+
+#: ../extensions/alternative-status-menu/extension.js:76
+msgid "Lock Screen"
+msgstr "Verrouiller l'écran"
+
+#: ../extensions/alternative-status-menu/extension.js:80
+msgid "Switch User"
+msgstr "Changer d'utilisateur"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Log Out..."
+msgstr "Fermer la session..."
+
+#: ../extensions/alternative-status-menu/extension.js:100
+msgid "Power Off..."
+msgstr "Éteindre..."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"Une liste de chaînes, contenant chacune un identifiant d'application (nom "
-"de fichier desktop), suivi par un deux-points et le numéro de l'espace de "
+"Une liste de chaînes, contenant chacune un identifiant d'application (nom de "
+"fichier desktop), suivi par un deux-points et le numéro de l'espace de "
 "travail"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
 msgstr "Liste d'applications et d'espaces de travail"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Le nom du thème, à charger à partir de ~/.themes/name/gnome-shell"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
-msgid "Theme name"
-msgstr "Nom du thème"
 
 #: ../extensions/dock/extension.js:116
 msgid "Drag here to add favorites"
@@ -81,3 +92,55 @@ msgstr "Enlever des favoris"
 #: ../extensions/dock/extension.js:425
 msgid "Add to Favorites"
 msgstr "Ajouter aux favoris"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Bonjour le monde !"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s est absent(e)."
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s n'est pas en ligne."
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s est en ligne."
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s est occupé(e)."
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Le nom du thème, à charger à partir de ~/.themes/name/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Nom du thème"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normal"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Gauche"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Droite"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "Renversé"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Configurer les paramètres d'affichage..."
