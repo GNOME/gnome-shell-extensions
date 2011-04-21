@@ -8,14 +8,57 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-04-01 16:40+0000\n"
-"PO-Revision-Date: 2011-04-04 13:30+0200\n"
+"POT-Creation-Date: 2011-04-16 16:32+0000\n"
+"PO-Revision-Date: 2011-04-21 19:31+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../extensions/alternative-status-menu/extension.js:23
+#: ../extensions/alternative-status-menu/extension.js:27
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Hibernate"
+msgstr "Hibernar"
+
+#: ../extensions/alternative-status-menu/extension.js:26
+#: ../extensions/alternative-status-menu/extension.js:92
+msgid "Suspend"
+msgstr "Suspender"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Available"
+msgstr "Disponible"
+
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "Busy"
+msgstr "Ocupado"
+
+#: ../extensions/alternative-status-menu/extension.js:65
+msgid "My Account"
+msgstr "Mi cuenta"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "System Settings"
+msgstr "Configuración del sistema"
+
+#: ../extensions/alternative-status-menu/extension.js:76
+msgid "Lock Screen"
+msgstr "Bloquear la pantalla"
+
+#: ../extensions/alternative-status-menu/extension.js:80
+msgid "Switch User"
+msgstr "Cambiar de usuario"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Log Out..."
+msgstr "Cerrar la sesión…"
+
+#: ../extensions/alternative-status-menu/extension.js:100
+msgid "Power Off..."
+msgstr "Apagar…"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
