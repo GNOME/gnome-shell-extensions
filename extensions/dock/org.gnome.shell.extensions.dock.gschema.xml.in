@@ -1,0 +1,19 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+  <enum id='org.gnome.shell.extensions.dock.PositionMode'>
+    <value nick='left' value='0'/>
+    <value nick='right' value='1'/>
+  </enum>
+
+  <schema id="org.gnome.shell.extensions.dock" path="/org/gnome/shell/extensions/dock/">
+    <key name="position" enum="org.gnome.shell.extensions.dock.PositionMode">
+      <default>'right'</default>
+      <_summary>Position of the dock</_summary>
+      <_description>Sets the position of the dock in the screen. Allowed values are 'right' or 'left'</_description>
+    </key>
+    <key name="size" type="i">
+      <default>48</default>
+      <_summary>Icon size</_summary>
+      <_description>Sets icon size of the dock.</_description>
+    </key>
+  </schema>
+</schemalist>

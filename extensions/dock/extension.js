@@ -25,7 +25,19 @@ const AltTab = imports.ui.altTab;
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
-const DOCKICON_SIZE = 48;
+// Settings
+const DOCK_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.dock';
+const DOCK_POSITION_KEY = 'position';
+const DOCK_SIZE_KEY = 'size';
+
+// Keep enums in sync with GSettings schemas
+const PositionMode = {
+    LEFT: 0,
+    RIGHT: 1
+};
+
+let position = PositionMode.RIGHT;
+let dockicon_size = 48;
 const DND_RAISE_APP_TIMEOUT = 500;
 
 function Dock() {
@@ -40,8 +52,16 @@ Dock.prototype = {
 
         this._favorites = [];
 
+        // Load Settings
+        this._settings = new Gio.Settings({ schema: DOCK_SETTINGS_SCHEMA });
+        position = this._settings.get_enum(DOCK_POSITION_KEY);
+        dockicon_size = this._settings.get_int(DOCK_SIZE_KEY);
+        //global.log("POSITION: " + position);
+        //global.log("dockicon_size: " + dockicon_size);
+
+
         this._spacing = 4;
-        this._item_size = DOCKICON_SIZE;
+        this._item_size = dockicon_size;
 
         this.actor = new St.BoxLayout({ name: 'dock', vertical: true, reactive: true });
 
@@ -119,8 +139,18 @@ Dock.prototype = {
 
         let primary = global.get_primary_monitor();
         let height = (icons)*(this._item_size + this._spacing) + 2*this._spacing;
-        this.actor.set_size(this._item_size + 4*this._spacing, height);
-        this.actor.set_position(primary.width-this._item_size-this._spacing-2, (primary.height-height)/2);
+        let width = (icons)*(this._item_size + this._spacing) + 2*this._spacing;
+        
+        switch (position) {
+            case PositionMode.LEFT:
+                this.actor.set_size(this._item_size + 4*this._spacing, height);
+                this.actor.set_position(0-this._spacing-4, (primary.height-height)/2);
+                break;
+            case PositionMode.RIGHT:
+            default:
+                this.actor.set_size(this._item_size + 4*this._spacing, height);
+                this.actor.set_position(primary.width-this._item_size-this._spacing-2, (primary.height-height)/2);
+        }
     },
 
     _getPreferredWidth: function (grid, forHeight, alloc) {
@@ -141,6 +171,8 @@ Dock.prototype = {
         let children = this._grid.get_children();
 
         let x = box.x1 + this._spacing;
+        if (position == PositionMode.LEFT)
+            x = box.x1 + 2*this._spacing;
         let y = box.y1 + this._spacing;
 
         for (let i = 0; i < children.length; i++) {
@@ -191,9 +223,9 @@ DockIcon.prototype = {
                                      x_fill: true,
                                      y_fill: true });
         this.actor._delegate = this;
-        this.actor.set_size(DOCKICON_SIZE, DOCKICON_SIZE);
+        this.actor.set_size(dockicon_size, dockicon_size);
 
-        this._icon = this.app.create_icon_texture(DOCKICON_SIZE);
+        this._icon = this.app.create_icon_texture(dockicon_size);
         this.actor.set_child(this._icon);
 
         this.actor.connect('clicked', Lang.bind(this, this._onClicked));
@@ -371,7 +403,14 @@ DockIconMenu.prototype = {
     __proto__: AppDisplay.AppIconMenu.prototype,
 
     _init: function(source) {
-        PopupMenu.PopupMenu.prototype._init.call(this, source.actor, St.Align.MIDDLE, St.Side.RIGHT, 0);
+        switch (position) {
+            case PositionMode.LEFT:
+                PopupMenu.PopupMenu.prototype._init.call(this, source.actor, St.Align.MIDDLE, St.Side.LEFT, 0);
+                break;
+            case PositionMode.RIGHT:
+            default:
+                PopupMenu.PopupMenu.prototype._init.call(this, source.actor, St.Align.MIDDLE, St.Side.RIGHT, 0);
+        }
 
         this._source = source;
 
