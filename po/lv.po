@@ -1,0 +1,147 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2011-04-18 14:10+0000\n"
+"PO-Revision-Date: 2011-04-20 12:42+0300\n"
+"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
+"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#: ../extensions/alternative-status-menu/extension.js:23
+#: ../extensions/alternative-status-menu/extension.js:27
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Hibernate"
+msgstr "Iemidzināt"
+
+#: ../extensions/alternative-status-menu/extension.js:26
+#: ../extensions/alternative-status-menu/extension.js:92
+msgid "Suspend"
+msgstr "Iesnaudināt"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Available"
+msgstr "Pieejams"
+
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "Busy"
+msgstr "Aizņemts"
+
+#: ../extensions/alternative-status-menu/extension.js:65
+msgid "My Account"
+msgstr "Mans konts"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "System Settings"
+msgstr "Sistēmas iestatījumi"
+
+#: ../extensions/alternative-status-menu/extension.js:76
+msgid "Lock Screen"
+msgstr "Bloķēt ekrānu"
+
+#: ../extensions/alternative-status-menu/extension.js:80
+msgid "Switch User"
+msgstr "Mainīt lietotāju"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Log Out..."
+msgstr "Izrakstīties..."
+
+#: ../extensions/alternative-status-menu/extension.js:100
+msgid "Power Off..."
+msgstr "Izslēgt..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Saraksts ar virknēm, kas katra satur lietotnes id (darbvirsmas faila "
+"nosaukums), kam seko kols un darbvietas numurs"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "Lietotņu un darbvietu saraksts"
+
+#: ../extensions/dock/extension.js:116
+msgid "Drag here to add favorites"
+msgstr "Velciet šeit, lai pievienotu izlasei"
+
+#: ../extensions/dock/extension.js:417
+msgid "New Window"
+msgstr "Jauns logs"
+
+#: ../extensions/dock/extension.js:419
+msgid "Quit Application"
+msgstr "Iziet no lietotnes"
+
+#: ../extensions/dock/extension.js:424
+msgid "Remove from Favorites"
+msgstr "Izņemt no izlases"
+
+#: ../extensions/dock/extension.js:425
+msgid "Add to Favorites"
+msgstr "Pievienot izlasei"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Sveika pasaule!"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s\" ir prom."
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s ir nesaistē."
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s ir tiešsaistē."
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s\" ir aizņemts."
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Tēmas nosaukums, ko ielādēt no ~/.themes/name/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Tēmas nosaukums"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normāls"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Pa kreisi"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Pa labi"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "Otrādi"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Konfigurēt displeja iestatījumus..."
+
