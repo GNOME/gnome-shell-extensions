@@ -3,20 +3,64 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Felipe Borges <felipe10borges@gmail.com>, 2011.
 # Rodrigo Padula <contato@rodrigopadula.com>, 2011.
+# Rodolfo Ribeiro Gomes <rodolforg@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-04-04 17:57+0000\n"
-"PO-Revision-Date: 2011-04-05 02:39-0300\n"
-"Last-Translator: Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
+"POT-Creation-Date: 2011-04-20 19:47+0000\n"
+"PO-Revision-Date: 2011-04-21 11:11-0300\n"
+"Last-Translator: Rodolfo Ribeiro Gomes <rodolforg@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../extensions/alternative-status-menu/extension.js:23
+#: ../extensions/alternative-status-menu/extension.js:27
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Hibernate"
+msgstr "Hibernar"
+
+#: ../extensions/alternative-status-menu/extension.js:26
+#: ../extensions/alternative-status-menu/extension.js:92
+msgid "Suspend"
+msgstr "Supender"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Available"
+msgstr "Disponível"
+
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "Busy"
+msgstr "Ocupado"
+
+#: ../extensions/alternative-status-menu/extension.js:65
+msgid "My Account"
+msgstr "Minha conta"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "System Settings"
+msgstr "Configurações de sistema"
+
+#: ../extensions/alternative-status-menu/extension.js:76
+msgid "Lock Screen"
+msgstr "Bloquear tela"
+
+#: ../extensions/alternative-status-menu/extension.js:80
+msgid "Switch User"
+msgstr "Trocar de usuário"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Log Out..."
+msgstr "Encerrar sessão..."
+
+#: ../extensions/alternative-status-menu/extension.js:100
+msgid "Power Off..."
+msgstr "Desligar..."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -24,15 +68,15 @@ msgid ""
 "followed by a colon and the workspace number"
 msgstr ""
 "Uma lista de strings, cada uma contendo um id do aplicativo (nome de arquivo "
-"desktop), seguido por dois pontos e o número da área de trabalho"
+"desktop), seguido por dois pontos e o número do espaço de trabalho"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
-msgstr "Aplicativo e lista de área de trabalho"
+msgstr "Lista de aplicativo e espaço de trabalho"
 
 #: ../extensions/dock/extension.js:116
 msgid "Drag here to add favorites"
-msgstr "Arraste aqui para adicionar favoritos"
+msgstr "Arraste aqui para adicionar aos favoritos"
 
 #: ../extensions/dock/extension.js:417
 msgid "New Window"
@@ -100,4 +144,4 @@ msgstr "De cabeça pra baixo"
 
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
-msgstr "Definir configurações de exibição..."
+msgstr "Alterar configurações de exibição..."
