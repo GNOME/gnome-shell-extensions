@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions 2.91.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-12 22:11+0100\n"
-"PO-Revision-Date: 2011-03-12 22:12+0100\n"
+"POT-Creation-Date: 2011-04-26 15:14+0200\n"
+"PO-Revision-Date: 2011-04-26 15:27+0200\n"
 "Last-Translator: Giovanni Campagna <scampa.giovanni@gmail.com>\n"
 "Language-Team: none <LL@li.org>\n"
 "Language: \n"
@@ -17,29 +17,45 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../extensions/example/extension.js:11
-msgid "Hello, world!"
-msgstr "Ciao, mondo!"
+#: ../extensions/alternative-status-menu/extension.js:39
+msgid "Available"
+msgstr "Disponibile"
 
-#: ../extensions/xrandr-indicator/extension.js:26
-msgid "Normal"
-msgstr "Normale"
+#: ../extensions/alternative-status-menu/extension.js:44
+msgid "Busy"
+msgstr "Non disponibile"
 
-#: ../extensions/xrandr-indicator/extension.js:27
-msgid "Left"
-msgstr "Sinistra"
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "My Account"
+msgstr "Account personale"
 
-#: ../extensions/xrandr-indicator/extension.js:28
-msgid "Right"
-msgstr "Destra"
+#: ../extensions/alternative-status-menu/extension.js:56
+msgid "System Settings"
+msgstr "Impostazioni di sistema"
 
-#: ../extensions/xrandr-indicator/extension.js:29
-msgid "Upside-down"
-msgstr "Rovesciato"
+#: ../extensions/alternative-status-menu/extension.js:63
+msgid "Lock Screen"
+msgstr "Blocca schermo"
 
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Configura impostazioni display..."
+#: ../extensions/alternative-status-menu/extension.js:67
+msgid "Switch User"
+msgstr "Cambia utente"
+
+#: ../extensions/alternative-status-menu/extension.js:72
+msgid "Log Out..."
+msgstr "Termina sessione..."
+
+#: ../extensions/alternative-status-menu/extension.js:79
+msgid "Suspend"
+msgstr "Sospendi"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Hibernate"
+msgstr "Iberna"
+
+#: ../extensions/alternative-status-menu/extension.js:91
+msgid "Power Off..."
+msgstr "Spegni..."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -52,14 +68,6 @@ msgstr ""
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
 msgstr "Lista applicazioni e spazi di lavoro"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Il nome del tema, da caricare in ~/.themes/nome/gnome-shell"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
-msgid "Theme name"
-msgstr "Nome del tema"
 
 #: ../extensions/dock/extension.js:116
 msgid "Drag here to add favorites"
@@ -80,3 +88,55 @@ msgstr "Rimuovi dai preferiti"
 #: ../extensions/dock/extension.js:425
 msgid "Add to Favorites"
 msgstr "Aggiungi ai preferiti"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Ciao, mondo!"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s è assente"
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s è fuori rete"
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s è disponibile"
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s non è disponibile"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Il nome del tema, da caricare in ~/.themes/nome/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Nome del tema"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normale"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Sinistra"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Destra"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "Rovesciato"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Configura impostazioni display..."
