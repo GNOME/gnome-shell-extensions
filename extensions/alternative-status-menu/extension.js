@@ -2,48 +2,35 @@
 const Lang = imports.lang;
 const St = imports.gi.St;
 
-
 const Main = imports.ui.main;
 const PopupMenu = imports.ui.popupMenu;
 const GnomeSession = imports.misc.gnomeSession;
 
-const Gettext = imports.gettext.domain('gnome-shell');
+const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
-function updateSuspendOrHibernate(object, pspec, item) {
-    let canSuspend = this._upClient.get_can_suspend();
-    let canHibernate = this._upClient.get_can_hibernate();
-
-    if (!canSuspend && !canHibernate) {
-	item.actor.hide();
-	return;
-    } else
-	item.actor.show();
-    if (!canSuspend && canHibernate) {
-	item.updateText(_("Hibernate"), null);
-	return;
-    }
-    let suspendText = _("Suspend");
-    let hibernateText = canHibernate ? _("Hibernate") : null;
-    item.updateText(suspendText, hibernateText);
+function updateSuspend(object, pspec, item) {
+    item.actor.visible = object.get_can_suspend();
 }
 
-function onSuspendOrHibernateActivate(item) {
+function updateHibernate(object, pspec, item) {
+    item.actor.visible = object.get_can_hibernate();
+}
+
+function onSuspendActivate(item) {
     Main.overview.hide();
 
-    let haveSuspend = this._upClient.get_can_suspend();
-    let haveHibernate = this._upClient.get_can_hibernate();
+    this._screenSaverProxy.LockRemote(Lang.bind(this, function() {
+        this._upClient.suspend_sync(null);
+    }));
+}
 
-    if (haveSuspend &&
-        item.state == PopupMenu.PopupAlternatingMenuItemState.DEFAULT) {
-        this._screenSaverProxy.LockRemote(Lang.bind(this, function() {
-            this._upClient.suspend_sync(null);
-        }));
-    } else {
-        this._screenSaverProxy.LockRemote(Lang.bind(this, function() {
-            this._upClient.hibernate_sync(null);
-        }));
-    }
+function onHibernateActivate(item) {
+    Main.overview.hide();
+
+    this._screenSaverProxy.LockRemote(Lang.bind(this, function() {
+        this._upClient.hibernate_sync(null);
+    }));
 }
 
 function createSubMenu() {
@@ -89,13 +76,17 @@ function createSubMenu() {
     item = new PopupMenu.PopupSeparatorMenuItem();
     this.menu.addMenuItem(item);
 
-    item = new PopupMenu.PopupAlternatingMenuItem(_("Suspend"),
-                                                  _("Hibernate"));
+    item = new PopupMenu.PopupMenuItem(_("Suspend"));
+    item.connect('activate', Lang.bind(this, onSuspendActivate));
+    this._upClient.connect('notify::can-suspend', Lang.bind(this, updateSuspend, item));
+    updateSuspend(this._upClient, null, item);
     this.menu.addMenuItem(item);
-    item.connect('activate', Lang.bind(this, onSuspendOrHibernateActivate));
-    this._upClient.connect('notify::can-suspend', Lang.bind(this, updateSuspendOrHibernate, item));
-    this._upClient.connect('notify::can-hibernate', Lang.bind(this, updateSuspendOrHibernate, item));
-    updateSuspendOrHibernate.call(this, null, null, item);
+
+    item = new PopupMenu.PopupMenuItem(_("Hibernate"));
+    item.connect('activate', Lang.bind(this, onHibernateActivate));
+    this._upClient.connect('notify::can-hibernate', Lang.bind(this, updateHibernate, item));
+    updateHibernate(this._upClient, null, item);
+    this.menu.addMenuItem(item);
 
     item = new PopupMenu.PopupMenuItem(_("Power Off..."));
     item.connect('activate', Lang.bind(this, function() {
@@ -106,7 +97,9 @@ function createSubMenu() {
 
 // Put your extension initialization code here
 function main(metadata) {
-    let statusMenu = Main.panel._statusmenu;
+    imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+
+    let statusMenu = Main.panel._userMenu;
     statusMenu.menu.removeAll();
     createSubMenu.call(statusMenu);
 }
