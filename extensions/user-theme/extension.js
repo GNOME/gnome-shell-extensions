@@ -29,13 +29,16 @@ ThemeManager.prototype = {
             file = Gio.file_new_for_path(_userCssStylesheet);
             if (file.query_exists(null))
                 _stylesheet = _userCssStylesheet;
+            else
+                _stylesheet = null;
         }
 
-        if (_stylesheet) {
-            global.log('loading user theme: ' + _stylesheet)
-            Main.setThemeStylesheet(_stylesheet);
-            Main.loadTheme();
-        }
+        if (_stylesheet)
+            global.log('loading user theme: ' + _stylesheet);
+        else
+            global.log('loading default theme (Adwaita)');
+        Main.setThemeStylesheet(_stylesheet);
+        Main.loadTheme();
     }
 }
 
