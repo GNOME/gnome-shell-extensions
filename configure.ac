@@ -21,9 +21,9 @@ GLIB_GSETTINGS
 ADDITIONAL_PACKAGES=
 
 dnl keep this in sync with extensions/Makefile.am
-ALL_EXTENSIONS="example alternate-tab xrandr-indicator windowsNavigator auto-move-windows dock user-theme alternative-status-menu gajim drive-menu"
+ALL_EXTENSIONS="example alternate-tab xrandr-indicator windowsNavigator auto-move-windows dock user-theme alternative-status-menu gajim drive-menu places-menu"
 AC_SUBST(ALL_EXTENSIONS, [$ALL_EXTENSIONS])
-DEFAULT_EXTENSIONS="alternate-tab windowsNavigator dock alternative-status-menu drive-menu"
+DEFAULT_EXTENSIONS="alternate-tab windowsNavigator dock alternative-status-menu drive-menu places-menu"
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable.
 	The default is to build all extensions that can be installed in the home directory and have no external depedencies.
@@ -43,7 +43,7 @@ for e in $enable_extensions; do
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			ADDITIONAL_PACKAGES="$ADDITIONAL_PAGKAGES gnome-desktop-3.0 >= 2.91.6"
 			;;
-		alternate-tab|example|windowsNavigator|auto-move-windows|dock|user-theme|alternative-status-menu|gajim|drive-menu)
+		alternate-tab|example|windowsNavigator|auto-move-windows|dock|user-theme|alternative-status-menu|gajim|drive-menu|places-menu)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			;;
 		*)
@@ -70,6 +70,7 @@ AC_CONFIG_FILES([
   extensions/example/Makefile
   extensions/windowsNavigator/Makefile
   extensions/gajim/Makefile
+  extensions/places-menu/Makefile
   extensions/xrandr-indicator/Makefile
   extensions/user-theme/Makefile
   extensions/Makefile

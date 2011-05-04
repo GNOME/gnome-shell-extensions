@@ -48,6 +48,10 @@ gajim
 
   Integration with Gajim, a Jabber/XMPP instant messaging client.
 
+places-menu
+
+  Shows a status Indicator for navigating to Places.
+
 user-theme
 
   Loads a shell theme from ~/.themes/<name>/gnome-shell.
