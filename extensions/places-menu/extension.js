@@ -24,7 +24,6 @@ PlacesMenu.prototype = {
     __proto__: PanelMenu.SystemStatusButton.prototype,
 
     _init: function() {
-
         PanelMenu.SystemStatusButton.prototype._init.call(this, 'folder');
 
         this.defaultItems = [];
@@ -39,24 +38,22 @@ PlacesMenu.prototype = {
         this._createDevices();
         Main.placesManager.connect('bookmarks-updated',Lang.bind(this,this._redisplayBookmarks));
         Main.placesManager.connect('mounts-updated',Lang.bind(this,this._redisplayDevices));
-
     },
 
     _redisplayBookmarks: function(){
-
         this._clearBookmarks();
         this._createBookmarks();
     },
+
     _redisplayDevices: function(){
         this._clearDevices();
         this._createDevices();
-
     },
 
     _createDefaultPlaces : function() {
-
         this.defaultPlaces = Main.placesManager.getDefaultPlaces();
-          for (let placeid = 0; placeid < this.defaultPlaces.length; placeid++) {
+
+        for (let placeid = 0; placeid < this.defaultPlaces.length; placeid++) {
             this.defaultItems[placeid] = new PopupMenu.PopupMenuItem(_(this.defaultPlaces[placeid].name));
             let icon = this.defaultPlaces[placeid].iconFactory(PLACE_ICON_SIZE);
             this.defaultItems[placeid].addActor(icon, { align: St.Align.END});
@@ -67,11 +64,11 @@ PlacesMenu.prototype = {
             });
 
         }
-    }
-    ,
-    _createBookmarks : function() {
+    },
 
-        this.bookmarks     = Main.placesManager.getBookmarks();
+    _createBookmarks : function() {
+        this.bookmarks = Main.placesManager.getBookmarks();
+
         for (let bookmarkid = 0; bookmarkid < this.bookmarks.length; bookmarkid++) {
             this.bookmarkItems[bookmarkid] = new PopupMenu.PopupMenuItem(_(this.bookmarks[bookmarkid].name));
             let icon = this.bookmarks[bookmarkid].iconFactory(PLACE_ICON_SIZE);
@@ -81,12 +78,12 @@ PlacesMenu.prototype = {
             this.bookmarkItems[bookmarkid].connect('activate', function(actor,event) {
                 actor.place.launch();
             });
-
-    }
+        }
     },
-    _createDevices : function() {
 
+    _createDevices : function() {
         this.devices = Main.placesManager.getMounts();
+
         for (let devid = 0; devid < this.devices.length; devid++) {
             this.deviceItems[devid] = new PopupMenu.PopupMenuItem(_(this.devices[devid].name));
             let icon = this.devices[devid].iconFactory(PLACE_ICON_SIZE);
@@ -98,25 +95,27 @@ PlacesMenu.prototype = {
             });
         }
 
+        if (this.devices.length == 0)
+            this._devicesMenuItem.actor.hide();
+        else
+            this._devicesMenuItem.actor.show();
     },
 
     _clearBookmarks : function(){
-
         this._bookmarksSection.removeAll();
         this.bookmarkItems = [];
-
     },
 
     _clearDevices : function(){
         this._devicesMenuItem.menu.removeAll();
         this.DeviceItems = [];
     },
-
 };
 
 
 function main(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+
     Panel.STANDARD_TRAY_ICON_ORDER.unshift('places-menu');
     Panel.STANDARD_TRAY_ICON_SHELL_IMPLEMENTATION['places-menu'] = PlacesMenu;
 }
