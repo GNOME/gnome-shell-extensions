@@ -1,0 +1,16 @@
+.extension-systemMonitor-container {
+    spacing: 5px;
+}
+
+.extension-systemMonitor-indicator-area {
+    border: 1px solid #000;
+    width: 100px;
+    height: 34px;
+    -cpu-user-color: #f00;
+    -cpu-sys-color: #0f0;
+    -cpu-iowait-color: #00f;
+    -mem-user-color: #ff0;
+    -mem-cached-color: #0ff;
+    -mem-other-color: #111;
+    background-color: #fff;
+}

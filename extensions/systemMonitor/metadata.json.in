@@ -1,0 +1,9 @@
+{
+    "shell-version": ["@shell_current@"],
+    "uuid": "@uuid@",
+    "localedir": "@LOCALEDIR@",
+    "original-author": "zaspire@rambler.ru",
+    "name": "SystemMonitor",
+    "description": "System Monitor",
+    "url": "@url@"
+}
