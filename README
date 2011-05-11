@@ -30,6 +30,10 @@ alternative-status-menu
 status menu with one featuring separate Suspend and Power Off. Adds the ability to
 hibernate as well.
 
+apps-menu
+
+  Lets you reach an application using gnome 2.x style menu on the panel.
+
 auto-move-windows
 
   Lets you manage your workspaces more easily, assigning a specific workspace to
