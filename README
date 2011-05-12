@@ -40,6 +40,10 @@ dock
 
   Shows a dock-style task switcher on the right side of the screen.
 
+drive-menu
+  Shows a status menu for rapid unmount and power off of external storage devices
+  (i.e. pendrives)
+
 example
 
   A minimal example illustrating how to write extensions.
@@ -48,9 +52,18 @@ gajim
 
   Integration with Gajim, a Jabber/XMPP instant messaging client.
 
+native-window-placement
+
+  An alternative algorithm for layouting the thumbnails in the windows overview, that
+  more closely reflects the actual positions and sizes.
+
 places-menu
 
   Shows a status Indicator for navigating to Places.
+
+systemMonitor
+
+  An message tray indicator showing CPU and memory loads.
 
 user-theme
 
