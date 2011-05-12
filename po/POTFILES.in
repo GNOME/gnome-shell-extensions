@@ -5,6 +5,7 @@ extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschem
 extensions/dock/extension.js
 extensions/example/extension.js
 extensions/gajim/extension.js
+extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in
 extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in
 extensions/windowsNavigator/extension.js
 extensions/xrandr-indicator/extension.js

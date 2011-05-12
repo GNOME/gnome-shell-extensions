@@ -1,6 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 // import just everything from workspace.js:
 const Clutter = imports.gi.Clutter;
+const Gio = imports.gi.Gio;
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 const Meta = imports.gi.Meta;
@@ -19,9 +20,12 @@ const Tweener = imports.ui.tweener;
 const Workspace = imports.ui.workspace;
 const WindowPositionFlags = Workspace.WindowPositionFlags;
 
+const WindowPlacementStrategy = {
+    NATURAL: 0,
+    GRID: 1,
+};
+
 // testing settings for natural window placement strategy:
-const WINDOW_PLACEMENT_STRATEGY = "natural"                         // window placement strategy: natural | grid
-const WINDOW_PLACEMENT_NATURAL_MORESCREEN = true;                   // activate mod4-directions-part that tries to use more screen real estate
 const WINDOW_PLACEMENT_NATURAL_FILLGAPS = true;                     // enlarge windows at the end to fill gaps         // not implemented yet
 const WINDOW_PLACEMENT_NATURAL_GRID_FALLBACK = true;                // fallback to grid mode if all windows have the same size and positions.     // not implemented yet
 const WINDOW_PLACEMENT_NATURAL_ACCURACY = 20;                       // accuracy of window translate moves  (KDE-default: 20)
@@ -105,6 +109,18 @@ Rect.prototype = {
 
 // Put your extension initialization code here
 function main() {
+    let settings = new Gio.Settings({ schema: 'org.gnome.shell.extensions.native-window-placement' });
+    let placementStrategy = settings.get_enum('strategy');
+    settings.connect('changed::strategy', function() {
+        placementStrategy = settings.get_enum('strategy');
+        // we don't update immediately, we wait for a relayout
+        // (and hope for the best)
+    });
+    let useMoreScreen = settings.get_boolean('use-more-screen');
+    settings.connect('changed::use-more-screen', function() {
+        useMoreScreen = settings.get_boolean('use-more-screen');
+    });
+
     /**
      * _calculateWindowTransformationsNatural:
      * @clones: Array of #MetaWindow
@@ -182,7 +198,7 @@ function main() {
                         rects[j].translate(diff[0], diff[1]);
 
 
-                        if (WINDOW_PLACEMENT_NATURAL_MORESCREEN) {
+                        if (useMoreScreen) {
                             // Try to keep the bounding rect the same aspect as the screen so that more
                             // screen real estate is utilised. We do this by splitting the screen into nine
                             // equal sections, if the window center is in any of the corner sections pull the
@@ -316,12 +332,14 @@ function main() {
 	let targets = [];
         let scales = [];
 
-        switch (WINDOW_PLACEMENT_STRATEGY) {
-        case "natural":
+        switch (placementStrategy) {
+        case WindowPlacementStrategy.NATURAL:
             [clones, targets] = this._calculateWindowTransformationsNatural(clones);
             break;
-        case "grid":
         default:
+            log ('Invalid window placement strategy');
+            placementStrategy = WindowPlacementStrategy.GRID;
+        case WindowPlacementStrategy.GRID:
             [clones, targets] = this._calculateWindowTransformationsGrid(clones);
             break;
         }
@@ -384,8 +402,7 @@ function main() {
     }
 
     /// position window titles on top of windows in overlay ////
-
-    if ( PLACE_WINDOW_CAPTIONS_ON_TOP )  {
+    if (settings.get_boolean('window-captions-on-top'))  {
 	Workspace.WindowOverlay.prototype._init = function(windowClone, parentActor) {
             let metaWindow = windowClone.metaWindow;
 
