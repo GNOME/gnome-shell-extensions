@@ -18,8 +18,6 @@ PKG_PROG_PKG_CONFIG([0.22])
 
 GLIB_GSETTINGS
 
-ADDITIONAL_PACKAGES=
-
 dnl keep this in alphabetic order
 dnl by default, install only extensions that do not change completely the shell experience,
 dnl that don't require GSettings and that don't require external packages for typelibs
@@ -38,20 +36,21 @@ if test x$enable_extensions = xall; then
    enable_extensions="$ALL_EXTENSIONS"
 fi
 
-ADDITIONAL_PACKAGES=
 ENABLED_EXTENSIONS=
 for e in $enable_extensions; do
 	case $e in
 		systemMonitor)
-			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
-			ADDITIONAL_PACKAGES="$ADDITIONAL_PAGKAGES libgtop-2.0 >= 2.28.3"
+			PKG_CHECK_MODULES(GTOP, libgtop-2.0 >= 2.28.4,
+					[ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"],
+					[AC_MSG_WARN([libgtop-2.0 not found, disabling systemMonitor])])
 			;;
 		xrandr-indicator)
-			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
-			ADDITIONAL_PACKAGES="$ADDITIONAL_PAGKAGES gnome-desktop-3.0 >= 2.91.6"
+			PKG_CHECK_MODULES(GNOME_DESKTOP, gnome-desktop-3.0 >= 2.91.6,
+					[ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"],
+					[AC_MSG_WARN([gnome-desktop-3.0 not found, disabling xrandr-indicator])])
 			;;
 dnl		keep this in alphabetic order
-		alternate-tab|alternative-status-menu|auto-move-windows|dock|drive-menu|example|gajim|places-menu|windowsNavigator)
+		alternate-tab|alternative-status-menu|auto-move-windows|dock|drive-menu|example|gajim|places-menu|user-theme|windowsNavigator)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			;;
 		*)
@@ -60,13 +59,6 @@ dnl		keep this in alphabetic order
 done
 
 AC_SUBST(ENABLED_EXTENSIONS, [$ENABLED_EXTENSIONS])
-
-dnl We don't really need cflags or libdirs, we just check
-dnl to ensure we don't fail at runtime.
-
-if test "x$ADDITIONAL_PACKAGES" != x; then
-	PKG_CHECK_MODULES(ADDITIONAL, [$ADDITIONAL_PACKAGES])
-fi
 
 dnl Please keep this sorted alphabetically
 AC_CONFIG_FILES([
