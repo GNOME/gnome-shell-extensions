@@ -20,10 +20,13 @@ GLIB_GSETTINGS
 
 ADDITIONAL_PACKAGES=
 
-dnl keep this in sync with extensions/Makefile.am
-ALL_EXTENSIONS="example systemMonitor alternate-tab xrandr-indicator windowsNavigator auto-move-windows dock user-theme alternative-status-menu gajim drive-menu places-menu"
+dnl keep this in alphabetic order
+dnl by default, install only extensions that do not change completely the shell experience,
+dnl that don't require GSettings and that don't require external packages for typelibs
+dnl (so basically only menus, status icons, search providers, overview tabs, message tray sources, etc.)
+DEFAULT_EXTENSIONS="alternative-status-menu dock drive-menu gajim places-menu windowsNavigator"
+ALL_EXTENSIONS="$DEFAULT_EXTENSIONS alternate-tab auto-move-windows example systemMonitor user-theme xrandr-indicator"
 AC_SUBST(ALL_EXTENSIONS, [$ALL_EXTENSIONS])
-DEFAULT_EXTENSIONS="alternate-tab windowsNavigator dock alternative-status-menu drive-menu places-menu"
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable.
 	The default is to build all extensions that can be installed in the home directory and have no external depedencies.
@@ -47,7 +50,8 @@ for e in $enable_extensions; do
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			ADDITIONAL_PACKAGES="$ADDITIONAL_PAGKAGES gnome-desktop-3.0 >= 2.91.6"
 			;;
-		alternate-tab|example|windowsNavigator|auto-move-windows|dock|user-theme|alternative-status-menu|gajim|drive-menu|places-menu)
+dnl		keep this in alphabetic order
+		alternate-tab|alternative-status-menu|auto-move-windows|dock|drive-menu|example|gajim|places-menu|windowsNavigator)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			;;
 		*)
