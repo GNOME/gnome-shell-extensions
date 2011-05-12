@@ -102,6 +102,12 @@ DriveMenuItem.prototype = {
     },
 
     activate: function(event) {
+	if (!this._primaryVolume) {
+	    // can't do anything
+	    PopupMenu.PopupBaseMenuItem.prototype.activate.call(this, event);
+	    return;
+	}
+
 	let mount = this._primaryVolume.get_mount();
 	if (mount) {
 	    this._launchMount(mount);
