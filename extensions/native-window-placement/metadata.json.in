@@ -1,0 +1,9 @@
+{
+ "uuid": "@uuid@",
+ "name": "Native Window Placement",
+ "description": "Arrange windows in overview in a more native way",
+ "shell-version": [ "@shell_current@" ],
+ "localedir": "@LOCALEDIR@",
+ "url": "@url@",
+ "original-authors": [ "wepmaschda@gmx.de" ]
+}
