@@ -1,4 +1,4 @@
-t # Hebrew translations for PACKAGE package.
+# Hebrew translations for PACKAGE package.
 # Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2011.
