@@ -1,0 +1,187 @@
+t # Hebrew translations for PACKAGE package.
+# Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-13 13:11+0300\n"
+"PO-Revision-Date: 2011-05-13 13:15+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <sh.yaron@gmail.com>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: ISRAEL\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: ../extensions/alternative-status-menu/extension.js:39
+msgid "Available"
+msgstr "פנוי"
+
+#: ../extensions/alternative-status-menu/extension.js:44
+msgid "Busy"
+msgstr "עסוק"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "My Account"
+msgstr "החשבון שלי"
+
+#: ../extensions/alternative-status-menu/extension.js:56
+msgid "System Settings"
+msgstr "הגדרות המערכת"
+
+#: ../extensions/alternative-status-menu/extension.js:63
+msgid "Lock Screen"
+msgstr "נעילת המסך"
+
+#: ../extensions/alternative-status-menu/extension.js:67
+msgid "Switch User"
+msgstr "החלפת משתמש"
+
+#: ../extensions/alternative-status-menu/extension.js:72
+msgid "Log Out..."
+msgstr "יציאה..."
+
+#: ../extensions/alternative-status-menu/extension.js:79
+msgid "Suspend"
+msgstr "השהיה"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Hibernate"
+msgstr "תרדמת"
+
+#: ../extensions/alternative-status-menu/extension.js:91
+msgid "Power Off..."
+msgstr "כיבוי..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "Application and workspace list"
+
+#: ../extensions/dock/extension.js:116
+msgid "Drag here to add favorites"
+msgstr "יש לגרור לכאן כדי להוסיף למועדפים"
+
+#: ../extensions/dock/extension.js:417
+msgid "New Window"
+msgstr "חלון חדש"
+
+#: ../extensions/dock/extension.js:419
+msgid "Quit Application"
+msgstr "יציאה מהיישום"
+
+#: ../extensions/dock/extension.js:424
+msgid "Remove from Favorites"
+msgstr "הסרה מהמועדפים"
+
+#: ../extensions/dock/extension.js:425
+msgid "Add to Favorites"
+msgstr "הוספה למועדפים"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "שלום, עולם!"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s הופיע/ה כמרוחק/ת."
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s התנתק/ה."
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s פנוי/ה."
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s עסוק/ה."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Place window captions on top"
+msgstr "Place window captions on top"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid ""
+"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
+"default grid based algorithm, 'natural' to use another one that reflects "
+"more the position and size of the actual window"
+msgstr ""
+"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
+"default grid based algorithm, 'natural' to use another one that reflects "
+"more the position and size of the actual window"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+msgid "Use more screen for windows"
+msgstr "Use more screen for windows"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
+msgid "Window placement strategy"
+msgstr "Window placement strategy"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Theme name"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "רגיל"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "שמאל"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "ימין"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "הפוך"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "הגדרת תצורת התצוגה..."
