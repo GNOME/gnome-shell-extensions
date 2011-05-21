@@ -1,0 +1,16 @@
+3.1.1 (unreleased)
+==================
+
+* New extensions: drive-menu, places-menu, native-window-placement,
+  systemMonitor
+* Dock position is configurable
+* Compatibility with released Shell was broken, API usage
+  was updated
+
+3.0.2
+=====
+
+* Updated translations.
+* Fixed bug #647386 (reverting of user-theme to default)
+* Fixed bug #647599 (support globally installed themes)
+* Added license and README
