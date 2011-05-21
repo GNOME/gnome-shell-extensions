@@ -1,0 +1,7 @@
+3.0.2
+=====
+
+* Updated translations.
+* Fixed bug #647386 (reverting of user-theme to default)
+* Fixed bug #647599 (support globally installed themes)
+* Added license and README
