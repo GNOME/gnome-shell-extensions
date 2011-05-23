@@ -1,0 +1,143 @@
+# Persian translation for gnome-shell-extensions.
+# Copyright (C) 2011 Iranian Free Software Users Group (IFSUG.org) translation team.
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2011-05-21 14:17+0000\n"
+"PO-Revision-Date: 2011-05-23 22:28+0330\n"
+"Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
+"Language-Team: Persian <translate@ifsug.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Persian\n"
+"X-Poedit-Country: IRAN, ISLAMIC REPUBLIC OF\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../extensions/alternative-status-menu/extension.js:23
+#: ../extensions/alternative-status-menu/extension.js:27
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Hibernate"
+msgstr "خواب‌زمستانی"
+
+#: ../extensions/alternative-status-menu/extension.js:26
+#: ../extensions/alternative-status-menu/extension.js:92
+msgid "Suspend"
+msgstr "تعلیق"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Available"
+msgstr "موجود"
+
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "Busy"
+msgstr "مشغول"
+
+#: ../extensions/alternative-status-menu/extension.js:65
+msgid "My Account"
+msgstr "حساب من"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "System Settings"
+msgstr "تنظیمات سیستم"
+
+#: ../extensions/alternative-status-menu/extension.js:76
+msgid "Lock Screen"
+msgstr "قفل‌کردن صفحه‌نمایش"
+
+#: ../extensions/alternative-status-menu/extension.js:80
+msgid "Switch User"
+msgstr "تعویض کاربر"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Log Out..."
+msgstr "خروج از سیستم..."
+
+#: ../extensions/alternative-status-menu/extension.js:100
+msgid "Power Off..."
+msgstr "خاموش کردن..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
+msgstr "فهرستی از رشته‌ها، هرکدام حاوی شناسه‌ی یک برنامه (نام پرونده رومیزی)، در ادامه‌ی یک ویرگول و شماره‌ی فضای کاری"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "فهرست برنامه‌ها و فضای‌کاری"
+
+#: ../extensions/dock/extension.js:116
+msgid "Drag here to add favorites"
+msgstr "به اینجا بکشید تا به علاقه‌مندی‌ها اضافه شود"
+
+#: ../extensions/dock/extension.js:417
+msgid "New Window"
+msgstr "پنجره جدید"
+
+#: ../extensions/dock/extension.js:419
+msgid "Quit Application"
+msgstr "خروج از برنامه"
+
+#: ../extensions/dock/extension.js:424
+msgid "Remove from Favorites"
+msgstr "حذف از علاقه‌مندی‌ها"
+
+#: ../extensions/dock/extension.js:425
+msgid "Add to Favorites"
+msgstr "اضافه کردن به علاقه‌مندی‌ها"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "سلام دنیا!"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s غائب است."
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s برون‌خط است."
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s برخط است."
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s مشغول است."
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "نام تم، جهت بارگیری از شاخه themes/name/gnome-shell./~"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "نام تم"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "عادی"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "چپ"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "راست"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "برعکس"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "پیکربندی تنظیمات نمایش..."
+
