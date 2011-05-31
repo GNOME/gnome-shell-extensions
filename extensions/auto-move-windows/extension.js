@@ -104,13 +104,14 @@ function main(extensionMeta) {
         }
 
         let activeWorkspaceIndex = global.screen.get_active_workspace_index();
-        let removingCurrentWorkspace = (emptyWorkspaces[activeWorkspaceIndex] &&
-                                        activeWorkspaceIndex < emptyWorkspaces.length - 1);
+        let activeIsLast = activeWorkspaceIndex == global.screen.n_workspaces - 2;
+        let removingTrailWorkspaces = (emptyWorkspaces[activeWorkspaceIndex] &&
+                                        activeIsLast);
         // Don't enter the overview when removing multiple empty workspaces at startup
-        let showOverview  = (removingCurrentWorkspace &&
+        let showOverview  = (removingTrailWorkspaces &&
                              !emptyWorkspaces.every(function(x) { return x; }));
 
-        if (removingCurrentWorkspace) {
+        if (removingTrailWorkspaces) {
             // "Merge" the empty workspace we are removing with the one at the end
             Main.wm.blockAnimations();
         }
@@ -123,11 +124,8 @@ function main(extensionMeta) {
                 break;
         }
 
-        if (removingCurrentWorkspace) {
-	    if (activeWorkspaceIndex > global.screen.n_workspaces - 1)
-                global.screen.get_workspace_by_index(global.screen.n_workspaces - 1).activate(global.get_current_time());
-	    else
-                global.screen.get_workspace_by_index(activeWorkspaceIndex).activate(global.get_current_time());
+        if (removingTrailWorkspaces) {
+            global.screen.get_workspace_by_index(global.screen.n_workspaces - 1).activate(global.get_current_time());
 
             Main.wm.unblockAnimations();
 
