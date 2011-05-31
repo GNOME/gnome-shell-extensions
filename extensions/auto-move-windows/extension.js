@@ -5,6 +5,7 @@ const Glib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
+const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 
@@ -73,8 +74,17 @@ function main(extensionMeta) {
         let i;
         let emptyWorkspaces = new Array(Main._workspaces.length);
 
-        for (i = 0; i < Main._workspaces.length; i++)
-            emptyWorkspaces[i] = true;
+        for (i = 0; i < Main._workspaces.length; i++) {
+            let lastRemoved = Main._workspaces[i]._lastRemovedWindow;
+            if (lastRemoved &&
+                (lastRemoved.get_window_type() == Meta.WindowType.SPLASHSCREEN ||
+                 lastRemoved.get_window_type() == Meta.WindowType.DIALOG ||
+                 lastRemoved.get_window_type() == Meta.WindowType.MODAL_DIALOG))
+                    emptyWorkspaces[i] = false;
+            else
+                emptyWorkspaces[i] = true;
+        }
+
 
         let windows = global.get_window_actors();
         for (i = 0; i < windows.length; i++) {
@@ -93,6 +103,18 @@ function main(extensionMeta) {
             emptyWorkspaces.push(false);
         }
 
+        let activeWorkspaceIndex = global.screen.get_active_workspace_index();
+        let removingCurrentWorkspace = (emptyWorkspaces[activeWorkspaceIndex] &&
+                                        activeWorkspaceIndex < emptyWorkspaces.length - 1);
+        // Don't enter the overview when removing multiple empty workspaces at startup
+        let showOverview  = (removingCurrentWorkspace &&
+                             !emptyWorkspaces.every(function(x) { return x; }));
+
+        if (removingCurrentWorkspace) {
+            // "Merge" the empty workspace we are removing with the one at the end
+            Main.wm.blockAnimations();
+        }
+
         // Delete other empty workspaces; do it from the end to avoid index changes
         for (i = emptyWorkspaces.length - 2; i >= 0; i--) {
             if (emptyWorkspaces[i])
@@ -100,6 +122,19 @@ function main(extensionMeta) {
             else
                 break;
         }
+
+        if (removingCurrentWorkspace) {
+	    if (activeWorkspaceIndex > global.screen.n_workspaces - 1)
+                global.screen.get_workspace_by_index(global.screen.n_workspaces - 1).activate(global.get_current_time());
+	    else
+                global.screen.get_workspace_by_index(activeWorkspaceIndex).activate(global.get_current_time());
+
+            Main.wm.unblockAnimations();
+
+            if (!Main.overview.visible && showOverview)
+                Main.overview.show();
+        }
+
         Main._checkWorkspacesId = 0;
         return false;
 
