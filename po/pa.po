@@ -1,0 +1,149 @@
+# Punjabi translation for gnome-shell-extensions.
+# Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+#
+# A S Alam <aalam@users.sf.net>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2011-05-21 14:17+0000\n"
+"PO-Revision-Date: 2011-06-03 08:18+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pa\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../extensions/alternative-status-menu/extension.js:23
+#: ../extensions/alternative-status-menu/extension.js:27
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Hibernate"
+msgstr "ਹਾਈਬਰਨੇਟ"
+
+#: ../extensions/alternative-status-menu/extension.js:26
+#: ../extensions/alternative-status-menu/extension.js:92
+msgid "Suspend"
+msgstr "ਸਸਪੈਂਡ"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Available"
+msgstr "ਉਪਲੱਬਧ"
+
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "Busy"
+msgstr "ਰੁਝਿਆ"
+
+#: ../extensions/alternative-status-menu/extension.js:65
+msgid "My Account"
+msgstr "ਮੇਰਾ ਅਕਾਊਂਟ"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "System Settings"
+msgstr "ਸਿਸਟਮ ਸੈਟਿੰਗ"
+
+#: ../extensions/alternative-status-menu/extension.js:76
+msgid "Lock Screen"
+msgstr "ਸਕਰੀਨ ਲਾਕ ਕਰੋ"
+
+#: ../extensions/alternative-status-menu/extension.js:80
+msgid "Switch User"
+msgstr "ਯੂਜ਼ਰ ਬਦਲੋ"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Log Out..."
+msgstr "ਲਾਗਆਉਟ..."
+
+#: ../extensions/alternative-status-menu/extension.js:100
+msgid "Power Off..."
+msgstr "...ਬੰਦ ਕਰੋ"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"ਲਾਈਨਾਂ ਦੀ ਲਿਸਟ, ਜੋ ਕਿ ਐਪਲੀਕੇਸ਼ਨ ID (ਡੈਸਕਟਾਪ ਫਾਇਲ ਨਾਂ), ਬਾਅਦ 'ਚ ਕਾਲਮ ਅਤੇ "
+"ਵਰਕਸਪੇਸ "
+"ਨੰਬਰ ਰੱਖਦਾ ਹੈ"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਅਤੇ ਵਰਕਸਪੇਸ ਲਿਸਟ"
+
+#: ../extensions/dock/extension.js:116
+msgid "Drag here to add favorites"
+msgstr "ਪਸੰਦ ਵਿੱਚ ਜੋੜਨ ਲਈ ਇੱਥੇ ਸੁੱਟੋ"
+
+#: ../extensions/dock/extension.js:417
+msgid "New Window"
+msgstr "ਨਵੀਂ ਵਿੰਡੋ"
+
+#: ../extensions/dock/extension.js:419
+msgid "Quit Application"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਬੰਦ ਕਰੋ"
+
+#: ../extensions/dock/extension.js:424
+msgid "Remove from Favorites"
+msgstr "ਪਸੰਦ ਵਿੱਚੋਂ ਹਟਾਓ"
+
+#: ../extensions/dock/extension.js:425
+msgid "Add to Favorites"
+msgstr "ਪਸੰਦ 'ਚ ਸ਼ਾਮਲ ਕਰੋ"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "ਹੈਲੋ, ਵਰਲਡ!"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s ਦੂਰ ਹੈ।"
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s ਆਫਲਾਈਨ ਹੈ।"
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s ਆਨਲਾਈਨ ਹੈ।"
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s ਰੁੱਝਿਆ/ਰੁੱਝੀ ਹੈ।"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "ਥੀਮ ਦਾ ਨਾਂ, ਜੋ ~/.themes/name/gnome-shell ਤੋਂ ਲੋਡ ਕੀਤਾ ਜਾਵੇਗਾ"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "ਥੀਮ ਨਾਂ"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "ਸਧਾਰਨ"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "ਖੱਬੇ"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "ਸੱਜੇ"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "ਉਤਲਾ ਹੇਠ"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "ਡਿਸਪਲੇਅ ਸੈਟਿੰਗ ਸੰਰਚਨਾ..."
+
