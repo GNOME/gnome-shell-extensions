@@ -82,7 +82,13 @@ Dock.prototype = {
         AppFavorites.getAppFavorites().connect('changed', Lang.bind(this, this._queueRedisplay));
         this._tracker.connect('app-state-changed', Lang.bind(this, this._queueRedisplay));
 
-        Main.chrome.addActor(this.actor, { visibleInOverview: false });
+        Main.overview.connect('showing', Lang.bind(this, function() {
+            this.actor.hide();
+        }));
+        Main.overview.connect('hidden', Lang.bind(this, function() {
+            this.actor.show();
+        }));
+        Main.chrome.addActor(this.actor);
         this.actor.lower_bottom();
     },
 
