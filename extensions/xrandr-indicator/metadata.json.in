@@ -3,7 +3,7 @@
 "name": "Monitor Status Indicator",
 "description": "Add a systems status menu for rotating monitors (overrides what is currently provided by gnome-settings-daemon)",
 "shell-version": [ "@shell_current@" ],
-"js-version": [ "0.7.15" ],
+"js-version": [ "0.7.15", "1.29.1" ],
 "localedir": "@LOCALEDIR@",
 "url": "@url@"
 }

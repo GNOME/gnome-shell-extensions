@@ -3,6 +3,7 @@ extensions/alternate-tab/extension.js
 extensions/auto-move-windows/extension.js
 extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in
 extensions/dock/extension.js
+extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in
 extensions/example/extension.js
 extensions/gajim/extension.js
 extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in
