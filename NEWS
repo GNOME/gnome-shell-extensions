@@ -1,11 +1,20 @@
-3.1.1 (unreleased)
-==================
+3.1.3
+=====
 
-* New extensions: drive-menu, places-menu, native-window-placement,
-  systemMonitor
-* Dock position is configurable
-* Compatibility with released Shell was broken, API usage
-  was updated
+* New extension: a menu for removable drives (drive-menu
+* New extensions: GNOME 2 like menus for apps and places
+  (apps-menu, places-menu)
+* New extension: additional configurability for the window
+  layout in the overview, including a mechanism similar to
+  KDE4 (native-window-placement)
+* New extension: a message tray indicator for CPU and memory
+  usage (uses libgtop) (systemMonitor)
+* user-theme: fixed resetting theme
+* user-theme: support themes installed in /usr/share/themes
+* alternative-status-menu: ported to gnome-shell master
+* dock: ported to gnome-shell master
+* dock: make position configurable (can be left or right)
+* Updated translations
 
 3.0.2
 =====
