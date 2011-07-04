@@ -1,0 +1,9 @@
+{
+    "uuid": "@uuid@",
+    "name": "Workspace Indicator",
+    "description": "Put an indicator on the panel signaling in which workspace you are, and give you the possibility of switching to another one",
+    "shell-version": [ "@shell_current@" ],
+    "localedir": "@LOCALEDIR@",
+    "original-authors": [ "erick.red@gmail.com" ],
+    "url": "@url@"
+}
