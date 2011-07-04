@@ -1,0 +1,205 @@
+# gnome-shell-extensions ja.po
+# Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-07-05 00:34+0900\n"
+"PO-Revision-Date: 2011-07-05 00:34+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../extensions/alternative-status-menu/extension.js:39
+msgid "Available"
+msgstr "在席中"
+
+#: ../extensions/alternative-status-menu/extension.js:44
+msgid "Busy"
+msgstr "離席中"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "My Account"
+msgstr "自分のアカウント"
+
+#: ../extensions/alternative-status-menu/extension.js:56
+msgid "System Settings"
+msgstr "システムの設定"
+
+#: ../extensions/alternative-status-menu/extension.js:63
+msgid "Lock Screen"
+msgstr "画面のロック"
+
+#: ../extensions/alternative-status-menu/extension.js:67
+msgid "Switch User"
+msgstr "ユーザの切り替え"
+
+#: ../extensions/alternative-status-menu/extension.js:72
+msgid "Log Out..."
+msgstr "ログアウト..."
+
+#: ../extensions/alternative-status-menu/extension.js:79
+msgid "Suspend"
+msgstr "サスペンド"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Hibernate"
+msgstr "ハイバーネート"
+
+#: ../extensions/alternative-status-menu/extension.js:91
+msgid "Power Off..."
+msgstr "電源オフ..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"アプリケーションの識別子 (.desktop ファイル名) とコロンの後にワークスペース番"
+"号を付与した文字列を要素とするリストです。"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "アプリケーションとワークスペースのリスト"
+
+#: ../extensions/dock/extension.js:142
+msgid "Drag here to add favorites"
+msgstr "ここにドラッグしてお気に入りへ追加します"
+
+#: ../extensions/dock/extension.js:462
+msgid "New Window"
+msgstr "新しいウィンドウで開く"
+
+#: ../extensions/dock/extension.js:464
+msgid "Quit Application"
+msgstr "アプリケーションの終了"
+
+#: ../extensions/dock/extension.js:469
+msgid "Remove from Favorites"
+msgstr "お気に入りから削除する"
+
+#: ../extensions/dock/extension.js:470
+msgid "Add to Favorites"
+msgstr "お気に入りへ追加する"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Icon size"
+msgstr "アイコンのサイズ"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Position of the dock"
+msgstr "ドックの位置"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Sets icon size of the dock."
+msgstr "ドックに表示するアイコンの大きさを指定します。"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"ドックをデスクトップに表示する位置を指定します。指定可能な値: 'right'、'left'"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "\"Hello, world!\""
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%sさんは離席中です"
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%sさんはオフラインです"
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%sさんはオンラインです"
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%sさんは取り込み中です"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"TRUE にすると、ウィンドウのサムネイルの上端にそのウィンドウのタイトルバーを表"
+"示します (これは、サムネイルの下端にタイトルバーを表示する GNOME シェルのデ"
+"フォルト値よりも優先されます)。この設定を適用する際は GNOME シェルを再起動し"
+"て下さい。"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Place window captions on top"
+msgstr "ウィンドウのタイトルバーを上端に表示するかどうか"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid ""
+"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
+"default grid based algorithm, 'natural' to use another one that reflects "
+"more the position and size of the actual window"
+msgstr ""
+"オーバービュー・モードでウィンドウのサムネイルを配置する際のアルゴリズムで"
+"す。指定可能な値: 'grid' (原則的に格子状に配置していくアルゴリズ"
+"ム)、'natural' (ウィンドウの実際の位置や大きさを考慮して配置していくアルゴリ"
+"ズム)"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"ウィンドウのサムネイルを複数配置する際に、画面のアスペクト比に合わせて、境界"
+"部分を減らすことにより、ウィンドウを統合しすることで、さらにたくさんの画面を"
+"使用できるようにするかどうかです。この設定は 'natural' の配置アルゴリズムを採"
+"用している場合にのみ適用されます。"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+msgid "Use more screen for windows"
+msgstr "ウィンドウにたくさんの画面を使うかどうか"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
+msgid "Window placement strategy"
+msgstr "ウィンドウを配置するアルゴリズム"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "テーマの名前です (~/.themes/name/gnome-shell 配下に格納します)。"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "テーマの名前"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "標準"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "左回り"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "右回り"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "逆さま"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "ディスプレイの設定..."
