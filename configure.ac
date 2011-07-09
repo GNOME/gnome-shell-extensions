@@ -40,7 +40,7 @@ ENABLED_EXTENSIONS=
 for e in $enable_extensions; do
 	case $e in
 		systemMonitor)
-			PKG_CHECK_MODULES(GTOP, libgtop-2.0 >= 2.28.4,
+			PKG_CHECK_MODULES(GTOP, libgtop-2.0 >= 2.28.3,
 					[ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"],
 					[AC_MSG_WARN([libgtop-2.0 not found, disabling systemMonitor])])
 			;;
