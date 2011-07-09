@@ -143,7 +143,7 @@ Dock.prototype = {
             this.actor.add_actor(this._placeholderText);
         }
 
-        let primary = global.get_primary_monitor();
+        let primary = Main.layoutManager.primaryMonitor;
         let height = (icons)*(this._item_size + this._spacing) + 2*this._spacing;
         let width = (icons)*(this._item_size + this._spacing) + 2*this._spacing;
         
