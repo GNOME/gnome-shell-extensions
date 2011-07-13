@@ -22,6 +22,7 @@ WorkspaceIndicator.prototype = {
 	_init: function(){
 		PanelMenu.SystemStatusButton.prototype._init.call(this, 'folder');
 
+	        this._currentWorkspace = global.screen.get_active_workspace().index();
 		this.statusLabel = new St.Label({ text: this._labelText() });
 		this.actor.set_child(this.statusLabel);
 
@@ -39,14 +40,18 @@ WorkspaceIndicator.prototype = {
 	},
 
 	_updateIndicator: function() {
-		this.statusLabel.set_text(this._labelText());
+	    this.workspacesItems[this._currentWorkspace].setShowDot(false);
+	    this._currentWorkspace = global.screen.get_active_workspace().index();
+	    this.workspacesItems[this._currentWorkspace].setShowDot(true);
+
+	    this.statusLabel.set_text(this._labelText());
 	},
 
 	_labelText : function(workspaceIndex) {
-		if(workspaceIndex == undefined) {
-			workspaceIndex = global.screen.get_active_workspace().index();
-		}
-		return Meta.prefs_get_workspace_name(workspaceIndex);
+	    if(workspaceIndex == undefined) {
+		workspaceIndex = this._currentWorkspace;
+	    }
+	    return Meta.prefs_get_workspace_name(workspaceIndex);
 	},
 
 	_createWorkspacesSection : function() {
@@ -64,9 +69,8 @@ WorkspaceIndicator.prototype = {
 				this._activate(actor.workspaceId);
 			}));
 		}
-		if(i == 1) {
-			this._updateIndicator();
-		}
+
+	    this._updateIndicator();
 	},
 
 	_activate : function (index) {
