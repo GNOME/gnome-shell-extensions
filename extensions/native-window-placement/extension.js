@@ -44,6 +44,7 @@ function injectToFunction(parent, name, func) {
         return ret;
     }
 }
+const WORKSPACE_BORDER_GAP = 10;                                    // gap between the workspace area and the workspace selector
 
 
  
@@ -137,8 +138,10 @@ function main() {
             return win2.metaWindow.get_stable_sequence() - win1.metaWindow.get_stable_sequence();
         });
 
-        // 2 * 10 px gaps at the border
-        let area = new Rect(this._x + 10, this._y + 10, this._width - 20, this._height - 20);
+        // Put a gap on the right edge of the workspace to separe it from the workspace selector
+        let x_gap = WORKSPACE_BORDER_GAP;
+        let y_gap = WORKSPACE_BORDER_GAP * this._height / this._width
+        let area = new Rect(this._x, this._y, this._width - x_gap, this._height - y_gap);
 
         let bounds = area.copy();
 
@@ -254,16 +257,14 @@ function main() {
         } while (overlap && loop_counter < WINDOW_PLACEMENT_NATURAL_MAX_TRANSLATIONS);
 
         // Work out scaling by getting the most top-left and most bottom-right window coords.
-        // The 20's and 10's are so that the windows don't touch the edge of the screen.
-        // Most 20's and 10's are already calculated into area now.
         let scale;
         scale = Math.min(area.width / bounds.width,
                          area.height / bounds.height,
                          1.0);
 
         // Make bounding rect fill the screen size for later steps
-        bounds.x = bounds.x - (area.width - bounds.width * scale) / 2 - 10 / scale;
-        bounds.y = bounds.y - (area.height - bounds.height * scale) / 2 - 10 / scale;
+        bounds.x = bounds.x - (area.width - bounds.width * scale) / 2;
+        bounds.y = bounds.y - (area.height - bounds.height * scale) / 2;
         bounds.width = area.width / scale;
         bounds.height = area.height / scale;
 
