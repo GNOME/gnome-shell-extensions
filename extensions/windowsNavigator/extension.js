@@ -96,13 +96,13 @@ function main() {
     }
 
     WorkspacesView.WorkspacesView.prototype._onKeyRelease = function(s, o) {
-        if (this._pickWindow && o.get_key_symbol() == Clutter.Alt_L)
+        if (this._pickWindow && o.get_key_symbol() == Clutter.KEY_Alt_L)
             this._hideTooltips();
-        if (this._pickWorkspace && o.get_key_symbol() == Clutter.Control_L)
+        if (this._pickWorkspace && o.get_key_symbol() == Clutter.KEY_Control_L)
             this._hideWorkspacesTooltips();
     }
     WorkspacesView.WorkspacesView.prototype._onKeyPress = function(s, o) {
-        if (o.get_key_symbol() == Clutter.Alt_L && !this._pickWorkspace) {
+        if (o.get_key_symbol() == Clutter.KEY_Alt_L && !this._pickWorkspace) {
             this._prevFocusActor = global.stage.get_key_focus();
             global.stage.set_key_focus(null);
             this._active = global.screen.get_active_workspace_index();
@@ -110,7 +110,7 @@ function main() {
             this._workspaces[global.screen.get_active_workspace_index()].showWindowsTooltips();
             return true;
         }
-        if (o.get_key_symbol() == Clutter.Control_L && !this._pickWindow) {
+        if (o.get_key_symbol() == Clutter.KEY_Control_L && !this._pickWindow) {
             this._prevFocusActor = global.stage.get_key_focus();
             global.stage.set_key_focus(null);
             this._pickWorkspace = true;
@@ -127,26 +127,32 @@ function main() {
                 this._hideTooltips();
                 return false;
             }
-            let c = o.get_key_unicode();
-            if (c > '9'.charCodeAt(0) || c < '0'.charCodeAt(0)) {
+
+            let c = o.get_key_symbol() - Clutter.KEY_0;
+            if (c > 9 || c <= 0) {
                 this._hideTooltips();
                 return false;
             }
-            let win = this._workspaces[this._active].getWindowWithTooltip(c - '0'.charCodeAt(0));
+
+            let win = this._workspaces[this._active].getWindowWithTooltip(c);
             this._hideTooltips();
+
             if (win)
                 Main.activateWindow(win, global.get_current_time());
+
             return true;
         }
         if (this._pickWorkspace) {
-            let c = o.get_key_unicode();
-            if (c > '9'.charCodeAt(0) || c < '0'.charCodeAt(0)) {
+            let c = o.get_key_symbol() - Clutter.KEY_0;
+            if (c > 9 || c <= 0) {
                 this._hideWorkspacesTooltips();
                 return false;
             }
-            let workspace = this._workspaces[c - '0'.charCodeAt(0) - 1];
+
+            let workspace = this._workspaces[c - 1];
             if (workspace !== undefined)
                 workspace.metaWorkspace.activate(global.get_current_time());
+
             this._hideWorkspacesTooltips();
             return true;
         }
