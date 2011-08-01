@@ -1,3 +1,17 @@
+3.1.4
+=====
+
+* New extension: a menu for changing workspace (workspace-indicator)
+* systemMonitor: lower the requirement on libgtop
+* auto-move-windows: open overview when last window on
+  last workspace is closed
+* dock: implement autohiding, with various configurable
+  effects
+* alternate-tab: more configurable implementations available
+* native-window-placement: don't rearrange the windows when
+  the workspace switcher is shown/hidden
+* update for gnome-shell 3.1.4 API changes
+
 3.1.3
 =====
 
