@@ -1,0 +1,19 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+  <enum id="org.gnome.shell.extensions.alternate-tab.BehaviourMode">
+    <value value="0" nick="native"/>
+    <value value="1" nick="all_thumbnails"/>
+    <value value="2" nick="workspace_icons"/>
+  </enum>
+  <schema id="org.gnome.shell.extensions.alternate-tab" path="/org/gnome/shell/extensions/alternate-tab/">
+    <key name="behaviour" enum="org.gnome.shell.extensions.alternate-tab.BehaviourMode">
+      <default>'native'</default>
+      <_summary>The alt tab behaviour.</_summary>
+      <_description>Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and workspace_icons.</_description>
+    </key>
+    <key type="b" name="first-time">
+      <default>true</default>
+      <_summary>Indicates if Alternate Tab is newly installed</_summary>
+      <_description>Ask the user for a default behaviour if true.</_description>
+    </key>
+  </schema>
+</schemalist>
