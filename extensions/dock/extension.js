@@ -61,7 +61,7 @@ const DND_RAISE_APP_TIMEOUT = 500;
 /*************************************************************************************/
 function hideDock_size () {
     if (hideable){
-       let monitor = global.get_primary_monitor()
+       let monitor = Main.layoutManager.primaryMonitor
        let position_x = monitor.x;
        let height = (this._nicons)*(this._item_size + this._spacing) + 2*this._spacing;
        let width = this._item_size + 4*this._spacing;
@@ -90,7 +90,7 @@ function hideDock_size () {
 }
 
 function showDock_size () {
-     let monitor = global.get_primary_monitor();
+     let monitor = Main.layoutManager.primaryMonitor;
      let height = (this._nicons)*(this._item_size + this._spacing) + 2*this._spacing;
      let width = this._item_size + 4*this._spacing;
      let position_x = monitor.x;
@@ -123,7 +123,7 @@ function initShowDock_size () {
 }
 
 function showEffectAddItem_size () {
-        let primary = global.get_primary_monitor();
+        let primary = Main.layoutManager.primaryMonitor;
         let height = (this._nicons)*(this._item_size + this._spacing) + 2*this._spacing;
         let width = this._item_size + 4*this._spacing;
 
@@ -141,7 +141,7 @@ function showEffectAddItem_size () {
 /**************************************************************************************/
 function hideDock_scale () {
        this._item_size = dockicon_size;
-       let monitor = global.get_primary_monitor();
+       let monitor = Main.layoutManager.primaryMonitor;
        let cornerX = 0;
        let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
        let width = this._item_size + 4*this._spacing;
@@ -171,7 +171,7 @@ function hideDock_scale () {
 
 function showDock_scale () {
         this._item_size = dockicon_size;
-        let monitor = global.get_primary_monitor();
+        let monitor = Main.layoutManager.primaryMonitor;
         let position_x = monitor.x;
         let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
         let width = this._item_size + 4*this._spacing;
@@ -197,7 +197,7 @@ function showDock_scale () {
 }
 
 function initShowDock_scale () {
-        let primary = global.get_primary_monitor();
+        let primary = Main.layoutManager.primaryMonitor;
         let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
         let width = this._item_size + 4*this._spacing;
 
@@ -237,7 +237,7 @@ function initShowDock_scale () {
 }
 
 function showEffectAddItem_scale () {
-        let monitor = global.get_primary_monitor();
+        let monitor = Main.layoutManager.primaryMonitor;
         let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
         let width = this._item_size + 4*this._spacing;
 
@@ -308,7 +308,7 @@ Dock.prototype = {
 
         //hidden
         this._settings.connect('changed::'+DOCK_POSITION_KEY, Lang.bind(this, function (){
-                let primary = global.get_primary_monitor();
+                let primary = Main.layoutManager.primaryMonitor;
                 position = this._settings.get_enum(DOCK_POSITION_KEY);
                 this.actor.y=primary.y;
                 this._redisplay();
