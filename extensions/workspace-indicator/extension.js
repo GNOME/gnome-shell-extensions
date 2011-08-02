@@ -9,9 +9,6 @@ const Panel = imports.ui.panel;
 
 const Main = imports.ui.main;
 
-const Gettext = imports.gettext.domain('gnome-shell-extensions');
-const _ = Gettext.gettext;
-
 function WorkspaceIndicator() {
 	this._init.apply(this, arguments);
 }
@@ -96,7 +93,14 @@ WorkspaceIndicator.prototype = {
 	},
 }
 
-function main() {
-	Panel.STANDARD_TRAY_ICON_ORDER.unshift('workspace-indicator');
-	Panel.STANDARD_TRAY_ICON_SHELL_IMPLEMENTATION['workspace-indicator'] = WorkspaceIndicator;
+function init(meta) {
+    Panel.STANDARD_TRAY_ICON_ORDER.unshift('workspace-indicator');
+}
+
+function enable() {
+    Main.panel.addToStatusArea('workspace-indicator', new WorkspaceIndicator);
+}
+
+function disable() {
+    Main.panel.removeFromStatusArea('workspace-indicator');
 }
