@@ -541,19 +541,33 @@ WindowList.prototype = {
     }
 };
 
-function main(metadata) {
+function init(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+}
 
-    Main.wm.setKeybindingHandler('switch_windows', function() {
-        let settings = new Gio.Settings({ schema: SETTINGS_SCHEMA });
+function doAltTab(shellwm, binding, window, backwards) {
+    let settings = new Gio.Settings({ schema: SETTINGS_SCHEMA });
 
-        if(settings.get_boolean(SETTINGS_FIRST_TIME_KEY)) {
-           new AltTabSettingsDialog().open();
-        } else {
-            let behaviour = settings.get_string(SETTINGS_BEHAVIOUR_KEY);
-            if(behaviour in MODES) {
-                MODES[behaviour]();
-            }
+    if(settings.get_boolean(SETTINGS_FIRST_TIME_KEY)) {
+        new AltTabSettingsDialog().open();
+    } else {
+        let behaviour = settings.get_string(SETTINGS_BEHAVIOUR_KEY);
+        if(behaviour in MODES) {
+            MODES[behaviour](binding, backwards);
         }
-    });
+    }
+}
+
+function enable() {
+    Main.wm.setKeybindingHandler('switch_windows', doAltTab);
+    Main.wm.setKeybindingHandler('switch_group', doAltTab);
+    Main.wm.setKeybindingHandler('switch_windows_backward', doAltTab);
+    Main.wm.setKeybindingHandler('switch_group_backward', doAltTab);
+}
+
+function disable() {
+    Main.wm.setKeybindingHandler('switch_windows', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch_group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch_windows_backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch_group_backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
 }
