@@ -90,9 +90,14 @@ DriveMenu.prototype = {
 }
 
 // Put your extension initialization code here
-function main(metadata) {
+function init(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+}
 
-    Panel.STANDARD_TRAY_ICON_ORDER.unshift('drive-menu');
-    Panel.STANDARD_TRAY_ICON_SHELL_IMPLEMENTATION['drive-menu'] = DriveMenu;
+function enable() {
+    Main.panel.addToStatusArea('drive-menu', new DriveMenu);
+}
+
+function disable() {
+    Main.panel.removeFromStatusArea('drive-menu');
 }

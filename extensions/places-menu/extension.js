@@ -113,9 +113,15 @@ PlacesMenu.prototype = {
 };
 
 
-function main(metadata) {
+function init(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
-
     Panel.STANDARD_TRAY_ICON_ORDER.unshift('places-menu');
-    Panel.STANDARD_TRAY_ICON_SHELL_IMPLEMENTATION['places-menu'] = PlacesMenu;
+}
+
+function enable() {
+    Main.panel.addToStatusArea('places-menu', new PlacesMenu);
+}
+
+function disable() {
+    Main.panel.removeFromStatusArea('places-menu');
 }

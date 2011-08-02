@@ -7,8 +7,6 @@ const PanelMenu = imports.ui.panelMenu;
 const Shell = imports.gi.Shell;
 const Lang = imports.lang;
 const ICON_SIZE = 28;
-const Gettext = imports.gettext.domain('gnome-shell-extensions');
-const _ = Gettext.gettext;
 
 let appsys = Shell.AppSystem.get_default();
 
@@ -89,9 +87,19 @@ ApplicationsButton.prototype = {
 };
 
 
-function main(metadata) {
-    let  appsMenuButton = new ApplicationsButton();
+function init(metadata) {
+    // nothing to do here
+}
+
+let appsMenuButton;
+
+function enable() {
+    appsMenuButton = new ApplicationsButton();
     Main.panel._leftBox.insert_actor(appsMenuButton.actor, 1);
     Main.panel._leftBox.child_set(appsMenuButton.actor, { y_fill : true } );
     Main.panel._menus.addMenu(appsMenuButton.menu);
+}
+
+function disable() {
+    appsMenuButton.destroy();
 }
