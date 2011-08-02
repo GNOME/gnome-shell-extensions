@@ -16,9 +16,20 @@ function _showHello() {
 }
 
 // Put your extension initialization code here
-function main(metadata) {
+function init(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+}
 
+let signalId;
+
+function enable() {
     Main.panel.actor.reactive = true;
-    Main.panel.actor.connect('button-release-event', _showHello);
+    signalId = Main.panel.actor.connect('button-release-event', _showHello);
+}
+
+function disable() {
+    if (signalId) {
+	Main.panel.actor.disconnect(signalId);
+	signalId = 0;
+    }
 }
