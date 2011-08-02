@@ -15,9 +15,24 @@ function ThemeManager() {
 
 ThemeManager.prototype = {
     _init: function() {
+    },
+
+    enable: function() {
         this._settings = new Gio.Settings({ schema: SETTINGS_SCHEMA });
-        this._settings.connect('changed::'+SETTINGS_KEY, Lang.bind(this, this._changeTheme));
+        this._changedId = this._settings.connect('changed::'+SETTINGS_KEY, Lang.bind(this, this._changeTheme));
         this._changeTheme();
+    },
+
+    disable: function() {
+        if (this._changedId) {
+            this._settings.disconnect(this._changedId);
+            this._changedId = 0;
+        }
+
+        this._settings = null;
+
+        Main.setThemeStylesheet(null);
+        Main.loadTheme();
     },
 
     _changeTheme: function() {
@@ -52,6 +67,6 @@ ThemeManager.prototype = {
 }
 
 
-function main(metadata) {
-    new ThemeManager();
+function init(metadata) {
+    return new ThemeManager();
 }
