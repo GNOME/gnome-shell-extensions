@@ -98,8 +98,17 @@ function createSubMenu() {
 // Put your extension initialization code here
 function main(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+}
 
+function enable() {
     let statusMenu = Main.panel._userMenu;
     statusMenu.menu.removeAll();
     createSubMenu.call(statusMenu);
+}
+
+function disable() {
+    // not guarranteed to work, if more extensions operate in the same place
+    let statusMenu = Main.panel._userMenu;
+    statusMenu.menu.removeAll();
+    statusMenu._createSubMenu();
 }
