@@ -9,6 +9,10 @@ const Shell = imports.gi.Shell;
 
 const Main = imports.ui.main;
 
+let _cpuIndicator;
+let _memIndicator;
+let _box;
+
 function Indicator() {
     this._init();
 }
@@ -24,11 +28,20 @@ Indicator.prototype = {
             app.open_new_window(-1);
         });
 
-	Mainloop.timeout_add(250, Lang.bind(this, function () {
+	this._timeoutId = Mainloop.timeout_add(250, Lang.bind(this, function () {
 	    this._updateValues();
             this.actor.queue_repaint();
             return true;
 	}));
+    },
+
+    destroy: function() {
+        if (this._timeoutId) {
+            Mainloop.source_remove(this._timeoutId);
+            this._timeoutId = 0;
+        }
+
+        this.actor.destroy();
     },
 
     _initValues: function() {
@@ -125,9 +138,21 @@ MemoryIndicator.prototype = {
     }
 };
 
-function main() {
-    let box = new St.BoxLayout({ style_class: 'extension-systemMonitor-container' });
-    box.add((new CpuIndicator()).actor);
-    box.add((new MemoryIndicator()).actor);
+function init() {
+    // nothing to do here
+}
+
+function enable() {
+    _cpuIndicator = new CpuIndicator(); 
+    _memIndicator = new MemIndicator();
+    _box = new St.BoxLayout({ style_class: 'extension-systemMonitor-container' });
+    box.add(_cpuIndicator.actor);
+    box.add(_memIndicator.actor);
     Main.messageTray.actor.add_actor(box);
+}
+
+function disable() {
+    _cpuIndicator.destroy();
+    _memIndicator.destroy();
+    _box.destroy();
 }
