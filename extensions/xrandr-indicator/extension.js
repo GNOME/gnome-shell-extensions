@@ -136,8 +136,14 @@ Indicator.prototype = {
 }
 
 
-function main(metadata) {
+function init(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+}
 
-    Panel.STANDARD_TRAY_ICON_SHELL_IMPLEMENTATION['display'] = Indicator;
+function enable() {
+    Main.panel.addToStatusArea('display', new Indicator());
+}
+
+function disable() {
+    Main.panel.removeFromStatusArea('display');
 }
