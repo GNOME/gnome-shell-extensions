@@ -293,14 +293,14 @@ Dock.prototype = {
         this._tracker = Shell.WindowTracker.get_default();
         this._appSystem = Shell.AppSystem.get_default();
 
-        this._appSystem.connect('installed-changed', Lang.bind(this, this._queueRedisplay));
-        AppFavorites.getAppFavorites().connect('changed', Lang.bind(this, this._queueRedisplay));
-        this._tracker.connect('app-state-changed', Lang.bind(this, this._queueRedisplay));
+        this._installedChangedId = this._appSystem.connect('installed-changed', Lang.bind(this, this._queueRedisplay));
+        this._appFavoritesChangedId = AppFavorites.getAppFavorites().connect('changed', Lang.bind(this, this._queueRedisplay));
+        this._appStateChangedId = this._tracker.connect('app-state-changed', Lang.bind(this, this._queueRedisplay));
 
-        Main.overview.connect('showing', Lang.bind(this, function() {
+        this._overviewShowingId = Main.overview.connect('showing', Lang.bind(this, function() {
             this.actor.hide();
         }));
-        Main.overview.connect('hidden', Lang.bind(this, function() {
+        this._overviewHiddenId = Main.overview.connect('hidden', Lang.bind(this, function() {
             this.actor.show();
         }));
         Main.chrome.addActor(this.actor);
@@ -308,6 +308,9 @@ Dock.prototype = {
 
         //hidden
         this._settings.connect('changed::'+DOCK_POSITION_KEY, Lang.bind(this, function (){
+                if (!this._settings)
+                    return;
+
                 let primary = Main.layoutManager.primaryMonitor;
                 position = this._settings.get_enum(DOCK_POSITION_KEY);
                 this.actor.y=primary.y;
@@ -315,11 +318,17 @@ Dock.prototype = {
         }));
 
         this._settings.connect('changed::'+DOCK_SIZE_KEY, Lang.bind(this, function (){
+                if (!this._settings)
+                    return;
+
                 dockicon_size = this._settings.get_int(DOCK_SIZE_KEY);
                 this._redisplay();
         }));
 
         this._settings.connect('changed::'+DOCK_HIDE_KEY, Lang.bind(this, function (){
+                if (!this._settings)
+                    return;
+
                 hideable = this._settings.get_boolean(DOCK_HIDE_KEY);
                 if (hideable){
                         hideDock=false;
@@ -330,7 +339,10 @@ Dock.prototype = {
                 }
         }));
 
-        this._settings.connect('changed::'+DOCK_EFFECTHIDE_KEY, Lang.bind(this, function (){
+        this._settings.connect('changed::'+DOCK_EFFECTHIDE_KEY, Lang.bind(this, function () {
+                if (!this._settings)
+                    return;
+
                 hideEffect = this._settings.get_enum(DOCK_EFFECTHIDE_KEY);
                 this.actor.y=0;
 
@@ -352,11 +364,48 @@ Dock.prototype = {
         }));
 
         this._settings.connect('changed::'+DOCK_AUTOHIDE_ANIMATION_TIME_KEY, Lang.bind(this,function (){
-                  autohide_animation_time = this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY);
+                if (!this._settings)
+                    return;
+
+                autohide_animation_time = this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY);
         }));
 
-        let leave_event = this.actor.connect('leave-event', Lang.bind(this, this._hideDock));
-        let enter_event = this.actor.connect('enter-event', Lang.bind(this, this._showDock));
+        this.actor.connect('leave-event', Lang.bind(this, this._hideDock));
+        this.actor.connect('enter-event', Lang.bind(this, this._showDock));
+    },
+
+    destroy: function() {
+        if (this._installedChangedId) {
+            this._appSystem.disconnect(this._installedChangedId);
+            this._installedChangedId = 0;
+        }
+
+        if (this._appFavoritesChangedId) {
+            AppFavorites.getAppFavorites().disconnect(this._appFavoritesChangedId);
+            this._appFavoritesChangedId = 0;
+        }
+
+        if (this._appStateChangedId) {
+            this._tracker.disconnect(this._appStateChangedId);
+            this._appStateChangedId = 0;
+        }
+
+        if (this._overviewShowingId) {
+            Main.overview.disconnect(this._overviewShowingId);
+            this._overviewShowingId = 0;
+        }
+
+        if (this._overviewHiddenId) {
+            Main.overview.disconnect(this._overviewHiddenId);
+            this._overviewHiddenId = 0;
+        }
+
+        this.actor.destroy();
+
+        // Break reference cycles
+        this._settings = null;
+        this._appSystem = null;
+        this._tracker = null;
     },
 
     // fuctions hide
@@ -805,6 +854,15 @@ DockIconMenu.prototype = {
 
 function main(extensionMeta) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', extensionMeta.localedir);
+}
 
-    let dock = new Dock();
+let dock;
+
+function enable() {
+    dock = new Dock();
+}
+
+function disable() {
+    dock.destroy();
+    dock = null;
 }
