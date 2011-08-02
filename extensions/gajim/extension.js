@@ -263,15 +263,31 @@ function GajimClient() {
 GajimClient.prototype = {
     _init: function() {
         this._sources = {};
-        this._cacheDir = GLib.get_user_cache_dir() + '/gnome-shell/gajim-avatars';
-        GLib.mkdir_with_parents(this._cacheDir, 0x1c0); // 0x1c0 = octal 0700
-
-        this._proxy = new Gajim(DBus.session, 'org.gajim.dbus', '/org/gajim/dbus/RemoteObject');
-        this._proxy.connect('NewMessage', Lang.bind(this, this._messageReceived));
     },
 
     proxy : function() {
         return this._proxy;
+    },
+
+    enable: function() {
+        this._cacheDir = GLib.get_user_cache_dir() + '/gnome-shell/gajim-avatars';
+        GLib.mkdir_with_parents(this._cacheDir, 0x1c0); // 0x1c0 = octal 0700
+
+        this._proxy = new Gajim(DBus.session, 'org.gajim.dbus', '/org/gajim/dbus/RemoteObject');
+        this._newMessageId = this._proxy.connect('NewMessage', Lang.bind(this, this._messageReceived));
+    },
+
+    disable: function() {
+        if (this._newMessageId) {
+            this._proxy.disconnect(this._newMessageId);
+            this._newMessageId = 0;
+        }
+        this._proxy = null;
+
+        for (let id in this._sources)
+            this._sources[id].destroy();
+
+        this._sources = { };
     },
 
     _messageReceived : function(emitter, data) {
@@ -308,6 +324,6 @@ GajimClient.prototype = {
 
 };
 
-function main() {
-    let client = new GajimClient();
+function init() {
+    return new GajimClient();
 }
