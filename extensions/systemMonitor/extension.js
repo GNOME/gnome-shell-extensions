@@ -20,7 +20,7 @@ Indicator.prototype = {
                                           reactive: true});
         this.actor.connect('repaint', Lang.bind(this, this._draw));
         this.actor.connect('button-press-event', function() {
-            let app = Shell.AppSystem.get_default().get_app("gnome-system-monitor.desktop");
+            let app = Shell.AppSystem.get_default().lookup_app('gnome-system-monitor.desktop');
             app.open_new_window(-1);
         });
 

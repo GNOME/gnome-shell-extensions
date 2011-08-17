@@ -160,8 +160,8 @@ Source.prototype = {
             }
         }
 
-        let app = Shell.AppSystem.get_default().get_app('gajim.desktop');
-        app.activate_window(null, global.get_current_time());
+        let app = Shell.AppSystem.get_default().lookup_app('gajim.desktop');
+        app.activate(-1);
     },
 
     _onChatState: function(emitter, data) {
