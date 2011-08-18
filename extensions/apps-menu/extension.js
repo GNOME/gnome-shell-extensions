@@ -9,9 +9,6 @@ const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
-const Gettext = imports.gettext.domain('gnome-shell-extensions');
-const _ = Gettext.gettext;
-
 const ICON_SIZE = 28;
 let appsys = Shell.AppSystem.get_default();
 
@@ -105,5 +102,10 @@ function enable() {
 }
 
 function disable() {
-    appsMenuButton.destroy();
+    appsMenuButton.actor.destroy();
+    appsMenuButton.menu.destroy();
+}
+
+function init() {
+    /* do nothing */
 }
