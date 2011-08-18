@@ -303,7 +303,7 @@ Dock.prototype = {
         this._overviewHiddenId = Main.overview.connect('hidden', Lang.bind(this, function() {
             this.actor.show();
         }));
-        Main.chrome.addActor(this.actor);
+        Main.layoutManager.addChrome(this.actor);
         this.actor.lower_bottom();
 
         //hidden
@@ -790,7 +790,7 @@ DockIconMenu.prototype = {
         }));
         source.actor.connect('destroy', Lang.bind(this, function () { this.actor.destroy(); }));
 
-        Main.chrome.addActor(this.actor);
+        Main.layoutManager.addChrome(this.actor);
     },
 
     _redisplay: function() {
@@ -852,7 +852,7 @@ DockIconMenu.prototype = {
     }
 }
 
-function main(extensionMeta) {
+function init(extensionMeta) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', extensionMeta.localedir);
 }
 
