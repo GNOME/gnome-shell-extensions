@@ -17,17 +17,23 @@ function _showHello() {
 
 // Put your extension initialization code here
 function init(metadata) {
+    log ('Example extension initalized');
+
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
 }
 
 let signalId;
 
 function enable() {
+    log ('Example extension enabled');
+
     Main.panel.actor.reactive = true;
     signalId = Main.panel.actor.connect('button-release-event', _showHello);
 }
 
 function disable() {
+    log ('Example extension disabled');
+
     if (signalId) {
 	Main.panel.actor.disconnect(signalId);
 	signalId = 0;
