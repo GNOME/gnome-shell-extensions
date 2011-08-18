@@ -46,8 +46,6 @@ function injectToFunction(parent, name, func) {
 }
 const WORKSPACE_BORDER_GAP = 10;                                    // gap between the workspace area and the workspace selector
 
-
- 
 function Rect(x, y, width, height) {
     [this.x, this.y, this.width, this.height] = arguments;
 }
@@ -107,20 +105,31 @@ Rect.prototype = {
     }
 };
 
+let winInjections, workspaceInjections, connectedSignals;
 
-// Put your extension initialization code here
-function main() {
+function resetState() {
+    winInjections = { };
+    workspaceInjections = { };
+    workViewInjections = { };
+    connectedSignals = [ ];
+}
+
+function enable() {
+    resetState();
+
     let settings = new Gio.Settings({ schema: 'org.gnome.shell.extensions.native-window-placement' });
     let placementStrategy = settings.get_enum('strategy');
-    settings.connect('changed::strategy', function() {
+    let signalId = settings.connect('changed::strategy', function() {
         placementStrategy = settings.get_enum('strategy');
         // we don't update immediately, we wait for a relayout
         // (and hope for the best)
     });
+    connectedSignals.push({ obj: settings, id: signalId });
     let useMoreScreen = settings.get_boolean('use-more-screen');
-    settings.connect('changed::use-more-screen', function() {
+    signalId = settings.connect('changed::use-more-screen', function() {
         useMoreScreen = settings.get_boolean('use-more-screen');
     });
+    connectedSignals.push({ obj: settings, id: signalId });
 
     /**
      * _calculateWindowTransformationsNatural:
@@ -290,7 +299,8 @@ function main() {
         }
 
         return [clones, targets];
-    },
+    }
+    workspaceInjections['_calculateWindowTransformationsNatural'] = undefined;
 
     /**
      * _calculateWindowTransformationsGrid:
@@ -309,6 +319,7 @@ function main() {
 
         return [clones, targets];
     }
+    workspaceInjections['_calculateWindowTransformationsGrid'] = undefined;
 
     /**
      * positionWindows:
@@ -316,6 +327,7 @@ function main() {
      *  INITIAL - this is the initial positioning of the windows.
      *  ANIMATE - Indicates that we need animate changing position.
      */
+    workspaceInjections['positionWindows'] = Workspace.Workspace.prototype.positionWindows;
     Workspace.Workspace.prototype.positionWindows = function(flags) {
         if (this._repositionWindowsId > 0) {
             Mainloop.source_remove(this._repositionWindowsId);
@@ -404,6 +416,7 @@ function main() {
 
     /// position window titles on top of windows in overlay ////
     if (settings.get_boolean('window-captions-on-top'))  {
+        winInjections['_init'] = Workspace.WindowOverlay.prototype._init;
 	Workspace.WindowOverlay.prototype._init = function(windowClone, parentActor) {
             let metaWindow = windowClone.metaWindow;
 
@@ -451,11 +464,13 @@ function main() {
 		this._onStyleChanged();
 	},
 
+        winInjections['chromeHeights'] = Workspace.WindowOverlay.prototype.chromeHeights;
 	Workspace.WindowOverlay.prototype.chromeHeights = function () {
             return [Math.max( this.closeButton.height - this.closeButton._overlap, this.title.height - this.title._overlap),
 		    0];
 	},
 
+        winInjections['updatePositions'] = Workspace.WindowOverlay.prototype.updatePositions;
 	Workspace.WindowOverlay.prototype.updatePositions = function(cloneX, cloneY, cloneWidth, cloneHeight) {
             let button = this.closeButton;
             let title = this.title;
@@ -478,6 +493,7 @@ function main() {
             title.set_position(Math.floor(titleX), Math.floor(titleY));
 	},
 
+        winInjections['_onStyleChanged'] = Workspace.WindowOverlay.prototype._onStyleChanged;
 	Workspace.WindowOverlay.prototype._onStyleChanged = function() {
             let titleNode = this.title.get_theme_node();
             this.title._spacing = titleNode.get_length('-shell-caption-spacing');
@@ -491,4 +507,21 @@ function main() {
     }
 }
 
+function removeInjection(object, injection, name) {
+    if (injection[name] === undefined)
+        delete object[name];
+    else
+        object[name] = injection[name];
+}
 
+function disable() {
+    for (i in workspaceInjections)
+        removeInjections(Workspace.Workspace.prototype, workspaceInjections, i);
+    for (i in winInjections)
+        removeInjections(Workspace.WindowOverlay.prototype, winInjections, i);
+
+    for each (i in connectedSignals)
+        i.obj.disconnect(i.id);
+
+    resetState();
+}
