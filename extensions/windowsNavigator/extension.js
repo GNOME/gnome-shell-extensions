@@ -17,9 +17,22 @@ function injectToFunction(parent, name, func) {
             ret = func.apply(this, arguments);
         return ret;
     }
+    return origin;
 }
 
-function main() {
+let winInjections, workspaceInjections, workViewInjections, createdActors, connectedSignals;
+
+function resetState() {
+    winInjections = { };
+    workspaceInjections = { };
+    workViewInjections = { };
+    createdActors = [ ];
+    connectedSignals = [ ];
+}
+
+function enable() {
+    resetState();
+
     Workspace.WindowOverlay.prototype.setId = function(id) {
         if (this._text.visible && id == null)
             this._text.hide();
@@ -27,9 +40,13 @@ function main() {
         if (id != null)
             this._text.text = this._id.toString();
     }
+    winInjections['setId'] = undefined;
+
     Workspace.WindowOverlay.prototype.getId = function() {
         return this._id;
     }
+    winInjections['getId'] = undefined;
+
     Workspace.WindowOverlay.prototype.showTooltip = function() {
         if (this._id === null)
             return;
@@ -37,10 +54,13 @@ function main() {
         this._text.show();
         this._text.text = this._id.toString();
     }
+    winInjections['showTooltip'] = undefined;
+
     Workspace.WindowOverlay.prototype.hideTooltip = function() {
         if (this._text.visible)
             this._text.hide();
     }
+    winInjections['hideTooltip'] = undefined;
 
     Workspace.Workspace.prototype.showTooltip = function() {
         if (this._tip == null)
@@ -51,6 +71,8 @@ function main() {
         this._tip.show();
         this._tip.raise_top();
     }
+    workspaceInjections['showTooltip'] = undefined;
+
     Workspace.Workspace.prototype.hideTooltip = function() {
         if (this._tip == null)
             return;
@@ -58,6 +80,8 @@ function main() {
             return;
         this._tip.hide();
     }
+    workspaceInjections['hideTooltip'] = undefined;
+
     Workspace.Workspace.prototype.getWindowWithTooltip = function(id) {
         for (let i in this._windowOverlays) {
             if (this._windowOverlays[i] == null)
@@ -67,18 +91,23 @@ function main() {
         }
         return null;
     }
+    workspaceInjections['getWindowWithTooltip'] = undefined;
+
     Workspace.Workspace.prototype.showWindowsTooltips = function() {
         for (let i in this._windowOverlays) {
             if (this._windowOverlays[i] != null)
                 this._windowOverlays[i].showTooltip();
         }
     }
+    workspaceInjections['showWindowsTooltips'] = undefined;
+
     Workspace.Workspace.prototype.hideWindowsTooltips = function() {
         for (let i in this._windowOverlays) {
             if (this._windowOverlays[i] != null)
                 this._windowOverlays[i].hideTooltip();
         }
     }
+    workspaceInjections['hideWindowsTooltips'] = undefined;
 
     WorkspacesView.WorkspacesView.prototype._hideTooltips = function() {
         if (global.stage.get_key_focus() == global.stage)
@@ -87,6 +116,7 @@ function main() {
         for (let i = 0; i < this._workspaces.length; i++)
             this._workspaces[i].hideWindowsTooltips();
     }
+    workViewInjections['_hideTooltips'] = undefined;
 
     WorkspacesView.WorkspacesView.prototype._hideWorkspacesTooltips = function() {
         global.stage.set_key_focus(this._prevFocusActor);
@@ -94,6 +124,7 @@ function main() {
         for (let i = 0; i < this._workspaces.length; i++)
             this._workspaces[i].hideTooltip();
     }
+    workViewInjections['_hideWorkspacesTooltips'] = undefined;
 
     WorkspacesView.WorkspacesView.prototype._onKeyRelease = function(s, o) {
         if (this._pickWindow && o.get_key_symbol() == Clutter.KEY_Alt_L)
@@ -101,6 +132,8 @@ function main() {
         if (this._pickWorkspace && o.get_key_symbol() == Clutter.KEY_Control_L)
             this._hideWorkspacesTooltips();
     }
+    workViewInjections['_onKeyRelease'] = undefined;
+
     WorkspacesView.WorkspacesView.prototype._onKeyPress = function(s, o) {
         if (o.get_key_symbol() == Clutter.KEY_Alt_L && !this._pickWorkspace) {
             this._prevFocusActor = global.stage.get_key_focus();
@@ -158,23 +191,26 @@ function main() {
         }
         return false;
     }
+    workViewInjections['_onKeyPress'] = undefined;
 
-    injectToFunction(Workspace.WindowOverlay.prototype, '_init', function(windowClone, parentActor) {
+    winInjections['_init'] = injectToFunction(Workspace.WindowOverlay.prototype, '_init', function(windowClone, parentActor) {
         this._id = null;
-        this._text = new St.Label({ style_class: 'extension-windowsNavigator-window-tooltip' });
+        createdActors.push(this._text = new St.Label({ style_class: 'extension-windowsNavigator-window-tooltip' }));
         this._text.hide();
         parentActor.add_actor(this._text);
     });
-    injectToFunction(Workspace.WindowOverlay.prototype, 'updatePositions', function(cloneX, cloneY, cloneWidth, cloneHeight) {
+
+    winInjections['updatePositions'] = injectToFunction(Workspace.WindowOverlay.prototype, 'updatePositions', function(cloneX, cloneY, cloneWidth, cloneHeight) {
         let textX = cloneX - 2;
         let textY = cloneY - 2;
         this._text.set_position(Math.floor(textX), Math.floor(textY));
         this._text.raise_top();
     });
-    injectToFunction(Workspace.Workspace.prototype, '_init', function(metaWorkspace) {
+
+    workspaceInjections['_init'] = injectToFunction(Workspace.Workspace.prototype, '_init', function(metaWorkspace) {
         if (metaWorkspace && metaWorkspace.index() < 9) {
-            this._tip = new St.Label({ style_class: 'extension-windowsNavigator-window-tooltip',
-                                       visible: false });
+            createdActors.push(this._tip = new St.Label({ style_class: 'extension-windowsNavigator-window-tooltip',
+                                                          visible: false }));
 
             this.actor.add_actor(this._tip);
             this.actor.connect('notify::scale-x', Lang.bind(this, function() {
@@ -183,7 +219,8 @@ function main() {
         } else
             this._tip = null;
     });
-    injectToFunction(Workspace.Workspace.prototype, 'positionWindows', function(flags) {
+
+    workspaceInjections['positionWindows'] = injectToFunction(Workspace.Workspace.prototype, 'positionWindows', function(flags) {
         let visibleClones = this._windows.slice();
         if (this._reservedSlot)
             visibleClones.push(this._reservedSlot);
@@ -200,14 +237,42 @@ function main() {
         }
     });
 
-    injectToFunction(WorkspacesView.WorkspacesView.prototype, '_init', function(width, height, x, y, workspaces) {
+    workViewInjections['_init'] = injectToFunction(WorkspacesView.WorkspacesView.prototype, '_init', function(width, height, x, y, workspaces) {
         this._pickWorkspace = false;
         this._pickWindow = false;
         this._keyPressEventId = global.stage.connect('key-press-event', Lang.bind(this, this._onKeyPress));
         this._keyReleaseEventId = global.stage.connect('key-release-event', Lang.bind(this, this._onKeyRelease));
+        connectedSignals.push({ obj: global.stage, id: this._keyPressEventId });
+        connectedSignals.push({ obj: global.stage, id: this._keyReleaseEventId });
     });
-    injectToFunction(WorkspacesView.WorkspacesView.prototype, '_onDestroy', function() {
+
+    workViewInjections['_onDestroy'] = injectToFunction(WorkspacesView.WorkspacesView.prototype, '_onDestroy', function() {
         global.stage.disconnect(this._keyPressEventId);
         global.stage.disconnect(this._keyReleaseEventId);
+        connectedSignals = [ ];
     });
+}
+
+function removeInjection(object, injection, name) {
+    if (injection[name] === undefined)
+        delete object[name];
+    else
+        object[name] = injection[name];
+}
+
+function disable() {
+    for (i in workspaceInjections)
+        removeInjections(Workspace.Workspace.prototype, workspaceInjections, i);
+    for (i in winInjections)
+        removeInjections(Workspace.WindowOverlay.prototype, winInjections, i);
+    for (i in workViewInjections)
+        removeInjections(Workspaces.WorkspacesView.prototype, workViewInjections, i);
+
+    for each (i in connectedSignals)
+        i.obj.disconnect(i.id);
+
+    for each (i in createdActors)
+        i.destroy();
+
+    resetState();
 }
