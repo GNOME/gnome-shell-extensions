@@ -1,34 +1,41 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 
-const St = imports.gi.St;
-const Main = imports.ui.main;
-const PopupMenu = imports.ui.popupMenu;
-const PanelMenu = imports.ui.panelMenu;
-const Shell = imports.gi.Shell;
+const GMenu = imports.gi.GMenu;
 const Lang = imports.lang;
-const ICON_SIZE = 28;
+const Shell = imports.gi.Shell;
+const St = imports.gi.St;
 
+const Main = imports.ui.main;
+const PanelMenu = imports.ui.panelMenu;
+const PopupMenu = imports.ui.popupMenu;
+
+const Gettext = imports.gettext.domain('gnome-shell-extensions');
+const _ = Gettext.gettext;
+
+const ICON_SIZE = 28;
 let appsys = Shell.AppSystem.get_default();
 
-function AppMenuItem(appInfo,params) {
-    this._init(appInfo,params);
+function AppMenuItem() {
+    this._init.apply(this, arguments);
 }
 
 AppMenuItem.prototype = {
     __proto__: PopupMenu.PopupBaseMenuItem.prototype,
-    _init: function (appInfo, params) {
+
+    _init: function (app, params) {
         PopupMenu.PopupBaseMenuItem.prototype._init.call(this, params);
-        let app = appsys.get_app(appInfo.get_id());
-        this.label = new St.Label({ text: appInfo.get_name() });
+
+        this._app = app;
+        this.label = new St.Label({ text: app.get_name() });
         this.addActor(this.label);
         this._icon = app.create_icon_texture(ICON_SIZE);
-        this.addActor(this._icon,{expand : false});
-        this._appInfo = appInfo;
+        this.addActor(this._icon, { expand: false });
     },
-    _onButtonReleaseEvent: function (actor, event) {
-        let id = this._appInfo.get_id();
-        appsys.get_app(id).activate(-1);
-        this.activate(event);
+
+    activate: function (event) {
+        this._app.activate_full(-1, event.get_time());
+
+        PopupMenu.PopupBaseMenuItem.prototype.activate.call(this, event);
     }
 
 };
@@ -43,7 +50,7 @@ ApplicationsButton.prototype = {
     _init: function() {
         PanelMenu.SystemStatusButton.prototype._init.call(this, 'start-here');
         this._display();
-        appsys.connect('installed-changed', Lang.bind(this,this.reDisplay));
+        appsys.connect('installed-changed', Lang.bind(this, this.reDisplay));
     },
 
     reDisplay : function() {
@@ -55,41 +62,38 @@ ApplicationsButton.prototype = {
         this.menu.removeAll();
     },
 
-    _display : function() {
-        let id;
-        this.appItems = [];
-        this.categories =  appsys.get_sections();
-        for ( id = 0; id < this.categories.length; id++) {
-            this.appItems[this.categories[id]] = new PopupMenu.PopupSubMenuMenuItem(this.categories[id]);
-            this.menu.addMenuItem(this.appItems[this.categories[id]]);
-        }
-        this._addSubMenuItems();
-        for ( id = 0; id < this.categories.length; id++) {
-            let item = this.appItems[this.categories[id]];
-            if(item.menu._getMenuItems().length == 0){
-                item.actor.hide();
+    // Recursively load a GMenuTreeDirectory; we could put this in ShellAppSystem too
+    // (taken from js/ui/appDisplay.js in core shell)
+    _loadCategory: function(dir, menu) {
+        var iter = dir.iter();
+        var nextType;
+        while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
+            if (nextType == GMenu.TreeItemType.ENTRY) {
+                var entry = iter.get_entry();
+                var app = appsys.lookup_app_by_tree_entry(entry);
+                menu.addMenuItem(new AppMenuItem(app));
+            } else if (nextType == GMenu.TreeItemType.DIRECTORY) {
+                this._loadCategory(iter.get_directory(), appList);
             }
         }
     },
-    _addSubMenuItems: function() {
-        let appInfos = appsys.get_flattened_apps().filter(function(app) {
-            return !app.get_is_nodisplay();
-        });
-        for (let appid = appInfos.length-1 ; appid >= 0; appid--) {
-            let appInfo = appInfos[appid];
-            let appItem = new AppMenuItem(appInfo);
-            this.appItems[appInfo.get_section()].menu.addMenuItem(appItem);
+
+    _display : function() {
+        let tree = appsys.get_tree();
+        let root = tree.get_root_directory();
+
+        let iter = root.iter();
+        let nextType;
+        while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
+            if (nextType == GMenu.TreeItemType.DIRECTORY) {
+                let dir = iter.get_directory();
+                let item = new PopupMenu.PopupSubMenuMenuItem(dir.get_name());
+                this._loadCategory(dir, item.menu);
+                this.menu.addMenuItem(item);
+            }
         }
-    },
-    _onDestroy: function() {
-        this._clearAll();
     }
 };
-
-
-function init(metadata) {
-    // nothing to do here
-}
 
 let appsMenuButton;
 

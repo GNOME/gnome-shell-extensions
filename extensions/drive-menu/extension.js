@@ -68,8 +68,8 @@ DriveMenu.prototype = {
 	this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 	this.menu.addAction(_("Open file manager"), function(event) {
 	    let appSystem = Shell.AppSystem.get_default();
-	    let app = appSystem.get_app('nautilus.desktop');
-	    app.activate(-1);
+	    let app = appSystem.lookup_app('nautilus.desktop');
+	    app.activate_full(-1, event.get_time());
 	});
     },
 
