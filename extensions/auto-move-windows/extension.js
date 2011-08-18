@@ -25,7 +25,14 @@ WindowMover.prototype = {
 
         let display = global.screen.get_display();
         // Connect after so the handler from ShellWindowTracker has already run
-        display.connect_after('window-created', Lang.bind(this, this._findAndMove));
+        this._windowCreatedId = display.connect_after('window-created', Lang.bind(this, this._findAndMove));
+    },
+
+    destroy: function() {
+        if (this._windowCreatedId) {
+            global.screen.get_display().disconnect(this._windowCreatedId);
+            this._windowCreatedId = 0;
+        }
     },
 
     _ensureAtLeastWorkspaces: function(num, window) {
@@ -69,7 +76,15 @@ WindowMover.prototype = {
     }
 }
 
-function main(extensionMeta) {
+let prevCheckWorkspaces;
+let winMover;
+
+function init(extensionMeta) {
+    // do nothing here
+}
+
+function enable() {
+    prevCheckWorkspaces = Main._checkWorkspaces;
     Main._checkWorkspaces = function() {
         let i;
         let emptyWorkspaces = new Array(Main._workspaces.length);
@@ -138,5 +153,10 @@ function main(extensionMeta) {
 
     };
 
-    new WindowMover();
+    winMover = new WindowMover();
+}
+
+function disable() {
+    Main._checkWorkspaces = prevCheckWorkspaces;
+    winMover.destroy();
 }
