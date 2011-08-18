@@ -63,6 +63,7 @@ function createSubMenu() {
     item = new PopupMenu.PopupMenuItem(_("Lock Screen"));
     item.connect('activate', Lang.bind(this, this._onLockScreenActivate));
     this.menu.addMenuItem(item);
+    this._lockScreenItem = item;
 
     item = new PopupMenu.PopupMenuItem(_("Switch User"));
     item.connect('activate', Lang.bind(this, this._onLoginScreenActivate));
@@ -72,9 +73,11 @@ function createSubMenu() {
     item = new PopupMenu.PopupMenuItem(_("Log Out..."));
     item.connect('activate', Lang.bind(this, this._onQuitSessionActivate));
     this.menu.addMenuItem(item);
+    this._logoutItem = item;
 
     item = new PopupMenu.PopupSeparatorMenuItem();
     this.menu.addMenuItem(item);
+    this._sessionSeparator = item;
 
     item = new PopupMenu.PopupMenuItem(_("Suspend"));
     item.connect('activate', Lang.bind(this, onSuspendActivate));
@@ -96,14 +99,22 @@ function createSubMenu() {
 }
 
 // Put your extension initialization code here
-function main(metadata) {
+function init(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+}
+
+function reset(statusMenu) {
+    statusMenu._updateSwitchUser();
+    statusMenu._updateLogout();
+    statusMenu._updateLockScreen();
+    statusMenu._presence.getStatus(Lang.bind(statusMenu, statusMenu._updatePresenceIcon));
 }
 
 function enable() {
     let statusMenu = Main.panel._userMenu;
     statusMenu.menu.removeAll();
     createSubMenu.call(statusMenu);
+    reset(statusMenu);
 }
 
 function disable() {
@@ -111,4 +122,5 @@ function disable() {
     let statusMenu = Main.panel._userMenu;
     statusMenu.menu.removeAll();
     statusMenu._createSubMenu();
+    reset(statusMenu);
 }
