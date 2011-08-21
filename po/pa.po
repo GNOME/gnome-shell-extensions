@@ -103,7 +103,7 @@ msgstr ""
 "\n"
 "ਨੇਟਿਵ:\n"
 "    ਇਹ ਮੋਡ ਨੇਟਿਵ ਗਨੋਮ 3 ਰਵੱਈਆ ਹੈ ਜਾਂ ਇੰਝ ਕਹਿ ਲਵੋ: ਨੇਟਿਵ ਸਵਿੱਚਾਂ ਨੂੰ ਨਾਲ\n"
-"    Alternative Tab ਇਕਸਟੈਨਸ਼ਨ ਬੰਦ ਕਰਦਾ ਹੈ।"
+"    Alternative Tab ਇਕਸਟੈਨਸ਼ਨ ਬੰਦ ਕਰਦਾ ਹੈ।\n"
 
 #: ../extensions/alternate-tab/extension.js:269
 msgid "Alt Tab Behaviour"
