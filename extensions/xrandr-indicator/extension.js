@@ -102,7 +102,7 @@ Indicator.prototype = {
                     output.set_rotation(bitmask);
                     try {
                         config.save();
-                        this._proxy.ApplyConfigurationRemote(global.stage_xwindow, event.get_time());
+                        this._proxy.ApplyConfigurationRemote(0, event.get_time());
                     } catch (e) {
                         log ('Could not save monitor configuration: ' + e);
                     }
