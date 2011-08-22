@@ -516,12 +516,17 @@ function removeInjection(object, injection, name) {
 
 function disable() {
     for (i in workspaceInjections)
-        removeInjections(Workspace.Workspace.prototype, workspaceInjections, i);
+        removeInjection(Workspace.Workspace.prototype, workspaceInjections, i);
     for (i in winInjections)
-        removeInjections(Workspace.WindowOverlay.prototype, winInjections, i);
+        removeInjection(Workspace.WindowOverlay.prototype, winInjections, i);
 
     for each (i in connectedSignals)
         i.obj.disconnect(i.id);
 
+    global.stage.queue_relayout();
     resetState();
+}
+
+function init() {
+    /* do nothing */
 }
