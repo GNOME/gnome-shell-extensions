@@ -144,11 +144,11 @@ function init() {
 
 function enable() {
     _cpuIndicator = new CpuIndicator(); 
-    _memIndicator = new MemIndicator();
+    _memIndicator = new MemoryIndicator();
     _box = new St.BoxLayout({ style_class: 'extension-systemMonitor-container' });
-    box.add(_cpuIndicator.actor);
-    box.add(_memIndicator.actor);
-    Main.messageTray.actor.add_actor(box);
+    _box.add(_cpuIndicator.actor);
+    _box.add(_memIndicator.actor);
+    Main.messageTray.actor.add_actor(_box);
 }
 
 function disable() {
