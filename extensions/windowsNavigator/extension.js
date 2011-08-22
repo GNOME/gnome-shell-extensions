@@ -213,9 +213,10 @@ function enable() {
                                                           visible: false }));
 
             this.actor.add_actor(this._tip);
-            this.actor.connect('notify::scale-x', Lang.bind(this, function() {
+            let signalId = this.actor.connect('notify::scale-x', Lang.bind(this, function() {
                 this._tip.set_scale(1 / this.actor.scale_x, 1 / this.actor.scale_x);
             }));
+            connectedSignals.push({ obj: this.actor, id: signalId });
         } else
             this._tip = null;
     });
@@ -262,11 +263,11 @@ function removeInjection(object, injection, name) {
 
 function disable() {
     for (i in workspaceInjections)
-        removeInjections(Workspace.Workspace.prototype, workspaceInjections, i);
+        removeInjection(Workspace.Workspace.prototype, workspaceInjections, i);
     for (i in winInjections)
-        removeInjections(Workspace.WindowOverlay.prototype, winInjections, i);
+        removeInjection(Workspace.WindowOverlay.prototype, winInjections, i);
     for (i in workViewInjections)
-        removeInjections(Workspaces.WorkspacesView.prototype, workViewInjections, i);
+        removeInjection(WorkspacesView.WorkspacesView.prototype, workViewInjections, i);
 
     for each (i in connectedSignals)
         i.obj.disconnect(i.id);
@@ -275,4 +276,8 @@ function disable() {
         i.destroy();
 
     resetState();
+}
+
+function init() {
+    /* do nothing */
 }
