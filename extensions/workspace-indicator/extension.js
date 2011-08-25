@@ -97,10 +97,13 @@ function init(meta) {
     Panel.STANDARD_TRAY_ICON_ORDER.unshift('workspace-indicator');
 }
 
+let _indicator;
+
 function enable() {
-    Main.panel.addToStatusArea('workspace-indicator', new WorkspaceIndicator);
+    _indicator = new WorkspaceIndicator;
+    Main.panel.addToStatusArea('workspace-indicator', _indicator);
 }
 
 function disable() {
-    Main.panel.removeFromStatusArea('workspace-indicator');
+    _indicator.destroy();
 }

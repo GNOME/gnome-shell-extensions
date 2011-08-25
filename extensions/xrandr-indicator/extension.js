@@ -140,10 +140,13 @@ function init(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
 }
 
+let _indicator;
+
 function enable() {
-    Main.panel.addToStatusArea('display', new Indicator());
+    _indicator = new Indicator();
+    Main.panel.addToStatusArea('display', _indicator);
 }
 
 function disable() {
-    Main.panel.removeFromStatusArea('display');
+    _indicator.destroy();
 }

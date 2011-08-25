@@ -94,10 +94,13 @@ function init(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
 }
 
+let _indicator;
+
 function enable() {
-    Main.panel.addToStatusArea('drive-menu', new DriveMenu);
+    _indicator = new DriveMenu;
+    Main.panel.addToStatusArea('drive-menu', _indicator);
 }
 
 function disable() {
-    Main.panel.removeFromStatusArea('drive-menu');
+    _indicator.destroy();
 }

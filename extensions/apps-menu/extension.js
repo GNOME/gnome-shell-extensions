@@ -102,8 +102,7 @@ function enable() {
 }
 
 function disable() {
-    appsMenuButton.actor.destroy();
-    appsMenuButton.menu.destroy();
+    appsMenuButton.destroy();
 }
 
 function init() {
