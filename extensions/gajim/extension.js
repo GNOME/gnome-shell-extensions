@@ -2,6 +2,7 @@
 
 const DBus = imports.dbus;
 const Gettext = imports.gettext.domain('gnome-shell');
+const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Lang = imports.lang;
 const Signals = imports.signals;
@@ -55,6 +56,8 @@ function decode64(input) {
 }
 
 function wrappedText(text, sender, timestamp, direction) {
+    if (!timestamp)
+        timestamp = (Date.now()  / 1000);
     return {
         messageType: Tp.ChannelTextMessageType.NORMAL,
         text: text,
@@ -81,7 +84,7 @@ Source.prototype = {
         this._iconUri = null;
         this._presence = "online";
 
-        this._notification = new TelepathyClient.Notification(this);
+        this._notification = new TelepathyClient.ChatNotification(this);
         this._notification.setUrgency(MessageTray.Urgency.HIGH);
 
         let jid = author.split('/')[0];
@@ -170,6 +173,10 @@ Source.prototype = {
             this.destroy();
     },
 
+    setChatState: function(state) {
+        // Gajim DBUS API doesn't support sending chatstate yet.
+    },
+
     _messageReceived: function(emitter, data) {
         let author = data[1][0];
         let text = data[1][1];
@@ -181,10 +188,11 @@ Source.prototype = {
     },
 
     _messageSent: function(emitter, data) {
+        let recipient = data[1][0];
         let text = data[1][1];
         let chatstate = data[1][3];
 
-        if (text) {
+        if (text && (recipient == this._author)) {
             let message = wrappedText(text, this._author, null, TelepathyClient.NotificationDirection.SENT);
             this._notification.appendMessage(message, false);
         } else if (chatstate == 'gone')
@@ -271,7 +279,10 @@ GajimClient.prototype = {
 
     enable: function() {
         this._cacheDir = GLib.get_user_cache_dir() + '/gnome-shell/gajim-avatars';
-        GLib.mkdir_with_parents(this._cacheDir, 0x1c0); // 0x1c0 = octal 0700
+        let dir = Gio.file_new_for_path(this._cacheDir);
+        if (!dir.query_exists(null)) {
+            GLib.mkdir_with_parents(this._cacheDir, 0x1c0); // 0x1c0 = octal 0700
+        }
 
         this._proxy = new Gajim(DBus.session, 'org.gajim.dbus', '/org/gajim/dbus/RemoteObject');
         this._newMessageId = this._proxy.connect('NewMessage', Lang.bind(this, this._messageReceived));
