@@ -1,0 +1,144 @@
+# Chinese (Taiwan) translation for gnome-shell-extensions.
+# Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-29 19:01+0800\n"
+"PO-Revision-Date: 2011-08-29 17:16+0800\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) <chinese-l10n@googlegroups.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../extensions/alternative-status-menu/extension.js:23
+#: ../extensions/alternative-status-menu/extension.js:27
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Hibernate"
+msgstr "休眠"
+
+#: ../extensions/alternative-status-menu/extension.js:26
+#: ../extensions/alternative-status-menu/extension.js:92
+msgid "Suspend"
+msgstr "暫停"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Available"
+msgstr "有空"
+
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "Busy"
+msgstr "忙碌"
+
+#: ../extensions/alternative-status-menu/extension.js:65
+msgid "My Account"
+msgstr "我的帳號"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "System Settings"
+msgstr "系統設定值"
+
+#: ../extensions/alternative-status-menu/extension.js:76
+msgid "Lock Screen"
+msgstr "鎖定畫面"
+
+#: ../extensions/alternative-status-menu/extension.js:80
+msgid "Switch User"
+msgstr "切換使用者"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Log Out..."
+msgstr "登出..."
+
+#: ../extensions/alternative-status-menu/extension.js:100
+msgid "Power Off..."
+msgstr "關閉電源..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"字串的清單，每個都包含一個應用程式 id (桌面檔名稱)，後面接著半形分號 \";\" 與"
+"工作區號碼"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "應用程式與工作區清單"
+
+#: ../extensions/dock/extension.js:116
+msgid "Drag here to add favorites"
+msgstr "拖曳至此處以加入喜好"
+
+#: ../extensions/dock/extension.js:417
+msgid "New Window"
+msgstr "新視窗"
+
+#: ../extensions/dock/extension.js:419
+msgid "Quit Application"
+msgstr "退出應用程式"
+
+#: ../extensions/dock/extension.js:424
+msgid "Remove from Favorites"
+msgstr "自喜好移除"
+
+#: ../extensions/dock/extension.js:425
+msgid "Add to Favorites"
+msgstr "加入喜好"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "你好，世界！"
+
+#: ../extensions/gajim/extension.js:219
+#, c-format
+msgid "%s is away."
+msgstr "%s 已離開。"
+
+#: ../extensions/gajim/extension.js:222
+#, c-format
+msgid "%s is offline."
+msgstr "%s 現在離線。"
+
+#: ../extensions/gajim/extension.js:225
+#, c-format
+msgid "%s is online."
+msgstr "%s 現在上線。"
+
+#: ../extensions/gajim/extension.js:228
+#, c-format
+msgid "%s is busy."
+msgstr "%s 正忙碌。"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "主題的名稱，要從 ~/.themes/name/gnome-shell 載入"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "主題名稱"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "一般"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "左"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "右"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "上下顛倒"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "設定顯示器設定值..."
