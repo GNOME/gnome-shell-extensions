@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-16 23:04+0200\n"
-"PO-Revision-Date: 2011-08-16 23:18+0200\n"
+"POT-Creation-Date: 2011-08-30 17:01+0200\n"
+"PO-Revision-Date: 2011-08-30 17:04+0200\n"
 "Last-Translator: Fran Diéguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
 "Language: gl\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../extensions/alternative-status-menu/extension.js:39
 msgid "Available"
-msgstr "Dispoñíbel"
+msgstr "Dispoñible"
 
 #: ../extensions/alternative-status-menu/extension.js:44
 msgid "Busy"
@@ -28,33 +28,33 @@ msgstr "Ocupado"
 
 #: ../extensions/alternative-status-menu/extension.js:52
 msgid "My Account"
-msgstr "A miña conta"
+msgstr "A Miña Conta"
 
 #: ../extensions/alternative-status-menu/extension.js:56
 msgid "System Settings"
-msgstr "Opcións do sistema"
+msgstr "Configuracións do sistema"
 
 #: ../extensions/alternative-status-menu/extension.js:63
 msgid "Lock Screen"
-msgstr "Bloquear pantalla"
+msgstr "Bloquear Pantaia"
 
-#: ../extensions/alternative-status-menu/extension.js:67
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Switch User"
-msgstr "Cambiar de usuario"
+msgstr "Trocar de Usario"
 
-#: ../extensions/alternative-status-menu/extension.js:72
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Log Out..."
-msgstr "Saír da sesión…"
+msgstr "Sair da sesión"
 
-#: ../extensions/alternative-status-menu/extension.js:79
+#: ../extensions/alternative-status-menu/extension.js:82
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../extensions/alternative-status-menu/extension.js:85
+#: ../extensions/alternative-status-menu/extension.js:88
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:91
+#: ../extensions/alternative-status-menu/extension.js:94
 msgid "Power Off..."
 msgstr "Apagar…"
 
@@ -83,28 +83,28 @@ msgid ""
 "    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
 "    native switches the Alternate Tab extension off. \n"
 msgstr ""
-"É a primeira vez que usa a extensión de Tab alternativo.\n"
+"É a primeira vez que usa a extensión de Tab alternativo.\n"
 "Seleccione o comportamento prefirido:\n"
 "\n"
 "Todo e miniaturas:\n"
-"    Este modo mostra tódolos aplicativos de tódolos espazos de traballa "
+"    Este modo mostra tódolos aplicativos de tódolos espazos de traballa "
 "nunha\n"
-"    lista de selección. No lugar de usar as iconas de aplicativos para cada\n"
+"    lista de selección. No lugar de usar as iconas de aplicativos para cada\n"
 "    xanela, usa miniaturas pequenas que representan as xanelas.\n"
 "\n"
 "Espazos de traballo e iconas:\n"
-"    Este modo permítelle cambiar entre os aplicativos do seu espazo de "
+"    Este modo permítelle cambiar entre os aplicativos do seu espazo de "
 "traballo \n"
-"    actual e permítelle engadir a opción de cambiar entre o último "
+"    actual e permítelle engadir a opción de cambiar entre o último "
 "aplicativo\n"
-"    usado do seu espazo de traballo anterior. Sempre é o último símbolo na\n"
-"    lista e está separado por unha liña separador/vertical se está "
-"dispoñíbel.\n"
-"    Cada xanela está representada pola icona do aplicativo.\n"
+"    usado do seu espazo de traballo anterior. Sempre é o último símbolo na\n"
+"    lista e está separado por unha liña separador/vertical se está "
+"dispoñíbel.\n"
+"    Cada xanela está representada pola icona do aplicativo.\n"
 "\n"
 "Nativo:\n"
-"    Este modo é o comportamento nativo de GNOME 3 ou noutras palabras: ao \n"
-"    seleccionar nativo desactiva a extensión Tab alternativo.\n"
+"    Este modo é o comportamento nativo de GNOME 3 ou noutras palabras: ao \n"
+"    seleccionar nativo desactiva a extensión Tab alternativo.\n"
 
 #: ../extensions/alternate-tab/extension.js:269
 msgid "Alt Tab Behaviour"
@@ -128,18 +128,18 @@ msgstr "Cancelar"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "Ask the user for a default behaviour if true."
-msgstr "Preguntarlle o comportamento predeterminado ao usuario se é certo."
+msgstr "Preguntarlle o comportamento predeterminado ao usuario se é certo."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid "Indicates if Alternate Tab is newly installed"
-msgstr "Indica se o Tab alternativo está instalado recentemente"
+msgstr "Indica se o Tab alternativo está instalado recentemente"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
 msgid ""
 "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
 "workspace_icons."
 msgstr ""
-"Estabelece o comportamento do Alt-Tab. Os valores posíbeis son: nativa, "
+"Estabelece o comportamento do Alt-Tab. Os valores posíbeis son: nativa, "
 "all_thumbnaisl e worspace_icons."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
@@ -158,29 +158,29 @@ msgstr ""
 msgid "Application and workspace list"
 msgstr "Lista de aplicativos e espazos de traballo"
 
-#: ../extensions/dock/extension.js:437
+#: ../extensions/dock/extension.js:486
 msgid "Drag here to add favorites"
 msgstr "Arrastre aquí para engadir aos favoritos"
 
-#: ../extensions/dock/extension.js:771
+#: ../extensions/dock/extension.js:820
 msgid "New Window"
 msgstr "Nova xanela"
 
-#: ../extensions/dock/extension.js:773
+#: ../extensions/dock/extension.js:822
 msgid "Quit Application"
 msgstr "Saír do aplicativo"
 
-#: ../extensions/dock/extension.js:778
+#: ../extensions/dock/extension.js:827
 msgid "Remove from Favorites"
 msgstr "Eliminar dos favoritos"
 
-#: ../extensions/dock/extension.js:779
+#: ../extensions/dock/extension.js:828
 msgid "Add to Favorites"
 msgstr "Engadir aos favoritos"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
 msgid "Autohide duration"
-msgstr "Duración do autoagochado"
+msgstr "Duración do autoagochado"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
 msgid "Autohide effect"
@@ -192,15 +192,15 @@ msgstr "Activar/desactivar autoagochado"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
 msgid "Icon size"
-msgstr "Tamaño das iconas"
+msgstr "Tamaño da icona"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
-msgstr "Posición da doca"
+msgstr "Posición da doca"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
 msgid "Sets icon size of the dock."
-msgstr "Estabelece o tamaño das iconas na doca."
+msgstr "Estabelece o tamaño das iconas na doca."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
 msgid ""
@@ -214,12 +214,12 @@ msgid ""
 "Sets the position of the dock in the screen. Allowed values are 'right' or "
 "'left'"
 msgstr ""
-"Estabelece a posición da doca na pantalla. Os valores permitidos son «right» "
+"Estabelece a posición da doca na pantalla. Os valores permitidos son «right» "
 "e «left»"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
-msgstr "Estabelece a duración do efecto de autoagochado."
+msgstr "Estabelece a duración do efecto de autoagochado."
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
@@ -262,9 +262,9 @@ msgid ""
 "default grid based algorithm, 'natural' to use another one that reflects "
 "more the position and size of the actual window"
 msgstr ""
-"O algoritmo usado pola disposición de miniaturas na vista previa. «grid» "
+"O algoritmo usado pola disposición de miniaturas na vista previa. «grid» "
 "para usar o algoritmo predeterminado baseado na grella, «natural» para usar "
-"outro que reflexa máis a posición e tamaño da xanela actual"
+"outro que reflexa máis a posición e tamaño da xanela actual"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
@@ -272,17 +272,17 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"Tente usar máis pantalla para dispor as miniaturas das xanelas adaptándose á "
+"Tente usar máis pantalla para dispor as miniaturas das xanelas adaptándose á "
 "taxa de aspecto da pantalla e consolidalas para reducir a caixa saltante. "
-"Esta configuración aplícase só para a estratexia de disposición natural."
+"Esta configuración aplícase só para a estratexia de disposición natural."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
 msgid "Use more screen for windows"
-msgstr "Usar máis pantalla para as xanelas"
+msgstr "Usar máis pantalla para as xanelas"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
 msgid "Window placement strategy"
-msgstr "Estratexia de disposición de xanelas"
+msgstr "Estratexia de disposición de xanelas"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
@@ -310,4 +310,4 @@ msgstr "Co de arriba cara abaixo"
 
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
-msgstr "Configurar as configuracións de pantalla..."
+msgstr "Configurar as configuracións de pantalla…"
