@@ -5,6 +5,7 @@ const St = imports.gi.St;
 const Main = imports.ui.main;
 const PopupMenu = imports.ui.popupMenu;
 const GnomeSession = imports.misc.gnomeSession;
+const UserMenu = imports.ui.userMenu;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
@@ -36,21 +37,20 @@ function onHibernateActivate(item) {
 function createSubMenu() {
     let item;
 
-    item = new PopupMenu.PopupImageMenuItem(_("Available"), 'user-available');
-    item.connect('activate', Lang.bind(this, this._setPresenceStatus, GnomeSession.PresenceStatus.AVAILABLE));
+    item = new UserMenu.IMStatusChooserItem();
+    item.connect('activate', Lang.bind(this, this._onMyAccountActivate));
     this.menu.addMenuItem(item);
-    this._presenceItems[GnomeSession.PresenceStatus.AVAILABLE] = item;
 
-    item = new PopupMenu.PopupImageMenuItem(_("Busy"), 'user-busy');
-    item.connect('activate', Lang.bind(this, this._setPresenceStatus, GnomeSession.PresenceStatus.BUSY));
+    item = new PopupMenu.PopupSwitchMenuItem(_("Do Not Disturb"));
+    item.connect('activate', Lang.bind(this, this._updatePresenceStatus));
     this.menu.addMenuItem(item);
-    this._presenceItems[GnomeSession.PresenceStatus.BUSY] = item;
+    this._dontDisturbSwitch = item;
 
     item = new PopupMenu.PopupSeparatorMenuItem();
     this.menu.addMenuItem(item);
 
-    item = new PopupMenu.PopupMenuItem(_("My Account"));
-    item.connect('activate', Lang.bind(this, this._onMyAccountActivate));
+    item = new PopupMenu.PopupMenuItem(_("Online Accounts"));
+    item.connect('activate', Lang.bind(this, this._onOnlineAccountsActivate));
     this.menu.addMenuItem(item);
 
     item = new PopupMenu.PopupMenuItem(_("System Settings"));
@@ -77,7 +77,6 @@ function createSubMenu() {
 
     item = new PopupMenu.PopupSeparatorMenuItem();
     this.menu.addMenuItem(item);
-    this._sessionSeparator = item;
 
     item = new PopupMenu.PopupMenuItem(_("Suspend"));
     item.connect('activate', Lang.bind(this, onSuspendActivate));
