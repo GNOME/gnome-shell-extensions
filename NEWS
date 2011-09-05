@@ -1,3 +1,11 @@
+3.1.90
+======
+* All extensions have been ported to the new extension
+  system (including live enable/disable)
+* Updated translations
+* xrandr-indicator no longer requires a specific gjs version
+* windowsNavigator fixed for more than 2 workspaces
+
 3.1.4
 =====
 
