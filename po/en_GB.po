@@ -1,0 +1,309 @@
+# British English translation of gnome-shell-extensions.
+# Copyright (C) 2011 gnome-shell-extensions'S COPYRIGHT HOLDER.
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Bruce Cowan <bruce@bcowan.me.uk>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-08 16:00+0100\n"
+"PO-Revision-Date: 2011-09-08 16:04+0100\n"
+"Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
+"Language-Team: British English <en@li.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1-beta1\n"
+
+#: ../extensions/alternative-status-menu/extension.js:44
+msgid "Do Not Disturb"
+msgstr "Do Not Disturb"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Online Accounts"
+msgstr "Online Accounts"
+
+#: ../extensions/alternative-status-menu/extension.js:56
+msgid "System Settings"
+msgstr "System Settings"
+
+#: ../extensions/alternative-status-menu/extension.js:63
+msgid "Lock Screen"
+msgstr "Lock Screen"
+
+#: ../extensions/alternative-status-menu/extension.js:68
+msgid "Switch User"
+msgstr "Switch User"
+
+#: ../extensions/alternative-status-menu/extension.js:73
+msgid "Log Out..."
+msgstr "Log Out…"
+
+#: ../extensions/alternative-status-menu/extension.js:81
+msgid "Suspend"
+msgstr "Suspend"
+
+#: ../extensions/alternative-status-menu/extension.js:87
+msgid "Hibernate"
+msgstr "Hibernate"
+
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Power Off..."
+msgstr "Power Off…"
+
+#: ../extensions/alternate-tab/extension.js:44
+msgid ""
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one "
+"selection \n"
+"    list. Instead of using the application icon of every window, it uses "
+"small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode let's you switch between the applications of your current \n"
+"    workspace and gives you additionally the option to switch to the last "
+"used \n"
+"    application of your previous workspace. This is always the last symbol "
+"in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"Native:\n"
+"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
+"    native switches the Alternate Tab extension off. \n"
+msgstr ""
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one selection "
+"    list. Instead of using the application icon of every window, it uses "
+"small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode lets you switch between the applications of your current \n"
+"    workspace and additionally gives you the option to switch to the last "
+"used \n"
+"    application of your previous workspace. This is always the last symbol "
+"in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"Native:\n"
+"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
+"    native switches the Alternate Tab extension off. \n"
+
+#: ../extensions/alternate-tab/extension.js:269
+msgid "Alt Tab Behaviour"
+msgstr "Alt Tab Behaviour"
+
+#: ../extensions/alternate-tab/extension.js:285
+msgid "All & Thumbnails"
+msgstr "All & Thumbnails"
+
+#: ../extensions/alternate-tab/extension.js:292
+msgid "Workspace & Icons"
+msgstr "Workspace & Icons"
+
+#: ../extensions/alternate-tab/extension.js:299
+msgid "Native"
+msgstr "Native"
+
+#: ../extensions/alternate-tab/extension.js:306
+msgid "Cancel"
+msgstr "Cancel"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "Ask the user for a default behaviour if true."
+msgstr "Ask the user for a default behaviour if true."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid "Indicates if Alternate Tab is newly installed"
+msgstr "Indicates if Alternate Tab is newly installed"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
+"workspace_icons."
+msgstr ""
+"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
+"workspace_icons."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
+msgid "The alt tab behaviour."
+msgstr "The alt tab behaviour."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "Application and workspace list"
+
+#: ../extensions/dock/extension.js:486
+msgid "Drag here to add favorites"
+msgstr "Drag here to add favourites"
+
+#: ../extensions/dock/extension.js:820
+msgid "New Window"
+msgstr "New Window"
+
+#: ../extensions/dock/extension.js:822
+msgid "Quit Application"
+msgstr "Quit Application"
+
+#: ../extensions/dock/extension.js:827
+msgid "Remove from Favorites"
+msgstr "Remove from Favourites"
+
+#: ../extensions/dock/extension.js:828
+msgid "Add to Favorites"
+msgstr "Add to Favourites"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Autohide duration"
+msgstr "Autohide duration"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Autohide effect"
+msgstr "Autohide effect"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Enable/disable autohide"
+msgstr "Enable/disable autohide"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Icon size"
+msgstr "Icon size"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Position of the dock"
+msgstr "Position of the dock"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Sets icon size of the dock."
+msgstr "Sets icon size of the dock."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+msgstr ""
+"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr "Sets the time duration of the autohide effect."
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Hello, world!"
+
+#: ../extensions/gajim/extension.js:227
+#, c-format
+msgid "%s is away."
+msgstr "%s is away."
+
+#: ../extensions/gajim/extension.js:230
+#, c-format
+msgid "%s is offline."
+msgstr "%s is offline."
+
+#: ../extensions/gajim/extension.js:233
+#, c-format
+msgid "%s is online."
+msgstr "%s is online."
+
+#: ../extensions/gajim/extension.js:236
+#, c-format
+msgid "%s is busy."
+msgstr "%s is busy."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Place window captions on top"
+msgstr "Place window captions on top"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid ""
+"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
+"default grid based algorithm, 'natural' to use another one that reflects "
+"more the position and size of the actual window"
+msgstr ""
+"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
+"default grid based algorithm, 'natural' to use another one that reflects "
+"more the position and size of the actual window"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+msgid "Use more screen for windows"
+msgstr "Use more screen for windows"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
+msgid "Window placement strategy"
+msgstr "Window placement strategy"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Theme name"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normal"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Left"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Right"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "Upside-down"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Configure display settings…"
