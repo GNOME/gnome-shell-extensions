@@ -41,10 +41,10 @@ function createSubMenu() {
     item.connect('activate', Lang.bind(this, this._onMyAccountActivate));
     this.menu.addMenuItem(item);
 
-    item = new PopupMenu.PopupSwitchMenuItem(_("Do Not Disturb"));
+    item = new PopupMenu.PopupSwitchMenuItem(_("Notifications"));
     item.connect('activate', Lang.bind(this, this._updatePresenceStatus));
     this.menu.addMenuItem(item);
-    this._dontDisturbSwitch = item;
+    this._notificationsSwitch = item;
 
     item = new PopupMenu.PopupSeparatorMenuItem();
     this.menu.addMenuItem(item);
@@ -106,7 +106,11 @@ function reset(statusMenu) {
     statusMenu._updateSwitchUser();
     statusMenu._updateLogout();
     statusMenu._updateLockScreen();
-    statusMenu._presence.getStatus(Lang.bind(statusMenu, statusMenu._updatePresenceIcon));
+
+    statusMenu._presence.getStatus(Lang.bind(statusMenu, statusMenu._updateSwitch));
+
+    // HACK! Obtain the IMStatusChooserItem and force a _updateUser
+    statusMenu.menu._getMenuItems()[0]._updateUser();
 }
 
 function enable() {
