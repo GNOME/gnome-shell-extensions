@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-09-09 20:38+0000\n"
-"PO-Revision-Date: 2011-09-17 11:54+0100\n"
+"POT-Creation-Date: 2011-09-17 09:54+0000\n"
+"PO-Revision-Date: 2011-09-17 17:14+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -77,21 +77,36 @@ msgid ""
 "    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
 "    native switches the Alternate Tab extension off. \n"
 msgstr ""
+"To je prvi zagon razširitve Alternate Tab. \n"
+"Izberite prednostno obnašanje:\n"
+"\n"
+"Vse in sličice:\n"
+"    Ta način prikazuje vse programe vseh delovnih površin ne enem izbirnem\n"
+"    seznamu. Namesto ikon programa vsakega okna, uporablja male sličice,\n"
+"    ki so enake samemu oknu. \n"
+"\n"
+"Delovne površine in ikone:\n"
+"    Ta način omogoča preklop med programi trenutne delovne površine in tudi \n"
+"    možnost za preklapljanje na zadnje uporabljen program predhodne delovne\n"
+"     površine. Ta je vedno zadnji simbol na seznamu in je ločen z ločilnikom ali pa \n"
+"    vodoravno črto. \n"
+"    Vsako okno je prikazano z ikono programa.  \n"
+"\n"
+"Lastni:\n"
+"    Ta način je lasten načinu obnašanja namizja GNOME 3: Izbor te možnosti \n"
+"    onemogoči razširitev Alternate Tab. \n"
 
 #: ../extensions/alternate-tab/extension.js:269
-#, fuzzy
 msgid "Alt Tab Behaviour"
-msgstr "Preklopnik oken Alt-Tab"
+msgstr "Obnašanje tipk Alt-Tab"
 
 #: ../extensions/alternate-tab/extension.js:285
-#, fuzzy
 msgid "All & Thumbnails"
-msgstr "Posodabljanje sličic"
+msgstr "Vse in sličice"
 
 #: ../extensions/alternate-tab/extension.js:292
-#, fuzzy
 msgid "Workspace & Icons"
-msgstr "Le ikone"
+msgstr "Delovne površine in ikone"
 
 #: ../extensions/alternate-tab/extension.js:299
 msgid "Native"
@@ -103,20 +118,19 @@ msgstr "Prekliči"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "Ask the user for a default behaviour if true."
-msgstr ""
+msgstr "Izbrana možnost omogoči vprašanje uporabniku za izbiro privzetega obnašanja."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid "Indicates if Alternate Tab is newly installed"
-msgstr ""
+msgstr "Določa ali je vstavek Alternate Tab nameščen."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
 msgid "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and workspace_icons."
-msgstr ""
+msgstr "Določi obnašanje tipk Alt-Tab. Mogoče vrednosti so: lastno, vse_sličice in ikone_delovne_površine."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
-#, fuzzy
 msgid "The alt tab behaviour."
-msgstr "Preklopnik oken Alt-Tab"
+msgstr "Obnašanje tipk Alt-Tab"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
@@ -163,26 +177,24 @@ msgid "Icon size"
 msgstr "Velikost ikone"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-#, fuzzy
 msgid "Position of the dock"
-msgstr "Xlib dock"
+msgstr "Postavitev sidrišča"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-#, fuzzy
 msgid "Sets icon size of the dock."
-msgstr "Velikost ikone, ki jo želite uporabiti."
+msgstr "Določi velikost ikon sidrišča."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
 msgid "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgstr ""
+msgstr "Določi učinek skrivanja sidrišča. Dovoljeni vrednosti sta 'spremeni velikost' ali 'prilagodi velikost'"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
-msgstr ""
+msgstr "Določi položaj sidrišča na zaslonu. Dovoljeni vrednosti sta 'desno' ali 'levo'."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
-msgstr ""
+msgstr "Določi trajanje učinka samodejnega skrivanja."
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
@@ -210,30 +222,27 @@ msgstr "%s je zaseden."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
-msgstr ""
+msgstr "Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice in s tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba lupino ponovno zagnati."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-#, fuzzy
 msgid "Place window captions on top"
-msgstr "Postavi okno vedno v ospredje"
+msgstr "Postavi nazive oken na vrh"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "The algorithm used to layout thumbnails in the overview. 'grid' to use the default grid based algorithm, 'natural' to use another one that reflects more the position and size of the actual window"
-msgstr ""
+msgstr "Algoritem, ki je uporabljen kot razporeditev sličic v pregledu oken. Možnost 'mreža' omogoči uporabo privzetega algoritma mrežne postavitve, možnost 'naravno' pa omogoči uporabo položaja in velikosti dejanskega okna, ki ga predstavlja sličica."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
-msgstr ""
+msgstr "Poskusi uporabiti več zaslona za postavitev sličic oken s prilagajanjem razmerja velikosti zaslona in prilagajanjem postavitve okvirja. Nastavitev je mogoče uporabiti le z naravnim načinom postavitve okna."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
-#, fuzzy
 msgid "Use more screen for windows"
-msgstr "Uporabi enako razporeditev v vseh oknih"
+msgstr "Uporabi več zaslona za okna"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-#, fuzzy
 msgid "Window placement strategy"
-msgstr "Nastavi postavitev okna"
+msgstr "Način postavitve okna"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
