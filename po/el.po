@@ -1,0 +1,323 @@
+# Greek translation for gnome-shell-extensions.
+# Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# ioza1964 <ioza1964@yahoo.gr>, 2011.
+# Ιωάννης Ζαμπούκας <ioza1964@yahoo.gr>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2011-09-17 15:20+0000\n"
+"PO-Revision-Date: 2011-09-18 14:34+0300\n"
+"Last-Translator: Ιωάννης Ζαμπούκας <ioza1964@yahoo.gr>\n"
+"Language-Team: Greek <team@gnome.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: ../extensions/alternative-status-menu/extension.js:44
+msgid "Notifications"
+msgstr "Ειδοποιήσεις"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Online Accounts"
+msgstr "Λογαριασμοί άμεσης επικοινωνίας"
+
+#: ../extensions/alternative-status-menu/extension.js:56
+msgid "System Settings"
+msgstr "Ρυθμίσεις συστήματος"
+
+#: ../extensions/alternative-status-menu/extension.js:63
+msgid "Lock Screen"
+msgstr "Κλείδωμα οθόνης"
+
+#: ../extensions/alternative-status-menu/extension.js:68
+msgid "Switch User"
+msgstr "Αλλαγή χρήστη"
+
+#: ../extensions/alternative-status-menu/extension.js:73
+msgid "Log Out..."
+msgstr "Αποσύνδεση..."
+
+#: ../extensions/alternative-status-menu/extension.js:81
+msgid "Suspend"
+msgstr "Αναστολή"
+
+#: ../extensions/alternative-status-menu/extension.js:87
+msgid "Hibernate"
+msgstr "Αδρανοποίηση"
+
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Power Off..."
+msgstr "Σβήσιμο..."
+
+#: ../extensions/alternate-tab/extension.js:44
+msgid ""
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one "
+"selection \n"
+"    list. Instead of using the application icon of every window, it uses "
+"small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode let's you switch between the applications of your current \n"
+"    workspace and gives you additionally the option to switch to the last "
+"used \n"
+"    application of your previous workspace. This is always the last symbol "
+"in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"Native:\n"
+"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
+"    native switches the Alternate Tab extension off. \n"
+msgstr ""
+"Αυτή είναι η πρώτη φορά που χρησιμοποιήσατε την εναλλακτική επέκταση "
+"στηλοθέτη. \n"
+"Παρακαλούμε επιλέξτε την συμπεριφορά που επιθυμείτε εσείς:\n"
+"\n"
+"Όλα & μικρογραφίες:\n"
+"    Αυτή η κατάσταση εμφανίζει όλες τις εφαρμογές από όλους τους χώρους "
+"εργασίας σε μια επιλογή \n"
+"    λίστα. Αντί να χρησιμοποιεί το εικονίδιο της εφαρμογής από κάθε "
+"παράθυρο, χρησιμοποιεί μικρές \n"
+"    μικρογραφίες που μοιάζουν με το ίδιο το παράθυρο. \n"
+"\n"
+"Χώρος εργασίας & εικονίδια:\n"
+"    Αυτή η λειτουργία σας επιτρέπει να κάνετε εναλλαγή μεταξύ των εφαρμογών "
+"του τρέχοντος \n"
+"    χώρου εργασίας σας και σας δίνει επιπλέον τη δυνατότητα να μεταβείτε "
+"στην τελευταία χρησιμοποιημένη \n"
+"    εφαρμογή του προηγούμενου χώρου εργασίας σας. Αυτό είναι πάντα το "
+"τελευταίο σύμβολο στη \n"
+"    λίστα και είναι απομονωμένο από ένα διαχωριστικό/κάθετη γραμμή, εάν "
+"υπάρχει. \n"
+"    Κάθε παράθυρο αντιπροσωπεύεται από εικονίδιο της εφαρμογής της.  \n"
+"\n"
+"Μητρική:\n"
+"    Αυτή η λειτουργία είναι η μητρική συμπεριφορά του GNOME 3 ή με άλλα "
+"λόγια: Αν κάνετε κλικ \n"
+"    στο μητρική θέτει εκτός λειτουργίας την εναλλακτική επέκταση "
+"στηλοθέτη. \n"
+
+#: ../extensions/alternate-tab/extension.js:269
+msgid "Alt Tab Behaviour"
+msgstr "Συμπεριφορά Alt Tab"
+
+#: ../extensions/alternate-tab/extension.js:285
+msgid "All & Thumbnails"
+msgstr "Όλα & μικρογραφίες"
+
+#: ../extensions/alternate-tab/extension.js:292
+msgid "Workspace & Icons"
+msgstr "Χώρος εργασίας & εικονίδια"
+
+#: ../extensions/alternate-tab/extension.js:299
+msgid "Native"
+msgstr "Μητρική"
+
+#: ../extensions/alternate-tab/extension.js:306
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "Ask the user for a default behaviour if true."
+msgstr "Ρωτήστε τον χρήστη για μια προεπιλεγμένη συμπεριφορα εαν αληθεύει."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid "Indicates if Alternate Tab is newly installed"
+msgstr "Υποδεικνύει αν ο εναλλακτικός στηλοθέτης είναι νεοεισαχθείς"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
+"workspace_icons."
+msgstr ""
+"Ρυθμίζει την συμπεριφορά του Alt Tab. Πιθανές τιμές είναι οι εξής: μητρική, "
+"όλες_μικρογραφίες και εικονίδια_χώρου εργασίας."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
+msgid "The alt tab behaviour."
+msgstr "Η συμπεριφορά alt tab."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Μια λίστα συμβολοσειρών, που η καθεμία περιέχει ένα αναγνωριστικό εφαρμογής "
+"(όνομα αρχείου επιφάνειας εργασίας), ακολουθούμενη από άνω και κάτω τελεία "
+"και τον αριθμό του χώρου εργασίας"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr "Λίστα εφαρμογής και χώρου εργασίας"
+
+#: ../extensions/dock/extension.js:486
+msgid "Drag here to add favorites"
+msgstr "Σύρετε εδώ για να προσθέσετε αγαπημένα"
+
+#: ../extensions/dock/extension.js:820
+msgid "New Window"
+msgstr "Νέο παράθυρο"
+
+#: ../extensions/dock/extension.js:822
+msgid "Quit Application"
+msgstr "Εγκατάλειψη εφαρμογής"
+
+#: ../extensions/dock/extension.js:827
+msgid "Remove from Favorites"
+msgstr "Απομάκρυνση από τα αγαπημένα"
+
+#: ../extensions/dock/extension.js:828
+msgid "Add to Favorites"
+msgstr "Προσθήκη στα αγαπημένα"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Autohide duration"
+msgstr "Διάρκεια αυτόματης απόκρυψης"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Autohide effect"
+msgstr "Εφέ αυτόματης απόκρυψης"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Enable/disable autohide"
+msgstr "Ενεργοποίηση/απενεργοποίηση αυτόματης απόκρυψης"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Icon size"
+msgstr "Μέγεθος εικονιδίου"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Position of the dock"
+msgstr "Θέση υποδοχέα"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Sets icon size of the dock."
+msgstr "Ρυθμίζει το μέγεθος εικόνας του υποδοχέα."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+msgstr ""
+"Ρυθμίζειτην επίδραση κρυψίματος του υποδοχέα. Επιτρεπόμενες τιμές είναι "
+"«αλλαγή μεγέθους» ή «αλλαγή κλίμακας»"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"Ρυθμίζει τη θέση του υποδοχέα στην οθόνη. Επιτρεπόμενες τιμές είναι «δεξιά» "
+"ή «αριστερά»"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr "Ρυθμίζει την χρονική διάρκεια του εφέ αυτόματης απόκρυψης."
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Καλημέρα, Κόσμε!"
+
+#: ../extensions/gajim/extension.js:227
+#, c-format
+msgid "%s is away."
+msgstr "%s είναι εκτός."
+
+#: ../extensions/gajim/extension.js:230
+#, c-format
+msgid "%s is offline."
+msgstr "%s είναι εκτός σύνδεσης"
+
+#: ../extensions/gajim/extension.js:233
+#, c-format
+msgid "%s is online."
+msgstr "%s είναι σε σύνδεση"
+
+#: ../extensions/gajim/extension.js:236
+#, c-format
+msgid "%s is busy."
+msgstr "%s είναι απασχολημένος"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Αν αυτό αληθεύει, τοποθετήστε τους τίτλους παράθυρου στην κορυφή της "
+"αντίστοιχης μικρογραφίας, παρακάμπτοντας το προεπιλεγμένο του κελύφους πού "
+"το τοποθετεί στο κάτω μέρος. Η αλλαγή αυτής της ρύθμισης απαιτεί "
+"επανεκκίνηση του κέλυφους για να έχει κάποιο αποτέλεσμα."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Place window captions on top"
+msgstr "Τοποθετήστε τίτλους παράθυρου στην κορυφή"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid ""
+"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
+"default grid based algorithm, 'natural' to use another one that reflects "
+"more the position and size of the actual window"
+msgstr ""
+"Ο αλγόριθμος που χρησιμοποιείται για την διάταξη μικρογραφιών στην "
+"επισκόπηση. «πλέγμα» να χρησιμοποιήσει τον αλγόριθμο που βασίζετε στο "
+"προεπιλεγμένο πλέγμα, «φυσικό» να χρησιμοποιήσει ένα άλλο που αντανακλά "
+"περισσότερο τη θέση και το μέγεθος της πραγματικού παράθυρου"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Προσπαθήστε να χρησιμοποιήσετε περισσότερη οθόνη για την τοποθέτηση "
+"μικρογραφιών παραθύρου προσαρμόζοντας τον λόγο διαστάσεων οθόνης, και "
+"εδραιώνοντας τους περαιτέρω για να μειώσετε το πλαίσιο οριοθέτησης. Αυτή η "
+"ρύθμιση ισχύει μόνο με την στρατηγική φυσικής τοποθέτησης."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+msgid "Use more screen for windows"
+msgstr "Χρησιμοποιήστε περισσότερη οθόνη για τα παράθυρα"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
+msgid "Window placement strategy"
+msgstr "Στρατηγική τοποθέτησης παραθύρου"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr ""
+"Το όνομα του θέματος, για να φορτωθεί από το αρχείο ~ / .themes / name / "
+"gnome-shell"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Όνομα θέματος"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Κανονικό"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Αριστερά"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Δεξιά"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "Αναποδογύρισμα"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+msgid "Configure display settings..."
+msgstr "Διαμορφώστε τις ρυθμίσεις της οθόνης..."
