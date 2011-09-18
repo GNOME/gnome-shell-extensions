@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../extensions/alternative-status-menu/extension.js:44
 msgid "Notifications"
-msgstr "Ειδοποιήσεις"
+msgstr "Ειδοποιήσεις"
 
 #: ../extensions/alternative-status-menu/extension.js:52
 msgid "Online Accounts"
-msgstr "Λογαριασμοί άμεσης επικοινωνίας"
+msgstr "Λογαριασμοί διαδικτύου"
 
 #: ../extensions/alternative-status-menu/extension.js:56
 msgid "System Settings"
@@ -32,27 +32,27 @@ msgstr "Ρυθμίσεις συστήματος"
 
 #: ../extensions/alternative-status-menu/extension.js:63
 msgid "Lock Screen"
-msgstr "Κλείδωμα οθόνης"
+msgstr "Κλείδωμα οθόνης"
 
 #: ../extensions/alternative-status-menu/extension.js:68
 msgid "Switch User"
-msgstr "Αλλαγή χρήστη"
+msgstr "Αλλαγή χρήστη"
 
 #: ../extensions/alternative-status-menu/extension.js:73
 msgid "Log Out..."
-msgstr "Αποσύνδεση..."
+msgstr "Αποσύνδεση…"
 
 #: ../extensions/alternative-status-menu/extension.js:81
 msgid "Suspend"
-msgstr "Αναστολή"
+msgstr "Αναστολή"
 
 #: ../extensions/alternative-status-menu/extension.js:87
 msgid "Hibernate"
-msgstr "Αδρανοποίηση"
+msgstr "Αδρανοποίηση"
 
 #: ../extensions/alternative-status-menu/extension.js:93
 msgid "Power Off..."
-msgstr "Σβήσιμο..."
+msgstr "Σβήσιμο…"
 
 #: ../extensions/alternate-tab/extension.js:44
 msgid ""
@@ -121,11 +121,11 @@ msgstr "Χώρος εργασίας & εικονίδια"
 
 #: ../extensions/alternate-tab/extension.js:299
 msgid "Native"
-msgstr "Μητρική"
+msgstr "Εγγενή"
 
 #: ../extensions/alternate-tab/extension.js:306
 msgid "Cancel"
-msgstr "Ακύρωση"
+msgstr "Ακύρωση"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "Ask the user for a default behaviour if true."
@@ -166,7 +166,7 @@ msgstr "Σύρετε εδώ για να προσθέσετε αγαπημένα"
 
 #: ../extensions/dock/extension.js:820
 msgid "New Window"
-msgstr "Νέο παράθυρο"
+msgstr "Νέο παράθυρο"
 
 #: ../extensions/dock/extension.js:822
 msgid "Quit Application"
@@ -174,11 +174,11 @@ msgstr "Εγκατάλειψη εφαρμογής"
 
 #: ../extensions/dock/extension.js:827
 msgid "Remove from Favorites"
-msgstr "Απομάκρυνση από τα αγαπημένα"
+msgstr "Απομάκρυνση από τα αγαπημένα"
 
 #: ../extensions/dock/extension.js:828
 msgid "Add to Favorites"
-msgstr "Προσθήκη στα αγαπημένα"
+msgstr "Προσθήκη στα αγαπημένα"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
 msgid "Autohide duration"
@@ -190,11 +190,11 @@ msgstr "Εφέ αυτόματης απόκρυψης"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
 msgid "Enable/disable autohide"
-msgstr "Ενεργοποίηση/απενεργοποίηση αυτόματης απόκρυψης"
+msgstr "Ενεργοποίηση/απενεργοποίηση αυτόματης απόκρυψης"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
 msgid "Icon size"
-msgstr "Μέγεθος εικονιδίου"
+msgstr "Μέγεθος εικονιδίου"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
@@ -209,15 +209,15 @@ msgid ""
 "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
 msgstr ""
 "Ρυθμίζειτην επίδραση κρυψίματος του υποδοχέα. Επιτρεπόμενες τιμές είναι "
-"«αλλαγή μεγέθους» ή «αλλαγή κλίμακας»"
+"resize («αλλαγή μεγέθους») ή rescale («αλλαγή κλίμακας»)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid ""
 "Sets the position of the dock in the screen. Allowed values are 'right' or "
 "'left'"
 msgstr ""
-"Ρυθμίζει τη θέση του υποδοχέα στην οθόνη. Επιτρεπόμενες τιμές είναι «δεξιά» "
-"ή «αριστερά»"
+"Ρυθμίζει τη θέση του υποδοχέα στην οθόνη. Επιτρεπόμενες τιμές είναι right («δεξιά») "
+"ή right («αριστερά»)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
@@ -225,7 +225,7 @@ msgstr "Ρυθμίζει την χρονική διάρκεια του εφέ α
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
-msgstr "Καλημέρα, Κόσμε!"
+msgstr "Καλημέρα, Κόσμε!"
 
 #: ../extensions/gajim/extension.js:227
 #, c-format
@@ -235,17 +235,17 @@ msgstr "%s είναι εκτός."
 #: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
-msgstr "%s είναι εκτός σύνδεσης"
+msgstr "%s είναι εκτός σύνδεσης."
 
 #: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
-msgstr "%s είναι σε σύνδεση"
+msgstr "%s είναι σε σύνδεση."
 
 #: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
-msgstr "%s είναι απασχολημένος"
+msgstr "%s είναι απασχολημένος/η."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid ""
@@ -269,8 +269,8 @@ msgid ""
 "more the position and size of the actual window"
 msgstr ""
 "Ο αλγόριθμος που χρησιμοποιείται για την διάταξη μικρογραφιών στην "
-"επισκόπηση. «πλέγμα» να χρησιμοποιήσει τον αλγόριθμο που βασίζετε στο "
-"προεπιλεγμένο πλέγμα, «φυσικό» να χρησιμοποιήσει ένα άλλο που αντανακλά "
+"επισκόπηση. grid («πλέγμα») να χρησιμοποιήσει τον αλγόριθμο που βασίζετε στο "
+"προεπιλεγμένο πλέγμα, natural («φυσικό») να χρησιμοποιήσει ένα άλλο που αντανακλά "
 "περισσότερο τη θέση και το μέγεθος της πραγματικού παράθυρου"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
@@ -304,20 +304,20 @@ msgstr "Όνομα θέματος"
 
 #: ../extensions/xrandr-indicator/extension.js:26
 msgid "Normal"
-msgstr "Κανονικό"
+msgstr "Κανονικό"
 
 #: ../extensions/xrandr-indicator/extension.js:27
 msgid "Left"
-msgstr "Αριστερά"
+msgstr "Αριστερά"
 
 #: ../extensions/xrandr-indicator/extension.js:28
 msgid "Right"
-msgstr "Δεξιά"
+msgstr "Δεξιά"
 
 #: ../extensions/xrandr-indicator/extension.js:29
 msgid "Upside-down"
-msgstr "Αναποδογύρισμα"
+msgstr "Αναποδογυρισμένο"
 
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
-msgstr "Διαμορφώστε τις ρυθμίσεις της οθόνης..."
+msgstr "Διαμορφώστε τις ρυθμίσεις της οθόνης…"
