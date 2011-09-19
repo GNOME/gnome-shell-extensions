@@ -7,59 +7,142 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
 "cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-04-18 14:10+0000\n"
-"PO-Revision-Date: 2011-04-20 12:42+0300\n"
+"POT-Creation-Date: 2011-09-08 22:11+0000\n"
+"PO-Revision-Date: 2011-09-16 14:29+0300\n"
 "Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
+"Language: lv\n"
 
-#: ../extensions/alternative-status-menu/extension.js:23
-#: ../extensions/alternative-status-menu/extension.js:27
-#: ../extensions/alternative-status-menu/extension.js:93
-msgid "Hibernate"
-msgstr "Iemidzināt"
-
-#: ../extensions/alternative-status-menu/extension.js:26
-#: ../extensions/alternative-status-menu/extension.js:92
-msgid "Suspend"
-msgstr "Iesnaudināt"
+#: ../extensions/alternative-status-menu/extension.js:44
+msgid "Notifications"
+msgstr "Paziņojumi"
 
 #: ../extensions/alternative-status-menu/extension.js:52
-msgid "Available"
-msgstr "Pieejams"
+#| msgid "My Account"
+msgid "Online Accounts"
+msgstr "Tiešsaistes konti"
 
-#: ../extensions/alternative-status-menu/extension.js:57
-msgid "Busy"
-msgstr "Aizņemts"
-
-#: ../extensions/alternative-status-menu/extension.js:65
-msgid "My Account"
-msgstr "Mans konts"
-
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:56
 msgid "System Settings"
 msgstr "Sistēmas iestatījumi"
 
-#: ../extensions/alternative-status-menu/extension.js:76
+#: ../extensions/alternative-status-menu/extension.js:63
 msgid "Lock Screen"
 msgstr "Bloķēt ekrānu"
 
-#: ../extensions/alternative-status-menu/extension.js:80
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Switch User"
 msgstr "Mainīt lietotāju"
 
-#: ../extensions/alternative-status-menu/extension.js:85
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Log Out..."
 msgstr "Izrakstīties..."
 
-#: ../extensions/alternative-status-menu/extension.js:100
+#: ../extensions/alternative-status-menu/extension.js:81
+msgid "Suspend"
+msgstr "Iesnaudināt"
+
+#: ../extensions/alternative-status-menu/extension.js:87
+msgid "Hibernate"
+msgstr "Iemidzināt"
+
+#: ../extensions/alternative-status-menu/extension.js:93
 msgid "Power Off..."
 msgstr "Izslēgt..."
+
+#: ../extensions/alternate-tab/extension.js:44
+msgid ""
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one "
+"selection \n"
+"    list. Instead of using the application icon of every window, it uses "
+"small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode let's you switch between the applications of your current \n"
+"    workspace and gives you additionally the option to switch to the last "
+"used \n"
+"    application of your previous workspace. This is always the last symbol "
+"in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"Native:\n"
+"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
+"    native switches the Alternate Tab extension off. \n"
+msgstr ""
+"Šī ir pirmā reize, kad izmantojat Alternate Tab paplašinājumu.\n"
+"Lūdzu, izvēlieties vēlamo uzvedību:\n"
+"\n"
+"Viss un sīktēli:\n"
+"    Šis režīms rāda visas lietotnes no visām daba vietām viena izlases "
+"sarakstā.\n"
+"    Tā vietā lai katrā logā izmantotu lietotnes ikonu, tas izmanto mazu "
+"sīktēlu,\n"
+"    kas pats atgādina logu.\n"
+"\n"
+"Darba vieta un ikonas:\n"
+"    Šis režīms ļauj pārslēgties starp lietotnēm pašreizējā darba vietā un \n"
+"    dod jums iespēju pārslēgties uz iepriekš lietoto lietotni iepriekšējā "
+"darba\n"
+"    vietā. Tas vienmēr ir pēdējais simbols sarakstā un ir nošķirts ar \n"
+"    atdalītāju vai vertikālu līniju, ja ir tāda ir pieejama.\n"
+"    Katru logu attēlo tam atbilstošās lietotnes ikona.\n\n"
+"\n"
+"Vietējs: "
+"    Šis režīms ir vietēja GNOME 3 uzvedība, jeb citiem vārdiem: vietējais "
+"režīms\n"
+"    izslēdz Alternate Tab paplašinājumu.\n"
+
+#: ../extensions/alternate-tab/extension.js:269
+msgid "Alt Tab Behaviour"
+msgstr "Alt Tab uzvedība"
+
+#: ../extensions/alternate-tab/extension.js:285
+msgid "All & Thumbnails"
+msgstr "Viss un sīktēli"
+
+#: ../extensions/alternate-tab/extension.js:292
+msgid "Workspace & Icons"
+msgstr "Darba vieta un ikonas"
+
+#: ../extensions/alternate-tab/extension.js:299
+msgid "Native"
+msgstr "Vietējs"
+
+#: ../extensions/alternate-tab/extension.js:306
+msgid "Cancel"
+msgstr "Atcelt"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "Ask the user for a default behaviour if true."
+msgstr "Ja patiess, par noklusēto uzvedību vaicāt lietotājam."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid "Indicates if Alternate Tab is newly installed"
+msgstr "Norāda, vai Alternate Tab ir tikko uzinstalēts"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
+"workspace_icons."
+msgstr ""
+"Iestata Alt-Tab uzvedību. Iespējamās vērtības: native, all_thumbnails un "
+"workspace_icons."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
+msgid "The alt tab behaviour."
+msgstr "Alt tab uzvedība."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -73,49 +156,133 @@ msgstr ""
 msgid "Application and workspace list"
 msgstr "Lietotņu un darbvietu saraksts"
 
-#: ../extensions/dock/extension.js:116
+#: ../extensions/dock/extension.js:486
 msgid "Drag here to add favorites"
 msgstr "Velciet šeit, lai pievienotu izlasei"
 
-#: ../extensions/dock/extension.js:417
+#: ../extensions/dock/extension.js:820
 msgid "New Window"
 msgstr "Jauns logs"
 
-#: ../extensions/dock/extension.js:419
+#: ../extensions/dock/extension.js:822
 msgid "Quit Application"
 msgstr "Iziet no lietotnes"
 
-#: ../extensions/dock/extension.js:424
+#: ../extensions/dock/extension.js:827
 msgid "Remove from Favorites"
 msgstr "Izņemt no izlases"
 
-#: ../extensions/dock/extension.js:425
+#: ../extensions/dock/extension.js:828
 msgid "Add to Favorites"
 msgstr "Pievienot izlasei"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Autohide duration"
+msgstr "Automātiskās slēpšanas ilgums"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Autohide effect"
+msgstr "Automātiskās slēpšanas efekts"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Enable/disable autohide"
+msgstr "Aktivēt/deaktivēt automātisko slēpšanu"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Icon size"
+msgstr "Ikonas izmērs"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Position of the dock"
+msgstr "Doka novietojums"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Sets icon size of the dock."
+msgstr "Iestata ikonu izmēru dokā."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+msgstr ""
+"Iestata doka slēpšanas efektu. Atļautās vērtības ir 'resize' vai 'rescale'"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"Iestata doka novietojumu ekrānā. Atļautās vērtības ir 'right' vai 'left'"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr "Iestata automātiskās slēpšanas efekta laiku."
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
 msgstr "Sveika pasaule!"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/gajim/extension.js:227
 #, c-format
 msgid "%s is away."
 msgstr "%s\" ir prom."
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
 msgstr "%s ir nesaistē."
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
 msgstr "%s ir tiešsaistē."
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
 msgstr "%s\" ir aizņemts."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Ja patiess, loga parakstus novieto virs attiecīgā sīktēla, pārrakstot čaulas "
+"noklusēto novietojumu (apakšā). Lai šī iestatījuma izmaiņas stātos spēkā, "
+"jāpārstartē čaula."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Place window captions on top"
+msgstr "Novieto loga parakstus augšpusē"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid ""
+"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
+"default grid based algorithm, 'natural' to use another one that reflects "
+"more the position and size of the actual window"
+msgstr ""
+"Algoritms, ko izmanto sīktēlu izkārtošanai pārskatā. 'grid', lai izmantotu "
+"noklusēto algoritmu, 'natural', lai izmantotu citu, kas vairāk atbilst logu "
+"novietojumam un izmēram."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Mēģināt izmantot vairāk ekrāna logu sīktēlu izvietošanai, pielāgojoties "
+"ekrāna "
+"garuma un platuma attiecībai, un tos sablīvējot ciešāk, samazinot aptverošo "
+"kasti. Šis iestatījums darbojas tikai ar dabisko izvietojumu stratēģiju."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+msgid "Use more screen for windows"
+msgstr "Lietot vairāk ekrānu logiem"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
+msgid "Window placement strategy"
+msgstr "Logu izvietojumu stratēģija"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
@@ -145,3 +312,8 @@ msgstr "Otrādi"
 msgid "Configure display settings..."
 msgstr "Konfigurēt displeja iestatījumus..."
 
+#~ msgid "Available"
+#~ msgstr "Pieejams"
+
+#~ msgid "Busy"
+#~ msgstr "Aizņemts"
