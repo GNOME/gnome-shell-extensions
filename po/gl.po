@@ -3,32 +3,29 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # Fran Diéguez <frandieguez@gnome.org>, 2011.
+# Fran Dieguez <frandieguez@gnome.org>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-30 17:01+0200\n"
-"PO-Revision-Date: 2011-08-30 17:04+0200\n"
-"Last-Translator: Fran Diéguez <frandieguez@gnome.org>\n"
+"POT-Creation-Date: 2011-09-25 13:23+0200\n"
+"PO-Revision-Date: 2011-09-25 13:24+0200\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: ../extensions/alternative-status-menu/extension.js:39
-msgid "Available"
-msgstr "Dispoñible"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../extensions/alternative-status-menu/extension.js:44
-msgid "Busy"
-msgstr "Ocupado"
+msgid "Notifications"
+msgstr "Notificacións"
 
 #: ../extensions/alternative-status-menu/extension.js:52
-msgid "My Account"
-msgstr "A Miña Conta"
+msgid "Online Accounts"
+msgstr "Contas en liña"
 
 #: ../extensions/alternative-status-menu/extension.js:56
 msgid "System Settings"
@@ -46,15 +43,15 @@ msgstr "Trocar de Usario"
 msgid "Log Out..."
 msgstr "Sair da sesión"
 
-#: ../extensions/alternative-status-menu/extension.js:82
+#: ../extensions/alternative-status-menu/extension.js:81
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../extensions/alternative-status-menu/extension.js:88
+#: ../extensions/alternative-status-menu/extension.js:87
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:94
+#: ../extensions/alternative-status-menu/extension.js:93
 msgid "Power Off..."
 msgstr "Apagar…"
 
@@ -225,22 +222,22 @@ msgstr "Estabelece a duración do efecto de autoagochado."
 msgid "Hello, world!"
 msgstr "Hola, mundo!"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/gajim/extension.js:227
 #, c-format
 msgid "%s is away."
 msgstr "%s está ausente."
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
 msgstr "%s está desconectado."
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
 msgstr "%s está conectado."
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
 msgstr "%s está ocupado."
@@ -251,6 +248,9 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
+"Se é verdadeiro, dispor os títulos das xanelas enriba da miniatura "
+"respectiva, omitindo a disposición inferior por omisión do shell. Se cambia "
+"esta configuración deberá reiniciar o shell para que se apliquen os cambios."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
 msgid "Place window captions on top"
@@ -311,3 +311,9 @@ msgstr "Co de arriba cara abaixo"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Configurar as configuracións de pantalla…"
+
+#~ msgid "Available"
+#~ msgstr "Dispoñible"
+
+#~ msgid "Busy"
+#~ msgstr "Ocupado"
