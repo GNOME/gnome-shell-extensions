@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-29 18:59+0800\n"
-"PO-Revision-Date: 2011-08-29 17:16+0800\n"
+"POT-Creation-Date: 2011-09-25 15:04+0800\n"
+"PO-Revision-Date: 2011-09-23 20:00+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <chinese-l10n@googlegroups.com>\n"
 "Language: \n"
@@ -16,17 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../extensions/alternative-status-menu/extension.js:39
-msgid "Available"
-msgstr "有空"
-
 #: ../extensions/alternative-status-menu/extension.js:44
-msgid "Busy"
-msgstr "忙碌"
+msgid "Notifications"
+msgstr "通知"
 
 #: ../extensions/alternative-status-menu/extension.js:52
-msgid "My Account"
-msgstr "我的帳號"
+msgid "Online Accounts"
+msgstr "線上帳號"
 
 #: ../extensions/alternative-status-menu/extension.js:56
 msgid "System Settings"
@@ -44,15 +40,15 @@ msgstr "切換使用者"
 msgid "Log Out..."
 msgstr "登出..."
 
-#: ../extensions/alternative-status-menu/extension.js:82
+#: ../extensions/alternative-status-menu/extension.js:81
 msgid "Suspend"
 msgstr "暫停"
 
-#: ../extensions/alternative-status-menu/extension.js:88
+#: ../extensions/alternative-status-menu/extension.js:87
 msgid "Hibernate"
 msgstr "休眠"
 
-#: ../extensions/alternative-status-menu/extension.js:94
+#: ../extensions/alternative-status-menu/extension.js:93
 msgid "Power Off..."
 msgstr "關閉電源..."
 
@@ -81,44 +77,62 @@ msgid ""
 "    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
 "    native switches the Alternate Tab extension off. \n"
 msgstr ""
+"這是您第一次使用 Alternate Tab 擴充套件。\n"
+"請選擇您偏好的行為：\n"
+"\n"
+"全部與縮圖：\n"
+"    這個模式會在一個選取清單中展現所有工作區的應用程式。\n"
+"    每個視窗不使用應用程式圖示，而是採用象徵視窗自己本身\n"
+"    的縮圖。\n"
+"\n"
+"工作區與圖示：\n"
+"    這個模式讓您在目前工作區的應用程式間切換，並額外給您\n"
+"    切換至上次使用的前個工作區應用程式的選項。它會是清單\n"
+"    中最後一個圖像，並且可能的話會用分隔符或垂直線分開。\n"
+"    每個視窗是由其應用程式圖示所表示。\n"
+"\n"
+"原生：\n"
+"    這個模式是 GNOME 3 的原生行為，換句話說：按下原生\n"
+"    會關閉 Alternate Tab 擴充套件。\n"
 
 #: ../extensions/alternate-tab/extension.js:269
 msgid "Alt Tab Behaviour"
-msgstr ""
+msgstr "Alt Tab 行為"
 
 #: ../extensions/alternate-tab/extension.js:285
 msgid "All & Thumbnails"
-msgstr ""
+msgstr "全部與縮圖"
 
 #: ../extensions/alternate-tab/extension.js:292
 msgid "Workspace & Icons"
-msgstr ""
+msgstr "工作區與圖示"
 
 #: ../extensions/alternate-tab/extension.js:299
 msgid "Native"
-msgstr ""
+msgstr "原生"
 
 #: ../extensions/alternate-tab/extension.js:306
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "Ask the user for a default behaviour if true."
-msgstr ""
+msgstr "若為真，詢問使用者預設行為。"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid "Indicates if Alternate Tab is newly installed"
-msgstr ""
+msgstr "指示 Alternate Tab 是否為新安裝"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
 msgid ""
 "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
 "workspace_icons."
 msgstr ""
+"設定 Alt-Tab 行為。可用的值為：natvie、all_thumbnails、workspace_icons。"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
 msgid "The alt tab behaviour."
-msgstr ""
+msgstr "alt tab 按鍵行為。"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -154,63 +168,63 @@ msgstr "加入喜好"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
 msgid "Autohide duration"
-msgstr ""
+msgstr "自動隱藏時間"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
 msgid "Autohide effect"
-msgstr ""
+msgstr "自動隱藏效果"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
 msgid "Enable/disable autohide"
-msgstr ""
+msgstr "啟用/停用自動隱藏"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
 msgid "Icon size"
-msgstr ""
+msgstr "圖示大小"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
-msgstr ""
+msgstr "Dock 的位置"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
 msgid "Sets icon size of the dock."
-msgstr ""
+msgstr "設定 Dock 的圖示大小。"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
 msgid ""
 "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgstr ""
+msgstr "設定隱藏 Dock 的效果。可用的值為「resize」或「rescale」"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid ""
 "Sets the position of the dock in the screen. Allowed values are 'right' or "
 "'left'"
-msgstr ""
+msgstr "設定 Dock 在螢幕的位置。可用的值為「right」(右) 或「left」(左)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
-msgstr ""
+msgstr "設定自動隱藏效果的時間長度。"
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
 msgstr "你好，世界！"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/gajim/extension.js:227
 #, c-format
 msgid "%s is away."
 msgstr "%s 已離開。"
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
 msgstr "%s 現在離線。"
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
 msgstr "%s 現在上線。"
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
 msgstr "%s 正忙碌。"
@@ -221,10 +235,12 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
+"如果為真，在對映的縮圖頂端放置視窗說明標題，凌駕 Shell 將它放置在底部的預設"
+"值。變更這個設定值需要重新啟動 Shell 來套用效果。"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
 msgid "Place window captions on top"
-msgstr ""
+msgstr "在頂端放置視窗說明標題"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid ""
@@ -232,6 +248,8 @@ msgid ""
 "default grid based algorithm, 'natural' to use another one that reflects "
 "more the position and size of the actual window"
 msgstr ""
+"用來配置縮圖的演算法。「grid」是採用預設的網格基礎演算法，「natural」則採用另"
+"一種反映視窗位置與實際大小的演算法。"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
@@ -246,7 +264,7 @@ msgstr ""
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
 msgid "Window placement strategy"
-msgstr ""
+msgstr "視窗擺放策略"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
@@ -275,3 +293,9 @@ msgstr "上下顛倒"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "設定顯示器設定值..."
+
+#~ msgid "Available"
+#~ msgstr "有空"
+
+#~ msgid "Busy"
+#~ msgstr "忙碌"
