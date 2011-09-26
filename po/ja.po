@@ -2,59 +2,122 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2011.
+# Jiro Matsuzawa <jmatsuzawa@src.gnome.org>, 2011
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-05 00:34+0900\n"
-"PO-Revision-Date: 2011-07-05 00:34+0900\n"
-"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
-"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
-"Language: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2011-09-25 12:13+0000\n"
+"PO-Revision-Date: 2011-09-26 11:43+0900\n"
+"Last-Translator: Jiro Matsuzawa <jmatsuzawa@src.gnome.org>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../extensions/alternative-status-menu/extension.js:39
-msgid "Available"
-msgstr "在席中"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../extensions/alternative-status-menu/extension.js:44
-msgid "Busy"
-msgstr "離席中"
+msgid "Notifications"
+msgstr "メッセージ通知"
 
 #: ../extensions/alternative-status-menu/extension.js:52
-msgid "My Account"
-msgstr "自分のアカウント"
+msgid "Online Accounts"
+msgstr "オンラインアカウント"
 
 #: ../extensions/alternative-status-menu/extension.js:56
 msgid "System Settings"
-msgstr "システムの設定"
+msgstr "システム設定"
 
 #: ../extensions/alternative-status-menu/extension.js:63
 msgid "Lock Screen"
 msgstr "画面のロック"
 
-#: ../extensions/alternative-status-menu/extension.js:67
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Switch User"
-msgstr "ユーザの切り替え"
+msgstr "ユーザーの切り替え"
 
-#: ../extensions/alternative-status-menu/extension.js:72
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Log Out..."
 msgstr "ログアウト..."
 
-#: ../extensions/alternative-status-menu/extension.js:79
+#: ../extensions/alternative-status-menu/extension.js:81
 msgid "Suspend"
 msgstr "サスペンド"
 
-#: ../extensions/alternative-status-menu/extension.js:85
+#: ../extensions/alternative-status-menu/extension.js:87
 msgid "Hibernate"
 msgstr "ハイバーネート"
 
-#: ../extensions/alternative-status-menu/extension.js:91
+#: ../extensions/alternative-status-menu/extension.js:93
 msgid "Power Off..."
 msgstr "電源オフ..."
+
+#: ../extensions/alternate-tab/extension.js:44
+msgid ""
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one "
+"selection \n"
+"    list. Instead of using the application icon of every window, it uses "
+"small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode let's you switch between the applications of your current \n"
+"    workspace and gives you additionally the option to switch to the last "
+"used \n"
+"    application of your previous workspace. This is always the last symbol "
+"in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"Native:\n"
+"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
+"    native switches the Alternate Tab extension off. \n"
+msgstr ""
+
+#: ../extensions/alternate-tab/extension.js:269
+msgid "Alt Tab Behaviour"
+msgstr ""
+
+#: ../extensions/alternate-tab/extension.js:285
+msgid "All & Thumbnails"
+msgstr ""
+
+#: ../extensions/alternate-tab/extension.js:292
+msgid "Workspace & Icons"
+msgstr ""
+
+#: ../extensions/alternate-tab/extension.js:299
+msgid "Native"
+msgstr ""
+
+#: ../extensions/alternate-tab/extension.js:306
+msgid "Cancel"
+msgstr ""
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "Ask the user for a default behaviour if true."
+msgstr ""
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid "Indicates if Alternate Tab is newly installed"
+msgstr ""
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
+"workspace_icons."
+msgstr ""
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
+msgid "The alt tab behaviour."
+msgstr ""
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -62,74 +125,97 @@ msgid ""
 "followed by a colon and the workspace number"
 msgstr ""
 "アプリケーションの識別子 (.desktop ファイル名) とコロンの後にワークスペース番"
-"号を付与した文字列を要素とするリストです。"
+"号を付与した文字列を要素とするリストです"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
 msgstr "アプリケーションとワークスペースのリスト"
 
-#: ../extensions/dock/extension.js:142
+#: ../extensions/dock/extension.js:486
 msgid "Drag here to add favorites"
-msgstr "ここにドラッグしてお気に入りへ追加します"
+msgstr "ドラッグでお気に入りに追加"
 
-#: ../extensions/dock/extension.js:462
+#: ../extensions/dock/extension.js:820
 msgid "New Window"
 msgstr "新しいウィンドウで開く"
 
-#: ../extensions/dock/extension.js:464
+#: ../extensions/dock/extension.js:822
 msgid "Quit Application"
-msgstr "アプリケーションの終了"
+msgstr "アプリケーションを終了"
 
-#: ../extensions/dock/extension.js:469
+#: ../extensions/dock/extension.js:827
 msgid "Remove from Favorites"
-msgstr "お気に入りから削除する"
+msgstr "お気に入りから削除"
 
-#: ../extensions/dock/extension.js:470
+#: ../extensions/dock/extension.js:828
 msgid "Add to Favorites"
-msgstr "お気に入りへ追加する"
+msgstr "お気に入りに追加"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Autohide duration"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Autohide effect"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Enable/disable autohide"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
 msgid "Icon size"
 msgstr "アイコンのサイズ"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
 msgstr "ドックの位置"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
 msgid "Sets icon size of the dock."
 msgstr "ドックに表示するアイコンの大きさを指定します。"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+#, fuzzy
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+msgstr ""
+"ドックをデスクトップに表示する位置を指定します。指定可能な値: 'right'、'left'"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid ""
 "Sets the position of the dock in the screen. Allowed values are 'right' or "
 "'left'"
 msgstr ""
 "ドックをデスクトップに表示する位置を指定します。指定可能な値: 'right'、'left'"
 
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr ""
+
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
-msgstr "\"Hello, world!\""
+msgstr "Hello, world!"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/gajim/extension.js:227
 #, c-format
 msgid "%s is away."
-msgstr "%sさんは離席中です"
+msgstr "%s さんは離席中です。"
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
-msgstr "%sさんはオフラインです"
+msgstr "%s さんはオフラインです。"
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
-msgstr "%sさんはオンラインです"
+msgstr "%s さんはオンラインです。"
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
-msgstr "%sさんは取り込み中です"
+msgstr "%s さんは取り込み中です。"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid ""
@@ -178,7 +264,7 @@ msgstr "ウィンドウを配置するアルゴリズム"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "テーマの名前です (~/.themes/name/gnome-shell 配下に格納します)。"
+msgstr "テーマの名前です (~/.themes/name/gnome-shell 配下に格納します)"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
