@@ -2,27 +2,27 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
+# Jorge González <jorgegonz@svn.gnome.org>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-09-08 22:11+0000\n"
-"PO-Revision-Date: 2011-09-18 19:06+0200\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"POT-Creation-Date: 2011-09-18 17:08+0000\n"
+"PO-Revision-Date: 2011-10-01 14:31+0200\n"
+"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../extensions/alternative-status-menu/extension.js:44
 msgid "Notifications"
 msgstr "Notificaciones"
 
 #: ../extensions/alternative-status-menu/extension.js:52
-#| msgid "My Account"
 msgid "Online Accounts"
 msgstr "Cuentas en línea"
 
@@ -82,11 +82,11 @@ msgstr ""
 
 #: ../extensions/alternate-tab/extension.js:269
 msgid "Alt Tab Behaviour"
-msgstr ""
+msgstr "Comportamiento de Alt+Tab"
 
 #: ../extensions/alternate-tab/extension.js:285
 msgid "All & Thumbnails"
-msgstr ""
+msgstr "Todo y miniaturas"
 
 #: ../extensions/alternate-tab/extension.js:292
 msgid "Workspace & Icons"
@@ -102,21 +102,24 @@ msgstr "Cancelar"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "Ask the user for a default behaviour if true."
-msgstr ""
+msgstr "Si es cierto, preguntar al usuario el comportamiento predeterminado."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid "Indicates if Alternate Tab is newly installed"
-msgstr ""
+msgstr "Indica si se ha instalado Alt+Tab recientemente"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
 msgid ""
 "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
 "workspace_icons."
 msgstr ""
+"Establece el comportamiento de Alt+Tab. Los valores posibles son: "
+"«native» (nativo), «all_thumbnails» (todo en miniaturas) y "
+"«workspace_icons» (iconos de áreas de trabajo)."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
 msgid "The alt tab behaviour."
-msgstr ""
+msgstr "El comportamiento de Alt+Tab."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -153,15 +156,15 @@ msgstr "Añadir a favoritos"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
 msgid "Autohide duration"
-msgstr ""
+msgstr "Duración de la ocultación automática"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
 msgid "Autohide effect"
-msgstr ""
+msgstr "Efecto de ocultación automática"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
 msgid "Enable/disable autohide"
-msgstr ""
+msgstr "Activar/desactivar ocultación automática"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
 msgid "Icon size"
@@ -169,26 +172,30 @@ msgstr "Tamaño del icono"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
-msgstr ""
+msgstr "Posición del tablero"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
 msgid "Sets icon size of the dock."
-msgstr ""
+msgstr "Configura el tamaño de los iconos del tablero."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
 msgid ""
 "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
 msgstr ""
+"Configura el efecto de ocultación del tablero. Los valores permitidos son "
+"«resize» (redimensionar) y «rescale» (re-escalar)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid ""
 "Sets the position of the dock in the screen. Allowed values are 'right' or "
 "'left'"
 msgstr ""
+"Configura la posición del tablero en la pantalla. Los valores permitidos son "
+"«right» (derecha) o «left» (izquierda)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
-msgstr ""
+msgstr "Configura la duración del efecto de ocultación automática."
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
@@ -241,11 +248,11 @@ msgstr ""
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
 msgid "Use more screen for windows"
-msgstr ""
+msgstr "Usar más pantalla para las ventanas"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
 msgid "Window placement strategy"
-msgstr ""
+msgstr "Estrategia de ubicación de ventanas"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
