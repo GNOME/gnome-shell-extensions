@@ -21,7 +21,10 @@ WorkspaceIndicator.prototype = {
 
 	        this._currentWorkspace = global.screen.get_active_workspace().index();
 		this.statusLabel = new St.Label({ text: this._labelText() });
-		this.actor.set_child(this.statusLabel);
+
+	        // destroy all previously created children, and add our statusLabel
+ 	        this.actor.get_children().forEach(function(c) { c.destroy() });
+		this.actor.add_actor(this.statusLabel);
 
 		this.workspacesItems = [];
 		this._workspaceSection = new PopupMenu.PopupMenuSection();
@@ -94,7 +97,7 @@ WorkspaceIndicator.prototype = {
 }
 
 function init(meta) {
-    Panel.STANDARD_TRAY_ICON_ORDER.unshift('workspace-indicator');
+    // empty
 }
 
 let _indicator;

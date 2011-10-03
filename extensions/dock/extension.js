@@ -295,7 +295,7 @@ Dock.prototype = {
 
         this._installedChangedId = this._appSystem.connect('installed-changed', Lang.bind(this, this._queueRedisplay));
         this._appFavoritesChangedId = AppFavorites.getAppFavorites().connect('changed', Lang.bind(this, this._queueRedisplay));
-        this._appStateChangedId = this._tracker.connect('app-state-changed', Lang.bind(this, this._queueRedisplay));
+        this._appStateChangedId = this._appSystem.connect('app-state-changed', Lang.bind(this, this._queueRedisplay));
 
         this._overviewShowingId = Main.overview.connect('showing', Lang.bind(this, function() {
             this.actor.hide();
@@ -386,7 +386,7 @@ Dock.prototype = {
         }
 
         if (this._appStateChangedId) {
-            this._tracker.disconnect(this._appStateChangedId);
+            this._appSystem.disconnect(this._appStateChangedId);
             this._appStateChangedId = 0;
         }
 
@@ -450,10 +450,7 @@ Dock.prototype = {
 
         let favorites = AppFavorites.getAppFavorites().getFavoriteMap();
 
-        /* hardcode here pending some design about how exactly desktop contexts behave */
-        let contextId = '';
-
-        let running = this._tracker.get_running_apps(contextId);
+        let running = this._appSystem.get_running();
         let runningIds = this._appIdListToHash(running);
 
         let icons = 0;

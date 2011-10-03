@@ -114,7 +114,7 @@ function reset(statusMenu) {
 }
 
 function enable() {
-    let statusMenu = Main.panel._userMenu;
+    let statusMenu = Main.panel._statusArea.userMenu;
     statusMenu.menu.removeAll();
     createSubMenu.call(statusMenu);
     reset(statusMenu);
@@ -122,7 +122,7 @@ function enable() {
 
 function disable() {
     // not guarranteed to work, if more extensions operate in the same place
-    let statusMenu = Main.panel._userMenu;
+    let statusMenu = Main.panel._statusArea.userMenu;
     statusMenu.menu.removeAll();
     statusMenu._createSubMenu();
     reset(statusMenu);
