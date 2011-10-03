@@ -2,7 +2,7 @@
  "uuid": "@uuid@",
  "name": "Removable Drive Menu",
  "description": "A status menu for accessing and unmounting removable devices",
- "shell-version": [ "@shell_current@" ],
+ "shell-version": [ "@shell_current@", "3.2" ],
  "localedir": "@LOCALEDIR@",
  "url": "@url@"
 }

@@ -2,7 +2,7 @@
 "uuid": "@uuid@",
 "name": "Applications Menu",
 "description": "Add a gnome 2.x style menu for applications",
-"shell-version": [ "@shell_current@" ],
+"shell-version": [ "@shell_current@", "3.2" ],
 "localedir": "@LOCALEDIR@",
 "url": "@url@"
 }

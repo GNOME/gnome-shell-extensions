@@ -2,7 +2,7 @@
 "uuid": "@uuid@",
 "name": "Places Status Indicator",
 "description": "Add a systems status menu for quickly navigating places in the system",
-"shell-version": [ "@shell_current@" ],
+"shell-version": [ "@shell_current@", "3.2" ],
 "localedir": "@LOCALEDIR@",
 "url": "@url@"
 }
