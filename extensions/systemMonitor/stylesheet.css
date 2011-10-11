@@ -1,16 +1,23 @@
 .extension-systemMonitor-container {
     spacing: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    padding-top: 0px;
 }
 
 .extension-systemMonitor-indicator-area {
-    border: 1px solid #000;
+    border: 1px solid #8d8d8d;
+    border-radius: 3px;
     width: 100px;
-    height: 34px;
-    -cpu-user-color: #f00;
-    -cpu-sys-color: #0f0;
-    -cpu-iowait-color: #00f;
-    -mem-user-color: #ff0;
-    -mem-cached-color: #0ff;
-    -mem-other-color: #111;
-    background-color: #fff;
+    height: 30px;
+    -grid-color: #575757;
+    -cpu-total-color: rgb(0,154,62);
+    -cpu-user-color: rgb(69,154,0);
+    -cpu-sys-color: rgb(255,253,81);
+    -cpu-iowait-color: rgb(210,148,0);
+    -mem-user-color: rgb(210,148,0);
+    -mem-cached-color: rgb(90,90,90);
+    -mem-other-color: rgb(205,203,41);
+    background-color: #1e1e1e;
 }
