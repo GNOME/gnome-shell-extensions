@@ -304,7 +304,6 @@ Dock.prototype = {
             this.actor.show();
         }));
         Main.layoutManager.addChrome(this.actor);
-        this.actor.lower_bottom();
 
         //hidden
         this._settings.connect('changed::'+DOCK_POSITION_KEY, Lang.bind(this, function (){
@@ -372,6 +371,8 @@ Dock.prototype = {
 
         this.actor.connect('leave-event', Lang.bind(this, this._hideDock));
         this.actor.connect('enter-event', Lang.bind(this, this._showDock));
+
+        this._hideDock();
     },
 
     destroy: function() {
