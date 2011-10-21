@@ -343,7 +343,6 @@ Dock.prototype = {
                     return;
 
                 hideEffect = this._settings.get_enum(DOCK_EFFECTHIDE_KEY);
-                this.actor.y=0;
 
                 switch (hideEffect) {
                         case AutoHideEffect.RESCALE:
@@ -352,13 +351,13 @@ Dock.prototype = {
                         case AutoHideEffect.RESIZE:
                            this.actor.set_scale (1,1);
                 }
-                this.actor.disconnect(leave_event);
-                this.actor.disconnect(enter_event);
+                this.actor.disconnect(this._leave_event);
+                this.actor.disconnect(this._enter_event);
 
                 this._selectFunctionsHide ();
 
-                leave_event = this.actor.connect('leave-event', Lang.bind(this, this._hideDock));
-                enter_event = this.actor.connect('enter-event', Lang.bind(this, this._showDock));
+                this._leave_event = this.actor.connect('leave-event', Lang.bind(this, this._hideDock));
+                this._enter_event = this.actor.connect('enter-event', Lang.bind(this, this._showDock));
                 this._redisplay();
         }));
 
@@ -369,8 +368,8 @@ Dock.prototype = {
                 autohide_animation_time = this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY);
         }));
 
-        this.actor.connect('leave-event', Lang.bind(this, this._hideDock));
-        this.actor.connect('enter-event', Lang.bind(this, this._showDock));
+        this._leave_event = this.actor.connect('leave-event', Lang.bind(this, this._hideDock));
+        this._enter_event = this.actor.connect('enter-event', Lang.bind(this, this._showDock));
 
         this._hideDock();
     },
