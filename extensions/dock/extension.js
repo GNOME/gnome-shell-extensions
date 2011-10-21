@@ -45,7 +45,8 @@ const PositionMode = {
 
 const AutoHideEffect = {
     RESIZE: 0,
-    RESCALE: 1
+    RESCALE: 1,
+    MOVE: 2
 };
 
 let position = PositionMode.RIGHT;
@@ -250,6 +251,82 @@ function showEffectAddItem_scale () {
         });
 }
 
+/**************************************************************************************/
+/**** start move Dock functions                                       *****************/
+/**************************************************************************************/
+function hideDock_move () {
+       this._item_size = dockicon_size;
+       let monitor = Main.layoutManager.primaryMonitor;
+       let cornerX = 0;
+       let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
+       let width = this._item_size + 4*this._spacing;
+
+       switch (position) {
+            case PositionMode.LEFT:
+                cornerX= monitor.x - width + this._spacing;
+                break;
+            case PositionMode.RIGHT:
+            default:
+                cornerX = monitor.x + monitor.width - this._spacing;
+        }
+
+        if (hideable) {
+               Tweener.addTween(this.actor,{
+                       x: cornerX,
+                       y: monitor.y + (monitor.height - height)/2,
+                       width: width,
+                       height: height,
+                       time: autohide_animation_time,
+                       transition: 'easeOutQuad'
+                     });
+               hideDock=true;
+        }
+}
+
+function showDock_move () {
+        this._item_size = dockicon_size;
+        let monitor = Main.layoutManager.primaryMonitor;
+        let position_x = monitor.x;
+        let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
+        let width = this._item_size + 4*this._spacing;
+
+        switch (position) {
+            case PositionMode.LEFT:
+                position_x=monitor.x - 2*this._spacing;
+                break;
+            case PositionMode.RIGHT:
+            default:
+                 position_x=monitor.x + (monitor.width-this._item_size-2*this._spacing);
+        }
+        Tweener.addTween(this.actor, {
+                x: position_x,
+                y: monitor.y + (monitor.height - height)/2,
+                width: width,
+                height: height,
+                time: autohide_animation_time,
+                transition: 'easeOutQuad'
+        });
+        hideDock=false;
+}
+
+function initShowDock_move () {
+    this._showDock();
+}
+
+function showEffectAddItem_move () {
+        let monitor = Main.layoutManager.primaryMonitor;
+        let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
+        let width = this._item_size + 4*this._spacing;
+
+        Tweener.addTween(this.actor, {
+                y: monitor.y + (monitor.height-height)/2,
+                height: height,
+                width: width,
+                time: autohide_animation_time,
+                transition: 'easeOutQuad'
+        });
+}
+
 function Dock() {
     this._init();
 }
@@ -350,6 +427,9 @@ Dock.prototype = {
                            break;
                         case AutoHideEffect.RESIZE:
                            this.actor.set_scale (1,1);
+                           break;
+                        case AutoHideEffect.MOVE:
+                           ;
                 }
                 this.actor.disconnect(this._leave_event);
                 this.actor.disconnect(this._enter_event);
@@ -424,6 +504,12 @@ Dock.prototype = {
             this._showDock = showDock_scale;
             this._initShowDock = initShowDock_scale;
             this._showEffectAddItem = showEffectAddItem_scale;
+            break;
+        case AutoHideEffect.MOVE:
+            this._hideDock = hideDock_move;
+            this._showDock = showDock_move;
+            this._initShowDock = initShowDock_move;
+            this._showEffectAddItem = showEffectAddItem_move;
             break;
         case AutoHideEffect.RESIZE:
         default:
