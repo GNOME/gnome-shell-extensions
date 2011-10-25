@@ -35,11 +35,16 @@ Indicator.prototype = {
                                   reactive: true});
         this.actor.add_actor(this.drawing_area);
 
-        Mainloop.timeout_add(INDICATOR_UPDATE_INTERVAL, Lang.bind(this, function () {
+        this._timeout = Mainloop.timeout_add(INDICATOR_UPDATE_INTERVAL, Lang.bind(this, function () {
             this._updateValues();
             this.drawing_area.queue_repaint();
             return true;
         }));
+    },
+
+    destroy: function() {
+        Mainloop.source_remove(this._timeout);
+        this.actor.destroy();
     },
 
     _initValues: function() {
@@ -239,6 +244,8 @@ function enable() {
 
 function disable() {
     _cpuIndicator.destroy();
+    _cpuIndicator = null;
     _memIndicator.destroy();
+    _memIndicator = null;
     _box.destroy();
 }
