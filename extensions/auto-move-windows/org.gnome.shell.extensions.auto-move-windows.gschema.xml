@@ -6,5 +6,9 @@
       <summary>Application and workspace list</summary>
       <description>A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number</description>
     </key>
+    <key name="autoswitch-workspace" type="b">
+        <default>false</default>
+        <_summary>Automatically switch to the workspace of automoved windows.</_summary>
+    </key>
   </schema>
 </schemalist>

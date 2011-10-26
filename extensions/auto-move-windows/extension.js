@@ -15,7 +15,8 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
-const SETTINGS_KEY = 'application-list';
+const SETTINGS_APPLICATION_LIST_KEY = 'application-list';
+const SETTINGS_AUTOSWITCH_WORKSPACE_KEY = 'autoswitch-workspace';
 
 let settings;
 
@@ -49,7 +50,7 @@ const WindowMover = new Lang.Class({
         if (window.skip_taskbar)
             return;
 
-        let spaces = this._settings.get_strv(SETTINGS_KEY);
+        let spaces = this._settings.get_strv(SETTINGS_APPLICATION_LIST_KEY);
 
         let app = this._windowTracker.get_window_app(window);
         if (!app) {
@@ -74,6 +75,8 @@ const WindowMover = new Lang.Class({
                     this._ensureAtLeastWorkspaces(workspace_num, window);
 
                 window.change_workspace_by_index(workspace_num, false);
+                if (this._settings.get_boolean(SETTINGS_AUTOSWITCH_WORKSPACE_KEY))
+                    window.get_workspace().activate_with_focus(window, global.get_current_time());
             }
         }
     }
