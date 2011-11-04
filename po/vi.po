@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
 "POT-Creation-Date: 2011-09-08 22:11+0000\n"
-"PO-Revision-Date: 2011-04-18 21:07+0700\n"
+"PO-Revision-Date: 2011-11-04 13:24+0700\n"
 "Last-Translator: Lê Trường An <xinemdungkhoc1@gmail.com>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -19,13 +19,12 @@ msgstr ""
 
 #: ../extensions/alternative-status-menu/extension.js:44
 msgid "Notifications"
-msgstr ""
+msgstr "Thông báo"
 
 #: ../extensions/alternative-status-menu/extension.js:52
-#, fuzzy
 #| msgid "My Account"
 msgid "Online Accounts"
-msgstr "Tài khoản của tôi"
+msgstr "Tài khoản trực tuyến"
 
 #: ../extensions/alternative-status-menu/extension.js:56
 msgid "System Settings"
@@ -80,44 +79,65 @@ msgid ""
 "    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
 "    native switches the Alternate Tab extension off. \n"
 msgstr ""
+"Đây là lần đầu tiên bạn dùng phần mở rộng Alternate Tab.\n"
+"Vui lòng chọn hành vi mong muốn:\n"
+"\n"
+"Tất cả & Ảnh nhỏ:\n"
+"    Chế độ này hiện mọi ứng dụng trong mọi vùng làm việc trong một danh "
+"sách\n"
+"    Dùng ảnh thu nhỏ của cửa sổ thay vì dùng biểu tượng ứng dụng cho mọi "
+"cửa\n"
+"    sổ.\n"
+"\n"
+"Vùng làm việc & Biểu tượng:\n"
+"    Chế độ này cho phép bạn chuyển ứng dụng trong vùng làm việc hiện thời\n"
+"    và bạn có lựa chọn chuyển sang ứng dụng dùng lần cuối ở vùng làm việc\n"
+"    trước, luôn là biểu tượng cuối cùng trong danh sách và bị ngăn bởi\n"
+"    thanh dọc nếu có. Ảnh ứng dụng được dùng để đại diện từng cửa sổ.\n"
+"\n"
+"Nguyên thuỷ:\n"
+"    Đây là hành vi mặc định trong GNOME 3. Nói cách khác là tắt phần mở\n"
+"    rộng này.\n"
 
 #: ../extensions/alternate-tab/extension.js:269
 msgid "Alt Tab Behaviour"
-msgstr ""
+msgstr "Hành vi Alt Tab"
 
 #: ../extensions/alternate-tab/extension.js:285
 msgid "All & Thumbnails"
-msgstr ""
+msgstr "Tất cả & Ảnh nhỏ"
 
 #: ../extensions/alternate-tab/extension.js:292
 msgid "Workspace & Icons"
-msgstr ""
+msgstr "Vùng làm việc & Biểu tượng"
 
 #: ../extensions/alternate-tab/extension.js:299
 msgid "Native"
-msgstr ""
+msgstr "Nguyên thuỷ"
 
 #: ../extensions/alternate-tab/extension.js:306
 msgid "Cancel"
-msgstr ""
+msgstr "Thôi"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "Ask the user for a default behaviour if true."
-msgstr ""
+msgstr "Hỏi người dùng hành vi mặc định nếu true."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid "Indicates if Alternate Tab is newly installed"
-msgstr ""
+msgstr "Chỉ thị đã cài đặt Alt Tab chưa"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
 msgid ""
 "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
 "workspace_icons."
 msgstr ""
+"Đặt hành vi Alt-Tab. Giá trị bao gồm: native (nguyên thuỷ), all_thumbnails "
+"(mọi ảnh nhỏ) và workspace_icons (biểu tượng vùng làm việc)."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
 msgid "The alt tab behaviour."
-msgstr ""
+msgstr "Hành vi Alt Tab"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -153,42 +173,45 @@ msgstr "Đánh dấu ưa thích"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
 msgid "Autohide duration"
-msgstr ""
+msgstr "Thời gian tự ẩn"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
 msgid "Autohide effect"
-msgstr ""
+msgstr "Hiệu ứng tự ẩn"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
 msgid "Enable/disable autohide"
-msgstr ""
+msgstr "Bật/Tắt tự ẩn"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
 msgid "Icon size"
-msgstr ""
+msgstr "Kích thước biểu tượng"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
-msgstr ""
+msgstr "Vị trí neo"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
 msgid "Sets icon size of the dock."
-msgstr ""
+msgstr "Đặt kích thước biểu tượng của neo."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
 msgid ""
 "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
 msgstr ""
+"Đặt hiệu ứng ẩn neo. Giá trị bao gồm: 'resize' (đổi cỡ) hoặc 'rescale' (co "
+"giãn)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid ""
 "Sets the position of the dock in the screen. Allowed values are 'right' or "
 "'left'"
 msgstr ""
+"Đặt vị trí neo trên màn hình. Giá trị bao gồm 'right' (phải) và 'left' (trái)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
-msgstr ""
+msgstr "Đặt khoảng thời gian của hiệu ứng tự ẩn"
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
@@ -241,11 +264,11 @@ msgstr ""
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
 msgid "Use more screen for windows"
-msgstr ""
+msgstr "Dùng nhiều screen cho cửa sổ"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
 msgid "Window placement strategy"
-msgstr ""
+msgstr "Chiến lược đặt cửa sổ"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
