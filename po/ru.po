@@ -2,13 +2,14 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Yuri Myasoedov <omerta13@yandex.ru>, 2011.
+# Stas Solovey <whats_up@tut.by>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-06-04 07:00+0000\n"
-"PO-Revision-Date: 2011-06-05 14:59+0300\n"
+"POT-Creation-Date: 2011-10-18 08:22+0000\n"
+"PO-Revision-Date: 2011-11-10 01:54+0300\n"
 "Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,48 +17,117 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../extensions/alternative-status-menu/extension.js:23
-#: ../extensions/alternative-status-menu/extension.js:27
-#: ../extensions/alternative-status-menu/extension.js:93
-msgid "Hibernate"
-msgstr "Спящий режим"
-
-#: ../extensions/alternative-status-menu/extension.js:26
-#: ../extensions/alternative-status-menu/extension.js:92
-msgid "Suspend"
-msgstr "Ждущий режим"
+#: ../extensions/alternative-status-menu/extension.js:44
+msgid "Notifications"
+msgstr "Уведомления"
 
 #: ../extensions/alternative-status-menu/extension.js:52
-msgid "Available"
-msgstr "Доступен"
+msgid "Online Accounts"
+msgstr "Сетевые учётные записи"
 
-#: ../extensions/alternative-status-menu/extension.js:57
-msgid "Busy"
-msgstr "Занят"
-
-#: ../extensions/alternative-status-menu/extension.js:65
-msgid "My Account"
-msgstr "Моя учётная запись"
-
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:56
 msgid "System Settings"
 msgstr "Системные параметры"
 
-#: ../extensions/alternative-status-menu/extension.js:76
+#: ../extensions/alternative-status-menu/extension.js:63
 msgid "Lock Screen"
 msgstr "Заблокировать экран"
 
-#: ../extensions/alternative-status-menu/extension.js:80
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Switch User"
 msgstr "Переключить пользователя"
 
-#: ../extensions/alternative-status-menu/extension.js:85
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Log Out..."
 msgstr "Выйти…"
 
-#: ../extensions/alternative-status-menu/extension.js:100
+#: ../extensions/alternative-status-menu/extension.js:81
+msgid "Suspend"
+msgstr "Ждущий режим"
+
+#: ../extensions/alternative-status-menu/extension.js:87
+msgid "Hibernate"
+msgstr "Спящий режим"
+
+#: ../extensions/alternative-status-menu/extension.js:93
 msgid "Power Off..."
 msgstr "Выключить…"
+
+#: ../extensions/alternate-tab/extension.js:44
+msgid ""
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one selection \n"
+"    list. Instead of using the application icon of every window, it uses small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode let's you switch between the applications of your current \n"
+"    workspace and gives you additionally the option to switch to the last used \n"
+"    application of your previous workspace. This is always the last symbol in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"Native:\n"
+"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
+"    native switches the Alternate Tab extension off. \n"
+msgstr ""
+"Расширение Alternate Tab используется впервые. \n"
+"Выберите нужный режим:\n"
+"\n"
+"Всё и эскизы:\n"
+"     В этом режиме все приложения со всех рабочих столов находятся в одном списке \n"
+"     выбора. Вместо того, чтобы использовать значок приложения из каждого окна, он использует небольшой \n"
+"     эскиз, напоминающий само окно. \n"
+"\n"
+"Рабочая область и значки:\n"
+"     Этот режим позволяет вам переключаться между приложениями текущего \n"
+"     рабочего пространства и дает возможность переключиться к последнему использованному \n"
+"     приложению предыдущего рабочего пространства. Это приложение, если доступно, всегда \n"
+"     отображается последним символом в списке и отделено разделителем/вертикальной линией. \n"
+"     Каждое окно изображается значком приложения.  \n"
+"\n"
+"Стандартный:\n"
+"     Этот режим является стандартным поведением GNOME 3 или, другими словами: выбирая \n"
+"     стандартное переключение, расширение Alternate Tab отключается. \n"
+
+#: ../extensions/alternate-tab/extension.js:269
+msgid "Alt Tab Behaviour"
+msgstr "Режим Alt Tab"
+
+#: ../extensions/alternate-tab/extension.js:285
+msgid "All & Thumbnails"
+msgstr "Всё и миниатюры"
+
+#: ../extensions/alternate-tab/extension.js:292
+msgid "Workspace & Icons"
+msgstr "Рабочая область и значки"
+
+#: ../extensions/alternate-tab/extension.js:299
+msgid "Native"
+msgstr "Нативный"
+
+#: ../extensions/alternate-tab/extension.js:306
+msgid "Cancel"
+msgstr "Отменить"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "Ask the user for a default behaviour if true."
+msgstr "Если выбрано, спрашивать пользователя о поведении по умолчанию."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid "Indicates if Alternate Tab is newly installed"
+msgstr "Указывает если недавно установлено расширение Alternate Tab"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
+msgid "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and workspace_icons."
+msgstr "Устанавливает режим Alt-Tab. Возможные значения: native, all_thumbnails и workspace_icons."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
+msgid "The alt tab behaviour."
+msgstr "Режим alt tab."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
@@ -67,49 +137,109 @@ msgstr "Список строк, содержащих id приложения (�
 msgid "Application and workspace list"
 msgstr "Приложение и список рабочих мест"
 
-#: ../extensions/dock/extension.js:116
+#: ../extensions/dock/extension.js:484
 msgid "Drag here to add favorites"
 msgstr "Перетащите, чтобы добавить в избранное"
 
-#: ../extensions/dock/extension.js:417
+#: ../extensions/dock/extension.js:817
 msgid "New Window"
 msgstr "Создать окно"
 
-#: ../extensions/dock/extension.js:419
+#: ../extensions/dock/extension.js:819
 msgid "Quit Application"
 msgstr "Закрыть приложение"
 
-#: ../extensions/dock/extension.js:424
+#: ../extensions/dock/extension.js:824
 msgid "Remove from Favorites"
 msgstr "Удалить из избранного"
 
-#: ../extensions/dock/extension.js:425
+#: ../extensions/dock/extension.js:825
 msgid "Add to Favorites"
 msgstr "Добавить в избранное"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Autohide duration"
+msgstr "Таймер автоскрытия"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Autohide effect"
+msgstr "Эффект автоскрытия"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Enable/disable autohide"
+msgstr "Включить/выключить автоскрытие"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Icon size"
+msgstr "Размер значков"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Position of the dock"
+msgstr "Расположение док-панели"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Sets icon size of the dock."
+msgstr "Устанавливает размер значка док-панели"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+msgstr "Устанавливает эффект скрытия док-панели. Возможные значения: «resize» или «rescale»"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
+msgstr "Устанавливает положение док-панели на экране. Возможные значения: «right» или «left»"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr "Устанавливает продолжительность эффекта автоскрытия."
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
 msgstr "Привет, мир!"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/gajim/extension.js:227
 #, c-format
 msgid "%s is away."
 msgstr "%s отошёл."
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
 msgstr "%s не в сети."
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
 msgstr "%s в сети."
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
 msgstr "%s занят."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
+msgstr "Если выбрано, располагать заголовки окон в верхней части миниатюр, а не в нижней, как это делается по умолчанию. Изменение этого параметра требует перезапуска оболочки, чтобы изменение вступило в силу."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Place window captions on top"
+msgstr "Размещать заголовки окон сверху"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "The algorithm used to layout thumbnails in the overview. 'grid' to use the default grid based algorithm, 'natural' to use another one that reflects more the position and size of the actual window"
+msgstr "Алгоритм, использующийся для расположения миниатюр. «grid» — использовать алгоритм сеточного расположения по умолчанию; «natural» — использовать другой алгоритм, который в большей степени отражает положение и размеры текущего окна."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
+msgstr "Пытаться использовать дополнительную площадь экрана для расположения миниатюр, изменяя соотношение сторон экрана и уплотняя размещение с целью уменьшения размеров ограничивающей рамки. Этот параметр применяется только для алгоритма расположения миниатюр «natural»."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+msgid "Use more screen for windows"
+msgstr "Использовать дополнительную площадь экрана для окон"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
+msgid "Window placement strategy"
+msgstr "Способ расположения окон"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
