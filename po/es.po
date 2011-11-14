@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-09-18 17:08+0000\n"
+"POT-Creation-Date: 2011-10-12 01:58+0000\n"
 "PO-Revision-Date: 2011-10-01 14:31+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
@@ -134,23 +134,23 @@ msgstr ""
 msgid "Application and workspace list"
 msgstr "Lista de aplicaciones y espacios de trabajo"
 
-#: ../extensions/dock/extension.js:486
+#: ../extensions/dock/extension.js:483
 msgid "Drag here to add favorites"
 msgstr "Arrastrar aquí para añadir a favoritos"
 
-#: ../extensions/dock/extension.js:820
+#: ../extensions/dock/extension.js:816
 msgid "New Window"
 msgstr "Ventana nueva"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:818
 msgid "Quit Application"
 msgstr "Salir de la aplicación"
 
-#: ../extensions/dock/extension.js:827
+#: ../extensions/dock/extension.js:823
 msgid "Remove from Favorites"
 msgstr "Quitar de favoritos"
 
-#: ../extensions/dock/extension.js:828
+#: ../extensions/dock/extension.js:824
 msgid "Add to Favorites"
 msgstr "Añadir a favoritos"
 
