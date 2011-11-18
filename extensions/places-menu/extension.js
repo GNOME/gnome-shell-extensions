@@ -54,9 +54,9 @@ PlacesMenu.prototype = {
         this.defaultPlaces = Main.placesManager.getDefaultPlaces();
 
         for (let placeid = 0; placeid < this.defaultPlaces.length; placeid++) {
-            this.defaultItems[placeid] = new PopupMenu.PopupMenuItem(_(this.defaultPlaces[placeid].name));
+            this.defaultItems[placeid] = new PopupMenu.PopupMenuItem(this.defaultPlaces[placeid].name);
             let icon = this.defaultPlaces[placeid].iconFactory(PLACE_ICON_SIZE);
-            this.defaultItems[placeid].addActor(icon, { align: St.Align.END});
+            this.defaultItems[placeid].addActor(icon, { align: St.Align.END });
             this.defaultItems[placeid].place = this.defaultPlaces[placeid];
             this.menu.addMenuItem(this.defaultItems[placeid]);
             this.defaultItems[placeid].connect('activate', function(actor,event) {
@@ -70,9 +70,9 @@ PlacesMenu.prototype = {
         this.bookmarks = Main.placesManager.getBookmarks();
 
         for (let bookmarkid = 0; bookmarkid < this.bookmarks.length; bookmarkid++) {
-            this.bookmarkItems[bookmarkid] = new PopupMenu.PopupMenuItem(_(this.bookmarks[bookmarkid].name));
+            this.bookmarkItems[bookmarkid] = new PopupMenu.PopupMenuItem(this.bookmarks[bookmarkid].name);
             let icon = this.bookmarks[bookmarkid].iconFactory(PLACE_ICON_SIZE);
-            this.bookmarkItems[bookmarkid].addActor(icon, { align: St.Align.END});
+            this.bookmarkItems[bookmarkid].addActor(icon, { align: St.Align.END });
             this.bookmarkItems[bookmarkid].place = this.bookmarks[bookmarkid];
             this._bookmarksSection.addMenuItem(this.bookmarkItems[bookmarkid]);
             this.bookmarkItems[bookmarkid].connect('activate', function(actor,event) {
@@ -85,9 +85,9 @@ PlacesMenu.prototype = {
         this.devices = Main.placesManager.getMounts();
 
         for (let devid = 0; devid < this.devices.length; devid++) {
-            this.deviceItems[devid] = new PopupMenu.PopupMenuItem(_(this.devices[devid].name));
+            this.deviceItems[devid] = new PopupMenu.PopupMenuItem(this.devices[devid].name);
             let icon = this.devices[devid].iconFactory(PLACE_ICON_SIZE);
-            this.deviceItems[devid].addActor(icon, { align: St.Align.END});
+            this.deviceItems[devid].addActor(icon, { align: St.Align.END });
             this.deviceItems[devid].place = this.devices[devid];
             this._devicesMenuItem.menu.addMenuItem(this.deviceItems[devid]);
             this.deviceItems[devid].connect('activate', function(actor,event) {
