@@ -403,8 +403,10 @@ AltTabPopup2.prototype = {
             }
 	}
 
-        if (!windows.length)
+        if (!windows.length) {
+            this.destroy();
             return false;
+        }
 
         if (!Main.pushModal(this.actor)) {
             // Probably someone else has a pointer grab, try again with keyboard only
