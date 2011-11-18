@@ -70,7 +70,7 @@ ApplicationsButton.prototype = {
                 var app = appsys.lookup_app_by_tree_entry(entry);
                 menu.addMenuItem(new AppMenuItem(app));
             } else if (nextType == GMenu.TreeItemType.DIRECTORY) {
-                this._loadCategory(iter.get_directory(), appList);
+                this._loadCategory(iter.get_directory(), menu);
             }
         }
     },
