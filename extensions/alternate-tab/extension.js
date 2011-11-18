@@ -30,12 +30,13 @@ const SETTINGS_BEHAVIOUR_KEY = 'behaviour';
 const SETTINGS_FIRST_TIME_KEY = 'first-time';
 
 const MODES = {
-    native: function(shellwm, binding, mask, window, backwards) {
-            shellwm._startAppSwitcher(shellwm, binding, mask, window, backwards);
+    all_thumbnails: function(shellwm, binding, mask, window, backwards) {
+        let tabPopup = new AltTabPopup2();
+
+        if (!tabPopup.show(backwards, binding, mask))
+            tabPopup.destroy();
     },
-    all_thumbnails: function() {
-            new AltTabPopup2();
-    },
+
     workspace_icons: function(shellwm, binding, mask, window, backwards) {
         if (shellwm._workspaceSwitcherPopup != null)
             shellwm._workspaceSwitcherPopup.actor.hide();
@@ -61,9 +62,8 @@ Workspace & Icons:\n\
     the list and is segregated by a separator/vertical line if available. \n\
     Every window is represented by its application icon.  \n\
 \n\
-Native:\n\
-    This mode is the native GNOME 3 behaviour or in other words: Clicking \n\
-    native switches the Alternate Tab extension off. \n\
+If you whish to revert to the default behavior for the Alt-Tab switcher, just\n\
+disable the extension from extensions.gnome.org or the Advanced Settings application.\
 ");
 
 function AltTabPopupW() {
@@ -82,8 +82,12 @@ AltTabPopupW.prototype = {
         if (!apps.length)
             return false;
 
-        if (!Main.pushModal(this.actor))
-            return false;
+        if (!Main.pushModal(this.actor)) {
+            // Probably someone else has a pointer grab, try again with keyboard only
+            if (!Main.pushModal(this.actor, global.get_current_time(), Meta.ModalOptions.POINTER_ALREADY_GRABBED)) {
+                return false;
+            }
+        }
         this._haveModal = true;
         this._modifierMask = AltTab.primaryModifier(mask);
 
@@ -150,6 +154,9 @@ AltTabPopupW.prototype = {
 
     _finish : function() {
         let app = this._appIcons[this._currentApp];
+        if (!app)
+            return;
+
         Main.activateWindow(app.cachedWindows[0]);
         this.destroy();
     }
@@ -311,13 +318,6 @@ AltTabSettingsDialog.prototype = {
                 })
             },
             {
-                label: _("Native"),
-                action: Lang.bind(this, function() {
-                    this.setBehaviour('native');
-                    this.close();
-                })
-            },
-            {
                 label: _("Cancel"),
                 action: Lang.bind(this, function() {
                     this.close();
@@ -358,16 +358,17 @@ AltTabPopup2.prototype = {
         this._thumbnailTimeoutId = 0;
         this._motionTimeoutId = 0;
 
+
         // Initially disable hover so we ignore the enter-event if
         // the switcher appears underneath the current pointer location
         this._disableHover();
 
-	this.show();
+	//this.show();
         Main.uiGroup.add_actor(this.actor);
-        this._select(0);
+        //this._select(0);
     },
 
-    show : function(backward) {
+    show : function(backward, binding, mask) {
         let windows = global.get_window_actors();
 
 	let list = '';
@@ -405,9 +406,14 @@ AltTabPopup2.prototype = {
         if (!windows.length)
             return false;
 
-        if (!Main.pushModal(this.actor))
-            return false;
+        if (!Main.pushModal(this.actor)) {
+            // Probably someone else has a pointer grab, try again with keyboard only
+            if (!Main.pushModal(this.actor, global.get_current_time(), Meta.ModalOptions.POINTER_ALREADY_GRABBED)) {
+                return false;
+            }
+        }
         this._haveModal = true;
+        this._modifierMask = AltTab.primaryModifier(mask);
 
         this.actor.connect('key-press-event', Lang.bind(this, this._keyPressEvent));
         this.actor.connect('key-release-event', Lang.bind(this, this._keyReleaseEvent));
@@ -423,10 +429,38 @@ AltTabPopup2.prototype = {
 
         this._appIcons = appIcons;
 
+        // make the initial selection
+        if (backward)
+            this._select(windows.length - 2);
+        else
+            this._select(0);
+
+        this.actor.opacity = 0;
+        this.actor.show();
+
+        // There's a race condition; if the user released Alt before
+        // we got the grab, then we won't be notified. (See
+        // https://bugzilla.gnome.org/show_bug.cgi?id=596695 for
+        // details.) So we check now. (Have to do this after updating
+        // selection.)
+        let [x, y, mods] = global.get_pointer();
+        if (!(mods & this._modifierMask)) {
+            this._finish();
+            return false;
+        }
+
+        // We delay showing the popup so that fast Alt+Tab users aren't
+        // disturbed by the popup briefly flashing.
+        this._initialDelayTimeoutId = Mainloop.timeout_add(AltTab.POPUP_DELAY_TIMEOUT,
+                                                           Lang.bind(this, function () {
+                                                               this.actor.opacity = 255;
+                                                               this._initialDelayTimeoutId = 0;
+                                                           }));
 
 	return true
     },
 
+/*
     _keyPressEvent : function(actor, event) {
         let keysym = event.get_key_symbol();
         let shift = (Shell.get_event_state(event) & Clutter.ModifierType.SHIFT_MASK);
@@ -472,6 +506,7 @@ AltTabPopup2.prototype = {
 
         return true;
     },
+*/
 
     _sortWindows : function(win1,win2) {
         let t1 = win1.get_user_time();
@@ -498,18 +533,18 @@ function WindowList(windows) {
 }
 
 WindowList.prototype = {
-    __proto__ : AltTab.AppSwitcher.prototype,
+    __proto__ : AltTab.SwitcherList.prototype,
 
     _init : function(windows) {
-        AltTab.AppSwitcher.prototype._init.call(this, []);
+        AltTab.SwitcherList.prototype._init.call(this, true);
 
         let activeWorkspace = global.screen.get_active_workspace();
         this._labels = new Array();
         this._thumbnailBins = new Array();
         this._clones = new Array();
         this._windows = windows;
-        this._arrows= new Array();
-        this.icons= new Array();
+        this._arrows = new Array();
+        this.icons = new Array();
 	for (let w = 0; w < windows.length; w++) {
             let arrow = new St.DrawingArea({ style_class: 'switcher-arrow' });
             arrow.connect('repaint', Lang.bind(this, function (area) {
@@ -538,15 +573,16 @@ WindowList.prototype = {
                         let clone = new Clutter.Clone ({ source: windowTexture, reactive: true,  width: width * scale, height: height * scale });
                         ap1.icon = ap1.app.create_icon_texture(128);
                         ap1._iconBin.set_size(128,128);
-	                ap1._iconBin.child=clone;
+	                ap1._iconBin.child = clone;
 
-                        ap1.label.text=win.get_title();
+                        ap1.label.text = win.get_title();
 	            }
 	        }
   	    }
             if (ap1 != null) {
-	    ap1.cachedWindows = [win];
-            this._addIcon(ap1);
+	        ap1.cachedWindows = [win];
+                this.addItem(ap1.actor, ap1.label);
+                this.icons.push(ap1);
             }
 	}
     },
@@ -575,15 +611,15 @@ function doAltTab(shellwm, binding, mask, window, backwards) {
 }
 
 function enable() {
-    Main.wm.setKeybindingHandler('switch_windows', doAltTab);
-    Main.wm.setKeybindingHandler('switch_group', doAltTab);
-    Main.wm.setKeybindingHandler('switch_windows_backward', doAltTab);
-    Main.wm.setKeybindingHandler('switch_group_backward', doAltTab);
+    Main.wm.setKeybindingHandler('switch-windows', doAltTab);
+    Main.wm.setKeybindingHandler('switch-group', doAltTab);
+    Main.wm.setKeybindingHandler('switch-windows-backward', doAltTab);
+    Main.wm.setKeybindingHandler('switch-group-backward', doAltTab);
 }
 
 function disable() {
-    Main.wm.setKeybindingHandler('switch_windows', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Main.wm.setKeybindingHandler('switch_group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Main.wm.setKeybindingHandler('switch_windows_backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Main.wm.setKeybindingHandler('switch_group_backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch-windows', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch-group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch-windows-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch-group-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
 }
