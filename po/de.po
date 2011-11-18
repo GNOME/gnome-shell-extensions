@@ -1,7 +1,7 @@
 # German translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Mario Blättermann <mariobl@freenet.de>, 2011.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2011.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2011.
 #
 msgid ""
@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-09-17 09:54+0000\n"
-"PO-Revision-Date: 2011-09-17 14:58+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@freenet.de>\n"
+"POT-Creation-Date: 2011-11-18 17:35+0000\n"
+"PO-Revision-Date: 2011-11-18 18:37+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,7 +56,7 @@ msgstr "Ruhezustand"
 msgid "Power Off..."
 msgstr "Ausschalten …"
 
-#: ../extensions/alternate-tab/extension.js:44
+#: ../extensions/alternate-tab/extension.js:50
 msgid ""
 "This is the first time you use the Alternate Tab extension. \n"
 "Please choose your preferred behaviour:\n"
@@ -77,9 +77,10 @@ msgid ""
 "    the list and is segregated by a separator/vertical line if available. \n"
 "    Every window is represented by its application icon.  \n"
 "\n"
-"Native:\n"
-"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
-"    native switches the Alternate Tab extension off. \n"
+"If you whish to revert to the default behavior for the Alt-Tab switcher, "
+"just\n"
+"disable the extension from extensions.gnome.org or the Advanced Settings "
+"application."
 msgstr ""
 "Sie verwenden die Erweiterung »Alt-Tab« das erste Mal. \n"
 "Bitte wählen Sie das gewünschte Verhalten:\n"
@@ -93,33 +94,30 @@ msgstr ""
 "    Dieser Modus ermöglicht den Wechsel zwischen Anwendungen auf Ihrer \n"
 "    aktuellen Arbeitsfläche und ermöglicht weiterhin, auf die zuletzt "
 "verwendete\n"
-"    Anwendung der letzten Arbeitsfläche zu wechseln. Sie ist immer das "
-"letzte Symbol\n"
+"    Anwendung der letzten Arbeitsfläche zu wechseln. Sie ist immer das letzte "
+"Symbol\n"
 "    der Liste und ist durch einen Trenner (vertikale Linie) getrennt. \n"
 "    Jedes Fenster wird durch das entsprechende Anwendungssymbol "
 "repräsentiert.\n"
 "\n"
-"Nativ:\n"
-"    Dieser Modus entspricht dem nativen Verhalten von GNOME 3, d.h.\n"
-"    die Erweiterung »Alt-Tab« wird ausgeschaltet. \n"
+"Falls Sie zum Standardverhalten der Alt-Tab-Umschaltung zurückkehren wollen,\n"
+"deaktivieren Sie diese Erweiterung in extensions.gnome.org oder verwenden "
+"Sie\n"
+"die »Erweiterten Einstellungen«."
 
-#: ../extensions/alternate-tab/extension.js:269
+#: ../extensions/alternate-tab/extension.js:291
 msgid "Alt Tab Behaviour"
 msgstr "Verhalten bei Alt-Tab"
 
-#: ../extensions/alternate-tab/extension.js:285
+#: ../extensions/alternate-tab/extension.js:307
 msgid "All & Thumbnails"
 msgstr "Alle und Vorschaubilder"
 
-#: ../extensions/alternate-tab/extension.js:292
+#: ../extensions/alternate-tab/extension.js:314
 msgid "Workspace & Icons"
 msgstr "Arbeitsbereich und Symbole"
 
-#: ../extensions/alternate-tab/extension.js:299
-msgid "Native"
-msgstr "Nativ"
-
-#: ../extensions/alternate-tab/extension.js:306
+#: ../extensions/alternate-tab/extension.js:321
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -153,30 +151,29 @@ msgid ""
 "followed by a colon and the workspace number"
 msgstr ""
 "Eine Liste aus Zeichenketten, wovon jede eine Anwendungskennung (*.desktop-"
-"Datei) enthält, gefolgt von einem Doppelpunkt und der Nummer der "
-"Arbeitsfläche"
+"Datei) enthält, gefolgt von einem Doppelpunkt und der Nummer der Arbeitsfläche"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid "Application and workspace list"
 msgstr "Anwendungs- und Arbeitsflächenliste"
 
-#: ../extensions/dock/extension.js:486
+#: ../extensions/dock/extension.js:484
 msgid "Drag here to add favorites"
 msgstr "Hierher ziehen, um zu Favoriten hinzuzufügen"
 
-#: ../extensions/dock/extension.js:820
+#: ../extensions/dock/extension.js:817
 msgid "New Window"
 msgstr "Neues Fenster"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:819
 msgid "Quit Application"
 msgstr "Anwendung beenden"
 
-#: ../extensions/dock/extension.js:827
+#: ../extensions/dock/extension.js:824
 msgid "Remove from Favorites"
 msgstr "Aus Favoriten entfernen"
 
-#: ../extensions/dock/extension.js:828
+#: ../extensions/dock/extension.js:825
 msgid "Add to Favorites"
 msgstr "Zu Favoriten hinzufügen"
 
@@ -266,8 +263,8 @@ msgstr "Fensterbeschriftungen oben platzieren"
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid ""
 "The algorithm used to layout thumbnails in the overview. 'grid' to use the "
-"default grid based algorithm, 'natural' to use another one that reflects "
-"more the position and size of the actual window"
+"default grid based algorithm, 'natural' to use another one that reflects more "
+"the position and size of the actual window"
 msgstr ""
 "Der Algorithmus zum Anordnen der Vorschaubilder in der Übersicht. »grid« "
 "verwendet den voreingestellten Raster-basierten Algorithmus, »natural« setzt "
@@ -277,14 +274,13 @@ msgstr ""
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. "
-"This setting applies only with the natural placement strategy."
+"aspect ratio, and consolidating them further to reduce the bounding box. This "
+"setting applies only with the natural placement strategy."
 msgstr ""
 "Versuchen, mehr Bildschirmfläche zum Platzieren der Fenstervorschaubilder zu "
-"verwenden, indem das Bildschirmseitenverhältnis berücksichtigt wird und "
-"diese stärker zusammengelegt werden, um den umgebenden Rahmen zu "
-"verkleinern. Diese Einstellung betrifft nur den natürlichen "
-"Platzierungsalgorithmus."
+"verwenden, indem das Bildschirmseitenverhältnis berücksichtigt wird und diese "
+"stärker zusammengelegt werden, um den umgebenden Rahmen zu verkleinern. Diese "
+"Einstellung betrifft nur den natürlichen Platzierungsalgorithmus."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
 msgid "Use more screen for windows"
@@ -323,6 +319,9 @@ msgstr "Kopfüber"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Bildschirmeinstellungen festlegen …"
+
+#~ msgid "Native"
+#~ msgstr "Nativ"
 
 #~ msgid "Available"
 #~ msgstr "Verfügbar"
