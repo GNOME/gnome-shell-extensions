@@ -2,7 +2,7 @@ extensionurl = http://git.gnome.org/gnome-shell-extensions
 
 # Change these to modify how installation is performed
 topextensiondir = $(datadir)/gnome-shell/extensions
-extensionbase = @gnome-shell-extensions.gnome.org
+extensionbase = @gnome-shell-extensions.gcampax.github.com
 
 uuid = $(EXTENSION_ID)$(extensionbase)
 
