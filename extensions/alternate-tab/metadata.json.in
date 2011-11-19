@@ -3,7 +3,7 @@
 "name": "AlternateTab",
 "description": "A replacement for Alt-Tab, allows to cycle between windows and does not group by application",
 "original-authors": [  "jw@bargsten.org", "thomas.bouffon@gmail.com" ],
-"shell-version": [ "@shell_current@" ],
+"shell-version": [ "@shell_current@", "3.2" ],
 "localedir": "@LOCALEDIR@",
 "url": "@url@"
 }
