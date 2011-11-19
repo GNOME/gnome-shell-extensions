@@ -1,7 +1,6 @@
 {
     "shell-version": ["@shell_current@", "3.2" ],
     "uuid": "@uuid@",
-    "localedir": "@LOCALEDIR@",
     "original-author": "zaspire@rambler.ru",
     "name": "SystemMonitor",
     "description": "System Monitor",

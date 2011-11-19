@@ -935,7 +935,7 @@ DockIconMenu.prototype = {
 }
 
 function init(extensionMeta) {
-    imports.gettext.bindtextdomain('gnome-shell-extensions', extensionMeta.localedir);
+    imports.gettext.bindtextdomain('gnome-shell-extensions', GLib.build_filenamev([metadata.path, 'locale']));
 }
 
 let dock;

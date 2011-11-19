@@ -19,7 +19,7 @@ function _showHello() {
 function init(metadata) {
     log ('Example extension initalized');
 
-    imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+    imports.gettext.bindtextdomain('gnome-shell-extensions', GLib.build_filenamev([metadata.path, 'locale']));
 }
 
 let signalId;

@@ -91,7 +91,7 @@ DriveMenu.prototype = {
 
 // Put your extension initialization code here
 function init(metadata) {
-    imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+    imports.gettext.bindtextdomain('gnome-shell-extensions', GLib.build_filenamev([metadata.path, 'locale']));
 }
 
 let _indicator;

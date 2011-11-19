@@ -1,4 +1,5 @@
 /* -*- mode: js2 - indent-tabs-mode: nil - js2-basic-offset: 4 -*- */
+const GLib = imports.gi.GLib;
 const Lang = imports.lang;
 const St = imports.gi.St;
 
@@ -99,7 +100,7 @@ function createSubMenu() {
 
 // Put your extension initialization code here
 function init(metadata) {
-    imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+    imports.gettext.bindtextdomain('gnome-shell-extensions', GLib.build_filenamev([metadata.path, 'locale']));
 }
 
 function reset(statusMenu) {

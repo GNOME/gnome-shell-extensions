@@ -595,7 +595,7 @@ WindowList.prototype = {
 };
 
 function init(metadata) {
-    imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+    imports.gettext.bindtextdomain('gnome-shell-extensions', GLib.build_filenamev([metadata.path, 'locale']));
 }
 
 function doAltTab(shellwm, binding, mask, window, backwards) {
