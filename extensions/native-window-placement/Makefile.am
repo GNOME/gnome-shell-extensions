@@ -2,7 +2,7 @@ EXTENSION_ID = native-window-placement
 
 include ../../extension.mk
 
-gschemas_in = org.gnome.shell.extensions.native-window-placement.gschema.xml.in
+gschemas_in = $(gschemabase).native-window-placement.gschema.xml.in
 
 @INTLTOOL_XML_NOMERGE_RULE@
 
