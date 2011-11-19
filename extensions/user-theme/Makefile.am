@@ -2,7 +2,7 @@ EXTENSION_ID = user-theme
 
 include ../../extension.mk
 
-gschemas_in = org.gnome.shell.extensions.user-theme.gschema.xml.in
+gschemas_in = $(gschemabase).user-theme.gschema.xml.in
 
 @INTLTOOL_XML_NOMERGE_RULE@
 

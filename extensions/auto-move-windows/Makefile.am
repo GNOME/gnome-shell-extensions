@@ -2,7 +2,7 @@ EXTENSION_ID = auto-move-windows
 
 include ../../extension.mk
 
-gschemas_in = org.gnome.shell.extensions.auto-move-windows.gschema.xml.in
+gschemas_in = $(gschemabase).auto-move-windows.gschema.xml.in
 
 @INTLTOOL_XML_NOMERGE_RULE@
 

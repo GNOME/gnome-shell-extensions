@@ -2,7 +2,7 @@ EXTENSION_ID = alternate-tab
 
 include ../../extension.mk
 
-gschemas_in = org.gnome.shell.extensions.alternate-tab.gschema.xml.in
+gschemas_in = $(gschemabase).alternate-tab.gschema.xml.in
 
 @INTLTOOL_XML_NOMERGE_RULE@
 
