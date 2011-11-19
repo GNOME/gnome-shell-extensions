@@ -10,15 +10,16 @@ const SETTINGS_SCHEMA = 'org.gnome.shell.extensions.user-theme';
 const SETTINGS_KEY = 'name';
 
 function ThemeManager() {
-    this._init();
+    this._init.apply(this, arguments);
 }
 
 ThemeManager.prototype = {
-    _init: function() {
+    _init: function(metadata) {
+        let me = imports.ui.extensionSystem.extensions[metadata.uuid];
+        this._settings = me.convenience.getSettings(metadata, 'user-theme');
     },
 
     enable: function() {
-        this._settings = new Gio.Settings({ schema: SETTINGS_SCHEMA });
         this._changedId = this._settings.connect('changed::'+SETTINGS_KEY, Lang.bind(this, this._changeTheme));
         this._changeTheme();
     },
@@ -68,5 +69,5 @@ ThemeManager.prototype = {
 
 
 function init(metadata) {
-    return new ThemeManager();
+    return new ThemeManager(metadata);
 }

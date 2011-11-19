@@ -1,7 +1,7 @@
 include $(top_srcdir)/include.mk
 
 dist_extension_DATA = extension.js stylesheet.css
-nodist_extension_DATA = metadata.json $(EXTRA_EXTENSION)
+nodist_extension_DATA = metadata.json $(top_srcdir)/lib/convenience.js $(EXTRA_EXTENSION)
 
 EXTRA_DIST = metadata.json.in
 

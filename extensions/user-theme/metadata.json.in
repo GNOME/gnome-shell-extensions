@@ -2,7 +2,7 @@
  "uuid": "@uuid@",
  "name": "User Themes",
  "description": "Load shell themes from user directory",
- "shell-version": [ "@shell_current@", "3.2" ],
+ "shell-version": [ "@shell_current@" ],
  "localedir": "@LOCALEDIR@",
  "original-authors": [ "john.stowers@gmail.com" ],
  "url": "@url@"

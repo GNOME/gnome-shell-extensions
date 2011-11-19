@@ -23,6 +23,8 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 const N_ = function(e) { return e };
 
+let settings;
+
 const POPUP_DELAY_TIMEOUT = 150; // milliseconds
 
 const SETTINGS_SCHEMA = 'org.gnome.shell.extensions.alternate-tab';
@@ -328,9 +330,8 @@ AltTabSettingsDialog.prototype = {
     },
 
     setBehaviour: function(behaviour) {
-           this._settings = new Gio.Settings({ schema: SETTINGS_SCHEMA });
-           this._settings.set_string(SETTINGS_BEHAVIOUR_KEY, behaviour);
-           this._settings.set_boolean(SETTINGS_FIRST_TIME_KEY, false);
+           settings.set_string(SETTINGS_BEHAVIOUR_KEY, behaviour);
+           settings.set_boolean(SETTINGS_FIRST_TIME_KEY, false);
     }
 };
 
@@ -595,13 +596,12 @@ WindowList.prototype = {
 };
 
 function init(metadata) {
-    imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+    let me = imports.ui.extensionSystem.extensions[metadata.uuid];
+    me.convenience.initTranslations(metadata);
+    settings = me.convenience.getSettings(metadata, 'alternate-tab');
 }
 
 function doAltTab(shellwm, binding, mask, window, backwards) {
-    let settings = new Gio.Settings({ schema: SETTINGS_SCHEMA });
-
-
     if(settings.get_boolean(SETTINGS_FIRST_TIME_KEY)) {
         new AltTabSettingsDialog().open();
     } else {

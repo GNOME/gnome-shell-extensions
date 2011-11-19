@@ -14,13 +14,15 @@ const Main = imports.ui.main;
 const SETTINGS_SCHEMA = 'org.gnome.shell.extensions.auto-move-windows';
 const SETTINGS_KEY = 'application-list';
 
+let settings;
+
 function WindowMover() {
     this._init();
 }
 
 WindowMover.prototype = {
     _init: function() {
-        this._settings = new Gio.Settings({ schema: SETTINGS_SCHEMA });
+        this._settings = settings;
         this._windowTracker = Shell.WindowTracker.get_default();
 
         let display = global.screen.get_display();
@@ -79,8 +81,10 @@ WindowMover.prototype = {
 let prevCheckWorkspaces;
 let winMover;
 
-function init(extensionMeta) {
-    // do nothing here
+function init(metadata) {
+    let me = imports.ui.extensionSystem.extensions[metadata.uuid];
+    me.convenience.initTranslations(metadata);
+    settings = me.convenience.getSettings(metadata, 'auto-move-windows');
 }
 
 function enable() {

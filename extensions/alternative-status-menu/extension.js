@@ -99,7 +99,8 @@ function createSubMenu() {
 
 // Put your extension initialization code here
 function init(metadata) {
-    imports.gettext.bindtextdomain('gnome-shell-extensions', metadata.localedir);
+    let me = imports.ui.extensionSystem.extensions[metadata.uuid];
+    me.convenience.initTranslations(metadata);
 }
 
 function reset(statusMenu) {

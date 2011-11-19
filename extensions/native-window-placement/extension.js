@@ -25,6 +25,8 @@ const WindowPlacementStrategy = {
     GRID: 1,
 };
 
+let _me, _metadata;
+
 // testing settings for natural window placement strategy:
 const WINDOW_PLACEMENT_NATURAL_FILLGAPS = true;                     // enlarge windows at the end to fill gaps         // not implemented yet
 const WINDOW_PLACEMENT_NATURAL_GRID_FALLBACK = true;                // fallback to grid mode if all windows have the same size and positions.     // not implemented yet
@@ -117,7 +119,7 @@ function resetState() {
 function enable() {
     resetState();
 
-    let settings = new Gio.Settings({ schema: 'org.gnome.shell.extensions.native-window-placement' });
+    let settings = _me.convenience.getSettings(_metadata, 'native-window-placement');
     let placementStrategy = settings.get_enum('strategy');
     let signalId = settings.connect('changed::strategy', function() {
         placementStrategy = settings.get_enum('strategy');
@@ -527,6 +529,7 @@ function disable() {
     resetState();
 }
 
-function init() {
-    /* do nothing */
+function init(metadata) {
+    _metadata = metadata;
+    _me = imports.ui.extensionSystem.extensions[metadata.uuid];
 }
