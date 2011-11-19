@@ -107,10 +107,7 @@ function reset(statusMenu) {
     statusMenu._updateLogout();
     statusMenu._updateLockScreen();
 
-    statusMenu._presence.getStatus(Lang.bind(statusMenu, statusMenu._updateSwitch));
-
-    // HACK! Obtain the IMStatusChooserItem and force a _updateUser
-    statusMenu.menu._getMenuItems()[0]._updateUser();
+    statusMenu._updateSwitch(statusMenu._presence.status);
 }
 
 function enable() {
