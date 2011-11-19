@@ -3,6 +3,5 @@
  "name": "Hello, World!",
  "description": "An example extension to show how it works. Shows Hello, world when clicking on the top panel.",
  "shell-version": [ "@shell_current@", "3.2" ],
- "localedir": "@LOCALEDIR@",
  "url": "@url@"
 }

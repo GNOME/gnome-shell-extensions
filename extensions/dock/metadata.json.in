@@ -4,6 +4,5 @@
 "description": "A dock for the GNOME Shell -- displays favorite and running applications",
 "original-author": "tclaesson@gmail.com",
 "shell-version": [ "@shell_current@" ],
-"localedir": "@LOCALEDIR@",
 "url": "@url@"
 }

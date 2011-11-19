@@ -3,7 +3,6 @@
  "name": "Auto Move Windows",
  "description": "Move applications to specific workspaces when they create windows",
  "shell-version": [ "@shell_current@" ],
- "localedir": "@LOCALEDIR@",
  "original-authors": [ "alessandro.crismani@gmail.com", "thomas.bouffon@gmail.com" ],
  "url": "@url@"
 }
