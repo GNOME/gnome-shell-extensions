@@ -1,3 +1,12 @@
+3.2.1
+=====
+* dock: added "move" hide effect
+* systemMonitor: now it enables/disables properly
+* systemMonitor: improved styling
+* alternate-tab: both modes now work with gnome-shell 3.2
+* various other bug fixes
+* updated translations
+
 3.2.0
 =====
 
