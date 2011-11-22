@@ -5,17 +5,19 @@
  * of the gnome-shell source code
  */
 
-const AltTab = imports.ui.altTab;
 const Clutter = imports.gi.Clutter;
 const Gdk = imports.gi.Gdk;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
 const Lang = imports.lang;
-const Main = imports.ui.main;
 const Mainloop = imports.mainloop;
-const ModalDialog = imports.ui.modalDialog;
+const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
+
+const AltTab = imports.ui.altTab;
+const Main = imports.ui.main;
+const ModalDialog = imports.ui.modalDialog;
 const Tweener = imports.ui.tweener;
 const WindowManager = imports.ui.windowManager;
 
@@ -32,16 +34,16 @@ const SETTINGS_BEHAVIOUR_KEY = 'behaviour';
 const SETTINGS_FIRST_TIME_KEY = 'first-time';
 
 const MODES = {
-    all_thumbnails: function(shellwm, binding, mask, window, backwards) {
+    all_thumbnails: function(display, binding, mask, window, backwards) {
         let tabPopup = new AltTabPopup2();
 
         if (!tabPopup.show(backwards, binding, mask))
             tabPopup.destroy();
     },
 
-    workspace_icons: function(shellwm, binding, mask, window, backwards) {
-        if (shellwm._workspaceSwitcherPopup != null)
-            shellwm._workspaceSwitcherPopup.actor.hide();
+    workspace_icons: function(display, binding, mask, window, backwards) {
+        if (Main.wm._workspaceSwitcherPopup)
+            Main.wm._workspaceSwitcherPopup.actor.hide();
 
         let tabPopup = new AltTabPopupW();
         if (!tabPopup.show(backwards, binding, mask))
@@ -601,27 +603,29 @@ function init(metadata) {
     settings = me.convenience.getSettings(metadata, 'alternate-tab');
 }
 
-function doAltTab(shellwm, binding, mask, window, backwards) {
+function doAltTab(display, screen, window, binding) {
     if(settings.get_boolean(SETTINGS_FIRST_TIME_KEY)) {
         new AltTabSettingsDialog().open();
     } else {
         let behaviour = settings.get_string(SETTINGS_BEHAVIOUR_KEY);
         if(behaviour in MODES) {
-            MODES[behaviour](shellwm, binding, mask, window, backwards);
+            let modifiers = binding.get_modifiers()
+            let backwards = modifiers & Meta.VirtualModifier.SHIFT_MASK;
+            MODES[behaviour](display, binding.get_name(), binding.get_mask(), window, backwards);
         }
     }
 }
 
 function enable() {
-    Main.wm.setKeybindingHandler('switch-windows', doAltTab);
-    Main.wm.setKeybindingHandler('switch-group', doAltTab);
-    Main.wm.setKeybindingHandler('switch-windows-backward', doAltTab);
-    Main.wm.setKeybindingHandler('switch-group-backward', doAltTab);
+    Meta.keybindings_set_custom_handler('switch-windows', doAltTab);
+    Meta.keybindings_set_custom_handler('switch-group', doAltTab);
+    Meta.keybindings_set_custom_handler('switch-windows-backward', doAltTab);
+    Meta.keybindings_set_custom_handler('switch-group-backward', doAltTab);
 }
 
 function disable() {
-    Main.wm.setKeybindingHandler('switch-windows', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Main.wm.setKeybindingHandler('switch-group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Main.wm.setKeybindingHandler('switch-windows-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Main.wm.setKeybindingHandler('switch-group-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Meta.keybindings_set_custom_handler('switch-windows', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Meta.keybindings_set_custom_handler('switch-group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Meta.keybindings_set_custom_handler('switch-windows-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Meta.keybindings_set_custom_handler('switch-group-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
 }
