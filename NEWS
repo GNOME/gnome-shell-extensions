@@ -1,3 +1,11 @@
+3.3.2
+=====
+* all extensions are now self-contained, including l10n and settings
+* introduce a convenience module that can be shared among all extensions
+* you can know build an installable zip file with make zip-file
+* apps-menu no longer shows NoDisplay apps
+* alternative-status-menu, alternate-tab: fix for master shell
+
 3.2.1
 =====
 * dock: added "move" hide effect
