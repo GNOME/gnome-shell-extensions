@@ -68,7 +68,8 @@ ApplicationsButton.prototype = {
             if (nextType == GMenu.TreeItemType.ENTRY) {
                 var entry = iter.get_entry();
                 var app = appsys.lookup_app_by_tree_entry(entry);
-                menu.addMenuItem(new AppMenuItem(app));
+                if (!entry.get_app_info().get_nodisplay())
+                    menu.addMenuItem(new AppMenuItem(app));
             } else if (nextType == GMenu.TreeItemType.DIRECTORY) {
                 this._loadCategory(iter.get_directory(), menu);
             }
