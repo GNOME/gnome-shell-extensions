@@ -95,6 +95,9 @@ function createSubMenu() {
 	this._session.ShutdownRemote();
     }));
     this.menu.addMenuItem(item);
+
+    // clear out this to avoid criticals
+    this._suspendOrPowerOffItem = null;
 }
 
 // Put your extension initialization code here
