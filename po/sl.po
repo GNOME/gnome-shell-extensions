@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-09-17 09:54+0000\n"
-"PO-Revision-Date: 2011-09-17 17:14+0100\n"
+"POT-Creation-Date: 2011-11-24 16:04+0000\n"
+"PO-Revision-Date: 2011-11-25 17:53+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -56,7 +56,7 @@ msgstr "V mirovanje"
 msgid "Power Off..."
 msgstr "Izklopi ..."
 
-#: ../extensions/alternate-tab/extension.js:44
+#: ../extensions/alternate-tab/extension.js:54
 msgid ""
 "This is the first time you use the Alternate Tab extension. \n"
 "Please choose your preferred behaviour:\n"
@@ -73,12 +73,11 @@ msgid ""
 "    the list and is segregated by a separator/vertical line if available. \n"
 "    Every window is represented by its application icon.  \n"
 "\n"
-"Native:\n"
-"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
-"    native switches the Alternate Tab extension off. \n"
+"If you whish to revert to the default behavior for the Alt-Tab switcher, just\n"
+"disable the extension from extensions.gnome.org or the Advanced Settings application."
 msgstr ""
 "To je prvi zagon razširitve Alternate Tab. \n"
-"Izberite prednostno obnašanje:\n"
+"Izberite želen način delovanja:\n"
 "\n"
 "Vse in sličice:\n"
 "    Ta način prikazuje vse programe vseh delovnih površin ne enem izbirnem\n"
@@ -92,27 +91,22 @@ msgstr ""
 "    vodoravno črto. \n"
 "    Vsako okno je prikazano z ikono programa.  \n"
 "\n"
-"Lastni:\n"
-"    Ta način je lasten načinu obnašanja namizja GNOME 3: Izbor te možnosti \n"
-"    onemogoči razširitev Alternate Tab. \n"
+"V kolikor želite povrniti delovanje na privzeti način preklopnika Alt+Tab,\n"
+"enostavno onemogočite to razširitev med naprednimi nastavitvami."
 
-#: ../extensions/alternate-tab/extension.js:269
+#: ../extensions/alternate-tab/extension.js:295
 msgid "Alt Tab Behaviour"
 msgstr "Obnašanje tipk Alt-Tab"
 
-#: ../extensions/alternate-tab/extension.js:285
+#: ../extensions/alternate-tab/extension.js:311
 msgid "All & Thumbnails"
 msgstr "Vse in sličice"
 
-#: ../extensions/alternate-tab/extension.js:292
+#: ../extensions/alternate-tab/extension.js:318
 msgid "Workspace & Icons"
 msgstr "Delovne površine in ikone"
 
-#: ../extensions/alternate-tab/extension.js:299
-msgid "Native"
-msgstr "Lastni"
-
-#: ../extensions/alternate-tab/extension.js:306
+#: ../extensions/alternate-tab/extension.js:325
 msgid "Cancel"
 msgstr "Prekliči"
 
@@ -140,23 +134,23 @@ msgstr "Seznam nizov z določilom ID programa (namizno ime programa), ki mu sled
 msgid "Application and workspace list"
 msgstr "Seznam programov in delovnih površin"
 
-#: ../extensions/dock/extension.js:486
+#: ../extensions/dock/extension.js:570
 msgid "Drag here to add favorites"
 msgstr "Potegnite sem, za dodajanje med priljubljene"
 
-#: ../extensions/dock/extension.js:820
+#: ../extensions/dock/extension.js:903
 msgid "New Window"
 msgstr "Novo okno"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:905
 msgid "Quit Application"
 msgstr "Končaj program"
 
-#: ../extensions/dock/extension.js:827
+#: ../extensions/dock/extension.js:910
 msgid "Remove from Favorites"
 msgstr "Odstrani iz priljubljenih"
 
-#: ../extensions/dock/extension.js:828
+#: ../extensions/dock/extension.js:911
 msgid "Add to Favorites"
 msgstr "Dodaj med priljubljene"
 
@@ -271,6 +265,9 @@ msgstr "Zgoraj-navzdol"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Nastavitve zaslona ..."
+
+#~ msgid "Native"
+#~ msgstr "Lastni"
 
 #~ msgid "Available"
 #~ msgstr "Na voljo"
