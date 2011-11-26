@@ -1,6 +1,7 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 
 const Clutter = imports.gi.Clutter;
+const Gio = imports.gi.Gio;
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 const Shell= imports.gi.Shell;
@@ -10,6 +11,9 @@ const AltTab=imports.ui.altTab;
 const Main = imports.ui.main;
 const Tweener = imports.ui.tweener;
 const WindowManager = imports.ui.windowManager;
+
+const SETTINGS_SCHEMA = 'org.gnome.shell.extensions.alternate-tab';
+const SETTINGS_JUST_CUR_WS = 'just-current-workspace';
 
 function AltTabPopup2() {
     this._init();
@@ -45,19 +49,31 @@ AltTabPopup2.prototype = {
 
     show : function(backward) {
         let windows = global.get_window_actors();
-
+        let activeWorkspace = global.screen.get_active_workspace();
 	let list = '';
 	let normal_windows= [];
+        let normal_windows_all= [];
+        let normal_windows_ws= [];
 	let appIcons = [];
 	let tracker = Shell.WindowTracker.get_default();
 	let apps = tracker.get_running_apps ('');
+        let settings = new Gio.Settings({ schema: SETTINGS_SCHEMA });
+        let justCurrentWS = settings.get_boolean(SETTINGS_JUST_CUR_WS);
 
 	for (let w = windows.length-1; w >= 0; w--) {
 	    let win = windows[w].get_meta_window();
 	    if (win.window_type == 0) {
-	        normal_windows.push(win);
-	    }
-	}
+	        normal_windows_all.push(win);
+                if(win.get_workspace() == activeWorkspace)
+                    normal_windows_ws.push(win);
+            }
+        }
+
+        if(justCurrentWS && normal_windows_ws.length)
+            normal_windows = normal_windows_ws;
+        else
+            normal_windows = normal_windows_all;
+
 	normal_windows.sort(Lang.bind(this, this._sortWindows));
 
         if(normal_windows.length) {

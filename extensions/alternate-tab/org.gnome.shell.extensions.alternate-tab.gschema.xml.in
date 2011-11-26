@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema path="/org/gnome/shell/extensions/alternate-tab/" id="org.gnome.shell.extensions.alternate-tab">
+    <key type="b" name="just-current-workspace">
+      <default>false</default>
+      <summary>Alt-tab restricts selection to just current workspace</summary>
+      <description>Alt-tab will only show windows in the current workspace. If there are no windows in the current workspace then windows from all workspaces are shown.</description>
+    </key>
+  </schema>
+</schemalist>
+
+
