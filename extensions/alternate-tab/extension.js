@@ -60,8 +60,11 @@ AltTabPopup2.prototype = {
 	}
 	normal_windows.sort(Lang.bind(this, this._sortWindows));
 
-        let win_on_top = normal_windows.shift();
-        normal_windows.push(win_on_top);
+        if(normal_windows.length) {
+            let win_on_top = normal_windows.shift();
+            normal_windows.push(win_on_top);
+        }
+
 	windows = normal_windows;
 	for (let w = 0; w < windows.length; w++) {
 	    let win = windows[w];
@@ -78,8 +81,10 @@ AltTabPopup2.prototype = {
 	    appIcons.push(ap1); 
 	}
 
-        if (!windows.length)
+        if (!windows.length) {
+            this.destroy();
             return false;
+        }
 
         if (!Main.pushModal(this.actor))
             return false;
