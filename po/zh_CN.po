@@ -2,62 +2,118 @@
 # Copyright (C) 2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Yinghua_Wang <wantinghard@gmail.com>, 2011.
+# Aron Xu <aronxu@gnome.org>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-04-19 07:16+0000\n"
-"PO-Revision-Date: 2011-04-20 20:49+0800\n"
-"Last-Translator: Yinghua Wang <wantinghard@gmail.com>\n"
+"POT-Creation-Date: 2011-11-18 17:35+0000\n"
+"PO-Revision-Date: 2011-11-27 18:45+0800\n"
+"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../extensions/alternative-status-menu/extension.js:23
-#: ../extensions/alternative-status-menu/extension.js:27
-#: ../extensions/alternative-status-menu/extension.js:93
-msgid "Hibernate"
-msgstr "休眠"
-
-#: ../extensions/alternative-status-menu/extension.js:26
-#: ../extensions/alternative-status-menu/extension.js:92
-msgid "Suspend"
-msgstr "挂起"
+#: ../extensions/alternative-status-menu/extension.js:44
+msgid "Notifications"
+msgstr "提示"
 
 #: ../extensions/alternative-status-menu/extension.js:52
-msgid "Available"
-msgstr "可用"
+msgid "Online Accounts"
+msgstr "在线帐号"
 
-#: ../extensions/alternative-status-menu/extension.js:57
-msgid "Busy"
-msgstr "忙碌"
-
-#: ../extensions/alternative-status-menu/extension.js:65
-msgid "My Account"
-msgstr "我的账户"
-
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:56
 msgid "System Settings"
 msgstr "系统设置"
 
-#: ../extensions/alternative-status-menu/extension.js:76
+#: ../extensions/alternative-status-menu/extension.js:63
 msgid "Lock Screen"
 msgstr "锁定屏幕"
 
-#: ../extensions/alternative-status-menu/extension.js:80
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Switch User"
 msgstr "切换用户"
 
-#: ../extensions/alternative-status-menu/extension.js:85
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Log Out..."
 msgstr "注销..."
 
-#: ../extensions/alternative-status-menu/extension.js:100
+#: ../extensions/alternative-status-menu/extension.js:81
+msgid "Suspend"
+msgstr "挂起"
+
+#: ../extensions/alternative-status-menu/extension.js:87
+msgid "Hibernate"
+msgstr "休眠"
+
+#: ../extensions/alternative-status-menu/extension.js:93
 msgid "Power Off..."
 msgstr "关机..."
+
+#: ../extensions/alternate-tab/extension.js:50
+msgid ""
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one "
+"selection \n"
+"    list. Instead of using the application icon of every window, it uses "
+"small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode let's you switch between the applications of your current \n"
+"    workspace and gives you additionally the option to switch to the last "
+"used \n"
+"    application of your previous workspace. This is always the last symbol "
+"in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"If you whish to revert to the default behavior for the Alt-Tab switcher, "
+"just\n"
+"disable the extension from extensions.gnome.org or the Advanced Settings "
+"application."
+msgstr ""
+
+#: ../extensions/alternate-tab/extension.js:291
+msgid "Alt Tab Behaviour"
+msgstr "Alt Tab 行为"
+
+#: ../extensions/alternate-tab/extension.js:307
+msgid "All & Thumbnails"
+msgstr "全部窗口和缩略图"
+
+#: ../extensions/alternate-tab/extension.js:314
+msgid "Workspace & Icons"
+msgstr "工作区和图标"
+
+#: ../extensions/alternate-tab/extension.js:321
+msgid "Cancel"
+msgstr "取消"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "Ask the user for a default behaviour if true."
+msgstr "如果设置为 true，询问用户设置一个默认行为。"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid "Indicates if Alternate Tab is newly installed"
+msgstr "指示“候选标签”是否为最近安装的"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
+"workspace_icons."
+msgstr ""
+"设置 Alt-Tab 行为。可用的值有：native、all_thumbnails 和 workspace_icons。"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
+msgid "The alt tab behaviour."
+msgstr "Alt Tab 行为。"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -70,53 +126,129 @@ msgstr ""
 msgid "Application and workspace list"
 msgstr "应用程序和工作区列表"
 
-#: ../extensions/dock/extension.js:116
+#: ../extensions/dock/extension.js:484
 msgid "Drag here to add favorites"
 msgstr "拖放到这里以添加收藏"
 
-#: ../extensions/dock/extension.js:417
+#: ../extensions/dock/extension.js:817
 msgid "New Window"
 msgstr "新窗口"
 
-#: ../extensions/dock/extension.js:419
+#: ../extensions/dock/extension.js:819
 msgid "Quit Application"
 msgstr "退出应用程序"
 
-#: ../extensions/dock/extension.js:424
+#: ../extensions/dock/extension.js:824
 msgid "Remove from Favorites"
 msgstr "移除收藏"
 
-#: ../extensions/dock/extension.js:425
+#: ../extensions/dock/extension.js:825
 msgid "Add to Favorites"
 msgstr "添加收藏"
 
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Autohide duration"
+msgstr "自动隐藏时间"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Autohide effect"
+msgstr "自动隐藏效果"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Enable/disable autohide"
+msgstr "启用/禁用自动隐藏"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Icon size"
+msgstr "图标大小"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Position of the dock"
+msgstr "Dock 位置"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Sets icon size of the dock."
+msgstr "设置 Dock 上的图标大小。"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+msgstr ""
+"设置隐藏 Dock 的效果。允许的至有 resize 和 rescale。"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"设置 Dock 在屏幕上的位置。允许的值有 right 和 left。"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr "设置自动隐藏的动画过渡时间。"
+
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
-msgstr "世界，你好！"
+msgstr "Hello, world!"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/gajim/extension.js:227
 #, c-format
 msgid "%s is away."
 msgstr "%s 不在。"
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
-msgstr "%s 已离线。"
+msgstr "%s 离线。"
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
 msgstr "%s 在线。"
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
 msgstr "%s 正忙。"
 
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"如果设置为 true，则将窗口说明文字放置在对应窗口的缩略图上方，而不是默认的"
+"下方。修改此设置需要重启 GNOME Shell 以使设置生效。"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Place window captions on top"
+msgstr "窗口说明文字在上"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid ""
+"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
+"default grid based algorithm, 'natural' to use another one that reflects "
+"more the position and size of the actual window"
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+msgid "Use more screen for windows"
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
+msgid "Window placement strategy"
+msgstr "窗口放置策略"
+
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "将从 ~/.themes/name/gnome-shell 加载的主题名称"
+msgstr "从 ~/.themes/name/gnome-shell 加载的主题名称"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
@@ -141,3 +273,9 @@ msgstr "上下翻转"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "配置显示设置..."
+
+#~ msgid "Available"
+#~ msgstr "在线"
+
+#~ msgid "Busy"
+#~ msgstr "忙碌"
