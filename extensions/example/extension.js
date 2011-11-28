@@ -1,4 +1,5 @@
 // Sample extension code, makes clicking on the panel show a message
+const GLib = imports.gi.GLib;
 const St = imports.gi.St;
 const Mainloop = imports.mainloop;
 

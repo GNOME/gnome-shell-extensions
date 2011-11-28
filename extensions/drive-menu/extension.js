@@ -1,4 +1,5 @@
 // Drive menu extension
+const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Lang = imports.lang;
 const St = imports.gi.St;
