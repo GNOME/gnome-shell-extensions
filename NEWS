@@ -1,3 +1,10 @@
+3.2.2
+=====
+* made extensions self-contained with respect to translations
+  (for schema files gnome-shell master is needed)
+* cherry-picked some bug fixes
+* cherry-picked translations
+
 3.2.1
 =====
 * dock: added "move" hide effect
