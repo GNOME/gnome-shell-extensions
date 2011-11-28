@@ -55,22 +55,26 @@ WorkspaceIndicator.prototype = {
 	},
 
 	_createWorkspacesSection : function() {
-		this._workspaceSection.removeAll();
-		this.workspacesItems = [];
+	    this._workspaceSection.removeAll();
+	    this.workspacesItems = [];
+	    this._currentWorkspace = global.screen.get_active_workspace().index();
 
-		let i = 0;
-		for(; i < global.screen.n_workspaces; i++) {
-			this.workspacesItems[i] = new PopupMenu.PopupMenuItem(this._labelText(i));
-			this._workspaceSection.addMenuItem(this.workspacesItems[i]);
-			this.workspacesItems[i].workspaceId = i;
-			this.workspacesItems[i].label_actor = this.statusLabel;
-			let self = this;
-			this.workspacesItems[i].connect('activate', Lang.bind(this, function(actor, event) {
-				this._activate(actor.workspaceId);
-			}));
-		}
+	    let i = 0;
+	    for(; i < global.screen.n_workspaces; i++) {
+		this.workspacesItems[i] = new PopupMenu.PopupMenuItem(this._labelText(i));
+		this._workspaceSection.addMenuItem(this.workspacesItems[i]);
+		this.workspacesItems[i].workspaceId = i;
+		this.workspacesItems[i].label_actor = this.statusLabel;
+		let self = this;
+		this.workspacesItems[i].connect('activate', Lang.bind(this, function(actor, event) {
+		    this._activate(actor.workspaceId);
+		}));
 
-	    this._updateIndicator();
+		if (i == this._currentWorkspace)
+		    this.workspacesItems[i].setShowDot(true);
+	    }
+
+	    this.statusLabel.set_text(this._labelText());
 	},
 
 	_activate : function (index) {
