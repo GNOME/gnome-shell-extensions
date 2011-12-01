@@ -1,67 +1,61 @@
 # Czech translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
+#
 # Marek Černocký <marek@manet.cz>, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-shell-extensions master\n"
+"Project-Id-Version: gnome-shell-extensions 3.2\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-11-22 10:40+0000\n"
+"POT-Creation-Date: 2011-11-28 19:18+0000\n"
 "PO-Revision-Date: 2011-11-22 11:43+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: ../extensions/alternative-status-menu/extension.js:23
-#: ../extensions/alternative-status-menu/extension.js:27
-#: ../extensions/alternative-status-menu/extension.js:93
-msgid "Hibernate"
-msgstr "Uspat na disk"
+#: ../extensions/alternative-status-menu/extension.js:45
+msgid "Notifications"
+msgstr "Oznamování"
 
-#: ../extensions/alternative-status-menu/extension.js:26
-#: ../extensions/alternative-status-menu/extension.js:92
-msgid "Suspend"
-msgstr "Uspat do paměti"
-
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Available"
-msgstr "Dostupný"
+#: ../extensions/alternative-status-menu/extension.js:53
+msgid "Online Accounts"
+msgstr "Účty on-line"
 
 #: ../extensions/alternative-status-menu/extension.js:57
-msgid "Busy"
-msgstr "Zaneprázdněný"
-
-#: ../extensions/alternative-status-menu/extension.js:65
-msgid "My Account"
-msgstr "Můj účet"
-
-#: ../extensions/alternative-status-menu/extension.js:69
 msgid "System Settings"
 msgstr "Nastavení systému"
 
-#: ../extensions/alternative-status-menu/extension.js:76
+#: ../extensions/alternative-status-menu/extension.js:64
 msgid "Lock Screen"
 msgstr "Zamknout obrazovku"
 
-#: ../extensions/alternative-status-menu/extension.js:80
+#: ../extensions/alternative-status-menu/extension.js:69
 msgid "Switch User"
 msgstr "Přepnout uživatele"
 
-#: ../extensions/alternative-status-menu/extension.js:85
+#: ../extensions/alternative-status-menu/extension.js:74
 msgid "Log Out..."
 msgstr "Odhlásit se…"
 
-#: ../extensions/alternative-status-menu/extension.js:100
+#: ../extensions/alternative-status-menu/extension.js:82
+msgid "Suspend"
+msgstr "Uspat do paměti"
+
+#: ../extensions/alternative-status-menu/extension.js:88
+msgid "Hibernate"
+msgstr "Uspat na disk"
+
+#: ../extensions/alternative-status-menu/extension.js:94
 msgid "Power Off..."
 msgstr "Vypnout…"
 
-#: ../extensions/alternate-tab/extension.js:54
+#: ../extensions/alternate-tab/extension.js:50
 msgid ""
 "This is the first time you use the Alternate Tab extension. \n"
 "Please choose your preferred behaviour:\n"
@@ -109,19 +103,19 @@ msgstr ""
 "rozšíření\n"
 "zakažte v extensions.gnome.org nebo v aplikaci Pokročilá nastavení."
 
-#: ../extensions/alternate-tab/extension.js:295
+#: ../extensions/alternate-tab/extension.js:291
 msgid "Alt Tab Behaviour"
 msgstr "Chování Alt Tab"
 
-#: ../extensions/alternate-tab/extension.js:311
+#: ../extensions/alternate-tab/extension.js:307
 msgid "All & Thumbnails"
 msgstr "Vše a náhledy"
 
-#: ../extensions/alternate-tab/extension.js:318
+#: ../extensions/alternate-tab/extension.js:314
 msgid "Workspace & Icons"
 msgstr "Pracovní plocha a ikony"
 
-#: ../extensions/alternate-tab/extension.js:325
+#: ../extensions/alternate-tab/extension.js:321
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -158,49 +152,134 @@ msgstr ""
 msgid "Application and workspace list"
 msgstr "Seznam aplikací a pracovních ploch"
 
-#: ../extensions/dock/extension.js:570
+#: ../extensions/dock/extension.js:569
 msgid "Drag here to add favorites"
 msgstr "Přetažením sem přidáte do oblíbených"
 
-#: ../extensions/dock/extension.js:903
+#: ../extensions/dock/extension.js:902
 msgid "New Window"
 msgstr "Nové okno"
 
-#: ../extensions/dock/extension.js:905
+#: ../extensions/dock/extension.js:904
 msgid "Quit Application"
 msgstr "Ukončit aplikaci"
 
-#: ../extensions/dock/extension.js:910
+#: ../extensions/dock/extension.js:909
 msgid "Remove from Favorites"
 msgstr "Odebrat z oblíbených"
 
-#: ../extensions/dock/extension.js:911
+#: ../extensions/dock/extension.js:910
 msgid "Add to Favorites"
 msgstr "Přidat do oblíbených"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Autohide duration"
+msgstr "Čas automatického skrývání"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Autohide effect"
+msgstr "Efekt automatického skrývání"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Enable/disable autohide"
+msgstr "Zapnout/vypnout automatické skrývání"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Icon size"
+msgstr "Velikost ikony"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Position of the dock"
+msgstr "Poloha doku"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Sets icon size of the dock."
+msgstr "Nastavuje velikost ikon v doku."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+msgstr ""
+"Nastavuje efekt skrývání doku. Povolené hodnoty jsou „resize“ (změna "
+"velikosti) a „rescale“ (změna měřítka)"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"Nastavuje polohu doku na obrazovce. Povolené hodnoty jsou „right“ (vpravo) "
+"nebo „left“ (vlevo)."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr "Nastavuje čas trvání efektu automatického skrývání."
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
 msgstr "Ahoj světe!"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/gajim/extension.js:227
 #, c-format
 msgid "%s is away."
 msgstr "%s je pryč."
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
 msgstr "%s je odpojen."
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
 msgstr "%s je připojen."
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
 msgstr "%s je zaneprázdněn."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Pokud je zapnuto, umisťuje se název okna nad případný náhled, čímž se "
+"přepíše výchozí chování shellu, který jej umisťuje dolů. Změna tohoto "
+"nastavení vyžaduje restart shellu, aby se projevila."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Place window captions on top"
+msgstr "Umístit název okna nahoru"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid ""
+"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
+"default grid based algorithm, 'natural' to use another one that reflects "
+"more the position and size of the actual window"
+msgstr ""
+"Algoritmus použitý k rozvržení náhledů v přehledu. „grid“ použijte pro "
+"výchozí algoritmus založený na pravidelné mřížce, „natural“ pro jiný "
+"algoritmus, který se snaží brát v úvahu polohu a velikost aktuálního okna"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Pomocí přizpůsobení měřítka obrazovky spolu se zmenšením ohraničení zkusit "
+"využít větší část obrazovky pro umístění náhledů oken. Toto nastavení se "
+"použije pouze dohromady se strategií umisťování „natural“."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+msgid "Use more screen for windows"
+msgstr "Použít větší část obrazovky pro okna"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
+msgid "Window placement strategy"
+msgstr "Strategie umisťování oken"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
@@ -229,3 +308,9 @@ msgstr "Vzhůru nohama"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Upravit nastavení zobrazení…"
+
+msgid "Available"
+msgstr "Dostupný"
+
+msgid "Busy"
+msgstr "Zaneprázdněný"
