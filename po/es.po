@@ -1,60 +1,85 @@
 # Spanish translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Jorge González <jorgegonz@svn.gnome.org>, 2011.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
+# Jorge González <jorgegonz@svn.gnome.org>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-09-18 17:08+0000\n"
-"PO-Revision-Date: 2011-11-14 10:44+0100\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"POT-Creation-Date: 2011-12-02 15:47+0000\n"
+"PO-Revision-Date: 2011-12-03 12:21+0100\n"
+"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../extensions/alternative-status-menu/extension.js:44
+#: ../extensions/alternative-status-menu/extension.js:45
 msgid "Notifications"
 msgstr "Notificaciones"
 
-#: ../extensions/alternative-status-menu/extension.js:52
+#: ../extensions/alternative-status-menu/extension.js:53
 msgid "Online Accounts"
 msgstr "Cuentas en línea"
 
-#: ../extensions/alternative-status-menu/extension.js:56
+#: ../extensions/alternative-status-menu/extension.js:57
 msgid "System Settings"
 msgstr "Configuración del sistema"
 
-#: ../extensions/alternative-status-menu/extension.js:63
+#: ../extensions/alternative-status-menu/extension.js:64
 msgid "Lock Screen"
 msgstr "Bloquear la pantalla"
 
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:69
 msgid "Switch User"
 msgstr "Cambiar de usuario"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:74
 msgid "Log Out..."
 msgstr "Cerrar la sesión…"
 
-#: ../extensions/alternative-status-menu/extension.js:81
+#: ../extensions/alternative-status-menu/extension.js:82
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../extensions/alternative-status-menu/extension.js:87
+#: ../extensions/alternative-status-menu/extension.js:88
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:93
+#: ../extensions/alternative-status-menu/extension.js:94
 msgid "Power Off..."
 msgstr "Apagar…"
 
-#: ../extensions/alternate-tab/extension.js:44
+#: ../extensions/alternate-tab/extension.js:50
+#| msgid ""
+#| "This is the first time you use the Alternate Tab extension. \n"
+#| "Please choose your preferred behaviour:\n"
+#| "\n"
+#| "All & Thumbnails:\n"
+#| "    This mode presents all applications from all workspaces in one "
+#| "selection \n"
+#| "    list. Instead of using the application icon of every window, it uses "
+#| "small \n"
+#| "    thumbnails resembling the window itself. \n"
+#| "\n"
+#| "Workspace & Icons:\n"
+#| "    This mode let's you switch between the applications of your current \n"
+#| "    workspace and gives you additionally the option to switch to the last "
+#| "used \n"
+#| "    application of your previous workspace. This is always the last "
+#| "symbol in \n"
+#| "    the list and is segregated by a separator/vertical line if "
+#| "available. \n"
+#| "    Every window is represented by its application icon.  \n"
+#| "\n"
+#| "Native:\n"
+#| "    This mode is the native GNOME 3 behaviour or in other words: "
+#| "Clicking \n"
+#| "    native switches the Alternate Tab extension off. \n"
 msgid ""
 "This is the first time you use the Alternate Tab extension. \n"
 "Please choose your preferred behaviour:\n"
@@ -75,9 +100,10 @@ msgid ""
 "    the list and is segregated by a separator/vertical line if available. \n"
 "    Every window is represented by its application icon.  \n"
 "\n"
-"Native:\n"
-"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
-"    native switches the Alternate Tab extension off. \n"
+"If you whish to revert to the default behavior for the Alt-Tab switcher, "
+"just\n"
+"disable the extension from extensions.gnome.org or the Advanced Settings "
+"application."
 msgstr ""
 "Esta es la primera vez que usa la extensión Alt+Tab. \n"
 "Seleccione el comportamiento preferido:\n"
@@ -99,28 +125,24 @@ msgstr ""
 "    disponible. \n"
 "    Cada ventana se representa con el icono de la aplicación.  \n"
 "\n"
-"Nativo:\n"
-"    Este modo es el comportamiento nativo de GNOME 3 o, en otras palabras, "
-"este \n"
-"    modo desactiva la extensión Alt+Tab. \n"
+"Si quiere volver al comportamiento predeterminado para el cambiador Alt-"
+"Tab,\n"
+"simplemente desactive la extensión desde extensions.gnome.org o desde la\n"
+"aplicación de Configuración avanzada."
 
-#: ../extensions/alternate-tab/extension.js:269
+#: ../extensions/alternate-tab/extension.js:291
 msgid "Alt Tab Behaviour"
 msgstr "Comportamiento de Alt+Tab"
 
-#: ../extensions/alternate-tab/extension.js:285
+#: ../extensions/alternate-tab/extension.js:307
 msgid "All & Thumbnails"
 msgstr "Todo y miniaturas"
 
-#: ../extensions/alternate-tab/extension.js:292
+#: ../extensions/alternate-tab/extension.js:314
 msgid "Workspace & Icons"
 msgstr "Espacio de trabajo e iconos"
 
-#: ../extensions/alternate-tab/extension.js:299
-msgid "Native"
-msgstr "Nativo"
-
-#: ../extensions/alternate-tab/extension.js:306
+#: ../extensions/alternate-tab/extension.js:321
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -158,23 +180,23 @@ msgstr ""
 msgid "Application and workspace list"
 msgstr "Lista de aplicaciones y espacios de trabajo"
 
-#: ../extensions/dock/extension.js:486
+#: ../extensions/dock/extension.js:569
 msgid "Drag here to add favorites"
 msgstr "Arrastrar aquí para añadir a favoritos"
 
-#: ../extensions/dock/extension.js:820
+#: ../extensions/dock/extension.js:902
 msgid "New Window"
 msgstr "Ventana nueva"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:904
 msgid "Quit Application"
 msgstr "Salir de la aplicación"
 
-#: ../extensions/dock/extension.js:827
+#: ../extensions/dock/extension.js:909
 msgid "Remove from Favorites"
 msgstr "Quitar de favoritos"
 
-#: ../extensions/dock/extension.js:828
+#: ../extensions/dock/extension.js:910
 msgid "Add to Favorites"
 msgstr "Añadir a favoritos"
 
@@ -268,8 +290,8 @@ msgid ""
 msgstr ""
 "El algoritmo usado para situar las miniaturas en la vista previa. "
 "«grid» (tabla) para usar el algoritmo predeterminado basado en una tabla, "
-"«natural» para usar otro que refleja mejor la posición y tamaño de la ventana "
-"representada."
+"«natural» para usar otro que refleja mejor la posición y tamaño de la "
+"ventana representada."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
@@ -316,6 +338,9 @@ msgstr "Hacia abajo"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Configurar las opciones de pantalla…"
+
+#~ msgid "Native"
+#~ msgstr "Nativo"
 
 #~ msgid "Available"
 #~ msgstr "Disponible"
