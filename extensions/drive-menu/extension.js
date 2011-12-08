@@ -55,7 +55,7 @@ DriveMenu.prototype = {
 
     _init: function() {
 	// is 'media-eject' better?
-	PanelMenu.SystemStatusButton.prototype._init.call(this, 'media-optical');
+	PanelMenu.SystemStatusButton.prototype._init.call(this, 'media-eject');
 
 	this._manager = Main.placesManager;
 	this._manager.connect('mounts-updated', Lang.bind(this, this._update));
