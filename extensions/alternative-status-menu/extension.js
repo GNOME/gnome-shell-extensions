@@ -103,6 +103,13 @@ function init(metadata) {
     imports.gettext.bindtextdomain('gnome-shell-extensions', GLib.build_filenamev([metadata.path, 'locale']));
 }
 
+function predestroy(statusMenu) {
+    // HACK! disconnect signals to avoid references to destroyed objects
+    let imstatusitem = statusMenu.menu._getMenuItems()[0];
+    imstatusitem._user.disconnect(imstatusitem._userLoadedId);
+    imstatusitem._user.disconnect(imstatusitem._userChangedId);
+}
+
 function reset(statusMenu) {
     statusMenu._updateSwitchUser();
     statusMenu._updateLogout();
@@ -116,7 +123,10 @@ function reset(statusMenu) {
 
 function enable() {
     let statusMenu = Main.panel._statusArea.userMenu;
+
+    predestroy(statusMenu);
     statusMenu.menu.removeAll();
+
     createSubMenu.call(statusMenu);
     reset(statusMenu);
 }
@@ -125,11 +135,7 @@ function disable() {
     // not guarranteed to work, if more extensions operate in the same place
     let statusMenu = Main.panel._statusArea.userMenu;
 
-    // HACK! disconnect signals to avoid references to destroyed objects
-    let imstatusitem = statusMenu.menu._getMenuItems()[0];
-    imstatusitem._user.disconnect(imstatusitem._userLoadedId);
-    imstatusitem._user.disconnect(imstatusitem._userChangedId);
-
+    predestroy(statusMenu);
     statusMenu.menu.removeAll();
 
     statusMenu._createSubMenu();
