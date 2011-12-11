@@ -10,6 +10,7 @@ const Clutter = imports.gi.Clutter;
 const Gdk = imports.gi.Gdk;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
+const GLib = imports.gi.GLib;
 const Lang = imports.lang;
 const Main = imports.ui.main;
 const Mainloop = imports.mainloop;
@@ -462,7 +463,6 @@ AltTabPopup2.prototype = {
 	return true
     },
 
-/*
     _keyPressEvent : function(actor, event) {
         let keysym = event.get_key_symbol();
         let shift = (Shell.get_event_state(event) & Clutter.ModifierType.SHIFT_MASK);
@@ -508,7 +508,6 @@ AltTabPopup2.prototype = {
 
         return true;
     },
-*/
 
     _sortWindows : function(win1,win2) {
         let t1 = win1.get_user_time();
@@ -613,15 +612,15 @@ function doAltTab(shellwm, binding, mask, window, backwards) {
 }
 
 function enable() {
-    Main.wm.setKeybindingHandler('switch-windows', doAltTab);
-    Main.wm.setKeybindingHandler('switch-group', doAltTab);
-    Main.wm.setKeybindingHandler('switch-windows-backward', doAltTab);
-    Main.wm.setKeybindingHandler('switch-group-backward', doAltTab);
+    Main.wm.setKeybindingHandler('switch_windows', doAltTab);
+    Main.wm.setKeybindingHandler('switch_group', doAltTab);
+    Main.wm.setKeybindingHandler('switch_windows_backward', doAltTab);
+    Main.wm.setKeybindingHandler('switch_group_backward', doAltTab);
 }
 
 function disable() {
-    Main.wm.setKeybindingHandler('switch-windows', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Main.wm.setKeybindingHandler('switch-group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Main.wm.setKeybindingHandler('switch-windows-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Main.wm.setKeybindingHandler('switch-group-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch_windows', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch_group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch_windows_backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    Main.wm.setKeybindingHandler('switch_group_backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
 }
