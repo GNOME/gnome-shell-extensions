@@ -37,6 +37,7 @@ WorkspaceIndicator.prototype = {
 
 		//styling
 		this.menu.actor.add_style_class_name('workspace-indicator-shorter');
+		this.statusLabel.add_style_class_name('panel-workspace-indicator');
 	},
 
 	_updateIndicator: function() {
@@ -50,6 +51,7 @@ WorkspaceIndicator.prototype = {
 	_labelText : function(workspaceIndex) {
 	    if(workspaceIndex == undefined) {
 		workspaceIndex = this._currentWorkspace;
+		return (workspaceIndex + 1).toString();
 	    }
 	    return Meta.prefs_get_workspace_name(workspaceIndex);
 	},
