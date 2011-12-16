@@ -1,5 +1,5 @@
 AC_PREREQ(2.63)
-AC_INIT([gnome-shell-extensions],[3.2.2],[https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&component=extensions])
+AC_INIT([gnome-shell-extensions],[3.2.3],[https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&component=extensions])
 
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([config])

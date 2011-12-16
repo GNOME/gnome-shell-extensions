@@ -1,5 +1,14 @@
 3.2.2
 =====
+* various: fix missing GLib import
+* workspace-indicator: fix when removing the last workspace
+* alternative-status-menu: fix long standing crash without avatar
+* alternate-tab: use GConf binding names
+* all: remove GSettings usage and allow local installation
+* all: update translations
+
+3.2.2
+=====
 * made extensions self-contained with respect to translations
   (for schema files gnome-shell master is needed)
 * cherry-picked some bug fixes
