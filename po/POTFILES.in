@@ -1,13 +1,9 @@
 extensions/alternative-status-menu/extension.js
 extensions/alternate-tab/extension.js
-extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in
 extensions/auto-move-windows/extension.js
-extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in
 extensions/dock/extension.js
-extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in
 extensions/example/extension.js
 extensions/gajim/extension.js
-extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in
 extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in
 extensions/windowsNavigator/extension.js
 extensions/xrandr-indicator/extension.js

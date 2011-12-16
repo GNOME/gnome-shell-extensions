@@ -25,6 +25,12 @@ const WindowPlacementStrategy = {
     GRID: 1,
 };
 
+/* Begin user settings */
+const PLACEMENT_STRATEGY = WindowPlacementStrategy.NATURAL;
+const USE_MORE_SCREEN = true;
+const WINDOW_CAPTIONS_ON_TOP = true;
+/* End user settings - do not change anything below this line */
+
 // testing settings for natural window placement strategy:
 const WINDOW_PLACEMENT_NATURAL_FILLGAPS = true;                     // enlarge windows at the end to fill gaps         // not implemented yet
 const WINDOW_PLACEMENT_NATURAL_GRID_FALLBACK = true;                // fallback to grid mode if all windows have the same size and positions.     // not implemented yet
@@ -117,19 +123,8 @@ function resetState() {
 function enable() {
     resetState();
 
-    let settings = new Gio.Settings({ schema: 'org.gnome.shell.extensions.native-window-placement' });
-    let placementStrategy = settings.get_enum('strategy');
-    let signalId = settings.connect('changed::strategy', function() {
-        placementStrategy = settings.get_enum('strategy');
-        // we don't update immediately, we wait for a relayout
-        // (and hope for the best)
-    });
-    connectedSignals.push({ obj: settings, id: signalId });
-    let useMoreScreen = settings.get_boolean('use-more-screen');
-    signalId = settings.connect('changed::use-more-screen', function() {
-        useMoreScreen = settings.get_boolean('use-more-screen');
-    });
-    connectedSignals.push({ obj: settings, id: signalId });
+    let placementStrategy = PLACEMENT_STRATEGY;
+    let useMoreScreen = USE_MORE_SCREEN;
 
     /**
      * _calculateWindowTransformationsNatural:
@@ -415,7 +410,7 @@ function enable() {
     }
 
     /// position window titles on top of windows in overlay ////
-    if (settings.get_boolean('window-captions-on-top'))  {
+    if (WINDOW_CAPTIONS_ON_TOP)  {
         winInjections['_init'] = Workspace.WindowOverlay.prototype._init;
 	Workspace.WindowOverlay.prototype._init = function(windowClone, parentActor) {
             let metaWindow = windowClone.metaWindow;

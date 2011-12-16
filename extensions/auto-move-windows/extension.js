@@ -11,8 +11,9 @@ const St = imports.gi.St;
 
 const Main = imports.ui.main;
 
-const SETTINGS_SCHEMA = 'org.gnome.shell.extensions.auto-move-windows';
-const SETTINGS_KEY = 'application-list';
+// list of applications and workspace pairs
+// format: "desktop-file-id.desktop:<num>"
+const APPLICATIONS = [ ];
 
 function WindowMover() {
     this._init();
@@ -20,7 +21,6 @@ function WindowMover() {
 
 WindowMover.prototype = {
     _init: function() {
-        this._settings = new Gio.Settings({ schema: SETTINGS_SCHEMA });
         this._windowTracker = Shell.WindowTracker.get_default();
 
         let display = global.screen.get_display();
@@ -46,7 +46,7 @@ WindowMover.prototype = {
         if (!this._windowTracker.is_window_interesting(window))
             return;
 
-        let spaces = this._settings.get_strv(SETTINGS_KEY);
+        let spaces = APPLICATIONS;
 
         let app = this._windowTracker.get_window_app(window);
         if (!app) {

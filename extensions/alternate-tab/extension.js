@@ -26,9 +26,9 @@ const N_ = function(e) { return e };
 
 const POPUP_DELAY_TIMEOUT = 150; // milliseconds
 
-const SETTINGS_SCHEMA = 'org.gnome.shell.extensions.alternate-tab';
-const SETTINGS_BEHAVIOUR_KEY = 'behaviour';
-const SETTINGS_FIRST_TIME_KEY = 'first-time';
+// Settings: choose one of MODES, the description is in MESSAGE
+// (master branch has a nice dialog, but we cannot in gnome 3.2)
+const BEHAVIOUR = 'all_thumbnails';
 
 const MODES = {
     all_thumbnails: function(shellwm, binding, mask, window, backwards) {
@@ -267,6 +267,8 @@ WindowSwitcher.prototype = {
     }
 };
 
+/* This object is never instantiated in the current branch, but
+   I don't trust git merge enough to remove it */
 function AltTabSettingsDialog() {
     this._init();
 }
@@ -598,16 +600,9 @@ function init(metadata) {
 }
 
 function doAltTab(shellwm, binding, mask, window, backwards) {
-    let settings = new Gio.Settings({ schema: SETTINGS_SCHEMA });
-
-
-    if(settings.get_boolean(SETTINGS_FIRST_TIME_KEY)) {
-        new AltTabSettingsDialog().open();
-    } else {
-        let behaviour = settings.get_string(SETTINGS_BEHAVIOUR_KEY);
-        if(behaviour in MODES) {
-            MODES[behaviour](shellwm, binding, mask, window, backwards);
-        }
+    let behaviour = BEHAVIOUR;
+    if(behaviour in MODES) {
+        MODES[behaviour](shellwm, binding, mask, window, backwards);
     }
 }
 
