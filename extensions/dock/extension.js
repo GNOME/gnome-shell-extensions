@@ -376,7 +376,7 @@ Dock.prototype = {
         this._overviewHiddenId = Main.overview.connect('hidden', Lang.bind(this, function() {
             this.actor.show();
         }));
-        Main.layoutManager.addChrome(this.actor);
+        Main.layoutManager.addChrome(this.actor, { affectsStruts: !DOCK_AUTOHIDE });
 
         this._leave_event = this.actor.connect('leave-event', Lang.bind(this, this._hideDock));
         this._enter_event = this.actor.connect('enter-event', Lang.bind(this, this._showDock));
