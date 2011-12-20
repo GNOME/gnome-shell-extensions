@@ -1,15 +1,5 @@
 <schemalist gettext-domain="gnome-shell-extensions">
-  <enum id="org.gnome.shell.extensions.native-window-placement.strategy">
-    <value nick="natural" value="0" />
-    <value nick="grid" value="1" />
-  </enum>
   <schema id="org.gnome.shell.extensions.native-window-placement" path="/org/gnome/shell/extensions/native-window-placement/">
-    <key name="strategy" enum="org.gnome.shell.extensions.native-window-placement.strategy">
-      <default>'natural'</default>
-      <_summary>Window placement strategy</_summary>
-      <_description>The algorithm used to layout thumbnails in the overview. 'grid' to use the default grid based algorithm,
-      'natural' to use another one that reflects more the position and size of the actual window</_description>
-    </key>
     <key name="use-more-screen" type="b">
       <default>true</default>
       <_summary>Use more screen for windows</_summary>

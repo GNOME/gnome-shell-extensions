@@ -20,11 +20,6 @@ const Tweener = imports.ui.tweener;
 const Workspace = imports.ui.workspace;
 const WindowPositionFlags = Workspace.WindowPositionFlags;
 
-const WindowPlacementStrategy = {
-    NATURAL: 0,
-    GRID: 1,
-};
-
 let _me, _metadata;
 
 // testing settings for natural window placement strategy:
@@ -112,7 +107,6 @@ let winInjections, workspaceInjections, connectedSignals;
 function resetState() {
     winInjections = { };
     workspaceInjections = { };
-    workViewInjections = { };
     connectedSignals = [ ];
 }
 
@@ -120,12 +114,6 @@ function enable() {
     resetState();
 
     let settings = _me.convenience.getSettings(_metadata, 'native-window-placement');
-    let placementStrategy = settings.get_enum('strategy');
-    let signalId = settings.connect('changed::strategy', function() {
-        placementStrategy = settings.get_enum('strategy');
-        // we don't update immediately, we wait for a relayout
-        // (and hope for the best)
-    });
     connectedSignals.push({ obj: settings, id: signalId });
     let useMoreScreen = settings.get_boolean('use-more-screen');
     signalId = settings.connect('changed::use-more-screen', function() {
@@ -305,25 +293,6 @@ function enable() {
     workspaceInjections['_calculateWindowTransformationsNatural'] = undefined;
 
     /**
-     * _calculateWindowTransformationsGrid:
-     * @clones: Array of #MetaWindow
-     *
-     * Returns clones with matching target coordinates and scales to arrange windows in a grid.
-     */
-    Workspace.Workspace.prototype._calculateWindowTransformationsGrid = function(clones) {
-        let slots = this._computeAllWindowSlots(clones.length);
-        clones = this._orderWindowsByMotionAndStartup(clones, slots);
-        let targets = [];
-
-        for (let i = 0; i < clones.length; i++) {
-            targets[i] = this._computeWindowLayout(clones[i].metaWindow, slots[i]);
-        }
-
-        return [clones, targets];
-    }
-    workspaceInjections['_calculateWindowTransformationsGrid'] = undefined;
-
-    /**
      * positionWindows:
      * @flags:
      *  INITIAL - this is the initial positioning of the windows.
@@ -347,17 +316,7 @@ function enable() {
 	let targets = [];
         let scales = [];
 
-        switch (placementStrategy) {
-        case WindowPlacementStrategy.NATURAL:
-            [clones, targets] = this._calculateWindowTransformationsNatural(clones);
-            break;
-        default:
-            log ('Invalid window placement strategy');
-            placementStrategy = WindowPlacementStrategy.GRID;
-        case WindowPlacementStrategy.GRID:
-            [clones, targets] = this._calculateWindowTransformationsGrid(clones);
-            break;
-        }
+        [clones, targets] = this._calculateWindowTransformationsNatural(clones);
 
 	let currentWorkspace = global.screen.get_active_workspace();
         let isOnCurrentWorkspace = this.metaWorkspace == null || this.metaWorkspace == currentWorkspace;
