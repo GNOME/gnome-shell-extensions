@@ -381,7 +381,8 @@ Dock.prototype = {
         this._overviewHiddenId = Main.overview.connect('hidden', Lang.bind(this, function() {
             this.actor.show();
         }));
-        Main.layoutManager.addChrome(this.actor);
+        Main.layoutManager.addChrome(this.actor,
+                                     { affectsStruts: !this._settings.get_boolean(DOCK_HIDE_KEY) });
 
         //hidden
         this._settings.connect('changed::'+DOCK_POSITION_KEY, Lang.bind(this, function (){
@@ -405,6 +406,10 @@ Dock.prototype = {
         this._settings.connect('changed::'+DOCK_HIDE_KEY, Lang.bind(this, function (){
                 if (!this._settings)
                     return;
+
+                Main.layoutManager.removeChrome(this.actor);
+                Main.layoutManager.addChrome(this.actor,
+                                             { affectsStruts: !this._settings.get_boolean(DOCK_HIDE_KEY) });
 
                 hideable = this._settings.get_boolean(DOCK_HIDE_KEY);
                 if (hideable){
