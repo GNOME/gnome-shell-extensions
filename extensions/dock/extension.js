@@ -662,16 +662,18 @@ function DockIcon(app, dock) {
 DockIcon.prototype = {
     _init : function(app, dock) {
         this.app = app;
-        this.actor = new St.Button({ style_class: 'dock-app',
+        this.actor = new St.Button({ style_class: 'app-well-app',
                                      button_mask: St.ButtonMask.ONE | St.ButtonMask.TWO,
                                      reactive: true,
                                      x_fill: true,
                                      y_fill: true });
         this.actor._delegate = this;
-        this.actor.set_size(dockicon_size, dockicon_size);
+        //this.actor.set_size(dockicon_size, dockicon_size);
 
-        this._icon = this.app.create_icon_texture(dockicon_size);
-        this.actor.set_child(this._icon);
+        this._icon = new AppDisplay.AppIcon(app, { setSizeManually: true,
+                                                   showLabel: false });
+        this.actor.set_child(this._icon.actor);
+        this._icon.setIconSize(dockicon_size);
 
         this.actor.connect('clicked', Lang.bind(this, this._onClicked));
 
