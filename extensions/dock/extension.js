@@ -386,9 +386,6 @@ Dock.prototype = {
 
         //hidden
         this._settings.connect('changed::'+DOCK_POSITION_KEY, Lang.bind(this, function (){
-                if (!this._settings)
-                    return;
-
                 let primary = Main.layoutManager.primaryMonitor;
                 position = this._settings.get_enum(DOCK_POSITION_KEY);
                 this.actor.y=primary.y;
@@ -396,17 +393,11 @@ Dock.prototype = {
         }));
 
         this._settings.connect('changed::'+DOCK_SIZE_KEY, Lang.bind(this, function (){
-                if (!this._settings)
-                    return;
-
                 dockicon_size = this._settings.get_int(DOCK_SIZE_KEY);
                 this._redisplay();
         }));
 
         this._settings.connect('changed::'+DOCK_HIDE_KEY, Lang.bind(this, function (){
-                if (!this._settings)
-                    return;
-
                 Main.layoutManager.removeChrome(this.actor);
                 Main.layoutManager.addChrome(this.actor,
                                              { affectsStruts: !this._settings.get_boolean(DOCK_HIDE_KEY) });
@@ -422,9 +413,6 @@ Dock.prototype = {
         }));
 
         this._settings.connect('changed::'+DOCK_EFFECTHIDE_KEY, Lang.bind(this, function () {
-                if (!this._settings)
-                    return;
-
                 hideEffect = this._settings.get_enum(DOCK_EFFECTHIDE_KEY);
 
                 switch (hideEffect) {
@@ -448,9 +436,6 @@ Dock.prototype = {
         }));
 
         this._settings.connect('changed::'+DOCK_AUTOHIDE_ANIMATION_TIME_KEY, Lang.bind(this,function (){
-                if (!this._settings)
-                    return;
-
                 autohide_animation_time = this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY);
         }));
 
@@ -489,6 +474,7 @@ Dock.prototype = {
         this.actor.destroy();
 
         // Break reference cycles
+        this._settings.run_dispose();
         this._settings = null;
         this._appSystem = null;
         this._tracker = null;
