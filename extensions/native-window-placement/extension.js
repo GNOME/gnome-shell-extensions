@@ -114,7 +114,6 @@ function enable() {
     resetState();
 
     let settings = _me.convenience.getSettings(_metadata, 'native-window-placement');
-    connectedSignals.push({ obj: settings, id: signalId });
     let useMoreScreen = settings.get_boolean('use-more-screen');
     signalId = settings.connect('changed::use-more-screen', function() {
         useMoreScreen = settings.get_boolean('use-more-screen');
@@ -333,7 +332,7 @@ function enable() {
             if (clone.inDrag)
                 continue;
 
-            if (overlay)
+            if (overlay && initialPositioning)
                 overlay.hide();
             if (animate && isOnCurrentWorkspace) {
                 if (!metaWindow.showing_on_its_workspace()) {
@@ -356,20 +355,11 @@ function enable() {
                                      });
                 }
 
-                Tweener.addTween(clone.actor,
-                                 { x: x,
-                                   y: y,
-                                   scale_x: scale,
-                                   scale_y: scale,
-                                   time: Overview.ANIMATION_TIME,
-                                   transition: 'easeOutQuad',
-                                   onComplete: Lang.bind(this, function() {
-				       this._showWindowOverlay(clone, overlay, true);
-                                   })
-                                 });
+                this._animateClone(clone, overlay, x, y, scale, initialPositioning);
             } else {
                 clone.actor.set_position(x, y);
                 clone.actor.set_scale(scale, scale);
+                this._updateWindowOverlayPositions(clone, overlay, x, y, scale, false);
                 this._showWindowOverlay(clone, overlay, isOnCurrentWorkspace);
             }
         }
@@ -432,7 +422,7 @@ function enable() {
 	},
 
         winInjections['updatePositions'] = Workspace.WindowOverlay.prototype.updatePositions;
-	Workspace.WindowOverlay.prototype.updatePositions = function(cloneX, cloneY, cloneWidth, cloneHeight) {
+	Workspace.WindowOverlay.prototype.updatePositions = function(cloneX, cloneY, cloneWidth, cloneHeight, animate) {
             let button = this.closeButton;
             let title = this.title;
 
@@ -443,15 +433,24 @@ function enable() {
             else
 		buttonX = cloneX + (cloneWidth - button._overlap);
 
-            button.set_position(Math.floor(buttonX), Math.floor(buttonY));
+            if (animate)
+                this._animateOverlayActor(button, Math.floor(buttonX), Math.floor(buttonY));
+            else
+                button.set_position(Math.floor(buttonX), Math.floor(buttonY));
 
             if (!title.fullWidth)
 		title.fullWidth = title.width;
-            title.width = Math.min(title.fullWidth, cloneWidth);
+            let titleWidth = Math.min(title.fullWidth, cloneWidth);
 
-            let titleX = cloneX + (cloneWidth - title.width) / 2;
+            let titleX = cloneX + (cloneWidth - titleWidth) / 2;
 	    let titleY = cloneY - title.height + title._overlap;
-            title.set_position(Math.floor(titleX), Math.floor(titleY));
+
+            if (animate)
+                this._animateOverlayActor(title, Math.floor(titleX), Math.floor(titleY));
+            else {
+                title.width = titleWidth;
+                title.set_position(Math.floor(titleX), Math.floor(titleY));
+            }
 	},
 
         winInjections['_onStyleChanged'] = Workspace.WindowOverlay.prototype._onStyleChanged;
