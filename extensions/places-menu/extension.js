@@ -33,7 +33,7 @@ PlacesMenu.prototype = {
         this._bookmarksSection = new PopupMenu.PopupMenuSection();
         this.menu.addMenuItem(this._bookmarksSection);
         this._createBookmarks();
-        this._devicesMenuItem = new PopupMenu.PopupSubMenuMenuItem('Removable Devices');
+        this._devicesMenuItem = new PopupMenu.PopupSubMenuMenuItem(_("Removable Devices"));
         this.menu.addMenuItem(this._devicesMenuItem);
         this._createDevices();
         Main.placesManager.connect('bookmarks-updated',Lang.bind(this,this._redisplayBookmarks));
