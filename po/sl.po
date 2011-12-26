@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-11-24 16:04+0000\n"
-"PO-Revision-Date: 2011-11-25 17:53+0100\n"
+"POT-Creation-Date: 2011-12-22 17:09+0000\n"
+"PO-Revision-Date: 2011-12-26 17:39+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -134,23 +134,23 @@ msgstr "Seznam nizov z določilom ID programa (namizno ime programa), ki mu sled
 msgid "Application and workspace list"
 msgstr "Seznam programov in delovnih površin"
 
-#: ../extensions/dock/extension.js:570
+#: ../extensions/dock/extension.js:561
 msgid "Drag here to add favorites"
 msgstr "Potegnite sem, za dodajanje med priljubljene"
 
-#: ../extensions/dock/extension.js:903
+#: ../extensions/dock/extension.js:896
 msgid "New Window"
 msgstr "Novo okno"
 
-#: ../extensions/dock/extension.js:905
+#: ../extensions/dock/extension.js:898
 msgid "Quit Application"
 msgstr "Končaj program"
 
-#: ../extensions/dock/extension.js:910
+#: ../extensions/dock/extension.js:903
 msgid "Remove from Favorites"
 msgstr "Odstrani iz priljubljenih"
 
-#: ../extensions/dock/extension.js:911
+#: ../extensions/dock/extension.js:904
 msgid "Add to Favorites"
 msgstr "Dodaj med priljubljene"
 
@@ -179,8 +179,8 @@ msgid "Sets icon size of the dock."
 msgstr "Določi velikost ikon sidrišča."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgstr "Določi učinek skrivanja sidrišča. Dovoljeni vrednosti sta 'spremeni velikost' ali 'prilagodi velikost'"
+msgid "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'"
+msgstr "Določi učinek skrivanja sidrišča. Dovoljeni vrednosti sta 'spremeni velikost', 'prilagodi velikost' ali 'premakni'."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
@@ -223,20 +223,12 @@ msgid "Place window captions on top"
 msgstr "Postavi nazive oken na vrh"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
-msgid "The algorithm used to layout thumbnails in the overview. 'grid' to use the default grid based algorithm, 'natural' to use another one that reflects more the position and size of the actual window"
-msgstr "Algoritem, ki je uporabljen kot razporeditev sličic v pregledu oken. Možnost 'mreža' omogoči uporabo privzetega algoritma mrežne postavitve, možnost 'naravno' pa omogoči uporabo položaja in velikosti dejanskega okna, ki ga predstavlja sličica."
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
 msgstr "Poskusi uporabiti več zaslona za postavitev sličic oken s prilagajanjem razmerja velikosti zaslona in prilagajanjem postavitve okvirja. Nastavitev je mogoče uporabiti le z naravnim načinom postavitve okna."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid "Use more screen for windows"
 msgstr "Uporabi več zaslona za okna"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
-msgstr "Način postavitve okna"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
@@ -265,6 +257,19 @@ msgstr "Zgoraj-navzdol"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Nastavitve zaslona ..."
+
+#~ msgid ""
+#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
+#~ "the default grid based algorithm, 'natural' to use another one that "
+#~ "reflects more the position and size of the actual window"
+#~ msgstr ""
+#~ "Algoritem, ki je uporabljen kot razporeditev sličic v pregledu oken. "
+#~ "Možnost 'mreža' omogoči uporabo privzetega algoritma mrežne postavitve, "
+#~ "možnost 'naravno' pa omogoči uporabo položaja in velikosti dejanskega "
+#~ "okna, ki ga predstavlja sličica."
+
+#~ msgid "Window placement strategy"
+#~ msgstr "Način postavitve okna"
 
 #~ msgid "Native"
 #~ msgstr "Lastni"
