@@ -3,54 +3,32 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2011.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
+# Nicolás Satragno <nsatragno@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-12-19 15:33+0000\n"
-"PO-Revision-Date: 2011-12-20 12:54+0100\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"POT-Creation-Date: 2011-12-27 14:30+0000\n"
+"PO-Revision-Date: 2011-12-27 16:58-0300\n"
+"Last-Translator: Nicolás Satragno <nsatragno@gmail.com>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Notifications"
-msgstr "Notificaciones"
-
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Online Accounts"
-msgstr "Cuentas en línea"
-
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "Configuración del sistema"
-
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "Bloquear la pantalla"
-
+#. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
-msgid "Switch User"
-msgstr "Cambiar de usuario"
-
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Log Out..."
-msgstr "Cerrar la sesión…"
-
-#: ../extensions/alternative-status-menu/extension.js:81
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../extensions/alternative-status-menu/extension.js:87
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:93
+#: ../extensions/alternative-status-menu/extension.js:78
 msgid "Power Off..."
 msgstr "Apagar…"
 
@@ -154,23 +132,23 @@ msgstr ""
 msgid "Application and workspace list"
 msgstr "Lista de aplicaciones y espacios de trabajo"
 
-#: ../extensions/dock/extension.js:570
+#: ../extensions/dock/extension.js:561
 msgid "Drag here to add favorites"
 msgstr "Arrastrar aquí para añadir a favoritos"
 
-#: ../extensions/dock/extension.js:903
+#: ../extensions/dock/extension.js:896
 msgid "New Window"
 msgstr "Ventana nueva"
 
-#: ../extensions/dock/extension.js:905
+#: ../extensions/dock/extension.js:898
 msgid "Quit Application"
 msgstr "Salir de la aplicación"
 
-#: ../extensions/dock/extension.js:910
+#: ../extensions/dock/extension.js:903
 msgid "Remove from Favorites"
 msgstr "Quitar de favoritos"
 
-#: ../extensions/dock/extension.js:911
+#: ../extensions/dock/extension.js:904
 msgid "Add to Favorites"
 msgstr "Añadir a favoritos"
 
@@ -199,8 +177,6 @@ msgid "Sets icon size of the dock."
 msgstr "Configura el tamaño de los íconos del tablero."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-#| msgid ""
-#| "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
 msgid ""
 "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
 "'move'"
@@ -219,6 +195,10 @@ msgstr ""
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Configura la duración del efecto de ocultación automática."
+
+#: ../extensions/drive-menu/extension.js:69
+msgid "Open file manager"
+msgstr "Abrir el gestor de archivos"
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
@@ -261,17 +241,6 @@ msgstr "Situar los títulos de ventanas arriba"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid ""
-"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
-"default grid based algorithm, 'natural' to use another one that reflects "
-"more the position and size of the actual window"
-msgstr ""
-"El algoritmo usado para situar las miniaturas en la vista previa. "
-"«grid» (tabla) para usar el algoritmo predeterminado basado en una tabla, "
-"«natural» para usar otro que refleja mejor la posición y tamaño de la ventana "
-"representada."
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
@@ -280,13 +249,13 @@ msgstr ""
 "forma de la pantalla, y consolidarlas aún más para reducir el área ocupada. "
 "Esta opción sólo se aplica a la estrategia de posicionamiento «natural»."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid "Use more screen for windows"
 msgstr "Usar más pantalla para las ventanas"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
-msgstr "Estrategia de ubicación de ventanas"
+#: ../extensions/places-menu/extension.js:36
+msgid "Removable Devices"
+msgstr "Dispositivos extraíbles"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
@@ -315,6 +284,37 @@ msgstr "Hacia abajo"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Configurar las opciones de pantalla…"
+
+#~ msgid "Notifications"
+#~ msgstr "Notificaciones"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Cuentas en línea"
+
+#~ msgid "System Settings"
+#~ msgstr "Configuración del sistema"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Bloquear la pantalla"
+
+#~ msgid "Switch User"
+#~ msgstr "Cambiar de usuario"
+
+#~ msgid "Log Out..."
+#~ msgstr "Cerrar la sesión…"
+
+#~ msgid ""
+#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
+#~ "the default grid based algorithm, 'natural' to use another one that "
+#~ "reflects more the position and size of the actual window"
+#~ msgstr ""
+#~ "El algoritmo usado para situar las miniaturas en la vista previa. "
+#~ "«grid» (tabla) para usar el algoritmo predeterminado basado en una tabla, "
+#~ "«natural» para usar otro que refleja mejor la posición y tamaño de la "
+#~ "ventana representada."
+
+#~ msgid "Window placement strategy"
+#~ msgstr "Estrategia de ubicación de ventanas"
 
 #~ msgid "Native"
 #~ msgstr "Nativo"
