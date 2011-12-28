@@ -1,57 +1,35 @@
 # gnome extensions lithuanian language.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Algimantas Margevičius <gymka@mail.ru>, 2011.
+# Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-10-03 16:37+0000\n"
-"PO-Revision-Date: 2011-10-08 15:58+0300\n"
+"POT-Creation-Date: 2011-12-27 14:30+0000\n"
+"PO-Revision-Date: 2011-12-28 22:36+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
-"Language-Team: lt <gymka@mail.ru>\n"
+"Language-Team: Lietuvių <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Notifications"
-msgstr "Pranešimai"
-
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Online Accounts"
-msgstr "Internetinės paskyros"
-
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "Sistemos nustatymai"
-
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "Užrakinti ekraną"
-
+#. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
-msgid "Switch User"
-msgstr "Pakeisti naudotoją"
-
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Log Out..."
-msgstr "Atsijungti..."
-
-#: ../extensions/alternative-status-menu/extension.js:81
 msgid "Suspend"
 msgstr "Užmigdyti"
 
-#: ../extensions/alternative-status-menu/extension.js:87
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Hibernuoti"
 
-#: ../extensions/alternative-status-menu/extension.js:93
+#: ../extensions/alternative-status-menu/extension.js:78
 msgid "Power Off..."
 msgstr "Išjungti..."
 
-#: ../extensions/alternate-tab/extension.js:44
+#: ../extensions/alternate-tab/extension.js:54
 msgid ""
 "This is the first time you use the Alternate Tab extension. \n"
 "Please choose your preferred behaviour:\n"
@@ -68,9 +46,8 @@ msgid ""
 "    the list and is segregated by a separator/vertical line if available. \n"
 "    Every window is represented by its application icon.  \n"
 "\n"
-"Native:\n"
-"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
-"    native switches the Alternate Tab extension off. \n"
+"If you whish to revert to the default behavior for the Alt-Tab switcher, just\n"
+"disable the extension from extensions.gnome.org or the Advanced Settings application."
 msgstr ""
 "Tai pirmas kartas kai naudojatės Alternate Tab plėtiniu. \n"
 "Pasirinkite pageidaujamą elgseną:\n"
@@ -85,27 +62,22 @@ msgstr ""
 "    Tai visada paskutinis simbolis sąraše atskirtas skirtuku/vertikalia linija. \n"
 "    Kiekvienas langas atvaizduojamas jo programos piktograma.  \n"
 "\n"
-"Gimtasis:\n"
-"    Šis režimas yra GNOME 3 gimtasis arba kitais žodžiais tariant: Paspaudus \n"
-"    gimtasis išjungiamas Alternate Tab plėtinys. \n"
+"Jei norite grįžti prie numatytosios Alt-Tab elgsenos, paprasčiausiai\n"
+"išjunkite plėtinį extensions.gnome.org arba papildomų nustatymų programoje."
 
-#: ../extensions/alternate-tab/extension.js:269
+#: ../extensions/alternate-tab/extension.js:295
 msgid "Alt Tab Behaviour"
 msgstr "Alt Tab veiksena"
 
-#: ../extensions/alternate-tab/extension.js:285
+#: ../extensions/alternate-tab/extension.js:311
 msgid "All & Thumbnails"
 msgstr "Visos ir miniatiūros"
 
-#: ../extensions/alternate-tab/extension.js:292
+#: ../extensions/alternate-tab/extension.js:318
 msgid "Workspace & Icons"
 msgstr "Darbalaukis ir piktogramos"
 
-#: ../extensions/alternate-tab/extension.js:299
-msgid "Native"
-msgstr "Gimtasis"
-
-#: ../extensions/alternate-tab/extension.js:306
+#: ../extensions/alternate-tab/extension.js:325
 msgid "Cancel"
 msgstr "Atsisakyti"
 
@@ -133,23 +105,23 @@ msgstr "Eilučių sąrašas, kur kiekviena turi programos id (darbastalio failo 
 msgid "Application and workspace list"
 msgstr "Programų ir darbalaukių sąrašas"
 
-#: ../extensions/dock/extension.js:483
+#: ../extensions/dock/extension.js:561
 msgid "Drag here to add favorites"
 msgstr "Nuvilkite čia, jei norite pridėt prie mėgstamų"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:896
 msgid "New Window"
 msgstr "Naujas langas"
 
-#: ../extensions/dock/extension.js:819
+#: ../extensions/dock/extension.js:898
 msgid "Quit Application"
 msgstr "Uždaryti programą"
 
-#: ../extensions/dock/extension.js:824
+#: ../extensions/dock/extension.js:903
 msgid "Remove from Favorites"
 msgstr "Pašalinti iš mėgstamų"
 
-#: ../extensions/dock/extension.js:825
+#: ../extensions/dock/extension.js:904
 msgid "Add to Favorites"
 msgstr "Pridėti prie mėgstamų"
 
@@ -178,8 +150,8 @@ msgid "Sets icon size of the dock."
 msgstr "Nustato skydelio piktogramos dydį."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgstr "Nustato skydelio slėpimo efektą. Galimos reikšmės yra 'resize' arba 'rescale'"
+msgid "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'"
+msgstr "Nustato skydelio slėpimo efektą. Galimos reikšmės yra „resize“, „rescale“ arba „move“"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
@@ -188,6 +160,10 @@ msgstr "Nustato skydelio vietą ekrane. Galimos reikšmės yra „right“ arba 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Nustato automatinio slėpimo efekto trukmę."
+
+#: ../extensions/drive-menu/extension.js:69
+msgid "Open file manager"
+msgstr "Atverti failų tvarkyklę"
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
@@ -222,20 +198,16 @@ msgid "Place window captions on top"
 msgstr "Talpinti lango antraštes viršuje"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
-msgid "The algorithm used to layout thumbnails in the overview. 'grid' to use the default grid based algorithm, 'natural' to use another one that reflects more the position and size of the actual window"
-msgstr "Algoritmas, naudojamas išdėstyti miniatiūras peržvalgos lange. „grid“ - naudoti numatytąjį algoritmą, „natural“ - naudoti kitą, kuris panašiau atvaizduoja lango dydį ir vietą"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
 msgstr "Bandyti naudoti daugiau ekrano vietos talpinant langų miniatiūras pritaikant prie ekrano kraštinių santykio ir suglaudinant jas taip sumažinant aprėpties langą. Šis nustatymas galios tik esant „natural“ talpinimo strategijai."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid "Use more screen for windows"
 msgstr "Naudoti daugiau ekrano langams "
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
-msgstr "Lango padėties strategija"
+#: ../extensions/places-menu/extension.js:36
+msgid "Removable Devices"
+msgstr "Išimami įrenginiai"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
@@ -265,3 +237,35 @@ msgstr "Aukštyn kojom"
 msgid "Configure display settings..."
 msgstr "Tvarkyti ekrano nustatymus..."
 
+#~ msgid "Notifications"
+#~ msgstr "Pranešimai"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Internetinės paskyros"
+
+#~ msgid "System Settings"
+#~ msgstr "Sistemos nustatymai"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Užrakinti ekraną"
+
+#~ msgid "Switch User"
+#~ msgstr "Pakeisti naudotoją"
+
+#~ msgid "Log Out..."
+#~ msgstr "Atsijungti..."
+
+#~ msgid "Native"
+#~ msgstr "Gimtasis"
+
+#~ msgid ""
+#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
+#~ "the default grid based algorithm, 'natural' to use another one that "
+#~ "reflects more the position and size of the actual window"
+#~ msgstr ""
+#~ "Algoritmas, naudojamas išdėstyti miniatiūras peržvalgos lange. „grid“ - "
+#~ "naudoti numatytąjį algoritmą, „natural“ - naudoti kitą, kuris panašiau "
+#~ "atvaizduoja lango dydį ir vietą"
+
+#~ msgid "Window placement strategy"
+#~ msgstr "Lango padėties strategija"
