@@ -1,0 +1,245 @@
+# Esperanto translation for gnome-shell-extensions.
+# Copyright (C) 2011 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2011-12-28 20:45+0000\n"
+"PO-Revision-Date: 2011-12-29 13:44+0100\n"
+"Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
+"Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:68
+msgid "Suspend"
+msgstr "Dormeti"
+
+#: ../extensions/alternative-status-menu/extension.js:73
+msgid "Hibernate"
+msgstr "Pasivumigi"
+
+#: ../extensions/alternative-status-menu/extension.js:78
+msgid "Power Off..."
+msgstr "Elŝalti..."
+
+#: ../extensions/alternate-tab/extension.js:54
+msgid ""
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one "
+"selection \n"
+"    list. Instead of using the application icon of every window, it uses "
+"small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode let's you switch between the applications of your current \n"
+"    workspace and gives you additionally the option to switch to the last "
+"used \n"
+"    application of your previous workspace. This is always the last symbol "
+"in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"If you whish to revert to the default behavior for the Alt-Tab switcher, "
+"just\n"
+"disable the extension from extensions.gnome.org or the Advanced Settings "
+"application."
+msgstr ""
+
+#: ../extensions/alternate-tab/extension.js:295
+msgid "Alt Tab Behaviour"
+msgstr ""
+
+#: ../extensions/alternate-tab/extension.js:311
+msgid "All & Thumbnails"
+msgstr ""
+
+#: ../extensions/alternate-tab/extension.js:318
+msgid "Workspace & Icons"
+msgstr ""
+
+#: ../extensions/alternate-tab/extension.js:325
+msgid "Cancel"
+msgstr "Nuligi"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "Ask the user for a default behaviour if true."
+msgstr ""
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid "Indicates if Alternate Tab is newly installed"
+msgstr ""
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
+"workspace_icons."
+msgstr ""
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
+msgid "The alt tab behaviour."
+msgstr ""
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "Application and workspace list"
+msgstr ""
+
+#: ../extensions/dock/extension.js:561
+msgid "Drag here to add favorites"
+msgstr ""
+
+#: ../extensions/dock/extension.js:896
+msgid "New Window"
+msgstr "Nova fenestro"
+
+#: ../extensions/dock/extension.js:898
+msgid "Quit Application"
+msgstr "Ĉesi aplikaĵon"
+
+#: ../extensions/dock/extension.js:903
+msgid "Remove from Favorites"
+msgstr "Forigi de la preferataj aplikaĵoj"
+
+#: ../extensions/dock/extension.js:904
+msgid "Add to Favorites"
+msgstr "Aldoni al la preferataj aplikaĵoj"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Autohide duration"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Autohide effect"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Enable/disable autohide"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Icon size"
+msgstr "Piktogramgrando"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Position of the dock"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Sets icon size of the dock."
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr ""
+
+#: ../extensions/drive-menu/extension.js:69
+msgid "Open file manager"
+msgstr "Malfermi dosieradministrilo"
+
+#: ../extensions/example/extension.js:11
+msgid "Hello, world!"
+msgstr "Saluton, mondo!"
+
+#: ../extensions/gajim/extension.js:227
+#, c-format
+msgid "%s is away."
+msgstr "%s estas fora."
+
+#: ../extensions/gajim/extension.js:230
+#, c-format
+msgid "%s is offline."
+msgstr "%s estas nekonektita."
+
+#: ../extensions/gajim/extension.js:233
+#, c-format
+msgid "%s is online."
+msgstr "%s estas konektita."
+
+#: ../extensions/gajim/extension.js:236
+#, c-format
+msgid "%s is busy."
+msgstr "%s estas okupata."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Place window captions on top"
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid "Use more screen for windows"
+msgstr ""
+
+#: ../extensions/places-menu/extension.js:36
+msgid "Removable Devices"
+msgstr "Demeteblaj aparatoj"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr ""
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "Theme name"
+msgstr "Etosnomo"
+
+#: ../extensions/xrandr-indicator/extension.js:26
+msgid "Normal"
+msgstr "Normale"
+
+#: ../extensions/xrandr-indicator/extension.js:27
+msgid "Left"
+msgstr "Maldekstre"
+
+#: ../extensions/xrandr-indicator/extension.js:28
+msgid "Right"
+msgstr "Dekstre"
+
+#: ../extensions/xrandr-indicator/extension.js:29
+msgid "Upside-down"
+msgstr "Renversite"
+
+#: ../extensions/xrandr-indicator/extension.js:78
+#, fuzzy
+msgid "Configure display settings..."
+msgstr "Agordi ekranagordojn..."
