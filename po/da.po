@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-06 22:28+0200\n"
-"PO-Revision-Date: 2011-04-06 09:07+0000\n"
+"POT-Creation-Date: 2012-01-02 12:35+0100\n"
+"PO-Revision-Date: 2011-12-27 00:32+0000\n"
 "Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -18,58 +18,149 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: ../extensions/alternative-status-menu/extension.js:45
+msgid "Notifications"
+msgstr "Beskeder"
+
+#: ../extensions/alternative-status-menu/extension.js:53
+msgid "Online Accounts"
+msgstr "Online konti"
+
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "System Settings"
+msgstr "Systemindstillinger"
+
+#: ../extensions/alternative-status-menu/extension.js:64
+msgid "Lock Screen"
+msgstr "Lås skærm"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "Switch User"
+msgstr "Skift bruger"
+
+#: ../extensions/alternative-status-menu/extension.js:74
+msgid "Log Out..."
+msgstr "Log ud..."
+
+#: ../extensions/alternative-status-menu/extension.js:82
+msgid "Suspend"
+msgstr "Dvale"
+
+#: ../extensions/alternative-status-menu/extension.js:88
+msgid "Hibernate"
+msgstr "Hviletilstand"
+
+#: ../extensions/alternative-status-menu/extension.js:94
+msgid "Power Off..."
+msgstr "Sluk..."
+
+#: ../extensions/alternate-tab/extension.js:51
 msgid ""
-"A list of strings, each containing an application id (desktop file name), "
-"followed by a colon and the workspace number"
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one "
+"selection \n"
+"    list. Instead of using the application icon of every window, it uses "
+"small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode let's you switch between the applications of your current \n"
+"    workspace and gives you additionally the option to switch to the last "
+"used \n"
+"    application of your previous workspace. This is always the last symbol "
+"in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"If you whish to revert to the default behavior for the Alt-Tab switcher, "
+"just\n"
+"disable the extension from extensions.gnome.org or the Advanced Settings "
+"application."
 msgstr ""
-"En liste over strenge, som hver indeholder et program-id "
-"(skrivebordsfilnavn), efterfulgt af et kolon og arbejdsområdets nummer"
+"Dette er første gang du bruger Alternate Tab-udvidelsen. \n"
+"Vælg venligst din foretrukne opførsel:\n"
+"\n"
+"Alle & miniaturebilleder:\n"
+"    Denne tilstand præsenterer alle programmer fra alle arbejdsområder i en "
+"markerings- \n"
+"    liste. I stedet for at bruge programikonet for hvert vindue, bruges et "
+"lille \n"
+"    miniaturebillede af vinduet selv. \n"
+"\n"
+"Arbejdsområde & ikoner:\n"
+"    Denne tilstand giver mulighed for at skifte mellem programmerne i dit "
+"nuværende \n"
+"    arbejdsområde og giver dig derudover muligheden for at skifte til det "
+"seneste brugte \n"
+"    program i dit tidligere arbejdsområde. Dette er altid det sidste symbol "
+"i \n"
+"    listen og er visuelt adskilt af en vertikal linje, hvis tilgængelig. \n"
+"    Hvert vindue er repræsenteret af dets programikon.  \n"
+"\n"
+"Hvis du ønsker at skifte tilbage til standardopførslen for Alt-Tab-"
+"skifteren, skal du\n"
+"blot deaktivere udvidelsen fra extensions.gnome.org eller programmet "
+"Avancerede indstillinger."
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "Application and workspace list"
-msgstr "Liste over programmer og arbejdsområder"
+#: ../extensions/alternate-tab/extension.js:294
+msgid "Alt Tab Behaviour"
+msgstr "Alt-Tab-opførsel"
 
-#: ../extensions/dock/extension.js:116
+#: ../extensions/alternate-tab/extension.js:310
+msgid "All & Thumbnails"
+msgstr "Alle & miniaturebilleder"
+
+#: ../extensions/alternate-tab/extension.js:317
+msgid "Workspace & Icons"
+msgstr "Arbejdsområde & ikoner"
+
+#: ../extensions/alternate-tab/extension.js:324
+msgid "Cancel"
+msgstr "Annullér"
+
+#: ../extensions/dock/extension.js:498
 msgid "Drag here to add favorites"
 msgstr "Træk hertil for at føje til favoritter"
 
-#: ../extensions/dock/extension.js:417
+#: ../extensions/dock/extension.js:831
 msgid "New Window"
 msgstr "Nyt vindue"
 
-#: ../extensions/dock/extension.js:419
+#: ../extensions/dock/extension.js:833
 msgid "Quit Application"
 msgstr "Afslut program"
 
-#: ../extensions/dock/extension.js:424
+#: ../extensions/dock/extension.js:838
 msgid "Remove from Favorites"
 msgstr "Fjern fra favoritter"
 
-#: ../extensions/dock/extension.js:425
+#: ../extensions/dock/extension.js:839
 msgid "Add to Favorites"
 msgstr "Føj til favoritter"
 
-#: ../extensions/example/extension.js:11
+#: ../extensions/example/extension.js:12
 msgid "Hello, world!"
 msgstr "Hej verden!"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/gajim/extension.js:227
 #, c-format
 msgid "%s is away."
 msgstr "%s er ikke til stede."
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
 msgstr "%s er frakoblet."
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
 msgstr "%s er tilgængelig."
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
 msgstr "%s er optaget."
@@ -101,3 +192,13 @@ msgstr "På hovedet"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Konfigurér skærmindstillinger..."
+
+#~ msgid ""
+#~ "A list of strings, each containing an application id (desktop file name), "
+#~ "followed by a colon and the workspace number"
+#~ msgstr ""
+#~ "En liste over strenge, som hver indeholder et program-id "
+#~ "(skrivebordsfilnavn), efterfulgt af et kolon og arbejdsområdets nummer"
+
+#~ msgid "Application and workspace list"
+#~ msgstr "Liste over programmer og arbejdsområder"
