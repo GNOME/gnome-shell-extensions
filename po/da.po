@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-06 22:28+0200\n"
-"PO-Revision-Date: 2011-04-06 09:07+0000\n"
+"POT-Creation-Date: 2012-01-02 12:35+0100\n"
+"PO-Revision-Date: 2011-12-27 00:32+0000\n"
 "Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -17,6 +17,50 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../extensions/alternative-status-menu/extension.js:23
+#: ../extensions/alternative-status-menu/extension.js:27
+#: ../extensions/alternative-status-menu/extension.js:93
+msgid "Hibernate"
+msgstr "Hviletilstand"
+
+#: ../extensions/alternative-status-menu/extension.js:26
+#: ../extensions/alternative-status-menu/extension.js:92
+msgid "Suspend"
+msgstr "Dvale"
+
+#: ../extensions/alternative-status-menu/extension.js:52
+msgid "Available"
+msgstr ""
+
+#: ../extensions/alternative-status-menu/extension.js:57
+msgid "Busy"
+msgstr ""
+
+#: ../extensions/alternative-status-menu/extension.js:65
+#, fuzzy
+msgid "My Account"
+msgstr "Online konti"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "System Settings"
+msgstr "Systemindstillinger"
+
+#: ../extensions/alternative-status-menu/extension.js:76
+msgid "Lock Screen"
+msgstr "Lås skærm"
+
+#: ../extensions/alternative-status-menu/extension.js:80
+msgid "Switch User"
+msgstr "Skift bruger"
+
+#: ../extensions/alternative-status-menu/extension.js:85
+msgid "Log Out..."
+msgstr "Log ud..."
+
+#: ../extensions/alternative-status-menu/extension.js:100
+msgid "Power Off..."
+msgstr "Sluk..."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -101,3 +145,70 @@ msgstr "På hovedet"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Konfigurér skærmindstillinger..."
+
+#~ msgid "Notifications"
+#~ msgstr "Beskeder"
+
+#~ msgid ""
+#~ "This is the first time you use the Alternate Tab extension. \n"
+#~ "Please choose your preferred behaviour:\n"
+#~ "\n"
+#~ "All & Thumbnails:\n"
+#~ "    This mode presents all applications from all workspaces in one "
+#~ "selection \n"
+#~ "    list. Instead of using the application icon of every window, it uses "
+#~ "small \n"
+#~ "    thumbnails resembling the window itself. \n"
+#~ "\n"
+#~ "Workspace & Icons:\n"
+#~ "    This mode let's you switch between the applications of your current \n"
+#~ "    workspace and gives you additionally the option to switch to the last "
+#~ "used \n"
+#~ "    application of your previous workspace. This is always the last "
+#~ "symbol in \n"
+#~ "    the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "    Every window is represented by its application icon.  \n"
+#~ "\n"
+#~ "If you whish to revert to the default behavior for the Alt-Tab switcher, "
+#~ "just\n"
+#~ "disable the extension from extensions.gnome.org or the Advanced Settings "
+#~ "application."
+#~ msgstr ""
+#~ "Dette er første gang du bruger Alternate Tab-udvidelsen. \n"
+#~ "Vælg venligst din foretrukne opførsel:\n"
+#~ "\n"
+#~ "Alle & miniaturebilleder:\n"
+#~ "    Denne tilstand præsenterer alle programmer fra alle arbejdsområder i "
+#~ "en markerings- \n"
+#~ "    liste. I stedet for at bruge programikonet for hvert vindue, bruges "
+#~ "et lille \n"
+#~ "    miniaturebillede af vinduet selv. \n"
+#~ "\n"
+#~ "Arbejdsområde & ikoner:\n"
+#~ "    Denne tilstand giver mulighed for at skifte mellem programmerne i dit "
+#~ "nuværende \n"
+#~ "    arbejdsområde og giver dig derudover muligheden for at skifte til det "
+#~ "seneste brugte \n"
+#~ "    program i dit tidligere arbejdsområde. Dette er altid det sidste "
+#~ "symbol i \n"
+#~ "    listen og er visuelt adskilt af en vertikal linje, hvis "
+#~ "tilgængelig. \n"
+#~ "    Hvert vindue er repræsenteret af dets programikon.  \n"
+#~ "\n"
+#~ "Hvis du ønsker at skifte tilbage til standardopførslen for Alt-Tab-"
+#~ "skifteren, skal du\n"
+#~ "blot deaktivere udvidelsen fra extensions.gnome.org eller programmet "
+#~ "Avancerede indstillinger."
+
+#~ msgid "Alt Tab Behaviour"
+#~ msgstr "Alt-Tab-opførsel"
+
+#~ msgid "All & Thumbnails"
+#~ msgstr "Alle & miniaturebilleder"
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "Arbejdsområde & ikoner"
+
+#~ msgid "Cancel"
+#~ msgstr "Annullér"
