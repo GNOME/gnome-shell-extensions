@@ -1,14 +1,15 @@
+# Slovenian translations for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2011.
+# Matej Urbančič <mateju@svn.gnome.org>, 2011 - 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-12-22 17:09+0000\n"
-"PO-Revision-Date: 2011-12-26 17:39+0100\n"
+"POT-Creation-Date: 2012-01-07 10:46+0000\n"
+"PO-Revision-Date: 2012-01-07 21:55+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -20,39 +21,16 @@ msgstr ""
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Notifications"
-msgstr "Obvestila"
-
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Online Accounts"
-msgstr "Spletni računi"
-
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "Sistemske nastavitve"
-
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "Zakleni zaslon"
-
+#. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
-msgid "Switch User"
-msgstr "Preklopi uporabnika"
-
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Log Out..."
-msgstr "Odjava ..."
-
-#: ../extensions/alternative-status-menu/extension.js:81
 msgid "Suspend"
 msgstr "V pripravljenost"
 
-#: ../extensions/alternative-status-menu/extension.js:87
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "V mirovanje"
 
-#: ../extensions/alternative-status-menu/extension.js:93
+#: ../extensions/alternative-status-menu/extension.js:78
 msgid "Power Off..."
 msgstr "Izklopi ..."
 
@@ -190,6 +168,10 @@ msgstr "Določi položaj sidrišča na zaslonu. Dovoljeni vrednosti sta 'desno' 
 msgid "Sets the time duration of the autohide effect."
 msgstr "Določi trajanje učinka samodejnega skrivanja."
 
+#: ../extensions/drive-menu/extension.js:69
+msgid "Open file manager"
+msgstr "Odpri upravljalnik datotek"
+
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
 msgstr "Pozdravljen, svet!"
@@ -230,6 +212,10 @@ msgstr "Poskusi uporabiti več zaslona za postavitev sličic oken s prilagajanje
 msgid "Use more screen for windows"
 msgstr "Uporabi več zaslona za okna"
 
+#: ../extensions/places-menu/extension.js:36
+msgid "Removable Devices"
+msgstr "Odstranljive naprave"
+
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Ime teme, ki bo naložena iz ~/.themes/name/gnome-shell"
@@ -257,6 +243,24 @@ msgstr "Zgoraj-navzdol"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Nastavitve zaslona ..."
+
+#~ msgid "Notifications"
+#~ msgstr "Obvestila"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Spletni računi"
+
+#~ msgid "System Settings"
+#~ msgstr "Sistemske nastavitve"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Zakleni zaslon"
+
+#~ msgid "Switch User"
+#~ msgstr "Preklopi uporabnika"
+
+#~ msgid "Log Out..."
+#~ msgstr "Odjava ..."
 
 #~ msgid ""
 #~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
