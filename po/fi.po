@@ -2,60 +2,37 @@
 # Copyright (C) 2011 Ville-Pekka Vainio
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Ville-Pekka Vainio <vpvainio@iki.fi>, 2011.
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-12-03 11:25+0000\n"
-"PO-Revision-Date: 2011-12-04 00:46+0200\n"
-"Last-Translator: Ville-Pekka Vainio <vpvainio@iki.fi>\n"
-"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-07 12:45+0200\n"
+"PO-Revision-Date: 2012-01-05 20:37+0200\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1-rc1\n"
+"X-Generator: Lokalize 1.4\n"
 "X-Project-Style: gnome\n"
 
-#: ../extensions/alternative-status-menu/extension.js:45
-msgid "Notifications"
-msgstr "Ilmoitukset"
-
-#: ../extensions/alternative-status-menu/extension.js:53
-msgid "Online Accounts"
-msgstr "Verkkotilit"
-
-#: ../extensions/alternative-status-menu/extension.js:57
-msgid "System Settings"
-msgstr "Järjestelmän asetukset"
-
-#: ../extensions/alternative-status-menu/extension.js:64
-msgid "Lock Screen"
-msgstr "Lukitse näyttö"
-
-#: ../extensions/alternative-status-menu/extension.js:69
-msgid "Switch User"
-msgstr "Vaihda käyttäjää"
-
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Log Out..."
-msgstr "Kirjaudu ulos…"
-
-#: ../extensions/alternative-status-menu/extension.js:82
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "Valmiustila"
 
-#: ../extensions/alternative-status-menu/extension.js:88
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Lepotila"
 
-#: ../extensions/alternative-status-menu/extension.js:94
+#: ../extensions/alternative-status-menu/extension.js:78
 msgid "Power Off..."
 msgstr "Sammuta…"
 
-#: ../extensions/alternate-tab/extension.js:50
+#: ../extensions/alternate-tab/extension.js:54
 msgid ""
 "This is the first time you use the Alternate Tab extension. \n"
 "Please choose your preferred behaviour:\n"
@@ -82,19 +59,19 @@ msgid ""
 "application."
 msgstr ""
 
-#: ../extensions/alternate-tab/extension.js:291
+#: ../extensions/alternate-tab/extension.js:295
 msgid "Alt Tab Behaviour"
 msgstr ""
 
-#: ../extensions/alternate-tab/extension.js:307
+#: ../extensions/alternate-tab/extension.js:311
 msgid "All & Thumbnails"
 msgstr ""
 
-#: ../extensions/alternate-tab/extension.js:314
+#: ../extensions/alternate-tab/extension.js:318
 msgid "Workspace & Icons"
-msgstr ""
+msgstr "Työtila ja kuvakkeet"
 
-#: ../extensions/alternate-tab/extension.js:321
+#: ../extensions/alternate-tab/extension.js:325
 msgid "Cancel"
 msgstr "Peru"
 
@@ -126,23 +103,23 @@ msgstr ""
 msgid "Application and workspace list"
 msgstr ""
 
-#: ../extensions/dock/extension.js:569
+#: ../extensions/dock/extension.js:561
 msgid "Drag here to add favorites"
 msgstr "Raahaa tähän lisätäksesi suosikkeihin"
 
-#: ../extensions/dock/extension.js:902
+#: ../extensions/dock/extension.js:896
 msgid "New Window"
 msgstr "Uusi ikkuna"
 
-#: ../extensions/dock/extension.js:904
+#: ../extensions/dock/extension.js:898
 msgid "Quit Application"
 msgstr "Lopeta ohjelma"
 
-#: ../extensions/dock/extension.js:909
+#: ../extensions/dock/extension.js:903
 msgid "Remove from Favorites"
 msgstr "Poista suosikeista"
 
-#: ../extensions/dock/extension.js:910
+#: ../extensions/dock/extension.js:904
 msgid "Add to Favorites"
 msgstr "Lisää suosikkeihin"
 
@@ -172,7 +149,8 @@ msgstr ""
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
 msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
 msgstr ""
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
@@ -183,6 +161,10 @@ msgstr ""
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
+msgstr ""
+
+#: ../extensions/drive-menu/extension.js:69
+msgid "Open file manager"
 msgstr ""
 
 #: ../extensions/example/extension.js:11
@@ -222,33 +204,26 @@ msgstr ""
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid ""
-"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
-"default grid based algorithm, 'natural' to use another one that reflects "
-"more the position and size of the actual window"
-msgstr ""
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid "Use more screen for windows"
 msgstr ""
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
+#: ../extensions/places-menu/extension.js:36
+msgid "Removable Devices"
 msgstr ""
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr ""
+msgstr "Teeman nimi, ladataan sijainnista ~/.themes/name/gnome-shell"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
-msgstr ""
+msgstr "Teeman nimi"
 
 #: ../extensions/xrandr-indicator/extension.js:26
 msgid "Normal"
@@ -269,3 +244,21 @@ msgstr "Ylösalaisin"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Määritä näytön asetukset…"
+
+#~ msgid "Notifications"
+#~ msgstr "Ilmoitukset"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Verkkotilit"
+
+#~ msgid "System Settings"
+#~ msgstr "Järjestelmän asetukset"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Lukitse näyttö"
+
+#~ msgid "Switch User"
+#~ msgstr "Vaihda käyttäjää"
+
+#~ msgid "Log Out..."
+#~ msgstr "Kirjaudu ulos…"
