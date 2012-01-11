@@ -13,16 +13,17 @@ zip-file: all
 	-rm -fR $(builddir)/zip-files
 	mkdir $(builddir)/_build; \
 	mkdir $(builddir)/zip-files; \
-	$(MAKE) install DESTDIR="`pwd`/_build"; \
+	$(MAKE) install DESTDIR="$(abs_builddir)/_build"; \
 	for i in $(ENABLED_EXTENSIONS); do \
-		mv "`pwd`/_build/$(topextensiondir)/$${i}$(extensionbase)" "`pwd`/_build/"; \
-		cp -r "`pwd`/_build/$(datadir)/locale" "`pwd`/_build/$${i}$(extensionbase)"; \
-		if [ -f "`pwd`/_build/$(datadir)/glib-2.0/schemas/$(gschemabase).$${i}.gschema.xml" ]; then \
-			mkdir "`pwd`/_build/$${i}$(extensionbase)/schemas"; \
-			mv "`pwd`/_build/$(datadir)/glib-2.0/schemas/$(gschemabase).$${i}.gschema.xml" "`pwd`/_build/$${i}$(extensionbase)/schemas"; \
-			glib-compile-schemas "`pwd`/_build/$${i}$(extensionbase)/schemas"; \
+		mv "$(builddir)/_build$(topextensiondir)/$${i}$(extensionbase)" "$(builddir)/_build/"; \
+		cp -r "$(builddir)/_build$(datadir)/locale" "$(builddir)/_build/$${i}$(extensionbase)"; \
+		cp "$(srcdir)/COPYING" -t "$(builddir)/_build/$${i}$(extensionbase)"; \
+		if [ -f "$(builddir)/_build$(datadir)/glib-2.0/schemas/$(gschemabase).$${i}.gschema.xml" ]; then \
+			mkdir "$(builddir)/_build/$${i}$(extensionbase)/schemas"; \
+			mv "$(builddir)/_build$(datadir)/glib-2.0/schemas/$(gschemabase).$${i}.gschema.xml" "$(builddir)/_build/$${i}$(extensionbase)/schemas"; \
+			glib-compile-schemas "$(builddir)/_build/$${i}$(extensionbase)/schemas"; \
 		fi; \
-		(cd "`pwd`/_build/$${i}$(extensionbase)"; \
+		(cd "$(builddir)/_build/$${i}$(extensionbase)"; \
 		 zip -qr "$(abs_builddir)/zip-files/$${i}$(extensionbase).shell-extension.zip" .; \
 		); \
 	done
