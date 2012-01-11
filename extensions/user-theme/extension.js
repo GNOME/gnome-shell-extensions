@@ -30,8 +30,6 @@ ThemeManager.prototype = {
             this._changedId = 0;
         }
 
-        this._settings = null;
-
         Main.setThemeStylesheet(null);
         Main.loadTheme();
     },
