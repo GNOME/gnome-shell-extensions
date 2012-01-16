@@ -2,15 +2,15 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# Marek Černocký <marek@manet.cz>, 2011.
+# Marek Černocký <marek@manet.cz>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-12-19 15:33+0000\n"
-"PO-Revision-Date: 2011-12-20 00:11+0100\n"
+"POT-Creation-Date: 2012-01-07 10:46+0000\n"
+"PO-Revision-Date: 2012-01-16 10:51+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,39 +19,16 @@ msgstr ""
 "Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Notifications"
-msgstr "Oznamování"
-
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Online Accounts"
-msgstr "Účty on-line"
-
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "Nastavení systému"
-
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "Zamknout obrazovku"
-
+#. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
-msgid "Switch User"
-msgstr "Přepnout uživatele"
-
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Log Out..."
-msgstr "Odhlásit se…"
-
-#: ../extensions/alternative-status-menu/extension.js:81
 msgid "Suspend"
 msgstr "Uspat do paměti"
 
-#: ../extensions/alternative-status-menu/extension.js:87
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Uspat na disk"
 
-#: ../extensions/alternative-status-menu/extension.js:93
+#: ../extensions/alternative-status-menu/extension.js:78
 msgid "Power Off..."
 msgstr "Vypnout…"
 
@@ -152,23 +129,23 @@ msgstr ""
 msgid "Application and workspace list"
 msgstr "Seznam aplikací a pracovních ploch"
 
-#: ../extensions/dock/extension.js:570
+#: ../extensions/dock/extension.js:561
 msgid "Drag here to add favorites"
 msgstr "Přetažením sem přidáte do oblíbených"
 
-#: ../extensions/dock/extension.js:903
+#: ../extensions/dock/extension.js:896
 msgid "New Window"
 msgstr "Nové okno"
 
-#: ../extensions/dock/extension.js:905
+#: ../extensions/dock/extension.js:898
 msgid "Quit Application"
 msgstr "Ukončit aplikaci"
 
-#: ../extensions/dock/extension.js:910
+#: ../extensions/dock/extension.js:903
 msgid "Remove from Favorites"
 msgstr "Odebrat z oblíbených"
 
-#: ../extensions/dock/extension.js:911
+#: ../extensions/dock/extension.js:904
 msgid "Add to Favorites"
 msgstr "Přidat do oblíbených"
 
@@ -216,6 +193,10 @@ msgstr ""
 msgid "Sets the time duration of the autohide effect."
 msgstr "Nastavuje čas trvání efektu automatického skrývání."
 
+#: ../extensions/drive-menu/extension.js:69
+msgid "Open file manager"
+msgstr "Otevřít správce souborů"
+
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
 msgstr "Ahoj světe!"
@@ -256,16 +237,6 @@ msgstr "Umístit název okna nahoru"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid ""
-"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
-"default grid based algorithm, 'natural' to use another one that reflects "
-"more the position and size of the actual window"
-msgstr ""
-"Algoritmus použitý k rozvržení náhledů v přehledu. „grid“ použijte pro "
-"výchozí algoritmus založený na pravidelné mřížce, „natural“ pro jiný "
-"algoritmus, který se snaží brát v úvahu polohu a velikost aktuálního okna"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
@@ -274,13 +245,13 @@ msgstr ""
 "využít větší část obrazovky pro umístění náhledů oken. Toto nastavení se "
 "použije pouze dohromady se strategií umisťování „natural“."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid "Use more screen for windows"
 msgstr "Použít větší část obrazovky pro okna"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
-msgstr "Strategie umisťování oken"
+#: ../extensions/places-menu/extension.js:36
+msgid "Removable Devices"
+msgstr "Výměnná zařízení"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
