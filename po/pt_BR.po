@@ -4,63 +4,121 @@
 # Felipe Borges <felipe10borges@gmail.com>, 2011.
 # Rodrigo Padula <contato@rodrigopadula.com>, 2011.
 # Rodolfo Ribeiro Gomes <rodolforg@gmail.com>, 2011.
-#
+# Djavan Fagundes <djavan@comum.org>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-04-20 19:47+0000\n"
-"PO-Revision-Date: 2011-04-21 11:11-0300\n"
-"Last-Translator: Rodolfo Ribeiro Gomes <rodolforg@gmail.com>\n"
+"POT-Creation-Date: 2011-12-27 14:30+0000\n"
+"PO-Revision-Date: 2012-01-30 19:55-0200\n"
+"Last-Translator: Djavan Fagundes <djavan@comum.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.6.1\n"
 
-#: ../extensions/alternative-status-menu/extension.js:23
-#: ../extensions/alternative-status-menu/extension.js:27
-#: ../extensions/alternative-status-menu/extension.js:93
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:68
+msgid "Suspend"
+msgstr "Suspend"
+
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:26
-#: ../extensions/alternative-status-menu/extension.js:92
-msgid "Suspend"
-msgstr "Supender"
-
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Available"
-msgstr "Disponível"
-
-#: ../extensions/alternative-status-menu/extension.js:57
-msgid "Busy"
-msgstr "Ocupado"
-
-#: ../extensions/alternative-status-menu/extension.js:65
-msgid "My Account"
-msgstr "Minha conta"
-
-#: ../extensions/alternative-status-menu/extension.js:69
-msgid "System Settings"
-msgstr "Configurações de sistema"
-
-#: ../extensions/alternative-status-menu/extension.js:76
-msgid "Lock Screen"
-msgstr "Bloquear tela"
-
-#: ../extensions/alternative-status-menu/extension.js:80
-msgid "Switch User"
-msgstr "Trocar de usuário"
-
-#: ../extensions/alternative-status-menu/extension.js:85
-msgid "Log Out..."
-msgstr "Encerrar sessão..."
-
-#: ../extensions/alternative-status-menu/extension.js:100
+#: ../extensions/alternative-status-menu/extension.js:78
 msgid "Power Off..."
 msgstr "Desligar..."
+
+#: ../extensions/alternate-tab/extension.js:54
+msgid ""
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one "
+"selection \n"
+"    list. Instead of using the application icon of every window, it uses "
+"small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode let's you switch between the applications of your current \n"
+"    workspace and gives you additionally the option to switch to the last "
+"used \n"
+"    application of your previous workspace. This is always the last symbol "
+"in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"If you whish to revert to the default behavior for the Alt-Tab switcher, "
+"just\n"
+"disable the extension from extensions.gnome.org or the Advanced Settings "
+"application."
+msgstr ""
+"Esta é a primeira vez que você usa a extensão Alternate Tab. \n"
+"Por favor, escolha seu comportamento preferido:\n"
+"\n"
+"All & miniaturas:\n"
+"    Este modo apresenta todos os aplicativos de todos os espaços de trabalho "
+"em\n"
+"    uma lista. Ao invés de usar o ícone do aplicativo de cada janela, ele "
+"usa\n"
+"    pequenas miniaturas assemelhando-se a janela própria. \n"
+"\n"
+"Espaço de trabalho & ícones:\n"
+"    Este modo permite que você alterne entre os aplicativos do seu espaço de "
+"trabalho\n"
+"    atual e dá a você além da opção para mudar para o último aplicativo "
+"usado em seu\n"
+"    espaço de trabalho anterior. Este é sempre o último símbolo na lista e "
+"separado\n"
+"    por uma linha separadora/vertical se disponível. \n"
+"    Cada janela é representada por seu ícone de aplicativo.  \n"
+"\n"
+"Se você deseja reverter para o comportamento padrão a partir do alternador "
+"de Alt-Tab, apenas desative a extensão de extensions.gnome.org ou nas "
+"configurações avançadas do aplicativo."
+
+#: ../extensions/alternate-tab/extension.js:295
+msgid "Alt Tab Behaviour"
+msgstr "Comportamento do Alt Tab"
+
+#: ../extensions/alternate-tab/extension.js:311
+msgid "All & Thumbnails"
+msgstr "Todas & miniaturas"
+
+#: ../extensions/alternate-tab/extension.js:318
+msgid "Workspace & Icons"
+msgstr "Espaço de trabalho & ícones"
+
+#: ../extensions/alternate-tab/extension.js:325
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "Ask the user for a default behaviour if true."
+msgstr "Pergunte ao usuário por um comportamento padrão se marcado."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid "Indicates if Alternate Tab is newly installed"
+msgstr "Indica se o alternar com Tab for recém-instalado"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
+"workspace_icons."
+msgstr ""
+"Define o comportamento do Alt-Tab. Valores possíveis são: nativo, "
+"all_thumbnails e workspace_icons."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
+msgid "The alt tab behaviour."
+msgstr "O comportamento do alt tab."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -74,49 +132,131 @@ msgstr ""
 msgid "Application and workspace list"
 msgstr "Lista de aplicativo e espaço de trabalho"
 
-#: ../extensions/dock/extension.js:116
+#: ../extensions/dock/extension.js:561
 msgid "Drag here to add favorites"
 msgstr "Arraste aqui para adicionar aos favoritos"
 
-#: ../extensions/dock/extension.js:417
+#: ../extensions/dock/extension.js:896
 msgid "New Window"
 msgstr "Nova janela"
 
-#: ../extensions/dock/extension.js:419
+#: ../extensions/dock/extension.js:898
 msgid "Quit Application"
 msgstr "Fechar aplicativo"
 
-#: ../extensions/dock/extension.js:424
+#: ../extensions/dock/extension.js:903
 msgid "Remove from Favorites"
 msgstr "Remover dos favoritos"
 
-#: ../extensions/dock/extension.js:425
+#: ../extensions/dock/extension.js:904
 msgid "Add to Favorites"
 msgstr "Adicionar aos favoritos"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Autohide duration"
+msgstr "Duração do ocultar automaticamente"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Autohide effect"
+msgstr "Efeito de ocultar automaticamente"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Enable/disable autohide"
+msgstr "Habilitar/desabilitar o ocultar automaticamente"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Icon size"
+msgstr "Tamanho do ícone"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Position of the dock"
+msgstr "Posição do dock"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Sets icon size of the dock."
+msgstr "Define o tamanho do ícone do dock."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr ""
+"Define o efeito de ocultar dock. Os valores permitidos são \"resize\", "
+"\"rescale\" e \"move\""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"Define a posição do dock na tela. Os valores permitidos são \"right\" ou "
+"\"left\""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr "Define o tempo de duração do efeito de ocultar automaticamente."
+
+#: ../extensions/drive-menu/extension.js:69
+msgid "Open file manager"
+msgstr "Abrir gerenciador de arquivos"
 
 #: ../extensions/example/extension.js:11
 msgid "Hello, world!"
 msgstr "Olá, mundo!"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/gajim/extension.js:227
 #, c-format
 msgid "%s is away."
 msgstr "%s está ausente."
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
 msgstr "%s está desconectado."
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
 msgstr "%s está conectado."
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
 msgstr "%s está ocupado."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Se verdadeiro, coloca legendas de janela em cima da respectiva miniatura, "
+"sobresscrevendo o padrão do shell de colocá-lo na parte inferior. A "
+"alteração dessa configuração requer o reinicio do shell para ter qualquer "
+"efeito."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Place window captions on top"
+msgstr "Colocar as legendas de janela em cima"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Tenta usar mais tela para colocação da janela de miniaturas, adaptando a "
+"proporção da tela e consolidando-os ainda mais para reduzir a caixa "
+"delimitadora. Essa configuração aplica-se somente com a estratégia de "
+"posicionamento natural."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid "Use more screen for windows"
+msgstr "Usar mais tela para janelas"
+
+#: ../extensions/places-menu/extension.js:36
+msgid "Removable Devices"
+msgstr "Dispositivos removíveis"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
@@ -145,3 +285,24 @@ msgstr "De cabeça pra baixo"
 #: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Alterar configurações de exibição..."
+
+#~ msgid "Available"
+#~ msgstr "Disponível"
+
+#~ msgid "Busy"
+#~ msgstr "Ocupado"
+
+#~ msgid "My Account"
+#~ msgstr "Minha conta"
+
+#~ msgid "System Settings"
+#~ msgstr "Configurações de sistema"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Bloquear tela"
+
+#~ msgid "Switch User"
+#~ msgstr "Trocar de usuário"
+
+#~ msgid "Log Out..."
+#~ msgstr "Encerrar sessão..."
