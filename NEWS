@@ -1,3 +1,10 @@
+3.3.4
+=====
+* improved styling of windowsNavigator tooltips
+* fixed windowsNavigator when used with the numeric keypad
+* fixed native-window-placement with custom button layout
+* updated translations (pt_BR, cz)
+
 3.3.3
 =====
 * windowsNavigator was fixed to work with azerty keyboards
