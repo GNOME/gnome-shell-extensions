@@ -224,7 +224,7 @@ function enable() {
     winInjections['updatePositions'] = injectToFunction(Workspace.WindowOverlay.prototype, 'updatePositions', function(cloneX, cloneY, cloneWidth, cloneHeight) {
         let textX = cloneX - 2;
         let textY = cloneY - 2;
-        this._text.set_position(Math.floor(textX), Math.floor(textY));
+        this._text.set_position(Math.floor(textX) + 5, Math.floor(textY) + 5);
         this._text.raise_top();
     });
 
