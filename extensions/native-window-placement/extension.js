@@ -31,6 +31,9 @@ const WINDOW_PLACEMENT_NATURAL_MAX_TRANSLATIONS = 5000;             // safety li
 
 const PLACE_WINDOW_CAPTIONS_ON_TOP = true;                          // place window titles in overview on top of windows with overlap parameter
 
+const BUTTON_LAYOUT_SCHEMA = 'org.gnome.shell.overrides';
+const BUTTON_LAYOUT_KEY = 'button-layout';
+
 function injectToFunction(parent, name, func) {
     let origin = parent[name];
     parent[name] = function() {
@@ -426,27 +429,38 @@ function enable() {
             let button = this.closeButton;
             let title = this.title;
 
+            let settings = new Gio.Settings({ schema: BUTTON_LAYOUT_SCHEMA });
+            let layout = settings.get_string(BUTTON_LAYOUT_KEY);
+            let rtl = St.Widget.get_default_direction() == St.TextDirection.RTL;
+
+            let split = layout.split(":");
+            let side;
+            if (split[0].indexOf("close") > -1)
+                side = rtl ? St.Side.RIGHT : St.Side.LEFT;
+            else
+                side = rtl ? St.Side.LEFT : St.Side.RIGHT;
+
             let buttonX;
             let buttonY = cloneY - (button.height - button._overlap);
-            if (St.Widget.get_default_direction() == St.TextDirection.RTL)
-		buttonX = cloneX - (button.width - button._overlap);
+            if (side == St.Side.LEFT)
+                buttonX = cloneX - (button.width - button._overlap);
             else
-		buttonX = cloneX + (cloneWidth - button._overlap);
+                buttonX = cloneX + (cloneWidth - button._overlap);
 
             if (animate)
-                this._animateOverlayActor(button, Math.floor(buttonX), Math.floor(buttonY));
+                this._animateOverlayActor(button, Math.floor(buttonX), Math.floor(buttonY), button.width);
             else
                 button.set_position(Math.floor(buttonX), Math.floor(buttonY));
 
             if (!title.fullWidth)
-		title.fullWidth = title.width;
+                title.fullWidth = title.width;
             let titleWidth = Math.min(title.fullWidth, cloneWidth);
 
             let titleX = cloneX + (cloneWidth - titleWidth) / 2;
-	    let titleY = cloneY - title.height + title._overlap;
+            let titleY = cloneY - title.height + title._overlap;
 
             if (animate)
-                this._animateOverlayActor(title, Math.floor(titleX), Math.floor(titleY));
+                this._animateOverlayActor(title, Math.floor(titleX), Math.floor(titleY), titleWidth);
             else {
                 title.width = titleWidth;
                 title.set_position(Math.floor(titleX), Math.floor(titleY));
