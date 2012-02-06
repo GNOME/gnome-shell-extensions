@@ -175,10 +175,14 @@ function enable() {
                 return false;
             }
 
-            let c = o.get_key_symbol() - Clutter.KEY_0;
+            let c = o.get_key_symbol() - Clutter.KEY_KP_0;
             if (c > 9 || c <= 0) {
-                this._hideTooltips();
-                return false;
+                c = o.get_key_symbol() - Clutter.KEY_0;
+                if (c > 9 || c <= 0) {
+                    this._hideTooltips();
+                    global.log(c);
+                    return false;
+                }
             }
 
             let win = this._workspaces[this._active].getWindowWithTooltip(c);
@@ -190,10 +194,13 @@ function enable() {
             return true;
         }
         if (this._pickWorkspace) {
-            let c = o.get_key_symbol() - Clutter.KEY_0;
+            let c = o.get_key_symbol() - Clutter.KEY_KP_0;
             if (c > 9 || c <= 0) {
-                this._hideWorkspacesTooltips();
-                return false;
+                c = o.get_key_symbol() - Clutter.KEY_0;
+                if (c > 9 || c <= 0) {
+                    this._hideWorkspacesTooltips();
+                    return false;
+                }
             }
 
             let workspace = this._workspaces[c - 1];
