@@ -20,7 +20,9 @@ const Tweener = imports.ui.tweener;
 const Workspace = imports.ui.workspace;
 const WindowPositionFlags = Workspace.WindowPositionFlags;
 
-let _me, _metadata;
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
 
 // testing settings for natural window placement strategy:
 const WINDOW_PLACEMENT_NATURAL_FILLGAPS = true;                     // enlarge windows at the end to fill gaps         // not implemented yet
@@ -116,7 +118,7 @@ function resetState() {
 function enable() {
     resetState();
 
-    let settings = _me.convenience.getSettings(_metadata, 'native-window-placement');
+    let settings = Convenience.getSettings();
     let useMoreScreen = settings.get_boolean('use-more-screen');
     signalId = settings.connect('changed::use-more-screen', function() {
         useMoreScreen = settings.get_boolean('use-more-screen');
@@ -501,7 +503,6 @@ function disable() {
     resetState();
 }
 
-function init(metadata) {
-    _metadata = metadata;
-    _me = imports.ui.extensionSystem.extensions[metadata.uuid];
+function init() {
+    /* do nothing */
 }

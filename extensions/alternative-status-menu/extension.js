@@ -7,6 +7,10 @@ const PopupMenu = imports.ui.popupMenu;
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
+
 let suspend_item = null;
 let hibernate_item = null;
 let poweroff_item = null;
@@ -36,17 +40,9 @@ function onHibernateActivate(item) {
     }));
 }
 
-function createSubMenu() {
-
-}
-
 // Put your extension initialization code here
 function init(metadata) {
-    let me = imports.ui.extensionSystem.extensions[metadata.uuid];
-    me.convenience.initTranslations(metadata);
-}
-
-function resetMenu() {
+    Convenience.initTranslations();
 }
 
 function enable() {

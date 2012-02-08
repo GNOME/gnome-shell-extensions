@@ -11,7 +11,10 @@ const St = imports.gi.St;
 
 const Main = imports.ui.main;
 
-const SETTINGS_SCHEMA = 'org.gnome.shell.extensions.auto-move-windows';
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
+
 const SETTINGS_KEY = 'application-list';
 
 let settings;
@@ -81,10 +84,9 @@ WindowMover.prototype = {
 let prevCheckWorkspaces;
 let winMover;
 
-function init(metadata) {
-    let me = imports.ui.extensionSystem.extensions[metadata.uuid];
-    me.convenience.initTranslations(metadata);
-    settings = me.convenience.getSettings(metadata, 'auto-move-windows');
+function init() {
+    Convenience.initTranslations();
+    settings = Convenience.getSettings();
 }
 
 function enable() {

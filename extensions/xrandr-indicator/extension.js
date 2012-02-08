@@ -17,6 +17,10 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 const N_ = function(e) { return e };
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
+
 const possibleRotations = [ GnomeDesktop.RRRotation.ROTATION_0,
 			    GnomeDesktop.RRRotation.ROTATION_90,
 			    GnomeDesktop.RRRotation.ROTATION_180,
@@ -137,8 +141,7 @@ Indicator.prototype = {
 
 
 function init(metadata) {
-    let me = imports.ui.extensionSystem.extensions[metadata.uuid];
-    me.convenience.initTranslations(metadata);
+    Convenience.initTranslations();
 }
 
 let _indicator;

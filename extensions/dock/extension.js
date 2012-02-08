@@ -25,6 +25,10 @@ const AltTab = imports.ui.altTab;
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
+
 // Settings
 const DOCK_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.dock';
 const DOCK_POSITION_KEY = 'position';
@@ -32,8 +36,6 @@ const DOCK_SIZE_KEY = 'size';
 const DOCK_HIDE_KEY = 'autohide';
 const DOCK_EFFECTHIDE_KEY = 'hide-effect';
 const DOCK_AUTOHIDE_ANIMATION_TIME_KEY = 'hide-effect-duration';
-
-let _me, _metadata;
 
 //hide
 //const autohide_animation_time = 0.3;
@@ -341,7 +343,7 @@ Dock.prototype = {
         this._favorites = [];
 
         // Load Settings
-        this._settings = _me.convenience.getSettings(_metadata, 'dock');
+        this._settings = Convenience.getSettings();
         position = this._settings.get_enum(DOCK_POSITION_KEY);
         dockicon_size = this._settings.get_int(DOCK_SIZE_KEY);
         hideDock = hideable = this._settings.get_boolean(DOCK_HIDE_KEY);
@@ -928,10 +930,8 @@ DockIconMenu.prototype = {
     }
 }
 
-function init(metadata) {
-    _metadata = metadata;
-    _me = imports.ui.extensionSystem.extensions[metadata.uuid];
-    _me.convenience.initTranslations(metadata);
+function init() {
+    Convenience.initTranslations();
 }
 
 let dock;

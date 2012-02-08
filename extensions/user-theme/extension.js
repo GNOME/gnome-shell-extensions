@@ -6,17 +6,19 @@ const Gio = imports.gi.Gio;
 const Lang = imports.lang;
 const Main = imports.ui.main;
 
-const SETTINGS_SCHEMA = 'org.gnome.shell.extensions.user-theme';
 const SETTINGS_KEY = 'name';
+
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
 
 function ThemeManager() {
     this._init.apply(this, arguments);
 }
 
 ThemeManager.prototype = {
-    _init: function(metadata) {
-        let me = imports.ui.extensionSystem.extensions[metadata.uuid];
-        this._settings = me.convenience.getSettings(metadata, 'user-theme');
+    _init: function() {
+        this._settings = Convenience.getSettings();
     },
 
     enable: function() {
@@ -66,6 +68,6 @@ ThemeManager.prototype = {
 }
 
 
-function init(metadata) {
-    return new ThemeManager(metadata);
+function init() {
+    return new ThemeManager();
 }

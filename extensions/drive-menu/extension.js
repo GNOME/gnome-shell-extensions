@@ -12,6 +12,10 @@ const Panel = imports.ui.panel;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
+
 function DriveMenuItem(place) {
     this._init(place);
 }
@@ -89,10 +93,8 @@ DriveMenu.prototype = {
     },
 }
 
-// Put your extension initialization code here
-function init(metadata) {
-    let me = imports.ui.extensionSystem.extensions[metadata.uuid];
-    me.convenience.initTranslations(metadata);
+function init() {
+    Convenience.initTranslations();
 }
 
 let _indicator;

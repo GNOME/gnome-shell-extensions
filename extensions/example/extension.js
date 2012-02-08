@@ -7,6 +7,10 @@ const _ = Gettext.gettext;
 
 const Main = imports.ui.main;
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
+
 function _showHello() {
     let text = new St.Label({ style_class: 'helloworld-label', text: _("Hello, world!") });
     let monitor = Main.layoutManager.primaryMonitor;
@@ -19,8 +23,7 @@ function _showHello() {
 function init(metadata) {
     log ('Example extension initalized');
 
-    let me = imports.ui.extensionSystem.extensions[metadata.uuid];
-    me.convenience.initTranslations(metadata);
+    Convenience.initTranslations();
 }
 
 let signalId;

@@ -25,11 +25,14 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 const N_ = function(e) { return e };
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
+
 let settings;
 
 const POPUP_DELAY_TIMEOUT = 150; // milliseconds
 
-const SETTINGS_SCHEMA = 'org.gnome.shell.extensions.alternate-tab';
 const SETTINGS_BEHAVIOUR_KEY = 'behaviour';
 const SETTINGS_FIRST_TIME_KEY = 'first-time';
 
@@ -598,9 +601,8 @@ WindowList.prototype = {
 };
 
 function init(metadata) {
-    let me = imports.ui.extensionSystem.extensions[metadata.uuid];
-    me.convenience.initTranslations(metadata);
-    settings = me.convenience.getSettings(metadata, 'alternate-tab');
+    Convenience.initTranslations();
+    settings = Convenience.getSettings();
 }
 
 function doAltTab(display, screen, window, binding) {

@@ -14,6 +14,10 @@ const Panel = imports.ui.panel;
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
+
 const PLACE_ICON_SIZE = 22;
 
 function PlacesMenu() {
@@ -113,9 +117,8 @@ PlacesMenu.prototype = {
 };
 
 
-function init(metadata) {
-    let me = imports.ui.extensionSystem.extensions[metadata.uuid];
-    me.convenience.initTranslations(metadata);
+function init() {
+    Convenience.initTranslations();
 }
 
 let _indicator;
