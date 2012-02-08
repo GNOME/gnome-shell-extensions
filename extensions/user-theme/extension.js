@@ -12,11 +12,9 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
-function ThemeManager() {
-    this._init.apply(this, arguments);
-}
+const ThemeManager = new Lang.Class({
+    Name: 'UserTheme.ThemeManager',
 
-ThemeManager.prototype = {
     _init: function() {
         this._settings = Convenience.getSettings();
     },
@@ -65,8 +63,7 @@ ThemeManager.prototype = {
         Main.setThemeStylesheet(_stylesheet);
         Main.loadTheme();
     }
-}
-
+});
 
 function init() {
     return new ThemeManager();

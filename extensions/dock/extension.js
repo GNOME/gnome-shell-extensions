@@ -568,6 +568,10 @@ const DockIcon = new Lang.Class({
     Name: 'Dock.DockIcon',
 
     _init : function(app, dock) {
+        this._dock = dock;
+        this._settings = dock._settings;
+
+
         this.app = app;
         this.actor = new St.Button({ style_class: 'app-well-app',
                                      button_mask: St.ButtonMask.ONE | St.ButtonMask.TWO,
@@ -599,9 +603,6 @@ const DockIcon = new Lang.Class({
         this._stateChangedId = this.app.connect('notify::state',
                                                 Lang.bind(this, this._onStateChanged));
         this._onStateChanged();
-
-        this._dock = dock;
-        this._settings = dock._settings;
     },
 
     _onDestroy: function() {
@@ -697,7 +698,8 @@ const DockIcon = new Lang.Class({
             this._menuManager.addMenu(this._menu, true);
         }
 
-        this._menu.popup();
+        this._menu.redisplay();
+        this._menu.open();
 
         return false;
     },
@@ -781,12 +783,12 @@ const DockIconMenu = new Lang.Class({
             if (!source.actor.mapped)
                 this.close();
         }));
-        source.actor.connect('destroy', Lang.bind(this, function () { this.actor.destroy(); }));
+        source.actor.connect('destroy', Lang.bind(this, function () { this.destroy(); }));
 
         Main.layoutManager.addChrome(this.actor);
     },
 
-    _redisplay: function() {
+    redisplay: function() {
         this.removeAll();
 
         let windows = this._source.app.get_windows();

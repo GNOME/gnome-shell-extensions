@@ -19,11 +19,9 @@ const SETTINGS_KEY = 'application-list';
 
 let settings;
 
-function WindowMover() {
-    this._init();
-}
+const WindowMover = new Lang.Class({
+    Name: 'AutoMoveWindows.WindowMover',
 
-WindowMover.prototype = {
     _init: function() {
         this._settings = settings;
         this._windowTracker = Shell.WindowTracker.get_default();
@@ -79,7 +77,7 @@ WindowMover.prototype = {
             }
         }
     }
-}
+});
 
 let prevCheckWorkspaces;
 let winMover;

@@ -16,15 +16,12 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
-function DriveMenuItem(place) {
-    this._init(place);
-}
-
-DriveMenuItem.prototype = {
-    __proto__: PopupMenu.PopupBaseMenuItem.prototype,
+const DriveMenuItem = new Lang.Class({
+    Name: 'DriveMenu.DriveMenuItem',
+    Extends: PopupMenu.PopupBaseMenuItem,
 
     _init: function(place) {
-	PopupMenu.PopupBaseMenuItem.prototype._init.call(this);
+	this.parent();
 
 	this.place = place;
 
@@ -46,23 +43,19 @@ DriveMenuItem.prototype = {
     activate: function(event) {
 	this.place.launch({ timestamp: event.get_time() });
 
-	PopupMenu.PopupBaseMenuItem.prototype.activate.call(this, event);
+	this.parent(event);
     }
-};
+});
 
-function DriveMenu() {
-    this._init();
-}
-
-DriveMenu.prototype = {
-    __proto__: PanelMenu.SystemStatusButton.prototype,
+const DriveMenu = new Lang.Class({
+    Name: 'DriveMenu.DriveMenu',
+    Extends: PanelMenu.SystemStatusButton,
 
     _init: function() {
-	// is 'media-eject' better?
-	PanelMenu.SystemStatusButton.prototype._init.call(this, 'media-eject');
+	this.parent('media-eject');
 
 	this._manager = Main.placesManager;
-	this._manager.connect('mounts-updated', Lang.bind(this, this._update));
+	this._updatedId = this._manager.connect('mounts-updated', Lang.bind(this, this._update));
 
 	this._contentSection = new PopupMenu.PopupMenuSection();
 	this.menu.addMenuItem(this._contentSection);
@@ -91,7 +84,13 @@ DriveMenu.prototype = {
 
 	this.actor.visible = any;
     },
-}
+
+    destroy: function() {
+	this._manager.disconnect(this._updatedId);
+
+	this.parent();
+    },
+});
 
 function init() {
     Convenience.initTranslations();

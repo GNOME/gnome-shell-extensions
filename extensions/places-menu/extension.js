@@ -20,15 +20,12 @@ const Convenience = Me.imports.convenience;
 
 const PLACE_ICON_SIZE = 22;
 
-function PlacesMenu() {
-    this._init.apply(this, arguments);
-}
-
-PlacesMenu.prototype = {
-    __proto__: PanelMenu.SystemStatusButton.prototype,
+const PlacesMenu = new Lang.Class({
+    Name: 'PlacesMenu.PlacesMenu',
+    Extends: PanelMenu.SystemStatusButton,
 
     _init: function() {
-        PanelMenu.SystemStatusButton.prototype._init.call(this, 'folder');
+        this.parent('folder');
 
         this.defaultItems = [];
         this.bookmarkItems = [];
@@ -40,8 +37,16 @@ PlacesMenu.prototype = {
         this._devicesMenuItem = new PopupMenu.PopupSubMenuMenuItem(_("Removable Devices"));
         this.menu.addMenuItem(this._devicesMenuItem);
         this._createDevices();
-        Main.placesManager.connect('bookmarks-updated',Lang.bind(this,this._redisplayBookmarks));
-        Main.placesManager.connect('mounts-updated',Lang.bind(this,this._redisplayDevices));
+
+        this._bookmarksId = Main.placesManager.connect('bookmarks-updated',Lang.bind(this,this._redisplayBookmarks));
+        this._mountsId = Main.placesManager.connect('mounts-updated',Lang.bind(this,this._redisplayDevices));
+    },
+
+    destroy: function() {
+        Main.placesManager.disconnect(this._bookmarksId);
+        Main.placesManager.disconnect(this._mountsId);
+
+        this.parent();
     },
 
     _redisplayBookmarks: function(){
@@ -112,10 +117,9 @@ PlacesMenu.prototype = {
 
     _clearDevices : function(){
         this._devicesMenuItem.menu.removeAll();
-        this.DeviceItems = [];
+        this.deviceItems = [];
     },
-};
-
+});
 
 function init() {
     Convenience.initTranslations();

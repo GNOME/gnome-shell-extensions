@@ -10,17 +10,13 @@ const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
 const ICON_SIZE = 28;
-let appsys = Shell.AppSystem.get_default();
 
-function AppMenuItem() {
-    this._init.apply(this, arguments);
-}
-
-AppMenuItem.prototype = {
-    __proto__: PopupMenu.PopupBaseMenuItem.prototype,
+const AppMenuItem = new Lang.Class({
+    Name: 'AppsMenu.AppMenuItem',
+    Extends: PopupMenu.PopupBaseMenuItem,
 
     _init: function (app, params) {
-        PopupMenu.PopupBaseMenuItem.prototype._init.call(this, params);
+        this.parent(params);
 
         this._app = app;
         this.label = new St.Label({ text: app.get_name() });
@@ -32,30 +28,36 @@ AppMenuItem.prototype = {
     activate: function (event) {
         this._app.activate_full(-1, event.get_time());
 
-        PopupMenu.PopupBaseMenuItem.prototype.activate.call(this, event);
+        this.parent(event);
     }
 
-};
+});
 
-function ApplicationsButton() {
-    this._init();
-}
-
-ApplicationsButton.prototype = {
-    __proto__: PanelMenu.SystemStatusButton.prototype,
+const ApplicationsButton = new Lang.Class({
+    Name: 'AppsMenu.ApplicationsButton',
+    Extends: PanelMenu.SystemStatusButton,
 
     _init: function() {
-        PanelMenu.SystemStatusButton.prototype._init.call(this, 'start-here');
+        this.parent('start-here');
+
+        this._appSys = Shell.AppSystem.get_default();
+        this._installedChangedId = this._appSys.connect('installed-changed', Lang.bind(this, this._refresh));
+
         this._display();
-        appsys.connect('installed-changed', Lang.bind(this, this.reDisplay));
     },
 
-    reDisplay : function() {
+    destroy: function() {
+        this._appSys.disconnect(this._installedChangedId);
+
+        this.parent();
+    },
+
+    _refresh: function() {
         this._clearAll();
         this._display();
     },
 
-    _clearAll : function() {
+    _clearAll: function() {
         this.menu.removeAll();
     },
 
@@ -67,7 +69,7 @@ ApplicationsButton.prototype = {
         while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
             if (nextType == GMenu.TreeItemType.ENTRY) {
                 var entry = iter.get_entry();
-                var app = appsys.lookup_app_by_tree_entry(entry);
+                var app = this._appSys.lookup_app_by_tree_entry(entry);
                 if (!entry.get_app_info().get_nodisplay())
                     menu.addMenuItem(new AppMenuItem(app));
             } else if (nextType == GMenu.TreeItemType.DIRECTORY) {
@@ -77,7 +79,7 @@ ApplicationsButton.prototype = {
     },
 
     _display : function() {
-        let tree = appsys.get_tree();
+        let tree = this._appSys.get_tree();
         let root = tree.get_root_directory();
 
         let iter = root.iter();
@@ -91,7 +93,7 @@ ApplicationsButton.prototype = {
             }
         }
     }
-};
+});
 
 let appsMenuButton;
 

@@ -16,11 +16,9 @@ let _cpuIndicator;
 let _memIndicator;
 let _box;
 
-function Indicator() {
-    this._init();
-}
+const Indicator = new Lang.Class({
+    Name: 'SystemMonitor.Indicator',
 
-Indicator.prototype = {
     _init: function() {
         this._initValues();
         this.drawing_area = new St.DrawingArea({ reactive: true });
@@ -44,6 +42,7 @@ Indicator.prototype = {
 
     destroy: function() {
         Mainloop.source_remove(this._timeout);
+
         this.actor.destroy();
     },
 
@@ -131,20 +130,16 @@ Indicator.prototype = {
             cr.setDash([], 0);
             cr.stroke();
         }
-
     }
+});
 
-};
-
-function CpuIndicator() {
-    this._init();
-}
-
-CpuIndicator.prototype = {
-    __proto__: Indicator.prototype,
+const CpuIndicator = new Lang.Class({
+    Name: 'SystemMonitor.CpuIndicator',
+    Extends: Indicator,
 
     _init: function() {
-        Indicator.prototype._init.call(this);
+        this.parent();
+
         this.gridColor = '-grid-color';
         this.renderStats = [ 'cpu-user', 'cpu-sys', 'cpu-iowait' ];
         
@@ -187,17 +182,15 @@ CpuIndicator.prototype = {
         
         this._prev = cpu;
     }
-};
+});
 
-function MemoryIndicator() {
-    this._init();
-}
-
-MemoryIndicator.prototype = {
-    __proto__: Indicator.prototype,
+const MemoryIndicator = new Lang.Class({
+    Name: 'SystemMonitor.MemoryIndicator',
+    Extends: Indicator,
     
     _init: function() {
-        Indicator.prototype._init.call(this);
+        this.parent();
+
         this.gridColor = '-grid-color';
         this.renderStats = [ 'mem-user', 'mem-other', 'mem-cached' ];
         
@@ -227,7 +220,7 @@ MemoryIndicator.prototype = {
         t += this.mem.cached / this.mem.total;
         this.stats['mem-cached'].values.push(t);
     }
-};
+});
 
 function init() {
     // nothing to do here

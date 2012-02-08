@@ -48,15 +48,16 @@ function injectToFunction(parent, name, func) {
 }
 const WORKSPACE_BORDER_GAP = 10;                                    // gap between the workspace area and the workspace selector
 
-function Rect(x, y, width, height) {
-    [this.x, this.y, this.width, this.height] = arguments;
-}
+const Rect = new Lang.Class({
+    Name: 'NativeWindowPlacement.Rect',
 
-Rect.prototype = {
+    _init: function(x, y, width, height) {
+        [this.x, this.y, this.width, this.height] = [x, y, width, height];
+    },
+
     /**
      * used in _calculateWindowTransformationsNatural to replace Meta.Rectangle that is too slow.
      */
-
     copy: function() {
         return new Rect(this.x, this.y, this.width, this.height);
     },
@@ -105,7 +106,7 @@ Rect.prototype = {
         this.x += dx;
         this.y += dy;
     }
-};
+});
 
 let winInjections, workspaceInjections, connectedSignals;
 
