@@ -1,5 +1,8 @@
 {
  "uuid": "@uuid@",
+ "extension-id": "@extension_id@",
+ "settings-schema": "@gschemaname@",
+ "gettext-domain": "@gettext_domain@",
  "name": "Native Window Placement",
  "description": "Arrange windows in overview in a more native way",
  "shell-version": [ "@shell_current@" ],

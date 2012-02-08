@@ -1,6 +1,9 @@
 {
     "shell-version": ["@shell_current@" ],
+    "extension-id": "@extension_id@",
     "uuid": "@uuid@",
+    "settings-schema": "@gschemaname@",
+    "gettext-domain": "@gettext_domain@",
     "original-author": "zaspire@rambler.ru",
     "name": "windowNavigator",
     "description": "Allow keyboard selection of windows and workspaces in overlay mode",

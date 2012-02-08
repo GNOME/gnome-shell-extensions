@@ -1,5 +1,8 @@
 {
+"extension-id": "@extension_id@",
 "uuid": "@uuid@",
+"settings-schema": "@gschemaname@",
+"gettext-domain": "@gettext_domain@",
 "name": "Applications Menu",
 "description": "Add a gnome 2.x style menu for applications",
 "shell-version": [ "@shell_current@" ],

@@ -1,5 +1,8 @@
 {
+ "extension-id": "@extension_id@",
  "uuid": "@uuid@",
+ "settings-schema": "@gschemaname@",
+ "gettext-domain": "@gettext_domain@",
  "name": "Gajim IM integration",
  "description": "Display Gajim incoming chats as notifications in the Shell message tray.",
  "shell-version": [ "@shell_current@" ],

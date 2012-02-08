@@ -1,5 +1,8 @@
 {
+ "extension-id": "@extension_id@",
  "uuid": "@uuid@",
+ "settings-schema": "@gschemaname@",
+ "gettext-domain": "@gettext_domain@",
  "name": "Auto Move Windows",
  "description": "Move applications to specific workspaces when they create windows",
  "shell-version": [ "@shell_current@" ],

@@ -1,5 +1,8 @@
 {
  "uuid": "@uuid@",
+ "extension-id": "@extension_id@",
+ "settings-schema": "@gschemaname@",
+ "gettext-domain": "@gettext_domain@",
  "name": "User Themes",
  "description": "Load shell themes from user directory",
  "shell-version": [ "@shell_current@" ],
