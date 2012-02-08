@@ -1,3 +1,13 @@
+3.3.5
+=====
+* improvements to the build system and convenience module,
+  making it easier for other extensions to use, and bringing
+  it up to date with gnome-shell changes
+* all extensions were ported to the Lang.Class framework
+  (except xrandr-indicator, which is pending GDBus merge)
+* alternate-tab and dock were slightly refactored to clean up
+  some old code
+
 3.3.4
 =====
 * improved styling of windowsNavigator tooltips
