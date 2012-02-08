@@ -28,6 +28,7 @@ const N_ = function(e) { return e };
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
+const Settings = Me.imports.settings;
 
 let settings;
 
@@ -36,49 +37,9 @@ const POPUP_DELAY_TIMEOUT = 150; // milliseconds
 const SETTINGS_BEHAVIOUR_KEY = 'behaviour';
 const SETTINGS_FIRST_TIME_KEY = 'first-time';
 
-const MODES = {
-    all_thumbnails: function(display, binding, mask, window, backwards) {
-        let tabPopup = new AltTabPopup2();
-
-        if (!tabPopup.show(backwards, binding, mask))
-            tabPopup.destroy();
-    },
-
-    workspace_icons: function(display, binding, mask, window, backwards) {
-        if (Main.wm._workspaceSwitcherPopup)
-            Main.wm._workspaceSwitcherPopup.actor.hide();
-
-        let tabPopup = new AltTabPopupW();
-        if (!tabPopup.show(backwards, binding, mask))
-            tabPopup.destroy();
-    }
-};
-
-const MESSAGE = N_("This is the first time you use the Alternate Tab extension. \n\
-Please choose your preferred behaviour:\n\
-\n\
-All & Thumbnails:\n\
-    This mode presents all applications from all workspaces in one selection \n\
-    list. Instead of using the application icon of every window, it uses small \n\
-    thumbnails resembling the window itself. \n\
-\n\
-Workspace & Icons:\n\
-    This mode let's you switch between the applications of your current \n\
-    workspace and gives you additionally the option to switch to the last used \n\
-    application of your previous workspace. This is always the last symbol in \n\
-    the list and is segregated by a separator/vertical line if available. \n\
-    Every window is represented by its application icon.  \n\
-\n\
-If you whish to revert to the default behavior for the Alt-Tab switcher, just\n\
-disable the extension from extensions.gnome.org or the Advanced Settings application.\
-");
-
-function AltTabPopupW() {
-    this._init();
-}
-
-AltTabPopupW.prototype = {
-    __proto__ : AltTab.AltTabPopup.prototype,
+const AltTabPopupWorkspaceIcons = new Lang.Class({
+    Name: 'AlternateTab.AltTabPopupWorkspaceIcons',
+    Extends: AltTab.AltTabPopup,
 
     _windowActivated : function(thumbnailList, n) { },
 
@@ -168,14 +129,11 @@ AltTabPopupW.prototype = {
         this.destroy();
     }
 
-};
+});
 
-function AppIcon(app, window) {
-    this._init(app, window);
-}
-
-AppIcon.prototype = {
-    __proto__ : AltTab.AppIcon.prototype,
+const AppIcon = new Lang.Class({
+    Name: 'AlternateTab.AppIcon',
+    Extends: AltTab.AppIcon,
 
     _init: function(app, window) {
         this.app = app;
@@ -202,16 +160,16 @@ AppIcon.prototype = {
             this.actor.add(this.label, { x_fill: false });
         }
     }
-};
+});
 
-function WindowSwitcher(apps, altTabPopup) {
-    this._init(apps, altTabPopup);
-}
-
-WindowSwitcher.prototype = {
-    __proto__ : AltTab.AppSwitcher.prototype,
+const WindowSwitcher = new Lang.Class({
+    Name: 'AlternateTab.WindowSwitcher',
+    Extends: AltTab.AppSwitcher,
 
     _init : function(apps, altTabPopup) {
+        // Horrible HACK!
+        // We inherit from AltTab.AppSwitcher, but only chain up to
+        // AltTab.SwitcherList._init, to bypass AltTab.AppSwitcher._init
         AltTab.SwitcherList.prototype._init.call(this, true);
 
         // Construct the AppIcons, sort by time, add to the popup
@@ -271,81 +229,11 @@ WindowSwitcher.prototype = {
         if (t2 > t1) return 1;
         else return -1;
     }
-};
+});
 
-function AltTabSettingsDialog() {
-    this._init();
-}
-
-AltTabSettingsDialog.prototype = {
-    __proto__: ModalDialog.ModalDialog.prototype,
-
-    _init : function() {
-        ModalDialog.ModalDialog.prototype._init.call(this, { styleClass: null });
-
-        let mainContentBox = new St.BoxLayout({ style_class: 'polkit-dialog-main-layout',
-                                                vertical: false });
-        this.contentLayout.add(mainContentBox,
-                               { x_fill: true,
-                                 y_fill: true });
-
-        let messageBox = new St.BoxLayout({ style_class: 'polkit-dialog-message-layout',
-                                            vertical: true });
-        mainContentBox.add(messageBox,
-                           { y_align: St.Align.START });
-
-        this._subjectLabel = new St.Label({ style_class: 'polkit-dialog-headline',
-                                            text: _("Alt Tab Behaviour") });
-
-        messageBox.add(this._subjectLabel,
-                       { y_fill:  false,
-                         y_align: St.Align.START });
-
-        this._descriptionLabel = new St.Label({ style_class: 'polkit-dialog-description',
-                                                text: Gettext.gettext(MESSAGE) });
-
-        messageBox.add(this._descriptionLabel,
-                       { y_fill:  true,
-                         y_align: St.Align.START });
-
-
-        this.setButtons([
-            {
-                label: _("All & Thumbnails"),
-                action: Lang.bind(this, function() {
-                    this.setBehaviour('all_thumbnails');
-                    this.close();
-                })
-            },
-            {
-                label: _("Workspace & Icons"),
-                action: Lang.bind(this, function() {
-                    this.setBehaviour('workspace_icons');
-                    this.close();
-                })
-            },
-            {
-                label: _("Cancel"),
-                action: Lang.bind(this, function() {
-                    this.close();
-                }),
-                key: Clutter.Escape
-            }
-        ]);
-    },
-
-    setBehaviour: function(behaviour) {
-           settings.set_string(SETTINGS_BEHAVIOUR_KEY, behaviour);
-           settings.set_boolean(SETTINGS_FIRST_TIME_KEY, false);
-    }
-};
-
-function AltTabPopup2() {
-    this._init();
-}
-
-AltTabPopup2.prototype = {
-    __proto__ : AltTab.AltTabPopup.prototype,
+const AltTabPopupAllThumbnails = new Lang.Class({
+    Name: 'AlternateTab.AltTabPopup.AllThumbnails',
+    Extends: AltTab.AltTabPopup,
 
     _init : function() {
         this.actor = new Shell.GenericContainer({ name: 'altTabPopup',
@@ -468,54 +356,6 @@ AltTabPopup2.prototype = {
 	return true
     },
 
-/*
-    _keyPressEvent : function(actor, event) {
-        let keysym = event.get_key_symbol();
-        let shift = (Shell.get_event_state(event) & Clutter.ModifierType.SHIFT_MASK);
-        // X allows servers to represent Shift+Tab in two different ways
-        if (shift && keysym == Clutter.Tab)
-            keysym = Clutter.ISO_Left_Tab;
-
-        this._disableHover();
-
-        if (keysym == Clutter.grave)
-            this._select(this._currentApp, this._nextWindow());
-        else if (keysym == Clutter.asciitilde)
-            this._select(this._currentApp, this._previousWindow());
-        else if (keysym == Clutter.Escape)
-            this.destroy();
-        else if (this._thumbnailsFocused) {
-            if (keysym == Clutter.Tab) {
-                if (this._currentWindow == this._appIcons[this._currentApp].cachedWindows.length - 1)
-                    this._select(this._nextApp());
-                else
-                    this._select(this._currentApp, this._nextWindow());
-            } else if (keysym == Clutter.ISO_Left_Tab) {
-                if (this._currentWindow == 0 || this._currentWindow == -1)
-                    this._select(this._previousApp());
-                else
-                    this._select(this._currentApp, this._previousWindow());
-            } else if (keysym == Clutter.Left)
-                this._select(this._currentApp, this._previousWindow());
-            else if (keysym == Clutter.Right)
-                this._select(this._currentApp, this._nextWindow());
-            else if (keysym == Clutter.Up)
-                this._select(this._currentApp, null, true);
-        } else {
-            if (keysym == Clutter.Tab)
-                this._select(this._nextApp());
-            else if (keysym == Clutter.ISO_Left_Tab)
-                this._select(this._previousApp());
-            else if (keysym == Clutter.Left)
-                this._select(this._previousApp());
-            else if (keysym == Clutter.Right)
-                this._select(this._nextApp());
-        }
-
-        return true;
-    },
-*/
-
     _sortWindows : function(win1,win2) {
         let t1 = win1.get_user_time();
         let t2 = win2.get_user_time();
@@ -534,17 +374,14 @@ AltTabPopup2.prototype = {
         Main.activateWindow(app.cachedWindows[0]);
         this.destroy();
     },
-};
+});
 
-function WindowList(windows) {
-    this._init(windows);
-}
-
-WindowList.prototype = {
-    __proto__ : AltTab.SwitcherList.prototype,
+const WindowList = new Lang.Class({
+    Name: 'AlternateTab.WindowList',
+    Extends: AltTab.SwitcherList,
 
     _init : function(windows) {
-        AltTab.SwitcherList.prototype._init.call(this, true);
+        this.parent(true);
 
         let activeWorkspace = global.screen.get_active_workspace();
         this._labels = new Array();
@@ -598,24 +435,41 @@ WindowList.prototype = {
     addSeparator: function () {
         this._separator=null;
     }
+});
+
+const MODES = {
+    all_thumbnails: AltTabPopupAllThumbnails,
+    workspace_icons: AltTabPopupWorkspaceIcons,
 };
+
+function doAltTab(display, screen, window, binding) {
+    if(settings.get_boolean(SETTINGS_FIRST_TIME_KEY)) {
+        let dialog = new Settings.AltTabSettingsDialog(settings);
+        dialog.open();
+        return;
+    }
+
+    let behaviour = settings.get_string(SETTINGS_BEHAVIOUR_KEY);
+
+    // alt-tab having no effect is unexpected, even with wrong settings
+    if (!(behaviour in MODES))
+        behaviour = 'all_thumbnails';
+
+    if (Main.wm._workspaceSwitcherPopup)
+        Main.wm._workspaceSwitcherPopup.actor.hide();
+
+    let modifiers = binding.get_modifiers()
+    let backwards = modifiers & Meta.VirtualModifier.SHIFT_MASK;
+
+    let constructor = MODES[behaviour];
+    let popup = new constructor();
+    if (!popup.show(backwards, binding.get_name(), binding.get_mask()))
+        popup.destroy();
+}
 
 function init(metadata) {
     Convenience.initTranslations();
     settings = Convenience.getSettings();
-}
-
-function doAltTab(display, screen, window, binding) {
-    if(settings.get_boolean(SETTINGS_FIRST_TIME_KEY)) {
-        new AltTabSettingsDialog().open();
-    } else {
-        let behaviour = settings.get_string(SETTINGS_BEHAVIOUR_KEY);
-        if(behaviour in MODES) {
-            let modifiers = binding.get_modifiers()
-            let backwards = modifiers & Meta.VirtualModifier.SHIFT_MASK;
-            MODES[behaviour](display, binding.get_name(), binding.get_mask(), window, backwards);
-        }
-    }
 }
 
 function enable() {
