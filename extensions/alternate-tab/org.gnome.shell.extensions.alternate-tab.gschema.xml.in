@@ -14,5 +14,10 @@
       <_summary>Indicates if Alternate Tab is newly installed</_summary>
       <_description>Ask the user for a default behaviour if true.</_description>
     </key>
+    <key type="b" name="highlight-selected">
+      <default>false</default>
+      <summary>Bring each selected window to the front.</summary>
+      <description>Bring each window to the front in turn as Alt+Tab is pressed.</description>
+    </key>
   </schema>
 </schemalist>

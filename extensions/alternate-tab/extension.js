@@ -36,6 +36,7 @@ const POPUP_DELAY_TIMEOUT = 150; // milliseconds
 
 const SETTINGS_BEHAVIOUR_KEY = 'behaviour';
 const SETTINGS_FIRST_TIME_KEY = 'first-time';
+const SETTINGS_HIGHLIGHT_SELECTED_KEY = 'highlight-selected';
 
 const AltTabPopupWorkspaceIcons = new Lang.Class({
     Name: 'AlternateTab.AltTabPopupWorkspaceIcons',
@@ -78,6 +79,8 @@ const AltTabPopupWorkspaceIcons = new Lang.Class({
         this.actor.show();
         this.actor.get_allocation_box();
 
+        this._highlight_selected = settings.get_boolean(SETTINGS_HIGHLIGHT_SELECTED_KEY);
+
         // Make the initial selection
         if (binding == 'switch_group') {
             //see AltTab.AltTabPopup.show function
@@ -119,11 +122,59 @@ const AltTabPopupWorkspaceIcons = new Lang.Class({
         return true;
     },
 
+    _select : function(app, window, forceAppFocus) {
+        if (app != this._currentApp || window == null) {
+            if (this._thumbnails)
+                this._destroyThumbnails();
+        }
+
+        if (this._thumbnailTimeoutId != 0) {
+            Mainloop.source_remove(this._thumbnailTimeoutId);
+            this._thumbnailTimeoutId = 0;
+        }
+
+        this._thumbnailsFocused = (window != null) && !forceAppFocus;
+
+        this._currentApp = app;
+        this._currentWindow = window ? window : -1;
+        this._appSwitcher.highlight(app, this._thumbnailsFocused);
+
+        if (window != null) {
+            if (!this._thumbnails)
+                this._createThumbnails();
+            this._currentWindow = window;
+            this._thumbnails.highlight(window, forceAppFocus);
+        } else if (this._appIcons[this._currentApp].cachedWindows.length > 1 &&
+                   !forceAppFocus) {
+            this._thumbnailTimeoutId = Mainloop.timeout_add (
+                THUMBNAIL_POPUP_TIME,
+                Lang.bind(this, this._timeoutPopupThumbnails));
+        }
+        if (this._highlight_selected) {
+            let current_app = this._appIcons[this._currentApp];
+            Main.activateWindow(current_app.cachedWindows[0]);
+        }
+    },
 
     _finish : function() {
         let app = this._appIcons[this._currentApp];
         if (!app)
             return;
+
+        /*
+         * We've to restore the original Z-depth and order of all windows.
+         *
+         * Gnome-shell doesn't give an option to change Z-depth without
+         * messing the window's user_time.
+         *
+         * Pointless if the popup wasn't showed.
+         */
+        if (this._highlight_selected && this.actor.opacity == 255) {
+            for (let i = this._appIcons.length - 2; i >= 0; i--) {
+                let app_walker = this._appIcons[i];
+                Main.activateWindow(app_walker.cachedWindows[0], global.get_current_time() - i - 1);
+            }
+        }
 
         Main.activateWindow(app.cachedWindows[0]);
         this.destroy();
