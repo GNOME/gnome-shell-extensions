@@ -7,7 +7,8 @@
     <key name="behaviour" enum="org.gnome.shell.extensions.alternate-tab.BehaviourMode">
       <default>'all_thumbnails'</default>
       <_summary>The alt tab behaviour.</_summary>
-      <_description>Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and workspace_icons.</_description>
+      <_description>Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and workspace_icons.
+      See the configuration dialogs for details.</_description>
     </key>
     <key type="b" name="highlight-selected">
       <default>false</default>
