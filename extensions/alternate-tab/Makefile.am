@@ -1,6 +1,6 @@
 EXTENSION_ID = alternate-tab
 
-EXTRA_MODULES = settings.js
+EXTRA_MODULES = prefs.js
 
 include ../../extension.mk
 include ../../settings.mk

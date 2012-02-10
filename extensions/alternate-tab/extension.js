@@ -28,14 +28,12 @@ const N_ = function(e) { return e };
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
-const Settings = Me.imports.settings;
 
 let settings;
 
 const POPUP_DELAY_TIMEOUT = 150; // milliseconds
 
 const SETTINGS_BEHAVIOUR_KEY = 'behaviour';
-const SETTINGS_FIRST_TIME_KEY = 'first-time';
 const SETTINGS_HIGHLIGHT_SELECTED_KEY = 'highlight-selected';
 
 const AltTabPopupWorkspaceIcons = new Lang.Class({
@@ -494,12 +492,6 @@ const MODES = {
 };
 
 function doAltTab(display, screen, window, binding) {
-    if(settings.get_boolean(SETTINGS_FIRST_TIME_KEY)) {
-        let dialog = new Settings.AltTabSettingsDialog(settings);
-        dialog.open();
-        return;
-    }
-
     let behaviour = settings.get_string(SETTINGS_BEHAVIOUR_KEY);
 
     // alt-tab having no effect is unexpected, even with wrong settings
