@@ -94,7 +94,7 @@ const WorkspaceIndicator = new Lang.Class({
     _activate : function (index) {
 	if(index >= 0 && index <  global.screen.n_workspaces) {
 	    let metaWorkspace = global.screen.get_workspace_by_index(index);
-	    metaWorkspace.activate(true);
+	    metaWorkspace.activate(global.get_current_time());
 	}
     },
 
