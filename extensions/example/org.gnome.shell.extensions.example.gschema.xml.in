@@ -1,0 +1,9 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema id="org.gnome.shell.extensions.example" path="/org/gnome/shell/extensions/example/">
+    <key name="hello-text" type="s">
+      <default>''</default>
+      <_summary>Alternative greeting text.</_summary>
+      <_description>If not empty, it contains the text that will be shown when clicking on the panel.</_description>
+    </key>
+  </schema>
+</schemalist>

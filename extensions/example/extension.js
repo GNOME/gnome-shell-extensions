@@ -1,3 +1,4 @@
+// -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 // Sample extension code, makes clicking on the panel show a message
 const St = imports.gi.St;
 const Mainloop = imports.mainloop;
@@ -12,11 +13,14 @@ const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
 function _showHello() {
-    let text = new St.Label({ style_class: 'helloworld-label', text: _("Hello, world!") });
+    let settings = Convenience.getSettings();
+    let text = settings.get_string('hello-text') || _("Hello, world!");
+
+    let label = new St.Label({ style_class: 'helloworld-label', text: text });
     let monitor = Main.layoutManager.primaryMonitor;
-    global.stage.add_actor(text);
-    text.set_position(Math.floor (monitor.width / 2 - text.width / 2), Math.floor(monitor.height / 2 - text.height / 2));
-    Mainloop.timeout_add(3000, function () { text.destroy(); });
+    global.stage.add_actor(label);
+    label.set_position(Math.floor (monitor.width / 2 - label.width / 2), Math.floor(monitor.height / 2 - label.height / 2));
+    Mainloop.timeout_add(3000, function () { label.destroy(); });
 }
 
 // Put your extension initialization code here
