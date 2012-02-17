@@ -1,4 +1,4 @@
-# Slovenian translations for gnome-shell-extensions.
+# Slovenian translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-01-07 10:46+0000\n"
-"PO-Revision-Date: 2012-01-07 21:55+0100\n"
+"POT-Creation-Date: 2012-02-17 09:49+0000\n"
+"PO-Revision-Date: 2012-02-17 21:18+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -21,160 +21,169 @@ msgstr ""
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
-msgid "Suspend"
-msgstr "V pripravljenost"
-
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Hibernate"
-msgstr "V mirovanje"
-
-#: ../extensions/alternative-status-menu/extension.js:78
-msgid "Power Off..."
-msgstr "Izklopi ..."
-
-#: ../extensions/alternate-tab/extension.js:54
-msgid ""
-"This is the first time you use the Alternate Tab extension. \n"
-"Please choose your preferred behaviour:\n"
-"\n"
-"All & Thumbnails:\n"
-"    This mode presents all applications from all workspaces in one selection \n"
-"    list. Instead of using the application icon of every window, it uses small \n"
-"    thumbnails resembling the window itself. \n"
-"\n"
-"Workspace & Icons:\n"
-"    This mode let's you switch between the applications of your current \n"
-"    workspace and gives you additionally the option to switch to the last used \n"
-"    application of your previous workspace. This is always the last symbol in \n"
-"    the list and is segregated by a separator/vertical line if available. \n"
-"    Every window is represented by its application icon.  \n"
-"\n"
-"If you whish to revert to the default behavior for the Alt-Tab switcher, just\n"
-"disable the extension from extensions.gnome.org or the Advanced Settings application."
-msgstr ""
-"To je prvi zagon razširitve Alternate Tab. \n"
-"Izberite želen način delovanja:\n"
-"\n"
-"Vse in sličice:\n"
-"    Ta način prikazuje vse programe vseh delovnih površin ne enem izbirnem\n"
-"    seznamu. Namesto ikon programa vsakega okna, uporablja male sličice,\n"
-"    ki so enake samemu oknu. \n"
-"\n"
-"Delovne površine in ikone:\n"
-"    Ta način omogoča preklop med programi trenutne delovne površine in tudi \n"
-"    možnost za preklapljanje na zadnje uporabljen program predhodne delovne\n"
-"     površine. Ta je vedno zadnji simbol na seznamu in je ločen z ločilnikom ali pa \n"
-"    vodoravno črto. \n"
-"    Vsako okno je prikazano z ikono programa.  \n"
-"\n"
-"V kolikor želite povrniti delovanje na privzeti način preklopnika Alt+Tab,\n"
-"enostavno onemogočite to razširitev med naprednimi nastavitvami."
-
-#: ../extensions/alternate-tab/extension.js:295
-msgid "Alt Tab Behaviour"
-msgstr "Obnašanje tipk Alt-Tab"
-
-#: ../extensions/alternate-tab/extension.js:311
-msgid "All & Thumbnails"
-msgstr "Vse in sličice"
-
-#: ../extensions/alternate-tab/extension.js:318
-msgid "Workspace & Icons"
-msgstr "Delovne površine in ikone"
-
-#: ../extensions/alternate-tab/extension.js:325
-msgid "Cancel"
-msgstr "Prekliči"
-
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "Ask the user for a default behaviour if true."
-msgstr "Izbrana možnost omogoči vprašanje uporabniku za izbiro privzetega obnašanja."
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Indicates if Alternate Tab is newly installed"
-msgstr "Določa ali je vstavek Alternate Tab nameščen."
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
-msgid "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and workspace_icons."
-msgstr "Določi obnašanje tipk Alt-Tab. Mogoče vrednosti so: lastno, vse_sličice in ikone_delovne_površine."
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
 msgid "The alt tab behaviour."
 msgstr "Obnašanje tipk Alt-Tab"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
-msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
-msgstr "Seznam nizov z določilom ID programa (namizno ime programa), ki mu sledi dvopičje in nato številka delovne površine."
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+#, fuzzy
+msgid "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and workspace_icons. See the configuration dialogs for details."
+msgstr "Določi obnašanje tipk Alt-Tab. Mogoče vrednosti so: lastno, vse_sličice in ikone_delovne_površine."
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: ../extensions/alternate-tab/prefs.js:27
+msgid "All & Thumbnails"
+msgstr "Vse in sličice"
+
+#: ../extensions/alternate-tab/prefs.js:28
+msgid "This mode presents all applications from all workspaces in one selection list. Instead of using the application icon of every window, it uses small thumbnails resembling the window itself."
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:34
+msgid "Workspace & Icons"
+msgstr "Delovne površine in ikone"
+
+#: ../extensions/alternate-tab/prefs.js:35
+msgid ""
+"This mode let's you switch between the applications of your current workspace and gives you additionally the option to switch to the last used application of your previous workspace. This is always the last symbol in the list and is segregated by a separator/vertical line if available. \n"
+"Every window is represented by its application icon."
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:41
+msgid "Move current selection to front before closing the popup"
+msgstr "Premakni trenutni izbor v ospredje pred zapiranjem pojavnega okna"
+
+#: ../extensions/alternate-tab/prefs.js:58
+msgid "The Alternate Tab can be used in different modes, that affect the way windows are chosen and presented."
+msgstr ""
+
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:64
+msgid "Suspend"
+msgstr "V pripravljenost"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "Hibernate"
+msgstr "V mirovanje"
+
+#: ../extensions/alternative-status-menu/extension.js:74
+msgid "Power Off..."
+msgstr "Izklopi ..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
 msgstr "Seznam programov in delovnih površin"
 
-#: ../extensions/dock/extension.js:561
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
+msgstr "Seznam nizov z določilom ID programa (namizno ime programa), ki mu sledi dvopičje in nato številka delovne površine."
+
+#: ../extensions/auto-move-windows/prefs.js:55
+#, fuzzy
+msgid "Application"
+msgstr "Program"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "Delovna površina"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Dodaj pravilo"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+#, fuzzy
+msgid "Create new matching rule"
+msgstr "Dodaj novo pravilo točkovanja"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Dodaj"
+
+#: ../extensions/dock/extension.js:489
 msgid "Drag here to add favorites"
 msgstr "Potegnite sem, za dodajanje med priljubljene"
 
-#: ../extensions/dock/extension.js:896
+#: ../extensions/dock/extension.js:815
 msgid "New Window"
 msgstr "Novo okno"
 
-#: ../extensions/dock/extension.js:898
+#: ../extensions/dock/extension.js:817
 msgid "Quit Application"
 msgstr "Končaj program"
 
-#: ../extensions/dock/extension.js:903
+#: ../extensions/dock/extension.js:822
 msgid "Remove from Favorites"
 msgstr "Odstrani iz priljubljenih"
 
-#: ../extensions/dock/extension.js:904
+#: ../extensions/dock/extension.js:823
 msgid "Add to Favorites"
 msgstr "Dodaj med priljubljene"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Autohide duration"
-msgstr "Trajanje samodejnega skrivanja"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Autohide effect"
-msgstr "Učinek samodejnega skrivanja"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Enable/disable autohide"
-msgstr "Omogoči/Onemogoči samodejno skrivanje"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Icon size"
-msgstr "Velikost ikone"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
 msgstr "Postavitev sidrišča"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
+msgstr "Določi položaj sidrišča na zaslonu. Dovoljeni vrednosti sta 'desno' ali 'levo'."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Icon size"
+msgstr "Velikost ikone"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
 msgid "Sets icon size of the dock."
 msgstr "Določi velikost ikon sidrišča."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Enable/disable autohide"
+msgstr "Omogoči/Onemogoči samodejno skrivanje"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Autohide effect"
+msgstr "Učinek samodejnega skrivanja"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
 msgid "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'"
 msgstr "Določi učinek skrivanja sidrišča. Dovoljeni vrednosti sta 'spremeni velikost', 'prilagodi velikost' ali 'premakni'."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
-msgstr "Določi položaj sidrišča na zaslonu. Dovoljeni vrednosti sta 'desno' ali 'levo'."
+msgid "Autohide duration"
+msgstr "Trajanje samodejnega skrivanja"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Določi trajanje učinka samodejnega skrivanja."
 
-#: ../extensions/drive-menu/extension.js:69
+#: ../extensions/drive-menu/extension.js:66
 msgid "Open file manager"
 msgstr "Odpri upravljalnik datotek"
 
-#: ../extensions/example/extension.js:11
+#: ../extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Pozdravljen, svet!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+#, fuzzy
+msgid "Alternative greeting text."
+msgstr "Naslov URL je %s, alternativno besedilo pa %s"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid "If not empty, it contains the text that will be shown when clicking on the panel."
+msgstr ""
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Sporočilo:"
 
 #: ../extensions/gajim/extension.js:227
 #, c-format
@@ -197,52 +206,120 @@ msgid "%s is busy."
 msgstr "%s je zaseden."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
-msgstr "Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice in s tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba lupino ponovno zagnati."
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Place window captions on top"
-msgstr "Postavi nazive oken na vrh"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
-msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
-msgstr "Poskusi uporabiti več zaslona za postavitev sličic oken s prilagajanjem razmerja velikosti zaslona in prilagajanjem postavitve okvirja. Nastavitev je mogoče uporabiti le z naravnim načinom postavitve okna."
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid "Use more screen for windows"
 msgstr "Uporabi več zaslona za okna"
 
-#: ../extensions/places-menu/extension.js:36
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
+msgstr "Poskusi uporabiti več zaslona za postavitev sličic oken s prilagajanjem razmerja velikosti zaslona in prilagajanjem postavitve okvirja. Nastavitev je mogoče uporabiti le z naravnim načinom postavitve okna."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Postavi nazive oken na vrh"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
+msgstr "Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice in s tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba lupino ponovno zagnati."
+
+#: ../extensions/places-menu/extension.js:37
 msgid "Removable Devices"
 msgstr "Odstranljive naprave"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Ime teme, ki bo naložena iz ~/.themes/name/gnome-shell"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
 msgstr "Ime teme"
 
-#: ../extensions/xrandr-indicator/extension.js:26
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Ime teme, ki bo naložena iz ~/.themes/name/gnome-shell"
+
+#: ../extensions/workspace-indicator/extension.js:24
+#, fuzzy
+msgid "Workspace Indicator"
+msgstr "Določilnik prosojnosti"
+
+#: ../extensions/xrandr-indicator/extension.js:30
 msgid "Normal"
 msgstr "Običajno"
 
-#: ../extensions/xrandr-indicator/extension.js:27
+#: ../extensions/xrandr-indicator/extension.js:31
 msgid "Left"
 msgstr "Levo"
 
-#: ../extensions/xrandr-indicator/extension.js:28
+#: ../extensions/xrandr-indicator/extension.js:32
 msgid "Right"
 msgstr "Desno"
 
-#: ../extensions/xrandr-indicator/extension.js:29
+#: ../extensions/xrandr-indicator/extension.js:33
 msgid "Upside-down"
 msgstr "Zgoraj-navzdol"
 
-#: ../extensions/xrandr-indicator/extension.js:78
+#: ../extensions/xrandr-indicator/extension.js:82
 msgid "Configure display settings..."
 msgstr "Nastavitve zaslona ..."
+
+#~ msgid ""
+#~ "This is the first time you use the Alternate Tab extension. \n"
+#~ "Please choose your preferred behaviour:\n"
+#~ "\n"
+#~ "All & Thumbnails:\n"
+#~ "    This mode presents all applications from all workspaces in one "
+#~ "selection \n"
+#~ "    list. Instead of using the application icon of every window, it uses "
+#~ "small \n"
+#~ "    thumbnails resembling the window itself. \n"
+#~ "\n"
+#~ "Workspace & Icons:\n"
+#~ "    This mode let's you switch between the applications of your current \n"
+#~ "    workspace and gives you additionally the option to switch to the last "
+#~ "used \n"
+#~ "    application of your previous workspace. This is always the last "
+#~ "symbol in \n"
+#~ "    the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "    Every window is represented by its application icon.  \n"
+#~ "\n"
+#~ "If you whish to revert to the default behavior for the Alt-Tab switcher, "
+#~ "just\n"
+#~ "disable the extension from extensions.gnome.org or the Advanced Settings "
+#~ "application."
+#~ msgstr ""
+#~ "To je prvi zagon razširitve Alternate Tab. \n"
+#~ "Izberite želen način delovanja:\n"
+#~ "\n"
+#~ "Vse in sličice:\n"
+#~ "    Ta način prikazuje vse programe vseh delovnih površin ne enem "
+#~ "izbirnem\n"
+#~ "    seznamu. Namesto ikon programa vsakega okna, uporablja male sličice,\n"
+#~ "    ki so enake samemu oknu. \n"
+#~ "\n"
+#~ "Delovne površine in ikone:\n"
+#~ "    Ta način omogoča preklop med programi trenutne delovne površine in "
+#~ "tudi \n"
+#~ "    možnost za preklapljanje na zadnje uporabljen program predhodne "
+#~ "delovne\n"
+#~ "     površine. Ta je vedno zadnji simbol na seznamu in je ločen z "
+#~ "ločilnikom ali pa \n"
+#~ "    vodoravno črto. \n"
+#~ "    Vsako okno je prikazano z ikono programa.  \n"
+#~ "\n"
+#~ "V kolikor želite povrniti delovanje na privzeti način preklopnika Alt"
+#~ "+Tab,\n"
+#~ "enostavno onemogočite to razširitev med naprednimi nastavitvami."
+
+#~ msgid "Alt Tab Behaviour"
+#~ msgstr "Obnašanje tipk Alt-Tab"
+
+#~ msgid "Cancel"
+#~ msgstr "Prekliči"
+
+#~ msgid "Ask the user for a default behaviour if true."
+#~ msgstr ""
+#~ "Izbrana možnost omogoči vprašanje uporabniku za izbiro privzetega "
+#~ "obnašanja."
+
+#~ msgid "Indicates if Alternate Tab is newly installed"
+#~ msgstr "Določa ali je vstavek Alternate Tab nameščen."
 
 #~ msgid "Notifications"
 #~ msgstr "Obvestila"
