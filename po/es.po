@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2011.
 # Nicolás Satragno <nsatragno@gmail.com>, 2011.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012.
+# 
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012., 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-02-10 18:44+0000\n"
-"PO-Revision-Date: 2012-02-12 13:40+0100\n"
+"POT-Creation-Date: 2012-02-13 22:07+0000\n"
+"PO-Revision-Date: 2012-02-17 10:48+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,87 +25,62 @@ msgid "The alt tab behaviour."
 msgstr "El comportamiento de Alt+Tab."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+#| msgid ""
+#| "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails "
+#| "and workspace_icons."
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
-"workspace_icons."
+"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+"workspace_icons. See the configuration dialogs for details."
 msgstr ""
 "Establece el comportamiento de Alt+Tab. Los valores posibles son: "
 "«native» (nativo), «all_thumbnails» (todo y miniaturas) y "
-"«workspace_icons» (iconos de áreas de trabajo)."
+"«workspace_icons» (iconos de áreas de trabajo). Para obtener información más "
+"detallada, consulte la configuración de los diálogos "
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
-msgid "Indicates if Alternate Tab is newly installed"
-msgstr "Indica si se ha instalado Alt+Tab recientemente"
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
-msgid "Ask the user for a default behaviour if true."
-msgstr "Si es cierto, preguntar al usuario el comportamiento predeterminado."
-
-#: ../extensions/alternate-tab/settings.js:31
-msgid ""
-"This is the first time you use the Alternate Tab extension. \n"
-"Please choose your preferred behaviour:\n"
-"\n"
-"All & Thumbnails:\n"
-"    This mode presents all applications from all workspaces in one "
-"selection \n"
-"    list. Instead of using the application icon of every window, it uses "
-"small \n"
-"    thumbnails resembling the window itself. \n"
-"\n"
-"Workspace & Icons:\n"
-"    This mode let's you switch between the applications of your current \n"
-"    workspace and gives you additionally the option to switch to the last "
-"used \n"
-"    application of your previous workspace. This is always the last symbol "
-"in \n"
-"    the list and is segregated by a separator/vertical line if available. \n"
-"    Every window is represented by its application icon.  \n"
-"\n"
-"If you whish to revert to the default behavior for the Alt-Tab switcher, "
-"just\n"
-"disable the extension from extensions.gnome.org or the Advanced Settings "
-"application."
-msgstr ""
-"Esta es la primera vez que usa la extensión Alt+Tab. \n"
-"Seleccione el comportamiento preferido:\n"
-"\n"
-"Todo y miniaturas:\n"
-"    Este modo muestra todas la aplicaciones de todas las áreas de trabajo \n"
-"    en una única lista. En lugar de usar el icono de la aplicación de cada "
-"ventana, usa \n"
-"    miniaturas similares a la ventana.\n"
-"\n"
-"Área de trabajo e iconos:\n"
-"    Este modo permite le alternar entre aplicaciones del área de trabajo "
-"actual, \n"
-"    y ofrece la posibilidad de cambiar a la última aplicación usada en el \n"
-"    área de trabajo anterior. Éste último es siempre el último símbolo en "
-"la \n"
-"    lista, y está diferenciado mediante un separador/línea vertical, si "
-"está \n"
-"    disponible. \n"
-"    Cada ventana se representa con el icono de la aplicación.  \n"
-"\n"
-"Si quiere volver al comportamiento predeterminado de Alt+Tab, simplemente\n"
-"desactive la extensión desde extensions.gnome.org o en la aplicación "
-"Configuración avanzada."
-
-#: ../extensions/alternate-tab/settings.js:70
-msgid "Alt Tab Behaviour"
-msgstr "Comportamiento de Alt+Tab"
-
-#: ../extensions/alternate-tab/settings.js:86
+#: ../extensions/alternate-tab/prefs.js:27
 msgid "All & Thumbnails"
 msgstr "Todo y miniaturas"
 
-#: ../extensions/alternate-tab/settings.js:93
+#: ../extensions/alternate-tab/prefs.js:28
+msgid ""
+"This mode presents all applications from all workspaces in one selection "
+"list. Instead of using the application icon of every window, it uses small "
+"thumbnails resembling the window itself."
+msgstr ""
+"Este modo presenta todas las aplicaciones de todas las áreas de trabajo en "
+"una lista de selección. En lugar de usar el icono de aplicación de cada "
+"ventana, usa pequeñas miniaturas que se asemejan a la propia ventana."
+
+#: ../extensions/alternate-tab/prefs.js:34
 msgid "Workspace & Icons"
 msgstr "Espacio de trabajo e iconos"
 
-#: ../extensions/alternate-tab/settings.js:100
-msgid "Cancel"
-msgstr "Cancelar"
+#: ../extensions/alternate-tab/prefs.js:35
+msgid ""
+"This mode let's you switch between the applications of your current "
+"workspace and gives you additionally the option to switch to the last used "
+"application of your previous workspace. This is always the last symbol in "
+"the list and is segregated by a separator/vertical line if available. \n"
+"Every window is represented by its application icon."
+msgstr ""
+"Este modo le permite alternar entre las aplicaciones de su área de trabajo "
+"actual y le da la opción de cambiar a la última aplicación utilizada de su "
+"área de trabajo anterior. Este siempre es el último símbolo de la lista y "
+"está separado por un separador/línea vertical si está disponible.\n"
+"Cada ventana está representada por su icono de aplicación."
+
+#: ../extensions/alternate-tab/prefs.js:41
+msgid "Move current selection to front before closing the popup"
+msgstr ""
+"Mover la selección actual al frente antes de cerrar la ventana emergente"
+
+#: ../extensions/alternate-tab/prefs.js:58
+msgid ""
+"The Alternate Tab can be used in different modes, that affect the way "
+"windows are chosen and presented."
+msgstr ""
+"La combinación de teclas Alt+Tab se puede usar en diferentes modos, que "
+"afectan la manera en que se eligen y presentan las ventanas."
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:64
@@ -131,6 +107,29 @@ msgstr ""
 "Una lista de cadenas, conteniendo cada una un ID de aplicación (nombre de "
 "archivo de escritorio), seguido de dos puntos y el número del espacio de "
 "trabajo"
+
+#: ../extensions/auto-move-windows/prefs.js:55
+#| msgid "Quit Application"
+msgid "Application"
+msgstr "Aplicación"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+#| msgid "Workspace & Icons"
+msgid "Workspace"
+msgstr "Área de trabajo"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Añadir regla"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "Crear regla de coincidencia nueva"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Añadir"
 
 #: ../extensions/dock/extension.js:489
 msgid "Drag here to add favorites"
@@ -200,9 +199,38 @@ msgstr "Configura la duración del efecto de ocultación automática."
 msgid "Open file manager"
 msgstr "Abrir el gestor de archivos"
 
-#: ../extensions/example/extension.js:15
+#: ../extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "¡Hola, mundo!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "Texto de bienvenida alternativo"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Si no está vacío, contiene el texto que se desplegará al pulsar sobre el "
+"panel."
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"«Example» tiene por objeto mostrar cómo construir extensiones de buen "
+"comportamiento para la Shell y por eso tiene poca funcionalidad por sí "
+"solo.\n"
+"Sin embargo, es posible personalizar el mensaje de bienvenida."
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Mensaje:"
 
 #: ../extensions/gajim/extension.js:227
 #, c-format
@@ -266,7 +294,6 @@ msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "El nombre del tema, que se carga desde ~/.themes/nombre/gnome-shell"
 
 #: ../extensions/workspace-indicator/extension.js:24
-#| msgid "Workspace & Icons"
 msgid "Workspace Indicator"
 msgstr "Indicador de espacio de trabajo"
 
@@ -289,6 +316,72 @@ msgstr "Hacia abajo"
 #: ../extensions/xrandr-indicator/extension.js:82
 msgid "Configure display settings..."
 msgstr "Configurar las opciones de pantalla…"
+
+#~ msgid "Indicates if Alternate Tab is newly installed"
+#~ msgstr "Indica si se ha instalado Alt+Tab recientemente"
+
+#~ msgid "Ask the user for a default behaviour if true."
+#~ msgstr ""
+#~ "Si es cierto, preguntar al usuario el comportamiento predeterminado."
+
+#~ msgid ""
+#~ "This is the first time you use the Alternate Tab extension. \n"
+#~ "Please choose your preferred behaviour:\n"
+#~ "\n"
+#~ "All & Thumbnails:\n"
+#~ "    This mode presents all applications from all workspaces in one "
+#~ "selection \n"
+#~ "    list. Instead of using the application icon of every window, it uses "
+#~ "small \n"
+#~ "    thumbnails resembling the window itself. \n"
+#~ "\n"
+#~ "Workspace & Icons:\n"
+#~ "    This mode let's you switch between the applications of your current \n"
+#~ "    workspace and gives you additionally the option to switch to the last "
+#~ "used \n"
+#~ "    application of your previous workspace. This is always the last "
+#~ "symbol in \n"
+#~ "    the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "    Every window is represented by its application icon.  \n"
+#~ "\n"
+#~ "If you whish to revert to the default behavior for the Alt-Tab switcher, "
+#~ "just\n"
+#~ "disable the extension from extensions.gnome.org or the Advanced Settings "
+#~ "application."
+#~ msgstr ""
+#~ "Esta es la primera vez que usa la extensión Alt+Tab. \n"
+#~ "Seleccione el comportamiento preferido:\n"
+#~ "\n"
+#~ "Todo y miniaturas:\n"
+#~ "    Este modo muestra todas la aplicaciones de todas las áreas de "
+#~ "trabajo \n"
+#~ "    en una única lista. En lugar de usar el icono de la aplicación de "
+#~ "cada ventana, usa \n"
+#~ "    miniaturas similares a la ventana.\n"
+#~ "\n"
+#~ "Área de trabajo e iconos:\n"
+#~ "    Este modo permite le alternar entre aplicaciones del área de trabajo "
+#~ "actual, \n"
+#~ "    y ofrece la posibilidad de cambiar a la última aplicación usada en "
+#~ "el \n"
+#~ "    área de trabajo anterior. Éste último es siempre el último símbolo en "
+#~ "la \n"
+#~ "    lista, y está diferenciado mediante un separador/línea vertical, si "
+#~ "está \n"
+#~ "    disponible. \n"
+#~ "    Cada ventana se representa con el icono de la aplicación.  \n"
+#~ "\n"
+#~ "Si quiere volver al comportamiento predeterminado de Alt+Tab, "
+#~ "simplemente\n"
+#~ "desactive la extensión desde extensions.gnome.org o en la aplicación "
+#~ "Configuración avanzada."
+
+#~ msgid "Alt Tab Behaviour"
+#~ msgstr "Comportamiento de Alt+Tab"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
 
 #~ msgid "Notifications"
 #~ msgstr "Notificaciones"
