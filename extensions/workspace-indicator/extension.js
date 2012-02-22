@@ -1,3 +1,6 @@
+// -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
+
+const Gio = imports.gi.Gio;
 const Meta = imports.gi.Meta;
 const Clutter = imports.gi.Clutter;
 const St = imports.gi.St;
@@ -15,6 +18,9 @@ const Main = imports.ui.main;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
+
+const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
+const WORKSPACE_KEY = 'workspace-names';
 
 const WorkspaceIndicator = new Lang.Class({
     Name: 'WorkspaceIndicator.WorkspaceIndicator',
@@ -43,11 +49,19 @@ const WorkspaceIndicator = new Lang.Class({
 	//styling
 	this.menu.actor.add_style_class_name('workspace-indicator-shorter');
 	this.statusLabel.add_style_class_name('panel-workspace-indicator');
+
+        this._settings = new Gio.Settings({ schema: WORKSPACE_SCHEMA });
+        this._settingsChangedId = this._settings.connect('changed::' + WORKSPACE_KEY, Lang.bind(this, this._createWorkspacesSection));
     },
 
     destroy: function() {
 	for (let i = 0; i < this._screenSignals.length; i++)
 	    global.screen.disconnect(this._screenSignals[i]);
+
+        if (this._settingsChangedId) {
+            this._settings.disconnect(this._settingsChangedId);
+            this._settingsChangedId = 0;
+        }
 
 	this.parent();
     },
