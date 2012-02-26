@@ -1,0 +1,306 @@
+# Serbian translation for gnome-shell-extensions.
+# Copyright (C) 2012 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Miloš Popović <gpopac@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2012-02-22 16:15+0000\n"
+"PO-Revision-Date: 2012-02-27 00:12+0100\n"
+"Last-Translator: Miloš Popović <gpopac@gmail.com>\n"
+"Language-Team: Serbian <gnom@prevod.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4;    plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 :    n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "The alt tab behaviour."
+msgstr "Ponašanje alt-tab tastera."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+"workspace_icons. See the configuration dialogs for details."
+msgstr ""
+"Određuje kako se ponašaju Alt-Tab tasteri. Ispravne vrednosti su "
+"„all_thumbnails“ (svi umanjeni prikazi) i „workspace_icons“ (ikonice radnih "
+"površi). Pogledajte prozorčiće za podešavanje za više podataka."
+
+#: ../extensions/alternate-tab/prefs.js:27
+msgid "All & Thumbnails"
+msgstr "Sve i umanjeni prikazi"
+
+#: ../extensions/alternate-tab/prefs.js:28
+msgid ""
+"This mode presents all applications from all workspaces in one selection "
+"list. Instead of using the application icon of every window, it uses small "
+"thumbnails resembling the window itself."
+msgstr ""
+"Ovaj režim prikazuje sve programe sa svih radnih prostora unutar jednog "
+"spiska. Umesto upotrebe ikonica programa za svaki prozor koristi se umanjeni "
+"prikaz programa."
+
+#: ../extensions/alternate-tab/prefs.js:34
+msgid "Workspace & Icons"
+msgstr "Radni prostori i ikonice"
+
+#: ../extensions/alternate-tab/prefs.js:35
+msgid ""
+"This mode let's you switch between the applications of your current "
+"workspace and gives you additionally the option to switch to the last used "
+"application of your previous workspace. This is always the last symbol in "
+"the list and is segregated by a separator/vertical line if available. \n"
+"Every window is represented by its application icon."
+msgstr ""
+"Ovaj režim vam omogućava da menjate programe sa trenutnog radnog prostora i "
+"daje vam dodatnu mogućnost da se prebacite na poslednji korišćen program sa "
+"drugog radnog prostora. On je uvek prikazan kao poslednji u spisku, razdvojen "
+"od ostalih.\n"
+"Svaki prozor je predstavljen ikonicom programa."
+
+#: ../extensions/alternate-tab/prefs.js:41
+msgid "Move current selection to front before closing the popup"
+msgstr "Pomeri trenutni izbor napred pre zatvaranja iskačućeg"
+
+#: ../extensions/alternate-tab/prefs.js:58
+msgid ""
+"The Alternate Tab can be used in different modes, that affect the way "
+"windows are chosen and presented."
+msgstr ""
+"Izmenjivač Tab tastera se može koristiti u različitim režimima koji određuju "
+"kako se prozori biraju i prikazuju."
+
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:64
+msgid "Suspend"
+msgstr "Obustavi"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "Hibernate"
+msgstr "Zamrzni"
+
+#: ../extensions/alternative-status-menu/extension.js:74
+msgid "Power Off..."
+msgstr "Isključi..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Program i spisak radnih prostora"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Spisak niski od kojih svaka sadrži ib programa (ime .desktop datoteke), "
+"zarez i broj radnog prostora."
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "Program"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "Radni prostor"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Dodaj pravilo"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "Dodaje novo pravilo za preklapanje"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Dodaj"
+
+#: ../extensions/dock/extension.js:489
+msgid "Drag here to add favorites"
+msgstr "Prevucite ovde za dodavanje među omiljene"
+
+#: ../extensions/dock/extension.js:815
+msgid "New Window"
+msgstr "Novi prozor"
+
+#: ../extensions/dock/extension.js:817
+msgid "Quit Application"
+msgstr "Napusti program"
+
+#: ../extensions/dock/extension.js:822
+msgid "Remove from Favorites"
+msgstr "Ukloni iz omiljenih"
+
+#: ../extensions/dock/extension.js:823
+msgid "Add to Favorites"
+msgstr "Dodaj omiljene"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Position of the dock"
+msgstr "Mesto površi sa ikonicama"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"Podešava mesto gde se nalazi površ sa ikonicama. Dozvoljene su vrednosti "
+"„right“ (desno) i „left“ (levo)"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Icon size"
+msgstr "Veličina ikonice"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Sets icon size of the dock."
+msgstr "Određuje veličinu površi za ikonice."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Enable/disable autohide"
+msgstr "Automatsko skrivanje"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Autohide effect"
+msgstr "Efekat automatskog skrivanja"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr ""
+"Određuje efekat koji se prikazuje prilikom sakrivanja površi sa ikonicama. "
+"Dozvoljene vrednosti su: „resize“ (promeni veličinu), „rescale“ (promeni "
+"veličinu uz zadržavanje razmere) i „move“ (premesti)"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid "Autohide duration"
+msgstr "Trajanje sakrivanja"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr "Određuje dužinu trajanja efekta sakrivanja."
+
+#: ../extensions/drive-menu/extension.js:66
+msgid "Open file manager"
+msgstr "Otvori upravnika datoteka"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "Pozdravna poruka!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "Promena pozdravnog teksta."
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Ukoliko upišete tekst ovde, on će biti prikazan kada kliknete na panel."
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"Ovaj primer samo pokazuje kako se piše dobro proširenje za Gnomovu Školjku, "
+"tako da vam ne znači puno.\n"
+"Ipak, možete izmeniti pozdravnu poruku pomoću ovog proširenja."
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Poruka:"
+
+#: ../extensions/gajim/extension.js:227
+#, c-format
+msgid "%s is away."
+msgstr "%s je odsutan."
+
+#: ../extensions/gajim/extension.js:230
+#, c-format
+msgid "%s is offline."
+msgstr "%s je nedostupan."
+
+#: ../extensions/gajim/extension.js:233
+#, c-format
+msgid "%s is online."
+msgstr "%s je dostupan."
+
+#: ../extensions/gajim/extension.js:236
+#, c-format
+msgid "%s is busy."
+msgstr "%s je zauzet."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "Koristi više prostora za prozor"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Koristi više prostora za smeštanje umanjenih prikaza prozora u zavisnosti od "
+"veličine ekrana,. Ovo podešavanje važi samo ukoliko je strategija razmeštanja "
+"postavljena na prirodno."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Ispiši natpise prozora iznad prikaza"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Ukoliko je postavljeno, natpisi prozora će biti postavljeni na vrh njihovih "
+"umanjenih prikaza umesto ispod prikaza. Promena ovih podešavanja zahteva da "
+"ponovo pokrenete Gnomovu Školjku."
+
+#: ../extensions/places-menu/extension.js:37
+msgid "Removable Devices"
+msgstr "Uklonjivi uređaji"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "Naziv teme"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Naziv teme koji se učitava iz datoteke ~/.themes/name/gnome-shell"
+
+#: ../extensions/workspace-indicator/extension.js:24
+msgid "Workspace Indicator"
+msgstr "Pokazatelj prozora"
+
+#: ../extensions/xrandr-indicator/extension.js:30
+msgid "Normal"
+msgstr "Uobičajeno"
+
+#: ../extensions/xrandr-indicator/extension.js:31
+msgid "Left"
+msgstr "Levo"
+
+#: ../extensions/xrandr-indicator/extension.js:32
+msgid "Right"
+msgstr "Desno"
+
+#: ../extensions/xrandr-indicator/extension.js:33
+msgid "Upside-down"
+msgstr "Naopačke"
+
+#: ../extensions/xrandr-indicator/extension.js:82
+msgid "Configure display settings..."
+msgstr "Podešavanja ekrana..."
