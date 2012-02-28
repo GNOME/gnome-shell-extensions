@@ -11,9 +11,9 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-02-17 20:30+0000\n"
-"PO-Revision-Date: 2012-02-20 16:52-0200\n"
-"Last-Translator: Gabriel Speckhahn <gabspeck@gmail.com>\n"
+"POT-Creation-Date: 2012-02-24 18:22+0000\n"
+"PO-Revision-Date: 2012-02-24 18:19-0300\n"
+"Last-Translator: Leandro Toledo <leandrotoledodesouza@gmail.com>\n"
 "Language-Team: GNOME pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -271,9 +271,8 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 "Se verdadeiro, coloca legendas de janela em cima da respectiva miniatura, "
-"sobresscrevendo o padrão do shell de colocá-lo na parte inferior. A "
-"alteração dessa configuração requer o reinício do shell para ter algum "
-"efeito."
+"sobrescrevendo o padrão do shell de colocá-lo na parte inferior. A alteração "
+"dessa configuração requer o reinício do shell para ter algum efeito."
 
 #: ../extensions/places-menu/extension.js:37
 msgid "Removable Devices"
@@ -287,9 +286,22 @@ msgstr "Nome do tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "O nome do tema, para ser carregado de ~/.themes/name/gnome-shell"
 
-#: ../extensions/workspace-indicator/extension.js:24
+#: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador de espaços de trabalho"
+
+#: ../extensions/workspace-indicator/prefs.js:151
+msgid "Workspace names:"
+msgstr "Nomes de espaços de trabalho:"
+
+#: ../extensions/workspace-indicator/prefs.js:162
+msgid "Name"
+msgstr "Nome"
+
+#: ../extensions/workspace-indicator/prefs.js:196
+#, c-format
+msgid "Workspace %d"
+msgstr "Espaço de trabalho %d"
 
 #: ../extensions/xrandr-indicator/extension.js:30
 msgid "Normal"
