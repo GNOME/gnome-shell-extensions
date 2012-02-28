@@ -45,7 +45,8 @@ msgstr "Delovne površine in ikone"
 msgid ""
 "This mode let's you switch between the applications of your current workspace and gives you additionally the option to switch to the last used application of your previous workspace. This is always the last symbol in the list and is segregated by a separator/vertical line if available. \n"
 "Every window is represented by its application icon."
-msgstr "Ta način omogoča preklop med programi trenutne delovne površine in hkrati omogoča izbiro na zadnje uporabljenega okna predhodne delovne površine. Ta predmet je vedno zapisan kot zadnji predmet seznama in je ločen z ločilnikom ali navpično črto. \ nVsako okno je prikazano z ikono programa."
+msgstr "Ta način omogoča preklop med programi trenutne delovne površine in hkrati omogoča izbiro na zadnje uporabljenega okna predhodne delovne površine. Ta predmet je vedno zapisan kot zadnji predmet seznama in je ločen z ločilnikom ali navpično črto.\n"
+"Vsako okno je prikazano z ikono programa."
 
 #: ../extensions/alternate-tab/prefs.js:41
 msgid "Move current selection to front before closing the popup"
