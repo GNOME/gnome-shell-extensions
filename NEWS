@@ -1,3 +1,13 @@
+3.3.90
+======
+* system wide installation via "make install" is possible
+  again
+* alternate-tab can now pre-activate the selected window
+* auto-move-windows, workspace-indicator and example gained
+  new preference dialogs
+* workspace-indicator: fixed a bug wrt focus stealing prevention
+* updated translations (es, pt_BR, it, sl, gl, sr)
+
 3.3.5
 =====
 * improvements to the build system and convenience module,
