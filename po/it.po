@@ -7,27 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-13 18:54+0100\n"
-"PO-Revision-Date: 2012-02-13 18:54+0100\n"
+"POT-Creation-Date: 2012-03-01 21:11+0100\n"
+"PO-Revision-Date: 2012-03-01 21:08+0100\n"
 "Last-Translator: Giovanni Campagna <scampa.giovanni@gmail.com>\n"
 "Language-Team: none <LL@li.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
-msgid "Suspend"
-msgstr "Sospendi"
-
-#: ../extensions/alternative-status-menu/extension.js:69
-msgid "Hibernate"
-msgstr "Iberna"
-
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "Spegni..."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid ""
@@ -85,6 +72,19 @@ msgid ""
 msgstr ""
 "Alternate Tab può essere usato in varie modalità, che influenzano il modo "
 "con cui le finestre sono scelte e successivamente mostrate."
+
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:64
+msgid "Suspend"
+msgstr "Sospendi"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "Hibernate"
+msgstr "Iberna"
+
+#: ../extensions/alternative-status-menu/extension.js:74
+msgid "Power Off..."
+msgstr "Spegni..."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -280,6 +280,23 @@ msgstr "Il nome del tema, da caricare in ~/.themes/nome/gnome-shell"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
 msgstr "Nome del tema"
+
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indicatore spazi di lavoro"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "Nomi degli spazi di lavoro:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "Nome"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "Spazio di lavoro %d"
 
 #: ../extensions/xrandr-indicator/extension.js:30
 msgid "Normal"
