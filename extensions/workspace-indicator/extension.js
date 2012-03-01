@@ -47,7 +47,6 @@ const WorkspaceIndicator = new Lang.Class({
 	this._createWorkspacesSection();
 
 	//styling
-	this.menu.actor.add_style_class_name('workspace-indicator-shorter');
 	this.statusLabel.add_style_class_name('panel-workspace-indicator');
 
         this._settings = new Gio.Settings({ schema: WORKSPACE_SCHEMA });
