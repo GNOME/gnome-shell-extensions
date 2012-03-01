@@ -10,6 +10,7 @@ po/gnome-shell-extensions.pot
 po/POTFILES
 po/stamp-it
 staging/
+zip-files/
 
 *~
 *.gmo
