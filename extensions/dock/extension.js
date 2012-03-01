@@ -729,7 +729,7 @@ const DockIcon = new Lang.Class({
 
     _onActivate: function (event) {
         this.emit('launching');
-        let modifiers = Shell.get_event_state(event);
+        let modifiers = event.get_state();
 
         if (modifiers & Clutter.ModifierType.CONTROL_MASK
             && this.app.state == Shell.AppState.RUNNING) {
