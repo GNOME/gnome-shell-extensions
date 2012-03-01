@@ -47,8 +47,6 @@ const WorkspaceNameModel = new GObject.Class({
             return;
         this._preventChanges = true;
 
-        print('reloading from settings');
-
         let newNames = this._settings.get_strv(WORKSPACE_KEY);
 
         let i = 0;
@@ -68,8 +66,6 @@ const WorkspaceNameModel = new GObject.Class({
             this.set(iter, [this.Columns.LABEL], [newNames[i]]);
         }
 
-        printerr('three');
-
         this._preventChanges = false;
     },
 
@@ -77,8 +73,6 @@ const WorkspaceNameModel = new GObject.Class({
         if (this._preventChanges)
             return;
         this._preventChanges = true;
-
-        print('on_row_changed: ' + path.to_string());
 
         let index = path.get_indices()[0];
         let names = this._settings.get_strv(WORKSPACE_KEY);
@@ -101,8 +95,6 @@ const WorkspaceNameModel = new GObject.Class({
             return;
         this._preventChanges = true;
 
-        print('on_row_inserted: ' + path.to_string());
-
         let index = path.get_indices()[0];
         let names = this._settings.get_strv(WORKSPACE_KEY);
         let label = this.get_value(iter, this.Columns.LABEL) || '';
@@ -117,8 +109,6 @@ const WorkspaceNameModel = new GObject.Class({
         if (this._preventChanges)
             return;
         this._preventChanges = true;
-
-        print('on_row_deleted: ' + path.to_string());
 
         let index = path.get_indices()[0];
         let names = this._settings.get_strv(WORKSPACE_KEY);
