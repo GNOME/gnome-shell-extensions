@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-25 15:04+0800\n"
-"PO-Revision-Date: 2011-09-25 15:04+0800\n"
+"POT-Creation-Date: 2012-03-09 20:12+0800\n"
+"PO-Revision-Date: 2012-03-09 20:13+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
 "Language: \n"
@@ -16,122 +16,64 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Notifications"
-msgstr "通知"
-
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Online Accounts"
-msgstr "網上帳號"
-
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "系統設定值"
-
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "鎖定畫面"
-
-#: ../extensions/alternative-status-menu/extension.js:68
-msgid "Switch User"
-msgstr "切換使用者"
-
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Log Out..."
-msgstr "登出..."
-
-#: ../extensions/alternative-status-menu/extension.js:81
-msgid "Suspend"
-msgstr "暫停"
-
-#: ../extensions/alternative-status-menu/extension.js:87
-msgid "Hibernate"
-msgstr "休眠"
-
-#: ../extensions/alternative-status-menu/extension.js:93
-msgid "Power Off..."
-msgstr "關閉電源..."
-
-#: ../extensions/alternate-tab/extension.js:44
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid ""
-"This is the first time you use the Alternate Tab extension. \n"
-"Please choose your preferred behaviour:\n"
-"\n"
-"All & Thumbnails:\n"
-"    This mode presents all applications from all workspaces in one "
-"selection \n"
-"    list. Instead of using the application icon of every window, it uses "
-"small \n"
-"    thumbnails resembling the window itself. \n"
-"\n"
-"Workspace & Icons:\n"
-"    This mode let's you switch between the applications of your current \n"
-"    workspace and gives you additionally the option to switch to the last "
-"used \n"
-"    application of your previous workspace. This is always the last symbol "
-"in \n"
-"    the list and is segregated by a separator/vertical line if available. \n"
-"    Every window is represented by its application icon.  \n"
-"\n"
-"Native:\n"
-"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
-"    native switches the Alternate Tab extension off. \n"
-msgstr ""
-"這是你第一次使用 Alternate Tab 擴充套件。\n"
-"請選擇你偏好的行為：\n"
-"\n"
-"全部與縮圖：\n"
-"    這個模式會在一個選取清單中展現所有工作區的應用程式。\n"
-"    每個視窗不使用應用程式圖示，而是採用象徵視窗自己本身\n"
-"    的縮圖。\n"
-"\n"
-"工作區與圖示：\n"
-"    這個模式讓你在目前工作區的應用程式間切換，並額外給你\n"
-"    切換至上次使用的前個工作區應用程式的選項。它會是清單\n"
-"    中最後一個圖像，並且可能的話會用分隔符或垂直線分開。\n"
-"    每個視窗是由其應用程式圖示所表示。\n"
-"\n"
-"原生：\n"
-"    這個模式是 GNOME 3 的原生行為，換句話說：按下原生\n"
-"    會關閉 Alternate Tab 擴充套件。\n"
+"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+"workspace_icons. See the configuration dialogs for details."
+msgstr "設定 Alt-Tab 行為。可用的值為：all_thumbnails、workspace_icons。請見組態對話盒瞭解詳細資訊。"
 
-#: ../extensions/alternate-tab/extension.js:269
-msgid "Alt Tab Behaviour"
-msgstr "Alt Tab 行為"
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid "The alt tab behaviour."
+msgstr "alt tab 按鍵行為。"
 
-#: ../extensions/alternate-tab/extension.js:285
+#: ../extensions/alternate-tab/prefs.js:27
 msgid "All & Thumbnails"
 msgstr "全部與縮圖"
 
-#: ../extensions/alternate-tab/extension.js:292
+#: ../extensions/alternate-tab/prefs.js:28
+msgid ""
+"This mode presents all applications from all workspaces in one selection "
+"list. Instead of using the application icon of every window, it uses small "
+"thumbnails resembling the window itself."
+msgstr "這個模式會將所有工作區的應用程式呈現於一個選取清單中。它使用小縮圖來象徵視窗本身，而不是使用應用程式圖示來代表每個視窗。"
+
+#: ../extensions/alternate-tab/prefs.js:34
 msgid "Workspace & Icons"
 msgstr "工作區與圖示"
 
-#: ../extensions/alternate-tab/extension.js:299
-msgid "Native"
-msgstr "原生"
-
-#: ../extensions/alternate-tab/extension.js:306
-msgid "Cancel"
-msgstr "取消"
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "Ask the user for a default behaviour if true."
-msgstr "若為真，詢問使用者預設行為。"
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Indicates if Alternate Tab is newly installed"
-msgstr "指示 Alternate Tab 是否為新安裝"
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
+#: ../extensions/alternate-tab/prefs.js:35
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
-"workspace_icons."
-msgstr "設定 Alt-Tab 行為。可用的值為：natvie、all_thumbnails、workspace_icons。"
+"This mode let's you switch between the applications of your current "
+"workspace and gives you additionally the option to switch to the last used "
+"application of your previous workspace. This is always the last symbol in "
+"the list and is segregated by a separator/vertical line if available. \n"
+"Every window is represented by its application icon."
+msgstr ""
+"這個模式讓你在你目前工作區中的應用程式之間切換，而且給你額外的選項來切換至上個工作區中你上次使用的應用程式；它總會是清單中的最後一個圖像，而且可能的話會用分隔符/垂直線隔離開來。\n"
+"每個視窗會以其應用程式圖示呈現。"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
-msgid "The alt tab behaviour."
-msgstr "alt tab 按鍵行為。"
+#: ../extensions/alternate-tab/prefs.js:41
+msgid "Move current selection to front before closing the popup"
+msgstr "在關閉彈出視窗之前，移動目前選取的項目至前方"
+
+#: ../extensions/alternate-tab/prefs.js:58
+msgid ""
+"The Alternate Tab can be used in different modes, that affect the way "
+"windows are chosen and presented."
+msgstr "Alternate Tab 可以使用不同的模式，會影響到選擇與呈現視窗的方式。"
+
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:64
+msgid "Suspend"
+msgstr "暫停"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "Hibernate"
+msgstr "休眠"
+
+#: ../extensions/alternative-status-menu/extension.js:74
+msgid "Power Off..."
+msgstr "關閉電源..."
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid ""
@@ -143,23 +85,44 @@ msgstr "字串的清單，每個都包含一個應用程式 id (桌面檔名稱)
 msgid "Application and workspace list"
 msgstr "應用程式與工作區清單"
 
-#: ../extensions/dock/extension.js:486
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "應用程式"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "工作區"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "加入規則"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "建立新的比對規則"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "加入"
+
+#: ../extensions/dock/extension.js:489
 msgid "Drag here to add favorites"
 msgstr "拖曳至此處以加入喜好"
 
-#: ../extensions/dock/extension.js:820
+#: ../extensions/dock/extension.js:815
 msgid "New Window"
 msgstr "新視窗"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:817
 msgid "Quit Application"
 msgstr "退出應用程式"
 
-#: ../extensions/dock/extension.js:827
+#: ../extensions/dock/extension.js:822
 msgid "Remove from Favorites"
 msgstr "自喜好移除"
 
-#: ../extensions/dock/extension.js:828
+#: ../extensions/dock/extension.js:823
 msgid "Add to Favorites"
 msgstr "加入喜好"
 
@@ -189,8 +152,9 @@ msgstr "設定 Dock 的圖示大小。"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
 msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgstr "設定隱藏 Dock 的效果。可用的值為「resize」或「rescale」"
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr "設定隱藏 Dock 的效果。可用的值為「resize」、「rescale」、「move」"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid ""
@@ -202,9 +166,38 @@ msgstr "設定 Dock 在螢幕的位置。可用的值為「right」(右) 或「l
 msgid "Sets the time duration of the autohide effect."
 msgstr "設定自動隱藏效果的時間長度。"
 
-#: ../extensions/example/extension.js:11
+#: ../extensions/drive-menu/extension.js:66
+msgid "Open file manager"
+msgstr "開啟檔案管理員"
+
+#: ../extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "你好，世界！"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "替換的歡迎文字。"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr "若不是空的，它則包含點擊面板時會顯示的文字。"
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"Example 旨要顯示如何替 Shell 建立行為良好的擴充套件，但它自己本身沒有什麼功能。\n"
+"不過，它可以讓你自選歡迎訊息。"
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "訊息："
 
 #: ../extensions/gajim/extension.js:227
 #, c-format
@@ -239,25 +232,18 @@ msgstr "在頂端放置視窗說明標題"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid ""
-"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
-"default grid based algorithm, 'natural' to use another one that reflects "
-"more the position and size of the actual window"
-msgstr "用來配置縮圖的演算法。「grid」是採用預設的網格基礎演算法，「natural」則採用另一種反映視窗位置與實際大小的演算法。"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
-msgstr ""
+msgstr "藉由適應螢幕長寬比來嘗試使用更多螢幕空間放置視窗縮圖，進一步聯合它們來減少邊界盒。這個設定僅適用於自然放置策略。"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid "Use more screen for windows"
-msgstr ""
+msgstr "視窗使用更多螢幕空間"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
-msgstr "視窗擺放策略"
+#: ../extensions/places-menu/extension.js:37
+msgid "Removable Devices"
+msgstr "可移除式裝置"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
@@ -267,25 +253,127 @@ msgstr "主題的名稱，要從 ~/.themes/name/gnome-shell 載入"
 msgid "Theme name"
 msgstr "主題名稱"
 
-#: ../extensions/xrandr-indicator/extension.js:26
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "工作區指示器"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "工作區名稱："
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "名稱"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "工作區 %d"
+
+#: ../extensions/xrandr-indicator/extension.js:30
 msgid "Normal"
 msgstr "一般"
 
-#: ../extensions/xrandr-indicator/extension.js:27
+#: ../extensions/xrandr-indicator/extension.js:31
 msgid "Left"
 msgstr "左"
 
-#: ../extensions/xrandr-indicator/extension.js:28
+#: ../extensions/xrandr-indicator/extension.js:32
 msgid "Right"
 msgstr "右"
 
-#: ../extensions/xrandr-indicator/extension.js:29
+#: ../extensions/xrandr-indicator/extension.js:33
 msgid "Upside-down"
 msgstr "上下顛倒"
 
-#: ../extensions/xrandr-indicator/extension.js:78
+#: ../extensions/xrandr-indicator/extension.js:82
 msgid "Configure display settings..."
 msgstr "設定顯示器設定值..."
+
+#~ msgid "Notifications"
+#~ msgstr "通知"
+
+#~ msgid "Online Accounts"
+#~ msgstr "線上帳號"
+
+#~ msgid "System Settings"
+#~ msgstr "系統設定值"
+
+#~ msgid "Lock Screen"
+#~ msgstr "鎖定畫面"
+
+#~ msgid "Switch User"
+#~ msgstr "切換使用者"
+
+#~ msgid "Log Out..."
+#~ msgstr "登出..."
+
+#~ msgid ""
+#~ "This is the first time you use the Alternate Tab extension. \n"
+#~ "Please choose your preferred behaviour:\n"
+#~ "\n"
+#~ "All & Thumbnails:\n"
+#~ "    This mode presents all applications from all workspaces in one "
+#~ "selection \n"
+#~ "    list. Instead of using the application icon of every window, it uses "
+#~ "small \n"
+#~ "    thumbnails resembling the window itself. \n"
+#~ "\n"
+#~ "Workspace & Icons:\n"
+#~ "    This mode let's you switch between the applications of your current \n"
+#~ "    workspace and gives you additionally the option to switch to the last "
+#~ "used \n"
+#~ "    application of your previous workspace. This is always the last "
+#~ "symbol in \n"
+#~ "    the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "    Every window is represented by its application icon.  \n"
+#~ "\n"
+#~ "Native:\n"
+#~ "    This mode is the native GNOME 3 behaviour or in other words: "
+#~ "Clicking \n"
+#~ "    native switches the Alternate Tab extension off. \n"
+#~ msgstr ""
+#~ "這是您第一次使用 Alternate Tab 擴充套件。\n"
+#~ "請選擇您偏好的行為：\n"
+#~ "\n"
+#~ "全部與縮圖：\n"
+#~ "    這個模式會在一個選取清單中展現所有工作區的應用程式。\n"
+#~ "    每個視窗不使用應用程式圖示，而是採用象徵視窗自己本身\n"
+#~ "    的縮圖。\n"
+#~ "\n"
+#~ "工作區與圖示：\n"
+#~ "    這個模式讓您在目前工作區的應用程式間切換，並額外給您\n"
+#~ "    切換至上次使用的前個工作區應用程式的選項。它會是清單\n"
+#~ "    中最後一個圖像，並且可能的話會用分隔符或垂直線分開。\n"
+#~ "    每個視窗是由其應用程式圖示所表示。\n"
+#~ "\n"
+#~ "原生：\n"
+#~ "    這個模式是 GNOME 3 的原生行為，換句話說：按下原生\n"
+#~ "    會關閉 Alternate Tab 擴充套件。\n"
+
+#~ msgid "Alt Tab Behaviour"
+#~ msgstr "Alt Tab 行為"
+
+#~ msgid "Cancel"
+#~ msgstr "取消"
+
+#~ msgid "Ask the user for a default behaviour if true."
+#~ msgstr "若為真，詢問使用者預設行為。"
+
+#~ msgid "Indicates if Alternate Tab is newly installed"
+#~ msgstr "指示 Alternate Tab 是否為新安裝"
+
+#~ msgid ""
+#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
+#~ "the default grid based algorithm, 'natural' to use another one that "
+#~ "reflects more the position and size of the actual window"
+#~ msgstr ""
+#~ "用來配置縮圖的演算法。「grid」是採用預設的網格基礎演算法，「natural」則採"
+#~ "用另一種反映視窗位置與實際大小的演算法。"
+
+#~ msgid "Window placement strategy"
+#~ msgstr "視窗擺放策略"
 
 #~ msgid "Available"
 #~ msgstr "有空"
