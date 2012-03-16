@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-26 16:15+0100\n"
-"PO-Revision-Date: 2012-02-26 16:21+0100\n"
+"POT-Creation-Date: 2012-03-16 12:15+0100\n"
+"PO-Revision-Date: 2012-03-16 12:15+0100\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
 "Language: gl\n"
@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 "Este modo presenta todos os aplicativos de todas as áreas de traballo nunha "
 "lista de selección. No lugar de usar a icona de aplicativo de cada xanela, "
-"usa pequenas miniaturas que se asemellan á propia xanela."
+"usa pequenas miniaturas que semellan a propia xanela."
 
 #: ../extensions/alternate-tab/prefs.js:34
 msgid "Workspace & Icons"
@@ -60,7 +60,7 @@ msgid ""
 "Every window is represented by its application icon."
 msgstr ""
 "Este modo permítelle alternar entre os aplicativos da súa área de traballo "
-"actual e dalle a opción de cambiar ao último aplicativo empregada da súa "
+"actual e dálle a opción de cambiar ao último aplicativo empregada da súa "
 "área de traballo anterior. Este sempre é o último símbolo da lista e está "
 "separado por un separador/liña vertical se está dispoñíbel.\n"
 "Cada xanela está representada pola súa icona de aplicativo."
@@ -74,7 +74,7 @@ msgid ""
 "The Alternate Tab can be used in different modes, that affect the way "
 "windows are chosen and presented."
 msgstr ""
-"A combinación de teclas Alt+TAb pódese usar en diferentes modos, que afectan "
+"A combinación de teclas Alt+Tab pódese usar en diferentes modos, que afectan "
 "á maneira na que se elixen e presentan as xanelas."
 
 #. add the new entries
@@ -286,15 +286,15 @@ msgstr "O nome do tema, a cargar desde ~/.themes/name/gnome-shell"
 msgid "Workspace Indicator"
 msgstr "Indicador de espazo de traballo"
 
-#: ../extensions/workspace-indicator/prefs.js:151
+#: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Nomes dos espazos de traballo:"
 
-#: ../extensions/workspace-indicator/prefs.js:162
+#: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
 msgstr "Nome"
 
-#: ../extensions/workspace-indicator/prefs.js:196
+#: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
 msgid "Workspace %d"
 msgstr "Espazos de traballo %d"
@@ -317,7 +317,7 @@ msgstr "Co de arriba cara abaixo"
 
 #: ../extensions/xrandr-indicator/extension.js:82
 msgid "Configure display settings..."
-msgstr "Configurar as configuracións de pantalla…"
+msgstr "Configurar as preferencias de pantalla…"
 
 #~ msgid "Notifications"
 #~ msgstr "Notificacións"
