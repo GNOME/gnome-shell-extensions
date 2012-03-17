@@ -2,14 +2,14 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# A S Alam <aalam@users.sf.net>, 2011.
+# A S Alam <aalam@users.sf.net>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-08-01 14:02+0000\n"
-"PO-Revision-Date: 2011-08-21 09:55+0530\n"
+"POT-Creation-Date: 2012-02-24 18:22+0000\n"
+"PO-Revision-Date: 2012-03-17 16:50+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
 "MIME-Version: 1.0\n"
@@ -19,133 +19,73 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../extensions/alternative-status-menu/extension.js:39
-msgid "Available"
-msgstr "ਉਪਲੱਬਧ"
-
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Busy"
-msgstr "ਰੁਝਿਆ"
-
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "My Account"
-msgstr "ਮੇਰਾ ਅਕਾਊਂਟ"
-
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "ਸਿਸਟਮ ਸੈਟਿੰਗ"
-
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "ਸਕਰੀਨ ਲਾਕ ਕਰੋ"
-
-#: ../extensions/alternative-status-menu/extension.js:67
-msgid "Switch User"
-msgstr "ਯੂਜ਼ਰ ਬਦਲੋ"
-
-#: ../extensions/alternative-status-menu/extension.js:72
-msgid "Log Out..."
-msgstr "ਲਾਗਆਉਟ..."
-
-#: ../extensions/alternative-status-menu/extension.js:79
-msgid "Suspend"
-msgstr "ਸਸਪੈਂਡ"
-
-#: ../extensions/alternative-status-menu/extension.js:85
-msgid "Hibernate"
-msgstr "ਹਾਈਬਰਨੇਟ"
-
-#: ../extensions/alternative-status-menu/extension.js:91
-msgid "Power Off..."
-msgstr "...ਬੰਦ ਕਰੋ"
-
-#: ../extensions/alternate-tab/extension.js:44
-msgid ""
-"This is the first time you use the Alternate Tab extension. \n"
-"Please choose your preferred behaviour:\n"
-"\n"
-"All & Thumbnails:\n"
-"    This mode presents all applications from all workspaces in one "
-"selection \n"
-"    list. Instead of using the application icon of every window, it uses "
-"small \n"
-"    thumbnails resembling the window itself. \n"
-"\n"
-"Workspace & Icons:\n"
-"    This mode let's you switch between the applications of your current \n"
-"    workspace and gives you additionally the option to switch to the last "
-"used \n"
-"    application of your previous workspace. This is always the last symbol "
-"in \n"
-"    the list and is segregated by a separator/vertical line if available. \n"
-"    Every window is represented by its application icon.  \n"
-"\n"
-"Native:\n"
-"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
-"    native switches the Alternate Tab extension off. \n"
-msgstr ""
-"ਇਹ ਪਹਿਲੀ ਵਾਰ ਹੈ, ਜਦੋਂ ਤੁਸੀਂ Alt(ernate) Tab ਇਕਸਟੈਨਸ਼ਨ ਵਰਤ ਰਹੇ ਹੋ।\n"
-"ਆਪਣੀ ਪਸੰਦ ਮੁਤਾਬਕ ਰਵੱਈਏ ਦੀ ਚੋਣ ਕਰੋ ਜੀ:\n"
-"\n"
-"ਸਭ ਅਤੇ ਥੰਮਨੇਲ:\n"
-"   ਇਹ ਮੋਡ ਸਭ ਵਰਕਸਪੇਸ ਤੋਂ ਸਭ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਇੱਕ ਚੋਣ ਲਿਸਟ ਵਿੱਚ ਵੇਖਾਉਂਦੀ ਹੈ।\n"
-"   ਹਰੇਕ ਵਿੰਡੋ ਲਈ ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਵਰਤਣ ਦੀ ਬਜਾਏ, ਇਹ ਹਰ ਵਿੰਡੋ ਨਾਲ ਰਲਦੇ\n"
-"    ਛੋਟੇ ਛੋਟੇ ਥੰਮਨੇਲ ਵਰਤਦੀ ਹੈ।\n"
-"\n"
-"ਵਰਕਸਪੇਸ ਅਤੇ ਆਈਕਾਨ:\n"
-"    ਇਹ ਮੋਡ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਮੌਜੂਦਾ ਵਰਕਸਪੇਸ ਦੀ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਮੱਦਦ ਕਰਨ ਲਈ ਸਹਾਇਕ "
-"ਹੈ\n"
-"    ਅਤੇ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਪਿਛਲੇ ਵਰਕਸਪੇਸ ਵਿੱਚ ਵਰਤੀ ਆਖਰੀ ਐਪਲੀਕੇਸ਼ਨ ਵਰਤਣ ਦੀ ਚੋਣ ਵੀ\n"
-"   ਵਾਧੂ ਰੂਪ ਵਿੱਚ ਦਿੰਦਾ ਹੈ। ਇਹ ਲਿਸਟ ਵਿੱਚ ਆਖਰੀ ਨਿਸ਼ਾਨ ਹੁੰਦਾ ਹੈ ਅਤੇ ਇਸ ਨੂੰ ਵੱਖ "
-"ਕਰਨ ਲਈ\n"
-"    ਖਿੜਵੀ/ਲੇਟਵੀ ਲਾਈਨ ਨਾਲ ਵੱਖ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਜੇ ਉਪਲੱਬਧ ਹੋਵੇ।\n"
-"    ਹਰੇਕ ਵਿੰਡੋ ਨੂੰ ਇਸ ਦੇ ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਨਾਲ ਦਰਸਾਇਆ ਜਾਂਦਾ ਹੈ।\n"
-"\n"
-"ਨੇਟਿਵ:\n"
-"    ਇਹ ਮੋਡ ਨੇਟਿਵ ਗਨੋਮ 3 ਰਵੱਈਆ ਹੈ ਜਾਂ ਇੰਝ ਕਹਿ ਲਵੋ: ਨੇਟਿਵ ਸਵਿੱਚਾਂ ਨੂੰ ਨਾਲ\n"
-"    Alternative Tab ਇਕਸਟੈਨਸ਼ਨ ਬੰਦ ਕਰਦਾ ਹੈ।\n"
-
-#: ../extensions/alternate-tab/extension.js:269
-msgid "Alt Tab Behaviour"
-msgstr "Alt Tab ਰਵੱਈਆ"
-
-#: ../extensions/alternate-tab/extension.js:285
-msgid "All & Thumbnails"
-msgstr "ਸਭ ਅਤੇ ਥੰਮਨੇਲ"
-
-#: ../extensions/alternate-tab/extension.js:292
-msgid "Workspace & Icons"
-msgstr "ਵਰਕਸਪੇਸ ਅਤੇ ਆਈਕਾਨ"
-
-#: ../extensions/alternate-tab/extension.js:299
-msgid "Native"
-msgstr "ਨੇਟਿਵ"
-
-#: ../extensions/alternate-tab/extension.js:306
-msgid "Cancel"
-msgstr "ਰੱਦ ਕਰੋ"
-
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "Ask the user for a default behaviour if true."
-msgstr "ਜੇ ਸਹੀ ਹੋਵੇ ਤਾਂ ਡਿਫਾਲਟ ਰਵੱਈਏ ਲਈ ਯੂਜ਼ਰ ਨੂੰ ਪੁੱਛੋ।"
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Indicates if Alternate Tab is newly installed"
-msgstr "ਦਰਸਾਉਂਦਾ ਹੈ ਜੇ ਬਦਲਵੀਂ ਟੈਬ ਨਵੀਂ ਇੰਸਟਾਲ ਹੈ"
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
-"workspace_icons."
-msgstr ""
-"Alt-Tab ਰਵੱਈਆ ਸੈੱਟ ਕਰੋ। ਸੰਭਵ ਮੁੱਲ ਹਨ: native, all_thumbnails ਅਤੇ "
-"workspace_icons।"
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
 msgid "The alt tab behaviour."
 msgstr "alt tab ਰਵੱਈਆ ਹੈ।"
 
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+#| msgid ""
+#| "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails "
+#| "and workspace_icons."
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+"workspace_icons. See the configuration dialogs for details."
+msgstr ""
+"Alt-Tab ਰਵੱਈਆ ਸੈੱਟ ਕਰੋ। ਸੰਭਵ ਮੁੱਲ ਹਨ:  all_thumbnails ਅਤੇ workspace_icons। "
+"ਵੇਰਵੇ ਲਈ ਸੰਰਚਨਾ ਡਾਈਲਾਗ ਵੇਖੋ।"
+
+#: ../extensions/alternate-tab/prefs.js:27
+msgid "All & Thumbnails"
+msgstr "ਸਭ ਅਤੇ ਥੰਮਨੇਲ"
+
+#: ../extensions/alternate-tab/prefs.js:28
+msgid ""
+"This mode presents all applications from all workspaces in one selection "
+"list. Instead of using the application icon of every window, it uses small "
+"thumbnails resembling the window itself."
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:34
+msgid "Workspace & Icons"
+msgstr "ਵਰਕਸਪੇਸ ਅਤੇ ਆਈਕਾਨ"
+
+#: ../extensions/alternate-tab/prefs.js:35
+msgid ""
+"This mode let's you switch between the applications of your current "
+"workspace and gives you additionally the option to switch to the last used "
+"application of your previous workspace. This is always the last symbol in "
+"the list and is segregated by a separator/vertical line if available. \n"
+"Every window is represented by its application icon."
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:41
+msgid "Move current selection to front before closing the popup"
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:58
+msgid ""
+"The Alternate Tab can be used in different modes, that affect the way "
+"windows are chosen and presented."
+msgstr ""
+
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:64
+msgid "Suspend"
+msgstr "ਸਸਪੈਂਡ"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "Hibernate"
+msgstr "ਹਾਈਬਰਨੇਟ"
+
+#: ../extensions/alternative-status-menu/extension.js:74
+msgid "Power Off..."
+msgstr "...ਬੰਦ ਕਰੋ"
+
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਅਤੇ ਵਰਕਸਪੇਸ ਲਿਸਟ"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -154,152 +94,298 @@ msgstr ""
 "ਵਰਕਸਪੇਸ ਨੰਬਰ "
 "ਰੱਖਦਾ ਹੈ"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "Application and workspace list"
-msgstr "ਐਪਲੀਕੇਸ਼ਨ ਅਤੇ ਵਰਕਸਪੇਸ ਲਿਸਟ"
+#: ../extensions/auto-move-windows/prefs.js:55
+#| msgid "Quit Application"
+msgid "Application"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ"
 
-#: ../extensions/dock/extension.js:437
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+#| msgid "Workspace & Icons"
+msgid "Workspace"
+msgstr "ਵਰਕਸਪੇਸ"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "ਨਿਯਮ ਜੋੜੋ"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "ਨਵਾਂ ਮਿਲਾਉਣ ਨਿਯਮ ਬਣਾਉ"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "ਸ਼ਾਮਲ"
+
+#: ../extensions/dock/extension.js:489
 msgid "Drag here to add favorites"
 msgstr "ਪਸੰਦ ਵਿੱਚ ਜੋੜਨ ਲਈ ਇੱਥੇ ਸੁੱਟੋ"
 
-#: ../extensions/dock/extension.js:771
+#: ../extensions/dock/extension.js:815
 msgid "New Window"
 msgstr "ਨਵੀਂ ਵਿੰਡੋ"
 
-#: ../extensions/dock/extension.js:773
+#: ../extensions/dock/extension.js:817
 msgid "Quit Application"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਬੰਦ ਕਰੋ"
 
-#: ../extensions/dock/extension.js:778
+#: ../extensions/dock/extension.js:822
 msgid "Remove from Favorites"
 msgstr "ਪਸੰਦ ਵਿੱਚੋਂ ਹਟਾਓ"
 
-#: ../extensions/dock/extension.js:779
+#: ../extensions/dock/extension.js:823
 msgid "Add to Favorites"
 msgstr "ਪਸੰਦ 'ਚ ਸ਼ਾਮਲ ਕਰੋ"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Autohide duration"
-msgstr "ਆਪੇ ਓਹਲੇ ਹੋਣ ਅੰਤਰਾਲ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Autohide effect"
-msgstr "ਆਪੇ-ਓਹਲੇ ਹੋਣ ਪ੍ਰਭਾਵ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Enable/disable autohide"
-msgstr "ਆਪੇ-ਓਹਲੇ ਕਰਨਾ ਚਾਲੂ/ਬੰਦ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Icon size"
-msgstr "ਆਈਕਾਨ ਆਕਾਰ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
 msgstr "ਡੌਕ ਦੀ ਸਥਿਤੀ"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Sets icon size of the dock."
-msgstr "ਡੌਕ ਦਾ ਆਈਕਾਨ ਆਕਾਰ ਸੈੱਟ ਕਰੋ।"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgstr ""
-"ਡੌਕ ਓਹਲੇ ਕਰਨ ਦਾ ਪ੍ਰਭਾਵ ਸੈੱਟ ਕਰਦਾ ਹੈ। ਸੰਭਵ ਮੁੱਲ ਹਨ 'resize' ਅਤੇ 'rescale'"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
 msgid ""
 "Sets the position of the dock in the screen. Allowed values are 'right' or "
 "'left'"
 msgstr "ਸਕਰੀਨ ਵਿੱਚ ਡੌਕ ਦੀ ਸਥਿਤੀ ਸੈੱਟ ਕਰਦਾ ਹੈ। ਸੰਭਵ ਮੁੱਲ ਹਨ 'right' ਜਾਂ 'left'"
 
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Icon size"
+msgstr "ਆਈਕਾਨ ਆਕਾਰ"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Sets icon size of the dock."
+msgstr "ਡੌਕ ਦਾ ਆਈਕਾਨ ਆਕਾਰ ਸੈੱਟ ਕਰੋ।"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Enable/disable autohide"
+msgstr "ਆਪੇ-ਓਹਲੇ ਕਰਨਾ ਚਾਲੂ/ਬੰਦ"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Autohide effect"
+msgstr "ਆਪੇ-ਓਹਲੇ ਹੋਣ ਪ੍ਰਭਾਵ"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+#| msgid ""
+#| "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr ""
+"ਡੌਕ ਓਹਲੇ ਕਰਨ ਦਾ ਪ੍ਰਭਾਵ ਸੈੱਟ ਕਰਦਾ ਹੈ। ਸੰਭਵ ਮੁੱਲ ਹਨ 'resize', 'rescale' ਅਤੇ "
+"'move'"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid "Autohide duration"
+msgstr "ਆਪੇ ਓਹਲੇ ਹੋਣ ਅੰਤਰਾਲ"
+
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "ਆਪੇ-ਓਹਲੇ ਕਰਨ ਦੇ ਪ੍ਰਭਾਵ ਦੀ ਸਮੇਂ ਦਾ ਅੰਤਰਾਲ ਸੈੱਟ ਕਰੋ।"
 
-#: ../extensions/example/extension.js:11
+#: ../extensions/drive-menu/extension.js:66
+msgid "Open file manager"
+msgstr "ਫਾਇਲ ਮੈਨੇਜਰ ਖੋਲ੍ਹੋ"
+
+#: ../extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "ਹੈਲੋ, ਵਰਲਡ!"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "ਬਦਲਵਾਂ ਸਵਾਗਤੀ ਟੈਕਸਟ ਹੈ।"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"ਜੇ ਖਾਲੀ ਨਹੀਂ ਤਾਂ ਇਹ ਟੈਕਸਟ ਰੱਖਦਾ ਹੈ, ਜੋ ਕਿ ਪੈਨਲ ਨੂੰ ਕਲਿੱਕ ਕਰਨ ਨਾਲ ਵੇਖਾਇਆ "
+"ਜਾਵੇਗਾ।"
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "ਸੁਨੇਹਾ:"
+
+#: ../extensions/gajim/extension.js:227
 #, c-format
 msgid "%s is away."
 msgstr "%s ਦੂਰ ਹੈ।"
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:230
 #, c-format
 msgid "%s is offline."
 msgstr "%s ਆਫਲਾਈਨ ਹੈ।"
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:233
 #, c-format
 msgid "%s is online."
 msgstr "%s ਆਨਲਾਈਨ ਹੈ।"
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:236
 #, c-format
 msgid "%s is busy."
 msgstr "%s ਰੁੱਝਿਆ/ਰੁੱਝੀ ਹੈ।"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
-msgstr ""
+msgid "Use more screen for windows"
+msgstr "ਵਿੰਡੋਜ਼ ਲਈ ਹੋਰ ਸਕਰੀਨ ਵਰਤੋਂ"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Place window captions on top"
-msgstr "ਥਾਂ ਵਿੰਡੋ ਸੁਰਖੀ ਸਭ ਤੋਂ ਉੱਤੇ"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
-msgid ""
-"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
-"default grid based algorithm, 'natural' to use another one that reflects "
-"more the position and size of the actual window"
-msgstr ""
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
-msgid "Use more screen for windows"
-msgstr "ਵਿੰਡੋਜ਼ ਲਈ ਹੋਰ ਸਕਰੀਨ ਵਰਤੋਂ"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "ਥਾਂ ਵਿੰਡੋ ਸੁਰਖੀ ਸਭ ਤੋਂ ਉੱਤੇ"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
-msgstr "ਵਿੰਡੋ ਸਥਿਤੀ ਤਰਕੀਬ"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+
+#: ../extensions/places-menu/extension.js:37
+msgid "Removable Devices"
+msgstr "ਹਟਾਉਣਯੋਗ ਜੰਤਰ"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "ਥੀਮ ਦਾ ਨਾਂ, ਜੋ ~/.themes/name/gnome-shell ਤੋਂ ਲੋਡ ਕੀਤਾ ਜਾਵੇਗਾ"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
 msgstr "ਥੀਮ ਨਾਂ"
 
-#: ../extensions/xrandr-indicator/extension.js:26
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "ਥੀਮ ਦਾ ਨਾਂ, ਜੋ ~/.themes/name/gnome-shell ਤੋਂ ਲੋਡ ਕੀਤਾ ਜਾਵੇਗਾ"
+
+#: ../extensions/workspace-indicator/extension.js:30
+#| msgid "Workspace & Icons"
+msgid "Workspace Indicator"
+msgstr "ਵਰਕਸਪੇਸ ਇੰਡੀਕੇਟਰ"
+
+#: ../extensions/workspace-indicator/prefs.js:151
+#| msgid "Workspace & Icons"
+msgid "Workspace names:"
+msgstr "ਵਰਕਸਪੇਸ ਨਾਂ:"
+
+#: ../extensions/workspace-indicator/prefs.js:162
+#| msgid "Native"
+msgid "Name"
+msgstr "ਨਾਂ"
+
+#: ../extensions/workspace-indicator/prefs.js:196
+#, c-format
+#| msgid "Workspace & Icons"
+msgid "Workspace %d"
+msgstr "ਵਰਕਸਪੇਸ %d"
+
+#: ../extensions/xrandr-indicator/extension.js:30
 msgid "Normal"
 msgstr "ਸਧਾਰਨ"
 
-#: ../extensions/xrandr-indicator/extension.js:27
+#: ../extensions/xrandr-indicator/extension.js:31
 msgid "Left"
 msgstr "ਖੱਬੇ"
 
-#: ../extensions/xrandr-indicator/extension.js:28
+#: ../extensions/xrandr-indicator/extension.js:32
 msgid "Right"
 msgstr "ਸੱਜੇ"
 
-#: ../extensions/xrandr-indicator/extension.js:29
+#: ../extensions/xrandr-indicator/extension.js:33
 msgid "Upside-down"
 msgstr "ਉਤਲਾ ਹੇਠ"
 
-#: ../extensions/xrandr-indicator/extension.js:78
+#: ../extensions/xrandr-indicator/extension.js:82
 msgid "Configure display settings..."
 msgstr "ਡਿਸਪਲੇਅ ਸੈਟਿੰਗ ਸੰਰਚਨਾ..."
 
+#~ msgid "Available"
+#~ msgstr "ਉਪਲੱਬਧ"
+
+#~ msgid "Busy"
+#~ msgstr "ਰੁਝਿਆ"
+
+#~ msgid "My Account"
+#~ msgstr "ਮੇਰਾ ਅਕਾਊਂਟ"
+
+#~ msgid "System Settings"
+#~ msgstr "ਸਿਸਟਮ ਸੈਟਿੰਗ"
+
+#~ msgid "Lock Screen"
+#~ msgstr "ਸਕਰੀਨ ਲਾਕ ਕਰੋ"
+
+#~ msgid "Switch User"
+#~ msgstr "ਯੂਜ਼ਰ ਬਦਲੋ"
+
+#~ msgid "Log Out..."
+#~ msgstr "ਲਾਗਆਉਟ..."
+
+#~ msgid ""
+#~ "This is the first time you use the Alternate Tab extension. \n"
+#~ "Please choose your preferred behaviour:\n"
+#~ "\n"
+#~ "All & Thumbnails:\n"
+#~ "    This mode presents all applications from all workspaces in one "
+#~ "selection \n"
+#~ "    list. Instead of using the application icon of every window, it uses "
+#~ "small \n"
+#~ "    thumbnails resembling the window itself. \n"
+#~ "\n"
+#~ "Workspace & Icons:\n"
+#~ "    This mode let's you switch between the applications of your current \n"
+#~ "    workspace and gives you additionally the option to switch to the last "
+#~ "used \n"
+#~ "    application of your previous workspace. This is always the last "
+#~ "symbol in \n"
+#~ "    the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "    Every window is represented by its application icon.  \n"
+#~ "\n"
+#~ "Native:\n"
+#~ "    This mode is the native GNOME 3 behaviour or in other words: "
+#~ "Clicking \n"
+#~ "    native switches the Alternate Tab extension off. \n"
+#~ msgstr ""
+#~ "ਇਹ ਪਹਿਲੀ ਵਾਰ ਹੈ, ਜਦੋਂ ਤੁਸੀਂ Alt(ernate) Tab ਇਕਸਟੈਨਸ਼ਨ ਵਰਤ ਰਹੇ ਹੋ।\n"
+#~ "ਆਪਣੀ ਪਸੰਦ ਮੁਤਾਬਕ ਰਵੱਈਏ ਦੀ ਚੋਣ ਕਰੋ ਜੀ:\n"
+#~ "\n"
+#~ "ਸਭ ਅਤੇ ਥੰਮਨੇਲ:\n"
+#~ "   ਇਹ ਮੋਡ ਸਭ ਵਰਕਸਪੇਸ ਤੋਂ ਸਭ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਇੱਕ ਚੋਣ ਲਿਸਟ ਵਿੱਚ ਵੇਖਾਉਂਦੀ ਹੈ।\n"
+#~ "   ਹਰੇਕ ਵਿੰਡੋ ਲਈ ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਵਰਤਣ ਦੀ ਬਜਾਏ, ਇਹ ਹਰ ਵਿੰਡੋ ਨਾਲ ਰਲਦੇ\n"
+#~ "    ਛੋਟੇ ਛੋਟੇ ਥੰਮਨੇਲ ਵਰਤਦੀ ਹੈ।\n"
+#~ "\n"
+#~ "ਵਰਕਸਪੇਸ ਅਤੇ ਆਈਕਾਨ:\n"
+#~ "    ਇਹ ਮੋਡ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਮੌਜੂਦਾ ਵਰਕਸਪੇਸ ਦੀ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਮੱਦਦ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ\n"
+#~ "    ਅਤੇ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਪਿਛਲੇ ਵਰਕਸਪੇਸ ਵਿੱਚ ਵਰਤੀ ਆਖਰੀ ਐਪਲੀਕੇਸ਼ਨ ਵਰਤਣ ਦੀ ਚੋਣ ਵੀ\n"
+#~ "   ਵਾਧੂ ਰੂਪ ਵਿੱਚ ਦਿੰਦਾ ਹੈ। ਇਹ ਲਿਸਟ ਵਿੱਚ ਆਖਰੀ ਨਿਸ਼ਾਨ ਹੁੰਦਾ ਹੈ ਅਤੇ ਇਸ ਨੂੰ ਵੱਖ ਕਰਨ ਲਈ\n"
+#~ "    ਖਿੜਵੀ/ਲੇਟਵੀ ਲਾਈਨ ਨਾਲ ਵੱਖ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਜੇ ਉਪਲੱਬਧ ਹੋਵੇ।\n"
+#~ "    ਹਰੇਕ ਵਿੰਡੋ ਨੂੰ ਇਸ ਦੇ ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਨਾਲ ਦਰਸਾਇਆ ਜਾਂਦਾ ਹੈ।\n"
+#~ "\n"
+#~ "ਨੇਟਿਵ:\n"
+#~ "    ਇਹ ਮੋਡ ਨੇਟਿਵ ਗਨੋਮ 3 ਰਵੱਈਆ ਹੈ ਜਾਂ ਇੰਝ ਕਹਿ ਲਵੋ: ਨੇਟਿਵ ਸਵਿੱਚਾਂ ਨੂੰ ਨਾਲ\n"
+#~ "    Alternative Tab ਇਕਸਟੈਨਸ਼ਨ ਬੰਦ ਕਰਦਾ ਹੈ।\n"
+
+#~ msgid "Alt Tab Behaviour"
+#~ msgstr "Alt Tab ਰਵੱਈਆ"
+
+#~ msgid "Cancel"
+#~ msgstr "ਰੱਦ ਕਰੋ"
+
+#~ msgid "Ask the user for a default behaviour if true."
+#~ msgstr "ਜੇ ਸਹੀ ਹੋਵੇ ਤਾਂ ਡਿਫਾਲਟ ਰਵੱਈਏ ਲਈ ਯੂਜ਼ਰ ਨੂੰ ਪੁੱਛੋ।"
+
+#~ msgid "Indicates if Alternate Tab is newly installed"
+#~ msgstr "ਦਰਸਾਉਂਦਾ ਹੈ ਜੇ ਬਦਲਵੀਂ ਟੈਬ ਨਵੀਂ ਇੰਸਟਾਲ ਹੈ"
+
+#~ msgid "Window placement strategy"
+#~ msgstr "ਵਿੰਡੋ ਸਥਿਤੀ ਤਰਕੀਬ"
