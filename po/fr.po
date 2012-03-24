@@ -8,222 +8,119 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-03-24 01:12+0000\n"
-"PO-Revision-Date: 2012-03-24 17:30+0100\n"
-"Last-Translator: Alain Lojewski <allomervan@gmail.com>\n"
+"POT-Creation-Date: 2012-03-19 09:27+0000\n"
+"PO-Revision-Date: 2012-03-16 13:32+0100\n"
+"Last-Translator: Pierre Henry <pierrehenry73@yahoo.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Le comportement d'alt+tab."
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
-msgstr ""
-"Définit le comportement d'alt+tab. Les valeurs possibles sont : "
-"« all_thumbnails » et « workspace_icons ». Consultez les messages de "
-"configuration pour plus de détails."
-
-#: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Tous et vignettes"
-
-#: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"Ce mode présente toutes les applications de tous les espaces de travail dans "
-"une liste à sélection unique. À la place de l'icône de l'application de "
-"chaque fenêtre, il utilise de petites vignettes ressemblant à la fenêtre "
-"elle-même."
-
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Espace de travail et icônes"
-
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Ce mode vous permet de permuter entre les applications de votre espace de "
-"travail actuel et vous donne en plus la possibilité de revenir à la dernière "
-"application utilisée dans l'espace de travail précédent. C'est toujours le "
-"dernier symbole dans la liste, et si disponible, il est isolé par une ligne "
-"verticale ou un séparateur. \n"
-"Chaque fenêtre est représentée par l'icône de son application."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr ""
-"Déplacer la sélection actuelle à l'avant avant de fermer la fenêtre "
-"surgissante"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"La combinaison alt+tab peut être utilisée dans différents modes, qui "
-"influent sur la façon dont les fenêtres sont sélectionnées et présentées."
-
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:61
 msgid "Suspend"
 msgstr "Mettre en veille"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:66
 msgid "Hibernate"
 msgstr "Hiberner"
 
-#: ../extensions/alternative-status-menu/extension.js:74
+#: ../extensions/alternative-status-menu/extension.js:71
 msgid "Power Off..."
 msgstr "Éteindre..."
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
-msgid "Application and workspace list"
-msgstr "Liste d'applications et d'espaces de travail"
-
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: ../extensions/alternate-tab/extension.js:51
 msgid ""
-"A list of strings, each containing an application id (desktop file name), "
-"followed by a colon and the workspace number"
+"This is the first time you use the Alternate Tab extension. \n"
+"Please choose your preferred behaviour:\n"
+"\n"
+"All & Thumbnails:\n"
+"    This mode presents all applications from all workspaces in one "
+"selection \n"
+"    list. Instead of using the application icon of every window, it uses "
+"small \n"
+"    thumbnails resembling the window itself. \n"
+"\n"
+"Workspace & Icons:\n"
+"    This mode let's you switch between the applications of your current \n"
+"    workspace and gives you additionally the option to switch to the last "
+"used \n"
+"    application of your previous workspace. This is always the last symbol "
+"in \n"
+"    the list and is segregated by a separator/vertical line if available. \n"
+"    Every window is represented by its application icon.  \n"
+"\n"
+"If you whish to revert to the default behavior for the Alt-Tab switcher, "
+"just\n"
+"disable the extension from extensions.gnome.org or the Advanced Settings "
+"application."
 msgstr ""
-"Une liste de chaînes de caratères, contenant chacune un identifiant "
-"d'application (nom de fichier desktop), suivi par un deux-points et le "
-"numéro de l'espace de travail"
+"C'est la première fois que vous utilisez l'extension Alt+Tab. \n"
+"Choisissez votre mode préféré :\n"
+"\n"
+"Tous et vignettes :\n"
+"    Ce mode présente toutes les applications de tous les espaces de travail "
+"dans une \n"
+"    seule liste à choix. Au lieu d'utiliser l'icône de l'application de "
+"chaque fenêtre, \n"
+"    il montre de petites vignettes ressemblant à la fenêtre.\n"
+"\n"
+"Espace de travail et icônes :\n"
+"    Ce mode vous permet de permuter entre les applications de l'espace de "
+"travail \n"
+"    actuel et donne en plus la possibilité de revenir à la dernière "
+"application \n"
+"    utilisée dans l'espace de travail précédent. C'est toujours le dernier "
+"symbole dans \n"
+"    la liste, et il se distingue par une ligne de séparation/verticale, le "
+"cas échéant. \n"
+"    Chaque fenêtre est identifiée par l'icône de son application. \n"
+"\n"
+"Si vous désirez revenir au comportement par défaut pour le commutateur Alt"
+"+Tab, \n"
+"désactivez uniquement l'extension à partir de extensions.gnome.org ou de "
+"l'application Paramètres Avancés."
 
-#: ../extensions/auto-move-windows/prefs.js:55
-msgid "Application"
-msgstr "Application"
+#: ../extensions/alternate-tab/extension.js:294
+msgid "Alt Tab Behaviour"
+msgstr "Comportement d'alt+tab"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
-msgid "Workspace"
-msgstr "Espace de travail"
+#: ../extensions/alternate-tab/extension.js:310
+msgid "All & Thumbnails"
+msgstr "Tous et vignettes"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
-msgstr "Ajouter une règle"
+#: ../extensions/alternate-tab/extension.js:317
+msgid "Workspace & Icons"
+msgstr "Espace de travail et icônes"
 
-#: ../extensions/auto-move-windows/prefs.js:94
-msgid "Create new matching rule"
-msgstr "Créer une nouvelle règle de concordance"
+#: ../extensions/alternate-tab/extension.js:324
+msgid "Cancel"
+msgstr "Annuler"
 
-#: ../extensions/auto-move-windows/prefs.js:98
-msgid "Add"
-msgstr "Ajouter"
-
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:498
 msgid "Drag here to add favorites"
-msgstr "Glissez ici pour ajouter des favoris"
+msgstr "Déposez ici pour ajouter aux favoris"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:831
 msgid "New Window"
 msgstr "Nouvelle fenêtre"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:833
 msgid "Quit Application"
 msgstr "Quitter l'application"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:838
 msgid "Remove from Favorites"
 msgstr "Enlever des favoris"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:839
 msgid "Add to Favorites"
 msgstr "Ajouter aux favoris"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Position du bandeau"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Définit la position du bandeau sur l'écran. Les valeurs possibles sont : "
-"right et left."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Taille d'icône"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Définit la taille des icônes du bandeau."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Activer/désactiver le masquage automatique"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Effet de masquage automatique"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Définit l'effet de masquage du bandeau. Les valeurs possibles sont : resize, "
-"rescale et move."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Durée du masquage automatique"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Définit la durée de l'effet de masquage automatique."
-
-#: ../extensions/drive-menu/extension.js:66
-msgid "Open file manager"
-msgstr "Ouvrir le gestionnaire de fichiers"
-
-#: ../extensions/example/extension.js:17
+#: ../extensions/example/extension.js:12
 msgid "Hello, world!"
 msgstr "Bonjour le monde !"
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
-msgid "Alternative greeting text."
-msgstr "Autre texte d'accueil."
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"S'il n'est pas vide, il contient le texte qui est affiché lorsque vous "
-"cliquez sur le panneau."
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: ../extensions/example/prefs.js:30
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
-msgstr ""
-"Example a pour but de montrer comment construire de bonnes extensions pour "
-"le Shell et en tant que tel, il n'a que peu de fonctionnalités en lui-même.\n"
-"Il est néanmoins possible de personnaliser le message d'accueil."
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "Message :"
 
 #: ../extensions/gajim/extension.js:227
 #, c-format
@@ -245,40 +142,6 @@ msgstr "%s est en ligne."
 msgid "%s is busy."
 msgstr "%s est occupé(e)."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-msgid "Use more screen for windows"
-msgstr "Utiliser plus d'écran pour les fenêtres"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. "
-"This setting applies only with the natural placement strategy."
-msgstr ""
-"Essaye d'utiliser plus d'espace écran pour placer les vignettes des fenêtres "
-"en s'adaptant aux proportions de l'écran et en les consolidant davantage "
-"pour réduire la zone englobante. Ce paramètre ne s'applique qu'en utilisant "
-"la stratégie de placement « natural »."
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
-msgid "Place window captions on top"
-msgstr "Placer les titres des fenêtres au-dessus"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
-msgstr ""
-"Si vrai, place les titres des fenêtres au-dessus de la vignette "
-"correspondante, ce qui remplace le comportement par défaut qui les place au-"
-"dessous. Pour que ce paramètre soit pris en compte, il faut redémarrer le "
-"shell."
-
-#: ../extensions/places-menu/extension.js:37
-msgid "Removable Devices"
-msgstr "Périphériques amovibles"
-
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
 msgstr "Nom du thème"
@@ -287,39 +150,23 @@ msgstr "Nom du thème"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Le nom du thème, à charger à partir de ~/.themes/name/gnome-shell"
 
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Indicateur d'espace de travail"
-
-#: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "Noms des espaces de travail :"
-
-#: ../extensions/workspace-indicator/prefs.js:152
-msgid "Name"
-msgstr "Nom"
-
-#: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
-msgid "Workspace %d"
-msgstr "Espace de travail %d"
-
-#: ../extensions/xrandr-indicator/extension.js:30
+#: ../extensions/xrandr-indicator/extension.js:26
 msgid "Normal"
 msgstr "Normal"
 
-#: ../extensions/xrandr-indicator/extension.js:31
+#: ../extensions/xrandr-indicator/extension.js:27
 msgid "Left"
 msgstr "Gauche"
 
-#: ../extensions/xrandr-indicator/extension.js:32
+#: ../extensions/xrandr-indicator/extension.js:28
 msgid "Right"
 msgstr "Droite"
 
-#: ../extensions/xrandr-indicator/extension.js:33
+#: ../extensions/xrandr-indicator/extension.js:29
 msgid "Upside-down"
 msgstr "Renversé"
 
-#: ../extensions/xrandr-indicator/extension.js:82
+#: ../extensions/xrandr-indicator/extension.js:78
 msgid "Configure display settings..."
 msgstr "Configurer les paramètres d'affichage..."
+
