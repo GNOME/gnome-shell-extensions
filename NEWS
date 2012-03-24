@@ -1,3 +1,11 @@
+3.3.92
+======
+* various updates for gnome-shell API changes (dock,
+  native-window-placement)
+* local-install is now a make rule, not a shell script
+* updated translations (zh, es, sw, ga, hu, it, no, pt_BR, de, sl,
+  pl, la, fi, sr)
+
 3.3.90
 ======
 * system wide installation via "make install" is possible
