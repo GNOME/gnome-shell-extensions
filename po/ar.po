@@ -1,0 +1,296 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Khaled Hosny <khaledhosny@eglug.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-28 18:52+0200\n"
+"PO-Revision-Date: 2012-03-28 18:52+0200\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.7.0\n"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "The alt tab behaviour."
+msgstr ""
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+"workspace_icons. See the configuration dialogs for details."
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:27
+msgid "All & Thumbnails"
+msgstr "الكل مع مصغّرات"
+
+#: ../extensions/alternate-tab/prefs.js:28
+msgid ""
+"This mode presents all applications from all workspaces in one selection "
+"list. Instead of using the application icon of every window, it uses small "
+"thumbnails resembling the window itself."
+msgstr ""
+"يعرض هذا النمط كل التطبيقات من كل مساحات العمل في قائمة واحدة، وبدلا من "
+"استخدام أيقونة التطبيق لكل النوافذ يستخدم صورة مصغّرة للنافذة نفسها."
+
+#: ../extensions/alternate-tab/prefs.js:34
+msgid "Workspace & Icons"
+msgstr "مساحة العمل مع أيقونات"
+
+#: ../extensions/alternate-tab/prefs.js:35
+msgid ""
+"This mode let's you switch between the applications of your current "
+"workspace and gives you additionally the option to switch to the last used "
+"application of your previous workspace. This is always the last symbol in "
+"the list and is segregated by a separator/vertical line if available. \n"
+"Every window is represented by its application icon."
+msgstr ""
+"يتيح هذا النمط التنقل بين التطبيقات في مساحة العمل الحالية بالإضافة إلى "
+"إمكانية الانتقال إلى آخر تطبيق استُخدم في مساحة العمل السابقة، والذي سيكون "
+"دائما آخر عنصر في القائمة مفصولا بخط رأسي.\n"
+"تُمثل كل نافذة بأيقونة التطبيق الذي تنتمي إليه."
+
+#: ../extensions/alternate-tab/prefs.js:41
+msgid "Move current selection to front before closing the popup"
+msgstr "انقل الاختيار الحالي إلى المقدمة قبل غلق النافذة المنبثقة."
+
+#: ../extensions/alternate-tab/prefs.js:58
+msgid ""
+"The Alternate Tab can be used in different modes, that affect the way "
+"windows are chosen and presented."
+msgstr ""
+"يمكن استخدام هذا الامتداد في أنماط مختلفة تؤثر على كيفية اختيار وعرض النوافذ."
+
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:64
+msgid "Suspend"
+msgstr "علّق"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "Hibernate"
+msgstr "أسبِت"
+
+#: ../extensions/alternative-status-menu/extension.js:74
+msgid "Power Off..."
+msgstr "أطفئ..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr ""
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "التطبيق"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "مساحة العمل"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "أضِف قاعدة"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "أنشئ قاعدة تطابق"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "أضِف"
+
+#: ../extensions/dock/extension.js:489
+msgid "Drag here to add favorites"
+msgstr "اسحب إلى هنا ليضاف إلى المفضّلة"
+
+#: ../extensions/dock/extension.js:815
+msgid "New Window"
+msgstr "نافذة جديدة"
+
+#: ../extensions/dock/extension.js:817
+msgid "Quit Application"
+msgstr "أغلق التطبيق"
+
+#: ../extensions/dock/extension.js:822
+msgid "Remove from Favorites"
+msgstr "أزِل من المفضّلة"
+
+#: ../extensions/dock/extension.js:823
+msgid "Add to Favorites"
+msgstr "أضِف إلى المفضّلة"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Position of the dock"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Icon size"
+msgstr "حجم الأيقونة"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Sets icon size of the dock."
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Enable/disable autohide"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Autohide effect"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid "Autohide duration"
+msgstr ""
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr ""
+
+#: ../extensions/drive-menu/extension.js:66
+msgid "Open file manager"
+msgstr "افتح مدير الملفّات"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "أهلا، يا عالم!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr ""
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "الرسالة:"
+
+#: ../extensions/gajim/extension.js:227
+#, c-format
+msgid "%s is away."
+msgstr "‏%s غائب."
+
+#: ../extensions/gajim/extension.js:230
+#, c-format
+msgid "%s is offline."
+msgstr "‏%s غير متّصل."
+
+#: ../extensions/gajim/extension.js:233
+#, c-format
+msgid "%s is online."
+msgstr "‏%s متّصل."
+
+#: ../extensions/gajim/extension.js:236
+#, c-format
+msgid "%s is busy."
+msgstr "‏%s مشغول."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+
+#: ../extensions/places-menu/extension.js:37
+msgid "Removable Devices"
+msgstr "الأجهزة المنفصلة"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "اسم السمة"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr ""
+
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "مؤشر مساحات العمل"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "أسماء مساحات العمل"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "الاسم"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "مساحة العمل %Id"
+
+#: ../extensions/xrandr-indicator/extension.js:30
+msgid "Normal"
+msgstr "عادي"
+
+#: ../extensions/xrandr-indicator/extension.js:31
+msgid "Left"
+msgstr "يسار"
+
+#: ../extensions/xrandr-indicator/extension.js:32
+msgid "Right"
+msgstr "يمين"
+
+#: ../extensions/xrandr-indicator/extension.js:33
+msgid "Upside-down"
+msgstr "رأسا على عقب"
+
+#: ../extensions/xrandr-indicator/extension.js:82
+msgid "Configure display settings..."
+msgstr "اضبط إعدادات أجهزة العرض..."
