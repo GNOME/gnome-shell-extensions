@@ -18,6 +18,14 @@ PKG_PROG_PKG_CONFIG([0.22])
 
 GLIB_GSETTINGS
 
+SHELL_VERSION="$PACKAGE_VERSION"
+shell_major=`echo "$PACKAGE_VERSION" | cut -d'.' -f1`
+shell_minor=`echo "$PACKAGE_VERSION" | cut -d'.' -f2`
+if test "$(($shell_minor % 2))" -eq 0; then
+	SHELL_VERSION="$shell_major.$shell_minor"
+fi
+AC_SUBST([SHELL_VERSION])
+
 dnl keep this in alphabetic order
 dnl by default, install only extensions that do not change completely the shell experience,
 dnl that don't require GSettings and that don't require external packages for typelibs

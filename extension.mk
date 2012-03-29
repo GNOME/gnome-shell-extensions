@@ -11,7 +11,7 @@ metadata.json: metadata.json.in $(top_builddir)/config.status
 	    -e "s|[@]uuid@|$(uuid)|" \
 	    -e "s|[@]gschemaname@|$(gschemaname)|" \
 	    -e "s|[@]gettext_domain@|$(GETTEXT_PACKAGE)|" \
-	    -e "s|[@]shell_current@|$(PACKAGE_VERSION)|" \
+	    -e "s|[@]shell_current@|$(SHELL_VERSION)|" \
 	    -e "s|[@]url@|$(extensionurl)|" \
 	    $< > $@
 
