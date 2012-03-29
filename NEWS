@@ -1,3 +1,8 @@
+3.4.0
+=====
+* build system improvements
+* updated translations (ar, cs, fr)
+
 3.3.92
 ======
 * various updates for gnome-shell API changes (dock,
