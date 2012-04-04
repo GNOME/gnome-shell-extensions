@@ -1,0 +1,305 @@
+# Korean translation for gnome-shell-extensions.
+# Copyright (C) 2012 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2012-03-29 18:00+0000\n"
+"PO-Revision-Date: 2012-04-05 02:50+0900\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"Language-Team: Korean <gnome-kr@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "The alt tab behaviour."
+msgstr "Alt-Tab 동작입니다."
+
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+"workspace_icons. See the configuration dialogs for details."
+msgstr "Alt-Tab 동작을 설정합니다. 가능한 값은 all_thumbnails와 workspace_icons 입니다. 자세한 내용은 설정 대화상자를 참고 바랍니다."
+
+#: ../extensions/alternate-tab/prefs.js:27
+msgid "All & Thumbnails"
+msgstr "전부 그리고 섬네일"
+
+#: ../extensions/alternate-tab/prefs.js:28
+msgid ""
+"This mode presents all applications from all workspaces in one selection "
+"list. Instead of using the application icon of every window, it uses small "
+"thumbnails resembling the window itself."
+msgstr "하나의 선택 목록에 모든 작업 공간에 있는 모든 프로그램을 보여주는 모드입니다. 모든 창의 프로그램 아이콘을 사용하는 대신 창 자신과 닮은 작은 섬네일을 사용합니다."
+
+#: ../extensions/alternate-tab/prefs.js:34
+msgid "Workspace & Icons"
+msgstr "작업 공간과 아이콘"
+
+#: ../extensions/alternate-tab/prefs.js:35
+msgid ""
+"This mode let's you switch between the applications of your current "
+"workspace and gives you additionally the option to switch to the last used "
+"application of your previous workspace. This is always the last symbol in "
+"the list and is segregated by a separator/vertical line if available. \n"
+"Every window is represented by its application icon."
+msgstr ""
+"이 모드는 현재 작업 공간의 프로그램 사이를 전환하도록 해주고 이전 작업 공간의 최근 사용한 프로그램으로 전환하는 옵션을 추가로 제공합니다. 항상 목록의 최근 심볼이며, 가능하다면 수직선/분리자로 분리합니다. \n"
+"모든 창은 프로그램 아이콘으로 표현합니다."
+
+#: ../extensions/alternate-tab/prefs.js:41
+msgid "Move current selection to front before closing the popup"
+msgstr "팝업을 닫기 전에 현재 선택을 앞으로 끌어오기"
+
+#: ../extensions/alternate-tab/prefs.js:58
+msgid ""
+"The Alternate Tab can be used in different modes, that affect the way "
+"windows are chosen and presented."
+msgstr ""
+"대체 탭은 창을 선택하고 나타내는 방법에 영향을 주는 다른 모드에 사용할 수 있"
+"습니다."
+
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:64
+msgid "Suspend"
+msgstr "대기"
+
+#: ../extensions/alternative-status-menu/extension.js:69
+msgid "Hibernate"
+msgstr "최대 절전"
+
+#: ../extensions/alternative-status-menu/extension.js:74
+msgid "Power Off..."
+msgstr "전원 끄기..."
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "프로그램 및 작업 공간 목록"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr "프로그램 ID (데스크톱 파일 이름), 콜론, 작업 공간 번호로 구성된 문자열 목록"
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "프로그램"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "작업 공간"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "규칙 추가"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "새 일치 규칙 만들기"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "추가"
+
+#: ../extensions/dock/extension.js:489
+msgid "Drag here to add favorites"
+msgstr "즐겨찾기에 추가하려면 이곳으로 끌으십시오"
+
+#: ../extensions/dock/extension.js:815
+msgid "New Window"
+msgstr "새 창"
+
+#: ../extensions/dock/extension.js:817
+msgid "Quit Application"
+msgstr "프로그램 나가기"
+
+#: ../extensions/dock/extension.js:822
+msgid "Remove from Favorites"
+msgstr "즐겨찾기에서 제거"
+
+#: ../extensions/dock/extension.js:823
+msgid "Add to Favorites"
+msgstr "즐겨찾기에 추가"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
+msgid "Position of the dock"
+msgstr "도크의 위치"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"화면의 도크 위치를 설정합니다. 허용하는 값은 '오른쪽' 또는 '왼쪽'입니다"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Icon size"
+msgstr "아이콘 크기"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Sets icon size of the dock."
+msgstr "도크의 아이콘 크기를 설정합니다."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Enable/disable autohide"
+msgstr "자동 숨김 활성/비활성화"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Autohide effect"
+msgstr "자동 숨김 효과"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr ""
+"도크를 숨기는 효과를 설정합니다. 가능한 값은 'resize', 'rescale' 그리고 "
+"'move'가 있습니다."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid "Autohide duration"
+msgstr "자동 숨김 경과시간"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
+msgid "Sets the time duration of the autohide effect."
+msgstr "자동 숨김 효과의 경과 시간을 설정합니다."
+
+#: ../extensions/drive-menu/extension.js:66
+msgid "Open file manager"
+msgstr "파일 관리자 열기"
+
+# NOTE: 번역하지 마십시오.
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "Hello, world!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "인사말을 대체합니다."
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr "비어있지 않다면, 패널을 눌렀을때 보일 텍스트를 포함합니다."
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"Example은 쉘에 대해 잘 갖춰진 확장을 어떻게 만드는지 보여주기 위한 것이며, 자"
+"체적으로 약간의 기능을 가지고 있습니다. \n"
+"그럼에도 불구하고 인사 메시지를 사용자가 원하는대로 정할 수 있습니다."
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "메시지:"
+
+#: ../extensions/gajim/extension.js:227
+#, c-format
+msgid "%s is away."
+msgstr "%s 자리에 없습니다."
+
+#: ../extensions/gajim/extension.js:230
+#, c-format
+msgid "%s is offline."
+msgstr "%s 오프라인입니다."
+
+#: ../extensions/gajim/extension.js:233
+#, c-format
+msgid "%s is online."
+msgstr "%s 온라인입니다."
+
+#: ../extensions/gajim/extension.js:236
+#, c-format
+msgid "%s is busy."
+msgstr "%s 자리 비움입니다."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "창을 위해 더 많은 화면 사용하기"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"화면 종횡비에 맞춰서 창의 섬네일을 놓기 위해 더 많은 화면을 사용하려 시도하"
+"며 상자로 감싸는 내용을 줄이기 위해 한 데 모입니다. 이 설정은 자연 배치 전략"
+"에만 적용합니다."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "창 캡션을 상단에 위치"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"참이면, 창의 캡션을 제각각의 섬네일의 위에 표시하며, 하단에 창 캡션을 놓는 쉘"
+"의 기본 값을 덮어씁니다. 이 바꾼 설정을 적용하려면 쉘을 다시 시작할 필요가 있"
+"습니다."
+
+#: ../extensions/places-menu/extension.js:37
+msgid "Removable Devices"
+msgstr "이동식 장치"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "테마 이름"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "~/.themes/name/gnome-shell로부터 불러올 테마의 이름입니다"
+
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "작업 공간 표시"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "작업 공간 이름:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "이름"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "작업 공간 %d"
+
+#: ../extensions/xrandr-indicator/extension.js:30
+msgid "Normal"
+msgstr "보통"
+
+#: ../extensions/xrandr-indicator/extension.js:31
+msgid "Left"
+msgstr "왼쪽"
+
+#: ../extensions/xrandr-indicator/extension.js:32
+msgid "Right"
+msgstr "오른쪽"
+
+#: ../extensions/xrandr-indicator/extension.js:33
+msgid "Upside-down"
+msgstr "상단 아래"
+
+#: ../extensions/xrandr-indicator/extension.js:82
+msgid "Configure display settings..."
+msgstr "디스플레이 설정..."
