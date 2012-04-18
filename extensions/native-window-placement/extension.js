@@ -33,6 +33,9 @@ const WINDOW_PLACEMENT_NATURAL_MAX_TRANSLATIONS = 5000;             // safety li
 
 const PLACE_WINDOW_CAPTIONS_ON_TOP = true;                          // place window titles in overview on top of windows with overlap parameter
 
+const WORKSPACE_BORDER_GAP = 10;                                    // minimum gap between the workspace area and the workspace selector
+const WINDOW_AREA_TOP_GAP = 20;                                     // minimum gap between the workspace area and the top border. This keeps window captions and close buttons visible. 13px (26/2) should currently be enough.
+
 const BUTTON_LAYOUT_SCHEMA = 'org.gnome.shell.overrides';
 const BUTTON_LAYOUT_KEY = 'button-layout';
 
@@ -46,7 +49,6 @@ function injectToFunction(parent, name, func) {
         return ret;
     }
 }
-const WORKSPACE_BORDER_GAP = 10;                                    // gap between the workspace area and the workspace selector
 
 const Rect = new Lang.Class({
     Name: 'NativeWindowPlacement.Rect',
@@ -143,9 +145,10 @@ function enable() {
         });
 
         // Put a gap on the right edge of the workspace to separe it from the workspace selector
-        let x_gap = WORKSPACE_BORDER_GAP;
-        let y_gap = WORKSPACE_BORDER_GAP * this._height / this._width
-        let area = new Rect(this._x, this._y, this._width - x_gap, this._height - y_gap);
+	let ratio = this._width / this._height;
+        let x_gap = Math.max(WORKSPACE_BORDER_GAP, WINDOW_AREA_TOP_GAP * ratio);
+        let y_gap = Math.max(WORKSPACE_BORDER_GAP / ratio, WINDOW_AREA_TOP_GAP);
+        let area = new Rect(this._x + x_gap/2, this._y + y_gap, this._width - x_gap, this._height - y_gap);
 
         let bounds = area.copy();
 
@@ -287,8 +290,8 @@ function enable() {
 
         let targets = [];
         for (let i = 0; i < rects.length; i++) {
-            rects[i].x = rects[i].x * scale + this._x;
-            rects[i].y = rects[i].y * scale + this._y;
+            rects[i].x = rects[i].x * scale + area.x;
+            rects[i].y = rects[i].y * scale + area.y;
 
             targets[i] = [rects[i].x, rects[i].y, scale];
         }
