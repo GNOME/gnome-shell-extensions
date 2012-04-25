@@ -34,5 +34,10 @@
       <_summary>Autohide duration</_summary>
       <_description>Sets the time duration of the autohide effect.</_description>
     </key>
+    <key name="monitor" type="i">
+      <default>-1</default>
+      <_summary>Monitor</_summary>
+      <_description>Sets monitor to display dock in. The default value (-1) is the primary monitor.</_description>
+    </key>
   </schema>
 </schemalist>

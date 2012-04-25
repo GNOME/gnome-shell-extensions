@@ -35,6 +35,7 @@ const DOCK_SIZE_KEY = 'size';
 const DOCK_HIDE_KEY = 'autohide';
 const DOCK_EFFECTHIDE_KEY = 'hide-effect';
 const DOCK_AUTOHIDE_ANIMATION_TIME_KEY = 'hide-effect-duration';
+const DOCK_MONITOR_KEY = 'monitor';
 
 // Keep enums in sync with GSettings schemas
 const PositionMode = {
@@ -51,8 +52,13 @@ const AutoHideEffect = {
 const DND_RAISE_APP_TIMEOUT = 500;
 
 // Utility function to make the dock clipped to the primary monitor
-function updateClip(actor) {
-    let monitor = Main.layoutManager.primaryMonitor;
+function updateClip(actor, monitorNumber) {
+    let monitor;
+    if (monitorNumber > -1 && monitorNumber < Main.layoutManager.monitors.length)
+	monitor = Main.layoutManager.monitors[monitorNumber];
+    else
+	monitor = Main.layoutManager.primaryMonitor;
+
     let allocation = actor.allocation;
 
     // Here we implicitly assume that the stage and actor's parent
@@ -78,7 +84,10 @@ function hideDock_size () {
     if (!this._hideable)
         return;
 
-    let monitor = Main.layoutManager.primaryMonitor
+    let monitor = Main.layoutManager.primaryMonitor;
+    if (this._displayMonitor > -1 && this._displayMonitor < Main.layoutManager.monitors.length) {
+      monitor = Main.layoutManager.monitors[this._displayMonitor];
+    }
     let position_x = monitor.x;
     let height = (this._nicons)*(this._item_size + this._spacing) + 2*this._spacing;
     let width = this._item_size + 4*this._spacing;
@@ -101,7 +110,7 @@ function hideDock_size () {
             this.actor.set_position (position_x,monitor.y+(monitor.height-height)/2);
             this.actor.set_size(width,height);
 
-	    updateClip(this.actor);
+	    updateClip(this.actor, this._displayMonitor);
         },
     });
 
@@ -110,6 +119,9 @@ function hideDock_size () {
 
 function showDock_size () {
     let monitor = Main.layoutManager.primaryMonitor;
+    if (this._displayMonitor > -1 && this._displayMonitor < Main.layoutManager.monitors.length) {
+      monitor = Main.layoutManager.monitors[this._displayMonitor];
+    }
     let height = (this._nicons)*(this._item_size + this._spacing) + 2*this._spacing;
     let width = this._item_size + 4*this._spacing;
     let position_x = monitor.x;
@@ -132,7 +144,7 @@ function showDock_size () {
             this.actor.set_position (position_x, monitor.y+(monitor.height-height)/2);
             this.actor.set_size(width,height);
 
-	    updateClip(this.actor);
+	    updateClip(this.actor, this._displayMonitor);
         }
     });
 
@@ -150,9 +162,10 @@ function showEffectAddItem_size () {
         width: width,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
         transition: 'easeOutQuad',
-	onUpdate: function () {
-	    updateClip(this);
-	}
+	onUpdate: function (monitor) {
+	    updateClip(this, monitor);
+	},
+	onUpdateParams: [this._displayMonitor]
     });
 }
 
@@ -165,6 +178,9 @@ function hideDock_scale () {
 
     this._item_size = this._settings.get_int(DOCK_SIZE_KEY);
     let monitor = Main.layoutManager.primaryMonitor;
+    if (this._displayMonitor > -1 && this._displayMonitor < Main.layoutManager.monitors.length) {
+      monitor = Main.layoutManager.monitors[this._displayMonitor];
+    }
     let cornerX = 0;
     let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
     let width = this._item_size + 4*this._spacing;
@@ -186,9 +202,10 @@ function hideDock_scale () {
         scale_x: 0.025,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
         transition: 'easeOutQuad',
-	onUpdate: function() {
-	    updateClip(this);
-	}
+	onUpdate: function(monitor) {
+	    updateClip(this, monitor);
+	},
+	onUpdateParams: [this._displayMonitor]
     });
 
     this._hidden = true;
@@ -197,6 +214,9 @@ function hideDock_scale () {
 function showDock_scale () {
     this._item_size = this._settings.get_int(DOCK_SIZE_KEY);
     let monitor = Main.layoutManager.primaryMonitor;
+    if (this._displayMonitor > -1 && this._displayMonitor < Main.layoutManager.monitors.length) {
+      monitor = Main.layoutManager.monitors[this._displayMonitor];
+    }
     let position_x = monitor.x;
     let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
     let width = this._item_size + 4*this._spacing;
@@ -217,9 +237,10 @@ function showDock_scale () {
         scale_x: 1,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
         transition: 'easeOutQuad',
-	onUpdate: function() {
-	    updateClip(this);
-	}
+	onUpdate: function(monitor) {
+	    updateClip(this, monitor);
+	},
+	onUpdateParams: [this._displayMonitor]
     });
 
     this._hidden = false;
@@ -227,6 +248,9 @@ function showDock_scale () {
 
 function showEffectAddItem_scale () {
     let monitor = Main.layoutManager.primaryMonitor;
+    if (this._displayMonitor > -1 && this._displayMonitor < Main.layoutManager.monitors.length) {
+      monitor = Main.layoutManager.monitors[this._displayMonitor];
+    }
     let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
     let width = this._item_size + 4*this._spacing;
 
@@ -236,9 +260,10 @@ function showEffectAddItem_scale () {
         width: width,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
         transition: 'easeOutQuad',
-	onUpdate: function() {
-	    updateClip(this);
-	}
+	onUpdate: function(monitor) {
+	    updateClip(this, monitor);
+	},
+	onUpdateParams: [this._displayMonitor]
     });
 }
 
@@ -251,6 +276,9 @@ function hideDock_move () {
 
     this._item_size = this._settings.get_int(DOCK_SIZE_KEY);
     let monitor = Main.layoutManager.primaryMonitor;
+    if (this._displayMonitor > -1 && this._displayMonitor < Main.layoutManager.monitors.length) {
+      monitor = Main.layoutManager.monitors[this._displayMonitor];
+    }
     let cornerX = 0;
     let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
     let width = this._item_size + 4*this._spacing;
@@ -271,9 +299,10 @@ function hideDock_move () {
         height: height,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
         transition: 'easeOutQuad',
-	onUpdate: function() {
-	    updateClip(this);
+	onUpdate: function(monitor) {
+	    updateClip(this, monitor);
 	},
+	onUpdateParams: [this._displayMonitor]
     });
 
     this._hidden = true;
@@ -282,6 +311,9 @@ function hideDock_move () {
 function showDock_move () {
     this._item_size = this._settings.get_int(DOCK_SIZE_KEY);
     let monitor = Main.layoutManager.primaryMonitor;
+    if (this._displayMonitor > -1 && this._displayMonitor < Main.layoutManager.monitors.length) {
+      monitor = Main.layoutManager.monitors[this._displayMonitor];
+    }
     let position_x = monitor.x;
     let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
     let width = this._item_size + 4*this._spacing;
@@ -301,9 +333,10 @@ function showDock_move () {
         height: height,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
         transition: 'easeOutQuad',
-	onUpdate: function() {
-	    updateClip(this);
+	onUpdate: function(monitor) {
+	    updateClip(this, monitor);
 	},
+	onUpdateParams: [this._displayMonitor]
     });
 
     this._hidden = false;
@@ -311,6 +344,9 @@ function showDock_move () {
 
 function showEffectAddItem_move () {
     let monitor = Main.layoutManager.primaryMonitor;
+    if (this._displayMonitor > -1 && this._displayMonitor < Main.layoutManager.monitors.length) {
+        monitor = Main.layoutManager.monitors[this._displayMonitor];
+    }
     let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
     let width = this._item_size + 4*this._spacing;
 
@@ -320,9 +356,10 @@ function showEffectAddItem_move () {
         width: width,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
         transition: 'easeOutQuad',
-	onUpdate: function() {
-	    updateClip(this);
+	onUpdate: function(monitor) {
+	    updateClip(this, monitor);
 	},
+	onUpdateParams: [this._displayMonitor]
     });
 }
 
@@ -340,6 +377,7 @@ const Dock = new Lang.Class({
         this._settings = Convenience.getSettings();
         this._hidden = false;
         this._hideable = this._settings.get_boolean(DOCK_HIDE_KEY);
+        this._displayMonitor = this._settings.get_int(DOCK_MONITOR_KEY);
 
         this._spacing = 4;
         this._item_size = this._settings.get_int(DOCK_SIZE_KEY);
@@ -377,6 +415,10 @@ const Dock = new Lang.Class({
         //hidden
         this._settings.connect('changed::'+DOCK_POSITION_KEY, Lang.bind(this, this._redisplay));
         this._settings.connect('changed::'+DOCK_SIZE_KEY, Lang.bind(this, this._redisplay));
+        this._settings.connect('changed::'+DOCK_MONITOR_KEY, Lang.bind(this, function (){
+            this._displayMonitor = this._settings.get_int(DOCK_MONITOR_KEY);
+            this._redisplay();
+        }));
 
         this._settings.connect('changed::'+DOCK_HIDE_KEY, Lang.bind(this, function (){
                 Main.layoutManager.removeChrome(this.actor);
