@@ -113,7 +113,7 @@ Source.prototype = {
     },
 
     _gotContactInfos: function(result, excp) {
-        this.title = result['FN'];
+        this.title = result['FN'] || result['NICKNAME'] || result['jid'];
 
         let avatarUri = null;
         if (result['PHOTO']) {
