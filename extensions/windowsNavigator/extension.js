@@ -34,7 +34,7 @@ function enable() {
     resetState();
 
     Workspace.WindowOverlay.prototype.setId = function(id) {
-        if (this._text.visible && id == null)
+        if (this._text && this._text.visible && id == null)
             this._text.hide();
         this._id = id;
         if (id != null)
@@ -57,7 +57,7 @@ function enable() {
     winInjections['showTooltip'] = undefined;
 
     Workspace.WindowOverlay.prototype.hideTooltip = function() {
-        if (this._text.visible)
+        if (this._text && this._text.visible)
             this._text.hide();
     }
     winInjections['hideTooltip'] = undefined;
