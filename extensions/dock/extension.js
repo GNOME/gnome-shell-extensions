@@ -50,6 +50,27 @@ const AutoHideEffect = {
 
 const DND_RAISE_APP_TIMEOUT = 500;
 
+// Utility function to make the dock clipped to the primary monitor
+function updateClip(actor) {
+    let monitor = Main.layoutManager.primaryMonitor;
+    let allocation = actor.allocation;
+
+    // Here we implicitly assume that the stage and actor's parent
+    // share the same coordinate space
+    let clip = new Clutter.ActorBox({ x1: Math.max(monitor.x, allocation.x1),
+				      y1: Math.max(monitor.y, allocation.y1),
+				      x2: Math.min(monitor.x + monitor.width, allocation.x2),
+				      y2: Math.min(monitor.y + monitor.height, allocation.y2) });
+    // Translate back into actor's coordinate space
+    clip.x1 -= actor.x;
+    clip.x2 -= actor.x;
+    clip.y1 -= actor.y;
+    clip.y2 -= actor.y;
+
+    // Apply the clip
+    actor.set_clip(clip.x1, clip.y1, clip.x2-clip.x1, clip.y2 - clip.y1);
+}
+
 /*************************************************************************************/
 /**** start resize's Dock functions                                  *****************/
 /*************************************************************************************/
@@ -79,6 +100,8 @@ function hideDock_size () {
             }
             this.actor.set_position (position_x,monitor.y+(monitor.height-height)/2);
             this.actor.set_size(width,height);
+
+	    updateClip(this.actor);
         },
     });
 
@@ -108,6 +131,8 @@ function showDock_size () {
             }
             this.actor.set_position (position_x, monitor.y+(monitor.height-height)/2);
             this.actor.set_size(width,height);
+
+	    updateClip(this.actor);
         }
     });
 
@@ -124,7 +149,10 @@ function showEffectAddItem_size () {
         height: height,
         width: width,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
-        transition: 'easeOutQuad'
+        transition: 'easeOutQuad',
+	onUpdate: function () {
+	    updateClip(this);
+	}
     });
 }
 
@@ -157,7 +185,10 @@ function hideDock_scale () {
         width: width,
         scale_x: 0.025,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
-        transition: 'easeOutQuad'
+        transition: 'easeOutQuad',
+	onUpdate: function() {
+	    updateClip(this);
+	}
     });
 
     this._hidden = true;
@@ -185,7 +216,10 @@ function showDock_scale () {
         width: width,
         scale_x: 1,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
-        transition: 'easeOutQuad'
+        transition: 'easeOutQuad',
+	onUpdate: function() {
+	    updateClip(this);
+	}
     });
 
     this._hidden = false;
@@ -201,7 +235,10 @@ function showEffectAddItem_scale () {
         height: height,
         width: width,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
-        transition: 'easeOutQuad'
+        transition: 'easeOutQuad',
+	onUpdate: function() {
+	    updateClip(this);
+	}
     });
 }
 
@@ -233,7 +270,10 @@ function hideDock_move () {
         width: width,
         height: height,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
-        transition: 'easeOutQuad'
+        transition: 'easeOutQuad',
+	onUpdate: function() {
+	    updateClip(this);
+	},
     });
 
     this._hidden = true;
@@ -260,24 +300,30 @@ function showDock_move () {
         width: width,
         height: height,
         time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
-        transition: 'easeOutQuad'
+        transition: 'easeOutQuad',
+	onUpdate: function() {
+	    updateClip(this);
+	},
     });
 
     this._hidden = false;
 }
 
 function showEffectAddItem_move () {
-        let monitor = Main.layoutManager.primaryMonitor;
-        let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
-        let width = this._item_size + 4*this._spacing;
+    let monitor = Main.layoutManager.primaryMonitor;
+    let height = this._nicons*(this._item_size + this._spacing) + 2*this._spacing;
+    let width = this._item_size + 4*this._spacing;
 
-        Tweener.addTween(this.actor, {
-                y: monitor.y + (monitor.height-height)/2,
-                height: height,
-                width: width,
-                time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
-                transition: 'easeOutQuad'
-        });
+    Tweener.addTween(this.actor, {
+        y: monitor.y + (monitor.height-height)/2,
+        height: height,
+        width: width,
+        time: this._settings.get_double(DOCK_AUTOHIDE_ANIMATION_TIME_KEY),
+        transition: 'easeOutQuad',
+	onUpdate: function() {
+	    updateClip(this);
+	},
+    });
 }
 
 const Dock = new Lang.Class({
