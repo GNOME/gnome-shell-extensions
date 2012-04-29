@@ -183,9 +183,13 @@ const Widget = new GObject.Class({
 	this._store.clear();
 
 	let currentItems = this._settings.get_strv(SETTINGS_KEY);
+	let validItems = [ ];
 	for (let i = 0; i < currentItems.length; i++) {
 	    let [id, index] = currentItems[i].split(':');
 	    let appInfo = Gio.DesktopAppInfo.new(id);
+	    if (!appInfo)
+		continue;
+	    validItems.push(currentItems[i]);
 
 	    let iter = this._store.append();
 	    let adj = new Gtk.Adjustment({ lower: 1,
@@ -196,6 +200,9 @@ const Widget = new GObject.Class({
 			    [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT],
 			    [appInfo, appInfo.get_icon(), appInfo.get_display_name(), parseInt(index), adj]);
 	}
+
+	if (validItems.length != currentItems.length) // some items were filtered out
+	    this._settings.set_strv(SETTINGS_KEY, validItems);
     },
 
     _appendItem: function(id, workspace) {
