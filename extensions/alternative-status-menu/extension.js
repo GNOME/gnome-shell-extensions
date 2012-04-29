@@ -15,13 +15,15 @@ let suspend_item = null;
 let hibernate_item = null;
 let poweroff_item = null;
 let suspend_signal_id = 0, hibernate_signal_id = 0;
+let settings = null;
+let setting_changed_id = 0;
 
 function updateSuspend(object, pspec, item) {
-    item.actor.visible = object.get_can_suspend();
+    item.actor.visible = object.get_can_suspend() && settings.get_boolean('allow-suspend');
 }
 
 function updateHibernate(object, pspec, item) {
-    item.actor.visible = object.get_can_hibernate();
+    item.actor.visible = object.get_can_hibernate() && settings.get_boolean('allow-hibernate');
 }
 
 function onSuspendActivate(item) {
@@ -47,6 +49,8 @@ function init(metadata) {
 
 function enable() {
     let statusMenu = Main.panel._statusArea.userMenu;
+
+    settings = Convenience.getSettings();
 
     let children = statusMenu.menu._getMenuItems();
     let index = children.length;
@@ -85,6 +89,11 @@ function enable() {
     // clear out this to avoid criticals (we don't mess with
     // updateSuspendOrPowerOff)
     statusMenu._suspendOrPowerOffItem = null;
+
+    setting_changed_id = settings.connect('changed', function() {
+	updateSuspend(statusMenu._upClient, null, suspend_item);
+	updateHibernate(statusMenu._upClient, null, hibernate_item);
+    });
 }
 
 function disable() {
@@ -105,6 +114,10 @@ function disable() {
     statusMenu._upClient.disconnect(suspend_signal_id);
     statusMenu._upClient.disconnect(hibernate_signal_id);
     suspend_signal_id = hibernate_signal_id = 0;
+
+    settings.disconnect(setting_changed_id);
+    setting_changed_id = 0;
+    settings = null;
 
     /* destroy the entries we had created */
     suspend_item.destroy();

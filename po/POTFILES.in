@@ -2,6 +2,7 @@ extensions/alternate-tab/extension.js
 extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in
 extensions/alternate-tab/prefs.js
 extensions/alternative-status-menu/extension.js
+extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in
 extensions/apps-menu/extension.js
 extensions/auto-move-windows/extension.js
 extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in
