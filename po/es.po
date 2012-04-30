@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-02-29 16:45+0000\n"
-"PO-Revision-Date: 2012-03-02 13:59+0100\n"
+"POT-Creation-Date: 2012-04-29 21:33+0000\n"
+"PO-Revision-Date: 2012-04-30 13:04+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -125,23 +125,23 @@ msgstr "Crear regla de coincidencia nueva"
 msgid "Add"
 msgstr "Añadir"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:577
 msgid "Drag here to add favorites"
 msgstr "Arrastrar aquí para añadir a favoritos"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:903
 msgid "New Window"
 msgstr "Ventana nueva"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:905
 msgid "Quit Application"
 msgstr "Salir de la aplicación"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:910
 msgid "Remove from Favorites"
 msgstr "Quitar de favoritos"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:911
 msgid "Add to Favorites"
 msgstr "Añadir a favoritos"
 
@@ -188,6 +188,18 @@ msgstr "Duración de la ocultación automática"
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Configura la duración del efecto de ocultación automática."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Pantalla"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"Establece la pantalla en la que mostrar el tablero. El valor predeterminado "
+"es (-1), que es la pantalla principal."
 
 #: ../extensions/drive-menu/extension.js:66
 msgid "Open file manager"
@@ -291,19 +303,16 @@ msgstr "El nombre del tema, que se carga desde ~/.themes/nombre/gnome-shell"
 msgid "Workspace Indicator"
 msgstr "Indicador de área de trabajo"
 
-#: ../extensions/workspace-indicator/prefs.js:151
-#| msgid "Workspace & Icons"
+#: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Nombres de los áreas de trabajo:"
 
-#: ../extensions/workspace-indicator/prefs.js:162
-#| msgid "Native"
+#: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
 msgstr "Nombre"
 
-#: ../extensions/workspace-indicator/prefs.js:196
+#: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
-#| msgid "Workspace"
 msgid "Workspace %d"
 msgstr "Área de trabajo %d"
 
