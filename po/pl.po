@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-16 21:19+0100\n"
-"PO-Revision-Date: 2012-03-16 21:20+0100\n"
+"POT-Creation-Date: 2012-04-30 16:19+0200\n"
+"PO-Revision-Date: 2012-04-30 16:20+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -126,23 +126,23 @@ msgstr "Utwórz nową pasującą regułę"
 msgid "Add"
 msgstr "Dodaj"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:577
 msgid "Drag here to add favorites"
 msgstr "Przeciągnięcie tutaj dodaje do ulubionych"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:903
 msgid "New Window"
 msgstr "Nowe okno"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:905
 msgid "Quit Application"
 msgstr "Zakończ program"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:910
 msgid "Remove from Favorites"
 msgstr "Usuń z ulubionych"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:911
 msgid "Add to Favorites"
 msgstr "Dodaj do ulubionych"
 
@@ -189,6 +189,18 @@ msgstr "Czas trwania automatycznego ukrywania"
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Ustawia czas trwania efektu automatycznego ukrywania."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Monitor"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"Ustawia, na którym monitorze wyświetlać dok. Domyślna wartość (-1) oznacza "
+"główny monitor."
 
 #: ../extensions/drive-menu/extension.js:66
 msgid "Open file manager"
