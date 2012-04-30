@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-16 12:15+0100\n"
-"PO-Revision-Date: 2012-03-16 12:15+0100\n"
+"POT-Creation-Date: 2012-04-30 16:41+0200\n"
+"PO-Revision-Date: 2012-04-30 16:42+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
 "Language: gl\n"
@@ -78,17 +78,33 @@ msgstr ""
 "á maneira na que se elixen e presentan as xanelas."
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:74
+#: ../extensions/alternative-status-menu/extension.js:78
 msgid "Power Off..."
 msgstr "Apagar…"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Activar a suspensión"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "Controla a visibilidade do elemento de menú «Suspender»"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Activar hibernación"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "Controla a visibilidade do elemento de menú «Hibernar»"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -123,23 +139,23 @@ msgstr "Crear regra de coincidencia nova"
 msgid "Add"
 msgstr "Engadir"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:577
 msgid "Drag here to add favorites"
 msgstr "Arrastre aquí para engadir aos favoritos"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:903
 msgid "New Window"
 msgstr "Nova xanela"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:905
 msgid "Quit Application"
 msgstr "Saír do aplicativo"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:910
 msgid "Remove from Favorites"
 msgstr "Eliminar dos favoritos"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:911
 msgid "Add to Favorites"
 msgstr "Engadir aos favoritos"
 
@@ -186,6 +202,18 @@ msgstr "Duración do autoagochado"
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Estabelece a duración do efecto de autoagochado."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Pantalla"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"Estabelece a pantalla na que mostrar o taboleiro. O valor predeterminado es "
+"(-1), que é a pantalla principal."
 
 #: ../extensions/drive-menu/extension.js:66
 msgid "Open file manager"
