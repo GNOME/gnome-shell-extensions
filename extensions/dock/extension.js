@@ -384,7 +384,9 @@ const Dock = new Lang.Class({
         this._nicons = 0;
         this._selectEffectFunctions(this._settings.get_enum(DOCK_EFFECTHIDE_KEY));
 
-        this.actor = new St.BoxLayout({ name: 'dock', vertical: true, reactive: true });
+        let [_x, _y, _w, _h] = this.get_start_position();
+        this.actor = new St.BoxLayout({ name: 'dock', vertical: true, reactive: true,
+                                        x: _x, y: _y, width: _w, height: _h });
 
         this._grid = new Shell.GenericContainer();
         this.actor.add(this._grid, { expand: true, y_align: St.Align.START });
@@ -462,6 +464,27 @@ const Dock = new Lang.Class({
         this._enter_event = this.actor.connect('enter-event', Lang.bind(this, this._showDock));
 
         this._hideDock();
+    },
+
+    get_start_position: function() {
+        let item_size = this._settings.get_int(DOCK_SIZE_KEY);
+        let monitor = Main.layoutManager.primaryMonitor;
+        if (this._displayMonitor > -1 && this._displayMonitor < Main.layoutManager.monitors.length) {
+          monitor = Main.layoutManager.monitors[this._displayMonitor];
+        }
+        let position_x = monitor.x;
+        let width = item_size + 4 * this._spacing;
+
+        switch (this._settings.get_enum(DOCK_POSITION_KEY)) {
+        case PositionMode.LEFT:
+            position_x=monitor.x - 2 * this._spacing;
+            break;
+        case PositionMode.RIGHT:
+        default:
+            position_x=monitor.x + (monitor.width - item_size - 2 * this._spacing);
+        }
+
+        return [ position_x, monitor.y, width, monitor.height ];
     },
 
     destroy: function() {
