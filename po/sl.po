@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-02-28 18:20+0000\n"
-"PO-Revision-Date: 2012-02-28 20:53+0100\n"
+"POT-Creation-Date: 2012-05-07 21:09+0000\n"
+"PO-Revision-Date: 2012-05-10 09:40+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-Country: SLOVENIA\n"
@@ -45,7 +45,8 @@ msgstr "Delovne površine in ikone"
 msgid ""
 "This mode let's you switch between the applications of your current workspace and gives you additionally the option to switch to the last used application of your previous workspace. This is always the last symbol in the list and is segregated by a separator/vertical line if available. \n"
 "Every window is represented by its application icon."
-msgstr "Ta način omogoča preklop med programi trenutne delovne površine in hkrati omogoča izbiro na zadnje uporabljenega okna predhodne delovne površine. Ta predmet je vedno zapisan kot zadnji predmet seznama in je ločen z ločilnikom ali navpično črto.\n"
+msgstr ""
+"Ta način omogoča preklop med programi trenutne delovne površine in hkrati omogoča izbiro na zadnje uporabljenega okna predhodne delovne površine. Ta predmet je vedno zapisan kot zadnji predmet seznama in je ločen z ločilnikom ali navpično črto.\n"
 "Vsako okno je prikazano z ikono programa."
 
 #: ../extensions/alternate-tab/prefs.js:41
@@ -98,23 +99,23 @@ msgstr "Ustvari novo pravilo skladanja"
 msgid "Add"
 msgstr "Dodaj"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Potegnite sem, za dodajanje med priljubljene"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Novo okno"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Končaj program"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Odstrani iz priljubljenih"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Dodaj med priljubljene"
 
@@ -153,6 +154,14 @@ msgstr "Trajanje samodejnega skrivanja"
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Določi trajanje učinka samodejnega skrivanja."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Zaslon"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid "Sets monitor to display dock in. The default value (-1) is the primary monitor."
+msgstr "Nastavi zaslon v sidrišče zaslona. Privzeta vrednost (-1) določa osnovni zaslon."
 
 #: ../extensions/drive-menu/extension.js:66
 msgid "Open file manager"
@@ -236,15 +245,15 @@ msgstr "Ime teme, ki bo naložena iz ~/.themes/name/gnome-shell"
 msgid "Workspace Indicator"
 msgstr "Kazalnik delovnih površin"
 
-#: ../extensions/workspace-indicator/prefs.js:151
+#: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Imena delovnih površin:"
 
-#: ../extensions/workspace-indicator/prefs.js:162
+#: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
 msgstr "Ime"
 
-#: ../extensions/workspace-indicator/prefs.js:196
+#: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
 msgid "Workspace %d"
 msgstr "Delovna površina %d"
