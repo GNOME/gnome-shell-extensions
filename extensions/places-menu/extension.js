@@ -10,6 +10,7 @@ const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 const Panel = imports.ui.panel;
+const PlaceDisplay = imports.ui.placeDisplay;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
@@ -26,6 +27,7 @@ const PlacesMenu = new Lang.Class({
 
     _init: function() {
         this.parent('folder');
+        this.placesManager = new PlaceDisplay.PlacesManager();
 
         this.defaultItems = [];
         this.bookmarkItems = [];
@@ -38,13 +40,13 @@ const PlacesMenu = new Lang.Class({
         this.menu.addMenuItem(this._devicesMenuItem);
         this._createDevices();
 
-        this._bookmarksId = Main.placesManager.connect('bookmarks-updated',Lang.bind(this,this._redisplayBookmarks));
-        this._mountsId = Main.placesManager.connect('mounts-updated',Lang.bind(this,this._redisplayDevices));
+        this._bookmarksId = this.placesManager.connect('bookmarks-updated',Lang.bind(this,this._redisplayBookmarks));
+        this._mountsId = this.placesManager.connect('mounts-updated',Lang.bind(this,this._redisplayDevices));
     },
 
     destroy: function() {
-        Main.placesManager.disconnect(this._bookmarksId);
-        Main.placesManager.disconnect(this._mountsId);
+        this.placesManager.disconnect(this._bookmarksId);
+        this.placesManager.disconnect(this._mountsId);
 
         this.parent();
     },
@@ -60,7 +62,7 @@ const PlacesMenu = new Lang.Class({
     },
 
     _createDefaultPlaces : function() {
-        this.defaultPlaces = Main.placesManager.getDefaultPlaces();
+        this.defaultPlaces = this.placesManager.getDefaultPlaces();
 
         for (let placeid = 0; placeid < this.defaultPlaces.length; placeid++) {
             this.defaultItems[placeid] = new PopupMenu.PopupMenuItem(this.defaultPlaces[placeid].name);
@@ -76,7 +78,7 @@ const PlacesMenu = new Lang.Class({
     },
 
     _createBookmarks : function() {
-        this.bookmarks = Main.placesManager.getBookmarks();
+        this.bookmarks = this.placesManager.getBookmarks();
 
         for (let bookmarkid = 0; bookmarkid < this.bookmarks.length; bookmarkid++) {
             this.bookmarkItems[bookmarkid] = new PopupMenu.PopupMenuItem(this.bookmarks[bookmarkid].name);
@@ -91,7 +93,7 @@ const PlacesMenu = new Lang.Class({
     },
 
     _createDevices : function() {
-        this.devices = Main.placesManager.getMounts();
+        this.devices = this.placesManager.getMounts();
 
         for (let devid = 0; devid < this.devices.length; devid++) {
             this.deviceItems[devid] = new PopupMenu.PopupMenuItem(this.devices[devid].name);
