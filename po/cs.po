@@ -211,8 +211,8 @@ msgid ""
 "Sets monitor to display dock in. The default value (-1) is the primary "
 "monitor."
 msgstr ""
-"Nastavuje monitor, který má zobrazovat při dokování. Výchozí hodnotou (-1) "
-"je hlavní monitor."
+"Nastavuje monitor, na kterém se má zobrazovat dok. Výchozí hodnotou (-1) je "
+"hlavní monitor."
 
 #: ../extensions/drive-menu/extension.js:66
 msgid "Open file manager"
