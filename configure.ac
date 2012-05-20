@@ -40,7 +40,7 @@ AC_ARG_ENABLE([extensions],
 	[],
 	[enable_extensions=$DEFAULT_EXTENSIONS]
 )
-if test x$enable_extensions = xall; then
+if test x"$enable_extensions" = xall; then
    enable_extensions="$ALL_EXTENSIONS"
 fi
 
