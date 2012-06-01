@@ -28,6 +28,7 @@ const DriveMenuItem = new Lang.Class({
 
 	this.label = new St.Label({ text: place.name });
 	this.addActor(this.label);
+        this.actor.label_actor = this.label;
 
 	let ejectIcon = new St.Icon({ icon_name: 'media-eject',
 				      icon_type: St.IconType.SYMBOLIC,
@@ -53,7 +54,7 @@ const DriveMenu = new Lang.Class({
     Extends: PanelMenu.SystemStatusButton,
 
     _init: function() {
-	this.parent('media-eject');
+	this.parent('media-eject', _("Removable devices"));
 
 	this._manager = new PlaceDisplay.PlacesManager();
 	this._updatedId = this._manager.connect('mounts-updated', Lang.bind(this, this._update));
