@@ -11,6 +11,7 @@ const Main = imports.ui.main;
 const Panel = imports.ui.panel;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
+const PlaceDisplay = imports.ui.placeDisplay;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
@@ -54,7 +55,7 @@ const DriveMenu = new Lang.Class({
     _init: function() {
 	this.parent('media-eject');
 
-	this._manager = Main.placesManager;
+	this._manager = new PlaceDisplay.PlacesManager();
 	this._updatedId = this._manager.connect('mounts-updated', Lang.bind(this, this._update));
 
 	this._contentSection = new PopupMenu.PopupMenuSection();
