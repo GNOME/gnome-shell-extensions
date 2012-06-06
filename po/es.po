@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-04-29 21:28+0000\n"
-"PO-Revision-Date: 2012-04-30 13:03+0200\n"
+"POT-Creation-Date: 2012-06-05 16:18+0000\n"
+"PO-Revision-Date: 2012-06-06 13:34+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -141,23 +141,23 @@ msgstr "Crear regla de coincidencia nueva"
 msgid "Add"
 msgstr "Añadir"
 
-#: ../extensions/dock/extension.js:577
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Arrastrar aquí para añadir a favoritos"
 
-#: ../extensions/dock/extension.js:903
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Ventana nueva"
 
-#: ../extensions/dock/extension.js:905
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Salir de la aplicación"
 
-#: ../extensions/dock/extension.js:910
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Quitar de favoritos"
 
-#: ../extensions/dock/extension.js:911
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Añadir a favoritos"
 
@@ -217,7 +217,12 @@ msgstr ""
 "Establece la pantalla en la que mostrar el tablero. El valor predeterminado "
 "es (-1), que es la pantalla principal."
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/drive-menu/extension.js:57
+#| msgid "Removable Devices"
+msgid "Removable devices"
+msgstr "Dispositivos extraíbles"
+
+#: ../extensions/drive-menu/extension.js:68
 msgid "Open file manager"
 msgstr "Abrir el gestor de archivos"
 
@@ -303,7 +308,7 @@ msgstr ""
 "los sitúa por debajo. Cambiar esta configuración requiere reiniciar la shell "
 "para que tenga efecto."
 
-#: ../extensions/places-menu/extension.js:37
+#: ../extensions/places-menu/extension.js:39
 msgid "Removable Devices"
 msgstr "Dispositivos extraíbles"
 
