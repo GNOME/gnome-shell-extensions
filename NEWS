@@ -1,3 +1,16 @@
+3.5.2
+=====
+* removable-drive-menu is now a11y friendly
+* the dock can now be placed on any monitor, not just the primary
+* dock is now clipped to its monitor
+* alternative-status-menu now exposes GSettings for Suspend
+  and Hibernate visibility - no UI yet
+* more gnome-shell API changes (places-menu, removable-drive-menu,
+  alternative-status-menu)
+* miscellaneous bug fixes (native-window-placement, gajim,
+  auto-move-windows)
+* updated translations
+
 3.4.0
 =====
 * build system improvements
