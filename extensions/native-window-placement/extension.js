@@ -123,7 +123,7 @@ function enable() {
 
     let settings = Convenience.getSettings();
     let useMoreScreen = settings.get_boolean('use-more-screen');
-    signalId = settings.connect('changed::use-more-screen', function() {
+    let signalId = settings.connect('changed::use-more-screen', function() {
         useMoreScreen = settings.get_boolean('use-more-screen');
     });
     connectedSignals.push({ obj: settings, id: signalId });
