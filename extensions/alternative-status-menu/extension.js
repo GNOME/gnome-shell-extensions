@@ -75,8 +75,7 @@ function enable() {
     hibernate_signal_id = statusMenu._upClient.connect('notify::can-hibernate', Lang.bind(statusMenu, updateHibernate, hibernate_item));
     updateHibernate(statusMenu._upClient, null, hibernate_item);
     
-    poweroff_item = new PopupMenu.PopupMenuItem(_("Power Off..."), { style_class: 'popup-alternating-menu-item' });
-    poweroff_item.actor.add_style_pseudo_class('alternate');
+    poweroff_item = new PopupMenu.PopupMenuItem(_("Power Off"));
     poweroff_item.connect('activate', Lang.bind(statusMenu, function() {
 	    this._session.ShutdownRemote();
     }));
