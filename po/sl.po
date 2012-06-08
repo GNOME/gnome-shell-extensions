@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-05-14 16:12+0000\n"
-"PO-Revision-Date: 2012-05-20 11:20+0100\n"
-"Last-Translator: filmsi\n"
+"POT-Creation-Date: 2012-06-08 12:07+0000\n"
+"PO-Revision-Date: 2012-06-08 20:51+0100\n"
+"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-Country: SLOVENIA\n"
@@ -67,8 +67,8 @@ msgid "Hibernate"
 msgstr "V mirovanje"
 
 #: ../extensions/alternative-status-menu/extension.js:78
-msgid "Power Off..."
-msgstr "Izklopi ..."
+msgid "Power Off"
+msgstr "Izklopi"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
 msgid "Enable suspending"
@@ -76,7 +76,7 @@ msgstr "Omogoči stanje pripravljenosti"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
 msgid "Control the visibility of the Suspend menu item"
-msgstr "Nadzirajte vidnost menijskega ukaza V pripravljenost"
+msgstr "Upravljanje vidnosti menijskega ukaza V pripravljenost"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
 msgid "Enable hibernating"
@@ -84,7 +84,7 @@ msgstr "Omogoči mirovanje"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
-msgstr "Nadzirajte vidnost menijskega ukaza  V mirovanje"
+msgstr "Upravljanje vidnosti menijskega ukaza V mirovanje"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -179,7 +179,11 @@ msgstr "Zaslon"
 msgid "Sets monitor to display dock in. The default value (-1) is the primary monitor."
 msgstr "Nastavi zaslon za prikaz sidrišča. Privzeta vrednost (-1) določa osnovni zaslon."
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/drive-menu/extension.js:57
+msgid "Removable devices"
+msgstr "Odstranljive naprave"
+
+#: ../extensions/drive-menu/extension.js:68
 msgid "Open file manager"
 msgstr "Odpri upravljalnik datotek"
 
@@ -245,7 +249,7 @@ msgstr "Postavi nazive oken na vrh"
 msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
 msgstr "Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice in s tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba lupino ponovno zagnati."
 
-#: ../extensions/places-menu/extension.js:37
+#: ../extensions/places-menu/extension.js:39
 msgid "Removable Devices"
 msgstr "Odstranljive naprave"
 
