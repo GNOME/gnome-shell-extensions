@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-28 18:52+0200\n"
-"PO-Revision-Date: 2012-03-28 18:52+0200\n"
+"POT-Creation-Date: 2012-06-09 18:35+0200\n"
+"PO-Revision-Date: 2012-06-09 18:35+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -70,17 +70,33 @@ msgstr ""
 "يمكن استخدام هذا الامتداد في أنماط مختلفة تؤثر على كيفية اختيار وعرض النوافذ."
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "علّق"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "أسبِت"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "أطفئ..."
+#: ../extensions/alternative-status-menu/extension.js:78
+msgid "Power Off"
+msgstr "أطفئ"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "فعّل التعليق"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "تحكم في ظهور ”علّق“ في القائمة"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "فعّل الإسبات"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "تحكم في ظهور ”أسبِت“ في القائمة"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -113,23 +129,23 @@ msgstr "أنشئ قاعدة تطابق"
 msgid "Add"
 msgstr "أضِف"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "اسحب إلى هنا ليضاف إلى المفضّلة"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "نافذة جديدة"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "أغلق التطبيق"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "أزِل من المفضّلة"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "أضِف إلى المفضّلة"
 
@@ -173,7 +189,21 @@ msgstr ""
 msgid "Sets the time duration of the autohide effect."
 msgstr ""
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "الشاشة"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+
+#: ../extensions/drive-menu/extension.js:57
+msgid "Removable devices"
+msgstr "الأجهزة المنفصلة"
+
+#: ../extensions/drive-menu/extension.js:68
 msgid "Open file manager"
 msgstr "افتح مدير الملفّات"
 
@@ -246,7 +276,7 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 
-#: ../extensions/places-menu/extension.js:37
+#: ../extensions/places-menu/extension.js:39
 msgid "Removable Devices"
 msgstr "الأجهزة المنفصلة"
 
