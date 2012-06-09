@@ -11,14 +11,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-06-05 16:18+0000\n"
-"PO-Revision-Date: 2012-06-06 13:34+0200\n"
+"POT-Creation-Date: 2012-06-08 12:07+0000\n"
+"PO-Revision-Date: 2012-06-09 11:52+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.4\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "The alt tab behaviour."
@@ -89,8 +90,9 @@ msgid "Hibernate"
 msgstr "Hibernar"
 
 #: ../extensions/alternative-status-menu/extension.js:78
-msgid "Power Off..."
-msgstr "Apagar…"
+#| msgid "Power Off..."
+msgid "Power Off"
+msgstr "Apagar"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
 msgid "Enable suspending"
@@ -218,7 +220,6 @@ msgstr ""
 "es (-1), que es la pantalla principal."
 
 #: ../extensions/drive-menu/extension.js:57
-#| msgid "Removable Devices"
 msgid "Removable devices"
 msgstr "Dispositivos extraíbles"
 
