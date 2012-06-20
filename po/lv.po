@@ -2,31 +2,29 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012.
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-02-24 18:22+0000\n"
-"PO-Revision-Date: 2012-03-15 22:06+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-20 20:25+0300\n"
+"PO-Revision-Date: 2012-06-20 20:33+0300\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
-"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"Language-Team: Latviešu <lata-l10n@googlegroups.com>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"Language: lv\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "The alt tab behaviour."
 msgstr "Alt tab uzvedība."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-#| msgid ""
-#| "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails "
-#| "and workspace_icons."
 msgid ""
 "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
 "workspace_icons. See the configuration dialogs for details."
@@ -44,9 +42,9 @@ msgid ""
 "list. Instead of using the application icon of every window, it uses small "
 "thumbnails resembling the window itself."
 msgstr ""
-"Šis režīms parāda visas lietotnes no visām darbvietām vienā izvēles sarakstā. "
-"Tā vietā, lai izmantotu lietotnes ikonu katrā logā, tas izmanto sīktēlus, kas "
-"izskatās pēc paša loga."
+"Šis režīms parāda visas lietotnes no visām darbvietām vienā izvēles "
+"sarakstā. Tā vietā, lai izmantotu lietotnes ikonu katrā logā, tas izmanto "
+"sīktēlus, kas izskatās pēc paša loga."
 
 #: ../extensions/alternate-tab/prefs.js:34
 msgid "Workspace & Icons"
@@ -80,17 +78,33 @@ msgstr ""
 "izvēlēti un attēloti."
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "Iesnaudināt"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Iemidzināt"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "Izslēgt..."
+#: ../extensions/alternative-status-menu/extension.js:78
+msgid "Power Off"
+msgstr "Izslēgt"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Aktivēt iesnaudināšanu"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "Pārvaldīt iesnaudināšanas izvēlnes vienuma redzamību"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Aktivēt iemidzināšanu"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "Pārvaldīt iemidzināšanas izvēlnes vienuma redzamību"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -105,13 +119,11 @@ msgstr ""
 "nosaukums), kam seko kols un darbvietas numurs"
 
 #: ../extensions/auto-move-windows/prefs.js:55
-#| msgid "Quit Application"
 msgid "Application"
 msgstr "Lietotne"
 
 #: ../extensions/auto-move-windows/prefs.js:64
 #: ../extensions/auto-move-windows/prefs.js:106
-#| msgid "Workspace & Icons"
 msgid "Workspace"
 msgstr "Darbavieta"
 
@@ -127,23 +139,23 @@ msgstr "Izveidot jaunu atbilstošu kārtulu"
 msgid "Add"
 msgstr "Pievienot"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Velciet šeit, lai pievienotu izlasei"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Jauns logs"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Iziet no lietotnes"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Izņemt no izlases"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Pievienot izlasei"
 
@@ -175,8 +187,6 @@ msgid "Autohide effect"
 msgstr "Automātiskās slēpšanas efekts"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-#| msgid ""
-#| "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
 msgid ""
 "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
 "'move'"
@@ -192,7 +202,23 @@ msgstr "Automātiskās slēpšanas ilgums"
 msgid "Sets the time duration of the autohide effect."
 msgstr "Iestata automātiskās slēpšanas efekta laiku."
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Monitors"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"Iestata monitoru, lai rādītu doku. Noklusējuma vērtība (-1) nozīmē primāro "
+"monitoru."
+
+#: ../extensions/drive-menu/extension.js:57
+msgid "Removable devices"
+msgstr "Noņemamās ierīces"
+
+#: ../extensions/drive-menu/extension.js:68
 msgid "Open file manager"
 msgstr "Atvērt datņu pārvaldnieku"
 
@@ -277,7 +303,7 @@ msgstr ""
 "noklusēto novietojumu (apakšā). Lai šī iestatījuma izmaiņas stātos spēkā, "
 "jāpārstartē čaula."
 
-#: ../extensions/places-menu/extension.js:37
+#: ../extensions/places-menu/extension.js:39
 msgid "Removable Devices"
 msgstr "Noņemamās ierīces"
 
@@ -290,23 +316,19 @@ msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Tēmas nosaukums, ko ielādēt no ~/.themes/name/gnome-shell"
 
 #: ../extensions/workspace-indicator/extension.js:30
-#| msgid "Workspace & Icons"
 msgid "Workspace Indicator"
 msgstr "Darbavietu indikators"
 
-#: ../extensions/workspace-indicator/prefs.js:151
-#| msgid "Workspace & Icons"
+#: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Darbvietu nosaukumi:"
 
-#: ../extensions/workspace-indicator/prefs.js:162
-#| msgid "Native"
+#: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
 msgstr "Nosaukums"
 
-#: ../extensions/workspace-indicator/prefs.js:196
+#: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
-#| msgid "Workspace & Icons"
 msgid "Workspace %d"
 msgstr "Darbvieta %d"
 
