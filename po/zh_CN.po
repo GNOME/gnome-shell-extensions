@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-05-20 22:41+0000\n"
-"PO-Revision-Date: 2012-05-26 23:00+0800\n"
+"POT-Creation-Date: 2012-06-08 12:07+0000\n"
+"PO-Revision-Date: 2012-05-26 22:57+0800\n"
 "Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -69,17 +69,35 @@ msgid ""
 msgstr "Alternate Tab 有多种使用模式，所使用模式会影响窗口展示和选择的方式。"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "挂起"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "休眠"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
+#: ../extensions/alternative-status-menu/extension.js:78
+#, fuzzy
+#| msgid "Power Off..."
+msgid "Power Off"
 msgstr "关机..."
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "启用挂起"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "控制“挂起”菜单项的可见性"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "启用休眠"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "控制“休眠”菜单项的可见性"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -183,7 +201,13 @@ msgid ""
 "monitor."
 msgstr "设置显示 Dock 的显示器。默认值(-1)是主显示器。"
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/drive-menu/extension.js:57
+#, fuzzy
+#| msgid "Removable Devices"
+msgid "Removable devices"
+msgstr "可移动设备"
+
+#: ../extensions/drive-menu/extension.js:68
 msgid "Open file manager"
 msgstr "打开文件管理器"
 
@@ -262,7 +286,7 @@ msgstr ""
 "如果设置为 true，则将窗口说明文字放置在对应窗口的缩略图上方，而不是默认的下"
 "方。修改此设置需要重启 GNOME Shell 以使设置生效。"
 
-#: ../extensions/places-menu/extension.js:37
+#: ../extensions/places-menu/extension.js:39
 msgid "Removable Devices"
 msgstr "可移动设备"
 
