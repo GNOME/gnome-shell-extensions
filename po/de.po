@@ -2,23 +2,25 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2011, 2012.
-# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2011.
+# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-02-29 16:45+0000\n"
-"PO-Revision-Date: 2012-03-01 13:12+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2012-06-08 12:07+0000\n"
+"PO-Revision-Date: 2012-07-15 13:54+0200\n"
+"Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
+"X-Generator: Gtranslator 2.91.5\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "The alt tab behaviour."
@@ -55,18 +57,18 @@ msgstr "Arbeitsbereich und Symbole"
 
 #: ../extensions/alternate-tab/prefs.js:35
 msgid ""
-"This mode let's you switch between the applications of your current workspace "
-"and gives you additionally the option to switch to the last used application "
-"of your previous workspace. This is always the last symbol in the list and is "
-"segregated by a separator/vertical line if available. \n"
+"This mode let's you switch between the applications of your current "
+"workspace and gives you additionally the option to switch to the last used "
+"application of your previous workspace. This is always the last symbol in "
+"the list and is segregated by a separator/vertical line if available. \n"
 "Every window is represented by its application icon."
 msgstr ""
 "In diesem Modus können Sie zwischen den Anwendungen der aktuellen "
 "Arbeitsfläche wechseln. Zusätzlich erhalten Sie die Möglichkeit, zur zuletzt "
 "verwendeten Anwendung der vorhergehenden Arbeitsfläche wechseln. Dies ist "
 "stets das letzte Symbol in der Liste und wird durch einen Trenner/eine "
-"senkrechte Linie abgegrenzt, falls verfügbar. Jedes Fenster wird durch dessen "
-"Anwendungssymbol dargestellt."
+"senkrechte Linie abgegrenzt, falls verfügbar. Jedes Fenster wird durch "
+"dessen Anwendungssymbol dargestellt."
 
 #: ../extensions/alternate-tab/prefs.js:41
 msgid "Move current selection to front before closing the popup"
@@ -74,24 +76,41 @@ msgstr "Aktuelle Auswahl vor dem Schließen des Popups in den Vordergrund"
 
 #: ../extensions/alternate-tab/prefs.js:58
 msgid ""
-"The Alternate Tab can be used in different modes, that affect the way windows "
-"are chosen and presented."
+"The Alternate Tab can be used in different modes, that affect the way "
+"windows are chosen and presented."
 msgstr ""
 "Alternate-Tab kann in verschiedenen Modi verwendet werden, die die Art der "
 "Anzeige und Auswahl von Fenstern beeinflusst."
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "Bereitschaft"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Ruhezustand"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
+#: ../extensions/alternative-status-menu/extension.js:78
+#| msgid "Power Off..."
+msgid "Power Off"
 msgstr "Ausschalten …"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Bereitschaft einblenden"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "Die Sichtbarkeit des Menüeintrags »Bereitschaft« festlegen"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Ruhezustand einblenden"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "Die Sichtbarkeit des Menüeintrags »Ruhezustand« festlegen"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -103,7 +122,8 @@ msgid ""
 "followed by a colon and the workspace number"
 msgstr ""
 "Eine Liste aus Zeichenketten, wovon jede eine Anwendungskennung (*.desktop-"
-"Datei) enthält, gefolgt von einem Doppelpunkt und der Nummer der Arbeitsfläche"
+"Datei) enthält, gefolgt von einem Doppelpunkt und der Nummer der "
+"Arbeitsfläche"
 
 #: ../extensions/auto-move-windows/prefs.js:55
 msgid "Application"
@@ -126,23 +146,23 @@ msgstr "Neue Übereinstimmungsregel erstellen"
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Hierher ziehen, um zu Favoriten hinzuzufügen"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Neues Fenster"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Anwendung beenden"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Aus Favoriten entfernen"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Zu Favoriten hinzufügen"
 
@@ -192,7 +212,24 @@ msgstr "Dauer automatisch verbergen"
 msgid "Sets the time duration of the autohide effect."
 msgstr "Legt die Effektdauer für automatisches Verbergen fest."
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Bildschirm"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"Legt den Bildschirm fest, in dem das Dock angezeigt werden soll. Die "
+"Voreinstellung (-1) entspricht dem primären Bildschirm."
+
+#: ../extensions/drive-menu/extension.js:57
+#| msgid "Removable Devices"
+msgid "Removable devices"
+msgstr "Wechseldatenträger"
+
+#: ../extensions/drive-menu/extension.js:68
 msgid "Open file manager"
 msgstr "Dateiverwaltung öffnen"
 
@@ -255,13 +292,14 @@ msgstr "Mehr Bildschirmbereich für Fenster verwenden"
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. This "
-"setting applies only with the natural placement strategy."
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
 msgstr ""
 "Versuchen, mehr Bildschirmfläche zum Platzieren der Fenstervorschaubilder zu "
-"verwenden, indem das Bildschirmseitenverhältnis berücksichtigt wird und diese "
-"stärker zusammengelegt werden, um den umgebenden Rahmen zu verkleinern. Diese "
-"Einstellung betrifft nur den natürlichen Platzierungsalgorithmus."
+"verwenden, indem das Bildschirmseitenverhältnis berücksichtigt wird und "
+"diese stärker zusammengelegt werden, um den umgebenden Rahmen zu "
+"verkleinern. Diese Einstellung betrifft nur den natürlichen "
+"Platzierungsalgorithmus."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -277,7 +315,7 @@ msgstr ""
 "Vorschaubild platziert und damit die Voreinstellung der Shell übergangen. "
 "Eine Änderungseinstellung tritt erst mit einem Neustart der Shell in Kraft."
 
-#: ../extensions/places-menu/extension.js:37
+#: ../extensions/places-menu/extension.js:39
 msgid "Removable Devices"
 msgstr "Wechseldatenträger"
 
@@ -295,15 +333,15 @@ msgstr ""
 msgid "Workspace Indicator"
 msgstr "Arbeitsflächenindikator"
 
-#: ../extensions/workspace-indicator/prefs.js:151
+#: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Namen der Arbeitsflächen:"
 
-#: ../extensions/workspace-indicator/prefs.js:162
+#: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
 msgstr "Name"
 
-#: ../extensions/workspace-indicator/prefs.js:196
+#: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
 msgid "Workspace %d"
 msgstr "Arbeitsfläche %d"
@@ -343,8 +381,8 @@ msgstr "Bildschirmeinstellungen festlegen …"
 #~ "    This mode let's you switch between the applications of your current \n"
 #~ "    workspace and gives you additionally the option to switch to the last "
 #~ "used \n"
-#~ "    application of your previous workspace. This is always the last symbol "
-#~ "in \n"
+#~ "    application of your previous workspace. This is always the last "
+#~ "symbol in \n"
 #~ "    the list and is segregated by a separator/vertical line if "
 #~ "available. \n"
 #~ "    Every window is represented by its application icon.  \n"
