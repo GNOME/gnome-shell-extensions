@@ -7,13 +7,26 @@
     <key name="behaviour" enum="org.gnome.shell.extensions.alternate-tab.BehaviourMode">
       <default>'all_thumbnails'</default>
       <_summary>The alt tab behaviour.</_summary>
-      <_description>Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and workspace_icons.
-      See the configuration dialogs for details.</_description>
+      <_description>
+	Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and workspace_icons.
+	See the configuration dialogs for details.
+      </_description>
     </key>
     <key type="b" name="highlight-selected">
       <default>false</default>
       <summary>Bring each selected window to the front.</summary>
-      <description>Bring each window to the front in turn as Alt+Tab is pressed.</description>
+      <description>
+	Bring each window to the front in turn as Alt+Tab is pressed.
+	This setting applies only when the selected mode is 'workspace_icons'.
+      </description>
+    </key>
+    <key type="b" name="show-app-icon">
+      <default>true</default>
+      <summary>Show small application icon.</summary>
+      <description>
+	If true, a small application icon is overlayed to each window thumbnail.
+	This setting applies only when the selected mode is 'all_thumbnails'.
+      </description>
     </key>
   </schema>
 </schemalist>

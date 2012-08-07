@@ -20,6 +20,8 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 const N_ = function(e) { return e };
 
+const SETTINGS_SHOW_APP_ICON_KEY = 'show-app-icon';
+
 function mod(a, b) {
     return ((a+b) % b);
 }
@@ -27,7 +29,9 @@ function mod(a, b) {
 const AltTabPopupAllThumbnails = new Lang.Class({
     Name: 'AlternateTab.AltTabPopup.AllThumbnails',
 
-    _init : function() {
+    _init : function(settings) {
+	this._settings = settings;
+
         this.actor = new Shell.GenericContainer({ name: 'altTabPopup',
                                                   reactive: true });
 
@@ -114,7 +118,7 @@ const AltTabPopupAllThumbnails = new Lang.Class({
         this.actor.connect('button-press-event', Lang.bind(this, this._clickedOutside));
         this.actor.connect('scroll-event', Lang.bind(this, this._onScroll));
 
-        this._appSwitcher = new WindowList(windows);
+        this._appSwitcher = new WindowList(windows, this._settings);
         this.actor.add_actor(this._appSwitcher.actor);
         this._appSwitcher.connect('item-activated', Lang.bind(this, this._windowActivated));
         this._appSwitcher.connect('item-entered', Lang.bind(this, this._windowEntered));
@@ -282,17 +286,22 @@ const AltTabPopupAllThumbnails = new Lang.Class({
 const WindowIcon = new Lang.Class({
     Name: 'WindowIcon',
 
-    _init: function(window) {
+    _init: function(window, settings) {
 	this.window = window;
 
         this.actor = new St.BoxLayout({ style_class: 'alt-tab-app',
                                         vertical: true });
         this.icon = null;
-        this._iconBin = new St.Bin({ x_fill: true, y_fill: true });
+        this._iconBin = new St.Widget({ layout_manager: new Clutter.BinLayout() });
 
         this.actor.add(this._iconBin, { x_fill: false, y_fill: false } );
         this.label = new St.Label({ text: window.get_title() });
         this.actor.add(this.label, { x_fill: false });
+
+	if (settings.get_boolean(SETTINGS_SHOW_APP_ICON_KEY)) {
+	    let tracker = Shell.WindowTracker.get_default();
+	    this.app = tracker.get_window_app(window);
+	}
     },
 
     set_size: function(size) {
@@ -301,10 +310,24 @@ const WindowIcon = new Lang.Class({
         let [width, height] = windowTexture.get_size();
         let scale = Math.min(1.0, size / width, size / height);
 
-        this.clone = new Clutter.Clone({ source: windowTexture, width: width * scale, height: height * scale });
+        this.clone = new Clutter.Clone({ source: windowTexture,
+					 width: width * scale,
+					 height: height * scale,
+					 // usual hack for the usual bug in ClutterBinLayout...
+				         x_expand: true,
+					 y_expand: true });
 
         this._iconBin.set_size(size, size);
-        this._iconBin.child = this.clone;
+	this._iconBin.destroy_all_children();
+        this._iconBin.add_actor(this.clone);
+
+	if (this.app) {
+	    this.appIcon = this.app.create_icon_texture(size / 2);
+	    this.appIcon.x_expand = this.appIcon.y_expand = true;
+	    this.appIcon.x_align = Clutter.ActorAlign.END;
+	    this.appIcon.y_align = Clutter.ActorAlign.END;
+	    this._iconBin.add_actor(this.appIcon);
+	}
     }
 });
 
@@ -312,7 +335,7 @@ const WindowList = new Lang.Class({
     Name: 'AlternateTab.WindowList',
     Extends: AltTab.SwitcherList,
 
-    _init : function(windows) {
+    _init : function(windows, settings) {
         this.parent(true);
 
         this.windows = windows;
@@ -320,7 +343,7 @@ const WindowList = new Lang.Class({
 
 	for (let i = 0; i < windows.length; i++) {
 	    let win = windows[i];
-	    let icon = new WindowIcon(win);
+	    let icon = new WindowIcon(win, settings);
 	    icon.set_size(128);
 
             this.addItem(icon.actor, icon.label);

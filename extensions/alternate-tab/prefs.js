@@ -21,6 +21,7 @@ const Convenience = Me.imports.convenience;
 
 const SETTINGS_BEHAVIOUR_KEY = 'behaviour';
 const SETTINGS_HIGHLIGHT_KEY = 'highlight-selected';
+const SETTINGS_SHOW_APP_ICON_KEY = 'show-app-icon';
 
 const MODES = {
     all_thumbnails: {
@@ -28,7 +29,9 @@ const MODES = {
         description: N_("This mode presents all applications from all workspaces in one selection \
 list. Instead of using the application icon of every window, it uses small \
 thumbnails resembling the window itself."),
-        extra_widgets: [ ]
+        extra_widgets: [
+	    { label: N_("Show overlaid application icon"), key: SETTINGS_SHOW_APP_ICON_KEY }
+	]
     },
     workspace_icons: {
         name: N_("Workspace & Icons"),
