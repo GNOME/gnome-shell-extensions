@@ -1,16 +1,19 @@
 # Indonesian translation for gnome-shell-extensions.
 # Copyright (C) 2012 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Andika Triwidada <andika@gmail.com>, 2012.
 #
+# Andika Triwidada <andika@gmail.com>, 2012.
+# Dirgita <dirgitadevina@yahoo.co.id>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-06-02 09:11+0000\n"
-"PO-Revision-Date: 2012-06-02 20:31+0700\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2012-08-07 08:40+0000\n"
+"PO-Revision-Date: 2012-08-07 22:44+0700\n"
+"Last-Translator: Dirgita <dirgitadevina@yahoo.co.id>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,22 +21,33 @@ msgstr ""
 "X-Poedit-Language: Indonesian\n"
 "X-Poedit-Country: INDONESIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Lokalize 1.2\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "The alt tab behaviour."
 msgstr "Perilaku alt tab."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and workspace_icons. See the configuration dialogs for details."
-msgstr "Menata perilaku Alt-Tab. Nilai yang mungkin adalah: all_thumbnails dan workspace_icons. Lihat dialog konfigurasi untuk rinciannya."
+msgid ""
+"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+"workspace_icons. See the configuration dialogs for details."
+msgstr ""
+"Menata perilaku Alt-Tab. Nilai yang mungkin adalah: all_thumbnails dan "
+"workspace_icons. Lihat dialog konfigurasi untuk rinciannya."
 
 #: ../extensions/alternate-tab/prefs.js:27
 msgid "All & Thumbnails"
 msgstr "Semua & Gambar Mini"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid "This mode presents all applications from all workspaces in one selection list. Instead of using the application icon of every window, it uses small thumbnails resembling the window itself."
-msgstr "Mode ini menampilkan semua aplikasi dari semua ruang kerja dalam suatu daftar pilihan. Sebagai pengganti ikon aplikasi dari setiap jendela, dipakai gambar mini yang mirip dengan jendela itu sendiri."
+msgid ""
+"This mode presents all applications from all workspaces in one selection "
+"list. Instead of using the application icon of every window, it uses small "
+"thumbnails resembling the window itself."
+msgstr ""
+"Mode ini menampilkan semua aplikasi dari semua ruang kerja dalam suatu "
+"daftar pilihan. Sebagai pengganti ikon aplikasi dari setiap jendela, dipakai "
+"gambar mini yang mirip dengan jendela itu sendiri."
 
 #: ../extensions/alternate-tab/prefs.js:34
 msgid "Workspace & Icons"
@@ -41,19 +55,29 @@ msgstr "Ruang Kerja & Ikon"
 
 #: ../extensions/alternate-tab/prefs.js:35
 msgid ""
-"This mode let's you switch between the applications of your current workspace and gives you additionally the option to switch to the last used application of your previous workspace. This is always the last symbol in the list and is segregated by a separator/vertical line if available. \n"
+"This mode let's you switch between the applications of your current "
+"workspace and gives you additionally the option to switch to the last used "
+"application of your previous workspace. This is always the last symbol in "
+"the list and is segregated by a separator/vertical line if available. \n"
 "Every window is represented by its application icon."
 msgstr ""
-"Mode ini memungkinkan Anda bertukar antara aplikasi pada ruang kerja kini dan memberi Anda pilihan tambahan untuk bertukar ke aplikasi yang terakhir dipakai pada ruang kerja sebelumnya. Ini selalu merupakan simbol terakhir pada daftar dan dikelompokkan oleh pemisah/garis vertikal bila tersedia.\n"
+"Mode ini memungkinkan Anda bertukar antara aplikasi pada ruang kerja kini "
+"dan memberi Anda pilihan tambahan untuk bertukar ke aplikasi yang terakhir "
+"dipakai pada ruang kerja sebelumnya. Ini selalu merupakan simbol terakhir "
+"pada daftar dan dikelompokkan oleh pemisah/garis vertikal bila tersedia.\n"
 "Setiap jendela diwakili oleh ikon aplikasinya."
 
 #: ../extensions/alternate-tab/prefs.js:41
 msgid "Move current selection to front before closing the popup"
-msgstr "Pindahkan pilihan kini ke depan sebelum menutup popup"
+msgstr "Memindahkan pilihan kini ke depan sebelum menutup popup"
 
 #: ../extensions/alternate-tab/prefs.js:58
-msgid "The Alternate Tab can be used in different modes, that affect the way windows are chosen and presented."
-msgstr "Tab Alternatif dapat dipakai dalam mode berbeda, yang mempengaruhi cara jendela dipilih dan disajikan."
+msgid ""
+"The Alternate Tab can be used in different modes, that affect the way "
+"windows are chosen and presented."
+msgstr ""
+"Tab Alternatif dapat dipakai dalam mode berbeda, yang mempengaruhi cara "
+"jendela dipilih dan disajikan."
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
@@ -65,8 +89,8 @@ msgid "Hibernate"
 msgstr "Hibernasi"
 
 #: ../extensions/alternative-status-menu/extension.js:78
-msgid "Power Off..."
-msgstr "Matikan..."
+msgid "Power Off"
+msgstr "Matikan"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
 msgid "Enable suspending"
@@ -74,7 +98,7 @@ msgstr "Fungsikan suspensi"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
 msgid "Control the visibility of the Suspend menu item"
-msgstr "Mengendalikan kenampakan butir menu Suspensi"
+msgstr "Menentukan kenampakan menu Suspensi"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
 msgid "Enable hibernating"
@@ -82,15 +106,19 @@ msgstr "Fungsikan hibernasi"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
-msgstr "Mengendalikan kenampakan butir menu Hibernasi"
+msgstr "Menentukan kenampakan menu Hibernasi"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
 msgstr "Aplikasi dan daftar ruang kerja"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
-msgstr "Daftar string, masing-masing memuat id aplikasi (nama berkas desktop), diikuti oleh titik dua dan nomor ruang kerja"
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Daftar string, masing-masing memuat id aplikasi (nama berkas desktop), "
+"diikuti oleh titik dua dan nomor ruang kerja"
 
 #: ../extensions/auto-move-windows/prefs.js:55
 msgid "Application"
@@ -135,11 +163,15 @@ msgstr "Tambah ke Favorit"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
 msgid "Position of the dock"
-msgstr "Posisi dok"
+msgstr "Posisi tambat"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
-msgstr "Atur posisi dok pada layar. Nilai yang diijinkan adalah 'right' (kanan) atau 'left' (kiri)"
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"Atur posisi dok pada layar. Nilai yang diizinkan adalah 'right' (kanan) atau "
+"'left' (kiri)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
 msgid "Icon size"
@@ -147,7 +179,7 @@ msgstr "Ukuran ikon"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
 msgid "Sets icon size of the dock."
-msgstr "Atur ukuran ikon dok."
+msgstr "Mengatur ukuran ikon dok."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Enable/disable autohide"
@@ -158,8 +190,12 @@ msgid "Autohide effect"
 msgstr "Efek sembunyi otomatis"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'"
-msgstr "Atur efek penyembunyian dok. Nilai yang diijinkan adalah 'resize' (ubah ukuran), 'rescale' (ubah skala), dan 'move' (pindah)"
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr ""
+"Mengatur efek penyembunyian dok. Nilai yang diizinkan adalah 'resize' (ubah "
+"ukuran), 'rescale' (ubah skala), dan 'move' (pindah)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid "Autohide duration"
@@ -167,41 +203,55 @@ msgstr "Durasi sembunyi otomatis"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
-msgstr "Atur durasi waktu dari efek sembunyi otomatis."
+msgstr "Mengatur durasi waktu dari efek sembunyi otomatis."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
 msgid "Monitor"
 msgstr "Monitor"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid "Sets monitor to display dock in. The default value (-1) is the primary monitor."
-msgstr "Atur monitor tempat menampilkan dok. Nilai bawaan (-1) adalah monitor primer."
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"Mengatur monitor tempat menampilkan dok. Nilai bawaan (-1) adalah monitor "
+"utama."
 
-#: ../extensions/drive-menu/extension.js:67
+#: ../extensions/drive-menu/extension.js:57
+msgid "Removable devices"
+msgstr "Perangkat yang dapat dilepas"
+
+#: ../extensions/drive-menu/extension.js:68
 msgid "Open file manager"
 msgstr "Buka manajer berkas"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
-msgstr "Hello, world!"
+msgstr "Hai, dunia!"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
 msgid "Alternative greeting text."
 msgstr "Teks penyapa alternatif."
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid "If not empty, it contains the text that will be shown when clicking on the panel."
-msgstr "Bila tak kosong, ini memuat teks yang akan ditampilkan ketika mengklik panel."
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Bila tak kosong, ini memuat teks yang akan ditampilkan ketika klik pada "
+"panel."
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Example bertujuan menampilkan bagaimana membangun ekstensi yang berkelakuan baik bagi Shell dan karena itu memiliki sedikit fungsi.\n"
-"Namun mungkin untuk menata pesan sapaan."
+"Example bertujuan menampilkan bagaimana membangun ekstensi yang berkelakuan "
+"baik bagi Shell dan karena itu hanya memiliki sedikit fungsi.\n"
+"Namun, tetap mungkin untuk mengatur pesan sapaan."
 
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
@@ -232,16 +282,29 @@ msgid "Use more screen for windows"
 msgstr "Pakai lebih banyak layar bagi jendela"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
-msgstr "Mencoba memakai lebih banyak layar untuk menempatkan gambar mini jendela dengan menyesuaikan ke rasio aspek layar, dan menyatukan mereka lebih jauh untuk mengurangi kotak pembatas. Pengaturan ini hanya berlaku pada strategi penempatan alami."
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Mencoba memakai lebih banyak layar untuk menempatkan gambar mini jendela "
+"dengan menyesuaikan ke rasio aspek layar, dan menyatukan mereka lebih jauh "
+"untuk mengurangi kotak pembatas. Pengaturan ini hanya berlaku pada strategi "
+"penempatan alami."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
 msgstr "Tempatkan keterangan jendela di atas"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
-msgstr "Bila true, menempatkan keterangan jendela di bagian atas gambar mini masing-masing, menimpa bawaan shell yang menempatkannya di bagian bawah. Mengubah ini memerlukan memulai ulang shell agar berdampak."
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Bila true, menempatkan keterangan jendela di bagian atas gambar mini masing-"
+"masing, menimpa bawaan shell yang menempatkannya di bagian bawah. Mengubah "
+"ini memerlukan memulai ulang shell agar berdampak."
 
 #: ../extensions/places-menu/extension.js:39
 msgid "Removable Devices"
@@ -290,5 +353,4 @@ msgstr "Terbalik"
 
 #: ../extensions/xrandr-indicator/extension.js:82
 msgid "Configure display settings..."
-msgstr "Atur tatanan tampilan..."
-
+msgstr "Konfigurasi tampilan..."
