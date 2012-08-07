@@ -1,6 +1,15 @@
+3.5.5
+=====
+* convenience module has been relicensed to BSD,
+  for compatibility with GPLv3 extensions
+* alternate-tab has been refactored and seen various
+  improvements to all&thumbnails mode, including a new
+  overlaid application icon
+* updated translations (lt, id, sr)
+
 3.5.4
 =====
-* updates translations (de, es, ar, sl, lv, zh_CN)
+* updated translations (de, es, ar, sl, lv, zh_CN)
 
 3.5.2
 =====
