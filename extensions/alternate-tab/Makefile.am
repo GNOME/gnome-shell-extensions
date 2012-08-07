@@ -1,6 +1,6 @@
 EXTENSION_ID = alternate-tab
 
-EXTRA_MODULES = allThumbnails.js workspaceIcons.js prefs.js
+EXTRA_MODULES = prefs.js
 
 include ../../extension.mk
 include ../../settings.mk

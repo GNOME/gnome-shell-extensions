@@ -19,31 +19,13 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
-const SETTINGS_BEHAVIOUR_KEY = 'behaviour';
-const SETTINGS_HIGHLIGHT_KEY = 'highlight-selected';
-const SETTINGS_SHOW_APP_ICON_KEY = 'show-app-icon';
+const SETTINGS_APP_ICON_MODE = 'app-icon-mode';
+const SETTINGS_CURRENT_WORKSPACE_ONLY = 'current-workspace-only';
 
 const MODES = {
-    all_thumbnails: {
-        name: N_("All & Thumbnails"),
-        description: N_("This mode presents all applications from all workspaces in one selection \
-list. Instead of using the application icon of every window, it uses small \
-thumbnails resembling the window itself."),
-        extra_widgets: [
-	    { label: N_("Show overlaid application icon"), key: SETTINGS_SHOW_APP_ICON_KEY }
-	]
-    },
-    workspace_icons: {
-        name: N_("Workspace & Icons"),
-        description: N_("This mode lets you switch between the applications of your current \
-workspace and gives you additionally the option to switch to the last used \
-application of your previous workspace. This is always the last symbol in \
-the list and is separated by a separator/vertical line if available. \n\
-Every window is represented by its application icon."),
-        extra_widgets: [
-            { label: N_("Move current selection to front before closing the popup"), key: SETTINGS_HIGHLIGHT_KEY }
-        ]
-    }
+    thumbnail_only: N_("Thumbnail only"),
+    app_icon_only: N_("Application icon only"),
+    both: N_("Thumbnail and application icon"),
 };
 
 const AltTabSettingsWidget = new GObject.Class({
@@ -53,65 +35,40 @@ const AltTabSettingsWidget = new GObject.Class({
 
     _init : function(params) {
         this.parent(params);
-        this.column_spacing = 10;
         this.margin = 10;
+	this.orientation = Gtk.Orientation.VERTICAL;
 
         this._settings = Convenience.getSettings();
 
-        let introLabel = _("The Alternate Tab can be used in different modes, that \
-affect the way windows are chosen and presented.");
-
-        this.attach(new Gtk.Label({ label: introLabel, wrap: true, sensitive: true,
-                                    margin_bottom: 10, margin_top: 5 }),
-                    0, 0, 2, 1);
+        let presentLabel = _("Present windows as");
+        this.add(new Gtk.Label({ label: presentLabel, sensitive: true,
+                                 margin_bottom: 10, margin_top: 5 }));
 
         let top = 1;
         let radio = null;
-        let currentMode = this._settings.get_string(SETTINGS_BEHAVIOUR_KEY);
+        let currentMode = this._settings.get_string(SETTINGS_APP_ICON_MODE);
         for (let mode in MODES) {
             // copy the mode variable because it has function scope, not block scope
             // so cannot be used in a closure
             let modeCapture = mode;
-            let obj = MODES[mode];
-            let name = Gettext.gettext(obj.name);
-            let description = Gettext.gettext(obj.description);
-            let nextra = obj.extra_widgets.length;
+            let name = Gettext.gettext(MODES[mode]);
 
             radio = new Gtk.RadioButton({ group: radio, label: name, valign: Gtk.Align.START });
             radio.connect('toggled', Lang.bind(this, function(widget) {
                 if (widget.active)
-                    this._settings.set_string(SETTINGS_BEHAVIOUR_KEY, modeCapture);
-                this._updateSensitivity(widget, widget.active);
+                    this._settings.set_string(SETTINGS_APP_ICON_MODE, modeCapture);
             }));
-            this.attach(radio, 0, top, 1, nextra + 1);
-
-            let descriptionLabel = new Gtk.Label({ label: description, wrap: true, sensitive: true,
-                                                   xalign: 0.0, justify: Gtk.Justification.FILL });
-            this.attach(descriptionLabel, 1, top, 1, 1);
-
-            radio._extra = [];
-            for (let i = 0; i < nextra; i++) {
-                let key = obj.extra_widgets[i].key;
-                let label = Gettext.gettext(obj.extra_widgets[i].label);
-
-                let extra = new Gtk.CheckButton({ label: label });
-                this._settings.bind(key, extra, 'active', Gio.SettingsBindFlags.DEFAULT);
-
-                radio._extra.push(extra);
-                this.attach(extra, 1, top + i + 1, 1, 1);                            
-            }
+            this.add(radio);
 
             if (mode == currentMode)
                 radio.active = true;
-            this._updateSensitivity(radio, radio.active);
-
-            top += nextra + 1;
+            top += 1;
         }
-    },
 
-    _updateSensitivity: function(widget, active) {
-        for (let i = 0; i < widget._extra.length; i++)
-            widget._extra[i].sensitive = active;
+	let check = new Gtk.CheckButton({ label: _("Show only windows in the current workspace"),
+					  margin_top: 12 });
+	this._settings.bind(SETTINGS_CURRENT_WORKSPACE_ONLY, check, 'active', Gio.SettingsBindFlags.DEFAULT);
+	this.add(check);
     },
 });
 
