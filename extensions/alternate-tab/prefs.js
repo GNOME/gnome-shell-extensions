@@ -32,10 +32,10 @@ thumbnails resembling the window itself."),
     },
     workspace_icons: {
         name: N_("Workspace & Icons"),
-        description: N_("This mode let's you switch between the applications of your current \
+        description: N_("This mode lets you switch between the applications of your current \
 workspace and gives you additionally the option to switch to the last used \
 application of your previous workspace. This is always the last symbol in \
-the list and is segregated by a separator/vertical line if available. \n\
+the list and is separated by a separator/vertical line if available. \n\
 Every window is represented by its application icon."),
         extra_widgets: [
             { label: N_("Move current selection to front before closing the popup"), key: SETTINGS_HIGHLIGHT_KEY }
