@@ -8,78 +8,79 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-02-24 18:22+0000\n"
-"PO-Revision-Date: 2012-03-17 16:50+0530\n"
+"POT-Creation-Date: 2012-08-18 00:42+0000\n"
+"PO-Revision-Date: 2012-08-19 15:11+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pa\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "alt tab ਰਵੱਈਆ ਹੈ।"
+msgid "The application icon mode."
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਮੋਡ"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-#| msgid ""
-#| "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails "
-#| "and workspace_icons."
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
 msgstr ""
-"Alt-Tab ਰਵੱਈਆ ਸੈੱਟ ਕਰੋ। ਸੰਭਵ ਮੁੱਲ ਹਨ:  all_thumbnails ਅਤੇ workspace_icons। "
-"ਵੇਰਵੇ ਲਈ ਸੰਰਚਨਾ ਡਾਈਲਾਗ ਵੇਖੋ।"
+
+#: ../extensions/alternate-tab/prefs.js:26
+#| msgid "All & Thumbnails"
+msgid "Thumbnail only"
+msgstr "ਕੇਵਲ ਥੰਮਨੇਲ ਹੀ"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "ਸਭ ਅਤੇ ਥੰਮਨੇਲ"
+#| msgid "Application"
+msgid "Application icon only"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਹੀ"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
+msgid "Thumbnail and application icon"
+msgstr "ਥੰਮਨੇਲ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "ਵਰਕਸਪੇਸ ਅਤੇ ਆਈਕਾਨ"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "ਵਿੰਡੋਜ਼ ਨੂੰ ਪੇਸ਼ ਕਰੋ"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr ""
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "ਮੌਜੂਦਾ ਵਰਕਸਪੇਸ ਵਿੱਚੋਂ ਹੀ ਵਿੰਡੋਜ਼ ਹੀ ਵੇਖਾਓ"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "ਸਸਪੈਂਡ"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "ਹਾਈਬਰਨੇਟ"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "...ਬੰਦ ਕਰੋ"
+#: ../extensions/alternative-status-menu/extension.js:78
+#| msgid "Power Off..."
+msgid "Power Off"
+msgstr "ਬੰਦ ਕਰੋ"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "ਸਸਪੈਂਡ ਕਰਨਾ ਯੋਗ"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "ਸਸਪੈਂਡ ਮੇਨੂ ਆਈਟਮ ਦੀ ਦਿੱਖ ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "ਹਾਈਬਰਨੇਟ ਕਰਨਾ ਚਾਲੂ"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "ਹਾਈਬਰਨੇਟ ਮੇਨੂ ਆਈਟਮ ਦੀ ਦਿੱਖ ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -95,13 +96,11 @@ msgstr ""
 "ਰੱਖਦਾ ਹੈ"
 
 #: ../extensions/auto-move-windows/prefs.js:55
-#| msgid "Quit Application"
 msgid "Application"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ"
 
 #: ../extensions/auto-move-windows/prefs.js:64
 #: ../extensions/auto-move-windows/prefs.js:106
-#| msgid "Workspace & Icons"
 msgid "Workspace"
 msgstr "ਵਰਕਸਪੇਸ"
 
@@ -117,23 +116,23 @@ msgstr "ਨਵਾਂ ਮਿਲਾਉਣ ਨਿਯਮ ਬਣਾਉ"
 msgid "Add"
 msgstr "ਸ਼ਾਮਲ"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "ਪਸੰਦ ਵਿੱਚ ਜੋੜਨ ਲਈ ਇੱਥੇ ਸੁੱਟੋ"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "ਨਵੀਂ ਵਿੰਡੋ"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਬੰਦ ਕਰੋ"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "ਪਸੰਦ ਵਿੱਚੋਂ ਹਟਾਓ"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "ਪਸੰਦ 'ਚ ਸ਼ਾਮਲ ਕਰੋ"
 
@@ -164,8 +163,6 @@ msgid "Autohide effect"
 msgstr "ਆਪੇ-ਓਹਲੇ ਹੋਣ ਪ੍ਰਭਾਵ"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-#| msgid ""
-#| "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
 msgid ""
 "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
 "'move'"
@@ -181,7 +178,23 @@ msgstr "ਆਪੇ ਓਹਲੇ ਹੋਣ ਅੰਤਰਾਲ"
 msgid "Sets the time duration of the autohide effect."
 msgstr "ਆਪੇ-ਓਹਲੇ ਕਰਨ ਦੇ ਪ੍ਰਭਾਵ ਦੀ ਸਮੇਂ ਦਾ ਅੰਤਰਾਲ ਸੈੱਟ ਕਰੋ।"
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "ਮਾਨੀਟਰ"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"ਡੌਕ ਵਿੱਚ ਵੇਖਾਉਣ ਲਈ ਨਿਗਾਰਨ ਸੈੱਟ ਕਰੋ। ਪ੍ਰਾਈਮਰੀ ਮਾਨੀਟਰ ਲਈ ਡਿਫਾਲਟ ਮੁੱਲ (-1) ਹੈ।"
+
+#: ../extensions/drive-menu/extension.js:57
+#| msgid "Removable Devices"
+msgid "Removable devices"
+msgstr "ਹਟਾਉਣਯੋਗ ਜੰਤਰ"
+
+#: ../extensions/drive-menu/extension.js:68
 msgid "Open file manager"
 msgstr "ਫਾਇਲ ਮੈਨੇਜਰ ਖੋਲ੍ਹੋ"
 
@@ -256,7 +269,7 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 
-#: ../extensions/places-menu/extension.js:37
+#: ../extensions/places-menu/extension.js:39
 msgid "Removable Devices"
 msgstr "ਹਟਾਉਣਯੋਗ ਜੰਤਰ"
 
@@ -269,23 +282,19 @@ msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "ਥੀਮ ਦਾ ਨਾਂ, ਜੋ ~/.themes/name/gnome-shell ਤੋਂ ਲੋਡ ਕੀਤਾ ਜਾਵੇਗਾ"
 
 #: ../extensions/workspace-indicator/extension.js:30
-#| msgid "Workspace & Icons"
 msgid "Workspace Indicator"
 msgstr "ਵਰਕਸਪੇਸ ਇੰਡੀਕੇਟਰ"
 
-#: ../extensions/workspace-indicator/prefs.js:151
-#| msgid "Workspace & Icons"
+#: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "ਵਰਕਸਪੇਸ ਨਾਂ:"
 
-#: ../extensions/workspace-indicator/prefs.js:162
-#| msgid "Native"
+#: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
 msgstr "ਨਾਂ"
 
-#: ../extensions/workspace-indicator/prefs.js:196
+#: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
-#| msgid "Workspace & Icons"
 msgid "Workspace %d"
 msgstr "ਵਰਕਸਪੇਸ %d"
 
@@ -308,6 +317,22 @@ msgstr "ਉਤਲਾ ਹੇਠ"
 #: ../extensions/xrandr-indicator/extension.js:82
 msgid "Configure display settings..."
 msgstr "ਡਿਸਪਲੇਅ ਸੈਟਿੰਗ ਸੰਰਚਨਾ..."
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "alt tab ਰਵੱਈਆ ਹੈ।"
+
+#~| msgid ""
+#~| "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails "
+#~| "and workspace_icons."
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "Alt-Tab ਰਵੱਈਆ ਸੈੱਟ ਕਰੋ। ਸੰਭਵ ਮੁੱਲ ਹਨ:  all_thumbnails ਅਤੇ workspace_icons। ਵੇਰਵੇ ਲਈ "
+#~ "ਸੰਰਚਨਾ ਡਾਈਲਾਗ ਵੇਖੋ।"
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "ਵਰਕਸਪੇਸ ਅਤੇ ਆਈਕਾਨ"
 
 #~ msgid "Available"
 #~ msgstr "ਉਪਲੱਬਧ"
