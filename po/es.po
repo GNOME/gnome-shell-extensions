@@ -11,86 +11,55 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-08-07 21:42+0000\n"
-"PO-Revision-Date: 2012-08-10 10:58+0200\n"
+"POT-Creation-Date: 2012-08-18 00:42+0000\n"
+"PO-Revision-Date: 2012-08-20 13:16+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Gtranslator 2.91.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.5\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "El comportamiento de Alt+Tab."
+#| msgid "Show overlaid application icon"
+msgid "The application icon mode."
+msgstr "El modo de icono de la aplicación."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
 msgstr ""
-"Establece el comportamiento de Alt+Tab. Los valores posibles son: "
-"«native» (nativo), «all_thumbnails» (todo y miniaturas) y "
-"«workspace_icons» (iconos de áreas de trabajo). Para obtener información más "
-"detallada, consulte la configuración de los diálogos "
+"Configura cómo se muestran las ventanas en el intercambiador. Las opciones "
+"posibles son «thumbnail-only» (muestra una miniatura de la ventana, «app-"
+"icon-only» (sólo muestra el icono de la aplicación) o «both» (se muestran "
+"ambas cosas)."
+
+#: ../extensions/alternate-tab/prefs.js:26
+#| msgid "All & Thumbnails"
+msgid "Thumbnail only"
+msgstr "Sólo miniaturas"
+
+#: ../extensions/alternate-tab/prefs.js:27
+#| msgid "Application"
+msgid "Application icon only"
+msgstr "Sólo icono de la aplicación"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid "All & Thumbnails"
-msgstr "Todo y miniaturas"
+#| msgid "Show overlaid application icon"
+msgid "Thumbnail and application icon"
+msgstr "Miniatura e icono de la aplicación"
 
-#: ../extensions/alternate-tab/prefs.js:29
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"Este modo presenta todas las aplicaciones de todas las áreas de trabajo en "
-"una lista de selección. En lugar de usar el icono de aplicación de cada "
-"ventana, usa pequeñas miniaturas que se asemejan a la propia ventana."
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Presentar ventanas como"
 
-#: ../extensions/alternate-tab/prefs.js:33
-msgid "Show overlaid application icon"
-msgstr "Mostrar el icono de la aplicación superpuesta"
-
-#: ../extensions/alternate-tab/prefs.js:37
-msgid "Workspace & Icons"
-msgstr "Área de trabajo e iconos"
-
-#: ../extensions/alternate-tab/prefs.js:38
-#| msgid ""
-#| "This mode let's you switch between the applications of your current "
-#| "workspace and gives you additionally the option to switch to the last "
-#| "used application of your previous workspace. This is always the last "
-#| "symbol in the list and is segregated by a separator/vertical line if "
-#| "available. \n"
-#| "Every window is represented by its application icon."
-msgid ""
-"This mode lets you switch between the applications of your current workspace "
-"and gives you additionally the option to switch to the last used application "
-"of your previous workspace. This is always the last symbol in the list and "
-"is separated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Este modo le permite alternar entre las aplicaciones de su área de trabajo "
-"actual y le da la opción de cambiar a la última aplicación utilizada de su "
-"área de trabajo anterior. Este siempre es el último símbolo de la lista y "
-"está separado por un separador/línea vertical si está disponible.\n"
-"Cada ventana está representada por su icono de aplicación."
-
-#: ../extensions/alternate-tab/prefs.js:44
-msgid "Move current selection to front before closing the popup"
-msgstr ""
-"Mover la selección actual al frente antes de cerrar la ventana emergente"
-
-#: ../extensions/alternate-tab/prefs.js:61
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"La combinación de teclas Alt+Tab se puede usar en diferentes modos, que "
-"afectan la manera en que se eligen y presentan las ventanas."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Mostrar ventanas solamente en el área de trabajo actual"
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
@@ -368,6 +337,63 @@ msgstr "Hacia abajo"
 #: ../extensions/xrandr-indicator/extension.js:82
 msgid "Configure display settings..."
 msgstr "Configurar las opciones de pantalla…"
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "El comportamiento de Alt+Tab."
+
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "Establece el comportamiento de Alt+Tab. Los valores posibles son: "
+#~ "«native» (nativo), «all_thumbnails» (todo y miniaturas) y "
+#~ "«workspace_icons» (iconos de áreas de trabajo). Para obtener información "
+#~ "más detallada, consulte la configuración de los diálogos "
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "Este modo presenta todas las aplicaciones de todas las áreas de trabajo "
+#~ "en una lista de selección. En lugar de usar el icono de aplicación de "
+#~ "cada ventana, usa pequeñas miniaturas que se asemejan a la propia ventana."
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "Área de trabajo e iconos"
+
+#~| msgid ""
+#~| "This mode let's you switch between the applications of your current "
+#~| "workspace and gives you additionally the option to switch to the last "
+#~| "used application of your previous workspace. This is always the last "
+#~| "symbol in the list and is segregated by a separator/vertical line if "
+#~| "available. \n"
+#~| "Every window is represented by its application icon."
+#~ msgid ""
+#~ "This mode lets you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is separated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "Este modo le permite alternar entre las aplicaciones de su área de "
+#~ "trabajo actual y le da la opción de cambiar a la última aplicación "
+#~ "utilizada de su área de trabajo anterior. Este siempre es el último "
+#~ "símbolo de la lista y está separado por un separador/línea vertical si "
+#~ "está disponible.\n"
+#~ "Cada ventana está representada por su icono de aplicación."
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr ""
+#~ "Mover la selección actual al frente antes de cerrar la ventana emergente"
+
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "La combinación de teclas Alt+Tab se puede usar en diferentes modos, que "
+#~ "afectan la manera en que se eligen y presentan las ventanas."
 
 #~ msgid "Indicates if Alternate Tab is newly installed"
 #~ msgstr "Indica si se ha instalado Alt+Tab recientemente"
