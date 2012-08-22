@@ -22,7 +22,6 @@ const Indicator = new Lang.Class({
     _init: function() {
         this._initValues();
         this.drawing_area = new St.DrawingArea({ reactive: true });
-        this.drawing_area.width = 100; this.drawing_area.height = 100;
         this.drawing_area.connect('repaint', Lang.bind(this, this._draw));
         this.drawing_area.connect('button-press-event', function() {
             let app = Shell.AppSystem.get_default().lookup_app('gnome-system-monitor.desktop');
@@ -30,7 +29,7 @@ const Indicator = new Lang.Class({
         });
 
         this.actor = new St.Bin({ style_class: "extension-systemMonitor-indicator-area",
-                                  reactive: true});
+                                  reactive: true, x_fill: true, y_fill: true });
         this.actor.add_actor(this.drawing_area);
 
         this._timeout = Mainloop.timeout_add(INDICATOR_UPDATE_INTERVAL, Lang.bind(this, function () {

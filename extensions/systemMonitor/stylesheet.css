@@ -2,15 +2,17 @@
     spacing: 5px;
     padding-left: 5px;
     padding-right: 5px;
-    padding-bottom: 1px;
-    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .extension-systemMonitor-indicator-area {
     border: 1px solid #8d8d8d;
     border-radius: 3px;
     width: 100px;
-    height: 30px;
+    /* message tray is 72px, so 20px padding of the container,
+       2px of border, makes it 50px */
+    height: 50px;
     -grid-color: #575757;
     -cpu-total-color: rgb(0,154,62);
     -cpu-user-color: rgb(69,154,0);
