@@ -8,13 +8,21 @@ const St = imports.gi.St;
 const Shell = imports.gi.Shell;
 
 const Main = imports.ui.main;
+const Tweener = imports.ui.tweener;
+
+const Gettext = imports.gettext.domain('gnome-shell-extensions');
+const _ = Gettext.gettext;
+
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
 
 const INDICATOR_UPDATE_INTERVAL = 500;
 const INDICATOR_NUM_GRID_LINES = 3;
 
-let _cpuIndicator;
-let _memIndicator;
-let _box;
+const ITEM_LABEL_SHOW_TIME = 0.15;
+const ITEM_LABEL_HIDE_TIME = 0.1;
+const ITEM_HOVER_TIMEOUT = 300;
 
 const Indicator = new Lang.Class({
     Name: 'SystemMonitor.Indicator',
@@ -29,7 +37,8 @@ const Indicator = new Lang.Class({
         });
 
         this.actor = new St.Bin({ style_class: "extension-systemMonitor-indicator-area",
-                                  reactive: true, x_fill: true, y_fill: true });
+                                  reactive: true, track_hover: true,
+				  x_fill: true, y_fill: true });
         this.actor.add_actor(this.drawing_area);
 
         this._timeout = Mainloop.timeout_add(INDICATOR_UPDATE_INTERVAL, Lang.bind(this, function () {
@@ -39,10 +48,63 @@ const Indicator = new Lang.Class({
         }));
     },
 
+    showLabel: function() {
+        if (this.label == null)
+            return;
+
+        this.label.opacity = 0;
+        this.label.show();
+
+        let [stageX, stageY] = this.actor.get_transformed_position();
+
+	let itemWidth = this.actor.allocation.x2 - this.actor.allocation.x1;
+        let itemHeight = this.actor.allocation.y2 - this.actor.allocation.y1;
+
+	let labelWidth = this.label.width;
+        let labelHeight = this.label.height;
+        let xOffset = Math.floor((itemWidth - labelWidth) / 2)
+
+        let x = stageX + xOffset;
+
+        let node = this.label.get_theme_node();
+        let yOffset = node.get_length('-y-offset');
+
+        let y = stageY - this.label.get_height() - yOffset;
+
+        this.label.set_position(x, y);
+        Tweener.addTween(this.label,
+                         { opacity: 255,
+                           time: ITEM_LABEL_SHOW_TIME,
+                           transition: 'easeOutQuad',
+                         });
+    },
+
+    setLabelText: function(text) {
+        if (this.label == null)
+            this.label = new St.Label({ style_class: 'extension-systemMonitor-indicator-label'});
+
+        this.label.set_text(text);
+        Main.layoutManager.addChrome(this.label);
+        this.label.hide();
+    },
+
+    hideLabel: function () {
+        Tweener.addTween(this.label,
+                         { opacity: 0,
+                           time: ITEM_LABEL_HIDE_TIME,
+                           transition: 'easeOutQuad',
+                           onComplete: Lang.bind(this, function() {
+                               this.label.hide();
+                           })
+                         });
+    },
+
     destroy: function() {
         Mainloop.source_remove(this._timeout);
 
         this.actor.destroy();
+	if (this.label)
+	    this.label.destroy();
     },
 
     _initValues: function() {
@@ -147,6 +209,8 @@ const CpuIndicator = new Lang.Class({
         this.renderStats = this.renderStats.sort(function(a,b) {
             return renderStatOrder[a] - renderStatOrder[b];
         });
+
+	this.setLabelText(_("CPU"));
     },
 
     _initValues: function() {
@@ -198,6 +262,8 @@ const MemoryIndicator = new Lang.Class({
         this.renderStats = this.renderStats.sort(function(a,b) {
             return renderStatOrder[a] - renderStatOrder[b];
         });
+
+	this.setLabelText(_("Memory"));
     },
 
     _initValues: function() {
@@ -221,23 +287,72 @@ const MemoryIndicator = new Lang.Class({
     }
 });
 
+const INDICATORS = [CpuIndicator, MemoryIndicator];
+
+const Extension = new Lang.Class({
+    Name: 'SystemMonitor.Extension',
+
+    _init: function() {
+	Convenience.initTranslations();
+
+	this._showLabelTimeoutId = 0;
+	this._resetHoverTimeoutId = 0;
+	this._labelShowing = false;
+    },
+
+    enable: function() {
+	this._box = new St.BoxLayout({ style_class: 'extension-systemMonitor-container' });
+	this._indicators = [ ];
+
+	for (let i = 0; i < INDICATORS.length; i++) {
+	    let indicator = new (INDICATORS[i])();
+
+            indicator.actor.connect('notify::hover', Lang.bind(this, function() {
+		this._onHover(indicator);
+	    }));
+	    this._box.add_actor(indicator.actor);
+	    this._indicators.push(indicator);
+	}
+
+	Main.messageTray.actor.add_actor(this._box);
+    },
+
+    disable: function() {
+	this._indicators.forEach(function(i) { i.destroy(); });
+	this._box.destroy();
+    },
+
+    _onHover: function (item) {
+        if (item.actor.get_hover()) {
+            if (this._showLabelTimeoutId == 0) {
+                let timeout = this._labelShowing ? 0 : ITEM_HOVER_TIMEOUT;
+                this._showLabelTimeoutId = Mainloop.timeout_add(timeout,
+                    Lang.bind(this, function() {
+                        this._labelShowing = true;
+                        item.showLabel();
+                        return false;
+                    }));
+                if (this._resetHoverTimeoutId > 0) {
+                    Mainloop.source_remove(this._resetHoverTimeoutId);
+                    this._resetHoverTimeoutId = 0;
+                }
+            }
+        } else {
+            if (this._showLabelTimeoutId > 0)
+                Mainloop.source_remove(this._showLabelTimeoutId);
+            this._showLabelTimeoutId = 0;
+            item.hideLabel();
+            if (this._labelShowing) {
+                this._resetHoverTimeoutId = Mainloop.timeout_add(ITEM_HOVER_TIMEOUT,
+                    Lang.bind(this, function() {
+                        this._labelShowing = false;
+                        return false;
+                    }));
+            }
+        }
+    },
+});
+
 function init() {
-    // nothing to do here
-}
-
-function enable() {
-    _cpuIndicator = new CpuIndicator();
-    _memIndicator = new MemoryIndicator();
-    _box = new St.BoxLayout({ style_class: 'extension-systemMonitor-container' });
-    _box.add(_cpuIndicator.actor);
-    _box.add(_memIndicator.actor);
-    Main.messageTray.actor.add_actor(_box);
-}
-
-function disable() {
-    _cpuIndicator.destroy();
-    _cpuIndicator = null;
-    _memIndicator.destroy();
-    _memIndicator = null;
-    _box.destroy();
+    return new Extension();
 }
