@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-30 16:19+0200\n"
-"PO-Revision-Date: 2012-04-30 16:20+0200\n"
+"POT-Creation-Date: 2012-08-22 20:04+0200\n"
+"PO-Revision-Date: 2012-08-22 20:05+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -22,76 +22,67 @@ msgstr ""
 "X-Poedit-Country: Poland\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Zachowanie Alt+Tab."
+msgid "The application icon mode."
+msgstr "Tryb ikon programów."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
 msgstr ""
-"Ustawia zachowanie Alt-Tab. Możliwe wartości: all_thumbnails i "
-"workspace_icons. Proszę zobaczyć okno konfiguracji, aby uzyskać więcej "
-"informacji."
+"Konfiguruje, jak wyświetlać okna w przełączniku. Prawidłowe możliwości to "
+"\"thumbnail-only\" (wyświetla miniaturę okna), \"app-icon-only\" (wyświetla "
+"tylko ikonę programu) lub \"both\" (wyświetla oba)."
+
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "Tylko miniatury"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Wszystko i miniatury"
+msgid "Application icon only"
+msgstr "Tylko ikony programów"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"Ten tryb przedstawia wszystkie programy ze wszystkich obszarów roboczych i "
-"na jednej liście wyboru. Zamiast używać ikony programu każdego okna używa "
-"małych miniatur samych okien."
+msgid "Thumbnail and application icon"
+msgstr "Miniatura i ikona programu"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Obszar roboczy i ikony"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Wyświetlanie okien jako"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Ten tryb umożliwia przełączanie między programami na bieżącym obszarze "
-"roboczym i udostępnia dodatkową opcję przełączenia na ostatnio użyty program "
-"poprzedniego obszaru roboczego. Jest to zawsze ostatni symbol na liście, "
-"oddzielony pionową linią. \n"
-"Każde okno jest przedstawiane przez swoją ikonę."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr ""
-"Przesuwanie bieżącego zaznaczenia na przód przed zamknięciem okna "
-"wyskakującego"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"Alternatywna tabulacja może być używana w różnych trybach, które wpływają na "
-"sposób wybierania i przedstawiania okien."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Wyświetlanie tylko okien w bieżącym obszarze roboczym"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "Uśpij"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Hibernuj"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "Wyłącz komputer..."
+#: ../extensions/alternative-status-menu/extension.js:78
+msgid "Power Off"
+msgstr "Wyłącz komputer"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Włączenie usypiania"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "Kontrola widoczności pozycji \"Uśpij\" menu"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Włączenie hibernacji"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "Kontrola widoczności pozycji \"Hibernuj\" menu"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -126,23 +117,23 @@ msgstr "Utwórz nową pasującą regułę"
 msgid "Add"
 msgstr "Dodaj"
 
-#: ../extensions/dock/extension.js:577
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Przeciągnięcie tutaj dodaje do ulubionych"
 
-#: ../extensions/dock/extension.js:903
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Nowe okno"
 
-#: ../extensions/dock/extension.js:905
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Zakończ program"
 
-#: ../extensions/dock/extension.js:910
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Usuń z ulubionych"
 
-#: ../extensions/dock/extension.js:911
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Dodaj do ulubionych"
 
@@ -202,7 +193,11 @@ msgstr ""
 "Ustawia, na którym monitorze wyświetlać dok. Domyślna wartość (-1) oznacza "
 "główny monitor."
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/drive-menu/extension.js:57
+msgid "Removable devices"
+msgstr "Urządzenia wymienne"
+
+#: ../extensions/drive-menu/extension.js:68
 msgid "Open file manager"
 msgstr "Otwórz menedżer plików"
 
@@ -286,9 +281,17 @@ msgstr ""
 "powłokę. Zmiana tego ustawienia wymaga ponownego uruchomienia powłoki, aby "
 "uwzględnić zmiany."
 
-#: ../extensions/places-menu/extension.js:37
+#: ../extensions/places-menu/extension.js:39
 msgid "Removable Devices"
 msgstr "Urządzenia wymienne"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "Procesor"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Pamięć"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
