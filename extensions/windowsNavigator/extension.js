@@ -139,7 +139,7 @@ function enable() {
     workViewInjections['_onKeyRelease'] = undefined;
 
     WorkspacesView.WorkspacesView.prototype._onKeyPress = function(s, o) {
-        if(Main.overview._viewSelector._activeTab.id != 'windows')
+        if(Main.overview._viewSelector._activePage != Main.overview._viewSelector._workspacesPage)
             return false;
 
         if ((o.get_key_symbol() == Clutter.KEY_Alt_L ||
