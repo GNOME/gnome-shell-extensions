@@ -1,3 +1,14 @@
+3.5.90
+======
+* alternate-tab has been reworked again, the old mode switch
+  was removed and the all&thumbnails code extended to handle
+  icons and filtering to the workspace
+* alternate-tab thumbnails now reflect the aspect ratio of the windows
+* systemMonitor now shows a tooltip above the indicator
+* native-window-placement, systemMonitor and windowsNavigator have been updated
+  for the newer shell
+* updated translations (es, pa)
+
 3.5.5
 =====
 * convenience module has been relicensed to BSD,
