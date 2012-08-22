@@ -341,6 +341,8 @@ const WindowIcon = new Lang.Class({
             this.clone = new Clutter.Clone({ source: windowTexture,
 					     width: width * scale,
 					     height: height * scale,
+					     x_align: Clutter.ActorAlign.CENTER,
+					     y_align: Clutter.ActorAlign.CENTER,
 					     // usual hack for the usual bug in ClutterBinLayout...
 				             x_expand: true,
 					     y_expand: true });
@@ -353,6 +355,8 @@ const WindowIcon = new Lang.Class({
             this.clone = new Clutter.Clone({ source: windowTexture,
 					     width: width * scale,
 					     height: height * scale,
+					     x_align: Clutter.ActorAlign.CENTER,
+					     y_align: Clutter.ActorAlign.CENTER,
 					     // usual hack for the usual bug in ClutterBinLayout...
 				             x_expand: true,
 					     y_expand: true });
@@ -381,7 +385,7 @@ const WindowList = new Lang.Class({
     Extends: AltTab.SwitcherList,
 
     _init : function(windows, settings) {
-        this.parent(true);
+        this.parent(false);
 
         this.windows = windows;
         this.icons = [];
