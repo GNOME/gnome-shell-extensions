@@ -149,10 +149,11 @@ const AltTabPopup = new Lang.Class({
         this._appSwitcher.connect('item-entered', Lang.bind(this, this._windowEntered));
 
         // make the initial selection
+	this._currentWindow = 0;
         if (backward)
-            this._select(windows.length - 1);
+            this._select(this._previousWindow());
         else
-            this._select(1);
+            this._select(this._nextWindow());
 
         this.actor.opacity = 0;
         this.actor.show();
