@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-06-08 12:07+0000\n"
-"PO-Revision-Date: 2012-06-08 20:51+0100\n"
+"POT-Creation-Date: 2012-08-29 00:06+0000\n"
+"PO-Revision-Date: 2012-08-29 09:10+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -22,40 +22,32 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Obnašanje tipk Alt-Tab"
+msgid "The application icon mode."
+msgstr "Ikonski način programa."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and workspace_icons. See the configuration dialogs for details."
-msgstr "Določi obnašanje tipk Alt-Tab. Mogoče vrednosti so: vse_sličice in ikone_delovne_površine. Za več podrobnosti si oglejte nastavitve."
+msgid "Configures how the windows are shown in the switcher. Valid possibilities are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-only' (shows only the application icon) or 'both'."
+msgstr "Nastavitev prikaza oken v preklopniku. Veljavne možnosti so 'le sličice', kar pokaže pomanjšano sličico okna, 'le ikono programa', kar pokaže ikono in možnost 'oboje', torej ikono in pomanjšano sličico."
+
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "Le sličice"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Vse in sličice"
+msgid "Application icon only"
+msgstr "Le ikono programa"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid "This mode presents all applications from all workspaces in one selection list. Instead of using the application icon of every window, it uses small thumbnails resembling the window itself."
-msgstr "Ta način prikazuje vse programe na vseh delovnih površinah na enem izbirnem seznamu. Namesto uporabe ikone programa na vsakem oknu, uporablja majhne sličice, ki predstavljajo samo okno."
+msgid "Thumbnail and application icon"
+msgstr "Sličice in ikono programa"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Delovne površine in ikone"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Pokaži okna kot"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current workspace and gives you additionally the option to switch to the last used application of your previous workspace. This is always the last symbol in the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Ta način omogoča preklop med programi trenutne delovne površine in hkrati omogoča izbiro na zadnje uporabljenega okna predhodne delovne površine. Ta predmet je vedno zapisan kot zadnji predmet seznama in je ločen z ločilnikom ali navpično črto.\n"
-"Vsako okno je prikazano z ikono programa."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "Premakni trenutni izbor v ospredje pred zapiranjem pojavnega okna"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid "The Alternate Tab can be used in different modes, that affect the way windows are chosen and presented."
-msgstr "Nadomestni zavihek je mogoče uporabiti pri različnih načinih dela, ki vplivajo na način izbire oken."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Pokaži le okna trenutne delovne površine"
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
@@ -253,6 +245,14 @@ msgstr "Izbrana možnost določi postavitev nazivov oken na vrh posamezne sliči
 msgid "Removable Devices"
 msgstr "Odstranljive naprave"
 
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPE"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Pomnilnik"
+
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
 msgstr "Ime teme"
@@ -298,3 +298,48 @@ msgstr "Zgoraj-navzdol"
 msgid "Configure display settings..."
 msgstr "Nastavitve zaslona ..."
 
+#~ msgid "The alt tab behaviour."
+#~ msgstr "Obnašanje tipk Alt-Tab"
+
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "Določi obnašanje tipk Alt-Tab. Mogoče vrednosti so: vse_sličice in "
+#~ "ikone_delovne_površine. Za več podrobnosti si oglejte nastavitve."
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "Ta način prikazuje vse programe na vseh delovnih površinah na enem "
+#~ "izbirnem seznamu. Namesto uporabe ikone programa na vsakem oknu, "
+#~ "uporablja majhne sličice, ki predstavljajo samo okno."
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "Delovne površine in ikone"
+
+#~ msgid ""
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "Ta način omogoča preklop med programi trenutne delovne površine in hkrati "
+#~ "omogoča izbiro na zadnje uporabljenega okna predhodne delovne površine. "
+#~ "Ta predmet je vedno zapisan kot zadnji predmet seznama in je ločen z "
+#~ "ločilnikom ali navpično črto.\n"
+#~ "Vsako okno je prikazano z ikono programa."
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr "Premakni trenutni izbor v ospredje pred zapiranjem pojavnega okna"
+
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "Nadomestni zavihek je mogoče uporabiti pri različnih načinih dela, ki "
+#~ "vplivajo na način izbire oken."
