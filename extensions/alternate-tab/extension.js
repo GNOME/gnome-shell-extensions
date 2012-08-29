@@ -363,17 +363,27 @@ const WindowIcon = new Lang.Class({
 					     y_expand: true });
 	    this._iconBin.add_actor(this.clone);
 
-	    this.appIcon = this.app.create_icon_texture(size / 2);
-	    this.appIcon.x_expand = this.appIcon.y_expand = true;
-	    this.appIcon.x_align = Clutter.ActorAlign.END;
-	    this.appIcon.y_align = Clutter.ActorAlign.END;
-	    this._iconBin.add_actor(this.appIcon);
+	    if (this.app) {
+		this.appIcon = this.app.create_icon_texture(size / 2);
+		this.appIcon.x_expand = this.appIcon.y_expand = true;
+		this.appIcon.x_align = Clutter.ActorAlign.END;
+		this.appIcon.y_align = Clutter.ActorAlign.END;
+		this._iconBin.add_actor(this.appIcon);
+	    }
 	    break;
 
 	case AppIconMode.APP_ICON_ONLY:
 	    size = 96;
-	    this.appIcon = this.app.create_icon_texture(size);
-	    this.appIcon.x_expand = this.appIcon.y_expand = true;
+	    if (this.app) {
+		this.appIcon = this.app.create_icon_texture(size);
+		this.appIcon.x_expand = this.appIcon.y_expand = true;
+	    } else {
+		this.appIcon = new St.Icon({ icon_name: 'icon-missing',
+					     icon_type: St.IconType.FULLCOLOR,
+					     icon_size: size,
+					     x_expand: true,
+					     y_expand: true });
+	    }
 	    this._iconBin.add_actor(this.appIcon);
 	}
 
