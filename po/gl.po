@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-16 12:15+0100\n"
-"PO-Revision-Date: 2012-03-16 12:15+0100\n"
+"POT-Creation-Date: 2012-08-30 04:16+0200\n"
+"PO-Revision-Date: 2012-08-30 04:16+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
 "Language: gl\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 2.91.5\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "The alt tab behaviour."
@@ -123,23 +124,23 @@ msgstr "Crear regra de coincidencia nova"
 msgid "Add"
 msgstr "Engadir"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Arrastre aquí para engadir aos favoritos"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Nova xanela"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Saír do aplicativo"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Eliminar dos favoritos"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Engadir aos favoritos"
 
@@ -186,6 +187,18 @@ msgstr "Duración do autoagochado"
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Estabelece a duración do efecto de autoagochado."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Monitor"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"Estabelece a pantalla na que mostrar o taboleiro. O valor predeterminado es "
+"(-1), que é a pantalla principal."
 
 #: ../extensions/drive-menu/extension.js:66
 msgid "Open file manager"
