@@ -141,7 +141,6 @@ Source.prototype = {
 
         if (!this._iconUri) {
             iconBox.child = new St.Icon({ icon_name: 'avatar-default',
-                                          icon_type: St.IconType.FULLCOLOR,
                                           icon_size: iconBox._size });
         } else {
             let textureCache = St.TextureCache.get_default();

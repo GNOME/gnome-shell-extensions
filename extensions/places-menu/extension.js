@@ -26,7 +26,7 @@ const PlacesMenu = new Lang.Class({
     Extends: PanelMenu.SystemStatusButton,
 
     _init: function() {
-        this.parent('folder');
+        this.parent('folder-symbolic');
         this.placesManager = new PlaceDisplay.PlacesManager();
 
         this.defaultItems = [];

@@ -379,7 +379,6 @@ const WindowIcon = new Lang.Class({
 		this.appIcon.x_expand = this.appIcon.y_expand = true;
 	    } else {
 		this.appIcon = new St.Icon({ icon_name: 'icon-missing',
-					     icon_type: St.IconType.FULLCOLOR,
 					     icon_size: size,
 					     x_expand: true,
 					     y_expand: true });

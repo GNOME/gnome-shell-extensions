@@ -38,7 +38,7 @@ const ApplicationsButton = new Lang.Class({
     Extends: PanelMenu.SystemStatusButton,
 
     _init: function() {
-        this.parent('start-here');
+        this.parent('start-here-symbolic');
 
         this._appSys = Shell.AppSystem.get_default();
         this._installedChangedId = this._appSys.connect('installed-changed', Lang.bind(this, this._refresh));
