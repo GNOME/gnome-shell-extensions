@@ -1,7 +1,7 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 
-const DBus = imports.dbus;
 const Gdk = imports.gi.Gdk;
+const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const GnomeDesktop = imports.gi.GnomeDesktop;
 const Lang = imports.lang;
@@ -33,25 +33,23 @@ let rotations = [ [ GnomeDesktop.RRRotation.ROTATION_0, N_("Normal") ],
 		  [ GnomeDesktop.RRRotation.ROTATION_180, N_("Upside-down") ]
 		];
 
-const XRandr2Iface = {
-    name: 'org.gnome.SettingsDaemon.XRANDR_2',
-    methods: [
-	{ name: 'ApplyConfiguration', inSignature: 'xx', outSignature: '' },
-    ]
-};
-let XRandr2 = DBus.makeProxyClass(XRandr2Iface);
+const XRandr2Iface = <interface name='org.gnome.SettingsDaemon.XRANDR_2'>
+<method name='ApplyConfiguration'>
+    <arg type='x' direction='in'/>
+    <arg type='x' direction='in'/>
+</method>
+</interface>;
 
-function Indicator() {
-    this._init.apply(this, arguments);
-}
+const XRandr2 = Gio.DBusProxy.makeProxyWrapper(XRandr2Iface);
 
-Indicator.prototype = {
-    __proto__: PanelMenu.SystemStatusButton.prototype,
+const Indicator = new Lang.Class({
+    Name: 'XRandRIndicator',
+    Extends: PanelMenu.SystemStatusButton,
 
     _init: function() {
-        PanelMenu.SystemStatusButton.prototype._init.call(this, 'preferences-desktop-display');
+	this.parent('preferences-desktop-display-symbolic', _("Display"));
 
-        this._proxy = new XRandr2(DBus.session, 'org.gnome.SettingsDaemon', '/org/gnome/SettingsDaemon/XRANDR');
+        this._proxy = new XRandr2(Gio.DBus.session, 'org.gnome.SettingsDaemon', '/org/gnome/SettingsDaemon/XRANDR');
 
         try {
             this._screen = new GnomeDesktop.RRScreen({ gdk_screen: Gdk.Screen.get_default() });
@@ -79,9 +77,7 @@ Indicator.prototype = {
                 this._addOutputItem(config, outputs[i]);
         }
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-        this.menu.addAction(_("Configure display settings..."), function() {
-            GLib.spawn_command_line_async('gnome-control-center display');
-        });
+	this.menu.addSettingsAction(_("Display Settings"), 'gnome-display-panel.desktop');
     },
 
     _addOutputItem: function(config, output) {
@@ -137,8 +133,7 @@ Indicator.prototype = {
         }
         return retval;
     }
-}
-
+});
 
 function init(metadata) {
     Convenience.initTranslations();
