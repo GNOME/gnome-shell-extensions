@@ -301,7 +301,9 @@ const Extension = new Lang.Class({
     },
 
     enable: function() {
-	this._box = new St.BoxLayout({ style_class: 'extension-systemMonitor-container' });
+	this._box = new St.BoxLayout({ style_class: 'extension-systemMonitor-container',
+				       x_align: Clutter.ActorAlign.START,
+				       x_expand: true });
 	this._indicators = [ ];
 
 	for (let i = 0; i < INDICATORS.length; i++) {
