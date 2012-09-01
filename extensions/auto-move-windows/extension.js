@@ -87,75 +87,76 @@ function init() {
     settings = Convenience.getSettings();
 }
 
+function myCheckWorkspaces() {
+    let i;
+    let emptyWorkspaces = new Array(Main._workspaces.length);
+
+    for (i = 0; i < Main._workspaces.length; i++) {
+	let lastRemoved = Main._workspaces[i]._lastRemovedWindow;
+	if (lastRemoved &&
+            (lastRemoved.get_window_type() == Meta.WindowType.SPLASHSCREEN ||
+             lastRemoved.get_window_type() == Meta.WindowType.DIALOG ||
+             lastRemoved.get_window_type() == Meta.WindowType.MODAL_DIALOG))
+            emptyWorkspaces[i] = false;
+	else
+            emptyWorkspaces[i] = true;
+    }
+
+    let windows = global.get_window_actors();
+    for (i = 0; i < windows.length; i++) {
+	let win = windows[i];
+
+	if (win.get_meta_window().is_on_all_workspaces())
+            continue;
+
+	let workspaceIndex = win.get_workspace();
+	emptyWorkspaces[workspaceIndex] = false;
+    }
+
+    // If we don't have an empty workspace at the end, add one
+    if (!emptyWorkspaces[emptyWorkspaces.length -1]) {
+	global.screen.append_new_workspace(false, global.get_current_time());
+	emptyWorkspaces.push(false);
+    }
+
+    let activeWorkspaceIndex = global.screen.get_active_workspace_index();
+    let activeIsLast = activeWorkspaceIndex == global.screen.n_workspaces - 2;
+    let removingTrailWorkspaces = (emptyWorkspaces[activeWorkspaceIndex] &&
+                                   activeIsLast);
+    // Don't enter the overview when removing multiple empty workspaces at startup
+    let showOverview  = (removingTrailWorkspaces &&
+                         !emptyWorkspaces.every(function(x) { return x; }));
+
+    if (removingTrailWorkspaces) {
+        // "Merge" the empty workspace we are removing with the one at the end
+        Main.wm.blockAnimations();
+    }
+
+    // Delete other empty workspaces; do it from the end to avoid index changes
+    for (i = emptyWorkspaces.length - 2; i >= 0; i--) {
+        if (emptyWorkspaces[i])
+            global.screen.remove_workspace(Main._workspaces[i], global.get_current_time());
+        else
+            break;
+    }
+
+    if (removingTrailWorkspaces) {
+        global.screen.get_workspace_by_index(global.screen.n_workspaces - 1).activate(global.get_current_time());
+
+        Main.wm.unblockAnimations();
+
+        if (!Main.overview.visible && showOverview)
+            Main.overview.show();
+    }
+
+    Main._checkWorkspacesId = 0;
+    return false;
+}
+
 function enable() {
     prevCheckWorkspaces = Main._checkWorkspaces;
-    Main._checkWorkspaces = function() {
-        let i;
-        let emptyWorkspaces = new Array(Main._workspaces.length);
-
-        for (i = 0; i < Main._workspaces.length; i++) {
-            let lastRemoved = Main._workspaces[i]._lastRemovedWindow;
-            if (lastRemoved &&
-                (lastRemoved.get_window_type() == Meta.WindowType.SPLASHSCREEN ||
-                 lastRemoved.get_window_type() == Meta.WindowType.DIALOG ||
-                 lastRemoved.get_window_type() == Meta.WindowType.MODAL_DIALOG))
-                    emptyWorkspaces[i] = false;
-            else
-                emptyWorkspaces[i] = true;
-        }
-
-
-        let windows = global.get_window_actors();
-        for (i = 0; i < windows.length; i++) {
-            let win = windows[i];
-
-            if (win.get_meta_window().is_on_all_workspaces())
-                continue;
-
-            let workspaceIndex = win.get_workspace();
-            emptyWorkspaces[workspaceIndex] = false;
-        }
-
-        // If we don't have an empty workspace at the end, add one
-        if (!emptyWorkspaces[emptyWorkspaces.length -1]) {
-            global.screen.append_new_workspace(false, global.get_current_time());
-            emptyWorkspaces.push(false);
-        }
-
-        let activeWorkspaceIndex = global.screen.get_active_workspace_index();
-        let activeIsLast = activeWorkspaceIndex == global.screen.n_workspaces - 2;
-        let removingTrailWorkspaces = (emptyWorkspaces[activeWorkspaceIndex] &&
-                                        activeIsLast);
-        // Don't enter the overview when removing multiple empty workspaces at startup
-        let showOverview  = (removingTrailWorkspaces &&
-                             !emptyWorkspaces.every(function(x) { return x; }));
-
-        if (removingTrailWorkspaces) {
-            // "Merge" the empty workspace we are removing with the one at the end
-            Main.wm.blockAnimations();
-        }
-
-        // Delete other empty workspaces; do it from the end to avoid index changes
-        for (i = emptyWorkspaces.length - 2; i >= 0; i--) {
-            if (emptyWorkspaces[i])
-                global.screen.remove_workspace(Main._workspaces[i], global.get_current_time());
-            else
-                break;
-        }
-
-        if (removingTrailWorkspaces) {
-            global.screen.get_workspace_by_index(global.screen.n_workspaces - 1).activate(global.get_current_time());
-
-            Main.wm.unblockAnimations();
-
-            if (!Main.overview.visible && showOverview)
-                Main.overview.show();
-        }
-
-        Main._checkWorkspacesId = 0;
-        return false;
-
-    };
+    if (Meta.prefs_get_dynamic_workspaces())
+	Main._checkWorkspaces = myCheckWorkspaces;
 
     winMover = new WindowMover();
 }
