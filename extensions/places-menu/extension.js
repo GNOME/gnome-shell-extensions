@@ -1,6 +1,6 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 
-const Gdk = imports.gi.Gdk;
+const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Lang = imports.lang;
 const Shell = imports.gi.Shell;
@@ -19,7 +19,38 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
-const PLACE_ICON_SIZE = 22;
+const PLACE_ICON_SIZE = 16;
+
+function iconForPlace(place) {
+    let split = place.id.split(':');
+    let kind = split.shift();
+    let uri = split.join(':');
+
+    let gicon = new Gio.ThemedIcon({ name: 'folder-symbolic' });
+    switch(kind) {
+    case 'special':
+	switch(uri) {
+	case 'home':
+	    gicon = new Gio.ThemedIcon({ name: 'user-home-symbolic' });
+	    break;
+	case 'desktop':
+	    // FIXME: There is no user-desktop-symbolic
+	    gicon = new Gio.ThemedIcon({ name: 'folder-symbolic' });
+	    break;
+	}
+	break;
+    case 'bookmark':
+	let info = Gio.File.new_for_uri(uri).query_info('standard::symbolic-icon', 0, null);
+	gicon = info.get_symbolic_icon(info);
+	break;
+    case 'mount':
+	gicon = place._mount.get_symbolic_icon();
+	break;
+    }
+
+    return new St.Icon({ gicon: gicon,
+			 icon_size: PLACE_ICON_SIZE });
+}
 
 const PlacesMenu = new Lang.Class({
     Name: 'PlacesMenu.PlacesMenu',
@@ -66,7 +97,7 @@ const PlacesMenu = new Lang.Class({
 
         for (let placeid = 0; placeid < this.defaultPlaces.length; placeid++) {
             this.defaultItems[placeid] = new PopupMenu.PopupMenuItem(this.defaultPlaces[placeid].name);
-            let icon = this.defaultPlaces[placeid].iconFactory(PLACE_ICON_SIZE);
+            let icon = iconForPlace(this.defaultPlaces[placeid]);
             this.defaultItems[placeid].addActor(icon, { align: St.Align.END, span: -1 });
             this.defaultItems[placeid].place = this.defaultPlaces[placeid];
             this.menu.addMenuItem(this.defaultItems[placeid]);
@@ -82,7 +113,7 @@ const PlacesMenu = new Lang.Class({
 
         for (let bookmarkid = 0; bookmarkid < this.bookmarks.length; bookmarkid++) {
             this.bookmarkItems[bookmarkid] = new PopupMenu.PopupMenuItem(this.bookmarks[bookmarkid].name);
-            let icon = this.bookmarks[bookmarkid].iconFactory(PLACE_ICON_SIZE);
+            let icon = iconForPlace(this.bookmarks[bookmarkid]);
             this.bookmarkItems[bookmarkid].addActor(icon, { align: St.Align.END, span: -1 });
             this.bookmarkItems[bookmarkid].place = this.bookmarks[bookmarkid];
             this._bookmarksSection.addMenuItem(this.bookmarkItems[bookmarkid]);
@@ -97,7 +128,7 @@ const PlacesMenu = new Lang.Class({
 
         for (let devid = 0; devid < this.devices.length; devid++) {
             this.deviceItems[devid] = new PopupMenu.PopupMenuItem(this.devices[devid].name);
-            let icon = this.devices[devid].iconFactory(PLACE_ICON_SIZE);
+            let icon = iconForPlace(this.devices[devid]);
             this.deviceItems[devid].addActor(icon, { align: St.Align.END, span: -1 });
             this.deviceItems[devid].place = this.devices[devid];
             this._devicesMenuItem.menu.addMenuItem(this.deviceItems[devid]);
