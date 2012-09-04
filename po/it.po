@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-01 21:11+0100\n"
-"PO-Revision-Date: 2012-03-01 21:08+0100\n"
+"POT-Creation-Date: 2012-09-05 00:20+0200\n"
+"PO-Revision-Date: 2012-09-05 00:25+0200\n"
 "Last-Translator: Giovanni Campagna <scampa.giovanni@gmail.com>\n"
 "Language-Team: none <LL@li.org>\n"
 "Language: it\n"
@@ -16,87 +16,79 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+# ndt: che schifo...
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
-msgstr ""
-"Imposta il comportamento di Alt-Tab. Valori possibili sono \"all_thumbnails"
-"\" e \"workspace_icons\". Per maggiori dettagli, si rimanda alla finestra di "
-"configurazione."
+msgid "The application icon mode."
+msgstr "Modalità icona applicazione"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "The alt tab behaviour."
-msgstr "Comportamento di Alt-Tab"
+msgid ""
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
+msgstr "Configura come le finestre sono mostrate nello scambiafinestre. Le possibilità valide sono 'thumbnails-only' (mostra una miniatura della finestra), 'app-icon-only' (mostra solo l'icona dell'applicazione) o 'both' (mostra entrambi)."
+
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "Solo la miniatura"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Tutte & Miniature"
+msgid "Application icon only"
+msgstr "Solo l'icona dell'applicazione"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"Questa modalità presenta tutte le applicazioni, da tutti gli spazi di lavoro "
-"in un'unica lista. Invece di usare un'icona, usa delle piccole miniature che "
-"rappresentano la finestra stessa."
+msgid "Thumbnail and application icon"
+msgstr "La miniatura e l'icona dell'applicazione"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Spazio di lavoro & Icone"
+# ndt: con invece che come, perchè altrimenti l'articolo sta male
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Mostra le finestre con"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Questa modalità ti consente di passare da un'applicazione all'altra del tuo "
-"spazio di lavoro corrente e ti da in aggiunta l'opzione di passare "
-"all'ultima applicazione dello spazio di lavoro precedente. Questa è sempre "
-"l'ultima della lista ed è separata da una linea verticale, se presente.\n"
-"Ogni finestra è rappresentata dall'icona dell'applicazione."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "Muovi la selezione corrente in avanti prima di chiudere il popup"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"Alternate Tab può essere usato in varie modalità, che influenzano il modo "
-"con cui le finestre sono scelte e successivamente mostrate."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Mostra solo le finestre dello spazio di lavoro corrente"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "Sospendi"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Iberna"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "Spegni..."
+#: ../extensions/alternative-status-menu/extension.js:78
+msgid "Power Off"
+msgstr "Spegni"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Abilita sospensione"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "Controlla la visibilità del comando Sospendi"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Abilita ibernazione"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "Controlla la visibilità del comando Iberna"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Lista applicazioni e spazi di lavoro"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
 "Una lista di stringhe, ognuna contenente un id applicazione (nome del file ."
 "desktop), seguito da due punti e il numero dello spazio di lavoro"
-
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "Application and workspace list"
-msgstr "Lista applicazioni e spazi di lavoro"
 
 #: ../extensions/auto-move-windows/prefs.js:55
 msgid "Application"
@@ -119,49 +111,53 @@ msgstr "Crea una nuova regola di corrispondenza"
 msgid "Add"
 msgstr "Aggiungi"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Trascina qui per aggiungere ai preferiti"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Nuova finestra"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Chiudi applicazione"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Rimuovi dai preferiti"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Aggiungi ai preferiti"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Autohide duration"
-msgstr "Durata dell'effetto di scomparsa"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Autohide effect"
-msgstr "Effetto di scomparsa"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Enable/disable autohide"
-msgstr "Abilita/disabilita scomparsa automatica"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Icon size"
-msgstr "Dimensione delle icone"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
 msgstr "Posizione del dock"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"Imposta la posizione del dock sullo schermo. Valori consentiti sono \"right"
+"\" (destra) e \"left\" (sinistra)"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Icon size"
+msgstr "Dimensione delle icone"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
 msgid "Sets icon size of the dock."
 msgstr "Imposta la dimensione delle icone del dock."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Enable/disable autohide"
+msgstr "Abilita/disabilita scomparsa automatica"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Autohide effect"
+msgstr "Effetto di scomparsa"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
 msgid ""
@@ -173,18 +169,30 @@ msgstr ""
 "schiaccia verso il lato), \"move\" (lo muove fuori dallo schermo)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Imposta la posizione del dock sullo schermo. Valori consentiti sono \"right"
-"\" (destra) e \"left\" (sinistra)"
+msgid "Autohide duration"
+msgstr "Durata dell'effetto di scomparsa"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Imposta la durata in secondi dell'effetto di scomparsa"
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Monitor"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"Imposta il monitor in cui mostrare la dock. Il valore di default (-1) "
+"rappresenta lo schermo principale."
+
+#: ../extensions/drive-menu/extension.js:56
+msgid "Removable devices"
+msgstr "Dispositivi rimovibili"
+
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Apri il gestore dei file"
 
@@ -220,41 +228,31 @@ msgstr ""
 msgid "Message:"
 msgstr "Messaggio:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s è assente"
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s è fuori rete"
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s è disponibile"
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s non è disponibile"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
-msgstr ""
-"Se vero, posiziona i titoli delle finestre in cima alle rispettive "
-"miniature, aggirando il comportamento normale della shell, che li colloca in "
-"basso. Modificare questa impostazione richiede di riavviare la shell."
+msgid "Use more screen for windows"
+msgstr "Usa più spazio per le finestre"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Place window captions on top"
-msgstr "Posiziona i titoli delle finestre in cima"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -265,21 +263,39 @@ msgstr ""
 "ulteriormente per ridurre lo spazio complessivo. Questa impostazione si "
 "applica solo se l'algoritmo di posizionamento è \"natural\"."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid "Use more screen for windows"
-msgstr "Usa più spazio per le finestre"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Posiziona i titoli delle finestre in cima"
 
-#: ../extensions/places-menu/extension.js:37
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Se vero, posiziona i titoli delle finestre in cima alle rispettive "
+"miniature, aggirando il comportamento normale della shell, che li colloca in "
+"basso. Modificare questa impostazione richiede di riavviare la shell."
+
+#: ../extensions/places-menu/extension.js:70
 msgid "Removable Devices"
 msgstr "Dispositivi rimovibili"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Il nome del tema, da caricare in ~/.themes/nome/gnome-shell"
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Memoria"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
 msgstr "Nome del tema"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Il nome del tema, da caricare in ~/.themes/nome/gnome-shell"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -314,12 +330,16 @@ msgstr "Destra"
 msgid "Upside-down"
 msgstr "Rovesciato"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Configura impostazioni display..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Monitor"
 
-#~ msgid "Display Settings"
-#~ msgstr "Impostazioni monitor"
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "Impostazioni monitor"
+
+#~ msgid "Configure display settings..."
+#~ msgstr "Configura impostazioni display..."
 
 #~ msgid "Cancel"
 #~ msgstr "Annulla"
