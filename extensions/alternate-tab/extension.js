@@ -395,7 +395,7 @@ const WindowList = new Lang.Class({
     Extends: AltTab.SwitcherList,
 
     _init : function(windows, settings) {
-        this.parent(false);
+        this.parent(true);
 
         this.windows = windows;
         this.icons = [];
