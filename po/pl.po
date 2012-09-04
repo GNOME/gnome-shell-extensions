@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-04 00:15+0200\n"
-"PO-Revision-Date: 2012-09-04 00:17+0200\n"
+"POT-Creation-Date: 2012-09-05 01:21+0200\n"
+"PO-Revision-Date: 2012-09-05 01:22+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -195,11 +195,11 @@ msgstr ""
 "Ustawia, na którym monitorze wyświetlać dok. Domyślna wartość (-1) oznacza "
 "główny monitor."
 
-#: ../extensions/drive-menu/extension.js:57
+#: ../extensions/drive-menu/extension.js:56
 msgid "Removable devices"
 msgstr "Urządzenia wymienne"
 
-#: ../extensions/drive-menu/extension.js:68
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Otwórz menedżer plików"
 
@@ -234,22 +234,22 @@ msgstr ""
 msgid "Message:"
 msgstr "Wiadomość:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "Użytkownik %s jest nieobecny."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "Użytkownik %s jest w trybie offline."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "Użytkownik %s jest w trybie online."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "Użytkownik %s jest zajęty."
@@ -283,7 +283,7 @@ msgstr ""
 "powłokę. Zmiana tego ustawienia wymaga ponownego uruchomienia powłoki, aby "
 "uwzględnić zmiany."
 
-#: ../extensions/places-menu/extension.js:39
+#: ../extensions/places-menu/extension.js:70
 msgid "Removable Devices"
 msgstr "Urządzenia wymienne"
 
@@ -336,6 +336,10 @@ msgstr "Prawo"
 msgid "Upside-down"
 msgstr "Odbicie poziomo"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Skonfiguruj ustawienia ekranu..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Ekran"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "Ustawienia ekranu"
