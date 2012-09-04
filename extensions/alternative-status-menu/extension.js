@@ -48,7 +48,7 @@ function init(metadata) {
 }
 
 function enable() {
-    let statusMenu = Main.panel._statusArea.userMenu;
+    let statusMenu = Main.panel.statusArea.userMenu;
 
     settings = Convenience.getSettings();
 
@@ -96,7 +96,7 @@ function enable() {
 }
 
 function disable() {
-    let statusMenu = Main.panel._statusArea.userMenu;
+    let statusMenu = Main.panel.statusArea.userMenu;
 
     let children = statusMenu.menu._getMenuItems();
     let index = children.length;

@@ -99,9 +99,7 @@ let appsMenuButton;
 
 function enable() {
     appsMenuButton = new ApplicationsButton();
-    Main.panel._leftBox.insert_child_at_index(appsMenuButton.actor, 1);
-    Main.panel._leftBox.child_set(appsMenuButton.actor, { y_fill : true } );
-    Main.panel._menus.addMenu(appsMenuButton.menu);
+    Main.panel.addToStatusArea('apps-menu', appsMenuButton, 1, 'left');
 }
 
 function disable() {

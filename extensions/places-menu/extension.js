@@ -162,7 +162,7 @@ let _indicator;
 
 function enable() {
     _indicator = new PlacesMenu;
-    Main.panel.addToStatusArea('places-menu', _indicator);
+    Main.panel.addToStatusArea('places-menu', _indicator, 1, 'left');
 }
 
 function disable() {
