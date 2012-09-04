@@ -1,3 +1,14 @@
+3.5.91
+======
+* various crashers were fixed in alternative-tab
+* auto-move-windows now can be made to work with static workspaces
+* place-menu is now on the left and uses symbolic icons like Files
+* StIconType usage was removed from all extensions, after it was
+  removed in core
+* systemMonitor, xrandr-indicator, apps-menu, places-menu,
+  alternative-status-menu were updated for the newer shell
+* updated translations (es, gl, it, pl, sl)
+
 3.5.90
 ======
 * alternate-tab has been reworked again, the old mode switch
