@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-08-22 14:21+0000\n"
-"PO-Revision-Date: 2012-08-25 12:01+0200\n"
+"POT-Creation-Date: 2012-09-04 22:55+0000\n"
+"PO-Revision-Date: 2012-09-06 18:25+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Gtranslator 2.91.5\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
@@ -33,9 +33,9 @@ msgid ""
 "only' (shows only the application icon) or 'both'."
 msgstr ""
 "Configura cómo se muestran las ventanas en el intercambiador. Las opciones "
-"posibles son «thumbnail-only» (muestra una miniatura de la ventana, «app-"
-"icon-only» (sólo muestra el icono de la aplicación) o «both» (se muestran "
-"ambas cosas)."
+"posibles son «thumbnail-only» (muestra una miniatura de la ventana, «app-icon-"
+"only» (sólo muestra el icono de la aplicación) o «both» (se muestran ambas "
+"cosas)."
 
 #: ../extensions/alternate-tab/prefs.js:26
 msgid "Thumbnail only"
@@ -195,11 +195,11 @@ msgstr ""
 "Establece la pantalla en la que mostrar el tablero. El valor predeterminado "
 "es (-1), que es la pantalla principal."
 
-#: ../extensions/drive-menu/extension.js:57
+#: ../extensions/drive-menu/extension.js:56
 msgid "Removable devices"
 msgstr "Dispositivos extraíbles"
 
-#: ../extensions/drive-menu/extension.js:68
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Abrir el gestor de archivos"
 
@@ -236,22 +236,22 @@ msgstr ""
 msgid "Message:"
 msgstr "Mensaje:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s no está disponible."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s está desconectado."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s está conectado."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s está ocupado."
@@ -285,7 +285,7 @@ msgstr ""
 "los sitúa por debajo. Cambiar esta configuración requiere reiniciar la shell "
 "para que tenga efecto."
 
-#: ../extensions/places-menu/extension.js:39
+#: ../extensions/places-menu/extension.js:70
 msgid "Removable Devices"
 msgstr "Dispositivos extraíbles"
 
@@ -338,9 +338,17 @@ msgstr "Derecha"
 msgid "Upside-down"
 msgstr "Hacia abajo"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Configurar las opciones de pantalla…"
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Pantalla"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+#| msgid "System Settings"
+msgid "Display Settings"
+msgstr "Configuración de pantalla"
+
+#~ msgid "Configure display settings..."
+#~ msgstr "Configurar las opciones de pantalla…"
 
 #~ msgid "The alt tab behaviour."
 #~ msgstr "El comportamiento de Alt+Tab."
@@ -470,9 +478,6 @@ msgstr "Configurar las opciones de pantalla…"
 
 #~ msgid "Online Accounts"
 #~ msgstr "Cuentas en línea"
-
-#~ msgid "System Settings"
-#~ msgstr "Configuración del sistema"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Bloquear la pantalla"
