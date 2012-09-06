@@ -7,80 +7,47 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-06-08 12:07+0000\n"
-"PO-Revision-Date: 2012-07-15 13:54+0200\n"
-"Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2012-09-06 17:51+0000\n"
+"PO-Revision-Date: 2012-09-07 00:16+0100\n"
+"Last-Translator: Christian Kirbach <Christian.Kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
 "X-Generator: Gtranslator 2.91.5\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Das Verhalten bei Eingabe von Alt-Tab."
+msgid "The application icon mode."
+msgstr "Der Modus des Anwendungssymbols."
 
-# Oder müssen die Werte doch übersetzt werden? -ck
-# Nein, dconf verhält sich hier nicht anders als gconf. Keinesfalls übersetzen! -mb
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
-msgstr ""
-"Legt das Verhalten bei Drücken von Alt-Tab fest. Mögliche Werte sind "
-"»all_thumbnails« und »workspace_icons«. Im Einstellungsdialog finden Sie "
-"weitere Details."
+msgid "Configures how the windows are shown in the switcher. Valid possibilities are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-only' (shows only the application icon) or 'both'."
+msgstr "Legt fest, wie die Fenster im Fensterumschalter angezeigt werden. Gültige Werte sind »thumbnail-only« (zeigt ein Vorschaubild des Fensters), »app-icon-only« (zeigt das Anwendungssymbol) oder »both« (beides)."
+
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "Nur Vorschaubild"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Alle und Vorschaubilder"
+msgid "Application icon only"
+msgstr "Nur Anwendungssymbol"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"Dieser Modus stellt alle Anwendungen aller Arbeitsflächen in einer "
-"Auswahlliste dar. Anstatt das Anwendungssymbol jedes Fensters darzustellen, "
-"werden Vorschaubilder der Fenster angezeigt."
+msgid "Thumbnail and application icon"
+msgstr "Vorschaubild und Anwendungssymbol"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Arbeitsbereich und Symbole"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Fenster darstellen als"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"In diesem Modus können Sie zwischen den Anwendungen der aktuellen "
-"Arbeitsfläche wechseln. Zusätzlich erhalten Sie die Möglichkeit, zur zuletzt "
-"verwendeten Anwendung der vorhergehenden Arbeitsfläche wechseln. Dies ist "
-"stets das letzte Symbol in der Liste und wird durch einen Trenner/eine "
-"senkrechte Linie abgegrenzt, falls verfügbar. Jedes Fenster wird durch "
-"dessen Anwendungssymbol dargestellt."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "Aktuelle Auswahl vor dem Schließen des Popups in den Vordergrund"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"Alternate-Tab kann in verschiedenen Modi verwendet werden, die die Art der "
-"Anzeige und Auswahl von Fenstern beeinflusst."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Nur Fenster der aktuellen Arbeitsfläche anzeigen"
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
@@ -92,7 +59,6 @@ msgid "Hibernate"
 msgstr "Ruhezustand"
 
 #: ../extensions/alternative-status-menu/extension.js:78
-#| msgid "Power Off..."
 msgid "Power Off"
 msgstr "Ausschalten …"
 
@@ -117,13 +83,8 @@ msgid "Application and workspace list"
 msgstr "Anwendungs- und Arbeitsflächenliste"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid ""
-"A list of strings, each containing an application id (desktop file name), "
-"followed by a colon and the workspace number"
-msgstr ""
-"Eine Liste aus Zeichenketten, wovon jede eine Anwendungskennung (*.desktop-"
-"Datei) enthält, gefolgt von einem Doppelpunkt und der Nummer der "
-"Arbeitsfläche"
+msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
+msgstr "Eine Liste aus Zeichenketten, wovon jede eine Anwendungskennung (*.desktop-Datei) enthält, gefolgt von einem Doppelpunkt und der Nummer der Arbeitsfläche"
 
 #: ../extensions/auto-move-windows/prefs.js:55
 msgid "Application"
@@ -173,12 +134,8 @@ msgid "Position of the dock"
 msgstr "Position des Docks"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Legt die Position des Docks auf dem Bildschirm fest. Mögliche Werte sind "
-"»right« und »left«"
+msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
+msgstr "Legt die Position des Docks auf dem Bildschirm fest. Mögliche Werte sind »right« und »left«"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
 msgid "Icon size"
@@ -197,12 +154,8 @@ msgid "Autohide effect"
 msgstr "Effekt automatisch verbergen"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Legt den Effekt für das versteckte Dock fest. Mögliche Werte sind »resize«, "
-"»rescale« und »move«"
+msgid "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'"
+msgstr "Legt den Effekt für das versteckte Dock fest. Mögliche Werte sind »resize«, »rescale« und »move«"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid "Autohide duration"
@@ -217,19 +170,14 @@ msgid "Monitor"
 msgstr "Bildschirm"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"Legt den Bildschirm fest, in dem das Dock angezeigt werden soll. Die "
-"Voreinstellung (-1) entspricht dem primären Bildschirm."
+msgid "Sets monitor to display dock in. The default value (-1) is the primary monitor."
+msgstr "Legt den Bildschirm fest, in dem das Dock angezeigt werden soll. Die Voreinstellung (-1) entspricht dem primären Bildschirm."
 
-#: ../extensions/drive-menu/extension.js:57
-#| msgid "Removable Devices"
+#: ../extensions/drive-menu/extension.js:56
 msgid "Removable devices"
 msgstr "Wechseldatenträger"
 
-#: ../extensions/drive-menu/extension.js:68
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Dateiverwaltung öffnen"
 
@@ -242,45 +190,39 @@ msgid "Alternative greeting text."
 msgstr "Alternative Begrüßungstext."
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"Falls nicht leer, ist dies der Text, der beim Anklicken des Panels angezeigt "
-"wird."
+msgid "If not empty, it contains the text that will be shown when clicking on the panel."
+msgstr "Falls nicht leer, ist dies der Text, der beim Anklicken des Panels angezeigt wird."
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
+"Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Das Beispiel soll zeigen, wie sich korrekt verhaltende Erweiterungen für die "
-"Shell erstellt werden. Es enthält grundlegende Funktionalität.\n"
+"Das Beispiel soll zeigen, wie sich korrekt verhaltende Erweiterungen für die Shell erstellt werden. Es enthält grundlegende Funktionalität.\n"
 "Es ist möglich, die Begrüßungsnachricht zu ändern."
 
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "Nachricht:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s ist abwesend."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s ist abgemeldet."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s ist angemeldet."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s ist beschäftigt."
@@ -290,34 +232,57 @@ msgid "Use more screen for windows"
 msgstr "Mehr Bildschirmbereich für Fenster verwenden"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. "
-"This setting applies only with the natural placement strategy."
-msgstr ""
-"Versuchen, mehr Bildschirmfläche zum Platzieren der Fenstervorschaubilder zu "
-"verwenden, indem das Bildschirmseitenverhältnis berücksichtigt wird und "
-"diese stärker zusammengelegt werden, um den umgebenden Rahmen zu "
-"verkleinern. Diese Einstellung betrifft nur den natürlichen "
-"Platzierungsalgorithmus."
+msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
+msgstr "Versuchen, mehr Bildschirmfläche zum Platzieren der Fenstervorschaubilder zu verwenden, indem das Bildschirmseitenverhältnis berücksichtigt wird und diese stärker zusammengelegt werden, um den umgebenden Rahmen zu verkleinern. Diese Einstellung betrifft nur den natürlichen Platzierungsalgorithmus."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
 msgstr "Fensterbeschriftungen oben platzieren"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
-msgstr ""
-"Falls wahr, so werden die Fensterbeschriftungen über dem zugehörigen "
-"Vorschaubild platziert und damit die Voreinstellung der Shell übergangen. "
-"Eine Änderungseinstellung tritt erst mit einem Neustart der Shell in Kraft."
+msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
+msgstr "Falls wahr, so werden die Fensterbeschriftungen über dem zugehörigen Vorschaubild platziert und damit die Voreinstellung der Shell übergangen. Eine Änderungseinstellung tritt erst mit einem Neustart der Shell in Kraft."
 
-#: ../extensions/places-menu/extension.js:39
-msgid "Removable Devices"
-msgstr "Wechseldatenträger"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Orte"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Geräte"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Lesezeichen"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Netzwerk"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Starten von »%s« fehlgeschlagen"
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Persönlicher Ordner"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Dateisystem"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Netzwerk durchsuchen"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Speicher"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -325,9 +290,7 @@ msgstr "Themenname"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr ""
-"Der Name des Themas, welches aus ~/.themes/name/gnome-shell geladen werden "
-"soll"
+msgstr "Der Name des Themas, welches aus ~/.themes/name/gnome-shell geladen werden soll"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -362,72 +325,16 @@ msgstr "Rechts"
 msgid "Upside-down"
 msgstr "Kopfüber"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Bildschirmeinstellungen festlegen …"
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Anzeige"
 
-#~ msgid ""
-#~ "This is the first time you use the Alternate Tab extension. \n"
-#~ "Please choose your preferred behaviour:\n"
-#~ "\n"
-#~ "All & Thumbnails:\n"
-#~ "    This mode presents all applications from all workspaces in one "
-#~ "selection \n"
-#~ "    list. Instead of using the application icon of every window, it uses "
-#~ "small \n"
-#~ "    thumbnails resembling the window itself. \n"
-#~ "\n"
-#~ "Workspace & Icons:\n"
-#~ "    This mode let's you switch between the applications of your current \n"
-#~ "    workspace and gives you additionally the option to switch to the last "
-#~ "used \n"
-#~ "    application of your previous workspace. This is always the last "
-#~ "symbol in \n"
-#~ "    the list and is segregated by a separator/vertical line if "
-#~ "available. \n"
-#~ "    Every window is represented by its application icon.  \n"
-#~ "\n"
-#~ "If you whish to revert to the default behavior for the Alt-Tab switcher, "
-#~ "just\n"
-#~ "disable the extension from extensions.gnome.org or the Advanced Settings "
-#~ "application."
-#~ msgstr ""
-#~ "Sie verwenden die Erweiterung »Alt-Tab« das erste Mal. \n"
-#~ "Bitte wählen Sie das gewünschte Verhalten:\n"
-#~ "\n"
-#~ "Alle und Vorschaubilder:\n"
-#~ "    Dieser Modus stellt alle Anwendungen aus allen Arbeitsflächen in "
-#~ "einer\n"
-#~ "    Auswahlliste dar. Anstelle des Anwendungssymbols jedes Fensters "
-#~ "werden\n"
-#~ "    kleine Vorschaubilder dargestellt, die dem Fenster ähnlich sind. \n"
-#~ "\n"
-#~ "Arbeitsfläche und Symbole:\n"
-#~ "    Dieser Modus ermöglicht den Wechsel zwischen Anwendungen auf Ihrer \n"
-#~ "    aktuellen Arbeitsfläche und ermöglicht weiterhin, auf die zuletzt "
-#~ "verwendete\n"
-#~ "    Anwendung der letzten Arbeitsfläche zu wechseln. Sie ist immer das "
-#~ "letzte Symbol\n"
-#~ "    der Liste und ist durch einen Trenner (vertikale Linie) getrennt. \n"
-#~ "    Jedes Fenster wird durch das entsprechende Anwendungssymbol "
-#~ "repräsentiert.\n"
-#~ "\n"
-#~ "Falls Sie zum Standardverhalten der Alt-Tab-Umschaltung zurückkehren "
-#~ "wollen,\n"
-#~ "deaktivieren Sie diese Erweiterung in extensions.gnome.org oder verwenden "
-#~ "Sie\n"
-#~ "die »Erweiterten Einstellungen«."
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "Bildschirmeinstellungen"
 
-#~ msgid "Alt Tab Behaviour"
-#~ msgstr "Verhalten bei Alt-Tab"
+#~ msgid "Removable Devices"
+#~ msgstr "Wechseldatenträger"
 
-#~ msgid "Cancel"
-#~ msgstr "Abbrechen"
-
-#~ msgid "Ask the user for a default behaviour if true."
-#~ msgstr ""
-#~ "Falls wahr, so wird der Benutzer nach dem voreinzustellendem Verhalten "
-#~ "gefragt."
-
-#~ msgid "Indicates if Alternate Tab is newly installed"
-#~ msgstr "Gibt an, ob die Erweiterung »Alt-Tab« neu installiert wurde"
+#~ msgid "The alt tab behaviour."
+#~ msgstr "Das Verhalten bei Eingabe von Alt-Tab."
