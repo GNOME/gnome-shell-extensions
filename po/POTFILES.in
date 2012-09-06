@@ -17,6 +17,7 @@ extensions/gajim/extension.js
 extensions/native-window-placement/extension.js
 extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in
 extensions/places-menu/extension.js
+extensions/places-menu/placeDisplay.js
 extensions/systemMonitor/extension.js
 extensions/user-theme/extension.js
 extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in
