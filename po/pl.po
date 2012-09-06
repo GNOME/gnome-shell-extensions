@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-05 01:21+0200\n"
-"PO-Revision-Date: 2012-09-05 01:22+0200\n"
+"POT-Creation-Date: 2012-09-06 19:51+0200\n"
+"PO-Revision-Date: 2012-09-06 19:52+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -283,9 +283,38 @@ msgstr ""
 "powłokę. Zmiana tego ustawienia wymaga ponownego uruchomienia powłoki, aby "
 "uwzględnić zmiany."
 
-#: ../extensions/places-menu/extension.js:70
-msgid "Removable Devices"
-msgstr "Urządzenia wymienne"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Miejsca"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Urządzenia"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Zakładki"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Sieć"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Uruchomienie \"%s\" się nie powiodło"
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Katalog domowy"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "System plików"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Przeglądaj sieć"
 
 #: ../extensions/systemMonitor/extension.js:213
 msgid "CPU"
