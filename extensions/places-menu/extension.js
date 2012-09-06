@@ -10,46 +10,43 @@ const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 const Panel = imports.ui.panel;
-const PlaceDisplay = imports.ui.placeDisplay;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
+const N_ = function(x) { return x; }
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
+const PlaceDisplay = Me.imports.placeDisplay;
 
 const PLACE_ICON_SIZE = 16;
 
-function iconForPlace(place) {
-    let split = place.id.split(':');
-    let kind = split.shift();
-    let uri = split.join(':');
+const PlaceMenuItem = new Lang.Class({
+    Name: 'PlaceMenuItem',
+    Extends: PopupMenu.PopupMenuItem,
 
-    let gicon = new Gio.ThemedIcon({ name: 'folder-symbolic' });
-    switch(kind) {
-    case 'special':
-	switch(uri) {
-	case 'home':
-	    gicon = new Gio.ThemedIcon({ name: 'user-home-symbolic' });
-	    break;
-	case 'desktop':
-	    // FIXME: There is no user-desktop-symbolic
-	    gicon = new Gio.ThemedIcon({ name: 'folder-symbolic' });
-	    break;
-	}
-	break;
-    case 'bookmark':
-	let info = Gio.File.new_for_uri(uri).query_info('standard::symbolic-icon', 0, null);
-	gicon = info.get_symbolic_icon(info);
-	break;
-    case 'mount':
-	gicon = place._mount.get_symbolic_icon();
-	break;
-    }
+    _init: function(info) {
+	this.parent(info.name);
+	this._info = info;
 
-    return new St.Icon({ gicon: gicon,
-			 icon_size: PLACE_ICON_SIZE });
+	this.addActor(new St.Icon({ gicon: info.icon,
+				    icon_size: PLACE_ICON_SIZE }),
+		     { align: St.Align.END, span: -1 });
+    },
+
+    activate: function(event) {
+	this._info.launch(event.get_time());
+
+	this.parent(event);
+    },
+});
+
+const SECTIONS = {
+    'special': N_("Places"),
+    'devices': N_("Devices"),
+    'bookmarks': N_("Bookmarks"),
+    'network': N_("Network")
 }
 
 const PlacesMenu = new Lang.Class({
@@ -60,98 +57,45 @@ const PlacesMenu = new Lang.Class({
         this.parent('folder-symbolic');
         this.placesManager = new PlaceDisplay.PlacesManager();
 
-        this.defaultItems = [];
-        this.bookmarkItems = [];
-        this.deviceItems = [];
-        this._createDefaultPlaces();
-        this._bookmarksSection = new PopupMenu.PopupMenuSection();
-        this.menu.addMenuItem(this._bookmarksSection);
-        this._createBookmarks();
-        this._devicesMenuItem = new PopupMenu.PopupSubMenuMenuItem(_("Removable Devices"));
-        this.menu.addMenuItem(this._devicesMenuItem);
-        this._createDevices();
+	this._sections = { };
 
-        this._bookmarksId = this.placesManager.connect('bookmarks-updated',Lang.bind(this,this._redisplayBookmarks));
-        this._mountsId = this.placesManager.connect('mounts-updated',Lang.bind(this,this._redisplayDevices));
+	for (let foo in SECTIONS) {
+	    let id = foo; // stupid JS closure semantics...
+	    this._sections[id] = { section: new PopupMenu.PopupMenuSection(),
+				   title: Gettext.gettext(SECTIONS[id]) };
+	    this.placesManager.connect(id + '-updated', Lang.bind(this, function() {
+		this._redisplay(id);
+	    }));
+
+	    this._create(id);
+	    this.menu.addMenuItem(this._sections[id].section);
+	}
     },
 
     destroy: function() {
-        this.placesManager.disconnect(this._bookmarksId);
-        this.placesManager.disconnect(this._mountsId);
+	this.placesManager.destroy();
 
         this.parent();
     },
 
-    _redisplayBookmarks: function(){
-        this._clearBookmarks();
-        this._createBookmarks();
+    _redisplay: function(id) {
+	this._sections[id].section.removeAll();
+        this._create(id);
     },
 
-    _redisplayDevices: function(){
-        this._clearDevices();
-        this._createDevices();
-    },
+    _create: function(id) {
+	let title = new PopupMenu.PopupMenuItem(this._sections[id].title,
+						{ reactive: false,
+                                                  style_class: 'popup-subtitle-menu-item' });
+	this._sections[id].section.addMenuItem(title);
 
-    _createDefaultPlaces : function() {
-        this.defaultPlaces = this.placesManager.getDefaultPlaces();
+        let places = this.placesManager.get(id);
 
-        for (let placeid = 0; placeid < this.defaultPlaces.length; placeid++) {
-            this.defaultItems[placeid] = new PopupMenu.PopupMenuItem(this.defaultPlaces[placeid].name);
-            let icon = iconForPlace(this.defaultPlaces[placeid]);
-            this.defaultItems[placeid].addActor(icon, { align: St.Align.END, span: -1 });
-            this.defaultItems[placeid].place = this.defaultPlaces[placeid];
-            this.menu.addMenuItem(this.defaultItems[placeid]);
-            this.defaultItems[placeid].connect('activate', function(actor,event) {
-                actor.place.launch();
-            });
+        for (let i = 0; i < places.length; i++)
+            this._sections[id].section.addMenuItem(new PlaceMenuItem(places[i]));
 
-        }
-    },
-
-    _createBookmarks : function() {
-        this.bookmarks = this.placesManager.getBookmarks();
-
-        for (let bookmarkid = 0; bookmarkid < this.bookmarks.length; bookmarkid++) {
-            this.bookmarkItems[bookmarkid] = new PopupMenu.PopupMenuItem(this.bookmarks[bookmarkid].name);
-            let icon = iconForPlace(this.bookmarks[bookmarkid]);
-            this.bookmarkItems[bookmarkid].addActor(icon, { align: St.Align.END, span: -1 });
-            this.bookmarkItems[bookmarkid].place = this.bookmarks[bookmarkid];
-            this._bookmarksSection.addMenuItem(this.bookmarkItems[bookmarkid]);
-            this.bookmarkItems[bookmarkid].connect('activate', function(actor,event) {
-                actor.place.launch();
-            });
-        }
-    },
-
-    _createDevices : function() {
-        this.devices = this.placesManager.getMounts();
-
-        for (let devid = 0; devid < this.devices.length; devid++) {
-            this.deviceItems[devid] = new PopupMenu.PopupMenuItem(this.devices[devid].name);
-            let icon = iconForPlace(this.devices[devid]);
-            this.deviceItems[devid].addActor(icon, { align: St.Align.END, span: -1 });
-            this.deviceItems[devid].place = this.devices[devid];
-            this._devicesMenuItem.menu.addMenuItem(this.deviceItems[devid]);
-            this.deviceItems[devid].connect('activate', function(actor,event) {
-                actor.place.launch();
-            });
-        }
-
-        if (this.devices.length == 0)
-            this._devicesMenuItem.actor.hide();
-        else
-            this._devicesMenuItem.actor.show();
-    },
-
-    _clearBookmarks : function(){
-        this._bookmarksSection.removeAll();
-        this.bookmarkItems = [];
-    },
-
-    _clearDevices : function(){
-        this._devicesMenuItem.menu.removeAll();
-        this.deviceItems = [];
-    },
+	this._sections[id].section.actor.visible = places.length > 0;
+    }
 });
 
 function init() {
