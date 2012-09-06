@@ -1,7 +1,6 @@
 # Czech translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-#
 # Marek Černocký <marek@manet.cz>, 2011, 2012.
 #
 msgid ""
@@ -9,72 +8,51 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-05-02 17:29+0000\n"
-"PO-Revision-Date: 2012-05-08 21:58+0200\n"
+"POT-Creation-Date: 2012-09-04 22:55+0000\n"
+"PO-Revision-Date: 2012-09-06 12:22+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Chování klávesové zkratky alt tab."
+msgid "The application icon mode."
+msgstr "Režim ikony aplikace."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
 msgstr ""
-"Nastavuje chování klávesové zkratky Alt-Tab. Možné hodnoty jsou: "
-"all_thumbnails (vše a náhledy) a workspace_icons (pracovní plocha a ikony). "
-"Více informací najdete v dialogovém okně nastavení."
+"Nastavuje, jak jsou okna zobrazována v přepínači. Platné možnosti jsou "
+"„thumbnail-only“ (zobrazuje náhled okna), „app-icon-only“ (zobrazuje pouze "
+"ikonu aplikace) nebo „both“ (zobrazuje obojí)."
+
+#: ../extensions/alternate-tab/prefs.js:26
+#| msgid "All & Thumbnails"
+msgid "Thumbnail only"
+msgstr "Pouze náhled"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Vše a náhledy"
+#| msgid "Application"
+msgid "Application icon only"
+msgstr "Pouze ikona aplikace"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"Tento režim představuje všechny aplikace ze všech pracovních ploch v jediném "
-"výběrovém seznamu. Namísto používání ikon aplikací, používá pro každé okno "
-"jeho vlastní miniaturu."
+msgid "Thumbnail and application icon"
+msgstr "Náhled a ikona aplikace"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Pracovní plocha a ikony"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Představovat okna jako"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Tento režim vám umožní přepínat mezi aplikacemi vaší aktuální pracovní "
-"plochy a dává vám dodatečnou volbu, přepnout se na poslední použitou "
-"aplikaci předchozí pracovní plochy. Tato aplikace je vždy poslední položkou "
-"v seznamu a pokud existuje, je oddělena oddělovačem/svislou čarou.\n"
-"Všechna okna jsou představována svojí ikonou aplikace."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "Než je vyskakovací okno zavřeno, přesune aktuální výběr do popředí"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"Přepínání klávesou Tab může být použito v různých režimech, které ovlivňují, "
-"jak budou okna předváděna a volena."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Zobrazovat pouze okna z aktuální pracovní plochy"
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
@@ -86,8 +64,9 @@ msgid "Hibernate"
 msgstr "Uspat na disk"
 
 #: ../extensions/alternative-status-menu/extension.js:78
-msgid "Power Off..."
-msgstr "Vypnout…"
+#| msgid "Power Off..."
+msgid "Power Off"
+msgstr "Vypnout"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
 msgid "Enable suspending"
@@ -138,23 +117,23 @@ msgstr "Vytvoření nového srovnávacího pravidla"
 msgid "Add"
 msgstr "Přidat"
 
-#: ../extensions/dock/extension.js:577
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Přetažením sem přidáte do oblíbených"
 
-#: ../extensions/dock/extension.js:903
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Nové okno"
 
-#: ../extensions/dock/extension.js:905
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Ukončit aplikaci"
 
-#: ../extensions/dock/extension.js:910
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Odebrat z oblíbených"
 
-#: ../extensions/dock/extension.js:911
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Přidat do oblíbených"
 
@@ -214,7 +193,12 @@ msgstr ""
 "Nastavuje monitor, na kterém se má zobrazovat dok. Výchozí hodnotou (-1) je "
 "hlavní monitor."
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/drive-menu/extension.js:56
+#| msgid "Removable Devices"
+msgid "Removable devices"
+msgstr "Výměnná zařízení"
+
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Otevřít správce souborů"
 
@@ -249,22 +233,22 @@ msgstr ""
 msgid "Message:"
 msgstr "Zpráva:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s je pryč."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s je odpojen."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s je připojen."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s je zaneprázdněn."
@@ -297,9 +281,17 @@ msgstr ""
 "přepíše výchozí chování shellu, který jej umisťuje dolů. Změna tohoto "
 "nastavení vyžaduje restart shellu, aby se projevila."
 
-#: ../extensions/places-menu/extension.js:37
+#: ../extensions/places-menu/extension.js:70
 msgid "Removable Devices"
 msgstr "Výměnná zařízení"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "Procesor"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Paměť"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -342,6 +334,59 @@ msgstr "Doprava"
 msgid "Upside-down"
 msgstr "Vzhůru nohama"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Upravit nastavení zobrazení…"
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Obrazovka"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+#| msgid "Configure display settings..."
+msgid "Display Settings"
+msgstr "Nastavení obrazovky"
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "Chování klávesové zkratky alt tab."
+
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "Nastavuje chování klávesové zkratky Alt-Tab. Možné hodnoty jsou: "
+#~ "all_thumbnails (vše a náhledy) a workspace_icons (pracovní plocha a "
+#~ "ikony). Více informací najdete v dialogovém okně nastavení."
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "Tento režim představuje všechny aplikace ze všech pracovních ploch v "
+#~ "jediném výběrovém seznamu. Namísto používání ikon aplikací, používá pro "
+#~ "každé okno jeho vlastní miniaturu."
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "Pracovní plocha a ikony"
+
+#~ msgid ""
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "Tento režim vám umožní přepínat mezi aplikacemi vaší aktuální pracovní "
+#~ "plochy a dává vám dodatečnou volbu, přepnout se na poslední použitou "
+#~ "aplikaci předchozí pracovní plochy. Tato aplikace je vždy poslední "
+#~ "položkou v seznamu a pokud existuje, je oddělena oddělovačem/svislou "
+#~ "čarou.\n"
+#~ "Všechna okna jsou představována svojí ikonou aplikace."
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr "Než je vyskakovací okno zavřeno, přesune aktuální výběr do popředí"
+
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "Přepínání klávesou Tab může být použito v různých režimech, které "
+#~ "ovlivňují, jak budou okna předváděna a volena."
