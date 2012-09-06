@@ -106,7 +106,11 @@ let _indicator;
 
 function enable() {
     _indicator = new PlacesMenu;
-    Main.panel.addToStatusArea('places-menu', _indicator, 1, 'left');
+
+    let pos = 1;
+    if ('apps-menu' in Main.panel.statusArea)
+	pos = 2;
+    Main.panel.addToStatusArea('places-menu', _indicator, pos, 'left');
 }
 
 function disable() {
