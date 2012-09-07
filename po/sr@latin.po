@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-06-23 09:53+0000\n"
-"PO-Revision-Date: 2012-08-07 10:37+0200\n"
+"POT-Creation-Date: 2012-09-06 17:51+0000\n"
+"PO-Revision-Date: 2012-09-07 11:16+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -21,61 +21,40 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Ponašanje tastera „alt-tab“."
+msgid "The application icon mode."
+msgstr "Režim ikonice programa."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
 msgstr ""
-"Određuje kako se ponašaju tasteri „Alt-Tab“. Ispravne vrednosti su "
-"„all_thumbnails“ (svi umanjeni prikazi) i „workspace_icons“ (ikonice radnih "
-"prostora). Pogledajte prozorčiće podešavanja za više podataka."
+"Podešava način prikazivanja prozora u prebacivaču. Ispravne mogućnosti su "
+"„thumbnail-only“ (prikazuje sličicu prozora), „app-icon-only“ (prikazuje "
+"samo ikonicu programa) ili „both“ (oba)."
+
+#: ../extensions/alternate-tab/prefs.js:26
+#| msgid "All & Thumbnails"
+msgid "Thumbnail only"
+msgstr "Samo sličice"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Sve i umanjeni prikazi"
+#| msgid "Application"
+msgid "Application icon only"
+msgstr "Samo ikonica programa"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"Ovaj režim prikazuje sve programe sa svih radnih prostora unutar jednog "
-"spiska. Umesto upotrebe ikonica programa za svaki prozor koristi se umanjeni "
-"prikaz programa."
+msgid "Thumbnail and application icon"
+msgstr "Sličica i ikonica programa"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Radni prostori i ikonice"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Prikaži prozore kao"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Ovaj režim vam omogućava da menjate programe sa trenutnog radnog prostora i "
-"daje vam dodatnu mogućnost da se prebacite na poslednji korišćen program sa "
-"drugog radnog prostora. On je uvek prikazan kao poslednji na spisku, i "
-"odvojen je od ostalih razdvojnikom/uspravnom linijom ako je dostupno.\n"
-"Svaki prozor je predstavljen ikonicom programa."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "Pomeri trenutni izbor napred pre zatvaranja iskačućeg"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"Izmenjivač Tab tastera se može koristiti u različitim režimima koji određuju "
-"kako se prozori biraju i prikazuju."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Prikazuje samo prozore u tekućem radnom prostoru"
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
@@ -216,11 +195,11 @@ msgstr ""
 "Podešava koji monitor će da prikaže luku. Osnovna vrednost (-1) jeste "
 "primarni monitor."
 
-#: ../extensions/drive-menu/extension.js:57
+#: ../extensions/drive-menu/extension.js:56
 msgid "Removable devices"
 msgstr "Uklonjivi uređaji"
 
-#: ../extensions/drive-menu/extension.js:68
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Otvori upravnika datoteka"
 
@@ -236,7 +215,8 @@ msgstr "Neki drugi pozdravni tekst."
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
-msgstr "Ukoliko upišete tekst ovde, on će biti prikazan kada kliknete na panel."
+msgstr ""
+"Ukoliko upišete tekst ovde, on će biti prikazan kada kliknete na panel."
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
@@ -254,22 +234,22 @@ msgstr ""
 msgid "Message:"
 msgstr "Poruka:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "„%s“ je odsutan."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "„%s“ je van mreže."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "„%s“ je na mreži."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "„%s“ je zauzet."
@@ -300,11 +280,48 @@ msgid ""
 msgstr ""
 "Ukoliko je izabrano, natpisi prozora će biti postavljeni na vrh njihovih "
 "umanjenih prikaza umesto ispod prikaza. Promena ovih podešavanja zahteva da "
-"ponovo pokrenete Gnomovu Školjku."
+"ponovo pokrenete Gnomovu školjku."
 
-#: ../extensions/places-menu/extension.js:39
-msgid "Removable Devices"
-msgstr "Uklonjivi uređaji"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Mesta"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Uređaji"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Obeleživači"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Mreža"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Nisam uspeo da pokrenem „%s“"
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Lično"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Sistem datoteka"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Razgledajte mrežu"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "Procesor"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Memorija"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -347,6 +364,61 @@ msgstr "Desno"
 msgid "Upside-down"
 msgstr "Naopačke"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Podešavanja ekrana..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Ekran"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+#| msgid "Configure display settings..."
+msgid "Display Settings"
+msgstr "Podešavanja ekrana"
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "Ponašanje tastera „alt-tab“."
+
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "Određuje kako se ponašaju tasteri „Alt-Tab“. Ispravne vrednosti su "
+#~ "„all_thumbnails“ (svi umanjeni prikazi) i „workspace_icons“ (ikonice "
+#~ "radnih prostora). Pogledajte prozorčiće podešavanja za više podataka."
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "Ovaj režim prikazuje sve programe sa svih radnih prostora unutar jednog "
+#~ "spiska. Umesto upotrebe ikonica programa za svaki prozor koristi se "
+#~ "umanjeni prikaz programa."
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "Radni prostori i ikonice"
+
+#~ msgid ""
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "Ovaj režim vam omogućava da menjate programe sa trenutnog radnog prostora "
+#~ "i daje vam dodatnu mogućnost da se prebacite na poslednji korišćen program "
+#~ "sa drugog radnog prostora. On je uvek prikazan kao poslednji na spisku, i "
+#~ "odvojen je od ostalih razdvojnikom/uspravnom linijom ako je dostupno.\n"
+#~ "Svaki prozor je predstavljen ikonicom programa."
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr "Pomeri trenutni izbor napred pre zatvaranja iskačućeg"
+
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "Izmenjivač Tab tastera se može koristiti u različitim režimima koji "
+#~ "određuju kako se prozori biraju i prikazuju."
+
+#~ msgid "Removable Devices"
+#~ msgstr "Uklonjivi uređaji"
