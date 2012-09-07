@@ -6,92 +6,85 @@
 # Rodolfo Ribeiro Gomes <rodolforg@gmail.com>, 2011.
 # Djavan Fagundes <djavan@comum.org>, 2012.
 # Gabriel Speckhahn <gabspeck@gmail.com>, 2012.
+# Og Maciel <ogmaciel@gnome.org>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-02-24 18:22+0000\n"
-"PO-Revision-Date: 2012-02-24 18:19-0300\n"
-"Last-Translator: Leandro Toledo <leandrotoledodesouza@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-07 10:59-0400\n"
+"PO-Revision-Date: 2012-09-07 11:21-0400\n"
+"Last-Translator: Og Maciel <ogmaciel@gnome.org>n"
 "Language-Team: GNOME pt_BR\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "O comportamento do alt tab."
+msgid "The application icon mode."
+msgstr "Ícone de modo do aplicativo"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
 msgstr ""
-"Define o comportamento do Alt-Tab. Valores possíveis são: all_thumbnails e "
-"workspace_icons. Veja os diálogos de configuração para mais detalhes."
+"Configura como as janelas são mostradas no alternador. Possibilidades válidas são"
+" \"thumbnail-only\" (mostra uma miniatura da janela), \"app-icon-only\" (mostra"
+" somente o ícone do aplicativo) ou \"both\" (ambos)."
+
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "Somente miniaturas"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Todas & miniaturas"
+msgid "Application icon only"
+msgstr "Somente ícone do aplicativo"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"Esse modo apresenta todos os aplicativos de todos os espaços de trabalho em "
-"uma lista de seleção. Em vez de usar o ícone de aplicativo de cada janela, "
-"usa pequenas miniaturas com a aparência da própria janela."
+msgid "Thumbnail and application icon"
+msgstr "Miniatura e ícone do aplicativo"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Espaço de trabalho & ícones"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Apresentar janelas como"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Esse modo permite que você alterne entre os aplicativos do seu espaço de "
-"trabalho atual e além disso lhe dá a opção de alternar para a última "
-"aplicação utilizada do seu espaço de trabalho anterior. Essa é sempre o "
-"último símbolo na lista e é segregada através de um separador/linha vertical "
-"quando disponível.\n"
-"Cada janela é representada pelo seu ícone de aplicativo."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "Move a seleção atual para a frente antes de fechar a popup"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"O tab alternativo pode ser usado em modos diferentes que afetam a maneira "
-"como as janelas são escolhidas e apresentadas."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Mostrar somente janelas no espaço de trabalho atual"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "Desligar..."
+#: ../extensions/alternative-status-menu/extension.js:78
+msgid "Power Off"
+msgstr "Desligar"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Habilitar suspenção"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "Controla a visibilidade do item de menu Suspender"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Habilitar hibernação"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "Controla a visibilidade do item de menu Hibernar"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -126,23 +119,23 @@ msgstr "Criar nova regra coincidinte"
 msgid "Add"
 msgstr "Adicionar"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Arraste aqui para adicionar aos favoritos"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Nova janela"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Fechar aplicativo"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Remover dos favoritos"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Adicionar aos favoritos"
 
@@ -190,7 +183,22 @@ msgstr "Duração do ocultar automaticamente"
 msgid "Sets the time duration of the autohide effect."
 msgstr "Define o tempo de duração do efeito de ocultar automaticamente."
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Monitor"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr "Configura o monitor para mostrar encaixe. O valor padrão (-1) é o"
+" monitor primário."
+
+#: ../extensions/drive-menu/extension.js:56
+msgid "Removable devices"
+msgstr "Dispositivos removíveis"
+
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Abrir gerenciador de arquivos"
 
@@ -225,22 +233,22 @@ msgstr ""
 msgid "Message:"
 msgstr "Mensagem:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s está ausente."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s está desconectado."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s está conectado."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s está ocupado."
@@ -274,9 +282,46 @@ msgstr ""
 "sobrescrevendo o padrão do shell de colocá-lo na parte inferior. A alteração "
 "dessa configuração requer o reinício do shell para ter algum efeito."
 
-#: ../extensions/places-menu/extension.js:37
-msgid "Removable Devices"
-msgstr "Dispositivos removíveis"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Locais"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Dispositivos"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Rede"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Falha ao lançar \"%s\""
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Pasta pessoal"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Sistema de arquivos"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Navegar rede"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Memória"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -290,15 +335,15 @@ msgstr "O nome do tema, para ser carregado de ~/.themes/name/gnome-shell"
 msgid "Workspace Indicator"
 msgstr "Indicador de espaços de trabalho"
 
-#: ../extensions/workspace-indicator/prefs.js:151
+#: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Nomes de espaços de trabalho:"
 
-#: ../extensions/workspace-indicator/prefs.js:162
+#: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
 msgstr "Nome"
 
-#: ../extensions/workspace-indicator/prefs.js:196
+#: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
 msgid "Workspace %d"
 msgstr "Espaço de trabalho %d"
@@ -319,9 +364,63 @@ msgstr "Direita"
 msgid "Upside-down"
 msgstr "De cabeça para baixo"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Alterar configurações de exibição..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Tela"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "Configurações de tela"
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "O comportamento do alt tab."
+
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "Define o comportamento do Alt-Tab. Valores possíveis são: all_thumbnails "
+#~ "e workspace_icons. Veja os diálogos de configuração para mais detalhes."
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "Esse modo apresenta todos os aplicativos de todos os espaços de trabalho "
+#~ "em uma lista de seleção. Em vez de usar o ícone de aplicativo de cada "
+#~ "janela, usa pequenas miniaturas com a aparência da própria janela."
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "Espaço de trabalho & ícones"
+
+#~ msgid ""
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "Esse modo permite que você alterne entre os aplicativos do seu espaço de "
+#~ "trabalho atual e além disso lhe dá a opção de alternar para a última "
+#~ "aplicação utilizada do seu espaço de trabalho anterior. Essa é sempre o "
+#~ "último símbolo na lista e é segregada através de um separador/linha "
+#~ "vertical quando disponível.\n"
+#~ "Cada janela é representada pelo seu ícone de aplicativo."
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr "Move a seleção atual para a frente antes de fechar a popup"
+
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "O tab alternativo pode ser usado em modos diferentes que afetam a maneira "
+#~ "como as janelas são escolhidas e apresentadas."
+
+#~ msgid "Configure display settings..."
+#~ msgstr "Alterar configurações de exibição..."
 
 #~ msgid ""
 #~ "This is the first time you use the Alternate Tab extension. \n"
@@ -393,9 +492,6 @@ msgstr "Alterar configurações de exibição..."
 
 #~ msgid "My Account"
 #~ msgstr "Minha conta"
-
-#~ msgid "System Settings"
-#~ msgstr "Configurações de sistema"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Bloquear tela"
