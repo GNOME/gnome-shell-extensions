@@ -9,16 +9,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-02-24 18:22+0000\n"
-"PO-Revision-Date: 2012-02-24 18:19-0300\n"
-"Last-Translator: Leandro Toledo <leandrotoledodesouza@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-07 10:48-0400\n"
+"PO-Revision-Date: 2012-09-07 10:55-0400\n"
+"Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
 "Language-Team: GNOME pt_BR\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
@@ -126,23 +125,23 @@ msgstr "Criar nova regra coincidinte"
 msgid "Add"
 msgstr "Adicionar"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Arraste aqui para adicionar aos favoritos"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Nova janela"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Fechar aplicativo"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Remover dos favoritos"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Adicionar aos favoritos"
 
@@ -189,6 +188,17 @@ msgstr "Duração do ocultar automaticamente"
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Define o tempo de duração do efeito de ocultar automaticamente."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Monitor"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr "Configura monitor para mostrar encaixe. O valor padrão (-1) é o monitor"
+" primário."
 
 #: ../extensions/drive-menu/extension.js:66
 msgid "Open file manager"
@@ -290,15 +300,15 @@ msgstr "O nome do tema, para ser carregado de ~/.themes/name/gnome-shell"
 msgid "Workspace Indicator"
 msgstr "Indicador de espaços de trabalho"
 
-#: ../extensions/workspace-indicator/prefs.js:151
+#: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Nomes de espaços de trabalho:"
 
-#: ../extensions/workspace-indicator/prefs.js:162
+#: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
 msgstr "Nome"
 
-#: ../extensions/workspace-indicator/prefs.js:196
+#: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
 msgid "Workspace %d"
 msgstr "Espaço de trabalho %d"
