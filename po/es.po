@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-09-04 22:55+0000\n"
-"PO-Revision-Date: 2012-09-06 18:25+0200\n"
+"POT-Creation-Date: 2012-09-07 15:25+0000\n"
+"PO-Revision-Date: 2012-09-10 18:16+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -285,9 +285,38 @@ msgstr ""
 "los sitúa por debajo. Cambiar esta configuración requiere reiniciar la shell "
 "para que tenga efecto."
 
-#: ../extensions/places-menu/extension.js:70
-msgid "Removable Devices"
-msgstr "Dispositivos extraíbles"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Lugares"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Dispositivos"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Red"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Falló al lanzar «%s»"
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Carpeta personal"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Sistema de archivos"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Examinar la red"
 
 #: ../extensions/systemMonitor/extension.js:213
 msgid "CPU"
@@ -343,9 +372,11 @@ msgid "Display"
 msgstr "Pantalla"
 
 #: ../extensions/xrandr-indicator/extension.js:80
-#| msgid "System Settings"
 msgid "Display Settings"
 msgstr "Configuración de pantalla"
+
+#~ msgid "Removable Devices"
+#~ msgstr "Dispositivos extraíbles"
 
 #~ msgid "Configure display settings..."
 #~ msgstr "Configurar las opciones de pantalla…"
