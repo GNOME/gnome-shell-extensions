@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-08-29 00:06+0000\n"
-"PO-Revision-Date: 2012-08-29 09:10+0100\n"
+"POT-Creation-Date: 2012-09-10 16:19+0000\n"
+"PO-Revision-Date: 2012-09-12 21:04+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -171,11 +171,11 @@ msgstr "Zaslon"
 msgid "Sets monitor to display dock in. The default value (-1) is the primary monitor."
 msgstr "Nastavi zaslon za prikaz sidrišča. Privzeta vrednost (-1) določa osnovni zaslon."
 
-#: ../extensions/drive-menu/extension.js:57
+#: ../extensions/drive-menu/extension.js:56
 msgid "Removable devices"
 msgstr "Odstranljive naprave"
 
-#: ../extensions/drive-menu/extension.js:68
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Odpri upravljalnik datotek"
 
@@ -205,22 +205,22 @@ msgstr ""
 msgid "Message:"
 msgstr "Sporočilo:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s ni prisoten."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s ni povezan."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s je na zvezi."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s je zaseden."
@@ -241,9 +241,38 @@ msgstr "Postavi nazive oken na vrh"
 msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
 msgstr "Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice in s tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba lupino ponovno zagnati."
 
-#: ../extensions/places-menu/extension.js:39
-msgid "Removable Devices"
-msgstr "Odstranljive naprave"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Mesta"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Naprave"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Zaznamki"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Omrežje"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Zaganjanje \"%s\" je spodletelo."
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Osebna mapa"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Datotečni sistem"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Brskanje omrežja"
 
 #: ../extensions/systemMonitor/extension.js:213
 msgid "CPU"
@@ -294,9 +323,16 @@ msgstr "Desno"
 msgid "Upside-down"
 msgstr "Zgoraj-navzdol"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Nastavitve zaslona ..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Zaslon"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "Nastavitve zaslona"
+
+#~ msgid "Removable Devices"
+#~ msgstr "Odstranljive naprave"
 
 #~ msgid "The alt tab behaviour."
 #~ msgstr "Obnašanje tipk Alt-Tab"
