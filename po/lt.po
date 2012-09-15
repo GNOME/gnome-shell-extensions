@@ -7,53 +7,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-06-08 12:07+0000\n"
-"PO-Revision-Date: 2012-08-05 17:07+0300\n"
+"POT-Creation-Date: 2012-09-07 15:25+0000\n"
+"PO-Revision-Date: 2012-09-15 15:14+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Alt tab elgsena."
+msgid "The application icon mode."
+msgstr "Programos piktogramos veiksena."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-#| msgid ""
-#| "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails "
-#| "and workspace_icons."
-msgid "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and workspace_icons. See the configuration dialogs for details."
-msgstr "Nustato Alt-Tab elgseną. Galimos pasirinktys: all_thumbnails arba workspace_icons. Daugiau informacijos rasite konfigūracijos dialoguose."
+msgid "Configures how the windows are shown in the switcher. Valid possibilities are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-only' (shows only the application icon) or 'both'."
+msgstr "Nustato, kaip langai yra rodomi perjungimo lange. Galimos vertės yra „thumbnail-only“ (rodo lango miniatiūrą), „app-icon-only“ (rodo tik programos piktogramą) ir „both“."
+
+#: ../extensions/alternate-tab/prefs.js:26
+#| msgid "All & Thumbnails"
+msgid "Thumbnail only"
+msgstr "Tik miniatiūros"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Visos ir miniatiūros"
+#| msgid "Application"
+msgid "Application icon only"
+msgstr "Tik programos piktograma"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid "This mode presents all applications from all workspaces in one selection list. Instead of using the application icon of every window, it uses small thumbnails resembling the window itself."
-msgstr "Ši veiksena parodo visas programas iš visų darbalaukių viename pasirinkimo sąraše. Užuot naudojus kiekvieno lango programos piktogramą, jis naudoja pačių langų miniatiūras."
+msgid "Thumbnail and application icon"
+msgstr "Miniatiūra ir programos piktograma"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Darbalaukis ir piktogramos"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Pateikti langus kaip"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current workspace and gives you additionally the option to switch to the last used application of your previous workspace. This is always the last symbol in the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Ši veiksena leidžia persijungti tarp programų jūsų dabartiniame darbalaukyje ir papildomai suteikia galimybę persijungti į paskutinę naudotą programą buvusiame darbalaukyje. Ši yra visada paskutinis simbolis sąraše ir yra atskirtas skirtuku/vertikalia linija, jei yra prieinamas. \n"
-"Kiekvienas langas yra pristatomas jo programos piktograma."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "Perkelti dabartinį pažymėjimą į priekį prieš užveriant iššokusį langą"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid "The Alternate Tab can be used in different modes, that affect the way windows are chosen and presented."
-msgstr "Alternatyvus Tab gali būti naudojamas skirtingose veiksenose, tai paveikia, kaip langai yra pasirenkami ir parodomi."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Rodyti tik dabartinio darbalaukio langus"
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
@@ -65,7 +57,6 @@ msgid "Hibernate"
 msgstr "Hibernuoti"
 
 #: ../extensions/alternative-status-menu/extension.js:78
-#| msgid "Power Off..."
 msgid "Power Off"
 msgstr "Išjungti"
 
@@ -94,13 +85,11 @@ msgid "A list of strings, each containing an application id (desktop file name),
 msgstr "Eilučių sąrašas, kur kiekviena turi programos id (darbastalio failo vardą), po jo dvitaškis ir darbalaukio numeris"
 
 #: ../extensions/auto-move-windows/prefs.js:55
-#| msgid "Quit Application"
 msgid "Application"
 msgstr "Programa"
 
 #: ../extensions/auto-move-windows/prefs.js:64
 #: ../extensions/auto-move-windows/prefs.js:106
-#| msgid "Workspace & Icons"
 msgid "Workspace"
 msgstr "Darbalaukis"
 
@@ -180,12 +169,11 @@ msgstr "Monitorius"
 msgid "Sets monitor to display dock in. The default value (-1) is the primary monitor."
 msgstr "Nustato monitorių, kuriame rodyti doką. Numatytoji reikšmė (-1) yra pagrindinis monitorius."
 
-#: ../extensions/drive-menu/extension.js:57
-#| msgid "Removable Devices"
+#: ../extensions/drive-menu/extension.js:56
 msgid "Removable devices"
 msgstr "Išimami įrenginiai"
 
-#: ../extensions/drive-menu/extension.js:68
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Atverti failų tvarkyklę"
 
@@ -215,22 +203,22 @@ msgstr ""
 msgid "Message:"
 msgstr "Pranešimas:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s yra pasitraukęs."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s yra atsijungęs."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s yra prisijungęs."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s yra užsiėmęs."
@@ -251,9 +239,46 @@ msgstr "Talpinti lango antraštes viršuje"
 msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
 msgstr "Jei teigiama, patalpinti lango antraštes virš atitinkamos miniatiūros, nepaisant numatyto talpinimo apačioje. Pakeitus šiuos nustatymus reikės paleisti apvalkalą iš naujo."
 
-#: ../extensions/places-menu/extension.js:39
-msgid "Removable Devices"
-msgstr "Išimami įrenginiai"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Vietos"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Įrenginiai"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Žymelės"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Tinklas"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Nepavyko paleisti „%s“"
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Namų aplankas"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Failų sistema"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Naršyti tinklą"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Atmintis"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -264,23 +289,19 @@ msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Temos pavadinimas, kuri bus įkrauta iš ~/.themes/name/gnome-shell"
 
 #: ../extensions/workspace-indicator/extension.js:30
-#| msgid "Workspace & Icons"
 msgid "Workspace Indicator"
 msgstr "Darbalaukio indikatorius"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace & Icons"
 msgid "Workspace names:"
 msgstr "Darbalaukių pavadinimas:"
 
 #: ../extensions/workspace-indicator/prefs.js:152
-#| msgid "Native"
 msgid "Name"
 msgstr "Pavadinimas"
 
 #: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
-#| msgid "Workspace & Icons"
 msgid "Workspace %d"
 msgstr "Darbalaukis %d"
 
@@ -300,96 +321,12 @@ msgstr "Dešinė"
 msgid "Upside-down"
 msgstr "Aukštyn kojom"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Tvarkyti ekrano nustatymus..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Vaizduoklis"
 
-#~ msgid ""
-#~ "This is the first time you use the Alternate Tab extension. \n"
-#~ "Please choose your preferred behaviour:\n"
-#~ "\n"
-#~ "All & Thumbnails:\n"
-#~ "    This mode presents all applications from all workspaces in one "
-#~ "selection \n"
-#~ "    list. Instead of using the application icon of every window, it uses "
-#~ "small \n"
-#~ "    thumbnails resembling the window itself. \n"
-#~ "\n"
-#~ "Workspace & Icons:\n"
-#~ "    This mode let's you switch between the applications of your current \n"
-#~ "    workspace and gives you additionally the option to switch to the last "
-#~ "used \n"
-#~ "    application of your previous workspace. This is always the last "
-#~ "symbol in \n"
-#~ "    the list and is segregated by a separator/vertical line if "
-#~ "available. \n"
-#~ "    Every window is represented by its application icon.  \n"
-#~ "\n"
-#~ "If you whish to revert to the default behavior for the Alt-Tab switcher, "
-#~ "just\n"
-#~ "disable the extension from extensions.gnome.org or the Advanced Settings "
-#~ "application."
-#~ msgstr ""
-#~ "Tai pirmas kartas kai naudojatės Alternate Tab plėtiniu. \n"
-#~ "Pasirinkite pageidaujamą elgseną:\n"
-#~ "\n"
-#~ "Visos su miniatiūrom:\n"
-#~ "    Ši veiksena atvaizduoja visas programas iš visų darbalaukių viename "
-#~ "sąraše. \n"
-#~ "    Vietoj kiekvieno programos lango piktogramos bus naudojama maža "
-#~ "miniatiūra atvaizduojanti patį langą. \n"
-#~ "\n"
-#~ "Darbalaukis ir piktogramos:\n"
-#~ "    Ši veiksena leidžia persijungti tarp programų jūsų dabartiniame "
-#~ "darbalaukyje \n"
-#~ "    bei leidžia persijungti į paskutinę programą iš praeito "
-#~ "darbalaukio. \n"
-#~ "    Tai visada paskutinis simbolis sąraše atskirtas skirtuku/vertikalia "
-#~ "linija. \n"
-#~ "    Kiekvienas langas atvaizduojamas jo programos piktograma.  \n"
-#~ "\n"
-#~ "Jei norite grįžti prie numatytosios Alt-Tab elgsenos, paprasčiausiai\n"
-#~ "išjunkite plėtinį extensions.gnome.org arba papildomų nustatymų "
-#~ "programoje."
+#: ../extensions/xrandr-indicator/extension.js:80
+#| msgid "System Settings"
+msgid "Display Settings"
+msgstr "Vaizduoklio nustatymai"
 
-#~ msgid "Alt Tab Behaviour"
-#~ msgstr "Alt Tab veiksena"
-
-#~ msgid "Cancel"
-#~ msgstr "Atsisakyti"
-
-#~ msgid "Ask the user for a default behaviour if true."
-#~ msgstr "Jei teigiama, klausi naudotojo numatytųjų nustatymų."
-
-#~ msgid "Indicates if Alternate Tab is newly installed"
-#~ msgstr "Nurodo ar Alternate tab šviežiai įdiegta"
-
-#~ msgid "Notifications"
-#~ msgstr "Pranešimai"
-
-#~ msgid "Online Accounts"
-#~ msgstr "Internetinės paskyros"
-
-#~ msgid "System Settings"
-#~ msgstr "Sistemos nustatymai"
-
-#~ msgid "Lock Screen"
-#~ msgstr "Užrakinti ekraną"
-
-#~ msgid "Switch User"
-#~ msgstr "Pakeisti naudotoją"
-
-#~ msgid "Log Out..."
-#~ msgstr "Atsijungti..."
-
-#~ msgid ""
-#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
-#~ "the default grid based algorithm, 'natural' to use another one that "
-#~ "reflects more the position and size of the actual window"
-#~ msgstr ""
-#~ "Algoritmas, naudojamas išdėstyti miniatiūras peržvalgos lange. „grid“ - "
-#~ "naudoti numatytąjį algoritmą, „natural“ - naudoti kitą, kuris panašiau "
-#~ "atvaizduoja lango dydį ir vietą"
-
-#~ msgid "Window placement strategy"
-#~ msgstr "Lango padėties strategija"
