@@ -7,86 +7,104 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-02-24 18:22+0000\n"
-"PO-Revision-Date: 2012-03-16 00:49+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2012-09-07 15:25+0000\n"
+"PO-Revision-Date: 2012-09-15 15:13+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Η συμπεριφορά alt tab."
+msgid "The application icon mode."
+msgstr "Η λειτουργία εικονιδίου της εφαρμογής"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-#, fuzzy
-#| msgid ""
-#| "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails "
-#| "and workspace_icons."
-msgid "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and workspace_icons. See the configuration dialogs for details."
-msgstr "Ρυθμίζει την συμπεριφορά του Alt Tab. Πιθανές τιμές είναι οι εξής: όλες_μικρογραφίες (all_thumbnails) και εικονίδια_χώρου εργασίας (workspace_icons). Δείτε τις ρυθμίσεις διαλόγου για λεπτομέρειες."
+msgid ""
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
+msgstr ""
+"Διαμορφώνει πως τα παράθυρα θα εμφανίζονται στν εναλλαγή των παραθύρων. "
+"Έγκυρες ρυθμίσεις είναι 'thumbnail-only' (εμφανίζει μια μικρογραφία του "
+"παραθύρου), 'app-icon-only' (εμφανίζει μόνο το εικονίδιο της εφαρμογής) ή "
+"'both'."
+
+#: ../extensions/alternate-tab/prefs.js:26
+#| msgid "All & Thumbnails"
+msgid "Thumbnail only"
+msgstr "Μόνο μικρογραφίες"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Όλα & μικρογραφίες"
+#| msgid "Application"
+msgid "Application icon only"
+msgstr "Μόνο εικονίδια εφαρμογών"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid "This mode presents all applications from all workspaces in one selection list. Instead of using the application icon of every window, it uses small thumbnails resembling the window itself."
-msgstr "Αυτή η κατάσταση εμφανίζει όλες τις εφαρμογές απ' όλους τους χώρους εργασίας σε μια λίστα επιλογής. Αντί να χρησιμοποιήσει το εικονίδιο της εφαρμογής για κάθε παράθυρο, χρησιμοποιεί μικρογραφίες που μοιάζουν με το ίδιο το παράθυρο."
+msgid "Thumbnail and application icon"
+msgstr "Εικονίδια μικρογραφιών και εφαρμογών"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Χώρος εργασίας & εικονίδια"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Παρουσίαση παραθύρων ως"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current workspace and gives you additionally the option to switch to the last used application of your previous workspace. This is always the last symbol in the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Αυτή η κατάσταση σας επιτρέπει την εναλλαγή μεταξύ των εφαρμογών του τωρινού χώρου εργασίας και σας δίνει επιπλέον την επιλογή να μεταβείτε στην τελευταία χρησιμοποιημένη εφαρμογή του προηγούμενου χώρου εργασίας σας. Αυτό είναι πάντα το τελευταίο σύμβολο στη λιστα και διαχωρίζεται από μια κάθετη γραμμή αν είναι διαθέσιμη. \n"
-"Κάθε παράθυρο αντιπροσωπεύεται από το εικονίδιο της εφαρμογής του."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "Μετακινήστε τη τωρινή επιλογή προς τα εμπρός πριν το κλείσιμο του αναδυόμενου"
-
-#: ../extensions/alternate-tab/prefs.js:58
-#, fuzzy
-msgid "The Alternate Tab can be used in different modes, that affect the way windows are chosen and presented."
-msgstr "Το Alternate Tab μπορεί να χρησιμοποιηθεί σε διαφορετικές καταστάσεις, οι οποίες επηρεάζουν τον τρόπο που τα παράθυρα επιλέγονται και παρουσιάζονται."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Προβολή των παραθύρων μόνο στον τρέχων χώρο εργασίας"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "Αναστολή"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Αδρανοποίηση"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "Σβήσιμο…"
+#: ../extensions/alternative-status-menu/extension.js:78
+#| msgid "Power Off..."
+msgid "Power Off"
+msgstr "Απενεργοποίηση"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Ενεργοποίηση αναστολής"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "Ελέγχει την ορατότητα του αντικειμένου Αναστολη"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Ενεργοποίηση αδρανοποίησης"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "Ελέγχει την ορατότητα του αντικειμένου Αδρανοποίηση"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
-msgstr "Λίστα εφαρμογής και χώρου εργασίας"
+msgstr "Λίστα εφαρμογών και χώρου εργασίας"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
-msgstr "Μια λίστα συμβολοσειρών, που η καθεμία περιέχει ένα αναγνωριστικό εφαρμογής (όνομα αρχείου επιφάνειας εργασίας), ακολουθούμενη από άνω και κάτω τελεία και τον αριθμό του χώρου εργασίας"
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Μια λίστα συμβολοσειρών, που η καθεμία περιέχει ένα αναγνωριστικό εφαρμογής "
+"(όνομα αρχείου επιφάνειας εργασίας), ακολουθούμενη από άνω και κάτω τελεία "
+"και τον αριθμό του χώρου εργασίας"
 
 #: ../extensions/auto-move-windows/prefs.js:55
-#| msgid "Quit Application"
 msgid "Application"
 msgstr "Εφαρμογή"
 
 #: ../extensions/auto-move-windows/prefs.js:64
 #: ../extensions/auto-move-windows/prefs.js:106
-#| msgid "Workspace & Icons"
 msgid "Workspace"
 msgstr "Χώρος εργασίας"
 
@@ -96,29 +114,29 @@ msgstr "Προσθήκη κανόνα"
 
 #: ../extensions/auto-move-windows/prefs.js:94
 msgid "Create new matching rule"
-msgstr ""
+msgstr "Δημιουργία νέου κανόνα που ταιριάζει"
 
 #: ../extensions/auto-move-windows/prefs.js:98
 msgid "Add"
 msgstr "Προσθήκη"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Σύρετε εδώ για να προσθέσετε αγαπημένα"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Νέο παράθυρο"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Εγκατάλειψη εφαρμογής"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Απομάκρυνση από τα αγαπημένα"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Προσθήκη στα αγαπημένα"
 
@@ -127,8 +145,12 @@ msgid "Position of the dock"
 msgstr "Θέση υποδοχέα"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
-msgstr "Ρυθμίζει τη θέση του υποδοχέα στην οθόνη. Επιτρεπόμενες τιμές είναι right («δεξιά») ή right («αριστερά»)"
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"Ρυθμίζει τη θέση του υποδοχέα στην οθόνη. Επιτρεπόμενες τιμές είναι right "
+"(«δεξιά») ή right («αριστερά»)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
 msgid "Icon size"
@@ -147,11 +169,14 @@ msgid "Autohide effect"
 msgstr "Εφέ αυτόματης απόκρυψης"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-#, fuzzy
 #| msgid ""
 #| "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgid "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'"
-msgstr "Ρυθμίζει το εφέ κρυψίματος του υποδοχέα. Επιτρεπόμενες τιμές είναι αλλαγή μεγέθους (resize), αλλαγή κλίμακας (rescale) και μετακίνηση (move)"
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr ""
+"Ρυθμίζει το εφέ κρυψίματος του υποδοχέα. Επιτρεπόμενες τιμές είναι 'resize', "
+"'rescale' και 'move'"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
 msgid "Autohide duration"
@@ -161,50 +186,76 @@ msgstr "Διάρκεια αυτόματης απόκρυψης"
 msgid "Sets the time duration of the autohide effect."
 msgstr "Ρυθμίζει την χρονική διάρκεια του εφέ αυτόματης απόκρυψης."
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Οθόνη"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"Ορίζει την οθόνη για την εμφάνιση του ταμπλό. Η προεπιλεγμένη τιμή (-1) "
+"είναι η κύρια οθόνη."
+
+#: ../extensions/drive-menu/extension.js:56
+#| msgid "Removable Devices"
+msgid "Removable devices"
+msgstr "Αφαιρούμενες συσκευές"
+
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Άνοιγμα διαχειριστή αρχείων"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
-msgstr "Καλημέρα, Κόσμε!"
+msgstr "Γεια σου, κόσμε!"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
 msgid "Alternative greeting text."
 msgstr "Εναλλακτικό κείμενο χαιρετισμού"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid "If not empty, it contains the text that will be shown when clicking on the panel."
-msgstr "Αν δεν είναι κενό, περιέχει το κείμενο που θα εμφανιστεί όταν θα κάνετε κλικ στον πίνακα εφαρμογών."
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Αν δεν είναι κενό, περιέχει το κείμενο που θα εμφανιστεί όταν θα κάνετε κλικ "
+"στον πίνακα εφαρμογών."
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
+"Το παράδειγμα στοχεύει να δείξει πώς να δημιουργήσουμε επεκτάσεις για το "
+"κέλυφος που συμπεριφέρονται σωστά και ως αυτού έχει μικρή λειτουργικότητα "
+"από μόνο του.\n"
+"Παρ' όλα αυτά είναι δυνατό να προσαρμόσετε το μήνυμα χαιρετισμού."
 
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "Μήνυμα:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s είναι εκτός."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s είναι εκτός σύνδεσης."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s είναι σε σύνδεση."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s είναι απασχολημένος/η."
@@ -214,20 +265,71 @@ msgid "Use more screen for windows"
 msgstr "Χρησιμοποιήστε περισσότερη οθόνη για τα παράθυρα"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
-msgstr "Προσπαθήστε να χρησιμοποιήσετε περισσότερη οθόνη για την τοποθέτηση μικρογραφιών παραθύρου προσαρμόζοντας τον λόγο διαστάσεων οθόνης, και εδραιώνοντας τους περαιτέρω για να μειώσετε το πλαίσιο οριοθέτησης. Αυτή η ρύθμιση ισχύει μόνο με την στρατηγική φυσικής τοποθέτησης."
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Προσπαθήστε να χρησιμοποιήσετε περισσότερη οθόνη για την τοποθέτηση "
+"μικρογραφιών παραθύρου προσαρμόζοντας τον λόγο διαστάσεων οθόνης, και "
+"εδραιώνοντας τους περαιτέρω για να μειώσετε το πλαίσιο οριοθέτησης. Αυτή η "
+"ρύθμιση ισχύει μόνο με την στρατηγική φυσικής τοποθέτησης."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
 msgstr "Τοποθετήστε τίτλους παράθυρου στην κορυφή"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
-msgstr "Αν αυτό αληθεύει, τοποθετήστε τους τίτλους παράθυρου στην κορυφή της αντίστοιχης μικρογραφίας, παρακάμπτοντας το προεπιλεγμένο του κελύφους πού το τοποθετεί στο κάτω μέρος. Η αλλαγή αυτής της ρύθμισης απαιτεί επανεκκίνηση του κέλυφους για να έχει κάποιο αποτέλεσμα."
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Αν αυτό αληθεύει, τοποθετήστε τους τίτλους παράθυρου στην κορυφή της "
+"αντίστοιχης μικρογραφίας, παρακάμπτοντας το προεπιλεγμένο του κελύφους πού "
+"το τοποθετεί στο κάτω μέρος. Η αλλαγή αυτής της ρύθμισης απαιτεί "
+"επανεκκίνηση του κέλυφους για να έχει κάποιο αποτέλεσμα."
 
-#: ../extensions/places-menu/extension.js:37
-msgid "Removable Devices"
-msgstr "Αφαιρούμενες συσκευές"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Τοποθεσίες"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Συσκευές"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Σελιδοδείκτες"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Δίκτυο"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Αποτυχία εκκίνησης \"%s\""
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Προσωπικός φάκελος"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Σύστημα αρχείων"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Περιήγηση δικτύου"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Μνήμη"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -235,27 +337,25 @@ msgstr "Όνομα θέματος"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Το όνομα του θέματος, για να φορτωθεί από το αρχείο ~ / .themes / name / gnome-shell"
+msgstr ""
+"Το όνομα του θέματος, για να φορτωθεί από το αρχείο ~ / .themes / name / "
+"gnome-shell"
 
 #: ../extensions/workspace-indicator/extension.js:30
-#, fuzzy
 #| msgid "Workspace & Icons"
 msgid "Workspace Indicator"
-msgstr "Σήμανση του χώρου εργασίας"
+msgstr "Δείκτης χώρου εργασίας"
 
-#: ../extensions/workspace-indicator/prefs.js:151
-#| msgid "Workspace & Icons"
+#: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Ονόματα χώρων εργασίας:"
 
-#: ../extensions/workspace-indicator/prefs.js:162
-#| msgid "Native"
+#: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
 msgstr "Όνομα"
 
-#: ../extensions/workspace-indicator/prefs.js:196
+#: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
-#| msgid "Workspace & Icons"
 msgid "Workspace %d"
 msgstr "Χώρος εργασίας %d"
 
@@ -275,18 +375,79 @@ msgstr "Δεξιά"
 msgid "Upside-down"
 msgstr "Αναποδογυρισμένο"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Διαμορφώστε τις ρυθμίσεις της οθόνης…"
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Οθόνη"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+#| msgid "System Settings"
+msgid "Display Settings"
+msgstr "Ρυθμίσεις οθόνης"
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "Η συμπεριφορά alt tab."
+
+#~| msgid ""
+#~| "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails "
+#~| "and workspace_icons."
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "Ρυθμίζει την συμπεριφορά του Alt Tab. Πιθανές τιμές είναι οι εξής: "
+#~ "όλες_μικρογραφίες (all_thumbnails) και εικονίδια_χώρου εργασίας "
+#~ "(workspace_icons). Δείτε τις ρυθμίσεις διαλόγου για λεπτομέρειες."
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "Αυτή η κατάσταση εμφανίζει όλες τις εφαρμογές απ' όλους τους χώρους "
+#~ "εργασίας σε μια λίστα επιλογής. Αντί να χρησιμοποιήσει το εικονίδιο της "
+#~ "εφαρμογής για κάθε παράθυρο, χρησιμοποιεί μικρογραφίες που μοιάζουν με το "
+#~ "ίδιο το παράθυρο."
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "Χώρος εργασίας & εικονίδια"
+
+#~ msgid ""
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "Αυτή η κατάσταση σας επιτρέπει την εναλλαγή μεταξύ των εφαρμογών του "
+#~ "τωρινού χώρου εργασίας και σας δίνει επιπλέον την επιλογή να μεταβείτε "
+#~ "στην τελευταία χρησιμοποιημένη εφαρμογή του προηγούμενου χώρου εργασίας "
+#~ "σας. Αυτό είναι πάντα το τελευταίο σύμβολο στη λιστα και διαχωρίζεται από "
+#~ "μια κάθετη γραμμή αν είναι διαθέσιμη. \n"
+#~ "Κάθε παράθυρο αντιπροσωπεύεται από το εικονίδιο της εφαρμογής του."
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr ""
+#~ "Μετακινήστε τη τωρινή επιλογή προς τα εμπρός πριν το κλείσιμο του "
+#~ "αναδυόμενου"
+
+#, fuzzy
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "Το Alternate Tab μπορεί να χρησιμοποιηθεί σε διαφορετικές καταστάσεις, οι "
+#~ "οποίες επηρεάζουν τον τρόπο που τα παράθυρα επιλέγονται και "
+#~ "παρουσιάζονται."
+
+#~ msgid "Configure display settings..."
+#~ msgstr "Διαμορφώστε τις ρυθμίσεις της οθόνης…"
 
 #~ msgid "Notifications"
 #~ msgstr "Ειδοποιήσεις"
 
 #~ msgid "Online Accounts"
 #~ msgstr "Λογαριασμοί διαδικτύου"
-
-#~ msgid "System Settings"
-#~ msgstr "Ρυθμίσεις συστήματος"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Κλείδωμα οθόνης"
