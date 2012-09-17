@@ -9,75 +9,51 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-08-07 08:40+0000\n"
-"PO-Revision-Date: 2012-08-07 22:44+0700\n"
-"Last-Translator: Dirgita <dirgitadevina@yahoo.co.id>\n"
+"POT-Creation-Date: 2012-09-07 15:25+0000\n"
+"PO-Revision-Date: 2012-09-17 12:29+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Poedit-Language: Indonesian\n"
-"X-Poedit-Country: INDONESIA\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.3\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Perilaku alt tab."
+msgid "The application icon mode."
+msgstr "Mode ikon aplikasi."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
 msgstr ""
-"Menata perilaku Alt-Tab. Nilai yang mungkin adalah: all_thumbnails dan "
-"workspace_icons. Lihat dialog konfigurasi untuk rinciannya."
+"Menata bagaimana jendela ditampilkan di penukar. Kemungkinan yang valid "
+"adalah 'thumbnail-only' (menampilkan gambar mini jendela), 'app-icon-"
+"only' (menampilkan hanya ikon aplikasi), atau 'both' (keduanya)."
+
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "Hanya gambar mini"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Semua & Gambar Mini"
+msgid "Application icon only"
+msgstr "Hanya ikon aplikasi"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"Mode ini menampilkan semua aplikasi dari semua ruang kerja dalam suatu "
-"daftar pilihan. Sebagai pengganti ikon aplikasi dari setiap jendela, dipakai "
-"gambar mini yang mirip dengan jendela itu sendiri."
+msgid "Thumbnail and application icon"
+msgstr "Gambar mini dan ikon aplikasi"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Ruang Kerja & Ikon"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Sajikan jendela sebagai"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Mode ini memungkinkan Anda bertukar antara aplikasi pada ruang kerja kini "
-"dan memberi Anda pilihan tambahan untuk bertukar ke aplikasi yang terakhir "
-"dipakai pada ruang kerja sebelumnya. Ini selalu merupakan simbol terakhir "
-"pada daftar dan dikelompokkan oleh pemisah/garis vertikal bila tersedia.\n"
-"Setiap jendela diwakili oleh ikon aplikasinya."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "Memindahkan pilihan kini ke depan sebelum menutup popup"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"Tab Alternatif dapat dipakai dalam mode berbeda, yang mempengaruhi cara "
-"jendela dipilih dan disajikan."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Hanya tampilkan jendela dalam ruang kerja kini"
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
@@ -217,11 +193,11 @@ msgstr ""
 "Mengatur monitor tempat menampilkan dok. Nilai bawaan (-1) adalah monitor "
 "utama."
 
-#: ../extensions/drive-menu/extension.js:57
+#: ../extensions/drive-menu/extension.js:56
 msgid "Removable devices"
 msgstr "Perangkat yang dapat dilepas"
 
-#: ../extensions/drive-menu/extension.js:68
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Buka manajer berkas"
 
@@ -257,22 +233,22 @@ msgstr ""
 msgid "Message:"
 msgstr "Pesan:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s pergi."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s luring."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s daring."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s sedang sibuk."
@@ -306,9 +282,46 @@ msgstr ""
 "masing, menimpa bawaan shell yang menempatkannya di bagian bawah. Mengubah "
 "ini memerlukan memulai ulang shell agar berdampak."
 
-#: ../extensions/places-menu/extension.js:39
-msgid "Removable Devices"
-msgstr "Perangkat Yang Dapat Dilepas"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Tempat"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Perangkat"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Penanda Buku"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Jaringan"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Gagal meluncurkan \"%s\""
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Rumah"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Sistem Berkas"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Ramban jaringan"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Memori"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -351,6 +364,10 @@ msgstr "Kanan"
 msgid "Upside-down"
 msgstr "Terbalik"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Konfigurasi tampilan..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Tampilan"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "Pengaturan Tampilan"
