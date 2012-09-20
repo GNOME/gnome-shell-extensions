@@ -8,97 +8,91 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-22 11:01+0100\n"
-"PO-Revision-Date: 2012-03-22 11:02+0100\n"
+"POT-Creation-Date: 2012-09-20 15:47+0200\n"
+"PO-Revision-Date: 2012-09-20 15:47+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
-"Language: \n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
-msgstr ""
-"Az Alt-Tab viselkedésének megadása. Lehetséges értékek: all_thumbnails és "
-"workspace_icons. Részletekért lásd a beállítóablakokat."
+msgid "The application icon mode."
+msgstr "Az alkalmazásikon módja."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "The alt tab behaviour."
-msgstr "Az Alt-Tab viselkedése."
+msgid ""
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
+msgstr ""
+"Az ablakok megjelenésének beállítása a váltóban. Lehetséges értékek: "
+"„thumbnail-only” (az ablak bélyegképének megjelenítése), „app-icon-only” (az "
+"alkalmazás ikonjának megjelenítése) vagy „both” (mindkettő)."
+
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "Csak bélyegkép"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Minden és bélyegképek"
+msgid "Application icon only"
+msgstr "Csak alkalmazásikon"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"Ez a mód minden munkaterület alkalmazásait egy kijelölőlistában jeleníti "
-"meg. Minden ablak alkalmazásikonjának használata helyett kis bélyegképeket "
-"használ, amelyek magára az ablakra hasonlítanak."
+msgid "Thumbnail and application icon"
+msgstr "Bélyegkép és alkalmazásikon"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Munkaterület és ikonok"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Ablakok megjelenítése mint"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Ez a mód lehetővé teszi a váltást a jelenlegi munkaterület alkalmazásai "
-"között, és lehetővé teszi az előző munkaterület utoljára használt "
-"alkalmazására váltást. Ez mindig a lista utolsó eleme, és egy elválasztó/"
-"függőleges vonal választja el, ha elérhető.\n"
-"Minden ablakot az alkalmazásikonja jelképez."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "Aktuális kijelölés előtérbe hozása a felugró ablak bezárása előtt"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"A váltás lap különböző módokon használható, amelyek befolyásolják az ablakok "
-"kiválasztásának és megjelenítésének módját."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Csak az aktuális munkaterület ablakainak megjelenítése"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "Felfüggesztés"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Hibernálás"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "Kikapcsolás…"
+#: ../extensions/alternative-status-menu/extension.js:78
+msgid "Power Off"
+msgstr "Kikapcsolás"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Felfüggesztés engedélyezése"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "A Felfüggesztés menüelem láthatóságának módosítása"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Hibernálás engedélyezése"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "A Hibernálás menüelem láthatóságának módosítása"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Alkalmazások és munkaterületek listája"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
 "Alkalmazásazonosítókat (.desktop fájl neve), majd kettősponttal elválasztva "
 "a munkaterület számát tartalmazó karakterláncok sorozata"
-
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "Application and workspace list"
-msgstr "Alkalmazások és munkaterületek listája"
 
 #: ../extensions/auto-move-windows/prefs.js:55
 msgid "Application"
@@ -121,49 +115,53 @@ msgstr "Új illesztési szabály létrehozása"
 msgid "Add"
 msgstr "Hozzáadás"
 
-#: ../extensions/dock/extension.js:489
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Húzza ide kedvenceit"
 
-#: ../extensions/dock/extension.js:815
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Új ablak"
 
-#: ../extensions/dock/extension.js:817
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Alkalmazás bezárása"
 
-#: ../extensions/dock/extension.js:822
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Eltávolítás a Kedvencek közül"
 
-#: ../extensions/dock/extension.js:823
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Hozzáadás a Kedvencekhez"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Autohide duration"
-msgstr "Automatikus rejtés hossza"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Autohide effect"
-msgstr "Automatikus rejtés effektusa"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Enable/disable autohide"
-msgstr "Automatikus rejtés engedélyezése vagy tiltása"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Icon size"
-msgstr "Ikonméret"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
 msgstr "A dokk pozíciója"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
+msgid ""
+"Sets the position of the dock in the screen. Allowed values are 'right' or "
+"'left'"
+msgstr ""
+"A dokk pozíciója a képernyőn. Lehetséges értékek: „right” (jobb) vagy "
+"„left” (bal)"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Icon size"
+msgstr "Ikonméret"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
 msgid "Sets icon size of the dock."
 msgstr "Az ikonméret megadása a dokkon."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Enable/disable autohide"
+msgstr "Automatikus rejtés engedélyezése vagy tiltása"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Autohide effect"
+msgstr "Automatikus rejtés effektusa"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
 msgid ""
@@ -174,18 +172,30 @@ msgstr ""
 "„rescale” (újraméretezés) és „move” (áthelyezés)"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"A dokk pozíciója a képernyőn. Lehetséges értékek: „right” (jobb) vagy "
-"„left” (bal)"
+msgid "Autohide duration"
+msgstr "Automatikus rejtés hossza"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Az automatikus rejtés effektus hosszának beállítása."
 
-#: ../extensions/drive-menu/extension.js:66
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Monitor"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"A dokk megjelenítése ezen a monitoron. Az alapértelmezett érték (-1) az "
+"elsődleges monitor."
+
+#: ../extensions/drive-menu/extension.js:56
+msgid "Removable devices"
+msgstr "Cserélhető eszközök"
+
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "Fájlkezelő megnyitása"
 
@@ -201,7 +211,8 @@ msgstr "Alternatív üdvözlőszöveg."
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
-msgstr "Ha nem üres, akkor a panelre kattintáskor megjelenő szöveget tartalmazza."
+msgstr ""
+"Ha nem üres, akkor a panelre kattintáskor megjelenő szöveget tartalmazza."
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
@@ -219,41 +230,31 @@ msgstr ""
 msgid "Message:"
 msgstr "Üzenet:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s távol van."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s kilépett."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s elérhető."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s elfoglalt."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
-msgstr ""
-"Ha igazra van állítva, akkor az ablakfeliratokat a megfelelő bélyegkép "
-"tetejére helyezi el, az alapértelmezett alja helyett. Ezen beállítás "
-"módosítása a Shell újraindítását igényli."
+msgid "Use more screen for windows"
+msgstr "Nagyobb képernyőterület használata ablakokhoz"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Place window captions on top"
-msgstr "Ablakfeliratok elhelyezése felül"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -264,21 +265,68 @@ msgstr ""
 "csökkentéséhez. Ez a beállítás csak a természetes elhelyezési stratégiára "
 "érvényes."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid "Use more screen for windows"
-msgstr "Nagyobb képernyőterület használata ablakokhoz"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Ablakfeliratok elhelyezése felül"
 
-#: ../extensions/places-menu/extension.js:37
-msgid "Removable Devices"
-msgstr "Cserélhető eszközök"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Ha igazra van állítva, akkor az ablakfeliratokat a megfelelő bélyegkép "
+"tetejére helyezi el, az alapértelmezett alja helyett. Ezen beállítás "
+"módosítása a Shell újraindítását igényli."
+
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Helyek"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Eszközök"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Könyvjelzők"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Hálózat"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "„%s” indítása meghiúsult"
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Saját mappa"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Fájlrendszer"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Hálózat tallózása"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Memória"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "A ~/.themes/név/gnome-shell alól betöltendő téma neve"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
 msgstr "Témanév"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "A ~/.themes/név/gnome-shell alól betöltendő téma neve"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -313,9 +361,62 @@ msgstr "Jobbra"
 msgid "Upside-down"
 msgstr "Fejjel lefelé"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Kijelzőbeállítások…"
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Kijelző"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "Kijelzőbeállítások"
+
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "Az Alt-Tab viselkedésének megadása. Lehetséges értékek: all_thumbnails és "
+#~ "workspace_icons. Részletekért lásd a beállítóablakokat."
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "Az Alt-Tab viselkedése."
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "Ez a mód minden munkaterület alkalmazásait egy kijelölőlistában jeleníti "
+#~ "meg. Minden ablak alkalmazásikonjának használata helyett kis "
+#~ "bélyegképeket használ, amelyek magára az ablakra hasonlítanak."
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "Munkaterület és ikonok"
+
+#~ msgid ""
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "Ez a mód lehetővé teszi a váltást a jelenlegi munkaterület alkalmazásai "
+#~ "között, és lehetővé teszi az előző munkaterület utoljára használt "
+#~ "alkalmazására váltást. Ez mindig a lista utolsó eleme, és egy elválasztó/"
+#~ "függőleges vonal választja el, ha elérhető.\n"
+#~ "Minden ablakot az alkalmazásikonja jelképez."
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr "Aktuális kijelölés előtérbe hozása a felugró ablak bezárása előtt"
+
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "A váltás lap különböző módokon használható, amelyek befolyásolják az "
+#~ "ablakok kiválasztásának és megjelenítésének módját."
+
+#~ msgid "Configure display settings..."
+#~ msgstr "Kijelzőbeállítások…"
 
 #~ msgid "Available"
 #~ msgstr "Elérhető"
@@ -326,9 +427,6 @@ msgstr "Kijelzőbeállítások…"
 #~ msgid "My Account"
 #~ msgstr "Saját fiók"
 
-#~ msgid "System Settings"
-#~ msgstr "Rendszerbeállítások"
-
 #~ msgid "Lock Screen"
 #~ msgstr "Képernyő zárolása"
 
@@ -337,4 +435,3 @@ msgstr "Kijelzőbeállítások…"
 
 #~ msgid "Log Out..."
 #~ msgstr "Kijelentkezés…"
-
