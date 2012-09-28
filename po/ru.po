@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-09-07 15:25+0000\n"
-"PO-Revision-Date: 2012-09-27 16:13+0300\n"
+"POT-Creation-Date: 2012-09-27 13:28+0000\n"
+"PO-Revision-Date: 2012-09-27 16:43+0300\n"
 "Last-Translator: Stas Solovey <whats_up@tut.by>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -23,19 +23,19 @@ msgstr ""
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "The alt tab behaviour."
-msgstr ""
+msgstr "Режим alt tab."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid ""
 "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
 "workspace_icons. See the configuration dialogs for details."
 msgstr ""
+"Устанавливает режим Alt-Tab. Возможные значения: all_thumbnails и "
+"workspace_icons. См. подробности в диалоговом окне настроек."
 
 #: ../extensions/alternate-tab/prefs.js:27
-#, fuzzy
-#| msgid "Thumbnail only"
 msgid "All & Thumbnails"
-msgstr "Только миниатюры"
+msgstr "Всё и миниатюры"
 
 #: ../extensions/alternate-tab/prefs.js:28
 msgid ""
@@ -43,12 +43,13 @@ msgid ""
 "list. Instead of using the application icon of every window, it uses small "
 "thumbnails resembling the window itself."
 msgstr ""
+"В этом режиме отображаются все приложения из всех рабочих областей в одном "
+"списке выбора. Вместо использования значков приложений для каждого окна, "
+"используются небольшие эскизы самого окна."
 
 #: ../extensions/alternate-tab/prefs.js:34
-#, fuzzy
-#| msgid "Workspace names:"
 msgid "Workspace & Icons"
-msgstr "Названия рабочих областей:"
+msgstr "Рабочая область и значки"
 
 #: ../extensions/alternate-tab/prefs.js:35
 msgid ""
@@ -58,16 +59,25 @@ msgid ""
 "the list and is segregated by a separator/vertical line if available. \n"
 "Every window is represented by its application icon."
 msgstr ""
+"Этот режим позволяет переключаться между приложениями текущей рабочей "
+"области и последним приложением открытым в предыдущей рабочей области. Это "
+"приложение всегда находится последним в списке и отделено от остальных "
+"разделителем/вертикальной линией.\n"
+"Каждое окно отображается в виде значка приложения."
 
 #: ../extensions/alternate-tab/prefs.js:41
 msgid "Move current selection to front before closing the popup"
 msgstr ""
+"Перед закрытием всплывающего окна перемещать текущее выделенное на передний "
+"план"
 
 #: ../extensions/alternate-tab/prefs.js:58
 msgid ""
 "The Alternate Tab can be used in different modes, that affect the way "
 "windows are chosen and presented."
 msgstr ""
+"Расширение Alternate Tab может использоваться в различных режимах, которые "
+"влияют на способ выбора и отображения окон."
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:64
@@ -79,10 +89,8 @@ msgid "Hibernate"
 msgstr "Спящий режим"
 
 #: ../extensions/alternative-status-menu/extension.js:74
-#, fuzzy
-#| msgid "Power Off"
 msgid "Power Off..."
-msgstr "Выключить"
+msgstr "Выключить…"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -278,8 +286,6 @@ msgstr ""
 "перезапуска Shell, чтобы изменение вступило в силу."
 
 #: ../extensions/places-menu/extension.js:37
-#, fuzzy
-#| msgid "Removable devices"
 msgid "Removable Devices"
 msgstr "Съёмные устройства"
 
@@ -325,77 +331,5 @@ msgid "Upside-down"
 msgstr "На 180 градусов"
 
 #: ../extensions/xrandr-indicator/extension.js:82
-#, fuzzy
-#| msgid "Display Settings"
 msgid "Configure display settings..."
-msgstr "Параметры экрана"
-
-#~ msgid "The application icon mode."
-#~ msgstr "Режим значков приложения."
-
-#~ msgid ""
-#~ "Configures how the windows are shown in the switcher. Valid possibilities "
-#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-#~ "only' (shows only the application icon) or 'both'."
-#~ msgstr ""
-#~ "Настраивает как окна отображаются при переключении. Возможные значения: "
-#~ "«thumbnail-only» (показывает миниатюру окна), «app-icon-only» (показывает "
-#~ "только значок приложения), или «both» (показывает миниатюру окна и значок "
-#~ "приложения)."
-
-#~ msgid "Application icon only"
-#~ msgstr "Только значок приложения"
-
-#~ msgid "Thumbnail and application icon"
-#~ msgstr "Миниатюра и значок приложения"
-
-#~ msgid "Present windows as"
-#~ msgstr "Отображать окна как"
-
-#~ msgid "Show only windows in the current workspace"
-#~ msgstr "Отображать окна только текущей рабочей области"
-
-#~ msgid "Enable suspending"
-#~ msgstr "Включить ждущий режим"
-
-#~ msgid "Control the visibility of the Suspend menu item"
-#~ msgstr "Управление отображения в меню пункта «Ждущий режим»"
-
-#~ msgid "Enable hibernating"
-#~ msgstr "Включить спящий режим"
-
-#~ msgid "Control the visibility of the Hibernate menu item"
-#~ msgstr "Управление отображения в меню пункта «Спящий режим»"
-
-#~ msgid "Places"
-#~ msgstr "Места"
-
-#~ msgid "Devices"
-#~ msgstr "Устройства"
-
-#~ msgid "Bookmarks"
-#~ msgstr "Закладки"
-
-#~ msgid "Network"
-#~ msgstr "Сеть"
-
-#~ msgid "Failed to launch \"%s\""
-#~ msgstr "Не удалось запустить «%s»"
-
-#~ msgid "Home"
-#~ msgstr "Домашняя папка"
-
-#~ msgid "File System"
-#~ msgstr "Файловая система"
-
-#~ msgid "Browse network"
-#~ msgstr "Обзор сети"
-
-#~ msgid "CPU"
-#~ msgstr "ЦП"
-
-#~ msgid "Memory"
-#~ msgstr "Память"
-
-#~ msgid "Display"
-#~ msgstr "Экран"
+msgstr "Настроить параметры экрана…"
