@@ -2,152 +2,93 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Jordi Mas i Hernandez <jmas@softcatala.org>, 2011.
+# Gil Forcada <gilforcada@guifi.net>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-19 23:28+0200\n"
-"PO-Revision-Date: 2011-08-02 07:30+0200\n"
-"Last-Translator: jmas@softcatala.org\n"
-"Language-Team: ca_ES <tradgnome@softcatala.net>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2012-09-06 17:51+0000\n"
+"PO-Revision-Date: 2012-09-29 00:02+0200\n"
+"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
+"Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../extensions/alternative-status-menu/extension.js:39
-msgid "Available"
-msgstr "Disponible"
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "The application icon mode."
+msgstr "El mode d'icona d'aplicació."
 
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Busy"
-msgstr "Ocupat"
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid ""
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
+msgstr ""
+"Configura com es mostren les icones en l'intercanviador. Les possibilitats "
+"vàlides són «thumbnail-only» (només miniatures, mostra les miniatures de les "
+"finestres), «app-icon-only» (només icona de l'aplicació, mostra només la "
+"icona de l'aplicació) o «both» (ambdós, mostra tan la icona de l'aplicació "
+"com la miniatura). "
 
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "My Account"
-msgstr "El meu compte"
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "Només miniatures"
 
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "Paràmetres de l'ordinador"
+#: ../extensions/alternate-tab/prefs.js:27
+msgid "Application icon only"
+msgstr "Només la icona de l'aplicació"
 
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "Bloca la pantalla"
+#: ../extensions/alternate-tab/prefs.js:28
+msgid "Thumbnail and application icon"
+msgstr "Miniatura i icona de l'aplicació"
 
-#: ../extensions/alternative-status-menu/extension.js:67
-msgid "Switch User"
-msgstr "Canvia d'usuari"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Mostra les finestres com a"
 
-#: ../extensions/alternative-status-menu/extension.js:72
-msgid "Log Out..."
-msgstr "Surt..."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Mostra només les icones de l'espai de treball actual"
 
-#: ../extensions/alternative-status-menu/extension.js:79
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:68
 msgid "Suspend"
 msgstr "Atura temporalment"
 
-#: ../extensions/alternative-status-menu/extension.js:85
+#: ../extensions/alternative-status-menu/extension.js:73
 msgid "Hibernate"
 msgstr "Hiberna"
 
-#: ../extensions/alternative-status-menu/extension.js:91
-msgid "Power Off..."
-msgstr "Apaga..."
+#: ../extensions/alternative-status-menu/extension.js:78
+msgid "Power Off"
+msgstr "Apaga"
 
-#: ../extensions/alternate-tab/extension.js:44
-msgid ""
-"This is the first time you use the Alternate Tab extension. \n"
-"Please choose your preferred behaviour:\n"
-"\n"
-"All & Thumbnails:\n"
-"    This mode presents all applications from all workspaces in one "
-"selection \n"
-"    list. Instead of using the application icon of every window, it uses "
-"small \n"
-"    thumbnails resembling the window itself. \n"
-"\n"
-"Workspace & Icons:\n"
-"    This mode let's you switch between the applications of your current \n"
-"    workspace and gives you additionally the option to switch to the last "
-"used \n"
-"    application of your previous workspace. This is always the last symbol "
-"in \n"
-"    the list and is segregated by a separator/vertical line if available. \n"
-"    Every window is represented by its application icon.  \n"
-"\n"
-"Native:\n"
-"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
-"    native switches the Alternate Tab extension off. \n"
-msgstr ""
-"Aquest és el primer cop que utilitzeu l'extensió «Alternate Tab». \n"
-"Trieu el comportament que preferiu:\n"
-"\n"
-"Totes i miniatures:\n"
-"    Aquest mode presenta totes les aplicacions de tots els espais de treball "
-"com a\n"
-"    una llista de selecció. En comptes de mostrar la icona d'aplicació de "
-"cada finestra, mostra les \n"
-"    miniatures que representen el contingut de la finestra. \n"
-"\n"
-"Espai de treball i icones:\n"
-"    Aquest mode us permet canviar entre aplicacions de l'espai de treball "
-"actual \n"
-"    i us dóna la possibilitat de canviar a l'última aplicació usada de "
-"l'espai de \n"
-"    treball anterior. Aquest és sempre el darrer símbol a la llista i està "
-"separat  \n"
-"    per una línia vertical/separador quan està disponible. \n"
-"    Cada finestra es representa per la seva icona d'aplicació.  \n"
-"\n"
-"Nadiu:\n"
-"    Aquest és el mode de comportament nadiu al GNOME 3 o amb altres "
-"paraules: fent \n"
-"    clic inhabilita l'extensió «Alternate Tab». \n"
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Habilita l'aturada temporal"
 
-#: ../extensions/alternate-tab/extension.js:269
-msgid "Alt Tab Behaviour"
-msgstr "Comportament de l'«Alternate Tab»"
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "Permet controlar si es mostra l'element de menú «Atura temporalment»"
 
-#: ../extensions/alternate-tab/extension.js:285
-msgid "All & Thumbnails"
-msgstr "Totes i miniatures"
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Habilita la hibernació"
 
-#: ../extensions/alternate-tab/extension.js:292
-msgid "Workspace & Icons"
-msgstr "Espai de treball i icones"
-
-#: ../extensions/alternate-tab/extension.js:299
-msgid "Native"
-msgstr "Nadiu"
-
-#: ../extensions/alternate-tab/extension.js:306
-msgid "Cancel"
-msgstr "Cancel·la"
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "Ask the user for a default behaviour if true."
-msgstr "Si és «true» (cert) pregunta a l'usuari pel comportament per defecte."
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Indicates if Alternate Tab is newly installed"
-msgstr "Indica si s'acaba d'instal·lar l'«Alternate Tab»"
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
-"workspace_icons."
-msgstr ""
-"Defineix el comportament de l'«Alternate Tab». Els valors possibles són: "
-"«native» (nadiu), «all_thumbnails» (totes i miniatures) i "
-"«workspace_icons» (espai de treball i icones)."
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
-msgid "The alt tab behaviour."
-msgstr "Comportament de l'«Alternate Tab»"
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "Permet controlar si es mostra l'element de menú «Hiberna»"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Aplicació i llista d'espais de treball"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -156,62 +97,52 @@ msgstr ""
 "d'aplicació (nom del fitxer de l'escriptori), seguit de dos punts i el "
 "número de l'espai de treball"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "Application and workspace list"
-msgstr "Aplicació i llista d'espais de treball"
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "Aplicació"
 
-#: ../extensions/dock/extension.js:437
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "Espai de treball"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Afegeix una regla"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "Crea una regla de coincidència nova"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Afegeix"
+
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
 msgstr "Arrossegueu aquí per afegir als preferits"
 
-#: ../extensions/dock/extension.js:771
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Finestra nova"
 
-#: ../extensions/dock/extension.js:773
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Surt de l'aplicació"
 
-#: ../extensions/dock/extension.js:778
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Suprimeix dels preferits"
 
-#: ../extensions/dock/extension.js:779
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Afegeix als preferits"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Autohide duration"
-msgstr "Duració de l'ocultació automàtica"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Autohide effect"
-msgstr "Efecte de l'ocultació automàtica"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Enable/disable autohide"
-msgstr "Habilita/Inhabilita l'ocultació automàtica"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Icon size"
-msgstr "Mida de la icona"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
 msgstr "Posició de l'acoblador"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Sets icon size of the dock."
-msgstr "Defineix la mida de la icona per l'acoblador."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgstr ""
-"Defineix l'efecte de l'acoblador amagat. Els valors permesos són "
-"«resize» (amplia) o «rescale» (escala)"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
 msgid ""
 "Sets the position of the dock in the screen. Allowed values are 'right' or "
 "'left'"
@@ -219,61 +150,115 @@ msgstr ""
 "Defineix la posició de l'acoblador a la pantalla. Els valors permesos són "
 "«right» (dreta) o «left» (esquerra)"
 
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Icon size"
+msgstr "Mida de la icona"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Sets icon size of the dock."
+msgstr "Defineix la mida de la icona per l'acoblador."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Enable/disable autohide"
+msgstr "Habilita/inhabilita l'ocultació automàtica"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Autohide effect"
+msgstr "Efecte de l'ocultació automàtica"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr ""
+"Defineix l'efecte de l'acoblador ocult. Els valors permesos són "
+"«resize» (amplia), «rescale» (escala) i «move» (mou)"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid "Autohide duration"
+msgstr "Duració de l'ocultació automàtica"
+
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Defineix la durada en temps de l'efecte d'ocultació automàtica."
 
-#: ../extensions/example/extension.js:11
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Pantalla"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr ""
+"Estableix la pantalla a on es mostra l'acoblador. El valor per defecte és "
+"«-1», la pantalla principal."
+
+#: ../extensions/drive-menu/extension.js:56
+msgid "Removable devices"
+msgstr "Dispositius extraïbles"
+
+#: ../extensions/drive-menu/extension.js:67
+msgid "Open file manager"
+msgstr "Obre del gestor de fitxers"
+
+#: ../extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Hola, món!"
 
-#: ../extensions/gajim/extension.js:219
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "Text de rebuda alternatiu."
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Si no és buit, conté el text que es mostrarà quan es faci clic en el quadre."
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"L'«Example» està pensat com una extensió del GNOME Shell que demostri la "
+"manera correcta de crear extensions. Com a extensió pròpiament dita no fa "
+"gairebé res.\n"
+"Tot i així permet personalitzar el missatge del rebedor."
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Missatge:"
+
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "%s està absent."
 
-#: ../extensions/gajim/extension.js:222
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "%s està fora de línia."
 
-#: ../extensions/gajim/extension.js:225
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "%s està en línia."
 
-#: ../extensions/gajim/extension.js:228
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "%s està ocupat."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
-msgstr ""
-"Si és «true» (cert), posiciona el títol de la finestra damunt de la "
-"miniatura corresponent, substituint el comportament per defecte del Shell de "
-"posicionar-lo a baix. Cal reiniciar el Shell per tal de que aquest canvi "
-"tingui efecte."
+msgid "Use more screen for windows"
+msgstr "Utilitza més pantalla per les finestres"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Place window captions on top"
-msgstr "Posiciona els títols de les finestres al damunt"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
-msgid ""
-"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
-"default grid based algorithm, 'natural' to use another one that reflects "
-"more the position and size of the actual window"
-msgstr ""
-"L'algoritme per posicionar les miniatures en la perspectiva general. Useu "
-"«grid» (graella) per a utilitzar l'algoritme per defecte basat en disposició "
-"en graella, o «natural» (natural) per a usar un algoritme que reflexa millor "
-"la posició i mida de la finestra actual."
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -285,38 +270,258 @@ msgstr ""
 "configuració només s'aplica a l'estratègia de posicionament de finestres "
 "natural."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
-msgid "Use more screen for windows"
-msgstr "Utilitza més pantalla per les finestres"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Posiciona els títols de les finestres al damunt"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
-msgstr "Estratègia de posicionament de la finestra"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Si és «true» (cert), posiciona el títol de la finestra damunt de la "
+"miniatura corresponent, substituint el comportament per defecte del Shell de "
+"posicionar-lo a baix. Cal reiniciar el Shell per tal de que aquest canvi "
+"tingui efecte."
+
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Llocs"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Dispositius"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Adreces d'interès"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Xarxa"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "No s'ha pogut iniciar «%s»"
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Inici"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Sistema de fitxers"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Navega per la xarxa"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Memòria"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "El nom del tema que es carregarà des de ~/.themes/name/gnome-shell"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
 msgstr "Nom del tema"
 
-#: ../extensions/xrandr-indicator/extension.js:26
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "El nom del tema que es carregarà des de ~/.themes/name/gnome-shell"
+
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indicador de l'espai de treball"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "Noms dels espais de treball:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "Nom"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "Espai de treball %d"
+
+#: ../extensions/xrandr-indicator/extension.js:30
 msgid "Normal"
 msgstr "Normal"
 
-#: ../extensions/xrandr-indicator/extension.js:27
+#: ../extensions/xrandr-indicator/extension.js:31
 msgid "Left"
 msgstr "Esquerra"
 
-#: ../extensions/xrandr-indicator/extension.js:28
+#: ../extensions/xrandr-indicator/extension.js:32
 msgid "Right"
 msgstr "Dreta"
 
-#: ../extensions/xrandr-indicator/extension.js:29
+#: ../extensions/xrandr-indicator/extension.js:33
 msgid "Upside-down"
 msgstr "Capgira"
 
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Configura els paràmetres de visualització..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Pantalla"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "Paràmetres de la pantalla"
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "Comportament de l'«Alternate Tab»."
+
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "Defineix el comportament de l'«Alternate Tab». Els valors possibles són: "
+#~ "«all_thumbnails» (totes i les miniatures) i «workspace_icons» (espais de "
+#~ "treball i icones). Vegeu els diàlegs de configuració per saber-ne més."
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "Aquest mode mostra totes les aplicacions de tots els espais de treball en "
+#~ "una sola llista de selecció. En comptes de fer servir la icona de "
+#~ "l'aplicació per cada finestra, fa servir miniatures de les mateixes "
+#~ "finestres de les aplicacions."
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "Espai de treball i icones"
+
+#~ msgid ""
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "Aquest mode us permet canviar entre les aplicacions de l'espai de treball "
+#~ "actual i us dóna la possibilitat de canviar a l'última aplicació "
+#~ "utilitzada de l'espai de treball anterior. Es mostra, en cas d'estar "
+#~ "disponible, sempre com a l'última icona de la llista, separada de la "
+#~ "resta amb un separador vertical.\n"
+#~ "Cada finestra està representada per la seva icona d'aplicació."
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr ""
+#~ "Mou la selecció actual al primer pla abans de tancar el diàleg emergent"
+
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "L'«Alternate Tab» es pot utilitzar de diferents maneres que canvien la "
+#~ "forma en que es seleccionen i es mostren les finestres."
+
+#~ msgid "Removable Devices"
+#~ msgstr "Dispositius extraïbles"
+
+#~ msgid "Configure display settings..."
+#~ msgstr "Configura els paràmetres de visualització..."
+
+#~ msgid "Available"
+#~ msgstr "Disponible"
+
+#~ msgid "Busy"
+#~ msgstr "Ocupat"
+
+#~ msgid "My Account"
+#~ msgstr "El meu compte"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Bloca la pantalla"
+
+#~ msgid "Switch User"
+#~ msgstr "Canvia d'usuari"
+
+#~ msgid "Log Out..."
+#~ msgstr "Surt..."
+
+#~ msgid ""
+#~ "This is the first time you use the Alternate Tab extension. \n"
+#~ "Please choose your preferred behaviour:\n"
+#~ "\n"
+#~ "All & Thumbnails:\n"
+#~ "    This mode presents all applications from all workspaces in one "
+#~ "selection \n"
+#~ "    list. Instead of using the application icon of every window, it uses "
+#~ "small \n"
+#~ "    thumbnails resembling the window itself. \n"
+#~ "\n"
+#~ "Workspace & Icons:\n"
+#~ "    This mode let's you switch between the applications of your current \n"
+#~ "    workspace and gives you additionally the option to switch to the last "
+#~ "used \n"
+#~ "    application of your previous workspace. This is always the last "
+#~ "symbol in \n"
+#~ "    the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "    Every window is represented by its application icon.  \n"
+#~ "\n"
+#~ "Native:\n"
+#~ "    This mode is the native GNOME 3 behaviour or in other words: "
+#~ "Clicking \n"
+#~ "    native switches the Alternate Tab extension off. \n"
+#~ msgstr ""
+#~ "Aquest és el primer cop que utilitzeu l'extensió «Alternate Tab». \n"
+#~ "Trieu el comportament que preferiu:\n"
+#~ "\n"
+#~ "Totes i miniatures:\n"
+#~ "    Aquest mode presenta totes les aplicacions de tots els espais de "
+#~ "treball com a\n"
+#~ "    una llista de selecció. En comptes de mostrar la icona d'aplicació de "
+#~ "cada finestra, mostra les \n"
+#~ "    miniatures que representen el contingut de la finestra. \n"
+#~ "\n"
+#~ "Espai de treball i icones:\n"
+#~ "    Aquest mode us permet canviar entre aplicacions de l'espai de treball "
+#~ "actual \n"
+#~ "    i us dóna la possibilitat de canviar a l'última aplicació usada de "
+#~ "l'espai de \n"
+#~ "    treball anterior. Aquest és sempre el darrer símbol a la llista i "
+#~ "està separat  \n"
+#~ "    per una línia vertical/separador quan està disponible. \n"
+#~ "    Cada finestra es representa per la seva icona d'aplicació.  \n"
+#~ "\n"
+#~ "Nadiu:\n"
+#~ "    Aquest és el mode de comportament nadiu al GNOME 3 o amb altres "
+#~ "paraules: fent \n"
+#~ "    clic inhabilita l'extensió «Alternate Tab». \n"
+
+#~ msgid "Alt Tab Behaviour"
+#~ msgstr "Comportament de l'«Alternate Tab»"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancel·la"
+
+#~ msgid "Ask the user for a default behaviour if true."
+#~ msgstr ""
+#~ "Si és «true» (cert) pregunta a l'usuari pel comportament per defecte."
+
+#~ msgid "Indicates if Alternate Tab is newly installed"
+#~ msgstr "Indica si s'acaba d'instal·lar l'«Alternate Tab»"
+
+#~ msgid ""
+#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
+#~ "the default grid based algorithm, 'natural' to use another one that "
+#~ "reflects more the position and size of the actual window"
+#~ msgstr ""
+#~ "L'algoritme per posicionar les miniatures en la perspectiva general. Useu "
+#~ "«grid» (graella) per a utilitzar l'algoritme per defecte basat en "
+#~ "disposició en graella, o «natural» (natural) per a usar un algoritme que "
+#~ "reflexa millor la posició i mida de la finestra actual."
+
+#~ msgid "Window placement strategy"
+#~ msgstr "Estratègia de posicionament de la finestra"
