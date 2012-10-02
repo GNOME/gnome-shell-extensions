@@ -11,24 +11,24 @@ const Main = imports.ui.main;
 const Panel = imports.ui.panel;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
-const PlaceDisplay = imports.ui.placeDisplay;
+const ShellMountOperation = imports.ui.shellMountOperation;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
-const DriveMenuItem = new Lang.Class({
-    Name: 'DriveMenu.DriveMenuItem',
+const MountMenuItem = new Lang.Class({
+    Name: 'DriveMenu.MountMenuItem',
     Extends: PopupMenu.PopupBaseMenuItem,
 
-    _init: function(place) {
+    _init: function(mount) {
 	this.parent();
 
-	this.place = place;
-
-	this.label = new St.Label({ text: place.name });
+	this.label = new St.Label({ text: mount.get_name() });
 	this.addActor(this.label);
         this.actor.label_actor = this.label;
+
+	this.mount = mount;
 
 	let ejectIcon = new St.Icon({ icon_name: 'media-eject-symbolic',
 				      style_class: 'popup-menu-icon ' });
@@ -38,11 +38,44 @@ const DriveMenuItem = new Lang.Class({
     },
 
     _eject: function() {
-	this.place.remove();
+        let mountOp = new ShellMountOperation.ShellMountOperation(this.mount);
+
+	if (this.mount.can_eject())
+	    this.mount.eject_with_operation(Gio.MountUnmountFlags.NONE,
+                                            mountOp.mountOp,
+					    null, // Gio.Cancellable
+					    Lang.bind(this, this._ejectFinish));
+	else
+	    this.mount.unmount_with_operation(Gio.MountUnmountFlags.NONE,
+                                              mountOp.mountOp,
+			                      null, // Gio.Cancellable
+			                      Lang.bind(this, this._unmountFinish));
+    },
+
+    _unmountFinish: function(mount, result) {
+	try {
+	    mount.unmount_with_operation_finish(result);
+	} catch(e) {
+	    this._reportFailure(e);
+	}
+    },
+
+    _ejectFinish: function(mount, result) {
+	try {
+	    mount.eject_with_operation_finish(result);
+	} catch(e) {
+	    this._reportFailure(e);
+	}
+    },
+
+    _reportFailure: function(exception) {
+	let msg = _("Ejecting drive '%s' failed:").format(this.mount.get_name());
+	Main.notifyError(msg, exception.message);
     },
 
     activate: function(event) {
-	this.place.launch({ timestamp: event.get_time() });
+        Gio.AppInfo.launch_default_for_uri(this.mount.get_root().get_uri(),
+                                           global.create_app_launch_context());
 
 	this.parent(event);
     }
@@ -55,39 +88,83 @@ const DriveMenu = new Lang.Class({
     _init: function() {
 	this.parent('media-eject-symbolic', _("Removable devices"));
 
-	this._manager = new PlaceDisplay.PlacesManager();
-	this._updatedId = this._manager.connect('mounts-updated', Lang.bind(this, this._update));
+	this._monitor = Gio.VolumeMonitor.get();
+	this._addedId = this._monitor.connect('mount-added', Lang.bind(this, function(monitor, mount) {
+	    this._addMount(mount);
+	    this._updateMenuVisibility();
+	}));
+	this._removedId = this._monitor.connect('mount-removed', Lang.bind(this, function(monitor, mount) {
+	    this._removeMount(mount);
+	    this._updateMenuVisibility();
+	}));
 
-	this._contentSection = new PopupMenu.PopupMenuSection();
-	this.menu.addMenuItem(this._contentSection);
+	this._mounts = [ ];
 
-	this._update();
+	this._monitor.get_mounts().forEach(Lang.bind(this, this._addMount));
 
 	this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-	this.menu.addAction(_("Open file manager"), function(event) {
+	this.menu.addAction(_("Open File"), function(event) {
 	    let appSystem = Shell.AppSystem.get_default();
 	    let app = appSystem.lookup_app('nautilus.desktop');
 	    app.activate_full(-1, event.get_time());
 	});
+
+	this._updateMenuVisibility();
     },
 
-    _update: function() {
-	this._contentSection.removeAll();
+    _updateMenuVisibility: function() {
+	if (this._mounts.length > 0)
+	    this.actor.show();
+	else
+	    this.actor.hide();
+    },
 
-	let mounts = this._manager.getMounts();
-	let any = false;
-	for (let i = 0; i < mounts.length; i++) {
-	    if (mounts[i].isRemovable()) {
-		this._contentSection.addMenuItem(new DriveMenuItem(mounts[i]));
-		any = true;
+    _isMountInteresting: function(mount) {
+        if (!mount.can_eject() && !mount.can_unmount())
+            return false;
+
+        let volume = mount.get_volume();
+
+        if (volume == null) {
+            // probably a GDaemonMount, could be network or
+            // local, but we can't tell; assume it's local for now
+            return true;
+        }
+
+        return volume.get_identifier('class') != 'network';
+    },
+
+    _addMount: function(mount) {
+	if (!this._isMountInteresting(mount))
+	    return;
+
+	let item = new MountMenuItem(mount);
+	this._mounts.unshift(item);
+	this.menu.addMenuItem(item, 0);
+    },
+
+    _removeMount: function(mount) {
+	if (!this._isMountInteresting(mount))
+	    return;
+
+	for (let i = 0; i < this._mounts.length; i++) {
+	    let item = this._mounts[i];
+	    if (item.mount == mount) {
+		item.destroy();
+		this._mounts.splice(i, 1);
+		return;
 	    }
 	}
-
-	this.actor.visible = any;
+	log ('Removing a mount that was never added to the menu');
     },
 
     destroy: function() {
-	this._manager.disconnect(this._updatedId);
+        if (this._connectedId) {
+	    this._monitor.disconnect(this._connectedId);
+	    this._monitor.disconnect(this._disconnectedId);
+            this._connectedId = 0;
+            this._disconnectedId = 0;
+        }
 
 	this.parent();
     },
