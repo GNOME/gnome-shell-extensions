@@ -1,3 +1,12 @@
+3.6.0
+=====
+* major rework in places menu, to make it work without
+  removed supporting code in the shell and to make it look like
+  the nautilus sidebar
+  (similar work would be needed for drive-menu, not done yet)
+* updated translations (ca, cs, de, el, en_GB, es, fi, hu, id, lt,
+  pl, pt_BR, ru, sl, sr)
+
 3.5.91
 ======
 * various crashers were fixed in alternative-tab
