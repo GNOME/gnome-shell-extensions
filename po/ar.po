@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-09 18:35+0200\n"
-"PO-Revision-Date: 2012-06-09 18:35+0200\n"
+"POT-Creation-Date: 2012-10-05 21:43+0200\n"
+"PO-Revision-Date: 2012-10-05 21:46+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -19,55 +19,35 @@ msgstr ""
 "X-Generator: Virtaal 0.7.0\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
+msgid "The application icon mode."
 msgstr ""
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
 msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "مصغّرة فقط"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "الكل مع مصغّرات"
+msgid "Application icon only"
+msgstr "أيقونة التطبيق فقط"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
-"يعرض هذا النمط كل التطبيقات من كل مساحات العمل في قائمة واحدة، وبدلا من "
-"استخدام أيقونة التطبيق لكل النوافذ يستخدم صورة مصغّرة للنافذة نفسها."
+msgid "Thumbnail and application icon"
+msgstr "مصغّرة وأيقونة التطبيق"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "مساحة العمل مع أيقونات"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "كيفية عرض التطبيقات"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"يتيح هذا النمط التنقل بين التطبيقات في مساحة العمل الحالية بالإضافة إلى "
-"إمكانية الانتقال إلى آخر تطبيق استُخدم في مساحة العمل السابقة، والذي سيكون "
-"دائما آخر عنصر في القائمة مفصولا بخط رأسي.\n"
-"تُمثل كل نافذة بأيقونة التطبيق الذي تنتمي إليه."
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "انقل الاختيار الحالي إلى المقدمة قبل غلق النافذة المنبثقة."
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"يمكن استخدام هذا الامتداد في أنماط مختلفة تؤثر على كيفية اختيار وعرض النوافذ."
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "أظهر نوافذ مساحات العمل الحالية فقط"
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:68
@@ -199,11 +179,11 @@ msgid ""
 "monitor."
 msgstr ""
 
-#: ../extensions/drive-menu/extension.js:57
+#: ../extensions/drive-menu/extension.js:56
 msgid "Removable devices"
 msgstr "الأجهزة المنفصلة"
 
-#: ../extensions/drive-menu/extension.js:68
+#: ../extensions/drive-menu/extension.js:67
 msgid "Open file manager"
 msgstr "افتح مدير الملفّات"
 
@@ -234,22 +214,22 @@ msgstr ""
 msgid "Message:"
 msgstr "الرسالة:"
 
-#: ../extensions/gajim/extension.js:227
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
 msgstr "‏%s غائب."
 
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
 msgstr "‏%s غير متّصل."
 
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
 msgstr "‏%s متّصل."
 
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
 msgstr "‏%s مشغول."
@@ -276,9 +256,46 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 
-#: ../extensions/places-menu/extension.js:39
-msgid "Removable Devices"
-msgstr "الأجهزة المنفصلة"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "الأماكن"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "الأجهزة"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "العلامات"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "الشبكة"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "فشل تشغيل \"%s\""
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "المنزل"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "نظام الملفات"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "تصفّح الشبكة"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "المعالج"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "الذاكرة"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -321,6 +338,47 @@ msgstr "يمين"
 msgid "Upside-down"
 msgstr "رأسا على عقب"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "اضبط إعدادات أجهزة العرض..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "العرض"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "إعدادات العرض"
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "يعرض هذا النمط كل التطبيقات من كل مساحات العمل في قائمة واحدة، وبدلا من "
+#~ "استخدام أيقونة التطبيق لكل النوافذ يستخدم صورة مصغّرة للنافذة نفسها."
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "مساحة العمل مع أيقونات"
+
+#~ msgid ""
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "يتيح هذا النمط التنقل بين التطبيقات في مساحة العمل الحالية بالإضافة إلى "
+#~ "إمكانية الانتقال إلى آخر تطبيق استُخدم في مساحة العمل السابقة، والذي سيكون "
+#~ "دائما آخر عنصر في القائمة مفصولا بخط رأسي.\n"
+#~ "تُمثل كل نافذة بأيقونة التطبيق الذي تنتمي إليه."
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr "انقل الاختيار الحالي إلى المقدمة قبل غلق النافذة المنبثقة."
+
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "يمكن استخدام هذا الامتداد في أنماط مختلفة تؤثر على كيفية اختيار وعرض "
+#~ "النوافذ."
+
+#~ msgid "Removable Devices"
+#~ msgstr "الأجهزة المنفصلة"
