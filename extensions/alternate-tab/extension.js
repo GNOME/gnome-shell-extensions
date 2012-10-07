@@ -1,4 +1,4 @@
-/* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
+/* -*- mode: js; js-basic-offset: 4; indent-tabs-mode: nil -*- */
 
 /* most of the code is borrowed from
  * > js/ui/altTab.js <
@@ -57,12 +57,11 @@ const AltTabPopup = new Lang.Class({
         this.actor.connect('get-preferred-height', Lang.bind(this, this._getPreferredHeight));
         this.actor.connect('allocate', Lang.bind(this, this._allocate));
 
-        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
-
         this._haveModal = false;
 
         this._currentWindow = 0;
         this._motionTimeoutId = 0;
+        this._initialDelayTimeoutId = 0;
 
         // Initially disable hover so we ignore the enter-event if
         // the switcher appears underneath the current pointer location
@@ -277,22 +276,24 @@ const AltTabPopup = new Lang.Class({
                              { opacity: 0,
                                time: AltTab.POPUP_FADE_OUT_TIME,
                                transition: 'easeOutQuad',
-                               onComplete: Lang.bind(this,
-                                   function() {
-                                       this.actor.destroy();
-                                   })
+                               onComplete: Lang.bind(this, this._finishDestroy),
                              });
         } else
-            this.actor.destroy();
+            this._finishDestroy();
     },
 
-    _onDestroy : function() {
-        this._popModal();
-
-        if (this._motionTimeoutId != 0)
+    _finishDestroy : function() {
+        if (this._motionTimeoutId != 0) {
             Mainloop.source_remove(this._motionTimeoutId);
-        if (this._initialDelayTimeoutId != 0)
+            this._motionTimeoutId = 0;
+        }
+
+        if (this._initialDelayTimeoutId != 0) {
             Mainloop.source_remove(this._initialDelayTimeoutId);
+            this._initialDelayTimeoutId = 0;
+        }
+
+        this.actor.destroy();
     },
 
     _select : function(window) {
