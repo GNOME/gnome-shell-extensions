@@ -11,6 +11,8 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
+const LOCK_ENABLED_KEY = 'lock-enabled';
+
 let suspend_item = null;
 let hibernate_item = null;
 let poweroff_item = null;
@@ -29,17 +31,33 @@ function updateHibernate(object, pspec, item) {
 function onSuspendActivate(item) {
     Main.overview.hide();
 
-    this._screenSaverProxy.LockRemote(Lang.bind(this, function() {
+    if (this._screenSaverSettings.get_boolean(LOCK_ENABLED_KEY)) {
+        let tmpId = Main.screenShield.connect('lock-screen-shown', Lang.bind(this, function() {
+            Main.screenShield.disconnect(tmpId);
+
+            this._upClient.suspend_sync(null);
+        }));
+
+        Main.screenShield.lock(true);
+    } else {
         this._upClient.suspend_sync(null);
-    }));
+    }
 }
 
 function onHibernateActivate(item) {
     Main.overview.hide();
 
-    this._screenSaverProxy.LockRemote(Lang.bind(this, function() {
+    if (this._screenSaverSettings.get_boolean(LOCK_ENABLED_KEY)) {
+        let tmpId = Main.screenShield.connect('lock-screen-shown', Lang.bind(this, function() {
+            Main.screenShield.disconnect(tmpId);
+
+            this._upClient.hibernate_sync(null);
+        }));
+
+        Main.screenShield.lock(true);
+    } else {
         this._upClient.hibernate_sync(null);
-    }));
+    }
 }
 
 // Put your extension initialization code here
