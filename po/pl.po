@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-06 19:51+0200\n"
-"PO-Revision-Date: 2012-09-06 19:52+0200\n"
+"POT-Creation-Date: 2012-10-08 23:03+0200\n"
+"PO-Revision-Date: 2012-10-08 23:04+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -58,15 +58,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Wyświetlanie tylko okien w bieżącym obszarze roboczym"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:86
 msgid "Suspend"
 msgstr "Uśpij"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:91
 msgid "Hibernate"
 msgstr "Hibernuj"
 
-#: ../extensions/alternative-status-menu/extension.js:78
+#: ../extensions/alternative-status-menu/extension.js:96
 msgid "Power Off"
 msgstr "Wyłącz komputer"
 
@@ -195,13 +195,18 @@ msgstr ""
 "Ustawia, na którym monitorze wyświetlać dok. Domyślna wartość (-1) oznacza "
 "główny monitor."
 
-#: ../extensions/drive-menu/extension.js:56
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Wysunięcie napędu \"%s\" się nie powiodło:"
+
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "Urządzenia wymienne"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "Otwórz menedżer plików"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "Otwórz plik"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
