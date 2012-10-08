@@ -1,6 +1,7 @@
 # Czech translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
+#
 # Marek Černocký <marek@manet.cz>, 2011, 2012.
 #
 msgid ""
@@ -8,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-09-04 22:55+0000\n"
-"PO-Revision-Date: 2012-09-06 12:22+0200\n"
+"POT-Creation-Date: 2012-10-08 17:42+0000\n"
+"PO-Revision-Date: 2012-10-08 22:39+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -33,12 +34,10 @@ msgstr ""
 "ikonu aplikace) nebo „both“ (zobrazuje obojí)."
 
 #: ../extensions/alternate-tab/prefs.js:26
-#| msgid "All & Thumbnails"
 msgid "Thumbnail only"
 msgstr "Pouze náhled"
 
 #: ../extensions/alternate-tab/prefs.js:27
-#| msgid "Application"
 msgid "Application icon only"
 msgstr "Pouze ikona aplikace"
 
@@ -55,16 +54,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Zobrazovat pouze okna z aktuální pracovní plochy"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:86
 msgid "Suspend"
 msgstr "Uspat do paměti"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:91
 msgid "Hibernate"
 msgstr "Uspat na disk"
 
-#: ../extensions/alternative-status-menu/extension.js:78
-#| msgid "Power Off..."
+#: ../extensions/alternative-status-menu/extension.js:96
 msgid "Power Off"
 msgstr "Vypnout"
 
@@ -193,14 +191,18 @@ msgstr ""
 "Nastavuje monitor, na kterém se má zobrazovat dok. Výchozí hodnotou (-1) je "
 "hlavní monitor."
 
-#: ../extensions/drive-menu/extension.js:56
-#| msgid "Removable Devices"
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Vysunutí disku „%s“ selhalo:"
+
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "Výměnná zařízení"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "Otevřít správce souborů"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "Otevřít soubor"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -281,9 +283,38 @@ msgstr ""
 "přepíše výchozí chování shellu, který jej umisťuje dolů. Změna tohoto "
 "nastavení vyžaduje restart shellu, aby se projevila."
 
-#: ../extensions/places-menu/extension.js:70
-msgid "Removable Devices"
-msgstr "Výměnná zařízení"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Místa"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Zařízení"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Záložky"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Síť"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Selhalo spuštění „%s“"
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Domů"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Systém souborů"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Procházet síť"
 
 #: ../extensions/systemMonitor/extension.js:213
 msgid "CPU"
@@ -339,54 +370,5 @@ msgid "Display"
 msgstr "Obrazovka"
 
 #: ../extensions/xrandr-indicator/extension.js:80
-#| msgid "Configure display settings..."
 msgid "Display Settings"
 msgstr "Nastavení obrazovky"
-
-#~ msgid "The alt tab behaviour."
-#~ msgstr "Chování klávesové zkratky alt tab."
-
-#~ msgid ""
-#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-#~ "workspace_icons. See the configuration dialogs for details."
-#~ msgstr ""
-#~ "Nastavuje chování klávesové zkratky Alt-Tab. Možné hodnoty jsou: "
-#~ "all_thumbnails (vše a náhledy) a workspace_icons (pracovní plocha a "
-#~ "ikony). Více informací najdete v dialogovém okně nastavení."
-
-#~ msgid ""
-#~ "This mode presents all applications from all workspaces in one selection "
-#~ "list. Instead of using the application icon of every window, it uses "
-#~ "small thumbnails resembling the window itself."
-#~ msgstr ""
-#~ "Tento režim představuje všechny aplikace ze všech pracovních ploch v "
-#~ "jediném výběrovém seznamu. Namísto používání ikon aplikací, používá pro "
-#~ "každé okno jeho vlastní miniaturu."
-
-#~ msgid "Workspace & Icons"
-#~ msgstr "Pracovní plocha a ikony"
-
-#~ msgid ""
-#~ "This mode let's you switch between the applications of your current "
-#~ "workspace and gives you additionally the option to switch to the last "
-#~ "used application of your previous workspace. This is always the last "
-#~ "symbol in the list and is segregated by a separator/vertical line if "
-#~ "available. \n"
-#~ "Every window is represented by its application icon."
-#~ msgstr ""
-#~ "Tento režim vám umožní přepínat mezi aplikacemi vaší aktuální pracovní "
-#~ "plochy a dává vám dodatečnou volbu, přepnout se na poslední použitou "
-#~ "aplikaci předchozí pracovní plochy. Tato aplikace je vždy poslední "
-#~ "položkou v seznamu a pokud existuje, je oddělena oddělovačem/svislou "
-#~ "čarou.\n"
-#~ "Všechna okna jsou představována svojí ikonou aplikace."
-
-#~ msgid "Move current selection to front before closing the popup"
-#~ msgstr "Než je vyskakovací okno zavřeno, přesune aktuální výběr do popředí"
-
-#~ msgid ""
-#~ "The Alternate Tab can be used in different modes, that affect the way "
-#~ "windows are chosen and presented."
-#~ msgstr ""
-#~ "Přepínání klávesou Tab může být použito v různých režimech, které "
-#~ "ovlivňují, jak budou okna předváděna a volena."
