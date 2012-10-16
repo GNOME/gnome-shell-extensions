@@ -7,13 +7,10 @@ extensions/apps-menu/extension.js
 extensions/auto-move-windows/extension.js
 extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in
 extensions/auto-move-windows/prefs.js
-extensions/dock/extension.js
-extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in
 extensions/drive-menu/extension.js
 extensions/example/extension.js
 extensions/example/org.gnome.shell.extensions.example.gschema.xml.in
 extensions/example/prefs.js
-extensions/gajim/extension.js
 extensions/native-window-placement/extension.js
 extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in
 extensions/places-menu/extension.js

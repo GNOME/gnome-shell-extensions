@@ -30,7 +30,7 @@ dnl keep this in alphabetic order
 dnl by default, install only extensions that do not change completely the shell experience,
 dnl that don't require GSettings and that don't require external packages for typelibs
 dnl (so basically only menus, status icons, search providers, overview tabs, message tray sources, etc.)
-DEFAULT_EXTENSIONS="alternative-status-menu apps-menu dock drive-menu gajim places-menu windowsNavigator workspace-indicator"
+DEFAULT_EXTENSIONS="alternative-status-menu apps-menu drive-menu places-menu windowsNavigator workspace-indicator"
 ALL_EXTENSIONS="$DEFAULT_EXTENSIONS alternate-tab auto-move-windows example native-window-placement systemMonitor user-theme xrandr-indicator"
 AC_SUBST(ALL_EXTENSIONS, [$ALL_EXTENSIONS])
 AC_ARG_ENABLE([extensions],
@@ -58,7 +58,7 @@ for e in $enable_extensions; do
 					[AC_MSG_WARN([gnome-desktop-3.0 not found, disabling xrandr-indicator])])
 			;;
 dnl		keep this in alphabetic order
-		alternate-tab|alternative-status-menu|apps-menu|auto-move-windows|dock|drive-menu|example|gajim|native-window-placement|places-menu|user-theme|windowsNavigator|workspace-indicator)
+		alternate-tab|alternative-status-menu|apps-menu|auto-move-windows|drive-menu|example|native-window-placement|places-menu|user-theme|windowsNavigator|workspace-indicator)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			;;
 		*)
@@ -74,10 +74,8 @@ AC_CONFIG_FILES([
   extensions/alternative-status-menu/Makefile
   extensions/apps-menu/Makefile
   extensions/auto-move-windows/Makefile
-  extensions/dock/Makefile
   extensions/drive-menu/Makefile
   extensions/example/Makefile
-  extensions/gajim/Makefile
   extensions/native-window-placement/Makefile
   extensions/places-menu/Makefile
   extensions/systemMonitor/Makefile
