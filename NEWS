@@ -1,3 +1,10 @@
+3.6.1
+=====
+* fixed alternative-status-menu for the new lock screen
+* squashed some alternate-tab warnings
+* drive-menu now works with 3.6 again
+* updated translations (ar, cs, el, es, gl, id, lv, pl, sl)
+
 3.6.0
 =====
 * major rework in places menu, to make it work without
