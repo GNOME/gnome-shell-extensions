@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-09-07 15:25+0000\n"
-"PO-Revision-Date: 2012-09-15 15:14+0300\n"
+"POT-Creation-Date: 2012-10-16 14:24+0000\n"
+"PO-Revision-Date: 2012-10-20 21:51+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <>\n"
 "Language: \n"
@@ -26,12 +26,10 @@ msgid "Configures how the windows are shown in the switcher. Valid possibilities
 msgstr "Nustato, kaip langai yra rodomi perjungimo lange. Galimos vertės yra „thumbnail-only“ (rodo lango miniatiūrą), „app-icon-only“ (rodo tik programos piktogramą) ir „both“."
 
 #: ../extensions/alternate-tab/prefs.js:26
-#| msgid "All & Thumbnails"
 msgid "Thumbnail only"
 msgstr "Tik miniatiūros"
 
 #: ../extensions/alternate-tab/prefs.js:27
-#| msgid "Application"
 msgid "Application icon only"
 msgstr "Tik programos piktograma"
 
@@ -48,15 +46,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Rodyti tik dabartinio darbalaukio langus"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:86
 msgid "Suspend"
 msgstr "Užmigdyti"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:91
 msgid "Hibernate"
 msgstr "Hibernuoti"
 
-#: ../extensions/alternative-status-menu/extension.js:78
+#: ../extensions/alternative-status-menu/extension.js:96
 msgid "Power Off"
 msgstr "Išjungti"
 
@@ -105,77 +103,19 @@ msgstr "Sukurti naują atitikimo taisyklę"
 msgid "Add"
 msgstr "Pridėti"
 
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "Nuvilkite čia, jei norite pridėt prie mėgstamų"
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Laikmenos „%s“ išstūmimas nepavyko:"
 
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "Naujas langas"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "Uždaryti programą"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "Pašalinti iš mėgstamų"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "Pridėti prie mėgstamų"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Skydelio pozicija"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
-msgstr "Nustato skydelio vietą ekrane. Galimos reikšmės yra „right“ arba „left“"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Piktogramų dydis"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Nustato skydelio piktogramos dydį."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Įjungti/Išjungti automatinį slėpimą"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Automatinio slėpimo efektas"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'"
-msgstr "Nustato skydelio slėpimo efektą. Galimos reikšmės yra „resize“, „rescale“ arba „move“"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Automatinio slėpimo trukmė"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Nustato automatinio slėpimo efekto trukmę."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Monitorius"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid "Sets monitor to display dock in. The default value (-1) is the primary monitor."
-msgstr "Nustato monitorių, kuriame rodyti doką. Numatytoji reikšmė (-1) yra pagrindinis monitorius."
-
-#: ../extensions/drive-menu/extension.js:56
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "Išimami įrenginiai"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "Atverti failų tvarkyklę"
+#: ../extensions/drive-menu/extension.js:106
+#| msgid "Open file manager"
+msgid "Open File"
+msgstr "Atverti failą"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -202,26 +142,6 @@ msgstr ""
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "Pranešimas:"
-
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "%s yra pasitraukęs."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "%s yra atsijungęs."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "%s yra prisijungęs."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "%s yra užsiėmęs."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -326,7 +246,6 @@ msgid "Display"
 msgstr "Vaizduoklis"
 
 #: ../extensions/xrandr-indicator/extension.js:80
-#| msgid "System Settings"
 msgid "Display Settings"
 msgstr "Vaizduoklio nustatymai"
 
