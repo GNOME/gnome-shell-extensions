@@ -123,8 +123,15 @@ const PlacesManager = new Lang.Class({
             let specialPath = GLib.get_user_special_dir(DEFAULT_DIRECTORIES[i]);
             if (specialPath == homePath)
                 continue;
-            this._places.special.push(new PlaceInfo('special',
-                                                    Gio.File.new_for_path(specialPath)));
+
+            let file = Gio.File.new_for_path(specialPath), info;
+            try {
+                info = new PlaceInfo('special', file);
+            } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND)) {
+                continue;
+            }
+
+            this._places.special.push(info);
         }
 
         /*
@@ -293,7 +300,14 @@ const PlacesManager = new Lang.Class({
     },
 
     _addMount: function(kind, mount) {
-        let devItem = new PlaceDeviceInfo(kind, mount);
+        let devItem;
+
+        try {
+            devItem = new PlaceDeviceInfo(kind, mount);
+        } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND)) {
+            return;
+        }
+
         this._places[kind].push(devItem);
     },
 
