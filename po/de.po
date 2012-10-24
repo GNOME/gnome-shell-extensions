@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-09-06 17:51+0000\n"
-"PO-Revision-Date: 2012-09-07 00:16+0100\n"
-"Last-Translator: Christian Kirbach <Christian.Kirbach@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-24 12:36+0200\n"
+"PO-Revision-Date: 2012-10-24 12:37+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -50,15 +50,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Nur Fenster der aktuellen Arbeitsfläche anzeigen"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:86
 msgid "Suspend"
 msgstr "Bereitschaft"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:91
 msgid "Hibernate"
 msgstr "Ruhezustand"
 
-#: ../extensions/alternative-status-menu/extension.js:78
+#: ../extensions/alternative-status-menu/extension.js:96
 msgid "Power Off"
 msgstr "Ausschalten …"
 
@@ -173,13 +173,18 @@ msgstr "Bildschirm"
 msgid "Sets monitor to display dock in. The default value (-1) is the primary monitor."
 msgstr "Legt den Bildschirm fest, in dem das Dock angezeigt werden soll. Die Voreinstellung (-1) entspricht dem primären Bildschirm."
 
-#: ../extensions/drive-menu/extension.js:56
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Auswerfen von Laufwerk »%s« schlug fehl:"
+
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "Wechseldatenträger"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "Dateiverwaltung öffnen"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "Datei öffnen"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
