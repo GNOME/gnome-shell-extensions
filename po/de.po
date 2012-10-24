@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-09-06 17:51+0000\n"
-"PO-Revision-Date: 2012-09-07 00:16+0100\n"
-"Last-Translator: Christian Kirbach <Christian.Kirbach@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-24 12:41+0200\n"
+"PO-Revision-Date: 2012-10-24 12:37+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -26,8 +26,14 @@ msgid "The application icon mode."
 msgstr "Der Modus des Anwendungssymbols."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Configures how the windows are shown in the switcher. Valid possibilities are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-only' (shows only the application icon) or 'both'."
-msgstr "Legt fest, wie die Fenster im Fensterumschalter angezeigt werden. Gültige Werte sind »thumbnail-only« (zeigt ein Vorschaubild des Fensters), »app-icon-only« (zeigt das Anwendungssymbol) oder »both« (beides)."
+msgid ""
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
+msgstr ""
+"Legt fest, wie die Fenster im Fensterumschalter angezeigt werden. Gültige "
+"Werte sind »thumbnail-only« (zeigt ein Vorschaubild des Fensters), »app-icon-"
+"only« (zeigt das Anwendungssymbol) oder »both« (beides)."
 
 #: ../extensions/alternate-tab/prefs.js:26
 msgid "Thumbnail only"
@@ -50,15 +56,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Nur Fenster der aktuellen Arbeitsfläche anzeigen"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:86
 msgid "Suspend"
 msgstr "Bereitschaft"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:91
 msgid "Hibernate"
 msgstr "Ruhezustand"
 
-#: ../extensions/alternative-status-menu/extension.js:78
+#: ../extensions/alternative-status-menu/extension.js:96
 msgid "Power Off"
 msgstr "Ausschalten …"
 
@@ -83,8 +89,13 @@ msgid "Application and workspace list"
 msgstr "Anwendungs- und Arbeitsflächenliste"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
-msgstr "Eine Liste aus Zeichenketten, wovon jede eine Anwendungskennung (*.desktop-Datei) enthält, gefolgt von einem Doppelpunkt und der Nummer der Arbeitsfläche"
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Eine Liste aus Zeichenketten, wovon jede eine Anwendungskennung (*.desktop-"
+"Datei) enthält, gefolgt von einem Doppelpunkt und der Nummer der "
+"Arbeitsfläche"
 
 #: ../extensions/auto-move-windows/prefs.js:55
 msgid "Application"
@@ -107,79 +118,18 @@ msgstr "Neue Übereinstimmungsregel erstellen"
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "Hierher ziehen, um zu Favoriten hinzuzufügen"
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Auswerfen von Laufwerk »%s« schlug fehl:"
 
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "Neues Fenster"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "Anwendung beenden"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "Aus Favoriten entfernen"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "Zu Favoriten hinzufügen"
-
-# Dock = das Dock ? -ck
-# Sofern es sich nicht um das Original-Dash handelt, ja. -mb
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Position des Docks"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
-msgstr "Legt die Position des Docks auf dem Bildschirm fest. Mögliche Werte sind »right« und »left«"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Symbolgröße"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Legt die Symbolgröße für das Dock fest"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Automatisches Verbergen aktivieren/deaktivieren"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Effekt automatisch verbergen"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'"
-msgstr "Legt den Effekt für das versteckte Dock fest. Mögliche Werte sind »resize«, »rescale« und »move«"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Dauer automatisch verbergen"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Legt die Effektdauer für automatisches Verbergen fest."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Bildschirm"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid "Sets monitor to display dock in. The default value (-1) is the primary monitor."
-msgstr "Legt den Bildschirm fest, in dem das Dock angezeigt werden soll. Die Voreinstellung (-1) entspricht dem primären Bildschirm."
-
-#: ../extensions/drive-menu/extension.js:56
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "Wechseldatenträger"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "Dateiverwaltung öffnen"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "Datei öffnen"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -190,58 +140,58 @@ msgid "Alternative greeting text."
 msgstr "Alternative Begrüßungstext."
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid "If not empty, it contains the text that will be shown when clicking on the panel."
-msgstr "Falls nicht leer, ist dies der Text, der beim Anklicken des Panels angezeigt wird."
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Falls nicht leer, ist dies der Text, der beim Anklicken des Panels angezeigt "
+"wird."
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Das Beispiel soll zeigen, wie sich korrekt verhaltende Erweiterungen für die Shell erstellt werden. Es enthält grundlegende Funktionalität.\n"
+"Das Beispiel soll zeigen, wie sich korrekt verhaltende Erweiterungen für die "
+"Shell erstellt werden. Es enthält grundlegende Funktionalität.\n"
 "Es ist möglich, die Begrüßungsnachricht zu ändern."
 
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "Nachricht:"
 
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "%s ist abwesend."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "%s ist abgemeldet."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "%s ist angemeldet."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "%s ist beschäftigt."
-
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
 msgstr "Mehr Bildschirmbereich für Fenster verwenden"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
-msgstr "Versuchen, mehr Bildschirmfläche zum Platzieren der Fenstervorschaubilder zu verwenden, indem das Bildschirmseitenverhältnis berücksichtigt wird und diese stärker zusammengelegt werden, um den umgebenden Rahmen zu verkleinern. Diese Einstellung betrifft nur den natürlichen Platzierungsalgorithmus."
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Versuchen, mehr Bildschirmfläche zum Platzieren der Fenstervorschaubilder zu "
+"verwenden, indem das Bildschirmseitenverhältnis berücksichtigt wird und "
+"diese stärker zusammengelegt werden, um den umgebenden Rahmen zu "
+"verkleinern. Diese Einstellung betrifft nur den natürlichen "
+"Platzierungsalgorithmus."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
 msgstr "Fensterbeschriftungen oben platzieren"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
-msgstr "Falls wahr, so werden die Fensterbeschriftungen über dem zugehörigen Vorschaubild platziert und damit die Voreinstellung der Shell übergangen. Eine Änderungseinstellung tritt erst mit einem Neustart der Shell in Kraft."
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Falls wahr, so werden die Fensterbeschriftungen über dem zugehörigen "
+"Vorschaubild platziert und damit die Voreinstellung der Shell übergangen. "
+"Eine Änderungseinstellung tritt erst mit einem Neustart der Shell in Kraft."
 
 #: ../extensions/places-menu/extension.js:46
 msgid "Places"
@@ -290,7 +240,9 @@ msgstr "Themenname"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Der Name des Themas, welches aus ~/.themes/name/gnome-shell geladen werden soll"
+msgstr ""
+"Der Name des Themas, welches aus ~/.themes/name/gnome-shell geladen werden "
+"soll"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -332,6 +284,80 @@ msgstr "Anzeige"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "Bildschirmeinstellungen"
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "Hierher ziehen, um zu Favoriten hinzuzufügen"
+
+#~ msgid "New Window"
+#~ msgstr "Neues Fenster"
+
+#~ msgid "Quit Application"
+#~ msgstr "Anwendung beenden"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Aus Favoriten entfernen"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Zu Favoriten hinzufügen"
+
+# Dock = das Dock ? -ck
+# Sofern es sich nicht um das Original-Dash handelt, ja. -mb
+#~ msgid "Position of the dock"
+#~ msgstr "Position des Docks"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr ""
+#~ "Legt die Position des Docks auf dem Bildschirm fest. Mögliche Werte sind "
+#~ "»right« und »left«"
+
+#~ msgid "Icon size"
+#~ msgstr "Symbolgröße"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "Legt die Symbolgröße für das Dock fest"
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "Automatisches Verbergen aktivieren/deaktivieren"
+
+#~ msgid "Autohide effect"
+#~ msgstr "Effekt automatisch verbergen"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr ""
+#~ "Legt den Effekt für das versteckte Dock fest. Mögliche Werte sind "
+#~ "»resize«, »rescale« und »move«"
+
+#~ msgid "Autohide duration"
+#~ msgstr "Dauer automatisch verbergen"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "Legt die Effektdauer für automatisches Verbergen fest."
+
+#~ msgid "Monitor"
+#~ msgstr "Bildschirm"
+
+#~ msgid ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+#~ msgstr ""
+#~ "Legt den Bildschirm fest, in dem das Dock angezeigt werden soll. Die "
+#~ "Voreinstellung (-1) entspricht dem primären Bildschirm."
+
+#~ msgid "%s is away."
+#~ msgstr "%s ist abwesend."
+
+#~ msgid "%s is offline."
+#~ msgstr "%s ist abgemeldet."
+
+#~ msgid "%s is online."
+#~ msgstr "%s ist angemeldet."
+
+#~ msgid "%s is busy."
+#~ msgstr "%s ist beschäftigt."
 
 #~ msgid "Removable Devices"
 #~ msgstr "Wechseldatenträger"
