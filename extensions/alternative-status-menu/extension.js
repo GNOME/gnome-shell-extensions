@@ -1,6 +1,12 @@
 /* -*- mode: js2 - indent-tabs-mode: nil - js2-basic-offset: 4 -*- */
+
+const Gio = imports.gi.Gio;
+const GLib = imports.gi.GLib;
 const Lang = imports.lang;
+const Mainloop = imports.mainloop;
 const St = imports.gi.St;
+
+const BoxPointer = imports.ui.boxpointer;
 const Main = imports.ui.main;
 const PopupMenu = imports.ui.popupMenu;
 
@@ -13,19 +19,65 @@ const Convenience = Me.imports.convenience;
 
 const LOCK_ENABLED_KEY = 'lock-enabled';
 
-let suspend_item = null;
-let hibernate_item = null;
-let poweroff_item = null;
-let suspend_signal_id = 0, hibernate_signal_id = 0;
-let settings = null;
-let setting_changed_id = 0;
+let extension;
 
-function updateSuspend(object, pspec, item) {
-    item.actor.visible = object.get_can_suspend() && settings.get_boolean('allow-suspend');
+// Need to reimplement here the missing bits from LoginManager
+
+function loginManager_hibernate() {
+    if (this._proxy) {
+        // systemd path
+        this._proxy.call("Hibernate",
+                         GLib.Variant.new('(b)', [true]),
+                         Gio.DBusCallFlags.NONE,
+                         -1, null, null);
+    } else {
+        // upower path
+        this._upClient.hibernate_sync(null);
+    }
 }
 
-function updateHibernate(object, pspec, item) {
-    item.actor.visible = object.get_can_hibernate() && settings.get_boolean('allow-hibernate');
+function loginManager_canHibernate(asyncCallback) {
+    if (this._proxy) {
+        // systemd path
+        this._proxy.call("CanHibernate",
+                         null,
+                         Gio.DBusCallFlags.NONE,
+                         -1, null, function(proxy, asyncResult) {
+                             let result, error;
+
+                             try {
+                                 result = proxy.call_finish(asyncResult);
+                             } catch(e) {
+                                 error = e;
+                             }
+
+                             if (error)
+                                 asyncCallback(false);
+                             else
+                                 asyncCallback(result[0] != 'no');
+                         });
+    } else {
+        Mainloop.idle_add(Lang.bind(this, function() {
+            asyncCallback(this._upClient.get_can_hibernate());
+            return false;
+        }));
+    }
+}
+
+function statusMenu_updateHaveHibernate() {
+    loginManager_canHibernate.call(this._loginManager, Lang.bind(this,
+        function(result) {
+            this._haveHibernate = result;
+            this._updateSuspendOrPowerOff();
+        }));
+}
+
+function statusMenu_updateSuspendOrPowerOff() {
+    this._suspendOrPowerOffItem.actor.hide();
+
+    extension.suspendItem.actor.visible = this._haveSuspend;
+    extension.hibernateItem.actor.visible = this._haveHibernate;
+    extension.powerOffItem.actor.visible = this._haveShutdown;
 }
 
 function onSuspendActivate(item) {
@@ -35,12 +87,13 @@ function onSuspendActivate(item) {
         let tmpId = Main.screenShield.connect('lock-screen-shown', Lang.bind(this, function() {
             Main.screenShield.disconnect(tmpId);
 
-            this._upClient.suspend_sync(null);
+            this._loginManager.suspend();
         }));
 
+        this.menu.close(BoxPointer.PopupAnimation.NONE);
         Main.screenShield.lock(true);
     } else {
-        this._upClient.suspend_sync(null);
+        this._loginManager.suspend();
     }
 }
 
@@ -51,102 +104,88 @@ function onHibernateActivate(item) {
         let tmpId = Main.screenShield.connect('lock-screen-shown', Lang.bind(this, function() {
             Main.screenShield.disconnect(tmpId);
 
-            this._upClient.hibernate_sync(null);
+            loginManager_hibernate.call(this._loginManager);
         }));
 
+        this.menu.close(BoxPointer.PopupAnimation.NONE);
         Main.screenShield.lock(true);
     } else {
-        this._upClient.hibernate_sync(null);
+        loginManager_hibernate.call(this._loginManager);
     }
 }
+
+const Extension = new Lang.Class({
+    Name: 'AlternativeStatusMenu.Extension',
+
+    _init: function() {
+        this.suspendItem = null;
+        this.hibernateItem = null;
+        this.powerOffItem = null;
+
+        Convenience.initTranslations();
+        this._settings = Convenience.getSettings();
+    },
+
+    enable: function() {
+        let statusMenu = Main.panel.statusArea.userMenu;
+
+        let children = statusMenu.menu._getMenuItems();
+        let index = children.length;
+
+        /* find the old entry */
+        for (let i = children.length - 1; i >= 0; i--) {
+            if (children[i] == statusMenu._suspendOrPowerOffItem) {
+                index = i;
+                break;
+            }
+        }
+
+        /* add the new entries */
+        this.suspendItem = new PopupMenu.PopupMenuItem(_("Suspend"));
+        this.suspendItem.connect('activate', Lang.bind(statusMenu, onSuspendActivate));
+
+        this.hibernateItem = new PopupMenu.PopupMenuItem(_("Hibernate"));
+        this.hibernateItem.connect('activate', Lang.bind(statusMenu, onHibernateActivate));
+
+        this.powerOffItem = new PopupMenu.PopupMenuItem(_("Power Off"));
+        this.powerOffItem.connect('activate', Lang.bind(statusMenu, function() {
+	    this._session.ShutdownRemote();
+        }));
+
+        /* insert the entries at the found position */
+        statusMenu.menu.addMenuItem(this.suspendItem, index);
+        statusMenu.menu.addMenuItem(this.hibernateItem, index + 1);
+        statusMenu.menu.addMenuItem(this.powerOffItem, index + 2);
+
+        this._openStateChangedId = statusMenu.menu.connect('open-state-changed', function() {
+            statusMenu_updateHaveHibernate.call(statusMenu);
+        });
+
+        this._previousUpdateSuspendOrPowerOff = statusMenu._updateSuspendOrPowerOff;
+        statusMenu._updateSuspendOrPowerOff = statusMenu_updateSuspendOrPowerOff;
+
+        this._settingsChangedId = this._settings.connect('changed', function() {
+            statusMenu._updateSuspendOrPowerOff();
+        });
+    },
+
+    disable: function() {
+        let statusMenu = Main.panel.statusArea.userMenu;
+
+        this.suspendItem.destroy();
+        this.hibernateItem.destroy();
+        this.powerOffItem.destroy();
+
+        statusMenu.menu.disconnect(this._openStateChangedId);
+        this._settings.disconnect(this._settingsChangedId);
+
+        statusMenu._updateSuspendOrPowerOff = this._previousUpdateSuspendOrPowerOff;
+        statusMenu._updateSuspendOrPowerOff();
+    },
+});
 
 // Put your extension initialization code here
 function init(metadata) {
-    Convenience.initTranslations();
+    return (extension = new Extension());
 }
 
-function enable() {
-    let statusMenu = Main.panel.statusArea.userMenu;
-
-    settings = Convenience.getSettings();
-
-    let children = statusMenu.menu._getMenuItems();
-    let index = children.length;
-
-    /* find and destroy the old entry */
-    for (let i = children.length - 1; i >= 0; i--) {
-        if (children[i] == statusMenu._suspendOrPowerOffItem) {
-            children[i].destroy();
-            index = i;
-            break;
-        }
-    }
-
-    /* add the new entries */
-    suspend_item = new PopupMenu.PopupMenuItem(_("Suspend"));
-    suspend_item.connect('activate', Lang.bind(statusMenu, onSuspendActivate));
-    suspend_signal_id = statusMenu._upClient.connect('notify::can-suspend', Lang.bind(statusMenu, updateSuspend, suspend_item));
-    updateSuspend(statusMenu._upClient, null, suspend_item);
-    
-    hibernate_item = new PopupMenu.PopupMenuItem(_("Hibernate"));
-    hibernate_item.connect('activate', Lang.bind(statusMenu, onHibernateActivate));
-    hibernate_signal_id = statusMenu._upClient.connect('notify::can-hibernate', Lang.bind(statusMenu, updateHibernate, hibernate_item));
-    updateHibernate(statusMenu._upClient, null, hibernate_item);
-    
-    poweroff_item = new PopupMenu.PopupMenuItem(_("Power Off"));
-    poweroff_item.connect('activate', Lang.bind(statusMenu, function() {
-	    this._session.ShutdownRemote();
-    }));
-
-    /* insert the entries at the found position */
-    statusMenu.menu.addMenuItem(suspend_item, index);
-    statusMenu.menu.addMenuItem(hibernate_item, index + 1);
-    statusMenu.menu.addMenuItem(poweroff_item, index + 2);
-
-    // clear out this to avoid criticals (we don't mess with
-    // updateSuspendOrPowerOff)
-    statusMenu._suspendOrPowerOffItem = null;
-
-    setting_changed_id = settings.connect('changed', function() {
-	updateSuspend(statusMenu._upClient, null, suspend_item);
-	updateHibernate(statusMenu._upClient, null, hibernate_item);
-    });
-}
-
-function disable() {
-    let statusMenu = Main.panel.statusArea.userMenu;
-
-    let children = statusMenu.menu._getMenuItems();
-    let index = children.length;
-
-    /* find the index for the previously created suspend entry */
-    for (let i = children.length - 1; i >= 0; i--) {
-        if (children[i] == suspend_item) {
-            index = i;
-            break;
-        }
-    }
-
-    /* disconnect signals */
-    statusMenu._upClient.disconnect(suspend_signal_id);
-    statusMenu._upClient.disconnect(hibernate_signal_id);
-    suspend_signal_id = hibernate_signal_id = 0;
-
-    settings.disconnect(setting_changed_id);
-    setting_changed_id = 0;
-    settings = null;
-
-    /* destroy the entries we had created */
-    suspend_item.destroy();
-    hibernate_item.destroy();
-    poweroff_item.destroy();
-
-    /* create a new suspend/poweroff entry */
-    /* empty strings are fine for the labels, since we immediately call updateSuspendOrPowerOff */
-    let item = new PopupMenu.PopupAlternatingMenuItem("", "");
-    /* restore the userMenu field */
-    statusMenu._suspendOrPowerOffItem = item;
-    statusMenu.menu.addMenuItem(item, index);
-    item.connect('activate', Lang.bind(statusMenu, statusMenu._onSuspendOrPowerOffActivate));
-    statusMenu._updateSuspendOrPowerOff();
-}
