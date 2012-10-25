@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-08-18 00:42+0000\n"
-"PO-Revision-Date: 2012-08-19 15:11+0530\n"
+"POT-Creation-Date: 2012-10-16 14:24+0000\n"
+"PO-Revision-Date: 2012-10-25 09:10+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
@@ -31,12 +31,10 @@ msgid ""
 msgstr ""
 
 #: ../extensions/alternate-tab/prefs.js:26
-#| msgid "All & Thumbnails"
 msgid "Thumbnail only"
 msgstr "ਕੇਵਲ ਥੰਮਨੇਲ ਹੀ"
 
 #: ../extensions/alternate-tab/prefs.js:27
-#| msgid "Application"
 msgid "Application icon only"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਹੀ"
 
@@ -53,16 +51,15 @@ msgid "Show only windows in the current workspace"
 msgstr "ਮੌਜੂਦਾ ਵਰਕਸਪੇਸ ਵਿੱਚੋਂ ਹੀ ਵਿੰਡੋਜ਼ ਹੀ ਵੇਖਾਓ"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:86
 msgid "Suspend"
 msgstr "ਸਸਪੈਂਡ"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:91
 msgid "Hibernate"
 msgstr "ਹਾਈਬਰਨੇਟ"
 
-#: ../extensions/alternative-status-menu/extension.js:78
-#| msgid "Power Off..."
+#: ../extensions/alternative-status-menu/extension.js:96
 msgid "Power Off"
 msgstr "ਬੰਦ ਕਰੋ"
 
@@ -116,87 +113,19 @@ msgstr "ਨਵਾਂ ਮਿਲਾਉਣ ਨਿਯਮ ਬਣਾਉ"
 msgid "Add"
 msgstr "ਸ਼ਾਮਲ"
 
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "ਪਸੰਦ ਵਿੱਚ ਜੋੜਨ ਲਈ ਇੱਥੇ ਸੁੱਟੋ"
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "ਡਰਾਇਵ '%s' ਬਾਹਰ ਕੱਢਣ ਲਈ ਫੇਲ੍ਹ:"
 
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "ਨਵੀਂ ਵਿੰਡੋ"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "ਐਪਲੀਕੇਸ਼ਨ ਬੰਦ ਕਰੋ"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "ਪਸੰਦ ਵਿੱਚੋਂ ਹਟਾਓ"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "ਪਸੰਦ 'ਚ ਸ਼ਾਮਲ ਕਰੋ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "ਡੌਕ ਦੀ ਸਥਿਤੀ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr "ਸਕਰੀਨ ਵਿੱਚ ਡੌਕ ਦੀ ਸਥਿਤੀ ਸੈੱਟ ਕਰਦਾ ਹੈ। ਸੰਭਵ ਮੁੱਲ ਹਨ 'right' ਜਾਂ 'left'"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "ਆਈਕਾਨ ਆਕਾਰ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "ਡੌਕ ਦਾ ਆਈਕਾਨ ਆਕਾਰ ਸੈੱਟ ਕਰੋ।"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "ਆਪੇ-ਓਹਲੇ ਕਰਨਾ ਚਾਲੂ/ਬੰਦ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "ਆਪੇ-ਓਹਲੇ ਹੋਣ ਪ੍ਰਭਾਵ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"ਡੌਕ ਓਹਲੇ ਕਰਨ ਦਾ ਪ੍ਰਭਾਵ ਸੈੱਟ ਕਰਦਾ ਹੈ। ਸੰਭਵ ਮੁੱਲ ਹਨ 'resize', 'rescale' ਅਤੇ "
-"'move'"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "ਆਪੇ ਓਹਲੇ ਹੋਣ ਅੰਤਰਾਲ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "ਆਪੇ-ਓਹਲੇ ਕਰਨ ਦੇ ਪ੍ਰਭਾਵ ਦੀ ਸਮੇਂ ਦਾ ਅੰਤਰਾਲ ਸੈੱਟ ਕਰੋ।"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "ਮਾਨੀਟਰ"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"ਡੌਕ ਵਿੱਚ ਵੇਖਾਉਣ ਲਈ ਨਿਗਾਰਨ ਸੈੱਟ ਕਰੋ। ਪ੍ਰਾਈਮਰੀ ਮਾਨੀਟਰ ਲਈ ਡਿਫਾਲਟ ਮੁੱਲ (-1) ਹੈ।"
-
-#: ../extensions/drive-menu/extension.js:57
-#| msgid "Removable Devices"
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "ਹਟਾਉਣਯੋਗ ਜੰਤਰ"
 
-#: ../extensions/drive-menu/extension.js:68
-msgid "Open file manager"
-msgstr "ਫਾਇਲ ਮੈਨੇਜਰ ਖੋਲ੍ਹੋ"
+#: ../extensions/drive-menu/extension.js:106
+#| msgid "Open file manager"
+msgid "Open File"
+msgstr "ਫਾਇਲ ਖੋਲ੍ਹੋ"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -227,26 +156,6 @@ msgstr ""
 msgid "Message:"
 msgstr "ਸੁਨੇਹਾ:"
 
-#: ../extensions/gajim/extension.js:227
-#, c-format
-msgid "%s is away."
-msgstr "%s ਦੂਰ ਹੈ।"
-
-#: ../extensions/gajim/extension.js:230
-#, c-format
-msgid "%s is offline."
-msgstr "%s ਆਫਲਾਈਨ ਹੈ।"
-
-#: ../extensions/gajim/extension.js:233
-#, c-format
-msgid "%s is online."
-msgstr "%s ਆਨਲਾਈਨ ਹੈ।"
-
-#: ../extensions/gajim/extension.js:236
-#, c-format
-msgid "%s is busy."
-msgstr "%s ਰੁੱਝਿਆ/ਰੁੱਝੀ ਹੈ।"
-
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
 msgstr "ਵਿੰਡੋਜ਼ ਲਈ ਹੋਰ ਸਕਰੀਨ ਵਰਤੋਂ"
@@ -269,9 +178,46 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 
-#: ../extensions/places-menu/extension.js:39
-msgid "Removable Devices"
-msgstr "ਹਟਾਉਣਯੋਗ ਜੰਤਰ"
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "ਥਾਵਾਂ"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "ਜੰਤਰ"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "ਬੁੱਕਮਾਰਕ"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "ਨੈੱਟਵਰਕ"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "\"%s\" ਚਲਾਉਣ ਲਈ ਫੇਲ੍ਹ ਹੈ"
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "ਘਰ"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "ਫਾਇਲ ਸਿਸਟਮ"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "ਨੈੱਟਵਰਕ ਝਲਕ"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "ਸੀਪੀਯੂ"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "ਮੈਮੋਰੀ"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -314,9 +260,87 @@ msgstr "ਸੱਜੇ"
 msgid "Upside-down"
 msgstr "ਉਤਲਾ ਹੇਠ"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "ਡਿਸਪਲੇਅ ਸੈਟਿੰਗ ਸੰਰਚਨਾ..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "ਡਿਸਪਲੇਅ"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+#| msgid "System Settings"
+msgid "Display Settings"
+msgstr "ਡਿਸਪਲੇਅ ਸੈਟਿੰਗ"
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "ਪਸੰਦ ਵਿੱਚ ਜੋੜਨ ਲਈ ਇੱਥੇ ਸੁੱਟੋ"
+
+#~ msgid "New Window"
+#~ msgstr "ਨਵੀਂ ਵਿੰਡੋ"
+
+#~ msgid "Quit Application"
+#~ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਬੰਦ ਕਰੋ"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "ਪਸੰਦ ਵਿੱਚੋਂ ਹਟਾਓ"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "ਪਸੰਦ 'ਚ ਸ਼ਾਮਲ ਕਰੋ"
+
+#~ msgid "Position of the dock"
+#~ msgstr "ਡੌਕ ਦੀ ਸਥਿਤੀ"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr "ਸਕਰੀਨ ਵਿੱਚ ਡੌਕ ਦੀ ਸਥਿਤੀ ਸੈੱਟ ਕਰਦਾ ਹੈ। ਸੰਭਵ ਮੁੱਲ ਹਨ 'right' ਜਾਂ 'left'"
+
+#~ msgid "Icon size"
+#~ msgstr "ਆਈਕਾਨ ਆਕਾਰ"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "ਡੌਕ ਦਾ ਆਈਕਾਨ ਆਕਾਰ ਸੈੱਟ ਕਰੋ।"
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "ਆਪੇ-ਓਹਲੇ ਕਰਨਾ ਚਾਲੂ/ਬੰਦ"
+
+#~ msgid "Autohide effect"
+#~ msgstr "ਆਪੇ-ਓਹਲੇ ਹੋਣ ਪ੍ਰਭਾਵ"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr ""
+#~ "ਡੌਕ ਓਹਲੇ ਕਰਨ ਦਾ ਪ੍ਰਭਾਵ ਸੈੱਟ ਕਰਦਾ ਹੈ। ਸੰਭਵ ਮੁੱਲ ਹਨ 'resize', 'rescale' ਅਤੇ 'move'"
+
+#~ msgid "Autohide duration"
+#~ msgstr "ਆਪੇ ਓਹਲੇ ਹੋਣ ਅੰਤਰਾਲ"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "ਆਪੇ-ਓਹਲੇ ਕਰਨ ਦੇ ਪ੍ਰਭਾਵ ਦੀ ਸਮੇਂ ਦਾ ਅੰਤਰਾਲ ਸੈੱਟ ਕਰੋ।"
+
+#~ msgid "Monitor"
+#~ msgstr "ਮਾਨੀਟਰ"
+
+#~ msgid ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+#~ msgstr "ਡੌਕ ਵਿੱਚ ਵੇਖਾਉਣ ਲਈ ਨਿਗਾਰਨ ਸੈੱਟ ਕਰੋ। ਪ੍ਰਾਈਮਰੀ ਮਾਨੀਟਰ ਲਈ ਡਿਫਾਲਟ ਮੁੱਲ (-1) ਹੈ।"
+
+#~ msgid "%s is away."
+#~ msgstr "%s ਦੂਰ ਹੈ।"
+
+#~ msgid "%s is offline."
+#~ msgstr "%s ਆਫਲਾਈਨ ਹੈ।"
+
+#~ msgid "%s is online."
+#~ msgstr "%s ਆਨਲਾਈਨ ਹੈ।"
+
+#~ msgid "%s is busy."
+#~ msgstr "%s ਰੁੱਝਿਆ/ਰੁੱਝੀ ਹੈ।"
+
+#~ msgid "Removable Devices"
+#~ msgstr "ਹਟਾਉਣਯੋਗ ਜੰਤਰ"
+
+#~ msgid "Configure display settings..."
+#~ msgstr "ਡਿਸਪਲੇਅ ਸੈਟਿੰਗ ਸੰਰਚਨਾ..."
 
 #~ msgid "The alt tab behaviour."
 #~ msgstr "alt tab ਰਵੱਈਆ ਹੈ।"
@@ -342,9 +366,6 @@ msgstr "ਡਿਸਪਲੇਅ ਸੈਟਿੰਗ ਸੰਰਚਨਾ..."
 
 #~ msgid "My Account"
 #~ msgstr "ਮੇਰਾ ਅਕਾਊਂਟ"
-
-#~ msgid "System Settings"
-#~ msgstr "ਸਿਸਟਮ ਸੈਟਿੰਗ"
 
 #~ msgid "Lock Screen"
 #~ msgstr "ਸਕਰੀਨ ਲਾਕ ਕਰੋ"
