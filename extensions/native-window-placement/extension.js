@@ -123,6 +123,7 @@ function enable() {
 
     let settings = Convenience.getSettings();
     let useMoreScreen = settings.get_boolean('use-more-screen');
+    let windowCaptionsOnTop = settings.get_boolean('window-captions-on-top');
     let signalId = settings.connect('changed::use-more-screen', function() {
         useMoreScreen = settings.get_boolean('use-more-screen');
     });
@@ -148,7 +149,13 @@ function enable() {
 	let ratio = this._width / this._height;
         let x_gap = Math.max(WORKSPACE_BORDER_GAP, WINDOW_AREA_TOP_GAP * ratio);
         let y_gap = Math.max(WORKSPACE_BORDER_GAP / ratio, WINDOW_AREA_TOP_GAP);
-        let area = new Rect(this._x + x_gap/2, this._y + y_gap, this._width - x_gap, this._height - y_gap);
+        let bottom_padding = 0;
+
+        // If the window captions are below the window, put an additional gap to account for them
+        if (!windowCaptionsOnTop && this._windowOverlays.length)
+            bottom_padding += this._windowOverlays[0].chromeHeights()[1];
+
+        let area = new Rect(this._x + x_gap/2, this._y + y_gap, this._width - x_gap, this._height - y_gap - bottom_padding);
 
         let bounds = area.copy();
 
@@ -321,17 +328,17 @@ function enable() {
         let animate = flags & WindowPositionFlags.ANIMATE;
 
         // Start the animations
-	let targets = [];
+        let targets = [];
         let scales = [];
 
         [clones, targets] = this._calculateWindowTransformationsNatural(clones);
 
-	let currentWorkspace = global.screen.get_active_workspace();
+        let currentWorkspace = global.screen.get_active_workspace();
         let isOnCurrentWorkspace = this.metaWorkspace == null || this.metaWorkspace == currentWorkspace;
 
         for (let i = 0; i < clones.length; i++) {
             let clone = clones[i];
-	    let [x, y , scale] = targets[i];
+            let [x, y , scale] = targets[i];
             let metaWindow = clone.metaWindow;
             let mainIndex = this._lookupIndex(metaWindow);
             let overlay = this._windowOverlays[mainIndex];
@@ -375,63 +382,15 @@ function enable() {
     }
 
     /// position window titles on top of windows in overlay ////
-    if (settings.get_boolean('window-captions-on-top'))  {
-        winInjections['_init'] = Workspace.WindowOverlay.prototype._init;
-	Workspace.WindowOverlay.prototype._init = function(windowClone, parentActor) {
-            let metaWindow = windowClone.metaWindow;
-
-            this._windowClone = windowClone;
-            this._parentActor = parentActor;
-            this._hidden = false;
-
-            let title = new St.Label({ style_class: 'window-caption',
-                                       text: metaWindow.title });
-            title.clutter_text.ellipsize = Pango.EllipsizeMode.END;
-            title._spacing = 0;
-            title._overlap = 0;
-
-            this._updateCaptionId = metaWindow.connect('notify::title', Lang.bind(this, function(w) {
-		this.title.text = w.title;
-	    }));
-
-            let button = new St.Button({ style_class: 'window-close' });
-            button._overlap = 0;
-
-            this._idleToggleCloseId = 0;
-            button.connect('clicked', Lang.bind(this, this._closeWindow));
-
-            windowClone.actor.connect('destroy', Lang.bind(this, this._onDestroy));
-            windowClone.actor.connect('enter-event', Lang.bind(this, this._onEnter));
-            windowClone.actor.connect('leave-event', Lang.bind(this, this._onLeave));
-
-            this._windowAddedId = 0;
-            windowClone.connect('zoom-start', Lang.bind(this, this.hide));
-            windowClone.connect('zoom-end', Lang.bind(this, this.show));
-
-            button.hide();
-
-            this.title = title;
-            this.closeButton = button;
-
-            parentActor.add_actor(this.title);
-            parentActor.add_actor(this.closeButton);
-            title.connect('style-changed', Lang.bind(this, this._onStyleChanged));
-            button.connect('style-changed', Lang.bind(this, this._onStyleChanged));
-
-            // force a style change if we are already on a stage - otherwise
-            // the signal will be emitted normally when we are added
-            if (parentActor.get_stage())
-		this._onStyleChanged();
-	},
-
+    if (windowCaptionsOnTop) {
         winInjections['chromeHeights'] = Workspace.WindowOverlay.prototype.chromeHeights;
-	Workspace.WindowOverlay.prototype.chromeHeights = function () {
+        Workspace.WindowOverlay.prototype.chromeHeights = function () {
             return [Math.max( this.closeButton.height - this.closeButton._overlap, this.title.height - this.title._overlap),
-		    0];
-	},
+                    0];
+        };
 
         winInjections['updatePositions'] = Workspace.WindowOverlay.prototype.updatePositions;
-	Workspace.WindowOverlay.prototype.updatePositions = function(cloneX, cloneY, cloneWidth, cloneHeight, animate) {
+        Workspace.WindowOverlay.prototype.updatePositions = function(cloneX, cloneY, cloneWidth, cloneHeight, animate) {
             let button = this.closeButton;
             let title = this.title;
 
@@ -463,7 +422,7 @@ function enable() {
             let titleWidth = Math.min(title.fullWidth, cloneWidth);
 
             let titleX = cloneX + (cloneWidth - titleWidth) / 2;
-            let titleY = cloneY - title.height + title._overlap;
+            let titleY = cloneY - title.height + title._spacing;
 
             if (animate)
                 this._animateOverlayActor(title, Math.floor(titleX), Math.floor(titleY), titleWidth);
@@ -471,19 +430,7 @@ function enable() {
                 title.width = titleWidth;
                 title.set_position(Math.floor(titleX), Math.floor(titleY));
             }
-	},
-
-        winInjections['_onStyleChanged'] = Workspace.WindowOverlay.prototype._onStyleChanged;
-	Workspace.WindowOverlay.prototype._onStyleChanged = function() {
-            let titleNode = this.title.get_theme_node();
-            this.title._spacing = titleNode.get_length('-shell-caption-spacing');
-	    this.title._overlap = titleNode.get_length('-shell-caption-overlap');
-
-            let closeNode = this.closeButton.get_theme_node();
-            this.closeButton._overlap = closeNode.get_length('-shell-close-overlap');
-
-            this._parentActor.queue_relayout();
-	}
+        };
     }
 }
 

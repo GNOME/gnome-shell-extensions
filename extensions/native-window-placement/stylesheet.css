@@ -1,3 +1,3 @@
 .window-caption {
-    -shell-caption-overlap: 13px;		/* current caption height is 26px => set it to half of it. TODO: better solution needed */
+    -shell-caption-spacing: 13px;		/* current caption height is 26px => set it to half of it. TODO: better solution needed */
 }
