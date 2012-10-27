@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-09-06 17:51+0000\n"
-"PO-Revision-Date: 2012-09-07 11:16+0200\n"
+"POT-Creation-Date: 2012-10-16 14:51+0000\n"
+"PO-Revision-Date: 2012-10-27 21:33+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -35,12 +35,10 @@ msgstr ""
 "samo ikonicu programa) ili „both“ (oba)."
 
 #: ../extensions/alternate-tab/prefs.js:26
-#| msgid "All & Thumbnails"
 msgid "Thumbnail only"
 msgstr "Samo sličice"
 
 #: ../extensions/alternate-tab/prefs.js:27
-#| msgid "Application"
 msgid "Application icon only"
 msgstr "Samo ikonica programa"
 
@@ -57,15 +55,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Prikazuje samo prozore u tekućem radnom prostoru"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:86
 msgid "Suspend"
 msgstr "Obustavi"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:91
 msgid "Hibernate"
 msgstr "Zamrzni"
 
-#: ../extensions/alternative-status-menu/extension.js:78
+#: ../extensions/alternative-status-menu/extension.js:96
 msgid "Power Off"
 msgstr "Ugasi"
 
@@ -195,13 +193,19 @@ msgstr ""
 "Podešava koji monitor će da prikaže luku. Osnovna vrednost (-1) jeste "
 "primarni monitor."
 
-#: ../extensions/drive-menu/extension.js:56
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Izbacivanje uređaja „%s“ nije uspelo:"
+
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "Uklonjivi uređaji"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "Otvori upravnika datoteka"
+#: ../extensions/drive-menu/extension.js:106
+#| msgid "Open file manager"
+msgid "Open File"
+msgstr "Otvori datoteku"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -369,7 +373,6 @@ msgid "Display"
 msgstr "Ekran"
 
 #: ../extensions/xrandr-indicator/extension.js:80
-#| msgid "Configure display settings..."
 msgid "Display Settings"
 msgstr "Podešavanja ekrana"
 
