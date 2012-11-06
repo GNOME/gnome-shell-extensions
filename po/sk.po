@@ -1,256 +1,167 @@
 # Slovak translation for gnome-shell-extensions.
-# Copyright (C) 2011 Free Software Foundation, Inc.
+# Copyright (C) 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Pavol Klacansky <pavol@klacansky.com>, 2011.
+# Pavol Klačanský <pavol@klacansky.com>, 2012.
+#  Dušan Kazik <prescott66@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-11-22 08:13+0000\n"
-"PO-Revision-Date: 2011-12-14 11:55+0100\n"
-"Last-Translator: Pavol Klacansky <pavol@klacansky.com>\n"
+"POT-Creation-Date: 2012-10-27 19:36+0000\n"
+"PO-Revision-Date: 2012-11-04 21:46+0100\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Notifications"
-msgstr "Upozornenia"
+# gsetting summary
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
+msgid "The application icon mode."
+msgstr "Režim ikony aplikácie."
 
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Online Accounts"
-msgstr "Online účty"
+# gsetting description
+#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+msgid ""
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
+msgstr ""
+"Nastaví ako budú zobrazené okná v prepínači. Platné možnosti sú „thumbnail-"
+"only“ (zobrazí len miniatúru okna), „app-icon-only“ (zobrazí len ikonu "
+"aplikácie) alebo „both“ (obe)."
 
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "Nastavenia systému"
+# RadioButton label
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "Len miniatúra"
 
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "Uzamknúť obrazovku"
+# RadioButton label
+#: ../extensions/alternate-tab/prefs.js:27
+msgid "Application icon only"
+msgstr "Len ikona aplikácie"
 
-#: ../extensions/alternative-status-menu/extension.js:68
-msgid "Switch User"
-msgstr "Prepnúť používateľa"
+# RadioButton label
+#: ../extensions/alternate-tab/prefs.js:28
+msgid "Thumbnail and application icon"
+msgstr "Miniatúra a ikona aplikácie"
 
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Log Out..."
-msgstr "Odhlásiť sa..."
+#  Label
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "Uvádzať okná ako"
 
-#: ../extensions/alternative-status-menu/extension.js:81
+# CheckButton
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "Zobraziť len okná z aktuálneho pracovného priestoru"
+
+# PopupMenuItem
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:86
 msgid "Suspend"
 msgstr "Uspať"
 
-#: ../extensions/alternative-status-menu/extension.js:87
+# PopupMenuItem
+#: ../extensions/alternative-status-menu/extension.js:91
 msgid "Hibernate"
 msgstr "Hibernovať"
 
-#: ../extensions/alternative-status-menu/extension.js:93
-msgid "Power Off..."
-msgstr "Vypnúť..."
+# PopupMenuItem
+#: ../extensions/alternative-status-menu/extension.js:96
+msgid "Power Off"
+msgstr "Vypnúť"
 
-# message
-#: ../extensions/alternate-tab/extension.js:54
-#, fuzzy
-#| msgid ""
-#| "This is the first time you use the Alternate Tab extension. \n"
-#| "Please choose your preferred behaviour:\n"
-#| "\n"
-#| "All & Thumbnails:\n"
-#| "    This mode presents all applications from all workspaces in one "
-#| "selection \n"
-#| "    list. Instead of using the application icon of every window, it uses "
-#| "small \n"
-#| "    thumbnails resembling the window itself. \n"
-#| "\n"
-#| "Workspace & Icons:\n"
-#| "    This mode let's you switch between the applications of your current \n"
-#| "    workspace and gives you additionally the option to switch to the last "
-#| "used \n"
-#| "    application of your previous workspace. This is always the last "
-#| "symbol in \n"
-#| "    the list and is segregated by a separator/vertical line if "
-#| "available. \n"
-#| "    Every window is represented by its application icon.  \n"
-#| "\n"
-#| "Native:\n"
-#| "    This mode is the native GNOME 3 behaviour or in other words: "
-#| "Clicking \n"
-#| "    native switches the Alternate Tab extension off. \n"
-msgid ""
-"This is the first time you use the Alternate Tab extension. \n"
-"Please choose your preferred behaviour:\n"
-"\n"
-"All & Thumbnails:\n"
-"    This mode presents all applications from all workspaces in one "
-"selection \n"
-"    list. Instead of using the application icon of every window, it uses "
-"small \n"
-"    thumbnails resembling the window itself. \n"
-"\n"
-"Workspace & Icons:\n"
-"    This mode let's you switch between the applications of your current \n"
-"    workspace and gives you additionally the option to switch to the last "
-"used \n"
-"    application of your previous workspace. This is always the last symbol "
-"in \n"
-"    the list and is segregated by a separator/vertical line if available. \n"
-"    Every window is represented by its application icon.  \n"
-"\n"
-"If you whish to revert to the default behavior for the Alt-Tab switcher, "
-"just\n"
-"disable the extension from extensions.gnome.org or the Advanced Settings "
-"application."
-msgstr ""
-"Toto je prvýkrát, čo ste použili rozšírenie Alternatívne prepínanie okien. \n"
-"Prosím, zvoľte vami preferované správanie:\n"
-"\n"
-"Všetko a miniatúry:\n"
-"    Tento režim zobrazí všetky aplikácie zo všetkých pracovných plôch v "
-"jednom zozname. \n"
-"    Namiesto použitia ikony aplikácie každého okna sa zobrazí miniatúra "
-"každého okna. \n"
-"\n"
-"Pracovné plochy a ikony:\n"
-"    Tento režim vám umožní prepínanie aplikácií aktuálnej pracovnej plochy a "
-"ponúka \n"
-"    dodatočnú voľbu prepnutia na naposledy použitú aplikáciu z "
-"predchádzajúcej plochy. \n"
-"    Je to vždy posledný symbol v zozname, oddelený zvislou čiarou, ak je "
-"dostupná. \n"
-"    Každé okno reprezentuje ikona jeho aplikácie.\n"
-"\n"
-"Pôvodné:\n"
-"    Tento režim je pôvodné správanie v GNOME 3, inými slovami: Kliknutím na "
-"pôvodné \n"
-"    vypnete Alternatívne prepínanie okien. \n"
+# gsetting summary
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Povoliť režim spánku"
 
-#: ../extensions/alternate-tab/extension.js:295
-msgid "Alt Tab Behaviour"
-msgstr "Správanie Alt Tab"
+# gsetting description
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "Nastaví viditeľnosť položky Uspať v ponuke"
 
-# button label
-#: ../extensions/alternate-tab/extension.js:311
-msgid "All & Thumbnails"
-msgstr "Všetko a miniatúry"
+# gsetting summary
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Povoliť hibernáciu"
 
-# button label
-#: ../extensions/alternate-tab/extension.js:318
-msgid "Workspace & Icons"
-msgstr "Pracovná plocha a ikony"
-
-# button label
-#: ../extensions/alternate-tab/extension.js:325
-msgid "Cancel"
-msgstr "Zrušiť"
-
-# description
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "Ask the user for a default behaviour if true."
-msgstr "Ak je true, tak sa opýtať používateľa na predvolené správanie."
+# gsetting description
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "Nastaví viditeľnosť položky Hibernovať v ponuke"
 
 # summary
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Indicates if Alternate Tab is newly installed"
-msgstr "Indikuje, že Alternatívne prepínanie okien je novo nainštalované"
-
-# description
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
-"workspace_icons."
-msgstr ""
-"Nastaví správanie Alt-Tab. Možné hodnoty: native, all_thumbnails a "
-"workspace_icons."
-
-# summary
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
-msgid "The alt tab behaviour."
-msgstr "Správanie alt tab."
-
-# description
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Zoznam aplikácií a pracovných plôch"
+
+# description
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
 "Zoznam reťazcov, z ktorých každý obsahuje identifikátor aplikácie (názov "
-"súboru desktop), nasledovaný čiarkou a číslom pracovnej plochy"
+"súboru .desktop), nasledovaný čiarkou a číslom pracovného priestoru"
 
-# summary
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "Application and workspace list"
-msgstr "Zoznam aplikácií a pracovných plôch"
+# TreeViewColumn
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "Aplikácia"
 
-# PM: znie to čudne ale nič lepši mi momentálne nenapadá
-#: ../extensions/dock/extension.js:570
+# TreeViewColumn; Label
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "Pracovný priestor"
+
+# ToolButton label
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Pridať pravidlo"
+
+# Dialog title
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "Vytvorenie nového odpovedajúceho pravidla"
+
+# button label
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Pridať"
+
+#: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
-msgstr "Pretiahnite sem na pridanie do obľúbených"
+msgstr "Pretiahnutím na toto miesto položku preidáte do obľúbených"
 
-# menu item
-#: ../extensions/dock/extension.js:903
+#: ../extensions/dock/extension.js:926
 msgid "New Window"
 msgstr "Nové okno"
 
-# menu item
-#: ../extensions/dock/extension.js:905
+#: ../extensions/dock/extension.js:928
 msgid "Quit Application"
 msgstr "Ukončiť aplikáciu"
 
-# togle menu item
-#: ../extensions/dock/extension.js:910
+#: ../extensions/dock/extension.js:933
 msgid "Remove from Favorites"
 msgstr "Odstrániť z obľúbených"
 
-# togle menu item
-#: ../extensions/dock/extension.js:911
+#: ../extensions/dock/extension.js:934
 msgid "Add to Favorites"
 msgstr "Pridať do obľúbených"
 
-# summary
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Autohide duration"
-msgstr "Trvanie automatického skrývania"
-
-# summary
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Autohide effect"
-msgstr "Efekt automatického skrývania"
-
-# summary
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Enable/disable autohide"
-msgstr "Povoliť/zakázať automatické skrývanie"
-
-# summary
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Icon size"
-msgstr "Veľkosť ikony"
-
-# summary
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Position of the dock"
 msgstr "Pozícia doku"
 
-# description
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Sets icon size of the dock."
-msgstr "Nastaví veľkosť ikony v doku."
-
-# description
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgstr ""
-"Nastaví efekt skrývania doku. Povolené hodnoty sú „resize“ (zmena veľkosti) "
-"alebo „rescale“ (zmena mierky)"
-
-# description
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
 msgid ""
 "Sets the position of the dock in the screen. Allowed values are 'right' or "
 "'left'"
@@ -258,129 +169,257 @@ msgstr ""
 "Nastaví pozíciu doku na obrazovke. Povolené hodnoty sú „right“ (vpravo) "
 "alebo „left“ (vľavo)"
 
-# description
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
+msgid "Icon size"
+msgstr "Veľkosť ikony"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
+msgid "Sets icon size of the dock."
+msgstr "Nastaví veľkosť ikony v doku."
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
+msgid "Enable/disable autohide"
+msgstr "Povoliť/zakázať automatické skrývanie"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
+msgid "Autohide effect"
+msgstr "Efekt automatického skrývania"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
+msgid ""
+"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+"'move'"
+msgstr ""
+"Nastaví efekt skrývania doku. Povolené hodnoty sú „resize“ (zmena veľkosti) "
+"alebo „rescale“ (zmena mierky)"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
+msgid "Autohide duration"
+msgstr "Trvanie automatického skrývania"
+
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
 msgid "Sets the time duration of the autohide effect."
 msgstr "Nastaví dĺžku trvania efektu automatického skrývania."
 
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
+msgid "Monitor"
+msgstr "Monitor"
+
+#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
+msgid ""
+"Sets monitor to display dock in. The default value (-1) is the primary "
+"monitor."
+msgstr "Nastaví monitor, v ktorom sa má zobraziť dok. Predvolená hodnota (-1) je hlavný monitor."
+
+# https://bugzilla.gnome.org/show_bug.cgi?id=687590
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Zlyhalo vysúvanie jednotky „%s“:"
+
+#  Menu
+#: ../extensions/drive-menu/extension.js:89
+msgid "Removable devices"
+msgstr "Vymeniteľné zariadenia"
+
+# Menu Action
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "Otvoriť súbor"
+
 # PŠ: a toto by som teda neprekladal, tento text musia poznať všetci ;-)
-#: ../extensions/example/extension.js:11
+# PK: ja by som to prelozil ;)
+# DK: ja by som ho prelozil tiez
+#: ../extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Ahoj, Svet!"
 
-# presenceMessage
-#: ../extensions/gajim/extension.js:227
+# gsetting summary
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "Alternatívny text privítania."
+
+# gsetting desription
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr "Obsahuje text, ktorý bude zobrazený po kliknutí na panel."
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"Rozšírenie Example vám má ukázať, ako sa dajú zostaviť dobre vyzerajúce a "
+"jednoduché rozšírenia pre Shell.\n"
+"Napriek tomu je možné prispôsobiť správu privítania."
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Správa:"
+
+#: ../extensions/gajim/extension.js:226
 #, c-format
 msgid "%s is away."
-msgstr "%s je neprítomný."
+msgstr "Kontakt %s je neprítomný."
 
-# presenceMessage
-#: ../extensions/gajim/extension.js:230
+#: ../extensions/gajim/extension.js:229
 #, c-format
 msgid "%s is offline."
-msgstr "%s je odpojený."
+msgstr "Kontakt %s je odpojený."
 
-# presenceMessage
-#: ../extensions/gajim/extension.js:233
+#: ../extensions/gajim/extension.js:232
 #, c-format
 msgid "%s is online."
-msgstr "%s je pripojený."
+msgstr "Kontakt %s je pripojený."
 
-# presenceMessage
-#: ../extensions/gajim/extension.js:236
+#: ../extensions/gajim/extension.js:235
 #, c-format
 msgid "%s is busy."
-msgstr "%s je zaneprázdnený."
-
-# description
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
-msgstr ""
-"Ak je true, tak bude titulok okna umiestnený navrchu zodpovedajúcej "
-"miniatúry. Prepíše sa tým predvolené nastavenie shellu, ktorý ho umiestňuje "
-"nadol. Aby sa prejavila zmena, je potrebné reštartovať shell."
+msgstr "Kontakt %s je zaneprázdnený."
 
 # summary
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "Použiť viac obrazovky pre okná"
+
+# description
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Place window captions on top"
-msgstr "Umiestniť titulok okna navrch"
-
-# description
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
-msgid ""
-"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
-"default grid based algorithm, 'natural' to use another one that reflects "
-"more the position and size of the actual window"
-msgstr ""
-"Algoritmus použitý na zobrazenie miniatúr v prehľade. Použite „grid“ ak "
-"chcete predvolený algoritmus založený na mriežke, „natural“ použite ak "
-"chcete aby odrážal pozíciu a veľkosť aktuálneho okna"
-
-# description
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"Pokúsi sa využiť viac obrazovky tým, že umiestňovanie miniatúr okien sa "
+"Pokúsi sa využiť viac obrazovky tým, že umiestnenie miniatúr okien sa "
 "prispôsobí pomeru strán, a tiež sa zváži zmenšenie okrajov. Toto nastavenie "
-"sa aplikuje len na postup umiestňovania „natural“."
+"sa aplikuje len pri bežnom spôsobe umiestnenia."
 
 # summary
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
-msgid "Use more screen for windows"
-msgstr "Použiť viac obrazovky pre okná"
-
-# summary
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
-msgstr "Stratégia umiestňovania okien"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Umiestniť titulok okna navrch"
 
 # description
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Názov témy, ktorá sa nahrá z ~/.themes/nazov/gnome-shell"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Pri nastavení na true, bude titulok okna umiestnený navrchu zodpovedajúcej "
+"miniatúry. Prepíše sa tým predvolené nastavenie shellu, ktorý ho umiestňuje "
+"nadol. Aby sa prejavila zmena, je potrebné reštartovať shell."
+
+#  menu item
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "Miesta"
+
+#  menu item
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "Zariadenia"
+
+#  menu item
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "Záložky"
+
+#  menu item
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "Sieť"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Zlyhalo spustenie „%s“"
+
+# Places
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "Domov"
+
+#: ../extensions/places-menu/placeDisplay.js:184
+msgid "File System"
+msgstr "Súborový systém"
+
+#: ../extensions/places-menu/placeDisplay.js:188
+msgid "Browse network"
+msgstr "Prehliadať sieť"
+
+# Label
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "Procesor"
+
+# Label
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Pamäť"
 
 # summary
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
 msgstr "Názov témy"
 
+# description
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Názov témy, ktorá sa načíta z ~/.themes/nazov/gnome-shell"
+
+# Label
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indikátor pracovného priestoru"
+
+# Label
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "Názvy pracovných priestorov:"
+
+# TreeViewColumn
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "Názov"
+
+# store label
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "Pracovný priestor č. %d"
+
 # rotation
-#: ../extensions/xrandr-indicator/extension.js:26
+#: ../extensions/xrandr-indicator/extension.js:30
 msgid "Normal"
 msgstr "Normálne"
 
 # rotation
-#: ../extensions/xrandr-indicator/extension.js:27
+#: ../extensions/xrandr-indicator/extension.js:31
 msgid "Left"
 msgstr "Vľavo"
 
 # rotation
-#: ../extensions/xrandr-indicator/extension.js:28
+#: ../extensions/xrandr-indicator/extension.js:32
 msgid "Right"
 msgstr "Vpravo"
 
 # rotation
-#: ../extensions/xrandr-indicator/extension.js:29
+#: ../extensions/xrandr-indicator/extension.js:33
 msgid "Upside-down"
 msgstr "Hore nohami"
 
-# menu item
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Nastaviť displej..."
+# PM: V tomto prípade by asi viac hodilo obrazovka
+#  menu
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Displej"
 
-# button label
-#~ msgid "Native"
-#~ msgstr "Pôvodné"
-
-#~ msgid "Available"
-#~ msgstr "Prítomný"
-
-#~ msgid "Busy"
-#~ msgstr "Zaneprázdnený"
+# menu
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "Nastavenia displeja"
