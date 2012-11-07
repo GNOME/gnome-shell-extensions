@@ -75,7 +75,7 @@ const PlaceInfo = new Lang.Class({
         try {
             let info = this.file.query_info('standard::display-name', 0, null);
             return info.get_display_name();
-        } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_SUPPORTED)) {
+        } catch(e if e instanceof Gio.IOErrorEnum) {
             return this.file.get_basename();
         }
     },
