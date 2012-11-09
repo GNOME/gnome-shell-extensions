@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-09-06 17:51+0000\n"
-"PO-Revision-Date: 2012-09-07 11:16+0200\n"
+"POT-Creation-Date: 2012-11-07 16:43+0000\n"
+"PO-Revision-Date: 2012-11-09 11:53+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -35,12 +35,10 @@ msgstr ""
 "samo ikonicu programa) ili „both“ (oba)."
 
 #: ../extensions/alternate-tab/prefs.js:26
-#| msgid "All & Thumbnails"
 msgid "Thumbnail only"
 msgstr "Samo sličice"
 
 #: ../extensions/alternate-tab/prefs.js:27
-#| msgid "Application"
 msgid "Application icon only"
 msgstr "Samo ikonica programa"
 
@@ -57,15 +55,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Prikazuje samo prozore u tekućem radnom prostoru"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:144
 msgid "Suspend"
 msgstr "Obustavi"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:147
 msgid "Hibernate"
 msgstr "Zamrzni"
 
-#: ../extensions/alternative-status-menu/extension.js:78
+#: ../extensions/alternative-status-menu/extension.js:150
 msgid "Power Off"
 msgstr "Ugasi"
 
@@ -118,90 +116,19 @@ msgstr "Dodajte novo pravilo za poklapanje"
 msgid "Add"
 msgstr "Dodaj"
 
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "Prevucite ovde da dodate među omiljene"
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Nisam uspeo da izbacim uređaj „%s“:"
 
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "Novi prozor"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "Napusti program"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "Ukloni iz omiljenih"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "Dodaj u omiljene"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Položaj luke"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Podešava mesto gde se nalazi površ sa ikonicama. Dozvoljene su vrednosti "
-"„right“ (desno) i „left“ (levo)"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Veličina ikonice"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Određuje veličinu ikonice u luci."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Samostalno skrivanje"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Dejstvo samoskrivanja"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Određuje dejstvo koje se prikazuje prilikom skrivanja površi sa ikonicama. "
-"Dozvoljene vrednosti su: „resize“ (promeni veličinu), „rescale“ (promeni "
-"veličinu uz zadržavanje razmere) i „move“ (premesti)"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Trajanje samoskrivanja"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Određuje dužinu trajanja dejstva samoskrivanja."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Monitor"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"Podešava koji monitor će da prikaže luku. Osnovna vrednost (-1) jeste "
-"primarni monitor."
-
-#: ../extensions/drive-menu/extension.js:56
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "Uklonjivi uređaji"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "Otvori upravnika datoteka"
+#: ../extensions/drive-menu/extension.js:106
+#| msgid "Open file manager"
+msgid "Open File"
+msgstr "Otvori datoteku"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -233,26 +160,6 @@ msgstr ""
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "Poruka:"
-
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "„%s“ je odsutan."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "„%s“ je van mreže."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "„%s“ je na mreži."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "„%s“ je zauzet."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -307,11 +214,11 @@ msgstr "Nisam uspeo da pokrenem „%s“"
 msgid "Home"
 msgstr "Lično"
 
-#: ../extensions/places-menu/placeDisplay.js:184
+#: ../extensions/places-menu/placeDisplay.js:191
 msgid "File System"
 msgstr "Sistem datoteka"
 
-#: ../extensions/places-menu/placeDisplay.js:188
+#: ../extensions/places-menu/placeDisplay.js:195
 msgid "Browse network"
 msgstr "Razgledajte mrežu"
 
@@ -369,9 +276,81 @@ msgid "Display"
 msgstr "Ekran"
 
 #: ../extensions/xrandr-indicator/extension.js:80
-#| msgid "Configure display settings..."
 msgid "Display Settings"
 msgstr "Podešavanja ekrana"
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "Prevucite ovde da dodate među omiljene"
+
+#~ msgid "New Window"
+#~ msgstr "Novi prozor"
+
+#~ msgid "Quit Application"
+#~ msgstr "Napusti program"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Ukloni iz omiljenih"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Dodaj u omiljene"
+
+#~ msgid "Position of the dock"
+#~ msgstr "Položaj luke"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr ""
+#~ "Podešava mesto gde se nalazi površ sa ikonicama. Dozvoljene su vrednosti "
+#~ "„right“ (desno) i „left“ (levo)"
+
+#~ msgid "Icon size"
+#~ msgstr "Veličina ikonice"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "Određuje veličinu ikonice u luci."
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "Samostalno skrivanje"
+
+#~ msgid "Autohide effect"
+#~ msgstr "Dejstvo samoskrivanja"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr ""
+#~ "Određuje dejstvo koje se prikazuje prilikom skrivanja površi sa ikonicama. "
+#~ "Dozvoljene vrednosti su: „resize“ (promeni veličinu), „rescale“ (promeni "
+#~ "veličinu uz zadržavanje razmere) i „move“ (premesti)"
+
+#~ msgid "Autohide duration"
+#~ msgstr "Trajanje samoskrivanja"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "Određuje dužinu trajanja dejstva samoskrivanja."
+
+#~ msgid "Monitor"
+#~ msgstr "Monitor"
+
+#~ msgid ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+#~ msgstr ""
+#~ "Podešava koji monitor će da prikaže luku. Osnovna vrednost (-1) jeste "
+#~ "primarni monitor."
+
+#~ msgid "%s is away."
+#~ msgstr "„%s“ je odsutan."
+
+#~ msgid "%s is offline."
+#~ msgstr "„%s“ je van mreže."
+
+#~ msgid "%s is online."
+#~ msgstr "„%s“ je na mreži."
+
+#~ msgid "%s is busy."
+#~ msgstr "„%s“ je zauzet."
 
 #~ msgid "The alt tab behaviour."
 #~ msgstr "Ponašanje tastera „alt-tab“."
