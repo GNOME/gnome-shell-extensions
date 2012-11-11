@@ -306,7 +306,7 @@ function enable() {
      *  INITIAL - this is the initial positioning of the windows.
      *  ANIMATE - Indicates that we need animate changing position.
      */
-    workspaceInjections['positionWindows'] = Workspace.Workspace.prototype._realPositionWindows;
+    workspaceInjections['_realPositionWindows'] = Workspace.Workspace.prototype._realPositionWindows;
     Workspace.Workspace.prototype._realPositionWindows = function(flags) {
         if (this._repositionWindowsId > 0) {
             Mainloop.source_remove(this._repositionWindowsId);
