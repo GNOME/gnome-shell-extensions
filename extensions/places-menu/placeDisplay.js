@@ -141,22 +141,25 @@ const PlacesManager = new Lang.Class({
         this._connectVolumeMonitorSignals();
         this._updateMounts();
 
-        this._bookmarksPath = GLib.build_filenamev([GLib.get_user_config_dir(), 'gtk-3.0', 'bookmarks']);
-        this._bookmarksFile = Gio.file_new_for_path(this._bookmarksPath);
-        this._monitor = this._bookmarksFile.monitor_file(Gio.FileMonitorFlags.NONE, null);
+        this._bookmarksFile = this._findBookmarksFile()
         this._bookmarkTimeoutId = 0;
-        this._monitor.connect('changed', Lang.bind(this, function () {
-            if (this._bookmarkTimeoutId > 0)
-                return;
-            /* Defensive event compression */
-            this._bookmarkTimeoutId = Mainloop.timeout_add(100, Lang.bind(this, function () {
-                this._bookmarkTimeoutId = 0;
-                this._reloadBookmarks();
-                return false;
-            }));
-        }));
+        this._monitor = null;
 
-        this._reloadBookmarks();
+        if (this._bookmarksFile) {
+            this._monitor = this._bookmarksFile.monitor_file(Gio.FileMonitorFlags.NONE, null);
+            this._monitor.connect('changed', Lang.bind(this, function () {
+                if (this._bookmarkTimeoutId > 0)
+                    return;
+                /* Defensive event compression */
+                this._bookmarkTimeoutId = Mainloop.timeout_add(100, Lang.bind(this, function () {
+                    this._bookmarkTimeoutId = 0;
+                    this._reloadBookmarks();
+                    return false;
+                }));
+            }));
+
+            this._reloadBookmarks();
+        }
     },
 
     _connectVolumeMonitorSignals: function() {
@@ -176,7 +179,8 @@ const PlacesManager = new Lang.Class({
         for (let i = 0; i < this._volumeMonitorSignals.length; i++)
             this._volumeMonitor.disconnect(this._volumeMonitorSignals[i]);
 
-        this._monitor.cancel();
+        if (this._monitor)
+            this._monitor.cancel();
         if (this._bookmarkTimeoutId)
             Mainloop.source_remove(this._bookmarkTimeoutId);
     },
@@ -249,14 +253,25 @@ const PlacesManager = new Lang.Class({
         this.emit('network-updated');
     },
 
+    _findBookmarksFile: function() {
+        let paths = [
+            GLib.build_filenamev([GLib.get_user_config_dir(), 'gtk-3.0', 'bookmarks']),
+            GLib.build_filenamev([GLib.get_home_dir(), '.gtk-bookmarks']),
+        ];
+
+        for (let i = 0; i < paths.length; i++) {
+            if (GLib.file_test(paths[i], GLib.FileTest.EXISTS))
+                return Gio.File.new_for_path(paths[i]);
+        }
+
+        return null;
+    },
+
     _reloadBookmarks: function() {
 
         this._bookmarks = [];
 
-        if (!GLib.file_test(this._bookmarksPath, GLib.FileTest.EXISTS))
-            return;
-
-        let content = Shell.get_file_contents_utf8_sync(this._bookmarksPath);
+        let content = Shell.get_file_contents_utf8_sync(this._bookmarksFile.get_path());
         let lines = content.split('\n');
 
         let bookmarks = [];
