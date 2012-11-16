@@ -277,6 +277,9 @@ const PlacesManager = new Lang.Class({
                 continue;
 
             let file = Gio.File.new_for_uri(bookmark);
+            if (file.is_native() && !file.query_exists(null))
+                continue;
+
             let duplicate = false;
             for (let i = 0; i < this._places.special.length; i++) {
                 if (file.equal(this._places.special[i].file)) {
