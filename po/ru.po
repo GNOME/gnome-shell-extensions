@@ -1,18 +1,18 @@
 # Russian translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Stas Solovey <whats_up@tut.by>, 2011, 2012.
 # Yuri Myasoedov <omerta13@yandex.ru>, 2011, 2012.
+# Stas Solovey <whats_up@tut.by>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-09-22 10:34+0000\n"
-"PO-Revision-Date: 2012-09-27 17:23+0400\n"
-"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
-"Language-Team: русский <gnome-cyr@gnome.org>\n"
+"POT-Creation-Date: 2012-11-16 19:30+0000\n"
+"PO-Revision-Date: 2012-11-16 18:29+0300\n"
+"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
+"Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,15 +57,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Отображать окна только текущей рабочей области"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:144
 msgid "Suspend"
 msgstr "Ждущий режим"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:147
 msgid "Hibernate"
 msgstr "Спящий режим"
 
-#: ../extensions/alternative-status-menu/extension.js:78
+#: ../extensions/alternative-status-menu/extension.js:150
 msgid "Power Off"
 msgstr "Выключить"
 
@@ -118,89 +118,18 @@ msgstr "Создать новое правило соответствия"
 msgid "Add"
 msgstr "Добавить"
 
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "Перетащите, чтобы добавить в избранное"
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Не удалось извлечь диск «%s»:"
 
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "Создать окно"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "Закрыть приложение"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "Удалить из избранного"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "Добавить в избранное"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Расположение док-панели"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Устанавливает положение док-панели на экране. Возможные значения: «right» "
-"или «left»"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Размер значков"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Устанавливает размер значка док-панели."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Включить/выключить автоскрытие"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Эффект автоскрытия"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Устанавливает эффект скрытия док-панели. Возможные значения: «resize», "
-"«rescale» и «move»"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Таймер автоскрытия"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Устанавливает продолжительность эффекта автоскрытия."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Монитор"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"Устанавливает монитор для отображения док-панели. Значением по умолчанию "
-"(-1) является основной монитор."
-
-#: ../extensions/drive-menu/extension.js:56
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "Съёмные устройства"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "Открыть файловый менеджер"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "Открыть файл"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -232,26 +161,6 @@ msgstr ""
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "Сообщение:"
-
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "%s отошёл."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "%s не в сети."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "%s в сети."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "%s занят."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -307,11 +216,11 @@ msgstr "Не удалось запустить «%s»"
 msgid "Home"
 msgstr "Домашняя папка"
 
-#: ../extensions/places-menu/placeDisplay.js:184
+#: ../extensions/places-menu/placeDisplay.js:195
 msgid "File System"
 msgstr "Файловая система"
 
-#: ../extensions/places-menu/placeDisplay.js:188
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Browse network"
 msgstr "Обзор сети"
 
@@ -371,3 +280,75 @@ msgstr "Экран"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "Параметры экрана"
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "Перетащите, чтобы добавить в избранное"
+
+#~ msgid "New Window"
+#~ msgstr "Создать окно"
+
+#~ msgid "Quit Application"
+#~ msgstr "Закрыть приложение"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Удалить из избранного"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Добавить в избранное"
+
+#~ msgid "Position of the dock"
+#~ msgstr "Расположение док-панели"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr ""
+#~ "Устанавливает положение док-панели на экране. Возможные значения: «right» "
+#~ "или «left»"
+
+#~ msgid "Icon size"
+#~ msgstr "Размер значков"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "Устанавливает размер значка док-панели."
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "Включить/выключить автоскрытие"
+
+#~ msgid "Autohide effect"
+#~ msgstr "Эффект автоскрытия"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr ""
+#~ "Устанавливает эффект скрытия док-панели. Возможные значения: «resize», "
+#~ "«rescale» и «move»"
+
+#~ msgid "Autohide duration"
+#~ msgstr "Таймер автоскрытия"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "Устанавливает продолжительность эффекта автоскрытия."
+
+#~ msgid "Monitor"
+#~ msgstr "Монитор"
+
+#~ msgid ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+#~ msgstr ""
+#~ "Устанавливает монитор для отображения док-панели. Значением по умолчанию "
+#~ "(-1) является основной монитор."
+
+#~ msgid "%s is away."
+#~ msgstr "%s отошёл."
+
+#~ msgid "%s is offline."
+#~ msgstr "%s не в сети."
+
+#~ msgid "%s is online."
+#~ msgstr "%s в сети."
+
+#~ msgid "%s is busy."
+#~ msgstr "%s занят."
