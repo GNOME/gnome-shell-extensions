@@ -428,16 +428,20 @@ function init(metadata) {
     settings = Convenience.getSettings();
 }
 
+function setKeybinding(name, func) {
+    Main.wm.setCustomKeybindingHandler(name, Main.KeybindingMode.NORMAL, func);
+}
+
 function enable() {
-    Meta.keybindings_set_custom_handler('switch-windows', doAltTab);
-    Meta.keybindings_set_custom_handler('switch-group', doAltTab);
-    Meta.keybindings_set_custom_handler('switch-windows-backward', doAltTab);
-    Meta.keybindings_set_custom_handler('switch-group-backward', doAltTab);
+    setKeybinding('switch-windows', doAltTab);
+    setKeybinding('switch-group', doAltTab);
+    setKeybinding('switch-windows-backward', doAltTab);
+    setKeybinding('switch-group-backward', doAltTab);
 }
 
 function disable() {
-    Meta.keybindings_set_custom_handler('switch-windows', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Meta.keybindings_set_custom_handler('switch-group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Meta.keybindings_set_custom_handler('switch-windows-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    Meta.keybindings_set_custom_handler('switch-group-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    setKeybinding('switch-windows', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    setKeybinding('switch-group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    setKeybinding('switch-windows-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    setKeybinding('switch-group-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
 }
