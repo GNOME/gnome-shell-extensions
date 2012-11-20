@@ -119,13 +119,14 @@ const AltTabPopup = new Lang.Class({
 	    });
 	} else {
 	    windows = global.display.get_tab_list(Meta.TabList.NORMAL_ALL, global.screen,
-						      global.screen.get_active_workspace());
+						  global.screen.get_active_workspace());
 	}
 
-        if (!windows.length) {
-            this.destroy();
+        // Filter away attached modal dialogs (switch to their parents instead)
+        windows = windows.filter(function(win) { return !win.is_attached_dialog(); });
+
+        if (windows.length == 0)
             return false;
-        }
 
         if (!Main.pushModal(this.actor)) {
             // Probably someone else has a pointer grab, try again with keyboard only
