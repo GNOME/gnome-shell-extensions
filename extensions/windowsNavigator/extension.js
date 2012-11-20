@@ -33,26 +33,10 @@ function resetState() {
 function enable() {
     resetState();
 
-    Workspace.WindowOverlay.prototype.setId = function(id) {
-        if (this._text && this._text.visible && id == null)
-            this._text.hide();
-        this._id = id;
-        if (id != null)
-            this._text.text = this._id.toString();
-    }
-    winInjections['setId'] = undefined;
-
-    Workspace.WindowOverlay.prototype.getId = function() {
-        return this._id;
-    }
-    winInjections['getId'] = undefined;
-
     Workspace.WindowOverlay.prototype.showTooltip = function() {
-        if (this._id === null)
-            return;
         this._text.raise_top();
         this._text.show();
-        this._text.text = this._id.toString();
+        this._text.text = (this._windowClone.slotId + 1).toString();
     }
     winInjections['showTooltip'] = undefined;
 
@@ -83,11 +67,9 @@ function enable() {
     workspaceInjections['hideTooltip'] = undefined;
 
     Workspace.Workspace.prototype.getWindowWithTooltip = function(id) {
-        for (let i in this._windowOverlays) {
-            if (this._windowOverlays[i] == null)
-                continue;
-            if (this._windowOverlays[i].getId() === id)
-                return this._windowOverlays[i]._windowClone.metaWindow;
+        for (let i = 0; i < this._windows.length; i++) {
+            if ((this._windows[i].slotId + 1) == id)
+                return this._windows[i].metaWindow;
         }
         return null;
     }
@@ -127,11 +109,11 @@ function enable() {
     workViewInjections['_hideWorkspacesTooltips'] = undefined;
 
     WorkspacesView.WorkspacesView.prototype._onKeyRelease = function(s, o) {
-        if (this._pickWindow && 
+        if (this._pickWindow &&
             (o.get_key_symbol() == Clutter.KEY_Alt_L ||
              o.get_key_symbol() == Clutter.KEY_Alt_R))
             this._hideTooltips();
-        if (this._pickWorkspace && 
+        if (this._pickWorkspace &&
             (o.get_key_symbol() == Clutter.KEY_Control_L ||
              o.get_key_symbol() == Clutter.KEY_Control_R))
             this._hideWorkspacesTooltips();
@@ -243,23 +225,6 @@ function enable() {
             connectedSignals.push({ obj: this.actor, id: signalId });
         } else
             this._tip = null;
-    });
-
-    workspaceInjections['positionWindows'] = injectToFunction(Workspace.Workspace.prototype, 'positionWindows', function(flags) {
-        let visibleClones = this._windows.slice();
-        if (this._reservedSlot)
-            visibleClones.push(this._reservedSlot);
-
-        let slots = this._computeAllWindowSlots(visibleClones.length);
-        visibleClones = this._orderWindowsByMotionAndStartup(visibleClones, slots);
-        for (let i = 0; i < visibleClones.length; i++) {
-            let clone = visibleClones[i];
-            let metaWindow = clone.metaWindow;
-            let mainIndex = this._lookupIndex(metaWindow);
-            let overlay = this._windowOverlays[mainIndex];
-            if (overlay)
-                overlay.setId(i < 9 ? i + 1 : null);
-        }
     });
 
     workViewInjections['_init'] = injectToFunction(WorkspacesView.WorkspacesView.prototype, '_init', function(width, height, x, y, workspaces) {
