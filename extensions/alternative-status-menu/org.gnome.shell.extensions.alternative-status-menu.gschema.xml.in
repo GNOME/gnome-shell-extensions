@@ -6,7 +6,7 @@
       <_description>Control the visibility of the Suspend menu item</_description>
     </key>
     <key name="allow-hibernate" type="b">
-      <default>false</default>
+      <default>true</default>
       <_summary>Enable hibernating</_summary>
       <_description>Control the visibility of the Hibernate menu item</_description>
     </key>
