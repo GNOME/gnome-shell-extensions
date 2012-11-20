@@ -1,3 +1,17 @@
+3.7.2
+=====
+* fixed crashes with places-menu, windowsNavigator, alternate-tab
+  and native-window-placement
+* alternate-tab now hides attached modal dialogs
+* places-menu has restored support for Nautilus 3.4
+* the default for hibernate is now to show in alternative-status-menu
+* some extensions are now tagged as "classic", and can be chosen with
+  --enable-extensions=classic-mode
+* dock and gajim were removed at the beginning of the 3.7.1 cycle,
+  as they were buggy and unmaintained
+* updated translations (ar, cs, de, el, es, gl, id, lt, lv, pa, pl
+  ru, sk, sl, sr, sr@latin)
+
 3.6.1
 =====
 * fixed alternative-status-menu for the new lock screen
