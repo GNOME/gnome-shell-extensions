@@ -27,21 +27,22 @@ fi
 AC_SUBST([SHELL_VERSION])
 
 dnl keep this in alphabetic order
-dnl by default, install only extensions that do not change completely the shell experience,
-dnl that don't require GSettings and that don't require external packages for typelibs
-dnl (so basically only menus, status icons, search providers, overview tabs, message tray sources, etc.)
-DEFAULT_EXTENSIONS="alternative-status-menu apps-menu drive-menu places-menu windowsNavigator workspace-indicator"
-ALL_EXTENSIONS="$DEFAULT_EXTENSIONS alternate-tab auto-move-windows example native-window-placement systemMonitor user-theme xrandr-indicator"
+CLASSIC_EXTENSIONS="apps-menu places-menu alternate-tab workspace-indicator"
+DEFAULT_EXTENSIONS="$CLASSIC_EXTENSIONS alternative-status-menu drive-menu windowsNavigator"
+ALL_EXTENSIONS="$DEFAULT_EXTENSIONS auto-move-windows example native-window-placement systemMonitor user-theme xrandr-indicator"
 AC_SUBST(ALL_EXTENSIONS, [$ALL_EXTENSIONS])
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable.
-	The default is to build all extensions that can be installed in the home directory and have no external depedencies.
-	Use "all" to enable all available extensions.])],
+	The default is to build and distribute all extensions that can be installed in the home directory and have no external depedencies.
+	Use "all" to enable all available extensions, or "classic-mode" to enable extensions that restore GNOME 2 functionality.])],
 	[],
 	[enable_extensions=$DEFAULT_EXTENSIONS]
 )
 if test x"$enable_extensions" = xall; then
    enable_extensions="$ALL_EXTENSIONS"
+fi
+if test x"$enable_extensions" = xclassic-mode; then
+   enable_extensions="$CLASSIC_EXTENSIONS"
 fi
 
 ENABLED_EXTENSIONS=
