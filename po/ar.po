@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-05 21:43+0200\n"
-"PO-Revision-Date: 2012-10-05 21:46+0200\n"
+"POT-Creation-Date: 2012-11-21 16:58+0200\n"
+"PO-Revision-Date: 2012-11-21 17:00+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -50,15 +50,15 @@ msgid "Show only windows in the current workspace"
 msgstr "أظهر نوافذ مساحات العمل الحالية فقط"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:144
 msgid "Suspend"
 msgstr "علّق"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:147
 msgid "Hibernate"
 msgstr "أسبِت"
 
-#: ../extensions/alternative-status-menu/extension.js:78
+#: ../extensions/alternative-status-menu/extension.js:150
 msgid "Power Off"
 msgstr "أطفئ"
 
@@ -109,83 +109,18 @@ msgstr "أنشئ قاعدة تطابق"
 msgid "Add"
 msgstr "أضِف"
 
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "اسحب إلى هنا ليضاف إلى المفضّلة"
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "فشل إخراج '%s':"
 
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "نافذة جديدة"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "أغلق التطبيق"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "أزِل من المفضّلة"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "أضِف إلى المفضّلة"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "حجم الأيقونة"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "الشاشة"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-
-#: ../extensions/drive-menu/extension.js:56
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "الأجهزة المنفصلة"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "افتح مدير الملفّات"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "افتح الملف"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -213,26 +148,6 @@ msgstr ""
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "الرسالة:"
-
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "‏%s غائب."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "‏%s غير متّصل."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "‏%s متّصل."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "‏%s مشغول."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -281,11 +196,11 @@ msgstr "فشل تشغيل \"%s\""
 msgid "Home"
 msgstr "المنزل"
 
-#: ../extensions/places-menu/placeDisplay.js:184
+#: ../extensions/places-menu/placeDisplay.js:195
 msgid "File System"
 msgstr "نظام الملفات"
 
-#: ../extensions/places-menu/placeDisplay.js:188
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Browse network"
 msgstr "تصفّح الشبكة"
 
@@ -345,6 +260,39 @@ msgstr "العرض"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "إعدادات العرض"
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "اسحب إلى هنا ليضاف إلى المفضّلة"
+
+#~ msgid "New Window"
+#~ msgstr "نافذة جديدة"
+
+#~ msgid "Quit Application"
+#~ msgstr "أغلق التطبيق"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "أزِل من المفضّلة"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "أضِف إلى المفضّلة"
+
+#~ msgid "Icon size"
+#~ msgstr "حجم الأيقونة"
+
+#~ msgid "Monitor"
+#~ msgstr "الشاشة"
+
+#~ msgid "%s is away."
+#~ msgstr "‏%s غائب."
+
+#~ msgid "%s is offline."
+#~ msgstr "‏%s غير متّصل."
+
+#~ msgid "%s is online."
+#~ msgstr "‏%s متّصل."
+
+#~ msgid "%s is busy."
+#~ msgstr "‏%s مشغول."
 
 #~ msgid ""
 #~ "This mode presents all applications from all workspaces in one selection "
