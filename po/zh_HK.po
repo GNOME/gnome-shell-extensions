@@ -6,9 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-09 20:12+0800\n"
-"PO-Revision-Date: 2012-03-09 20:13+0800\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2012-11-16 19:30+0000\n"
+"PO-Revision-Date: 2012-11-21 14:40+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
 "Language: \n"
@@ -17,73 +18,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
-msgstr "設定 Alt-Tab 行為。可用的值為：all_thumbnails、workspace_icons。請見組態對話盒瞭解詳細資訊。"
+msgid "The application icon mode."
+msgstr "應用程式圖示模式。"
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "The alt tab behaviour."
-msgstr "alt tab 按鍵行為。"
+msgid ""
+"Configures how the windows are shown in the switcher. Valid possibilities "
+"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+"only' (shows only the application icon) or 'both'."
+msgstr "設定視窗在切換器中顯示的方式。有效的選項為「thumbnail-only」(顯示視窗的縮圖)、「app-icon-only」(僅顯示應用程式圖示)，或「both」(兩者)"
+
+#: ../extensions/alternate-tab/prefs.js:26
+msgid "Thumbnail only"
+msgstr "僅縮圖"
 
 #: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "全部與縮圖"
+msgid "Application icon only"
+msgstr "僅應用程式圖示"
 
 #: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr "這個模式會將所有工作區的應用程式呈現於一個選取清單中。它使用小縮圖來象徵視窗本身，而不是使用應用程式圖示來代表每個視窗。"
+msgid "Thumbnail and application icon"
+msgstr "縮圖與應用程式圖示"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "工作區與圖示"
+#: ../extensions/alternate-tab/prefs.js:43
+msgid "Present windows as"
+msgstr "視窗呈現方式"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"這個模式讓你在你目前工作區中的應用程式之間切換，而且給你額外的選項來切換至上個工作區中你上次使用的應用程式；它總會是清單中的最後一個圖像，而且可能的話會用分隔符/垂直線隔離開來。\n"
-"每個視窗會以其應用程式圖示呈現。"
-
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "在關閉彈出視窗之前，移動目前選取的項目至前方"
-
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr "Alternate Tab 可以使用不同的模式，會影響到選擇與呈現視窗的方式。"
+#: ../extensions/alternate-tab/prefs.js:68
+msgid "Show only windows in the current workspace"
+msgstr "僅顯示目前工作區中的視窗"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:144
 msgid "Suspend"
 msgstr "暫停"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:147
 msgid "Hibernate"
 msgstr "休眠"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "關閉電源..."
+#: ../extensions/alternative-status-menu/extension.js:150
+msgid "Power Off"
+msgstr "關閉電源"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "啟用暫停"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "控制暫停選單項目的可見性"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "啟用休眠"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "控制休眠選單項目的可見性"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "應用程式與工作區清單"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr "字串的清單，每個都包含一個應用程式 id (桌面檔名稱)，後面接着半形分號 \";\" 與工作區號碼"
-
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "Application and workspace list"
-msgstr "應用程式與工作區清單"
 
 #: ../extensions/auto-move-windows/prefs.js:55
 msgid "Application"
@@ -106,69 +108,18 @@ msgstr "建立新的比對規則"
 msgid "Add"
 msgstr "加入"
 
-#: ../extensions/dock/extension.js:489
-msgid "Drag here to add favorites"
-msgstr "拖曳至此處以加入喜好"
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "裝置「%s」退出失敗："
 
-#: ../extensions/dock/extension.js:815
-msgid "New Window"
-msgstr "新視窗"
+#: ../extensions/drive-menu/extension.js:89
+msgid "Removable devices"
+msgstr "可移除式裝置"
 
-#: ../extensions/dock/extension.js:817
-msgid "Quit Application"
-msgstr "退出應用程式"
-
-#: ../extensions/dock/extension.js:822
-msgid "Remove from Favorites"
-msgstr "自喜好移除"
-
-#: ../extensions/dock/extension.js:823
-msgid "Add to Favorites"
-msgstr "加入喜好"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Autohide duration"
-msgstr "自動隱藏時間"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Autohide effect"
-msgstr "自動隱藏效果"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Enable/disable autohide"
-msgstr "啟用/停用自動隱藏"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Icon size"
-msgstr "圖示大小"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Position of the dock"
-msgstr "Dock 的位置"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Sets icon size of the dock."
-msgstr "設定 Dock 的圖示大小。"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr "設定隱藏 Dock 的效果。可用的值為「resize」、「rescale」、「move」"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr "設定 Dock 在螢幕的位置。可用的值為「right」(右) 或「left」(左)"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "設定自動隱藏效果的時間長度。"
-
-#: ../extensions/drive-menu/extension.js:66
-msgid "Open file manager"
-msgstr "開啟檔案管理員"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "開啟檔案"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -199,59 +150,76 @@ msgstr ""
 msgid "Message:"
 msgstr "訊息："
 
-#: ../extensions/gajim/extension.js:227
-#, c-format
-msgid "%s is away."
-msgstr "%s 已離開。"
-
-#: ../extensions/gajim/extension.js:230
-#, c-format
-msgid "%s is offline."
-msgstr "%s 現在離線。"
-
-#: ../extensions/gajim/extension.js:233
-#, c-format
-msgid "%s is online."
-msgstr "%s 現在上線。"
-
-#: ../extensions/gajim/extension.js:236
-#, c-format
-msgid "%s is busy."
-msgstr "%s 正忙碌。"
-
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
-msgstr "如果為真，在對映的縮圖頂端放置視窗說明標題，凌駕 Shell 將它放置在底部的預設值。更改這個設定值需要重新啟動 Shell 來套用效果。"
+msgid "Use more screen for windows"
+msgstr "視窗使用更多螢幕空間"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Place window captions on top"
-msgstr "在頂端放置視窗說明標題"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr "藉由適應螢幕長寬比來嘗試使用更多螢幕空間放置視窗縮圖，進一步聯合它們來減少邊界盒。這個設定僅適用於自然放置策略。"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid "Use more screen for windows"
-msgstr "視窗使用更多螢幕空間"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "在頂端放置視窗說明標題"
 
-#: ../extensions/places-menu/extension.js:37
-msgid "Removable Devices"
-msgstr "可移除式裝置"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr "如果為真，在對映的縮圖頂端放置視窗說明標題，凌駕 Shell 將它放置在底部的預設值。更改這個設定值需要重新啟動 Shell 來套用效果。"
+
+#: ../extensions/places-menu/extension.js:46
+msgid "Places"
+msgstr "位置"
+
+#: ../extensions/places-menu/extension.js:47
+msgid "Devices"
+msgstr "裝置"
+
+#: ../extensions/places-menu/extension.js:48
+msgid "Bookmarks"
+msgstr "書籤"
+
+#: ../extensions/places-menu/extension.js:49
+msgid "Network"
+msgstr "網絡"
+
+#: ../extensions/places-menu/placeDisplay.js:48
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "無法啟動「%s」"
+
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Home"
+msgstr "家目錄"
+
+#: ../extensions/places-menu/placeDisplay.js:195
+msgid "File System"
+msgstr "檔案系統"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Browse network"
+msgstr "瀏覽網絡"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "記憶體"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "主題的名稱，要從 ~/.themes/name/gnome-shell 載入"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
 msgstr "主題名稱"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "主題的名稱，要從 ~/.themes/name/gnome-shell 載入"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -286,18 +254,122 @@ msgstr "右"
 msgid "Upside-down"
 msgstr "上下顛倒"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "設定顯示器設定值..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "顯示"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "顯示設定值"
+
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "設定 Alt-Tab 行為。可用的值為：all_thumbnails、workspace_icons。請見組態對"
+#~ "話盒瞭解詳細資訊。"
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "alt tab 按鍵行為。"
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "這個模式會將所有工作區的應用程式呈現於一個選取清單中。它使用小縮圖來象徵視"
+#~ "窗本身，而不是使用應用程式圖示來代表每個視窗。"
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "工作區與圖示"
+
+#~ msgid ""
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "這個模式讓您在您目前工作區中的應用程式之間切換，而且給您額外的選項來切換至"
+#~ "上個工作區中您上次使用的應用程式；它總會是清單中的最後一個圖像，而且可能的"
+#~ "話會用分隔符/垂直線隔離開來。\n"
+#~ "每個視窗會以其應用程式圖示呈現。"
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr "在關閉彈出視窗之前，移動目前選取的項目至前方"
+
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr "Alternate Tab 可以使用不同的模式，會影響到選擇與呈現視窗的方式。"
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "拖曳至此處以加入喜好"
+
+#~ msgid "New Window"
+#~ msgstr "新視窗"
+
+#~ msgid "Quit Application"
+#~ msgstr "退出應用程式"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "自喜好移除"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "加入喜好"
+
+#~ msgid "Autohide duration"
+#~ msgstr "自動隱藏時間"
+
+#~ msgid "Autohide effect"
+#~ msgstr "自動隱藏效果"
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "啟用/停用自動隱藏"
+
+#~ msgid "Icon size"
+#~ msgstr "圖示大小"
+
+#~ msgid "Position of the dock"
+#~ msgstr "Dock 的位置"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "設定 Dock 的圖示大小。"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr "設定隱藏 Dock 的效果。可用的值為「resize」、「rescale」、「move」"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr "設定 Dock 在螢幕的位置。可用的值為「right」(右) 或「left」(左)"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "設定自動隱藏效果的時間長度。"
+
+#~ msgid "%s is away."
+#~ msgstr "%s 已離開。"
+
+#~ msgid "%s is offline."
+#~ msgstr "%s 現在離線。"
+
+#~ msgid "%s is online."
+#~ msgstr "%s 現在上線。"
+
+#~ msgid "%s is busy."
+#~ msgstr "%s 正忙碌。"
+
+#~ msgid "Configure display settings..."
+#~ msgstr "設定顯示器設定值..."
 
 #~ msgid "Notifications"
 #~ msgstr "通知"
 
 #~ msgid "Online Accounts"
 #~ msgstr "線上帳號"
-
-#~ msgid "System Settings"
-#~ msgstr "系統設定值"
 
 #~ msgid "Lock Screen"
 #~ msgstr "鎖定畫面"
