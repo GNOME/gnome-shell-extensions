@@ -27,7 +27,7 @@ fi
 AC_SUBST([SHELL_VERSION])
 
 dnl keep this in alphabetic order
-CLASSIC_EXTENSIONS="apps-menu places-menu alternate-tab workspace-indicator"
+CLASSIC_EXTENSIONS="apps-menu places-menu alternate-tab default-min-max workspace-indicator"
 DEFAULT_EXTENSIONS="$CLASSIC_EXTENSIONS alternative-status-menu drive-menu windowsNavigator"
 ALL_EXTENSIONS="$DEFAULT_EXTENSIONS auto-move-windows example native-window-placement systemMonitor user-theme xrandr-indicator"
 AC_SUBST(ALL_EXTENSIONS, [$ALL_EXTENSIONS])
@@ -59,7 +59,7 @@ for e in $enable_extensions; do
 					[AC_MSG_WARN([gnome-desktop-3.0 not found, disabling xrandr-indicator])])
 			;;
 dnl		keep this in alphabetic order
-		alternate-tab|alternative-status-menu|apps-menu|auto-move-windows|drive-menu|example|native-window-placement|places-menu|user-theme|windowsNavigator|workspace-indicator)
+		alternate-tab|alternative-status-menu|apps-menu|auto-move-windows|default-min-max|drive-menu|example|native-window-placement|places-menu|user-theme|windowsNavigator|workspace-indicator)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
 			;;
 		*)
@@ -75,6 +75,7 @@ AC_CONFIG_FILES([
   extensions/alternative-status-menu/Makefile
   extensions/apps-menu/Makefile
   extensions/auto-move-windows/Makefile
+  extensions/default-min-max/Makefile
   extensions/drive-menu/Makefile
   extensions/example/Makefile
   extensions/native-window-placement/Makefile
