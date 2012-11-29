@@ -38,6 +38,8 @@ AC_ARG_ENABLE([extensions],
 	[],
 	[enable_extensions=$DEFAULT_EXTENSIONS]
 )
+AM_CONDITIONAL([CLASSIC_MODE], [test x"$enable_extensions" = xclassic-mode])
+
 if test x"$enable_extensions" = xall; then
    enable_extensions="$ALL_EXTENSIONS"
 fi
@@ -71,6 +73,7 @@ AC_SUBST(ENABLED_EXTENSIONS, [$ENABLED_EXTENSIONS])
 
 dnl Please keep this sorted alphabetically
 AC_CONFIG_FILES([
+  data/Makefile
   extensions/alternate-tab/Makefile
   extensions/alternative-status-menu/Makefile
   extensions/apps-menu/Makefile

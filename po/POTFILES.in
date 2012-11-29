@@ -1,3 +1,6 @@
+data/gnome-classic.desktop.in
+data/gnome-classic.session.desktop.in.in
+data/gnome-shell-classic.desktop.in.in
 extensions/alternate-tab/extension.js
 extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in
 extensions/alternate-tab/prefs.js

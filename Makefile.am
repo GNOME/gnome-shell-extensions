@@ -1,6 +1,12 @@
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
+DIST_SUBDIRS = data extensions po
+
 SUBDIRS = extensions po
+
+if CLASSIC_MODE
+SUBDIRS += data
+endif
 
 EXTRA_DIST = lib/convenience.js
 
