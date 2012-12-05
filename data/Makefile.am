@@ -1,3 +1,5 @@
+include $(top_srcdir)/include.mk
+
 desktopdir = $(datadir)/applications
 desktop_in_in_files = gnome-shell-classic.desktop.in.in
 desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
@@ -12,10 +14,24 @@ xsessiondir = $(datadir)/xsessions
 xsession_in_files = gnome-classic.desktop.in
 xsession_DATA = $(xsession_in_files:.desktop.in=.desktop)
 
+modedir = $(datadir)/gnome-shell/modes
+mode_in_files = classic.json.in
+mode_DATA = $(mode_in_files:.json.in=.json)
+
 %.desktop.in:%.desktop.in.in
 	$(AM_V_GEN) sed \
 		-e "s|\@bindir\@|$(bindir)|" \
 		-e "s|\@VERSION\@|$(VERSION)|" \
+		$< > $@
+
+comma:=,
+empty:=
+space:= $(empty) $(empty)
+extensions:=$(patsubst %,\"%$(extensionbase)\",$(CLASSIC_EXTENSIONS))
+extension_list:=$(subst $(space),$(comma),$(extensions))
+%.json:%.json.in
+	$(AM_V_GEN) sed \
+		-e "s|\@CLASSIC_EXTENSIONS\@|$(extension_list)|g" \
 		$< > $@
 
 %.session.desktop.in: %.session.desktop.in.in
@@ -31,10 +47,12 @@ EXTRA_DIST = \
 	$(desktop_in_in_files) \
 	$(session_in_in_files) \
 	$(xsession_in_files) \
+	$(mode_in_files) \
 	$(NULL)
 
 CLEANFILES = \
 	$(desktop_DATA) \
 	$(session_DATA) \
 	$(xsession_DATA) \
+	$(mode_DATA) \
 	$(NULL)

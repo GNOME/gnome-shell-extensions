@@ -30,6 +30,7 @@ dnl keep this in alphabetic order
 CLASSIC_EXTENSIONS="apps-menu places-menu default-min-max"
 DEFAULT_EXTENSIONS="$CLASSIC_EXTENSIONS alternative-status-menu drive-menu windowsNavigator workspace-indicator"
 ALL_EXTENSIONS="$DEFAULT_EXTENSIONS auto-move-windows example native-window-placement systemMonitor user-theme xrandr-indicator"
+AC_SUBST(CLASSIC_EXTENSIONS, [$CLASSIC_EXTENSIONS])
 AC_SUBST(ALL_EXTENSIONS, [$ALL_EXTENSIONS])
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable.

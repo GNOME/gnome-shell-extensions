@@ -6,6 +6,7 @@ config.log
 config.status
 aclocal.m4
 autom4te.cache/
+data/*.json
 po/gnome-shell-extensions.pot
 po/POTFILES
 po/stamp-it
