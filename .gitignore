@@ -15,5 +15,8 @@ zip-files/
 *~
 *.gmo
 metadata.json
+*.desktop
+*.desktop.in
 *.gschema.xml
 *.gschema.valid
+*.session
