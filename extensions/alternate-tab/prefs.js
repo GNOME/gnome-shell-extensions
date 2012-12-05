@@ -1,11 +1,5 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 
-/* most of the code is borrowed from
- * > js/ui/altTab.js <
- * of the gnome-shell source code
- */
-
-const Gdk = imports.gi.Gdk;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
 const GObject = imports.gi.GObject;
@@ -23,9 +17,9 @@ const SETTINGS_APP_ICON_MODE = 'app-icon-mode';
 const SETTINGS_CURRENT_WORKSPACE_ONLY = 'current-workspace-only';
 
 const MODES = {
-    thumbnail_only: N_("Thumbnail only"),
-    app_icon_only: N_("Application icon only"),
-    both: N_("Thumbnail and application icon"),
+    'thumbnail-only': N_("Thumbnail only"),
+    'app-icon-only': N_("Application icon only"),
+    'both': N_("Thumbnail and application icon"),
 };
 
 const AltTabSettingsWidget = new GObject.Class({
@@ -38,7 +32,7 @@ const AltTabSettingsWidget = new GObject.Class({
         this.margin = 10;
 	this.orientation = Gtk.Orientation.VERTICAL;
 
-        this._settings = Convenience.getSettings();
+        this._settings = new Gio.Settings({ schema: 'org.gnome.shell.window-switcher' });
 
         let presentLabel = _("Present windows as");
         this.add(new Gtk.Label({ label: presentLabel, sensitive: true,
