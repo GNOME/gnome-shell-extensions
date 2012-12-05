@@ -1,0 +1,11 @@
+{
+"extension-id": "@extension_id@",
+"uuid": "@uuid@",
+"settings-schema": "@gschemaname@",
+"gettext-domain": "@gettext_domain@",
+"name": "Static workspaces",
+"description": "Disable dynamic workspace management",
+"original-authors": [ "fmuellner@gnome.org" ],
+"shell-version": [ "@shell_current@" ],
+"url": "@url@"
+}
