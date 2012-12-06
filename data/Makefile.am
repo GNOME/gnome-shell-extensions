@@ -20,6 +20,7 @@ mode_DATA = $(mode_in_files:.json.in=.json)
 
 %.desktop.in:%.desktop.in.in
 	$(AM_V_GEN) sed \
+		-e "s|\@libexecdir\@|$(libexecdir)|" \
 		-e "s|\@bindir\@|$(bindir)|" \
 		-e "s|\@VERSION\@|$(VERSION)|" \
 		$< > $@
@@ -32,11 +33,6 @@ extension_list:=$(subst $(space),$(comma),$(extensions))
 %.json:%.json.in
 	$(AM_V_GEN) sed \
 		-e "s|\@CLASSIC_EXTENSIONS\@|$(extension_list)|g" \
-		$< > $@
-
-%.session.desktop.in: %.session.desktop.in.in
-	$(AM_V_GEN) sed \
-		-e "s|\@libexecdir\@|$(libexecdir)|" \
 		$< > $@
 
 %.session: %.session.desktop.in   $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
