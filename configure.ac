@@ -39,7 +39,7 @@ AC_ARG_ENABLE([extensions],
 	[],
 	[enable_extensions=$DEFAULT_EXTENSIONS]
 )
-AM_CONDITIONAL([CLASSIC_MODE], [test x"$enable_extensions" = xclassic-mode])
+AM_CONDITIONAL([CLASSIC_MODE], [test x"$enable_extensions" = xclassic-mode -o x"$enable_extensions" = xall])
 
 if test x"$enable_extensions" = xall; then
    enable_extensions="$ALL_EXTENSIONS"
