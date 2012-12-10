@@ -1,0 +1,11 @@
+{
+"extension-id": "@extension_id@",
+"uuid": "@uuid@",
+"settings-schema": "@gschemaname@",
+"gettext-domain": "@gettext_domain@",
+"name": "AlternateTab",
+"description": "A replacement for Alt-Tab, allows to cycle between windows and does not group by application",
+"original-authors": [  "jw@bargsten.org", "thomas.bouffon@gmail.com" ],
+"shell-version": [ "@shell_current@" ],
+"url": "@url@"
+}
