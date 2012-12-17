@@ -1,18 +1,18 @@
 # Russian translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Yuri Myasoedov <omerta13@yandex.ru>, 2011, 2012.
 # Stas Solovey <whats_up@tut.by>, 2011, 2012.
+# Yuri Myasoedov <omerta13@yandex.ru>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-11-16 19:30+0000\n"
-"PO-Revision-Date: 2012-11-16 18:29+0300\n"
-"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
-"Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"POT-Creation-Date: 2012-12-11 16:59+0000\n"
+"PO-Revision-Date: 2012-12-17 09:16+0400\n"
+"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
+"Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,38 +21,41 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "X-Generator: Gtranslator 2.91.5\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "Режим значков приложения."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "Традиционный GNOME"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
-msgstr ""
-"Устанавливает способ отображения окна при переключении. Возможные значения: "
-"«thumbnail-only» (показывать миниатюру окна), «app-icon-only» (показывать "
-"только значок приложения), или «both» (показывать миниатюру окна и значок "
-"приложения)."
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Этот сеанс использует традиционный GNOME"
 
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "Традиционный GNOME Shell"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+#| msgid "Thumbnail and application icon"
+msgid "Window management and application launching"
+msgstr "Управление окнами и запуск приложений"
+
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Только миниатюры"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Только значок приложения"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Миниатюра и значок приложения"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Отображать окна как"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Отображать окна только текущей рабочей области"
 
@@ -280,6 +283,19 @@ msgstr "Экран"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "Параметры экрана"
+
+#~ msgid "The application icon mode."
+#~ msgstr "Режим значков приложения."
+
+#~ msgid ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
+#~ msgstr ""
+#~ "Устанавливает способ отображения окна при переключении. Возможные "
+#~ "значения: «thumbnail-only» (показывать миниатюру окна), «app-icon-"
+#~ "only» (показывать только значок приложения), или «both» (показывать "
+#~ "миниатюру окна и значок приложения)."
 
 #~ msgid "Drag here to add favorites"
 #~ msgstr "Перетащите, чтобы добавить в избранное"
