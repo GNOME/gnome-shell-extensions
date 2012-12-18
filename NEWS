@@ -1,3 +1,14 @@
+3.7.3
+=====
+* new extensions: default-min-max, static-workspaces
+* alternate-tab now uses the built-in window switcher and just
+  takes over the switch-application keybinding
+* workspace-indicator: is no longer part of classic-mode
+* we now install classic-mode data files for gdm, gnome-session
+  and gnome-shell, so if you enable classic-mode you get a new
+  session option in GDM
+* updated translations (ar, es, pl, ru, sl, zh_HK, zh_TW)
+
 3.7.2
 =====
 * fixed crashes with places-menu, windowsNavigator, alternate-tab
