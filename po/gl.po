@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-12 01:15+0200\n"
-"PO-Revision-Date: 2012-10-12 01:16+0200\n"
+"POT-Creation-Date: 2012-12-27 00:51+0100\n"
+"PO-Revision-Date: 2012-12-27 00:52+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -19,50 +19,53 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "O modo da icona do aplicativo."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME clasico"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
-msgstr ""
-"Configura como se mostran as xanelas no intercambiador. As opcións posíbeis "
-"son «thumbnail-only» (mostra unha miniatura da xanela, «app-icon-only» (só "
-"mostra a icona do aplicativo) ou «both» (móstranse ambas cosas)."
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Esta sesión iniciarao en GNOME clásico"
 
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell clásico"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Xestor de xanelas e inicio de aplicativos"
+
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Só miniaturas"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Só icona do aplicativo"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Miniatura e icona do aplicativo"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Presentar xanelas como"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Mostrar só as xanelas na área de traballo actual"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:86
+#: ../extensions/alternative-status-menu/extension.js:144
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../extensions/alternative-status-menu/extension.js:91
+#: ../extensions/alternative-status-menu/extension.js:147
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:96
+#: ../extensions/alternative-status-menu/extension.js:150
 msgid "Power Off"
 msgstr "Apagar"
 
@@ -115,82 +118,6 @@ msgstr "Crear regra de coincidencia nova"
 msgid "Add"
 msgstr "Engadir"
 
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "Arrastre aquí para engadir aos favoritos"
-
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "Nova xanela"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "Saír do aplicativo"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "Eliminar dos favoritos"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "Engadir aos favoritos"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Posición da doca"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Estabelece a posición da doca na pantalla. Os valores permitidos son «right» "
-"e «left»"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Tamaño da icona"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Estabelece o tamaño das iconas na doca."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Activar/desactivar autoagochado"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Efecto de autoagochado"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Estabelece o efecto de agochado da doca. Os valores permitidos son "
-"«resize» (redimensionar( e «rescale» (re-escalar) e «move» (mover)"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Duración do autoagochado"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Estabelece a duración do efecto de autoagochado."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Pantalla"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"Estabelece a pantalla na que mostrar o taboleiro. O valor predeterminado es "
-"(-1), que é a pantalla principal."
-
 #: ../extensions/drive-menu/extension.js:72
 #, c-format
 msgid "Ejecting drive '%s' failed:"
@@ -234,26 +161,6 @@ msgstr ""
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "Mensaxe:"
-
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "%s está ausente."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "%s está desconectado."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "%s está conectado."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "%s está ocupado."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -308,11 +215,11 @@ msgstr "Produciuse un fallo ao iniciar «%s»"
 msgid "Home"
 msgstr "Cartafol persoal"
 
-#: ../extensions/places-menu/placeDisplay.js:184
+#: ../extensions/places-menu/placeDisplay.js:195
 msgid "File System"
 msgstr "Sistema de ficheiros"
 
-#: ../extensions/places-menu/placeDisplay.js:188
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Browse network"
 msgstr "Explorar a rede"
 
@@ -372,6 +279,90 @@ msgstr "Pantalla"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "Preferencias da pantalla"
+
+#~ msgid "The application icon mode."
+#~ msgstr "O modo da icona do aplicativo."
+
+#~ msgid ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
+#~ msgstr ""
+#~ "Configura como se mostran as xanelas no intercambiador. As opcións "
+#~ "posíbeis son «thumbnail-only» (mostra unha miniatura da xanela, «app-icon-"
+#~ "only» (só mostra a icona do aplicativo) ou «both» (móstranse ambas cosas)."
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "Arrastre aquí para engadir aos favoritos"
+
+#~ msgid "New Window"
+#~ msgstr "Nova xanela"
+
+#~ msgid "Quit Application"
+#~ msgstr "Saír do aplicativo"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Eliminar dos favoritos"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Engadir aos favoritos"
+
+#~ msgid "Position of the dock"
+#~ msgstr "Posición da doca"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr ""
+#~ "Estabelece a posición da doca na pantalla. Os valores permitidos son "
+#~ "«right» e «left»"
+
+#~ msgid "Icon size"
+#~ msgstr "Tamaño da icona"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "Estabelece o tamaño das iconas na doca."
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "Activar/desactivar autoagochado"
+
+#~ msgid "Autohide effect"
+#~ msgstr "Efecto de autoagochado"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr ""
+#~ "Estabelece o efecto de agochado da doca. Os valores permitidos son "
+#~ "«resize» (redimensionar( e «rescale» (re-escalar) e «move» (mover)"
+
+#~ msgid "Autohide duration"
+#~ msgstr "Duración do autoagochado"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "Estabelece a duración do efecto de autoagochado."
+
+#~ msgid "Monitor"
+#~ msgstr "Pantalla"
+
+#~ msgid ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+#~ msgstr ""
+#~ "Estabelece a pantalla na que mostrar o taboleiro. O valor predeterminado "
+#~ "es (-1), que é a pantalla principal."
+
+#~ msgid "%s is away."
+#~ msgstr "%s está ausente."
+
+#~ msgid "%s is offline."
+#~ msgstr "%s está desconectado."
+
+#~ msgid "%s is online."
+#~ msgstr "%s está conectado."
+
+#~ msgid "%s is busy."
+#~ msgstr "%s está ocupado."
 
 #~ msgid "Removable Devices"
 #~ msgstr "Dispositivos extraíbeis"
