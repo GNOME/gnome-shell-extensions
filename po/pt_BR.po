@@ -10,11 +10,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-07 10:59-0400\n"
-"PO-Revision-Date: 2012-09-07 11:21-0400\n"
-"Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
-"Language-Team: GNOME pt_BR\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2012-11-16 19:37+0000\n"
+"PO-Revision-Date: 2012-12-31 02:39-0300\n"
+"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +26,7 @@ msgstr ""
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
 msgid "The application icon mode."
-msgstr "Ícone de modo do aplicativo"
+msgstr "O modo de ícone do aplicativo."
 
 #: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
 msgid ""
@@ -33,13 +34,13 @@ msgid ""
 "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
 "only' (shows only the application icon) or 'both'."
 msgstr ""
-"Configura como as janelas são mostradas no alternador. Possibilidades válidas são"
-" \"thumbnail-only\" (mostra uma miniatura da janela), \"app-icon-only\" (mostra"
-" somente o ícone do aplicativo) ou \"both\" (ambos)."
+"Configura como as janelas são mostradas no alternador. Possibilidades "
+"válidas são \"thumbnail-only\" (mostra uma miniatura da janela), \"app-icon-"
+"only\" (mostra somente o ícone do aplicativo) ou \"both\" (ambos)."
 
 #: ../extensions/alternate-tab/prefs.js:26
 msgid "Thumbnail only"
-msgstr "Somente miniaturas"
+msgstr "Somente miniatura"
 
 #: ../extensions/alternate-tab/prefs.js:27
 msgid "Application icon only"
@@ -58,15 +59,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Mostrar somente janelas no espaço de trabalho atual"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternative-status-menu/extension.js:86
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:91
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:78
+#: ../extensions/alternative-status-menu/extension.js:96
 msgid "Power Off"
 msgstr "Desligar"
 
@@ -113,7 +114,7 @@ msgstr "Adicionar regra"
 
 #: ../extensions/auto-move-windows/prefs.js:94
 msgid "Create new matching rule"
-msgstr "Criar nova regra coincidinte"
+msgstr "Criar uma nova regra coincidente"
 
 #: ../extensions/auto-move-windows/prefs.js:98
 msgid "Add"
@@ -121,7 +122,7 @@ msgstr "Adicionar"
 
 #: ../extensions/dock/extension.js:600
 msgid "Drag here to add favorites"
-msgstr "Arraste aqui para adicionar aos favoritos"
+msgstr "Arraste aqui para adicionar favoritos"
 
 #: ../extensions/dock/extension.js:926
 msgid "New Window"
@@ -161,7 +162,7 @@ msgstr "Define o tamanho do ícone do dock."
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
 msgid "Enable/disable autohide"
-msgstr "Habilitar/desabilitar o ocultar automaticamente"
+msgstr "Habilitar/desabilitar ocultar automaticamente"
 
 #: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
 msgid "Autohide effect"
@@ -191,16 +192,22 @@ msgstr "Monitor"
 msgid ""
 "Sets monitor to display dock in. The default value (-1) is the primary "
 "monitor."
-msgstr "Configura o monitor para mostrar encaixe. O valor padrão (-1) é o"
-" monitor primário."
+msgstr ""
+"Configura o monitor para mostrar encaixe. O valor padrão (-1) é o monitor "
+"primário."
 
-#: ../extensions/drive-menu/extension.js:56
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Falha ao ejetar a unidade \"%s\":"
+
+#: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "Dispositivos removíveis"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "Abrir gerenciador de arquivos"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "Abrir arquivo"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -307,13 +314,13 @@ msgstr "Falha ao lançar \"%s\""
 msgid "Home"
 msgstr "Pasta pessoal"
 
-#: ../extensions/places-menu/placeDisplay.js:184
+#: ../extensions/places-menu/placeDisplay.js:188
 msgid "File System"
 msgstr "Sistema de arquivos"
 
-#: ../extensions/places-menu/placeDisplay.js:188
+#: ../extensions/places-menu/placeDisplay.js:192
 msgid "Browse network"
-msgstr "Navegar rede"
+msgstr "Navegar na rede"
 
 #: ../extensions/systemMonitor/extension.js:213
 msgid "CPU"
