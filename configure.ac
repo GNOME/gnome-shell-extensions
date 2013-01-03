@@ -39,14 +39,23 @@ AC_ARG_ENABLE([extensions],
 	[],
 	[enable_extensions=$DEFAULT_EXTENSIONS]
 )
-AM_CONDITIONAL([CLASSIC_MODE], [test x"$enable_extensions" = xclassic-mode -o x"$enable_extensions" = xall])
 
 if test x"$enable_extensions" = xall; then
    enable_extensions="$ALL_EXTENSIONS"
-fi
-if test x"$enable_extensions" = xclassic-mode; then
+   enable_classic_mode_default=yes
+elif test x"$enable_extensions" = xclassic-mode; then
    enable_extensions="$CLASSIC_EXTENSIONS"
+   enable_classic_mode_default=yes
+else
+   enable_classic_mode_default=no
 fi
+
+AC_ARG_ENABLE([classic-mode],
+        [AS_HELP_STRING([--enable-classic-mode],[Enable installing data files for classic mode.
+        Defaults to yes if enabling all or classic-mode extensions, and no otherwise.])],
+        [],
+        [enable_classic_mode=$enable_classic_mode_default])
+AM_CONDITIONAL([CLASSIC_MODE], [test x"$enable_classic_mode" != xno])
 
 ENABLED_EXTENSIONS=
 for e in $enable_extensions; do
