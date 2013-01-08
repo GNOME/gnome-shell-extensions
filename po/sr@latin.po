@@ -2,14 +2,14 @@
 # Copyright (C) 2012 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Miloš Popović <gpopac@gmail.com>, 2012.
-# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-11-07 16:43+0000\n"
-"PO-Revision-Date: 2012-11-09 11:53+0200\n"
+"POT-Creation-Date: 2013-01-03 00:24+0000\n"
+"PO-Revision-Date: 2013-01-08 20:14+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -20,37 +20,41 @@ msgstr ""
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "Režim ikonice programa."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "Klasičan Gnom"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
-msgstr ""
-"Podešava način prikazivanja prozora u prebacivaču. Ispravne mogućnosti su "
-"„thumbnail-only“ (prikazuje sličicu prozora), „app-icon-only“ (prikazuje "
-"samo ikonicu programa) ili „both“ (oba)."
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Ova sesija vas prijavljuje u klasičan Gnom"
 
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "Klasična Gnomova školjka"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+#| msgid "Thumbnail and application icon"
+msgid "Window management and application launching"
+msgstr "Upravljanje prozorima i pokretanje programa"
+
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Samo sličice"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Samo ikonica programa"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Sličica i ikonica programa"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Prikaži prozore kao"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Prikazuje samo prozore u tekućem radnom prostoru"
 
@@ -126,7 +130,6 @@ msgid "Removable devices"
 msgstr "Uklonjivi uređaji"
 
 #: ../extensions/drive-menu/extension.js:106
-#| msgid "Open file manager"
 msgid "Open File"
 msgstr "Otvori datoteku"
 
@@ -214,11 +217,11 @@ msgstr "Nisam uspeo da pokrenem „%s“"
 msgid "Home"
 msgstr "Lično"
 
-#: ../extensions/places-menu/placeDisplay.js:191
+#: ../extensions/places-menu/placeDisplay.js:195
 msgid "File System"
 msgstr "Sistem datoteka"
 
-#: ../extensions/places-menu/placeDisplay.js:195
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Browse network"
 msgstr "Razgledajte mrežu"
 
@@ -278,6 +281,18 @@ msgstr "Ekran"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "Podešavanja ekrana"
+
+#~ msgid "The application icon mode."
+#~ msgstr "Režim ikonice programa."
+
+#~ msgid ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
+#~ msgstr ""
+#~ "Podešava način prikazivanja prozora u prebacivaču. Ispravne mogućnosti su "
+#~ "„thumbnail-only“ (prikazuje sličicu prozora), „app-icon-only“ (prikazuje "
+#~ "samo ikonicu programa) ili „both“ (oba)."
 
 #~ msgid "Drag here to add favorites"
 #~ msgstr "Prevucite ovde da dodate među omiljene"
