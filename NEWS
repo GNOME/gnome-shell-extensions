@@ -1,3 +1,11 @@
+3.7.4
+=====
+* a separate configure switch has been added to enable
+  classic mode session definitions
+* places-menu is no longer part of the classic-mode
+  extension set
+* updated translations (ar, gl, hu, lt, pt_BR, sr)
+
 3.7.3
 =====
 * new extensions: default-min-max, static-workspaces
