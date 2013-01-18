@@ -27,8 +27,8 @@ fi
 AC_SUBST([SHELL_VERSION])
 
 dnl keep this in alphabetic order
-CLASSIC_EXTENSIONS="apps-menu alternate-tab default-min-max static-workspaces"
-DEFAULT_EXTENSIONS="$CLASSIC_EXTENSIONS alternative-status-menu drive-menu places-menu windowsNavigator workspace-indicator"
+CLASSIC_EXTENSIONS="apps-menu places-menu alternate-tab default-min-max static-workspaces"
+DEFAULT_EXTENSIONS="$CLASSIC_EXTENSIONS alternative-status-menu drive-menu windowsNavigator workspace-indicator"
 ALL_EXTENSIONS="$DEFAULT_EXTENSIONS auto-move-windows example native-window-placement systemMonitor user-theme xrandr-indicator"
 AC_SUBST(CLASSIC_EXTENSIONS, [$CLASSIC_EXTENSIONS])
 AC_SUBST(ALL_EXTENSIONS, [$ALL_EXTENSIONS])
