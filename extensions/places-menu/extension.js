@@ -24,15 +24,15 @@ const PLACE_ICON_SIZE = 16;
 
 const PlaceMenuItem = new Lang.Class({
     Name: 'PlaceMenuItem',
-    Extends: PopupMenu.PopupMenuItem,
+    Extends: PopupMenu.PopupBaseMenuItem,
 
     _init: function(info) {
-	this.parent(info.name);
+	this.parent();
 	this._info = info;
 
 	this.addActor(new St.Icon({ gicon: info.icon,
-				    icon_size: PLACE_ICON_SIZE }),
-		     { align: St.Align.END, span: -1 });
+				    icon_size: PLACE_ICON_SIZE }));
+        this.addActor(new St.Label({ text: info.name }));
     },
 
     activate: function(event) {
@@ -42,33 +42,36 @@ const PlaceMenuItem = new Lang.Class({
     },
 });
 
-const SECTIONS = {
-    'special': N_("Places"),
-    'devices': N_("Devices"),
-    'bookmarks': N_("Bookmarks"),
-    'network': N_("Network")
-}
+const SECTIONS = [
+    'special',
+    'devices',
+    'bookmarks',
+    'network'
+]
 
 const PlacesMenu = new Lang.Class({
     Name: 'PlacesMenu.PlacesMenu',
-    Extends: PanelMenu.SystemStatusButton,
+    Extends: PanelMenu.Button,
 
     _init: function() {
-        this.parent('folder-symbolic');
+        let label = new St.Label({ text: _("Places") });
+        this.parent(0.0, label.text);
+        this.actor.add_actor(label);
+
         this.placesManager = new PlaceDisplay.PlacesManager();
 
 	this._sections = { };
 
-	for (let foo in SECTIONS) {
-	    let id = foo; // stupid JS closure semantics...
-	    this._sections[id] = { section: new PopupMenu.PopupMenuSection(),
-				   title: Gettext.gettext(SECTIONS[id]) };
+	for (let i=0; i < SECTIONS.length; i++) {
+	    let id = SECTIONS[i];
+	    this._sections[id] = new PopupMenu.PopupMenuSection();
 	    this.placesManager.connect(id + '-updated', Lang.bind(this, function() {
 		this._redisplay(id);
 	    }));
 
 	    this._create(id);
-	    this.menu.addMenuItem(this._sections[id].section);
+	    this.menu.addMenuItem(this._sections[id]);
+	    this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 	}
     },
 
@@ -79,22 +82,17 @@ const PlacesMenu = new Lang.Class({
     },
 
     _redisplay: function(id) {
-	this._sections[id].section.removeAll();
+	this._sections[id].removeAll();
         this._create(id);
     },
 
     _create: function(id) {
-	let title = new PopupMenu.PopupMenuItem(this._sections[id].title,
-						{ reactive: false,
-                                                  style_class: 'popup-subtitle-menu-item' });
-	this._sections[id].section.addMenuItem(title);
-
         let places = this.placesManager.get(id);
 
         for (let i = 0; i < places.length; i++)
-            this._sections[id].section.addMenuItem(new PlaceMenuItem(places[i]));
+            this._sections[id].addMenuItem(new PlaceMenuItem(places[i]));
 
-	this._sections[id].section.actor.visible = places.length > 0;
+	this._sections[id].actor.visible = places.length > 0;
     }
 });
 
