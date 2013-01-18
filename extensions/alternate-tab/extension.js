@@ -3,6 +3,7 @@
 const Clutter = imports.gi.Clutter;
 const Lang = imports.lang;
 const Meta = imports.gi.Meta;
+const Shell = imports.gi.Shell;
 
 const AltTab = imports.ui.altTab;
 const Main = imports.ui.main;
@@ -13,7 +14,7 @@ function init(metadata) {
 }
 
 function setKeybinding(name, func) {
-    Main.wm.setCustomKeybindingHandler(name, Main.KeybindingMode.NORMAL, func);
+    Main.wm.setCustomKeybindingHandler(name, Shell.KeyBindingMode.NORMAL, func);
 }
 
 function enable() {
