@@ -1,4 +1,9 @@
 {
     "parentMode": "user",
-    "enabledExtensions": [@CLASSIC_EXTENSIONS@]
+    "enabledExtensions": [@CLASSIC_EXTENSIONS@],
+    "panel": { "left": ["activities", "appMenu"],
+               "center": [],
+               "right": ["a11y", "keyboard", "volume", "bluetooth",
+                         "network", "battery", "dateMenu", "userMenu"]
+             }
 }
