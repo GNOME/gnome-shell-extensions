@@ -1,68 +1,72 @@
 # Czech translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-#
-# Marek Černocký <marek@manet.cz>, 2011, 2012.
+# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-10-08 17:42+0000\n"
-"PO-Revision-Date: 2012-10-08 22:39+0200\n"
+"POT-Creation-Date: 2013-01-18 23:09+0000\n"
+"PO-Revision-Date: 2013-01-22 09:35+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
-"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "Režim ikony aplikace."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME klasik"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
-msgstr ""
-"Nastavuje, jak jsou okna zobrazována v přepínači. Platné možnosti jsou "
-"„thumbnail-only“ (zobrazuje náhled okna), „app-icon-only“ (zobrazuje pouze "
-"ikonu aplikace) nebo „both“ (zobrazuje obojí)."
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Toto sezení vás přihlásí do GNOME klasik"
 
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell klasik"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+#| msgid "Thumbnail and application icon"
+msgid "Window management and application launching"
+msgstr "Správa oken a spouštění aplikací"
+
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Pouze náhled"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Pouze ikona aplikace"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Náhled a ikona aplikace"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Představovat okna jako"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Zobrazovat pouze okna z aktuální pracovní plochy"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:86
+#: ../extensions/alternative-status-menu/extension.js:144
 msgid "Suspend"
 msgstr "Uspat do paměti"
 
-#: ../extensions/alternative-status-menu/extension.js:91
+#: ../extensions/alternative-status-menu/extension.js:147
 msgid "Hibernate"
 msgstr "Uspat na disk"
 
-#: ../extensions/alternative-status-menu/extension.js:96
+#: ../extensions/alternative-status-menu/extension.js:150
 msgid "Power Off"
 msgstr "Vypnout"
 
@@ -115,82 +119,6 @@ msgstr "Vytvoření nového srovnávacího pravidla"
 msgid "Add"
 msgstr "Přidat"
 
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "Přetažením sem přidáte do oblíbených"
-
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "Nové okno"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "Ukončit aplikaci"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "Odebrat z oblíbených"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "Přidat do oblíbených"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Poloha doku"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Nastavuje polohu doku na obrazovce. Povolené hodnoty jsou „right“ (vpravo) "
-"nebo „left“ (vlevo)."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Velikost ikony"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Nastavuje velikost ikon v doku."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Zapnout/vypnout automatické skrývání"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Efekt automatického skrývání"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Nastavuje efekt skrývání doku. Povolené hodnoty jsou „resize“ (změna "
-"velikosti), „rescale“ (změna měřítka) a „move“ (přesun)."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Čas automatického skrývání"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Nastavuje čas trvání efektu automatického skrývání."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Monitor"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"Nastavuje monitor, na kterém se má zobrazovat dok. Výchozí hodnotou (-1) je "
-"hlavní monitor."
-
 #: ../extensions/drive-menu/extension.js:72
 #, c-format
 msgid "Ejecting drive '%s' failed:"
@@ -235,26 +163,6 @@ msgstr ""
 msgid "Message:"
 msgstr "Zpráva:"
 
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "%s je pryč."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "%s je odpojen."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "%s je připojen."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "%s je zaneprázdněn."
-
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
 msgstr "Použít větší část obrazovky pro okna"
@@ -283,21 +191,9 @@ msgstr ""
 "přepíše výchozí chování shellu, který jej umisťuje dolů. Změna tohoto "
 "nastavení vyžaduje restart shellu, aby se projevila."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:57
 msgid "Places"
 msgstr "Místa"
-
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Zařízení"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Záložky"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Síť"
 
 #: ../extensions/places-menu/placeDisplay.js:48
 #, c-format
@@ -308,11 +204,11 @@ msgstr "Selhalo spuštění „%s“"
 msgid "Home"
 msgstr "Domů"
 
-#: ../extensions/places-menu/placeDisplay.js:184
+#: ../extensions/places-menu/placeDisplay.js:195
 msgid "File System"
 msgstr "Systém souborů"
 
-#: ../extensions/places-menu/placeDisplay.js:188
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Browse network"
 msgstr "Procházet síť"
 
@@ -372,3 +268,96 @@ msgstr "Obrazovka"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "Nastavení obrazovky"
+
+#~ msgid "The application icon mode."
+#~ msgstr "Režim ikony aplikace."
+
+#~ msgid ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
+#~ msgstr ""
+#~ "Nastavuje, jak jsou okna zobrazována v přepínači. Platné možnosti jsou "
+#~ "„thumbnail-only“ (zobrazuje náhled okna), „app-icon-only“ (zobrazuje "
+#~ "pouze ikonu aplikace) nebo „both“ (zobrazuje obojí)."
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "Přetažením sem přidáte do oblíbených"
+
+#~ msgid "New Window"
+#~ msgstr "Nové okno"
+
+#~ msgid "Quit Application"
+#~ msgstr "Ukončit aplikaci"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Odebrat z oblíbených"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Přidat do oblíbených"
+
+#~ msgid "Position of the dock"
+#~ msgstr "Poloha doku"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr ""
+#~ "Nastavuje polohu doku na obrazovce. Povolené hodnoty jsou "
+#~ "„right“ (vpravo) nebo „left“ (vlevo)."
+
+#~ msgid "Icon size"
+#~ msgstr "Velikost ikony"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "Nastavuje velikost ikon v doku."
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "Zapnout/vypnout automatické skrývání"
+
+#~ msgid "Autohide effect"
+#~ msgstr "Efekt automatického skrývání"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr ""
+#~ "Nastavuje efekt skrývání doku. Povolené hodnoty jsou „resize“ (změna "
+#~ "velikosti), „rescale“ (změna měřítka) a „move“ (přesun)."
+
+#~ msgid "Autohide duration"
+#~ msgstr "Čas automatického skrývání"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "Nastavuje čas trvání efektu automatického skrývání."
+
+#~ msgid "Monitor"
+#~ msgstr "Monitor"
+
+#~ msgid ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+#~ msgstr ""
+#~ "Nastavuje monitor, na kterém se má zobrazovat dok. Výchozí hodnotou (-1) "
+#~ "je hlavní monitor."
+
+#~ msgid "%s is away."
+#~ msgstr "%s je pryč."
+
+#~ msgid "%s is offline."
+#~ msgstr "%s je odpojen."
+
+#~ msgid "%s is online."
+#~ msgstr "%s je připojen."
+
+#~ msgid "%s is busy."
+#~ msgstr "%s je zaneprázdněn."
+
+#~ msgid "Devices"
+#~ msgstr "Zařízení"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Záložky"
+
+#~ msgid "Network"
+#~ msgstr "Síť"
