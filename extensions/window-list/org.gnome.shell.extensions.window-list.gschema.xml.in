@@ -1,0 +1,18 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+  <enum id="org.gnome.shell.extensions.window-list.GroupingMode">
+    <value value="0" nick="never"/>
+    <value value="1" nick="always"/>
+  </enum>
+  <schema id="org.gnome.shell.extensions.window-list"
+          path="/org/gnome/shell/extensions/window-list/">
+    <key name="grouping-mode"
+         enum="org.gnome.shell.extensions.window-list.GroupingMode">
+      <default>'never'</default>
+      <_summary>When to group windows</_summary>
+      <_description>
+        Decides when to group windows from the same application on the
+        window list. Possible values are "never" and "always".
+      </_description>
+    </key>
+  </schema>
+</schemalist>
