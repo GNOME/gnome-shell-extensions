@@ -19,30 +19,66 @@ function _minimizeOrActivateWindow(window) {
 }
 
 
+const WindowTitle = new Lang.Class({
+    Name: 'WindowTitle',
+
+    _init: function(metaWindow) {
+        this._metaWindow = metaWindow;
+        this.actor = new St.BoxLayout();
+
+        let textureCache = St.TextureCache.get_default();
+        let icon = textureCache.bind_pixbuf_property(this._metaWindow, "icon");
+        this._icon = new St.Bin({ style_class: 'window-button-icon',
+                                  child: icon });
+        this.actor.add(this._icon);
+        this._label = new St.Label();
+        this.actor.add(this._label);
+
+        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
+
+        this._notifyTitleId =
+            this._metaWindow.connect('notify::title',
+                                    Lang.bind(this, this._updateTitle));
+        this._notifyMinimizedId =
+            this._metaWindow.connect('notify::minimized',
+                                    Lang.bind(this, this._minimizedChanged));
+        this._minimizedChanged();
+    },
+
+    _minimizedChanged: function() {
+        this._icon.opacity = this._metaWindow.minimized ? 128 : 255;
+        this._updateTitle();
+    },
+
+    _updateTitle: function() {
+        if (this._metaWindow.minimized)
+            this._label.text = '[%s]'.format(this._metaWindow.title);
+        else
+            this._label.text = this._metaWindow.title;
+    },
+
+    _onDestroy: function() {
+        this._metaWindow.disconnect(this._notifyTitleId);
+        this._metaWindow.disconnect(this._notifyMinimizedId);
+    }
+});
+
+
 const WindowButton = new Lang.Class({
     Name: 'WindowButton',
 
     _init: function(metaWindow) {
         this.metaWindow = metaWindow;
 
-        let box = new St.BoxLayout();
+        this._windowTitle = new WindowTitle(this.metaWindow);
         this.actor = new St.Button({ style_class: 'window-button',
                                      x_fill: true,
                                      can_focus: true,
-                                     child: box });
+                                     child: this._windowTitle.actor });
         this.actor._delegate = this;
 
         this.actor.connect('allocation-changed',
                            Lang.bind(this, this._updateIconGeometry));
-
-        let textureCache = St.TextureCache.get_default();
-        let icon = textureCache.bind_pixbuf_property(this.metaWindow, "icon");
-        this._icon = new St.Bin({ style_class: 'window-button-icon',
-                                  child: icon });
-        box.add(this._icon);
-        this._label = new St.Label();
-        box.add(this._label);
-
         this.actor.connect('clicked', Lang.bind(this, this._onClicked));
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
 
@@ -51,33 +87,14 @@ const WindowButton = new Lang.Class({
                                           Lang.bind(this, this._updateVisibility));
         this._updateVisibility();
 
-        this._notifyTitleId =
-            this.metaWindow.connect('notify::title',
-                                    Lang.bind(this, this._updateTitle));
-        this._notifyMinimizedId =
-            this.metaWindow.connect('notify::minimized',
-                                    Lang.bind(this, this._minimizedChanged));
         this._notifyFocusId =
             global.display.connect('notify::focus-window',
                                    Lang.bind(this, this._updateStyle));
-        this._minimizedChanged();
+        this._updateStyle();
     },
 
     _onClicked: function() {
         _minimizeOrActivateWindow(this.metaWindow);
-    },
-
-    _minimizedChanged: function() {
-        this._icon.opacity = this.metaWindow.minimized ? 128 : 255;
-        this._updateTitle();
-        this._updateStyle();
-    },
-
-    _updateTitle: function() {
-        if (this.metaWindow.minimized)
-            this._label.text = '[%s]'.format(this.metaWindow.title);
-        else
-            this._label.text = this.metaWindow.title;
     },
 
     _updateStyle: function() {
@@ -108,8 +125,6 @@ const WindowButton = new Lang.Class({
 
     _onDestroy: function() {
         global.window_manager.disconnect(this._switchWorkspaceId);
-        this.metaWindow.disconnect(this._notifyTitleId);
-        this.metaWindow.disconnect(this._notifyMinimizedId);
         global.display.disconnect(this._notifyFocusId);
     }
 });
