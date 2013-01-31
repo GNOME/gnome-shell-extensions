@@ -1,6 +1,7 @@
 # Czech translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
+#
 # Marek Černocký <marek@manet.cz>, 2011, 2012, 2013.
 #
 msgid ""
@@ -8,10 +9,10 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-01-18 23:09+0000\n"
-"PO-Revision-Date: 2013-01-22 09:35+0100\n"
+"POT-Creation-Date: 2013-01-30 16:54+0000\n"
+"PO-Revision-Date: 2013-01-31 20:08+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
-"Language-Team: čeština <gnome-cs-list@gnome.org>\n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +34,6 @@ msgid "GNOME Shell Classic"
 msgstr "GNOME Shell klasik"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
-#| msgid "Thumbnail and application icon"
 msgid "Window management and application launching"
 msgstr "Správa oken a spouštění aplikací"
 
@@ -85,6 +85,18 @@ msgstr "Povolit uspávání na disk"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Řídí viditelnost položky „Uspat na disk“ v nabídce"
+
+#: ../extensions/apps-menu/extension.js:50
+msgid "Activities Overview"
+msgstr "Přehled činností"
+
+#: ../extensions/apps-menu/extension.js:103
+msgid "Favorites"
+msgstr "Oblíbené"
+
+#: ../extensions/apps-menu/extension.js:197
+msgid "Applications"
+msgstr "Aplikace"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -268,96 +280,3 @@ msgstr "Obrazovka"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "Nastavení obrazovky"
-
-#~ msgid "The application icon mode."
-#~ msgstr "Režim ikony aplikace."
-
-#~ msgid ""
-#~ "Configures how the windows are shown in the switcher. Valid possibilities "
-#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-#~ "only' (shows only the application icon) or 'both'."
-#~ msgstr ""
-#~ "Nastavuje, jak jsou okna zobrazována v přepínači. Platné možnosti jsou "
-#~ "„thumbnail-only“ (zobrazuje náhled okna), „app-icon-only“ (zobrazuje "
-#~ "pouze ikonu aplikace) nebo „both“ (zobrazuje obojí)."
-
-#~ msgid "Drag here to add favorites"
-#~ msgstr "Přetažením sem přidáte do oblíbených"
-
-#~ msgid "New Window"
-#~ msgstr "Nové okno"
-
-#~ msgid "Quit Application"
-#~ msgstr "Ukončit aplikaci"
-
-#~ msgid "Remove from Favorites"
-#~ msgstr "Odebrat z oblíbených"
-
-#~ msgid "Add to Favorites"
-#~ msgstr "Přidat do oblíbených"
-
-#~ msgid "Position of the dock"
-#~ msgstr "Poloha doku"
-
-#~ msgid ""
-#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
-#~ "or 'left'"
-#~ msgstr ""
-#~ "Nastavuje polohu doku na obrazovce. Povolené hodnoty jsou "
-#~ "„right“ (vpravo) nebo „left“ (vlevo)."
-
-#~ msgid "Icon size"
-#~ msgstr "Velikost ikony"
-
-#~ msgid "Sets icon size of the dock."
-#~ msgstr "Nastavuje velikost ikon v doku."
-
-#~ msgid "Enable/disable autohide"
-#~ msgstr "Zapnout/vypnout automatické skrývání"
-
-#~ msgid "Autohide effect"
-#~ msgstr "Efekt automatického skrývání"
-
-#~ msgid ""
-#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
-#~ "and 'move'"
-#~ msgstr ""
-#~ "Nastavuje efekt skrývání doku. Povolené hodnoty jsou „resize“ (změna "
-#~ "velikosti), „rescale“ (změna měřítka) a „move“ (přesun)."
-
-#~ msgid "Autohide duration"
-#~ msgstr "Čas automatického skrývání"
-
-#~ msgid "Sets the time duration of the autohide effect."
-#~ msgstr "Nastavuje čas trvání efektu automatického skrývání."
-
-#~ msgid "Monitor"
-#~ msgstr "Monitor"
-
-#~ msgid ""
-#~ "Sets monitor to display dock in. The default value (-1) is the primary "
-#~ "monitor."
-#~ msgstr ""
-#~ "Nastavuje monitor, na kterém se má zobrazovat dok. Výchozí hodnotou (-1) "
-#~ "je hlavní monitor."
-
-#~ msgid "%s is away."
-#~ msgstr "%s je pryč."
-
-#~ msgid "%s is offline."
-#~ msgstr "%s je odpojen."
-
-#~ msgid "%s is online."
-#~ msgstr "%s je připojen."
-
-#~ msgid "%s is busy."
-#~ msgstr "%s je zaneprázdněn."
-
-#~ msgid "Devices"
-#~ msgstr "Zařízení"
-
-#~ msgid "Bookmarks"
-#~ msgstr "Záložky"
-
-#~ msgid "Network"
-#~ msgstr "Síť"
