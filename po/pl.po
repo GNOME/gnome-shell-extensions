@@ -4,14 +4,14 @@
 # pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Piotr Drąg <piotrdrag@gmail.com>, 2011-2012.
-# Aviary.pl <gnomepl@aviary.pl>, 2011-2012.
+# Piotr Drąg <piotrdrag@gmail.com>, 2011-2013.
+# Aviary.pl <gnomepl@aviary.pl>, 2011-2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-06 22:34+0100\n"
-"PO-Revision-Date: 2012-12-06 22:35+0100\n"
+"POT-Creation-Date: 2013-01-31 18:04+0100\n"
+"PO-Revision-Date: 2013-01-31 18:05+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -40,37 +40,23 @@ msgstr "Klasyczna powłoka GNOME"
 msgid "Window management and application launching"
 msgstr "Zarządzanie oknami i uruchamianie programów"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "Tryb ikon programów."
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
-msgstr ""
-"Konfiguruje, jak wyświetlać okna w przełączniku. Prawidłowe możliwości to "
-"\"thumbnail-only\" (wyświetla miniaturę okna), \"app-icon-only\" (wyświetla "
-"tylko ikonę programu) lub \"both\" (wyświetla oba)."
-
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Tylko miniatury"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Tylko ikony programów"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Miniatura i ikona programu"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Wyświetlanie okien jako"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Wyświetlanie tylko okien w bieżącym obszarze roboczym"
 
@@ -102,6 +88,18 @@ msgstr "Włączenie hibernacji"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Kontrola widoczności pozycji \"Hibernuj\" menu"
+
+#: ../extensions/apps-menu/extension.js:50
+msgid "Activities Overview"
+msgstr "Ekran podglądu"
+
+#: ../extensions/apps-menu/extension.js:103
+msgid "Favorites"
+msgstr "Ulubione"
+
+#: ../extensions/apps-menu/extension.js:197
+msgid "Applications"
+msgstr "Programy"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -209,21 +207,9 @@ msgstr ""
 "powłokę. Zmiana tego ustawienia wymaga ponownego uruchomienia powłoki, aby "
 "uwzględnić zmiany."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:57
 msgid "Places"
 msgstr "Miejsca"
-
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Urządzenia"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Zakładki"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Sieć"
 
 #: ../extensions/places-menu/placeDisplay.js:48
 #, c-format
