@@ -318,21 +318,18 @@ const ApplicationsButton = new Lang.Class({
                 if (!entry.get_app_info().get_nodisplay()) {
                     let app = appSys.lookup_app_by_tree_entry(entry);
                     let menu_id = dir.get_menu_id();
-                    if (!this.applicationsByCategory[menu_id])
-                        this.applicationsByCategory[menu_id] = new Array();
                     this.applicationsByCategory[menu_id].push(app);
                 }
             } else if (nextType == GMenu.TreeItemType.DIRECTORY) {
                 let subdir = iter.get_directory();
-                if (subdir.get_is_nodisplay())
-                    continue;
-
-                let menu_id = subdir.get_menu_id();
-                this.applicationsByCategory[menu_id] = new Array();
-                this._loadCategory(subdir);
-                if (this.applicationsByCategory[menu_id].length > 0) {
-                   let categoryMenuItem = new CategoryMenuItem(this, subdir);
-                   this.categoriesBox.add_actor(categoryMenuItem.actor);
+                if (!subdir.get_is_nodisplay()) {
+                    let menu_id = subdir.get_menu_id();
+                    this.applicationsByCategory[menu_id] = new Array();
+                    this._loadCategory(subdir);
+                    if (this.applicationsByCategory[menu_id].length > 0) {
+                        let categoryMenuItem = new CategoryMenuItem(this, subdir);
+                        this.categoriesBox.add_actor(categoryMenuItem.actor);
+                    }
                 }
             }
         }
@@ -431,15 +428,14 @@ const ApplicationsButton = new Lang.Class({
         while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
             if (nextType == GMenu.TreeItemType.DIRECTORY) {
                 let dir = iter.get_directory();
-                if (dir.get_is_nodisplay())
-                    continue;
-
-                let menu_id = dir.get_menu_id();
-                this.applicationsByCategory[menu_id] = new Array();
-                this._loadCategory(dir);
-                if (this.applicationsByCategory[menu_id].length > 0) {
-                   let categoryMenuItem = new CategoryMenuItem(this, dir);
-                   this.categoriesBox.add_actor(categoryMenuItem.actor);
+                if (!dir.get_is_nodisplay()) {
+                    let menu_id = dir.get_menu_id();
+                    this.applicationsByCategory[menu_id] = new Array();
+                    this._loadCategory(dir);
+                    if (this.applicationsByCategory[menu_id].length > 0) {
+                        let categoryMenuItem = new CategoryMenuItem(this, dir);
+                        this.categoriesBox.add_actor(categoryMenuItem.actor);
+                    }
                 }
             }
         }
