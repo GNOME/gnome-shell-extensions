@@ -25,7 +25,9 @@ const Convenience = Me.imports.convenience;
 const appSys = Shell.AppSystem.get_default();
 
 const APPLICATION_ICON_SIZE = 32;
+const HORIZ_FACTOR = 5;
 const MENU_HEIGHT_OFFSET = 132;
+const NAVIGATION_REGION_OVERSHOOT = 50;
 
 const ActivitiesMenuItem = new Lang.Class({
     Name: 'ActivitiesMenuItem',
@@ -88,6 +90,9 @@ const CategoryMenuItem = new Lang.Class({
 	this._category = category;
         this._button = button;
 
+        this._oldX = -1;
+        this._oldY = -1;
+
         let name;
         if (this._category)
             name = this._category.get_name();
@@ -95,12 +100,88 @@ const CategoryMenuItem = new Lang.Class({
             name = _("Favorites");
 
         this.addActor(new St.Label({ text: name }));
+        this.actor.connect('motion-event', Lang.bind(this, this._onMotionEvent));
     },
 
     activate: function(event) {
         this._button.selectCategory(this._category, this);
         this._button.scrollToCatButton(this);
 	this.parent(event);
+    },
+
+    _isNavigatingSubmenu: function([x, y]) {
+        let [posX, posY] = this.actor.get_transformed_position();
+
+        if (this._oldX == -1) {
+            this._oldX = x;
+            this._oldY = y;
+            return true;
+        }
+
+        let deltaX = Math.abs(x - this._oldX);
+        let deltaY = Math.abs(y - this._oldY);
+
+        this._oldX = x;
+        this._oldY = y;
+
+        // If it lies outside the x-coordinates then it is definitely outside.
+        if (posX > x || posX + this.actor.width < x)
+            return false;
+
+        // If it lies inside the menu item then it is definitely inside.
+        if (posY <= y && posY + this.actor.height >= y)
+            return true;
+
+        // We want the keep-up triangle only if the movement is more
+        // horizontal than vertical.
+        if (deltaX * HORIZ_FACTOR < deltaY)
+            return false;
+
+        // Check whether the point lies inside triangle ABC, and a similar
+        // triangle on the other side of the menu item.
+        //
+        //   +---------------------+
+        //   | menu item           |
+        // A +---------------------+ C
+        //              P          |
+        //                         B
+
+        // Ensure that the point P always lies below line AC so that we can
+        // only check for triangle ABC.
+        if (posY > y) {
+            let offset = posY - y;
+            y = posY + this.actor.height + offset;
+        }
+
+        // Ensure that A is (0, 0).
+        x -= posX;
+        y -= posY + this.actor.height;
+
+        // Check which side of line AB the point P lies on by taking the
+        // cross-product of AB and AP. See:
+        // http://stackoverflow.com/questions/3461453/determine-which-side-of-a-line-a-point-lies
+        if (((this.actor.width * y) - (NAVIGATION_REGION_OVERSHOOT * x)) <= 0)
+             return true;
+
+        return false;
+    },
+
+    _onMotionEvent: function(actor, event) {
+        if (!Clutter.get_pointer_grab()) {
+            this._oldX = -1;
+            this._oldY = -1;
+            Clutter.grab_pointer(this.actor);
+        }
+        this.actor.hover = true;
+
+        if (this._isNavigatingSubmenu(event.get_coords()))
+            return true;
+
+        this._oldX = -1;
+        this._oldY = -1;
+        this.actor.hover = false;
+        Clutter.ungrab_pointer();
+        return false;
     },
 
     setActive: function(active, params) {
