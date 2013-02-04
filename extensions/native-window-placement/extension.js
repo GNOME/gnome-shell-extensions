@@ -145,17 +145,41 @@ function enable() {
             return win2.metaWindow.get_stable_sequence() - win1.metaWindow.get_stable_sequence();
         });
 
-        // Put a gap on the right edge of the workspace to separe it from the workspace selector
-	let ratio = this._width / this._height;
-        let x_gap = Math.max(WORKSPACE_BORDER_GAP, WINDOW_AREA_TOP_GAP * ratio);
-        let y_gap = Math.max(WORKSPACE_BORDER_GAP / ratio, WINDOW_AREA_TOP_GAP);
-        let bottom_padding = 0;
+        let node = this.actor.get_theme_node();
+        let columnSpacing = node.get_length('-horizontal-spacing');
+        let rowSpacing = node.get_length('-vertical-spacing');
+        let padding = {
+            left: node.get_padding(St.Side.LEFT),
+            top: node.get_padding(St.Side.TOP),
+            bottom: node.get_padding(St.Side.BOTTOM),
+            right: node.get_padding(St.Side.RIGHT),
+        };
 
+        let closeButtonHeight, captionHeight;
+        let leftBorder, rightBorder;
         // If the window captions are below the window, put an additional gap to account for them
-        if (!windowCaptionsOnTop && this._windowOverlays.length)
-            bottom_padding += this._windowOverlays[0].chromeHeights()[1];
+        if (!windowCaptionsOnTop && this._windowOverlays.length) {
+            // All of the overlays have the same chrome sizes,
+            // so just pick the first one.
+            let overlay = this._windowOverlays[0];
+            [closeButtonHeight, captionHeight] = overlay.chromeHeights();
+            [leftBorder, rightBorder] = overlay.chromeWidths();
+        } else {
+            [closeButtonHeight, captionHeight] = [0, 0];
+            [leftBorder, rightBorder] = [0, 0];
+        }
 
-        let area = new Rect(this._x + x_gap/2, this._y + y_gap, this._width - x_gap, this._height - y_gap - bottom_padding);
+        rowSpacing += captionHeight;
+        columnSpacing += (rightBorder + leftBorder) / 2;
+        padding.top += closeButtonHeight;
+        padding.bottom += captionHeight;
+        padding.left += leftBorder;
+        padding.right += rightBorder;
+
+        let area = new Rect(this._x + padding.left,
+                            this._y + padding.top,
+                            this._width - padding.left - padding.right,
+                            this._height - padding.top - padding.bottom);
 
         let bounds = area.copy();
 
@@ -342,14 +366,18 @@ function enable() {
             let metaWindow = clone.metaWindow;
             let mainIndex = this._lookupIndex(metaWindow);
             let overlay = this._windowOverlays[mainIndex];
+            clone.slotId = i;
 
             // Positioning a window currently being dragged must be avoided;
             // we'll just leave a blank spot in the layout for it.
             if (clone.inDrag)
                 continue;
 
+            clone.slot = [x, y, clone.actor.width * scale, clone.actor.height * scale];
+
             if (overlay && initialPositioning)
-                overlay.hide();
+                overlay.hide(initialPositioning);
+
             if (animate && isOnCurrentWorkspace) {
                 if (!metaWindow.showing_on_its_workspace()) {
                     /* Hidden windows should fade in and grow
@@ -375,7 +403,7 @@ function enable() {
             } else {
                 clone.actor.set_position(x, y);
                 clone.actor.set_scale(scale, scale);
-                this._updateWindowOverlayPositions(clone, overlay, x, y, scale, false);
+                clone.overlay.relayout(false);
                 this._showWindowOverlay(clone, overlay, isOnCurrentWorkspace);
             }
         }
