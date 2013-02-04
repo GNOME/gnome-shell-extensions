@@ -206,7 +206,9 @@ function enable() {
         parentActor.add_actor(this._text);
     });
 
-    winInjections['updatePositions'] = injectToFunction(Workspace.WindowOverlay.prototype, 'updatePositions', function(cloneX, cloneY, cloneWidth, cloneHeight) {
+    winInjections['relayout'] = injectToFunction(Workspace.WindowOverlay.prototype, 'relayout', function(animate) {
+        let [cloneX, cloneY, cloneWidth, cloneHeight] = this._windowClone.slot;
+
         let textX = cloneX - 2;
         let textY = cloneY - 2;
         this._text.set_position(Math.floor(textX) + 5, Math.floor(textY) + 5);
