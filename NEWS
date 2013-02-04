@@ -1,3 +1,18 @@
+3.7.5
+=====
+* places-menu is back in the classic extensions, with
+  a new old GNOME-2 look
+* classic mode moved the date menu to right, where we
+  all know it rightly belongs
+* apps-menu received a face-lift, with the inclusion
+  of a reduced form of AxeMenu
+* new extension in the classic set: launch-new-instance,
+  which modifies the behavior of clicking in the dash
+  and app launcher
+* alternate-tab, native-window-placement and windowsNavigator
+  updated for gnome-shell changes
+* translation updates (es, cz, pl)
+
 3.7.4
 =====
 * a separate configure switch has been added to enable
