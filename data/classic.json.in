@@ -1,5 +1,6 @@
 {
     "parentMode": "user",
+    "stylesheetName": "gnome-classic.css",
     "enabledExtensions": [@CLASSIC_EXTENSIONS@],
     "panel": { "left": ["activities", "appMenu"],
                "center": [],
