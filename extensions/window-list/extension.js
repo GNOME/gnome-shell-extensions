@@ -21,7 +21,8 @@ const DND_ACTIVATE_TIMEOUT = 500;
 
 const GroupingMode = {
     NEVER: 0,
-    ALWAYS: 1
+    AUTO: 1,
+    ALWAYS: 2
 };
 
 
@@ -400,6 +401,20 @@ const WindowList = new Lang.Class({
                 let spacing = node.get_length('spacing');
                 this._windowList.layout_manager.spacing = spacing;
             }));
+        this._windowList.connect('notify::allocation', Lang.bind(this,
+            function() {
+                if (this._groupingMode != GroupingMode.AUTO || this._grouped)
+                    return;
+
+                let allocation = this._windowList.allocation;
+                let width = allocation.x2 - allocation.x1;
+                let [, natWidth] = this._windowList.get_preferred_width(-1);
+                if (width < natWidth) {
+                    this._grouped = true;
+                    Meta.later_add(Meta.LaterType.BEFORE_REDRAW,
+                                   Lang.bind(this, this._populateWindowList));
+                }
+            }));
 
         this._trayButton = new TrayButton();
         box.add(this._trayButton.actor);
@@ -475,13 +490,14 @@ const WindowList = new Lang.Class({
 
     _groupingModeChanged: function() {
         this._groupingMode = this._settings.get_enum('grouping-mode');
+        this._grouped = this._groupingMode == GroupingMode.ALWAYS;
         this._populateWindowList();
     },
 
     _populateWindowList: function() {
         this._windowList.destroy_all_children();
 
-        if (this._groupingMode == GroupingMode.NEVER) {
+        if (!this._grouped) {
             let windows = Meta.get_window_actors(global.screen);
             for (let i = 0; i < windows.length; i++)
                 this._onWindowAdded(null, windows[i].metaWindow);
@@ -514,7 +530,7 @@ const WindowList = new Lang.Class({
     },
 
     _onAppStateChanged: function(appSys, app) {
-        if (this._groupingMode != GroupingMode.ALWAYS)
+        if (!this._grouped)
             return;
 
         if (app.state == Shell.AppState.RUNNING)
@@ -545,7 +561,7 @@ const WindowList = new Lang.Class({
         if (!Shell.WindowTracker.get_default().is_window_interesting(win))
             return;
 
-        if (this._groupingMode != GroupingMode.NEVER)
+        if (this._grouped)
             return;
 
         let button = new WindowButton(win);
@@ -556,8 +572,14 @@ const WindowList = new Lang.Class({
     },
 
     _onWindowRemoved: function(ws, win) {
-        if (this._groupingMode != GroupingMode.NEVER)
+        if (this._grouped) {
+            if (this._groupingMode == GroupingMode.AUTO) {
+                this._grouped = false;
+                this._populateWindowList();
+            }
+
             return;
+        }
 
         let children = this._windowList.get_children();
         for (let i = 0; i < children.length; i++) {

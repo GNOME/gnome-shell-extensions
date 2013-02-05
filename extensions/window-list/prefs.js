@@ -47,6 +47,7 @@ const WindowListPrefsWidget = new GObject.Class({
 
         let modeLabels = {
             'never': _("Never group windows"),
+            'auto': _("Group windows when space is limited"),
             'always': _("Always group windows")
         };
 
