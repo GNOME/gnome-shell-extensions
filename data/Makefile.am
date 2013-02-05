@@ -20,11 +20,11 @@ mode_DATA = $(mode_in_files:.json.in=.json)
 
 themedir = $(datadir)/gnome-shell/theme
 theme_DATA = 				\
-	classic-toggle-off-intl.svg	\
-	classic-toggle-off-us.svg	\
-	classic-toggle-on-intl.svg	\
-	classic-toggle-on-us.svg	\
-	gnome-classic.css		\
+	$(srcdir)/classic-toggle-off-intl.svg	\
+	$(srcdir)/classic-toggle-off-us.svg	\
+	$(srcdir)/classic-toggle-on-intl.svg	\
+	$(srcdir)/classic-toggle-on-us.svg	\
+	$(srcdir)/gnome-classic.css		\
 	$(NULL)
 
 %.desktop.in:%.desktop.in.in
