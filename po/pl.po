@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-31 18:04+0100\n"
-"PO-Revision-Date: 2013-01-31 18:05+0100\n"
+"POT-Creation-Date: 2013-02-06 02:00+0100\n"
+"PO-Revision-Date: 2013-02-06 02:01+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -243,6 +243,18 @@ msgstr "Nazwa motywu"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Nazwa motywu do wczytania z katalogu ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Kiedy grupować okna"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\" and \"always\"."
+msgstr ""
+"Określa, kiedy grupować okna tego samego programu na liście okien. Możliwe "
+"wartości to \"never\" i \"always\"."
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
