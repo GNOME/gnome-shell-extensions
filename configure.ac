@@ -4,7 +4,7 @@ AC_INIT([gnome-shell-extensions],[3.7.5.1],[https://bugzilla.gnome.org/enter_bug
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([config])
 
-AM_INIT_AUTOMAKE([1.10 dist-bzip2 no-dist-gzip foreign tar-ustar])
+AM_INIT_AUTOMAKE([1.10 dist-xz no-dist-gzip foreign tar-ustar])
 
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
