@@ -192,11 +192,11 @@ const PlacesManager = new Lang.Class({
         /* Add standard places */
         this._places.devices.push(new PlaceInfo('devices',
                                                 Gio.File.new_for_path('/'),
-                                                _("File System"),
+                                                _("Computer"),
                                                 'drive-harddisk-symbolic'));
         this._places.network.push(new PlaceInfo('network',
                                                 Gio.File.new_for_uri('network:///'),
-                                                _("Browse network"),
+                                                _("Browse Network"),
                                                 'network-workgroup-symbolic'));
 
         /* first go through all connected drives */
