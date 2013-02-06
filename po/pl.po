@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-06 02:00+0100\n"
-"PO-Revision-Date: 2013-02-06 02:01+0100\n"
+"POT-Creation-Date: 2013-02-06 02:06+0100\n"
+"PO-Revision-Date: 2013-02-06 02:07+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -255,6 +255,18 @@ msgid ""
 msgstr ""
 "Określa, kiedy grupować okna tego samego programu na liście okien. Możliwe "
 "wartości to \"never\" i \"always\"."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Grupowanie okien"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Bez grupowania okien"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Always group windows"
+msgstr "Zawsze grupowanie okien"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
