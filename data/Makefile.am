@@ -53,6 +53,7 @@ EXTRA_DIST = \
 	$(session_in_in_files) \
 	$(xsession_in_files) \
 	$(mode_in_files) \
+	$(theme_DATA) \
 	$(NULL)
 
 CLEANFILES = \
