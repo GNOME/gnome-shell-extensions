@@ -1,3 +1,11 @@
+3.7.5.1
+=======
+* new extension forgotten in previous NEWS entry:
+  windows-list
+* also forgotten previously: classic mode got a new
+  GNOME2 style
+* build fixes
+
 3.7.5
 =====
 * places-menu is back in the classic extensions, with
