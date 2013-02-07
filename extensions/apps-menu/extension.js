@@ -27,19 +27,6 @@ const appSys = Shell.AppSystem.get_default();
 const APPLICATION_ICON_SIZE = 32;
 const MENU_HEIGHT_OFFSET = 132;
 
-function fixMarkup(text, allowMarkup) {
-    if (allowMarkup) {
-        let _text = text.replace(/&(?!amp;|quot;|apos;|lt;|gt;)/g, '&amp;');
-        _text = _text.replace(/<(?!\/?[biu]>)/g, '&lt;');
-        try {
-            Pango.parse_markup(_text, -1, '');
-            return _text;
-        } catch (e) {
-        }
-    }
-    return GLib.markup_escape_text(text, -1);
-}
-
 const ActivitiesMenuItem = new Lang.Class({
     Name: 'ActivitiesMenuItem',
     Extends: PopupMenu.PopupBaseMenuItem,
@@ -69,8 +56,9 @@ const ApplicationMenuItem = new Lang.Class({
         let icon = this._app.create_icon_texture(APPLICATION_ICON_SIZE);
 	this.addActor(icon);
 
-        let appName = fixMarkup(this._app.get_name());
-        this.addActor(new St.Label({ text: appName }));
+        let appLabel = new St.Label({ text: app.get_name() });
+        this.addActor(appLabel);
+        this.actor.label_actor = appLabel;
     },
 
     activate: function(event) {
