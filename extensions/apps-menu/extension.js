@@ -57,7 +57,7 @@ const ApplicationMenuItem = new Lang.Class({
 	this.addActor(icon);
 
         let appLabel = new St.Label({ text: app.get_name() });
-        this.addActor(appLabel);
+        this.addActor(appLabel, { span: -1, expand: true });
         this.actor.label_actor = appLabel;
     },
 
@@ -72,6 +72,10 @@ const ApplicationMenuItem = new Lang.Class({
         if (active)
             this._button.scrollToButton(this);
         this.parent(active, params);
+    },
+
+    _getPreferredWidth: function(actor, forHeight, alloc) {
+        alloc.min_size = alloc.natural_size = -1;
     }
 });
 
