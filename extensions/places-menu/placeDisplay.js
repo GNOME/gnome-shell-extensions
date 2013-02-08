@@ -95,6 +95,35 @@ const PlaceDeviceInfo = new Lang.Class({
     }
 });
 
+const PlaceVolumeInfo = new Lang.Class({
+    Name: 'PlaceVolumeInfo',
+    Extends: PlaceInfo,
+
+    _init: function(kind, volume) {
+        this._volume = volume;
+        this.parent(kind, volume.get_activation_root(), volume.get_name());
+    },
+
+    launch: function(timestamp) {
+        if (this.file) {
+            this.parent(timestamp);
+            return;
+        }
+
+        this._volume.mount(0, null, null, Lang.bind(this, function(volume, result) {
+            volume.mount_finish(result);
+
+            let mount = volume.get_mount();
+            this.file = mount.get_root();
+            this.parent(timestamp);
+        }));
+    },
+
+    getIcon: function() {
+        return this._volume.get_symbolic_icon();
+    }
+});
+
 const DEFAULT_DIRECTORIES = [
     GLib.UserDirectory.DIRECTORY_DOCUMENTS,
     GLib.UserDirectory.DIRECTORY_PICTURES,
@@ -186,6 +215,9 @@ const PlacesManager = new Lang.Class({
     },
 
     _updateMounts: function() {
+        let networkMounts = [];
+        let networkVolumes = [];
+
         this._places.devices = [];
         this._places.network = [];
 
@@ -205,13 +237,13 @@ const PlacesManager = new Lang.Class({
             let volumes = drives[i].get_volumes();
 
             for(let j = 0; j < volumes.length; j++) {
-                let mount = volumes[j].get_mount();
-                let kind = 'devices';
-                if (volumes[j].get_identifier('class').indexOf('network') >= 0)
-                    kind = 'network';
-
-                if(mount != null)
-                    this._addMount(kind, mount);
+                if (volumes[j].get_identifier('class').indexOf('network') >= 0) {
+                    networkVolumes.push(volumes[i]);
+                } else {
+                    let mount = volumes[j].get_mount();
+                    if(mount != null)
+                        this._addMount('devices', mount);
+                }
             }
         }
 
@@ -221,13 +253,13 @@ const PlacesManager = new Lang.Class({
             if(volumes[i].get_drive() != null)
                 continue;
 
-            let kind = 'devices';
-            if (volumes[i].get_identifier('class').indexOf('network') >= 0)
-                kind = 'network';
-
-            let mount = volumes[i].get_mount();
-            if(mount != null)
-                this._addMount(kind, mount);
+            if (volumes[i].get_identifier('class').indexOf('network') >= 0) {
+                networkVolumes.push(volumes[i]);
+            } else {
+                let mount = volumes[i].get_mount();
+                if(mount != null)
+                    this._addMount('devices', mount);
+            }
         }
 
         /* add mounts that have no volume (/etc/mtab mounts, ftp, sftp,...) */
@@ -240,13 +272,24 @@ const PlacesManager = new Lang.Class({
                 continue;
 
             let root = mounts[i].get_default_location();
-            let kind;
-            if (root.is_native())
-                kind = 'devices';
-            else
-                kind = 'network';
+            if (!root.is_native()) {
+                networkMounts.push(mounts[i]);
+                continue;
+            }
+            this._addMount('devices', mounts[i]);
+        }
 
-            this._addMount(kind, mounts[i]);
+        for (let i = 0; i < networkVolumes.length; i++) {
+            let mount = networkVolumes[i].get_mount();
+            if (mount) {
+                networkMounts.push(mount);
+                continue;
+            }
+            this._addVolume('network', networkVolumes[i]);
+        }
+
+        for (let i = 0; i < networkMounts.length; i++) {
+            this._addMount('network', networkMounts[i]);
         }
 
         this.emit('devices-updated');
@@ -327,6 +370,18 @@ const PlacesManager = new Lang.Class({
         }
 
         this._places[kind].push(devItem);
+    },
+
+    _addVolume: function(kind, volume) {
+        let volItem;
+
+        try {
+            volItem = new PlaceVolumeInfo(kind, volume);
+        } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND)) {
+            return;
+        }
+
+        this._places[kind].push(volItem);
     },
 
     get: function (kind) {
