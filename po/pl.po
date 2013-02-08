@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-06 02:06+0100\n"
-"PO-Revision-Date: 2013-02-06 02:07+0100\n"
+"POT-Creation-Date: 2013-02-08 15:40+0100\n"
+"PO-Revision-Date: 2013-02-08 15:41+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -89,15 +89,15 @@ msgstr "Włączenie hibernacji"
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Kontrola widoczności pozycji \"Hibernuj\" menu"
 
-#: ../extensions/apps-menu/extension.js:50
+#: ../extensions/apps-menu/extension.js:37
 msgid "Activities Overview"
 msgstr "Ekran podglądu"
 
-#: ../extensions/apps-menu/extension.js:103
+#: ../extensions/apps-menu/extension.js:91
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: ../extensions/apps-menu/extension.js:197
+#: ../extensions/apps-menu/extension.js:185
 msgid "Applications"
 msgstr "Programy"
 
@@ -221,11 +221,11 @@ msgid "Home"
 msgstr "Katalog domowy"
 
 #: ../extensions/places-menu/placeDisplay.js:195
-msgid "File System"
-msgstr "System plików"
+msgid "Computer"
+msgstr "Komputer"
 
 #: ../extensions/places-menu/placeDisplay.js:199
-msgid "Browse network"
+msgid "Browse Network"
 msgstr "Przeglądaj sieć"
 
 #: ../extensions/systemMonitor/extension.js:213
