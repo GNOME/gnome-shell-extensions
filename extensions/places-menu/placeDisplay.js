@@ -197,6 +197,8 @@ const PlacesManager = new Lang.Class({
         this._places.special.push(new PlaceInfo('special',
                                                 Gio.File.new_for_path(homePath),
                                                 _("Home")));
+
+        let specials = [];
         for (let i = 0; i < DEFAULT_DIRECTORIES.length; i++) {
             let specialPath = GLib.get_user_special_dir(DEFAULT_DIRECTORIES[i]);
             if (specialPath == homePath)
@@ -209,8 +211,13 @@ const PlacesManager = new Lang.Class({
                 continue;
             }
 
-            this._places.special.push(info);
+            specials.push(info);
         }
+
+        specials.sort(function(a, b) {
+            return GLib.utf8_collate(a.name, b.name);
+        });
+        this._places.special = this._places.special.concat(specials);
 
         /*
         * Show devices, code more or less ported from nautilus-places-sidebar.c
