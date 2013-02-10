@@ -30,15 +30,35 @@ const PlaceMenuItem = new Lang.Class({
 	this.parent();
 	this._info = info;
 
-	this.addActor(new St.Icon({ gicon: info.icon,
-				    icon_size: PLACE_ICON_SIZE }));
-        this.addActor(new St.Label({ text: info.name }));
+        this._icon = new St.Icon({ gicon: info.icon,
+                                   icon_size: PLACE_ICON_SIZE });
+	this.addActor(this._icon);
+
+        this._label = new St.Label({ text: info.name });
+        this.addActor(this._label);
+
+        this._changedId = info.connect('changed',
+                                       Lang.bind(this, this._propertiesChanged));
+    },
+
+    destroy: function() {
+        if (this._changedId) {
+            this._info.disconnect(this._changedId);
+            this._changedId = 0;
+        }
+
+        this.parent();
     },
 
     activate: function(event) {
 	this._info.launch(event.get_time());
 
 	this.parent(event);
+    },
+
+    _propertiesChanged: function(info) {
+        this._icon.gicon = info.icon;
+        this._label.text = info.name;
     },
 });
 

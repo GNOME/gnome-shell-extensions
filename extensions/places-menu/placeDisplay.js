@@ -18,6 +18,11 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 const N_ = function(x) { return x; }
 
+const Hostname1Iface = <interface name="org.freedesktop.hostname1">
+<property name="PrettyHostname" type="s" access="read" />
+</interface>;
+const Hostname1 = Gio.DBusProxy.makeProxyWrapper(Hostname1Iface);
+
 const PlaceInfo = new Lang.Class({
     Name: 'PlaceInfo',
 
@@ -26,6 +31,9 @@ const PlaceInfo = new Lang.Class({
         this.file = file;
         this.name = name || this._getFileName();
         this.icon = icon ? new Gio.ThemedIcon({ name: icon }) : this.getIcon();
+    },
+
+    destroy: function() {
     },
 
     isRemovable: function() {
@@ -80,6 +88,47 @@ const PlaceInfo = new Lang.Class({
         }
     },
 });
+Signals.addSignalMethods(PlaceInfo.prototype);
+
+const RootInfo = new Lang.Class({
+    Name: 'RootInfo',
+    Extends: PlaceInfo,
+
+    _init: function() {
+        this.parent('devices', Gio.File.new_for_path('/'), _("Computer"));
+
+        this._proxy = new Hostname1(Gio.DBus.system,
+                                    'org.freedesktop.hostname1',
+                                    '/org/freedesktop/hostname1',
+                                    Lang.bind(this, function(obj, error) {
+                                        if (error)
+                                            return;
+
+                                        this._proxy.connect('g-properties-changed',
+                                                            Lang.bind(this, this._propertiesChanged));
+                                        this._propertiesChanged(obj);
+                                    }));
+    },
+
+    getIcon: function() {
+        return new Gio.ThemedIcon({ name: 'drive-harddisk-symbolic' });
+    },
+
+    _propertiesChanged: function(proxy) {
+        // GDBusProxy will emit a g-properties-changed when hostname1 goes down
+        // ignore it
+        if (proxy.g_name_owner) {
+            this.name = proxy.PrettyHostname || _("Computer");
+            this.emit('changed');
+        }
+    },
+
+    destroy: function() {
+        this._proxy.run_dispose();
+        this.parent();
+    }
+});
+
 
 const PlaceDeviceInfo = new Lang.Class({
     Name: 'PlaceDeviceInfo',
@@ -218,14 +267,13 @@ const PlacesManager = new Lang.Class({
         let networkMounts = [];
         let networkVolumes = [];
 
+        this._places.devices.forEach(function (p) { p.destroy(); });
         this._places.devices = [];
+        this._places.network.forEach(function (p) { p.destroy(); });
         this._places.network = [];
 
         /* Add standard places */
-        this._places.devices.push(new PlaceInfo('devices',
-                                                Gio.File.new_for_path('/'),
-                                                _("Computer"),
-                                                'drive-harddisk-symbolic'));
+        this._places.devices.push(new RootInfo());
         this._places.network.push(new PlaceInfo('network',
                                                 Gio.File.new_for_uri('network:///'),
                                                 _("Browse Network"),
