@@ -299,6 +299,9 @@ var PlacesManager = new Lang.Class({
         let homePath = GLib.get_home_dir();
 
         this._places.special.push(new PlaceInfo('special',
+                                                Gio.File.new_for_uri('recent:///'),
+                                                _("Recent")));
+        this._places.special.push(new PlaceInfo('special',
                                                 Gio.File.new_for_path(homePath),
                                                 _("Home")));
 
@@ -327,6 +330,10 @@ var PlacesManager = new Lang.Class({
             return GLib.utf8_collate(a.name, b.name);
         });
         this._places.special = this._places.special.concat(specials);
+
+        this._places.special.push(new PlaceInfo('special',
+                                                Gio.File.new_for_uri('trash:///'),
+                                                _("Trash")));
 
         this.emit('special-updated');
     },
