@@ -30,6 +30,18 @@
     border-bottom: 1px solid #000 !important;
 }
 
+  #panel.lock-screen {
+    background-color: rgba(0,0,0,0.3) !important;
+    background-gradient-end: rgba(0,0,0,0.3) !important;
+    border-top-color: transparent;
+}
+
+  #panel.unlock-screen {
+    background-color: transparent !important;
+    background-gradient-end: transparent !important;
+    border-top-color: transparent;
+}
+
 
 /* TOP BAR */
 
@@ -46,7 +58,9 @@
     -minimum-hpadding: 3px !important;
   }
 
-  #panel:overview .panel-button {
+  #panel:overview .panel-button,
+  #panel.lock-screen .panel-button,
+  #panel.unlock-screen .panel-button {
     color: #ccc !important;
   }
 
