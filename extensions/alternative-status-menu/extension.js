@@ -31,8 +31,9 @@ function loginManager_hibernate() {
                          Gio.DBusCallFlags.NONE,
                          -1, null, null);
     } else {
-        // upower path
-        this._upClient.hibernate_sync(null);
+        // Can't do in ConsoleKit
+        this.emit('prepare-for-sleep', true);
+        this.emit('prepare-for-sleep', false);
     }
 }
 
@@ -58,7 +59,7 @@ function loginManager_canHibernate(asyncCallback) {
                          });
     } else {
         Mainloop.idle_add(Lang.bind(this, function() {
-            asyncCallback(this._upClient.get_can_hibernate());
+            asyncCallback(false);
             return false;
         }));
     }
@@ -83,35 +84,15 @@ function statusMenu_updateSuspendOrPowerOff() {
 function onSuspendActivate(item) {
     Main.overview.hide();
 
-    if (this._screenSaverSettings.get_boolean(LOCK_ENABLED_KEY)) {
-        let tmpId = Main.screenShield.connect('lock-screen-shown', Lang.bind(this, function() {
-            Main.screenShield.disconnect(tmpId);
-
-            this._loginManager.suspend();
-        }));
-
-        this.menu.close(BoxPointer.PopupAnimation.NONE);
-        Main.screenShield.lock(true);
-    } else {
-        this._loginManager.suspend();
-    }
+    this.menu.close(BoxPointer.PopupAnimation.NONE);
+    this._loginManager.suspend();
 }
 
 function onHibernateActivate(item) {
     Main.overview.hide();
 
-    if (this._screenSaverSettings.get_boolean(LOCK_ENABLED_KEY)) {
-        let tmpId = Main.screenShield.connect('lock-screen-shown', Lang.bind(this, function() {
-            Main.screenShield.disconnect(tmpId);
-
-            loginManager_hibernate.call(this._loginManager);
-        }));
-
-        this.menu.close(BoxPointer.PopupAnimation.NONE);
-        Main.screenShield.lock(true);
-    } else {
-        loginManager_hibernate.call(this._loginManager);
-    }
+    this.menu.close(BoxPointer.PopupAnimation.NONE);
+    loginManager_hibernate.call(this._loginManager);
 }
 
 const Extension = new Lang.Class({
