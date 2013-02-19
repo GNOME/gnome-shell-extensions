@@ -24,6 +24,7 @@ zip-file: all
 		mv "$(builddir)/_build$(topextensiondir)/$${i}$(extensionbase)" "$(builddir)/_build/"; \
 		cp -r "$(builddir)/_build$(datadir)/locale" "$(builddir)/_build/$${i}$(extensionbase)"; \
 		cp "$(srcdir)/COPYING" -t "$(builddir)/_build/$${i}$(extensionbase)"; \
+		cp "$(srcdir)/NEWS" -t "$(builddir)/_build/$${i}$(extensionbase)"; \
 		if [ -f "$(builddir)/_build$(datadir)/glib-2.0/schemas/$(gschemabase).$${i}.gschema.xml" ]; then \
 			$(MKDIR_P) "$(builddir)/_build/$${i}$(extensionbase)/schemas"; \
 			mv "$(builddir)/_build$(datadir)/glib-2.0/schemas/$(gschemabase).$${i}.gschema.xml" "$(builddir)/_build/$${i}$(extensionbase)/schemas"; \
