@@ -116,8 +116,8 @@ const HotCorner = new Lang.Class({
     Name: 'HotCorner',
     Extends: Layout.HotCorner,
 
-    _init : function() {
-        this.parent();
+    _init : function(layoutManager) {
+        this.parent(layoutManager);
     },
 
     _onCornerEntered : function() {
@@ -170,7 +170,7 @@ const ApplicationsButton = new Lang.Class({
 
     _init: function() {
         this.parent(1.0, null, false);
-        this._hotCorner = new HotCorner();
+        this._hotCorner = new HotCorner(Main.layoutManager);
         this.setMenu(new ApplicationsMenu(this.actor, 1.0, St.Side.TOP, this, this._hotCorner));
         Main.panel.menuManager.addMenu(this.menu);
 
