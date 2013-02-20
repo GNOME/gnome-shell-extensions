@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-01-03 00:24+0000\n"
-"PO-Revision-Date: 2013-01-08 20:14+0200\n"
+"POT-Creation-Date: 2013-02-08 12:25+0000\n"
+"PO-Revision-Date: 2013-02-20 12:19+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -34,7 +34,6 @@ msgid "GNOME Shell Classic"
 msgstr "Klasična Gnomova školjka"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
-#| msgid "Thumbnail and application icon"
 msgid "Window management and application launching"
 msgstr "Upravljanje prozorima i pokretanje programa"
 
@@ -86,6 +85,20 @@ msgstr "Uključuje zamrzavanje"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Upravlja vidljivošću stavke izbornika zamrzavanja"
+
+#: ../extensions/apps-menu/extension.js:50
+msgid "Activities Overview"
+msgstr "Pregled aktivnosti"
+
+#: ../extensions/apps-menu/extension.js:103
+#| msgid "Add to Favorites"
+msgid "Favorites"
+msgstr "Omiljeno"
+
+#: ../extensions/apps-menu/extension.js:197
+#| msgid "Application"
+msgid "Applications"
+msgstr "Programi"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -192,21 +205,9 @@ msgstr ""
 "umanjenih prikaza umesto ispod prikaza. Promena ovih podešavanja zahteva da "
 "ponovo pokrenete Gnomovu školjku."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:57
 msgid "Places"
 msgstr "Mesta"
-
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Uređaji"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Obeleživači"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Mreža"
 
 #: ../extensions/places-menu/placeDisplay.js:48
 #, c-format
@@ -218,11 +219,12 @@ msgid "Home"
 msgstr "Lično"
 
 #: ../extensions/places-menu/placeDisplay.js:195
-msgid "File System"
-msgstr "Sistem datoteka"
+msgid "Computer"
+msgstr "Računar"
 
 #: ../extensions/places-menu/placeDisplay.js:199
-msgid "Browse network"
+#| msgid "Browse network"
+msgid "Browse Network"
 msgstr "Razgledajte mrežu"
 
 #: ../extensions/systemMonitor/extension.js:213
@@ -240,6 +242,30 @@ msgstr "Naziv teme"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Naziv teme koji se učitava iz datoteke „~/.themes/name/gnome-shell“"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Kada grupisati prozore"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\" and \"always\"."
+msgstr ""
+"Određuje kada će biti grupisani prozori istog programa u spisku prozora. "
+"Dozvoljene vrednosti su „never“ (nikad) i „always“ (uvek)."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Grupisanje prozora"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Nikad ne grupiši prozore"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Always group windows"
+msgstr "Uvek grupiši prozore"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -281,138 +307,3 @@ msgstr "Ekran"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "Podešavanja ekrana"
-
-#~ msgid "The application icon mode."
-#~ msgstr "Režim ikonice programa."
-
-#~ msgid ""
-#~ "Configures how the windows are shown in the switcher. Valid possibilities "
-#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-#~ "only' (shows only the application icon) or 'both'."
-#~ msgstr ""
-#~ "Podešava način prikazivanja prozora u prebacivaču. Ispravne mogućnosti su "
-#~ "„thumbnail-only“ (prikazuje sličicu prozora), „app-icon-only“ (prikazuje "
-#~ "samo ikonicu programa) ili „both“ (oba)."
-
-#~ msgid "Drag here to add favorites"
-#~ msgstr "Prevucite ovde da dodate među omiljene"
-
-#~ msgid "New Window"
-#~ msgstr "Novi prozor"
-
-#~ msgid "Quit Application"
-#~ msgstr "Napusti program"
-
-#~ msgid "Remove from Favorites"
-#~ msgstr "Ukloni iz omiljenih"
-
-#~ msgid "Add to Favorites"
-#~ msgstr "Dodaj u omiljene"
-
-#~ msgid "Position of the dock"
-#~ msgstr "Položaj luke"
-
-#~ msgid ""
-#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
-#~ "or 'left'"
-#~ msgstr ""
-#~ "Podešava mesto gde se nalazi površ sa ikonicama. Dozvoljene su vrednosti "
-#~ "„right“ (desno) i „left“ (levo)"
-
-#~ msgid "Icon size"
-#~ msgstr "Veličina ikonice"
-
-#~ msgid "Sets icon size of the dock."
-#~ msgstr "Određuje veličinu ikonice u luci."
-
-#~ msgid "Enable/disable autohide"
-#~ msgstr "Samostalno skrivanje"
-
-#~ msgid "Autohide effect"
-#~ msgstr "Dejstvo samoskrivanja"
-
-#~ msgid ""
-#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
-#~ "and 'move'"
-#~ msgstr ""
-#~ "Određuje dejstvo koje se prikazuje prilikom skrivanja površi sa ikonicama. "
-#~ "Dozvoljene vrednosti su: „resize“ (promeni veličinu), „rescale“ (promeni "
-#~ "veličinu uz zadržavanje razmere) i „move“ (premesti)"
-
-#~ msgid "Autohide duration"
-#~ msgstr "Trajanje samoskrivanja"
-
-#~ msgid "Sets the time duration of the autohide effect."
-#~ msgstr "Određuje dužinu trajanja dejstva samoskrivanja."
-
-#~ msgid "Monitor"
-#~ msgstr "Monitor"
-
-#~ msgid ""
-#~ "Sets monitor to display dock in. The default value (-1) is the primary "
-#~ "monitor."
-#~ msgstr ""
-#~ "Podešava koji monitor će da prikaže luku. Osnovna vrednost (-1) jeste "
-#~ "primarni monitor."
-
-#~ msgid "%s is away."
-#~ msgstr "„%s“ je odsutan."
-
-#~ msgid "%s is offline."
-#~ msgstr "„%s“ je van mreže."
-
-#~ msgid "%s is online."
-#~ msgstr "„%s“ je na mreži."
-
-#~ msgid "%s is busy."
-#~ msgstr "„%s“ je zauzet."
-
-#~ msgid "The alt tab behaviour."
-#~ msgstr "Ponašanje tastera „alt-tab“."
-
-#~ msgid ""
-#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-#~ "workspace_icons. See the configuration dialogs for details."
-#~ msgstr ""
-#~ "Određuje kako se ponašaju tasteri „Alt-Tab“. Ispravne vrednosti su "
-#~ "„all_thumbnails“ (svi umanjeni prikazi) i „workspace_icons“ (ikonice "
-#~ "radnih prostora). Pogledajte prozorčiće podešavanja za više podataka."
-
-#~ msgid ""
-#~ "This mode presents all applications from all workspaces in one selection "
-#~ "list. Instead of using the application icon of every window, it uses "
-#~ "small thumbnails resembling the window itself."
-#~ msgstr ""
-#~ "Ovaj režim prikazuje sve programe sa svih radnih prostora unutar jednog "
-#~ "spiska. Umesto upotrebe ikonica programa za svaki prozor koristi se "
-#~ "umanjeni prikaz programa."
-
-#~ msgid "Workspace & Icons"
-#~ msgstr "Radni prostori i ikonice"
-
-#~ msgid ""
-#~ "This mode let's you switch between the applications of your current "
-#~ "workspace and gives you additionally the option to switch to the last "
-#~ "used application of your previous workspace. This is always the last "
-#~ "symbol in the list and is segregated by a separator/vertical line if "
-#~ "available. \n"
-#~ "Every window is represented by its application icon."
-#~ msgstr ""
-#~ "Ovaj režim vam omogućava da menjate programe sa trenutnog radnog prostora "
-#~ "i daje vam dodatnu mogućnost da se prebacite na poslednji korišćen program "
-#~ "sa drugog radnog prostora. On je uvek prikazan kao poslednji na spisku, i "
-#~ "odvojen je od ostalih razdvojnikom/uspravnom linijom ako je dostupno.\n"
-#~ "Svaki prozor je predstavljen ikonicom programa."
-
-#~ msgid "Move current selection to front before closing the popup"
-#~ msgstr "Pomeri trenutni izbor napred pre zatvaranja iskačućeg"
-
-#~ msgid ""
-#~ "The Alternate Tab can be used in different modes, that affect the way "
-#~ "windows are chosen and presented."
-#~ msgstr ""
-#~ "Izmenjivač Tab tastera se može koristiti u različitim režimima koji "
-#~ "određuju kako se prozori biraju i prikazuju."
-
-#~ msgid "Removable Devices"
-#~ msgstr "Uklonjivi uređaji"
