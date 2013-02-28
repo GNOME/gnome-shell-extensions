@@ -14,6 +14,8 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
+const ICON_TEXTURE_SIZE = 24;
+
 const GroupingMode = {
     NEVER: 0,
     ALWAYS: 1
@@ -37,10 +39,9 @@ const WindowTitle = new Lang.Class({
         this._metaWindow = metaWindow;
         this.actor = new St.BoxLayout();
 
-        let textureCache = St.TextureCache.get_default();
-        let icon = textureCache.bind_pixbuf_property(this._metaWindow, "icon");
+        let app = Shell.WindowTracker.get_default().get_window_app(metaWindow);
         this._icon = new St.Bin({ style_class: 'window-button-icon',
-                                  child: icon });
+                                  child: app.create_icon_texture(ICON_TEXTURE_SIZE) });
         this.actor.add(this._icon);
         this._label = new St.Label();
         this.actor.add(this._label);
@@ -165,7 +166,7 @@ const AppButton = new Lang.Class({
         stack.add_actor(this._multiWindowTitle);
 
         let icon = new St.Bin({ style_class: 'window-button-icon',
-                                child: app.create_icon_texture(24) });
+                                child: app.create_icon_texture(ICON_TEXTURE_SIZE) });
         this._multiWindowTitle.add(icon);
         this._multiWindowTitle.add(new St.Label({ text: app.get_name() }));
 
