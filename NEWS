@@ -1,3 +1,11 @@
+3.7.91
+======
+* various updates for shell changes
+* update window-list to always use application icons
+* update apps-menu to not load subdirectories as
+  separate categories
+* translation updates (lt, zh_CN)
+
 3.7.90
 ======
 * various fixes to make places-menu behave more
