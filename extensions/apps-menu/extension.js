@@ -116,10 +116,6 @@ const HotCorner = new Lang.Class({
     Name: 'HotCorner',
     Extends: Layout.HotCorner,
 
-    _init : function(layoutManager) {
-        this.parent(layoutManager);
-    },
-
     _onCornerEntered : function() {
         if (!this._entered) {
             this._entered = true;
@@ -170,7 +166,8 @@ const ApplicationsButton = new Lang.Class({
 
     _init: function() {
         this.parent(1.0, null, false);
-        this._hotCorner = new HotCorner(Main.layoutManager);
+        this._hotCorner = Main.layoutManager.hotCorners[Main.layoutManager.primaryIndex];
+
         this.setMenu(new ApplicationsMenu(this.actor, 1.0, St.Side.TOP, this, this._hotCorner));
         Main.panel.menuManager.addMenu(this.menu);
 
@@ -179,20 +176,11 @@ const ApplicationsButton = new Lang.Class({
         // role ATK_ROLE_MENU like other elements of the panel.
         this.actor.accessible_role = Atk.Role.LABEL;
 
-        let container = new Shell.GenericContainer();
-        container.connect('get-preferred-width', Lang.bind(this, this._containerGetPreferredWidth));
-        container.connect('get-preferred-height', Lang.bind(this, this._containerGetPreferredHeight));
-        container.connect('allocate', Lang.bind(this, this._containerAllocate));
-        this.actor.add_actor(container);
-        this.actor.name = 'panelApplications';
-
         this._label = new St.Label({ text: _("Applications") });
-        container.add_actor(this._label);
 
+        this.actor.add_actor(this._label);
+        this.actor.name = 'panelApplications';
         this.actor.label_actor = this._label;
-
-        container.add_actor(this._hotCorner.actor);
-        Main.messageTray._grabHelper.addActor(this._hotCorner.actor);
 
         this.actor.connect('captured-event', Lang.bind(this, this._onCapturedEvent));
 
@@ -223,37 +211,6 @@ const ApplicationsButton = new Lang.Class({
         }));
     },
 
-    _containerGetPreferredWidth: function(actor, forHeight, alloc) {
-        [alloc.min_size, alloc.natural_size] = this._label.get_preferred_width(forHeight);
-    },
-
-    _containerGetPreferredHeight: function(actor, forWidth, alloc) {
-        [alloc.min_size, alloc.natural_size] = this._label.get_preferred_height(forWidth);
-    },
-
-    _containerAllocate: function(actor, box, flags) {
-        this._label.allocate(box, flags);
-
-        // The hot corner needs to be outside any padding/alignment
-        // that has been imposed on us
-        let primary = Main.layoutManager.primaryMonitor;
-        let hotBox = new Clutter.ActorBox();
-        let ok, x, y;
-        if (actor.get_text_direction() == Clutter.TextDirection.LTR) {
-            [ok, x, y] = actor.transform_stage_point(primary.x, primary.y);
-        } else {
-            [ok, x, y] = actor.transform_stage_point(primary.x + primary.width, primary.y);
-            // hotCorner.actor has northeast gravity, so we don't need
-            // to adjust x for its width
-        }
-
-        hotBox.x1 = Math.round(x);
-        hotBox.x2 = hotBox.x1 + this._hotCorner.actor.width;
-        hotBox.y1 = Math.round(y);
-        hotBox.y2 = hotBox.y1 + this._hotCorner.actor.height;
-        this._hotCorner.actor.allocate(hotBox, flags);
-    },
-
     _createVertSeparator: function() {
         let separator = new St.DrawingArea({ style_class: 'calendar-vertical-separator',
                                              pseudo_class: 'highlighted' });
@@ -263,7 +220,7 @@ const ApplicationsButton = new Lang.Class({
 
     _onCapturedEvent: function(actor, event) {
         if (event.type() == Clutter.EventType.BUTTON_PRESS) {
-            if (!this._hotCorner.shouldToggleOverviewOnClick())
+            if (!Main.overview.shouldToggleByCornerOrButton())
                 return true;
         }
         return false;
@@ -502,7 +459,6 @@ let _showingId;
 
 function enable() {
     activitiesButton = Main.panel.statusArea['activities'];
-    activitiesButton.hotCorner.actor.hide();
     activitiesButton.container.hide();
     appsMenuButton = new ApplicationsButton();
     Main.panel.addToStatusArea('apps-menu', appsMenuButton, 1, 'left');
@@ -523,7 +479,6 @@ function disable() {
     Main.overview.disconnect(_showingId);
     appsMenuButton.destroy();
     activitiesButton.container.show();
-    activitiesButton.hotCorner.actor.show();
 
     Main.wm.setCustomKeybindingHandler('panel-main-menu',
                                        Shell.KeyBindingMode.NORMAL |
