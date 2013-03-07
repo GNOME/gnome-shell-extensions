@@ -23,7 +23,7 @@
 }
 
 .window-button > StWidget {
-  max-width: 250px;
+  -st-natural-width: 250px;
   color: #bbb;
   background-color: black;
   border-radius: 4px;
