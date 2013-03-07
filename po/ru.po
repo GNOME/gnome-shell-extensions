@@ -2,15 +2,15 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Stas Solovey <whats_up@tut.by>, 2011, 2012.
-# Yuri Myasoedov <omerta13@yandex.ru>, 2011, 2012.
+# Yuri Myasoedov <omerta13@yandex.ru>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-12-11 16:59+0000\n"
-"PO-Revision-Date: 2012-12-17 09:16+0400\n"
+"POT-Creation-Date: 2013-02-08 12:25+0000\n"
+"PO-Revision-Date: 2013-03-07 09:32+0400\n"
 "Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
 msgid "GNOME Classic"
-msgstr "Традиционный GNOME"
+msgstr "Классический GNOME"
 
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
@@ -32,10 +32,9 @@ msgstr "Этот сеанс использует традиционный GNOME"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:1
 msgid "GNOME Shell Classic"
-msgstr "Традиционный GNOME Shell"
+msgstr "Классический GNOME Shell"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
-#| msgid "Thumbnail and application icon"
 msgid "Window management and application launching"
 msgstr "Управление окнами и запуск приложений"
 
@@ -74,19 +73,33 @@ msgstr "Выключить"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
 msgid "Enable suspending"
-msgstr "Включить ждущий режим"
+msgstr "Разрешить использование ждущего режима"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
 msgid "Control the visibility of the Suspend menu item"
-msgstr "Управление отображения в меню пункта «Ждущий режим»"
+msgstr "Показывать ли в меню пункт «Ждущий режим»"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
 msgid "Enable hibernating"
-msgstr "Включить спящий режим"
+msgstr "Разрешить использование спящего режима"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
-msgstr "Управление отображения в меню пункта «Спящий режим»"
+msgstr "Показывать ли в меню пункт «Спящий режим»"
+
+#: ../extensions/apps-menu/extension.js:50
+msgid "Activities Overview"
+msgstr "Обзор"
+
+#: ../extensions/apps-menu/extension.js:103
+#| msgid "Add to Favorites"
+msgid "Favorites"
+msgstr "Избранное"
+
+#: ../extensions/apps-menu/extension.js:197
+#| msgid "Application"
+msgid "Applications"
+msgstr "Приложения"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -111,7 +124,7 @@ msgstr "Рабочая область"
 
 #: ../extensions/auto-move-windows/prefs.js:80
 msgid "Add rule"
-msgstr "Создать правило"
+msgstr "Добавить правило"
 
 #: ../extensions/auto-move-windows/prefs.js:94
 msgid "Create new matching rule"
@@ -147,7 +160,7 @@ msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
 msgstr ""
-"если не пусто, содержащийся текст будет отображаться при нажатии на панель."
+"Если не пусто, содержащийся текст будет отображаться при нажатии на панель."
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
@@ -157,7 +170,7 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Цель расширения Example, показать, как создавать хорошо работающие "
+"Цель расширения Example — показать, как создавать хорошо работающие "
 "расширения для Shell, и само по себе оно имеет малую функциональность.\n"
 "Тем не менее, можно настроить приветственное сообщение."
 
@@ -194,21 +207,9 @@ msgstr ""
 "нижней, как это делается по умолчанию. Изменение этого параметра требует "
 "перезапуска Shell, чтобы изменение вступило в силу."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:57
 msgid "Places"
 msgstr "Места"
-
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Устройства"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Закладки"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Сеть"
 
 #: ../extensions/places-menu/placeDisplay.js:48
 #, c-format
@@ -220,11 +221,12 @@ msgid "Home"
 msgstr "Домашняя папка"
 
 #: ../extensions/places-menu/placeDisplay.js:195
-msgid "File System"
-msgstr "Файловая система"
+msgid "Computer"
+msgstr "Компьютер"
 
 #: ../extensions/places-menu/placeDisplay.js:199
-msgid "Browse network"
+#| msgid "Browse network"
+msgid "Browse Network"
 msgstr "Обзор сети"
 
 #: ../extensions/systemMonitor/extension.js:213
@@ -242,6 +244,30 @@ msgstr "Название темы"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Название темы, загружаемой из ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Когда группировать окна"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\" and \"always\"."
+msgstr ""
+"Решает, когда группировать окна одного и того же приложения в списке окон. "
+"Возможные значения: «never» — никогда; «always» — всегда."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Группировка окон"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Никогда не группировать окна"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Always group windows"
+msgstr "Всегда группировать окна"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -284,6 +310,18 @@ msgstr "Экран"
 msgid "Display Settings"
 msgstr "Параметры экрана"
 
+#~ msgid "Devices"
+#~ msgstr "Устройства"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Закладки"
+
+#~ msgid "Network"
+#~ msgstr "Сеть"
+
+#~ msgid "File System"
+#~ msgstr "Файловая система"
+
 #~ msgid "The application icon mode."
 #~ msgstr "Режим значков приложения."
 
@@ -308,9 +346,6 @@ msgstr "Параметры экрана"
 
 #~ msgid "Remove from Favorites"
 #~ msgstr "Удалить из избранного"
-
-#~ msgid "Add to Favorites"
-#~ msgstr "Добавить в избранное"
 
 #~ msgid "Position of the dock"
 #~ msgstr "Расположение док-панели"
