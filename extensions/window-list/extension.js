@@ -418,13 +418,16 @@ const WindowList = new Lang.Class({
             Main.overview.connect('showing', Lang.bind(this, function() {
                 this.actor.hide();
                 this._updateKeyboardAnchor();
+                this._updateMessageTrayAnchor();
             }));
 
         this._overviewHidingId =
             Main.overview.connect('hiding', Lang.bind(this, function() {
                 this.actor.show();
                 this._updateKeyboardAnchor();
+                this._updateMessageTrayAnchor();
             }));
+        this._updateMessageTrayAnchor();
 
         this._settings = Convenience.getSettings();
         this._groupingModeChangedId =
@@ -464,6 +467,13 @@ const WindowList = new Lang.Class({
 
         let anchorY = Main.overview.visible ? 0 : this.actor.height;
         Main.keyboard.actor.anchor_y = anchorY;
+    },
+
+    _updateMessageTrayAnchor: function() {
+        let anchorY = this.actor.visible ? this.actor.height : 0;
+
+        Main.messageTray.actor.anchor_y = anchorY;
+        Main.messageTray._notificationWidget.anchor_y = -anchorY;
     },
 
     _onAppStateChanged: function(appSys, app) {
@@ -568,6 +578,9 @@ const WindowList = new Lang.Class({
         global.screen.disconnect(this._nWorkspacesChangedId);
         this._nWorkspacesChangedId = 0;
 
+        Main.messageTray.actor.anchor_y = 0;
+        Main.messageTray._notificationWidget.anchor_y = 0;
+
         Main.overview.disconnect(this._overviewShowingId);
         Main.overview.disconnect(this._overviewHidingId);
 
@@ -600,26 +613,6 @@ function enable() {
         return false;
     };
 
-    injections['_tween'] = MessageTray.MessageTray.prototype._tween;
-    MessageTray.MessageTray.prototype._tween = function(actor, statevar, value, params) {
-        if (!Main.overview.visible) {
-            let anchorY;
-            if (statevar == '_trayState')
-                anchorY = windowList.actor.height;
-            else if (statevar == '_notificationState')
-                anchorY = -windowList.actor.height;
-            else
-                anchorY = 0;
-            actor.anchor_y = anchorY;
-        }
-        injections['_tween'].call(Main.messageTray, actor, statevar, value, params);
-    };
-    injections['_onTrayHidden'] = MessageTray.MessageTray.prototype._onTrayHidden;
-    MessageTray.MessageTray.prototype._onTrayHidden = function() {
-        this.actor.anchor_y = 0;
-        injections['_onTrayHidden'].call(Main.messageTray);
-    };
-
     notificationParent = Main.messageTray._notificationWidget.get_parent();
     Main.messageTray._notificationWidget.hide();
     Main.messageTray._notificationWidget.reparent(windowList.actor);
@@ -642,7 +635,4 @@ function disable() {
 
     for (prop in injections)
         MessageTray.MessageTray.prototype[prop] = injections[prop];
-
-    Main.messageTray._notificationWidget.set_anchor_point(0, 0);
-    Main.messageTray.actor.set_anchor_point(0, 0);
 }
