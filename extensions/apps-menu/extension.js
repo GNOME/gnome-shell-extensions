@@ -140,12 +140,17 @@ const ApplicationsMenu = new Lang.Class({
     },
 
     open: function(animate) {
-        this._hotCorner.actor.hide();
+        this._hotCorner.setBarrierSize(0);
+        if (this._hotCorner.actor) // fallback corner
+            this._hotCorner.actor.hide();
         this.parent(animate);
     },
 
     close: function(animate) {
-        this._hotCorner.actor.show();
+        let size = Main.layoutManager.panelBox.height;
+        this._hotCorner.setBarrierSize(size);
+        if (this._hotCorner.actor) // fallback corner
+            this._hotCorner.actor.show();
         this.parent(animate);
     },
 
