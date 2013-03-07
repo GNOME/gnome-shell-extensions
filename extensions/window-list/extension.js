@@ -530,8 +530,8 @@ const WindowList = new Lang.Class({
 
             let signals = { windowAddedId: 0, windowRemovedId: 0 };
             signals._windowAddedId =
-                workspace.connect('window-added',
-                                  Lang.bind(this, this._onWindowAdded));
+                workspace.connect_after('window-added',
+                                        Lang.bind(this, this._onWindowAdded));
             signals._windowRemovedId =
                 workspace.connect('window-removed',
                                   Lang.bind(this, this._onWindowRemoved));
