@@ -2,15 +2,15 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2011 - 2012.
+# Matej Urbančič <mateju@svn.gnome.org>, 2011 - 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-12-06 21:35+0000\n"
-"PO-Revision-Date: 2012-12-10 21:43+0100\n"
+"POT-Creation-Date: 2013-03-07 17:02+0000\n"
+"PO-Revision-Date: 2013-03-07 21:56+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -39,50 +39,36 @@ msgstr "Običajna lupina GNOME"
 msgid "Window management and application launching"
 msgstr "Upravljanje oken in zaganjanje programov"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "Ikonski način programa."
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
-msgstr ""
-"Nastavitev prikaza oken v preklopniku. Veljavne možnosti so 'le sličice', "
-"kar pokaže pomanjšano sličico okna, 'le ikono programa', kar pokaže ikono in "
-"možnost 'oboje', torej ikono in pomanjšano sličico."
-
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Le sličice"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Le ikono programa"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Sličice in ikono programa"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Pokaži okna kot"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Pokaži le okna trenutne delovne površine"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:144
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "V pripravljenost"
 
-#: ../extensions/alternative-status-menu/extension.js:147
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "V mirovanje"
 
-#: ../extensions/alternative-status-menu/extension.js:150
+#: ../extensions/alternative-status-menu/extension.js:131
 msgid "Power Off"
 msgstr "Izklopi"
 
@@ -101,6 +87,18 @@ msgstr "Omogoči mirovanje"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Upravljanje vidnosti menijskega ukaza V mirovanje"
+
+#: ../extensions/apps-menu/extension.js:37
+msgid "Activities Overview"
+msgstr "Pregled dejavnosti"
+
+#: ../extensions/apps-menu/extension.js:95
+msgid "Favorites"
+msgstr "Priljubljeno"
+
+#: ../extensions/apps-menu/extension.js:184
+msgid "Applications"
+msgstr "Programi"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -208,38 +206,27 @@ msgstr ""
 "tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba "
 "lupino ponovno zagnati."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:77
 msgid "Places"
 msgstr "Mesta"
 
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Naprave"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Zaznamki"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Omrežje"
-
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Zaganjanje \"%s\" je spodletelo."
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Računalnik"
+
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Home"
 msgstr "Osebna mapa"
 
-#: ../extensions/places-menu/placeDisplay.js:195
-msgid "File System"
-msgstr "Datotečni sistem"
-
-#: ../extensions/places-menu/placeDisplay.js:199
-msgid "Browse network"
-msgstr "Brskanje omrežja"
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "Prebrskaj omrežje"
 
 #: ../extensions/systemMonitor/extension.js:213
 msgid "CPU"
@@ -256,6 +243,30 @@ msgstr "Ime teme"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Ime teme, ki bo naložena iz ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Kdaj naj se okna združujejo"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\" and \"always\"."
+msgstr ""
+"Določi, kdaj se okna v seznamu združujejo. Veljavni vrednosti sta \"nikoli\" "
+"ali \"vedno\"."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Združevanje oken"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Nikoli ne združuj oken"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Always group windows"
+msgstr "Vedno združuj okna"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -298,6 +309,30 @@ msgstr "Zaslon"
 msgid "Display Settings"
 msgstr "Nastavitve zaslona"
 
+#~ msgid "The application icon mode."
+#~ msgstr "Ikonski način programa."
+
+#~ msgid ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
+#~ msgstr ""
+#~ "Nastavitev prikaza oken v preklopniku. Veljavne možnosti so 'le sličice', "
+#~ "kar pokaže pomanjšano sličico okna, 'le ikono programa', kar pokaže ikono "
+#~ "in možnost 'oboje', torej ikono in pomanjšano sličico."
+
+#~ msgid "Devices"
+#~ msgstr "Naprave"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Zaznamki"
+
+#~ msgid "Network"
+#~ msgstr "Omrežje"
+
+#~ msgid "File System"
+#~ msgstr "Datotečni sistem"
+
 #~ msgid "Drag here to add favorites"
 #~ msgstr "Potegnite sem, za dodajanje med priljubljene"
 
@@ -309,9 +344,6 @@ msgstr "Nastavitve zaslona"
 
 #~ msgid "Remove from Favorites"
 #~ msgstr "Odstrani iz priljubljenih"
-
-#~ msgid "Add to Favorites"
-#~ msgstr "Dodaj med priljubljene"
 
 #~ msgid "Position of the dock"
 #~ msgstr "Postavitev sidrišča"
