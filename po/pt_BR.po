@@ -7,13 +7,14 @@
 # Djavan Fagundes <djavan@comum.org>, 2012.
 # Gabriel Speckhahn <gabspeck@gmail.com>, 2012.
 # Og Maciel <ogmaciel@gnome.org>, 2012.
+# Rafael Ferreira <rafael.f.f1@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-11-16 19:37+0000\n"
-"PO-Revision-Date: 2012-12-31 02:39-0300\n"
+"POT-Creation-Date: 2013-03-08 13:34+0000\n"
+"PO-Revision-Date: 2013-03-10 21:46-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -21,53 +22,56 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Project-Style: gnome\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "O modo de ícone do aplicativo."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME Clássico"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
-msgstr ""
-"Configura como as janelas são mostradas no alternador. Possibilidades "
-"válidas são \"thumbnail-only\" (mostra uma miniatura da janela), \"app-icon-"
-"only\" (mostra somente o ícone do aplicativo) ou \"both\" (ambos)."
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Essa sessão se inicia como GNOME Clássico"
 
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell Clássico"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Gerenciamento de janelas e início de aplicativos"
+
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Somente miniatura"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Somente ícone do aplicativo"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Miniatura e ícone do aplicativo"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Apresentar janelas como"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Mostrar somente janelas no espaço de trabalho atual"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:86
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../extensions/alternative-status-menu/extension.js:91
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:96
+#: ../extensions/alternative-status-menu/extension.js:131
 msgid "Power Off"
 msgstr "Desligar"
 
@@ -86,6 +90,18 @@ msgstr "Habilitar hibernação"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Controla a visibilidade do item de menu Hibernar"
+
+#: ../extensions/apps-menu/extension.js:37
+msgid "Activities Overview"
+msgstr "Panorama de atividades"
+
+#: ../extensions/apps-menu/extension.js:95
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: ../extensions/apps-menu/extension.js:184
+msgid "Applications"
+msgstr "Aplicativos"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -119,82 +135,6 @@ msgstr "Criar uma nova regra coincidente"
 #: ../extensions/auto-move-windows/prefs.js:98
 msgid "Add"
 msgstr "Adicionar"
-
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "Arraste aqui para adicionar favoritos"
-
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "Nova janela"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "Fechar aplicativo"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "Remover dos favoritos"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "Adicionar aos favoritos"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Posição do dock"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Define a posição do dock na tela. Os valores permitidos são \"right\" ou "
-"\"left\""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Tamanho do ícone"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Define o tamanho do ícone do dock."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Habilitar/desabilitar ocultar automaticamente"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Efeito de ocultar automaticamente"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Define o efeito de ocultar dock. Os valores permitidos são \"resize\", "
-"\"rescale\" e \"move\""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Duração do ocultar automaticamente"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Define o tempo de duração do efeito de ocultar automaticamente."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Monitor"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"Configura o monitor para mostrar encaixe. O valor padrão (-1) é o monitor "
-"primário."
 
 #: ../extensions/drive-menu/extension.js:72
 #, c-format
@@ -240,26 +180,6 @@ msgstr ""
 msgid "Message:"
 msgstr "Mensagem:"
 
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "%s está ausente."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "%s está desconectado."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "%s está conectado."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "%s está ocupado."
-
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
 msgstr "Usar mais tela para janelas"
@@ -289,37 +209,26 @@ msgstr ""
 "sobrescrevendo o padrão do shell de colocá-lo na parte inferior. A alteração "
 "dessa configuração requer o reinício do shell para ter algum efeito."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:77
 msgid "Places"
 msgstr "Locais"
 
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Dispositivos"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Marcadores"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Rede"
-
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
-msgstr "Falha ao lançar \"%s\""
+msgstr "Falha ao iniciar \"%s\""
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Computador"
+
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Home"
 msgstr "Pasta pessoal"
 
-#: ../extensions/places-menu/placeDisplay.js:188
-msgid "File System"
-msgstr "Sistema de arquivos"
-
-#: ../extensions/places-menu/placeDisplay.js:192
-msgid "Browse network"
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
 msgstr "Navegar na rede"
 
 #: ../extensions/systemMonitor/extension.js:213
@@ -337,6 +246,30 @@ msgstr "Nome do tema"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "O nome do tema, para ser carregado de ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Quando agrupar janelas"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\" and \"always\"."
+msgstr ""
+"Decide quando agrupar janelas do mesmo aplicativo na lista de janelas. "
+"Valores possível são \"nunca\" e \"sempre\"."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Agrupamento de janelas"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Nunca agrupar janelas"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Always group windows"
+msgstr "Sempre agrupar janelas"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -378,6 +311,99 @@ msgstr "Tela"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "Configurações de tela"
+
+#~ msgid "The application icon mode."
+#~ msgstr "O modo de ícone do aplicativo."
+
+#~ msgid ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
+#~ msgstr ""
+#~ "Configura como as janelas são mostradas no alternador. Possibilidades "
+#~ "válidas são \"thumbnail-only\" (mostra uma miniatura da janela), \"app-"
+#~ "icon-only\" (mostra somente o ícone do aplicativo) ou \"both\" (ambos)."
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "Arraste aqui para adicionar favoritos"
+
+#~ msgid "New Window"
+#~ msgstr "Nova janela"
+
+#~ msgid "Quit Application"
+#~ msgstr "Fechar aplicativo"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Remover dos favoritos"
+
+#~ msgid "Position of the dock"
+#~ msgstr "Posição do dock"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr ""
+#~ "Define a posição do dock na tela. Os valores permitidos são \"right\" ou "
+#~ "\"left\""
+
+#~ msgid "Icon size"
+#~ msgstr "Tamanho do ícone"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "Define o tamanho do ícone do dock."
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "Habilitar/desabilitar ocultar automaticamente"
+
+#~ msgid "Autohide effect"
+#~ msgstr "Efeito de ocultar automaticamente"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr ""
+#~ "Define o efeito de ocultar dock. Os valores permitidos são \"resize\", "
+#~ "\"rescale\" e \"move\""
+
+#~ msgid "Autohide duration"
+#~ msgstr "Duração do ocultar automaticamente"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "Define o tempo de duração do efeito de ocultar automaticamente."
+
+#~ msgid "Monitor"
+#~ msgstr "Monitor"
+
+#~ msgid ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+#~ msgstr ""
+#~ "Configura o monitor para mostrar encaixe. O valor padrão (-1) é o monitor "
+#~ "primário."
+
+#~ msgid "%s is away."
+#~ msgstr "%s está ausente."
+
+#~ msgid "%s is offline."
+#~ msgstr "%s está desconectado."
+
+#~ msgid "%s is online."
+#~ msgstr "%s está conectado."
+
+#~ msgid "%s is busy."
+#~ msgstr "%s está ocupado."
+
+#~ msgid "Devices"
+#~ msgstr "Dispositivos"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Marcadores"
+
+#~ msgid "Network"
+#~ msgstr "Rede"
+
+#~ msgid "File System"
+#~ msgstr "Sistema de arquivos"
 
 #~ msgid "The alt tab behaviour."
 #~ msgstr "O comportamento do alt tab."
