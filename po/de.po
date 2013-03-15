@@ -1,16 +1,17 @@
 # German translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2011, 2012.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2011-2013.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-24 12:41+0200\n"
-"PO-Revision-Date: 2012-10-24 12:37+0100\n"
-"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-03-11 01:25+0000\n"
+"PO-Revision-Date: 2013-03-13 20:30+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -21,50 +22,53 @@ msgstr ""
 "X-Poedit-Country: GERMANY\n"
 "X-Generator: Gtranslator 2.91.5\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "Der Modus des Anwendungssymbols."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME Classic"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
-msgstr ""
-"Legt fest, wie die Fenster im Fensterumschalter angezeigt werden. Gültige "
-"Werte sind »thumbnail-only« (zeigt ein Vorschaubild des Fensters), »app-icon-"
-"only« (zeigt das Anwendungssymbol) oder »both« (beides)."
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Diese Sitzung meldet Sie in GNOME Classic an"
 
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell Classic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Fensterverwaltung und Anwendungsstart"
+
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Nur Vorschaubild"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Nur Anwendungssymbol"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Vorschaubild und Anwendungssymbol"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Fenster darstellen als"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Nur Fenster der aktuellen Arbeitsfläche anzeigen"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:86
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Bereitschaft"
 
-#: ../extensions/alternative-status-menu/extension.js:91
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Ruhezustand"
 
-#: ../extensions/alternative-status-menu/extension.js:96
+#: ../extensions/alternative-status-menu/extension.js:131
 msgid "Power Off"
 msgstr "Ausschalten …"
 
@@ -83,6 +87,18 @@ msgstr "Ruhezustand einblenden"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Die Sichtbarkeit des Menüeintrags »Ruhezustand« festlegen"
+
+#: ../extensions/apps-menu/extension.js:37
+msgid "Activities Overview"
+msgstr "Aktivitäten-Übersicht"
+
+#: ../extensions/apps-menu/extension.js:95
+msgid "Favorites"
+msgstr "Favoriten"
+
+#: ../extensions/apps-menu/extension.js:184
+msgid "Applications"
+msgstr "Anwendungen"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -193,37 +209,26 @@ msgstr ""
 "Vorschaubild platziert und damit die Voreinstellung der Shell übergangen. "
 "Eine Änderungseinstellung tritt erst mit einem Neustart der Shell in Kraft."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:77
 msgid "Places"
 msgstr "Orte"
 
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Geräte"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Lesezeichen"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Netzwerk"
-
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Starten von »%s« fehlgeschlagen"
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Rechner"
+
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Home"
 msgstr "Persönlicher Ordner"
 
-#: ../extensions/places-menu/placeDisplay.js:184
-msgid "File System"
-msgstr "Dateisystem"
-
-#: ../extensions/places-menu/placeDisplay.js:188
-msgid "Browse network"
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
 msgstr "Netzwerk durchsuchen"
 
 #: ../extensions/systemMonitor/extension.js:213
@@ -243,6 +248,30 @@ msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr ""
 "Der Name des Themas, welches aus ~/.themes/name/gnome-shell geladen werden "
 "soll"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Fenstergruppierung"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\" and \"always\"."
+msgstr ""
+"Legt fest, ob Fenster der gleichen Anwendung in der Fensterliste gruppiert "
+"werden sollen. Mögliche Werte sind »never« (nie) und »always« (immer)."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Fenstergruppierung"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Fenster niemals gruppieren"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Always group windows"
+msgstr "Fenster immer gruppieren"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -285,6 +314,30 @@ msgstr "Anzeige"
 msgid "Display Settings"
 msgstr "Bildschirmeinstellungen"
 
+#~ msgid "The application icon mode."
+#~ msgstr "Der Modus des Anwendungssymbols."
+
+#~ msgid ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
+#~ msgstr ""
+#~ "Legt fest, wie die Fenster im Fensterumschalter angezeigt werden. Gültige "
+#~ "Werte sind »thumbnail-only« (zeigt ein Vorschaubild des Fensters), »app-"
+#~ "icon-only« (zeigt das Anwendungssymbol) oder »both« (beides)."
+
+#~ msgid "Devices"
+#~ msgstr "Geräte"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Lesezeichen"
+
+#~ msgid "Network"
+#~ msgstr "Netzwerk"
+
+#~ msgid "File System"
+#~ msgstr "Dateisystem"
+
 #~ msgid "Drag here to add favorites"
 #~ msgstr "Hierher ziehen, um zu Favoriten hinzuzufügen"
 
@@ -296,71 +349,3 @@ msgstr "Bildschirmeinstellungen"
 
 #~ msgid "Remove from Favorites"
 #~ msgstr "Aus Favoriten entfernen"
-
-#~ msgid "Add to Favorites"
-#~ msgstr "Zu Favoriten hinzufügen"
-
-# Dock = das Dock ? -ck
-# Sofern es sich nicht um das Original-Dash handelt, ja. -mb
-#~ msgid "Position of the dock"
-#~ msgstr "Position des Docks"
-
-#~ msgid ""
-#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
-#~ "or 'left'"
-#~ msgstr ""
-#~ "Legt die Position des Docks auf dem Bildschirm fest. Mögliche Werte sind "
-#~ "»right« und »left«"
-
-#~ msgid "Icon size"
-#~ msgstr "Symbolgröße"
-
-#~ msgid "Sets icon size of the dock."
-#~ msgstr "Legt die Symbolgröße für das Dock fest"
-
-#~ msgid "Enable/disable autohide"
-#~ msgstr "Automatisches Verbergen aktivieren/deaktivieren"
-
-#~ msgid "Autohide effect"
-#~ msgstr "Effekt automatisch verbergen"
-
-#~ msgid ""
-#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
-#~ "and 'move'"
-#~ msgstr ""
-#~ "Legt den Effekt für das versteckte Dock fest. Mögliche Werte sind "
-#~ "»resize«, »rescale« und »move«"
-
-#~ msgid "Autohide duration"
-#~ msgstr "Dauer automatisch verbergen"
-
-#~ msgid "Sets the time duration of the autohide effect."
-#~ msgstr "Legt die Effektdauer für automatisches Verbergen fest."
-
-#~ msgid "Monitor"
-#~ msgstr "Bildschirm"
-
-#~ msgid ""
-#~ "Sets monitor to display dock in. The default value (-1) is the primary "
-#~ "monitor."
-#~ msgstr ""
-#~ "Legt den Bildschirm fest, in dem das Dock angezeigt werden soll. Die "
-#~ "Voreinstellung (-1) entspricht dem primären Bildschirm."
-
-#~ msgid "%s is away."
-#~ msgstr "%s ist abwesend."
-
-#~ msgid "%s is offline."
-#~ msgstr "%s ist abgemeldet."
-
-#~ msgid "%s is online."
-#~ msgstr "%s ist angemeldet."
-
-#~ msgid "%s is busy."
-#~ msgstr "%s ist beschäftigt."
-
-#~ msgid "Removable Devices"
-#~ msgstr "Wechseldatenträger"
-
-#~ msgid "The alt tab behaviour."
-#~ msgstr "Das Verhalten bei Eingabe von Alt-Tab."
