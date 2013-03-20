@@ -3,22 +3,21 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
 # Biró Balázs <arch.scar at gmail dot com>, 2011.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012, 2013.
 # Balázs Úr <urbalazs at gmail dot com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-12-11 16:59+0000\n"
-"PO-Revision-Date: 2013-01-01 16:05+0100\n"
-"Last-Translator: Balázs Úr <urbalazs at gmail dot com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-21 00:49+0100\n"
+"PO-Revision-Date: 2013-03-21 00:48+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -35,7 +34,6 @@ msgid "GNOME Shell Classic"
 msgstr "Klasszikus GNOME Shell"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
-#| msgid "Thumbnail and application icon"
 msgid "Window management and application launching"
 msgstr "Ablakkezelés és alkalmazásindítás"
 
@@ -60,15 +58,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Csak az aktuális munkaterület ablakainak megjelenítése"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:144
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Felfüggesztés"
 
-#: ../extensions/alternative-status-menu/extension.js:147
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Hibernálás"
 
-#: ../extensions/alternative-status-menu/extension.js:150
+#: ../extensions/alternative-status-menu/extension.js:131
 msgid "Power Off"
 msgstr "Kikapcsolás"
 
@@ -87,6 +85,18 @@ msgstr "Hibernálás engedélyezése"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "A Hibernálás menüelem láthatóságának módosítása"
+
+#: ../extensions/apps-menu/extension.js:37
+msgid "Activities Overview"
+msgstr "Tevékenységek áttekintés"
+
+#: ../extensions/apps-menu/extension.js:95
+msgid "Favorites"
+msgstr "Kedvencek"
+
+#: ../extensions/apps-menu/extension.js:184
+msgid "Applications"
+msgstr "Alkalmazások"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -131,7 +141,6 @@ msgid "Removable devices"
 msgstr "Cserélhető eszközök"
 
 #: ../extensions/drive-menu/extension.js:106
-#| msgid "Open file manager"
 msgid "Open File"
 msgstr "Fájl megnyitása"
 
@@ -195,37 +204,26 @@ msgstr ""
 "tetejére helyezi el, az alapértelmezett alja helyett. Ezen beállítás "
 "módosítása a Shell újraindítását igényli."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:77
 msgid "Places"
 msgstr "Helyek"
 
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Eszközök"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Könyvjelzők"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Hálózat"
-
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "„%s” indítása meghiúsult"
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Számítógép"
+
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Home"
 msgstr "Saját mappa"
 
-#: ../extensions/places-menu/placeDisplay.js:195
-msgid "File System"
-msgstr "Fájlrendszer"
-
-#: ../extensions/places-menu/placeDisplay.js:199
-msgid "Browse network"
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
 msgstr "Hálózat tallózása"
 
 #: ../extensions/systemMonitor/extension.js:213
@@ -243,6 +241,30 @@ msgstr "Témanév"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "A ~/.themes/név/gnome-shell alól betöltendő téma neve"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Mikor legyenek az ablakok csoportosítva"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\" and \"always\"."
+msgstr ""
+"Megadja, mikor csoportosítsa az Ablaklista kisalkalmazás egyazon alkalmazás "
+"ablakait. Lehetséges értékek „never” (soha) és „always” (mindig)."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Ablakcsoportosítás"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Soha ne csoportosítsa az ablakokat"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Always group windows"
+msgstr "Mindig csoportosítsa az ablakokat"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -285,6 +307,18 @@ msgstr "Kijelző"
 msgid "Display Settings"
 msgstr "Kijelzőbeállítások"
 
+#~ msgid "Devices"
+#~ msgstr "Eszközök"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Könyvjelzők"
+
+#~ msgid "Network"
+#~ msgstr "Hálózat"
+
+#~ msgid "File System"
+#~ msgstr "Fájlrendszer"
+
 #~ msgid "The application icon mode."
 #~ msgstr "Az alkalmazásikon módja."
 
@@ -308,9 +342,6 @@ msgstr "Kijelzőbeállítások"
 
 #~ msgid "Remove from Favorites"
 #~ msgstr "Eltávolítás a Kedvencek közül"
-
-#~ msgid "Add to Favorites"
-#~ msgstr "Hozzáadás a Kedvencekhez"
 
 #~ msgid "Position of the dock"
 #~ msgstr "A dokk pozíciója"
