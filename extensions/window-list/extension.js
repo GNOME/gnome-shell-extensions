@@ -1,5 +1,6 @@
 const Clutter = imports.gi.Clutter;
 const GLib = imports.gi.GLib;
+const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
 const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
@@ -10,6 +11,7 @@ const Hash = imports.misc.hash;
 const Lang = imports.lang;
 const Main = imports.ui.main;
 const MessageTray = imports.ui.messageTray;
+const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -372,6 +374,106 @@ const TrayButton = new Lang.Class({
     }
 });
 
+const WorkspaceIndicator = new Lang.Class({
+    Name: 'WindowList.WorkspaceIndicator',
+    Extends: PanelMenu.Button,
+
+    _init: function(){
+        this.parent(0.0, _("Workspace Indicator"));
+        this.actor.add_style_class_name('window-list-workspace-indicator');
+
+        this._currentWorkspace = global.screen.get_active_workspace().index();
+        this.statusLabel = new St.Label({ text: this._getStatusText() });
+
+        this.actor.add_actor(this.statusLabel);
+
+        this.workspacesItems = [];
+
+        this._screenSignals = [];
+        this._screenSignals.push(global.screen.connect_after('workspace-added', Lang.bind(this,this._updateMenu)));
+        this._screenSignals.push(global.screen.connect_after('workspace-removed', Lang.bind(this,this._updateMenu)));
+        this._screenSignals.push(global.screen.connect_after('workspace-switched', Lang.bind(this,this._updateIndicator)));
+
+        this.actor.connect('scroll-event', Lang.bind(this, this._onScrollEvent));
+        this._updateMenu();
+
+        this._settings = new Gio.Settings({ schema: 'org.gnome.desktop.wm.preferences' });
+        this._settingsChangedId = this._settings.connect('changed::workspace-names', Lang.bind(this, this._updateMenu));
+    },
+
+    destroy: function() {
+        for (let i = 0; i < this._screenSignals.length; i++)
+            global.screen.disconnect(this._screenSignals[i]);
+
+        if (this._settingsChangedId) {
+            this._settings.disconnect(this._settingsChangedId);
+            this._settingsChangedId = 0;
+        }
+
+        this.parent();
+    },
+
+    _updateIndicator: function() {
+        this.workspacesItems[this._currentWorkspace].setShowDot(false);
+        this._currentWorkspace = global.screen.get_active_workspace().index();
+        this.workspacesItems[this._currentWorkspace].setShowDot(true);
+
+        this.statusLabel.set_text(this._getStatusText());
+    },
+
+    _getStatusText: function() {
+        let current = global.screen.get_active_workspace().index();
+        let total = global.screen.n_workspaces;
+
+        return '%d / %d'.format(current + 1, total);
+    },
+
+    _updateMenu: function() {
+        this.menu.removeAll();
+        this.workspacesItems = [];
+        this._currentWorkspace = global.screen.get_active_workspace().index();
+
+        for(let i = 0; i < global.screen.n_workspaces; i++) {
+            let name = Meta.prefs_get_workspace_name(i);
+            let item = new PopupMenu.PopupMenuItem(name);
+            item.workspaceId = i;
+
+            item.connect('activate', Lang.bind(this, function(item, event) {
+                this._activate(item.workspaceId);
+            }));
+
+            if (i == this._currentWorkspace)
+                item.setShowDot(true);
+
+            this.menu.addMenuItem(item);
+            this.workspacesItems[i] = item;
+        }
+
+        this.statusLabel.set_text(this._getStatusText());
+    },
+
+    _activate: function(index) {
+        if(index >= 0 && index < global.screen.n_workspaces) {
+            let metaWorkspace = global.screen.get_workspace_by_index(index);
+            metaWorkspace.activate(global.get_current_time());
+        }
+    },
+
+    _onScrollEvent: function(actor, event) {
+        let direction = event.get_scroll_direction();
+        let diff = 0;
+        if (direction == Clutter.ScrollDirection.DOWN) {
+            diff = 1;
+        } else if (direction == Clutter.ScrollDirection.UP) {
+            diff = -1;
+        } else {
+            return;
+        }
+
+        let newIndex = this._currentWorkspace + diff;
+        this._activate(newIndex);
+    },
+});
 
 const WindowList = new Lang.Class({
     Name: 'WindowList',
@@ -415,6 +517,12 @@ const WindowList = new Lang.Class({
                                    Lang.bind(this, this._populateWindowList));
                 }
             }));
+
+        this._workspaceIndicator = new WorkspaceIndicator();
+        box.add(this._workspaceIndicator.container);
+
+        this._menuManager = new PopupMenu.PopupMenuManager(this);
+        this._menuManager.addMenu(this._workspaceIndicator.menu);
 
         this._trayButton = new TrayButton();
         box.add(this._trayButton.actor);
@@ -672,6 +780,7 @@ const WindowList = new Lang.Class({
     },
 
     _onDestroy: function() {
+        this._workspaceIndicator.destroy();
 
         Main.ctrlAltTabManager.removeGroup(this.actor);
 

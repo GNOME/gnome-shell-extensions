@@ -66,3 +66,12 @@
   width: 24px;
   height: 24px;
 }
+
+.window-list-workspace-indicator {
+  background-color: rgba(200, 200, 200, .3);
+  border: 1px solid #cccccc;
+}
+
+.window-list-workspace-indicator > StLabel {
+  padding: 0 2px;
+}
