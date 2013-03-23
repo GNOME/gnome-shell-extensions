@@ -1,9 +1,11 @@
 const Clutter = imports.gi.Clutter;
+const GLib = imports.gi.GLib;
 const Gtk = imports.gi.Gtk;
 const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 
+const DND = imports.ui.dnd;
 const Hash = imports.misc.hash;
 const Lang = imports.lang;
 const Main = imports.ui.main;
@@ -15,6 +17,7 @@ const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
 const ICON_TEXTURE_SIZE = 24;
+const DND_ACTIVATE_TIMEOUT = 500;
 
 const GroupingMode = {
     NEVER: 0,
@@ -434,6 +437,19 @@ const WindowList = new Lang.Class({
                 this._updateMessageTrayAnchor();
             }));
 
+        this._dragBeginId =
+            Main.xdndHandler.connect('drag-begin',
+                                     Lang.bind(this, this._onDragBegin));
+        this._dragEndId =
+            Main.xdndHandler.connect('drag-end',
+                                     Lang.bind(this, this._onDragEnd));
+        this._dragMonitor = {
+            dragMotion: Lang.bind(this, this._onDragMotion)
+        };
+
+        this._dndTimeoutId = 0;
+        this._dndWindow = null;
+
         this._settings = Convenience.getSettings();
         this._groupingModeChangedId =
             this._settings.connect('changed::grouping-mode',
@@ -562,6 +578,59 @@ const WindowList = new Lang.Class({
             workspace.disconnect(signals._windowAddedId);
             workspace.disconnect(signals._windowRemovedId);
         }
+    },
+
+    _onDragBegin: function() {
+        DND.addDragMonitor(this._dragMonitor);
+    },
+
+    _onDragEnd: function() {
+        DND.removeDragMonitor(this._dragMonitor);
+        this._removeActivateTimeout();
+    },
+
+    _onDragMotion: function(dragEvent) {
+        if (Main.overview.visible ||
+            !this.actor.contains(dragEvent.targetActor)) {
+            this._removeActivateTimeout();
+            return DND.DragMotionResult.CONTINUE;
+        }
+
+        let hoveredWindow = null;
+        if (dragEvent.targetActor._delegate)
+            hoveredWindow = dragEvent.targetActor._delegate.metaWindow;
+
+        if (!hoveredWindow ||
+            this._dndWindow == hoveredWindow)
+            return DND.DragMotionResult.CONTINUE;
+
+        this._removeActivateTimeout();
+
+        this._dndWindow = hoveredWindow;
+        this._dndTimeoutId = GLib.timeout_add(GLib.PRIORITY_DEFAULT,
+                                              DND_ACTIVATE_TIMEOUT,
+                                              Lang.bind(this, this._activateWindow));
+
+        return DND.DragMotionResult.CONTINUE;
+    },
+
+    _removeActivateTimeout: function() {
+        if (this._dndTimeoutId)
+            GLib.source_remove (this._dndTimeoutId);
+        this._dndTimeoutId = 0;
+        this._dndWindow = null;
+    },
+
+    _activateWindow: function() {
+        let [x, y] = global.get_pointer();
+        let pickedActor = global.stage.get_actor_at_pos(Clutter.PickMode.ALL, x, y);
+
+        if (this._dndWindow && this.actor.contains(pickedActor))
+            this._dndWindow.activate(global.get_current_time());
+        this._dndWindow = null;
+        this._dndTimeoutId = 0;
+
+        return false;
     },
 
     _onDestroy: function() {
