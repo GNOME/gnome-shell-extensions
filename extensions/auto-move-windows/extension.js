@@ -68,11 +68,28 @@ const WindowMover = new Lang.Class({
             let apps_to_space = spaces[j].split(":");
             // Match application id
             if (apps_to_space[0] == app_id) {
-                let workspace_num = parseInt(apps_to_space[1]) - 1;
+                let workspace_num, monitor_num;
+
+                if (apps_to_space.length == 2) {
+                    workspace_num = parseInt(apps_to_space[1]);
+                    monitor_num = Main.layoutManager.primaryMonitor;
+                } else {
+                    workspace_num = apps_to_space[1] ? parseInt(apps_to_space[1]) :
+                        global.screen.get_active_workspace_index();
+                    monitor_num = parseInt(apps_to_space[2]);
+                }
 
                 if (workspace_num >= global.screen.n_workspaces)
                     this._ensureAtLeastWorkspaces(workspace_num, window);
+                if (workspace_num < 0)
+                    workspace_num = global.screen.get_active_workspace_index();
 
+                if (monitor_num >= Main.layoutManager.monitors.length)
+                    monitor_num = Main.layoutManager.monitors.length - 1;
+                if (monitor_num < 0)
+                    monitor_num = 0;
+
+                window.move_to_monitor(monitor_num);
                 window.change_workspace_by_index(workspace_num, false);
             }
         }
