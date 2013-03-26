@@ -2,13 +2,13 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Fran Diéguez <frandieguez@gnome.org>, 2011.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-27 00:51+0100\n"
-"PO-Revision-Date: 2012-12-27 00:52+0200\n"
+"POT-Creation-Date: 2013-03-26 12:50+0100\n"
+"PO-Revision-Date: 2013-03-26 12:51+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -57,15 +57,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Mostrar só as xanelas na área de traballo actual"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:144
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../extensions/alternative-status-menu/extension.js:147
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../extensions/alternative-status-menu/extension.js:150
+#: ../extensions/alternative-status-menu/extension.js:131
 msgid "Power Off"
 msgstr "Apagar"
 
@@ -84,6 +84,18 @@ msgstr "Activar hibernación"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Controla a visibilidade do elemento de menú «Hibernar»"
+
+#: ../extensions/apps-menu/extension.js:37
+msgid "Activities Overview"
+msgstr "Vista xeral de actividades"
+
+#: ../extensions/apps-menu/extension.js:95
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: ../extensions/apps-menu/extension.js:184
+msgid "Applications"
+msgstr "Aplicativos"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -190,37 +202,26 @@ msgstr ""
 "respectiva, omitindo a disposición inferior por omisión do shell. Se cambia "
 "esta configuración deberá reiniciar o shell para que se apliquen os cambios."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:77
 msgid "Places"
 msgstr "Lugares"
 
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Dispositivos"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Marcadores"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Rede"
-
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Produciuse un fallo ao iniciar «%s»"
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Computador"
+
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Home"
 msgstr "Cartafol persoal"
 
-#: ../extensions/places-menu/placeDisplay.js:195
-msgid "File System"
-msgstr "Sistema de ficheiros"
-
-#: ../extensions/places-menu/placeDisplay.js:199
-msgid "Browse network"
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
 msgstr "Explorar a rede"
 
 #: ../extensions/systemMonitor/extension.js:213
@@ -238,6 +239,30 @@ msgstr "Nome do tema"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "O nome do tema, a cargar desde ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Cando agrupar xanelas"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\" and \"always\"."
+msgstr ""
+"Decide cando agrupar as xanelas do mesmo aplicativo na lista de xanelas. Os "
+"valores posíbeis son \"never\" (nunca) e \"always\" (sempre)."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Agrupación de xanelas"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Non agrupar nunca as xanelas"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Always group windows"
+msgstr "Agrupar sempre as xanelas"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -280,6 +305,18 @@ msgstr "Pantalla"
 msgid "Display Settings"
 msgstr "Preferencias da pantalla"
 
+#~ msgid "Devices"
+#~ msgstr "Dispositivos"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Marcadores"
+
+#~ msgid "Network"
+#~ msgstr "Rede"
+
+#~ msgid "File System"
+#~ msgstr "Sistema de ficheiros"
+
 #~ msgid "The application icon mode."
 #~ msgstr "O modo da icona do aplicativo."
 
@@ -303,9 +340,6 @@ msgstr "Preferencias da pantalla"
 
 #~ msgid "Remove from Favorites"
 #~ msgstr "Eliminar dos favoritos"
-
-#~ msgid "Add to Favorites"
-#~ msgstr "Engadir aos favoritos"
 
 #~ msgid "Position of the dock"
 #~ msgstr "Posición da doca"
