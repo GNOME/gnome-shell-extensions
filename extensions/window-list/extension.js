@@ -423,11 +423,16 @@ const WindowList = new Lang.Class({
 
         this._overviewHidingId =
             Main.overview.connect('hiding', Lang.bind(this, function() {
-                this.actor.show();
+                this.actor.visible = !Main.layoutManager.primaryMonitor.inFullscreen;
                 this._updateKeyboardAnchor();
                 this._updateMessageTrayAnchor();
             }));
         this._updateMessageTrayAnchor();
+
+        this._fullscreenChangedId =
+            global.screen.connect('in-fullscreen-changed', Lang.bind(this, function() {
+                this._updateMessageTrayAnchor();
+            }));
 
         this._settings = Convenience.getSettings();
         this._groupingModeChangedId =
@@ -583,6 +588,8 @@ const WindowList = new Lang.Class({
 
         Main.overview.disconnect(this._overviewShowingId);
         Main.overview.disconnect(this._overviewHidingId);
+
+        global.screen.disconnect(this._fullscreenChangedId);
 
         this._settings.disconnect(this._groupingModeChangedId);
 
