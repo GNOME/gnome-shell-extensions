@@ -4,7 +4,6 @@
    - white edge highlight with text-shadow and icon-shadow for panel-button
    - better shading of the panel (dark 5%) - impossible without multipoint gradients, image-bg is a hack
    - bubble menus: separators
-   - submenus (network, ...)
    - startup notification spinner
 */
 
@@ -142,6 +141,18 @@
 
   .popup-subtitle-menu-item, .popup-subtitle-menu-item:insensitive {
     color: #000;
+  }
+
+  .popup-submenu-menu-item:open {
+    background-color: #888;
+    color: #fff;
+  }
+
+  .popup-sub-menu {
+      background-gradient-start: #ddd;
+      background-gradient-end: #dfdfdf;
+      background-gradient-direction: vertical;
+      box-shadow: inset 0px 1px 3px rgba(0,0,0,0.4);
   }
 
 /* CALENDAR */
