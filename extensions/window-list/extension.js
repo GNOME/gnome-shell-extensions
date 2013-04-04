@@ -239,11 +239,13 @@ const AppButton = new Lang.Class({
 
         if (this._singleWindowTitle.visible) {
             if (!this._windowTitle) {
-                this._windowTitle = new WindowTitle(windows[0]);
+                this.metaWindow = windows[0];
+                this._windowTitle = new WindowTitle(this.metaWindow);
                 this._singleWindowTitle.child = this._windowTitle.actor;
             }
         } else {
             if (this._windowTitle) {
+                this.metaWindow = null;
                 this._singleWindowTitle.child = null;
                 this._windowTitle = null;
             }
