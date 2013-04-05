@@ -55,12 +55,21 @@ const ApplicationMenuItem = new Lang.Class({
 	this._app = app;
         this._button = button;
 
-        let icon = this._app.create_icon_texture(APPLICATION_ICON_SIZE);
-	this.addActor(icon);
+        this._iconBin = new St.Bin();
+        this.addActor(this._iconBin);
 
         let appLabel = new St.Label({ text: app.get_name() });
         this.addActor(appLabel, { span: -1, expand: true });
         this.actor.label_actor = appLabel;
+
+        let textureCache = St.TextureCache.get_default();
+        let iconThemeChangedId = textureCache.connect('icon-theme-changed',
+                                                      Lang.bind(this, this._updateIcon));
+        this.actor.connect('destroy', Lang.bind(this,
+            function() {
+                textureCache.disconnect(iconThemeChangedId);
+            }));
+        this._updateIcon();
     },
 
     activate: function(event) {
@@ -78,6 +87,10 @@ const ApplicationMenuItem = new Lang.Class({
 
     _getPreferredWidth: function(actor, forHeight, alloc) {
         alloc.min_size = alloc.natural_size = -1;
+    },
+
+    _updateIcon: function() {
+        this._iconBin.set_child(this._app.create_icon_texture(APPLICATION_ICON_SIZE));
     }
 });
 
