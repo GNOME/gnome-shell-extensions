@@ -312,6 +312,17 @@ const ApplicationsButton = new Lang.Class({
         return false;
     },
 
+    _onMenuKeyPress: function(actor, event) {
+        let symbol = event.get_key_symbol();
+        if (symbol == Clutter.KEY_Left || symbol == Clutter.KEY_Right) {
+            let direction = symbol == Clutter.KEY_Left ? Gtk.DirectionType.LEFT
+                                                       : Gtk.DirectionType.RIGHT;
+            if (this.menu.actor.navigate_focus(global.stage.key_focus, direction, false))
+                return true;
+        }
+        return this.parent(actor, event);
+    },
+
     _onVertSepRepaint: function(area) {
         let cr = area.get_context();
         let themeNode = area.get_theme_node();
