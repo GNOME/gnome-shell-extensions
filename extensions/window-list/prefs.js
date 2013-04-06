@@ -59,9 +59,9 @@ const WindowListPrefsWidget = new GObject.Class({
                continue;
             }
 
-            radio = new Gtk.RadioButton({ group: radio,
+            radio = new Gtk.RadioButton({ active: currentMode == mode,
                                           label: label,
-                                          active: currentMode == mode });
+                                          group: radio });
             grid.add(radio);
 
             radio.connect('toggled', Lang.bind(this, function(button) {
