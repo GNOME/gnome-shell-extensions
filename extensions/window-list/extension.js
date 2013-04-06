@@ -49,6 +49,12 @@ const WindowTitle = new Lang.Class({
         this._label = new St.Label();
         this.actor.add(this._label);
 
+        this._textureCache = St.TextureCache.get_default();
+        this._iconThemeChangedId =
+            this._textureCache.connect('icon-theme-changed', Lang.bind(this,
+                function() {
+                    this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
+                }));
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
 
         this._notifyTitleId =
@@ -73,6 +79,7 @@ const WindowTitle = new Lang.Class({
     },
 
     _onDestroy: function() {
+        this._textureCache.disconnect(this._iconThemeChangedId);
         this._metaWindow.disconnect(this._notifyTitleId);
         this._metaWindow.disconnect(this._notifyMinimizedId);
     }
@@ -168,9 +175,9 @@ const AppButton = new Lang.Class({
         this._multiWindowTitle = new St.BoxLayout({ x_expand: true });
         stack.add_actor(this._multiWindowTitle);
 
-        let icon = new St.Bin({ style_class: 'window-button-icon',
-                                child: app.create_icon_texture(ICON_TEXTURE_SIZE) });
-        this._multiWindowTitle.add(icon);
+        this._icon = new St.Bin({ style_class: 'window-button-icon',
+                                  child: app.create_icon_texture(ICON_TEXTURE_SIZE) });
+        this._multiWindowTitle.add(this._icon);
         this._multiWindowTitle.add(new St.Label({ text: app.get_name() }));
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
@@ -180,6 +187,12 @@ const AppButton = new Lang.Class({
         this._menuManager.addMenu(this._menu);
         Main.uiGroup.add_actor(this._menu.actor);
 
+        this._textureCache = St.TextureCache.get_default();
+        this._iconThemeChangedId =
+            this._textureCache.connect('icon-theme-changed', Lang.bind(this,
+                function() {
+                    this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
+                }));
         this.actor.connect('clicked', Lang.bind(this, this._onClicked));
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
 
@@ -284,6 +297,7 @@ const AppButton = new Lang.Class({
     },
 
     _onDestroy: function() {
+        this._textureCache.disconnect(this._iconThemeChangedId);
         global.window_manager.disconnect(this._switchWorkspaceId);
         this._windowTracker.disconnect(this._notifyFocusId);
         this.app.disconnect(this._windowsChangedId);
