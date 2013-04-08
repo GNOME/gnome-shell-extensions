@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-02-08 12:25+0000\n"
+"POT-Creation-Date: 2013-02-20 11:19+0000\n"
 "PO-Revision-Date: 2013-02-20 12:19+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -58,17 +58,17 @@ msgid "Show only windows in the current workspace"
 msgstr "Prikazuje samo prozore u tekućem radnom prostoru"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:144
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Obustavi"
 
-#: ../extensions/alternative-status-menu/extension.js:147
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Zamrzni"
 
-#: ../extensions/alternative-status-menu/extension.js:150
+#: ../extensions/alternative-status-menu/extension.js:131
 msgid "Power Off"
-msgstr "Ugasi"
+msgstr "Isključi"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
 msgid "Enable suspending"
@@ -86,17 +86,15 @@ msgstr "Uključuje zamrzavanje"
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Upravlja vidljivošću stavke izbornika zamrzavanja"
 
-#: ../extensions/apps-menu/extension.js:50
+#: ../extensions/apps-menu/extension.js:37
 msgid "Activities Overview"
 msgstr "Pregled aktivnosti"
 
-#: ../extensions/apps-menu/extension.js:103
-#| msgid "Add to Favorites"
+#: ../extensions/apps-menu/extension.js:95
 msgid "Favorites"
 msgstr "Omiljeno"
 
-#: ../extensions/apps-menu/extension.js:197
-#| msgid "Application"
+#: ../extensions/apps-menu/extension.js:189
 msgid "Applications"
 msgstr "Programi"
 
@@ -205,25 +203,25 @@ msgstr ""
 "umanjenih prikaza umesto ispod prikaza. Promena ovih podešavanja zahteva da "
 "ponovo pokrenete Gnomovu školjku."
 
-#: ../extensions/places-menu/extension.js:57
+#: ../extensions/places-menu/extension.js:77
 msgid "Places"
 msgstr "Mesta"
 
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Nisam uspeo da pokrenem „%s“"
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
-msgid "Home"
-msgstr "Lično"
-
-#: ../extensions/places-menu/placeDisplay.js:195
 msgid "Computer"
 msgstr "Računar"
 
 #: ../extensions/places-menu/placeDisplay.js:199
-#| msgid "Browse network"
+msgid "Home"
+msgstr "Lično"
+
+#: ../extensions/places-menu/placeDisplay.js:286
 msgid "Browse Network"
 msgstr "Razgledajte mrežu"
 
