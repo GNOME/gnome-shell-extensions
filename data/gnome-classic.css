@@ -3,7 +3,6 @@
 /* FIXME:
    - white edge highlight with text-shadow and icon-shadow for panel-button
    - better shading of the panel (dark 5%) - impossible without multipoint gradients, image-bg is a hack
-   - bubble menus: separators
    - startup notification spinner
 */
 
@@ -137,6 +136,15 @@
 
   .popup-menu-item:insensitive {
     color: #888;
+  }
+
+  .popup-separator-menu-item {
+    -gradient-height: 1px;
+    -gradient-start: rgba(0,0,0,0.0);
+    -gradient-end: rgba(0,0,0,0.3);
+    -margin-horizontal: 24px;
+    height: 1px;
+    padding: 8px 0px;
   }
 
   .popup-subtitle-menu-item, .popup-subtitle-menu-item:insensitive {
