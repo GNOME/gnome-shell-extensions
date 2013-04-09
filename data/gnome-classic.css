@@ -141,7 +141,7 @@
   .popup-separator-menu-item {
     -gradient-height: 1px;
     -gradient-start: rgba(0,0,0,0.0);
-    -gradient-end: rgba(0,0,0,0.3);
+    -gradient-end: rgba(0,0,0,0.15);
     -margin-horizontal: 24px;
     height: 1px;
     padding: 8px 0px;
