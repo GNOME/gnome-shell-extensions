@@ -1,5 +1,8 @@
 .bottom-panel {
-  height: 32px;
+  /* .window-button-icon height +
+     .window-button vertical padding +
+     .window-button > StWidget vertical padding) */
+  height: 30px;
 }
 
 .window-list {
@@ -61,29 +64,4 @@
 .window-button-icon {
   width: 24px;
   height: 24px;
-}
-
-.window-list-workspace-switcher {
-  spacing: 6px;
-}
-
-.window-list-workspace-button {
-  min-width: 2.5em;
-  color: #ccc;
-  transition-duration: 100;
-  border: 1px;
-  border-color: #ccc;
-  padding: 0 2px;
-}
-
-.window-list-workspace-button:outlined {
-  padding: 0 1px;
-  border: 2px solid white;
-  background: #222;
-  font-weight: bold;
-}
-
-.window-list-workspace-button:hover {
-  color: white;
-  text-shadow: black 0px 2px 2px;
 }
