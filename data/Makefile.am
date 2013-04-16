@@ -20,6 +20,7 @@ mode_DATA = $(mode_in_files:.json.in=.json)
 
 themedir = $(datadir)/gnome-shell/theme
 theme_DATA = 				\
+	$(srcdir)/classic-process-working.svg	\
 	$(srcdir)/classic-toggle-off-intl.svg	\
 	$(srcdir)/classic-toggle-off-us.svg	\
 	$(srcdir)/classic-toggle-on-intl.svg	\

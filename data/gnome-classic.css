@@ -3,7 +3,6 @@
 /* FIXME:
    - white edge highlight with text-shadow and icon-shadow for panel-button
    - better shading of the panel (dark 5%) - impossible without multipoint gradients, image-bg is a hack
-   - startup notification spinner
 */
 
 #panel {
@@ -98,6 +97,7 @@
 
   #appMenu {
     text-shadow: 0 0 0 transparent !important;
+    spinner-image: url("classic-process-working.svg");
   }
 
   /* used for the app menu header only */
