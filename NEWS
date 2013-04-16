@@ -1,3 +1,18 @@
+3.8.1
+=====
+* many improvements to window-list:
+  - windows are activated by DND over them
+  - window buttons now have the right size,
+    even if the text is smaller or larger
+    than the ideal
+  - window buttons can be grouped automatically
+    when the panel becomes crowded
+  - added a workspace switcher menu
+* added keyboard navigation to apps-menu
+* small tweaks to classic-mode theme, in particular
+  for menus
+* translation updates (gl, ko, sr)
+
 3.8.0
 =====
 * translation updates (hu, ja, fi, it)
