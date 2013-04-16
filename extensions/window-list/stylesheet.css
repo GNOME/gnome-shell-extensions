@@ -24,6 +24,7 @@
 
 .window-button > StWidget {
   -st-natural-width: 250px;
+  max-width: 250px;
   color: #bbb;
   background-color: black;
   border-radius: 4px;
