@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-08 15:40+0100\n"
-"PO-Revision-Date: 2013-02-08 15:41+0100\n"
+"POT-Creation-Date: 2013-04-19 21:13+0200\n"
+"PO-Revision-Date: 2013-04-19 21:14+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -61,15 +61,15 @@ msgid "Show only windows in the current workspace"
 msgstr "Wyświetlanie tylko okien w bieżącym obszarze roboczym"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:144
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Uśpij"
 
-#: ../extensions/alternative-status-menu/extension.js:147
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Hibernuj"
 
-#: ../extensions/alternative-status-menu/extension.js:150
+#: ../extensions/alternative-status-menu/extension.js:131
 msgid "Power Off"
 msgstr "Wyłącz komputer"
 
@@ -89,15 +89,15 @@ msgstr "Włączenie hibernacji"
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Kontrola widoczności pozycji \"Hibernuj\" menu"
 
-#: ../extensions/apps-menu/extension.js:37
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Ekran podglądu"
 
-#: ../extensions/apps-menu/extension.js:91
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: ../extensions/apps-menu/extension.js:185
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "Programy"
 
@@ -207,24 +207,25 @@ msgstr ""
 "powłokę. Zmiana tego ustawienia wymaga ponownego uruchomienia powłoki, aby "
 "uwzględnić zmiany."
 
-#: ../extensions/places-menu/extension.js:57
+#: ../extensions/places-menu/extension.js:77
 msgid "Places"
 msgstr "Miejsca"
 
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Uruchomienie \"%s\" się nie powiodło"
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
-msgid "Home"
-msgstr "Katalog domowy"
-
-#: ../extensions/places-menu/placeDisplay.js:195
 msgid "Computer"
 msgstr "Komputer"
 
 #: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "Katalog domowy"
+
+#: ../extensions/places-menu/placeDisplay.js:286
 msgid "Browse Network"
 msgstr "Przeglądaj sieć"
 
@@ -251,10 +252,10 @@ msgstr "Kiedy grupować okna"
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "Określa, kiedy grupować okna tego samego programu na liście okien. Możliwe "
-"wartości to \"never\" i \"always\"."
+"wartości to \"never\", \"auto\" i \"always\"."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -265,6 +266,10 @@ msgid "Never group windows"
 msgstr "Bez grupowania okien"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Grupowanie okien, kiedy miejsce jest ograniczone"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Zawsze grupowanie okien"
 
