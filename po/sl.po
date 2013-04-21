@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-03-07 17:02+0000\n"
-"PO-Revision-Date: 2013-03-07 21:56+0100\n"
+"POT-Creation-Date: 2013-04-20 13:37+0000\n"
+"PO-Revision-Date: 2013-04-21 08:07+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -88,15 +88,15 @@ msgstr "Omogoči mirovanje"
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Upravljanje vidnosti menijskega ukaza V mirovanje"
 
-#: ../extensions/apps-menu/extension.js:37
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Pregled dejavnosti"
 
-#: ../extensions/apps-menu/extension.js:95
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Priljubljeno"
 
-#: ../extensions/apps-menu/extension.js:184
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "Programi"
 
@@ -251,10 +251,10 @@ msgstr "Kdaj naj se okna združujejo"
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
-"Določi, kdaj se okna v seznamu združujejo. Veljavni vrednosti sta \"nikoli\" "
-"ali \"vedno\"."
+"Določi, kdaj se okna v seznamu združujejo. Veljavne vrednosti so \"nikoli\", "
+"\"samodejno\" in \"vedno\"."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -265,6 +265,10 @@ msgid "Never group windows"
 msgstr "Nikoli ne združuj oken"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Združi okna v skupine, ko je prostor omejen"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Vedno združuj okna"
 
