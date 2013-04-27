@@ -342,21 +342,20 @@ function enable() {
                     0];
         };
 
-        winInjections['updatePositions'] = Workspace.WindowOverlay.prototype.updatePositions;
-        Workspace.WindowOverlay.prototype.updatePositions = function(cloneX, cloneY, cloneWidth, cloneHeight, animate) {
+        winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
+        Workspace.WindowOverlay.prototype.relayout = function(animate) {
             let button = this.closeButton;
             let title = this.title;
+            let border = this.border;
 
-            let settings = new Gio.Settings({ schema: BUTTON_LAYOUT_SCHEMA });
-            let layout = settings.get_string(BUTTON_LAYOUT_KEY);
-            let rtl = Clutter.get_default_text_direction() == Clutter.TextDirection.RTL;
+            Tweener.removeTweens(button);
+            Tweener.removeTweens(title);
+            Tweener.removeTweens(border);
 
-            let split = layout.split(":");
-            let side;
-            if (split[0].indexOf("close") > -1)
-                side = rtl ? St.Side.RIGHT : St.Side.LEFT;
-            else
-                side = rtl ? St.Side.LEFT : St.Side.RIGHT;
+            let [cloneX, cloneY, cloneWidth, cloneHeight] = this._windowClone.slot;
+
+            let layout = Meta.prefs_get_button_layout();
+            let side = layout.left_buttons.indexOf(Meta.ButtonFunction.CLOSE) > -1 ? St.Side.LEFT : St.Side.RIGHT;
 
             let buttonX;
             let buttonY = cloneY - (button.height - button._overlap);
@@ -370,11 +369,21 @@ function enable() {
             else
                 button.set_position(Math.floor(buttonX), Math.floor(buttonY));
 
-            if (!title.fullWidth)
-                title.fullWidth = title.width;
-            let titleWidth = Math.min(title.fullWidth, cloneWidth);
+            // Clutter.Actor.get_preferred_width() will return the fixed width if one
+            // is set, so we need to reset the width by calling set_width(-1), to forward
+            // the call down to StLabel.
+            // We also need to save and restore the current width, otherwise the animation
+            // starts from the wrong point.
+            let prevTitleWidth = title.width;
+            title.set_width(-1);
+            let [titleMinWidth, titleNatWidth] = title.get_preferred_width(-1);
+            let titleWidth = Math.max(titleMinWidth, Math.min(titleNatWidth, cloneWidth));
+            title.width = prevTitleWidth;
 
             let titleX = cloneX + (cloneWidth - titleWidth) / 2;
+
+            /// this is the actual difference to original gnome-shell:
+            //let titleY = cloneY + cloneHeight + title._spacing;
             let titleY = cloneY - title.height + title._spacing;
 
             if (animate)
@@ -382,6 +391,19 @@ function enable() {
             else {
                 title.width = titleWidth;
                 title.set_position(Math.floor(titleX), Math.floor(titleY));
+            }
+
+            let borderX = cloneX - this.borderSize;
+            let borderY = cloneY - this.borderSize;
+            let borderWidth = cloneWidth + 2 * this.borderSize;
+            let borderHeight = cloneHeight + 2 * this.borderSize;
+
+            if (animate) {
+                this._animateOverlayActor(this.border, borderX, borderY,
+                                          borderWidth, borderHeight);
+            } else {
+                this.border.set_position(borderX, borderY);
+                this.border.set_size(borderWidth, borderHeight);
             }
         };
     }
