@@ -141,9 +141,6 @@ function enable() {
     Workspace.Workspace.prototype._calculateWindowTransformationsNatural = function(clones) {
         // As we are using pseudo-random movement (See "slot") we need to make sure the list
         // is always sorted the same way no matter which window is currently active.
-        clones = clones.sort(function (win1, win2) {
-            return win2.metaWindow.get_stable_sequence() - win1.metaWindow.get_stable_sequence();
-        });
 
         let node = this.actor.get_theme_node();
         let columnSpacing = node.get_length('-horizontal-spacing');
@@ -319,94 +316,22 @@ function enable() {
         let buttonOuterHeight, captionHeight;
         let buttonOuterWidth = 0;
 
-        let targets = [];
+        let slots = [];
         for (let i = 0; i < rects.length; i++) {
             rects[i].x = rects[i].x * scale + area.x;
             rects[i].y = rects[i].y * scale + area.y;
 
-            targets[i] = [rects[i].x, rects[i].y, scale];
+            slots.push([rects[i].x, rects[i].y, scale, clones[i]]);
         }
 
-        return [clones, targets];
+        return slots;
     }
     workspaceInjections['_calculateWindowTransformationsNatural'] = undefined;
 
-    /**
-     * _realPositionWindows:
-     * @flags:
-     *  INITIAL - this is the initial positioning of the windows.
-     *  ANIMATE - Indicates that we need animate changing position.
-     */
-    workspaceInjections['_realPositionWindows'] = Workspace.Workspace.prototype._realPositionWindows;
-    Workspace.Workspace.prototype._realPositionWindows = function(flags) {
-        if (this._repositionWindowsId > 0) {
-            Mainloop.source_remove(this._repositionWindowsId);
-            this._repositionWindowsId = 0;
-        }
-
-        let clones = this._windows.slice();
-        if (this._reservedSlot)
-            clones.push(this._reservedSlot);
-
-        let initialPositioning = flags & WindowPositionFlags.INITIAL;
-        let animate = flags & WindowPositionFlags.ANIMATE;
-
-        // Start the animations
-        let targets = [];
-        let scales = [];
-
-        [clones, targets] = this._calculateWindowTransformationsNatural(clones);
-
-        let currentWorkspace = global.screen.get_active_workspace();
-        let isOnCurrentWorkspace = this.metaWorkspace == null || this.metaWorkspace == currentWorkspace;
-
-        for (let i = 0; i < clones.length; i++) {
-            let clone = clones[i];
-            let [x, y , scale] = targets[i];
-            let metaWindow = clone.metaWindow;
-            let mainIndex = this._lookupIndex(metaWindow);
-            let overlay = this._windowOverlays[mainIndex];
-            clone.slotId = i;
-
-            // Positioning a window currently being dragged must be avoided;
-            // we'll just leave a blank spot in the layout for it.
-            if (clone.inDrag)
-                continue;
-
-            clone.slot = [x, y, clone.actor.width * scale, clone.actor.height * scale];
-
-            if (overlay && initialPositioning)
-                overlay.hide(initialPositioning);
-
-            if (animate && isOnCurrentWorkspace) {
-                if (!metaWindow.showing_on_its_workspace()) {
-                    /* Hidden windows should fade in and grow
-                     * therefore we need to resize them now so they
-                     * can be scaled up later */
-                    if (initialPositioning) {
-                        clone.actor.opacity = 0;
-                        clone.actor.scale_x = 0;
-                        clone.actor.scale_y = 0;
-                        clone.actor.x = x;
-                        clone.actor.y = y;
-                    }
-
-                    // Make the window slightly transparent to indicate it's hidden
-                    Tweener.addTween(clone.actor,
-                                     { opacity: 255,
-                                       time: Overview.ANIMATION_TIME,
-                                       transition: 'easeInQuad'
-                                     });
-                }
-
-                this._animateClone(clone, overlay, x, y, scale, initialPositioning);
-            } else {
-                clone.actor.set_position(x, y);
-                clone.actor.set_scale(scale, scale);
-                clone.overlay.relayout(false);
-                this._showWindowOverlay(clone, overlay, isOnCurrentWorkspace);
-            }
-        }
+    /// map gnome shell's computeAllWindowSlots() to our window placement function
+    workspaceInjections['_computeAllWindowSlots'] = Workspace.Workspace.prototype._computeAllWindowSlots;
+    Workspace.Workspace.prototype._computeAllWindowSlots = function(windows) {
+        return this._calculateWindowTransformationsNatural(windows);
     }
 
     /// position window titles on top of windows in overlay ////
