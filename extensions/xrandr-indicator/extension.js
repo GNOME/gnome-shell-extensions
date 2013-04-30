@@ -94,7 +94,7 @@ const Indicator = new Lang.Class({
             if (bitmask & allowedRotations) {
                 let item = new PopupMenu.PopupMenuItem(Gettext.gettext(name));
                 if (bitmask & currentRotation)
-                    item.setShowDot(true);
+                    item.setOrnament(PopupMenu.Ornament.DOT);
                 item.connect('activate', Lang.bind(this, function(item, event) {
                     /* ensure config is saved so we get a backup if anything goes wrong */
                     config.save();
