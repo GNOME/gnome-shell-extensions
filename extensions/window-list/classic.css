@@ -3,6 +3,7 @@
 #panel.bottom-panel {
     border-top-width: 1px;
     border-bottom-width: 0px;
+    height: 32px !important;
   }
 
   .bottom-panel .window-button > StWidget {
@@ -11,6 +12,7 @@
     background-gradient-end: #d0d0d0;
     color: #555 !important;
     border-radius: 2px !important;
+    padding: 4px 6px 2px !important;
     text-shadow: 0 0 transparent;
     box-shadow: inset -1px -1px 1px rgba(0,0,0,0.5) !important;
   }
