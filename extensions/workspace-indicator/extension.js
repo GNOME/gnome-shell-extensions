@@ -66,9 +66,9 @@ const WorkspaceIndicator = new Lang.Class({
     },
 
     _updateIndicator: function() {
-	this.workspacesItems[this._currentWorkspace].setShowDot(false);
+	this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
 	this._currentWorkspace = global.screen.get_active_workspace().index();
-	this.workspacesItems[this._currentWorkspace].setShowDot(true);
+	this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
 	this.statusLabel.set_text(this._labelText());
     },
@@ -98,7 +98,7 @@ const WorkspaceIndicator = new Lang.Class({
 	    }));
 
 	    if (i == this._currentWorkspace)
-		this.workspacesItems[i].setShowDot(true);
+		this.workspacesItems[i].setOrnament(PopupMenu.Ornament.DOT);
 	}
 
 	this.statusLabel.set_text(this._labelText());
