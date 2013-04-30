@@ -47,11 +47,23 @@ function enable() {
     winInjections['hideTooltip'] = undefined;
 
     Workspace.Workspace.prototype.showTooltip = function() {
-        if (this._tip == null)
+        if (this._tip == null || this._actualGeometry == null)
             return;
         this._tip.text = (this.metaWorkspace.index() + 1).toString();
-        this._tip.x = this._x;
-        this._tip.y = this._y;
+
+        // Hand code this instead of using _getSpacingAndPadding
+        // because that fails on empty workspaces
+        let node = this.actor.get_theme_node();
+        let padding = {
+            left: node.get_padding(St.Side.LEFT),
+            top: node.get_padding(St.Side.TOP),
+            bottom: node.get_padding(St.Side.BOTTOM),
+            right: node.get_padding(St.Side.RIGHT),
+        };
+
+        let area = Workspace.padArea(this._actualGeometry, padding);
+        this._tip.x = area.x;
+        this._tip.y = area.y;
         this._tip.show();
         this._tip.raise_top();
     }
