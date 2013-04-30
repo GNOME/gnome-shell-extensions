@@ -390,8 +390,7 @@ const WorkspaceIndicator = new Lang.Class({
         this.workspacesItems = [];
 
         this._screenSignals = [];
-        this._screenSignals.push(global.screen.connect_after('workspace-added', Lang.bind(this,this._updateMenu)));
-        this._screenSignals.push(global.screen.connect_after('workspace-removed', Lang.bind(this,this._updateMenu)));
+        this._screenSignals.push(global.screen.connect('notify::n-workspaces', Lang.bind(this,this._updateMenu)));
         this._screenSignals.push(global.screen.connect_after('workspace-switched', Lang.bind(this,this._updateIndicator)));
 
         this.actor.connect('scroll-event', Lang.bind(this, this._onScrollEvent));
