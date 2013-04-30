@@ -414,9 +414,9 @@ const WorkspaceIndicator = new Lang.Class({
     },
 
     _updateIndicator: function() {
-        this.workspacesItems[this._currentWorkspace].setShowDot(false);
+        this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
         this._currentWorkspace = global.screen.get_active_workspace().index();
-        this.workspacesItems[this._currentWorkspace].setShowDot(true);
+        this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
         this.statusLabel.set_text(this._getStatusText());
     },
@@ -443,7 +443,7 @@ const WorkspaceIndicator = new Lang.Class({
             }));
 
             if (i == this._currentWorkspace)
-                item.setShowDot(true);
+                item.setOrnament(PopupMenu.Ornament.DOT);
 
             this.menu.addMenuItem(item);
             this.workspacesItems[i] = item;
