@@ -1,3 +1,10 @@
+3.9.1
+=====
+* updates to window-list, xrandr-indicator,
+  workspace-indicator, windowsNavigator for gnome-shell
+  changes
+* translation updates (cs, es, lt, pl, pt_BR, sl)
+
 3.8.1
 =====
 * many improvements to window-list:
