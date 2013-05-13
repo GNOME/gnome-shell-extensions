@@ -147,6 +147,15 @@
     padding: 8px 0px;
   }
 
+  .popup-slider-menu-item {
+    -slider-handle-border-color: #888;
+    -slider-handle-border-width: 1px;
+  }
+
+  .popup-menu-item:hover .popup-slider-menu-item {
+    color: #fff;
+  }
+
   .popup-subtitle-menu-item, .popup-subtitle-menu-item:insensitive {
     color: #000;
   }
