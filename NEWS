@@ -1,3 +1,9 @@
+3.8.2
+=====
+* window-list: fix styling in classic mode
+* window-list: code cleanups
+* translation updates (cs, es, lt, pl, pt_BR, sl)
+
 3.8.1
 =====
 * many improvements to window-list:
