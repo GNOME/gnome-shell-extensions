@@ -4,7 +4,7 @@
 "settings-schema": "@gschemaname@",
 "gettext-domain": "@gettext_domain@",
 "name": "Monitor Status Indicator",
-"description": "Add a systems status menu for rotating monitors (overrides what is currently provided by gnome-settings-daemon)",
+"description": "Add a system status menu for rotating monitors.",
 "shell-version": [ "@shell_current@" ],
 "url": "@url@"
 }

@@ -6,6 +6,6 @@
     "gettext-domain": "@gettext_domain@",
     "original-author": "zaspire@rambler.ru",
     "name": "windowNavigator",
-    "description": "Allow keyboard selection of windows and workspaces in overlay mode",
+    "description": "Allow keyboard selection of windows and workspaces in overlay mode. <Ctrl>number selects a workspace, and <Alt>number selects a window.",
     "url": "@url@"
 }

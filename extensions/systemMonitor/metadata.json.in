@@ -6,6 +6,6 @@
     "gettext-domain": "@gettext_domain@",
     "original-author": "zaspire@rambler.ru",
     "name": "SystemMonitor",
-    "description": "System Monitor",
+    "description": "System monitor showing CPU and memory usage in the message tray.",
     "url": "@url@"
 }

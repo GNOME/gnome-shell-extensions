@@ -4,7 +4,7 @@
  "settings-schema": "@gschemaname@",
  "gettext-domain": "@gettext_domain@",
  "name": "Removable Drive Menu",
- "description": "A status menu for accessing and unmounting removable devices",
+ "description": "A status menu for accessing and unmounting removable devices.",
  "shell-version": [ "@shell_current@" ],
  "url": "@url@"
 }

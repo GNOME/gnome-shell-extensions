@@ -4,7 +4,7 @@
     "settings-schema": "@gschemaname@",
     "gettext-domain": "@gettext_domain@",
     "name": "Workspace Indicator",
-    "description": "Put an indicator on the panel signaling in which workspace you are, and give you the possibility of switching to another one",
+    "description": "Put an indicator on the panel signaling in which workspace you are, and give you the possibility of switching to another one.",
     "shell-version": [ "@shell_current@" ],
     "original-authors": [ "erick.red@gmail.com" ],
     "url": "@url@"
