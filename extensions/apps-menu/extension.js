@@ -424,7 +424,7 @@ const ApplicationsButton = new Lang.Class({
         this.leftBox = new St.BoxLayout({ vertical: true });
         this.applicationsScrollBox = new St.ScrollView({ x_fill: true, y_fill: false,
                                                          y_align: St.Align.START,
-                                                         style_class: 'vfade' });
+                                                         style_class: 'apps-menu vfade' });
         this.applicationsScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         let vscroll = this.applicationsScrollBox.get_vscroll_bar();
         vscroll.connect('scroll-start', Lang.bind(this, function() {

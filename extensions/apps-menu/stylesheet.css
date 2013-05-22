@@ -1,1 +1,7 @@
-/* none used*/
+.apps-menu:ltr {
+    padding-right: 3px;
+}
+
+.apps-menu:rtl {
+    padding-left: 3px;
+}
