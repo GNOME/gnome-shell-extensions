@@ -76,8 +76,8 @@ function statusMenu_updateHaveHibernate() {
 function statusMenu_updateSuspendOrPowerOff() {
     this._suspendOrPowerOffItem.actor.hide();
 
-    extension.suspendItem.actor.visible = this._haveSuspend;
-    extension.hibernateItem.actor.visible = this._haveHibernate;
+    extension.suspendItem.actor.visible = this._haveSuspend && extension.settings.get_boolean('allow-suspend');
+    extension.hibernateItem.actor.visible = this._haveHibernate && extension.settings.get_boolean('allow-hibernate');
     extension.powerOffItem.actor.visible = this._haveShutdown;
 }
 
@@ -104,7 +104,7 @@ const Extension = new Lang.Class({
         this.powerOffItem = null;
 
         Convenience.initTranslations();
-        this._settings = Convenience.getSettings();
+        this.settings = Convenience.getSettings();
     },
 
     enable: function() {
@@ -145,7 +145,7 @@ const Extension = new Lang.Class({
         this._previousUpdateSuspendOrPowerOff = statusMenu._updateSuspendOrPowerOff;
         statusMenu._updateSuspendOrPowerOff = statusMenu_updateSuspendOrPowerOff;
 
-        this._settingsChangedId = this._settings.connect('changed', function() {
+        this._settingsChangedId = this.settings.connect('changed', function() {
             statusMenu._updateSuspendOrPowerOff();
         });
     },
@@ -158,7 +158,7 @@ const Extension = new Lang.Class({
         this.powerOffItem.destroy();
 
         statusMenu.menu.disconnect(this._openStateChangedId);
-        this._settings.disconnect(this._settingsChangedId);
+        this.settings.disconnect(this._settingsChangedId);
 
         statusMenu._updateSuspendOrPowerOff = this._previousUpdateSuspendOrPowerOff;
         statusMenu._updateSuspendOrPowerOff();
