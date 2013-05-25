@@ -138,47 +138,12 @@ function enable() {
      * PresentWindowsEffect::calculateWindowTransformationsNatural() from KDE, see:
      * https://projects.kde.org/projects/kde/kdebase/kde-workspace/repository/revisions/master/entry/kwin/effects/presentwindows/presentwindows.cpp
      */
-    Workspace.Workspace.prototype._calculateWindowTransformationsNatural = function(clones) {
+    Workspace.Workspace.prototype._calculateWindowTransformationsNatural = function(clones, area) {
         // As we are using pseudo-random movement (See "slot") we need to make sure the list
         // is always sorted the same way no matter which window is currently active.
 
-        let node = this.actor.get_theme_node();
-        let columnSpacing = node.get_length('-horizontal-spacing');
-        let rowSpacing = node.get_length('-vertical-spacing');
-        let padding = {
-            left: node.get_padding(St.Side.LEFT),
-            top: node.get_padding(St.Side.TOP),
-            bottom: node.get_padding(St.Side.BOTTOM),
-            right: node.get_padding(St.Side.RIGHT),
-        };
-
-        let closeButtonHeight, captionHeight;
-        let leftBorder, rightBorder;
-        // If the window captions are below the window, put an additional gap to account for them
-        if (!windowCaptionsOnTop && this._windowOverlays.length) {
-            // All of the overlays have the same chrome sizes,
-            // so just pick the first one.
-            let overlay = this._windowOverlays[0];
-            [closeButtonHeight, captionHeight] = overlay.chromeHeights();
-            [leftBorder, rightBorder] = overlay.chromeWidths();
-        } else {
-            [closeButtonHeight, captionHeight] = [0, 0];
-            [leftBorder, rightBorder] = [0, 0];
-        }
-
-        rowSpacing += captionHeight;
-        columnSpacing += (rightBorder + leftBorder) / 2;
-        padding.top += closeButtonHeight;
-        padding.bottom += captionHeight;
-        padding.left += leftBorder;
-        padding.right += rightBorder;
-
-        let area = new Rect(this._x + padding.left,
-                            this._y + padding.top,
-                            this._width - padding.left - padding.right,
-                            this._height - padding.top - padding.bottom);
-
-        let bounds = area.copy();
+        let area_rect = new Rect(area.x, area.y, area.width, area.height);
+        let bounds = area_rect.copy();
 
         let direction = 0;
         let directions = [];
@@ -221,7 +186,7 @@ function enable() {
                         if (diff[0] == 0 && diff[1] == 0)
                             diff[0] = 1;
                         // Try to keep screen/workspace aspect ratio
-                        if ( bounds.height / bounds.width > area.height / area.width )
+                        if ( bounds.height / bounds.width > area_rect.height / area_rect.width )
                             diff[0] *= 2;
                         else
                             diff[1] *= 2;
@@ -293,15 +258,15 @@ function enable() {
 
         // Work out scaling by getting the most top-left and most bottom-right window coords.
         let scale;
-        scale = Math.min(area.width / bounds.width,
-                         area.height / bounds.height,
+        scale = Math.min(area_rect.width / bounds.width,
+                         area_rect.height / bounds.height,
                          1.0);
 
         // Make bounding rect fill the screen size for later steps
-        bounds.x = bounds.x - (area.width - bounds.width * scale) / 2;
-        bounds.y = bounds.y - (area.height - bounds.height * scale) / 2;
-        bounds.width = area.width / scale;
-        bounds.height = area.height / scale;
+        bounds.x = bounds.x - (area_rect.width - bounds.width * scale) / 2;
+        bounds.y = bounds.y - (area_rect.height - bounds.height * scale) / 2;
+        bounds.width = area_rect.width / scale;
+        bounds.height = area_rect.height / scale;
 
         // Move all windows back onto the screen and set their scale
         for (let i = 0; i < rects.length; i++) {
@@ -318,8 +283,8 @@ function enable() {
 
         let slots = [];
         for (let i = 0; i < rects.length; i++) {
-            rects[i].x = rects[i].x * scale + area.x;
-            rects[i].y = rects[i].y * scale + area.y;
+            rects[i].x = rects[i].x * scale + area_rect.x;
+            rects[i].y = rects[i].y * scale + area_rect.y;
 
             slots.push([rects[i].x, rects[i].y, scale, clones[i]]);
         }
@@ -328,20 +293,118 @@ function enable() {
     }
     workspaceInjections['_calculateWindowTransformationsNatural'] = undefined;
 
-    /// map gnome shell's computeAllWindowSlots() to our window placement function
-    workspaceInjections['_computeAllWindowSlots'] = Workspace.Workspace.prototype._computeAllWindowSlots;
-    Workspace.Workspace.prototype._computeAllWindowSlots = function(windows) {
-        return this._calculateWindowTransformationsNatural(windows);
-    }
+    /**
+     * _updateWindowPositions:
+     * @flags:
+     *  INITIAL - this is the initial positioning of the windows.
+     *  ANIMATE - Indicates that we need animate changing position.
+     */
+    workspaceInjections['_updateWindowPositions'] = Workspace.Workspace.prototype._updateWindowPositions;
+    Workspace.Workspace.prototype._updateWindowPositions = function(flags) {
+            if (this._currentLayout == null) {
+                this._recalculateWindowPositions(flags);
+                return;
+            }
+
+            let initialPositioning = flags & WindowPositionFlags.INITIAL;
+            let animate = flags & WindowPositionFlags.ANIMATE;
+
+            let layout = this._currentLayout;
+            let strategy = layout.strategy;
+
+            let [, , padding] = this._getSpacingAndPadding();
+            let area = Workspace.padArea(this._actualGeometry, padding);
+
+            /// EDIT replace this version by our own:
+            //let slots = strategy.computeWindowSlots(layout, area);
+
+
+            /// EDIT copied from _realRecalculateWindowPositions:
+            let clones = this._windows.slice();
+            if (clones.length == 0)
+                return;
+
+            clones.sort(function(a, b) {
+                return a.metaWindow.get_stable_sequence() - b.metaWindow.get_stable_sequence();
+            });
+
+            if (this._reservedSlot)
+                clones.push(this._reservedSlot);
+
+            /// EDIT our own window placement function:
+            let slots = this._calculateWindowTransformationsNatural(clones, area);
+
+
+            let currentWorkspace = global.screen.get_active_workspace();
+            let isOnCurrentWorkspace = this.metaWorkspace == null || this.metaWorkspace == currentWorkspace;
+
+            for (let i = 0; i < slots.length; i++) {
+                let slot = slots[i];
+                let [x, y, scale, clone] = slot;
+                let metaWindow = clone.metaWindow;
+                let overlay = clone.overlay;
+                clone.slotId = i;
+
+                // Positioning a window currently being dragged must be avoided;
+                // we'll just leave a blank spot in the layout for it.
+                if (clone.inDrag)
+                    continue;
+
+                let cloneWidth = clone.actor.width * scale;
+                let cloneHeight = clone.actor.height * scale;
+                clone.slot = [x, y, cloneWidth, cloneHeight];
+
+                if (overlay && (initialPositioning || !clone.positioned))
+                    overlay.hide();
+
+                if (!clone.positioned) {
+                    // This window appeared after the overview was already up
+                    // Grow the clone from the center of the slot
+                    clone.actor.x = x + cloneWidth / 2;
+                    clone.actor.y = y + cloneHeight / 2;
+                    clone.actor.scale_x = 0;
+                    clone.actor.scale_y = 0;
+                    clone.positioned = true;
+                }
+
+                if (animate && isOnCurrentWorkspace) {
+                    if (!metaWindow.showing_on_its_workspace()) {
+                        /* Hidden windows should fade in and grow
+                         * therefore we need to resize them now so they
+                         * can be scaled up later */
+                        if (initialPositioning) {
+                            clone.actor.opacity = 0;
+                            clone.actor.scale_x = 0;
+                            clone.actor.scale_y = 0;
+                            clone.actor.x = x;
+                            clone.actor.y = y;
+                        }
+
+                        Tweener.addTween(clone.actor,
+                                         { opacity: 255,
+                                           time: Overview.ANIMATION_TIME,
+                                           transition: 'easeInQuad'
+                                         });
+                    }
+
+                    this._animateClone(clone, overlay, x, y, scale, initialPositioning);
+                } else {
+                    // cancel any active tweens (otherwise they might override our changes)
+                    Tweener.removeTweens(clone.actor);
+                    clone.actor.set_position(x, y);
+                    clone.actor.set_scale(scale, scale);
+                    clone.overlay.relayout(false);
+                    this._showWindowOverlay(clone, overlay, isOnCurrentWorkspace);
+                }
+            }
+        }
+
+
 
     /// position window titles on top of windows in overlay ////
     if (windowCaptionsOnTop) {
-        winInjections['chromeHeights'] = Workspace.WindowOverlay.prototype.chromeHeights;
-        Workspace.WindowOverlay.prototype.chromeHeights = function () {
-            return [Math.max( this.closeButton.height - this.closeButton._overlap, this.title.height - this.title._overlap),
-                    0];
-        };
 
+        /// This is almost a direct copy of the original relayout function. Differences are marked.
         winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
         Workspace.WindowOverlay.prototype.relayout = function(animate) {
             let button = this.closeButton;
