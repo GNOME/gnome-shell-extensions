@@ -37,6 +37,85 @@ function _minimizeOrActivateWindow(window) {
             window.activate(global.get_current_time());
 }
 
+function _openMenu(menu) {
+    menu.open();
+
+    let event = Clutter.get_current_event();
+    if (event && event.type() == Clutter.EventType.KEY_RELEASE)
+        menu.actor.navigate_focus(null, Gtk.DirectionType.TAB_FORWARD, false);
+}
+
+
+const WindowContextMenu = new Lang.Class({
+    Name: 'WindowContextMenu',
+    Extends: PopupMenu.PopupMenu,
+
+    _init: function(source, metaWindow) {
+        this.parent(source, 0.5, St.Side.BOTTOM);
+
+        this._metaWindow = metaWindow;
+
+        this._minimizeItem = new PopupMenu.PopupMenuItem('');
+        this._minimizeItem.connect('activate', Lang.bind(this, function() {
+            if (this._metaWindow.minimized)
+                this._metaWindow.unminimize();
+            else
+                this._metaWindow.minimize();
+        }));
+        this.addMenuItem(this._minimizeItem);
+
+        this._notifyMinimizedId =
+            this._metaWindow.connect('notify::minimized',
+                                     Lang.bind(this, this._updateMinimizeItem));
+        this._updateMinimizeItem();
+
+        this._maximizeItem = new PopupMenu.PopupMenuItem('');
+        this._maximizeItem.connect('activate', Lang.bind(this, function() {
+            if (this._metaWindow.maximized_vertically &&
+                this._metaWindow.maximized_horizontally)
+                this._metaWindow.unmaximize(Meta.MaximizeFlags.HORIZONTAL |
+                                            Meta.MaximizeFlags.VERTICAL);
+            else
+                this._metaWindow.maximize(Meta.MaximizeFlags.HORIZONTAL |
+                                          Meta.MaximizeFlags.VERTICAL);
+        }));
+        this.addMenuItem(this._maximizeItem);
+
+        this._notifyMaximizedHId =
+            this._metaWindow.connect('notify::maximized-horizontally',
+                                     Lang.bind(this, this._updateMaximizeItem));
+        this._notifyMaximizedVId =
+            this._metaWindow.connect('notify::maximized-vertically',
+                                     Lang.bind(this, this._updateMaximizeItem));
+        this._updateMaximizeItem();
+
+        let item = new PopupMenu.PopupMenuItem(_("Close"));
+        item.connect('activate', Lang.bind(this, function() {
+            this._metaWindow.delete(global.get_current_time());
+        }));
+        this.addMenuItem(item);
+
+        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
+    },
+
+    _updateMinimizeItem: function() {
+        this._minimizeItem.label.text = this._metaWindow.minimized ? _("Unminimize")
+                                                                   : _("Minimize");
+    },
+
+    _updateMaximizeItem: function() {
+        let maximized = this._metaWindow.maximized_vertically &&
+                        this._metaWindow.maximized_horizontally;
+        this._maximizeItem.label.text = maximized ? _("Unmaximize")
+                                                  : _("Maximize");
+    },
+
+    _onDestroy: function() {
+        this._metaWindow.disconnect(this._notifyMinimizedId);
+        this._metaWindow.disconnect(this._notifyMaximizedHId);
+        this._metaWindow.disconnect(this._notifyMaximizedVId);
+    }
+});
 
 const WindowTitle = new Lang.Class({
     Name: 'WindowTitle',
@@ -99,13 +178,22 @@ const WindowButton = new Lang.Class({
         this.actor = new St.Button({ style_class: 'window-button',
                                      x_fill: true,
                                      can_focus: true,
+                                     button_mask: St.ButtonMask.ONE |
+                                                  St.ButtonMask.THREE,
                                      child: this._windowTitle.actor });
         this.actor._delegate = this;
+
+        this._menuManager = new PopupMenu.PopupMenuManager(this);
+        this._contextMenu = new WindowContextMenu(this.actor, this.metaWindow);
+        this._contextMenu.actor.hide();
+        this._menuManager.addMenu(this._contextMenu);
+        Main.uiGroup.add_actor(this._contextMenu.actor);
 
         this.actor.connect('allocation-changed',
                            Lang.bind(this, this._updateIconGeometry));
         this.actor.connect('clicked', Lang.bind(this, this._onClicked));
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
+        this.actor.connect('popup-menu', Lang.bind(this, this._onPopupMenu));
 
         this._switchWorkspaceId =
             global.window_manager.connect('switch-workspace',
@@ -118,8 +206,22 @@ const WindowButton = new Lang.Class({
         this._updateStyle();
     },
 
-    _onClicked: function() {
-        _minimizeOrActivateWindow(this.metaWindow);
+    _onClicked: function(actor, button) {
+        if (this._contextMenu.isOpen) {
+            this._contextMenu.close();
+            return;
+        }
+
+        if (button == 1)
+            _minimizeOrActivateWindow(this.metaWindow);
+        else
+            _openMenu(this._contextMenu);
+    },
+
+    _onPopupMenu: function(actor) {
+        if (this._contextMenu.isOpen)
+            return;
+        _openMenu(this._contextMenu);
     },
 
     _updateStyle: function() {
@@ -151,9 +253,81 @@ const WindowButton = new Lang.Class({
     _onDestroy: function() {
         global.window_manager.disconnect(this._switchWorkspaceId);
         global.display.disconnect(this._notifyFocusId);
+        this._contextMenu.actor.destroy();
     }
 });
 
+
+const AppContextMenu = new Lang.Class({
+    Name: 'AppContextMenu',
+    Extends: PopupMenu.PopupMenu,
+
+    _init: function(source, app) {
+        this.parent(source, 0.5, St.Side.BOTTOM);
+
+        this._app = app;
+
+        this._minimizeItem = new PopupMenu.PopupMenuItem(_("Minimize all"));
+        this._minimizeItem.connect('activate', Lang.bind(this, function() {
+            this._app.get_windows().forEach(function(w) {
+                w.minimize();
+            });
+        }));
+        this.addMenuItem(this._minimizeItem);
+
+        this._unminimizeItem = new PopupMenu.PopupMenuItem(_("Unminimize all"));
+        this._unminimizeItem.connect('activate', Lang.bind(this, function() {
+            this._app.get_windows().forEach(function(w) {
+                w.unminimize();
+            });
+        }));
+        this.addMenuItem(this._unminimizeItem);
+
+        this._maximizeItem = new PopupMenu.PopupMenuItem(_("Maximize all"));
+        this._maximizeItem.connect('activate', Lang.bind(this, function() {
+            this._app.get_windows().forEach(function(w) {
+                w.maximize(Meta.MaximizeFlags.HORIZONTAL |
+                           Meta.MaximizeFlags.VERTICAL);
+            });
+        }));
+        this.addMenuItem(this._maximizeItem);
+
+        this._unmaximizeItem = new PopupMenu.PopupMenuItem(_("Unmaximize all"));
+        this._unmaximizeItem.connect('activate', Lang.bind(this, function() {
+            this._app.get_windows().forEach(function(w) {
+                w.unmaximize(Meta.MaximizeFlags.HORIZONTAL |
+                             Meta.MaximizeFlags.VERTICAL);
+            });
+        }));
+        this.addMenuItem(this._unmaximizeItem);
+
+        let item = new PopupMenu.PopupMenuItem(_("Close all"));
+        item.connect('activate', Lang.bind(this, function() {
+            this._app.get_windows().forEach(function(w) {
+                w.delete(global.get_current_time());
+            });
+        }));
+        this.addMenuItem(item);
+    },
+
+    open: function(animate) {
+        let windows = this._app.get_windows();
+        this._minimizeItem.actor.visible = windows.some(function(w) {
+            return !w.minimized;
+        });
+        this._unminimizeItem.actor.visible = windows.some(function(w) {
+            return w.minimized;
+        });
+        this._maximizeItem.actor.visible = windows.some(function(w) {
+            return !(w.maximized_horizontally && w.maximized_vertically);
+        });
+        this._unmaximizeItem.actor.visible = windows.some(function(w) {
+            return w.maximized_horizontally && w.maximized_vertically;
+        });
+
+        this.parent(animate);
+    }
+});
 
 const AppButton = new Lang.Class({
     Name: 'AppButton',
@@ -165,6 +339,8 @@ const AppButton = new Lang.Class({
         this.actor = new St.Button({ style_class: 'window-button',
                                      x_fill: true,
                                      can_focus: true,
+                                     button_mask: St.ButtonMask.ONE |
+                                                  St.ButtonMask.THREE,
                                      child: stack });
         this.actor._delegate = this;
 
@@ -190,6 +366,12 @@ const AppButton = new Lang.Class({
         this._menuManager.addMenu(this._menu);
         Main.uiGroup.add_actor(this._menu.actor);
 
+        this._contextMenuManager = new PopupMenu.PopupMenuManager(this);
+        this._appContextMenu = new AppContextMenu(this.actor, this.app);
+        this._appContextMenu.actor.hide();
+        this._contextMenuManager.addMenu(this._appContextMenu);
+        Main.uiGroup.add_actor(this._appContextMenu.actor);
+
         this._textureCache = St.TextureCache.get_default();
         this._iconThemeChangedId =
             this._textureCache.connect('icon-theme-changed', Lang.bind(this,
@@ -198,6 +380,7 @@ const AppButton = new Lang.Class({
                 }));
         this.actor.connect('clicked', Lang.bind(this, this._onClicked));
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
+        this.actor.connect('popup-menu', Lang.bind(this, this._onPopupMenu));
 
         this._switchWorkspaceId =
             global.window_manager.connect('switch-workspace',
@@ -258,42 +441,68 @@ const AppButton = new Lang.Class({
                 this.metaWindow = windows[0];
                 this._windowTitle = new WindowTitle(this.metaWindow);
                 this._singleWindowTitle.child = this._windowTitle.actor;
+                this._windowContextMenu = new WindowContextMenu(this.actor, this.metaWindow);
+                Main.uiGroup.add_actor(this._windowContextMenu.actor);
+                this._windowContextMenu.actor.hide();
+                this._contextMenuManager.addMenu(this._windowContextMenu);
             }
+            this._contextMenu = this._windowContextMenu;
         } else {
             if (this._windowTitle) {
                 this.metaWindow = null;
                 this._singleWindowTitle.child = null;
                 this._windowTitle = null;
+                this._windowContextMenu.actor.destroy();
+                this._windowContextMenu = null;
             }
+            this._contextMenu = this._appContextMenu;
         }
+
     },
 
-    _onClicked: function() {
-        if (this._menu.isOpen) {
+    _onClicked: function(actor, button) {
+        let menuWasOpen = this._menu.isOpen;
+        if (menuWasOpen)
             this._menu.close();
-            return;
-        }
 
-        let windows = this._getWindowList();
-        if (windows.length == 1) {
-            _minimizeOrActivateWindow(windows[0]);
-        } else {
-            this._menu.removeAll();
+        let contextMenuWasOpen = this._contextMenu.isOpen;
+        if (contextMenuWasOpen)
+            this._contextMenu.close();
 
-            for (let i = 0; i < windows.length; i++) {
-                let windowTitle = new WindowTitle(windows[i]);
-                let item = new PopupMenu.PopupBaseMenuItem();
-                item.addActor(windowTitle.actor);
-                item._window = windows[i];
-                this._menu.addMenuItem(item);
+        if (button == 1) {
+            if (menuWasOpen)
+                return;
+
+            let windows = this._getWindowList();
+            if (windows.length == 1) {
+                if (contextMenuWasOpen)
+                    return;
+                _minimizeOrActivateWindow(windows[0]);
+            } else {
+                this._menu.removeAll();
+
+                for (let i = 0; i < windows.length; i++) {
+                    let windowTitle = new WindowTitle(windows[i]);
+                    let item = new PopupMenu.PopupBaseMenuItem();
+                    item.actor.add_actor(windowTitle.actor);
+                    item._window = windows[i];
+                    this._menu.addMenuItem(item);
+                }
+                _openMenu(this._menu);
             }
-            this._menu.open();
-
-            let event = Clutter.get_current_event();
-            if (event && event.type() == Clutter.EventType.KEY_RELEASE)
-                this._menu.actor.navigate_focus(null, Gtk.DirectionType.TAB_FORWARD, false);
+        } else {
+            if (contextMenuWasOpen)
+                return;
+            _openMenu(this._contextMenu);
         }
     },
+
+    _onPopupMenu: function(actor) {
+        if (this._menu.isOpen || this._contextMenu.isOpen)
+            return;
+        _openMenu(this._contextMenu);
+    },
+
 
     _onMenuActivate: function(menu, child) {
         child._window.activate(global.get_current_time());
