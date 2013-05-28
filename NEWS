@@ -1,3 +1,11 @@
+3.9.2
+=====
+* apps-menu: appearance of the scrollbars was improved
+* window-list is a little taller in classic mode (to account
+  for the workspace switcher)
+* alternative-status-menu honors again the dconf configuration
+* translation updates (sr)
+
 3.9.1
 =====
 * updates to window-list, xrandr-indicator,
