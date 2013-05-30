@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-26 12:50+0100\n"
-"PO-Revision-Date: 2013-03-26 12:51+0200\n"
+"POT-Creation-Date: 2013-05-31 01:16+0200\n"
+"PO-Revision-Date: 2013-05-31 01:17+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -85,15 +85,15 @@ msgstr "Activar hibernación"
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Controla a visibilidade do elemento de menú «Hibernar»"
 
-#: ../extensions/apps-menu/extension.js:37
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Vista xeral de actividades"
 
-#: ../extensions/apps-menu/extension.js:95
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: ../extensions/apps-menu/extension.js:184
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "Aplicativos"
 
@@ -247,10 +247,11 @@ msgstr "Cando agrupar xanelas"
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "Decide cando agrupar as xanelas do mesmo aplicativo na lista de xanelas. Os "
-"valores posíbeis son \"never\" (nunca) e \"always\" (sempre)."
+"valores posíbeis son \"never\" (nunca), \"auto\" (automático) e \"always\" "
+"(sempre)."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -261,6 +262,10 @@ msgid "Never group windows"
 msgstr "Non agrupar nunca as xanelas"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Agrupar as xanelas cando o espazo é limitado"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Agrupar sempre as xanelas"
 
