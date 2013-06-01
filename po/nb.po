@@ -1,14 +1,14 @@
 # Norwegian bokmål translation of gnome-shell-extensions.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2011-2012.
+# Kjartan Maraas <kmaraas@gnome.org>, 2011-2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-14 18:50+0100\n"
-"PO-Revision-Date: 2012-03-14 18:52+0100\n"
+"POT-Creation-Date: 2013-06-02 01:12+0200\n"
+"PO-Revision-Date: 2013-06-02 01:37+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: \n"
@@ -16,62 +16,83 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Oppførsel for alt-tab."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "Klassisk GNOME"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
-msgstr ""
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Denne økten logger inn i klassisk GNOME"
 
-#: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Alle og miniatyrer"
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "Klassisk GNOME-skall"
 
-#: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
-msgstr ""
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Vinduhåndtering og start av programmer"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Arbeidsområde og ikoner"
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "Kun miniatyr"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "Kun programikon"
 
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr ""
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "Miniatyr og programikon"
 
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "Vis vinduer som"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "Vis kun vinduer i aktivt arbeidsområde"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Hvilemodus"
 
-#: ../extensions/alternative-status-menu/extension.js:69
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Dvalemodus"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "Slå av …"
+#: ../extensions/alternative-status-menu/extension.js:131
+msgid "Power Off"
+msgstr "Slå av"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "Slå på hvilemodus"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "Kontroller synlighet for menyoppføringen for hvilemodus"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "Slå på dvalemodus"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "Kontroller synligheten for menyoppføringen for dvalemodus"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Aktivitetsoversikt"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Favoritter"
+
+#: ../extensions/apps-menu/extension.js:278
+msgid "Applications"
+msgstr "Programmer"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -101,75 +122,24 @@ msgstr "Legg til regel"
 #: ../extensions/auto-move-windows/prefs.js:94
 #, fuzzy
 msgid "Create new matching rule"
-msgstr "Lag en ny regel fra dette"
+msgstr "Lag en ny regel"
 
 #: ../extensions/auto-move-windows/prefs.js:98
 msgid "Add"
 msgstr "Legg til"
 
-#: ../extensions/dock/extension.js:489
-msgid "Drag here to add favorites"
-msgstr "Dra hit for å legge til favoritter"
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Utløsing av stasjon «%s» feilet:"
 
-#: ../extensions/dock/extension.js:815
-msgid "New Window"
-msgstr "Nytt vindu"
+#: ../extensions/drive-menu/extension.js:89
+msgid "Removable devices"
+msgstr "Avtagbare enheter"
 
-#: ../extensions/dock/extension.js:817
-msgid "Quit Application"
-msgstr "Avslutt programmet"
-
-#: ../extensions/dock/extension.js:822
-msgid "Remove from Favorites"
-msgstr "Fjern fra favoritter"
-
-#: ../extensions/dock/extension.js:823
-msgid "Add to Favorites"
-msgstr "Legg til i favoritter"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr ""
-
-#: ../extensions/drive-menu/extension.js:66
-msgid "Open file manager"
-msgstr "Åpne filhåndterer"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "Åpne fil"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -198,29 +168,9 @@ msgstr ""
 msgid "Message:"
 msgstr "Melding:"
 
-#: ../extensions/gajim/extension.js:227
-#, c-format
-msgid "%s is away."
-msgstr "%s er borte."
-
-#: ../extensions/gajim/extension.js:230
-#, c-format
-msgid "%s is offline."
-msgstr "%s er frakoblet."
-
-#: ../extensions/gajim/extension.js:233
-#, c-format
-msgid "%s is online."
-msgstr "%s er tilkoblet."
-
-#: ../extensions/gajim/extension.js:236
-#, c-format
-msgid "%s is busy."
-msgstr "%s er opptatt."
-
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
-msgstr ""
+msgstr "Bruk mer skjerm til vinduer"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
 msgid ""
@@ -240,9 +190,35 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 
-#: ../extensions/places-menu/extension.js:37
-msgid "Removable Devices"
-msgstr "Avtagbare enheter"
+#: ../extensions/places-menu/extension.js:77
+msgid "Places"
+msgstr "Steder"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Klarte ikke å starte «%s»"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Datamaskin"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "Hjem"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "Bla gjennom nettverk"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "Minne"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -251,6 +227,32 @@ msgstr "Navn på tema"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Navn på tema som skal lastes fra ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr ""
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Gruppering av vinduer"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Aldri grupper vinduer"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Grupper vinduer når det er begrenset med plass"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Alltid grupper vinduer"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -285,6 +287,10 @@ msgstr "Høyre"
 msgid "Upside-down"
 msgstr "Opp-ned"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Konfigurer innstillinger for skjerm …"
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Skjerm"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "Innstillinger for skjerm"
