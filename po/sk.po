@@ -2,15 +2,15 @@
 # Copyright (C) 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Pavol Klačanský <pavol@klacansky.com>, 2012.
-#  Dušan Kazik <prescott66@gmail.com>, 2012.
+# Dušan Kazik <prescott66@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-10-26 15:22+0000\n"
-"PO-Revision-Date: 2012-11-04 21:46+0100\n"
+"POT-Creation-Date: 2013-05-30 23:17+0000\n"
+"PO-Revision-Date: 2013-05-31 14:24+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -20,60 +20,62 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
 "X-Generator: Poedit 1.5.4\n"
 
-# gsetting summary
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "Režim ikony aplikácie."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "Klasické prostredie GNOME"
 
-# gsetting description
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
-msgstr ""
-"Nastaví ako budú zobrazené okná v prepínači. Platné možnosti sú „thumbnail-"
-"only“ (zobrazí len miniatúru okna), „app-icon-only“ (zobrazí len ikonu "
-"aplikácie) alebo „both“ (obe)."
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Táto relácia vás prihlási do klasického prostredia GNOME"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "Klasický shell prostredia GNOME"
 
 # RadioButton label
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Správca okien a spúšťanie aplikácií"
+
+# RadioButton label
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Len miniatúra"
 
 # RadioButton label
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Len ikona aplikácie"
 
 # RadioButton label
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Miniatúra a ikona aplikácie"
 
-# Label
-#: ../extensions/alternate-tab/prefs.js:43
+#  Label
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Uvádzať okná ako"
 
 # CheckButton
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Zobraziť len okná z aktuálneho pracovného priestoru"
 
 # PopupMenuItem
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:144
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Uspať"
 
 # PopupMenuItem
-#: ../extensions/alternative-status-menu/extension.js:147
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Hibernovať"
 
 # PopupMenuItem
-#: ../extensions/alternative-status-menu/extension.js:150
+#: ../extensions/alternative-status-menu/extension.js:131
 msgid "Power Off"
 msgstr "Vypnúť"
 
@@ -96,6 +98,19 @@ msgstr "Povoliť hibernáciu"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Nastaví viditeľnosť položky Hibernovať v ponuke"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Prehľad aktivít"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Obľúbené"
+
+# TreeViewColumn
+#: ../extensions/apps-menu/extension.js:278
+msgid "Applications"
+msgstr "Aplikácie"
 
 # summary
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
@@ -143,7 +158,7 @@ msgstr "Pridať"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Zlyhalo vysúvanie jednotky „%s“:"
 
-# Menu
+#  Menu
 #: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
 msgstr "Vymeniteľné zariadenia"
@@ -176,14 +191,13 @@ msgstr "Obsahuje text, ktorý bude zobrazený po kliknutí na panel."
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
 #: ../extensions/example/prefs.js:30
-#, fuzzy
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Rozšírenie Example vám má ukázať, ako sa dajú zostaviť dobre vyzerajúce a jednoduché rozšírenia "
-"pre Shell.\n"
+"Rozšírenie Example vám má ukázať, ako sa dajú zostaviť dobre vyzerajúce a "
+"jednoduché rozšírenia pre Shell a demonštrovať tak funkčnosť.\n"
 "Napriek tomu je možné prispôsobiť správu privítania."
 
 #: ../extensions/example/prefs.js:36
@@ -222,42 +236,28 @@ msgstr ""
 "miniatúry. Prepíše sa tým predvolené nastavenie shellu, ktorý ho umiestňuje "
 "nadol. Aby sa prejavila zmena, je potrebné reštartovať shell."
 
-# menu item
-#: ../extensions/places-menu/extension.js:46
+#  menu item
+#: ../extensions/places-menu/extension.js:77
 msgid "Places"
 msgstr "Miesta"
 
-# menu item
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Zariadenia"
-
-# menu item
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Záložky"
-
-# menu item
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Sieť"
-
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Zlyhalo spustenie „%s“"
 
-# Places
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Počítač"
+
+# Places
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Home"
 msgstr "Domov"
 
-#: ../extensions/places-menu/placeDisplay.js:191
-msgid "File System"
-msgstr "Súborový systém"
-
-#: ../extensions/places-menu/placeDisplay.js:195
-msgid "Browse network"
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
 msgstr "Prehliadať sieť"
 
 # Label
@@ -279,6 +279,34 @@ msgstr "Názov témy"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Názov témy, ktorá sa načíta z ~/.themes/nazov/gnome-shell"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Kedy zoskupiť okná"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Rozhoduje kedy sa majú v zozname okien zoskupiť okná tej istej aplikácie."
+"Možné hodnoty sú „never“ (nikdy), „auto“ (automaticky) a „always“ (vždy)."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Zoskupenie okien"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Nikdy nezoskupovať okná"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Zoskupovať okna ak je obmedzený priestor"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Vždy zoskupovať okná"
 
 # Label
 #: ../extensions/workspace-indicator/extension.js:30
@@ -321,8 +349,7 @@ msgstr "Vpravo"
 msgid "Upside-down"
 msgstr "Hore nohami"
 
-# PM: V tomto prípade by asi viac hodilo obrazovka
-# menu
+#  menu
 #: ../extensions/xrandr-indicator/extension.js:50
 msgid "Display"
 msgstr "Displej"
