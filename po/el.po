@@ -3,67 +3,72 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # ioza1964 <ioza1964@yahoo.gr>, 2011.
 # Ιωάννης Ζαμπούκας <ioza1964@yahoo.gr>, 2011.
-#
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-10-08 17:42+0000\n"
-"PO-Revision-Date: 2012-10-11 17:16+0200\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
-"Language-Team: Greek <team@gnome.gr>\n"
+"POT-Creation-Date: 2013-04-19 19:12+0000\n"
+"PO-Revision-Date: 2013-06-05 08:09+0300\n"
+"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"Language-Team: team@gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "Η λειτουργία εικονιδίου της εφαρμογής"
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "Κλασικό GNOME"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
-msgstr ""
-"Διαμορφώνει πως τα παράθυρα θα εμφανίζονται στν εναλλαγή των παραθύρων. "
-"Έγκυρες ρυθμίσεις είναι 'thumbnail-only' (εμφανίζει μια μικρογραφία του "
-"παραθύρου), 'app-icon-only' (εμφανίζει μόνο το εικονίδιο της εφαρμογής) ή "
-"'both'."
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Αυτή η συνεδρία σας συνδέει στο κλασικό GNOME"
 
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "Κλασικό κέλυφος GNOME"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+#| msgid "Thumbnail and application icon"
+msgid "Window management and application launching"
+msgstr "Εκκίνηση διαχείρισης παραθύρου και εφαρμογής"
+
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Μόνο μικρογραφίες"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Μόνο εικονίδια εφαρμογών"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Εικονίδια μικρογραφιών και εφαρμογών"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Παρουσίαση παραθύρων ως"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Προβολή των παραθύρων μόνο στον τρέχων χώρο εργασίας"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:86
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Αναστολή"
 
-#: ../extensions/alternative-status-menu/extension.js:91
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Αδρανοποίηση"
 
-#: ../extensions/alternative-status-menu/extension.js:96
+#: ../extensions/alternative-status-menu/extension.js:131
 msgid "Power Off"
 msgstr "Τερματισμός"
 
@@ -82,6 +87,20 @@ msgstr "Ενεργοποίηση αδρανοποίησης"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Ελέγχει την ορατότητα του αντικειμένου Αδρανοποίηση"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Επισκόπηση ενεργειών"
+
+#: ../extensions/apps-menu/extension.js:113
+#| msgid "Add to Favorites"
+msgid "Favorites"
+msgstr "Αγαπημένα"
+
+#: ../extensions/apps-menu/extension.js:278
+#| msgid "Application"
+msgid "Applications"
+msgstr "Εφαρμογές"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -117,82 +136,6 @@ msgstr "Δημιουργία νέου κανόνα που ταιριάζει"
 msgid "Add"
 msgstr "Προσθήκη"
 
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "Σύρετε εδώ για να προσθέσετε αγαπημένα"
-
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "Νέο παράθυρο"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "Εγκατάλειψη εφαρμογής"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "Απομάκρυνση από τα αγαπημένα"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "Προσθήκη στα αγαπημένα"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Θέση υποδοχέα"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Ρυθμίζει τη θέση του υποδοχέα στην οθόνη. Επιτρεπόμενες τιμές είναι right "
-"(«δεξιά») ή right («αριστερά»)"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Μέγεθος εικονιδίου"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Ρυθμίζει το μέγεθος εικόνας του υποδοχέα."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Ενεργοποίηση/απενεργοποίηση αυτόματης απόκρυψης"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Εφέ αυτόματης απόκρυψης"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Ρυθμίζει το εφέ κρυψίματος του υποδοχέα. Επιτρεπόμενες τιμές είναι 'resize', "
-"'rescale' και 'move'"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Διάρκεια αυτόματης απόκρυψης"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Ρυθμίζει την χρονική διάρκεια του εφέ αυτόματης απόκρυψης."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Οθόνη"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"Ορίζει την οθόνη για την εμφάνιση του ταμπλό. Η προεπιλεγμένη τιμή (-1) "
-"είναι η κύρια οθόνη."
-
 #: ../extensions/drive-menu/extension.js:72
 #, c-format
 msgid "Ejecting drive '%s' failed:"
@@ -203,7 +146,6 @@ msgid "Removable devices"
 msgstr "Αφαιρούμενες συσκευές"
 
 #: ../extensions/drive-menu/extension.js:106
-#| msgid "Open file manager"
 msgid "Open File"
 msgstr "Άνοιγμα αρχείου"
 
@@ -240,26 +182,6 @@ msgstr ""
 msgid "Message:"
 msgstr "Μήνυμα:"
 
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "%s είναι εκτός."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "%s είναι εκτός σύνδεσης."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "%s είναι σε σύνδεση."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "%s είναι απασχολημένος/η."
-
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
 msgstr "Χρησιμοποιήστε περισσότερη οθόνη για τα παράθυρα"
@@ -290,37 +212,27 @@ msgstr ""
 "το τοποθετεί στο κάτω μέρος. Η αλλαγή αυτής της ρύθμισης απαιτεί "
 "επανεκκίνηση του κέλυφους για να έχει κάποιο αποτέλεσμα."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:77
 msgid "Places"
 msgstr "Τοποθεσίες"
 
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Συσκευές"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Σελιδοδείκτες"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Δίκτυο"
-
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Αποτυχία εκκίνησης \"%s\""
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Υπολογιστής"
+
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Home"
 msgstr "Προσωπικός φάκελος"
 
-#: ../extensions/places-menu/placeDisplay.js:184
-msgid "File System"
-msgstr "Σύστημα αρχείων"
-
-#: ../extensions/places-menu/placeDisplay.js:188
-msgid "Browse network"
+#: ../extensions/places-menu/placeDisplay.js:286
+#| msgid "Browse network"
+msgid "Browse Network"
 msgstr "Περιήγηση δικτύου"
 
 #: ../extensions/systemMonitor/extension.js:213
@@ -340,6 +252,35 @@ msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr ""
 "Το όνομα του θέματος, για να φορτωθεί από το αρχείο ~ / .themes / name / "
 "gnome-shell"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Πότε θα ομαδοποιούνται τα παράθυρα"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Αποφασίζει αν θα ομαδοποιούνται παράθυρα από την ίδια εφαρμογή στη λίστα "
+"παραθύρων. Έγκυρες τιμές είναι \"never\" (ποτέ), \"auto\" (αυτόματο) και "
+"\"always\" (πάντα)."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Ομαδοποίηση παραθύρων"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Να μη γίνεται ποτέ ομαδοποίηση παραθύρων"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Ομαδοποίηση παραθύρων όταν ο χώρος είναι περιορισμένος"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Να γίνεται πάντα ομαδοποίηση παραθύρων"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -381,6 +322,100 @@ msgstr "Οθόνη"
 #: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "Ρυθμίσεις οθόνης"
+
+#~ msgid "The application icon mode."
+#~ msgstr "Η λειτουργία εικονιδίου της εφαρμογής"
+
+#~ msgid ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
+#~ msgstr ""
+#~ "Διαμορφώνει πως τα παράθυρα θα εμφανίζονται στν εναλλαγή των παραθύρων. "
+#~ "Έγκυρες ρυθμίσεις είναι 'thumbnail-only' (εμφανίζει μια μικρογραφία του "
+#~ "παραθύρου), 'app-icon-only' (εμφανίζει μόνο το εικονίδιο της εφαρμογής) ή "
+#~ "'both'."
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "Σύρετε εδώ για να προσθέσετε αγαπημένα"
+
+#~ msgid "New Window"
+#~ msgstr "Νέο παράθυρο"
+
+#~ msgid "Quit Application"
+#~ msgstr "Εγκατάλειψη εφαρμογής"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Απομάκρυνση από τα αγαπημένα"
+
+#~ msgid "Position of the dock"
+#~ msgstr "Θέση υποδοχέα"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr ""
+#~ "Ρυθμίζει τη θέση του υποδοχέα στην οθόνη. Επιτρεπόμενες τιμές είναι right "
+#~ "(«δεξιά») ή right («αριστερά»)"
+
+#~ msgid "Icon size"
+#~ msgstr "Μέγεθος εικονιδίου"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "Ρυθμίζει το μέγεθος εικόνας του υποδοχέα."
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "Ενεργοποίηση/απενεργοποίηση αυτόματης απόκρυψης"
+
+#~ msgid "Autohide effect"
+#~ msgstr "Εφέ αυτόματης απόκρυψης"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr ""
+#~ "Ρυθμίζει το εφέ κρυψίματος του υποδοχέα. Επιτρεπόμενες τιμές είναι "
+#~ "'resize', 'rescale' και 'move'"
+
+#~ msgid "Autohide duration"
+#~ msgstr "Διάρκεια αυτόματης απόκρυψης"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "Ρυθμίζει την χρονική διάρκεια του εφέ αυτόματης απόκρυψης."
+
+#~ msgid "Monitor"
+#~ msgstr "Οθόνη"
+
+#~ msgid ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+#~ msgstr ""
+#~ "Ορίζει την οθόνη για την εμφάνιση του ταμπλό. Η προεπιλεγμένη τιμή (-1) "
+#~ "είναι η κύρια οθόνη."
+
+#~ msgid "%s is away."
+#~ msgstr "%s είναι εκτός."
+
+#~ msgid "%s is offline."
+#~ msgstr "%s είναι εκτός σύνδεσης."
+
+#~ msgid "%s is online."
+#~ msgstr "%s είναι σε σύνδεση."
+
+#~ msgid "%s is busy."
+#~ msgstr "%s είναι απασχολημένος/η."
+
+#~ msgid "Devices"
+#~ msgstr "Συσκευές"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Σελιδοδείκτες"
+
+#~ msgid "Network"
+#~ msgstr "Δίκτυο"
+
+#~ msgid "File System"
+#~ msgstr "Σύστημα αρχείων"
 
 #~ msgid "The alt tab behaviour."
 #~ msgstr "Η συμπεριφορά alt tab."
