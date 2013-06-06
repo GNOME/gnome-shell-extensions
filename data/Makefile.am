@@ -28,6 +28,12 @@ theme_DATA = 				\
 	$(srcdir)/gnome-classic.css		\
 	$(NULL)
 
+gsettings_in_files = org.gnome.shell.extensions.classic-overrides.gschema.xml.in
+gsettings_SCHEMAS = $(gsettings_in_files:.xml.in=.xml)
+
+@INTLTOOL_XML_NOMERGE_RULE@
+@GSETTINGS_RULES@
+
 %.desktop.in:%.desktop.in.in
 	$(AM_V_GEN) sed \
 		-e "s|\@libexecdir\@|$(libexecdir)|" \
@@ -54,6 +60,7 @@ EXTRA_DIST = \
 	$(session_in_in_files) \
 	$(xsession_in_files) \
 	$(mode_in_files) \
+	$(gsettings_in_files) \
 	$(theme_DATA) \
 	$(NULL)
 
@@ -62,4 +69,5 @@ CLEANFILES = \
 	$(session_DATA) \
 	$(xsession_DATA) \
 	$(mode_DATA) \
+	$(gsettings_SCHEMAS) \
 	$(NULL)
