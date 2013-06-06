@@ -64,6 +64,13 @@ const Indicator = new Lang.Class({
         this._screen.connect('changed', Lang.bind(this, this._randrEvent));
     },
 
+    destroy: function() [
+        if (this._screen)
+            this._screen.run_dispose();
+
+        this.parent();
+    },
+
     _randrEvent: function() {
         this.menu.removeAll();
         this._createMenu();
