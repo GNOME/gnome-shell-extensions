@@ -1,6 +1,7 @@
 {
     "parentMode": "user",
     "stylesheetName": "gnome-classic.css",
+    "overridesSchema": "org.gnome.shell.extensions.classic-overrides",
     "enabledExtensions": [@CLASSIC_EXTENSIONS@],
     "panel": { "left": ["activities", "appMenu"],
                "center": [],
