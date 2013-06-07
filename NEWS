@@ -1,3 +1,13 @@
+3.8.3
+=====
+* important: default-min-max and static-workspaces
+  were dropped and replaced with classic-mode schema overrides
+* apps-menu and classic-mode in general: fix the
+  scrollbar theming
+* alternative-status-menu honors again GSettings
+* native-window-placement respects again captions-on-top
+* translation updates (sk)
+
 3.8.2
 =====
 * window-list: fix styling in classic mode
