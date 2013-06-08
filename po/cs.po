@@ -1,7 +1,6 @@
 # Czech translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-#
 # Marek Černocký <marek@manet.cz>, 2011, 2012, 2013.
 #
 msgid ""
@@ -9,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-04-19 19:12+0000\n"
-"PO-Revision-Date: 2013-04-20 15:34+0200\n"
+"POT-Creation-Date: 2013-06-07 22:57+0000\n"
+"PO-Revision-Date: 2013-06-08 07:44+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -36,6 +35,24 @@ msgstr "GNOME Shell klasik"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Správa oken a spouštění aplikací"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Modální dialogová okna připojovat k rodičovskému oknu"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr "Když běží GNOME Shell, tento klíč přepíše klíč v org.gnome.mutter"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "Okna upuštěná u okraje obrazovky nechat řadit jako dlaždice"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid "Workspace Indicator"
+msgid "Workspaces only on primary monitor"
+msgstr "Pracovní plochy jen na hlavním monitoru"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -306,6 +323,6 @@ msgstr "Vzhůru nohama"
 msgid "Display"
 msgstr "Obrazovka"
 
-#: ../extensions/xrandr-indicator/extension.js:80
+#: ../extensions/xrandr-indicator/extension.js:87
 msgid "Display Settings"
 msgstr "Nastavení obrazovky"
