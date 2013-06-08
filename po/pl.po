@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-19 21:13+0200\n"
-"PO-Revision-Date: 2013-04-19 21:14+0200\n"
+"POT-Creation-Date: 2013-06-08 21:04+0200\n"
+"PO-Revision-Date: 2013-06-08 21:05+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -39,6 +39,27 @@ msgstr "Klasyczna powłoka GNOME"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Zarządzanie oknami i uruchamianie programów"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Dołączanie modalnych okien dialogowych do okien nadrzędnych"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Ten klucz zastępuje klucz w \"org.gnome.mutter\", kiedy uruchomiona jest "
+"powłoka GNOME."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Włączenie kafelkowania przy krawędziach podczas przenoszenia okien do "
+"krawędzi ekranu"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Obszary robocze tylko na pierwszym monitorze"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
