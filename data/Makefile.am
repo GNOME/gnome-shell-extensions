@@ -36,7 +36,6 @@ gsettings_SCHEMAS = $(gsettings_in_files:.xml.in=.xml)
 
 %.desktop.in:%.desktop.in.in
 	$(AM_V_GEN) sed \
-		-e "s|\@libexecdir\@|$(libexecdir)|" \
 		-e "s|\@bindir\@|$(bindir)|" \
 		-e "s|\@VERSION\@|$(VERSION)|" \
 		$< > $@

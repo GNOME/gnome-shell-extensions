@@ -1,4 +1,3 @@
 [GNOME Session]
 _Name=GNOME Classic
 RequiredComponents=gnome-shell-classic;gnome-settings-daemon;nautilus-classic;
-IsRunnableHelper=@libexecdir@/gnome-session-check-accelerated
