@@ -20,6 +20,7 @@ extensions/places-menu/placeDisplay.js
 extensions/systemMonitor/extension.js
 extensions/user-theme/extension.js
 extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in
+extensions/window-list/extension.js
 extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in
 extensions/window-list/prefs.js
 extensions/windowsNavigator/extension.js
