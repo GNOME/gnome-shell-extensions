@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-05-30 23:17+0000\n"
-"PO-Revision-Date: 2013-06-01 00:00+0500\n"
+"POT-Creation-Date: 2013-06-15 16:56+0000\n"
+"PO-Revision-Date: 2013-06-16 23:36+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <tg@li.org>\n"
 "Language: tg\n"
@@ -34,6 +34,28 @@ msgstr "Восити GNOME-и классикӣ"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Идоракунии равзанаҳо ва оғозидани барномаҳо"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Замима кардани равзанаи гуфтугӯи модалӣ ба равзанаи асосӣ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Ҳангоми иҷрокунии GNOME Shell ин калид калидеро дар org.gnome.mutter "
+"ҷойгузин мекунад."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Фаъол кардани лавҳаҳои канорӣ ҳангоми интиқолдиҳии равзанаҳо ба канорҳои "
+"экран"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid "Workspace Indicator"
+msgid "Workspaces only on primary monitor"
+msgstr "Фазоҳои корӣ танҳо дар монитори асосӣ"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -242,6 +264,11 @@ msgstr "Номи мавзӯъ"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Номи мавзӯъ аз ~/.themes/name/gnome-shell боргирӣ мешавад"
 
+#: ../extensions/window-list/extension.js:382
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Нишондиҳандаи фазои кор"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "Шартҳои гурӯҳбандии равзанаҳо"
@@ -270,10 +297,6 @@ msgstr "Гурӯҳбандии равзанаҳо барои фазои маҳд
 #: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Ҳамеша равзанаҳоро гурӯҳбандӣ кардан"
-
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Нишондиҳандаи фазои кор"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -308,6 +331,6 @@ msgstr "Чаппагардон"
 msgid "Display"
 msgstr "Дисплей"
 
-#: ../extensions/xrandr-indicator/extension.js:80
+#: ../extensions/xrandr-indicator/extension.js:87
 msgid "Display Settings"
 msgstr "Танзимоти дисплей"
