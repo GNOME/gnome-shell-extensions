@@ -292,8 +292,9 @@ const PlacesManager = new Lang.Class({
             let volumes = drives[i].get_volumes();
 
             for(let j = 0; j < volumes.length; j++) {
-                if (volumes[j].get_identifier('class').indexOf('network') >= 0) {
-                    networkVolumes.push(volumes[i]);
+                let identifier = volumes[j].get_identifier('class');
+                if (identifier && identifier.indexOf('network') >= 0) {
+                    networkVolumes.push(volumes[j]);
                 } else {
                     let mount = volumes[j].get_mount();
                     if(mount != null)
@@ -308,7 +309,8 @@ const PlacesManager = new Lang.Class({
             if(volumes[i].get_drive() != null)
                 continue;
 
-            if (volumes[i].get_identifier('class').indexOf('network') >= 0) {
+            let identifier = volumes[i].get_identifier('class');
+            if (identifier && identifier.indexOf('network') >= 0) {
                 networkVolumes.push(volumes[i]);
             } else {
                 let mount = volumes[i].get_mount();
