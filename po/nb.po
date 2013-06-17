@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-02 01:12+0200\n"
-"PO-Revision-Date: 2013-06-02 01:37+0200\n"
+"POT-Creation-Date: 2013-06-17 12:29+0200\n"
+"PO-Revision-Date: 2013-06-17 12:30+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: \n"
@@ -32,6 +32,23 @@ msgstr "Klassisk GNOME-skall"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Vinduhåndtering og start av programmer"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Arbeidsområder kun på hovedskjerm"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -120,9 +137,8 @@ msgid "Add rule"
 msgstr "Legg til regel"
 
 #: ../extensions/auto-move-windows/prefs.js:94
-#, fuzzy
 msgid "Create new matching rule"
-msgstr "Lag en ny regel"
+msgstr "Lag en ny regel for treff"
 
 #: ../extensions/auto-move-windows/prefs.js:98
 msgid "Add"
@@ -228,9 +244,14 @@ msgstr "Navn på tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Navn på tema som skal lastes fra ~/.themes/name/gnome-shell"
 
+#: ../extensions/window-list/extension.js:382
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Arbeidsområdeindikator"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
-msgstr ""
+msgstr "Når vinduer skal grupperes"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
@@ -253,10 +274,6 @@ msgstr "Grupper vinduer når det er begrenset med plass"
 #: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Alltid grupper vinduer"
-
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Arbeidsområdeindikator"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -291,6 +308,6 @@ msgstr "Opp-ned"
 msgid "Display"
 msgstr "Skjerm"
 
-#: ../extensions/xrandr-indicator/extension.js:80
+#: ../extensions/xrandr-indicator/extension.js:87
 msgid "Display Settings"
 msgstr "Innstillinger for skjerm"
