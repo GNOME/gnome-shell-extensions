@@ -1,3 +1,9 @@
+3.8.3.1
+=======
+* fix a crash in places-menu with MTP devices
+* drop deprecated IsRunnableHelper
+* translation updates
+
 3.8.3
 =====
 * important: default-min-max and static-workspaces
