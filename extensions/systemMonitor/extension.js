@@ -34,6 +34,7 @@ const Indicator = new Lang.Class({
         this.drawing_area.connect('button-press-event', function() {
             let app = Shell.AppSystem.get_default().lookup_app('gnome-system-monitor.desktop');
             app.open_new_window(-1);
+            return true;
         });
 
         this.actor = new St.Bin({ style_class: "extension-systemMonitor-indicator-area",
