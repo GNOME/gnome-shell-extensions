@@ -1,3 +1,12 @@
+3.9.3
+=====
+* classic mode mini extensions were replaced with a
+  GSettings override specified in the .json file
+* styling of classic mode improved
+* native-window-placement is back working on 3.9
+* misc bug fixes
+* traslation updates (an, cs, el, es, gl, nb, pl, sk, tg)
+
 3.9.2
 =====
 * apps-menu: appearance of the scrollbars was improved
