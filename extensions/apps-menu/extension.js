@@ -227,24 +227,23 @@ const ApplicationsMenu = new Lang.Class({
     Name: 'ApplicationsMenu',
     Extends: PopupMenu.PopupMenu,
 
-    _init: function(sourceActor, arrowAlignment, arrowSide, button, hotCorner) {
+    _init: function(sourceActor, arrowAlignment, arrowSide, button) {
         this.parent(sourceActor, arrowAlignment, arrowSide);
         this._button = button;
-        this._hotCorner = hotCorner;
     },
 
     open: function(animate) {
-        this._hotCorner.setBarrierSize(0);
-        if (this._hotCorner.actor) // fallback corner
-            this._hotCorner.actor.hide();
+        this._button.hotCorner.setBarrierSize(0);
+        if (this._button.hotCorner.actor) // fallback corner
+            this._button.hotCorner.actor.hide();
         this.parent(animate);
     },
 
     close: function(animate) {
         let size = Main.layoutManager.panelBox.height;
-        this._hotCorner.setBarrierSize(size);
-        if (this._hotCorner.actor) // fallback corner
-            this._hotCorner.actor.show();
+        this._button.hotCorner.setBarrierSize(size);
+        if (this._button.hotCorner.actor) // fallback corner
+            this._button.hotCorner.actor.show();
         this.parent(animate);
     },
 
@@ -265,9 +264,8 @@ const ApplicationsButton = new Lang.Class({
 
     _init: function() {
         this.parent(1.0, null, false);
-        this._hotCorner = Main.layoutManager.hotCorners[Main.layoutManager.primaryIndex];
 
-        this.setMenu(new ApplicationsMenu(this.actor, 1.0, St.Side.TOP, this, this._hotCorner));
+        this.setMenu(new ApplicationsMenu(this.actor, 1.0, St.Side.TOP, this));
         Main.panel.menuManager.addMenu(this.menu);
 
         // At this moment applications menu is not keyboard navigable at
@@ -308,6 +306,10 @@ const ApplicationsButton = new Lang.Class({
         _panelBoxChangedId = Main.layoutManager.connect('panel-box-changed', Lang.bind(this, function() {
             container.queue_relayout();
         }));
+    },
+
+    get hotCorner() {
+        return Main.layoutManager.hotCorners[Main.layoutManager.primaryIndex];
     },
 
     _createVertSeparator: function() {
