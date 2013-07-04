@@ -47,7 +47,7 @@ function loginManager_canHibernate(asyncCallback) {
                              let result, error;
 
                              try {
-                                 result = proxy.call_finish(asyncResult);
+                                 result = proxy.call_finish(asyncResult).deep_unpack();
                              } catch(e) {
                                  error = e;
                              }
