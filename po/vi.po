@@ -8,73 +8,71 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-06-07 22:57+0000\n"
-"PO-Revision-Date: 2013-07-06 18:20+0700\n"
-"Last-Translator: Lê Trường An <xinemdungkhoc1@gmail.com>\n"
+"POT-Creation-Date: 2013-07-04 14:51+0000\n"
+"PO-Revision-Date: 2013-07-06 18:23+0700\n"
+"Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
 msgid "GNOME Classic"
-msgstr ""
+msgstr "GNOME Cổ điển"
 
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
-msgstr ""
+msgstr "Phiên làm việc này đăng nhập bạn vào GNOME Cổ điển"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:1
 msgid "GNOME Shell Classic"
-msgstr ""
+msgstr "Hệ vỏ GNOME Cổ điển"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
-msgstr ""
+msgstr "Quản lý cửa sổ và chạy ứng dụng"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
-msgstr ""
+msgstr "Gắn hộp thoại dạng modal (luôn ở trên) vào cửa sổ mẹ"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
+"Khóa này sẽ đè lên khóa có trong org.gnome.mutter khi chạy Hệ vỏ GNOME."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
+msgstr "Bật xếp lớp ở cạnh khi thả cửa sổ vào cạnh màn hình"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
 msgid "Workspaces only on primary monitor"
-msgstr ""
+msgstr "Vùng làm việc chỉ ở trên màn hình chính"
 
 #: ../extensions/alternate-tab/prefs.js:20
-#, fuzzy
-#| msgid "All & Thumbnails"
 msgid "Thumbnail only"
-msgstr "Tất cả & Ảnh nhỏ"
+msgstr "Chỉ ảnh nhỏ"
 
 #: ../extensions/alternate-tab/prefs.js:21
-#, fuzzy
-#| msgid "Application and workspace list"
 msgid "Application icon only"
-msgstr "Danh sách ứng dụng và vùng làm việc"
+msgstr "Chỉ có ảnh nhỏ đại diện cho ứng dụng"
 
 #: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
-msgstr ""
+msgstr "Ảnh thu nhỏ và biểu tượng của ứng dụng"
 
 #: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
-msgstr ""
+msgstr "Cửa sổ hiện tại như là"
 
 #: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
-msgstr ""
+msgstr "Chỉ hiển thị các cửa sổ trong không gian làm việc hiện tại"
 
 #. add the new entries
 #: ../extensions/alternative-status-menu/extension.js:125
@@ -86,42 +84,36 @@ msgid "Hibernate"
 msgstr "Ngủ đông"
 
 #: ../extensions/alternative-status-menu/extension.js:131
-#, fuzzy
-#| msgid "Power Off..."
 msgid "Power Off"
-msgstr "Tắt máy..."
+msgstr "Tắt máy"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
 msgid "Enable suspending"
-msgstr ""
+msgstr "Cho phép tạm dừng"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
 msgid "Control the visibility of the Suspend menu item"
-msgstr ""
+msgstr "Cấu hình trình đơn con “Tạm dừng” hiện hay ẩn đi"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
 msgid "Enable hibernating"
-msgstr ""
+msgstr "Cho phép ngủ đông"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
-msgstr ""
+msgstr "Cấu hình trình đơn con “Ngủ đông” hiện hay ẩn đi"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
-msgstr ""
+msgstr "Tổng quan hoạt động"
 
 #: ../extensions/apps-menu/extension.js:113
-#, fuzzy
-#| msgid "Add to Favorites"
 msgid "Favorites"
-msgstr "Đánh dấu ưa thích"
+msgstr ""
 
-#: ../extensions/apps-menu/extension.js:278
-#, fuzzy
-#| msgid "Quit Application"
+#: ../extensions/apps-menu/extension.js:276
 msgid "Applications"
-msgstr "Thoát ứng dụng"
+msgstr "Ứng dụng"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -132,46 +124,42 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"Danh sách chuỗi các id ứng dụng (tên tập tin .desktop), theo sau là dấu hai "
-"chấm và mã số vùng làm việc"
+"Một danh sách chuỗi, mỗi chuỗi là một id của ứng dụng (tên tập tin ."
+"desktop), theo sau là dấu hai chấm và mã số vùng làm việc"
 
 #: ../extensions/auto-move-windows/prefs.js:55
-#, fuzzy
-#| msgid "Quit Application"
 msgid "Application"
-msgstr "Thoát ứng dụng"
+msgstr "Ứng dụng"
 
 #: ../extensions/auto-move-windows/prefs.js:64
 #: ../extensions/auto-move-windows/prefs.js:106
-#, fuzzy
-#| msgid "Workspace & Icons"
 msgid "Workspace"
-msgstr "Vùng làm việc & Biểu tượng"
+msgstr "Vùng làm việc"
 
 #: ../extensions/auto-move-windows/prefs.js:80
 msgid "Add rule"
-msgstr ""
+msgstr "Thêm quy tắc"
 
 #: ../extensions/auto-move-windows/prefs.js:94
 msgid "Create new matching rule"
-msgstr ""
+msgstr "Tạo một quy tắc khớp mới"
 
 #: ../extensions/auto-move-windows/prefs.js:98
 msgid "Add"
-msgstr ""
+msgstr "Thêm"
 
 #: ../extensions/drive-menu/extension.js:72
 #, c-format
 msgid "Ejecting drive '%s' failed:"
-msgstr ""
+msgstr "Đẩy đĩa “%s” ra gặp lỗi:"
 
 #: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
-msgstr ""
+msgstr "Đĩa di động"
 
 #: ../extensions/drive-menu/extension.js:106
 msgid "Open File"
-msgstr ""
+msgstr "Mở tập tin"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -179,13 +167,15 @@ msgstr "Xin chào!"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
 msgid "Alternative greeting text."
-msgstr ""
+msgstr "Lời chào thay thế."
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
 msgstr ""
+"Nếu không rỗng, nó sẽ chứa chữ mà chữ này sẽ được hiển thị khi bấm chuột "
+"trên bảng điều khiển."
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
@@ -195,14 +185,17 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
+"Example (Ví dụ) nhắm vào việc hướng dẫn làm cách nào để xây dựng các phần mở "
+"rộng chạy tốt cho Hệ vỏ và do vậy nó chỉ có một ít chức năng.\n"
+"Tuy thế nó có khả năng cá nhân hóa lời chào."
 
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
-msgstr ""
+msgstr "Lời nhắn:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
-msgstr "Dùng nhiều screen cho cửa sổ"
+msgstr "Dùng nhiều màn hình cho các cửa sổ"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
 msgid ""
@@ -210,10 +203,13 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
+"Hãy thử dùng nhiều màn hình để đặt ảnh thu nhỏ của cửa sổ bằng cách chỉnh "
+"sửa cho thích hợp với tỷ lệ dạng màn hình, và hợp nhất chúng hơn nữa để giảm "
+"bớt ô hạn biên. Cài đặt này chỉ áp dụng với chiến lược sắp đặt tự nhiên."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
-msgstr ""
+msgstr "Đặt thanh tiêu đề cửa sổ trên đỉnh"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
@@ -221,36 +217,39 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
+"Nếu đúng, đặt thanh tiêu đề của cửa sổ trên đỉnh của ảnh thu nhỏ tương ứng, "
+"đè lên cách ứng xử mặc định của hệ vỏ là ở dưới đáy.Những thay đổi này cần "
+"khởi động lại hệ vỏ để có tác dụng."
 
 #: ../extensions/places-menu/extension.js:77
 msgid "Places"
-msgstr ""
+msgstr "Mở nhanh"
 
 #: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
-msgstr ""
+msgstr "Gặp lỗi khi chạy \"%s\""
 
 #: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
 msgid "Computer"
-msgstr ""
+msgstr "Máy tính"
 
 #: ../extensions/places-menu/placeDisplay.js:199
 msgid "Home"
-msgstr ""
+msgstr "Thư mục riêng"
 
 #: ../extensions/places-menu/placeDisplay.js:286
 msgid "Browse Network"
-msgstr ""
+msgstr "Duyệt mạng"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
-msgstr ""
+msgstr "CPU              "
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
-msgstr ""
+msgstr "Bộ nhớ"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -260,53 +259,51 @@ msgstr "Tên chủ đề"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Tên chủ đề, nạp từ ~/.themes/name/gnome-shell"
 
+#: ../extensions/window-list/extension.js:382
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Bộ chỉ thị vùng làm việc"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
-msgstr ""
+msgstr "Khi nào thì nhóm các cửa sổ lại"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
+"Decides when to group windows from the same application on the window list. "
+"Các giá trị có thể là \"never\", \"auto\" và \"always\"."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
-msgstr ""
+msgstr "Nhóm cửa sổ lại"
 
 #: ../extensions/window-list/prefs.js:49
 msgid "Never group windows"
-msgstr ""
+msgstr "Không bao giờ nhóm các cửa sổ lại với nhau"
 
 #: ../extensions/window-list/prefs.js:50
 msgid "Group windows when space is limited"
-msgstr ""
+msgstr "Nhóm các cửa sổ lại với nhau khi không đủ chỗ"
 
 #: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
-msgstr ""
-
-#: ../extensions/workspace-indicator/extension.js:30
-#, fuzzy
-#| msgid "Workspace & Icons"
-msgid "Workspace Indicator"
-msgstr "Vùng làm việc & Biểu tượng"
+msgstr "Luôn nhóm các cửa sổ lại với nhau"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-#, fuzzy
-#| msgid "Workspace & Icons"
 msgid "Workspace names:"
-msgstr "Vùng làm việc & Biểu tượng"
+msgstr "Tên vùng làm việc:"
 
 #: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
-msgstr ""
+msgstr "Tên"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, fuzzy, c-format
-#| msgid "Workspace & Icons"
+#, c-format
 msgid "Workspace %d"
-msgstr "Vùng làm việc & Biểu tượng"
+msgstr "Vùng làm việc %d"
 
 #: ../extensions/xrandr-indicator/extension.js:30
 msgid "Normal"
@@ -322,171 +319,15 @@ msgstr "Phải"
 
 #: ../extensions/xrandr-indicator/extension.js:33
 msgid "Upside-down"
-msgstr "Trên xuống"
+msgstr "Trên-xuống"
 
 #: ../extensions/xrandr-indicator/extension.js:50
 msgid "Display"
-msgstr ""
+msgstr "Hiển thị"
 
 #: ../extensions/xrandr-indicator/extension.js:87
-#, fuzzy
-#| msgid "System Settings"
 msgid "Display Settings"
-msgstr "Thiết lập hệ thống"
+msgstr "Cài đặt hiển thị"
 
 #~ msgid "Notifications"
 #~ msgstr "Thông báo"
-
-#~| msgid "My Account"
-#~ msgid "Online Accounts"
-#~ msgstr "Tài khoản trực tuyến"
-
-#~ msgid "Lock Screen"
-#~ msgstr "Khoá màn hình"
-
-#~ msgid "Switch User"
-#~ msgstr "Đổi người dùng"
-
-#~ msgid "Log Out..."
-#~ msgstr "Đăng xuất..."
-
-#~ msgid ""
-#~ "This is the first time you use the Alternate Tab extension. \n"
-#~ "Please choose your preferred behaviour:\n"
-#~ "\n"
-#~ "All & Thumbnails:\n"
-#~ "    This mode presents all applications from all workspaces in one "
-#~ "selection \n"
-#~ "    list. Instead of using the application icon of every window, it uses "
-#~ "small \n"
-#~ "    thumbnails resembling the window itself. \n"
-#~ "\n"
-#~ "Workspace & Icons:\n"
-#~ "    This mode let's you switch between the applications of your current \n"
-#~ "    workspace and gives you additionally the option to switch to the last "
-#~ "used \n"
-#~ "    application of your previous workspace. This is always the last "
-#~ "symbol in \n"
-#~ "    the list and is segregated by a separator/vertical line if "
-#~ "available. \n"
-#~ "    Every window is represented by its application icon.  \n"
-#~ "\n"
-#~ "Native:\n"
-#~ "    This mode is the native GNOME 3 behaviour or in other words: "
-#~ "Clicking \n"
-#~ "    native switches the Alternate Tab extension off. \n"
-#~ msgstr ""
-#~ "Đây là lần đầu tiên bạn dùng phần mở rộng Alternate Tab.\n"
-#~ "Vui lòng chọn hành vi mong muốn:\n"
-#~ "\n"
-#~ "Tất cả & Ảnh nhỏ:\n"
-#~ "    Chế độ này hiện mọi ứng dụng trong mọi vùng làm việc trong một danh "
-#~ "sách\n"
-#~ "    Dùng ảnh thu nhỏ của cửa sổ thay vì dùng biểu tượng ứng dụng cho mọi "
-#~ "cửa\n"
-#~ "    sổ.\n"
-#~ "\n"
-#~ "Vùng làm việc & Biểu tượng:\n"
-#~ "    Chế độ này cho phép bạn chuyển ứng dụng trong vùng làm việc hiện "
-#~ "thời\n"
-#~ "    và bạn có lựa chọn chuyển sang ứng dụng dùng lần cuối ở vùng làm "
-#~ "việc\n"
-#~ "    trước, luôn là biểu tượng cuối cùng trong danh sách và bị ngăn bởi\n"
-#~ "    thanh dọc nếu có. Ảnh ứng dụng được dùng để đại diện từng cửa sổ.\n"
-#~ "\n"
-#~ "Nguyên thuỷ:\n"
-#~ "    Đây là hành vi mặc định trong GNOME 3. Nói cách khác là tắt phần mở\n"
-#~ "    rộng này.\n"
-
-#~ msgid "Alt Tab Behaviour"
-#~ msgstr "Hành vi Alt Tab"
-
-#~ msgid "Native"
-#~ msgstr "Nguyên thuỷ"
-
-#~ msgid "Cancel"
-#~ msgstr "Thôi"
-
-#~ msgid "Ask the user for a default behaviour if true."
-#~ msgstr "Hỏi người dùng hành vi mặc định nếu true."
-
-#~ msgid "Indicates if Alternate Tab is newly installed"
-#~ msgstr "Chỉ thị đã cài đặt Alt Tab chưa"
-
-#~ msgid ""
-#~ "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails "
-#~ "and workspace_icons."
-#~ msgstr ""
-#~ "Đặt hành vi Alt-Tab. Giá trị bao gồm: native (nguyên thuỷ), "
-#~ "all_thumbnails (mọi ảnh nhỏ) và workspace_icons (biểu tượng vùng làm "
-#~ "việc)."
-
-#~ msgid "The alt tab behaviour."
-#~ msgstr "Hành vi Alt Tab"
-
-#~ msgid "Drag here to add favorites"
-#~ msgstr "Thả vào đây để thêm ưa thích"
-
-#~ msgid "New Window"
-#~ msgstr "Cửa sổ mới"
-
-#~ msgid "Remove from Favorites"
-#~ msgstr "Hết ưa thích"
-
-#~ msgid "Autohide duration"
-#~ msgstr "Thời gian tự ẩn"
-
-#~ msgid "Autohide effect"
-#~ msgstr "Hiệu ứng tự ẩn"
-
-#~ msgid "Enable/disable autohide"
-#~ msgstr "Bật/Tắt tự ẩn"
-
-#~ msgid "Icon size"
-#~ msgstr "Kích thước biểu tượng"
-
-#~ msgid "Position of the dock"
-#~ msgstr "Vị trí neo"
-
-#~ msgid "Sets icon size of the dock."
-#~ msgstr "Đặt kích thước biểu tượng của neo."
-
-#~ msgid ""
-#~ "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-#~ msgstr ""
-#~ "Đặt hiệu ứng ẩn neo. Giá trị bao gồm: 'resize' (đổi cỡ) hoặc "
-#~ "'rescale' (co giãn)"
-
-#~ msgid ""
-#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
-#~ "or 'left'"
-#~ msgstr ""
-#~ "Đặt vị trí neo trên màn hình. Giá trị bao gồm 'right' (phải) và "
-#~ "'left' (trái)"
-
-#~ msgid "Sets the time duration of the autohide effect."
-#~ msgstr "Đặt khoảng thời gian của hiệu ứng tự ẩn"
-
-#~ msgid "%s is away."
-#~ msgstr "%s không có mặt."
-
-#~ msgid "%s is offline."
-#~ msgstr "%s đang ngoại tuyến."
-
-#~ msgid "%s is online."
-#~ msgstr "%s đang trực tuyến."
-
-#~ msgid "%s is busy."
-#~ msgstr "%s đang bận."
-
-#~ msgid "Window placement strategy"
-#~ msgstr "Chiến lược đặt cửa sổ"
-
-#~ msgid "Configure display settings..."
-#~ msgstr "Cấu hình thiết lập hiển thị..."
-
-#~ msgid "Available"
-#~ msgstr "Có mặt"
-
-#~ msgid "Busy"
-#~ msgstr "Bận"
