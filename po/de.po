@@ -9,18 +9,16 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-03-11 01:25+0000\n"
-"PO-Revision-Date: 2013-03-13 20:30+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2013-07-04 14:06+0000\n"
+"PO-Revision-Date: 2013-07-08 17:20+0100\n"
+"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
-"Language: \n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Language: German\n"
-"X-Poedit-Country: GERMANY\n"
-"X-Generator: Gtranslator 2.91.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -38,6 +36,29 @@ msgstr "GNOME Shell Classic"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Fensterverwaltung und Anwendungsstart"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Einen modalen Dialog an das übergeordnete Fenster anhängen"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Dieser Schlüssel überschreibt den Schlüssel in »org.gnome.mutter« wenn die "
+"GNOME-Shell ausgeführt wird."
+
+# identisch zum Schüssel in »gnome-shell«
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Größenanpassung aktivieren, wenn ein Fenster an die Bildschirmkante "
+"verschoben wird"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid "Workspace Indicator"
+msgid "Workspaces only on primary monitor"
+msgstr "Arbeitsflächen nur auf dem Primärmonitor"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -88,15 +109,15 @@ msgstr "Ruhezustand einblenden"
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Die Sichtbarkeit des Menüeintrags »Ruhezustand« festlegen"
 
-#: ../extensions/apps-menu/extension.js:37
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Aktivitäten-Übersicht"
 
-#: ../extensions/apps-menu/extension.js:95
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Favoriten"
 
-#: ../extensions/apps-menu/extension.js:184
+#: ../extensions/apps-menu/extension.js:276
 msgid "Applications"
 msgstr "Anwendungen"
 
@@ -231,11 +252,11 @@ msgstr "Persönlicher Ordner"
 msgid "Browse Network"
 msgstr "Netzwerk durchsuchen"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Speicher"
 
@@ -249,6 +270,11 @@ msgstr ""
 "Der Name des Themas, welches aus ~/.themes/name/gnome-shell geladen werden "
 "soll"
 
+#: ../extensions/window-list/extension.js:382
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Arbeitsflächenindikator"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "Fenstergruppierung"
@@ -256,10 +282,11 @@ msgstr "Fenstergruppierung"
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "Legt fest, ob Fenster der gleichen Anwendung in der Fensterliste gruppiert "
-"werden sollen. Mögliche Werte sind »never« (nie) und »always« (immer)."
+"werden sollen. Mögliche Werte sind »never« (nie), »auto« (automatisch) und "
+"»always« (immer)."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -270,12 +297,12 @@ msgid "Never group windows"
 msgstr "Fenster niemals gruppieren"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Fenster bei Platzmangel gruppieren"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Fenster immer gruppieren"
-
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Arbeitsflächenindikator"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -310,7 +337,7 @@ msgstr "Kopfüber"
 msgid "Display"
 msgstr "Anzeige"
 
-#: ../extensions/xrandr-indicator/extension.js:80
+#: ../extensions/xrandr-indicator/extension.js:87
 msgid "Display Settings"
 msgstr "Bildschirmeinstellungen"
 
