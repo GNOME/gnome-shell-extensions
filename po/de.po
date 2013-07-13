@@ -9,18 +9,16 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-03-11 01:25+0000\n"
-"PO-Revision-Date: 2013-03-13 20:30+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2013-06-30 11:59+0000\n"
+"PO-Revision-Date: 2013-07-11 19:25+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
-"Language: \n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Language: German\n"
-"X-Poedit-Country: GERMANY\n"
-"X-Generator: Gtranslator 2.91.5\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -38,6 +36,27 @@ msgstr "GNOME Shell Classic"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Fensterverwaltung und Anwendungsstart"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Modalen Dialog an das übergeordnete Fenster anhängen"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Dieser Schlüssel überschreibt den Schlüssel in org.gnome.mutter wenn GNOME "
+"Shell läuft."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Größenanpassung aktivieren, wenn ein Fenster an die Bildschirmkante "
+"verschoben wird"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Arbeitsflächen nur auf dem primären Bildschirm"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -88,15 +107,15 @@ msgstr "Ruhezustand einblenden"
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Die Sichtbarkeit des Menüeintrags »Ruhezustand« festlegen"
 
-#: ../extensions/apps-menu/extension.js:37
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Aktivitäten-Übersicht"
 
-#: ../extensions/apps-menu/extension.js:95
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Favoriten"
 
-#: ../extensions/apps-menu/extension.js:184
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "Anwendungen"
 
@@ -256,10 +275,11 @@ msgstr "Fenstergruppierung"
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
-"Legt fest, ob Fenster der gleichen Anwendung in der Fensterliste gruppiert "
-"werden sollen. Mögliche Werte sind »never« (nie) und »always« (immer)."
+"Legt fest, ob Fenster der selben Anwendung in der Fensterliste gruppiert "
+"werden sollen. Mögliche Werte sind »never« (nie), »auto« (automatisch) und "
+"»always« (immer)."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -270,6 +290,10 @@ msgid "Never group windows"
 msgstr "Fenster niemals gruppieren"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Fenster bei begrenztem Platz gruppieren"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Fenster immer gruppieren"
 
