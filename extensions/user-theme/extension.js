@@ -45,6 +45,7 @@ const ThemeManager = new Lang.Class({
                 _stylesheet = _userCssStylesheet;
             else {
                 let sysdirs = GLib.get_system_data_dirs();
+                sysdirs.unshift(GLib.get_user_data_dir());
                 for (let i = 0; i < sysdirs.length; i++) {
                     _userCssStylesheet = sysdirs[i] + '/themes/' + _themeName + '/gnome-shell/gnome-shell.css';
                     let file = Gio.file_new_for_path(_userCssStylesheet);
