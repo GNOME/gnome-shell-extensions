@@ -1,3 +1,12 @@
+3.9.4
+=====
+* apps-menu: fixed handling of hot corner in case
+  of screen reconfiguration
+* alternative-status-menu now correctly honors polkit
+  for hibernation
+* user-menu now loads themes from $XDG_DATA_HOME too
+* translation updates (de, id, pt_BR, vi, zh_CN, ml)
+
 3.9.3
 =====
 * classic mode mini extensions were replaced with a
