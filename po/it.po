@@ -1,5 +1,6 @@
 # Italian translations for GNOME Shell extensions
 # Copyright (C) 2011 Giovanni Campagna et al.
+# Copyright (C) 2012, 2013 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Giovanni Campagna <scampa.giovanni@gmail.com>, 2011
 # Milo Casagrande <milo@ubuntu.com>, 2013.
@@ -8,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 10:05+0100\n"
-"PO-Revision-Date: 2013-03-20 10:05+0100\n"
+"POT-Creation-Date: 2013-07-19 09:34+0200\n"
+"PO-Revision-Date: 2013-07-19 09:33+0200\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -17,6 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -34,6 +36,28 @@ msgstr "GNOME Shell classico"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Gestione finestre a avvio applicazioni"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Collega la finestra modale alla finestra genitore"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Questa chiave scavalca quella in org.gnome.mutter quando è in esecuzione "
+"GNOME Shell."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+#, fuzzy
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Abilita la tassellatura sul bordo quando le finestre vengono rilasciate ai "
+"bordi dello schermo"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Spazi di lavoro solo sul monitor principale"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -85,15 +109,15 @@ msgstr "Abilita ibernazione"
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Controlla la visibilità del comando Iberna"
 
-#: ../extensions/apps-menu/extension.js:37
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Panoramica attività"
 
-#: ../extensions/apps-menu/extension.js:95
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Preferiti"
 
-#: ../extensions/apps-menu/extension.js:184
+#: ../extensions/apps-menu/extension.js:276
 msgid "Applications"
 msgstr "Applicazioni"
 
@@ -226,11 +250,11 @@ msgstr "Home"
 msgid "Browse Network"
 msgstr "Esplora rete"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Memoria"
 
@@ -242,6 +266,11 @@ msgstr "Nome del tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Il nome del tema, da caricare da ~/.themes/nome/gnome-shell"
 
+#: ../extensions/window-list/extension.js:382
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indicatore spazi di lavoro"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "Quando raggruppare le finestre"
@@ -249,10 +278,10 @@ msgstr "Quando raggruppare le finestre"
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "Decide quando raggruppare le finestre della stessa applicazione sull'elenco "
-"delle finestre. I possibile valori sono \"never\" e \"always\"."
+"delle finestre. I possibili valori sono \"never\", \"auto\" e \"always\"."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -263,12 +292,12 @@ msgid "Never group windows"
 msgstr "Non raggruppare le finestre"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Raggruppare le finestre quando c'è poco spazio"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Raggruppare sempre le finestre"
-
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Indicatore spazi di lavoro"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -303,6 +332,6 @@ msgstr "Rovesciato"
 msgid "Display"
 msgstr "Monitor"
 
-#: ../extensions/xrandr-indicator/extension.js:80
+#: ../extensions/xrandr-indicator/extension.js:87
 msgid "Display Settings"
 msgstr "Impostazioni monitor"
