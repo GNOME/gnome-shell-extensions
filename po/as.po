@@ -1,0 +1,333 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Nilamdyuti Goswami <ngoswami@redhat.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-07-26 09:56+0000\n"
+"PO-Revision-Date: 2013-07-29 13:07+0530\n"
+"Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME ক্লাচিক"
+
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "এই অধিবেশনে আপোনাক GNOME ক্লাচিকলৈ লগ কৰে"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME শ্বেল ক্লাচিক"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "উইন্ডো ব্যৱস্থাপনা আৰু এপ্লিকেচনৰ লঞ্চ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "মডাল ডাইলগ উপধায়ক উইন্ডোৰ সৈতে সংলগ্ন কৰক"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr "GNOME শ্বেল চলাওতে এই কি'য়ে org.gnome.mutter ত থকা কি' অভাৰৰাইড কৰে।"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "উইন্ডোসমূহক পৰ্দাৰ প্ৰান্তসমূহত এৰোতে প্ৰান্ত টাইলিং সামৰ্থবান কৰক"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "কাৰ্য্যস্থানসমূহ কেৱল প্ৰাথমিক মনিটৰত"
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "কেৱল থাম্বনেইল"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "কেৱল এপ্লিকেচন আইকন"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "থাম্বনেইল আৰু এপ্লিকেচন আইকন"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "উইন্ডোসমূহক এই ধৰণে পৰিৱেশন কৰক"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "কেৱল বৰ্তমান কাৰ্য্যস্থানত থকা উইন্ডোসমূহ দেখুৱাওক"
+
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:125
+msgid "Suspend"
+msgstr "স্থগিত কৰক"
+
+#: ../extensions/alternative-status-menu/extension.js:128
+msgid "Hibernate"
+msgstr "হাইবাৰনেইট"
+
+#: ../extensions/alternative-status-menu/extension.js:131
+msgid "Power Off"
+msgstr "বন্ধ কৰক"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "স্থগিত কৰা সামৰ্থবান কৰক"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "স্থগিত মেনু বস্তুৰ দৃশ্যমানতা নিয়ন্ত্ৰণ কৰক"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "হাইবেৰনেইট কৰা সামৰ্থবান কৰক"
+
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "হাইবেৰনেইট মেনু বস্তুৰ দৃশ্যমানতা নিয়ন্ত্ৰণ কৰক"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "কাৰ্য্যসমূহৰ অভাৰভিউ"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "পছন্দৰ"
+
+#: ../extensions/apps-menu/extension.js:276
+msgid "Applications"
+msgstr "এপ্লিকেচনসমূহ"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "এপ্লিকেচন আৰু কাৰ্য্যস্থান তালিকা"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"স্ট্ৰিংসমূহৰ এটা তালিকা, প্ৰতিটোয়ে এটা এপ্লিকেচন আইডি (ডেস্কটপ ফাইল নাম), এটা "
+"কল'ন "
+"আৰু কাৰ্য্যস্থান নম্বৰৰ সৈতে অনুকৰণ কৰা অন্তৰ্ভুক্ত কৰে"
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "এপ্লিকেচন"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "কাৰ্য্যস্থান"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "নিয়ম যোগ কৰক"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "নতুন মিল খোৱা নিয়ম সৃষ্টি কৰক"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "যোগ কৰক"
+
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "ড্ৰাইভ '%s' বাহিৰ কৰাটো ব্যৰ্থ হ'ল:"
+
+#: ../extensions/drive-menu/extension.js:89
+msgid "Removable devices"
+msgstr "আতৰাব পৰা ডিভাইচসমূহ"
+
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "ফাইল খোলক"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "নমস্কাৰ, বিশ্ব!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "বৈকল্পিক অভিন্দন লিখনী।"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr "যদি ৰিক্ত নহয়, ই পেনেল ক্লিক কৰোতে দেখুৱা লিখনী অন্তৰ্ভুক্ত কৰিব।"
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"উদাহৰণে শ্বেলৰ বাবে কিধৰণে ভাল ব্যৱহাৰ কৰা সম্প্ৰসাৰণসমূহ নিৰ্মাণ কৰিব লাগে "
+"দেখুৱাবলে লক্ষ্য লয় "
+"আৰু সেয়েহে ইয়াৰ খুব ক'ম নিজস্ব কাৰ্যকৰীতা থাকে।\n"
+"যি কি নহওক অভিন্দন বাৰ্তাটো স্বনিৰ্বাচন কৰাটো সম্ভব।"
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "বাৰ্তা:"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "উইন্ডোসমূহৰ বাবে অধিক পৰ্দা ব্যৱহাৰ কৰক"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"পৰ্দা অনুপাত হাৰৰ সৈতে অনুকূলন কৰি উইন্ডো থাম্বনেইলসমূহ উপস্থাপন কৰাৰ বাবে "
+"অধিক পৰ্দা ব্যৱহাৰ কৰাৰ, "
+"আৰু বান্ধনী বাকচ হ্ৰাস কৰিবলে সিহতক ততোধিক শৃঙ্খলাবদ্ধ কৰাৰ চেষ্টা কৰক। "
+"এই সংহতি কেৱল স্বাভাৱিক উপস্থাপন কৌশলৰ সৈতে প্ৰযোজ্য।"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "উইন্ডো কেপষণসমূহ ওপৰত ৰাখক"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"যদি সত্য, উইন্ডো কেপষণ প্ৰতিটো থাম্বনেইলৰ ওপৰত ৰাখক, ইয়াক তলত ৰখাৰ শ্বেলৰ "
+"অবিকল্পিত "
+"প্ৰক্ৰিয়াক অভাৰৰাইড কৰাকৈ। এই সংহতিৰ পৰিবৰ্তন প্ৰভাৱশালী হ'বলৈ শ্বেল পুনৰাম্ভ "
+"কৰাৰ প্ৰয়োজন।"
+
+#: ../extensions/places-menu/extension.js:77
+msgid "Places"
+msgstr "স্থানবোৰ"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "\"%s\" লঞ্চ কৰিবলে ব্যৰ্থ"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "কমপিউটাৰ"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "ঘৰ"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "নেটৱাৰ্ক ব্ৰাউছ কৰক"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "মেমৰি"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "থীম নাম"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "~/.themes/name/gnome-shell ৰ পৰা ল'ড কৰিব লগিয়া থীমৰ নাম"
+
+#: ../extensions/window-list/extension.js:382
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "কাৰ্য্যস্থান সূচক"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "উইন্ডোসমূহ কেতিয়া একত্ৰিত কৰা হ'ব"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"উইন্ডো তালিকাত একেটা এপ্লিকেচনৰ পৰা উইন্ডোসমূহ কেতিয়া দলবদ্ধ কৰা হ'ব নিৰ্ধাৰণ "
+"কৰে। "
+"সম্ভাব্য মানসমূহ হ'ল \"কেতিয়াও নহয়\", \"স্বচালিত\" আৰু \"সদায়\"।"
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "উইন্ডো দলবদ্ধকৰণ"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "উইন্ডোসমূহ কেতিয়াও দলবদ্ধ নকৰিব "
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "উইন্ডোসমূহ দলবদ্ধ কৰক যেতিয়া স্থান সীমিত থাকে"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "উইন্ডোসমূহ সদায় দলবদ্ধ কৰিব"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "কাৰ্য্যস্থানৰ নামবোৰ:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "নাম"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "কাৰ্য্যস্থান %d"
+
+#: ../extensions/xrandr-indicator/extension.js:30
+msgid "Normal"
+msgstr "স্বাভাৱিক"
+
+#: ../extensions/xrandr-indicator/extension.js:31
+msgid "Left"
+msgstr "বাঁওফাল"
+
+#: ../extensions/xrandr-indicator/extension.js:32
+msgid "Right"
+msgstr "সোঁফাল"
+
+#: ../extensions/xrandr-indicator/extension.js:33
+msgid "Upside-down"
+msgstr "উলোটা"
+
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "প্ৰদৰ্শন"
+
+#: ../extensions/xrandr-indicator/extension.js:87
+msgid "Display Settings"
+msgstr "প্ৰদৰ্শনৰ সংহতিসমূহ"
+
+
