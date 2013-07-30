@@ -480,6 +480,8 @@ function removeInjection(object, injection, name) {
 }
 
 function disable() {
+    var i;
+
     for (i in workspaceInjections)
         removeInjection(Workspace.Workspace.prototype, workspaceInjections, i);
     for (i in winInjections)

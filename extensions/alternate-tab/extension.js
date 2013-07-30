@@ -54,6 +54,8 @@ function enable() {
 }
 
 function disable() {
+    var prop;
+
     setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
     setKeybinding('switch-group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
     setKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));

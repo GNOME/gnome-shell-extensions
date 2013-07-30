@@ -842,6 +842,8 @@ function enable() {
 }
 
 function disable() {
+    var prop;
+
     if (!windowList)
         return;
 
