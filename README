@@ -24,12 +24,6 @@ alternate-tab
 
   Lets you use classic Alt+Tab (window-based instead of app-based) in GNOME Shell.
 
-alternative-status-menu
-
-  For those who want a power off item visible at all the time, replaces GNOME Shell
-status menu with one featuring separate Suspend and Power Off. Adds the ability to
-hibernate as well.
-
 apps-menu
 
   Lets you reach an application using gnome 2.x style menu on the panel.
