@@ -59,7 +59,7 @@ const ApplicationMenuItem = new Lang.Class({
         this.addActor(this._iconBin);
 
         let appLabel = new St.Label({ text: app.get_name() });
-        this.addActor(appLabel, { span: -1, expand: true });
+        this.addActor(appLabel, { expand: true });
         this.actor.label_actor = appLabel;
 
         let textureCache = St.TextureCache.get_default();
