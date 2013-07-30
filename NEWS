@@ -1,3 +1,10 @@
+3.9.5
+=====
+* alternative-status-menu was removed entirely, as
+  it does not fit in the designs of the new unified
+  status menu
+* updated translations (as, gu, it, ru)
+
 3.9.4
 =====
 * apps-menu: fixed handling of hot corner in case
