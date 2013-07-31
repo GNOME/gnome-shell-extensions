@@ -8,17 +8,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-21 00:49+0100\n"
-"PO-Revision-Date: 2013-03-21 00:48+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-07-30 13:34+0000\n"
+"PO-Revision-Date: 2013-07-31 21:51+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -36,6 +37,25 @@ msgstr "Klasszikus GNOME Shell"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Ablakkezelés és alkalmazásindítás"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Kizárólagos ablak csatlakoztatása a szülő ablakhoz"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Ez a beállítás felülírja az org.gnome.mutter séma beállításokat, amikor a "
+"GNOME Shell fut."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "Szélek csempézésének engedélyezése ablakok képernyőszélekre ejtésekor"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Munkaterületek megjelenítése csak az elsődleges monitoron"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -57,44 +77,15 @@ msgstr "Ablakok megjelenítése mint"
 msgid "Show only windows in the current workspace"
 msgstr "Csak az aktuális munkaterület ablakainak megjelenítése"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Felfüggesztés"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Hibernálás"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Kikapcsolás"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Felfüggesztés engedélyezése"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "A Felfüggesztés menüelem láthatóságának módosítása"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Hibernálás engedélyezése"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "A Hibernálás menüelem láthatóságának módosítása"
-
-#: ../extensions/apps-menu/extension.js:37
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Tevékenységek áttekintés"
 
-#: ../extensions/apps-menu/extension.js:95
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Kedvencek"
 
-#: ../extensions/apps-menu/extension.js:184
+#: ../extensions/apps-menu/extension.js:276
 msgid "Applications"
 msgstr "Alkalmazások"
 
@@ -226,11 +217,11 @@ msgstr "Saját mappa"
 msgid "Browse Network"
 msgstr "Hálózat tallózása"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Memória"
 
@@ -242,6 +233,11 @@ msgstr "Témanév"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "A ~/.themes/név/gnome-shell alól betöltendő téma neve"
 
+#: ../extensions/window-list/extension.js:382
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Munkaterület indikátor"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "Mikor legyenek az ablakok csoportosítva"
@@ -249,10 +245,11 @@ msgstr "Mikor legyenek az ablakok csoportosítva"
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "Megadja, mikor csoportosítsa az Ablaklista kisalkalmazás egyazon alkalmazás "
-"ablakait. Lehetséges értékek „never” (soha) és „always” (mindig)."
+"ablakait. Lehetséges értékek „never” (soha), „auto” (automatikus) és "
+"„always” (mindig)."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -263,12 +260,12 @@ msgid "Never group windows"
 msgstr "Soha ne csoportosítsa az ablakokat"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Ablakok csoportosítása, ha kevés a hely"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Mindig csoportosítsa az ablakokat"
-
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Munkaterület indikátor"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -303,9 +300,30 @@ msgstr "Fejjel lefelé"
 msgid "Display"
 msgstr "Kijelző"
 
-#: ../extensions/xrandr-indicator/extension.js:80
+#: ../extensions/xrandr-indicator/extension.js:87
 msgid "Display Settings"
 msgstr "Kijelzőbeállítások"
+
+#~ msgid "Suspend"
+#~ msgstr "Felfüggesztés"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernálás"
+
+#~ msgid "Power Off"
+#~ msgstr "Kikapcsolás"
+
+#~ msgid "Enable suspending"
+#~ msgstr "Felfüggesztés engedélyezése"
+
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "A Felfüggesztés menüelem láthatóságának módosítása"
+
+#~ msgid "Enable hibernating"
+#~ msgstr "Hibernálás engedélyezése"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "A Hibernálás menüelem láthatóságának módosítása"
 
 #~ msgid "Devices"
 #~ msgstr "Eszközök"
