@@ -3,24 +3,22 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Wylmer Wang <wantinghard@gmail.com>, 2011.
 # Aron Xu <aronxu@gnome.org>, 2011.
-# tuhaihe <1132321739qq@gmail.com>, 2012, 2013.
-# YunQiang Su <wzssyqa@gmail.com>, 2013.
+# tuhaihe <1132321739qq@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-07-04 14:06+0000\n"
-"PO-Revision-Date: 2013-07-12 21:12+0800\n"
-"Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
-"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"POT-Creation-Date: 2013-07-13 21:51+0000\n"
+"PO-Revision-Date: 2013-08-03 22:10+0800\n"
+"Last-Translator: tuhaihe <1132321739qq@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <i18n-zh@googlegroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bits\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.5\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -29,7 +27,7 @@ msgstr "GNOME 经典模式"
 
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
-msgstr "该会话将带您进入 GNOME 经典模式"
+msgstr "该会话将登录到“GNOME 经典模式”"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:1
 msgid "GNOME Shell Classic"
@@ -37,25 +35,24 @@ msgstr "GNOME Shell 经典模式"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
-msgstr "窗口管理与应用程序启动"
+msgstr "窗口管理与应用启动"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
-msgstr "将模式窗口附着在父窗口"
+msgstr "将模式对话框附着到父窗口"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "运行 GNOME Shell 时，此键覆盖 org.gnome.mutter 中的键。"
+msgstr "当运行 GNOME Shell 时该键会覆盖 org.gnome.mutter 中的键。"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "拖动窗口到屏幕边缘时启用边缘平铺"
+msgstr "启用将窗口拖拽到屏幕边缘时平铺显示的功能"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid "Workspace Indicator"
 msgid "Workspaces only on primary monitor"
-msgstr "只在主显示器上有工作区"
+msgstr "仅在主显示器上显示工作区"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -114,7 +111,7 @@ msgstr "活动概览"
 msgid "Favorites"
 msgstr "收藏"
 
-#: ../extensions/apps-menu/extension.js:276
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "应用程序"
 
@@ -161,7 +158,7 @@ msgstr "可移动设备"
 
 #: ../extensions/drive-menu/extension.js:106
 msgid "Open File"
-msgstr "打开文件"
+msgstr "打开文件管理器"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -240,11 +237,11 @@ msgstr "主文件夹"
 msgid "Browse Network"
 msgstr "浏览网络"
 
-#: ../extensions/systemMonitor/extension.js:214
+#: ../extensions/systemMonitor/extension.js:213
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:267
+#: ../extensions/systemMonitor/extension.js:266
 msgid "Memory"
 msgstr "内存"
 
@@ -256,22 +253,17 @@ msgstr "主题名称"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "从 ~/.themes/name/gnome-shell 加载的主题名称"
 
-#: ../extensions/window-list/extension.js:382
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "工作区指示器"
-
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
-msgstr "何时对窗口进行分组"
+msgstr "何时分组窗口"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
-"定义何时在窗口列表中分组显示同一应用程序的多个窗口。可取的值"
-"有“never”、“auto”和“always”。"
+"决定何时对窗口列表上的同一应用的窗口进行分组。可用值有“never”(从"
+"不)、“auto”(自动)和“always”(总是)。"
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -279,15 +271,19 @@ msgstr "窗口分组"
 
 #: ../extensions/window-list/prefs.js:49
 msgid "Never group windows"
-msgstr "不分组窗口"
+msgstr "从不将窗口分组"
 
 #: ../extensions/window-list/prefs.js:50
 msgid "Group windows when space is limited"
-msgstr "当空间受限时分组窗口"
+msgstr "当空间有限时将窗口分组"
 
 #: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
-msgstr "始终分组窗口"
+msgstr "总是对窗口分组"
+
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "工作区指示器"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -322,7 +318,7 @@ msgstr "上下翻转"
 msgid "Display"
 msgstr "显示"
 
-#: ../extensions/xrandr-indicator/extension.js:87
+#: ../extensions/xrandr-indicator/extension.js:80
 msgid "Display Settings"
 msgstr "显示设置"
 
