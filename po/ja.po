@@ -1,16 +1,17 @@
 # gnome-shell-extensions ja.po
-# Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
+# Copyright (C) 2011-2013 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2011.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2011, 2013
+# Nishio Futoshi <fut_nis@d3.dion.ne.jp>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-25 16:24+0900\n"
-"PO-Revision-Date: 2013-03-25 17:06+0900\n"
-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-07-30 13:34+0000\n"
+"PO-Revision-Date: 2013-06-23 11:15+0900\n"
+"Last-Translator: Nishio Futoshi <fut_nis@d3.dion.ne.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -35,6 +36,22 @@ msgstr "GNOME Shell クラシック"
 msgid "Window management and application launching"
 msgstr "ウィンドウ管理とアプリケーション起動"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "モーダルダイアログを親ウィンドウに結び付ける"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr "GNOME Shell 使用時は、このキーが、org.gnome.mutter の同じキーよりも優先します。"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "ウィンドウを画面の端に移動させたときにタイル状に配置する"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "プライマリモニターのみワークスペースを切り替える"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "サムネイルのみ"
@@ -55,44 +72,15 @@ msgstr "ウィンドウの表示方法"
 msgid "Show only windows in the current workspace"
 msgstr "現在のワークスペースのウィンドウのみ表示する"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "サスペンド"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "ハイバーネート"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "電源オフ"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "サスペンドを有効にする"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "メニューアイテムとしてサスペンドを表示します。"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "ハイバーネートを有効にする"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "メニューアイテムとしてハイバーネートを表示します。"
-
-#: ../extensions/apps-menu/extension.js:37
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "アクティビティ"
 
-#: ../extensions/apps-menu/extension.js:95
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "お気に入り"
 
-#: ../extensions/apps-menu/extension.js:184
+#: ../extensions/apps-menu/extension.js:276
 msgid "Applications"
 msgstr "アプリケーション"
 
@@ -115,28 +103,28 @@ msgstr "ワークスペース"
 
 #: ../extensions/auto-move-windows/prefs.js:80
 msgid "Add rule"
-msgstr ""
+msgstr "ルールを追加"
 
 #: ../extensions/auto-move-windows/prefs.js:94
 msgid "Create new matching rule"
-msgstr ""
+msgstr "新規ルールの作成"
 
 #: ../extensions/auto-move-windows/prefs.js:98
 msgid "Add"
-msgstr ""
+msgstr "追加"
 
 #: ../extensions/drive-menu/extension.js:72
 #, c-format
 msgid "Ejecting drive '%s' failed:"
-msgstr ""
+msgstr "ドライブ '%s' の取り出しに失敗しました:"
 
 #: ../extensions/drive-menu/extension.js:89
 msgid "Removable devices"
-msgstr ""
+msgstr "リムーバブルデバイス"
 
 #: ../extensions/drive-menu/extension.js:106
 msgid "Open File"
-msgstr ""
+msgstr "ファイルを開く"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -144,11 +132,11 @@ msgstr "Hello, world!"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
 msgid "Alternative greeting text."
-msgstr ""
+msgstr "代わりの挨拶テキストです。"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
 msgid "If not empty, it contains the text that will be shown when clicking on the panel."
-msgstr ""
+msgstr "空でない場合、指定したテキストが、パネルをクリックした時に表示されます。"
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
@@ -157,10 +145,12 @@ msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
+"Example は、うまく動作する GNOME Shell 拡張機能の構築方法を示すことを目的としています。それ自体の機能はほんとどありません。\n"
+"それでも、挨拶メッセージをカスタマイズすることはできます。"
 
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
-msgstr ""
+msgstr "メッセージ:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -200,11 +190,11 @@ msgstr "ホーム"
 msgid "Browse Network"
 msgstr "ネットワークを表示"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "メモリ"
 
@@ -216,13 +206,18 @@ msgstr "テーマの名前"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "テーマの名前です (~/.themes/name/gnome-shell 配下に格納します)"
 
+#: ../extensions/window-list/extension.js:382
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "ワークスペースインジケーター"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
-msgstr ""
+msgstr "ウインドウをグループ化する条件"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
-msgid "Decides when to group windows from the same application on the window list. Possible values are \"never\" and \"always\"."
-msgstr ""
+msgid "Decides when to group windows from the same application on the window list. Possible values are \"never\", \"auto\" and \"always\"."
+msgstr "ウィンドウ一覧にある同じアプリケーションをグループ化する条件を指定します。指定可能な値は、\"never\", \"auto\", \"always\" です。"
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -233,25 +228,25 @@ msgid "Never group windows"
 msgstr "ウィンドウをグループ化しない"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "ウィンドウ一覧の幅が制限される時にグループ化する"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "ウィンドウをグループ化する"
 
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr ""
-
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
-msgstr ""
+msgstr "ワークスペース名:"
 
 #: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 #: ../extensions/workspace-indicator/prefs.js:186
 #, c-format
 msgid "Workspace %d"
-msgstr ""
+msgstr "ワークスペース %d"
 
 #: ../extensions/xrandr-indicator/extension.js:30
 msgid "Normal"
@@ -271,13 +266,32 @@ msgstr "逆さま"
 
 #: ../extensions/xrandr-indicator/extension.js:50
 msgid "Display"
-msgstr ""
+msgstr "ディスプレイ"
 
-#: ../extensions/xrandr-indicator/extension.js:80
-#, fuzzy
-#| msgid "System Settings"
+#: ../extensions/xrandr-indicator/extension.js:87
 msgid "Display Settings"
-msgstr "システム設定"
+msgstr "ディスプレイ設定"
+
+#~ msgid "Suspend"
+#~ msgstr "サスペンド"
+
+#~ msgid "Hibernate"
+#~ msgstr "ハイバーネート"
+
+#~ msgid "Power Off"
+#~ msgstr "電源オフ"
+
+#~ msgid "Enable suspending"
+#~ msgstr "サスペンドを有効にする"
+
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "メニューアイテムとしてサスペンドを表示します。"
+
+#~ msgid "Enable hibernating"
+#~ msgstr "ハイバーネートを有効にする"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "メニューアイテムとしてハイバーネートを表示します。"
 
 #~ msgid "Notifications"
 #~ msgstr "メッセージ通知"
