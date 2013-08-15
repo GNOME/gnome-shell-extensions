@@ -1,0 +1,304 @@
+# Friulian translation for gnome-shell-extensions.
+# Copyright (C) 2013 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Fabio Tomat <f.t.public@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-08-11 00:54+0000\n"
+"PO-Revision-Date: 2013-08-15 12:07+0100\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
+"Language-Team: Friulian <fur@li.org>\n"
+"Language: fur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME Classic"
+
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Cheste session a si invie cun GNOME classic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell Classic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Gjestion di balcons e inviament di aplicazions"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Tache il balcon modâl al balcon gjenitôr"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Cheste clâf a sorplante che in org.gnome.mutter quanche al è in esecuzion "
+"GNOME Shell."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+#, fuzzy
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Abilite la tasseladure sul'ôr quanche i balcons a vegnin molâts sul'ôr dal "
+"visôr"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Lûcs di lavôr dome sul visôr principâl"
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "Dome miniaturis"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "Dome l'icone de aplicazion"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "Miniature e icone de aplicazion"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "Mostre dome i balcons dal lûc di lavôr corint"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Panoramiche ativitâts"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Preferîts"
+
+#: ../extensions/apps-menu/extension.js:276
+msgid "Applications"
+msgstr "Aplicazions"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Liste aplicazions e lûcs di lavôr"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "Aplicazion"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "Lûc di lavôr"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Zonte regule"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "Cree une gnove regule di corispondence"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Zonte"
+
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "No rivât a parâ fûr l'unitât «%s»:"
+
+#: ../extensions/drive-menu/extension.js:89
+msgid "Removable devices"
+msgstr "Argagn rimovibil"
+
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "Vierç File"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "Mandi, mont!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "Test di benvignût alternatîf"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+#, fuzzy
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Se no vueit, al ten il test che al vegnarà mostrât scliçant su le rie "
+"superiôr"
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"Example al ponte a mostrâ come imbastî une estension de Shell che a si "
+"compuarti ben e par chest no'n d'a tantis funzions.\n"
+"Ad ogni mût al è pussibil modificâ il messaç di benvignût. "
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Messaç:"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "Dopre plui spazi par i balcons"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Cîr di doprâ plui puest par plaçâ lis miniaturis dai balcons, adatânsi al "
+"rapuart di aspiet dal visôr e consolidanlis ancjemo di plui par ridusi il "
+"spazi complessîf. Cheste impostazion a si apliche dome se l'algoritmo di "
+"posizionament al è \"natural\"."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Met il titul dal balcon insomp"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Se VÊR, al place i titui dai balcons insomp as relativis miniaturis, lant in "
+"volte al compuartament normâl de shell, che lis place in bas.Cambiant cheste "
+"impostazion a si scugne tornâ a inviâ la shell."
+
+#: ../extensions/places-menu/extension.js:77
+msgid "Places"
+msgstr "Puescj"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Inviament di «%s» falît"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Computer"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "Cjase"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "Esplore rêt"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "Memorie"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr ""
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr ""
+
+#: ../extensions/window-list/extension.js:382
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indicatôr lûcs di lavôr"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Quant ingrumâ i balcons"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Decît quant ingrumâ i balcons de stesse aplicazion su le liste dai balcons. "
+"I pussibii valôrs a son \"never\", \"auto\" e \"always\"."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Ingrumament balcons"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "No ingrumâ i balcons"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Ingrume i balcons quanche al'è pôc puest"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Ingrume simpri i balcons"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "Nons dai lûcs di lavôr:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "Non"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "Lûc di lavôr %d"
+
+#: ../extensions/xrandr-indicator/extension.js:30
+msgid "Normal"
+msgstr "Normâl"
+
+#: ../extensions/xrandr-indicator/extension.js:31
+msgid "Left"
+msgstr "Çampe"
+
+#: ../extensions/xrandr-indicator/extension.js:32
+msgid "Right"
+msgstr "Diestre"
+
+#: ../extensions/xrandr-indicator/extension.js:33
+msgid "Upside-down"
+msgstr "Cui pîs pa'l'aiar"
+
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Visôr"
+
+#: ../extensions/xrandr-indicator/extension.js:87
+msgid "Display Settings"
+msgstr "Impostazions Visôr"
