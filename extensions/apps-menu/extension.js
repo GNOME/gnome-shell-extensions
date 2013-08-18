@@ -36,7 +36,7 @@ const ActivitiesMenuItem = new Lang.Class({
     _init: function(button) {
 	this.parent();
         this._button = button;
-        this.addActor(new St.Label({ text: _("Activities Overview") }));
+        this.actor.add_child(new St.Label({ text: _("Activities Overview") }));
     },
 
     activate: function(event) {
@@ -56,10 +56,10 @@ const ApplicationMenuItem = new Lang.Class({
         this._button = button;
 
         this._iconBin = new St.Bin();
-        this.addActor(this._iconBin);
+        this.actor.add_child(this._iconBin);
 
         let appLabel = new St.Label({ text: app.get_name() });
-        this.addActor(appLabel, { expand: true });
+        this.actor.add_child(appLabel, { expand: true });
         this.actor.label_actor = appLabel;
 
         let textureCache = St.TextureCache.get_default();
@@ -112,7 +112,7 @@ const CategoryMenuItem = new Lang.Class({
         else
             name = _("Favorites");
 
-        this.addActor(new St.Label({ text: name }));
+        this.actor.add_child(new St.Label({ text: name }));
         this.actor.connect('motion-event', Lang.bind(this, this._onMotionEvent));
     },
 
@@ -273,9 +273,17 @@ const ApplicationsButton = new Lang.Class({
         // role ATK_ROLE_MENU like other elements of the panel.
         this.actor.accessible_role = Atk.Role.LABEL;
 
-        this._label = new St.Label({ text: _("Applications") });
+        let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
 
-        this.actor.add_actor(this._label);
+        this._label = new St.Label({ text: _("Applications"),
+                                     y_expand: true,
+                                     y_align: Clutter.ActorAlign.CENTER });
+        hbox.add_child(this._label);
+        hbox.add_child(new St.Label({ text: '\u25BE',
+                                      y_expand: true,
+                                      y_align: Clutter.ActorAlign.CENTER }));
+
+        this.actor.add_actor(hbox);
         this.actor.name = 'panelApplications';
         this.actor.label_actor = this._label;
 

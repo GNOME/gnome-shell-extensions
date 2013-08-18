@@ -89,10 +89,10 @@ function init() {
 
 function myCheckWorkspaces() {
     let i;
-    let emptyWorkspaces = new Array(Main._workspaces.length);
+    let emptyWorkspaces = new Array(this._workspaces.length);
 
-    for (i = 0; i < Main._workspaces.length; i++) {
-	let lastRemoved = Main._workspaces[i]._lastRemovedWindow;
+    for (i = 0; i < this._workspaces.length; i++) {
+	let lastRemoved = this._workspaces[i]._lastRemovedWindow;
 	if (lastRemoved &&
             (lastRemoved.get_window_type() == Meta.WindowType.SPLASHSCREEN ||
              lastRemoved.get_window_type() == Meta.WindowType.DIALOG ||
@@ -129,13 +129,13 @@ function myCheckWorkspaces() {
 
     if (removingTrailWorkspaces) {
         // "Merge" the empty workspace we are removing with the one at the end
-        Main.wm.blockAnimations();
+        this._wm.blockAnimations();
     }
 
     // Delete other empty workspaces; do it from the end to avoid index changes
     for (i = emptyWorkspaces.length - 2; i >= 0; i--) {
         if (emptyWorkspaces[i])
-            global.screen.remove_workspace(Main._workspaces[i], global.get_current_time());
+            global.screen.remove_workspace(this._workspaces[i], global.get_current_time());
         else
             break;
     }
@@ -143,25 +143,25 @@ function myCheckWorkspaces() {
     if (removingTrailWorkspaces) {
         global.screen.get_workspace_by_index(global.screen.n_workspaces - 1).activate(global.get_current_time());
 
-        Main.wm.unblockAnimations();
+        this._wm.unblockAnimations();
 
         if (!Main.overview.visible && showOverview)
             Main.overview.show();
     }
 
-    Main._checkWorkspacesId = 0;
+    this._checkWorkspacesId = 0;
     return false;
 }
 
 function enable() {
-    prevCheckWorkspaces = Main._checkWorkspaces;
+    prevCheckWorkspaces = Main.wm._workspaceTracker._checkWorkspaces;
     if (Meta.prefs_get_dynamic_workspaces())
-	Main._checkWorkspaces = myCheckWorkspaces;
+	Main.wm._workspaceTracker._checkWorkspaces = myCheckWorkspaces;
 
     winMover = new WindowMover();
 }
 
 function disable() {
-    Main._checkWorkspaces = prevCheckWorkspaces;
+    Main.wm._workspaceTracker._checkWorkspaces = prevCheckWorkspaces;
     winMover.destroy();
 }

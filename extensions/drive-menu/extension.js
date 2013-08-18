@@ -1,4 +1,5 @@
 // Drive menu extension
+const Clutter = imports.gi.Clutter;
 const Gio = imports.gi.Gio;
 const Lang = imports.lang;
 const St = imports.gi.St;
@@ -25,7 +26,7 @@ const MountMenuItem = new Lang.Class({
 	this.parent();
 
 	this.label = new St.Label({ text: mount.get_name() });
-	this.addActor(this.label);
+	this.actor.add(this.label, { expand: true });
         this.actor.label_actor = this.label;
 
 	this.mount = mount;
@@ -34,7 +35,7 @@ const MountMenuItem = new Lang.Class({
 				      style_class: 'popup-menu-icon ' });
 	let ejectButton = new St.Button({ child: ejectIcon });
 	ejectButton.connect('clicked', Lang.bind(this, this._eject));
-	this.addActor(ejectButton);
+	this.actor.add(ejectButton);
     },
 
     _eject: function() {
@@ -83,10 +84,20 @@ const MountMenuItem = new Lang.Class({
 
 const DriveMenu = new Lang.Class({
     Name: 'DriveMenu.DriveMenu',
-    Extends: PanelMenu.SystemStatusButton,
+    Extends: PanelMenu.Button,
 
     _init: function() {
-	this.parent('media-eject-symbolic', _("Removable devices"));
+        this.parent(0.0, _("Removable devices"));
+
+        let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
+        let icon = new St.Icon({ icon_name: 'media-eject-symbolic',
+                                 style_class: 'system-status-icon' });
+
+        hbox.add_child(icon);
+        hbox.add_child(new St.Label({ text: '\u25BE',
+                                      y_expand: true,
+                                      y_align: Clutter.ActorAlign.CENTER }));
+        this.actor.add_child(hbox);
 
 	this._monitor = Gio.VolumeMonitor.get();
 	this._addedId = this._monitor.connect('mount-added', Lang.bind(this, function(monitor, mount) {

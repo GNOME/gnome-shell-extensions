@@ -1,5 +1,6 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 
+const Clutter = imports.gi.Clutter;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Lang = imports.lang;
@@ -32,10 +33,10 @@ const PlaceMenuItem = new Lang.Class({
 
         this._icon = new St.Icon({ gicon: info.icon,
                                    icon_size: PLACE_ICON_SIZE });
-	this.addActor(this._icon);
+	this.actor.add_child(this._icon);
 
         this._label = new St.Label({ text: info.name });
-        this.addActor(this._label);
+        this.actor.add_child(this._label);
 
         this._changedId = info.connect('changed',
                                        Lang.bind(this, this._propertiesChanged));
@@ -74,9 +75,17 @@ const PlacesMenu = new Lang.Class({
     Extends: PanelMenu.Button,
 
     _init: function() {
-        let label = new St.Label({ text: _("Places") });
-        this.parent(0.0, label.text);
-        this.actor.add_actor(label);
+        this.parent(0.0, _("Places"));
+
+        let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
+        let label = new St.Label({ text: _("Places"),
+                                   y_expand: true,
+                                   y_align: Clutter.ActorAlign.CENTER });
+        hbox.add_child(label);
+        hbox.add_child(new St.Label({ text: '\u25BE',
+                                      y_expand: true,
+                                      y_align: Clutter.ActorAlign.CENTER }));
+        this.actor.add_actor(hbox);
 
         this.placesManager = new PlaceDisplay.PlacesManager();
 
