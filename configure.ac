@@ -29,7 +29,7 @@ AC_SUBST([SHELL_VERSION])
 dnl keep this in alphabetic order
 CLASSIC_EXTENSIONS="apps-menu places-menu alternate-tab launch-new-instance window-list"
 DEFAULT_EXTENSIONS="$CLASSIC_EXTENSIONS drive-menu windowsNavigator workspace-indicator"
-ALL_EXTENSIONS="$DEFAULT_EXTENSIONS auto-move-windows example native-window-placement systemMonitor user-theme xrandr-indicator"
+ALL_EXTENSIONS="$DEFAULT_EXTENSIONS auto-move-windows example native-window-placement systemMonitor user-theme"
 AC_SUBST(CLASSIC_EXTENSIONS, [$CLASSIC_EXTENSIONS])
 AC_SUBST(ALL_EXTENSIONS, [$ALL_EXTENSIONS])
 AC_ARG_ENABLE([extensions],
@@ -65,11 +65,6 @@ for e in $enable_extensions; do
 					[ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"],
 					[AC_MSG_WARN([libgtop-2.0 not found, disabling systemMonitor])])
 			;;
-		xrandr-indicator)
-			PKG_CHECK_MODULES(GNOME_DESKTOP, gnome-desktop-3.0 >= 2.91.6,
-					[ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"],
-					[AC_MSG_WARN([gnome-desktop-3.0 not found, disabling xrandr-indicator])])
-			;;
 dnl		keep this in alphabetic order
 		alternate-tab|apps-menu|auto-move-windows|drive-menu|example|launch-new-instance|native-window-placement|places-menu|user-theme|window-list|windowsNavigator|workspace-indicator)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
@@ -97,7 +92,6 @@ AC_CONFIG_FILES([
   extensions/window-list/Makefile
   extensions/windowsNavigator/Makefile
   extensions/workspace-indicator/Makefile
-  extensions/xrandr-indicator/Makefile
   extensions/Makefile
   Makefile
   po/Makefile.in
