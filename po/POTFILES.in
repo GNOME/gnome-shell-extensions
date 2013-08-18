@@ -24,4 +24,3 @@ extensions/window-list/prefs.js
 extensions/windowsNavigator/extension.js
 extensions/workspace-indicator/extension.js
 extensions/workspace-indicator/prefs.js
-extensions/xrandr-indicator/extension.js
