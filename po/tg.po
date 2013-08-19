@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-06-15 16:56+0000\n"
-"PO-Revision-Date: 2013-06-16 23:36+0500\n"
+"POT-Creation-Date: 2013-08-19 08:21+0000\n"
+"PO-Revision-Date: 2013-08-19 23:51+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <tg@li.org>\n"
 "Language: tg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -53,7 +53,6 @@ msgstr ""
 "экран"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid "Workspace Indicator"
 msgid "Workspaces only on primary monitor"
 msgstr "Фазоҳои корӣ танҳо дар монитори асосӣ"
 
@@ -76,35 +75,6 @@ msgstr "Намоиш додани равзанаҳо ҳамчун"
 #: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Намоиш додани равзанаҳо танҳо дар фазои кории ҷорӣ"
-
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Таваққуф"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Гибернатсия"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Анҷоми кор"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Фаъолсозии таваққуф"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Идоракунии намоёнии объекти менюи таваққуф"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Фаъолсозии гибернатсия"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Идоракунии намоёнии объекти менюи гибернатсия"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -151,16 +121,16 @@ msgstr "Эҷод кардани қоидаи мувофиқати нав"
 msgid "Add"
 msgstr "Илова кардан"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Баровардани диски '%s' қатъ шудааст:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Дастгоҳҳои ҷудошаванда"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Кушодани файл"
 
@@ -226,7 +196,8 @@ msgstr ""
 "мекунад. Барои татбиқ кардани таъсири ин танзимот шумо бояд воситро бозоғозӣ "
 "кунед."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Ҷойҳо"
 
@@ -248,11 +219,11 @@ msgstr "Асосӣ"
 msgid "Browse Network"
 msgstr "Тамошо кардани шабака"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Ҳофиза"
 
@@ -264,7 +235,47 @@ msgstr "Номи мавзӯъ"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Номи мавзӯъ аз ~/.themes/name/gnome-shell боргирӣ мешавад"
 
-#: ../extensions/window-list/extension.js:382
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Пӯшидан"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Бекор кардани ҳадди ақал"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Ҳадди ақал сохтан"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Бекор кардани ҳадди аксар"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Ҳадди аксар сохтан"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Ҳамаро бо ҳадди ақал сохтан"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Бекор кардани ҳадди ақал барои ҳама"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Ҳамаро бо ҳадди аксар сохтан"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Бекор кардани ҳадди аксар барои ҳама"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Ҳамаро пӯшонидан"
+
+#: ../extensions/window-list/extension.js:591
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Нишондиҳандаи фазои кор"
@@ -311,26 +322,41 @@ msgstr "Ном"
 msgid "Workspace %d"
 msgstr "Фазои кории %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Муқаррарӣ"
+#~ msgid "Suspend"
+#~ msgstr "Таваққуф"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Чап"
+#~ msgid "Hibernate"
+#~ msgstr "Гибернатсия"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Рост"
+#~ msgid "Power Off"
+#~ msgstr "Анҷоми кор"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Чаппагардон"
+#~ msgid "Enable suspending"
+#~ msgstr "Фаъолсозии таваққуф"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Дисплей"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "Идоракунии намоёнии объекти менюи таваққуф"
 
-#: ../extensions/xrandr-indicator/extension.js:87
-msgid "Display Settings"
-msgstr "Танзимоти дисплей"
+#~ msgid "Enable hibernating"
+#~ msgstr "Фаъолсозии гибернатсия"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "Идоракунии намоёнии объекти менюи гибернатсия"
+
+#~ msgid "Normal"
+#~ msgstr "Муқаррарӣ"
+
+#~ msgid "Left"
+#~ msgstr "Чап"
+
+#~ msgid "Right"
+#~ msgstr "Рост"
+
+#~ msgid "Upside-down"
+#~ msgstr "Чаппагардон"
+
+#~ msgid "Display"
+#~ msgstr "Дисплей"
+
+#~ msgid "Display Settings"
+#~ msgstr "Танзимоти дисплей"
