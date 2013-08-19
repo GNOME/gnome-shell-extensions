@@ -2,15 +2,15 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2011 - 2013.
+# Matej Urbančič <mateju@svn.gnome.org>, 2011-2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-08-15 10:12+0000\n"
-"PO-Revision-Date: 2013-08-17 16:46+0100\n"
+"POT-Creation-Date: 2013-08-19 18:52+0000\n"
+"PO-Revision-Date: 2013-08-19 21:53+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -86,7 +86,7 @@ msgstr "Pregled dejavnosti"
 msgid "Favorites"
 msgstr "Priljubljeno"
 
-#: ../extensions/apps-menu/extension.js:276
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "Programi"
 
@@ -123,16 +123,16 @@ msgstr "Ustvari novo pravilo skladanja"
 msgid "Add"
 msgstr "Dodaj"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Izmetavanje pogona '%s' je spodletelo:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Odstranljive naprave"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Odpri datoteko"
 
@@ -196,7 +196,8 @@ msgstr ""
 "tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba "
 "lupino ponovno zagnati."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Mesta"
 
@@ -234,7 +235,47 @@ msgstr "Ime teme"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Ime teme, ki bo naložena iz ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:382
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Zapri"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Povečaj"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Skrči"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Pomanjšaj"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Razpni"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Skrči vse"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Pomanjšaj vse"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Razpni"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "_Pomanjšaj vse"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Zapri vse"
+
+#: ../extensions/window-list/extension.js:591
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Kazalnik delovnih površin"
@@ -280,29 +321,23 @@ msgstr "Ime"
 msgid "Workspace %d"
 msgstr "Delovna površina %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Običajno"
+#~ msgid "Normal"
+#~ msgstr "Običajno"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Levo"
+#~ msgid "Left"
+#~ msgstr "Levo"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Desno"
+#~ msgid "Right"
+#~ msgstr "Desno"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Zgoraj-navzdol"
+#~ msgid "Upside-down"
+#~ msgstr "Zgoraj-navzdol"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Zaslon"
+#~ msgid "Display"
+#~ msgstr "Zaslon"
 
-#: ../extensions/xrandr-indicator/extension.js:87
-msgid "Display Settings"
-msgstr "Nastavitve zaslona"
+#~ msgid "Display Settings"
+#~ msgstr "Nastavitve zaslona"
 
 #~ msgid "Suspend"
 #~ msgstr "V pripravljenost"
