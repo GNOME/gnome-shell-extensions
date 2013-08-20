@@ -4,7 +4,7 @@
          xmlns:gnome="http://api.gnome.org/doap-extensions#"
          xmlns="http://usefulinc.com/ns/doap#">
 
-  <name xml:lang="en">GNOME Shell Extensions</name>
+  <name xml:lang="en">gnome-shell-extensions</name>
   <shortdesc xml:lang="en">Modify and extend GNOME Shell functionality and behavior</shortdesc>
   <description xml:lang="en">
 GNOME Shell Extensions is a collection of extensions providing
