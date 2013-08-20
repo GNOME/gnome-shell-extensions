@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-10 10:24+0200\n"
-"PO-Revision-Date: 2013-06-10 10:25+0200\n"
+"POT-Creation-Date: 2013-08-21 00:47+0200\n"
+"PO-Revision-Date: 2013-08-21 00:47+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -44,8 +44,7 @@ msgstr "Anexar o diálogo modal á xanela pai"
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Esta chave sobrescribe a chave en org.gnome.mutter cando executa GNOME "
-"Shell."
+"Esta chave sobrescribe a chave en org.gnome.mutter cando executa GNOME Shell."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Enable edge tiling when dropping windows on screen edges"
@@ -74,35 +73,6 @@ msgstr "Presentar xanelas como"
 #: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Mostrar só as xanelas na área de traballo actual"
-
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Suspender"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Hibernar"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Apagar"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Activar a suspensión"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Controla a visibilidade do elemento de menú «Suspender»"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Activar hibernación"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Controla a visibilidade do elemento de menú «Hibernar»"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -149,16 +119,16 @@ msgstr "Crear regra de coincidencia nova"
 msgid "Add"
 msgstr "Engadir"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Fallo ao extraer a unidade «%s»:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Dispositivos extraíbeis"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Abrir ficheiro"
 
@@ -221,7 +191,8 @@ msgstr ""
 "respectiva, omitindo a disposición inferior por omisión do shell. Se cambia "
 "esta configuración deberá reiniciar o shell para que se apliquen os cambios."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Lugares"
 
@@ -243,11 +214,11 @@ msgstr "Cartafol persoal"
 msgid "Browse Network"
 msgstr "Explorar a rede"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Memoria"
 
@@ -258,6 +229,51 @@ msgstr "Nome do tema"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "O nome do tema, a cargar desde ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Pechar"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Restabelecer"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Minimizar"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Restaurar"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Maximizar"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Minimizar todo"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Restaurar todo"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Maximizar todo"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Restaurar todo"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Pechar todo"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indicador de espazo de traballo"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
@@ -288,10 +304,6 @@ msgstr "Agrupar as xanelas cando o espazo é limitado"
 msgid "Always group windows"
 msgstr "Agrupar sempre as xanelas"
 
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Indicador de espazo de traballo"
-
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Nomes dos espazos de traballo:"
@@ -305,29 +317,44 @@ msgstr "Nome"
 msgid "Workspace %d"
 msgstr "Espazos de traballo %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Normal"
+#~ msgid "Suspend"
+#~ msgstr "Suspender"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Esquerda"
+#~ msgid "Hibernate"
+#~ msgstr "Hibernar"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Dereita"
+#~ msgid "Power Off"
+#~ msgstr "Apagar"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Co de arriba cara abaixo"
+#~ msgid "Enable suspending"
+#~ msgstr "Activar a suspensión"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Pantalla"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "Controla a visibilidade do elemento de menú «Suspender»"
 
-#: ../extensions/xrandr-indicator/extension.js:87
-msgid "Display Settings"
-msgstr "Preferencias da pantalla"
+#~ msgid "Enable hibernating"
+#~ msgstr "Activar hibernación"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "Controla a visibilidade do elemento de menú «Hibernar»"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Left"
+#~ msgstr "Esquerda"
+
+#~ msgid "Right"
+#~ msgstr "Dereita"
+
+#~ msgid "Upside-down"
+#~ msgstr "Co de arriba cara abaixo"
+
+#~ msgid "Display"
+#~ msgstr "Pantalla"
+
+#~ msgid "Display Settings"
+#~ msgstr "Preferencias da pantalla"
 
 #~ msgid "Devices"
 #~ msgstr "Dispositivos"
