@@ -1,3 +1,11 @@
+3.9.90
+======
+* xrandr-indicator was removed, as the implementation
+  was incompatible with the new DisplayConfig mutter API
+* various extensions were updated for the 3.9.90 gnome-shell API
+* updated translations (cs, es, fur, gl, he, hu, id, ja, sl, tg,
+  zh_CN, zh_HK, zh_TW)
+
 3.9.5
 =====
 * alternative-status-menu was removed entirely, as
