@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-08 21:04+0200\n"
-"PO-Revision-Date: 2013-06-08 21:05+0200\n"
+"POT-Creation-Date: 2013-08-23 00:50+0200\n"
+"PO-Revision-Date: 2013-08-23 00:52+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -81,35 +81,6 @@ msgstr "Wyświetlanie okien jako"
 msgid "Show only windows in the current workspace"
 msgstr "Wyświetlanie tylko okien w bieżącym obszarze roboczym"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Uśpij"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Hibernuj"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Wyłącz komputer"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Włączenie usypiania"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Kontrola widoczności pozycji \"Uśpij\" menu"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Włączenie hibernacji"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Kontrola widoczności pozycji \"Hibernuj\" menu"
-
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Ekran podglądu"
@@ -155,16 +126,16 @@ msgstr "Utwórz nową pasującą regułę"
 msgid "Add"
 msgstr "Dodaj"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Wysunięcie napędu \"%s\" się nie powiodło:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Urządzenia wymienne"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Otwórz plik"
 
@@ -228,7 +199,8 @@ msgstr ""
 "powłokę. Zmiana tego ustawienia wymaga ponownego uruchomienia powłoki, aby "
 "uwzględnić zmiany."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Miejsca"
 
@@ -250,11 +222,11 @@ msgstr "Katalog domowy"
 msgid "Browse Network"
 msgstr "Przeglądaj sieć"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "Procesor"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Pamięć"
 
@@ -265,6 +237,51 @@ msgstr "Nazwa motywu"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Nazwa motywu do wczytania z katalogu ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Zamknij"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Cofnij minimalizację"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Zminimalizuj"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Cofnij maksymalizację"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Zmaksymalizuj"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Zminimalizuj wszystkie"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Cofnij minimalizację wszystkich"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Zmaksymalizuj wszystkie"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Cofnij maksymalizację wszystkich"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Zamknij wszystkie"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Wskaźnik obszaru roboczego"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
@@ -294,10 +311,6 @@ msgstr "Grupowanie okien, kiedy miejsce jest ograniczone"
 msgid "Always group windows"
 msgstr "Zawsze grupowanie okien"
 
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Wskaźnik obszaru roboczego"
-
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Nazwy obszarów roboczych:"
@@ -310,27 +323,3 @@ msgstr "Nazwa"
 #, c-format
 msgid "Workspace %d"
 msgstr "Obszar roboczy %d"
-
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Normalnie"
-
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Lewo"
-
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Prawo"
-
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Odbicie poziomo"
-
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Ekran"
-
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "Ustawienia ekranu"
