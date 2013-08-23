@@ -147,12 +147,7 @@
     padding: 8px 0px;
   }
 
-  .popup-slider-menu-item {
-    -slider-handle-border-color: #888;
-    -slider-handle-border-width: 1px;
-  }
-
-  .popup-menu-item:hover .popup-slider-menu-item {
+  .popup-menu-item:hover .popup-status-menu-item {
     color: #fff;
   }
 
@@ -229,11 +224,17 @@
 
 /* VOLUME SLIDER */
 
-.popup-slider-menu-item {
+.slider {
     -slider-background-color: #e9e9e9;
     -slider-border-color: #999;
     -slider-active-background-color: #76b0ec;
     -slider-active-border-color: #1f6dbc;
+    -slider-handle-border-color: #888;
+    -slider-handle-border-width: 1px;
+}
+
+.popup-menu-icon {
+    color: #000 !important;
 }
 
 /* ON OFF switch */
@@ -254,4 +255,13 @@
 .toggle-switch-intl:checked {
     background-image: url("classic-toggle-on-intl.svg");
     background-size: contain;
+}
+
+.system-menu-action {
+    color: #555 !important;
+}
+
+.system-menu-action:hover,
+.system-menu-action:focus {
+    color: black !important;
 }
