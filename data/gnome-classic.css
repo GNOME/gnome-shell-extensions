@@ -222,6 +222,21 @@
     color: #666 !important;
   }
 
+/* SYSTEM MENU */
+
+.system-menu-action {
+    color: #e6e6e6;
+    border: 1px solid #ddd; /* using rgba() is flaky unfortunately */
+}
+
+.system-menu-action:hover,
+.system-menu-action:focus,
+.system-menu-action:active {
+    color: white;
+    background-color: #4a90d9;
+    border: none;
+}
+
 /* VOLUME SLIDER */
 
 .slider {
