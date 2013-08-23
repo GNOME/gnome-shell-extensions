@@ -5,7 +5,6 @@
     "enabledExtensions": [@CLASSIC_EXTENSIONS@],
     "panel": { "left": ["activities", "appMenu"],
                "center": [],
-               "right": ["a11y", "keyboard", "volume", "bluetooth",
-                         "network", "battery", "dateMenu", "userMenu"]
+               "right": ["a11y", "keyboard", "dateMenu", "aggregateMenu"]
              }
 }
