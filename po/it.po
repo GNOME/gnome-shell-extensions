@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-19 09:34+0200\n"
-"PO-Revision-Date: 2013-07-19 09:33+0200\n"
+"POT-Creation-Date: 2013-08-25 17:33+0200\n"
+"PO-Revision-Date: 2013-08-25 17:33+0200\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -49,7 +49,6 @@ msgstr ""
 "GNOME Shell."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
-#, fuzzy
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
 "Abilita la tassellatura sul bordo quando le finestre vengono rilasciate ai "
@@ -80,35 +79,6 @@ msgstr "Mostra le finestre con"
 msgid "Show only windows in the current workspace"
 msgstr "Mostra solo le finestre dello spazio di lavoro corrente"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Sospendi"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Iberna"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Spegni"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Abilita sospensione"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Controlla la visibilità del comando Sospendi"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Abilita ibernazione"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Controlla la visibilità del comando Iberna"
-
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Panoramica attività"
@@ -117,7 +87,7 @@ msgstr "Panoramica attività"
 msgid "Favorites"
 msgstr "Preferiti"
 
-#: ../extensions/apps-menu/extension.js:276
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "Applicazioni"
 
@@ -154,16 +124,16 @@ msgstr "Crea una nuova regola di corrispondenza"
 msgid "Add"
 msgstr "Aggiungi"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Espulsione dell'unità «%s» non riuscita:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Dispositivi rimovibili"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Apri file"
 
@@ -228,7 +198,8 @@ msgstr ""
 "miniature, aggirando il comportamento normale della shell, che li colloca in "
 "basso. Modificare questa impostazione richiede di riavviare la shell."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Posizioni"
 
@@ -266,7 +237,47 @@ msgstr "Nome del tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Il nome del tema, da caricare da ~/.themes/nome/gnome-shell"
 
-#: ../extensions/window-list/extension.js:382
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Chiudi"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Deminimizza"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Minimizza"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Demassimizza"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Massimizza"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Minimizza tutto"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Deminimizza tutto"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Massimizza tutto"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Demassimizza tutto"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Chiudi tutto"
+
+#: ../extensions/window-list/extension.js:591
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicatore spazi di lavoro"
@@ -311,27 +322,3 @@ msgstr "Nome"
 #, c-format
 msgid "Workspace %d"
 msgstr "Spazio di lavoro %d"
-
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Normale"
-
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Sinistra"
-
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Destra"
-
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Rovesciato"
-
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Monitor"
-
-#: ../extensions/xrandr-indicator/extension.js:87
-msgid "Display Settings"
-msgstr "Impostazioni monitor"
