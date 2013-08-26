@@ -8,21 +8,23 @@
 # Gabriel Speckhahn <gabspeck@gmail.com>, 2012.
 # Og Maciel <ogmaciel@gnome.org>, 2012.
 # Rafael Ferreira <rafael.f.f1@gmail.com>, 2013.
+# Enrico Nicoletto <liverig@gmail.com>, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-06-17 19:46+0000\n"
-"PO-Revision-Date: 2013-06-23 06:51-0300\n"
-"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
+"POT-Creation-Date: 2013-08-21 10:32+0000\n"
+"PO-Revision-Date: 2013-08-21 13:05-0300\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -40,7 +42,7 @@ msgstr "GNOME Shell Clássico"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
-msgstr "Gerenciamento de janelas e início de aplicativos"
+msgstr "Gerenciamento de janelas e execução de aplicativos"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -50,7 +52,8 @@ msgstr "Anexar diálogo modal à janela pai"
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Esta chave sobrescreve a chave em org.gnome.mutter ao executar GNOME Shell."
+"Esta chave sobrescreve a chave em org.gnome.mutter ao executar o Shell do "
+"GNOME."
 
 # Precedentes no mutter e no gnome-shell
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
@@ -81,35 +84,6 @@ msgstr "Apresentar janelas como"
 #: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Mostrar somente janelas no espaço de trabalho atual"
-
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Suspender"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Hibernar"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Desligar"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Habilitar suspenção"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Controla a visibilidade do item de menu Suspender"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Habilitar hibernação"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Controla a visibilidade do item de menu Hibernar"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -156,16 +130,16 @@ msgstr "Criar uma nova regra coincidente"
 msgid "Add"
 msgstr "Adicionar"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Falha ao ejetar a unidade \"%s\":"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Dispositivos removíveis"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Abrir arquivo"
 
@@ -192,8 +166,9 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Example procura mostrar como construir extensões bem comportadas para o "
-"Shell e portanto ela possui poucas funcionalidades próprias.\n"
+"A extensão \"Example\" procura mostrar como construir extensões bem "
+"comportadas para o Shell e portanto ela possui poucas funcionalidades "
+"próprias.\n"
 "De qualquer maneira, é possível personalizar a mensagem de saudação."
 
 #: ../extensions/example/prefs.js:36
@@ -229,7 +204,8 @@ msgstr ""
 "sobrescrevendo o padrão do shell de colocá-lo na parte inferior. A alteração "
 "dessa configuração requer o reinício do shell para ter algum efeito."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Locais"
 
@@ -251,11 +227,11 @@ msgstr "Pasta pessoal"
 msgid "Browse Network"
 msgstr "Navegar na rede"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Memória"
 
@@ -265,7 +241,52 @@ msgstr "Nome do tema"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "O nome do tema, para ser carregado de ~/.themes/name/gnome-shell"
+msgstr "O nome do tema, para ser carregado de ~/.themes/nome/gnome-shell"
+
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Fechar"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Desfazer janelas minimizadas"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Minimizar"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Desfazer janelas maximizadas"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Maximizar"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Minimizar todas"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Desfazer todas as janelas minimizadas"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Maximizar todas"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Desfazer todas as janelas maximizadas"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Fechar todas"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indicador de espaços de trabalho"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
@@ -289,15 +310,11 @@ msgstr "Nunca agrupar janelas"
 
 #: ../extensions/window-list/prefs.js:50
 msgid "Group windows when space is limited"
-msgstr "Agrupar janelas quando espaço estiver limitado"
+msgstr "Agrupar janelas quando o espaço estiver limitado"
 
 #: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Sempre agrupar janelas"
-
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Indicador de espaços de trabalho"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -312,29 +329,44 @@ msgstr "Nome"
 msgid "Workspace %d"
 msgstr "Espaço de trabalho %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Normal"
+#~ msgid "Suspend"
+#~ msgstr "Suspender"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Esquerda"
+#~ msgid "Hibernate"
+#~ msgstr "Hibernar"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Direita"
+#~ msgid "Power Off"
+#~ msgstr "Desligar"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "De cabeça para baixo"
+#~ msgid "Enable suspending"
+#~ msgstr "Habilitar suspenção"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Tela"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "Controla a visibilidade do item de menu Suspender"
 
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "Configurações de tela"
+#~ msgid "Enable hibernating"
+#~ msgstr "Habilitar hibernação"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "Controla a visibilidade do item de menu Hibernar"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Left"
+#~ msgstr "Esquerda"
+
+#~ msgid "Right"
+#~ msgstr "Direita"
+
+#~ msgid "Upside-down"
+#~ msgstr "De cabeça para baixo"
+
+#~ msgid "Display"
+#~ msgstr "Tela"
+
+#~ msgid "Display Settings"
+#~ msgstr "Configurações de tela"
 
 #~ msgid "The application icon mode."
 #~ msgstr "O modo de ícone do aplicativo."
