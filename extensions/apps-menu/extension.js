@@ -548,6 +548,9 @@ const ApplicationsButton = new Lang.Class({
 
         if (category_menu_id) {
             applist = this.applicationsByCategory[category_menu_id];
+            applist.sort(function(a,b) {
+                return a.get_name().toLowerCase() > b.get_name().toLowerCase();
+            });
         } else {
             applist = new Array();
             let favorites = global.settings.get_strv('favorite-apps');
@@ -558,9 +561,6 @@ const ApplicationsButton = new Lang.Class({
             }
         }
 
-        applist.sort(function(a,b) {
-            return a.get_name().toLowerCase() > b.get_name().toLowerCase();
-        });
         return applist;
     },
 
