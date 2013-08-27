@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-05-30 23:17+0000\n"
-"PO-Revision-Date: 2013-05-31 14:24+0100\n"
+"POT-Creation-Date: 2013-08-20 22:47+0000\n"
+"PO-Revision-Date: 2013-08-21 12:30+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -38,6 +38,30 @@ msgstr "Klasický shell prostredia GNOME"
 msgid "Window management and application launching"
 msgstr "Správca okien a spúšťanie aplikácií"
 
+# summary
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Pripojiť modálne dialógové okno k rodičovskému oknu"
+
+# description
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Tento kľúč preváži kľúč v org.gnome.mutter, keď je spustené prostredie GNOME "
+"Shell."
+
+# summary
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Povoliť usporiadanie okien do dlaždíc pri ich pustení na okrajoch obrazovky"
+
+# Label
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Pracovné priestory iba na primárnom monitore"
+
 # RadioButton label
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -62,42 +86,6 @@ msgstr "Uvádzať okná ako"
 #: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Zobraziť len okná z aktuálneho pracovného priestoru"
-
-# PopupMenuItem
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Uspať"
-
-# PopupMenuItem
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Hibernovať"
-
-# PopupMenuItem
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Vypnúť"
-
-# gsetting summary
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Povoliť režim spánku"
-
-# gsetting description
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Nastaví viditeľnosť položky Uspať v ponuke"
-
-# gsetting summary
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Povoliť hibernáciu"
-
-# gsetting description
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Nastaví viditeľnosť položky Hibernovať v ponuke"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -153,18 +141,18 @@ msgid "Add"
 msgstr "Pridať"
 
 # https://bugzilla.gnome.org/show_bug.cgi?id=687590
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Zlyhalo vysúvanie jednotky „%s“:"
 
 #  Menu
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Vymeniteľné zariadenia"
 
 # Menu Action
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Otvoriť súbor"
 
@@ -237,7 +225,8 @@ msgstr ""
 "nadol. Aby sa prejavila zmena, je potrebné reštartovať shell."
 
 #  menu item
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Miesta"
 
@@ -261,12 +250,12 @@ msgid "Browse Network"
 msgstr "Prehliadať sieť"
 
 # Label
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "Procesor"
 
 # Label
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Pamäť"
 
@@ -279,6 +268,62 @@ msgstr "Názov témy"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Názov témy, ktorá sa načíta z ~/.themes/nazov/gnome-shell"
+
+# PopupMenuItem
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Zavrieť"
+
+# label
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Odminimalizovať"
+
+# label
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Minimalizovať"
+
+# label
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Odmaximalizovať"
+
+# label
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Maximalizovať"
+
+# PopupMenuItem
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Minimalizovať všetko"
+
+# PopupMenuItem
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Odminimalizovať všetko"
+
+# PopupMenuItem
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Maximalizovať všetko"
+
+# PopupMenuItem
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Odmaximalizovať všetko"
+
+# PopupMenuItem
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Zavrieť všetko"
+
+# Label
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indikátor pracovného priestoru"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
@@ -309,11 +354,6 @@ msgid "Always group windows"
 msgstr "Vždy zoskupovať okná"
 
 # Label
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Indikátor pracovného priestoru"
-
-# Label
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Názvy pracovných priestorov:"
@@ -328,33 +368,3 @@ msgstr "Názov"
 #, c-format
 msgid "Workspace %d"
 msgstr "Pracovný priestor č. %d"
-
-# rotation
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Normálne"
-
-# rotation
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Vľavo"
-
-# rotation
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Vpravo"
-
-# rotation
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Hore nohami"
-
-#  menu
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Displej"
-
-# menu
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "Nastavenia displeja"
