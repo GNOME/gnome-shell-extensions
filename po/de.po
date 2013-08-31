@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2011-2013.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2011, 2012.
+# Benjamin Steinwender <b@stbe.at>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-07-04 14:06+0000\n"
-"PO-Revision-Date: 2013-07-08 17:20+0100\n"
+"POT-Creation-Date: 2013-08-29 13:55+0000\n"
+"PO-Revision-Date: 2013-08-29 22:48+0100\n"
 "Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de_DE\n"
@@ -56,7 +57,6 @@ msgstr ""
 "verschoben wird"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid "Workspace Indicator"
 msgid "Workspaces only on primary monitor"
 msgstr "Arbeitsflächen nur auf dem Primärmonitor"
 
@@ -80,35 +80,6 @@ msgstr "Fenster darstellen als"
 msgid "Show only windows in the current workspace"
 msgstr "Nur Fenster der aktuellen Arbeitsfläche anzeigen"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Bereitschaft"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Ruhezustand"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Ausschalten …"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Bereitschaft einblenden"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Die Sichtbarkeit des Menüeintrags »Bereitschaft« festlegen"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Ruhezustand einblenden"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Die Sichtbarkeit des Menüeintrags »Ruhezustand« festlegen"
-
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Aktivitäten-Übersicht"
@@ -117,7 +88,7 @@ msgstr "Aktivitäten-Übersicht"
 msgid "Favorites"
 msgstr "Favoriten"
 
-#: ../extensions/apps-menu/extension.js:276
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "Anwendungen"
 
@@ -155,16 +126,16 @@ msgstr "Neue Übereinstimmungsregel erstellen"
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Auswerfen von Laufwerk »%s« schlug fehl:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Wechseldatenträger"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Datei öffnen"
 
@@ -230,7 +201,8 @@ msgstr ""
 "Vorschaubild platziert und damit die Voreinstellung der Shell übergangen. "
 "Eine Änderungseinstellung tritt erst mit einem Neustart der Shell in Kraft."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Orte"
 
@@ -270,7 +242,47 @@ msgstr ""
 "Der Name des Themas, welches aus ~/.themes/name/gnome-shell geladen werden "
 "soll"
 
-#: ../extensions/window-list/extension.js:382
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Schließen"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Minimieren rückgängig"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Minimieren"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Maximieren rückgängig"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Maximieren"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Alle minimieren"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Alle minimieren rückgängig"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Alle maximieren"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Alle maximieren rückgängig"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Alle schließen"
+
+#: ../extensions/window-list/extension.js:591
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Arbeitsflächenindikator"
@@ -317,29 +329,44 @@ msgstr "Name"
 msgid "Workspace %d"
 msgstr "Arbeitsfläche %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Normal"
+#~ msgid "Suspend"
+#~ msgstr "Bereitschaft"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Links"
+#~ msgid "Hibernate"
+#~ msgstr "Ruhezustand"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Rechts"
+#~ msgid "Power Off"
+#~ msgstr "Ausschalten …"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Kopfüber"
+#~ msgid "Enable suspending"
+#~ msgstr "Bereitschaft einblenden"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Anzeige"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "Die Sichtbarkeit des Menüeintrags »Bereitschaft« festlegen"
 
-#: ../extensions/xrandr-indicator/extension.js:87
-msgid "Display Settings"
-msgstr "Bildschirmeinstellungen"
+#~ msgid "Enable hibernating"
+#~ msgstr "Ruhezustand einblenden"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "Die Sichtbarkeit des Menüeintrags »Ruhezustand« festlegen"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Left"
+#~ msgstr "Links"
+
+#~ msgid "Right"
+#~ msgstr "Rechts"
+
+#~ msgid "Upside-down"
+#~ msgstr "Kopfüber"
+
+#~ msgid "Display"
+#~ msgstr "Anzeige"
+
+#~ msgid "Display Settings"
+#~ msgstr "Bildschirmeinstellungen"
 
 #~ msgid "The application icon mode."
 #~ msgstr "Der Modus des Anwendungssymbols."
