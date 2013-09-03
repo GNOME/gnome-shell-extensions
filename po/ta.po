@@ -1,0 +1,338 @@
+# Tamil translation for gnome-shell-extensions.
+# Copyright (C) 2013 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# தங்கமணி அருண் <thangam.arunx@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-08-19 13:01+0000\n"
+"PO-Revision-Date: 2013-09-03 16:00+0530\n"
+"Last-Translator: Shantha kumar <shkumar@redhat.com>\n"
+"Language-Team: Tamil <ta@li.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME கிளாஸிக்"
+
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "இந்த அமர்வு உங்களை GNOME கிளாஸிக்கில் புகுபதிவு செய்யும்"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME செல் கிளாஸிக்"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "சாளர நிர்வாகம் மற்றும் பயன்பாட்டு துவக்கம்"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "சேய் உரையாடலை பெற்றோர் சாளரத்துடன்  ஒட்டவும்"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"இந்த திறப்பானது GNOME செல்லை இயக்கும் போது, org.gnome.mutter இல் உள்ள திறப்பைப் "
+"புறக்கணிக்கிறது."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "சாளரங்களை திரை விளிம்புகளில் விடும் போது, விளிம்பு சட்டமாக்கலை செயற்படுத்து"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "முதன்மை திரையில் மட்டும் பணியிடங்கள்"
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "சிறுபடம் மட்டும்"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "பயன்பாட்டு சின்னம் மட்டுமே"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "சிறுபடம் மற்றும் பயன்பாட்டு சின்னம்"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "சாளரத்தை இவ்வாறு காட்டு"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "தற்போதைய பணியிடத்தில் மட்டும் சாளரங்களைக் காட்டு"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "செயல்பாடுகளின் கண்ணோட்டம்"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "பிடித்தவை"
+
+#: ../extensions/apps-menu/extension.js:278
+msgid "Applications"
+msgstr "பயன்பாடுகள்"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "பயன்பாடு மற்றும் பணியிட பட்டியியல்"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"பயன்பாட்டு id (பணிமேடை கோப்பு பெயர்), அதைத்தொடர்ந்து ஒரு முக்காற் குறி மற்றும் பணியிட "
+"எண் ஆகியவற்றைக் கொண்டிருக்கும் சரங்களின் பட்டியல்"
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "பயன்பாடு"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "பணியிடம்"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "விதியை சேர்"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "புதிய பொருத்தும் விதியை உருவாக்கு"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "சேர்"
+
+#: ../extensions/drive-menu/extension.js:73
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "இயக்கியை '%s' வெளித்தள்ளுவதில் தோல்வியடைந்தது:"
+
+#: ../extensions/drive-menu/extension.js:90
+msgid "Removable devices"
+msgstr "நீக்கக்கூடிய சாதனங்கள்"
+
+#: ../extensions/drive-menu/extension.js:117
+msgid "Open File"
+msgstr "கோப்பைத் திற"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "வணக்கம், தமிழா !"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "மாற்று வாழ்த்துரை."
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"காலியாக இல்லாவிட்டால், பலகத்தின் மீது சொடுக்கும் போது காண்பிக்கப்படும் உரையைக் "
+"கொண்டிருக்கும்."
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"செல்லுக்கான சிறப்பாக செயல்படும் நீட்சிகளை எப்படி திறம்பட கட்டமைப்பது என்பதைக் காண்பிப்பதே "
+"Example இன் குறிக்கோளாகும் மேலும் அதுவும் மிகக் குறைந்த செயலம்சத்தையே கொண்டுள்ளது.\n"
+"இருப்பினும், வாழ்த்துச்செய்தியை தனிப்பயனாக்கம் செய்யமுடியும்."
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "செய்தி:"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "சாளரங்களுக்காக அதிக திரையை பயன்படுத்தவும்"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"திரையின் தன்மை விகிதத்திற்கு ஏற்ப தகவமைப்பதன் மூலமும் சாளர சிறுபடங்களை உட்கொண்டிருக்கும் "
+"பெட்டியை மேலும் குறைப்பதற்காக அவற்றை வகைபிரித்தமைப்பதன் மூலமும் சாளர சிறுபடங்களை "
+"வைப்பதற்கு அதிக திரையைப் பயன்படுத்தவும். இந்த அமைவு இயல்பான இடவமைத்தல் உத்திக்கு மட்டுமே "
+"பொருந்தும்."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "சாளரத்தின் தலைப்புகளை மேலே வைக்கவும்"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"true என இருப்பின், சாளர தலைப்புகளை அடிப்பகுதியில் வைக்கும் செல்லின் முன்னிருப்பான "
+"குணத்தைப் புறக்கணித்து, சாளர தலைப்புகளை அந்தந்த சிறுபடத்தின் மேல் பகுதியில் வைக்கும். இந்த "
+"அமைவில் மாற்றம் செய்தால், மாற்றம் விளைவை ஏற்படுத்த செல்லை மறுதொடக்கம் செய்ய வேண்டும்."
+
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "இடங்கள்"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "\"%s\" ஐத் தொடங்குவதில் தோல்வியடைந்தது"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "கணினி"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "இல்லம்"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "பிணையத்தை உலாவு"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "நினைவகம்"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "தீம் பெயர்"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "~/.themes/name/gnome-shell இலிருந்து ஏற்றப்பட வேண்டிய தீமின் பெயர்"
+
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "மூடு"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "குறுக்கல் நீக்கு"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "சிறிதாக்கு"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "பெரிதாக்கல் நீக்கு"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "பெரிதாக்கு"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "அனைத்தையும் சிறிதாக்கு"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "அனைத்தையும் குறுக்கல் நீக்கு"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "அனைத்தையும் பெரிதாக்கு"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr " அனைத்தையும் பெரிதாக்கல் நீக்கு"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "அனைத்தையும் மூடு"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "பணியிடம் காட்டி"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "சாளரங்களை எப்பொழுது குழுவாக்க வேண்டும்"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"சாளர பட்டியலில், ஒரே பயன்பாட்டுக்கு உரிய சாளரங்களை எப்போது குழுவாக்க வேண்டும் என "
+"முடிவுச்செய்கிறது. சாத்தியமான மதிப்புகள் \"ஒருபோதும் வேண்டாம்\", \"தானாக\" மற்றும் "
+"\"எப்பொழுதும்\"."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "சாளர குழுவாக்கம்"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "சாளரங்களை ஒருபோதும் குழுவாக்காதே"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "இடப்பற்றாக்குறை இருக்ககும்பொழுது சாளரங்களை குழுவாக்கு"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "சாளரங்களை எப்பொதும் குழுவாக்கு"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "பணியிடப் பெயர்கள்:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "பெயர்"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "பணியிடம் %d"
+
+#~ msgid "Normal"
+#~ msgstr "வழக்கமான"
+
+#~ msgid "Left"
+#~ msgstr "இடது"
+
+#~ msgid "Right"
+#~ msgstr "வலது"
+
+#~ msgid "Upside-down"
+#~ msgstr "தலைக்கீல்"
+
+#~ msgid "Display"
+#~ msgstr "காட்சி"
+
+#~ msgid "Display Settings"
+#~ msgstr "காட்சி அமைப்புகள்"
