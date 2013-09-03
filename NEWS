@@ -1,3 +1,12 @@
+3.9.91
+======
+* update the classic mode session and theme to work with the
+  new system menu
+* the usual round of updates and fixes for gnome-shell
+  API changes
+* updated translations (de, it, lt, nl, pl, pt_BR, sk,
+  zh_HK, zh_TW)
+
 3.9.90
 ======
 * xrandr-indicator was removed, as the implementation
