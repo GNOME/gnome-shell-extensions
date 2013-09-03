@@ -726,14 +726,17 @@ const WindowList = new Lang.Class({
                 }
             }));
 
+	let indicatorsBox = new St.BoxLayout();
+	box.add(indicatorsBox);
+
         this._workspaceIndicator = new WorkspaceIndicator();
-        box.add(this._workspaceIndicator.container);
+        indicatorsBox.add(this._workspaceIndicator.container, { expand: false, y_fill: false });
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menuManager.addMenu(this._workspaceIndicator.menu);
 
         this._trayButton = new TrayButton();
-        box.add(this._trayButton.actor);
+        indicatorsBox.add(this._trayButton.actor, { expand: false });
 
         Main.layoutManager.addChrome(this.actor, { affectsStruts: true,
                                                    trackFullscreen: true });
