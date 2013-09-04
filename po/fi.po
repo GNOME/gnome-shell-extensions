@@ -2,26 +2,26 @@
 # Copyright (C) 2011 Ville-Pekka Vainio
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Gnome 2012-03 Finnish translation sprint participants:
-# Jiri Grönroos
 # Niklas Laxström
 # Ville-Pekka Vainio
 # Ville-Pekka Vainio <vpvainio@iki.fi>, 2011.
-# Jiri Grönroos <jiri.gronroos@iki.fi>, 2012, 2013.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-02-08 12:25+0000\n"
-"PO-Revision-Date: 2013-03-20 23:54+0200\n"
+"POT-Creation-Date: 2013-08-19 08:21+0000\n"
+"PO-Revision-Date: 2013-09-02 20:54+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
-"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 "X-POT-Import-Date: 2012-03-05 15:06:12+0000\n"
 
@@ -36,11 +36,29 @@ msgstr "Tämä istunto kirjaa sinut perinteiseen Gnomeen"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:1
 msgid "GNOME Shell Classic"
-msgstr ""
+msgstr "Gnome Shell - perinteinen"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Ikkunoiden hallintaa ja sovellusten käynnistämistä"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid "Workspace Indicator"
+msgid "Workspaces only on primary monitor"
+msgstr "Työtilat vain ensisijaisella näytöllä"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -52,62 +70,31 @@ msgstr "Pelkkä sovelluksen kuvake"
 
 #: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
-msgstr ""
+msgstr "Pienoiskuva ja sovelluksen kuvake"
 
 #: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
-msgstr ""
+msgstr "Ikkunoiden esittäminen"
 
 #: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Näytä vain nykyisessä työtilassa olevat ikkunat"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:144
-msgid "Suspend"
-msgstr "Valmiustila"
-
-#: ../extensions/alternative-status-menu/extension.js:147
-msgid "Hibernate"
-msgstr "Lepotila"
-
-#: ../extensions/alternative-status-menu/extension.js:150
-msgid "Power Off"
-msgstr "Sammuta"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr ""
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr ""
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr ""
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr ""
-
-#: ../extensions/apps-menu/extension.js:50
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Yleisnäkymä"
 
-#: ../extensions/apps-menu/extension.js:103
-#| msgid "Add to Favorites"
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Suosikit"
 
-#: ../extensions/apps-menu/extension.js:197
-#| msgid "Application"
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "Sovellukset"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
-msgstr ""
+msgstr "Sovellus- ja työtilaluettelo"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
@@ -136,17 +123,16 @@ msgstr "Luo uusi vastaava sääntö"
 msgid "Add"
 msgstr "Lisää"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
-msgstr ""
+msgstr "Aseman \"%s\" irrottaminen epäonnistui:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Erilliset tallennusvälineet"
 
-#: ../extensions/drive-menu/extension.js:106
-#| msgid "Open file manager"
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Avaa tiedosto"
 
@@ -190,7 +176,7 @@ msgstr ""
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
-msgstr ""
+msgstr "Aseta ikkunoiden otsikkoteksti ylös"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
@@ -198,34 +184,38 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
+"Jos tosi, ikkunan otsikkoteksti asetetaan ikkunan pienoiskuvan yläpuolelle. "
+"Tämä syrjäyttää oletusasetuksen, eli otsikkotekstin asettamisen pienoiskuvan "
+"alle. Tämän asetuksen muutos vaatii Gnomen uudelleenkäynnistyksen."
 
-#: ../extensions/places-menu/extension.js:57
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Sijainnit"
 
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Kohteen \"%s\" käynnistys epäonnistui"
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
-msgid "Home"
-msgstr "Koti"
-
-#: ../extensions/places-menu/placeDisplay.js:195
 msgid "Computer"
 msgstr "Tietokone"
 
 #: ../extensions/places-menu/placeDisplay.js:199
-#| msgid "Browse network"
+msgid "Home"
+msgstr "Koti"
+
+#: ../extensions/places-menu/placeDisplay.js:286
 msgid "Browse Network"
 msgstr "Selaa verkkoa"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "Suoritin"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Muisti"
 
@@ -237,6 +227,51 @@ msgstr "Teeman nimi"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Teeman nimi, ladataan sijainnista ~/.themes/name/gnome-shell"
 
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Sulje"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Palauta pienennys"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Pienennä"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Palauta suurennus"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Suurenna"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Pienennä kaikki"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Palauta kaikkien koko"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Suurenna kaikki"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Palauta kaikkien koko"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Sulje kaikki"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Työtilan ilmaisin"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "Milloin ikkunat ryhmitetään"
@@ -244,8 +279,10 @@ msgstr "Milloin ikkunat ryhmitetään"
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
+"Päättää milloin saman sovelluksen ikkunat ryhmitellään ikkunaluettelossa. "
+"Mahdolliset arvot ovat \"never\", \"auto\" ja \"always\"."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -256,12 +293,12 @@ msgid "Never group windows"
 msgstr "Älä ryhmitä ikkunoita koskaan"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Ryhmitä ikkunat tilan ollessa rajallinen"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Ryhmitä ikkunat aina"
-
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Työtilan ilmaisin"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -276,29 +313,32 @@ msgstr "Nimi"
 msgid "Workspace %d"
 msgstr "Työtila %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Tavallinen"
+#~ msgid "Suspend"
+#~ msgstr "Valmiustila"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Vasen"
+#~ msgid "Hibernate"
+#~ msgstr "Lepotila"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Oikea"
+#~ msgid "Power Off"
+#~ msgstr "Sammuta"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Ylösalaisin"
+#~ msgid "Normal"
+#~ msgstr "Tavallinen"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Näyttö"
+#~ msgid "Left"
+#~ msgstr "Vasen"
 
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "Näytön asetukset"
+#~ msgid "Right"
+#~ msgstr "Oikea"
+
+#~ msgid "Upside-down"
+#~ msgstr "Ylösalaisin"
+
+#~ msgid "Display"
+#~ msgstr "Näyttö"
+
+#~ msgid "Display Settings"
+#~ msgstr "Näytön asetukset"
 
 #~ msgid "Drag here to add favorites"
 #~ msgstr "Raahaa tähän lisätäksesi suosikkeihin"
