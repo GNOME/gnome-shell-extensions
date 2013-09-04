@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-04-19 19:12+0000\n"
-"PO-Revision-Date: 2013-05-14 18:48+0200\n"
+"POT-Creation-Date: 2013-08-25 15:34+0000\n"
+"PO-Revision-Date: 2013-09-04 06:29+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -37,6 +37,25 @@ msgstr "Klasična Gnomova školjka"
 msgid "Window management and application launching"
 msgstr "Upravljanje prozorima i pokretanje programa"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Prikačinje prozorče roditeljskom prozoru"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Ovaj ključ prevazilazi ključ u „org.gnome.mutter“ kada pokreće Gnomovu školjku."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "Uključuje popločavanje ivice prilikom otpuštanja prozora na ivicama ekrana"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid "Workspace Indicator"
+msgid "Workspaces only on primary monitor"
+msgstr "Radni prostori samo na primarnom monitoru"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Samo sličice"
@@ -56,35 +75,6 @@ msgstr "Prikaži prozore kao"
 #: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Prikazuje samo prozore u tekućem radnom prostoru"
-
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Obustavi"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Zamrzni"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Isključi"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Uključuje obustavljanje"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Upravlja vidljivošću stavke izbornika obustavljanja"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Uključuje zamrzavanje"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Upravlja vidljivošću stavke izbornika zamrzavanja"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -131,16 +121,16 @@ msgstr "Dodajte novo pravilo za poklapanje"
 msgid "Add"
 msgstr "Dodaj"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Nisam uspeo da izbacim uređaj „%s“:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Uklonjivi uređaji"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Otvori datoteku"
 
@@ -203,7 +193,8 @@ msgstr ""
 "umanjenih prikaza umesto ispod prikaza. Promena ovih podešavanja zahteva da "
 "ponovo pokrenete Gnomovu školjku."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Mesta"
 
@@ -225,11 +216,11 @@ msgstr "Lično"
 msgid "Browse Network"
 msgstr "Razgledajte mrežu"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "Procesor"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Memorija"
 
@@ -241,21 +232,63 @@ msgstr "Naziv teme"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Naziv teme koji se učitava iz datoteke „~/.themes/name/gnome-shell“"
 
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Zatvori"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Poništi umanjenje"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Umanji"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Poništi uvećanje"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Uvećaj"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Umanji sve"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Poništi umanjenje svega"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Uvećaj sve"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Poništi uvećanje svega"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Zatvori sve"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Pokazatelj radnih prostora"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "Kada grupisati prozore"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
-#| msgid ""
-#| "Decides when to group windows from the same application on the window "
-#| "list. Possible values are \"never\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "Određuje kada će biti grupisani prozori istog programa u spisku prozora. "
-"Dozvoljene vrednosti su „never“ (nikad), „auto“ (automatski) i „always“ "
-"(uvek)."
+"Dozvoljene vrednosti su „never“ (nikad), „auto“ (automatski) i "
+"„always“ (uvek)."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -273,10 +306,6 @@ msgstr "Grupiši prozore kada je prostor ograničen"
 msgid "Always group windows"
 msgstr "Uvek grupiši prozore"
 
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Pokazatelj radnih prostora"
-
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Nazivi radnih prostora:"
@@ -289,27 +318,3 @@ msgstr "Naziv"
 #, c-format
 msgid "Workspace %d"
 msgstr "%d. radni prostor"
-
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Uobičajeno"
-
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Levo"
-
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Desno"
-
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Naopačke"
-
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Ekran"
-
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "Podešavanja ekrana"
