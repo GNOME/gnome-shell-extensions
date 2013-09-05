@@ -7,16 +7,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-07-14 13:19+0000\n"
-"PO-Revision-Date: 2013-07-27 15:41+0300\n"
-"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
-"Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-09-03 10:36+0000\n"
+"PO-Revision-Date: 2013-09-04 00:58+0300\n"
+"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
+"Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -41,12 +43,15 @@ msgid "Attach modal dialog to the parent window"
 msgstr "Прикреплять модальное диалоговое окно к родительскому окну"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "Этот ключ переопределяет ключ в org.gnome.mutter при запуске GNOME Shell."
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Этот ключ переопределяет ключ в org.gnome.mutter при запуске GNOME Shell."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "Автоматически изменять размеры окна при перемещении окна к краям экрана"
+msgstr ""
+"Автоматически изменять размеры окна при перемещении окна к краям экрана"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
 msgid "Workspaces only on primary monitor"
@@ -72,35 +77,6 @@ msgstr "Отображать окна как"
 msgid "Show only windows in the current workspace"
 msgstr "Отображать окна только текущей рабочей области"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Ждущий режим"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Спящий режим"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Выключить"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Разрешить использование ждущего режима"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Показывать ли в меню пункт «Ждущий режим»"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Разрешить использование спящего режима"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Показывать ли в меню пункт «Спящий режим»"
-
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Обзор"
@@ -109,7 +85,7 @@ msgstr "Обзор"
 msgid "Favorites"
 msgstr "Избранное"
 
-#: ../extensions/apps-menu/extension.js:276
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "Приложения"
 
@@ -118,8 +94,12 @@ msgid "Application and workspace list"
 msgstr "Приложение и список рабочих областей"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
-msgstr "Список строк, содержащих идентификатор приложения (имя desktop-файла), за которым следует двоеточие и номер рабочего места"
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Список строк, содержащих идентификатор приложения (имя desktop-файла), за "
+"которым следует двоеточие и номер рабочего места"
 
 #: ../extensions/auto-move-windows/prefs.js:55
 msgid "Application"
@@ -142,16 +122,16 @@ msgstr "Создать новое правило соответствия"
 msgid "Add"
 msgstr "Добавить"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Не удалось извлечь диск «%s»:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Съёмные устройства"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Открыть файл"
 
@@ -164,17 +144,23 @@ msgid "Alternative greeting text."
 msgstr "Альтернативный текст приветствия."
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid "If not empty, it contains the text that will be shown when clicking on the panel."
-msgstr "Если строка не пуста, то содержащийся в ней текст будет показан при нажатии на панель."
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Если строка не пуста, то содержащийся в ней текст будет показан при нажатии "
+"на панель."
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Цель расширения Example — показать, как создавать расширения для Shell, само по себе оно имеет малую функциональность.\n"
+"Цель расширения Example — показать, как создавать расширения для Shell, само "
+"по себе оно имеет малую функциональность.\n"
 "Тем не менее, можно настроить приветственное сообщение."
 
 #: ../extensions/example/prefs.js:36
@@ -186,18 +172,32 @@ msgid "Use more screen for windows"
 msgstr "Использовать дополнительную область экрана для окон"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
-msgstr "Использовать дополнительную область экрана для расположения миниатюр, изменяя соотношение сторон экрана и уплотняя размещение для уменьшения размеров ограничивающей рамки. Этот параметр применяется только при использовании алгоритма расположения миниатюр «natural»."
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Использовать дополнительную область экрана для расположения миниатюр, "
+"изменяя соотношение сторон экрана и уплотняя размещение для уменьшения "
+"размеров ограничивающей рамки. Этот параметр применяется только при "
+"использовании алгоритма расположения миниатюр «natural»."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
 msgstr "Размещать заголовки окон сверху"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
-msgstr "Если выбрано, то заголовки будет располагаться в верхней части миниатюры (по умолчанию заголовки располагаются снизу). При изменении этого параметра, чтобы оно вступило в силу, необходимо перезапустить Shell."
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Если выбрано, то заголовки будет располагаться в верхней части миниатюры (по "
+"умолчанию заголовки располагаются снизу). При изменении этого параметра, "
+"чтобы оно вступило в силу, необходимо перезапустить Shell."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Места"
 
@@ -235,7 +235,49 @@ msgstr "Название темы"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Название темы, загружаемой из ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:382
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Закрыть"
+
+# ну или "восстановить", правда тогда появляется неоднозначный повтор (unmaximize)
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Вернуть"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Свернуть"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Восстановить"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Развернуть"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Свернуть все"
+
+# ну или "восстановить", правда тогда появляется неоднозначный повтор (unmaximize)
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Вернуть все"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Развернуть все"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Восстановить все"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Закрыть все"
+
+#: ../extensions/window-list/extension.js:591
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Индикатор рабочей области"
@@ -245,8 +287,13 @@ msgid "When to group windows"
 msgstr "Когда группировать окна"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
-msgid "Decides when to group windows from the same application on the window list. Possible values are \"never\", \"auto\" and \"always\"."
-msgstr "Определяет, когда группировать окна одного и того же приложения в списке окон. Возможные значения: «never» — никогда; «auto» — автоматически; «always» — всегда."
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Определяет, когда группировать окна одного и того же приложения в списке "
+"окон. Возможные значения: «never» — никогда; «auto» — автоматически; "
+"«always» — всегда."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -276,28 +323,3 @@ msgstr "Название"
 #, c-format
 msgid "Workspace %d"
 msgstr "Рабочая область %d"
-
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Без поворота"
-
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Влево"
-
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Вправо"
-
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "На 180 градусов"
-
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Экран"
-
-#: ../extensions/xrandr-indicator/extension.js:87
-msgid "Display Settings"
-msgstr "Параметры экрана"
-
