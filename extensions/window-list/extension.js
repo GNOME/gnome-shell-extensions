@@ -726,7 +726,7 @@ const WindowList = new Lang.Class({
                 }
             }));
 
-	let indicatorsBox = new St.BoxLayout();
+	let indicatorsBox = new St.BoxLayout({ x_align: Clutter.ActorAlign.END });
 	box.add(indicatorsBox);
 
         this._workspaceIndicator = new WorkspaceIndicator();
