@@ -275,7 +275,7 @@ msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
-"يقرر متى تجميع نوافذ نفس التطبيق في قائمة النوافذ. القيم الممكنة هي \"never"
+"يقرر متى تجمع نوافذ نفس التطبيق في قائمة النوافذ. القيم الممكنة هي \"never"
 "\"، \"auto\" و \"always\"."
 
 #: ../extensions/window-list/prefs.js:30
