@@ -2,14 +2,14 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# A S Alam <aalam@users.sf.net>, 2011, 2012.
+# A S Alam <aalam@users.sf.net>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-10-16 14:24+0000\n"
-"PO-Revision-Date: 2012-10-25 09:10+0530\n"
+"POT-Creation-Date: 2013-08-19 08:21+0000\n"
+"PO-Revision-Date: 2013-09-09 14:13-0500\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
@@ -19,65 +19,76 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਮੋਡ"
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "ਗਨੋਮ ਕਲਾਸਿਕ"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "ਇਹ ਸ਼ੈਸ਼ਨ ਤੁਹਾਨੂੰ ਗਨੋਮ ਕਲਾਸਿਕ ਵਿੱਚ ਲਾਗ ਕਰਦਾ ਹੈ"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "ਗਨੋਮ ਸ਼ੈਲ ਕਲਾਸਿਕ"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+#| msgid "Thumbnail and application icon"
+msgid "Window management and application launching"
+msgstr "ਵਿੰਡੋ ਪਰਬੰਧ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਚਲਾਓ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "ਮੁੱਢਲੀ ਵਿੰਡੋ ਵਿੱਚ ਮਾਡਲ ਡਾਈਲਾਗ ਜੋੜੋ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
+"ਇਹ ਕੁੰਜੀ ਗਨੋਮ ਸ਼ੈੱਲ ਚੱਲਣ ਦੇ ਦੌਰਾਨ  org.gnome.mutter ਕੁੰਜੀ ਨੂੰ ਅਣਡਿੱਠਾ ਕਰਦੀ ਹੈ।"
 
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "ਕੋਨਾ ਟਿਲਿੰਗ ਚਾਲੂ, ਜਦੋਂ ਵਿੰਡੋਜ਼ ਨੂੰ ਸਕਰੀਨ ਕੋਨਿਆਂ ਤੋਂ ਡਰਾਪ ਕਰਨਾ ਹੋਵੇ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid "Workspace Indicator"
+msgid "Workspaces only on primary monitor"
+msgstr "ਪ੍ਰਾਈਮਰੀ ਮਾਨੀਟਰ ਉੱਤੇ ਕੇਵਲ ਵਰਕਸਪੇਸ"
+
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "ਕੇਵਲ ਥੰਮਨੇਲ ਹੀ"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਹੀ"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "ਥੰਮਨੇਲ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "ਵਿੰਡੋਜ਼ ਨੂੰ ਪੇਸ਼ ਕਰੋ"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "ਮੌਜੂਦਾ ਵਰਕਸਪੇਸ ਵਿੱਚੋਂ ਹੀ ਵਿੰਡੋਜ਼ ਹੀ ਵੇਖਾਓ"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:86
-msgid "Suspend"
-msgstr "ਸਸਪੈਂਡ"
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "ਸਰਗਰਮੀ ਝਲਕ"
 
-#: ../extensions/alternative-status-menu/extension.js:91
-msgid "Hibernate"
-msgstr "ਹਾਈਬਰਨੇਟ"
+#: ../extensions/apps-menu/extension.js:113
+#| msgid "Add to Favorites"
+msgid "Favorites"
+msgstr "ਪਸੰਦੀਦਾ"
 
-#: ../extensions/alternative-status-menu/extension.js:96
-msgid "Power Off"
-msgstr "ਬੰਦ ਕਰੋ"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "ਸਸਪੈਂਡ ਕਰਨਾ ਯੋਗ"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "ਸਸਪੈਂਡ ਮੇਨੂ ਆਈਟਮ ਦੀ ਦਿੱਖ ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "ਹਾਈਬਰਨੇਟ ਕਰਨਾ ਚਾਲੂ"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "ਹਾਈਬਰਨੇਟ ਮੇਨੂ ਆਈਟਮ ਦੀ ਦਿੱਖ ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ"
+#: ../extensions/apps-menu/extension.js:278
+#| msgid "Application"
+msgid "Applications"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -113,17 +124,16 @@ msgstr "ਨਵਾਂ ਮਿਲਾਉਣ ਨਿਯਮ ਬਣਾਉ"
 msgid "Add"
 msgstr "ਸ਼ਾਮਲ"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "ਡਰਾਇਵ '%s' ਬਾਹਰ ਕੱਢਣ ਲਈ ਫੇਲ੍ਹ:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "ਹਟਾਉਣਯੋਗ ਜੰਤਰ"
 
-#: ../extensions/drive-menu/extension.js:106
-#| msgid "Open file manager"
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "ਫਾਇਲ ਖੋਲ੍ਹੋ"
 
@@ -177,45 +187,41 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
+"ਜੇ ਚੋਣ ਕੀਤੀ ਤਾਂ ਵਿੰਡੋ ਸੁਰਖੀਆਂ ਨੂੰ ਅਨੁਸਾਰੀ ਥੰਮਨੇਲ ਉੱਤੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਜੋ ਕਿ "
+"ਸ਼ੈਲ ਮੂਲ ਰੂਪ (ਹੇਠਾਂ) "
+"ਰੱਖਣ ਨੂੰ ਅਣਡਿੱਠਾ ਕਰਦਾ ਹੈ। ਇਹ ਸੈਟਿੰਗ ਬਦਲਾਅ ਦੇ ਚਾਲੂ ਹੋਣ ਲਈ ਸ਼ੈਲ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨ "
+"ਦੀ "
+"ਲੋੜ ਹੈ।"
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "ਥਾਵਾਂ"
 
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "ਜੰਤਰ"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "ਬੁੱਕਮਾਰਕ"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "ਨੈੱਟਵਰਕ"
-
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" ਚਲਾਉਣ ਲਈ ਫੇਲ੍ਹ ਹੈ"
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "ਕੰਪਿਊਟਰ"
+
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Home"
 msgstr "ਘਰ"
 
-#: ../extensions/places-menu/placeDisplay.js:184
-msgid "File System"
-msgstr "ਫਾਇਲ ਸਿਸਟਮ"
+#: ../extensions/places-menu/placeDisplay.js:286
+#| msgid "Browse network"
+msgid "Browse Network"
+msgstr "ਨੈੱਟਵਰਕ ਝਲਕ ਵੇਖੋ"
 
-#: ../extensions/places-menu/placeDisplay.js:188
-msgid "Browse network"
-msgstr "ਨੈੱਟਵਰਕ ਝਲਕ"
-
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "ਸੀਪੀਯੂ"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "ਮੈਮੋਰੀ"
 
@@ -227,9 +233,79 @@ msgstr "ਥੀਮ ਨਾਂ"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "ਥੀਮ ਦਾ ਨਾਂ, ਜੋ ~/.themes/name/gnome-shell ਤੋਂ ਲੋਡ ਕੀਤਾ ਜਾਵੇਗਾ"
 
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "ਬੰਦ ਕਰੋ"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "ਅਣ-ਨਿਊਨਤਮ"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "ਨਿਊਨਤਮ"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "ਅਣ-ਵੱਧੋ-ਵੱਧ"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "ਵੱਧੋ-ਵੱਧ"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "ਸਭ ਨਿਊਨਤਮ ਕਰੋ"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "ਸਭ ਅਣ-ਨਿਊਨਤਮ ਕਰੋ"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "ਸਭ ਵੱਧ-ਵੱਧ ਕਰੋ"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "ਸਭ ਅਣ-ਵੱਧੋ-ਵੱਧ ਕਰੋ"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "ਸਭ ਬੰਦ ਕਰੋ"
+
+#: ../extensions/window-list/extension.js:591
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "ਵਰਕਸਪੇਸ ਇੰਡੀਕੇਟਰ"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "ਵਿੰਡੋਜ਼ ਗਰੁੱਪ ਕਦੋਂ ਬਣਾਉਣਾ ਹੈ"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"ਵਿੰਡੋ ਲਿਸਟ ਵਿੱਚ ਇਕੋ ਕੰਮ ਦੇ ਵਿੰਡੋ ਦਾ ਗਰੁੱਪ ਕਦੋਂ ਬਣਾਉਣਾ ਹੈ, ਇਹ ਦੱਸੋ। ਸੰਭਵ ਮੁੱਲ "
+"ਹਨ \"ਕਦੇ ਨਹੀਂ\", "
+"\"ਆਟੋ\" ਅਤੇ \"ਹਮੇਸ਼ਾ\"।"
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "ਵਿੰਡੋ ਗਰੁੱਪਿੰਗ"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "ਵਿੰਡੋ ਦਾ ਗਰੁੱਪ ਕਦੇ ਨਾ ਬਣਾਓ"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "ਜਦੋਂ ਥਾਂ ਥੋੜੀ ਹੋਵੇ ਤਾਂ ਵਿੰਡੋਜ਼ ਦਾ ਗਰੁੱਪ ਬਣਾਓ"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "ਵਿੰਡੋ ਦਾ ਗਰੁੱਪ ਹਮੇਸ਼ਾ ਬਣਾਓ"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -244,30 +320,60 @@ msgstr "ਨਾਂ"
 msgid "Workspace %d"
 msgstr "ਵਰਕਸਪੇਸ %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "ਸਧਾਰਨ"
+#~ msgid "The application icon mode."
+#~ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਮੋਡ"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "ਖੱਬੇ"
+#~ msgid "Suspend"
+#~ msgstr "ਸਸਪੈਂਡ"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "ਸੱਜੇ"
+#~ msgid "Hibernate"
+#~ msgstr "ਹਾਈਬਰਨੇਟ"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "ਉਤਲਾ ਹੇਠ"
+#~ msgid "Power Off"
+#~ msgstr "ਬੰਦ ਕਰੋ"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "ਡਿਸਪਲੇਅ"
+#~ msgid "Enable suspending"
+#~ msgstr "ਸਸਪੈਂਡ ਕਰਨਾ ਯੋਗ"
 
-#: ../extensions/xrandr-indicator/extension.js:80
-#| msgid "System Settings"
-msgid "Display Settings"
-msgstr "ਡਿਸਪਲੇਅ ਸੈਟਿੰਗ"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "ਸਸਪੈਂਡ ਮੇਨੂ ਆਈਟਮ ਦੀ ਦਿੱਖ ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ"
+
+#~ msgid "Enable hibernating"
+#~ msgstr "ਹਾਈਬਰਨੇਟ ਕਰਨਾ ਚਾਲੂ"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "ਹਾਈਬਰਨੇਟ ਮੇਨੂ ਆਈਟਮ ਦੀ ਦਿੱਖ ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ"
+
+#~ msgid "Devices"
+#~ msgstr "ਜੰਤਰ"
+
+#~ msgid "Bookmarks"
+#~ msgstr "ਬੁੱਕਮਾਰਕ"
+
+#~ msgid "Network"
+#~ msgstr "ਨੈੱਟਵਰਕ"
+
+#~ msgid "File System"
+#~ msgstr "ਫਾਇਲ ਸਿਸਟਮ"
+
+#~ msgid "Normal"
+#~ msgstr "ਸਧਾਰਨ"
+
+#~ msgid "Left"
+#~ msgstr "ਖੱਬੇ"
+
+#~ msgid "Right"
+#~ msgstr "ਸੱਜੇ"
+
+#~ msgid "Upside-down"
+#~ msgstr "ਉਤਲਾ ਹੇਠ"
+
+#~ msgid "Display"
+#~ msgstr "ਡਿਸਪਲੇਅ"
+
+#~| msgid "System Settings"
+#~ msgid "Display Settings"
+#~ msgstr "ਡਿਸਪਲੇਅ ਸੈਟਿੰਗ"
 
 #~ msgid "Drag here to add favorites"
 #~ msgstr "ਪਸੰਦ ਵਿੱਚ ਜੋੜਨ ਲਈ ਇੱਥੇ ਸੁੱਟੋ"
@@ -280,9 +386,6 @@ msgstr "ਡਿਸਪਲੇਅ ਸੈਟਿੰਗ"
 
 #~ msgid "Remove from Favorites"
 #~ msgstr "ਪਸੰਦ ਵਿੱਚੋਂ ਹਟਾਓ"
-
-#~ msgid "Add to Favorites"
-#~ msgstr "ਪਸੰਦ 'ਚ ਸ਼ਾਮਲ ਕਰੋ"
 
 #~ msgid "Position of the dock"
 #~ msgstr "ਡੌਕ ਦੀ ਸਥਿਤੀ"
