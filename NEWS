@@ -1,3 +1,13 @@
+3.8.4
+=====
+* a number of fixes backported from the master branch
+  - apps-menu no longer crashes after XRandR events
+  - fixed CanHibernate in alternative-status-menu
+  - user-menu looks up themes in ~/.local/share
+  - systemMonitor blocks the message tray menu properly
+  - xrandr-indicator disables property
+* translation updates
+
 3.8.3.1
 =======
 * fix a crash in places-menu with MTP devices
