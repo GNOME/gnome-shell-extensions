@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-07-30 13:34+0000\n"
+"POT-Creation-Date: 2013-08-27 19:46+0000\n"
 "PO-Revision-Date: 2013-06-23 11:15+0900\n"
 "Last-Translator: Nishio Futoshi <fut_nis@d3.dion.ne.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -80,7 +80,7 @@ msgstr "アクティビティ"
 msgid "Favorites"
 msgstr "お気に入り"
 
-#: ../extensions/apps-menu/extension.js:276
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "アプリケーション"
 
@@ -113,16 +113,16 @@ msgstr "新規ルールの作成"
 msgid "Add"
 msgstr "追加"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "ドライブ '%s' の取り出しに失敗しました:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "リムーバブルデバイス"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "ファイルを開く"
 
@@ -168,7 +168,8 @@ msgstr "ウィンドウのタイトルバーを上端に表示するかどうか
 msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
 msgstr "TRUE にすると、ウィンドウのサムネイルの上端にそのウィンドウのタイトルバーを表示します (これは、サムネイルの下端にタイトルバーを表示する GNOME シェルのデフォルト値よりも優先されます)。この設定を適用する際は GNOME シェルを再起動してください。"
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "場所"
 
@@ -206,7 +207,47 @@ msgstr "テーマの名前"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "テーマの名前です (~/.themes/name/gnome-shell 配下に格納します)"
 
-#: ../extensions/window-list/extension.js:382
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "閉じる"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "最小化解除"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "最小化"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "最大化解除"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "最大化"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "全て最小化"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "全て最小化解除"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "全て最大化"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "全て最大化解除"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "全て閉じる"
+
+#: ../extensions/window-list/extension.js:591
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "ワークスペースインジケーター"
@@ -248,29 +289,23 @@ msgstr "名前"
 msgid "Workspace %d"
 msgstr "ワークスペース %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "標準"
+#~ msgid "Normal"
+#~ msgstr "標準"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "左回り"
+#~ msgid "Left"
+#~ msgstr "左回り"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "右回り"
+#~ msgid "Right"
+#~ msgstr "右回り"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "逆さま"
+#~ msgid "Upside-down"
+#~ msgstr "逆さま"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "ディスプレイ"
+#~ msgid "Display"
+#~ msgstr "ディスプレイ"
 
-#: ../extensions/xrandr-indicator/extension.js:87
-msgid "Display Settings"
-msgstr "ディスプレイ設定"
+#~ msgid "Display Settings"
+#~ msgstr "ディスプレイ設定"
 
 #~ msgid "Suspend"
 #~ msgstr "サスペンド"
