@@ -8,9 +8,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-02-08 12:25+0000\n"
-"PO-Revision-Date: 2013-03-28 02:57+0900\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-08-19 08:21+0000\n"
+"PO-Revision-Date: 2013-09-14 04:35+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -36,6 +37,23 @@ msgstr "그놈 셸 클래식"
 msgid "Window management and application launching"
 msgstr "창 관리 및 프로그램 실행"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "모달 대화 상자를 상위 창에 붙이기"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr "그놈 셸을 실행할 때 org.gnome.mutter에 있는 키 대신 사용됩니다."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "화면 가장자리에 창을 놓을 때 가장자리 맞추기 기능을 사용합니다"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "주 모니터에만 작업 공간 사용"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "섬네일만"
@@ -56,44 +74,15 @@ msgstr "현재 창 표시 방법"
 msgid "Show only windows in the current workspace"
 msgstr "현재 작업 공간의 창만 표시합니다"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:144
-msgid "Suspend"
-msgstr "대기 모드"
-
-#: ../extensions/alternative-status-menu/extension.js:147
-msgid "Hibernate"
-msgstr "최대 절전"
-
-#: ../extensions/alternative-status-menu/extension.js:150
-msgid "Power Off"
-msgstr "전원 끄기"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "대기 모드 사용"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "대기 모드 메뉴를 보일지 정합니다"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "최대 절전 사용"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "최대 절전 메뉴를 보일지 정합니다"
-
-#: ../extensions/apps-menu/extension.js:50
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "현재 활동"
 
-#: ../extensions/apps-menu/extension.js:103
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "즐겨찾기"
 
-#: ../extensions/apps-menu/extension.js:197
+#: ../extensions/apps-menu/extension.js:278
 msgid "Applications"
 msgstr "프로그램"
 
@@ -105,7 +94,9 @@ msgstr "프로그램 및 작업 공간 목록"
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
-msgstr "문자열 목록, 각각은 프로그램 ID(데스크톱 파일 이름) 다음에 콜론 뒤에 작업 공간 번호."
+msgstr ""
+"문자열 목록, 각각은 프로그램 ID(데스크톱 파일 이름) 다음에 콜론 뒤에 작업 공"
+"간 번호."
 
 #: ../extensions/auto-move-windows/prefs.js:55
 msgid "Application"
@@ -128,22 +119,22 @@ msgstr "새 일치 규칙 만들기"
 msgid "Add"
 msgstr "추가"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "'%s' 드라이브를 빼는데 실패했습니다:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "이동식 장치"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "파일 열기"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
-msgstr "Hello, world!"
+msgstr "안녕하세요, 여러분!"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
 msgid "Alternative greeting text."
@@ -163,9 +154,8 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Example은 쉘에 대해 잘 갖춰진 확장을 어떻게 만드는지 보여주기 위한 것이며, 자"
-"체적으로 약간의 기능을 가지고 있습니다. \n"
-"그럼에도 불구하고 인사 메시지를 사용자가 원하는대로 정할 수 있습니다."
+"Example 확장은 잘 동작하는 셸 확장을 어떻게 만드는지 보여주는 예제이므로 자체 기능은 거의 없습니다.\n"
+"하지만 인사 메시지를 원하는대로 지정할 수 있습니다."
 
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
@@ -181,7 +171,10 @@ msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
-msgstr "창의 섬네일을 표시할 때 더 많은 화면을 사용합니다. 섬네일을 화면 종횡비에 맞추고 섬네일을 통합해 차지하는 크기를 줄입니다. 이 설정은 자동 배치 방식에서만 적용됩니다."
+msgstr ""
+"창의 섬네일을 표시할 때 더 많은 화면을 사용합니다. 섬네일을 화면 종횡비에 맞"
+"추고 섬네일을 통합해 차지하는 크기를 줄입니다. 이 설정은 자동 배치 방식에서"
+"만 적용됩니다."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -192,34 +185,38 @@ msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
-msgstr "참이면, 창의 이름을 각 섬네일 위에 표시합니다. 셸의 기본값은 아래에 창 이름을 표시합니다. 이 설정을 바꾸면 셸을 다시 시작해야 적용됩니다."
+msgstr ""
+"참이면, 창의 이름을 각 섬네일 위에 표시합니다. 셸의 기본값은 아래에 창 이름"
+"을 표시합니다. 이 설정을 바꾸면 셸을 다시 시작해야 적용됩니다."
 
-#: ../extensions/places-menu/extension.js:57
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "위치"
 
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" 실행에 실패했습니다"
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
-msgid "Home"
-msgstr "홈"
-
-#: ../extensions/places-menu/placeDisplay.js:195
 msgid "Computer"
 msgstr "컴퓨터"
 
 #: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "홈"
+
+#: ../extensions/places-menu/placeDisplay.js:286
 msgid "Browse Network"
 msgstr "네트워크 찾아보기"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "메모리"
 
@@ -231,6 +228,51 @@ msgstr "테마 이름"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "테마 이름, ~/.themes/name/gnome-shell 아래에서 읽어들입니다."
 
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "닫기"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "최소화 취소"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "최소화"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "최대화 취소"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "최대화"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "모두 최소화"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "모두 최소화 취소"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "모두 최대화"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "모두 최대화 취소"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "모두 닫기"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "작업 공간 표시"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "창 모으기 조건"
@@ -238,8 +280,8 @@ msgstr "창 모으기 조건"
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
-msgstr "창 목록에서 같은 프로그램의 창을 언제 모을지 결정합니다. 가능한 값은 \"never\" 및 \"always\"입니다."
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr "창 목록에서 같은 프로그램의 창을 언제 모을지 결정합니다. 가능한 값은 \"never\", \"auto\", \"always\"입니다."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -250,12 +292,12 @@ msgid "Never group windows"
 msgstr "창을 모으지 않기"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "공간이 부족할 때 창 모으기"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "항상 창 모으기"
-
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "작업 공간 표시"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -269,32 +311,3 @@ msgstr "이름"
 #, c-format
 msgid "Workspace %d"
 msgstr "작업 공간 %d"
-
-# 회전
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "보통"
-
-# 회전
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "왼쪽"
-
-# 회전
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "오른쪽"
-
-# 회전
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "위 아래 뒤집기"
-
-# 디스플레이를 말한다.
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "디스플레이"
-
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "디스플레이 설정"
