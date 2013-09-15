@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-23 00:50+0200\n"
-"PO-Revision-Date: 2013-08-23 00:52+0200\n"
+"POT-Creation-Date: 2013-09-15 02:40+0200\n"
+"PO-Revision-Date: 2013-09-15 02:42+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -127,7 +127,7 @@ msgid "Add"
 msgstr "Dodaj"
 
 #: ../extensions/drive-menu/extension.js:73
-#, c-format
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Wysunięcie napędu \"%s\" się nie powiodło:"
 
@@ -154,8 +154,6 @@ msgid ""
 msgstr ""
 "Jeśli nie jest puste, to zawiera tekst wyświetlany po kliknięciu na panelu."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -205,7 +203,7 @@ msgid "Places"
 msgstr "Miejsca"
 
 #: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "Uruchomienie \"%s\" się nie powiodło"
 
@@ -283,6 +281,10 @@ msgstr "Zamknij wszystkie"
 msgid "Workspace Indicator"
 msgstr "Wskaźnik obszaru roboczego"
 
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Lista okien"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "Kiedy grupować okna"
@@ -320,6 +322,6 @@ msgid "Name"
 msgstr "Nazwa"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Obszar roboczy %d"
