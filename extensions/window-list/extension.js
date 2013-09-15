@@ -740,7 +740,7 @@ const WindowList = new Lang.Class({
 
         Main.layoutManager.addChrome(this.actor, { affectsStruts: true,
                                                    trackFullscreen: true });
-        Main.ctrlAltTabManager.addGroup(this.actor, _('Window List'), 'start-here-symbolic');
+        Main.ctrlAltTabManager.addGroup(this.actor, _("Window List"), 'start-here-symbolic');
 
         this._appSystem = Shell.AppSystem.get_default();
         this._appStateChangedId =
