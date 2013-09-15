@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-08-19 08:21+0000\n"
-"PO-Revision-Date: 2013-09-14 04:35+0900\n"
+"POT-Creation-Date: 2013-09-15 00:43+0000\n"
+"PO-Revision-Date: 2013-09-16 03:25+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -154,7 +154,8 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Example 확장은 잘 동작하는 셸 확장을 어떻게 만드는지 보여주는 예제이므로 자체 기능은 거의 없습니다.\n"
+"Example 확장은 잘 동작하는 셸 확장을 어떻게 만드는지 보여주는 예제이므로 자"
+"체 기능은 거의 없습니다.\n"
 "하지만 인사 메시지를 원하는대로 지정할 수 있습니다."
 
 #: ../extensions/example/prefs.js:36
@@ -273,6 +274,10 @@ msgstr "모두 닫기"
 msgid "Workspace Indicator"
 msgstr "작업 공간 표시"
 
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "창 목록"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "창 모으기 조건"
@@ -281,7 +286,9 @@ msgstr "창 모으기 조건"
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
-msgstr "창 목록에서 같은 프로그램의 창을 언제 모을지 결정합니다. 가능한 값은 \"never\", \"auto\", \"always\"입니다."
+msgstr ""
+"창 목록에서 같은 프로그램의 창을 언제 모을지 결정합니다. 가능한 값은 \"never"
+"\", \"auto\", \"always\"입니다."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
