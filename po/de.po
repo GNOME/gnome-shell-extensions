@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-08-29 13:55+0000\n"
-"PO-Revision-Date: 2013-08-29 22:48+0100\n"
+"POT-Creation-Date: 2013-09-15 00:43+0000\n"
+"PO-Revision-Date: 2013-09-15 21:33+0100\n"
 "Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de_DE\n"
@@ -286,6 +286,11 @@ msgstr "Alle schließen"
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Arbeitsflächenindikator"
+
+#: ../extensions/window-list/extension.js:743
+#| msgid "Window Grouping"
+msgid "Window List"
+msgstr "Fensterliste"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
