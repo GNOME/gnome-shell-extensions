@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-21 00:47+0200\n"
-"PO-Revision-Date: 2013-08-21 00:47+0200\n"
+"POT-Creation-Date: 2013-09-15 17:23+0200\n"
+"PO-Revision-Date: 2013-09-15 17:23+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -274,6 +274,10 @@ msgstr "Pechar todo"
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador de espazo de traballo"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Lista de xanelas"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
