@@ -3,15 +3,15 @@
 # Copyright (C) 2012, 2013 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Giovanni Campagna <scampa.giovanni@gmail.com>, 2011
-# Milo Casagrande <milo@ubuntu.com>, 2013.
+# Milo Casagrande <milo@milo.name>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-25 17:33+0200\n"
-"PO-Revision-Date: 2013-08-25 17:33+0200\n"
-"Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
+"POT-Creation-Date: 2013-09-16 09:00+0200\n"
+"PO-Revision-Date: 2013-09-16 09:00+0200\n"
+"Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -281,6 +281,10 @@ msgstr "Chiudi tutto"
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicatore spazi di lavoro"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Elenco finestre"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
