@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-08-19 08:21+0000\n"
+"POT-Creation-Date: 2013-09-15 00:43+0000\n"
 "PO-Revision-Date: 2013-08-19 14:59+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -274,6 +274,10 @@ msgstr "Zavřít všechna"
 msgid "Workspace Indicator"
 msgstr "Ukazatel pracovní plochy"
 
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Seznam oken"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "Kdy seskupovat okna"
@@ -314,42 +318,3 @@ msgstr "Název"
 #, c-format
 msgid "Workspace %d"
 msgstr "Pracovní plocha %d"
-
-#~ msgid "Suspend"
-#~ msgstr "Uspat do paměti"
-
-#~ msgid "Hibernate"
-#~ msgstr "Uspat na disk"
-
-#~ msgid "Power Off"
-#~ msgstr "Vypnout"
-
-#~ msgid "Enable suspending"
-#~ msgstr "Povolit uspávání do paměti"
-
-#~ msgid "Control the visibility of the Suspend menu item"
-#~ msgstr "Řídí viditelnost položky „Uspat do paměti“ v nabídce"
-
-#~ msgid "Enable hibernating"
-#~ msgstr "Povolit uspávání na disk"
-
-#~ msgid "Control the visibility of the Hibernate menu item"
-#~ msgstr "Řídí viditelnost položky „Uspat na disk“ v nabídce"
-
-#~ msgid "Normal"
-#~ msgstr "Normální"
-
-#~ msgid "Left"
-#~ msgstr "Doleva"
-
-#~ msgid "Right"
-#~ msgstr "Doprava"
-
-#~ msgid "Upside-down"
-#~ msgstr "Vzhůru nohama"
-
-#~ msgid "Display"
-#~ msgstr "Obrazovka"
-
-#~ msgid "Display Settings"
-#~ msgstr "Nastavení obrazovky"
