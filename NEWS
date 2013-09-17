@@ -1,3 +1,11 @@
+3.9.92
+======
+* more updates and fixes for gnome-shell master changes
+  and regressions (systemMonitor, window-list, apps-menu)
+* lots of updated translations (ar, as, cs, da, de, el, es,
+  eu, fi, gl, he, hu, it, ja, kk, ko, lv, nb, nl, pa, pl,
+  pt_BR, ru, sk, sr, sr@latin, ta, tg)
+
 3.9.91
 ======
 * update the classic mode session and theme to work with the
