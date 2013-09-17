@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-13 22:20+0200\n"
-"PO-Revision-Date: 2013-09-12 09:44+0100\n"
+"POT-Creation-Date: 2013-09-17 18:40+0200\n"
+"PO-Revision-Date: 2013-09-16 23:58+0200\n"
 "Last-Translator: Kris Thomsen <mail@kristhomsen.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -81,7 +81,7 @@ msgstr "Aktivitetsoversigt"
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Programmer"
 
@@ -276,6 +276,10 @@ msgstr "Luk alle"
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Arbejdsområdeindikator"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Vinduesliste"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
