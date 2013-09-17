@@ -232,6 +232,10 @@ const ApplicationsMenu = new Lang.Class({
         this._button = button;
     },
 
+    isEmpty: function() {
+	return false;
+    },
+
     open: function(animate) {
         this._button.hotCorner.setBarrierSize(0);
         if (this._button.hotCorner.actor) // fallback corner
