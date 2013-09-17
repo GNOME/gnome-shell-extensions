@@ -317,12 +317,27 @@ const Extension = new Lang.Class({
 	    this._indicators.push(indicator);
 	}
 
-	Main.messageTray.actor.add_actor(this._box);
+	this._boxHolder = new St.BoxLayout({ x_expand: true,
+					     y_expand: true,
+					     x_align: Clutter.ActorAlign.START,
+					   });
+	let menuButton = Main.messageTray._messageTrayMenuButton.actor;
+	Main.messageTray.actor.remove_child(menuButton);
+	Main.messageTray.actor.add_child(this._boxHolder);
+
+	this._boxHolder.add_child(this._box);
+	this._boxHolder.add_child(menuButton);
     },
 
     disable: function() {
 	this._indicators.forEach(function(i) { i.destroy(); });
+
+	let menuButton = Main.messageTray._messageTrayMenuButton.actor;
+	this._boxHolder.remove_child(menuButton);
+	Main.messageTray.actor.add_child(menuButton);
+
 	this._box.destroy();
+	this._boxHolder.destroy();
     },
 
     _onHover: function (item) {
