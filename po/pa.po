@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-08-19 08:21+0000\n"
-"PO-Revision-Date: 2013-09-09 14:13-0500\n"
+"POT-Creation-Date: 2013-09-15 00:43+0000\n"
+"PO-Revision-Date: 2013-09-17 22:14-0500\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
@@ -33,7 +33,6 @@ msgid "GNOME Shell Classic"
 msgstr "ਗਨੋਮ ਸ਼ੈਲ ਕਲਾਸਿਕ"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
-#| msgid "Thumbnail and application icon"
 msgid "Window management and application launching"
 msgstr "ਵਿੰਡੋ ਪਰਬੰਧ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਚਲਾਓ"
 
@@ -52,7 +51,6 @@ msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "ਕੋਨਾ ਟਿਲਿੰਗ ਚਾਲੂ, ਜਦੋਂ ਵਿੰਡੋਜ਼ ਨੂੰ ਸਕਰੀਨ ਕੋਨਿਆਂ ਤੋਂ ਡਰਾਪ ਕਰਨਾ ਹੋਵੇ"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid "Workspace Indicator"
 msgid "Workspaces only on primary monitor"
 msgstr "ਪ੍ਰਾਈਮਰੀ ਮਾਨੀਟਰ ਉੱਤੇ ਕੇਵਲ ਵਰਕਸਪੇਸ"
 
@@ -81,12 +79,10 @@ msgid "Activities Overview"
 msgstr "ਸਰਗਰਮੀ ਝਲਕ"
 
 #: ../extensions/apps-menu/extension.js:113
-#| msgid "Add to Favorites"
 msgid "Favorites"
 msgstr "ਪਸੰਦੀਦਾ"
 
 #: ../extensions/apps-menu/extension.js:278
-#| msgid "Application"
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ"
 
@@ -161,6 +157,9 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
+"Example ਦਾ ਮਕਸਦ ਸ਼ੈਲ ਲਈ ਇੱਕ ਵਧੀਆ ਕੰਮ ਕਰਦੀ ਇਕਸਟੈਸ਼ਨ ਬਣਾਉਣ ਦੀ ਉਦਾਹਰਨ ਦੇਣਾ ਹੈ "
+"ਅਤੇ ਇਸ ਦਾ ਖੁਦ ਕੋਈ ਬਹੁਤਾ ਕੰਮ ਨਹੀਂ ਹੈ।\n"
+"ਫੇਰ ਵੀ ਸਵਾਗਤੀ ਸੁਨੇਹੇ ਨੂੰ ਬਦਲਣਾ ਸੰਭਵ ਹੈ।"
 
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
@@ -176,6 +175,10 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
+"ਸਕਰੀਨ ਆਕਾਰ ਅਨੁਪਾਤ ਨੂੰ ਧਿਆਨ ਵਿੱਚ ਰੱਖ ਕੇ ਵਿੰਡੋ ਥੰਮਨੇਲ ਨੂੰ ਰੱਖ ਕੇ ਹੋਰ ਸਕਰੀਨ ਵਰਤਣ "
+"ਦੀ ਕੋਸ਼ਿਸ਼ "
+"ਕਰੋ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਬਾਊਂਡ ਬਕਸ ਘਟਾਉਣ ਲਈ ਹੋਰ ਵੀ ਸੰਘਣਾ ਕਰੋ। ਇਹ ਸੈਟਿੰਗ ਕੇਵਲ ਸੁਭਾਵਿਕ "
+"ਥਾਂ ਨੀਤੀ ਨਾਲ ਹੀ ਲਾਗੂ ਹੁੰਦੀ ਹੈ।"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -188,9 +191,8 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 "ਜੇ ਚੋਣ ਕੀਤੀ ਤਾਂ ਵਿੰਡੋ ਸੁਰਖੀਆਂ ਨੂੰ ਅਨੁਸਾਰੀ ਥੰਮਨੇਲ ਉੱਤੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਜੋ ਕਿ "
-"ਸ਼ੈਲ ਮੂਲ ਰੂਪ (ਹੇਠਾਂ) "
-"ਰੱਖਣ ਨੂੰ ਅਣਡਿੱਠਾ ਕਰਦਾ ਹੈ। ਇਹ ਸੈਟਿੰਗ ਬਦਲਾਅ ਦੇ ਚਾਲੂ ਹੋਣ ਲਈ ਸ਼ੈਲ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨ "
-"ਦੀ "
+"ਸ਼ੈਲ ਮੂਲ ਰੂਪ (ਹੇਠਾਂ) ਰੱਖਣ "
+"ਨੂੰ ਅਣਡਿੱਠਾ ਕਰਦਾ ਹੈ। ਇਹ ਸੈਟਿੰਗ ਬਦਲਾਅ ਦੇ ਚਾਲੂ ਹੋਣ ਲਈ ਸ਼ੈਲ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ "
 "ਲੋੜ ਹੈ।"
 
 #: ../extensions/places-menu/extension.js:78
@@ -213,7 +215,6 @@ msgid "Home"
 msgstr "ਘਰ"
 
 #: ../extensions/places-menu/placeDisplay.js:286
-#| msgid "Browse network"
 msgid "Browse Network"
 msgstr "ਨੈੱਟਵਰਕ ਝਲਕ ਵੇਖੋ"
 
@@ -277,6 +278,11 @@ msgstr "ਸਭ ਬੰਦ ਕਰੋ"
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "ਵਰਕਸਪੇਸ ਇੰਡੀਕੇਟਰ"
+
+#: ../extensions/window-list/extension.js:743
+#| msgid "Window Grouping"
+msgid "Window List"
+msgstr "ਵਿੰਡੋਜ਼ ਲਿਸਟ"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
