@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-08-19 08:21+0000\n"
-"PO-Revision-Date: 2013-09-02 20:54+0300\n"
+"POT-Creation-Date: 2013-09-15 00:43+0000\n"
+"PO-Revision-Date: 2013-09-18 20:21+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -56,7 +56,6 @@ msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid "Workspace Indicator"
 msgid "Workspaces only on primary monitor"
 msgstr "Työtilat vain ensisijaisella näytöllä"
 
@@ -271,6 +270,11 @@ msgstr "Sulje kaikki"
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Työtilan ilmaisin"
+
+#: ../extensions/window-list/extension.js:743
+#| msgid "Window Grouping"
+msgid "Window List"
+msgstr "Ikkunaluettelo"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
