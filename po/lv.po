@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-08-19 08:21+0000\n"
-"PO-Revision-Date: 2013-09-10 21:45+0300\n"
+"POT-Creation-Date: 2013-09-21 18:27+0000\n"
+"PO-Revision-Date: 2013-09-21 22:50+0300\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -35,7 +35,6 @@ msgid "GNOME Shell Classic"
 msgstr "Klasiskā GNOME čaula"
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
-#| msgid "Thumbnail and application icon"
 msgid "Window management and application launching"
 msgstr "Logu pārvaldība un lietotņu palaišana"
 
@@ -53,7 +52,6 @@ msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "Aktivēt logu sānisko izklāšanu, kad to nomet uz ekrāna malas"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid "Workspace Indicator"
 msgid "Workspaces only on primary monitor"
 msgstr "Darbvietas tikai uz galvenā monitora"
 
@@ -82,12 +80,10 @@ msgid "Activities Overview"
 msgstr "Aktivitāšu pārskats"
 
 #: ../extensions/apps-menu/extension.js:113
-#| msgid "Add to Favorites"
 msgid "Favorites"
 msgstr "Izlase"
 
-#: ../extensions/apps-menu/extension.js:278
-#| msgid "Application"
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Lietotnes"
 
@@ -218,7 +214,6 @@ msgid "Home"
 msgstr "Mājas"
 
 #: ../extensions/places-menu/placeDisplay.js:286
-#| msgid "Browse network"
 msgid "Browse Network"
 msgstr "Pārlūkot tīklu"
 
@@ -282,6 +277,11 @@ msgstr "Aizvērt visu"
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Darbvietu indikators"
+
+#: ../extensions/window-list/extension.js:743
+#| msgid "Window Grouping"
+msgid "Window List"
+msgstr "Logu saraksts"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
