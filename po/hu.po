@@ -8,16 +8,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-21 00:49+0100\n"
-"PO-Revision-Date: 2013-03-21 00:48+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-09-12 09:30+0000\n"
+"PO-Revision-Date: 2013-09-21 19:42+0200\n"
+"Last-Translator: Balázs Úr <urbalazs at gmail dot com>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -36,6 +37,26 @@ msgstr "Klasszikus GNOME Shell"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Ablakkezelés és alkalmazásindítás"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Kizárólagos ablak csatlakoztatása a szülő ablakhoz"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Ez a beállítás felülírja az org.gnome.mutter séma beállításokat, amikor a "
+"GNOME Shell fut."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "Szélek csempézésének engedélyezése ablakok képernyőszélekre ejtésekor"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid "Workspace Indicator"
+msgid "Workspaces only on primary monitor"
+msgstr "Munkaterületek megjelenítése csak az elsődleges monitoron"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -86,15 +107,15 @@ msgstr "Hibernálás engedélyezése"
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "A Hibernálás menüelem láthatóságának módosítása"
 
-#: ../extensions/apps-menu/extension.js:37
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Tevékenységek áttekintés"
 
-#: ../extensions/apps-menu/extension.js:95
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Kedvencek"
 
-#: ../extensions/apps-menu/extension.js:184
+#: ../extensions/apps-menu/extension.js:276
 msgid "Applications"
 msgstr "Alkalmazások"
 
@@ -226,11 +247,11 @@ msgstr "Saját mappa"
 msgid "Browse Network"
 msgstr "Hálózat tallózása"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Memória"
 
@@ -247,12 +268,16 @@ msgid "When to group windows"
 msgstr "Mikor legyenek az ablakok csoportosítva"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#| msgid ""
+#| "Decides when to group windows from the same application on the window "
+#| "list. Possible values are \"never\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "Megadja, mikor csoportosítsa az Ablaklista kisalkalmazás egyazon alkalmazás "
-"ablakait. Lehetséges értékek „never” (soha) és „always” (mindig)."
+"ablakait. Lehetséges értékek „never” (soha), „auto” (automatikus) és "
+"„always” (mindig)."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -263,6 +288,10 @@ msgid "Never group windows"
 msgstr "Soha ne csoportosítsa az ablakokat"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Ablakok csoportosítása, ha kevés a hely"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Mindig csoportosítsa az ablakokat"
 
@@ -303,7 +332,7 @@ msgstr "Fejjel lefelé"
 msgid "Display"
 msgstr "Kijelző"
 
-#: ../extensions/xrandr-indicator/extension.js:80
+#: ../extensions/xrandr-indicator/extension.js:87
 msgid "Display Settings"
 msgstr "Kijelzőbeállítások"
 
