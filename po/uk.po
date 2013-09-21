@@ -2,143 +2,96 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Alexandr Toorchyn <ilex@mail.ua>, 2011.
-# 
+# Daniel Korostil <ted.korostiled@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-05 13:11+0200\n"
-"PO-Revision-Date: 2011-12-04 17:49+0400\n"
-"Last-Translator: Alexandr Toorchyn <ilex@mail.ua>\n"
-"Language-Team: Ukrainian <uk@li.org>\n"
+"POT-Creation-Date: 2013-09-21 12:22+0300\n"
+"PO-Revision-Date: 2013-09-21 12:22+0300\n"
+"Last-Translator: Daniel Korostil <ted.korostiled@gmail.com>\n"
+"Language-Team: linux.org.ua\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
 
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Notifications"
-msgstr "Сповіщення"
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "Класичний GNOME"
 
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Online Accounts"
-msgstr "Мережеві облікові записи"
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Це — сеанс входу в класичний GNOME"
 
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "Системні параметри"
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "Класична оболонка GNOME"
 
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "Заблокувати екран"
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Керування вікнами і запускання програм"
 
-#: ../extensions/alternative-status-menu/extension.js:68
-msgid "Switch User"
-msgstr "Змінити користувача"
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Приєднати модальне вікно до батьківського вікна"
 
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Log Out..."
-msgstr "Вийти…"
-
-#: ../extensions/alternative-status-menu/extension.js:81
-msgid "Suspend"
-msgstr "Режим очікування"
-
-#: ../extensions/alternative-status-menu/extension.js:87
-msgid "Hibernate"
-msgstr "Сплячий режим"
-
-#: ../extensions/alternative-status-menu/extension.js:93
-msgid "Power Off..."
-msgstr "Вимкнути…"
-
-#: ../extensions/alternate-tab/extension.js:54
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
-"This is the first time you use the Alternate Tab extension. \n"
-"Please choose your preferred behaviour:\n"
-"\n"
-"All & Thumbnails:\n"
-"    This mode presents all applications from all workspaces in one "
-"selection \n"
-"    list. Instead of using the application icon of every window, it uses "
-"small \n"
-"    thumbnails resembling the window itself. \n"
-"\n"
-"Workspace & Icons:\n"
-"    This mode let's you switch between the applications of your current \n"
-"    workspace and gives you additionally the option to switch to the last "
-"used \n"
-"    application of your previous workspace. This is always the last symbol "
-"in \n"
-"    the list and is segregated by a separator/vertical line if available. \n"
-"    Every window is represented by its application icon.  \n"
-"\n"
-"If you whish to revert to the default behavior for the Alt-Tab switcher, "
-"just\n"
-"disable the extension from extensions.gnome.org or the Advanced Settings "
-"application."
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Розширення Alternate Tab використовується вперше. \n"
-"Виберіть потрібний режим:\n"
-"\n"
-"Все і ескізи:\n"
-"   У цьому режимі всі програми з усіх стільниць перебувають в одному \n"
-"    списку. Замість того, щоб використовувати піктограму програми з кожного \n"
-"   вікна, він використовує невеликий ескіз, що нагадує саме вікно. \n"
-"\n"
-"Робочий простір і піктограми:\n"
-"    Цей режим дозволяє вам перемикатися між програмами поточного \n"
-"   робочого простору і дає можливість перемикатись до останнього "
-"використаного \n"
-"   програмою попереднього робочого простору. Ця програма, якщо доступна, "
-"завжди \n"
-"   показується останнім символом у списку і відокремлена роздільником/"
-"вертикальною лінією. \n"
-"   Кожне вікно зображується піктограмою програми.  \n"
-"\n"
-"Якщо бажаєте повернутися до типових налаштувань для Alt-Tab "
-"перемикача, просто\n"
-"вимкнути розширення з extensions.gnome.org або в додаткових параметрах ."
+"Цей ключ нехтує ключем у org.gnome.mutter, коли запущено оболонку GNOME."
 
-#: ../extensions/alternate-tab/extension.js:295
-msgid "Alt Tab Behaviour"
-msgstr "Режим Alt Tab"
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "Увімкнути розбиття країв, коли кладуться вікна на краї екрана"
 
-#: ../extensions/alternate-tab/extension.js:311
-msgid "All & Thumbnails"
-msgstr "Все і мініатюри"
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Робочий простір лише на основному моніторі"
 
-#: ../extensions/alternate-tab/extension.js:318
-msgid "Workspace & Icons"
-msgstr "Робочий простір та піктограми"
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "Тільки мініатюри"
 
-#: ../extensions/alternate-tab/extension.js:325
-msgid "Cancel"
-msgstr "Скасувати"
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "Тільки піктограми програми"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "Ask the user for a default behaviour if true."
-msgstr "Якщо вибрано, запитувати користувача про типову поведінку."
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "Мініатюри та піктограми програм"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Indicates if Alternate Tab is newly installed"
-msgstr "Вказує якщо недавно встановлено розширення Alternate Tab"
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "Представляти вікна як"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
-"workspace_icons."
-msgstr ""
-"Встановлює режим Alt Tab. Можливі значення: native, all_thumbnails і"
-"workspace_icons."
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "Показувати вікна тільки з поточного робочого простору"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
-msgid "The alt tab behaviour."
-msgstr "Поведінка Alt Tab"
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Огляд діяльності"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Улюблене"
+
+#: ../extensions/apps-menu/extension.js:282
+msgid "Applications"
+msgstr "Програми"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Програма і список робочих просторів"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -146,165 +99,404 @@ msgstr ""
 "Список рядків, що містять ідентифікатор програми (назва файла стільниці),"
 "двокрапка і номер робочого простору"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "Application and workspace list"
-msgstr "Програма і список робочих просторів"
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "Програма"
 
-#: ../extensions/dock/extension.js:570
-msgid "Drag here to add favorites"
-msgstr "Перетягніть, щоб додати в улюблене"
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "Робочий простір"
 
-#: ../extensions/dock/extension.js:903
-msgid "New Window"
-msgstr "Створити вікно"
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Додати правило"
 
-#: ../extensions/dock/extension.js:905
-msgid "Quit Application"
-msgstr "Закрити програму"
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "Створити нове відповідне правило"
 
-#: ../extensions/dock/extension.js:910
-msgid "Remove from Favorites"
-msgstr "Вилучити з улюбленого"
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Додати"
 
-#: ../extensions/dock/extension.js:911
-msgid "Add to Favorites"
-msgstr "Додати до улюбленого"
+#: ../extensions/drive-menu/extension.js:73
+#, javascript-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Не вдалося витягнути пристрій «%s»:"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Autohide duration"
-msgstr "Таймер автоматичне приховування"
+#: ../extensions/drive-menu/extension.js:90
+msgid "Removable devices"
+msgstr "Змінні пристрої"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Autohide effect"
-msgstr "Ефект автоматичне приховування"
+#: ../extensions/drive-menu/extension.js:117
+msgid "Open File"
+msgstr "Відкрити Файли"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Enable/disable autohide"
-msgstr "Увімкнути/вимкнути автоматичне приховування"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Icon size"
-msgstr "Розмір піктограми"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Position of the dock"
-msgstr "Розташування панелі"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Sets icon size of the dock."
-msgstr "Встановлює розмір піктограми для панелі"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgstr ""
-"Встановлює ефект приховування панелі. Можливі значення: «resize» або "
-"«rescale»"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Вказує перебування панелі на екрані. Можливі значення: «right» або "
-"«left»"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Встановлює тривалість ефекту автоматичного приховування."
-
-#: ../extensions/example/extension.js:11
+#: ../extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Привіт, світе!"
 
-#: ../extensions/gajim/extension.js:227
-#, c-format
-msgid "%s is away."
-msgstr "%s відійшов."
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "Додатковий вітальний текст."
 
-#: ../extensions/gajim/extension.js:230
-#, c-format
-msgid "%s is offline."
-msgstr "%s поза мережею."
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Якщо це поле не порожнє, воно містить текст, який буде показуватись, коли "
+"натискаєте на панель."
 
-#: ../extensions/gajim/extension.js:233
-#, c-format
-msgid "%s is online."
-msgstr "%s в мережі."
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"Приклад зроблено, щоб показувати, як зібрати правильні розширення для "
+"оболонки і саме по собі воно не має багато функціональності.\n"
+"Попри це, воно змінює вітальний текст. "
 
-#: ../extensions/gajim/extension.js:236
-#, c-format
-msgid "%s is busy."
-msgstr "%s зайнятий"
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Надпис:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
-msgstr ""
-"Якщо вибрано, розташовувати заголовки вікон у верхній частині мініатюр, а не "
-"в нижній, як це робиться типово. Зміна цього параметра вимагає "
-"перезапуску оболонки, щоб зміна вступила в силу."
+msgid "Use more screen for windows"
+msgstr "Використовувати додаткову площу екрана для вікон"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Place window captions on top"
-msgstr "Розміщувати заголовки вікон зверху"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
-msgid ""
-"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
-"default grid based algorithm, 'natural' to use another one that reflects "
-"more the position and size of the actual window"
-msgstr ""
-"Алгоритм, що використовується для розташування мініатюр. 'grid' — "
-"використовувати алгоритм сіткового розташування типово, 'natural' "
-"— використовувати інший алгоритм, який частіше показує стан і "
-"розміри поточного вікна."
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
 "Намагатися використовувати додаткову площу екрана для розташування мініатюр, "
-"змінюючи відношення сторін екрана і ущільнюючи розміщення з метою "
-"зменшення розмірів обмежувальної рамки. Цей параметр застосовується тільки для "
+"змінюючи відношення сторін екрана і ущільнюючи розміщення з метою зменшення "
+"розмірів обмежувальної рамки. Цей параметр застосовується тільки для "
 "алгоритму розміщенням мініатюр «natural»."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
-msgid "Use more screen for windows"
-msgstr "Використовувати додаткову площу екрана для вікон"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Розміщувати заголовки вікон зверху"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
-msgstr "Спосіб розташування вікон"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Якщо вибрано, розташовувати заголовки вікон у верхній частині мініатюр, а не "
+"в нижній, як це робиться типово. Зміна цього параметра вимагає перезапуску "
+"оболонки, щоб зміна вступила в силу."
+
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "Місця"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, javascript-format
+msgid "Failed to launch \"%s\""
+msgstr "Не вдалося запустити «%s»"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Комп'ютер"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "Домівка"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "Огляд мережі"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "Процесор"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "Пам'ять"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Назва теми, що завантажується з ~/.themes/name/gnome-shell"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
 msgstr "Назва теми"
 
-#: ../extensions/xrandr-indicator/extension.js:26
-msgid "Normal"
-msgstr "Звичайний"
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Назва теми, що завантажується з ~/.themes/name/gnome-shell"
 
-#: ../extensions/xrandr-indicator/extension.js:27
-msgid "Left"
-msgstr "Вліво"
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Закрити"
 
-#: ../extensions/xrandr-indicator/extension.js:28
-msgid "Right"
-msgstr "Вправо"
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Відновити згорнуте"
 
-#: ../extensions/xrandr-indicator/extension.js:29
-msgid "Upside-down"
-msgstr "На 180 градусів"
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Згорнути"
 
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Налаштувати параметри екрана…"
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Відновити розгорнуте"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Розгорнути"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Згорнути все"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Відновити все згорнуте"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Розгорнути все"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Відновити все розгорнуте"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Закрити все"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Покажчик робочого простору"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Перелік вікон"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Умови групування вікон"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Визначає правила групування вікон програм у списку вікон. Можливими "
+"значеннями є «never», «auto» і «always»."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Групування вікон"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "ніколи не групувати вікна"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Групувати вікна коли простір обмежено"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Завжди групувати вікна"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "Назви робочих просторів:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "Назва"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Робочий простір %d"
+
+#~ msgid "Notifications"
+#~ msgstr "Сповіщення"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Мережеві облікові записи"
+
+#~ msgid "System Settings"
+#~ msgstr "Системні параметри"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Заблокувати екран"
+
+#~ msgid "Switch User"
+#~ msgstr "Змінити користувача"
+
+#~ msgid "Log Out..."
+#~ msgstr "Вийти…"
+
+#~ msgid "Suspend"
+#~ msgstr "Режим очікування"
+
+#~ msgid "Hibernate"
+#~ msgstr "Сплячий режим"
+
+#~ msgid "Power Off..."
+#~ msgstr "Вимкнути…"
+
+#~ msgid ""
+#~ "This is the first time you use the Alternate Tab extension. \n"
+#~ "Please choose your preferred behaviour:\n"
+#~ "\n"
+#~ "All & Thumbnails:\n"
+#~ "    This mode presents all applications from all workspaces in one "
+#~ "selection \n"
+#~ "    list. Instead of using the application icon of every window, it uses "
+#~ "small \n"
+#~ "    thumbnails resembling the window itself. \n"
+#~ "\n"
+#~ "Workspace & Icons:\n"
+#~ "    This mode let's you switch between the applications of your current \n"
+#~ "    workspace and gives you additionally the option to switch to the last "
+#~ "used \n"
+#~ "    application of your previous workspace. This is always the last "
+#~ "symbol in \n"
+#~ "    the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "    Every window is represented by its application icon.  \n"
+#~ "\n"
+#~ "If you whish to revert to the default behavior for the Alt-Tab switcher, "
+#~ "just\n"
+#~ "disable the extension from extensions.gnome.org or the Advanced Settings "
+#~ "application."
+#~ msgstr ""
+#~ "Розширення Alternate Tab використовується вперше. \n"
+#~ "Виберіть потрібний режим:\n"
+#~ "\n"
+#~ "Все і ескізи:\n"
+#~ "   У цьому режимі всі програми з усіх стільниць перебувають в одному \n"
+#~ "    списку. Замість того, щоб використовувати піктограму програми з "
+#~ "кожного \n"
+#~ "   вікна, він використовує невеликий ескіз, що нагадує саме вікно. \n"
+#~ "\n"
+#~ "Робочий простір і піктограми:\n"
+#~ "    Цей режим дозволяє вам перемикатися між програмами поточного \n"
+#~ "   робочого простору і дає можливість перемикатись до останнього "
+#~ "використаного \n"
+#~ "   програмою попереднього робочого простору. Ця програма, якщо доступна, "
+#~ "завжди \n"
+#~ "   показується останнім символом у списку і відокремлена роздільником/"
+#~ "вертикальною лінією. \n"
+#~ "   Кожне вікно зображується піктограмою програми.  \n"
+#~ "\n"
+#~ "Якщо бажаєте повернутися до типових налаштувань для Alt-Tab перемикача, "
+#~ "просто\n"
+#~ "вимкнути розширення з extensions.gnome.org або в додаткових параметрах ."
+
+#~ msgid "Alt Tab Behaviour"
+#~ msgstr "Режим Alt Tab"
+
+#~ msgid "Cancel"
+#~ msgstr "Скасувати"
+
+#~ msgid "Ask the user for a default behaviour if true."
+#~ msgstr "Якщо вибрано, запитувати користувача про типову поведінку."
+
+#~ msgid "Indicates if Alternate Tab is newly installed"
+#~ msgstr "Вказує якщо недавно встановлено розширення Alternate Tab"
+
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails "
+#~ "and workspace_icons."
+#~ msgstr ""
+#~ "Встановлює режим Alt Tab. Можливі значення: native, all_thumbnails "
+#~ "іworkspace_icons."
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "Поведінка Alt Tab"
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "Перетягніть, щоб додати в улюблене"
+
+#~ msgid "New Window"
+#~ msgstr "Створити вікно"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Вилучити з улюбленого"
+
+#~ msgid "Autohide duration"
+#~ msgstr "Таймер автоматичне приховування"
+
+#~ msgid "Autohide effect"
+#~ msgstr "Ефект автоматичне приховування"
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "Увімкнути/вимкнути автоматичне приховування"
+
+#~ msgid "Icon size"
+#~ msgstr "Розмір піктограми"
+
+#~ msgid "Position of the dock"
+#~ msgstr "Розташування панелі"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "Встановлює розмір піктограми для панелі"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+#~ msgstr ""
+#~ "Встановлює ефект приховування панелі. Можливі значення: «resize» або "
+#~ "«rescale»"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr ""
+#~ "Вказує перебування панелі на екрані. Можливі значення: «right» або «left»"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "Встановлює тривалість ефекту автоматичного приховування."
+
+#~ msgid "%s is away."
+#~ msgstr "%s відійшов."
+
+#~ msgid "%s is offline."
+#~ msgstr "%s поза мережею."
+
+#~ msgid "%s is online."
+#~ msgstr "%s в мережі."
+
+#~ msgid "%s is busy."
+#~ msgstr "%s зайнятий"
+
+#~ msgid ""
+#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
+#~ "the default grid based algorithm, 'natural' to use another one that "
+#~ "reflects more the position and size of the actual window"
+#~ msgstr ""
+#~ "Алгоритм, що використовується для розташування мініатюр. 'grid' — "
+#~ "використовувати алгоритм сіткового розташування типово, 'natural' — "
+#~ "використовувати інший алгоритм, який частіше показує стан і розміри "
+#~ "поточного вікна."
+
+#~ msgid "Window placement strategy"
+#~ msgstr "Спосіб розташування вікон"
+
+#~ msgid "Normal"
+#~ msgstr "Звичайний"
+
+#~ msgid "Left"
+#~ msgstr "Вліво"
+
+#~ msgid "Right"
+#~ msgstr "Вправо"
+
+#~ msgid "Upside-down"
+#~ msgstr "На 180 градусів"
+
+#~ msgid "Configure display settings..."
+#~ msgstr "Налаштувати параметри екрана…"
