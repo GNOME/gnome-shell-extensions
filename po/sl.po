@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-08-19 18:52+0000\n"
-"PO-Revision-Date: 2013-08-19 21:53+0100\n"
+"POT-Creation-Date: 2013-09-21 09:11+0000\n"
+"PO-Revision-Date: 2013-09-21 20:20+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -86,7 +86,7 @@ msgstr "Pregled dejavnosti"
 msgid "Favorites"
 msgstr "Priljubljeno"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Programi"
 
@@ -279,6 +279,10 @@ msgstr "Zapri vse"
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Kazalnik delovnih površin"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Seznam oken"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
