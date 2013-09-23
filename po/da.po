@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-17 18:40+0200\n"
-"PO-Revision-Date: 2013-09-16 23:58+0200\n"
+"POT-Creation-Date: 2013-09-23 19:34+0200\n"
+"PO-Revision-Date: 2013-09-23 19:29+0200\n"
 "Last-Translator: Kris Thomsen <mail@kristhomsen.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -52,6 +52,12 @@ msgstr "Aktivér kant-fliselægning når vinduer slippes på skærmkanter"
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
 msgid "Workspaces only on primary monitor"
 msgstr "Kun arbejdsområder på primær skærm"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Forsink fokusændringer i musetilstand indtil pegeren holder op med at bevæge "
+"sig"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
