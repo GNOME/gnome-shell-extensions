@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-15 17:23+0200\n"
-"PO-Revision-Date: 2013-09-15 17:23+0200\n"
+"POT-Creation-Date: 2013-09-23 22:20+0200\n"
+"PO-Revision-Date: 2013-09-23 22:21+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -54,6 +54,12 @@ msgstr "Activar o mosaico nos bordos ao arrastrar xanelas aos bordos da xanela"
 msgid "Workspaces only on primary monitor"
 msgstr "Espazos de traballo só no monitor primario"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Atrasar o cambio de foco no modo rato até que o punteiro se deteña ao "
+"moverse"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Só miniaturas"
@@ -82,7 +88,7 @@ msgstr "Vista xeral de actividades"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Aplicativos"
 
