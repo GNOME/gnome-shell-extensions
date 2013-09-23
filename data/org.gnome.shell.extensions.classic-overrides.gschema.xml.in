@@ -32,7 +32,7 @@
       <_summary>Delay focus changes in mouse mode until the pointer stops moving</_summary>
       <_description>
         This key overrides the key in org.gnome.mutter when running GNOME Shell.
-      <_/description>
+      </_description>
     </key>
   </schema>
 </schemalist>
