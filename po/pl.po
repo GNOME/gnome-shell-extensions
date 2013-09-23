@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-15 02:40+0200\n"
+"POT-Creation-Date: 2013-09-23 20:36+0200\n"
 "PO-Revision-Date: 2013-09-15 02:42+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
@@ -61,6 +61,12 @@ msgstr ""
 msgid "Workspaces only on primary monitor"
 msgstr "Obszary robocze tylko na pierwszym monitorze"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Opóźnienie zmiany aktywności w trybie myszy do momentu, w którym kursor się "
+"zatrzymuje"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Tylko miniatury"
@@ -89,7 +95,7 @@ msgstr "Ekran podglądu"
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Programy"
 
