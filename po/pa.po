@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-09-15 00:43+0000\n"
-"PO-Revision-Date: 2013-09-17 22:14-0500\n"
+"POT-Creation-Date: 2013-09-23 10:19+0000\n"
+"PO-Revision-Date: 2013-09-24 07:53-0500\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
@@ -54,6 +54,10 @@ msgstr "ਕੋਨਾ ਟਿਲਿੰਗ ਚਾਲੂ, ਜਦੋਂ ਵਿੰਡ�
 msgid "Workspaces only on primary monitor"
 msgstr "ਪ੍ਰਾਈਮਰੀ ਮਾਨੀਟਰ ਉੱਤੇ ਕੇਵਲ ਵਰਕਸਪੇਸ"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "ਪੁਆਇੰਟਰ ਦੇ ਹਿਲਣ ਤੋਂ ਰੁਕਣ ਤੱਕ ਮਾਊਸ ਮੋਡ ਵਿੱਚ ਫੋਕਸ ਬਦਲਾਅ ਵਿੱਚ ਦੇਰੀ"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "ਕੇਵਲ ਥੰਮਨੇਲ ਹੀ"
@@ -82,7 +86,7 @@ msgstr "ਸਰਗਰਮੀ ਝਲਕ"
 msgid "Favorites"
 msgstr "ਪਸੰਦੀਦਾ"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ"
 
@@ -157,8 +161,9 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Example ਦਾ ਮਕਸਦ ਸ਼ੈਲ ਲਈ ਇੱਕ ਵਧੀਆ ਕੰਮ ਕਰਦੀ ਇਕਸਟੈਸ਼ਨ ਬਣਾਉਣ ਦੀ ਉਦਾਹਰਨ ਦੇਣਾ ਹੈ "
-"ਅਤੇ ਇਸ ਦਾ ਖੁਦ ਕੋਈ ਬਹੁਤਾ ਕੰਮ ਨਹੀਂ ਹੈ।\n"
+"Example ਦਾ ਮਕਸਦ ਸ਼ੈਲ ਲਈ ਇੱਕ ਵਧੀਆ ਕੰਮ ਕਰਦੀ ਇਕਸਟੈਸ਼ਨ ਬਣਾਉਣ ਦੀ ਉਦਾਹਰਨ ਦੇਣਾ ਹੈ ਅਤੇ "
+"ਇਸ ਦਾ "
+"ਖੁਦ ਕੋਈ ਬਹੁਤਾ ਕੰਮ ਨਹੀਂ ਹੈ।\n"
 "ਫੇਰ ਵੀ ਸਵਾਗਤੀ ਸੁਨੇਹੇ ਨੂੰ ਬਦਲਣਾ ਸੰਭਵ ਹੈ।"
 
 #: ../extensions/example/prefs.js:36
@@ -176,9 +181,10 @@ msgid ""
 "This setting applies only with the natural placement strategy."
 msgstr ""
 "ਸਕਰੀਨ ਆਕਾਰ ਅਨੁਪਾਤ ਨੂੰ ਧਿਆਨ ਵਿੱਚ ਰੱਖ ਕੇ ਵਿੰਡੋ ਥੰਮਨੇਲ ਨੂੰ ਰੱਖ ਕੇ ਹੋਰ ਸਕਰੀਨ ਵਰਤਣ "
-"ਦੀ ਕੋਸ਼ਿਸ਼ "
-"ਕਰੋ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਬਾਊਂਡ ਬਕਸ ਘਟਾਉਣ ਲਈ ਹੋਰ ਵੀ ਸੰਘਣਾ ਕਰੋ। ਇਹ ਸੈਟਿੰਗ ਕੇਵਲ ਸੁਭਾਵਿਕ "
-"ਥਾਂ ਨੀਤੀ ਨਾਲ ਹੀ ਲਾਗੂ ਹੁੰਦੀ ਹੈ।"
+"ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਅਤੇ "
+"ਉਹਨਾਂ ਨੂੰ ਬਾਊਂਡ ਬਕਸ ਘਟਾਉਣ ਲਈ ਹੋਰ ਵੀ ਸੰਘਣਾ ਕਰੋ। ਇਹ ਸੈਟਿੰਗ ਕੇਵਲ ਸੁਭਾਵਿਕ ਥਾਂ "
+"ਨੀਤੀ ਨਾਲ ਹੀ "
+"ਲਾਗੂ ਹੁੰਦੀ ਹੈ।"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -280,7 +286,6 @@ msgid "Workspace Indicator"
 msgstr "ਵਰਕਸਪੇਸ ਇੰਡੀਕੇਟਰ"
 
 #: ../extensions/window-list/extension.js:743
-#| msgid "Window Grouping"
 msgid "Window List"
 msgstr "ਵਿੰਡੋਜ਼ ਲਿਸਟ"
 
