@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-09-15 00:58+0000\n"
-"PO-Revision-Date: 2013-09-15 14:28+0600\n"
+"POT-Creation-Date: 2013-09-23 10:19+0000\n"
+"PO-Revision-Date: 2013-09-24 06:33+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "Language: kk\n"
@@ -55,6 +55,10 @@ msgstr ""
 msgid "Workspaces only on primary monitor"
 msgstr "Жұмыс орындары тек біріншілік мониторда"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "Тышқан режиміндегі фокусты ауыстыру курсор тоқтағанша дейін кідірту"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Тек үлгі"
@@ -83,7 +87,7 @@ msgstr "Шолу көрінісі"
 msgid "Favorites"
 msgstr "Таңдамалылар"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Қолданбалар"
 
