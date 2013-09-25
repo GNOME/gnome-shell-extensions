@@ -4,13 +4,13 @@
 #
 # assar <asiersar@yahoo.com>, 2011.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2013.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-16 20:33+0200\n"
-"PO-Revision-Date: 2013-09-16 20:59+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-09-23 10:19+0000\n"
+"PO-Revision-Date: 2013-09-25 11:17+0200\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
@@ -58,6 +58,12 @@ msgstr ""
 msgid "Workspaces only on primary monitor"
 msgstr "Laneko areak pantaila nagusian soilik"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Fokuaren aldaketaren atzerapena saguaren moduan erakusleak mugitzeari utzi "
+"arte"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Koadro txikiak soilik"
@@ -86,7 +92,7 @@ msgstr "Jardueren ikuspegi orokorra"
 msgid "Favorites"
 msgstr "Gogokoak"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Aplikazioak"
 
@@ -124,7 +130,7 @@ msgid "Add"
 msgstr "Gehitu"
 
 #: ../extensions/drive-menu/extension.js:73
-#, javascript-format
+#, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Huts egin du '%s' unitatea egoztean: "
 
@@ -150,15 +156,16 @@ msgid ""
 "panel."
 msgstr "Ez badago hutsik, panelean klik egitean erakutsiko den testua dauka."
 
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"Shell-erako portaera egokia duten hedapenak nola eraikitzen den "
-"erakusteko helburua du adibideak,  ondorioz bere kasa funtzionalitate "
-"baxukoa da.\n"
+"Shell-erako portaera egokia duten hedapenak nola eraikitzen den erakusteko "
+"helburua du adibideak,  ondorioz bere kasa funtzionalitate baxukoa da.\n"
 "Hala ere, ongi etorriko mezua pertsonalizatzeko aukera dago."
 
 #: ../extensions/example/prefs.js:36
@@ -176,9 +183,9 @@ msgid ""
 "This setting applies only with the natural placement strategy."
 msgstr ""
 "Saiatu pantaila gehiago erabiltzen leihoen koadro txikiak kokatzeko "
-"pantailaren aspektu-erlaziora egokituz, eta haiek taldekatu "
-"muga-koadroa txikiagotzeko. Ezarpen hau kokapen naturalaren "
-"estrategiarekin soilik aplikatzen da."
+"pantailaren aspektu-erlaziora egokituz, eta haiek taldekatu muga-koadroa "
+"txikiagotzeko. Ezarpen hau kokapen naturalaren estrategiarekin soilik "
+"aplikatzen da."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -190,9 +197,9 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"TRUE (egia) bada, leihoen epigrafeak dagokien koadro txikien gainean "
-"jarriko ditu, Shell-aren lehenespena (behean jartzearena) gainidatziz. "
-"Ezarpen hau aldatzeko eta aplikatzeko Shell berrabiarazi behar da."
+"TRUE (egia) bada, leihoen epigrafeak dagokien koadro txikien gainean jarriko "
+"ditu, Shell-aren lehenespena (behean jartzearena) gainidatziz. Ezarpen hau "
+"aldatzeko eta aplikatzeko Shell berrabiarazi behar da."
 
 #: ../extensions/places-menu/extension.js:78
 #: ../extensions/places-menu/extension.js:81
@@ -200,7 +207,7 @@ msgid "Places"
 msgstr "Lekuak"
 
 #: ../extensions/places-menu/placeDisplay.js:56
-#, javascript-format
+#, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Huts egin du '%s' abiaraztean"
 
@@ -292,8 +299,7 @@ msgid ""
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "Aplikazio bereko leihoak leihoen zerrendan noiz elkartuko diren erabakitzen "
-"du. "
-"Balio erabilgarriak: 'never' (inoiz ere ez), 'auto' (automatikoa) eta "
+"du. Balio erabilgarriak: 'never' (inoiz ere ez), 'auto' (automatikoa) eta "
 "'always' (beti)."
 
 #: ../extensions/window-list/prefs.js:30
@@ -321,7 +327,7 @@ msgid "Name"
 msgstr "Izena"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, javascript-format
+#, c-format
 msgid "Workspace %d"
 msgstr "%d. laneko area"
 
