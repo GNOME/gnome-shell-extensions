@@ -2,15 +2,15 @@
 # Copyright (C) 2012 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# Andika Triwidada <andika@gmail.com>, 2012.
+# Andika Triwidada <andika@gmail.com>, 2012, 2013.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-shell-extensions master\n"
+"Project-Id-Version: gnome-shell-extensions gnome-3-8\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-10-08 17:42+0000\n"
-"PO-Revision-Date: 2012-10-15 21:54+0700\n"
+"POT-Creation-Date: 2013-09-21 17:43+0000\n"
+"PO-Revision-Date: 2013-09-27 18:42+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
@@ -19,52 +19,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "Mode ikon aplikasi."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME Klasik"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Sesi ini memasuk-logkan Anda ke dalam GNOME Klasik"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell Klasik"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Manajemen jendela dan peluncuran aplikasi"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Cantolkan dialog modal ke jendela induk"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Menata bagaimana jendela ditampilkan di penukar. Kemungkinan yang valid "
-"adalah 'thumbnail-only' (menampilkan gambar mini jendela), 'app-icon-"
-"only' (menampilkan hanya ikon aplikasi), atau 'both' (keduanya)."
+"Kunci ini menimpa kunci dalam org.gnome.mutter ketika menjalankan GNOME "
+"Shell."
 
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "Fungsikan pengubinan tepi ketika menjatuhkan jendela pada tepi layar"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Ruang kerja hanya pada monitor primer"
+
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Hanya gambar mini"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Hanya ikon aplikasi"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Gambar mini dan ikon aplikasi"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Sajikan jendela sebagai"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Hanya tampilkan jendela dalam ruang kerja kini"
 
 #. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:86
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Suspensi"
 
-#: ../extensions/alternative-status-menu/extension.js:91
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Hibernasi"
 
-#: ../extensions/alternative-status-menu/extension.js:96
+#: ../extensions/alternative-status-menu/extension.js:131
 msgid "Power Off"
 msgstr "Matikan"
 
@@ -83,6 +105,18 @@ msgstr "Fungsikan hibernasi"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Menentukan kenampakan menu Hibernasi"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Ringkasan Aktivitas"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Favorit"
+
+#: ../extensions/apps-menu/extension.js:276
+msgid "Applications"
+msgstr "Aplikasi"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -116,82 +150,6 @@ msgstr "Buat aturan pencocokan baru"
 #: ../extensions/auto-move-windows/prefs.js:98
 msgid "Add"
 msgstr "Tambah"
-
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "Seret ke sini untuk menambah favorit"
-
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "Jendela Baru"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "Keluar Aplikasi"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "Hapus dari Favorit"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "Tambah ke Favorit"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Posisi tambat"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Atur posisi dok pada layar. Nilai yang diizinkan adalah 'right' (kanan) atau "
-"'left' (kiri)"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Ukuran ikon"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Mengatur ukuran ikon dok."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Aktifkan/nonaktifkan sembunyi otomatis"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Efek sembunyi otomatis"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Mengatur efek penyembunyian dok. Nilai yang diizinkan adalah 'resize' (ubah "
-"ukuran), 'rescale' (ubah skala), dan 'move' (pindah)"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Durasi sembunyi otomatis"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Mengatur durasi waktu dari efek sembunyi otomatis."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Monitor"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"Mengatur monitor tempat menampilkan dok. Nilai bawaan (-1) adalah monitor "
-"utama."
 
 #: ../extensions/drive-menu/extension.js:72
 #, c-format
@@ -238,26 +196,6 @@ msgstr ""
 msgid "Message:"
 msgstr "Pesan:"
 
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "%s pergi."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "%s luring."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "%s daring."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "%s sedang sibuk."
-
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
 msgstr "Pakai lebih banyak layar bagi jendela"
@@ -287,44 +225,33 @@ msgstr ""
 "masing, menimpa bawaan shell yang menempatkannya di bagian bawah. Mengubah "
 "ini memerlukan memulai ulang shell agar berdampak."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:77
 msgid "Places"
 msgstr "Tempat"
 
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Perangkat"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Penanda Buku"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Jaringan"
-
-#: ../extensions/places-menu/placeDisplay.js:48
+#: ../extensions/places-menu/placeDisplay.js:56
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Gagal meluncurkan \"%s\""
 
+#: ../extensions/places-menu/placeDisplay.js:98
 #: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Komputer"
+
+#: ../extensions/places-menu/placeDisplay.js:199
 msgid "Home"
 msgstr "Rumah"
 
-#: ../extensions/places-menu/placeDisplay.js:184
-msgid "File System"
-msgstr "Sistem Berkas"
-
-#: ../extensions/places-menu/placeDisplay.js:188
-msgid "Browse network"
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
 msgstr "Ramban jaringan"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Memori"
 
@@ -335,6 +262,35 @@ msgstr "Nama tema"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Nama tema, untuk dimuat dari ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Kapan mengelompokkan jendela"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Menentukan kapan mengelompokkan jendela dari aplikasi yang sama pada daftar "
+"jendela. Nilai yang mungkin adalah \"never\" (tak pernah), \"auto"
+"\" (otomatis), dan \"always\" (selalu)."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Pengelompokan Jendela"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Jangan pernah kelompokkan jendela"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Kelompokkan jendela ketika ruang terbatas"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Selalu kelompokkan jendela"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -373,6 +329,6 @@ msgstr "Terbalik"
 msgid "Display"
 msgstr "Tampilan"
 
-#: ../extensions/xrandr-indicator/extension.js:80
+#: ../extensions/xrandr-indicator/extension.js:87
 msgid "Display Settings"
 msgstr "Pengaturan Tampilan"
