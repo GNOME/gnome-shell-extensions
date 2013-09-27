@@ -1,0 +1,311 @@
+# Afrikaans translation for gnome-shell-extensions.
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# F Wolff <friedel@translate.org.za>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-09-26 20:32+0000\n"
+"PO-Revision-Date: 2013-09-27 16:17+0200\n"
+"Last-Translator: F Wolff <friedel@translate.org.za>\n"
+"Language-Team: translate-discuss-af@lists.sourceforge.net\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
+
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME Klassiek"
+
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Hierdie sessie laat mens aanmeld by GNOME Klassiek"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell Klassiek"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Vensterbestuur en toepassinglansering"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Werkruimtes slegs op primêre monitor"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "Slegs toepassingsikoon"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "Duimnael en toepassingsikoon"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "Wys vensters as"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "Wys slegs vensters van die huidige werkruimte"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Aktiwiteite-oorsig"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Gunstelinge"
+
+#: ../extensions/apps-menu/extension.js:282
+msgid "Applications"
+msgstr "Toepassings"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Toepassing- en werkruimtelys"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "Toepassing"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "Werkruimte"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Voeg reël by"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr ""
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Voeg by"
+
+#: ../extensions/drive-menu/extension.js:73
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Kon nie skyf '%s' uitskiet nie:"
+
+#: ../extensions/drive-menu/extension.js:90
+msgid "Removable devices"
+msgstr "Verwyderbare toestelle"
+
+#: ../extensions/drive-menu/extension.js:117
+msgid "Open File"
+msgstr "Open lêer"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "Hallo, wêreld!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr ""
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Boodskap:"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "Plekke"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "Kon nie \"%s\" lanseer nie"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Rekenaar"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "Tuis"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "Blaai deur netwerk"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "SVE"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "Geheue"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "Temanaam"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr ""
+
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Sluit"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr ""
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Minimeer"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr ""
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Maksimeer"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Minimeer almal"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr ""
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Maksimeer almal"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr ""
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Sluit almal"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr ""
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Vensterlys"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Wanneer om vensters te groepeer"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Besluit wanneer om vensters van dieselfde toepassing in die vensterlys te "
+"groepeer. Moontlike waardes is \"never\", \"auto\" en \"always\"."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Venstergroepering"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Moet nooit vensters groepeer nie"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Groepeer vensters wanneer ruimte beperk is"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Groepeer vensters altyd"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "Werkruimtename:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "Naam"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "Werkruimte %d"
