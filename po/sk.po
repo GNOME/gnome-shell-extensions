@@ -1,16 +1,16 @@
 # Slovak translation for gnome-shell-extensions.
-# Copyright (C) 2012 Free Software Foundation, Inc.
+# Copyright (C) 2012-2013 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Pavol Klačanský <pavol@klacansky.com>, 2012.
-# Dušan Kazik <prescott66@gmail.com>, 2012.
+# Dušan Kazik <prescott66@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-09-15 00:43+0000\n"
-"PO-Revision-Date: 2013-08-21 12:30+0100\n"
+"POT-Creation-Date: 2013-09-27 14:18+0000\n"
+"PO-Revision-Date: 2013-09-27 17:42+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -62,6 +62,12 @@ msgstr ""
 msgid "Workspaces only on primary monitor"
 msgstr "Pracovné priestory iba na primárnom monitore"
 
+# summary
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Oneskoriť pohyb zamerania v režime myši, až kým sa ukazovateľ nezastaví"
+
 # RadioButton label
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -96,7 +102,7 @@ msgid "Favorites"
 msgstr "Obľúbené"
 
 # TreeViewColumn
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Aplikácie"
 
@@ -142,7 +148,7 @@ msgstr "Pridať"
 
 # https://bugzilla.gnome.org/show_bug.cgi?id=687590
 #: ../extensions/drive-menu/extension.js:73
-#, c-format
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Zlyhalo vysúvanie jednotky „%s“:"
 
@@ -176,8 +182,6 @@ msgid ""
 msgstr "Obsahuje text, ktorý bude zobrazený po kliknutí na panel."
 
 # PM: podľa mňa chýba preklad druhej časti prvej vety
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -231,7 +235,7 @@ msgid "Places"
 msgstr "Miesta"
 
 #: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "Zlyhalo spustenie „%s“"
 
@@ -326,7 +330,6 @@ msgid "Workspace Indicator"
 msgstr "Indikátor pracovného priestoru"
 
 #: ../extensions/window-list/extension.js:743
-#| msgid "Window Grouping"
 msgid "Window List"
 msgstr "Zoznam okien"
 
@@ -370,6 +373,6 @@ msgstr "Názov"
 
 # store label
 #: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Pracovný priestor č. %d"
