@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-08 19:50+0200\n"
-"PO-Revision-Date: 2013-09-08 19:51+0200\n"
+"POT-Creation-Date: 2013-09-28 14:53+0200\n"
+"PO-Revision-Date: 2013-09-28 14:54+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: \n"
@@ -40,7 +40,8 @@ msgstr "Fest modal dialog til opphavsvindu"
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "Denne nøkkelen overstyrer nøkkelen i org.gnome.mutter når GNOME Shell kjører."
+msgstr ""
+"Denne nøkkelen overstyrer nøkkelen i org.gnome.mutter når GNOME Shell kjører."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Enable edge tiling when dropping windows on screen edges"
@@ -49,6 +50,10 @@ msgstr ""
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
 msgid "Workspaces only on primary monitor"
 msgstr "Arbeidsområder kun på hovedskjerm"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -78,7 +83,7 @@ msgstr "Aktivitetsoversikt"
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Programmer"
 
@@ -260,6 +265,10 @@ msgstr "Lukk alle"
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Arbeidsområdeindikator"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Vinduliste"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
