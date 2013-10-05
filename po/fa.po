@@ -1,7 +1,7 @@
 # Persian translation for gnome-shell-extensions.
 # Copyright (C) 2011 Iranian Free Software Users Group (IFSUG.org) translation team.
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2011.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2011, 2013.
 #
 msgid ""
 msgstr ""
