@@ -7,63 +7,90 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-04-29 21:33+0000\n"
-"PO-Revision-Date: 2012-05-14 20:38+0330\n"
+"POT-Creation-Date: 2013-09-23 10:19+0000\n"
+"PO-Revision-Date: 2013-10-05 18:31+0330\n"
 "Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
 "Language-Team: Persian\n"
+"Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Persian\n"
-"X-Poedit-Country: IRAN, ISLAMIC REPUBLIC OF\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.7\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "رفتار alt tab."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "گنوم کلاسیک"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and workspace_icons. See the configuration dialogs for details."
-msgstr "رفتار Alt-Tab را تنظیم می‌کند. مقادیر ممکن عبارتند از: all_thumbnails و workspace_icons. برای جزئیات، محاوره‌ی پیکربندی را مشاهده کنید."
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "این نشست شما را به گنوم کلاسیک وارد می‌کند"
 
-#: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "همه و تصاویر بندانگشتی"
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "گنوم‌شل کلاسیک"
 
-#: ../extensions/alternate-tab/prefs.js:28
-msgid "This mode presents all applications from all workspaces in one selection list. Instead of using the application icon of every window, it uses small thumbnails resembling the window itself."
-msgstr ""
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "مدیریت پنجره‌ها و اجرا کننده برنامه‌ها"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "فضای‌کاری و شمایل‌ها"
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "اتصال محاوره modal به پنجره والد"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current workspace and gives you additionally the option to switch to the last used application of your previous workspace. This is always the last symbol in the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr "این کلید، کلید org.gnome.mutter را در هنگام اجرای گنوم‌شل بازنویسی می‌کند."
 
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr "انتقالِ انتخاب فعلی به بالا قبل از بستن پنجره واشو"
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "فعال‌سازی چینش در گوشه‌ها هنگامی که پنجره‌ها در گوشه‌های صفحه‌نمایش می‌اندازید"
 
-#: ../extensions/alternate-tab/prefs.js:58
-msgid "The Alternate Tab can be used in different modes, that affect the way windows are chosen and presented."
-msgstr "«جای‌گزین Tab» می‌تواند در حالت‌های مختلفی استفاده شود، که در نحوه باز شدن و انتخاب پنجره‌ها تاثیر می‌گذارد."
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid "Workspace Indicator"
+msgid "Workspaces only on primary monitor"
+msgstr "فضا‌های کاری تنها در نمایشگر اصلی"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:64
-msgid "Suspend"
-msgstr "تعلیق"
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "به تاخیر انداختن تغییر تمرکز در حالت موشی تا زمانی که نشانگر از حرکت باز ایستد"
 
-#: ../extensions/alternative-status-menu/extension.js:69
-msgid "Hibernate"
-msgstr "خواب‌زمستانی"
+#: ../extensions/alternate-tab/prefs.js:20
+#| msgid "All & Thumbnails"
+msgid "Thumbnail only"
+msgstr "تنها تصویر بندانگشتی"
 
-#: ../extensions/alternative-status-menu/extension.js:74
-msgid "Power Off..."
-msgstr "خاموش کردن..."
+#: ../extensions/alternate-tab/prefs.js:21
+#| msgid "Application"
+msgid "Application icon only"
+msgstr "تنها شمایل برنامه"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "تصویر بندانگشتی و شمایل برنامه"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "نمایش پنجره به عنوان"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "نمایش پنجره‌ها تنها در فضای‌کاری فعلی"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "نمای‌کلی فعالیت‌ها"
+
+#: ../extensions/apps-menu/extension.js:113
+#| msgid "Add to Favorites"
+msgid "Favorites"
+msgstr "علاقه‌مندی‌ها"
+
+#: ../extensions/apps-menu/extension.js:282
+#| msgid "Application"
+msgid "Applications"
+msgstr "برنامه‌ها"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -74,7 +101,6 @@ msgid "A list of strings, each containing an application id (desktop file name),
 msgstr "فهرستی از رشته‌ها، هرکدام حاوی شناسه‌ی یک برنامه (نام پرونده رومیزی)، در ادامه‌ی یک ویرگول و شماره‌ی فضای کاری"
 
 #: ../extensions/auto-move-windows/prefs.js:55
-#| msgid "Quit Application"
 msgid "Application"
 msgstr "برنامه"
 
@@ -95,73 +121,20 @@ msgstr "اضافه کردن یک قاعده‌ی منطبق جدید"
 msgid "Add"
 msgstr "اضافه"
 
-#: ../extensions/dock/extension.js:577
-msgid "Drag here to add favorites"
-msgstr "به اینجا بکشید تا به علاقه‌مندی‌ها اضافه شود"
+#: ../extensions/drive-menu/extension.js:73
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "بیرون دادن دیسک‌گردان «%s» شکست خورد:"
 
-#: ../extensions/dock/extension.js:903
-msgid "New Window"
-msgstr "پنجره جدید"
+#: ../extensions/drive-menu/extension.js:90
+#| msgid "Removable Devices"
+msgid "Removable devices"
+msgstr "دستگاه‌های جداشدنی"
 
-#: ../extensions/dock/extension.js:905
-msgid "Quit Application"
-msgstr "خروج از برنامه"
-
-#: ../extensions/dock/extension.js:910
-msgid "Remove from Favorites"
-msgstr "حذف از علاقه‌مندی‌ها"
-
-#: ../extensions/dock/extension.js:911
-msgid "Add to Favorites"
-msgstr "اضافه کردن به علاقه‌مندی‌ها"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "اندازه شمایل"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "فعال/غیرفعال کردن مخفی‌سازی خودکار"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "جلوه‌ی مخفی‌سازی خودکار"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "طول مدت مخفی‌سازی خودکار"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "تنظیم مدت زمان جلوه‌ی مخفی‌سازی خودکار"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "نمایشگر"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid "Sets monitor to display dock in. The default value (-1) is the primary monitor."
-msgstr ""
-
-#: ../extensions/drive-menu/extension.js:66
-msgid "Open file manager"
-msgstr "باز کردن مدیر پرونده"
+#: ../extensions/drive-menu/extension.js:117
+#| msgid "Open file manager"
+msgid "Open File"
+msgstr "باز کردن پرونده"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -182,30 +155,12 @@ msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
+"هدف Example این است که نشان دهد چگونه می‌توان متصل‌شونده‌های صحیح برای گنوم‌شل ساخت و برای نمونه کمی قابلیت از خود نیز دارد.\n"
+"با این وجود می‌توان پیام خوش‌آمد را تغییر داد."
 
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "پیام:"
-
-#: ../extensions/gajim/extension.js:227
-#, c-format
-msgid "%s is away."
-msgstr "%s غائب است."
-
-#: ../extensions/gajim/extension.js:230
-#, c-format
-msgid "%s is offline."
-msgstr "%s برون‌خط است."
-
-#: ../extensions/gajim/extension.js:233
-#, c-format
-msgid "%s is online."
-msgstr "%s برخط است."
-
-#: ../extensions/gajim/extension.js:236
-#, c-format
-msgid "%s is busy."
-msgstr "%s مشغول است."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -213,7 +168,7 @@ msgstr "استفاده از صفحه بیشتر برای پنجره"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
 msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
-msgstr ""
+msgstr "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -223,9 +178,36 @@ msgstr "قراردادن عنوان پنجره در بالا"
 msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
 msgstr "اگر بر روی درست باشد، عنوان پنجره را بالای تصویر آن قرار می‌دهد، که حالت پیش‌فرض شل در پایین را تغییر می‌دهد. تغییر این گزینه، نیاز به راه‌اندازی مجدد شل دارد تا تاثیر بگذارد."
 
-#: ../extensions/places-menu/extension.js:37
-msgid "Removable Devices"
-msgstr "دستگاه‌های جدا شدنی"
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "مکان‌ها"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "اجرای «%s» شکست خورد"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "رایانه"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "خانه"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "مرور شبکه"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "سی‌پی‌یو"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "حافظه"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -235,9 +217,78 @@ msgstr "نام تم"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "نام تم، جهت بارگیری از شاخه themes/name/gnome-shell./~"
 
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "خروج"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "ناحداقل کردن"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "حداکثر کردن"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "ناحداکثر کردن"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "حداکثر کردن"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "حداقل کردن همه"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "ناحداقل کردن همه"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "حداکثر کردن همه"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "ناحداکثر کردن همه"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "بستن همه"
+
+#: ../extensions/window-list/extension.js:591
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "نشانگر فضای‌کاری"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "فهرست پنجره"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "زمان گروه کردن پنجره‌ها"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid "Decides when to group windows from the same application on the window list. Possible values are \"never\", \"auto\" and \"always\"."
+msgstr "تصمیم می‌گیرد که چه زمانی پنجره‌های یک برنامه واحد در فهرست پنجره‌ها گروه شوند. مقادیر ممکن عبارتند از «never»، «auto» و «always»"
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "گروه‌سازی پنجره‌ها"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "هیچ‌گاه پنجره‌ها گروه نشوند"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "پنجره‌ها زمانی که فضا محدود است گروه شوند"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "همیشه پنجره‌ها گروه شوند"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -252,25 +303,94 @@ msgstr "نام"
 msgid "Workspace %d"
 msgstr "فضای‌کاری %Id"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "عادی"
+#~ msgid "The alt tab behaviour."
+#~ msgstr "رفتار alt tab."
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "چپ"
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "رفتار Alt-Tab را تنظیم می‌کند. مقادیر ممکن عبارتند از: all_thumbnails و "
+#~ "workspace_icons. برای جزئیات، محاوره‌ی پیکربندی را مشاهده کنید."
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "راست"
+#~ msgid "Workspace & Icons"
+#~ msgstr "فضای‌کاری و شمایل‌ها"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "برعکس"
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr "انتقالِ انتخاب فعلی به بالا قبل از بستن پنجره واشو"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "پیکربندی تنظیمات نمایش..."
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "«جای‌گزین Tab» می‌تواند در حالت‌های مختلفی استفاده شود، که در نحوه باز شدن و "
+#~ "انتخاب پنجره‌ها تاثیر می‌گذارد."
+
+#~ msgid "Suspend"
+#~ msgstr "تعلیق"
+
+#~ msgid "Hibernate"
+#~ msgstr "خواب‌زمستانی"
+
+#~ msgid "Power Off..."
+#~ msgstr "خاموش کردن..."
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "به اینجا بکشید تا به علاقه‌مندی‌ها اضافه شود"
+
+#~ msgid "New Window"
+#~ msgstr "پنجره جدید"
+
+#~ msgid "Quit Application"
+#~ msgstr "خروج از برنامه"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "حذف از علاقه‌مندی‌ها"
+
+#~ msgid "Icon size"
+#~ msgstr "اندازه شمایل"
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "فعال/غیرفعال کردن مخفی‌سازی خودکار"
+
+#~ msgid "Autohide effect"
+#~ msgstr "جلوه‌ی مخفی‌سازی خودکار"
+
+#~ msgid "Autohide duration"
+#~ msgstr "طول مدت مخفی‌سازی خودکار"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "تنظیم مدت زمان جلوه‌ی مخفی‌سازی خودکار"
+
+#~ msgid "Monitor"
+#~ msgstr "نمایشگر"
+
+#~ msgid "%s is away."
+#~ msgstr "%s غائب است."
+
+#~ msgid "%s is offline."
+#~ msgstr "%s برون‌خط است."
+
+#~ msgid "%s is online."
+#~ msgstr "%s برخط است."
+
+#~ msgid "%s is busy."
+#~ msgstr "%s مشغول است."
+
+#~ msgid "Normal"
+#~ msgstr "عادی"
+
+#~ msgid "Left"
+#~ msgstr "چپ"
+
+#~ msgid "Right"
+#~ msgstr "راست"
+
+#~ msgid "Upside-down"
+#~ msgstr "برعکس"
+
+#~ msgid "Configure display settings..."
+#~ msgstr "پیکربندی تنظیمات نمایش..."
 
 #~ msgid "Available"
 #~ msgstr "موجود"
