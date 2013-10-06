@@ -1,0 +1,333 @@
+# Catalan translation for gnome-shell-extensions.
+# Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Jordi Mas i Hernandez <jmas@softcatala.org>, 2011.
+# Gil Forcada <gilforcada@guifi.net>, 2012, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-06 21:59+0200\n"
+"PO-Revision-Date: 2013-09-25 00:21+0200\n"
+"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
+"Language-Team: Catalan <tradgnome@softcatala.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME clàssic"
+
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Esta sessió vos permet utilitzar el GNOME clàssic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell clàssic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Gestió de finestres i iniciació d'aplicacions"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Adjunta el diàleg modal a la finestra pare"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Si s'executa el GNOME Shell, esta clau sobreescriu la clau «org.gnome."
+"mutter»."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Habilita la tesselització a les vores en deixar anar les finestres a les "
+"vores de la pantalla"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Els espais de treball només es mostren en el monitor principal"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Retarda el canvi de focus, en mode ratolí, fins que el punter estiga quiet"
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "Només miniatures"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "Només la icona de l'aplicació"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "Miniatura i icona de l'aplicació"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "Mostra les finestres com a"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "Mostra només les icones de l'espai de treball actual"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Vista general d'activitats"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Preferides"
+
+#: ../extensions/apps-menu/extension.js:282
+msgid "Applications"
+msgstr "Aplicacions"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Aplicació i llista d'espais de treball"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Una llista de cadenes, cada una de les quals conté un identificador "
+"d'aplicació (nom del fitxer de l'escriptori), seguit de dos punts i el "
+"número de l'espai de treball"
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "Aplicació"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "Espai de treball"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Afig una regla"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "Crea una regla de coincidència nova"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Afig"
+
+#: ../extensions/drive-menu/extension.js:73
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Ha fallat l'expulsió de la unitat «%s»:"
+
+#: ../extensions/drive-menu/extension.js:90
+msgid "Removable devices"
+msgstr "Dispositius extraïbles"
+
+#: ../extensions/drive-menu/extension.js:117
+msgid "Open File"
+msgstr "Obri el fitxer"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "Hola, món!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "Text de rebuda alternatiu."
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Si no és buit, conté el text que es mostrarà quan es faça clic en el quadre."
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"L'«Example» està pensat com una extensió del GNOME Shell que demostri la "
+"manera correcta de crear extensions. Com a extensió pròpiament dita no fa "
+"gairebé res.\n"
+"Tot i així permet personalitzar el missatge del rebedor."
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Missatge:"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "Utilitza més pantalla per les finestres"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Intenta utilitzar més espai de la pantalla per posicionar les miniatures de "
+"les finestres adaptant-les al ràtio d'aspecte de la pantalla, consolidant-"
+"les més per reduir la capsa que les envolta. Este paràmetre de configuració "
+"només s'aplica a l'estratègia de posicionament de finestres natural."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Posiciona els títols de les finestres al damunt"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Si és «true» (cert), posiciona el títol de la finestra damunt de la "
+"miniatura corresponent, substituint el comportament per defecte del Shell de "
+"posicionar-lo a baix. Cal reiniciar el Shell per tal de que este canvi tinga "
+"efecte."
+
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "Llocs"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "No s'ha pogut iniciar «%s»"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Ordinador"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "Inici"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "Navega per la xarxa"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "Memòria"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "Nom del tema"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "El nom del tema que es carregarà des de ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Tanca"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Desminimitza"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Minimitza"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Desmaximitza"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Maximitza"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Minimitza-ho tot"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Desminimitza-ho tot"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Maximitza-ho tot"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Desmaximitza-ho tot"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Tanca-ho tot"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indicador de l'espai de treball"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Llista de finestres"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Quan s'han d'agrupar les finestres"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Decideix quan s'han d'agrupar les finestres de la mateixa aplicació a la "
+"llista de finestres. Els valors possibles són: «never» (mai), "
+"«auto» (automàticament) i «always» (sempre)."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Agrupació de finestres"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Mai agrupes les finestres"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Agrupa les finestres quan l'espai estiga limitat"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Agrupa les finestres sempre"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "Noms dels espais de treball:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "Nom"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "Espai de treball %d"
