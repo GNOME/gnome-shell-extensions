@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-15 22:18+0200\n"
-"PO-Revision-Date: 2013-09-15 22:19+0000\n"
-"Last-Translator: Reinout van Schouwen <reinouts@gnome.org>\n"
+"POT-Creation-Date: 2013-10-12 20:00+0200\n"
+"PO-Revision-Date: 2013-10-12 20:00+0200\n"
+"Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
 "Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -53,6 +53,10 @@ msgstr "Randtegels inschakelen bij het slepen van vensters naar schermranden"
 msgid "Workspaces only on primary monitor"
 msgstr "Werkbladen alleen op primaire beeldscherm"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "Focus pas wijzigen nadat de muisaanwijzer is gestopt met bewegen"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Alleen miniatuur"
@@ -81,7 +85,7 @@ msgstr "Activiteitenoverzicht"
 msgid "Favorites"
 msgstr "Favorieten"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Toepassingen"
 
