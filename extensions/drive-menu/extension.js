@@ -133,6 +133,8 @@ const DriveMenu = new Lang.Class({
     _isMountInteresting: function(mount) {
         if (!mount.can_eject() && !mount.can_unmount())
             return false;
+        if (mount.is_shadowed())
+            return false;
 
         let volume = mount.get_volume();
 
