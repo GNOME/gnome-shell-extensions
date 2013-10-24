@@ -18,9 +18,11 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 const N_ = function(x) { return x; }
 
-const Hostname1Iface = <interface name="org.freedesktop.hostname1">
-<property name="PrettyHostname" type="s" access="read" />
-</interface>;
+const Hostname1Iface = '<node> \
+<interface name="org.freedesktop.hostname1"> \
+<property name="PrettyHostname" type="s" access="read" /> \
+</interface> \
+</node>';
 const Hostname1 = Gio.DBusProxy.makeProxyWrapper(Hostname1Iface);
 
 const PlaceInfo = new Lang.Class({
