@@ -5,13 +5,14 @@
 # Ιωάννης Ζαμπούκας <ioza1964@yahoo.gr>, 2011.
 # Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
 # Vangelis Skarmoutsos <skarmoutsosv@gmail.com>, 2013.
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-09-15 08:32+0000\n"
-"PO-Revision-Date: 2013-09-16 22:25+0300\n"
+"POT-Creation-Date: 2013-10-25 00:37+0000\n"
+"PO-Revision-Date: 2013-11-05 15:18+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
 "Language-Team: team@gnome.gr\n"
 "Language: el\n"
@@ -60,6 +61,12 @@ msgstr ""
 msgid "Workspaces only on primary monitor"
 msgstr "Χώροι εργασίας μόνο στην πρωτεύουσα οθόνη"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Καθυστέρηση εστίασης αλλαγών στην κατάσταση ποντικιού μέχρι να σταματήσει να "
+"κινείται ο δείκτης"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Μόνο μικρογραφία"
@@ -88,7 +95,7 @@ msgstr "Επισκόπηση δραστηριοτήτων"
 msgid "Favorites"
 msgstr "Αγαπημένα"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Εφαρμογές"
 
@@ -127,7 +134,7 @@ msgid "Add"
 msgstr "Προσθήκη"
 
 #: ../extensions/drive-menu/extension.js:73
-#, c-format
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Απέτυχε η εξαγωγή του δίσκου '%s':"
 
@@ -155,8 +162,6 @@ msgstr ""
 "Αν δεν είναι κενό, περιέχει το κείμενο που θα εμφανιστεί όταν γίνεται κλικ "
 "στον πίνακα εφαρμογών."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -207,21 +212,21 @@ msgstr ""
 msgid "Places"
 msgstr "Τοποθεσίες"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:58
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "Αποτυχία εκκίνησης \"%s\""
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:100
+#: ../extensions/places-menu/placeDisplay.js:123
 msgid "Computer"
 msgstr "Υπολογιστής"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:201
 msgid "Home"
 msgstr "Προσωπικός φάκελος"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:288
 msgid "Browse Network"
 msgstr "Περιήγηση δικτύου"
 
@@ -239,7 +244,8 @@ msgstr "Όνομα θέματος"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Το όνομα του θέματος που θα φορτωθεί από το ~ /.themes/name/gnome-shell"
+msgstr ""
+"Το όνομα του θέματος που θα φορτωθεί από το ~ /.themes/name/gnome-shell"
 
 #: ../extensions/window-list/extension.js:92
 msgid "Close"
@@ -328,7 +334,7 @@ msgid "Name"
 msgstr "Όνομα"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Χώρος εργασίας %d"
 
