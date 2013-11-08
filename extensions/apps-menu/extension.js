@@ -388,8 +388,9 @@ const ApplicationsButton = new Lang.Class({
         while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
             if (nextType == GMenu.TreeItemType.ENTRY) {
                 let entry = iter.get_entry();
-                if (!entry.get_app_info().get_nodisplay()) {
-                    let app = appSys.lookup_app_by_tree_entry(entry);
+                let appInfo = entry.get_app_info();
+                let app = appSys.lookup_app(entry.get_desktop_file_id());
+                if (appInfo.should_show()) {
                     let menu_id = dir.get_menu_id();
                     this.applicationsByCategory[categoryId].push(app);
                 }
@@ -485,7 +486,8 @@ const ApplicationsButton = new Lang.Class({
 
         //Load categories
         this.applicationsByCategory = {};
-        let tree = appSys.get_tree();
+        let tree = new GMenu.Tree({ menu_basename: 'applications.menu' });
+        tree.load_sync();
         let root = tree.get_root_directory();
         let categoryMenuItem = new CategoryMenuItem(this, null);
         this.categoriesBox.add_actor(categoryMenuItem.actor);
