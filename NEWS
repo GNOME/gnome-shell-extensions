@@ -1,3 +1,9 @@
+3.11.1
+======
+* ignore shadowed mounts in drive-menu extension
+* updates for gnome-shell/gjs changes
+* updated translations (el, th)
+
 3.10.1
 ======
 * updated translations (af, ca, ca@valencia, de, et, eu, fa,
