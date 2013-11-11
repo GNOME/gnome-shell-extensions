@@ -30,7 +30,8 @@ const WorkspaceIndicator = new Lang.Class({
 	this.parent(0.0, _("Workspace Indicator"));
 
 	this._currentWorkspace = global.screen.get_active_workspace().index();
-	this.statusLabel = new St.Label({ text: this._labelText() });
+	this.statusLabel = new St.Label({ y_align: Clutter.ActorAlign.CENTER,
+                                          text: this._labelText() });
 
 	this.actor.add_actor(this.statusLabel);
 
