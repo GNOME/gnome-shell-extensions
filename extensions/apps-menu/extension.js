@@ -253,17 +253,21 @@ const ApplicationsMenu = new Lang.Class({
     },
 
     open: function(animate) {
-        this._button.hotCorner.setBarrierSize(0);
-        if (this._button.hotCorner.actor) // fallback corner
-            this._button.hotCorner.actor.hide();
+        if(this._button.hotCorner) {
+            this._button.hotCorner.setBarrierSize(0);
+            if (this._button.hotCorner.actor) // fallback corner
+                this._button.hotCorner.actor.hide();
+        }
         this.parent(animate);
     },
 
     close: function(animate) {
         let size = Main.layoutManager.panelBox.height;
-        this._button.hotCorner.setBarrierSize(size);
-        if (this._button.hotCorner.actor) // fallback corner
-            this._button.hotCorner.actor.show();
+        if(this._button.hotCorner) {
+            this._button.hotCorner.setBarrierSize(size);
+            if (this._button.hotCorner.actor) // fallback corner
+                this._button.hotCorner.actor.show();
+        }
         this.parent(animate);
     },
 
