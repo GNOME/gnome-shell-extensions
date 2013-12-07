@@ -1,336 +1,529 @@
-# Chinese (China) translation for gnome-clocks.
-# Copyright (C) 2012 gnome-clocks's COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-clocks package.
+# Chinese (China) translation for gnome-shell-extensions.
+# Copyright (C) 2011 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Wylmer Wang <wantinghard@gmail.com>, 2011.
+# Aron Xu <aronxu@gnome.org>, 2011.
 # tuhaihe <1132321739qq@gmail.com>, 2012, 2013.
-# YunQiang Su <wzssyqa@gmail.com>, 2012.
-# Aron Xu <aronxu@gnome.org>, 2012.
-# 甘露(Lu Gan) <rhythm.gan@gmail.com>，2013
+# 甘露(Gan Lu) <rhythm.gan@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-clocks master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=clocks&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-11-11 22:18+0000\n"
-"PO-Revision-Date: 2013-10-23 00:45+0800\n"
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-11-17 08:58+0000\n"
+"PO-Revision-Date: 2013-11-10 11:34+0800\n"
 "Last-Translator: tuhaihe <1132321739qq@gmail.com>\n"
-"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnome-clocks.desktop.in.h:1 ../src/window.vala:173
-#: ../data/ui/window.ui.h:1
-msgid "Clocks"
-msgstr "时钟"
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME 经典模式"
 
-#: ../data/gnome-clocks.desktop.in.h:2
-msgid "GNOME Clocks"
-msgstr "GNOME 时钟"
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "该会话将登录到“GNOME 经典模式”"
 
-#: ../data/gnome-clocks.desktop.in.h:3
-msgid "Clocks for world times, plus alarms, stopwatch and a timer"
-msgstr "时钟可用来查看世界时间，外加闹钟、秒表和定时器功能"
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell 经典模式"
 
-#: ../data/gnome-clocks.desktop.in.h:4
-msgid "time;timer;alarm;world clock;stopwatch;time zone;"
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "窗口管理与应用启动"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "将模式对话框附着到父窗口"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr "当运行 GNOME Shell 时该键会覆盖 org.gnome.mutter 中的键。"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "启用将窗口拖拽到屏幕边缘时平铺显示的功能"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "仅在主显示器上显示工作区"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "将鼠标模式下焦点的切换推迟到光标停止移动之后"
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "仅缩略图"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "仅应用程序图标"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "缩略图和应用程序图标"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "窗口展现为"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "仅显示当前工作区中的窗口"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "活动概览"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "收藏"
+
+#: ../extensions/apps-menu/extension.js:282
+msgid "Applications"
+msgstr "应用程序"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "应用程序和工作区列表"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
 msgstr ""
-"time;timer;alarm;world clock;stopwatch;time zone;钟;表;定时;计时;时间;时区;"
+"一系列字符串，每个字符串包含一个应用程序标识(桌面文件名称)、冒号加工作区号"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:1
-msgid "Configured world clocks"
-msgstr "已配置的世界时钟"
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "应用程序"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:2
-msgid "List of world clocks to show."
-msgstr "将显示的世界时钟列表。"
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "工作区"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:3
-msgid "Configured alarms"
-msgstr "已配置的闹钟"
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "添加规则"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:4
-msgid "List of alarms set."
-msgstr "闹钟组列表。"
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "创建新的匹配规则"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:5 ../src/timer.vala:105
-msgid "Timer"
-msgstr "定时器"
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "添加"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:6
-msgid "Configured timer duration in seconds."
-msgstr "已配置的定时器时长(秒)。"
+#: ../extensions/drive-menu/extension.js:73
+#, javascript-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "弹出驱动器“%s”失败："
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:7
-msgid "Geolocation support"
-msgstr "地理定位支持"
+#: ../extensions/drive-menu/extension.js:90
+msgid "Removable devices"
+msgstr "可移动设备"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:8
-msgid "Turn geolocation support on and off."
-msgstr "开启/关闭地理定位支持。"
+#: ../extensions/drive-menu/extension.js:117
+msgid "Open File"
+msgstr "打开文件管理器"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:9
-msgid "Window state"
-msgstr "窗口状态"
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "Hello, world!"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:10
-msgid "State of the window: i.e. maximized."
-msgstr "窗口状态：例如“最大化”。"
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "替代的祝福语。"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:11
-msgid "Window width and height"
-msgstr "窗口宽度和高度"
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr "如果不为空，所包含的文本会在点击面板时显示。"
 
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:12
-msgid "Width and height of the window."
-msgstr "该窗口的宽度及高度。"
-
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:13
-msgid "Panel state"
-msgstr "面板状态"
-
-#: ../data/org.gnome.clocks.gschema.xml.in.in.h:14
-msgid "Current clock panel."
-msgstr "当前时钟面板。"
-
-#: ../src/alarm.vala:109 ../src/alarm.vala:330 ../src/alarm.vala:481
-msgid "Alarm"
-msgstr "闹钟"
-
-#: ../src/alarm.vala:110 ../src/stopwatch.vala:187 ../data/ui/alarm.ui.h:2
-msgid "Stop"
-msgstr "停止"
-
-#: ../src/alarm.vala:113 ../data/ui/alarm.ui.h:3
-msgid "Snooze"
-msgstr "贪睡"
-
-#: ../src/alarm.vala:282
-msgid "Edit Alarm"
-msgstr "编辑闹钟"
-
-#: ../src/alarm.vala:282
-msgid "New Alarm"
-msgstr "新建闹钟"
-
-#. Translators: "New" refers to an alarm
-#. Translators: "New" refers to a world clock
-#: ../src/alarm.vala:487 ../src/world.vala:281
-msgid "New"
-msgstr "新建"
-
-#: ../src/application.vala:24
-msgid "Print version information and exit"
-msgstr "打印版本信息并退出"
-
-#: ../src/stopwatch.vala:129
-msgid "Stopwatch"
-msgstr "秒表"
-
-#: ../src/stopwatch.vala:190
-msgid "Lap"
-msgstr "记圈"
-
-#: ../src/stopwatch.vala:197 ../src/timer.vala:156
-msgid "Continue"
-msgstr "继续"
-
-#: ../src/stopwatch.vala:201 ../data/ui/stopwatch.ui.h:2
-#: ../data/ui/timer.ui.h:3
-msgid "Reset"
-msgstr "重置"
-
-#: ../src/stopwatch.vala:209 ../data/ui/stopwatch.ui.h:1
-#: ../data/ui/timer.ui.h:1
-msgid "Start"
-msgstr "开始"
-
-#: ../src/timer.vala:113
-msgid "Time is up!"
-msgstr "时间到！"
-
-#: ../src/timer.vala:113
-msgid "Timer countdown finished"
-msgstr "倒计时结束"
-
-#: ../src/timer.vala:161 ../src/timer.vala:172 ../data/ui/timer.ui.h:2
-msgid "Pause"
-msgstr "暂停"
-
-#: ../src/utils.vala:163
-msgid "Mondays"
-msgstr "星期一"
-
-#: ../src/utils.vala:164
-msgid "Tuesdays"
-msgstr "星期二"
-
-#: ../src/utils.vala:165
-msgid "Wednesdays"
-msgstr "星期三"
-
-#: ../src/utils.vala:166
-msgid "Thursdays"
-msgstr "星期四"
-
-#: ../src/utils.vala:167
-msgid "Fridays"
-msgstr "星期五"
-
-#: ../src/utils.vala:168
-msgid "Saturdays"
-msgstr "星期六"
-
-#: ../src/utils.vala:169
-msgid "Sundays"
-msgstr "星期日"
-
-#: ../src/utils.vala:249
-msgid "Every Day"
-msgstr "每天"
-
-#: ../src/utils.vala:251
-msgid "Weekdays"
-msgstr "工作日"
-
-#: ../src/utils.vala:253
-msgid "Weekends"
-msgstr "周末"
-
-#: ../src/widgets.vala:461
-msgid "Cancel"
-msgstr "取消"
-
-#: ../src/widgets.vala:473 ../src/widgets.vala:526
-msgid "Click on items to select them"
-msgstr "点击条目以选中它们"
-
-#: ../src/widgets.vala:528
-#, c-format
-msgid "%d selected"
-msgid_plural "%d selected"
-msgstr[0] "已选中 %d 个"
-
-#: ../src/widgets.vala:570
-msgid "Delete"
-msgstr "删除"
-
-#: ../src/window.vala:146
-#, c-format
-msgid "Failed to show help: %s"
-msgstr "无法显示帮助：%s"
-
-#: ../src/window.vala:176
-msgid "Utilities to help you with the time."
-msgstr "帮助您使用时间的工具。"
-
-#: ../src/window.vala:181
-msgid "translator-credits"
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"tuhaihe <1132321739qq@gmail.com>, 2012~2013\n"
-"Aron Xu <aronxu@gnome.org>, 2012\n"
-"YunQiang Su <wzssyqa@gmail.com>, 2012"
+"示例意在展示如何为 Shell 创建良好工作的扩展，本身功能有限。\n"
+"尽管如此，它还是具备定制祝福语的功能。"
 
-#. If it is Dec 31st here and Jan 1st there (d = 1), then "tomorrow"
-#: ../src/world.vala:112 ../src/world.vala:115
-msgid "Tomorrow"
-msgstr "明天"
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "消息："
 
-#. If it is Jan 1st here and Dec 31st there (t = 1), then "yesterday"
-#: ../src/world.vala:112 ../src/world.vala:115
-msgid "Yesterday"
-msgstr "昨天"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "展现窗口时利用更多屏幕空间"
 
-#: ../src/world.vala:272
-msgid "World"
-msgstr "世界"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"尝试通过适应屏幕宽高比，以及相互组合以减少包围框，在摆放窗口缩略图时利用更多"
+"屏幕空间。此设置只应用于自然摆放策略。"
 
-#. namespace World
-#. namespace Clocks
-#: ../data/ui/alarmsetupdialog.ui.h:1
-msgid "_Done"
-msgstr "完成(_D)"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "窗口说明文字在上"
 
-#: ../data/ui/alarmsetupdialog.ui.h:2
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"如果设置为 true，则将窗口说明文字放置在对应窗口的缩略图上方，而不是默认的下"
+"方。修改此设置需要重启 GNOME Shell 以使设置生效。"
+
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "位置"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, javascript-format
+msgid "Failed to launch \"%s\""
+msgstr "无法启动“%s”"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "计算机"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "主文件夹"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "浏览网络"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "内存"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "主题名称"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "从 ~/.themes/name/gnome-shell 加载的主题名称"
+
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "关闭"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "取消最小化"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "最小化"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "取消最大化"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "最大化"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "全部最小化"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "全部取消最小化"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "全部最大化"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "全部取消最大化"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "全部关闭"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "工作区指示器"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "窗口列表"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "何时分组窗口"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"决定何时对窗口列表上的同一应用的窗口进行分组。可用值有“never”(从"
+"不)、“auto”(自动)和“always”(总是)。"
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "窗口分组"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "从不将窗口分组"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "当空间有限时将窗口分组"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "总是对窗口分组"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "工作区名称："
+
+#: ../extensions/workspace-indicator/prefs.js:152
 msgid "Name"
 msgstr "名称"
 
-#: ../data/ui/alarmsetupdialog.ui.h:3
-msgid "Repeat Every"
-msgstr "重复周期"
+#: ../extensions/workspace-indicator/prefs.js:186
+#, javascript-format
+msgid "Workspace %d"
+msgstr "工作区 %d"
 
-#: ../data/ui/alarmsetupdialog.ui.h:4
-msgid "Active"
-msgstr "活动"
+#~ msgid "Suspend"
+#~ msgstr "挂起"
 
-#: ../data/ui/alarm.ui.h:1
-msgid "Select <b>New</b> to add an alarm"
-msgstr "选择<b>新建</b>以添加闹钟"
+#~ msgid "Hibernate"
+#~ msgstr "休眠"
 
-#: ../data/ui/menu.ui.h:1
-msgid "_New"
-msgstr "新建(_N)"
+#~ msgid "Power Off"
+#~ msgstr "关机"
 
-#: ../data/ui/menu.ui.h:2
-msgid "_Help"
-msgstr "帮助(_H)"
+#~ msgid "Enable suspending"
+#~ msgstr "启用挂起"
 
-#: ../data/ui/menu.ui.h:3
-msgid "_About"
-msgstr "关于(_A)"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "控制“挂起”菜单项的可见性"
 
-#: ../data/ui/menu.ui.h:4
-msgid "_Quit"
-msgstr "退出(_Q)"
+#~ msgid "Enable hibernating"
+#~ msgstr "启用休眠"
 
-#: ../data/ui/menu.ui.h:5
-msgid "Select All"
-msgstr "全选"
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "控制“休眠”菜单项的可见性"
 
-#: ../data/ui/menu.ui.h:6
-msgid "Select None"
-msgstr "全不选"
+#~ msgid "Normal"
+#~ msgstr "正常"
 
-#: ../data/ui/worldlocationdialog.ui.h:1
-msgid "Add a New World Clock"
-msgstr "添加新的世界时钟"
+#~ msgid "Left"
+#~ msgstr "左"
 
-#: ../data/ui/worldlocationdialog.ui.h:2
-msgid "Search for a city:"
-msgstr "搜索城市："
+#~ msgid "Right"
+#~ msgstr "右"
 
-#: ../data/ui/world.ui.h:1
-msgid "Select <b>New</b> to add a world clock"
-msgstr "选择<b>新建</b>以添加世界时钟"
+#~ msgid "Upside-down"
+#~ msgstr "上下翻转"
 
-#: ../data/ui/world.ui.h:2
-msgid "Sunrise"
-msgstr "日出"
+#~ msgid "Display"
+#~ msgstr "显示"
 
-#: ../data/ui/world.ui.h:3
-msgid "Sunset"
-msgstr "日落"
+#~ msgid "Display Settings"
+#~ msgstr "显示设置"
 
-#~ msgid "Split"
-#~ msgstr "分段时间"
+#~ msgid "The application icon mode."
+#~ msgstr "应用程序图标模式。"
 
-#~ msgid "Total"
-#~ msgstr "总计"
+#~ msgid ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
+#~ msgstr ""
+#~ "配置窗口在切换器中的显示方式。有效值包括“仅缩略图”(显示窗口的缩略图)、“仅"
+#~ "应用程序图标”(仅显示应用程序图标)或“全部”。"
 
-#~ msgid "Done"
-#~ msgstr "完成"
+#~ msgid "Drag here to add favorites"
+#~ msgstr "拖放到这里以添加收藏"
 
-#~ msgid "Gnome Clocks"
-#~ msgstr "Gnome 时钟"
+#~ msgid "New Window"
+#~ msgstr "新窗口"
 
-#~ msgid "Time"
-#~ msgstr "时间"
+#~ msgid "Quit Application"
+#~ msgstr "退出应用程序"
 
-#~ msgid "About Clocks"
-#~ msgstr "关于时钟"
+#~ msgid "Remove from Favorites"
+#~ msgstr "移除收藏"
 
-#~ msgid "Edit"
-#~ msgstr "编辑"
+#~ msgid "Position of the dock"
+#~ msgstr "Dock 位置"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr "设置 Dock 在屏幕上的位置。允许的值有“右”或“左”。"
+
+#~ msgid "Icon size"
+#~ msgstr "图标大小"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "设置 Dock 上的图标大小。"
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "启用/禁用自动隐藏"
+
+#~ msgid "Autohide effect"
+#~ msgstr "自动隐藏效果"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr "设置隐藏 Dock 的效果。允许的值有“resize”、“rescale”和“move”"
+
+#~ msgid "Autohide duration"
+#~ msgstr "自动隐藏时间"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "设置自动隐藏的动画过渡时间。"
+
+#~ msgid "Monitor"
+#~ msgstr "显示器"
+
+#~ msgid ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+#~ msgstr "设置显示 Dock 的显示器。默认值(-1)是主显示器。"
+
+#~ msgid "%s is away."
+#~ msgstr "%s 不在。"
+
+#~ msgid "%s is offline."
+#~ msgstr "%s 离线。"
+
+#~ msgid "%s is online."
+#~ msgstr "%s 在线。"
+
+#~ msgid "%s is busy."
+#~ msgstr "%s 忙碌。"
+
+#~ msgid "Devices"
+#~ msgstr "设备"
+
+#~ msgid "Bookmarks"
+#~ msgstr "书签"
+
+#~ msgid "Network"
+#~ msgstr "网络"
+
+#~ msgid "File System"
+#~ msgstr "文件系统"
+
+#~ msgid "The alt tab behaviour."
+#~ msgstr "Alt Tab 行为。"
+
+#~ msgid ""
+#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
+#~ "workspace_icons. See the configuration dialogs for details."
+#~ msgstr ""
+#~ "设置 Alt-Tab 行为。可取的值有：native(原生)、all_thumbnails(所有缩略图) "
+#~ "和 workspace_icons(工作区内图标)。详情参阅配置对话框。"
+
+#~ msgid ""
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
+#~ msgstr ""
+#~ "此模式将在一个选择列表中展示全部工作区中的所有应用程序。它使用小缩略图而非"
+#~ "各窗口的应用程序图标来代表窗口。"
+
+#~ msgid "Workspace & Icons"
+#~ msgstr "工作区和图标"
+
+#~ msgid ""
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "Every window is represented by its application icon."
+#~ msgstr ""
+#~ "此模式让您在当前工作区中的应用程序及上个工作区、上次使用的应用程序间切换。"
+#~ "上次使用这项总是列表中的最后一个符号，并以分隔符或竖线区别(若可能)。\n"
+#~ "每个窗口以其应用程序图标展示。"
+
+#~ msgid "Move current selection to front before closing the popup"
+#~ msgstr "在关闭弹出界面前将当前选择移到前面"
+
+#~ msgid ""
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "Alternate Tab 有多种使用模式，所使用模式会影响窗口展示和选择的方式。"
+
+#~ msgid "Removable Devices"
+#~ msgstr "可移动设备"
+
+#~ msgid "Configure display settings..."
+#~ msgstr "配置显示设置..."
+
+#~ msgid "Notifications"
+#~ msgstr "提示"
+
+#~ msgid "Online Accounts"
+#~ msgstr "在线帐号"
+
+#~ msgid "Lock Screen"
+#~ msgstr "锁定屏幕"
+
+#~ msgid "Switch User"
+#~ msgstr "切换用户"
+
+#~ msgid "Log Out..."
+#~ msgstr "注销..."
+
+#~ msgid "Alt Tab Behaviour"
+#~ msgstr "Alt Tab 行为"
+
+#~ msgid "Cancel"
+#~ msgstr "取消"
+
+#~ msgid "Ask the user for a default behaviour if true."
+#~ msgstr "如果设置为 true，询问用户设置一个默认行为。"
+
+#~ msgid "Indicates if Alternate Tab is newly installed"
+#~ msgstr "指示“候选标签”是否为最近安装的"
+
+#~ msgid "Window placement strategy"
+#~ msgstr "窗口放置策略"
+
+#~ msgid "Available"
+#~ msgstr "在线"
+
+#~ msgid "Busy"
+#~ msgstr "忙碌"
