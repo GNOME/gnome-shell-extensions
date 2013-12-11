@@ -5,10 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-08-19 08:21+0000\n"
-"PO-Revision-Date: 2013-09-09 23:22+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-11 06:42+0200\n"
+"PO-Revision-Date: 2013-12-11 06:43+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -51,9 +50,12 @@ msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid "Workspace Indicator"
 msgid "Workspaces only on primary monitor"
 msgstr "مساحات عمل على الشاشة الرئيسية فقط"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -83,7 +85,7 @@ msgstr "ملخص الأنشطة"
 msgid "Favorites"
 msgstr "المفضّلات"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "التطبيقات"
 
@@ -119,7 +121,7 @@ msgid "Add"
 msgstr "أضِف"
 
 #: ../extensions/drive-menu/extension.js:73
-#, c-format
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "فشل إخراج '%s':"
 
@@ -145,8 +147,6 @@ msgid ""
 "panel."
 msgstr ""
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -185,22 +185,21 @@ msgstr ""
 msgid "Places"
 msgstr "الأماكن"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:58
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "فشل تشغيل \"%s\""
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:100
+#: ../extensions/places-menu/placeDisplay.js:123
 msgid "Computer"
 msgstr "الحاسوب"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:201
 msgid "Home"
 msgstr "المنزل"
 
-#: ../extensions/places-menu/placeDisplay.js:286
-#| msgid "Browse network"
+#: ../extensions/places-menu/placeDisplay.js:288
 msgid "Browse Network"
 msgstr "تصفّح الشبكة"
 
@@ -265,6 +264,10 @@ msgstr "أغلق الكل"
 msgid "Workspace Indicator"
 msgstr "مؤشر مساحات العمل"
 
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "قائمة النوافذ"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "متى تجمّع النوافذ"
@@ -302,7 +305,7 @@ msgid "Name"
 msgstr "الاسم"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "مساحة العمل %Id"
 
