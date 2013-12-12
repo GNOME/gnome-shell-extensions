@@ -2,271 +2,330 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Praveen Illa <mail2ipn@gmail.com>, 2011.
-#
+# Krishnababu Krothapalli <kkrothap@redhat.com>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-09-19 17:46+0000\n"
-"PO-Revision-Date: 2011-09-25 15:01+0530\n"
-"Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
-"Language-Team: Telugu <indlinux-telugu@lists.sourceforge.net>\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-06 14:45+0530\n"
+"PO-Revision-Date: 2013-10-01 04:16-0400\n"
+"Last-Translator: Krishnababu Krothapalli <kkrothap@redhat.com>\n"
+"Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.1.2\n"
 
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Notifications"
-msgstr "ప్రకటనలు"
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "గ్నోమ్ క్లాసిక్"
 
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Online Accounts"
-msgstr "ఆన్‌లైన్ ఖాతాలు"
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "ఈ సెషన్ గ్నోమ్‌ క్లాసిక్ లోనికి లాగ్ చేస్తుంది"
 
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "వ్యవస్థ అమరికలు"
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "గ్నోమ్ షెల్ క్లాసిక్"
 
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "తెరకు తాళంవేయి"
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "కిటికీ నిర్వాహణ మరియు అనువర్తనము ప్రారంభించుట"
 
-#: ../extensions/alternative-status-menu/extension.js:68
-msgid "Switch User"
-msgstr "వాడుకరిని మార్చు"
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "పేరెంట్ విండోనకు మోడల్ డైలాగ్ అనుబందించు"
 
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Log Out..."
-msgstr "నిష్క్రమించు..."
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"గ్నోమ్ షెల్ నందు నడుచునప్పుడు ఈ కీ org.gnome.mutter నందలి కీను వోవర్‌రైడ్ "
+"చేయును."
 
-#: ../extensions/alternative-status-menu/extension.js:81
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "తెర అంచులనందు విండోలను విడువునప్పుడు ఎడ్జ్ టైటిలింగ్ చేతనం చేయి"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "ప్రాధమిక మానిటర్ పైని కార్యక్షేత్రాలు మాత్రమే"
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "థంబ్‌నెయిల్ మాత్రమే"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "అనువర్తనం ప్రతిమ మాత్రమే"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "థంబ్‌నెయిల్ మరియు అనువర్తనం ప్రతిమ"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "విండోలు ఇలా ప్రజంట్ చేయి"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "‌విండోలను ప్రస్తుత పనిస్థలం నందు మాత్రమే చూపుము"
+
+#. add the new entries
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "తాత్కాలికంగా నిలిపివేయి"
 
-#: ../extensions/alternative-status-menu/extension.js:87
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "సుప్తావస్థ"
 
-#: ../extensions/alternative-status-menu/extension.js:93
-msgid "Power Off..."
-msgstr "విద్యుత్ ఆపు..."
+#: ../extensions/alternative-status-menu/extension.js:131
+msgid "Power Off"
+msgstr "విద్యుత్ ఆపు"
 
-#: ../extensions/alternate-tab/extension.js:44
-msgid ""
-"This is the first time you use the Alternate Tab extension. \n"
-"Please choose your preferred behaviour:\n"
-"\n"
-"All & Thumbnails:\n"
-"    This mode presents all applications from all workspaces in one "
-"selection \n"
-"    list. Instead of using the application icon of every window, it uses "
-"small \n"
-"    thumbnails resembling the window itself. \n"
-"\n"
-"Workspace & Icons:\n"
-"    This mode let's you switch between the applications of your current \n"
-"    workspace and gives you additionally the option to switch to the last "
-"used \n"
-"    application of your previous workspace. This is always the last symbol "
-"in \n"
-"    the list and is segregated by a separator/vertical line if available. \n"
-"    Every window is represented by its application icon.  \n"
-"\n"
-"Native:\n"
-"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
-"    native switches the Alternate Tab extension off. \n"
-msgstr ""
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
+msgid "Enable suspending"
+msgstr "రద్దుచేయుట చేతనంచేయి"
 
-#: ../extensions/alternate-tab/extension.js:269
-msgid "Alt Tab Behaviour"
-msgstr ""
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
+msgid "Control the visibility of the Suspend menu item"
+msgstr "రద్దుచేసిన మెనూ అంశం కనిపించుటను నియంత్రించు"
 
-#: ../extensions/alternate-tab/extension.js:285
-msgid "All & Thumbnails"
-msgstr "అన్నీ & చిరుచిత్రాలు"
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
+msgid "Enable hibernating"
+msgstr "హెబర్నేటింగ్ చేతనంచేయి"
 
-#: ../extensions/alternate-tab/extension.js:292
-msgid "Workspace & Icons"
-msgstr "కార్యక్షేత్రం & ప్రతీకలు"
+#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
+msgid "Control the visibility of the Hibernate menu item"
+msgstr "హైబర్నేట్ మెనూ అంశం కనిపించుటకు నియంత్రించు"
 
-#: ../extensions/alternate-tab/extension.js:299
-msgid "Native"
-msgstr ""
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "కార్యకలాపాల పై పై పరిశీలనను చూపించు"
 
-#: ../extensions/alternate-tab/extension.js:306
-msgid "Cancel"
-msgstr "రద్దుచేయి"
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "ఇష్టాలు"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "Ask the user for a default behaviour if true."
-msgstr ""
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
-msgid "Indicates if Alternate Tab is newly installed"
-msgstr ""
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:3
-msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: native, all_thumbnails and "
-"workspace_icons."
-msgstr ""
-
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:4
-msgid "The alt tab behaviour."
-msgstr ""
+#: ../extensions/apps-menu/extension.js:278
+msgid "Applications"
+msgstr "అనువర్తనాలు"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "అనువర్తన మరియు కార్యక్షేత్రాల జాబితా"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
+"స్ట్రింగ్స్ జాబితా, ప్రతిదీ వొక అనువర్తనం ఐడి (డిస్కుటాప్ ఫైల్ పేరు)ను, "
+"వెంటనే కోలన్ మరియు పనిస్థలం సంఖ్యతో"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "Application and workspace list"
-msgstr "అనువర్తన మరియు కార్యక్షేత్రాల జాబితా"
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "అనువర్తనం"
 
-#: ../extensions/dock/extension.js:486
-msgid "Drag here to add favorites"
-msgstr "ఇష్టాంశాలకు జతచేయడానికి ఇక్కడ లాగి వదలండి"
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "పనిస్థలం"
 
-#: ../extensions/dock/extension.js:820
-msgid "New Window"
-msgstr "కొత్త విండో"
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "నియమాన్ని జతచేయి"
 
-#: ../extensions/dock/extension.js:822
-msgid "Quit Application"
-msgstr "అనువర్తనము నిష్క్రమించు"
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "పోల్చే నియమం కొత్తది సృష్టించు"
 
-#: ../extensions/dock/extension.js:827
-msgid "Remove from Favorites"
-msgstr "ఇష్టాంశాల నుండి తీసివేయి"
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "చేర్చు"
 
-#: ../extensions/dock/extension.js:828
-msgid "Add to Favorites"
-msgstr "ఇష్టాంశాలకు జతచేయి"
+#: ../extensions/drive-menu/extension.js:72
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "'%s' డ్రైవ్ బయటకునెట్టుట విఫలమైంది:"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Autohide duration"
-msgstr "స్వయంగాదాగు నిడివి"
+#: ../extensions/drive-menu/extension.js:89
+msgid "Removable devices"
+msgstr "తీసివేయదగ్గ పరికరాలు"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid "Autohide effect"
-msgstr "స్వయందాగు ప్రభావం"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "ఫైలు తెరువు"
 
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Enable/disable autohide"
-msgstr "స్వయందాగుటను చేతనపరుచు/అచేతనపరుచు"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Icon size"
-msgstr "ప్రతీక పరిమాణం"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Position of the dock"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Sets icon size of the dock."
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "స్వయందాగు ప్రభావం యొక్క సమయ పరిధిని అమర్చును."
-
-#: ../extensions/example/extension.js:11
+#: ../extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "హలో, ప్రపంచమా!"
 
-#: ../extensions/gajim/extension.js:227
-#, c-format
-msgid "%s is away."
-msgstr "%s దూరంగావున్నారు."
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "ప్రత్యామ్నాయ గ్రీటింగ్ పాఠం."
 
-#: ../extensions/gajim/extension.js:230
-#, c-format
-msgid "%s is offline."
-msgstr "%s ఆఫ్‌లైనులోవున్నారు."
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"ఒకవేళ ఖాళీ కాకపోతే, అది పానల్ పైన నొక్కినప్పుడు చూపించబడు పాఠం కలిగివుంటుంది."
+""
 
-#: ../extensions/gajim/extension.js:233
-#, c-format
-msgid "%s is online."
-msgstr "%s ఆన్‌లైనులోవున్నారు."
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"ఉదాహరణ అనునది సరిగా ప్రవర్తించే పొడిగింతలను షెల్ కొరకు యెలా నిర్మించాలో "
+"చూపటానికి వుద్దేశించింది అది కొంత దాని స్వంత ఫంక్షనాలిటీను కలిగివుంటుంది.\n"
+"అయితే అభినందనలు తెలియజేసే సందేశాన్ని మలచుకోవడం సాధ్యమే."
 
-#: ../extensions/gajim/extension.js:236
-#, c-format
-msgid "%s is busy."
-msgstr "%s తీరికలేకుండావున్నారు."
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "సందేశం:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
-msgstr ""
+msgid "Use more screen for windows"
+msgstr "విండోల కొరకు ఎక్కువ తెరను వాడు"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Place window captions on top"
-msgstr ""
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
-msgid ""
-"The algorithm used to layout thumbnails in the overview. 'grid' to use the "
-"default grid based algorithm, 'natural' to use another one that reflects "
-"more the position and size of the actual window"
-msgstr ""
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
+"స్క్రీన్ ఏస్పెక్ట్ రేషియో ను ఆపాదించుకుంటూ  విండో థంబ్‌నెయిల్స్ వుంచుటకు "
+"మరింత స్క్రీన్‌ వుపయోగించుటకు ప్రయత్నించుము, మరియు వాటిని ఇంకా వొకటిగా "
+"కూర్చుతూ బౌండింగ్ బాక్స్ తగ్గించు. ఈ అమర్పులు నాచురల్ ప్లేస్‌మెంట్ స్ట్రాటజీ "
+"తో మాత్రమే వర్తించబడును."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:5
-msgid "Use more screen for windows"
-msgstr "విండోల కొరకు ఎక్కువ తెరను వాడు"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "విండో కాప్షన్లను పైన వుంచుము"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:6
-msgid "Window placement strategy"
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
 msgstr ""
+"ఒకవేళ నిజమైతే, సంభందిత థంబ్‌నెయిల్ పైన విండో కాప్షన్లు వుంచును, షెల్ "
+"అప్రమేయంగా కింద వుంచడం వోవర్‌రైడ్ చేయబడును. ఈ అమర్పు ప్రభావితం కావడానికి "
+"షెల్ పునఃప్రారంభించవలసి వుంటుంది."
+
+#: ../extensions/places-menu/extension.js:77
+msgid "Places"
+msgstr "స్థలములు"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "\"%s\" ప్రారంభించుటలో విఫలమైంది"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "కంప్యూటర్"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "నివాసం"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "నెట్‌వర్కులో విహరించు"
+
+#: ../extensions/systemMonitor/extension.js:213
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:266
+msgid "Memory"
+msgstr "మెమొరి"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
-msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "థీము యొక్క పేరు ~/.themes/name/gnome-shell నుండి ఎక్కించబడును"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "Theme name"
 msgstr "థీము పేరు"
 
-#: ../extensions/xrandr-indicator/extension.js:26
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "థీము యొక్క పేరు ~/.themes/name/gnome-shell నుండి ఎక్కించబడును"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "విండోలను ఎప్పుడు సమూహం చేయాలి"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"విండోజాబితాలో ఒకే రకమైన అప్లకేషన్ నుండి వచ్చిన విండోలను ఎప్పుడు సమూహం చేయాలో "
+"నిర్ణయిస్తుంది. సాధ్యమైన విలువలు \"ఎప్పటికివద్దు\", \"స్వయంచాలకంగా\" మరియు "
+"\"ఎల్లప్పుడు\"."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "విండో సమూహికీకరణ"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "విండోలను ఎప్పుడూ సమూహం చేయవద్దు"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "స్థాలము పరిమితంగా ఉన్నప్పడు విండోలను సమూహం చేయుము"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "విండోలను ఎల్లప్పుడు సమూహం చేయాలి"
+
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "పనిస్థలం సూచకి"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "పనిస్థలం పేర్లు:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "పేరు"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "పనిస్థలం %d"
+
+#: ../extensions/xrandr-indicator/extension.js:30
 msgid "Normal"
 msgstr "సాధారణ"
 
-#: ../extensions/xrandr-indicator/extension.js:27
+#: ../extensions/xrandr-indicator/extension.js:31
 msgid "Left"
 msgstr "ఎడమ"
 
-#: ../extensions/xrandr-indicator/extension.js:28
+#: ../extensions/xrandr-indicator/extension.js:32
 msgid "Right"
 msgstr "కుడి"
 
-#: ../extensions/xrandr-indicator/extension.js:29
+#: ../extensions/xrandr-indicator/extension.js:33
 msgid "Upside-down"
-msgstr ""
+msgstr "తలక్రిందులుగా"
 
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "ప్రదర్శన అమరికలను స్వరూపించు..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "ప్రదర్శించు"
+
+#: ../extensions/xrandr-indicator/extension.js:80
+msgid "Display Settings"
+msgstr "అమర్పులు ప్రదర్శించు"
