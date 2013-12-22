@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-06-05 18:52+0000\n"
-"PO-Revision-Date: 2013-06-05 20:51+0100\n"
+"POT-Creation-Date: 2013-12-20 18:44+0000\n"
+"PO-Revision-Date: 2013-12-21 16:24+0100\n"
 "Last-Translator: Jorge Pérez Pérez <jorgtum@gmail.com>\n"
 "Language-Team: Aragonese <softaragones@googlegroups.com>\n"
 "Language: an\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.3\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -34,6 +34,31 @@ msgstr "GNOME Shell clasico"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Chestión de finestras y inicio d'aplicacions"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Acoplar un dialogo modal a la finestra pai"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Ista clau sobrescribe a clau en org.gnome.mutter en executar o GNOME Shell."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Activar o mosaico en os cantos en arrocegar as finestras a los cantos d'a "
+"finestra"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Arias de treballo nomás en a pantalla prencipal"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Retardar o cambeo d'o foco d'o churi dica que o puntero deixe de mover-se"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -55,35 +80,6 @@ msgstr "Presentar as finestras como"
 msgid "Show only windows in the current workspace"
 msgstr "Amostrar as finestras solament en l'aria de treballo actual"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "Suspender"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "Hibernar"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "Amortar"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Activar a suspensión"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Controla la visibilidat de l'elemento de menú «Suspender»"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Activar a hibernación"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Controla la visibilidat de l'elemento de menú «Hibernar»"
-
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Anvista d'actividatz"
@@ -92,7 +88,7 @@ msgstr "Anvista d'actividatz"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "Aplicacions"
 
@@ -130,16 +126,16 @@ msgstr "Creyar un regle nuevo de coincidencia"
 msgid "Add"
 msgstr "Adhibir"
 
-#: ../extensions/drive-menu/extension.js:72
+#: ../extensions/drive-menu/extension.js:73
 #, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Ha fallau en fer fuera o dispositivo «%s»"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:90
 msgid "Removable devices"
 msgstr "Dispositivos extraíbles"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:117
 msgid "Open File"
 msgstr "Ubrir o fichero"
 
@@ -205,33 +201,34 @@ msgstr ""
 "sitúa por debaixo. Cambiar ista configuración requier reiniciar a shell ta "
 "que tienga efecto."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Puestos"
 
-#: ../extensions/places-menu/placeDisplay.js:56
+#: ../extensions/places-menu/placeDisplay.js:58
 #, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Ha fallau en lanzar «%s»"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:100
+#: ../extensions/places-menu/placeDisplay.js:123
 msgid "Computer"
 msgstr "Equipo"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:201
 msgid "Home"
 msgstr "Carpeta presonal"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:288
 msgid "Browse Network"
 msgstr "Examinar o ret"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "CPU"
 
@@ -242,6 +239,55 @@ msgstr "Nombre d'o tema"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "O nombre d'o tema, que se carga dende /.themes/nombre/gnome-shell"
+
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Zarrar"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Restaurar"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Minimizar"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Restaurar"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Maximizar"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Minimizar-lo tot"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Restaurar-lo tot"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Maximizar-lo tot"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Restaurar-lo tot"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Zarrar-lo tot"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indicador d'aria de treballo"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Lista de finestras"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
@@ -271,10 +317,6 @@ msgstr "Agrupar as finestras quan l'espacio siga limitau"
 msgid "Always group windows"
 msgstr "Agrupar siempre as finestras"
 
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Indicador d'aria de treballo"
-
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
 msgstr "Nombres d'as arias de treballo:"
@@ -288,26 +330,41 @@ msgstr "Nombre"
 msgid "Workspace %d"
 msgstr "Aria de treballo %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Normal"
+#~ msgid "Suspend"
+#~ msgstr "Suspender"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Cucha"
+#~ msgid "Hibernate"
+#~ msgstr "Hibernar"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Dreita"
+#~ msgid "Power Off"
+#~ msgstr "Amortar"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Enta baixo"
+#~ msgid "Enable suspending"
+#~ msgstr "Activar a suspensión"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Pantalla"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "Controla la visibilidat de l'elemento de menú «Suspender»"
 
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "Opcions de pantalla"
+#~ msgid "Enable hibernating"
+#~ msgstr "Activar a hibernación"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "Controla la visibilidat de l'elemento de menú «Hibernar»"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Left"
+#~ msgstr "Cucha"
+
+#~ msgid "Right"
+#~ msgstr "Dreita"
+
+#~ msgid "Upside-down"
+#~ msgstr "Enta baixo"
+
+#~ msgid "Display"
+#~ msgstr "Pantalla"
+
+#~ msgid "Display Settings"
+#~ msgstr "Opcions de pantalla"
