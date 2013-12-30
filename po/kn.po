@@ -1,7 +1,7 @@
 # Kannada translation for gnome-shell-extensions.
 # Copyright (C) 2013 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-#
+# prabodhcp <prabodhcp@gmail.com>, 2013
 # Shankar Prasad <prasad.mvs@gmail.com>, 2013.
 msgid ""
 msgstr ""
