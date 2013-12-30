@@ -1,0 +1,337 @@
+# Kannada translation for gnome-shell-extensions.
+# Copyright (C) 2013 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+#
+# Shankar Prasad <prasad.mvs@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-12-22 20:16+0000\n"
+"PO-Revision-Date: 2013-12-30 16:41+0630\n"
+"Last-Translator: Shankar Prasad <svenkate AT redhat Dot com>\n"
+"Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME ಕ್ಲಾಸಿಕ್"
+
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "ಈ ಅಧಿವೇಶನವು ನಿಮ್ಮನ್ನು GNOME ಕ್ಲಾಸಿಕ್‌ಗೆ ಪ್ರವೇಶಿಸುವಂತೆ ಮಾಡುತ್ತದೆ"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME ಶೆಲ್‌ ಕ್ಲಾಸಿಕ್"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "ಕಿಟಕಿ ನಿರ್ವಹಣೆ ಹಾಗು ಅನ್ವಯವನ್ನು ಆರಂಭಿಸುವಿಕೆ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "ಮೂಲ ಕಿಟಕಿಗೆ ಮೋಡಲ್ ಸಂವಾದವನ್ನು ಸೇರಿಸು"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"GNOME ಶೆಲ್‌ ಅನ್ನು ಚಲಾಯಿಸುವಾಗ ಈ ಕೀಲಿಯು org.gnome.mutter ಯಲ್ಲಿನ ಕೀಲಿಯನ್ನು "
+"ಅತಿಕ್ರಮಿಸುತ್ತದೆ."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"ತೆರೆಯ ಅಂಚುಗಳಲ್ಲಿ ಕಿಟಕಿಗಳನ್ನು ಬೀಳಿಸುವಾಗ ಅಂಚಿನ ಟೈಲಿಂಗ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "ಪ್ರಾಥಮಿಕ ತೆರೆಯಲ್ಲಿ ಇರುವ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳು ಮಾತ್ರ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"ಮೌಸ್‌ ಸ್ಥಿತಿಯಲ್ಲಿ ತೆರೆಸೂಚಕವು ನಿಲ್ಲುವವರೆಗೆ ಗಮನ ಹರಿಸುವ ಬದಲಾವಣೆಗಳನ್ನು ವಿಳಂಬವಾಗಿಸು"
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "ಚಿಕ್ಕಚಿತ್ರ ಮಾತ್ರ"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "ಅನ್ವಯ ಚಿಹ್ನೆ ಮಾತ್ರ"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "ಅಡಕಚಿತ್ರ ಮತ್ತು ಅನ್ವಯ ಚಿಹ್ನೆ"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "ಈ ರೀತಿಯಲ್ಲಿ ಈಗಿರುವ ಕಿಟಕಿ"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "ಪ್ರಸಕ್ತ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿರುವ ಕಿಟಕಿಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "ಚಟುವಟಿಕೆಗಳ ಸ್ಥೂಲ ಸಮೀಕ್ಷೆ"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "ಮೆಚ್ಚಿನವುಗಳು"
+
+#: ../extensions/apps-menu/extension.js:282
+msgid "Applications"
+msgstr "ಅನ್ವಯಗಳು"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "ಅನ್ವಯ ಹಾಗು ಕಾರ್ಯಕ್ಷೇತ್ರ ಪಟ್ಟಿ"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"ಅನ್ವಯ id (ಗಣಕತೆರೆ ಕಡತದ ಹೆಸರು), ನಂತರ ಒಂದು ವಿವರಣೆ ಚಿಹ್ನೆ ಮತ್ತು ಕಾರ್ಯಕ್ಷೇತ್ರದ "
+"ಸಂಖ್ಯೆಯನ್ನು ಹೊಂದಿರುವ ವಾಕ್ಯಾಂಶಗಳ ಒಂದು ಪಟ್ಟಿ"
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "ಅನ್ವಯ"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "ನಿಯಮವನ್ನು ಸೇರಿಸು"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "ಹೊಸ ಹೊಂದಿಕೆಯಾಗುವ ನಿಯಮವನ್ನು ರಚಿಸು"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "ಸೇರಿಸು"
+
+#: ../extensions/drive-menu/extension.js:73
+#, c-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "'%s' ಡ್ರೈವ್ ಅನ್ನು ಹೊರತೆಗೆಯುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ:"
+
+#: ../extensions/drive-menu/extension.js:90
+msgid "Removable devices"
+msgstr "ತೆಗೆಯಬಹುದಾದ ಸಾಧನಗಳು"
+
+#: ../extensions/drive-menu/extension.js:117
+msgid "Open File"
+msgstr "ಕಡತವನ್ನು ತೆರೆ"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "ನಮಸ್ಕಾರ, ಎಲ್ಲರಿಗೂ!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "ಪರ್ಯಾಯ ಶುಭಾಶಯ ಪಠ್ಯ."
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"ಖಾಲಿ ಇರದೆ ಇದ್ದಲ್ಲಿ, ಪ್ಯಾನೆಲ್‌ನ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ ತೋರಿಸಲಾಗುವ ಪಠ್ಯವನ್ನು ಇದು "
+"ಹೊಂದಿರುತ್ತದೆ."
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"ಉದಾಹರಣೆಯು ಶೆಲ್‌ಗಾಗಿ ಉತ್ತಮವಾಗಿ ವರ್ತಿಸುವ ವಿಸ್ತರಣೆಗಳನ್ನು ನಿರ್ಮಿಸುವುದನ್ನು ತೋರಿಸುವ "
+"ಉದ್ಧೇಶವನ್ನು ಹೊಂದಿರುತ್ತದೆ ಮತ್ತು ಅದು ತಾನೆ ಸ್ವತಃ ಬಹಳ ಕಡಿಮೆ ಎನ್ನುವಷ್ಟು "
+"ಪ್ರಯೋಜನವನ್ನು ನೀಡಬಲ್ಲದು.\n"
+"ಆದರೂ ಸಹ ಶುಭಾಶಯದ ಸಂದೇಶವನ್ನು ಅಗತ್ಯಾನುಗಣವಾಗಿಸಲು ಸಾಧ್ಯವಿರುತ್ತದೆ."
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "ಸಂದೇಶ:"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "ಕಿಟಕಿಗಳಿಗಾಗಿ ಹೆಚ್ಚಿನ ತೆರೆಯನ್ನು ಬಳಸಿ"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"ತೆರೆಯ ಆಕಾರ ಅನುಪಾತವನ್ನು ಅಳವಡಿಸಿಕೊಳ್ಳುವ ಮೂಲಕ ಕಿಟಕಿ ಅಡಕಚಿತ್ರಗಳನ್ನು (ತಂಬ್‌ನೈಲ್) "
+"ಇರಿಸುವ "
+"ಸಲುವಾಗಿ ಹೆಚ್ಚಿನ ತೆರೆಯನ್ನು ಬಳಸಲು, ಮತ್ತು ಸೀಮಿತ ಚೌಕವನ್ನು (ಬೌಂಡಿಂಗ್ ಬಾಕ್ಸ್) ಕಡಿಮೆ "
+"ಮಾಡಲು "
+"ಅವುಗಳನ್ನು ಇನ್ನಷ್ಟು ಕ್ರೋಢೀಕರಿಸಲು ಪ್ರಯತ್ನಿಸಿ. ಈ ಸಿದ್ಧತೆಯು ಕೇವಲ ನೈಸರ್ಗಿಕ "
+"ಇರಿಸುವಿಕೆ "
+"ತಂತ್ರದೊಂದಿಗೆ ಮಾತ್ರ ಕೆಲಸ ಮಾಡುತ್ತದೆ."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "ಕಿಟಕಿ ತಲೆಬರಹಗಳನ್ನು ಮೇಲೆಯೆ ಇರಿಸು"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"ನಿಜವಾದಲ್ಲಿ, ಆಯಾಯ ಅಡಕಚಿತ್ರದ ಮೇಲ್ಭಾಗದಲ್ಲಿ ಕಿಟಕಿ ಶೀರ್ಷಿಕೆಗಳನ್ನು ಇರಿಸಿ, ಆ ಮೂಲಕ "
+"ಶೆಲ್‌ನ ಪೂರ್ವನಿಯೋಜಿತವಾದಂತಹ ಕೆಳಭಾಗದಲ್ಲಿ ಇರಿಸುವಿಕೆಯನ್ನು ಅತಿಕ್ರಮಿಸಿದಂತಾಗುತ್ತದೆ. ಈ "
+"ಸಿದ್ಧತೆಯನ್ನು ಬದಲಾಯಿಸಿದಲ್ಲಿ ಅದು ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರಲು ಶೆಲ್ ಅನ್ನು ಮರಳಿ ಆರಂಭಿಸುವ "
+"ಅಗತ್ಯವಿರುತ್ತದೆ."
+
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "ಸ್ಥಳಗಳು"
+
+#: ../extensions/places-menu/placeDisplay.js:58
+#, c-format
+msgid "Failed to launch \"%s\""
+msgstr "'%s' ಅನ್ನು ಆರಂಭಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../extensions/places-menu/placeDisplay.js:100
+#: ../extensions/places-menu/placeDisplay.js:123
+msgid "Computer"
+msgstr "ಗಣಕ"
+
+#: ../extensions/places-menu/placeDisplay.js:201
+msgid "Home"
+msgstr "ನೆಲೆ"
+
+#: ../extensions/places-menu/placeDisplay.js:288
+msgid "Browse Network"
+msgstr "ಜಾಲಬಂಧವನ್ನು ವೀಕ್ಷಿಸು"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "ಮೆಮೊರಿ"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಹೆಸರು"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "~/.themes/name/gnome-shell ಇಂದ ಲೋಡ್ ಮಾಡಬೇಕಿರುವ ಪರಿಸರವಿನ್ಯಾಸದ ಹೆಸರು"
+
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "ಮುಚ್ಚು"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "ಕುಗ್ಗಿಸಿದ್ದನ್ನು ಹಿಗ್ಗಿಸು"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "ಕುಗ್ಗಿಸು"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "ಹಿಂದಿನ ಸ್ಥಿತಿಗೆ ಮರಳಿಸು"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "ಹಿಗ್ಗಿಸು"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "ಎಲ್ಲವನ್ನೂ ಕುಗ್ಗಿಸು"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "ಎಲ್ಲವನ್ನೂ ಹಿಂದಿನ ಸ್ಥಿತಿಗೆ ಮರಳಿಸು"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "ಎಲ್ಲವನ್ನೂ ಹಿಗ್ಗಿಸು"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "ಎಲ್ಲವನ್ನೂ ಹಿಂದಿನ ಸ್ಥಿತಿಗೆ ಮರಳಿಸು"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "ಎಲ್ಲವನ್ನು ಮುಚ್ಚು"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ ಸೂಚಿ"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "ಕಿಟಕಿ ಪಟ್ಟಿ"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "ಕಿಟಕಿಗಳನ್ನು ಯಾವಾಗ ಗುಂಪುಗೂಡಿಸಬೇಕು"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"ಕಿಟಕಿಯ ಪಟ್ಟಿಯಲ್ಲಿ ಒಂದೇ ಅನ್ವಯಗಳ ಕಿಟಕಿಗಳನ್ನು ಯಾವಾಗ ಗುಂಪುಗೂಡಿಸಬೇಕು ಎನ್ನುವುದನ್ನು "
+"ಇದು ನಿರ್ಧರಿಸುತ್ತದೆ. "
+"ಸಾಧ್ಯವಿರುವ ಮೌಲ್ಯಗಳೆಂದರೆ, \"never\", \"auto\" ಮತ್ತು \"always\""
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "ಕಿಟಕಿ ಗುಂಪು ಮಾಡುವಿಕೆ"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "ಎಂದಿಗೂ ಕಿಟಕಿಗಳನ್ನು ಗುಂಪುಗೂಡಿಸದಿರು"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "ಸ್ಥಳದ ಮಿತಿ ಇದ್ದಾಗ ಕಿಟಕಿಗಳನ್ನು ಗುಂಪುಗೂಡಿಸು"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "ಯಾವಾಗಲೂ ಕಿಟಕಿಗಳನ್ನು ಗುಂಪುಗೂಡಿಸು"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ ಹೆಸರುಗಳು:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "ಹೆಸರು"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, c-format
+msgid "Workspace %d"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ %d"
+
