@@ -2,7 +2,7 @@
 Type=Application
 _Name=GNOME Shell Classic
 _Comment=Window management and application launching
-Exec=@bindir@/gnome-shell --mode=classic
+Exec=@bindir@/gnome-shell
 TryExec=@bindir@/gnome-shell
 X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=gnome-shell
