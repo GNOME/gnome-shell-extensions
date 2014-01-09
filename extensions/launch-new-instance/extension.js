@@ -5,14 +5,7 @@ var _onActivateOriginal = null;
 var _activateResultOriginal = null;
 
 function _onActivate(event) {
-
-  this.emit('launching');
-
-  if (this._onActivateOverride) {
-    this._onActivateOverride(event);
-  } else {
-    this.app.open_new_window(-1);
-  }
+  this.app.open_new_window(-1);
   Main.overview.hide();
 }
 
