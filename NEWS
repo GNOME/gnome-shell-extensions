@@ -1,3 +1,9 @@
+3.11.4
+======
+* classic mode now supports session saving
+* updates for gnome-shell changes
+* updated translattions (ar, kn)
+
 3.11.3
 ======
 * workspace-indicator is vertically aligned now
