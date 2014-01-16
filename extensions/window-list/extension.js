@@ -7,7 +7,6 @@ const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 
 const DND = imports.ui.dnd;
-const Hash = imports.misc.hash;
 const Lang = imports.lang;
 const Main = imports.ui.main;
 const MessageTray = imports.ui.messageTray;
@@ -761,7 +760,7 @@ const WindowList = new Lang.Class({
                     this._updateKeyboardAnchor();
                 }));
 
-        this._workspaceSignals = new Hash.Map();
+        this._workspaceSignals = new Map();
         this._nWorkspacesChangedId =
             global.screen.connect('notify::n-workspaces',
                                   Lang.bind(this, this._onWorkspacesChanged));
@@ -931,7 +930,8 @@ const WindowList = new Lang.Class({
         let numWorkspaces = global.screen.n_workspaces;
         for (let i = 0; i < numWorkspaces; i++) {
             let workspace = global.screen.get_workspace_by_index(i);
-            let signals = this._workspaceSignals.delete(workspace)[1];
+            let signals = this._workspaceSignals.get(workspace);
+            this._workspaceSignals.delete(workspace);
             workspace.disconnect(signals._windowAddedId);
             workspace.disconnect(signals._windowRemovedId);
         }
