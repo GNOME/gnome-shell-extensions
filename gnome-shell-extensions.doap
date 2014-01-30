@@ -18,7 +18,7 @@ and will be picked automatically at next login.
   <maintainer>
     <foaf:Person>
       <foaf:name>Giovanni Campagna</foaf:name>
-      <foaf:mbox rdf:resource="mailto:scampa.giovanni@gmail.com" />
+      <foaf:mbox rdf:resource="mailto:gcampagna@src.gnome.org" />
       <gnome:userid>gcampagna</gnome:userid>
     </foaf:Person>
   </maintainer>
