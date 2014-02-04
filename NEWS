@@ -1,8 +1,13 @@
+3.11.5
+======
+* updates for gnome-shell changes
+* updated translations (kn)
+
 3.11.4
 ======
 * classic mode now supports session saving
 * updates for gnome-shell changes
-* updated translattions (ar, kn)
+* updated translations (ar, kn)
 
 3.11.3
 ======
