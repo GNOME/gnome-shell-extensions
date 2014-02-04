@@ -17,6 +17,9 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
+const Gettext = imports.gettext.domain('gnome-shell-extensions');
+const _ = Gettext.gettext;
+
 const ICON_TEXTURE_SIZE = 24;
 const DND_ACTIVATE_TIMEOUT = 500;
 
