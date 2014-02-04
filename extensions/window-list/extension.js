@@ -876,7 +876,7 @@ const WindowList = new Lang.Class({
     },
 
     _onWindowAdded: function(ws, win) {
-        if (!Shell.WindowTracker.get_default().is_window_interesting(win))
+        if (win.skip_taskbar)
             return;
 
         if (this._grouped)
