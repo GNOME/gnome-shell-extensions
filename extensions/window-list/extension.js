@@ -219,6 +219,17 @@ const WindowButton = new Lang.Class({
         this._updateStyle();
     },
 
+    get active() {
+        return this.actor.has_style_class_name('focused');
+    },
+
+    activate: function() {
+        if (this.active)
+            return;
+
+        this._onClicked(this.actor, 1);
+    },
+
     _onClicked: function(actor, button) {
         if (this._contextMenu.isOpen) {
             this._contextMenu.close();
@@ -485,6 +496,17 @@ const AppButton = new Lang.Class({
 
     },
 
+    get active() {
+        return this.actor.has_style_class_name('focused');
+    },
+
+    activate: function() {
+        if (this.active)
+            return;
+
+        this._onClicked(this.actor, 1);
+    },
+
     _onClicked: function(actor, button) {
         let menuWasOpen = this._menu.isOpen;
         if (menuWasOpen)
@@ -724,6 +746,7 @@ const WindowList = new Lang.Class({
 
         let layout = new Clutter.BoxLayout({ homogeneous: true });
         this._windowList = new St.Widget({ style_class: 'window-list',
+                                           reactive: true,
                                            layout_manager: layout,
                                            x_align: Clutter.ActorAlign.START,
                                            x_expand: true,
@@ -750,6 +773,7 @@ const WindowList = new Lang.Class({
                                    Lang.bind(this, this._populateWindowList));
                 }
             }));
+        this._windowList.connect('scroll-event', Lang.bind(this, this._onScrollEvent));
 
 	let indicatorsBox = new St.BoxLayout({ x_align: Clutter.ActorAlign.END });
 	box.add(indicatorsBox);
@@ -831,6 +855,31 @@ const WindowList = new Lang.Class({
             this._settings.connect('changed::grouping-mode',
                                    Lang.bind(this, this._groupingModeChanged));
         this._groupingModeChanged();
+    },
+
+    _onScrollEvent: function(actor, event) {
+        let direction = event.get_scroll_direction();
+        let diff = 0;
+        if (direction == Clutter.ScrollDirection.DOWN)
+            diff = 1;
+        else if (direction == Clutter.ScrollDirection.UP)
+            diff = -1;
+        else
+            return;
+
+        let children = this._windowList.get_children().map(function(actor) {
+            return actor._delegate;
+        });
+        let active = 0;
+        for (let i = 0; i < children.length; i++) {
+            if (children[i].active) {
+                active = i;
+                break;
+            }
+        }
+
+        active = Math.max(0, Math.min(active + diff, children.length-1));
+        children[active].activate();
     },
 
     _groupingModeChanged: function() {
