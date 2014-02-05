@@ -43,8 +43,7 @@ const PlaceInfo = new Lang.Class({
     },
 
     launch: function(timestamp) {
-        let launchContext = global.create_app_launch_context();
-        launchContext.set_timestamp(timestamp);
+        let launchContext = global.create_app_launch_context(timestamp, -1);
 
         try {
             Gio.AppInfo.launch_default_for_uri(this.file.get_uri(),
