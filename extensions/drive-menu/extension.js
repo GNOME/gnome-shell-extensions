@@ -36,6 +36,39 @@ const MountMenuItem = new Lang.Class({
 	let ejectButton = new St.Button({ child: ejectIcon });
 	ejectButton.connect('clicked', Lang.bind(this, this._eject));
 	this.actor.add(ejectButton);
+
+        this._changedId = mount.connect('changed', Lang.bind(this, this._syncVisibility));
+        this._syncVisibility();
+    },
+
+    destroy: function() {
+        if (this._changedId) {
+            this.mount.disconnect(this._changedId);
+            this._changedId = 0;
+        }
+
+        this.parent();
+    },
+
+    _isInteresting: function() {
+        if (!this.mount.can_eject() && !this.mount.can_unmount())
+            return false;
+        if (this.mount.is_shadowed())
+            return false;
+
+        let volume = this.mount.get_volume();
+
+        if (volume == null) {
+            // probably a GDaemonMount, could be network or
+            // local, but we can't tell; assume it's local for now
+            return true;
+        }
+
+        return volume.get_identifier('class') != 'network';
+    },
+
+    _syncVisibility: function() {
+        this.actor.visible = this._isInteresting();
     },
 
     _eject: function() {
@@ -124,42 +157,19 @@ const DriveMenu = new Lang.Class({
     },
 
     _updateMenuVisibility: function() {
-	if (this._mounts.length > 0)
+	if (this._mounts.filter(function(i) i.actor.visible).length > 0)
 	    this.actor.show();
 	else
 	    this.actor.hide();
     },
 
-    _isMountInteresting: function(mount) {
-        if (!mount.can_eject() && !mount.can_unmount())
-            return false;
-        if (mount.is_shadowed())
-            return false;
-
-        let volume = mount.get_volume();
-
-        if (volume == null) {
-            // probably a GDaemonMount, could be network or
-            // local, but we can't tell; assume it's local for now
-            return true;
-        }
-
-        return volume.get_identifier('class') != 'network';
-    },
-
     _addMount: function(mount) {
-	if (!this._isMountInteresting(mount))
-	    return;
-
 	let item = new MountMenuItem(mount);
 	this._mounts.unshift(item);
 	this.menu.addMenuItem(item, 0);
     },
 
     _removeMount: function(mount) {
-	if (!this._isMountInteresting(mount))
-	    return;
-
 	for (let i = 0; i < this._mounts.length; i++) {
 	    let item = this._mounts[i];
 	    if (item.mount == mount) {
