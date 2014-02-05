@@ -75,3 +75,7 @@
 .window-list-workspace-indicator > StLabel {
   padding: 0 2px;
 }
+
+.notification {
+  font-weight: normal;
+}
