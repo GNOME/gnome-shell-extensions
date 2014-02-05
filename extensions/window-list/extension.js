@@ -10,10 +10,8 @@ const DND = imports.ui.dnd;
 const Lang = imports.lang;
 const Main = imports.ui.main;
 const MessageTray = imports.ui.messageTray;
-const Overview = imports.ui.overview;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
-const Tweener = imports.ui.tweener;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
@@ -773,12 +771,7 @@ const WindowList = new Lang.Class({
 
         this._overviewShowingId =
             Main.overview.connect('showing', Lang.bind(this, function() {
-                // revert layout manager showing us
-                this.actor.visible = !Main.layoutManager.primaryMonitor.inFullscreen;
-
-                Tweener.addTween(this.actor,
-                                 { opacity: 0,
-                                   time: Overview.SHADE_ANIMATION_TIME });
+                this.actor.hide();
                 this._updateKeyboardAnchor();
                 this._updateMessageTrayAnchor();
             }));
@@ -786,15 +779,6 @@ const WindowList = new Lang.Class({
         this._overviewHidingId =
             Main.overview.connect('hiding', Lang.bind(this, function() {
                 this.actor.visible = !Main.layoutManager.primaryMonitor.inFullscreen;
-                Tweener.addTween(this.actor,
-                                 { opacity: 255,
-                                   time: Overview.SHADE_ANIMATION_TIME });
-
-                this._updateKeyboardAnchor();
-                this._updateMessageTrayAnchor();
-            }));
-        this._overviewHiddenId =
-            Main.overview.connect('hidden', Lang.bind(this, function() {
                 this._updateKeyboardAnchor();
                 this._updateMessageTrayAnchor();
             }));
@@ -855,12 +839,12 @@ const WindowList = new Lang.Class({
         if (!Main.keyboard.actor)
             return;
 
-        let anchorY = (Main.overview.visible || !this.actor.visible) ? 0 : this.actor.height;
+        let anchorY = Main.overview.visible ? 0 : this.actor.height;
         Main.keyboard.actor.anchor_y = anchorY;
     },
 
     _updateMessageTrayAnchor: function() {
-        let anchorY = (Main.overview.visible || !this.actor.visible) ? 0 : this.actor.height;
+        let anchorY = this.actor.visible ? this.actor.height : 0;
 
         Main.messageTray.actor.anchor_y = anchorY;
         Main.messageTray._notificationWidget.anchor_y = -anchorY;
@@ -1034,7 +1018,6 @@ const WindowList = new Lang.Class({
 
         Main.overview.disconnect(this._overviewShowingId);
         Main.overview.disconnect(this._overviewHidingId);
-        Main.overview.disconnect(this._overviewHiddenId);
 
         global.screen.disconnect(this._fullscreenChangedId);
 
