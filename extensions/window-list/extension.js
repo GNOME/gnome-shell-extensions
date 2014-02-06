@@ -786,6 +786,7 @@ const WindowList = new Lang.Class({
 
         this._fullscreenChangedId =
             global.screen.connect('in-fullscreen-changed', Lang.bind(this, function() {
+                this._updateKeyboardAnchor();
                 this._updateMessageTrayAnchor();
             }));
 
