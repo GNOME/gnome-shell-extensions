@@ -271,7 +271,7 @@ const AppContextMenu = new Lang.Class({
 
         this._minimizeItem = new PopupMenu.PopupMenuItem(_("Minimize all"));
         this._minimizeItem.connect('activate', Lang.bind(this, function() {
-            this._app.get_windows().forEach(function(w) {
+            this._getWindowList().forEach(function(w) {
                 w.minimize();
             });
         }));
@@ -279,7 +279,7 @@ const AppContextMenu = new Lang.Class({
 
         this._unminimizeItem = new PopupMenu.PopupMenuItem(_("Unminimize all"));
         this._unminimizeItem.connect('activate', Lang.bind(this, function() {
-            this._app.get_windows().forEach(function(w) {
+            this._getWindowList().forEach(function(w) {
                 w.unminimize();
             });
         }));
@@ -287,7 +287,7 @@ const AppContextMenu = new Lang.Class({
 
         this._maximizeItem = new PopupMenu.PopupMenuItem(_("Maximize all"));
         this._maximizeItem.connect('activate', Lang.bind(this, function() {
-            this._app.get_windows().forEach(function(w) {
+            this._getWindowList().forEach(function(w) {
                 w.maximize(Meta.MaximizeFlags.HORIZONTAL |
                            Meta.MaximizeFlags.VERTICAL);
             });
@@ -296,7 +296,7 @@ const AppContextMenu = new Lang.Class({
 
         this._unmaximizeItem = new PopupMenu.PopupMenuItem(_("Unmaximize all"));
         this._unmaximizeItem.connect('activate', Lang.bind(this, function() {
-            this._app.get_windows().forEach(function(w) {
+            this._getWindowList().forEach(function(w) {
                 w.unmaximize(Meta.MaximizeFlags.HORIZONTAL |
                              Meta.MaximizeFlags.VERTICAL);
             });
@@ -305,15 +305,22 @@ const AppContextMenu = new Lang.Class({
 
         let item = new PopupMenu.PopupMenuItem(_("Close all"));
         item.connect('activate', Lang.bind(this, function() {
-            this._app.get_windows().forEach(function(w) {
+            this._getWindowList().forEach(function(w) {
                 w.delete(global.get_current_time());
             });
         }));
         this.addMenuItem(item);
     },
 
+    _getWindowList: function() {
+        let workspace = global.screen.get_active_workspace();
+        return this._app.get_windows().filter(function(win) {
+            return win.located_on_workspace(workspace);
+        });
+    },
+
     open: function(animate) {
-        let windows = this._app.get_windows();
+        let windows = this._getWindowList();
         this._minimizeItem.actor.visible = windows.some(function(w) {
             return !w.minimized;
         });
