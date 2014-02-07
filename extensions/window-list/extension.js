@@ -315,7 +315,7 @@ const AppContextMenu = new Lang.Class({
     _getWindowList: function() {
         let workspace = global.screen.get_active_workspace();
         return this._app.get_windows().filter(function(win) {
-            return win.located_on_workspace(workspace);
+            return !win.skip_taskbar && win.located_on_workspace(workspace);
         });
     },
 
@@ -436,7 +436,7 @@ const AppButton = new Lang.Class({
     _getWindowList: function() {
         let workspace = global.screen.get_active_workspace();
         return this.app.get_windows().filter(function(win) {
-            return win.located_on_workspace(workspace);
+            return !win.skip_taskbar && win.located_on_workspace(workspace);
         });
     },
 
