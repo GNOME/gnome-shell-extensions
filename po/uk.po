@@ -2,21 +2,21 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Alexandr Toorchyn <ilex@mail.ua>, 2011.
-# Daniel Korostil <ted.korostiled@gmail.com>, 2013.
+# Daniel Korostil <ted.korostiled@gmail.com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-21 12:22+0300\n"
-"PO-Revision-Date: 2013-09-21 12:22+0300\n"
+"POT-Creation-Date: 2014-02-09 23:19+0200\n"
+"PO-Revision-Date: 2014-02-09 23:19+0300\n"
 "Last-Translator: Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
@@ -54,6 +54,10 @@ msgstr "Увімкнути розбиття країв, коли кладуть�
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
 msgid "Workspaces only on primary monitor"
 msgstr "Робочий простір лише на основному моніторі"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "Затримувати зміни фокусу миші, поки вказівник не перестане рухатись"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -120,16 +124,16 @@ msgstr "Створити нове відповідне правило"
 msgid "Add"
 msgstr "Додати"
 
-#: ../extensions/drive-menu/extension.js:73
+#: ../extensions/drive-menu/extension.js:106
 #, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Не вдалося витягнути пристрій «%s»:"
 
-#: ../extensions/drive-menu/extension.js:90
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "Змінні пристрої"
 
-#: ../extensions/drive-menu/extension.js:117
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "Відкрити Файли"
 
@@ -197,21 +201,21 @@ msgstr ""
 msgid "Places"
 msgstr "Місця"
 
-#: ../extensions/places-menu/placeDisplay.js:56
+#: ../extensions/places-menu/placeDisplay.js:57
 #, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "Не вдалося запустити «%s»"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "Комп'ютер"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "Домівка"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "Огляд мережі"
 
@@ -231,52 +235,52 @@ msgstr "Назва теми"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Назва теми, що завантажується з ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:92
+#: ../extensions/window-list/extension.js:94
 msgid "Close"
 msgstr "Закрити"
 
-#: ../extensions/window-list/extension.js:102
+#: ../extensions/window-list/extension.js:104
 msgid "Unminimize"
 msgstr "Відновити згорнуте"
 
-#: ../extensions/window-list/extension.js:103
+#: ../extensions/window-list/extension.js:105
 msgid "Minimize"
 msgstr "Згорнути"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:111
 msgid "Unmaximize"
 msgstr "Відновити розгорнуте"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:112
 msgid "Maximize"
 msgstr "Розгорнути"
 
-#: ../extensions/window-list/extension.js:270
+#: ../extensions/window-list/extension.js:272
 msgid "Minimize all"
 msgstr "Згорнути все"
 
-#: ../extensions/window-list/extension.js:278
+#: ../extensions/window-list/extension.js:280
 msgid "Unminimize all"
 msgstr "Відновити все згорнуте"
 
-#: ../extensions/window-list/extension.js:286
+#: ../extensions/window-list/extension.js:288
 msgid "Maximize all"
 msgstr "Розгорнути все"
 
-#: ../extensions/window-list/extension.js:295
+#: ../extensions/window-list/extension.js:297
 msgid "Unmaximize all"
 msgstr "Відновити все розгорнуте"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:306
 msgid "Close all"
 msgstr "Закрити все"
 
-#: ../extensions/window-list/extension.js:591
+#: ../extensions/window-list/extension.js:593
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Покажчик робочого простору"
 
-#: ../extensions/window-list/extension.js:743
+#: ../extensions/window-list/extension.js:745
 msgid "Window List"
 msgstr "Перелік вікон"
 
