@@ -46,7 +46,7 @@ const WindowMover = new Lang.Class({
     },
 
     _findAndMove: function(display, window, noRecurse) {
-        if (!this._windowTracker.is_window_interesting(window))
+        if (window.skip_taskbar)
             return;
 
         let spaces = this._settings.get_strv(SETTINGS_KEY);
