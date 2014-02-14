@@ -391,7 +391,6 @@ const AppButton = new Lang.Class({
         this._appContextMenu = new AppContextMenu(this.actor, this.app);
         this._appContextMenu.connect('open-state-changed', _onMenuStateChanged);
         this._appContextMenu.actor.hide();
-        this._contextMenuManager.addMenu(this._appContextMenu);
         Main.uiGroup.add_actor(this._appContextMenu.actor);
 
         this._textureCache = St.TextureCache.get_default();
@@ -470,6 +469,7 @@ const AppButton = new Lang.Class({
                 this._windowContextMenu.actor.hide();
                 this._contextMenuManager.addMenu(this._windowContextMenu);
             }
+            this._contextMenuManager.removeMenu(this._appContextMenu);
             this._contextMenu = this._windowContextMenu;
         } else {
             if (this._windowTitle) {
@@ -480,6 +480,7 @@ const AppButton = new Lang.Class({
                 this._windowContextMenu = null;
             }
             this._contextMenu = this._appContextMenu;
+            this._contextMenuManager.addMenu(this._appContextMenu);
         }
 
     },
