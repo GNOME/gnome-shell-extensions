@@ -266,7 +266,7 @@ const WindowButton = new Lang.Class({
     _onDestroy: function() {
         global.window_manager.disconnect(this._switchWorkspaceId);
         global.display.disconnect(this._notifyFocusId);
-        this._contextMenu.actor.destroy();
+        this._contextMenu.destroy();
     }
 });
 
@@ -476,7 +476,7 @@ const AppButton = new Lang.Class({
                 this.metaWindow = null;
                 this._singleWindowTitle.child = null;
                 this._windowTitle = null;
-                this._windowContextMenu.actor.destroy();
+                this._windowContextMenu.destroy();
                 this._windowContextMenu = null;
             }
             this._contextMenu = this._appContextMenu;
@@ -538,7 +538,7 @@ const AppButton = new Lang.Class({
         global.window_manager.disconnect(this._switchWorkspaceId);
         this._windowTracker.disconnect(this._notifyFocusId);
         this.app.disconnect(this._windowsChangedId);
-        this._menu.actor.destroy();
+        this._menu.destroy();
     }
 });
 
