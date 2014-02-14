@@ -47,6 +47,16 @@ function _openMenu(menu) {
         menu.actor.navigate_focus(null, Gtk.DirectionType.TAB_FORWARD, false);
 }
 
+function _onMenuStateChanged(menu, isOpen) {
+    if (isOpen)
+        return;
+
+    let [x, y,] = global.get_pointer();
+    let actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
+    if (windowList.actor.contains(actor))
+        actor.sync_hover();
+}
+
 
 const WindowContextMenu = new Lang.Class({
     Name: 'WindowContextMenu',
@@ -187,6 +197,7 @@ const WindowButton = new Lang.Class({
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._contextMenu = new WindowContextMenu(this.actor, this.metaWindow);
+        this._contextMenu.connect('open-state-changed', _onMenuStateChanged);
         this._contextMenu.actor.hide();
         this._menuManager.addMenu(this._contextMenu);
         Main.uiGroup.add_actor(this._contextMenu.actor);
@@ -370,6 +381,7 @@ const AppButton = new Lang.Class({
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menu = new PopupMenu.PopupMenu(this.actor, 0.5, St.Side.BOTTOM);
+        this._menu.connect('open-state-changed', _onMenuStateChanged);
         this._menu.actor.hide();
         this._menu.connect('activate', Lang.bind(this, this._onMenuActivate));
         this._menuManager.addMenu(this._menu);
@@ -377,6 +389,7 @@ const AppButton = new Lang.Class({
 
         this._contextMenuManager = new PopupMenu.PopupMenuManager(this);
         this._appContextMenu = new AppContextMenu(this.actor, this.app);
+        this._appContextMenu.connect('open-state-changed', _onMenuStateChanged);
         this._appContextMenu.actor.hide();
         this._contextMenuManager.addMenu(this._appContextMenu);
         Main.uiGroup.add_actor(this._appContextMenu.actor);
@@ -451,6 +464,8 @@ const AppButton = new Lang.Class({
                 this._windowTitle = new WindowTitle(this.metaWindow);
                 this._singleWindowTitle.child = this._windowTitle.actor;
                 this._windowContextMenu = new WindowContextMenu(this.actor, this.metaWindow);
+                this._windowContextMenu.connect('open-state-changed',
+                                                _onMenuStateChanged);
                 Main.uiGroup.add_actor(this._windowContextMenu.actor);
                 this._windowContextMenu.actor.hide();
                 this._contextMenuManager.addMenu(this._windowContextMenu);
