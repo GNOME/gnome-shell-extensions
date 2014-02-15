@@ -16,7 +16,8 @@ function _onActivate(event) {
   Main.overview.hide();
 }
 
-function _activateResult(app) {
+function _activateResult(result) {
+  let app = this._appSys.lookup_app(result);
   app.open_new_window(-1);
 }
 
