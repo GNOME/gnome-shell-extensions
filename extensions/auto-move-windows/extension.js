@@ -104,9 +104,9 @@ function myCheckWorkspaces() {
 
     let windows = global.get_window_actors();
     for (i = 0; i < windows.length; i++) {
-	let win = windows[i];
-
-	if (win.get_meta_window().is_on_all_workspaces())
+	let winActor = windows[i];
+        let win = winActor.meta_window;
+	if (win.is_on_all_workspaces())
             continue;
 
 	let workspaceIndex = win.get_workspace();
