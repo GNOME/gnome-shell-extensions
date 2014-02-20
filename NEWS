@@ -1,3 +1,15 @@
+3.11.90
+=======
+* several fixes and improvements to the window-list
+  (can be scrolled, works correctly with the OSD
+  keyboard, filters skip-taskbar windows, does not
+  force all notifications to bold)
+* drive-menu fixed not to show shadowed mounts
+* updates for gnome-shell changes (launch-new-instance,
+  auto-move-windows, places-menu)
+* build system fixes for systems without /bin/bash
+* updated translations (or, tr, uk)
+
 3.11.5
 ======
 * updates for gnome-shell changes
