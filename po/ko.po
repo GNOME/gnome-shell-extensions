@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2012.
-# Changwoo Ryu <cwryu@debian.org>, 2013.
+# Changwoo Ryu <cwryu@debian.org>, 2013-2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-09-15 00:43+0000\n"
-"PO-Revision-Date: 2013-09-16 03:25+0900\n"
+"POT-Creation-Date: 2014-03-05 08:31+0000\n"
+"PO-Revision-Date: 2014-03-05 20:11+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -54,6 +54,10 @@ msgstr "화면 가장자리에 창을 놓을 때 가장자리 맞추기 기능�
 msgid "Workspaces only on primary monitor"
 msgstr "주 모니터에만 작업 공간 사용"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "마우스 포인터가 움직이지 않을 때까지 포커스 전환을 미루기"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "섬네일만"
@@ -82,7 +86,7 @@ msgstr "현재 활동"
 msgid "Favorites"
 msgstr "즐겨찾기"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "프로그램"
 
@@ -119,16 +123,16 @@ msgstr "새 일치 규칙 만들기"
 msgid "Add"
 msgstr "추가"
 
-#: ../extensions/drive-menu/extension.js:73
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "'%s' 드라이브를 빼는데 실패했습니다:"
 
-#: ../extensions/drive-menu/extension.js:90
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "이동식 장치"
 
-#: ../extensions/drive-menu/extension.js:117
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "파일 열기"
 
@@ -146,8 +150,6 @@ msgid ""
 "panel."
 msgstr "빈 값이 아니면, 패널을 눌렀을때 보일 텍스트입니다."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -195,21 +197,21 @@ msgstr ""
 msgid "Places"
 msgstr "위치"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" 실행에 실패했습니다"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "컴퓨터"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "홈"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "네트워크 찾아보기"
 
@@ -229,52 +231,52 @@ msgstr "테마 이름"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "테마 이름, ~/.themes/name/gnome-shell 아래에서 읽어들입니다."
 
-#: ../extensions/window-list/extension.js:92
+#: ../extensions/window-list/extension.js:104
 msgid "Close"
 msgstr "닫기"
 
-#: ../extensions/window-list/extension.js:102
+#: ../extensions/window-list/extension.js:114
 msgid "Unminimize"
 msgstr "최소화 취소"
 
-#: ../extensions/window-list/extension.js:103
+#: ../extensions/window-list/extension.js:115
 msgid "Minimize"
 msgstr "최소화"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:121
 msgid "Unmaximize"
 msgstr "최대화 취소"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:122
 msgid "Maximize"
 msgstr "최대화"
 
-#: ../extensions/window-list/extension.js:270
+#: ../extensions/window-list/extension.js:294
 msgid "Minimize all"
 msgstr "모두 최소화"
 
-#: ../extensions/window-list/extension.js:278
+#: ../extensions/window-list/extension.js:302
 msgid "Unminimize all"
 msgstr "모두 최소화 취소"
 
-#: ../extensions/window-list/extension.js:286
+#: ../extensions/window-list/extension.js:310
 msgid "Maximize all"
 msgstr "모두 최대화"
 
-#: ../extensions/window-list/extension.js:295
+#: ../extensions/window-list/extension.js:319
 msgid "Unmaximize all"
 msgstr "모두 최대화 취소"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:328
 msgid "Close all"
 msgstr "모두 닫기"
 
-#: ../extensions/window-list/extension.js:591
+#: ../extensions/window-list/extension.js:638
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "작업 공간 표시"
 
-#: ../extensions/window-list/extension.js:743
+#: ../extensions/window-list/extension.js:792
 msgid "Window List"
 msgstr "창 목록"
 
@@ -315,6 +317,6 @@ msgid "Name"
 msgstr "이름"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "작업 공간 %d"
