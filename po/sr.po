@@ -2,22 +2,22 @@
 # Copyright (C) 2012 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Милош Поповић <gpopac@gmail.com>, 2012.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012, 2013.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012, 2013, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-shell-extensions master\n"
+"Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-02-20 11:19+0000\n"
-"PO-Revision-Date: 2013-02-20 12:19+0200\n"
+"POT-Creation-Date: 2014-03-14 20:31+0000\n"
+"PO-Revision-Date: 2014-03-15 06:02+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -36,6 +36,25 @@ msgstr "Класична Гномова шкољка"
 #: ../data/gnome-shell-classic.desktop.in.in.h:2
 msgid "Window management and application launching"
 msgstr "Управљање прозорима и покретање програма"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Прикачиње прозорче родитељском прозору"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Овај кључ превазилази кључ у „org.gnome.mutter“ када покреће Гномову шкољку."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "Укључује поплочавање ивице приликом отпуштања прозора на ивицама екрана"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid "Workspace Indicator"
+msgid "Workspaces only on primary monitor"
+msgstr "Радни простори само на примарном монитору"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -57,7 +76,7 @@ msgstr "Прикажи прозоре као"
 msgid "Show only windows in the current workspace"
 msgstr "Приказује само прозоре у текућем радном простору"
 
-#. add the new entries
+#. add the new entries */
 #: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Обустави"
@@ -86,15 +105,15 @@ msgstr "Укључује замрзавање"
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Управља видљивошћу ставке изборника замрзавања"
 
-#: ../extensions/apps-menu/extension.js:37
+#: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
 msgstr "Преглед активности"
 
-#: ../extensions/apps-menu/extension.js:95
+#: ../extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Омиљено"
 
-#: ../extensions/apps-menu/extension.js:189
+#: ../extensions/apps-menu/extension.js:276
 msgid "Applications"
 msgstr "Програми"
 
@@ -132,7 +151,7 @@ msgid "Add"
 msgstr "Додај"
 
 #: ../extensions/drive-menu/extension.js:72
-#, c-format
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Нисам успео да избацим уређај „%s“:"
 
@@ -159,8 +178,6 @@ msgid ""
 msgstr ""
 "Уколико упишете текст овде, он ће бити приказан када кликнете на панел."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -208,7 +225,7 @@ msgid "Places"
 msgstr "Места"
 
 #: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "Нисам успео да покренем „%s“"
 
@@ -225,11 +242,11 @@ msgstr "Личнo"
 msgid "Browse Network"
 msgstr "Разгледајте мрежу"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "Процесор"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Меморија"
 
@@ -246,12 +263,16 @@ msgid "When to group windows"
 msgstr "Када груписати прозоре"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#| msgid ""
+#| "Decides when to group windows from the same application on the window "
+#| "list. Possible values are \"never\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\" and \"always\"."
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
-"Одређује када ће бити груписани прозори истог програма у списку прозора. "
-"Дозвољене вредности су „never“ (никад) и „always“ (увек)."
+"Одређује када груписати прозоре из истог програма у Списку прозора. "
+"Дозвољене вредности су „never“ (никад), „auto“ (аутоматски) и „always“ "
+"(увек)."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -262,6 +283,10 @@ msgid "Never group windows"
 msgstr "Никад не групиши прозоре"
 
 #: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Групиши прозоре када је простор ограничен"
+
+#: ../extensions/window-list/prefs.js:51
 msgid "Always group windows"
 msgstr "Увек групиши прозоре"
 
@@ -278,7 +303,7 @@ msgid "Name"
 msgstr "Назив"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "%d. радни простор"
 
@@ -302,6 +327,6 @@ msgstr "Наопачке"
 msgid "Display"
 msgstr "Екран"
 
-#: ../extensions/xrandr-indicator/extension.js:80
+#: ../extensions/xrandr-indicator/extension.js:87
 msgid "Display Settings"
 msgstr "Подешавања екрана"
