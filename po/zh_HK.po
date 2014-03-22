@@ -6,16 +6,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-20 13:44+0800\n"
-"PO-Revision-Date: 2013-09-20 13:44+0800\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2014-03-19 20:33+0000\n"
+"PO-Revision-Date: 2014-03-22 20:05+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
-"Language: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.3\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -50,6 +51,10 @@ msgstr "在螢幕邊緣放下視窗時啟用邊緣拼貼"
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
 msgid "Workspaces only on primary monitor"
 msgstr "工作區只在主要螢幕"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "延遲滑鼠模式中焦點的改變直到指標停止移動"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -114,16 +119,16 @@ msgstr "建立新的比對規則"
 msgid "Add"
 msgstr "加入"
 
-#: ../extensions/drive-menu/extension.js:73
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "裝置「%s」退出失敗："
 
-#: ../extensions/drive-menu/extension.js:90
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "可移除式裝置"
 
-#: ../extensions/drive-menu/extension.js:117
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "開啟檔案"
 
@@ -141,8 +146,6 @@ msgid ""
 "panel."
 msgstr "若不是空的，它則包含點擊面板時會顯示的文字。"
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -183,21 +186,21 @@ msgstr "如果為真，在對映的縮圖頂端放置視窗說明標題，凌駕
 msgid "Places"
 msgstr "位置"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "無法啟動「%s」"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "電腦"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "家目錄"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "瀏覽網絡"
 
@@ -217,52 +220,52 @@ msgstr "主題名稱"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "主題的名稱，要從 ~/.themes/name/gnome-shell 載入"
 
-#: ../extensions/window-list/extension.js:92
+#: ../extensions/window-list/extension.js:104
 msgid "Close"
 msgstr "關閉"
 
-#: ../extensions/window-list/extension.js:102
+#: ../extensions/window-list/extension.js:114
 msgid "Unminimize"
 msgstr "取消最小化"
 
-#: ../extensions/window-list/extension.js:103
+#: ../extensions/window-list/extension.js:115
 msgid "Minimize"
 msgstr "最小化"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:121
 msgid "Unmaximize"
 msgstr "取消最大化"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:122
 msgid "Maximize"
 msgstr "最大化"
 
-#: ../extensions/window-list/extension.js:270
+#: ../extensions/window-list/extension.js:294
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: ../extensions/window-list/extension.js:278
+#: ../extensions/window-list/extension.js:302
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: ../extensions/window-list/extension.js:286
+#: ../extensions/window-list/extension.js:310
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: ../extensions/window-list/extension.js:295
+#: ../extensions/window-list/extension.js:319
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:328
 msgid "Close all"
 msgstr "全部關閉"
 
-#: ../extensions/window-list/extension.js:591
+#: ../extensions/window-list/extension.js:638
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "工作區指示器"
 
-#: ../extensions/window-list/extension.js:743
+#: ../extensions/window-list/extension.js:792
 msgid "Window List"
 msgstr "視窗清單"
 
@@ -301,7 +304,7 @@ msgid "Name"
 msgstr "名稱"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "工作區 %d"
 
