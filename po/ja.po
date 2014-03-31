@@ -4,14 +4,15 @@
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2011.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2011, 2013
 # Nishio Futoshi <fut_nis@d3.dion.ne.jp>, 2013.
+# Ikuya Awashiro <ikuya@fruitsbasket.info>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-08-27 19:46+0000\n"
-"PO-Revision-Date: 2013-06-23 11:15+0900\n"
-"Last-Translator: Nishio Futoshi <fut_nis@d3.dion.ne.jp>\n"
+"POT-Creation-Date: 2014-03-29 20:57+0000\n"
+"PO-Revision-Date: 2014-06-23 16:25+0900\n"
+"Last-Translator: Ikuya Awashiro <ikuya@fruitsbasket.info>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -52,6 +53,10 @@ msgstr "ウィンドウを画面の端に移動させたときにタイル状に
 msgid "Workspaces only on primary monitor"
 msgstr "プライマリモニターのみワークスペースを切り替える"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "ポインターの動作が止まるまでマウスモードでのフォーカスの変更を遅らせる"
+
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "サムネイルのみ"
@@ -80,7 +85,7 @@ msgstr "アクティビティ"
 msgid "Favorites"
 msgstr "お気に入り"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "アプリケーション"
 
@@ -113,16 +118,16 @@ msgstr "新規ルールの作成"
 msgid "Add"
 msgstr "追加"
 
-#: ../extensions/drive-menu/extension.js:73
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "ドライブ '%s' の取り出しに失敗しました:"
 
-#: ../extensions/drive-menu/extension.js:90
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "リムーバブルデバイス"
 
-#: ../extensions/drive-menu/extension.js:117
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "ファイルを開く"
 
@@ -138,8 +143,6 @@ msgstr "代わりの挨拶テキストです。"
 msgid "If not empty, it contains the text that will be shown when clicking on the panel."
 msgstr "空でない場合、指定したテキストが、パネルをクリックした時に表示されます。"
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
@@ -173,21 +176,21 @@ msgstr "TRUE にすると、ウィンドウのサムネイルの上端にその�
 msgid "Places"
 msgstr "場所"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" の起動に失敗"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "コンピューター"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "ホーム"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "ネットワークを表示"
 
@@ -207,50 +210,54 @@ msgstr "テーマの名前"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "テーマの名前です (~/.themes/name/gnome-shell 配下に格納します)"
 
-#: ../extensions/window-list/extension.js:92
+#: ../extensions/window-list/extension.js:104
 msgid "Close"
 msgstr "閉じる"
 
-#: ../extensions/window-list/extension.js:102
+#: ../extensions/window-list/extension.js:114
 msgid "Unminimize"
 msgstr "最小化解除"
 
-#: ../extensions/window-list/extension.js:103
+#: ../extensions/window-list/extension.js:115
 msgid "Minimize"
 msgstr "最小化"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:121
 msgid "Unmaximize"
 msgstr "最大化解除"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:122
 msgid "Maximize"
 msgstr "最大化"
 
-#: ../extensions/window-list/extension.js:270
+#: ../extensions/window-list/extension.js:294
 msgid "Minimize all"
 msgstr "全て最小化"
 
-#: ../extensions/window-list/extension.js:278
+#: ../extensions/window-list/extension.js:302
 msgid "Unminimize all"
 msgstr "全て最小化解除"
 
-#: ../extensions/window-list/extension.js:286
+#: ../extensions/window-list/extension.js:310
 msgid "Maximize all"
 msgstr "全て最大化"
 
-#: ../extensions/window-list/extension.js:295
+#: ../extensions/window-list/extension.js:319
 msgid "Unmaximize all"
 msgstr "全て最大化解除"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:328
 msgid "Close all"
 msgstr "全て閉じる"
 
-#: ../extensions/window-list/extension.js:591
+#: ../extensions/window-list/extension.js:638
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "ワークスペースインジケーター"
+
+#: ../extensions/window-list/extension.js:792
+msgid "Window List"
+msgstr "ウィンドウのリスト"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
@@ -285,7 +292,7 @@ msgid "Name"
 msgstr "名前"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "ワークスペース %d"
 
