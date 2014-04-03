@@ -5,3 +5,4 @@ Exec=env GNOME_SHELL_SESSION_MODE=classic gnome-session --session gnome-classic
 TryExec=gnome-session
 Icon=
 Type=Application
+DesktopNames=GNOME-Classic;GNOME
