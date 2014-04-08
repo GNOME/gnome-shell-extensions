@@ -2,94 +2,93 @@
 # Copyright (C) 2011-12 Listed translators
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Claude Paroz <claude@2xlibre.net>, 2011.
-#
+# Sam Friedmann <sfriedma@redhat.com>, 2013. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-04-30 14:43+0000\n"
-"PO-Revision-Date: 2012-03-24 17:30+0100\n"
-"Last-Translator: Alain Lojewski <allomervan@gmail.com>\n"
+"POT-Creation-Date: 2014-03-30 19:58+0000\n"
+"PO-Revision-Date: 2013-10-08 09:59-0400\n"
+"Last-Translator: Sam Friedmann <sfriedma@redhat.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Zanata 3.3.2\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The alt tab behaviour."
-msgstr "Le comportement d'alt+tab."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME Classique"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Cette session vous connecte à GNOME Classique"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell Classique"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Gestion de fenêtres et lancement d'applications"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Attacher les dialogues modaux à leur fenêtre parente"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
-"Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-"workspace_icons. See the configuration dialogs for details."
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Définit le comportement d'alt+tab. Les valeurs possibles sont : "
-"« all_thumbnails » et « workspace_icons ». Consultez les messages de "
-"configuration pour plus de détails."
+"Cette clé prend le pas sur la clé dans org.gnome.mutter lorsque GNOME Shell "
+"est lancé."
 
-#: ../extensions/alternate-tab/prefs.js:27
-msgid "All & Thumbnails"
-msgstr "Tous et vignettes"
-
-#: ../extensions/alternate-tab/prefs.js:28
-msgid ""
-"This mode presents all applications from all workspaces in one selection "
-"list. Instead of using the application icon of every window, it uses small "
-"thumbnails resembling the window itself."
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
-"Ce mode présente toutes les applications de tous les espaces de travail dans "
-"une liste à sélection unique. À la place de l'icône de l'application de "
-"chaque fenêtre, il utilise de petites vignettes ressemblant à la fenêtre "
-"elle-même."
+"Activer les mosaïques de bords lorsque des fenêtres sont déposées sur les "
+"bords de l'écran"
 
-#: ../extensions/alternate-tab/prefs.js:34
-msgid "Workspace & Icons"
-msgstr "Espace de travail et icônes"
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Espaces de travail sur l'écran principal uniquement"
 
-#: ../extensions/alternate-tab/prefs.js:35
-msgid ""
-"This mode let's you switch between the applications of your current "
-"workspace and gives you additionally the option to switch to the last used "
-"application of your previous workspace. This is always the last symbol in "
-"the list and is segregated by a separator/vertical line if available. \n"
-"Every window is represented by its application icon."
-msgstr ""
-"Ce mode vous permet de permuter entre les applications de votre espace de "
-"travail actuel et vous donne en plus la possibilité de revenir à la dernière "
-"application utilisée dans l'espace de travail précédent. C'est toujours le "
-"dernier symbole dans la liste, et si disponible, il est isolé par une ligne "
-"verticale ou un séparateur. \n"
-"Chaque fenêtre est représentée par l'icône de son application."
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "Vignette uniquement"
 
-#: ../extensions/alternate-tab/prefs.js:41
-msgid "Move current selection to front before closing the popup"
-msgstr ""
-"Déplacer la sélection actuelle à l'avant avant de fermer la fenêtre "
-"surgissante"
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "Icône de l'application uniquement"
 
-#: ../extensions/alternate-tab/prefs.js:58
-msgid ""
-"The Alternate Tab can be used in different modes, that affect the way "
-"windows are chosen and presented."
-msgstr ""
-"La combinaison alt+tab peut être utilisée dans différents modes, qui "
-"influent sur la façon dont les fenêtres sont sélectionnées et présentées."
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "Icône de l'application et vignette"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "Présenter les fenêtres en tant que"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "Uniquement afficher les fenêtres dans l'espace de travail actuel"
+
+#. add the new entries */
+#: ../extensions/alternative-status-menu/extension.js:125
 msgid "Suspend"
 msgstr "Mettre en veille"
 
-#: ../extensions/alternative-status-menu/extension.js:73
+#: ../extensions/alternative-status-menu/extension.js:128
 msgid "Hibernate"
 msgstr "Hiberner"
 
-#: ../extensions/alternative-status-menu/extension.js:78
-msgid "Power Off..."
-msgstr "Éteindre..."
+#: ../extensions/alternative-status-menu/extension.js:131
+msgid "Power Off"
+msgstr "Éteindre"
 
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
 msgid "Enable suspending"
@@ -106,6 +105,18 @@ msgstr "Activer l'hibernation"
 #: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
 msgid "Control the visibility of the Hibernate menu item"
 msgstr "Gère la visibilité de l'élément de menu « hibernation »"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Vue d'ensemble des activités"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Favoris"
+
+#: ../extensions/apps-menu/extension.js:276
+msgid "Applications"
+msgstr "Applications"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -141,85 +152,18 @@ msgstr "Créer une nouvelle règle de concordance"
 msgid "Add"
 msgstr "Ajouter"
 
-#: ../extensions/dock/extension.js:577
-msgid "Drag here to add favorites"
-msgstr "Glissez ici pour ajouter des favoris"
+#: ../extensions/drive-menu/extension.js:72
+#, javascript-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Échec de l'éjection du disque « %s » :"
 
-#: ../extensions/dock/extension.js:903
-msgid "New Window"
-msgstr "Nouvelle fenêtre"
+#: ../extensions/drive-menu/extension.js:89
+msgid "Removable devices"
+msgstr "Périphériques amovibles"
 
-#: ../extensions/dock/extension.js:905
-msgid "Quit Application"
-msgstr "Quitter l'application"
-
-#: ../extensions/dock/extension.js:910
-msgid "Remove from Favorites"
-msgstr "Enlever des favoris"
-
-#: ../extensions/dock/extension.js:911
-msgid "Add to Favorites"
-msgstr "Ajouter aux favoris"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Position du bandeau"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Définit la position du bandeau sur l'écran. Les valeurs possibles sont : "
-"right et left."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Taille d'icône"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Définit la taille des icônes du bandeau."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Activer/désactiver le masquage automatique"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Effet de masquage automatique"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Définit l'effet de masquage du bandeau. Les valeurs possibles sont : resize, "
-"rescale et move."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Durée du masquage automatique"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Définit la durée de l'effet de masquage automatique."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Écran"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"Definit l'écran qui affiche le dock. La valeur par défaut (-1) représente "
-"l'écran principal."
-
-#: ../extensions/drive-menu/extension.js:66
-msgid "Open file manager"
-msgstr "Ouvrir le gestionnaire de fichiers"
+#: ../extensions/drive-menu/extension.js:106
+msgid "Open File"
+msgstr "Ouvrir le fichier"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -237,8 +181,6 @@ msgstr ""
 "S'il n'est pas vide, il contient le texte qui est affiché lorsque vous "
 "cliquez sur le panneau."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -252,26 +194,6 @@ msgstr ""
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "Message :"
-
-#: ../extensions/gajim/extension.js:227
-#, c-format
-msgid "%s is away."
-msgstr "%s est absent(e)."
-
-#: ../extensions/gajim/extension.js:230
-#, c-format
-msgid "%s is offline."
-msgstr "%s n'est pas en ligne."
-
-#: ../extensions/gajim/extension.js:233
-#, c-format
-msgid "%s is online."
-msgstr "%s est en ligne."
-
-#: ../extensions/gajim/extension.js:236
-#, c-format
-msgid "%s is busy."
-msgstr "%s est occupé(e)."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -303,9 +225,35 @@ msgstr ""
 "dessous. Pour que ce paramètre soit pris en compte, il faut redémarrer le "
 "shell."
 
-#: ../extensions/places-menu/extension.js:37
-msgid "Removable Devices"
-msgstr "Périphériques amovibles"
+#: ../extensions/places-menu/extension.js:77
+msgid "Places"
+msgstr "Emplacements"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, javascript-format
+msgid "Failed to launch \"%s\""
+msgstr "Échec du lancement de « %s »"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Ordinateur"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "Dossier personnel"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "Explorer le réseau"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "Mémoire"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -314,6 +262,35 @@ msgstr "Nom du thème"
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Le nom du thème, à charger à partir de ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "À quel moment grouper les fenêtres"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Décide à quel moment grouper les fenêtres de la même application sur la "
+"liste des fenêtres. Les valeurs possibles sont « never » (jamais), « auto » "
+"et « always » (toujours)."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Groupement de fenêtres"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Ne jamais grouper de fenêtres"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Grouper les fenêtres lorsque l'espace est limité"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Toujours grouper les fenêtres"
 
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
@@ -328,7 +305,7 @@ msgid "Name"
 msgstr "Nom"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Espace de travail %d"
 
@@ -348,6 +325,10 @@ msgstr "Droite"
 msgid "Upside-down"
 msgstr "Renversé"
 
-#: ../extensions/xrandr-indicator/extension.js:82
-msgid "Configure display settings..."
-msgstr "Configurer les paramètres d'affichage..."
+#: ../extensions/xrandr-indicator/extension.js:50
+msgid "Display"
+msgstr "Affichage"
+
+#: ../extensions/xrandr-indicator/extension.js:87
+msgid "Display Settings"
+msgstr "Paramètres d'affichage"
