@@ -57,6 +57,12 @@ function _onMenuStateChanged(menu, isOpen) {
         actor.sync_hover();
 }
 
+function _getAppStableSequence(app) {
+    return app.get_windows().reduce(function(prev, cur) {
+        return Math.min(prev, cur.get_stable_sequence());
+    }, 0);
+}
+
 
 const WindowContextMenu = new Lang.Class({
     Name: 'WindowContextMenu',
@@ -892,11 +898,19 @@ const WindowList = new Lang.Class({
         this._windowList.destroy_all_children();
 
         if (!this._grouped) {
-            let windows = Meta.get_window_actors(global.screen);
+            let windows = Meta.get_window_actors(global.screen).sort(
+                function(w1, w2) {
+                    return w1.metaWindow.get_stable_sequence() -
+                           w2.metaWindow.get_stable_sequence();
+                });
             for (let i = 0; i < windows.length; i++)
                 this._onWindowAdded(null, windows[i].metaWindow);
         } else {
-            let apps = this._appSystem.get_running();
+            let apps = this._appSystem.get_running().sort(
+                function(a1, a2) {
+                    return _getAppStableSequence(a1) -
+                           _getAppStableSequence(a2);
+                });
             for (let i = 0; i < apps.length; i++)
                 this._addApp(apps[i]);
         }
