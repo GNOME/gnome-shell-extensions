@@ -39,6 +39,12 @@
     border-top-color: transparent;
 }
 
+.tile-preview-left.on-primary,
+.tile-preview-right.on-primary,
+.tile-preview-left.tile-preview-right.on-primary {
+    /* keep in sync with -panel-corner-radius */
+    border-radius: 0;
+}
 
 /* TOP BAR */
 
