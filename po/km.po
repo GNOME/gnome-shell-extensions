@@ -1,0 +1,326 @@
+# Khmer translation for gnome-shell-extensions.
+# Copyright (C) 2014 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Khoem Sokhem <sokhem@open.org.kh>, 2014.
+# Sophea Sok <sophea@open.org.kh>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2014-04-02 07:59+0000\n"
+"PO-Revision-Date: 2014-04-09 08:54+0700\n"
+"Last-Translator: Sophea Sok <sophea@open.org.kh>\n"
+"Language-Team: Khmer <>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: WordForge 0.8 RC1\n"
+"X-Language: km-KH\n"
+
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME Classic"
+
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "សម័យ​នេះ​នឹង​ឲ្យ​អ្នក​ចូល GNOME Classic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell Classic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "កំពុង​ចាប់ផ្ដើម​កម្មវិធី និង​ការ​គ្រប់គ្រង​បង្អួច"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "ភ្ជាប់​ប្រអប់​បែប​ទៅកាន់​បង្អួច​មេ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"ពាក្យ​គន្លឹះ​នេះ​នឹង​បដិសេធ​​ពាក្យ​គន្លឹះ​នៅ​ក្នុង org.gnome.mutter "
+"ពេល​ដំណើរការ GNOME សែល។"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "បើក​គម្រប​គែម​ពេល​ទម្លាក់​បង្អួច​នៅ​លើ​គែម​អេក្រង់"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "តំបន់​ធ្វើការ​មានតែ​នៅ​លើ​ម៉ូនីទ័រ​មេ​ប៉ុណ្ណោះ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"ប្ដូរ​ការ​ពន្យារពេល​ផ្ដោត​នៅ​ក្នុង​របៀប​កណ្ដុរ​រហូតដល់​ព្រួញ​កណ្ដុរ​លែង​ផ្លា"
+"ស់ទី"
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "តែ​រូបភាព​តូច​ប៉ុណ្ណោះ"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "តែ​រូបតំណាង​កម្មវិធី​ប៉ុណ្ណោះ"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "រូបតំណាង​កម្មវិធី និង​រូបភាព​តូច"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "បង្ហាញ​វីនដូ​ជា"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "បង្ហាញ​តែ​វីនដូ​ប៉ុណ្ណោះ​នៅ​ក្នុង​តំបន់​ធ្វើការ​បច្ចុប្បន្ន"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "សកម្មភាព​ទិដ្ឋភាព​ទូទៅ"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "ចំណូលចិត្ត"
+
+#: ../extensions/apps-menu/extension.js:282
+msgid "Applications"
+msgstr "កម្មវិធី"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "កម្មវិធី និង​បញ្ជី​តំបន់​ធ្វើការ"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"បញ្ជី​ខ្សែ​អក្សរ, បញ្ជី​នីមួយៗ​មាន​លេខ​សម្គាល់​កម្មវិធី (ឈ្មោះ​ឯកសារ​ផ្ទៃតុ) "
+"តាម​ពីក្រោយ​ដោយ​សញ្ញា​ចុច​ពីរ និង​លេខ​តំបន់​ធ្វើការ"
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "កម្មវិធី"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "តំបន់​ធ្វើការ"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "បន្ថែម​ក្បួន"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "បង្កើត​ក្បួន​ផ្គូរផ្គង​ថ្មី"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "បន្ថែម"
+
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ច្រាន់​ដ្រាយ '%s' ចេញ៖"
+
+#: ../extensions/drive-menu/extension.js:123
+msgid "Removable devices"
+msgstr "ឧបករណ៍​ចល័ត"
+
+#: ../extensions/drive-menu/extension.js:150
+msgid "Open File"
+msgstr "បើក​ឯកសារ"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "សួស្ដី ពិភពលោក!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "អត្ថបទ​ស្វាគមន៍​ឆ្លាស់គ្នា។"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr "បើ​មិន​ទទេ វា​គឺ​មាន​អត្ថបទ​ដែល​នឹង​បង្ហាញ​ពេល​ចុច​លើ​ស្លាបព្រឹល។"
+
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"ឧទាហរណ៍៖ ដើម្បី​បង្ហាញ​របៀប​បង្កើត​ផ្នែក​បន្ថែម​ល្អ​សម្រាប់​សែល "
+"វា​គឺ​ត្រូវ​មាន​មុខងារ​ផ្ទាល់ខ្លួន​របស់​វា។\nទោះ​យ៉ាងណា "
+"វា​មិន​អាច​ប្ដូរ​សារ​ស្វាគមន៍​បាន​ទេ។"
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "សារ៖"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "ប្រើ​អេក្រង់​ច្រើន​សម្រាប់​បង្អួច"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"សាកល្បង​ប្រើ​អេក្រង់​ច្រើន​សម្រាប់​ដាក់​រូបភាព​តូច​របស់​បង្អួច​ដោយ​យោង​តាម​ស"
+"មាមាត្រ​អេក្រង់ រួច​បង្រួម​វា​ដើម្បី​បន្ថយ​ព្រំដែន​ប្រអប់។ "
+"ការ​កំណត់​នេះ​អនុវត្ត​តែ​ជាមួយ​វិធីសាស្ត្រ​ជំនួស​ធម្មជាតិ​ប៉ុណ្ណោះ។"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "ដាក់​ចំណងជើង​បង្អួច​នៅ​ខាងលើ"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"ប្រសិនបើ​ពិត វា​នឹង​ដាក់​ចំណងជើង​បង្អួច​នៅ​ខាងលើ​រូបភាព​តូច "
+"ហើយ​បដិសេធ​សែល​លំនាំដើម​ដែល​ដាក់​វា​នៅ​បាត។ ការ​ប្ដូរ​ការ​កំណត់​នេះ "
+"តម្រូវ​ឲ្យ​ចាប់ផ្ដើម​សែល​ឡើងវិញ​ទើប​មាន​ប្រសិទ្ធភាព។"
+
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "ដាក់"
+
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
+msgid "Failed to launch \"%s\""
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ចាប់ផ្ដើម \"%s\""
+
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
+msgid "Computer"
+msgstr "កុំព្យូទ័រ"
+
+#: ../extensions/places-menu/placeDisplay.js:200
+msgid "Home"
+msgstr "ផ្ទះ"
+
+#: ../extensions/places-menu/placeDisplay.js:287
+msgid "Browse Network"
+msgstr "រក​មើល​បណ្ដាញ"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "ស៊ីភីយូ"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "អង្គ​ចងចាំ"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "ឈ្មោះ​រូបរាង"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "ឈ្មោះ​រូបរាង​ដែល​ត្រូវ​ផ្ទុក​ចេញពី ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/extension.js:104
+msgid "Close"
+msgstr "បិទ"
+
+#: ../extensions/window-list/extension.js:114
+msgid "Unminimize"
+msgstr "មិន​បង្រួម​អប្បបរមា"
+
+#: ../extensions/window-list/extension.js:115
+msgid "Minimize"
+msgstr "បង្រួម​អប្បបរមា"
+
+#: ../extensions/window-list/extension.js:121
+msgid "Unmaximize"
+msgstr "មិន​ពង្រីក​អតិបរមា"
+
+#: ../extensions/window-list/extension.js:122
+msgid "Maximize"
+msgstr "ពង្រីក​អតិបរមា"
+
+#: ../extensions/window-list/extension.js:294
+msgid "Minimize all"
+msgstr "បង្រួម​អប្បបរមា​ទាំងអស់"
+
+#: ../extensions/window-list/extension.js:302
+msgid "Unminimize all"
+msgstr "មិន​បង្រួម​អប្បបរមា​ទាំងអស់"
+
+#: ../extensions/window-list/extension.js:310
+msgid "Maximize all"
+msgstr "ពង្រីក​អតិបរមា​ទាំងអស់"
+
+#: ../extensions/window-list/extension.js:319
+msgid "Unmaximize all"
+msgstr "មិន​ពង្រីក​អតិបរមា​ទាំងអស់"
+
+#: ../extensions/window-list/extension.js:328
+msgid "Close all"
+msgstr "បិទ​ទាំងអស់"
+
+#: ../extensions/window-list/extension.js:638
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "ទ្រនិច​បង្ហាញ​តំបន់​ធ្វើការ"
+
+#: ../extensions/window-list/extension.js:792
+msgid "Window List"
+msgstr "បញ្ជី​បង្អួច"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "ពេល​ដាក់​បង្អួច​ជាក្រុម"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"សម្រេចចិត្ត​ថា​តើ​ពេល​ណា​ដែល​ត្រូវ​ដាក់​បង្អួច​ជា​ក្រុម​ចេញពី​កម្មវិធី​ដូចគ្"
+"នា​នៅ​លើ​បញ្ជី​បង្អួច។ តម្លៃ​ដែល​អាច​ប្រើ​បាន​គឺ៖ \"កុំ\", \"ស្វ័យប្រវត្តិ\" និង "
+"\"ជានិច្ច\" ។"
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "ដាក់​បង្អួច​ជា​ក្រុម"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "កុំ​ដាក់​បង្អួច​ជា​ក្រុម"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "ដាក់​បង្អួច​ជា​ក្រុម​ពេល​ទំហំ​មាន​ដែន​កំណត់"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "ដាក់​បង្អួច​ជា​ក្រុម​ជានិច្ច"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "ឈ្មោះ​តំបន់​ធ្វើការ៖"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "ឈ្មោះ"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, javascript-format
+msgid "Workspace %d"
+msgstr "តំបន់​ធ្វើការ %d"
