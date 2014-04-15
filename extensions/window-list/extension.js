@@ -917,7 +917,8 @@ const WindowList = new Lang.Class({
     },
 
     _updateMessageTrayAnchor: function() {
-        let anchorY = this.actor.visible ? this.actor.height : 0;
+        let sameMonitor = Main.layoutManager.primaryIndex == Main.layoutManager.bottomIndex;
+        let anchorY = this.actor.visible && sameMonitor ? this.actor.height : 0;
 
         Main.messageTray.actor.anchor_y = anchorY;
         Main.messageTray._notificationWidget.anchor_y = -anchorY;
