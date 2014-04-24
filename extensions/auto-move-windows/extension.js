@@ -91,6 +91,11 @@ function myCheckWorkspaces() {
     let i;
     let emptyWorkspaces = new Array(this._workspaces.length);
 
+    if (!Meta.prefs_get_dynamic_workspaces()) {
+        this._checkWorkspacesId = 0;
+        return false;
+    }
+
     for (i = 0; i < this._workspaces.length; i++) {
 	let lastRemoved = this._workspaces[i]._lastRemovedWindow;
 	if (lastRemoved &&
@@ -155,8 +160,7 @@ function myCheckWorkspaces() {
 
 function enable() {
     prevCheckWorkspaces = Main.wm._workspaceTracker._checkWorkspaces;
-    if (Meta.prefs_get_dynamic_workspaces())
-	Main.wm._workspaceTracker._checkWorkspaces = myCheckWorkspaces;
+    Main.wm._workspaceTracker._checkWorkspaces = myCheckWorkspaces;
 
     winMover = new WindowMover();
 }
