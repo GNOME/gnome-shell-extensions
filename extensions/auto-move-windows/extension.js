@@ -97,13 +97,14 @@ function myCheckWorkspaces() {
     }
 
     for (i = 0; i < this._workspaces.length; i++) {
-	let lastRemoved = this._workspaces[i]._lastRemovedWindow;
-	if (lastRemoved &&
-            (lastRemoved.get_window_type() == Meta.WindowType.SPLASHSCREEN ||
-             lastRemoved.get_window_type() == Meta.WindowType.DIALOG ||
-             lastRemoved.get_window_type() == Meta.WindowType.MODAL_DIALOG))
+        let lastRemoved = this._workspaces[i]._lastRemovedWindow;
+        if ((lastRemoved &&
+             (lastRemoved.get_window_type() == Meta.WindowType.SPLASHSCREEN ||
+              lastRemoved.get_window_type() == Meta.WindowType.DIALOG ||
+              lastRemoved.get_window_type() == Meta.WindowType.MODAL_DIALOG)) ||
+            this._workspaces[i]._keepAliveId)
             emptyWorkspaces[i] = false;
-	else
+        else
             emptyWorkspaces[i] = true;
     }
 
