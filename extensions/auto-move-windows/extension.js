@@ -40,7 +40,7 @@ const WindowMover = new Lang.Class({
 
     _ensureAtLeastWorkspaces: function(num, window) {
         for (let j = global.screen.n_workspaces; j <= num; j++) {
-            window.change_workspace_by_index(j-1, false, global.get_current_time());
+            window.change_workspace_by_index(j-1, false);
             global.screen.append_new_workspace(false, 0);
         }
     },
@@ -73,7 +73,7 @@ const WindowMover = new Lang.Class({
                 if (workspace_num >= global.screen.n_workspaces)
                     this._ensureAtLeastWorkspaces(workspace_num, window);
 
-                window.change_workspace_by_index(workspace_num, false, global.get_current_time());
+                window.change_workspace_by_index(workspace_num, false);
             }
         }
     }
