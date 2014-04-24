@@ -108,6 +108,13 @@ function myCheckWorkspaces() {
             emptyWorkspaces[i] = true;
     }
 
+    let sequences = Shell.WindowTracker.get_default().get_startup_sequences();
+    for (i = 0; i < sequences.length; i++) {
+        let index = sequences[i].get_workspace();
+        if (index >= 0 && index <= global.screen.n_workspaces)
+            emptyWorkspaces[index] = false;
+    }
+
     let windows = global.get_window_actors();
     for (i = 0; i < windows.length; i++) {
 	let winActor = windows[i];
