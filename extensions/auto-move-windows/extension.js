@@ -109,7 +109,7 @@ function myCheckWorkspaces() {
 	if (win.is_on_all_workspaces())
             continue;
 
-	let workspaceIndex = win.get_workspace();
+	let workspaceIndex = win.get_workspace().index();
 	emptyWorkspaces[workspaceIndex] = false;
     }
 
