@@ -136,10 +136,6 @@ function myCheckWorkspaces() {
     let activeIsLast = activeWorkspaceIndex == global.screen.n_workspaces - 2;
     let removingTrailWorkspaces = (emptyWorkspaces[activeWorkspaceIndex] &&
                                    activeIsLast);
-    // Don't enter the overview when removing multiple empty workspaces at startup
-    let showOverview  = (removingTrailWorkspaces &&
-                         !emptyWorkspaces.every(function(x) { return x; }));
-
     if (removingTrailWorkspaces) {
         // "Merge" the empty workspace we are removing with the one at the end
         this._wm.blockAnimations();
@@ -157,9 +153,6 @@ function myCheckWorkspaces() {
         global.screen.get_workspace_by_index(global.screen.n_workspaces - 1).activate(global.get_current_time());
 
         this._wm.unblockAnimations();
-
-        if (!Main.overview.visible && showOverview)
-            Main.overview.show();
     }
 
     this._checkWorkspacesId = 0;
