@@ -133,13 +133,7 @@ function myCheckWorkspaces() {
     }
 
     let activeWorkspaceIndex = global.screen.get_active_workspace_index();
-    let activeIsLast = activeWorkspaceIndex == global.screen.n_workspaces - 2;
-    let removingTrailWorkspaces = (emptyWorkspaces[activeWorkspaceIndex] &&
-                                   activeIsLast);
-    if (removingTrailWorkspaces) {
-        // "Merge" the empty workspace we are removing with the one at the end
-        this._wm.blockAnimations();
-    }
+    emptyWorkspaces[activeWorkspaceIndex] = false;
 
     // Delete other empty workspaces; do it from the end to avoid index changes
     for (i = emptyWorkspaces.length - 2; i >= 0; i--) {
@@ -147,12 +141,6 @@ function myCheckWorkspaces() {
             global.screen.remove_workspace(this._workspaces[i], global.get_current_time());
         else
             break;
-    }
-
-    if (removingTrailWorkspaces) {
-        global.screen.get_workspace_by_index(global.screen.n_workspaces - 1).activate(global.get_current_time());
-
-        this._wm.unblockAnimations();
     }
 
     this._checkWorkspacesId = 0;
