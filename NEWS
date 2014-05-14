@@ -1,3 +1,12 @@
+3.12.2
+======
+* classic theme: remove rounded corners from tile previews
+* several fixes and improvements to the window-list
+  (keep button order stable, don't shift message tray on other monitors)
+* auto-move-windows: several fixes and updates for api changes
+* launch-new-instances: updates for api changes
+* updated translations (ja, km)
+
 3.12.0
 ======
 * updated translations (zh_HK, zh_TW)
