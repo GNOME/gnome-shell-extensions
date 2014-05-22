@@ -59,7 +59,8 @@ function _onMenuStateChanged(menu, isOpen) {
 
 function _getAppStableSequence(app) {
     return app.get_windows().reduce(function(prev, cur) {
-        return Math.min(prev, cur.get_stable_sequence());
+        let seq = cur.get_stable_sequence();
+        return prev ? Math.min(prev, seq) : seq;
     }, 0);
 }
 
