@@ -217,6 +217,9 @@ const WindowButton = new Lang.Class({
         this._switchWorkspaceId =
             global.window_manager.connect('switch-workspace',
                                           Lang.bind(this, this._updateVisibility));
+        this._workspaceChangedId =
+            this.metaWindow.connect('workspace-changed',
+                                    Lang.bind(this, this._updateVisibility));
         this._updateVisibility();
 
         this._notifyFocusId =
@@ -281,6 +284,7 @@ const WindowButton = new Lang.Class({
     },
 
     _onDestroy: function() {
+        this.metaWindow.disconnect(this._workspaceChangedId);
         global.window_manager.disconnect(this._switchWorkspaceId);
         global.display.disconnect(this._notifyFocusId);
         this._contextMenu.destroy();
@@ -1005,6 +1009,9 @@ const WindowList = new Lang.Class({
 
             return;
         }
+
+        if (win.get_compositor_private())
+            return; // not actually removed, just moved to another workspace
 
         let children = this._windowList.get_children();
         for (let i = 0; i < children.length; i++) {
