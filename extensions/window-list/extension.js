@@ -780,20 +780,6 @@ const WindowList = new Lang.Class({
                 let spacing = node.get_length('spacing');
                 this._windowList.layout_manager.spacing = spacing;
             }));
-        this._windowList.connect('notify::allocation', Lang.bind(this,
-            function() {
-                if (this._groupingMode != GroupingMode.AUTO || this._grouped)
-                    return;
-
-                let allocation = this._windowList.allocation;
-                let width = allocation.x2 - allocation.x1;
-                let [, natWidth] = this._windowList.get_preferred_width(-1);
-                if (width < natWidth) {
-                    this._grouped = true;
-                    Meta.later_add(Meta.LaterType.BEFORE_REDRAW,
-                                   Lang.bind(this, this._populateWindowList));
-                }
-            }));
         this._windowList.connect('scroll-event', Lang.bind(this, this._onScrollEvent));
 
 	let indicatorsBox = new St.BoxLayout({ x_align: Clutter.ActorAlign.END });
@@ -837,6 +823,10 @@ const WindowList = new Lang.Class({
                                   Lang.bind(this, this._onWorkspacesChanged));
         this._onWorkspacesChanged();
 
+        this._switchWorkspaceId =
+            global.window_manager.connect('switch-workspace',
+                                          Lang.bind(this, this._checkGrouping));
+
         this._overviewShowingId =
             Main.overview.connect('showing', Lang.bind(this, function() {
                 this.actor.hide();
@@ -875,6 +865,7 @@ const WindowList = new Lang.Class({
         this._groupingModeChangedId =
             this._settings.connect('changed::grouping-mode',
                                    Lang.bind(this, this._groupingModeChanged));
+        this._grouped = undefined;
         this._groupingModeChanged();
     },
 
@@ -903,10 +894,48 @@ const WindowList = new Lang.Class({
         children[active].activate();
     },
 
+    _getPreferredUngroupedWindowListWidth: function() {
+        if (this._windowList.get_n_children() == 0)
+            return this._windowList.get_preferred_width(-1)[1];
+
+        let children = this._windowList.get_children();
+        let [, childWidth] = children[0].get_preferred_width(-1);
+        let spacing = this._windowList.layout_manager.spacing;
+
+        let workspace = global.screen.get_active_workspace();
+        let nWindows = global.display.get_tab_list(Meta.TabList.NORMAL, workspace).length;
+
+        return nWindows * childWidth + (nWindows - 1) * spacing;
+    },
+
+    _getMaxWindowListWidth: function() {
+        let indicatorsBox = this._trayButton.actor.get_parent();
+        return this.actor.width - indicatorsBox.get_preferred_width(-1)[1];
+    },
+
     _groupingModeChanged: function() {
         this._groupingMode = this._settings.get_enum('grouping-mode');
-        this._grouped = this._groupingMode == GroupingMode.ALWAYS;
-        this._populateWindowList();
+
+        if (this._groupingMode == GroupingMode.AUTO) {
+            this._checkGrouping();
+        } else {
+            this._grouped = this._groupingMode == GroupingMode.ALWAYS;
+            this._populateWindowList();
+        }
+    },
+
+    _checkGrouping: function() {
+        if (this._groupingMode != GroupingMode.AUTO)
+            return;
+
+        let maxWidth = this._getMaxWindowListWidth();
+        let natWidth = this._getPreferredUngroupedWindowListWidth();
+
+        let grouped = (maxWidth < natWidth);
+        if (this._grouped !== grouped) {
+            this._grouped = grouped;
+            this._populateWindowList();
+        }
     },
 
     _populateWindowList: function() {
@@ -985,6 +1014,9 @@ const WindowList = new Lang.Class({
         if (win.skip_taskbar)
             return;
 
+        if (!this._grouped)
+            this._checkGrouping();
+
         if (this._grouped)
             return;
 
@@ -1002,14 +1034,11 @@ const WindowList = new Lang.Class({
     },
 
     _onWindowRemoved: function(ws, win) {
-        if (this._grouped) {
-            if (this._groupingMode == GroupingMode.AUTO) {
-                this._grouped = false;
-                this._populateWindowList();
-            }
+        if (this._grouped)
+            this._checkGrouping();
 
+        if (this._grouped)
             return;
-        }
 
         if (win.get_compositor_private())
             return; // not actually removed, just moved to another workspace
@@ -1124,6 +1153,9 @@ const WindowList = new Lang.Class({
         this._disconnectWorkspaceSignals();
         global.screen.disconnect(this._nWorkspacesChangedId);
         this._nWorkspacesChangedId = 0;
+
+        global.window_manager.disconnect(this._switchWorkspaceId);
+        this._switchWorkspaceId = 0;
 
         Main.messageTray.actor.anchor_y = 0;
         Main.messageTray._notificationWidget.anchor_y = 0;
