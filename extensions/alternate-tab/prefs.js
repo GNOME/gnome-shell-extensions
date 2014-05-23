@@ -29,16 +29,24 @@ const AltTabSettingsWidget = new GObject.Class({
 
     _init : function(params) {
         this.parent(params);
-        this.margin = 10;
+        this.margin = 24;
+        this.row_spacing = 6;
 	this.orientation = Gtk.Orientation.VERTICAL;
 
         this._settings = new Gio.Settings({ schema: 'org.gnome.shell.window-switcher' });
 
-        let presentLabel = _("Present windows as");
-        this.add(new Gtk.Label({ label: presentLabel, sensitive: true,
-                                 margin_bottom: 10, margin_top: 5 }));
+        let presentLabel = '<b>' + _("Present windows as") + '</b>';
+        this.add(new Gtk.Label({ label: presentLabel, use_markup: true,
+                                 halign: Gtk.Align.START }));
 
-        let top = 1;
+        let align = new Gtk.Alignment({ left_padding: 12 });
+        this.add(align);
+
+        let grid = new Gtk.Grid({ orientation: Gtk.Orientation.VERTICAL,
+                                  row_spacing: 6,
+                                  column_spacing: 6 });
+        align.add(grid);
+
         let radio = null;
         let currentMode = this._settings.get_string(SETTINGS_APP_ICON_MODE);
         for (let mode in MODES) {
@@ -52,15 +60,14 @@ const AltTabSettingsWidget = new GObject.Class({
                 if (widget.active)
                     this._settings.set_string(SETTINGS_APP_ICON_MODE, modeCapture);
             }));
-            this.add(radio);
+            grid.add(radio);
 
             if (mode == currentMode)
                 radio.active = true;
-            top += 1;
         }
 
 	let check = new Gtk.CheckButton({ label: _("Show only windows in the current workspace"),
-					  margin_top: 12 });
+	                                  margin_top: 6 });
 	this._settings.bind(SETTINGS_CURRENT_WORKSPACE_ONLY, check, 'active', Gio.SettingsBindFlags.DEFAULT);
 	this.add(check);
     },
