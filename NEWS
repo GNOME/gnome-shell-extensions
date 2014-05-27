@@ -1,3 +1,9 @@
+3.13.2
+======
+* Fix sorting of grouped buttons in window list
+* Tweak preference UIs
+* updated translations (en_GB)
+
 3.13.1
 ======
 * add DesktopNames key to the classic session file
