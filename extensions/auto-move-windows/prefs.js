@@ -37,7 +37,7 @@ const Widget = new GObject.Class({
 
     _init: function(params) {
 	this.parent(params);
-	this.set_orientation(Gtk.Orientation.VERTICAL);
+        this.set_orientation(Gtk.Orientation.VERTICAL);
 
 	this._settings = Convenience.getSettings();
 	this._settings.connect('changed', Lang.bind(this, this._refresh));
@@ -46,6 +46,11 @@ const Widget = new GObject.Class({
 	this._store = new Gtk.ListStore();
 	this._store.set_column_types([Gio.AppInfo, GObject.TYPE_STRING, Gio.Icon, GObject.TYPE_INT,
                                       Gtk.Adjustment]);
+
+        let scrolled = new Gtk.ScrolledWindow({ shadow_type: Gtk.ShadowType.IN});
+        scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
+        this.add(scrolled);
+
 
 	this._treeView = new Gtk.TreeView({ model: this._store,
                                             hexpand: true, vexpand: true });
@@ -70,21 +75,28 @@ const Widget = new GObject.Class({
         workspaceColumn.add_attribute(workspaceRenderer, "text", Columns.WORKSPACE);
 	this._treeView.append_column(workspaceColumn);
 
-	this.add(this._treeView);
+	scrolled.add(this._treeView);
 
-	let toolbar = new Gtk.Toolbar();
+	let toolbar = new Gtk.Toolbar({ icon_size: Gtk.IconSize.SMALL_TOOLBAR });
 	toolbar.get_style_context().add_class(Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 	this.add(toolbar);
 
-	let newButton = new Gtk.ToolButton({ stock_id: Gtk.STOCK_NEW,
-                                             label: _("Add rule"),
+	let newButton = new Gtk.ToolButton({ icon_name: 'bookmark-new-symbolic',
+                                             label: _("Add Rule"),
 					     is_important: true });
 	newButton.connect('clicked', Lang.bind(this, this._createNew));
 	toolbar.add(newButton);
 
-	let delButton = new Gtk.ToolButton({ stock_id: Gtk.STOCK_DELETE });
+	let delButton = new Gtk.ToolButton({ icon_name: 'edit-delete-symbolic'  });
 	delButton.connect('clicked', Lang.bind(this, this._deleteSelected));
 	toolbar.add(delButton);
+
+        let selection = this._treeView.get_selection();
+        selection.connect('changed',
+            function() {
+                delButton.sensitive = selection.count_selected_rows() > 0;
+            });
+        delButton.sensitive = selection.count_selected_rows() > 0;
 
 	this._changedPermitted = true;
 	this._refresh();
@@ -93,18 +105,27 @@ const Widget = new GObject.Class({
     _createNew: function() {
 	let dialog = new Gtk.Dialog({ title: _("Create new matching rule"),
 				      transient_for: this.get_toplevel(),
+                                      use_header_bar: true,
 				      modal: true });
 	dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL);
-	dialog.add_button(_("Add"), Gtk.ResponseType.OK);
+	let addButton = dialog.add_button(_("Add"), Gtk.ResponseType.OK);
         dialog.set_default_response(Gtk.ResponseType.OK);
 
 	let grid = new Gtk.Grid({ column_spacing: 10,
                                   row_spacing: 15,
                                   margin: 10 });
 	dialog._appChooser = new Gtk.AppChooserWidget({ show_all: true });
+        dialog._appChooser.connect('application-selected', Lang.bind(this,
+            function(w, appInfo) {
+                addButton.sensitive = appInfo &&
+                                      this._checkId(appInfo.get_id());
+            }));
+        let appInfo = dialog._appChooser.get_app_info();
+        addButton.sensitive = appInfo && this._checkId(appInfo.get_id());
+
 	grid.attach(dialog._appChooser, 0, 0, 2, 1);
-	grid.attach(new Gtk.Label({ label: _("Workspace") }),
-		    0, 1, 1, 1);
+	grid.attach(new Gtk.Label({ label: _("Workspace"),
+                                    halign: Gtk.Align.END }), 0, 1, 1, 1);
 	let adjustment = new Gtk.Adjustment({ lower: 1,
 					      upper: WORKSPACE_MAX,
 					      step_increment: 1
@@ -129,10 +150,9 @@ const Widget = new GObject.Class({
 		index = 1;
 
 	    this._changedPermitted = false;
-	    if (!this._appendItem(appInfo.get_id(), index)) {
-                this._changedPermitted = true;
-                return;
-            }
+	    this._appendItem(appInfo.get_id(), index);
+	    this._changedPermitted = true;
+
 	    let iter = this._store.append();
 	    let adj = new Gtk.Adjustment({ lower: 1,
 					   upper: WORKSPACE_MAX,
@@ -141,7 +161,6 @@ const Widget = new GObject.Class({
 	    this._store.set(iter,
 			    [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT],
 			    [appInfo, appInfo.get_icon(), appInfo.get_display_name(), index, adj]);
-	    this._changedPermitted = true;
 
             dialog.destroy();
 	}));
@@ -156,8 +175,8 @@ const Widget = new GObject.Class({
 
 	    this._changedPermitted = false;
 	    this._removeItem(appInfo.get_id());
-	    this._store.remove(iter);
 	    this._changedPermitted = true;
+	    this._store.remove(iter);
 	}
     },
 
@@ -205,20 +224,15 @@ const Widget = new GObject.Class({
 	    this._settings.set_strv(SETTINGS_KEY, validItems);
     },
 
+    _checkId: function(id) {
+        let items = this._settings.get_strv(SETTINGS_KEY);
+        return !items.some(function(i) { return i.startsWith(id + ':'); });
+    },
+
     _appendItem: function(id, workspace) {
 	let currentItems = this._settings.get_strv(SETTINGS_KEY);
-	let alreadyHave = currentItems.map(function(el) {
-	    return el.split(':')[0];
-	}).indexOf(id) != -1;
-
-	if (alreadyHave) {
-            printerr("Already have an item for this id");
-	    return false;
-        }
-
 	currentItems.push(id + ':' + workspace);
 	this._settings.set_strv(SETTINGS_KEY, currentItems);
-        return true;
     },
 
     _removeItem: function(id) {
@@ -253,7 +267,7 @@ function init() {
 }
 
 function buildPrefsWidget() {
-    let widget = new Widget();
+    let widget = new Widget({ margin: 12 });
     widget.show_all();
 
     return widget;
