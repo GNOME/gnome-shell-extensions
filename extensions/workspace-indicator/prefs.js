@@ -135,11 +135,16 @@ const WorkspaceSettingsWidget = new GObject.Class({
 
     _init: function(params) {
         this.parent(params);
-        this.margin = 10;
+        this.margin = 12;
         this.orientation = Gtk.Orientation.VERTICAL;
 
-        this.add(new Gtk.Label({ label: _("Workspace names:"),
-                                 margin_bottom: 5 }));
+        this.add(new Gtk.Label({ label: '<b>' + _("Workspace Names") + '</b>',
+                                 use_markup: true, margin_bottom: 6,
+                                 hexpand: true, halign: Gtk.Align.START }));
+
+        let scrolled = new Gtk.ScrolledWindow({ shadow_type: Gtk.ShadowType.IN });
+        scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
+        this.add(scrolled);
 
         this._store = new WorkspaceNameModel();
         this._treeView = new Gtk.TreeView({ model: this._store,
@@ -156,18 +161,25 @@ const WorkspaceSettingsWidget = new GObject.Class({
         column.add_attribute(renderer, 'text', this._store.Columns.LABEL);
         this._treeView.append_column(column);
 
-        this.add(this._treeView);
+        scrolled.add(this._treeView);
 
-        let toolbar = new Gtk.Toolbar();
+        let toolbar = new Gtk.Toolbar({ icon_size: Gtk.IconSize.SMALL_TOOLBAR });
         toolbar.get_style_context().add_class(Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 
-        let newButton = new Gtk.ToolButton({ stock_id: Gtk.STOCK_NEW });
+        let newButton = new Gtk.ToolButton({ icon_name: 'list-add-symbolic' });
         newButton.connect('clicked', Lang.bind(this, this._newClicked));
         toolbar.add(newButton);
 
-        let delButton = new Gtk.ToolButton({ stock_id: Gtk.STOCK_DELETE });
+        let delButton = new Gtk.ToolButton({ icon_name: 'list-remove-symbolic' });
         delButton.connect('clicked', Lang.bind(this, this._delClicked));
         toolbar.add(delButton);
+
+        let selection = this._treeView.get_selection();
+        selection.connect('changed',
+            function() {
+                delButton.sensitive = selection.count_selected_rows() > 0;
+            });
+        delButton.sensitive = selection.count_selected_rows() > 0;
 
         this.add(toolbar);
     },
