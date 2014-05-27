@@ -23,7 +23,20 @@ const ExamplePrefsWidget = new GObject.Class({
 
     _init: function(params) {
 	this.parent(params);
-        this.margin = this.row_spacing = this.column_spacing = 10;
+        this.margin = 12;
+        this.row_spacing = this.column_spacing = 6;
+        this.set_orientation(Gtk.Orientation.VERTICAL);
+
+	this.add(new Gtk.Label({ label: '<b>' + _("Message") + '</b>',
+                                 use_markup: true,
+                                 halign: Gtk.Align.START }));
+
+        let entry = new Gtk.Entry({ hexpand: true,
+                                    margin_bottom: 12 });
+        this.add(entry);
+
+	this._settings = Convenience.getSettings();
+	this._settings.bind('hello-text', entry, 'text', Gio.SettingsBindFlags.DEFAULT);
 
 	// TRANSLATORS: Example is the name of the extension, should not be
 	// translated
@@ -31,16 +44,8 @@ const ExamplePrefsWidget = new GObject.Class({
 extensions for the Shell and as such it has little functionality on its own.\n\
 Nevertheless it's possible to customize the greeting message.");
 
-	this.attach(new Gtk.Label({ label: primaryText, wrap: true }), 0, 0, 2, 1);
-
-	this.attach(new Gtk.Label({ label: '<b>' + _("Message:") + '</b>', use_markup: true }),
-		    0, 1, 1, 1);
-
-	let entry = new Gtk.Entry({ hexpand: true });
-	this.attach(entry, 1, 1, 1, 1);
-
-	this._settings = Convenience.getSettings();
-	this._settings.bind('hello-text', entry, 'text', Gio.SettingsBindFlags.DEFAULT);
+	this.add(new Gtk.Label({ label: primaryText,
+                                 wrap: true, xalign: 0 }));
     }
 });
 
