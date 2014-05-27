@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Bruce Cowan <bruce@bcowan.me.uk>, 2011.
 # Chris Leonard <cjlhomeaddress@gmail.com>, 2012.
+# Philip Withnall <philip@tecnocode.co.uk>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2012-09-20 13:47+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-27 22:05+0100\n"
 "PO-Revision-Date: 2012-09-21 21:00-0400\n"
-"Last-Translator: Chris Leonard <cjlhomeaddress@gmail.com>\n"
+"Last-Translator: Philip Withnall <philip@tecnocode.co.uk>\n"
 "Language-Team: Sugar Labs\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
@@ -20,68 +20,88 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:1
-msgid "The application icon mode."
-msgstr "The application icon mode."
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME Classic"
 
-#: ../extensions/alternate-tab/org.gnome.shell.extensions.alternate-tab.gschema.xml.in.h:2
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "This session logs you into GNOME Classic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell Classic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Window management and application launching"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Attach modal dialogue to the parent window"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Configures how the windows are shown in the switcher. Valid possibilities "
-"are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-"only' (shows only the application icon) or 'both'."
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
 
-#: ../extensions/alternate-tab/prefs.js:26
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Arrangement of buttons on the titlebar"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "Enable edge tiling when dropping windows on screen edges"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+msgid "Workspaces only on primary monitor"
+msgstr "Workspaces only on primary monitor"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "Delay focus changes in mouse mode until the pointer stops moving"
+
+#: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Thumbnail only"
 
-#: ../extensions/alternate-tab/prefs.js:27
+#: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Application icon only"
 
-#: ../extensions/alternate-tab/prefs.js:28
+#: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Thumbnail and application icon"
 
-#: ../extensions/alternate-tab/prefs.js:43
+#: ../extensions/alternate-tab/prefs.js:37
 msgid "Present windows as"
 msgstr "Present windows as"
 
-#: ../extensions/alternate-tab/prefs.js:68
+#: ../extensions/alternate-tab/prefs.js:62
 msgid "Show only windows in the current workspace"
 msgstr "Show only windows in the current workspace"
 
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:68
-msgid "Suspend"
-msgstr "Suspend"
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Activities Overview"
 
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Hibernate"
-msgstr "Hibernate"
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Favourites"
 
-#: ../extensions/alternative-status-menu/extension.js:78
-msgid "Power Off"
-msgstr "Power Off"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "Enable suspending"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "Control the visibility of the Suspend menu item"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "Enable hibernating"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "Control the visibility of the Hibernate menu item"
+#: ../extensions/apps-menu/extension.js:282
+msgid "Applications"
+msgstr "Applications"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
 msgid "Application and workspace list"
@@ -116,89 +136,18 @@ msgstr "Create new matching rule"
 msgid "Add"
 msgstr "Add"
 
-#: ../extensions/dock/extension.js:600
-msgid "Drag here to add favorites"
-msgstr "Drag here to add favourites"
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Ejecting drive '%s' failed:"
 
-#: ../extensions/dock/extension.js:926
-msgid "New Window"
-msgstr "New Window"
-
-#: ../extensions/dock/extension.js:928
-msgid "Quit Application"
-msgstr "Quit Application"
-
-#: ../extensions/dock/extension.js:933
-msgid "Remove from Favorites"
-msgstr "Remove from Favourites"
-
-#: ../extensions/dock/extension.js:934
-msgid "Add to Favorites"
-msgstr "Add to Favourites"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:1
-msgid "Position of the dock"
-msgstr "Position of the dock"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:2
-msgid ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-msgstr ""
-"Sets the position of the dock in the screen. Allowed values are 'right' or "
-"'left'"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:3
-msgid "Icon size"
-msgstr "Icon size"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:4
-msgid "Sets icon size of the dock."
-msgstr "Sets icon size of the dock."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:5
-msgid "Enable/disable autohide"
-msgstr "Enable/disable autohide"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:6
-msgid "Autohide effect"
-msgstr "Autohide effect"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:7
-msgid ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-msgstr ""
-"Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
-"'move'"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:8
-msgid "Autohide duration"
-msgstr "Autohide duration"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:9
-msgid "Sets the time duration of the autohide effect."
-msgstr "Sets the time duration of the autohide effect."
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:10
-msgid "Monitor"
-msgstr "Monitor"
-
-#: ../extensions/dock/org.gnome.shell.extensions.dock.gschema.xml.in.h:11
-msgid ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-msgstr ""
-"Sets monitor to display dock in. The default value (-1) is the primary "
-"monitor."
-
-#: ../extensions/drive-menu/extension.js:56
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "Removable devices"
 
-#: ../extensions/drive-menu/extension.js:67
-msgid "Open file manager"
-msgstr "Open file manager"
+#: ../extensions/drive-menu/extension.js:150
+msgid "Open File"
+msgstr "Open File"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -216,8 +165,6 @@ msgstr ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -231,26 +178,6 @@ msgstr ""
 #: ../extensions/example/prefs.js:36
 msgid "Message:"
 msgstr "Message:"
-
-#: ../extensions/gajim/extension.js:226
-#, c-format
-msgid "%s is away."
-msgstr "%s is away."
-
-#: ../extensions/gajim/extension.js:229
-#, c-format
-msgid "%s is offline."
-msgstr "%s is offline."
-
-#: ../extensions/gajim/extension.js:232
-#, c-format
-msgid "%s is online."
-msgstr "%s is online."
-
-#: ../extensions/gajim/extension.js:235
-#, c-format
-msgid "%s is busy."
-msgstr "%s is busy."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -280,44 +207,34 @@ msgstr ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 
-#: ../extensions/places-menu/extension.js:46
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Places"
 
-#: ../extensions/places-menu/extension.js:47
-msgid "Devices"
-msgstr "Devices"
-
-#: ../extensions/places-menu/extension.js:48
-msgid "Bookmarks"
-msgstr "Bookmarks"
-
-#: ../extensions/places-menu/extension.js:49
-msgid "Network"
-msgstr "Network"
-
-#: ../extensions/places-menu/placeDisplay.js:48
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "Failed to launch \"%s\""
 
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
+msgid "Computer"
+msgstr "Computer"
+
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "Home"
 
-#: ../extensions/places-menu/placeDisplay.js:184
-msgid "File System"
-msgstr "File System"
+#: ../extensions/places-menu/placeDisplay.js:287
+msgid "Browse Network"
+msgstr "Browse Network"
 
-#: ../extensions/places-menu/placeDisplay.js:188
-msgid "Browse network"
-msgstr "Browse network"
-
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "Memory"
 
@@ -329,9 +246,82 @@ msgstr "Theme name"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 
+#: ../extensions/window-list/extension.js:110
+msgid "Close"
+msgstr "Close"
+
+#: ../extensions/window-list/extension.js:120
+msgid "Unminimize"
+msgstr "Unminimise"
+
+#: ../extensions/window-list/extension.js:121
+msgid "Minimize"
+msgstr "Minimise"
+
+#: ../extensions/window-list/extension.js:127
+msgid "Unmaximize"
+msgstr "Unmaximise"
+
+#: ../extensions/window-list/extension.js:128
+msgid "Maximize"
+msgstr "Maximise"
+
+#: ../extensions/window-list/extension.js:300
+msgid "Minimize all"
+msgstr "Minimise all"
+
+#: ../extensions/window-list/extension.js:308
+msgid "Unminimize all"
+msgstr "Unminimise all"
+
+#: ../extensions/window-list/extension.js:316
+msgid "Maximize all"
+msgstr "Maximise all"
+
+#: ../extensions/window-list/extension.js:325
+msgid "Unmaximize all"
+msgstr "Unmaximise all"
+
+#: ../extensions/window-list/extension.js:334
+msgid "Close all"
+msgstr "Close all"
+
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Workspace Indicator"
+
+#: ../extensions/window-list/extension.js:798
+msgid "Window List"
+msgstr "Window List"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "When to group windows"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Window Grouping"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Never group windows"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Group windows when space is limited"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Always group windows"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace names:"
@@ -342,33 +332,141 @@ msgid "Name"
 msgstr "Name"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Workspace %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "Normal"
+#~ msgid "The application icon mode."
+#~ msgstr "The application icon mode."
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "Left"
+#~ msgid ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
+#~ msgstr ""
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "Right"
+#~ msgid "Suspend"
+#~ msgstr "Suspend"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "Upside-down"
+#~ msgid "Hibernate"
+#~ msgstr "Hibernate"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "Display"
+#~ msgid "Power Off"
+#~ msgstr "Power Off"
 
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "Display Settings"
+#~ msgid "Enable suspending"
+#~ msgstr "Enable suspending"
+
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "Control the visibility of the Suspend menu item"
+
+#~ msgid "Enable hibernating"
+#~ msgstr "Enable hibernating"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "Control the visibility of the Hibernate menu item"
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "Drag here to add favourites"
+
+#~ msgid "New Window"
+#~ msgstr "New Window"
+
+#~ msgid "Quit Application"
+#~ msgstr "Quit Application"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Remove from Favourites"
+
+#~ msgid "Position of the dock"
+#~ msgstr "Position of the dock"
+
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+
+#~ msgid "Icon size"
+#~ msgstr "Icon size"
+
+#~ msgid "Sets icon size of the dock."
+#~ msgstr "Sets icon size of the dock."
+
+#~ msgid "Enable/disable autohide"
+#~ msgstr "Enable/disable autohide"
+
+#~ msgid "Autohide effect"
+#~ msgstr "Autohide effect"
+
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+#~ msgstr ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
+
+#~ msgid "Autohide duration"
+#~ msgstr "Autohide duration"
+
+#~ msgid "Sets the time duration of the autohide effect."
+#~ msgstr "Sets the time duration of the autohide effect."
+
+#~ msgid "Monitor"
+#~ msgstr "Monitor"
+
+#~ msgid ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+#~ msgstr ""
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
+
+#~ msgid "%s is away."
+#~ msgstr "%s is away."
+
+#~ msgid "%s is offline."
+#~ msgstr "%s is offline."
+
+#~ msgid "%s is online."
+#~ msgstr "%s is online."
+
+#~ msgid "%s is busy."
+#~ msgstr "%s is busy."
+
+#~ msgid "Devices"
+#~ msgstr "Devices"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Bookmarks"
+
+#~ msgid "Network"
+#~ msgstr "Network"
+
+#~ msgid "File System"
+#~ msgstr "File System"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Left"
+#~ msgstr "Left"
+
+#~ msgid "Right"
+#~ msgstr "Right"
+
+#~ msgid "Upside-down"
+#~ msgstr "Upside-down"
+
+#~ msgid "Display"
+#~ msgstr "Display"
+
+#~ msgid "Display Settings"
+#~ msgstr "Display Settings"
 
 #~ msgid "Do Not Disturb"
 #~ msgstr "Do Not Disturb"
