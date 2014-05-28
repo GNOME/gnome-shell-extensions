@@ -644,10 +644,15 @@ const WorkspaceIndicator = new Lang.Class({
         this.parent(0.0, _("Workspace Indicator"));
         this.actor.add_style_class_name('window-list-workspace-indicator');
 
-        this._currentWorkspace = global.screen.get_active_workspace().index();
-        this.statusLabel = new St.Label({ text: this._getStatusText() });
+        let container = new St.Widget({ layout_manager: new Clutter.BinLayout(),
+                                        x_expand: true, y_expand: true });
+        this.actor.add_actor(container);
 
-        this.actor.add_actor(this.statusLabel);
+        this._currentWorkspace = global.screen.get_active_workspace().index();
+        this.statusLabel = new St.Label({ text: this._getStatusText(),
+                                          x_align: Clutter.ActorAlign.CENTER,
+                                          y_align: Clutter.ActorAlign.CENTER });
+        container.add_actor(this.statusLabel);
 
         this.workspacesItems = [];
 
@@ -734,6 +739,11 @@ const WorkspaceIndicator = new Lang.Class({
         let newIndex = this._currentWorkspace + diff;
         this._activate(newIndex);
     },
+
+    _allocate: function(actor, box, flags) {
+        if (actor.get_n_children() > 0)
+            actor.get_first_child().allocate(box, flags);
+    }
 });
 
 const WindowList = new Lang.Class({
@@ -785,7 +795,7 @@ const WindowList = new Lang.Class({
 	box.add(indicatorsBox);
 
         this._workspaceIndicator = new WorkspaceIndicator();
-        indicatorsBox.add(this._workspaceIndicator.container, { expand: false, y_fill: false });
+        indicatorsBox.add(this._workspaceIndicator.container, { expand: false, y_fill: true });
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menuManager.addMenu(this._workspaceIndicator.menu);

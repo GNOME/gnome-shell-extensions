@@ -68,12 +68,12 @@
 }
 
 .window-list-workspace-indicator {
-  background-color: rgba(200, 200, 200, .3);
-  border: 1px solid #cccccc;
+  padding: 3px;
 }
 
-.window-list-workspace-indicator > StLabel {
-  padding: 0 2px;
+.window-list-workspace-indicator > StWidget {
+  background-color: rgba(200, 200, 200, .3);
+  border: 1px solid #cccccc;
 }
 
 .notification {
