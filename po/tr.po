@@ -7,10 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-02-05 09:01+0000\n"
-"PO-Revision-Date: 2014-02-05 12:07+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2014-06-07 07:31+0000\n"
+"PO-Revision-Date: 2014-06-07 21:23+0000\n"
 "Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -18,7 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -27,7 +25,7 @@ msgstr "GNOME Klasik"
 
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
-msgstr ""
+msgstr "Bu oturum, GNOME Klasik sürümüne giriş yapmanızı sağlar."
 
 #: ../data/gnome-shell-classic.desktop.in.in.h:1
 msgid "GNOME Shell Classic"
@@ -44,24 +42,29 @@ msgstr "Yardımcı iletişim penceresini üst pencereye iliştir"
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Bu anahtar, GNOME Shell çalışırken org.gnome.mutter içindeki anahtarı "
-"geçersiz kılar."
+msgstr "Bu anahtar, GNOME Shell çalışırken org.gnome.mutter içindeki anahtarı geçersiz kılar."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"Pencereler ekran kenarlarında bırakıldığında kenar döşemeyi etkinleştir"
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Başlık çubuğundaki düğmelerin düzeni"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid "Workspace Indicator"
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr "Bu anahtar, GNOME Kabuğu çalışırken org.gnome.desktop.wm.preferences içindeki anahtarı geçersiz kılar."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "Pencereler ekran kenarlarında bırakıldığında kenar döşemeyi etkinleştir"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "Çalışma alanları sadece birincil ekranda"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"Fare kipinde odak değişikliklerini işaretçi hareketi durana kadar beklet"
+msgstr "Fare kipinde odak değişikliklerini işaretçi hareketi durana kadar beklet"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -75,15 +78,13 @@ msgstr "Sadece uygulama simgesi"
 msgid "Thumbnail and application icon"
 msgstr "Küçük resim ve uygulama simgesi"
 
-#: ../extensions/alternate-tab/prefs.js:37
-#, fuzzy
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
-msgstr "Şimdiki pencereler olarak"
+msgstr ""
 
-#: ../extensions/alternate-tab/prefs.js:62
-#, fuzzy
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
-msgstr "Pencereleri sadece bu çalışma alanında göster"
+msgstr "Sadece geçerli çalışma alanındaki pencereleri göster"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -105,30 +106,31 @@ msgstr "Uygulama ve çalışma alanı listesi"
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
-msgstr ""
+msgstr "Her biri, bir uygulama kimliği (masaüstü dosya adı) ardından gelen iki nokta üst üste ve çalışma alanı numarasını içeren dizgeler listesi"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Uygulama"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "Çalışma Alanı"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
-msgstr "Kural ekle"
+#: ../extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
+msgstr "Kural Ekle"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "Yeni bir eşleşme kuralı oluştur"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "Ekle"
 
 #: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "'%s' sürücüsü çıkarılamadı:"
 
@@ -152,23 +154,21 @@ msgstr "Alternatif karşılama metni."
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
-msgstr ""
+msgstr "Eğer boş değilse, panele tıklandığında gösterilecek metni içerir."
 
 #: ../extensions/example/prefs.js:30
+msgid "Message"
+msgstr "İleti"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
+"Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
 
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "Mesaj:"
-
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
-#, fuzzy
 msgid "Use more screen for windows"
-msgstr "Pencereler için birden fazla ekran kullan"
+msgstr "Pencereler için ekranın daha fazla kısmını kullan"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
 msgid ""
@@ -193,20 +193,21 @@ msgstr ""
 msgid "Places"
 msgstr "Yerler"
 
-#: ../extensions/places-menu/placeDisplay.js:58
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" başlatılamadı"
 
-#: ../extensions/places-menu/placeDisplay.js:100
-#: ../extensions/places-menu/placeDisplay.js:123
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "Bilgisayar"
 
-#: ../extensions/places-menu/placeDisplay.js:201
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "Başlangıç"
 
-#: ../extensions/places-menu/placeDisplay.js:288
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "Ağa Gözat"
 
@@ -226,53 +227,52 @@ msgstr "Tema adı"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "~/.themes/name/gnome-shell konumundan edinilen tema adı"
 
-#: ../extensions/window-list/extension.js:94
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Kapat"
 
-#: ../extensions/window-list/extension.js:104
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr ""
 
-#: ../extensions/window-list/extension.js:105
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
-msgstr ""
+msgstr "Simge durumuna küçült"
 
-#: ../extensions/window-list/extension.js:111
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
-msgstr ""
+msgstr "Önceki Boyut"
 
-#: ../extensions/window-list/extension.js:112
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
-msgstr ""
+msgstr "En büyük duruma getir"
 
-#: ../extensions/window-list/extension.js:272
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
-msgstr ""
+msgstr "Tümünü simge durumuna küçült"
 
-#: ../extensions/window-list/extension.js:280
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr ""
 
-#: ../extensions/window-list/extension.js:288
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
-msgstr ""
+msgstr "Tümünü  en büyük duruma getir"
 
-#: ../extensions/window-list/extension.js:297
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
-msgstr ""
+msgstr "Tümünü Önceki Boyutuna Getir"
 
-#: ../extensions/window-list/extension.js:306
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "Hepsini kapat"
 
-#: ../extensions/window-list/extension.js:593
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Çalışma Alanı Belirteci"
 
-#: ../extensions/window-list/extension.js:745
-#| msgid "Window Grouping"
+#: ../extensions/window-list/extension.js:798
 msgid "Window List"
 msgstr "Pencere Listesi"
 
@@ -281,15 +281,10 @@ msgid "When to group windows"
 msgstr "Pencerelerin ne zaman gruplanacağı"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
-#| msgid ""
-#| "Decides when to group windows from the same application on the window "
-#| "list. Possible values are \"never\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
-msgstr ""
-"Pencere listesinde aynı uygulamaların ne zaman gruplanacağına karar verir. "
-"Geçerli değerler  \"hiçbir zaman\", \"otomatik\" ve \"herzaman\" dır."
+msgstr "Pencere listesinde aynı uygulamaların ne zaman gruplanacağına karar verir. Geçerli değerler  \"hiçbir zaman\", \"otomatik\" ve \"herzaman\" dır."
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -308,67 +303,14 @@ msgid "Always group windows"
 msgstr "Pencereleri her zaman gruplandır"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "Çalışma alanı adları:"
+msgid "Workspace Names"
+msgstr "Çalışma Alanı Adları"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "İsim"
 
-#: ../extensions/workspace-indicator/prefs.js:186
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Çalışma Alanı %d"
-
-#~ msgid "Suspend"
-#~ msgstr "Uyku"
-
-#~ msgid "Hibernate"
-#~ msgstr "Derin Uyku"
-
-#~ msgid "Power Off"
-#~ msgstr "Kapat"
-
-#~ msgid "Enable suspending"
-#~ msgstr "Uykuyu etkinleştir"
-
-#~ msgid "Control the visibility of the Suspend menu item"
-#~ msgstr "Bekle menü düğmesinin görünürlüğünü kontrol et"
-
-#~ msgid "Enable hibernating"
-#~ msgstr "Derin uykuyu etkileştir"
-
-#~ msgid "Control the visibility of the Hibernate menu item"
-#~ msgstr "Derin Uyku menü düğmesinin görünürlüğünü kontrol et"
-
-#~ msgid "Normal"
-#~ msgstr "Normal"
-
-#~ msgid "Left"
-#~ msgstr "Sol"
-
-#~ msgid "Right"
-#~ msgstr "Sağ"
-
-#~ msgid "Upside-down"
-#~ msgstr "Baş aşağı"
-
-#~ msgid "Display"
-#~ msgstr "Görüntü"
-
-#~ msgid "Display Settings"
-#~ msgstr "Görüntü Ayarları"
-
-#~ msgid "The application icon mode."
-#~ msgstr "Uygulama simge kipi"
-
-#~ msgid "Devices"
-#~ msgstr "Cihazlar"
-
-#~ msgid "Bookmarks"
-#~ msgstr "Yer imleri"
-
-#~ msgid "Network"
-#~ msgstr "Ağ"
-
-#~ msgid "File System"
-#~ msgstr "Dosya Sistemi"
