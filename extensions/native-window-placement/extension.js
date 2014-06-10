@@ -36,7 +36,7 @@ const PLACE_WINDOW_CAPTIONS_ON_TOP = true;                          // place win
 const WORKSPACE_BORDER_GAP = 10;                                    // minimum gap between the workspace area and the workspace selector
 const WINDOW_AREA_TOP_GAP = 20;                                     // minimum gap between the workspace area and the top border. This keeps window captions and close buttons visible. 13px (26/2) should currently be enough.
 
-const BUTTON_LAYOUT_SCHEMA = 'org.gnome.shell.overrides';
+const BUTTON_LAYOUT_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const BUTTON_LAYOUT_KEY = 'button-layout';
 
 function injectToFunction(parent, name, func) {
