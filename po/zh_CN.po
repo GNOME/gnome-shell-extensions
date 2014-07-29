@@ -11,9 +11,9 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-11-01 13:36+0000\n"
-"PO-Revision-Date: 2013-11-10 11:34+0800\n"
-"Last-Translator: tuhaihe <1132321739qq@gmail.com>\n"
+"POT-Creation-Date: 2014-05-31 18:51+0000\n"
+"PO-Revision-Date: 2014-06-01 10:36+0800\n"
+"Last-Translator: irisgyq <gouyingqiyanxuan321@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -49,14 +49,24 @@ msgid ""
 msgstr "当运行 GNOME Shell 时该键会覆盖 org.gnome.mutter 中的键。"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "标题栏上按钮的排列"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr "当运行 GNOME Shell 时该键会覆盖 org.gnome.desktop.wm.preferences 中的键。"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "启用将窗口拖拽到屏幕边缘时平铺显示的功能"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "仅在主显示器上显示工作区"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr "将鼠标模式下焦点的切换推迟到光标停止移动之后"
 
@@ -72,11 +82,11 @@ msgstr "仅应用程序图标"
 msgid "Thumbnail and application icon"
 msgstr "缩略图和应用程序图标"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "窗口展现为"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "仅显示当前工作区中的窗口"
 
@@ -103,37 +113,37 @@ msgid ""
 msgstr ""
 "一系列字符串，每个字符串包含一个应用程序标识(桌面文件名称)、冒号加工作区号"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "应用程序"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "工作区"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
 msgstr "添加规则"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "创建新的匹配规则"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "添加"
 
-#: ../extensions/drive-menu/extension.js:73
+#: ../extensions/drive-menu/extension.js:106
 #, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "弹出驱动器“%s”失败："
 
-#: ../extensions/drive-menu/extension.js:90
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "可移动设备"
 
-#: ../extensions/drive-menu/extension.js:117
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "打开文件管理器"
 
@@ -152,6 +162,10 @@ msgid ""
 msgstr "如果不为空，所包含的文本会在点击面板时显示。"
 
 #: ../extensions/example/prefs.js:30
+msgid "Message"
+msgstr "消息"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -159,10 +173,6 @@ msgid ""
 msgstr ""
 "示例意在展示如何为 Shell 创建良好工作的扩展，本身功能有限。\n"
 "尽管如此，它还是具备定制祝福语的功能。"
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "消息："
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -195,21 +205,21 @@ msgstr ""
 msgid "Places"
 msgstr "位置"
 
-#: ../extensions/places-menu/placeDisplay.js:58
+#: ../extensions/places-menu/placeDisplay.js:57
 #, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "无法启动“%s”"
 
-#: ../extensions/places-menu/placeDisplay.js:100
-#: ../extensions/places-menu/placeDisplay.js:123
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "计算机"
 
-#: ../extensions/places-menu/placeDisplay.js:201
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "主文件夹"
 
-#: ../extensions/places-menu/placeDisplay.js:288
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "浏览网络"
 
@@ -229,52 +239,52 @@ msgstr "主题名称"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "从 ~/.themes/name/gnome-shell 加载的主题名称"
 
-#: ../extensions/window-list/extension.js:92
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "关闭"
 
-#: ../extensions/window-list/extension.js:102
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "取消最小化"
 
-#: ../extensions/window-list/extension.js:103
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "最小化"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "取消最大化"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "最大化"
 
-#: ../extensions/window-list/extension.js:270
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: ../extensions/window-list/extension.js:278
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: ../extensions/window-list/extension.js:286
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: ../extensions/window-list/extension.js:295
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "全部关闭"
 
-#: ../extensions/window-list/extension.js:591
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "工作区指示器"
 
-#: ../extensions/window-list/extension.js:743
+#: ../extensions/window-list/extension.js:798
 msgid "Window List"
 msgstr "窗口列表"
 
@@ -307,14 +317,14 @@ msgid "Always group windows"
 msgstr "总是对窗口分组"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "工作区名称："
+msgid "Workspace Names"
+msgstr "工作区名称"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "名称"
 
-#: ../extensions/workspace-indicator/prefs.js:186
+#: ../extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "工作区 %d"
