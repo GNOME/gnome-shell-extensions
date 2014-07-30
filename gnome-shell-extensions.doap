@@ -6,6 +6,7 @@
 
   <name xml:lang="en">gnome-shell-extensions</name>
   <shortdesc xml:lang="en">Modify and extend GNOME Shell functionality and behavior</shortdesc>
+  <category rdf:resource="http://api.gnome.org/doap-extensions#core" />
   <description xml:lang="en">
 GNOME Shell Extensions is a collection of extensions providing
 additional and optional functionality to GNOME Shell.
