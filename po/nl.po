@@ -1,21 +1,22 @@
 # Dutch translation for gnome-shell-extensions.
 # Copyright (C) 2013 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Reinout van Schouwen <reinouts@gnome.org>, 2013.
-#
+# Reinout van Schouwen <reinouts@gnome.org>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-12 20:00+0200\n"
-"PO-Revision-Date: 2013-10-12 20:00+0200\n"
-"Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
-"Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
+"POT-Creation-Date: 2014-08-12 23:29+0200\n"
+"PO-Revision-Date: 2014-08-12 23:30+0200\n"
+"Last-Translator: Reinout van Schouwen <reinouts@gnome.org>\n"
+"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -46,14 +47,26 @@ msgstr ""
 "draaien van Gnome Shell."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Volgorde van knoppen op de titelbalk"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"Deze sleutel heeft voorrang op de sleutel in "
+"org.gnome.desktop.wm.preferences bij het draaien van Gnome Shell."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "Randtegels inschakelen bij het slepen van vensters naar schermranden"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "Werkbladen alleen op primaire beeldscherm"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr "Focus pas wijzigen nadat de muisaanwijzer is gestopt met bewegen"
 
@@ -69,11 +82,11 @@ msgstr "Alleen toepassingspictogram"
 msgid "Thumbnail and application icon"
 msgstr "Miniatuur en toepassingspictogram"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "Vensters presenteren als"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "Alleen vensters op het huidige werkblad tonen"
 
@@ -101,37 +114,37 @@ msgstr ""
 "Een lijst van strings, die elk een toepassings-id (desktop-bestandsnaam) "
 "bevatten, gevolgd door een dubbele punt en het werkbladnummer"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Toepassing"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "Werkblad"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
 msgstr "Regel toevoegen"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "Nieuwe vergelijkingsregel aanmaken"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "Toevoegen"
 
-#: ../extensions/drive-menu/extension.js:73
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Uitwerpen van station ‘%s’ mislukt:"
 
-#: ../extensions/drive-menu/extension.js:90
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "Verwijderbare apparaten"
 
-#: ../extensions/drive-menu/extension.js:117
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "Bestand openen"
 
@@ -151,9 +164,13 @@ msgstr ""
 "Indien niet leeg, bevat het de tekst die getoond wordt bij het klikken op "
 "het paneel."
 
+#: ../extensions/example/prefs.js:30
+msgid "Message"
+msgstr "Bericht"
+
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
-#: ../extensions/example/prefs.js:30
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -163,10 +180,6 @@ msgstr ""
 "voor de Shell kunt bouwen. Als zodanig heeft het weinig eigen "
 "functionaliteit.\n"
 "Niettemin is het mogelijk om de begroetingstekst aan te passen."
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "Bericht:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -203,21 +216,21 @@ msgstr ""
 msgid "Places"
 msgstr "Locaties"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "Starten van ‘%s’ mislukt"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "Computer"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "Persoonlijke map"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "Netwerk doorbladeren"
 
@@ -237,52 +250,52 @@ msgstr "Themanaam"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "De naam van het thema, te laden vanuit ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:92
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Sluiten"
 
-#: ../extensions/window-list/extension.js:102
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Zichtbaar maken"
 
-#: ../extensions/window-list/extension.js:103
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "Minimaliseren"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Herstellen"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "Maximaliseren"
 
-#: ../extensions/window-list/extension.js:270
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
 msgstr "Alles minimaliseren"
 
-#: ../extensions/window-list/extension.js:278
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr "Alles zichtbaar maken"
 
-#: ../extensions/window-list/extension.js:286
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
 msgstr "Alles maximaliseren"
 
-#: ../extensions/window-list/extension.js:295
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
 msgstr "Alles herstellen"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "Alles sluiten"
 
-#: ../extensions/window-list/extension.js:591
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Werkbladindicator"
 
-#: ../extensions/window-list/extension.js:743
+#: ../extensions/window-list/extension.js:798
 msgid "Window List"
 msgstr "Vensterlijst"
 
@@ -315,14 +328,14 @@ msgid "Always group windows"
 msgstr "Vensters altijd groeperen"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "Werkbladnamen:"
+msgid "Workspace Names"
+msgstr "Werkbladnamen"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "Naam"
 
-#: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Werkblad %d"
