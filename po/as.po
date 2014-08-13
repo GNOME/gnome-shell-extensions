@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Nilamdyuti Goswami <ngoswami@redhat.com>, 2013.
+# Nilamdyuti Goswami <ngoswami@redhat.com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-09-23 10:19+0000\n"
-"PO-Revision-Date: 2013-09-24 14:28+0530\n"
+"POT-Creation-Date: 2014-08-13 07:35+0000\n"
+"PO-Revision-Date: 2014-08-13 17:37+0530\n"
 "Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -45,14 +45,28 @@ msgid ""
 msgstr "GNOME শ্বেল চলাওতে এই কি'য়ে org.gnome.mutter ত থকা কি' অভাৰৰাইড কৰে।"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "শীৰ্ষলবাৰত বুটামসমূহৰ ব্যৱস্থাপনা"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid ""
+#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"এই কি'য়ে GNOME শ্বেল চলাওতে org.gnome.desktop.wm.preferences ত থকা কি'ক "
+"অভাৰৰাইড কৰে।"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "উইন্ডোসমূহক পৰ্দাৰ প্ৰান্তসমূহত এৰোতে প্ৰান্ত টাইলিং সামৰ্থবান কৰক"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "কাৰ্য্যস্থানসমূহ কেৱল প্ৰাথমিক মনিটৰত"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr ""
 "বিলম্বৰ ফকাচ মাউছ অৱস্থাত পৰিবৰ্তন হয় যেতিয়ালৈকে পইন্টাৰে গমন কৰা বন্ধ নকৰে"
@@ -69,11 +83,11 @@ msgstr "কেৱল এপ্লিকেচন আইকন"
 msgid "Thumbnail and application icon"
 msgstr "থাম্বনেইল আৰু এপ্লিকেচন আইকন"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "উইন্ডোসমূহক এই ধৰণে পৰিৱেশন কৰক"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "কেৱল বৰ্তমান কাৰ্য্যস্থানত থকা উইন্ডোসমূহ দেখুৱাওক"
 
@@ -102,37 +116,38 @@ msgstr ""
 "কল'ন "
 "আৰু কাৰ্য্যস্থান নম্বৰৰ সৈতে অনুকৰণ কৰা অন্তৰ্ভুক্ত কৰে"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "এপ্লিকেচন"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "কাৰ্য্যস্থান"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+#| msgid "Add rule"
+msgid "Add Rule"
 msgstr "নিয়ম যোগ কৰক"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "নতুন মিল খোৱা নিয়ম সৃষ্টি কৰক"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "যোগ কৰক"
 
-#: ../extensions/drive-menu/extension.js:73
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "ড্ৰাইভ '%s' বাহিৰ কৰাটো ব্যৰ্থ হ'ল:"
 
-#: ../extensions/drive-menu/extension.js:90
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "আতৰাব পৰা ডিভাইচসমূহ"
 
-#: ../extensions/drive-menu/extension.js:117
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "ফাইল খোলক"
 
@@ -142,17 +157,20 @@ msgstr "নমস্কাৰ, বিশ্ব!"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
 msgid "Alternative greeting text."
-msgstr "বৈকল্পিক অভিন্দন লিখনী।"
+msgstr "বৈকল্পিক অভিন্দন লিখনি।"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
-msgstr "যদি ৰিক্ত নহয়, ই পেনেল ক্লিক কৰোতে দেখুৱা লিখনী অন্তৰ্ভুক্ত কৰিব।"
+msgstr "যদি ৰিক্ত নহয়, ই পেনেল ক্লিক কৰোতে দেখুৱা লিখনি অন্তৰ্ভুক্ত কৰিব।"
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
+#| msgid "Message:"
+msgid "Message"
+msgstr "বাৰ্তা"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -161,10 +179,6 @@ msgstr ""
 "উদাহৰণে শ্বেলৰ বাবে কিধৰণে ভাল ব্যৱহাৰ কৰা সম্প্ৰসাৰণসমূহ নিৰ্মাণ কৰিব লাগে "
 "দেখুৱাবলে লক্ষ্য লয় আৰু সেয়েহে ইয়াৰ খুব ক'ম নিজস্ব কাৰ্যকৰীতা থাকে।\n"
 "যি কি নহওক অভিন্দন বাৰ্তাটো স্বনিৰ্বাচন কৰাটো সম্ভব।"
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "বাৰ্তা:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -202,23 +216,23 @@ msgstr ""
 msgid "Places"
 msgstr "স্থানবোৰ"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" লঞ্চ কৰিবলে ব্যৰ্থ"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "কমপিউটাৰ"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "ঘৰ"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
-msgstr "নেটৱাৰ্ক ব্ৰাউছ কৰক"
+msgstr "নেটৱৰ্ক ব্ৰাউছ কৰক"
 
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
@@ -236,52 +250,52 @@ msgstr "থীম নাম"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "~/.themes/name/gnome-shell ৰ পৰা ল'ড কৰিব লগিয়া থীমৰ নাম"
 
-#: ../extensions/window-list/extension.js:92
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "বন্ধ কৰক"
 
-#: ../extensions/window-list/extension.js:102
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "ডাঙৰ কৰক"
 
-#: ../extensions/window-list/extension.js:103
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "সৰু কৰক"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "সৰু কৰক"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "ডাঙৰ কৰক"
 
-#: ../extensions/window-list/extension.js:270
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
 msgstr "সকলো সৰু কৰক"
 
-#: ../extensions/window-list/extension.js:278
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr "সকলো ডাঙৰ কৰক"
 
-#: ../extensions/window-list/extension.js:286
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
 msgstr "সকলো ডাঙৰ কৰক"
 
-#: ../extensions/window-list/extension.js:295
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
 msgstr "সকলো সৰু কৰক"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "সকলো বন্ধ কৰক"
 
-#: ../extensions/window-list/extension.js:591
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "কাৰ্য্যস্থান সূচক"
 
-#: ../extensions/window-list/extension.js:743
+#: ../extensions/window-list/extension.js:798
 msgid "Window List"
 msgstr "উইন্ডো তালিকা"
 
@@ -315,15 +329,16 @@ msgid "Always group windows"
 msgstr "উইন্ডোসমূহ সদায় দলবদ্ধ কৰিব"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "কাৰ্য্যস্থানৰ নামবোৰ:"
+#| msgid "Workspace names:"
+msgid "Workspace Names"
+msgstr "কাৰ্য্যস্থানৰ নামবোৰ"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "নাম"
 
-#: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
 msgid "Workspace %d"
 msgstr "কাৰ্য্যস্থান %d"
 
