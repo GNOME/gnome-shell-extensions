@@ -2,17 +2,17 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Jordi Mas i Hernandez <jmas@softcatala.org>, 2011.
-# Gil Forcada <gilforcada@guifi.net>, 2012, 2013.
+# Gil Forcada <gilforcada@guifi.net>, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-06 21:59+0200\n"
-"PO-Revision-Date: 2013-09-25 00:21+0200\n"
+"POT-Creation-Date: 2014-08-17 14:40+0200\n"
+"PO-Revision-Date: 2014-08-17 14:38+0200\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
-"Language: \n"
+"Language: ca-XV\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bits\n"
@@ -47,16 +47,28 @@ msgstr ""
 "mutter»."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Disposició dels botons en la barra de títol"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"Si s'executa el GNOME Shell, esta clau sobreescriu la clau «org.gnome."
+"desktop.wm.preferences»."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
 "Habilita la tesselització a les vores en deixar anar les finestres a les "
 "vores de la pantalla"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "Els espais de treball només es mostren en el monitor principal"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr ""
 "Retarda el canvi de focus, en mode ratolí, fins que el punter estiga quiet"
@@ -73,11 +85,11 @@ msgstr "Només la icona de l'aplicació"
 msgid "Thumbnail and application icon"
 msgstr "Miniatura i icona de l'aplicació"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "Mostra les finestres com a"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "Mostra només les icones de l'espai de treball actual"
 
@@ -106,37 +118,37 @@ msgstr ""
 "d'aplicació (nom del fitxer de l'escriptori), seguit de dos punts i el "
 "número de l'espai de treball"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Aplicació"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "Espai de treball"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
 msgstr "Afig una regla"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "Crea una regla de coincidència nova"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "Afig"
 
-#: ../extensions/drive-menu/extension.js:73
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Ha fallat l'expulsió de la unitat «%s»:"
 
-#: ../extensions/drive-menu/extension.js:90
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "Dispositius extraïbles"
 
-#: ../extensions/drive-menu/extension.js:117
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "Obri el fitxer"
 
@@ -155,9 +167,11 @@ msgid ""
 msgstr ""
 "Si no és buit, conté el text que es mostrarà quan es faça clic en el quadre."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
+msgid "Message"
+msgstr "Missatge"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -167,10 +181,6 @@ msgstr ""
 "manera correcta de crear extensions. Com a extensió pròpiament dita no fa "
 "gairebé res.\n"
 "Tot i així permet personalitzar el missatge del rebedor."
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "Missatge:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -207,21 +217,21 @@ msgstr ""
 msgid "Places"
 msgstr "Llocs"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "No s'ha pogut iniciar «%s»"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "Ordinador"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "Inici"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "Navega per la xarxa"
 
@@ -241,52 +251,52 @@ msgstr "Nom del tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "El nom del tema que es carregarà des de ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:92
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Tanca"
 
-#: ../extensions/window-list/extension.js:102
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Desminimitza"
 
-#: ../extensions/window-list/extension.js:103
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "Minimitza"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Desmaximitza"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "Maximitza"
 
-#: ../extensions/window-list/extension.js:270
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
 msgstr "Minimitza-ho tot"
 
-#: ../extensions/window-list/extension.js:278
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr "Desminimitza-ho tot"
 
-#: ../extensions/window-list/extension.js:286
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
 msgstr "Maximitza-ho tot"
 
-#: ../extensions/window-list/extension.js:295
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
 msgstr "Desmaximitza-ho tot"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "Tanca-ho tot"
 
-#: ../extensions/window-list/extension.js:591
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador de l'espai de treball"
 
-#: ../extensions/window-list/extension.js:743
+#: ../extensions/window-list/extension.js:798
 msgid "Window List"
 msgstr "Llista de finestres"
 
@@ -320,14 +330,14 @@ msgid "Always group windows"
 msgstr "Agrupa les finestres sempre"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "Noms dels espais de treball:"
+msgid "Workspace Names"
+msgstr "Noms dels espais de treball"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "Nom"
 
-#: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Espai de treball %d"
