@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-03-19 20:33+0000\n"
-"PO-Revision-Date: 2014-03-21 21:41+0800\n"
+"POT-Creation-Date: 2014-08-18 19:38+0000\n"
+"PO-Revision-Date: 2014-08-19 10:13+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (Taiwan) <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.5\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -45,14 +45,28 @@ msgid ""
 msgstr "當執行 GNOME Shell 時這個設定鍵會覆蓋在 org.gnome.mutter 中的設定值。"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "標頭列按鈕的配置"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid ""
+#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"當執行 GNOME Shell 時這個設定鍵會覆蓋在 org.gnome.desktop.wm.preferences 中的"
+"設定值。"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "在螢幕邊緣放下視窗時啟用邊緣拼貼"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "工作區只在主要螢幕"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr "延遲滑鼠模式中焦點的改變直到指標停止移動"
 
@@ -68,11 +82,11 @@ msgstr "僅應用程式圖示"
 msgid "Thumbnail and application icon"
 msgstr "縮圖與應用程式圖示"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "視窗呈現方式"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "僅顯示目前工作區中的視窗"
 
@@ -100,24 +114,25 @@ msgstr ""
 "字串的清單，每個都包含一個應用程式 id (桌面檔名稱)，後面接著半形分號 \";\" 與"
 "工作區號碼"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "應用程式"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "工作區"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+#| msgid "Add rule"
+msgid "Add Rule"
 msgstr "加入規則"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "建立新的比對規則"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "加入"
 
@@ -149,6 +164,11 @@ msgid ""
 msgstr "若不是空的，它則包含點擊面板時會顯示的文字。"
 
 #: ../extensions/example/prefs.js:30
+#| msgid "Message:"
+msgid "Message"
+msgstr "訊息："
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -157,10 +177,6 @@ msgstr ""
 "Example 旨要顯示如何替 Shell 建立行為良好的擴充套件，但它自己本身沒有什麼功"
 "能。\n"
 "不過，它可以讓您自訂歡迎訊息。"
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "訊息："
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -227,52 +243,52 @@ msgstr "主題名稱"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "主題的名稱，要從 ~/.themes/name/gnome-shell 載入"
 
-#: ../extensions/window-list/extension.js:104
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "關閉"
 
-#: ../extensions/window-list/extension.js:114
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "取消最小化"
 
-#: ../extensions/window-list/extension.js:115
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "最小化"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "取消最大化"
 
-#: ../extensions/window-list/extension.js:122
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "最大化"
 
-#: ../extensions/window-list/extension.js:294
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: ../extensions/window-list/extension.js:302
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: ../extensions/window-list/extension.js:310
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: ../extensions/window-list/extension.js:319
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: ../extensions/window-list/extension.js:328
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "全部關閉"
 
-#: ../extensions/window-list/extension.js:638
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "工作區指示器"
 
-#: ../extensions/window-list/extension.js:792
+#: ../extensions/window-list/extension.js:798
 msgid "Window List"
 msgstr "視窗清單"
 
@@ -304,14 +320,15 @@ msgid "Always group windows"
 msgstr "永遠群組視窗"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "工作區名稱："
+#| msgid "Workspace names:"
+msgid "Workspace Names"
+msgstr "工作區名稱"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "名稱"
 
-#: ../extensions/workspace-indicator/prefs.js:186
+#: ../extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "工作區 %d"
