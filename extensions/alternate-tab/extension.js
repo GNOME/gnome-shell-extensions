@@ -30,11 +30,11 @@ function enable() {
             this._select(1);
     };
     injections['_keyPressHandler'] = AltTab.WindowSwitcherPopup.prototype._keyPressHandler;
-    AltTab.WindowSwitcherPopup.prototype._keyPressHandler = function(keysym, backwards, action) {
+    AltTab.WindowSwitcherPopup.prototype._keyPressHandler = function(keysym, action) {
         if (action == Meta.KeyBindingAction.SWITCH_WINDOWS ||
             action == Meta.KeyBindingAction.SWITCH_APPLICATIONS ||
             action == Meta.KeyBindingAction.SWITCH_GROUP) {
-            this._select(backwards ? this._previous() : this._next());
+            this._select(this._next());
         } else if (action == Meta.KeyBindingAction.SWITCH_WINDOWS_BACKWARD ||
                    action == Meta.KeyBindingAction.SWITCH_APPLICATIONS_BACKWARD ||
                    action == Meta.KeyBindingAction.SWITCH_GROUP_BACKWARD) {
