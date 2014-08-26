@@ -1,17 +1,18 @@
-# Manoj Kumar Giri <mgiri@redhat.com>, 2013.
+# Manoj Kumar Giri <mgiri@redhat.com>, 2013, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-06 14:45+0530\n"
-"PO-Revision-Date: 2013-11-05 12:06-0500\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2014-08-25 21:51+0000\n"
+"PO-Revision-Date: 2014-08-26 12:15+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
+"Language: or\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: or\n"
-"X-Generator: Zanata 3.2.3\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -41,12 +42,32 @@ msgid ""
 msgstr "ଏହି କି org.gnome.mutter ରେ GNOME ସେଲ ଚାଲୁଥିବା ସମୟରେ ନବଲିଖନ କରିଥାଏ।"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "ଶୀର୍ଷକ ପଟିରେ ଚାବିର ସଜ୍ଜା"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid ""
+#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"ଏହି କି org.gnome.desktop.wm.preferencesରେ GNOME ସେଲ ଚାଲୁଥିବା ସମୟରେ ନବଲିଖନ "
+"କରିଥାଏ।"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "ୱିଣ୍ଡୋଗୁଡ଼ିକୁ ପରଦା ଧାରରେ ରଖିବା ସମୟରେ ଧାର ଟାଇଲକୁ ସକ୍ରିୟ କରନ୍ତୁ"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "କାର୍ଯ୍ୟକ୍ଷେତ୍ର କେବଳ ପ୍ରାଥମିକ ମନିଟରରେ ଥାଏ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"ସୂଚକ ଗତି କରିବା ବନ୍ଦ ନହେଲା ପର୍ଯ୍ୟନ୍ତ ମାଉସ ଧାରାରେ ଲକ୍ଷ୍ଯସ୍ଥଳ ପରିବର୍ତ୍ତନକୁ "
+"ବିଳମ୍ବ କରନ୍ତୁ"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -60,42 +81,13 @@ msgstr "କେବଳ ପ୍ରୟୋଗ ଚିତ୍ର ସଂକେତ"
 msgid "Thumbnail and application icon"
 msgstr "ସଂକ୍ଷେପ ଲିଖନ ଏବଂ ପ୍ରୟୋଗ ଚିତ୍ର ସଂକେତ"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "ଉପସ୍ଥିତ ୱିଣ୍ଡୋ ଯେପରିକି"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "ପ୍ରଚଳିତ କାର୍ଯ୍ୟକ୍ଷେତ୍ରରେ କେବଳ ୱିଣ୍ଡୋଗୁଡ଼ିକୁ ଦର୍ଶାନ୍ତୁ"
-
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "ନିଲମ୍ବନ କରନ୍ତୁ"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "ବିଦ୍ୟୁତ ପ୍ରବାହ ବନ୍ଦ କରନ୍ତୁ"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "ନିଲମ୍ବନକୁ ସକ୍ରିୟ କରନ୍ତୁ"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "ନିଲମ୍ବିତ ତାଲିକା ବସ୍ତୁର ଦୃଶ୍ୟମାନ୍ୟତାକୁ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "ହାଇବରନେଟକୁ ସକ୍ଷମ କରନ୍ତୁ"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "ହାଇବରନେଟ ତାଲିକା ବସ୍ତୁର ଦୃଶ୍ୟମାନ୍ୟତାକୁ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -105,7 +97,7 @@ msgstr "କାର୍ଯ୍ୟକଳାପଗୁଡ଼ିକର ସମୀକ୍�
 msgid "Favorites"
 msgstr "ମନପସନ୍ଦ"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "ପ୍ରୟୋଗ"
 
@@ -119,39 +111,41 @@ msgid ""
 "followed by a colon and the workspace number"
 msgstr ""
 "ବାକ୍ୟଖଣ୍ଡଗୁଡ଼ିକର ଗୋଟିଏ ତାଲିକା, ପ୍ରତ୍ୟେକ ଗୋଟିଏ ପ୍ରୟୋଗ id ଧାରଣ କରିଅଛି (ଡେସ୍କଟପ "
-"ଫାଇଲ ନାମ), ଏହାପରେ ଏକ  ବିରାମ ଚିହ୍ନ ଏବଂ କାର୍ଯ୍ୟକ୍ଷେତ୍ର କ୍ରମ ସଂଖ୍ୟା"
+"ଫାଇଲ ନାମ), "
+"ଏହାପରେ ଏକ  ବିରାମ ଚିହ୍ନ ଏବଂ କାର୍ଯ୍ୟକ୍ଷେତ୍ର କ୍ରମ ସଂଖ୍ୟା"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "ପ୍ରୟୋଗ"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "କାର୍ୟ୍ଯସ୍ଥାନ"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+#| msgid "Add rule"
+msgid "Add Rule"
 msgstr "ନିୟମ ଯୋଗକରନ୍ତୁ"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "ନୂଆ ମେଳଖାଉଥିବା ନିୟମ ସୃଷ୍ଟି କରନ୍ତୁ"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "ଯୋଗ କରନ୍ତୁ"
 
-#: ../extensions/drive-menu/extension.js:72
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "ଡ୍ରାଇଭ '%s' କୁ ବାହାର କରିବା ବିଫଳ ହୋଇଛି:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "କଢ଼ାଯୋଗ୍ୟ ଉପକରଣଗୁଡ଼ିକ"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "ଫାଇଲକୁ ଖୋଲନ୍ତୁ"
 
@@ -171,21 +165,21 @@ msgstr ""
 "ଯଦି ଖାଲିନଥାଏ, ତେବେ ପ୍ୟାନେଲ ଉପରେ କ୍ଲିକ କରିବା ସମୟରେ ଦର୍ଶାଇବାକୁ ଥିବା ପାଠ୍ୟ ଧାରଣ "
 "କରିଥାଏ।"
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
+#| msgid "Message:"
+msgid "Message"
+msgstr "ସନ୍ଦେଶ"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
 "ଏହି ଉଦାହରଣର ଲକ୍ଷ୍ଯ ହେଉଛି ସେଲ ପାଇଁ ଉତ୍ତମ ଅନୁଲଗ୍ନଗୁଡ଼ିକୁ ନିର୍ମାଣ କରିବା ଯେପରିକି "
-"ଏଥିରେ ନିଜର ବହୁତ କମ କାର୍ଯ୍ୟକାରିତା ଥାଏ।\n"
+"ଏଥିରେ ନିଜର ବହୁତ କମ "
+"କାର୍ଯ୍ୟକାରିତା ଥାଏ।\n"
 "ଅନ୍ୟଥା ଅଭିନନ୍ଦନ ସନ୍ଦେଶକୁ ଇଚ୍ଛାରୂପଣ କରିବା ସମ୍ଭବ ହୋଇଥାଏ।"
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "ସନ୍ଦେଶ:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -198,8 +192,10 @@ msgid ""
 "This setting applies only with the natural placement strategy."
 msgstr ""
 "ପରଦା ବିଭେଦନକୁ  ଗ୍ରହଣ କରି ୱିଣ୍ଡୋକୁ ରଖିବାକୁ ଅଧିକ ପରଦା ବ୍ୟବହାର କରିବାକୁ ଚେଷ୍ଟା "
-"କରନ୍ତୁ, ଏବଂ ବାକ୍ସର ସୀମାକୁ କମ କରିବାକୁ ସେମାନଙ୍କୁ ଏକତ୍ରିତ କରିଥାଏ। ଏହି ସଂରଚନା "
-"କେବଳ ପ୍ରାକୃତିକ କୌଶଳ ସହିତ ପ୍ରୟୋଗ ହୋଇଥାଏ।"
+"କରନ୍ତୁ, ଏବଂ ବାକ୍ସର "
+"ସୀମାକୁ କମ କରିବାକୁ ସେମାନଙ୍କୁ ଏକତ୍ରିତ କରିଥାଏ। ଏହି ସଂରଚନା କେବଳ ପ୍ରାକୃତିକ କୌଶଳ "
+"ସହିତ ପ୍ରୟୋଗ "
+"ହୋଇଥାଏ।"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -212,36 +208,38 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 "ଯଦି true, ତେବେ ୱିଣ୍ଡୋ ଶୀର୍ଷକକୁ ଉଚିତ ସଂକ୍ଷିପ୍ତ ଲିଖନ ଉପରେ ରଖନ୍ତୁ, ସେଲ "
-"ପୂର୍ବନିର୍ଦ୍ଧାରିତକୁ ତଳେ ରଖିକରି ନବଲିଖନ କରୁଅଛି। ଏହି ସେଟିଙ୍ଗକୁ ପରିବର୍ତ୍ତନ କରିବା "
-"ପାଇଁ ସେଲକୁ ପୁନଃଚାଳନ କରିବା ଆବଶ୍ୟକ ହୋଇଥାଏ।"
+"ପୂର୍ବନିର୍ଦ୍ଧାରିତକୁ ତଳେ ରଖିକରି "
+"ନବଲିଖନ କରୁଅଛି। ଏହି ସେଟିଙ୍ଗକୁ ପରିବର୍ତ୍ତନ କରିବା ପାଇଁ ସେଲକୁ ପୁନଃଚାଳନ କରିବା "
+"ଆବଶ୍ୟକ ହୋଇଥାଏ।"
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "ସ୍ଥାନଗୁଡିକ"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" କୁ ଆରମ୍ଭ କରିବାରେ ବିଫଳ"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "କମ୍ପୁଟର"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "ମୂଳ ସ୍ଥାନ"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "ନେଟୱାର୍କ ବ୍ରାଉଜ କରନ୍ତୁ"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "ସ୍ମୃତିସ୍ଥାନ"
 
@@ -253,6 +251,56 @@ msgstr "ପ୍ରସଙ୍ଗ ନାମ"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "~/.themes/name/gnome-shell ରୁ ଧାରଣ ହେବାକୁ ଥିବା ପ୍ରସଙ୍ଗର ନାମ"
 
+#: ../extensions/window-list/extension.js:110
+msgid "Close"
+msgstr "ବନ୍ଦ କରନ୍ତୁ"
+
+#: ../extensions/window-list/extension.js:120
+msgid "Unminimize"
+msgstr "ଛୋଟକରନ୍ତୁ ନାହିଁ"
+
+#: ../extensions/window-list/extension.js:121
+msgid "Minimize"
+msgstr "ଛୋଟକରନ୍ତୁ"
+
+#: ../extensions/window-list/extension.js:127
+msgid "Unmaximize"
+msgstr "ବଡ଼କରନ୍ତୁ ନାହିଁ"
+
+#: ../extensions/window-list/extension.js:128
+msgid "Maximize"
+msgstr "ବଡ଼କରନ୍ତୁ"
+
+#: ../extensions/window-list/extension.js:300
+msgid "Minimize all"
+msgstr "ସବୁଗୁଡ଼ିକୁ ଛୋଟକରନ୍ତୁ"
+
+#: ../extensions/window-list/extension.js:308
+msgid "Unminimize all"
+msgstr "ସବୁଗୁଡ଼ିକୁ ଛୋଟକରନ୍ତୁ ନାହିଁ"
+
+#: ../extensions/window-list/extension.js:316
+msgid "Maximize all"
+msgstr "ସବୁଗୁଡ଼ିକୁ ବଡ଼କରନ୍ତୁ"
+
+#: ../extensions/window-list/extension.js:325
+msgid "Unmaximize all"
+msgstr "ସବୁଗୁଡ଼ିକୁ ବଡ଼କରନ୍ତୁ ନାହିଁ"
+
+#: ../extensions/window-list/extension.js:334
+msgid "Close all"
+msgstr "ସବୁଗୁଡ଼ିକୁ ବନ୍ଦ କରନ୍ତୁ"
+
+#: ../extensions/window-list/extension.js:644
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "କାର୍ଯ୍ୟକ୍ଷେତ୍ର ସୂଚକ"
+
+#: ../extensions/window-list/extension.js:798
+#| msgid "Window Grouping"
+msgid "Window List"
+msgstr "ୱିଣ୍ଡୋ ତାଲିକା"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "ୱିଣ୍ଡୋଗୁଡିକୁ କେତେବେଳେ ସମୂହିତ କରାଯିବ"
@@ -263,7 +311,8 @@ msgid ""
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "ସ୍ଥିର କରେ ଗୋଟିଏ ପ୍ରୟୋଗର ୱିଣ୍ଡୋଗୁଡିକ କେତେବେଳେ ୱିଣ୍ଡୋ ତାଲିକାରେ ସମୂହିତ କରାଯିବ। "
-"ସାମ୍ଭାବ୍ଯ ମୂଲ୍ଯ  ହେଲା \"କଦାପି ନୁହଁ\", \"ସ୍ୱୟଂଚାଳିତ\" ଏବଂ \"ସର୍ବଦା\"।"
+"ସାମ୍ଭାବ୍ଯ ମୂଲ୍ଯ  "
+"ହେଲା \"କଦାପି ନୁହଁ\", \"ସ୍ୱୟଂଚାଳିତ\" ଏବଂ \"ସର୍ବଦା\"।"
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -281,43 +330,55 @@ msgstr "ସ୍ଥାନ ସୀମିତ ଥିଲେ ୱିଣ୍ଡୋଗୁଡ
 msgid "Always group windows"
 msgstr "ସର୍ବଦା ୱିଣ୍ଡୋଗୁଡିକୁ ସମୂହିତ କରାଯିବ"
 
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "କାର୍ଯ୍ୟକ୍ଷେତ୍ର ସୂଚକ"
-
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "କାର୍ଯ୍ଯକ୍ଷେତ୍ର ନାମ:"
+#| msgid "Workspace names:"
+msgid "Workspace Names"
+msgstr "କାର୍ଯ୍ଯକ୍ଷେତ୍ର ନାମ"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "ନାମ"
 
-#: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
 msgid "Workspace %d"
 msgstr "କାର୍ଯ୍ଯକ୍ଷେତ୍ର %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "ସ୍ବାଭାବିକ"
+#~ msgid "Suspend"
+#~ msgstr "ନିଲମ୍ବନ କରନ୍ତୁ"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "ବାମ"
+#~ msgid "Hibernate"
+#~ msgstr "ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "ଡାହାଣ"
+#~ msgid "Power Off"
+#~ msgstr "ବିଦ୍ୟୁତ ପ୍ରବାହ ବନ୍ଦ କରନ୍ତୁ"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "ଉପରୁ ତଳକୁ"
+#~ msgid "Enable suspending"
+#~ msgstr "ନିଲମ୍ବନକୁ ସକ୍ରିୟ କରନ୍ତୁ"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "ଦେଖାଅ"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "ନିଲମ୍ବିତ ତାଲିକା ବସ୍ତୁର ଦୃଶ୍ୟମାନ୍ୟତାକୁ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"
 
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "ସେଟିଙ୍ଗଗୁଡିକ ଦର୍ଶାନ୍ତୁ"
+#~ msgid "Enable hibernating"
+#~ msgstr "ହାଇବରନେଟକୁ ସକ୍ଷମ କରନ୍ତୁ"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "ହାଇବରନେଟ ତାଲିକା ବସ୍ତୁର ଦୃଶ୍ୟମାନ୍ୟତାକୁ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"
+
+#~ msgid "Normal"
+#~ msgstr "ସ୍ବାଭାବିକ"
+
+#~ msgid "Left"
+#~ msgstr "ବାମ"
+
+#~ msgid "Right"
+#~ msgstr "ଡାହାଣ"
+
+#~ msgid "Upside-down"
+#~ msgstr "ଉପରୁ ତଳକୁ"
+
+#~ msgid "Display"
+#~ msgstr "ଦେଖାଅ"
+
+#~ msgid "Display Settings"
+#~ msgstr "ସେଟିଙ୍ଗଗୁଡିକ ଦର୍ଶାନ୍ତୁ"
