@@ -1,22 +1,24 @@
 # Persian translation for gnome-shell-extensions.
 # Copyright (C) 2011 Iranian Free Software Users Group (IFSUG.org) translation team.
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2011, 2013.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2011, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-09-23 10:19+0000\n"
-"PO-Revision-Date: 2013-10-05 18:31+0330\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2014-08-28 07:40+0000\n"
+"PO-Revision-Date: 2014-08-28 19:59+0430\n"
 "Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
-"Language-Team: Persian\n"
+"Language-Team: Persian <>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Gtranslator 2.91.6\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -40,29 +42,45 @@ msgid "Attach modal dialog to the parent window"
 msgstr "اتصال محاوره modal به پنجره والد"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "این کلید، کلید org.gnome.mutter را در هنگام اجرای گنوم‌شل بازنویسی می‌کند."
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"این کلید، کلید org.gnome.mutter را در هنگام اجرای گنوم‌شل بازنویسی می‌کند."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "فعال‌سازی چینش در گوشه‌ها هنگامی که پنجره‌ها در گوشه‌های صفحه‌نمایش می‌اندازید"
+msgid "Arrangement of buttons on the titlebar"
+msgstr "چینش دکمه‌ها در نوار عنوان"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid "Workspace Indicator"
+#| msgid ""
+#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"این کلید، کلید org.gnome.desktop.wm.preferences را در هنگام اجرای گنوم‌شل "
+"بازنویسی می‌کند."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"فعال‌سازی چینش در گوشه‌ها هنگامی که پنجره‌ها در گوشه‌های صفحه‌نمایش می‌اندازید"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "فضا‌های کاری تنها در نمایشگر اصلی"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr "به تاخیر انداختن تغییر تمرکز در حالت موشی تا زمانی که نشانگر از حرکت باز ایستد"
+msgstr ""
+"به تاخیر انداختن تغییر تمرکز در حالت موشی تا زمانی که نشانگر از حرکت باز "
+"ایستد"
 
 #: ../extensions/alternate-tab/prefs.js:20
-#| msgid "All & Thumbnails"
 msgid "Thumbnail only"
 msgstr "تنها تصویر بندانگشتی"
 
 #: ../extensions/alternate-tab/prefs.js:21
-#| msgid "Application"
 msgid "Application icon only"
 msgstr "تنها شمایل برنامه"
 
@@ -70,11 +88,11 @@ msgstr "تنها شمایل برنامه"
 msgid "Thumbnail and application icon"
 msgstr "تصویر بندانگشتی و شمایل برنامه"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "نمایش پنجره به عنوان"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "نمایش پنجره‌ها تنها در فضای‌کاری فعلی"
 
@@ -83,12 +101,10 @@ msgid "Activities Overview"
 msgstr "نمای‌کلی فعالیت‌ها"
 
 #: ../extensions/apps-menu/extension.js:113
-#| msgid "Add to Favorites"
 msgid "Favorites"
 msgstr "علاقه‌مندی‌ها"
 
 #: ../extensions/apps-menu/extension.js:282
-#| msgid "Application"
 msgid "Applications"
 msgstr "برنامه‌ها"
 
@@ -97,42 +113,45 @@ msgid "Application and workspace list"
 msgstr "فهرست برنامه‌ها و فضای‌کاری"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
-msgstr "فهرستی از رشته‌ها، هرکدام حاوی شناسه‌ی یک برنامه (نام پرونده رومیزی)، در ادامه‌ی یک ویرگول و شماره‌ی فضای کاری"
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"فهرستی از رشته‌ها، هرکدام حاوی شناسه‌ی یک برنامه (نام پرونده رومیزی)، در "
+"ادامه‌ی یک ویرگول و شماره‌ی فضای کاری"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "برنامه"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "فضای‌کاری"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+#| msgid "Add rule"
+msgid "Add Rule"
 msgstr "اضافه کردن قاعده"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "اضافه کردن یک قاعده‌ی منطبق جدید"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "اضافه"
 
-#: ../extensions/drive-menu/extension.js:73
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "بیرون دادن دیسک‌گردان «%s» شکست خورد:"
 
-#: ../extensions/drive-menu/extension.js:90
-#| msgid "Removable Devices"
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "دستگاه‌های جداشدنی"
 
-#: ../extensions/drive-menu/extension.js:117
-#| msgid "Open file manager"
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "باز کردن پرونده"
 
@@ -145,59 +164,76 @@ msgid "Alternative greeting text."
 msgstr "متن خوش‌آمد جای‌گزین"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid "If not empty, it contains the text that will be shown when clicking on the panel."
-msgstr "اگر خالی نباشد، حاوی متنی خواهد بود که که هنگام کلیک بر روی پنل نمایش داده می‌شود است."
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: ../extensions/example/prefs.js:30
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"اگر خالی نباشد، حاوی متنی خواهد بود که که هنگام کلیک بر روی پنل نمایش داده "
+"می‌شود است."
+
+#: ../extensions/example/prefs.js:30
+#| msgid "Message:"
+msgid "Message"
+msgstr "پیام"
+
+#: ../extensions/example/prefs.js:43
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"هدف Example این است که نشان دهد چگونه می‌توان متصل‌شونده‌های صحیح برای گنوم‌شل ساخت و برای نمونه کمی قابلیت از خود نیز دارد.\n"
+"هدف Example این است که نشان دهد چگونه می‌توان متصل‌شونده‌های صحیح برای گنوم‌شل "
+"ساخت و برای نمونه کمی قابلیت از خود نیز دارد.\n"
 "با این وجود می‌توان پیام خوش‌آمد را تغییر داد."
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "پیام:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
 msgstr "استفاده از صفحه بیشتر برای پنجره"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
-msgstr "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
 msgstr "قراردادن عنوان پنجره در بالا"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
-msgstr "اگر بر روی درست باشد، عنوان پنجره را بالای تصویر آن قرار می‌دهد، که حالت پیش‌فرض شل در پایین را تغییر می‌دهد. تغییر این گزینه، نیاز به راه‌اندازی مجدد شل دارد تا تاثیر بگذارد."
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"اگر بر روی درست باشد، عنوان پنجره را بالای تصویر آن قرار می‌دهد، که حالت "
+"پیش‌فرض شل در پایین را تغییر می‌دهد. تغییر این گزینه، نیاز به راه‌اندازی مجدد "
+"شل دارد تا تاثیر بگذارد."
 
 #: ../extensions/places-menu/extension.js:78
 #: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "مکان‌ها"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "اجرای «%s» شکست خورد"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "رایانه"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "خانه"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "مرور شبکه"
 
@@ -217,52 +253,52 @@ msgstr "نام تم"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "نام تم، جهت بارگیری از شاخه themes/name/gnome-shell./~"
 
-#: ../extensions/window-list/extension.js:92
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "خروج"
 
-#: ../extensions/window-list/extension.js:102
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "ناحداقل کردن"
 
-#: ../extensions/window-list/extension.js:103
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "حداکثر کردن"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "ناحداکثر کردن"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "حداکثر کردن"
 
-#: ../extensions/window-list/extension.js:270
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
 msgstr "حداقل کردن همه"
 
-#: ../extensions/window-list/extension.js:278
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr "ناحداقل کردن همه"
 
-#: ../extensions/window-list/extension.js:286
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
 msgstr "حداکثر کردن همه"
 
-#: ../extensions/window-list/extension.js:295
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
 msgstr "ناحداکثر کردن همه"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "بستن همه"
 
-#: ../extensions/window-list/extension.js:591
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "نشانگر فضای‌کاری"
 
-#: ../extensions/window-list/extension.js:743
+#: ../extensions/window-list/extension.js:798
 msgid "Window List"
 msgstr "فهرست پنجره"
 
@@ -271,8 +307,12 @@ msgid "When to group windows"
 msgstr "زمان گروه کردن پنجره‌ها"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
-msgid "Decides when to group windows from the same application on the window list. Possible values are \"never\", \"auto\" and \"always\"."
-msgstr "تصمیم می‌گیرد که چه زمانی پنجره‌های یک برنامه واحد در فهرست پنجره‌ها گروه شوند. مقادیر ممکن عبارتند از «never»، «auto» و «always»"
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"تصمیم می‌گیرد که چه زمانی پنجره‌های یک برنامه واحد در فهرست پنجره‌ها گروه شوند. "
+"مقادیر ممکن عبارتند از «never»، «auto» و «always»"
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -291,15 +331,16 @@ msgid "Always group windows"
 msgstr "همیشه پنجره‌ها گروه شوند"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "نام فضاهای کاری:"
+#| msgid "Workspace names:"
+msgid "Workspace Names"
+msgstr "نام فضاهای کاری"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "نام"
 
-#: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
 msgid "Workspace %d"
 msgstr "فضای‌کاری %Id"
 
