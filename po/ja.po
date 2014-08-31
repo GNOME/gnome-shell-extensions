@@ -5,14 +5,15 @@
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2011, 2013
 # Nishio Futoshi <fut_nis@d3.dion.ne.jp>, 2013.
 # Ikuya Awashiro <ikuya@fruitsbasket.info>, 2014.
+# Hajime Taira <htaira@redhat.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-03-29 20:57+0000\n"
-"PO-Revision-Date: 2014-06-23 16:25+0900\n"
-"Last-Translator: Ikuya Awashiro <ikuya@fruitsbasket.info>\n"
+"POT-Creation-Date: 2014-08-28 19:37+0000\n"
+"PO-Revision-Date: 2014-08-29 12:16+0900\n"
+"Last-Translator: Hajime Taira <htaira@redhat.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -46,14 +47,22 @@ msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr "GNOME Shell 使用時は、このキーが、org.gnome.mutter の同じキーよりも優先します。"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "タイトルバー上のボタンの配置"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "This key overrides the key in org.gnome.desktop.wm.preferences when running GNOME Shell."
+msgstr "GNOME Shell 使用時は、このキーが、org.gnome.desktop.wm.preferences の同じキーよりも優先します。"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "ウィンドウを画面の端に移動させたときにタイル状に配置する"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "プライマリモニターのみワークスペースを切り替える"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr "ポインターの動作が止まるまでマウスモードでのフォーカスの変更を遅らせる"
 
@@ -69,11 +78,11 @@ msgstr "アプリケーションアイコンのみ"
 msgid "Thumbnail and application icon"
 msgstr "サムネイルとアプリケーションアイコン"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "ウィンドウの表示方法"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "現在のワークスペースのウィンドウのみ表示する"
 
@@ -97,24 +106,24 @@ msgstr "アプリケーションとワークスペースのリスト"
 msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
 msgstr "アプリケーションの識別子 (.desktop ファイル名) とコロンの後にワークスペース番号を付与した文字列を要素とするリストです"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "アプリケーション"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "ワークスペース"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
 msgstr "ルールを追加"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "新規ルールの作成"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "追加"
 
@@ -144,16 +153,16 @@ msgid "If not empty, it contains the text that will be shown when clicking on th
 msgstr "空でない場合、指定したテキストが、パネルをクリックした時に表示されます。"
 
 #: ../extensions/example/prefs.js:30
+msgid "Message"
+msgstr "メッセージ"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
 "Example は、うまく動作する GNOME Shell 拡張機能の構築方法を示すことを目的としています。それ自体の機能はほんとどありません。\n"
 "それでも、挨拶メッセージをカスタマイズすることはできます。"
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "メッセージ:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -210,52 +219,52 @@ msgstr "テーマの名前"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "テーマの名前です (~/.themes/name/gnome-shell 配下に格納します)"
 
-#: ../extensions/window-list/extension.js:104
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "閉じる"
 
-#: ../extensions/window-list/extension.js:114
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "最小化解除"
 
-#: ../extensions/window-list/extension.js:115
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "最小化"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "最大化解除"
 
-#: ../extensions/window-list/extension.js:122
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "最大化"
 
-#: ../extensions/window-list/extension.js:294
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
 msgstr "全て最小化"
 
-#: ../extensions/window-list/extension.js:302
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr "全て最小化解除"
 
-#: ../extensions/window-list/extension.js:310
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
 msgstr "全て最大化"
 
-#: ../extensions/window-list/extension.js:319
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
 msgstr "全て最大化解除"
 
-#: ../extensions/window-list/extension.js:328
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "全て閉じる"
 
-#: ../extensions/window-list/extension.js:638
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "ワークスペースインジケーター"
 
-#: ../extensions/window-list/extension.js:792
+#: ../extensions/window-list/extension.js:798
 msgid "Window List"
 msgstr "ウィンドウのリスト"
 
@@ -284,14 +293,14 @@ msgid "Always group windows"
 msgstr "ウィンドウをグループ化する"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "ワークスペース名:"
+msgid "Workspace Names"
+msgstr "ワークスペース名"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "名前"
 
-#: ../extensions/workspace-indicator/prefs.js:186
+#: ../extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "ワークスペース %d"
