@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# , 2013.
+# , 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
 "cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-07-19 07:34+0000\n"
-"PO-Revision-Date: 2013-07-19 14:15+0530\n"
+"POT-Creation-Date: 2014-09-02 07:39+0000\n"
+"PO-Revision-Date: 2014-09-02 15:45+0530\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: \n"
@@ -40,20 +40,33 @@ msgid "Attach modal dialog to the parent window"
 msgstr "મુખ્ય વિન્ડોમાં મોડલ સંવાદને જોડો"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"આ કી org.gnome.mutter માં કી ઉપર લખાઇ જશે જ્યારે GNOME Shell ચાલી રહ્યુ હોય."
+msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr "આ કી org.gnome.mutter માં કી ઉપર લખાઇ જશે જ્યારે GNOME Shell ચાલી રહ્યુ હોય."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"જ્યારે સ્ક્રીન બાજુ પર વિન્ડોને પડતી મૂકી રહ્યા હોય ત્યારે ટાઇલીંગ સક્રિય "
-"કરો"
+msgid "Arrangement of buttons on the titlebar"
+msgstr "શીર્ષકપટ્ટી પર બટનોની ગોઠવણ"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid ""
+#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"આ કી  org.gnome.desktop.wm.preferences માં કી ઉપર લખાઇ જશે જ્યારે GNOME શેલ ચાલી રહ્યુ હોય."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "જ્યારે સ્ક્રીન બાજુ પર વિન્ડોને પડતી મૂકી રહ્યા હોય ત્યારે ટાઇલીંગ સક્રિય કરો"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "ફક્ત પ્રાથમિક મોનિટર પર કામ કરવાની જગ્યા"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "માઉસ સ્થિતિમાં ફોકસ ફેરફારમાં વિલંબ થાય છે જ્યાં સુધી પોઇંટર ખસેડવાનું બંધ થાય"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -67,42 +80,13 @@ msgstr "ફક્ત કાર્યક્રમ ચિહ્ન"
 msgid "Thumbnail and application icon"
 msgstr "થમ્ભનેઇલ અને કાર્યક્રમ ચિહ્ન"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "આ તરીકે વિન્ડોને હાજર કરો"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "વર્તમાન કામ કરવાની જગ્યામાં ફક્ત વિન્ડોને બતાવો"
-
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "અટકાવો"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "હાઇબરનેટ"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "પાવર બંધ"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "સ્થગિતને સક્રિય કરો"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "સ્થગિત મેનુ વસ્તુની દૃશ્યતાને નિયંત્રિત કરો"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "હાઇબરનેટીંગને સક્રિય કરો"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "હાઇબરનેટ મેનુ વસ્તુની દૃશ્યતાને નિયંત્રિત કરો"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -112,7 +96,7 @@ msgstr "પ્રવૃત્તિ દૃશ્ય"
 msgid "Favorites"
 msgstr "પસંદીદા"
 
-#: ../extensions/apps-menu/extension.js:276
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "કાર્યક્રમો"
 
@@ -125,40 +109,41 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"શબ્દમાળાઓની યાદી, દરેક રંગ અને કામ કરવાની જગ્યા નંબર દ્દારા અનુસરેલ "
-"કાર્યક્રમ id (ડેસ્કટોપ ફાઇલ નામ) ને સામવી રહ્યુ છે"
+"શબ્દમાળાઓની યાદી, દરેક રંગ અને કામ કરવાની જગ્યા નંબર દ્દારા અનુસરેલ કાર્યક્રમ id "
+"(ડેસ્કટોપ ફાઇલ નામ) ને સામવી રહ્યુ છે"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "કાર્યક્રમ"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "કાર્ય કરવાની જગ્યા"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+#| msgid "Add rule"
+msgid "Add Rule"
 msgstr "નિયમ ઉમેરો"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "નવીં બંધબેસતા નિયમને બનાવો"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "ઉમેરો"
 
-#: ../extensions/drive-menu/extension.js:72
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "ડ્રાઇવ '%s' બહાર નીકાળતી વખતે નિષ્ફળતા:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "દૂર કરી શકાય તેવા ઉપકરણો"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "ફાઇલને ખોલો"
 
@@ -174,26 +159,22 @@ msgstr "વૈકલ્પિક શુભેચ્છા લખાણ."
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
-msgstr ""
-"જો ખાલી ન હોય તો, તે લખાણને સમાવે છે કે જે બતાવશે જ્યારે પેનલ પર ક્લિક કરી "
-"રહ્યા હોય."
+msgstr "જો ખાલી ન હોય તો, તે લખાણને સમાવે છે કે જે બતાવશે જ્યારે પેનલ પર ક્લિક કરી રહ્યા હોય."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
+#| msgid "Message:"
+msgid "Message"
+msgstr "સંદેશો"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"શેલ માટે સારી વર્તણૂકવાળા શેલ એક્સટેન્શનને કેવી રીતે બનાવવા તે આ ઉદાહરણ "
-"બતાવે છે તેની સાથે તેની પાસે તેની પોતાની "
-"પર થોડી કાર્યક્ષમતા છે.\n"
+"શેલ માટે સારી વર્તણૂકવાળા શેલ એક્સટેન્શનને કેવી રીતે બનાવવા તે આ ઉદાહરણ બતાવે છે તેની સાથે "
+"તેની પાસે તેની પોતાની પર થોડી કાર્યક્ષમતા છે.\n"
 "તેમ છતાં શુભેચ્છા સંદેશ કસ્ટમાઇઝ કરવા માટે શક્ય છે."
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "સંદેશો:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -205,9 +186,9 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"સ્ક્રીન આશરે દરને અપનાવીને વિન્ડો થમ્ભનેઇલને સ્થિત કરવા માટે વધારે "
-"સ્ક્રીનને વાપરવાનો પ્રયત્ન કરો, અને બાઉન્ડીંગ બોક્સને ઘટાડવા માટે તેઓને આગળ "
-"આશ્ર્વાસન આપો. આ સુયોજન ફક્ત કુદરતી સ્થાન યોજના સાથે લાગુ થાય છે."
+"સ્ક્રીન આશરે દરને અપનાવીને વિન્ડો થમ્ભનેઇલને સ્થિત કરવા માટે વધારે સ્ક્રીનને વાપરવાનો પ્રયત્ન "
+"કરો, અને બાઉન્ડીંગ બોક્સને ઘટાડવા માટે તેઓને આગળ આશ્ર્વાસન આપો. આ સુયોજન ફક્ત કુદરતી સ્થાન "
+"યોજના સાથે લાગુ થાય છે."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -219,29 +200,29 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"જો true હોય તો, થમ્ભનેઇલ પર કૅપ્શન વિન્ડોને સ્થિત કરો, નીચે તેને સ્થિત "
-"કરીને શેલ મૂળભૂત પર લખી રહ્યા છે. આ સુયોજનને બદલવાથી કોઇપણ અસર લાવવા માટે "
-"શેલને પુન:શરૂ કરવાની જરૂર છે."
+"જો true હોય તો, થમ્ભનેઇલ પર કૅપ્શન વિન્ડોને સ્થિત કરો, નીચે તેને સ્થિત કરીને શેલ મૂળભૂત પર "
+"લખી રહ્યા છે. આ સુયોજનને બદલવાથી કોઇપણ અસર લાવવા માટે શેલને પુન:શરૂ કરવાની જરૂર છે."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "સ્થાનો"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" ને શરૂ કરવામાં નિષ્ફળતા"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "કમ્પ્યૂટર"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "ઘર"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "નેટવર્ક બ્રાઉઝ કરો"
 
@@ -261,10 +242,55 @@ msgstr "થીમનું નામ"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "થીમનું નામ, ~/.themes/name/gnome-shell માંથી લાવવા માટે"
 
-#: ../extensions/window-list/extension.js:382
+#: ../extensions/window-list/extension.js:110
+msgid "Close"
+msgstr "બંધ કરો"
+
+#: ../extensions/window-list/extension.js:120
+msgid "Unminimize"
+msgstr "ન્યૂનતમમાંથી પાછુ લાવો"
+
+#: ../extensions/window-list/extension.js:121
+msgid "Minimize"
+msgstr "ન્યુનતમ કરો"
+
+#: ../extensions/window-list/extension.js:127
+msgid "Unmaximize"
+msgstr "મહત્તમમાંથી પાછુ લાવો"
+
+#: ../extensions/window-list/extension.js:128
+msgid "Maximize"
+msgstr "મહત્તમ કરો"
+
+#: ../extensions/window-list/extension.js:300
+msgid "Minimize all"
+msgstr "બધુ મહત્તમ કરો"
+
+#: ../extensions/window-list/extension.js:308
+msgid "Unminimize all"
+msgstr "બધાને ન્યૂનત્તમમાંથી પાછુ લાવો"
+
+#: ../extensions/window-list/extension.js:316
+msgid "Maximize all"
+msgstr "બધુ મહત્તમ કરો"
+
+#: ../extensions/window-list/extension.js:325
+msgid "Unmaximize all"
+msgstr "બધાને મહત્તમમાંથી પાછુ લાવો"
+
+#: ../extensions/window-list/extension.js:334
+msgid "Close all"
+msgstr "બધુ બંધ કરો"
+
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "કામ કરવાની જગ્યાનું સૂચક"
+
+#: ../extensions/window-list/extension.js:798
+#| msgid "Window Grouping"
+msgid "Window List"
+msgstr "વિન્ડો યાદી"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
@@ -275,8 +301,7 @@ msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
-"વિન્ડોની મેનુ પર એક જ કાર્યક્રમમાંથી વિન્ડોના જૂથો કયારે પાડવા તે નક્કી કરે "
-"છે. \"ક્યારેય "
+"વિન્ડોની મેનુ પર એક જ કાર્યક્રમમાંથી વિન્ડોના જૂથો કયારે પાડવા તે નક્કી કરે છે. \"ક્યારેય "
 "નહિ\", \"આપોઆપ\" અને \"હંમેશા\" તેની શક્ય કિંમતો છે."
 
 #: ../extensions/window-list/prefs.js:30
@@ -296,39 +321,54 @@ msgid "Always group windows"
 msgstr "હંમેશા જૂથ વિન્ડો"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "કામ કરવાની જગ્યાના નામો:"
+#| msgid "Workspace names:"
+msgid "Workspace Names"
+msgstr "કામ કરવાની જગ્યાના નામો"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "નામ"
 
-#: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
 msgid "Workspace %d"
 msgstr "કામ કરવાની જગ્યા %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "સામાન્ય"
+#~ msgid "Suspend"
+#~ msgstr "અટકાવો"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "ડાબું"
+#~ msgid "Hibernate"
+#~ msgstr "હાઇબરનેટ"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "જમણું"
+#~ msgid "Power Off"
+#~ msgstr "પાવર બંધ"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "ઊલટું"
+#~ msgid "Enable suspending"
+#~ msgstr "સ્થગિતને સક્રિય કરો"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "દર્શાવ"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "સ્થગિત મેનુ વસ્તુની દૃશ્યતાને નિયંત્રિત કરો"
 
-#: ../extensions/xrandr-indicator/extension.js:87
-msgid "Display Settings"
-msgstr "દર્શાવ સુયોજનો"
+#~ msgid "Enable hibernating"
+#~ msgstr "હાઇબરનેટીંગને સક્રિય કરો"
 
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "હાઇબરનેટ મેનુ વસ્તુની દૃશ્યતાને નિયંત્રિત કરો"
+
+#~ msgid "Normal"
+#~ msgstr "સામાન્ય"
+
+#~ msgid "Left"
+#~ msgstr "ડાબું"
+
+#~ msgid "Right"
+#~ msgstr "જમણું"
+
+#~ msgid "Upside-down"
+#~ msgstr "ઊલટું"
+
+#~ msgid "Display"
+#~ msgstr "દર્શાવ"
+
+#~ msgid "Display Settings"
+#~ msgstr "દર્શાવ સુયોજનો"
