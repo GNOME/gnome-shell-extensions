@@ -1,3 +1,9 @@
+3.13.91
+=======
+* window-list: restore fitts'ability of workspace button
+* updated for gnome-shell changes
+* updated translations (cs, kk, fr, or, fa, ja, gu, id)
+
 3.13.90
 =======
 * updated translations (as, ca, eu, nl, zh_CN, zh_HK, zh_TW)
