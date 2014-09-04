@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-03-05 08:31+0000\n"
-"PO-Revision-Date: 2014-03-05 20:11+0900\n"
+"POT-Creation-Date: 2014-09-04 19:38+0000\n"
+"PO-Revision-Date: 2014-09-05 07:14+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -47,14 +47,24 @@ msgid ""
 msgstr "그놈 셸을 실행할 때 org.gnome.mutter에 있는 키 대신 사용됩니다."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "제목 표시줄의 단추 정렬"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr "그놈 셸을 실행할 때 org.gnome.desktop.wm.preferences에 있는 키 대신 사용됩니다."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "화면 가장자리에 창을 놓을 때 가장자리 맞추기 기능을 사용합니다"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "주 모니터에만 작업 공간 사용"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr "마우스 포인터가 움직이지 않을 때까지 포커스 전환을 미루기"
 
@@ -70,11 +80,11 @@ msgstr "프로그램 아이콘만"
 msgid "Thumbnail and application icon"
 msgstr "섬네일과 프로그램 아이콘"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "현재 창 표시 방법"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "현재 작업 공간의 창만 표시합니다"
 
@@ -102,24 +112,24 @@ msgstr ""
 "문자열 목록, 각각은 프로그램 ID(데스크톱 파일 이름) 다음에 콜론 뒤에 작업 공"
 "간 번호."
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "프로그램"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "작업 공간"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
 msgstr "규칙 추가"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "새 일치 규칙 만들기"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "추가"
 
@@ -151,6 +161,10 @@ msgid ""
 msgstr "빈 값이 아니면, 패널을 눌렀을때 보일 텍스트입니다."
 
 #: ../extensions/example/prefs.js:30
+msgid "Message"
+msgstr "메시지"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -159,10 +173,6 @@ msgstr ""
 "Example 확장은 잘 동작하는 셸 확장을 어떻게 만드는지 보여주는 예제이므로 자"
 "체 기능은 거의 없습니다.\n"
 "하지만 인사 메시지를 원하는대로 지정할 수 있습니다."
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "메시지:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -231,52 +241,52 @@ msgstr "테마 이름"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "테마 이름, ~/.themes/name/gnome-shell 아래에서 읽어들입니다."
 
-#: ../extensions/window-list/extension.js:104
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "닫기"
 
-#: ../extensions/window-list/extension.js:114
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "최소화 취소"
 
-#: ../extensions/window-list/extension.js:115
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "최소화"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "최대화 취소"
 
-#: ../extensions/window-list/extension.js:122
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "최대화"
 
-#: ../extensions/window-list/extension.js:294
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
 msgstr "모두 최소화"
 
-#: ../extensions/window-list/extension.js:302
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr "모두 최소화 취소"
 
-#: ../extensions/window-list/extension.js:310
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
 msgstr "모두 최대화"
 
-#: ../extensions/window-list/extension.js:319
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
 msgstr "모두 최대화 취소"
 
-#: ../extensions/window-list/extension.js:328
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "모두 닫기"
 
-#: ../extensions/window-list/extension.js:638
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "작업 공간 표시"
 
-#: ../extensions/window-list/extension.js:792
+#: ../extensions/window-list/extension.js:808
 msgid "Window List"
 msgstr "창 목록"
 
@@ -309,14 +319,14 @@ msgid "Always group windows"
 msgstr "항상 창 모으기"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "작업 공간 이름:"
+msgid "Workspace Names"
+msgstr "작업 공간 이름"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "이름"
 
-#: ../extensions/workspace-indicator/prefs.js:186
+#: ../extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "작업 공간 %d"
