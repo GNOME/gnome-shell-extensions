@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.screenshot-window-sizer"
+          path="/org/gnome/shell/extensions/screenshot-window-sizer/">
+    <key type="as" name="cycle-screenshot-sizes">
+      <default><![CDATA[['<Alt><Control>s']]]></default>
+      <_summary>Cycle Screenshot Sizes</_summary>
+    </key>
+  </schema>
+</schemalist>

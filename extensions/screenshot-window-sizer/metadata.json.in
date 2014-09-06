@@ -1,0 +1,10 @@
+{
+"extension-id": "@extension_id@",
+"uuid": "@uuid@",
+"settings-schema": "@gschemaname@",
+"gettext-domain": "@gettext_domain@",
+"name": "Screenshot Window Sizer",
+"description": "Resize windows for GNOME Software screenshots",
+"shell-version": [ "@shell_current@" ],
+"url": "@url@"
+}
