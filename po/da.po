@@ -2,14 +2,15 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# Kris Thomsen <mail@kristhomsen.dk>, 2011-2013.
+# Kris Thomsen <mail@kristhomsen.dk>, 2011-2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-23 19:34+0200\n"
-"PO-Revision-Date: 2013-09-23 19:29+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2014-09-08 07:38+0000\n"
+"PO-Revision-Date: 2014-09-09 20:54+0200\n"
 "Last-Translator: Kris Thomsen <mail@kristhomsen.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -46,14 +47,28 @@ msgstr ""
 "Denne nøgle tilsidesætter nøglen i org.gnome.mutter når GNOME Shell kører."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Placeringen af knapper i titellinjen"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid ""
+#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"Denne nøgle tilsidesætter nøglen i org.gnome.desktop.wm.preferences når "
+"GNOME Shell kører."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "Aktivér kant-fliselægning når vinduer slippes på skærmkanter"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "Kun arbejdsområder på primær skærm"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr ""
 "Forsink fokusændringer i musetilstand indtil pegeren holder op med at bevæge "
@@ -71,11 +86,11 @@ msgstr "Kun programikon"
 msgid "Thumbnail and application icon"
 msgstr "Miniaturebillede og programikon"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "Præsentér vindue som"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "Vis kun vinduer i det nuværende arbejdsområde"
 
@@ -103,37 +118,38 @@ msgstr ""
 "En liste over strenge, som hver indeholder et program-id "
 "(skrivebordsfilnavn), efterfulgt af et kolon og arbejdsområdets nummer"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Program"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "Arbejdsområde"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+#| msgid "Add rule"
+msgid "Add Rule"
 msgstr "Tilføj regel"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "Opret ny regel for match"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "Tilføj"
 
-#: ../extensions/drive-menu/extension.js:73
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Udskubning af drevet \"%s\" fejlede:"
 
-#: ../extensions/drive-menu/extension.js:90
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "Flytbare enheder"
 
-#: ../extensions/drive-menu/extension.js:117
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "Åbn fil"
 
@@ -153,9 +169,12 @@ msgstr ""
 "Hvis den ikke er tom, så indeholder den teksten, der vil blive vist når der "
 "klikkes på panelet."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
+#| msgid "Message:"
+msgid "Message"
+msgstr "Besked"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -164,10 +183,6 @@ msgstr ""
 "Example sigter efter at vise hvordan man bygger udvidelser til shell'en som "
 "opfører sig ordentligt, og har som sådan meget lidt selvstændig "
 "funktionalitet.Alligevel er det muligt at tilpasse velkomstbeskeden."
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "Besked:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -204,21 +219,21 @@ msgstr ""
 msgid "Places"
 msgstr "Steder"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "Kunne ikke åbne \"%s\""
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "Computer"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "Hjem"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "Gennemse netværk"
 
@@ -238,52 +253,52 @@ msgstr "Temanavn"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Navnet på temaet, som indlæses fra ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:92
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Luk"
 
-#: ../extensions/window-list/extension.js:102
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Afminimér"
 
-#: ../extensions/window-list/extension.js:103
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "Minimér"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Afmaksimér"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "Maksimér"
 
-#: ../extensions/window-list/extension.js:270
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
 msgstr "Minimér"
 
-#: ../extensions/window-list/extension.js:278
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr "Afminimér alle"
 
-#: ../extensions/window-list/extension.js:286
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
 msgstr "Maksimér alle"
 
-#: ../extensions/window-list/extension.js:295
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
 msgstr "Afmaksimér alle"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "Luk alle"
 
-#: ../extensions/window-list/extension.js:591
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Arbejdsområdeindikator"
 
-#: ../extensions/window-list/extension.js:743
+#: ../extensions/window-list/extension.js:808
 msgid "Window List"
 msgstr "Vinduesliste"
 
@@ -317,15 +332,16 @@ msgid "Always group windows"
 msgstr "Gruppér altid vinduer"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "Arbejdsområdenavne:"
+#| msgid "Workspace names:"
+msgid "Workspace Names"
+msgstr "Navne på arbejdsområder"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "Navn"
 
-#: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Arbejdsområde %d"
 
