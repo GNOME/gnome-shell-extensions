@@ -983,6 +983,12 @@ const WindowList = new Lang.Class({
         if (this._grouped)
             return;
 
+        let children = this._windowList.get_children();
+        for (let i = 0; i < children.length; i++) {
+            if (children[i]._delegate.metaWindow == win)
+                return;
+        }
+
         let button = new WindowButton(win);
         this._windowList.layout_manager.pack(button.actor,
                                              true, true, true,
