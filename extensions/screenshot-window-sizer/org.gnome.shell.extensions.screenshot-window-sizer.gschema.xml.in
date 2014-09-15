@@ -4,7 +4,7 @@
           path="/org/gnome/shell/extensions/screenshot-window-sizer/">
     <key type="as" name="cycle-screenshot-sizes">
       <default><![CDATA[['<Alt><Control>s']]]></default>
-      <summary>Cycle Screenshot Sizes</summary>
+      <_summary>Cycle Screenshot Sizes</_summary>
     </key>
   </schema>
 </schemalist>
