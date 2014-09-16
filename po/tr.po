@@ -2,20 +2,21 @@
 # Copyright (C) 2012 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Osman Karagöz <osmank3@gmail.com>, 2012.
+# sabri ünal <yakushabb@gmail.com>, 2014
 # Muhammet Kara <muhammetk@gmail.com>, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-06-07 07:31+0000\n"
-"PO-Revision-Date: 2014-06-07 21:23+0000\n"
+"POT-Creation-Date: 2014-09-16 07:39+0000\n"
+"PO-Revision-Date: 2014-09-16 11:34+0000\n"
 "Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
-"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: tr_TR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -80,7 +81,7 @@ msgstr "Küçük resim ve uygulama simgesi"
 
 #: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
-msgstr ""
+msgstr "Pencereleri farklı sun"
 
 #: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
@@ -164,7 +165,7 @@ msgstr "İleti"
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
-msgstr ""
+msgstr "Bu örnek, Shell için uygun uzantıların nasıl geliştirileceğini göstermeyi amaçlar; bu yüzden kendi başına çok az işleve sahiptir.\nYine de karşılama mesajını özelleştirmek mümkündür."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -175,7 +176,7 @@ msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
-msgstr ""
+msgstr "Ekran en-boy oranına uyum sağlayarak ve sınır kutucuğunu küçültmek için daha da sıkılaştırarak, pencere küçük resimlerini yerleştirmek için ekranda daha fazla alan kullanmayı dene. Bu seçenek sadece doğal yerleştirme stratejisi ile geçerlidir."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -186,7 +187,7 @@ msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
-msgstr ""
+msgstr "Eğer doğruysa, kabukta öntanıml olarak alta yerleştirme ayarını geçersiz kıl ve pencere açıklamalarını ilgili küçük resimlerin üstüne yerleştir. Bu ayarda yapılan değişikliklerin etkili olması için kabuğun yeniden başlatılması gerekir."
 
 #: ../extensions/places-menu/extension.js:78
 #: ../extensions/places-menu/extension.js:81
@@ -233,7 +234,7 @@ msgstr "Kapat"
 
 #: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
-msgstr ""
+msgstr "Önceki Boyutuna Getir"
 
 #: ../extensions/window-list/extension.js:121
 msgid "Minimize"
@@ -253,7 +254,7 @@ msgstr "Tümünü simge durumuna küçült"
 
 #: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
-msgstr ""
+msgstr "Tümünü Önceki Boyutuna Getir"
 
 #: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
@@ -272,7 +273,7 @@ msgstr "Hepsini kapat"
 msgid "Workspace Indicator"
 msgstr "Çalışma Alanı Belirteci"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:808
 msgid "Window List"
 msgstr "Pencere Listesi"
 
