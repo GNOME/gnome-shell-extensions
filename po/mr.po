@@ -1,0 +1,335 @@
+# Marathi translation for gnome-shell-extensions.
+# Copyright (C) 2014 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+#
+# Sandeep Shedmake <sshedmak@redhat.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2014-09-16 19:39+0000\n"
+"PO-Revision-Date: 2014-09-17 09:01+0530\n"
+"Last-Translator: Sandeep Shedmake <sshedmak@redhat.com>\n"
+"Language-Team: Marathi <mr@li.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME क्लासिक"
+
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "हे सत्र तुम्हाला GNOME क्लासिक सत्रामध्ये प्रवेश करून देतो"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME शेल क्लासिक"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "पटल व्यवस्थापन आणि ॲप्लिकेशन सुरू करणे"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "मुख्य पटलकरिता मोडल संवादची जुळणी करा"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"GNOME शेल चालवतेवेळी ही कि org.gnome.mutter मधील कि खोडून पुन्हा लिहते."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "शीर्षकपट्टीवरील बटनांची व्यवस्था"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"GNOME शेल चालवतेवेळी ही कि org.gnome.desktop.wm.preferences मधील कि खोडून "
+"पुन्हा लिहते."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "स्क्रीन किनारांवर पटल टाकतेवेळी किनार टाइनिंग सुरू करा"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+msgid "Workspaces only on primary monitor"
+msgstr "फक्त प्राथमिक मॉनिटरवरील वर्कस्पेसेस"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr "पाँटरची हालचाल बंद होईपर्यंत माउस मोडमधील फोकस बदलावमध्ये विलंब करा"
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "फक्त थंबनेल"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "फक्त ॲप्लिकेशन चिन्ह"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "थंबनेल आणि ॲप्लिकेशन चिन्ह"
+
+#: ../extensions/alternate-tab/prefs.js:38
+msgid "Present windows as"
+msgstr "पटलांना असे प्रस्तुत करा"
+
+#: ../extensions/alternate-tab/prefs.js:69
+msgid "Show only windows in the current workspace"
+msgstr "सध्याच्या कार्यक्षेत्रात फक्त पटल दाखवा"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "प्रक्रिया पूर्वावलोकन"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "पसंती"
+
+#: ../extensions/apps-menu/extension.js:282
+msgid "Applications"
+msgstr "ॲप्लिकेशन्स"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "ॲप्लिकेशन आणि कार्यक्षेत्र सूची"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"स्ट्रिंग्स्ची सूची, प्रत्येकात ॲप्लिकेशन id (डेस्कटॉप फाइल नाव) समाविष्टीत, "
+"स्वल्पविराम आणि कार्यक्षेत्र क्रमांक पाठोपाठ"
+
+#: ../extensions/auto-move-windows/prefs.js:60
+msgid "Application"
+msgstr "ॲप्लिकेशन"
+
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
+msgid "Workspace"
+msgstr "कार्यक्षेत्र"
+
+#: ../extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
+msgstr "नियम समाविष्ट करा"
+
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Create new matching rule"
+msgstr "नवीन जुळण्याजोगी नियम निर्माण करा"
+
+#: ../extensions/auto-move-windows/prefs.js:111
+msgid "Add"
+msgstr "समाविष्ट करा"
+
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "ड्राइव्ह '%s' बाहेर काढणे अपयशी:"
+
+#: ../extensions/drive-menu/extension.js:123
+msgid "Removable devices"
+msgstr "काढून टाकण्याजोगी साधने"
+
+#: ../extensions/drive-menu/extension.js:150
+msgid "Open File"
+msgstr "फाइल उघडा"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "हलो, वर्ल्ड!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "वैकल्पिक प्रणाम मजकूर."
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr "रिकामे नसल्यास, पटलावर क्लिक करताना दाखवण्याजोगी मजकूर समाविष्टीत आहे."
+
+#: ../extensions/example/prefs.js:30
+msgid "Message"
+msgstr "संदेश"
+
+#: ../extensions/example/prefs.js:43
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"उदाहरणात शेल आणि स्वय कामगिरिकरिता योग्य एक्सटेंशन्सची बांधणी कशी करायची ते "
+"ठरवले जाते.\n"
+"तरीही प्रणाम संदशी पसंतीचे करणे शक्य आहे."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "पटलांकरिता एकापेक्षा जास्त स्क्रीनचा वापर करा"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"स्क्रीन ॲस्पेक्ट प्रमाणकरिता स्क्रीनला सहमत करून पटल थंबनेल्स स्थीत "
+"करण्यासाठी, आणि बाऊंडिंग पेटी छोटे करण्यासाठी, एकापेक्षा जास्त स्क्रीनचा वापर "
+"करण्याचा प्रयत्न करा. हे सेटिंग फक्त नॅचरल स्ट्रॅटजिसह लागू होते."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "शीर्षकरिता पटल कॅपशन्स स्थीत करा"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"खरे असल्यास, पटल कॅप्शन्सला ठराविक थंबनेलच्या शीर्षवर स्थीत करा, शेलच्या "
+"तळाला पूर्वनिर्धारितपणे स्थीत करणे वगळूण. ह्या सेटिंगला बदलण्यासाठी कोणत्याही "
+"प्रभावकरिता शेलला पुन्हा सुरू करणे आवश्यक आहे."
+
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "ठिकाणे"
+
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
+msgid "Failed to launch \"%s\""
+msgstr "\"%s\" सुरू करण्यास अपयशी"
+
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
+msgid "Computer"
+msgstr "संगणक"
+
+#: ../extensions/places-menu/placeDisplay.js:200
+msgid "Home"
+msgstr "होम"
+
+#: ../extensions/places-menu/placeDisplay.js:287
+msgid "Browse Network"
+msgstr "नेटवर्क चाळा"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "मेमरि"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "रंग रूपचे नाव"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "~/.themes/name/gnome-shell पासून लोड करण्याजोगी, रंग रूपचे नाव"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Close"
+msgstr "बंद करा"
+
+#: ../extensions/window-list/extension.js:120
+msgid "Unminimize"
+msgstr "छोटे करणे अशक्य करा"
+
+#: ../extensions/window-list/extension.js:121
+msgid "Minimize"
+msgstr "छोटे करा"
+
+#: ../extensions/window-list/extension.js:127
+msgid "Unmaximize"
+msgstr "मोठे करणे अशक्य करा"
+
+#: ../extensions/window-list/extension.js:128
+msgid "Maximize"
+msgstr "मोठे करा"
+
+#: ../extensions/window-list/extension.js:300
+msgid "Minimize all"
+msgstr "सर्व छोटे करा"
+
+#: ../extensions/window-list/extension.js:308
+msgid "Unminimize all"
+msgstr "सर्व छोटे करणे अशक्य करा"
+
+#: ../extensions/window-list/extension.js:316
+msgid "Maximize all"
+msgstr "सर्व मोठे करा"
+
+#: ../extensions/window-list/extension.js:325
+msgid "Unmaximize all"
+msgstr "सर्व मोठे करणे अशक्य करा"
+
+#: ../extensions/window-list/extension.js:334
+msgid "Close all"
+msgstr "सर्व बंद करा"
+
+#: ../extensions/window-list/extension.js:644
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "कार्यक्षेत्र निर्देशक"
+
+#: ../extensions/window-list/extension.js:808
+msgid "Window List"
+msgstr "पटल सूची"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "पटल केव्हा एकत्रीत करायचे"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"पटल सूचीवर एकाच ॲप्लिकेशनपासून पटल कधी एकत्रीत करायचे ते ठरवतो. "
+"संभाव्य मूल्य \"never\", \"auto\" आणि \"always\" आहे."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "पटल गट बनविणे"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "कधीही पटलांचा गट करू नका"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "जागा मर्यादीत असल्यास पटलांना एका गटामध्ये करा"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "नेहमी पटलांना एका गटात करा"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace Names"
+msgstr "कार्यक्षेत्र नाव"
+
+#: ../extensions/workspace-indicator/prefs.js:157
+msgid "Name"
+msgstr "नाव"
+
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
+msgid "Workspace %d"
+msgstr "कार्यक्षेत्र %d"
+
