@@ -1,3 +1,9 @@
+3.13.92
+=======
+* new extension: screenshot-window-sizer
+* window-list: Don't add sticky windows more than once
+* updated translations (da, de, fi, ko, mr, ms, ne, pa, pl, sk, sv, ta, te, tr)
+
 3.13.91
 =======
 * window-list: restore fitts'ability of workspace button
