@@ -1,17 +1,18 @@
-# Shankar Prasad <svenkate@redhat.com>, 2013.
+# Shankar Prasad <svenkate@redhat.com>, 2013, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-06 14:45+0530\n"
-"PO-Revision-Date: 2013-10-29 06:13-0400\n"
-"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2014-09-02 07:39+0000\n"
+"PO-Revision-Date: 2014-09-17 16:33+0530\n"
+"Last-Translator: Shankar Prasad <svenkate AT redhat Dot com>\n"
 "Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
+"Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: kn\n"
-"X-Generator: Zanata 3.2.3\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n!=1)\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -43,13 +44,33 @@ msgstr ""
 "ಅತಿಕ್ರಮಿಸುತ್ತದೆ."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "ಶೀರ್ಷಿಕೆಪಟ್ಟಿಯಲ್ಲಿ ಗುಂಡಿಗಳ ವ್ಯವಸ್ಥಿತ ಜೋಡಿಸುವಿಕೆ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid ""
+#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"GNOME ಶೆಲ್‌ ಅನ್ನು ಚಲಾಯಿಸುವಾಗ ಈ ಕೀಲಿಯು org.gnome.desktop.wm.preferences ನಲ್ಲಿನ "
+"ಕೀಲಿಯನ್ನು "
+"ಅತಿಕ್ರಮಿಸುತ್ತದೆ."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
 "ತೆರೆಯ ಅಂಚುಗಳಲ್ಲಿ ಕಿಟಕಿಗಳನ್ನು ಬೀಳಿಸುವಾಗ ಅಂಚಿನ ಟೈಲಿಂಗ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "ಪ್ರಾಥಮಿಕ ತೆರೆಯಲ್ಲಿ ಇರುವ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳು ಮಾತ್ರ"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"ತೆರೆಸೂಚಕವು ಚಲಿಸುವುದು ನಿಲ್ಲಿಸುವವರೆಗೆ ಮೌಸ್‌ನಲ್ಲಿನ ಗಮನದ ಬದಲಾವಣೆಗಳನ್ನು ವಿಳಂಬಗೊಳಿಸು"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -63,42 +84,13 @@ msgstr "ಅನ್ವಯ ಚಿಹ್ನೆ ಮಾತ್ರ"
 msgid "Thumbnail and application icon"
 msgstr "ಅಡಕಚಿತ್ರ ಮತ್ತು ಅನ್ವಯ ಚಿಹ್ನೆ"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "ಈ ರೀತಿಯಲ್ಲಿ ಈಗಿರುವ ಕಿಟಕಿ"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "ಪ್ರಸಕ್ತ ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿರುವ ಕಿಟಕಿಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು"
-
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "ಅಮಾನತುಗೊಳಿಸು"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "ನೆನಪಿನೊಡನೆ ಮುಚ್ಚು"
-
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "ಸ್ಥಗಿತಗೊಳಿಸು (ಪವರ್-ಆಫ್)"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "ಅಮಾನತುಗೊಳಿಸುವುದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "ಅಮಾನತುಗೊಳಿಸು ಪರಿವಿಡಿ ಅಂಶದ ಗೋಚರಿಕೆಯನ್ನು ನಿಯಂತ್ರಿಸು"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "ನೆನಪಿನೊಡನೆ ಮುಚ್ಚುವಿಕೆಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "ನೆನಪಿನೊಡನೆ ಮುಚ್ಚು ಪರಿವಿಡಿ ಅಂಶದ ಗೋಚರಿಕೆಯನ್ನು ನಿಯಂತ್ರಿಸು"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -108,7 +100,7 @@ msgstr "ಚಟುವಟಿಕೆ ಅವಲೋಕನ"
 msgid "Favorites"
 msgstr "ನೆಚ್ಚಿನವು"
 
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "ಅನ್ವಯಗಳು"
 
@@ -124,37 +116,38 @@ msgstr ""
 "ಅನ್ವಯ id (ಗಣಕತೆರೆ ಕಡತದ ಹೆಸರು), ನಂತರ ಒಂದು ವಿವರಣೆ ಚಿಹ್ನೆ ಮತ್ತು ಕಾರ್ಯಕ್ಷೇತ್ರದ "
 "ಸಂಖ್ಯೆಯನ್ನು ಹೊಂದಿರುವ ವಾಕ್ಯಾಂಶಗಳ ಒಂದು ಪಟ್ಟಿ"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "ಅನ್ವಯ"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+#| msgid "Add rule"
+msgid "Add Rule"
 msgstr "ನಿಯಮವನ್ನು ಸೇರಿಸು"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "ಹೊಸ ಹೊಂದಿಕೆಯಾಗುವ ನಿಯಮವನ್ನು ರಚಿಸು"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "ಸೇರಿಸು"
 
-#: ../extensions/drive-menu/extension.js:72
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "'%s' ಡ್ರೈವ್ ಅನ್ನು ಹೊರತೆಗೆಯುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "ತೆಗೆಯಬಹುದಾದ ಸಾಧನಗಳು"
 
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "ಕಡತವನ್ನು ತೆರೆ"
 
@@ -174,22 +167,22 @@ msgstr ""
 "ಖಾಲಿ ಇರದೆ ಇದ್ದಲ್ಲಿ, ಪ್ಯಾನೆಲ್‌ನ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ ತೋರಿಸಲಾಗುವ ಪಠ್ಯವನ್ನು ಇದು "
 "ಹೊಂದಿರುತ್ತದೆ."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
+#| msgid "Message:"
+msgid "Message"
+msgstr "ಸಂದೇಶ"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"ಉದಾಹರಣೆಯು ಶೆಲ್‌ಗಾಗಿ ಉತ್ತಮವಾಗಿ ವರ್ತಿಸುವ ವಿಸ್ತರಣೆಗಳನ್ನು ನಿರ್ಮಿಸುವುದನ್ನು "
-"ತೋರಿಸುವ ಉದ್ಧೇಶವನ್ನು ಹೊಂದಿರುತ್ತದೆ ಮತ್ತು ಅದು ತಾನೆ ಸ್ವತಃ ಬಹಳ ಕಡಿಮೆ ಎನ್ನುವಷ್ಟು "
-"ಪ್ರಯೋಜನವನ್ನು ನೀಡಬಲ್ಲದು.\n"
+"ಉದಾಹರಣೆಯು ಶೆಲ್‌ಗಾಗಿ ಉತ್ತಮವಾಗಿ ವರ್ತಿಸುವ ವಿಸ್ತರಣೆಗಳನ್ನು ನಿರ್ಮಿಸುವುದನ್ನು ತೋರಿಸುವ "
+"ಉದ್ಧೇಶವನ್ನು ಹೊಂದಿರುತ್ತದೆ ಮತ್ತು ಅದು ತಾನೆ ಸ್ವತಃ ಬಹಳ ಕಡಿಮೆ ಎನ್ನುವಷ್ಟು "
+"ಪ್ರಯೋಜನವನ್ನು "
+"ನೀಡಬಲ್ಲದು.\n"
 "ಆದರೂ ಸಹ ಶುಭಾಶಯದ ಸಂದೇಶವನ್ನು ಅಗತ್ಯಾನುಗಣವಾಗಿಸಲು ಸಾಧ್ಯವಿರುತ್ತದೆ."
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "ಸಂದೇಶ:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -202,9 +195,12 @@ msgid ""
 "This setting applies only with the natural placement strategy."
 msgstr ""
 "ತೆರೆಯ ಆಕಾರ ಅನುಪಾತವನ್ನು ಅಳವಡಿಸಿಕೊಳ್ಳುವ ಮೂಲಕ ಕಿಟಕಿ ಅಡಕಚಿತ್ರಗಳನ್ನು (ತಂಬ್‌ನೈಲ್) "
-"ಇರಿಸುವ ಸಲುವಾಗಿ ಹೆಚ್ಚಿನ ತೆರೆಯನ್ನು ಬಳಸಲು, ಮತ್ತು ಸೀಮಿತ ಚೌಕವನ್ನು (ಬೌಂಡಿಂಗ್ "
-"ಬಾಕ್ಸ್) ಕಡಿಮೆ ಮಾಡಲು ಅವುಗಳನ್ನು ಇನ್ನಷ್ಟು ಕ್ರೋಢೀಕರಿಸಲು ಪ್ರಯತ್ನಿಸಿ. ಈ ಸಿದ್ಧತೆಯು "
-"ಕೇವಲ ನೈಸರ್ಗಿಕ ಇರಿಸುವಿಕೆ ತಂತ್ರದೊಂದಿಗೆ ಮಾತ್ರ ಕೆಲಸ ಮಾಡುತ್ತದೆ."
+"ಇರಿಸುವ "
+"ಸಲುವಾಗಿ ಹೆಚ್ಚಿನ ತೆರೆಯನ್ನು ಬಳಸಲು, ಮತ್ತು ಸೀಮಿತ ಚೌಕವನ್ನು (ಬೌಂಡಿಂಗ್ ಬಾಕ್ಸ್) ಕಡಿಮೆ "
+"ಮಾಡಲು "
+"ಅವುಗಳನ್ನು ಇನ್ನಷ್ಟು ಕ್ರೋಢೀಕರಿಸಲು ಪ್ರಯತ್ನಿಸಿ. ಈ ಸಿದ್ಧತೆಯು ಕೇವಲ ನೈಸರ್ಗಿಕ "
+"ಇರಿಸುವಿಕೆ "
+"ತಂತ್ರದೊಂದಿಗೆ ಮಾತ್ರ ಕೆಲಸ ಮಾಡುತ್ತದೆ."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -217,37 +213,39 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 "ನಿಜವಾದಲ್ಲಿ, ಆಯಾಯ ಅಡಕಚಿತ್ರದ ಮೇಲ್ಭಾಗದಲ್ಲಿ ಕಿಟಕಿ ಶೀರ್ಷಿಕೆಗಳನ್ನು ಇರಿಸಿ, ಆ ಮೂಲಕ "
-"ಶೆಲ್‌ನ ಪೂರ್ವನಿಯೋಜಿತವಾದಂತಹ ಕೆಳಭಾಗದಲ್ಲಿ ಇರಿಸುವಿಕೆಯನ್ನು ಅತಿಕ್ರಮಿಸಿದಂತಾಗುತ್ತದೆ. "
-"ಈ ಸಿದ್ಧತೆಯನ್ನು ಬದಲಾಯಿಸಿದಲ್ಲಿ ಅದು ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರಲು ಶೆಲ್ ಅನ್ನು ಮರಳಿ ಆರಂಭಿಸುವ "
-"ಅಗತ್ಯವಿರುತ್ತದೆ."
+"ಶೆಲ್‌ನ "
+"ಪೂರ್ವನಿಯೋಜಿತವಾದಂತಹ ಕೆಳಭಾಗದಲ್ಲಿ ಇರಿಸುವಿಕೆಯನ್ನು ಅತಿಕ್ರಮಿಸಿದಂತಾಗುತ್ತದೆ. ಈ "
+"ಸಿದ್ಧತೆಯನ್ನು "
+"ಬದಲಾಯಿಸಿದಲ್ಲಿ ಅದು ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರಲು ಶೆಲ್ ಅನ್ನು ಮರಳಿ ಆರಂಭಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
 
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "ಸ್ಥಳಗಳು"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "'%s' ಅನ್ನು ಆರಂಭಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
 
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "ಗಣಕ"
 
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "ನೆಲೆ"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "ಜಾಲಬಂಧವನ್ನು ವೀಕ್ಷಿಸು"
 
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "ಮೆಮೊರಿ"
 
@@ -259,6 +257,56 @@ msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಹೆಸರು"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "~/.themes/name/gnome-shell ಇಂದ ಲೋಡ್ ಮಾಡಬೇಕಿರುವ ಪರಿಸರವಿನ್ಯಾಸದ ಹೆಸರು"
 
+#: ../extensions/window-list/extension.js:110
+msgid "Close"
+msgstr "ಮುಚ್ಚು"
+
+#: ../extensions/window-list/extension.js:120
+msgid "Unminimize"
+msgstr "ಹಿಂದಿನ ಸ್ಥಿತಿ"
+
+#: ../extensions/window-list/extension.js:121
+msgid "Minimize"
+msgstr "ಕುಗ್ಗಿಸು"
+
+#: ../extensions/window-list/extension.js:127
+msgid "Unmaximize"
+msgstr "ಹಿಂದಿನ ಸ್ಥಿತಿ"
+
+#: ../extensions/window-list/extension.js:128
+msgid "Maximize"
+msgstr "ಹಿಗ್ಗಿಸು"
+
+#: ../extensions/window-list/extension.js:300
+msgid "Minimize all"
+msgstr "ಎಲ್ಲವನ್ನೂ ಕುಗ್ಗಿಸು"
+
+#: ../extensions/window-list/extension.js:308
+msgid "Unminimize all"
+msgstr "ಎಲ್ಲವೂ ಹಿಂದಿನ ಸ್ಥಿತಿಗೆ"
+
+#: ../extensions/window-list/extension.js:316
+msgid "Maximize all"
+msgstr "ಎಲ್ಲವನ್ನೂ ಹಿಗ್ಗಿಸು"
+
+#: ../extensions/window-list/extension.js:325
+msgid "Unmaximize all"
+msgstr "ಎಲ್ಲವೂ ಹಿಂದಿನ ಸ್ಥಿತಿಗೆ"
+
+#: ../extensions/window-list/extension.js:334
+msgid "Close all"
+msgstr "ಎಲ್ಲವನ್ನೂ ಮುಚ್ಚು"
+
+#: ../extensions/window-list/extension.js:644
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "ಕಾರ್ಯಸ್ಥಳದ ಸೂಚಕ"
+
+#: ../extensions/window-list/extension.js:798
+#| msgid "Window Grouping"
+msgid "Window List"
+msgstr "ಕಿಟಕಿಯ ಪಟ್ಟಿ"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "ಕಿಟಕಿಗಳನ್ನು ಯಾವಾಗ ಗುಂಪುಗೂಡಿಸಬೇಕು"
@@ -269,8 +317,8 @@ msgid ""
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "ಕಿಟಕಿಯ ಪಟ್ಟಿಯಲ್ಲಿ ಒಂದೇ ಅನ್ವಯಗಳ ಕಿಟಕಿಗಳನ್ನು ಯಾವಾಗ ಗುಂಪುಗೂಡಿಸಬೇಕು ಎನ್ನುವುದನ್ನು "
-"ಇದು ನಿರ್ಧರಿಸುತ್ತದೆ. ಸಾಧ್ಯವಿರುವ ಮೌಲ್ಯಗಳೆಂದರೆ, \"never\", \"auto\" ಮತ್ತು "
-"\"always\""
+"ಇದು "
+"ನಿರ್ಧರಿಸುತ್ತದೆ. ಸಾಧ್ಯವಿರುವ ಮೌಲ್ಯಗಳೆಂದರೆ, \"never\", \"auto\" ಮತ್ತು \"always\""
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -288,43 +336,55 @@ msgstr "ಸ್ಥಳದ ಮಿತಿ ಇದ್ದಾಗ ಕಿಟಕಿಗಳನ
 msgid "Always group windows"
 msgstr "ಯಾವಾಗಲೂ ಕಿಟಕಿಗಳನ್ನು ಗುಂಪುಗೂಡಿಸು"
 
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "ಕಾರ್ಯಸ್ಥಳದ ಸೂಚಕ"
-
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "ಕಾರ್ಯಸ್ಥಳದ ಹೆಸರುಗಳು:"
+#| msgid "Workspace names:"
+msgid "Workspace Names"
+msgstr "ಕಾರ್ಯಸ್ಥಳದ ಹೆಸರುಗಳು"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "ಹೆಸರು"
 
-#: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
 msgid "Workspace %d"
 msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "ಸಾಮಾನ್ಯ"
+#~ msgid "Suspend"
+#~ msgstr "ಅಮಾನತುಗೊಳಿಸು"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "ಎಡ"
+#~ msgid "Hibernate"
+#~ msgstr "ನೆನಪಿನೊಡನೆ ಮುಚ್ಚು"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "ಬಲ"
+#~ msgid "Power Off"
+#~ msgstr "ಸ್ಥಗಿತಗೊಳಿಸು (ಪವರ್-ಆಫ್)"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "ತಲೆಕೆಳಗೆ"
+#~ msgid "Enable suspending"
+#~ msgstr "ಅಮಾನತುಗೊಳಿಸುವುದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "ಪ್ರದರ್ಶಕ"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "ಅಮಾನತುಗೊಳಿಸು ಪರಿವಿಡಿ ಅಂಶದ ಗೋಚರಿಕೆಯನ್ನು ನಿಯಂತ್ರಿಸು"
 
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "ಪ್ರದರ್ಶಕದ ಸಿದ್ಧತೆಗಳು"
+#~ msgid "Enable hibernating"
+#~ msgstr "ನೆನಪಿನೊಡನೆ ಮುಚ್ಚುವಿಕೆಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "ನೆನಪಿನೊಡನೆ ಮುಚ್ಚು ಪರಿವಿಡಿ ಅಂಶದ ಗೋಚರಿಕೆಯನ್ನು ನಿಯಂತ್ರಿಸು"
+
+#~ msgid "Normal"
+#~ msgstr "ಸಾಮಾನ್ಯ"
+
+#~ msgid "Left"
+#~ msgstr "ಎಡ"
+
+#~ msgid "Right"
+#~ msgstr "ಬಲ"
+
+#~ msgid "Upside-down"
+#~ msgstr "ತಲೆಕೆಳಗೆ"
+
+#~ msgid "Display"
+#~ msgstr "ಪ್ರದರ್ಶಕ"
+
+#~ msgid "Display Settings"
+#~ msgstr "ಪ್ರದರ್ಶಕದ ಸಿದ್ಧತೆಗಳು"
