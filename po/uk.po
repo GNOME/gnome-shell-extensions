@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-09 23:19+0200\n"
-"PO-Revision-Date: 2014-02-09 23:19+0300\n"
+"POT-Creation-Date: 2014-09-20 23:29+0300\n"
+"PO-Revision-Date: 2014-09-20 23:31+0300\n"
 "Last-Translator: Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "Language: uk\n"
@@ -48,14 +48,26 @@ msgstr ""
 "Цей ключ нехтує ключем у org.gnome.mutter, коли запущено оболонку GNOME."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Компонування кнопок на смужці заголовку"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"Цей ключ нехтує ключем у org.gnome.desktop.wm.preferences, коли запущено "
+"GNOME Shell."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "Увімкнути розбиття країв, коли кладуться вікна на краї екрана"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "Робочий простір лише на основному моніторі"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr "Затримувати зміни фокусу миші, поки вказівник не перестане рухатись"
 
@@ -71,11 +83,11 @@ msgstr "Тільки піктограми програми"
 msgid "Thumbnail and application icon"
 msgstr "Мініатюри та піктограми програм"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "Представляти вікна як"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "Показувати вікна тільки з поточного робочого простору"
 
@@ -103,24 +115,24 @@ msgstr ""
 "Список рядків, що містять ідентифікатор програми (назва файла стільниці),"
 "двокрапка і номер робочого простору"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Програма"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "Робочий простір"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
 msgstr "Додати правило"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "Створити нове відповідне правило"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "Додати"
 
@@ -154,6 +166,12 @@ msgstr ""
 "натискаєте на панель."
 
 #: ../extensions/example/prefs.js:30
+msgid "Message"
+msgstr "Надпис"
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -162,10 +180,6 @@ msgstr ""
 "Приклад зроблено, щоб показувати, як зібрати правильні розширення для "
 "оболонки і саме по собі воно не має багато функціональності.\n"
 "Попри це, воно змінює вітальний текст. "
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "Надпис:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -235,52 +249,52 @@ msgstr "Назва теми"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Назва теми, що завантажується з ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:94
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Закрити"
 
-#: ../extensions/window-list/extension.js:104
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Відновити згорнуте"
 
-#: ../extensions/window-list/extension.js:105
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "Згорнути"
 
-#: ../extensions/window-list/extension.js:111
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Відновити розгорнуте"
 
-#: ../extensions/window-list/extension.js:112
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "Розгорнути"
 
-#: ../extensions/window-list/extension.js:272
+#: ../extensions/window-list/extension.js:300
 msgid "Minimize all"
 msgstr "Згорнути все"
 
-#: ../extensions/window-list/extension.js:280
+#: ../extensions/window-list/extension.js:308
 msgid "Unminimize all"
 msgstr "Відновити все згорнуте"
 
-#: ../extensions/window-list/extension.js:288
+#: ../extensions/window-list/extension.js:316
 msgid "Maximize all"
 msgstr "Розгорнути все"
 
-#: ../extensions/window-list/extension.js:297
+#: ../extensions/window-list/extension.js:325
 msgid "Unmaximize all"
 msgstr "Відновити все розгорнуте"
 
-#: ../extensions/window-list/extension.js:306
+#: ../extensions/window-list/extension.js:334
 msgid "Close all"
 msgstr "Закрити все"
 
-#: ../extensions/window-list/extension.js:593
+#: ../extensions/window-list/extension.js:644
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Покажчик робочого простору"
 
-#: ../extensions/window-list/extension.js:745
+#: ../extensions/window-list/extension.js:808
 msgid "Window List"
 msgstr "Перелік вікон"
 
@@ -313,14 +327,14 @@ msgid "Always group windows"
 msgstr "Завжди групувати вікна"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "Назви робочих просторів:"
+msgid "Workspace Names"
+msgstr "Назви робочих просторів"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "Назва"
 
-#: ../extensions/workspace-indicator/prefs.js:186
+#: ../extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Робочий простір %d"
