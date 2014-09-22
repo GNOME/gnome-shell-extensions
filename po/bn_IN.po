@@ -1,17 +1,18 @@
-# sray <sray@redhat.com>, 2013. #zanata
+# sray <sray@redhat.com>, 2013, 2014. #zanata.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-06 14:45+0530\n"
-"PO-Revision-Date: 2013-09-26 05:02-0400\n"
-"Last-Translator: sray <sray@redhat.com>\n"
-"Language-Team: Bengali (India)\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2014-09-22 07:38+0000\n"
+"PO-Revision-Date: 2014-09-22 16:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: bn-IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: bn-IN\n"
-"X-Generator: Zanata 3.1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -43,12 +44,32 @@ msgstr ""
 "GNOME সেল চালানোর ক্ষেত্রে এই কী in org.gnome.mutter এর কী ওভাররাইড করে।"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "শিরোনাম দন্ডে বোতামগুলির সজ্জা"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#| msgid ""
+#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"GNOME সেল চালানোর সময়ে এই কী org.gnome.desktop.wm.preferences-এর কী ওভাররাইড "
+"করে।"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "উইন্ডো স্ক্রীন কিনারায় রাখার সময়ে কিনারা টাইলিং সক্রিয় করুন"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "শুধুমাত্র প্রধান মনিটরে ওয়ার্কস্পেস"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"পয়েন্টার অবস্থান পরিবর্তন না থামানো পর্যন্ত মাউস মোডে ফোকাস পরিবর্তন বিলম্বিত "
+"করুন"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -62,44 +83,13 @@ msgstr "শুধুমাত্র অ্যাপ্লিকেশন অা�
 msgid "Thumbnail and application icon"
 msgstr "থাম্বনেইল এবং অ্যাপ্লিকেশন অাইকন"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "এই রূপে উইন্ডো উপস্থাপনা"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "শুধুমাত্র উইন্ডো বর্তমান ওয়ার্কস্পেসে দেখান"
-
-# auto translated by TM merge from project: gdm, version: 3.8.4, DocId: gdm
-#. add the new entries
-#: ../extensions/alternative-status-menu/extension.js:125
-msgid "Suspend"
-msgstr "স্থগিত করুন"
-
-#: ../extensions/alternative-status-menu/extension.js:128
-msgid "Hibernate"
-msgstr "নিদ্রিত অবস্থা"
-
-# auto translated by TM merge from project: gnome-shell, version: 3.8.4, DocId: gnome-shell
-#: ../extensions/alternative-status-menu/extension.js:131
-msgid "Power Off"
-msgstr "বন্ধ করুন"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:1
-msgid "Enable suspending"
-msgstr "স্থগিত সক্রিয় করুন"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:2
-msgid "Control the visibility of the Suspend menu item"
-msgstr "স্থগিত মেনু অাইটেমের দৃশ্যমানতা নিয়ন্ত্রণ করুন"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:3
-msgid "Enable hibernating"
-msgstr "নিদ্রিত অবস্থা সক্রিয় করুন"
-
-#: ../extensions/alternative-status-menu/org.gnome.shell.extensions.alternative-status-menu.gschema.xml.in.h:4
-msgid "Control the visibility of the Hibernate menu item"
-msgstr "নিদ্রিত অবস্থা মেনু অাইটেমের দৃশ্যমানতা নিয়ন্ত্রণ করুন"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -111,7 +101,7 @@ msgid "Favorites"
 msgstr "বিশেষ"
 
 # auto translated by TM merge from project: gnome-menus, version: 3.8.0, DocId: gnome-menus-3.0
-#: ../extensions/apps-menu/extension.js:278
+#: ../extensions/apps-menu/extension.js:282
 msgid "Applications"
 msgstr "অ্যাপ্লিকেশন"
 
@@ -125,43 +115,45 @@ msgid ""
 "followed by a colon and the workspace number"
 msgstr ""
 "স্ট্রীঙের একটি তালিকা, প্রতিটিতে থাকে একটি অ্যাপ্লিকেশন অাইডি (ডেস্কটপ ফাইল "
-"নাম), সংগে থাকে যতিচিহ্ন এবং ওয়ার্কস্পেস নম্বর"
+"নাম), "
+"সংগে থাকে যতিচিহ্ন এবং ওয়ার্কস্পেস নম্বর"
 
 # auto translated by TM merge from project: yelp, version: 3.8.1, DocId: yelp
-#: ../extensions/auto-move-windows/prefs.js:55
+#: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "অ্যাপ্লিকেশন"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "ওয়ার্কস্পেস"
 
 # auto translated by TM merge from project: evolution, version: el6, DocId: evolution-2.32
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: ../extensions/auto-move-windows/prefs.js:85
+#| msgid "Add rule"
+msgid "Add Rule"
 msgstr "নিয়ম যোগ করুন"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "মেলানোর নতুন নিয়ম তৈরি করুন"
 
 # auto translated by TM merge from project: file-roller, version: 3.8.3, DocId: file-roller
-#: ../extensions/auto-move-windows/prefs.js:98
+#: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "যোগ করুন"
 
-#: ../extensions/drive-menu/extension.js:72
-#, c-format
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "'%s' ড্রাইভ ইজেক্ট করা গেল না:"
 
-#: ../extensions/drive-menu/extension.js:89
+#: ../extensions/drive-menu/extension.js:123
 msgid "Removable devices"
 msgstr "অপসারণযোগ্য ডিভাইসগুলি"
 
 # auto translated by TM merge from project: gnome-user-share, version: 3.8, DocId: gnome-user-share
-#: ../extensions/drive-menu/extension.js:106
+#: ../extensions/drive-menu/extension.js:150
 msgid "Open File"
 msgstr "ফাইল খুলুন"
 
@@ -179,21 +171,21 @@ msgid ""
 "panel."
 msgstr "খালি না থাকলে, তাতে পাঠ্য থাকবে যা প্যানেলে ক্লিক করা হলে দেখানো হবে।"
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
 #: ../extensions/example/prefs.js:30
+#| msgid "Message:"
+msgid "Message"
+msgstr "বার্তা"
+
+#: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
 "সেলের জন্য সুস্থিত এক্সটেনশন কীভাবে গঠন করা সম্ভব তা উদাহরণের মাধ্যমে "
-"উপস্থাপিত করা হয়।\n"
+"উপস্থাপিত করা "
+"হয়।\n"
 "উপরন্তু অভিভাদন বার্তা নিজের পছন্দ মতোও করে নেওয়া যায়।"
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "বার্তা:"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
@@ -205,10 +197,11 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"স্ক্রীন অ্যাসপেক্ট অনুপাত সামঞ্জস্যপূর্ণ করে উইন্ডো থাম্বনেইল রাখার জন্য "
-"অারো স্ক্রীন ব্যবহারের চেষ্টা করুন, এবং বাউন্ডিং বক্স কমাতে তাদের সংঘবদ্ধ "
-"করার চেষ্টা করুন। এই সেটিং শুধুমাত্র স্বাভাবিক প্লেসমেন্ট কৌশলের ক্ষেত্রেই "
-"প্রযোজ্য হয়।"
+"স্ক্রীন অ্যাসপেক্ট অনুপাত সামঞ্জস্যপূর্ণ করে উইন্ডো থাম্বনেইল রাখার জন্য অারো "
+"স্ক্রীন "
+"ব্যবহারের চেষ্টা করুন, এবং বাউন্ডিং বক্স কমাতে তাদের সংঘবদ্ধ করার চেষ্টা "
+"করুন। এই "
+"সেটিং শুধুমাত্র স্বাভাবিক প্লেসমেন্ট কৌশলের ক্ষেত্রেই প্রযোজ্য হয়।"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -221,41 +214,43 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 "যদি সত্য হয়, তলায় রাখার সেল ডিফল্ট ওভাররাইড করে সংশ্লিষ্ট থাম্বনেইলের শীর্ষে "
-"উইন্ডো ক্যাপশন রাখুন। এই সেটিং পরিবর্তন করলে তা প্রয়োগ করতে সেল বন্ধ করে "
-"চালু করতে হবে।"
+"উইন্ডো "
+"ক্যাপশন রাখুন। এই সেটিং পরিবর্তন করলে তা প্রয়োগ করতে সেল বন্ধ করে চালু করতে "
+"হবে।"
 
 # auto translated by TM merge from project: file-roller, version: 3.8.3, DocId: file-roller
-#: ../extensions/places-menu/extension.js:77
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "অবস্থান"
 
-#: ../extensions/places-menu/placeDisplay.js:56
-#, c-format
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" লঞ্চ করা গেল না"
 
 # auto translated by TM merge from project: gvfs, version: 1.16.3, DocId: gvfs
-#: ../extensions/places-menu/placeDisplay.js:98
-#: ../extensions/places-menu/placeDisplay.js:121
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
 msgid "Computer"
 msgstr "কম্পিউটার"
 
 # auto translated by TM merge from project: rhsm-web, version: 0.0, DocId: management
-#: ../extensions/places-menu/placeDisplay.js:199
+#: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
 msgstr "প্রথম পাতা"
 
-#: ../extensions/places-menu/placeDisplay.js:286
+#: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
 msgstr "নেটওয়ার্ক ব্রাউজ"
 
 # auto translated by TM merge from project: gnome-system-monitor, version: 3.8.2.1, DocId: gnome-system-monitor
-#: ../extensions/systemMonitor/extension.js:213
+#: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
 
 # auto translated by TM merge from project: RHEV Installation Guide, version: 3.1, DocId: topics/Planning_your_Data_Center
-#: ../extensions/systemMonitor/extension.js:266
+#: ../extensions/systemMonitor/extension.js:267
 msgid "Memory"
 msgstr "মেমরি"
 
@@ -267,6 +262,56 @@ msgstr "থিম নাম"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "থিমের নাম, ~/.themes/name/gnome-shell থেকে লোড করা হবে"
 
+#: ../extensions/window-list/extension.js:110
+msgid "Close"
+msgstr "বন্ধ করুন"
+
+#: ../extensions/window-list/extension.js:120
+msgid "Unminimize"
+msgstr "অান-মিনিমাইজ"
+
+#: ../extensions/window-list/extension.js:121
+msgid "Minimize"
+msgstr "ছোট করুন"
+
+#: ../extensions/window-list/extension.js:127
+msgid "Unmaximize"
+msgstr "অান-ম্যাক্সিমাইজ"
+
+#: ../extensions/window-list/extension.js:128
+msgid "Maximize"
+msgstr "বড় করুন"
+
+#: ../extensions/window-list/extension.js:300
+msgid "Minimize all"
+msgstr "সকল ছোট করুন"
+
+#: ../extensions/window-list/extension.js:308
+msgid "Unminimize all"
+msgstr "সকল অান-মিনিমাইজ করুন"
+
+#: ../extensions/window-list/extension.js:316
+msgid "Maximize all"
+msgstr "সকল বড় করুন"
+
+#: ../extensions/window-list/extension.js:325
+msgid "Unmaximize all"
+msgstr "সকল অান-ম্যাক্সিমাইজ করুন"
+
+#: ../extensions/window-list/extension.js:334
+msgid "Close all"
+msgstr "সকল বন্ধ করুন"
+
+#: ../extensions/window-list/extension.js:644
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "ওয়ার্কস্পেস সূচক"
+
+#: ../extensions/window-list/extension.js:808
+#| msgid "Window Grouping"
+msgid "Window List"
+msgstr "উইন্ডো তালিকা"
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
 msgstr "উইন্ডো দলভুক্তকরণ"
@@ -276,9 +321,9 @@ msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
-"উইন্ডো তালিকায় একই অ্যাপ্লিকেশন থেকে কখন উইন্ডো দলভুক্ত করা হবে তার "
-"সিদ্ধান্ত নেয়। সম্ভাব্য মানগুলি হল \"কখনও নয়\", \"স্বয়ংক্রিয়\" এবং "
-"\"সর্বদা\"।"
+"উইন্ডো তালিকায় একই অ্যাপ্লিকেশন থেকে কখন উইন্ডো দলভুক্ত করা হবে তার সিদ্ধান্ত "
+"নেয়। "
+"সম্ভাব্য মানগুলি হল \"কখনও নয়\", \"স্বয়ংক্রিয়\" এবং \"সর্বদা\"।"
 
 #: ../extensions/window-list/prefs.js:30
 msgid "Window Grouping"
@@ -296,43 +341,57 @@ msgstr "স্থান কম থাকলে উইন্ডো দলভু�
 msgid "Always group windows"
 msgstr "উইন্ডো সর্বদা দলভুক্ত করুন"
 
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "ওয়ার্কস্পেস সূচক"
-
 #: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "ওয়ার্কস্পেস নামগুলি:"
+#| msgid "Workspace names:"
+msgid "Workspace Names"
+msgstr "ওয়ার্কস্পেস নামগুলি"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "নাম"
 
-#: ../extensions/workspace-indicator/prefs.js:186
-#, c-format
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
 msgid "Workspace %d"
 msgstr "ওয়ার্কস্পেস %d"
 
-#: ../extensions/xrandr-indicator/extension.js:30
-msgid "Normal"
-msgstr "স্বাভাবিক"
+# auto translated by TM merge from project: gdm, version: 3.8.4, DocId: gdm
+#~ msgid "Suspend"
+#~ msgstr "স্থগিত করুন"
 
-#: ../extensions/xrandr-indicator/extension.js:31
-msgid "Left"
-msgstr "বাম"
+#~ msgid "Hibernate"
+#~ msgstr "নিদ্রিত অবস্থা"
 
-#: ../extensions/xrandr-indicator/extension.js:32
-msgid "Right"
-msgstr "ডান"
+# auto translated by TM merge from project: gnome-shell, version: 3.8.4, DocId: gnome-shell
+#~ msgid "Power Off"
+#~ msgstr "বন্ধ করুন"
 
-#: ../extensions/xrandr-indicator/extension.js:33
-msgid "Upside-down"
-msgstr "উল্টো"
+#~ msgid "Enable suspending"
+#~ msgstr "স্থগিত সক্রিয় করুন"
 
-#: ../extensions/xrandr-indicator/extension.js:50
-msgid "Display"
-msgstr "প্রদর্শন"
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "স্থগিত মেনু অাইটেমের দৃশ্যমানতা নিয়ন্ত্রণ করুন"
 
-#: ../extensions/xrandr-indicator/extension.js:80
-msgid "Display Settings"
-msgstr "প্রদর্শন সেটিং"
+#~ msgid "Enable hibernating"
+#~ msgstr "নিদ্রিত অবস্থা সক্রিয় করুন"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "নিদ্রিত অবস্থা মেনু অাইটেমের দৃশ্যমানতা নিয়ন্ত্রণ করুন"
+
+#~ msgid "Normal"
+#~ msgstr "স্বাভাবিক"
+
+#~ msgid "Left"
+#~ msgstr "বাম"
+
+#~ msgid "Right"
+#~ msgstr "ডান"
+
+#~ msgid "Upside-down"
+#~ msgstr "উল্টো"
+
+#~ msgid "Display"
+#~ msgstr "প্রদর্শন"
+
+#~ msgid "Display Settings"
+#~ msgstr "প্রদর্শন সেটিং"
