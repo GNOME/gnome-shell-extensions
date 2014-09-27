@@ -18,17 +18,6 @@ function setKeybinding(name, func) {
 }
 
 function enable() {
-    injections['_initialSelection'] = AltTab.WindowSwitcherPopup.prototype._initialSelection;
-    AltTab.WindowSwitcherPopup.prototype._initialSelection = function(backward, binding) {
-        if (binding == 'switch-windows-backward' ||
-            binding == 'switch-applications-backward' ||
-            binding == 'switch-group-backward' || backward)
-            this._select(this._items.length - 1);
-        else if (this._items.length == 1)
-            this._select(0);
-        else
-            this._select(1);
-    };
     injections['_keyPressHandler'] = AltTab.WindowSwitcherPopup.prototype._keyPressHandler;
     AltTab.WindowSwitcherPopup.prototype._keyPressHandler = function(keysym, action) {
         if (action == Meta.KeyBindingAction.SWITCH_WINDOWS ||
