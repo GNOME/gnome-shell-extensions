@@ -44,7 +44,11 @@ function enable() {
                 this._select(this._previous());
             else if (keysym == Clutter.Right)
                 this._select(this._next());
+            else
+                return Clutter.EVENT_PROPAGATE;
         }
+
+        return Clutter.EVENT_STOP;
     };
 
     setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._startWindowSwitcher));
