@@ -1,8 +1,6 @@
-const Main = imports.ui.main;
 const AppDisplay = imports.ui.appDisplay;
 
 var _onActivateOriginal = null;
-var _activateResultOriginal = null;
 
 function _activate(button) {
   this.animateLaunch();
