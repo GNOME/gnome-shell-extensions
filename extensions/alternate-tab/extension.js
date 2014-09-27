@@ -20,24 +20,17 @@ function setKeybinding(name, func) {
 function enable() {
     injections['_keyPressHandler'] = AltTab.WindowSwitcherPopup.prototype._keyPressHandler;
     AltTab.WindowSwitcherPopup.prototype._keyPressHandler = function(keysym, action) {
-        if (action == Meta.KeyBindingAction.SWITCH_WINDOWS ||
-            action == Meta.KeyBindingAction.SWITCH_APPLICATIONS ||
-            action == Meta.KeyBindingAction.SWITCH_GROUP) {
-            this._select(this._next());
-        } else if (action == Meta.KeyBindingAction.SWITCH_WINDOWS_BACKWARD ||
-                   action == Meta.KeyBindingAction.SWITCH_APPLICATIONS_BACKWARD ||
-                   action == Meta.KeyBindingAction.SWITCH_GROUP_BACKWARD) {
-            this._select(this._previous());
-        } else {
-            if (keysym == Clutter.Left)
-                this._select(this._previous());
-            else if (keysym == Clutter.Right)
-                this._select(this._next());
-            else
-                return Clutter.EVENT_PROPAGATE;
+        switch(action) {
+            case Meta.KeyBindingAction.SWITCH_APPLICATIONS:
+            case Meta.KeyBindingAction.SWITCH_GROUP:
+              action = Meta.KeyBindingAction.SWITCH_WINDOWS;
+              break;
+            case Meta.KeyBindingAction.SWITCH_APPLICATIONS_BACKWARD:
+            case Meta.KeyBindingAction.SWITCH_GROUP_BACKWARD:
+              action = Meta.KeyBindingAction.SWITCH_WINDOWS_BACKWARD;
+              break;
         }
-
-        return Clutter.EVENT_STOP;
+        return injections['_keyPressHandler'].call(this, keysym, action);
     };
 
     setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._startWindowSwitcher));
