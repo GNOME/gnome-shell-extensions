@@ -908,7 +908,7 @@ const WindowList = new Lang.Class({
         this._windowList.destroy_all_children();
 
         if (!this._grouped) {
-            let windows = Meta.get_window_actors(global.screen).sort(
+            let windows = global.get_window_actors().sort(
                 function(w1, w2) {
                     return w1.metaWindow.get_stable_sequence() -
                            w2.metaWindow.get_stable_sequence();
@@ -1127,7 +1127,7 @@ const WindowList = new Lang.Class({
 
         this._settings.disconnect(this._groupingModeChangedId);
 
-        let windows = Meta.get_window_actors(global.screen);
+        let windows = global.get_window_actors();
         for (let i = 0; i < windows.length; i++)
             windows[i].metaWindow.set_icon_geometry(null);
     }
