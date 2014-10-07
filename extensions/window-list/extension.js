@@ -140,7 +140,7 @@ const WindowTitle = new Lang.Class({
 
     _init: function(metaWindow) {
         this._metaWindow = metaWindow;
-        this.actor = new St.BoxLayout();
+        this.actor = new St.BoxLayout({ style_class: 'window-button-box' });
 
         let app = Shell.WindowTracker.get_default().get_window_app(metaWindow);
         this._icon = new St.Bin({ style_class: 'window-button-icon',
@@ -392,7 +392,8 @@ const AppButton = new Lang.Class({
                                                x_align: St.Align.START });
         stack.add_actor(this._singleWindowTitle);
 
-        this._multiWindowTitle = new St.BoxLayout({ x_expand: true });
+        this._multiWindowTitle = new St.BoxLayout({ style_class: 'window-button-box',
+                                                    x_expand: true });
         stack.add_actor(this._multiWindowTitle);
 
         this._icon = new St.Bin({ style_class: 'window-button-icon',
