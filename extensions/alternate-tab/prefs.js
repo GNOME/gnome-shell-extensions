@@ -33,7 +33,7 @@ const AltTabSettingsWidget = new GObject.Class({
         this.row_spacing = 6;
 	this.orientation = Gtk.Orientation.VERTICAL;
 
-        this._settings = new Gio.Settings({ schema: 'org.gnome.shell.window-switcher' });
+        this._settings = new Gio.Settings({ schema_id: 'org.gnome.shell.window-switcher' });
 
         let presentLabel = '<b>' + _("Present windows as") + '</b>';
         this.add(new Gtk.Label({ label: presentLabel, use_markup: true,

@@ -30,7 +30,7 @@ const WorkspaceNameModel = new GObject.Class({
         this.parent(params);
         this.set_column_types([GObject.TYPE_STRING]);
 
-        this._settings = new Gio.Settings({ schema: WORKSPACE_SCHEMA });
+        this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
         //this._settings.connect('changed::workspace-names', Lang.bind(this, this._reloadFromSettings));
 
         this._reloadFromSettings();

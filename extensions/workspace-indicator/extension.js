@@ -50,7 +50,7 @@ const WorkspaceIndicator = new Lang.Class({
 	//styling
 	this.statusLabel.add_style_class_name('panel-workspace-indicator');
 
-        this._settings = new Gio.Settings({ schema: WORKSPACE_SCHEMA });
+        this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
         this._settingsChangedId = this._settings.connect('changed::' + WORKSPACE_KEY, Lang.bind(this, this._createWorkspacesSection));
     },
 

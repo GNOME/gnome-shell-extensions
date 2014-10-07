@@ -663,7 +663,7 @@ const WorkspaceIndicator = new Lang.Class({
         this.actor.connect('scroll-event', Lang.bind(this, this._onScrollEvent));
         this._updateMenu();
 
-        this._settings = new Gio.Settings({ schema: 'org.gnome.desktop.wm.preferences' });
+        this._settings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.preferences' });
         this._settingsChangedId = this._settings.connect('changed::workspace-names', Lang.bind(this, this._updateMenu));
     },
 
