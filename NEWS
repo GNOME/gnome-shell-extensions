@@ -1,3 +1,9 @@
+3.14.1
+======
+ * alternateTab: Fix dismissing popup with Escape
+ * some improvements to the window-list
+   (spacing in app buttons, no flash when closing windows with auto-grouping)
+ * updated translations (lv, it, pt, bg)
 
 3.14.0
 ======
