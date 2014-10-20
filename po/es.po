@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-06-11 07:32+0000\n"
-"PO-Revision-Date: 2014-06-12 17:24+0200\n"
+"POT-Creation-Date: 2014-10-14 19:43+0000\n"
+"PO-Revision-Date: 2014-10-20 12:41+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -54,8 +54,6 @@ msgid "Arrangement of buttons on the titlebar"
 msgstr "Ordenación de los botones en la barra de título"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
@@ -132,7 +130,6 @@ msgid "Workspace"
 msgstr "Área de trabajo"
 
 #: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
 msgid "Add Rule"
 msgstr "Añadir regla"
 
@@ -174,7 +171,6 @@ msgstr ""
 "panel."
 
 #: ../extensions/example/prefs.js:30
-#| msgid "Message:"
 msgid "Message"
 msgstr "Mensaje"
 
@@ -241,6 +237,10 @@ msgstr "Carpeta personal"
 msgid "Browse Network"
 msgstr "Examinar la red"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Tamaños de capturas de pantalla cíclicos"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
@@ -277,32 +277,32 @@ msgstr "Desmaximizar"
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:304
 msgid "Minimize all"
 msgstr "Minimizar todo"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:312
 msgid "Unminimize all"
 msgstr "Desminimizar todo"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:320
 msgid "Maximize all"
 msgstr "Maximizar todo"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:329
 msgid "Unmaximize all"
 msgstr "Desmaximizar todo"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:338
 msgid "Close all"
 msgstr "Cerrar todo"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:649
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador de área de trabajo"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:799
 msgid "Window List"
 msgstr "Lista de ventanas"
 
@@ -335,7 +335,6 @@ msgid "Always group windows"
 msgstr "Siempre agrupar las ventanas"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
 msgid "Workspace Names"
 msgstr "Nombres de los áreas de trabajo"
 
