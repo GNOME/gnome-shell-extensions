@@ -1,14 +1,14 @@
 # Norwegian bokmål translation of gnome-shell-extensions.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2011-2013.
+# Kjartan Maraas <kmaraas@gnome.org>, 2011-2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-shell-extensions\n"
+"Project-Id-Version: gnome-shell-extensions 3.15.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-03 19:57+0200\n"
-"PO-Revision-Date: 2014-06-03 19:57+0200\n"
+"POT-Creation-Date: 2014-10-22 20:31+0200\n"
+"PO-Revision-Date: 2014-10-22 20:31+0200\n"
 "Last-Translator: Åka Sikrom <a4@hush.com>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: Norwegian bokmål\n"
@@ -52,7 +52,9 @@ msgstr "Plassering av knapper på tittellinjen"
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
-msgstr "Denne nøkkelen overstyrer nøkkelen i org.gnome.desktop.wm.preferences når GNOME Shell kjører."
+msgstr ""
+"Denne nøkkelen overstyrer nøkkelen i org.gnome.desktop.wm.preferences når "
+"GNOME Shell kjører."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
@@ -165,6 +167,8 @@ msgstr ""
 msgid "Message"
 msgstr "Melding"
 
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
 #: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -229,6 +233,10 @@ msgstr "Hjem"
 msgid "Browse Network"
 msgstr "Bla gjennom nettverk"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Bla gjennom størrelser på skjermdump"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
@@ -265,32 +273,32 @@ msgstr "Gjenopprett"
 msgid "Maximize"
 msgstr "Maksimer"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:304
 msgid "Minimize all"
 msgstr "Minimer alle"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:312
 msgid "Unminimize all"
 msgstr "Gjenopprett alle"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:320
 msgid "Maximize all"
 msgstr "Maksimer alle"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:329
 msgid "Unmaximize all"
 msgstr "Gjenopprett alle"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:338
 msgid "Close all"
 msgstr "Lukk alle"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:649
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Arbeidsområdeindikator"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:799
 msgid "Window List"
 msgstr "Vinduliste"
 
