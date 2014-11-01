@@ -782,8 +782,8 @@ const WindowList = new Lang.Class({
             }));
         this._windowList.connect('scroll-event', Lang.bind(this, this._onScrollEvent));
 
-	let indicatorsBox = new St.BoxLayout({ x_align: Clutter.ActorAlign.END });
-	box.add(indicatorsBox);
+        let indicatorsBox = new St.BoxLayout({ x_align: Clutter.ActorAlign.END });
+        box.add(indicatorsBox);
 
         this._workspaceIndicator = new WorkspaceIndicator();
         indicatorsBox.add(this._workspaceIndicator.container, { expand: false, y_fill: true });
@@ -1164,6 +1164,9 @@ const WindowList = new Lang.Class({
         Main.overview.disconnect(this._overviewHidingId);
 
         global.screen.disconnect(this._fullscreenChangedId);
+
+        Main.xdndHandler.disconnect(this._dragBeginId);
+        Main.xdndHandler.disconnect(this._dragEndId);
 
         this._settings.disconnect(this._groupingModeChangedId);
 
