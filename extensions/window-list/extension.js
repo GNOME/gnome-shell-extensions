@@ -1188,7 +1188,7 @@ function enable() {
 
     windowList.actor.connect('notify::hover', Lang.bind(Main.messageTray,
         function() {
-            this._pointerInTray = windowList.actor.hover;
+            this._pointerInNotification = windowList.actor.hover;
             this._updateState();
         }));
 
