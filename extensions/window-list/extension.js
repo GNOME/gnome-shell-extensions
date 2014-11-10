@@ -53,7 +53,7 @@ function _onMenuStateChanged(menu, isOpen) {
 
     let [x, y,] = global.get_pointer();
     let actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
-    if (windowList.actor.contains(actor))
+    if (Me.stateObj.windowListContains(actor))
         actor.sync_hover();
 }
 
@@ -812,7 +812,7 @@ const WindowList = new Lang.Class({
             Main.layoutManager.connect('keyboard-visible-changed',
                 Lang.bind(this, function(o, state) {
                     Main.layoutManager.keyboardBox.visible = state;
-                    Main.uiGroup.set_child_above_sibling(windowList.actor,
+                    Main.uiGroup.set_child_above_sibling(this.actor,
                                                          Main.layoutManager.keyboardBox);
                     this._updateKeyboardAnchor();
                 }));
@@ -1176,49 +1176,60 @@ const WindowList = new Lang.Class({
     }
 });
 
-let windowList;
-let injections = {};
-let notificationParent;
+const Extension = new Lang.Class({
+    Name: 'Extension',
+
+    _init: function() {
+        this._windowList = null;
+        this._injections = {};
+        this._notificationParent = null;
+    },
+
+    enable: function() {
+        this._windowList = new WindowList();
+        let windowListActor = this._windowList.actor;
+
+        windowListActor.connect('notify::hover', Lang.bind(Main.messageTray,
+            function() {
+                this._pointerInNotification = windowListActor.hover;
+                this._updateState();
+            }));
+
+        this._injections['_trayDwellTimeout'] =
+            MessageTray.MessageTray.prototype._trayDwellTimeout;
+        MessageTray.MessageTray.prototype._trayDwellTimeout = function() {
+            return false;
+        };
+
+        this._notificationParent = Main.messageTray._notificationWidget.get_parent();
+        Main.messageTray._notificationWidget.hide();
+        Main.messageTray._notificationWidget.reparent(windowListActor);
+        Main.messageTray._notificationWidget.show();
+    },
+
+    disable: function() {
+        if (!this._windowList)
+            return;
+
+        this._windowList.actor.hide();
+
+        if (this._notificationParent) {
+            Main.messageTray._notificationWidget.reparent(this._notificationParent);
+            this._notificationParent = null;
+        }
+
+        this._windowList.actor.destroy();
+        this._windowList = null;
+
+        for (let prop in this._injections)
+            MessageTray.MessageTray.prototype[prop] = this._injections[prop];
+    },
+
+    windowListContains: function(actor) {
+        return this._windowList.actor.contains(actor);
+    }
+});
 
 function init() {
-}
-
-function enable() {
-    windowList = new WindowList();
-
-    windowList.actor.connect('notify::hover', Lang.bind(Main.messageTray,
-        function() {
-            this._pointerInNotification = windowList.actor.hover;
-            this._updateState();
-        }));
-
-    injections['_trayDwellTimeout'] = MessageTray.MessageTray.prototype._trayDwellTimeout;
-    MessageTray.MessageTray.prototype._trayDwellTimeout = function() {
-        return false;
-    };
-
-    notificationParent = Main.messageTray._notificationWidget.get_parent();
-    Main.messageTray._notificationWidget.hide();
-    Main.messageTray._notificationWidget.reparent(windowList.actor);
-    Main.messageTray._notificationWidget.show();
-}
-
-function disable() {
-    var prop;
-
-    if (!windowList)
-        return;
-
-    windowList.actor.hide();
-
-    if (notificationParent) {
-        Main.messageTray._notificationWidget.reparent(notificationParent);
-        notificationParent = null;
-    }
-
-    windowList.actor.destroy();
-    windowList = null;
-
-    for (prop in injections)
-        MessageTray.MessageTray.prototype[prop] = injections[prop];
+    return new Extension();
 }
