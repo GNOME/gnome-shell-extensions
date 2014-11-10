@@ -840,6 +840,24 @@ const WindowList = new Lang.Class({
                 this._updateKeyboardAnchor();
                 this._updateMessageTrayAnchor();
             }));
+
+        this._isOnBottomMonitor = Main.layoutManager.primaryIndex == Main.layoutManager.bottomIndex;
+
+        if (this._isOnBottomMonitor) {
+            let actor = this.actor;
+            this._bottomHoverChangedId =
+                actor.connect('notify::hover', Lang.bind(Main.messageTray,
+                    function() {
+                        this._pointerInNotification = actor.hover;
+                        this._updateState();
+                    }));
+
+            this._notificationParent = Main.messageTray._notificationWidget.get_parent();
+            Main.messageTray._notificationWidget.hide();
+            Main.messageTray._notificationWidget.reparent(this.actor);
+            Main.messageTray._notificationWidget.show();
+        }
+
         this._updateMessageTrayAnchor();
 
         this._fullscreenChangedId =
@@ -975,8 +993,10 @@ const WindowList = new Lang.Class({
     },
 
     _updateMessageTrayAnchor: function() {
-        let sameMonitor = Main.layoutManager.primaryIndex == Main.layoutManager.bottomIndex;
-        let anchorY = this.actor.visible && sameMonitor ? this.actor.height : 0;
+        if (!this._isOnBottomMonitor)
+            return;
+
+        let anchorY = this.actor.visible ? this.actor.height : 0;
 
         Main.messageTray.actor.anchor_y = anchorY;
         Main.messageTray._notificationWidget.anchor_y = -anchorY;
@@ -1157,8 +1177,19 @@ const WindowList = new Lang.Class({
         global.window_manager.disconnect(this._switchWorkspaceId);
         this._switchWorkspaceId = 0;
 
-        Main.messageTray.actor.anchor_y = 0;
-        Main.messageTray._notificationWidget.anchor_y = 0;
+        if (this._bottomHoverChangedId)
+            this.actor.disconnect(this._bottomHoverChangedId);
+        this._bottomHoverChangedId = 0;
+
+        if (this._notificationParent) {
+            Main.messageTray._notificationWidget.reparent(this._notificationParent);
+            this._notificationParent = null;
+        }
+
+        if (this._isOnBottomMonitor) {
+            Main.messageTray.actor.anchor_y = 0;
+            Main.messageTray._notificationWidget.anchor_y = 0;
+        }
 
         Main.overview.disconnect(this._overviewShowingId);
         Main.overview.disconnect(this._overviewHidingId);
@@ -1182,29 +1213,16 @@ const Extension = new Lang.Class({
     _init: function() {
         this._windowList = null;
         this._injections = {};
-        this._notificationParent = null;
     },
 
     enable: function() {
         this._windowList = new WindowList();
-        let windowListActor = this._windowList.actor;
-
-        windowListActor.connect('notify::hover', Lang.bind(Main.messageTray,
-            function() {
-                this._pointerInNotification = windowListActor.hover;
-                this._updateState();
-            }));
 
         this._injections['_trayDwellTimeout'] =
             MessageTray.MessageTray.prototype._trayDwellTimeout;
         MessageTray.MessageTray.prototype._trayDwellTimeout = function() {
             return false;
         };
-
-        this._notificationParent = Main.messageTray._notificationWidget.get_parent();
-        Main.messageTray._notificationWidget.hide();
-        Main.messageTray._notificationWidget.reparent(windowListActor);
-        Main.messageTray._notificationWidget.show();
     },
 
     disable: function() {
@@ -1212,12 +1230,6 @@ const Extension = new Lang.Class({
             return;
 
         this._windowList.actor.hide();
-
-        if (this._notificationParent) {
-            Main.messageTray._notificationWidget.reparent(this._notificationParent);
-            this._notificationParent = null;
-        }
-
         this._windowList.actor.destroy();
         this._windowList = null;
 
