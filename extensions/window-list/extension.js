@@ -186,27 +186,17 @@ const WindowTitle = new Lang.Class({
 });
 
 
-const WindowButton = new Lang.Class({
-    Name: 'WindowButton',
+const BaseButton = new Lang.Class({
+    Name: 'BaseButton',
+    Abstract: true,
 
-    _init: function(metaWindow) {
-        this.metaWindow = metaWindow;
-
-        this._windowTitle = new WindowTitle(this.metaWindow);
+    _init: function() {
         this.actor = new St.Button({ style_class: 'window-button',
                                      x_fill: true,
                                      can_focus: true,
                                      button_mask: St.ButtonMask.ONE |
-                                                  St.ButtonMask.THREE,
-                                     child: this._windowTitle.actor });
+                                                  St.ButtonMask.THREE });
         this.actor._delegate = this;
-
-        this._menuManager = new PopupMenu.PopupMenuManager(this);
-        this._contextMenu = new WindowContextMenu(this.actor, this.metaWindow);
-        this._contextMenu.connect('open-state-changed', _onMenuStateChanged);
-        this._contextMenu.actor.hide();
-        this._menuManager.addMenu(this._contextMenu);
-        Main.uiGroup.add_actor(this._contextMenu.actor);
 
         this.actor.connect('allocation-changed',
                            Lang.bind(this, this._updateIconGeometry));
@@ -214,18 +204,11 @@ const WindowButton = new Lang.Class({
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
         this.actor.connect('popup-menu', Lang.bind(this, this._onPopupMenu));
 
+        this._contextMenuManager = new PopupMenu.PopupMenuManager(this);
+
         this._switchWorkspaceId =
             global.window_manager.connect('switch-workspace',
                                           Lang.bind(this, this._updateVisibility));
-        this._workspaceChangedId =
-            this.metaWindow.connect('workspace-changed',
-                                    Lang.bind(this, this._updateVisibility));
-        this._updateVisibility();
-
-        this._notifyFocusId =
-            global.display.connect('notify::focus-window',
-                                   Lang.bind(this, this._updateStyle));
-        this._updateStyle();
     },
 
     get active() {
@@ -240,6 +223,89 @@ const WindowButton = new Lang.Class({
     },
 
     _onClicked: function(actor, button) {
+        throw new Error('Not implemented');
+    },
+
+    _canOpenPopupMenu: function() {
+        return true;
+    },
+
+    _onPopupMenu: function(actor) {
+        if (!this._canOpenPopupMenu() || this._contextMenu.isOpen)
+            return;
+        _openMenu(this._contextMenu);
+    },
+
+    _isFocused: function() {
+        throw new Error('Not implemented');
+    },
+
+    _updateStyle: function() {
+        if (this._isFocused())
+            this.actor.add_style_class_name('focused');
+        else
+            this.actor.remove_style_class_name('focused');
+    },
+
+    _isWindowVisible: function(window) {
+        let workspace = global.screen.get_active_workspace();
+
+        return !window.skip_taskbar && window.located_on_workspace(workspace);
+    },
+
+    _updateVisibility: function() {
+        throw new Error('Not implemented');
+    },
+
+    _getIconGeometry: function() {
+        let rect = new Meta.Rectangle();
+
+        [rect.x, rect.y] = this.actor.get_transformed_position();
+        [rect.width, rect.height] = this.actor.get_transformed_size();
+
+        return rect;
+    },
+
+    _updateIconGeometry: function() {
+        throw new Error('Not implemented');
+    },
+
+    _onDestroy: function() {
+        global.window_manager.disconnect(this._switchWorkspaceId);
+    }
+});
+
+
+const WindowButton = new Lang.Class({
+    Name: 'WindowButton',
+    Extends: BaseButton,
+
+    _init: function(metaWindow) {
+        this.parent();
+
+        this.metaWindow = metaWindow;
+        this._updateVisibility();
+
+        this._windowTitle = new WindowTitle(this.metaWindow);
+        this.actor.set_child(this._windowTitle.actor);
+
+        this._contextMenu = new WindowContextMenu(this.actor, this.metaWindow);
+        this._contextMenu.connect('open-state-changed', _onMenuStateChanged);
+        this._contextMenu.actor.hide();
+        this._contextMenuManager.addMenu(this._contextMenu);
+        Main.uiGroup.add_actor(this._contextMenu.actor);
+
+        this._workspaceChangedId =
+            this.metaWindow.connect('workspace-changed',
+                                    Lang.bind(this, this._updateVisibility));
+
+        this._notifyFocusId =
+            global.display.connect('notify::focus-window',
+                                   Lang.bind(this, this._updateStyle));
+        this._updateStyle();
+    },
+
+    _onClicked: function(actor, button) {
         if (this._contextMenu.isOpen) {
             this._contextMenu.close();
             return;
@@ -251,41 +317,30 @@ const WindowButton = new Lang.Class({
             _openMenu(this._contextMenu);
     },
 
-    _onPopupMenu: function(actor) {
-        if (this._contextMenu.isOpen)
-            return;
-        _openMenu(this._contextMenu);
+    _isFocused: function() {
+        return global.display.focus_window == this.metaWindow;
     },
 
     _updateStyle: function() {
+        this.parent();
+
         if (this.metaWindow.minimized)
             this.actor.add_style_class_name('minimized');
         else
             this.actor.remove_style_class_name('minimized');
-
-        if (global.display.focus_window == this.metaWindow)
-            this.actor.add_style_class_name('focused');
-        else
-            this.actor.remove_style_class_name('focused');
     },
 
     _updateVisibility: function() {
-        let workspace = global.screen.get_active_workspace();
-        this.actor.visible = this.metaWindow.located_on_workspace(workspace);
+        this.actor.visible = this._isWindowVisible(this.metaWindow);
     },
 
     _updateIconGeometry: function() {
-        let rect = new Meta.Rectangle();
-
-        [rect.x, rect.y] = this.actor.get_transformed_position();
-        [rect.width, rect.height] = this.actor.get_transformed_size();
-
-        this.metaWindow.set_icon_geometry(rect);
+        this.metaWindow.set_icon_geometry(this._getIconGeometry());
     },
 
     _onDestroy: function() {
+        this.parent();
         this.metaWindow.disconnect(this._workspaceChangedId);
-        global.window_manager.disconnect(this._switchWorkspaceId);
         global.display.disconnect(this._notifyFocusId);
         this._contextMenu.destroy();
     }
@@ -296,14 +351,14 @@ const AppContextMenu = new Lang.Class({
     Name: 'AppContextMenu',
     Extends: PopupMenu.PopupMenu,
 
-    _init: function(source, app) {
+    _init: function(source, appButton) {
         this.parent(source, 0.5, St.Side.BOTTOM);
 
-        this._app = app;
+        this._appButton = appButton;
 
         this._minimizeItem = new PopupMenu.PopupMenuItem(_("Minimize all"));
         this._minimizeItem.connect('activate', Lang.bind(this, function() {
-            this._getWindowList().forEach(function(w) {
+            this._appButton.getWindowList().forEach(function(w) {
                 w.minimize();
             });
         }));
@@ -311,7 +366,7 @@ const AppContextMenu = new Lang.Class({
 
         this._unminimizeItem = new PopupMenu.PopupMenuItem(_("Unminimize all"));
         this._unminimizeItem.connect('activate', Lang.bind(this, function() {
-            this._getWindowList().forEach(function(w) {
+            this._appButton.getWindowList().forEach(function(w) {
                 w.unminimize();
             });
         }));
@@ -319,7 +374,7 @@ const AppContextMenu = new Lang.Class({
 
         this._maximizeItem = new PopupMenu.PopupMenuItem(_("Maximize all"));
         this._maximizeItem.connect('activate', Lang.bind(this, function() {
-            this._getWindowList().forEach(function(w) {
+            this._appButton.getWindowList().forEach(function(w) {
                 w.maximize(Meta.MaximizeFlags.HORIZONTAL |
                            Meta.MaximizeFlags.VERTICAL);
             });
@@ -328,7 +383,7 @@ const AppContextMenu = new Lang.Class({
 
         this._unmaximizeItem = new PopupMenu.PopupMenuItem(_("Unmaximize all"));
         this._unmaximizeItem.connect('activate', Lang.bind(this, function() {
-            this._getWindowList().forEach(function(w) {
+            this._appButton.getWindowList().forEach(function(w) {
                 w.unmaximize(Meta.MaximizeFlags.HORIZONTAL |
                              Meta.MaximizeFlags.VERTICAL);
             });
@@ -337,22 +392,15 @@ const AppContextMenu = new Lang.Class({
 
         let item = new PopupMenu.PopupMenuItem(_("Close all"));
         item.connect('activate', Lang.bind(this, function() {
-            this._getWindowList().forEach(function(w) {
+            this._appButton.getWindowList().forEach(function(w) {
                 w.delete(global.get_current_time());
             });
         }));
         this.addMenuItem(item);
     },
 
-    _getWindowList: function() {
-        let workspace = global.screen.get_active_workspace();
-        return this._app.get_windows().filter(function(win) {
-            return !win.skip_taskbar && win.located_on_workspace(workspace);
-        });
-    },
-
     open: function(animate) {
-        let windows = this._getWindowList();
+        let windows = this._appButton.getWindowList();
         this._minimizeItem.actor.visible = windows.some(function(w) {
             return !w.minimized;
         });
@@ -372,21 +420,16 @@ const AppContextMenu = new Lang.Class({
 
 const AppButton = new Lang.Class({
     Name: 'AppButton',
+    Extends: BaseButton,
 
     _init: function(app) {
+        this.parent();
+
         this.app = app;
+        this._updateVisibility();
 
         let stack = new St.Widget({ layout_manager: new Clutter.BinLayout() });
-        this.actor = new St.Button({ style_class: 'window-button',
-                                     x_fill: true,
-                                     can_focus: true,
-                                     button_mask: St.ButtonMask.ONE |
-                                                  St.ButtonMask.THREE,
-                                     child: stack });
-        this.actor._delegate = this;
-
-        this.actor.connect('allocation-changed',
-                           Lang.bind(this, this._updateIconGeometry));
+        this.actor.set_child(stack);
 
         this._singleWindowTitle = new St.Bin({ x_expand: true,
                                                x_align: St.Align.START });
@@ -409,8 +452,7 @@ const AppButton = new Lang.Class({
         this._menuManager.addMenu(this._menu);
         Main.uiGroup.add_actor(this._menu.actor);
 
-        this._contextMenuManager = new PopupMenu.PopupMenuManager(this);
-        this._appContextMenu = new AppContextMenu(this.actor, this.app);
+        this._appContextMenu = new AppContextMenu(this.actor, this);
         this._appContextMenu.connect('open-state-changed', _onMenuStateChanged);
         this._appContextMenu.actor.hide();
         Main.uiGroup.add_actor(this._appContextMenu.actor);
@@ -421,14 +463,6 @@ const AppButton = new Lang.Class({
                 function() {
                     this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
                 }));
-        this.actor.connect('clicked', Lang.bind(this, this._onClicked));
-        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
-        this.actor.connect('popup-menu', Lang.bind(this, this._onPopupMenu));
-
-        this._switchWorkspaceId =
-            global.window_manager.connect('switch-workspace',
-                                          Lang.bind(this, this._updateVisibility));
-        this._updateVisibility();
 
         this._windowsChangedId =
             this.app.connect('windows-changed',
@@ -447,18 +481,12 @@ const AppButton = new Lang.Class({
         this.actor.visible = this.app.is_on_workspace(workspace);
     },
 
-    _updateStyle: function() {
-        if (this._windowTracker.focus_app == this.app)
-            this.actor.add_style_class_name('focused');
-        else
-            this.actor.remove_style_class_name('focused');
+    _isFocused: function() {
+        return this._windowTracker.focus_app == this.app;
     },
 
     _updateIconGeometry: function() {
-        let rect = new Meta.Rectangle();
-
-        [rect.x, rect.y] = this.actor.get_transformed_position();
-        [rect.width, rect.height] = this.actor.get_transformed_size();
+        let rect = this._getIconGeometry();
 
         let windows = this.app.get_windows();
         windows.forEach(function(w) {
@@ -467,15 +495,14 @@ const AppButton = new Lang.Class({
     },
 
 
-    _getWindowList: function() {
-        let workspace = global.screen.get_active_workspace();
-        return this.app.get_windows().filter(function(win) {
-            return !win.skip_taskbar && win.located_on_workspace(workspace);
-        });
+    getWindowList: function() {
+        return this.app.get_windows().filter(Lang.bind(this, function(win) {
+            return this._isWindowVisible(win);
+        }));
     },
 
     _windowsChanged: function() {
-        let windows = this._getWindowList();
+        let windows = this.getWindowList();
         this._singleWindowTitle.visible = windows.length == 1;
         this._multiWindowTitle.visible = !this._singleWindowTitle.visible;
 
@@ -507,17 +534,6 @@ const AppButton = new Lang.Class({
 
     },
 
-    get active() {
-        return this.actor.has_style_class_name('focused');
-    },
-
-    activate: function() {
-        if (this.active)
-            return;
-
-        this._onClicked(this.actor, 1);
-    },
-
     _onClicked: function(actor, button) {
         let menuWasOpen = this._menu.isOpen;
         if (menuWasOpen)
@@ -531,7 +547,7 @@ const AppButton = new Lang.Class({
             if (menuWasOpen)
                 return;
 
-            let windows = this._getWindowList();
+            let windows = this.getWindowList();
             if (windows.length == 1) {
                 if (contextMenuWasOpen)
                     return;
@@ -555,20 +571,17 @@ const AppButton = new Lang.Class({
         }
     },
 
-    _onPopupMenu: function(actor) {
-        if (this._menu.isOpen || this._contextMenu.isOpen)
-            return;
-        _openMenu(this._contextMenu);
+    _canOpenPopupMenu: function() {
+        return !this._menu.isOpen;
     },
-
 
     _onMenuActivate: function(menu, child) {
         child._window.activate(global.get_current_time());
     },
 
     _onDestroy: function() {
+        this.parent();
         this._textureCache.disconnect(this._iconThemeChangedId);
-        global.window_manager.disconnect(this._switchWorkspaceId);
         this._windowTracker.disconnect(this._notifyFocusId);
         this.app.disconnect(this._windowsChangedId);
         this._menu.destroy();
