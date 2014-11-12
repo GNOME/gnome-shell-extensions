@@ -108,8 +108,9 @@ const MountMenuItem = new Lang.Class({
     },
 
     activate: function(event) {
+        let context = global.create_app_launch_context(event.get_time(), -1);
         Gio.AppInfo.launch_default_for_uri(this.mount.get_root().get_uri(),
-                                           global.create_app_launch_context());
+                                           context);
 
 	this.parent(event);
     }
