@@ -15,5 +15,13 @@
         window list. Possible values are "never", "auto" and "always".
       </_description>
     </key>
+    <key name="show-on-all-monitors" type="b">
+      <default>false</default>
+      <_summary>Show the window list on all monitors</_summary>
+      <_description>
+        Whether to show the window list on all connected monitors or
+        only on the primary one.
+      </_description>
+    </key>
   </schema>
 </schemalist>

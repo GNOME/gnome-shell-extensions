@@ -53,7 +53,7 @@ function _onMenuStateChanged(menu, isOpen) {
 
     let [x, y,] = global.get_pointer();
     let actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
-    if (Me.stateObj.windowListContains(actor))
+    if (Me.stateObj.someWindowListContains(actor))
         actor.sync_hover();
 }
 
@@ -190,7 +190,10 @@ const BaseButton = new Lang.Class({
     Name: 'BaseButton',
     Abstract: true,
 
-    _init: function() {
+    _init: function(perMonitor, monitorIndex) {
+        this._perMonitor = perMonitor;
+        this._monitorIndex = monitorIndex;
+
         this.actor = new St.Button({ style_class: 'window-button',
                                      x_fill: true,
                                      can_focus: true,
@@ -209,6 +212,15 @@ const BaseButton = new Lang.Class({
         this._switchWorkspaceId =
             global.window_manager.connect('switch-workspace',
                                           Lang.bind(this, this._updateVisibility));
+
+        if (this._perMonitor) {
+            this._windowEnteredMonitorId =
+                global.screen.connect('window-entered-monitor',
+                    Lang.bind(this, this._windowEnteredOrLeftMonitor));
+            this._windowLeftMonitorId =
+                global.screen.connect('window-left-monitor',
+                    Lang.bind(this, this._windowEnteredOrLeftMonitor));
+        }
     },
 
     get active() {
@@ -247,10 +259,16 @@ const BaseButton = new Lang.Class({
             this.actor.remove_style_class_name('focused');
     },
 
+    _windowEnteredOrLeftMonitor: function(metaScreen, monitorIndex, metaWindow) {
+        throw new Error('Not implemented');
+    },
+
     _isWindowVisible: function(window) {
         let workspace = global.screen.get_active_workspace();
 
-        return !window.skip_taskbar && window.located_on_workspace(workspace);
+        return !window.skip_taskbar &&
+               window.located_on_workspace(workspace) &&
+               (!this._perMonitor || window.get_monitor() == this._monitorIndex);
     },
 
     _updateVisibility: function() {
@@ -272,6 +290,14 @@ const BaseButton = new Lang.Class({
 
     _onDestroy: function() {
         global.window_manager.disconnect(this._switchWorkspaceId);
+
+        if (this._windowEnteredMonitorId)
+            global.screen.disconnect(this._windowEnteredMonitorId);
+        this._windowEnteredMonitorId = 0;
+
+        if (this._windowLeftMonitorId)
+            global.screen.disconnect(this._windowLeftMonitorId);
+        this._windowLeftMonitorId = 0;
     }
 });
 
@@ -280,8 +306,8 @@ const WindowButton = new Lang.Class({
     Name: 'WindowButton',
     Extends: BaseButton,
 
-    _init: function(metaWindow) {
-        this.parent();
+    _init: function(metaWindow, perMonitor, monitorIndex) {
+        this.parent(perMonitor, monitorIndex);
 
         this.metaWindow = metaWindow;
         this._updateVisibility();
@@ -328,6 +354,11 @@ const WindowButton = new Lang.Class({
             this.actor.add_style_class_name('minimized');
         else
             this.actor.remove_style_class_name('minimized');
+    },
+
+    _windowEnteredOrLeftMonitor: function(metaScreen, monitorIndex, metaWindow) {
+        if (monitorIndex == this._monitorIndex && metaWindow == this.metaWindow)
+            this._updateVisibility();
     },
 
     _updateVisibility: function() {
@@ -422,8 +453,8 @@ const AppButton = new Lang.Class({
     Name: 'AppButton',
     Extends: BaseButton,
 
-    _init: function(app) {
-        this.parent();
+    _init: function(app, perMonitor, monitorIndex) {
+        this.parent(perMonitor, monitorIndex);
 
         this.app = app;
         this._updateVisibility();
@@ -476,9 +507,22 @@ const AppButton = new Lang.Class({
         this._updateStyle();
     },
 
+    _windowEnteredOrLeftMonitor: function(metaScreen, monitorIndex, metaWindow) {
+        if (this._windowTracker.get_window_app(metaWindow) == this.app &&
+            monitorIndex == this._monitorIndex) {
+            this._updateVisibility();
+            this._windowsChanged();
+        }
+    },
+
     _updateVisibility: function() {
-        let workspace = global.screen.get_active_workspace();
-        this.actor.visible = this.app.is_on_workspace(workspace);
+        if (!this._perMonitor) {
+            // fast path: use ShellApp API to avoid iterating over all windows.
+            let workspace = global.screen.get_active_workspace();
+            this.actor.visible = this.app.is_on_workspace(workspace);
+        } else {
+            this.actor.visible = this.getWindowList().length >= 1;
+        }
     },
 
     _isFocused: function() {
@@ -767,7 +811,10 @@ const WorkspaceIndicator = new Lang.Class({
 const WindowList = new Lang.Class({
     Name: 'WindowList',
 
-    _init: function() {
+    _init: function(perMonitor, monitor) {
+        this._perMonitor = perMonitor;
+        this._monitor = monitor;
+
         this.actor = new St.Widget({ name: 'panel',
                                      style_class: 'bottom-panel',
                                      reactive: true,
@@ -801,25 +848,34 @@ const WindowList = new Lang.Class({
         this._workspaceIndicator = new WorkspaceIndicator();
         indicatorsBox.add(this._workspaceIndicator.container, { expand: false, y_fill: true });
 
+        this._workspaceSettings = new Gio.Settings({ schema_id: 'org.gnome.shell.overrides' });
+        this._workspacesOnlyOnPrimaryChangedId =
+            this._workspaceSettings.connect('changed::workspaces-only-on-primary',
+                                            Lang.bind(this, this._updateWorkspaceIndicatorVisibility));
+        this._updateWorkspaceIndicatorVisibility();
+
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menuManager.addMenu(this._workspaceIndicator.menu);
 
-        this._trayButton = new TrayButton();
-        indicatorsBox.add(this._trayButton.actor, { expand: false });
+        this._isOnBottomMonitor = this._monitor == Main.layoutManager.bottomMonitor;
+
+        if (this._isOnBottomMonitor) {
+            this._trayButton = new TrayButton();
+            indicatorsBox.add(this._trayButton.actor, { expand: false });
+        }
 
         Main.layoutManager.addChrome(this.actor, { affectsStruts: true,
                                                    trackFullscreen: true });
         Main.ctrlAltTabManager.addGroup(this.actor, _("Window List"), 'start-here-symbolic');
 
+        this.actor.width = this._monitor.width;
+        this.actor.set_position(this._monitor.x,
+                                this._monitor.y + this._monitor.height - this.actor.height);
+
         this._appSystem = Shell.AppSystem.get_default();
         this._appStateChangedId =
             this._appSystem.connect('app-state-changed',
                                     Lang.bind(this, this._onAppStateChanged));
-
-        this._monitorsChangedId =
-            Main.layoutManager.connect('monitors-changed',
-                                       Lang.bind(this, this._updatePosition));
-        this._updatePosition();
 
         this._keyboardVisiblechangedId =
             Main.layoutManager.connect('keyboard-visible-changed',
@@ -853,8 +909,6 @@ const WindowList = new Lang.Class({
                 this._updateKeyboardAnchor();
                 this._updateMessageTrayAnchor();
             }));
-
-        this._isOnBottomMonitor = Main.layoutManager.primaryIndex == Main.layoutManager.bottomIndex;
 
         if (this._isOnBottomMonitor) {
             let actor = this.actor;
@@ -925,6 +979,12 @@ const WindowList = new Lang.Class({
         children[active].activate();
     },
 
+    _updateWorkspaceIndicatorVisibility: function() {
+        this._workspaceIndicator.actor.visible =
+            this._monitor == Main.layoutManager.primaryMonitor ||
+            !this._workspaceSettings.get_boolean('workspaces-only-on-primary');
+    },
+
     _getPreferredUngroupedWindowListWidth: function() {
         if (this._windowList.get_n_children() == 0)
             return this._windowList.get_preferred_width(-1)[1];
@@ -934,13 +994,21 @@ const WindowList = new Lang.Class({
         let spacing = this._windowList.layout_manager.spacing;
 
         let workspace = global.screen.get_active_workspace();
-        let nWindows = global.display.get_tab_list(Meta.TabList.NORMAL, workspace).length;
+        let windows = global.display.get_tab_list(Meta.TabList.NORMAL, workspace);
+        if (this._perMonitor) {
+            windows = windows.filter(Lang.bind(this, function(window) {
+                return window.get_monitor() == this._monitor.index;
+            }));
+        }
+        let nWindows = windows.length;
+        if (nWindows == 0)
+            return this._windowList.get_preferred_width(-1)[1];
 
         return nWindows * childWidth + (nWindows - 1) * spacing;
     },
 
     _getMaxWindowListWidth: function() {
-        let indicatorsBox = this._trayButton.actor.get_parent();
+        let indicatorsBox = this._workspaceIndicator.actor.get_parent();
         return this.actor.width - indicatorsBox.get_preferred_width(-1)[1];
     },
 
@@ -991,12 +1059,6 @@ const WindowList = new Lang.Class({
         }
     },
 
-    _updatePosition: function() {
-        let monitor = Main.layoutManager.primaryMonitor;
-        this.actor.width = monitor.width;
-        this.actor.set_position(monitor.x, monitor.y + monitor.height - this.actor.height);
-    },
-
     _updateKeyboardAnchor: function() {
         if (!Main.keyboard.actor)
             return;
@@ -1026,7 +1088,7 @@ const WindowList = new Lang.Class({
     },
 
     _addApp: function(app) {
-        let button = new AppButton(app);
+        let button = new AppButton(app, this._perMonitor, this._monitor.index);
         this._windowList.layout_manager.pack(button.actor,
                                              true, true, true,
                                              Clutter.BoxAlignment.START,
@@ -1059,7 +1121,7 @@ const WindowList = new Lang.Class({
                 return;
         }
 
-        let button = new WindowButton(win);
+        let button = new WindowButton(win, this._perMonitor, this._monitor.index);
         this._windowList.layout_manager.pack(button.actor,
                                              true, true, true,
                                              Clutter.BoxAlignment.START,
@@ -1168,15 +1230,14 @@ const WindowList = new Lang.Class({
     },
 
     _onDestroy: function() {
+        this._workspaceSettings.disconnect(this._workspacesOnlyOnPrimaryChangedId);
+
         this._workspaceIndicator.destroy();
 
         Main.ctrlAltTabManager.removeGroup(this.actor);
 
         this._appSystem.disconnect(this._appStateChangedId);
         this._appStateChangedId = 0;
-
-        Main.layoutManager.disconnect(this._monitorsChangedId);
-        this._monitorsChangedId = 0;
 
         Main.layoutManager.disconnect(this._keyboardVisiblechangedId);
         this._keyboardVisiblechangedId = 0;
@@ -1224,34 +1285,69 @@ const Extension = new Lang.Class({
     Name: 'Extension',
 
     _init: function() {
-        this._windowList = null;
+        this._windowLists = null;
         this._injections = {};
     },
 
     enable: function() {
-        this._windowList = new WindowList();
+        this._windowLists = [];
 
         this._injections['_trayDwellTimeout'] =
             MessageTray.MessageTray.prototype._trayDwellTimeout;
         MessageTray.MessageTray.prototype._trayDwellTimeout = function() {
             return false;
         };
+
+        this._settings = Convenience.getSettings();
+        this._showOnAllMonitorsChangedId =
+            this._settings.connect('changed::show-on-all-monitors',
+                                   Lang.bind(this, this._buildWindowLists));
+
+        this._monitorsChangedId =
+            Main.layoutManager.connect('monitors-changed',
+                                       Lang.bind(this, this._buildWindowLists));
+
+        this._buildWindowLists();
+    },
+
+    _buildWindowLists: function() {
+        this._windowLists.forEach(function(windowList) {
+            windowList.actor.destroy();
+        });
+        this._windowLists = [];
+
+        let showOnAllMonitors = this._settings.get_boolean('show-on-all-monitors');
+
+        Main.layoutManager.monitors.forEach(Lang.bind(this, function(monitor) {
+            if (showOnAllMonitors || monitor == Main.layoutManager.primaryMonitor)
+                this._windowLists.push(new WindowList(showOnAllMonitors, monitor));
+        }));
     },
 
     disable: function() {
-        if (!this._windowList)
+        if (!this._windowLists)
             return;
 
-        this._windowList.actor.hide();
-        this._windowList.actor.destroy();
-        this._windowList = null;
+        this._settings.disconnect(this._showOnAllMonitorsChangedId);
+        this._showOnAllMonitorsChangedId = 0;
+
+        Main.layoutManager.disconnect(this._monitorsChangedId);
+        this._monitorsChangedId = 0;
+
+        this._windowLists.forEach(function(windowList) {
+            windowList.actor.hide();
+            windowList.actor.destroy();
+        });
+        this._windowLists = null;
 
         for (let prop in this._injections)
             MessageTray.MessageTray.prototype[prop] = this._injections[prop];
     },
 
-    windowListContains: function(actor) {
-        return this._windowList.actor.contains(actor);
+    someWindowListContains: function(actor) {
+        return this._windowLists.some(function(windowList) {
+            return windowList.actor.contains(actor);
+        });
     }
 });
 
