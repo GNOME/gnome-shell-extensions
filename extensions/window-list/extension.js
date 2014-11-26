@@ -796,6 +796,7 @@ const WindowList = new Lang.Class({
 
         Main.layoutManager.addChrome(this.actor, { affectsStruts: true,
                                                    trackFullscreen: true });
+        Main.uiGroup.set_child_above_sibling(this.actor, Main.layoutManager.trayBox);
         Main.ctrlAltTabManager.addGroup(this.actor, _("Window List"), 'start-here-symbolic');
 
         this._appSystem = Shell.AppSystem.get_default();
@@ -811,9 +812,13 @@ const WindowList = new Lang.Class({
         this._keyboardVisiblechangedId =
             Main.layoutManager.connect('keyboard-visible-changed',
                 Lang.bind(this, function(o, state) {
-                    Main.layoutManager.keyboardBox.visible = state;
-                    Main.uiGroup.set_child_above_sibling(windowList.actor,
-                                                         Main.layoutManager.keyboardBox);
+                    let keyboardBox = Main.layoutManager.keyboardBox;
+                    keyboardBox.visible = state;
+                    if (state)
+                        Main.uiGroup.set_child_above_sibling(this.actor, keyboardBox);
+                    else
+                        Main.uiGroup.set_child_above_sibling(this.actor,
+                                                             Main.layoutManager.trayBox);
                     this._updateKeyboardAnchor();
                 }));
 
