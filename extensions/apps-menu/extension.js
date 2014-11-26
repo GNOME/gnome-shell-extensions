@@ -58,7 +58,8 @@ const ApplicationMenuItem = new Lang.Class({
         this._iconBin = new St.Bin();
         this.actor.add_child(this._iconBin);
 
-        let appLabel = new St.Label({ text: app.get_name() });
+        let appLabel = new St.Label({ text: app.get_name(), y_expand: true,
+                                      y_align: Clutter.ActorAlign.CENTER });
         this.actor.add_child(appLabel, { expand: true });
         this.actor.label_actor = appLabel;
 
