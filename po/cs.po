@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-08-22 07:35+0000\n"
-"PO-Revision-Date: 2014-08-22 11:54+0200\n"
+"POT-Creation-Date: 2014-11-25 20:31+0000\n"
+"PO-Revision-Date: 2014-11-26 09:11+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -55,8 +55,8 @@ msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
 msgstr ""
-"Když běží GNOME Shell, tento klíč přepíše klíč v "
-"org.gnome.desktop.wm.preferences"
+"Když běží GNOME Shell, tento klíč přepíše klíč v org.gnome.desktop.wm."
+"preferences"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
@@ -140,11 +140,11 @@ msgstr "Přidat"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Vysunutí disku „%s“ selhalo:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Výměnná zařízení"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Otevřít soubor"
 
@@ -228,6 +228,10 @@ msgstr "Domů"
 msgid "Browse Network"
 msgstr "Procházet síť"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Mění velikost pro snímky obrazovky"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "Procesor"
@@ -264,32 +268,32 @@ msgstr "Zrušit maximalizaci"
 msgid "Maximize"
 msgstr "Maximalizovat"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:304
 msgid "Minimize all"
 msgstr "Minimalizovat všechna"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:312
 msgid "Unminimize all"
 msgstr "Zrušit minimalizaci všech"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:320
 msgid "Maximize all"
 msgstr "Maximalizovat všechna"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:329
 msgid "Unmaximize all"
 msgstr "Zrušit maximalizaci všech"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:338
 msgid "Close all"
 msgstr "Zavřít všechna"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:649
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Ukazatel pracovní plochy"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:799
 msgid "Window List"
 msgstr "Seznam oken"
 
