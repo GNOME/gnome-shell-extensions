@@ -30,7 +30,7 @@ const ThemeManager = new Lang.Class({
             this._changedId = 0;
         }
 
-        Main._cssStylesheet = null;
+        Main.setThemeStylesheet(null);
         Main.loadTheme();
     },
 
@@ -57,13 +57,11 @@ const ThemeManager = new Lang.Class({
             }
         }
 
-        if (_stylesheet) {
+        if (_stylesheet)
             global.log('loading user theme: ' + _stylesheet);
-            Main.setThemeStylesheet(_stylesheet);
-        } else {
+        else
             global.log('loading default theme (Adwaita)');
-            Main._cssStylesheet = null;
-        }
+        Main.setThemeStylesheet(_stylesheet);
         Main.loadTheme();
     }
 });
