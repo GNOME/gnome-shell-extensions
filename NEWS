@@ -1,3 +1,10 @@
+3.15.2
+======
+* removable-drive, user-theme, window-list: Update for gnome-shell changes
+* apps-menu: Fix some visual glitches
+* Fix classic mode style
+* updated translations (an, cs, he, vi)
+
 3.15.1
 ======
  * updated translations (es, nb)
