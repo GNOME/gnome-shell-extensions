@@ -1,0 +1,5 @@
+@import url("gnome-classic.css");
+
+stage {
+  -st-icon-style: symbolic;
+}
