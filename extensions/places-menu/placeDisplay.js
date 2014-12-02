@@ -202,7 +202,7 @@ const PlacesManager = new Lang.Class({
         let specials = [];
         for (let i = 0; i < DEFAULT_DIRECTORIES.length; i++) {
             let specialPath = GLib.get_user_special_dir(DEFAULT_DIRECTORIES[i]);
-            if (specialPath == homePath)
+            if (specialPath == null || specialPath == homePath)
                 continue;
 
             let file = Gio.File.new_for_path(specialPath), info;
