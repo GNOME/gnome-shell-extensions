@@ -4,15 +4,14 @@
 #
 # Biró Balázs <arch.scar at gmail dot com>, 2011.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012, 2013.
-# Balázs Úr <urbalazs at gmail dot com>, 2013.
-# Balázs Úr <urbalazs@gmail.com>, 2014.
+# Balázs Úr <urbalazs at gmail dot com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-06-16 19:32+0000\n"
-"PO-Revision-Date: 2014-06-16 23:36+0200\n"
+"POT-Creation-Date: 2014-11-30 11:20+0000\n"
+"PO-Revision-Date: 2014-12-03 16:55+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -55,8 +54,6 @@ msgid "Arrangement of buttons on the titlebar"
 msgstr "A gombok elrendezése az ablak címsorában"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
@@ -101,11 +98,11 @@ msgstr "Csak az aktuális munkaterület ablakainak megjelenítése"
 msgid "Activities Overview"
 msgstr "Tevékenységek áttekintés"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Kedvencek"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Alkalmazások"
 
@@ -131,7 +128,6 @@ msgid "Workspace"
 msgstr "Munkaterület"
 
 #: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
 msgid "Add Rule"
 msgstr "Szabály hozzáadása"
 
@@ -148,11 +144,11 @@ msgstr "Hozzáadás"
 msgid "Ejecting drive '%s' failed:"
 msgstr "A(z) „%s” meghajtó kiadása nem sikerült:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Cserélhető eszközök"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Fájl megnyitása"
 
@@ -172,7 +168,6 @@ msgstr ""
 "Ha nem üres, akkor a panelre kattintáskor megjelenő szöveget tartalmazza."
 
 #: ../extensions/example/prefs.js:30
-#| msgid "Message:"
 msgid "Message"
 msgstr "Üzenet"
 
@@ -238,6 +233,10 @@ msgstr "Saját mappa"
 msgid "Browse Network"
 msgstr "Hálózat tallózása"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Képernyőképméretek végigléptetése"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
@@ -274,32 +273,32 @@ msgstr "Maximalizálás megszüntetése"
 msgid "Maximize"
 msgstr "Maximalizálás"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:304
 msgid "Minimize all"
 msgstr "Minden minimalizálása"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:312
 msgid "Unminimize all"
 msgstr "Minden minimalizálásának megszüntetése"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:320
 msgid "Maximize all"
 msgstr "Minden maximalizálása"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:329
 msgid "Unmaximize all"
 msgstr "Minden maximalizálásának megszüntetése"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:338
 msgid "Close all"
 msgstr "Minden bezárása"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:649
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Munkaterület indikátor"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:799
 msgid "Window List"
 msgstr "Ablaklista"
 
@@ -333,7 +332,6 @@ msgid "Always group windows"
 msgstr "Mindig csoportosítsa az ablakokat"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
 msgid "Workspace Names"
 msgstr "Munkaterületnevek"
 
