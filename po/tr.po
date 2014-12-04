@@ -2,15 +2,16 @@
 # Copyright (C) 2012 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Osman Karagöz <osmank3@gmail.com>, 2012.
-# sabri ünal <yakushabb@gmail.com>, 2014
+# sabri ünal <yakushabb@gmail.com>, 2014.
+# Gökhan Gurbetoğlu <ggurbet@gmail.com>, 2014.
 # Muhammet Kara <muhammetk@gmail.com>, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-09-16 07:39+0000\n"
-"PO-Revision-Date: 2014-09-16 11:34+0000\n"
+"POT-Creation-Date: 2014-12-03 08:34+0000\n"
+"PO-Revision-Date: 2014-12-04 09:02+0000\n"
 "Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -91,11 +92,11 @@ msgstr "Sadece geçerli çalışma alanındaki pencereleri göster"
 msgid "Activities Overview"
 msgstr "Etkinlikler Genel Görünümü"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Gözdeler"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Uygulamalar"
 
@@ -135,11 +136,11 @@ msgstr "Ekle"
 msgid "Ejecting drive '%s' failed:"
 msgstr "'%s' sürücüsü çıkarılamadı:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Çıkarılabilir cihazlar"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Dosya Aç"
 
@@ -212,6 +213,10 @@ msgstr "Başlangıç"
 msgid "Browse Network"
 msgstr "Ağa Gözat"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Ekran Görüntüsü Boyutları Arasında Geçiş Yap"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "İşlemci"
@@ -248,32 +253,32 @@ msgstr "Önceki Boyut"
 msgid "Maximize"
 msgstr "En büyük duruma getir"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:304
 msgid "Minimize all"
 msgstr "Tümünü simge durumuna küçült"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:312
 msgid "Unminimize all"
 msgstr "Tümünü Önceki Boyutuna Getir"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:320
 msgid "Maximize all"
 msgstr "Tümünü  en büyük duruma getir"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:329
 msgid "Unmaximize all"
 msgstr "Tümünü Önceki Boyutuna Getir"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:338
 msgid "Close all"
 msgstr "Hepsini kapat"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:649
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Çalışma Alanı Belirteci"
 
-#: ../extensions/window-list/extension.js:808
+#: ../extensions/window-list/extension.js:799
 msgid "Window List"
 msgstr "Pencere Listesi"
 
