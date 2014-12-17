@@ -1,10 +1,5 @@
 include $(top_srcdir)/include.mk
 
-desktopdir = $(datadir)/applications
-desktop_in_in_files = gnome-shell-classic.desktop.in.in
-desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
-desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-
 sessiondir = $(datadir)/gnome-session/sessions
 session_in_in_files = gnome-classic.session.desktop.in.in
 session_in_files = $(session_in_in_files:.session.desktop.in.in=.session.desktop.in)
@@ -56,7 +51,6 @@ extension_list:=$(subst $(space),$(comma),$(extensions))
 @INTLTOOL_DESKTOP_RULE@
 
 EXTRA_DIST = \
-	$(desktop_in_in_files) \
 	$(session_in_in_files) \
 	$(xsession_in_files) \
 	$(mode_in_files) \
@@ -65,7 +59,6 @@ EXTRA_DIST = \
 	$(NULL)
 
 CLEANFILES = \
-	$(desktop_DATA) \
 	$(session_DATA) \
 	$(xsession_DATA) \
 	$(mode_DATA) \
