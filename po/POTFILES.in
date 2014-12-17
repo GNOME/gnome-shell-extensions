@@ -1,6 +1,5 @@
 data/gnome-classic.desktop.in
 data/gnome-classic.session.desktop.in.in
-data/gnome-shell-classic.desktop.in.in
 data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in
 extensions/alternate-tab/prefs.js
 extensions/apps-menu/extension.js
