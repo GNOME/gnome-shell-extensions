@@ -7,10 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-08-07 12:27+0200\n"
-"PO-Revision-Date: 2014-07-29 19:37+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-17 16:32+0100\n"
+"PO-Revision-Date: 2014-12-05 23:43+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
@@ -18,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -100,11 +99,11 @@ msgstr "Erakutsi leihoak bakarrik uneko laneko arean"
 msgid "Activities Overview"
 msgstr "Jardueren ikuspegi orokorra"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Gogokoak"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Aplikazioak"
 
@@ -146,11 +145,11 @@ msgstr "Gehitu"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Huts egin du '%s' unitatea egoztean: "
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Gailu aldagarriak"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Ireki fitxategia"
 
@@ -236,6 +235,10 @@ msgstr "Karpeta nagusia"
 msgid "Browse Network"
 msgstr "Arakatu sarea"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Pantaila-argazkien tamainak begiztan"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "PUZ"
@@ -272,32 +275,32 @@ msgstr "Desmaximizatu"
 msgid "Maximize"
 msgstr "Maximizatu"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:304
 msgid "Minimize all"
 msgstr "Minimizatu denak"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:312
 msgid "Unminimize all"
 msgstr "Leheneratu denak"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:320
 msgid "Maximize all"
 msgstr "Maximizatu denak"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:329
 msgid "Unmaximize all"
 msgstr "Desmaximizatu denak"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:338
 msgid "Close all"
 msgstr "Itxi denak"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:649
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Lan arearen adierazlea"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:799
 msgid "Window List"
 msgstr "Leihoen zerrenda"
 
