@@ -848,7 +848,7 @@ const WindowList = new Lang.Class({
         this._workspaceIndicator = new WorkspaceIndicator();
         indicatorsBox.add(this._workspaceIndicator.container, { expand: false, y_fill: true });
 
-        this._workspaceSettings = new Gio.Settings({ schema_id: 'org.gnome.shell.overrides' });
+        this._workspaceSettings = this._getWorkspaceSettings();
         this._workspacesOnlyOnPrimaryChangedId =
             this._workspaceSettings.connect('changed::workspaces-only-on-primary',
                                             Lang.bind(this, this._updateWorkspaceIndicatorVisibility));
@@ -952,6 +952,13 @@ const WindowList = new Lang.Class({
                                    Lang.bind(this, this._groupingModeChanged));
         this._grouped = undefined;
         this._groupingModeChanged();
+    },
+
+    _getWorkspaceSettings: function() {
+        let settings = global.get_overrides_settings();
+        if (settings.list_keys().indexOf('workspaces-only-on-primary') > -1)
+            return settings;
+        return new Gio.Settings({ schema_id: 'org.gnome.mutter' });
     },
 
     _onScrollEvent: function(actor, event) {
