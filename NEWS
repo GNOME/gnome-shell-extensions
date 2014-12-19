@@ -1,3 +1,7 @@
+3.15.3.1
+========
+* adjust to gnome-shell change
+
 3.15.3
 ======
 * classic-mode: Add high-contrast theme variant, drop .desktop file
