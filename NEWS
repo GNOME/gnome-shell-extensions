@@ -1,3 +1,9 @@
+3.14.3
+======
+* apps-menu: Fix some visual glitches
+* places-menu: Fix error when XDG user directories are not set up
+* window-list: Update for gnome-shell changes
+
 3.14.2
 ======
 * drive-menu: Update for nautilus/gnome-shell changes
