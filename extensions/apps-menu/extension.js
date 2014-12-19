@@ -589,8 +589,8 @@ function enable() {
     Main.panel.addToStatusArea('apps-menu', appsMenuButton, 1, 'left');
 
     Main.wm.setCustomKeybindingHandler('panel-main-menu',
-                                       Shell.KeyBindingMode.NORMAL |
-                                       Shell.KeyBindingMode.OVERVIEW,
+                                       Shell.ActionMode.NORMAL |
+                                       Shell.ActionMode.OVERVIEW,
                                        function() {
                                            appsMenuButton.menu.toggle();
                                        });
@@ -606,8 +606,8 @@ function disable() {
     activitiesButton.container.show();
 
     Main.wm.setCustomKeybindingHandler('panel-main-menu',
-                                       Shell.KeyBindingMode.NORMAL |
-                                       Shell.KeyBindingMode.OVERVIEW,
+                                       Shell.ActionMode.NORMAL |
+                                       Shell.ActionMode.OVERVIEW,
                                        Main.sessionMode.hasOverview ?
                                        Lang.bind(Main.overview, Main.overview.toggle) :
                                        null);

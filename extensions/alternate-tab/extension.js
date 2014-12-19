@@ -14,7 +14,7 @@ function init(metadata) {
 }
 
 function setKeybinding(name, func) {
-    Main.wm.setCustomKeybindingHandler(name, Shell.KeyBindingMode.NORMAL, func);
+    Main.wm.setCustomKeybindingHandler(name, Shell.ActionMode.NORMAL, func);
 }
 
 function enable() {

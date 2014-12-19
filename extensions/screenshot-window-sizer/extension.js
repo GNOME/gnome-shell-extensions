@@ -138,7 +138,7 @@ function enable() {
     Main.wm.addKeybinding('cycle-screenshot-sizes',
                           Convenience.getSettings(),
                           Meta.KeyBindingFlags.PER_WINDOW | Meta.KeyBindingFlags.REVERSES,
-                          Shell.KeyBindingMode.NORMAL,
+                          Shell.ActionMode.NORMAL,
                           cycleScreenshotSizes);
 }
 
