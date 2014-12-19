@@ -1,3 +1,10 @@
+3.15.3
+======
+* classic-mode: Add high-contrast theme variant, drop .desktop file
+* places-menu: Fix error when XDG user directories are not set up
+* window-list: Add option to show on all monitors
+* updated translations (eu, hu, kk, ro, tr)
+
 3.15.2
 ======
 * removable-drive, user-theme, window-list: Update for gnome-shell changes
