@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-11-30 11:20+0000\n"
-"PO-Revision-Date: 2014-12-03 16:55+0100\n"
+"POT-Creation-Date: 2014-12-20 08:36+0000\n"
+"PO-Revision-Date: 2014-12-20 13:34+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -29,14 +29,6 @@ msgstr "Klasszikus GNOME"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Bejelentkezés a klasszikus GNOME környezetbe"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "Klasszikus GNOME Shell"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Ablakkezelés és alkalmazásindítás"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -273,32 +265,32 @@ msgstr "Maximalizálás megszüntetése"
 msgid "Maximize"
 msgstr "Maximalizálás"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:390
 msgid "Minimize all"
 msgstr "Minden minimalizálása"
 
-#: ../extensions/window-list/extension.js:312
+#: ../extensions/window-list/extension.js:398
 msgid "Unminimize all"
 msgstr "Minden minimalizálásának megszüntetése"
 
-#: ../extensions/window-list/extension.js:320
+#: ../extensions/window-list/extension.js:406
 msgid "Maximize all"
 msgstr "Minden maximalizálása"
 
-#: ../extensions/window-list/extension.js:329
+#: ../extensions/window-list/extension.js:415
 msgid "Unmaximize all"
 msgstr "Minden maximalizálásának megszüntetése"
 
-#: ../extensions/window-list/extension.js:338
+#: ../extensions/window-list/extension.js:424
 msgid "Close all"
 msgstr "Minden bezárása"
 
-#: ../extensions/window-list/extension.js:649
+#: ../extensions/window-list/extension.js:706
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Munkaterület indikátor"
 
-#: ../extensions/window-list/extension.js:799
+#: ../extensions/window-list/extension.js:869
 msgid "Window List"
 msgstr "Ablaklista"
 
@@ -315,21 +307,37 @@ msgstr ""
 "ablakait. Lehetséges értékek „never” (soha), „auto” (automatikus) és "
 "„always” (mindig)."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Az ablaklista megjelenítése minden monitoron"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Megjelenjen-e az ablaklista minden csatlakoztatott monitoron vagy csak az "
+"elsődlegesen."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Ablakcsoportosítás"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Soha ne csoportosítsa az ablakokat"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Ablakok csoportosítása, ha kevés a hely"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Mindig csoportosítsa az ablakokat"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Megjelenítés minden monitoron"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
@@ -343,6 +351,12 @@ msgstr "Név"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "%d. munkaterület"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "Klasszikus GNOME Shell"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Ablakkezelés és alkalmazásindítás"
 
 #~ msgid "Normal"
 #~ msgstr "Normál"
