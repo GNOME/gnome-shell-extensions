@@ -15,16 +15,16 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-06-03 07:29+0000\n"
-"PO-Revision-Date: 2014-06-03 10:05-0300\n"
-"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
+"POT-Creation-Date: 2014-12-20 20:37+0000\n"
+"PO-Revision-Date: 2014-12-20 19:28-0300\n"
+"Last-Translator: Ricardo Barbosa <barbosa.cisco@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -35,14 +35,6 @@ msgstr "GNOME Clássico"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Essa sessão se inicia como GNOME Clássico"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "GNOME Shell Clássico"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Gerenciamento de janelas e execução de aplicativos"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -60,8 +52,6 @@ msgid "Arrangement of buttons on the titlebar"
 msgstr "Arranjo de botões na barra de títulos"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
@@ -107,11 +97,11 @@ msgstr "Mostrar somente janelas no espaço de trabalho atual"
 msgid "Activities Overview"
 msgstr "Panorama de atividades"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Aplicativos"
 
@@ -137,7 +127,6 @@ msgid "Workspace"
 msgstr "Espaço de trabalho"
 
 #: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
 msgid "Add Rule"
 msgstr "Adicionar regra"
 
@@ -154,11 +143,11 @@ msgstr "Adicionar"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Falha ao ejetar a unidade \"%s\":"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Dispositivos removíveis"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Abrir arquivo"
 
@@ -178,7 +167,6 @@ msgstr ""
 "Quando não vazio, contém o texto que será exibido ao se clicar no painel."
 
 #: ../extensions/example/prefs.js:30
-#| msgid "Message:"
 msgid "Message"
 msgstr "Mensagem"
 
@@ -245,6 +233,10 @@ msgstr "Pasta pessoal"
 msgid "Browse Network"
 msgstr "Navegar na rede"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Alterna entre tamanhos de captura de telas"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
@@ -281,32 +273,32 @@ msgstr "Desfazer janelas maximizadas"
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:390
 msgid "Minimize all"
 msgstr "Minimizar todas"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:398
 msgid "Unminimize all"
 msgstr "Desfazer todas as janelas minimizadas"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:406
 msgid "Maximize all"
 msgstr "Maximizar todas"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:415
 msgid "Unmaximize all"
 msgstr "Desfazer todas as janelas maximizadas"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:424
 msgid "Close all"
 msgstr "Fechar todas"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:706
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador de espaços de trabalho"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:869
 msgid "Window List"
 msgstr "Lista de janelas"
 
@@ -322,24 +314,39 @@ msgstr ""
 "Decide quando agrupar janelas do mesmo aplicativo na lista de janelas. "
 "Valores possíveis são \"nunca\", \"auto\" e \"sempre\"."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Mostra a lista de janela em todos os monitores"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Se deve ser exibida a lista de janelas em todos os monitores ou somente no "
+"monitor principal."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Agrupamento de janelas"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Nunca agrupar janelas"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Agrupar janelas quando o espaço estiver limitado"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Sempre agrupar janelas"
 
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Mostrar em todos os monitores"
+
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
 msgid "Workspace Names"
 msgstr "Nomes de espaços de trabalho"
 
@@ -351,6 +358,12 @@ msgstr "Nome"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Espaço de trabalho %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "GNOME Shell Clássico"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Gerenciamento de janelas e execução de aplicativos"
 
 #~ msgid "Suspend"
 #~ msgstr "Suspender"
