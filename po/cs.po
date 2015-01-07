@@ -2,15 +2,15 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Petr Kovar <pknbe@volny.cz>, 2013.
-# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013, 2014.
+# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-11-25 20:31+0000\n"
-"PO-Revision-Date: 2014-11-26 09:11+0100\n"
+"POT-Creation-Date: 2015-01-06 20:32+0000\n"
+"PO-Revision-Date: 2015-01-07 09:04+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -28,14 +28,6 @@ msgstr "GNOME klasik"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Toto sezení vás přihlásí do GNOME klasik"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "GNOME Shell klasik"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Správa oken a spouštění aplikací"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -94,11 +86,11 @@ msgstr "Zobrazovat pouze okna z aktuální pracovní plochy"
 msgid "Activities Overview"
 msgstr "Přehled činností"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Oblíbené"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Aplikace"
 
@@ -268,32 +260,32 @@ msgstr "Zrušit maximalizaci"
 msgid "Maximize"
 msgstr "Maximalizovat"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:390
 msgid "Minimize all"
 msgstr "Minimalizovat všechna"
 
-#: ../extensions/window-list/extension.js:312
+#: ../extensions/window-list/extension.js:398
 msgid "Unminimize all"
 msgstr "Zrušit minimalizaci všech"
 
-#: ../extensions/window-list/extension.js:320
+#: ../extensions/window-list/extension.js:406
 msgid "Maximize all"
 msgstr "Maximalizovat všechna"
 
-#: ../extensions/window-list/extension.js:329
+#: ../extensions/window-list/extension.js:415
 msgid "Unmaximize all"
 msgstr "Zrušit maximalizaci všech"
 
-#: ../extensions/window-list/extension.js:338
+#: ../extensions/window-list/extension.js:424
 msgid "Close all"
 msgstr "Zavřít všechna"
 
-#: ../extensions/window-list/extension.js:649
+#: ../extensions/window-list/extension.js:706
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Ukazatel pracovní plochy"
 
-#: ../extensions/window-list/extension.js:799
+#: ../extensions/window-list/extension.js:869
 msgid "Window List"
 msgstr "Seznam oken"
 
@@ -309,21 +301,37 @@ msgstr ""
 "Rozhoduje, kdy se mají v seznamu oken seskupovat okna stejné aplikace. Možné "
 "hodnoty jsou „never“ (nikdy), „auto“ (automaticky) a „always“ (vždy)."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Zobrazovat seznam oken na všech monitorech"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Zda zobrazovat seznam oken na všech připojených monitorech nebo jen na "
+"hlavním."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Seskupování oken"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Nikdy neseskupovat okna"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Seskupovat okna při nedostatku místa"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Vždy seskupovat okna"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Zobrazovat na všech monitorech"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
@@ -337,3 +345,9 @@ msgstr "Název"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Pracovní plocha %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "GNOME Shell klasik"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Správa oken a spouštění aplikací"
