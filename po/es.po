@@ -4,15 +4,15 @@
 # Jorge González <jorgegonz@svn.gnome.org>, 2011.
 # Nicolás Satragno <nsatragno@gmail.com>, 2011.
 # 
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012., 2013, 2014.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012., 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-12-22 08:37+0000\n"
-"PO-Revision-Date: 2014-12-22 12:18+0100\n"
+"POT-Creation-Date: 2015-01-08 08:35+0000\n"
+"PO-Revision-Date: 2015-01-08 18:20+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -39,7 +39,7 @@ msgstr "Acoplar un diálogo modal a la ventana padre"
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Esta clave sobreescribe la clave en org.gnome.mutter al ejecutar GNOME Shell."
+"Esta clave sobrescribe la clave en org.gnome.mutter al ejecutar GNOME Shell."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Arrangement of buttons on the titlebar"
@@ -50,7 +50,7 @@ msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
 msgstr ""
-"Esta clave sobreescribe la clave en org.gnome.desktop.wm.preferences al "
+"Esta clave sobrescribe la clave en org.gnome.desktop.wm.preferences al "
 "ejecutar GNOME Shell."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
