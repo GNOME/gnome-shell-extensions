@@ -2,24 +2,24 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Yuri Myasoedov <omerta13@yandex.ru>, 2011, 2012, 2013.
-# Stas Solovey <whats_up@tut.by>, 2011, 2012, 2013.
+# Stas Solovey <whats_up@tut.by>, 2011, 2012, 2013, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-06-27 07:35+0000\n"
-"PO-Revision-Date: 2014-06-27 21:50+0400\n"
-"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
+"POT-Creation-Date: 2015-01-10 08:33+0000\n"
+"PO-Revision-Date: 2015-01-10 13:20+0300\n"
+"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.6.5\n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -29,14 +29,6 @@ msgstr "Классический GNOME"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Данный сеанс использует классический рабочий стол GNOME"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "Классический GNOME Shell"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Управление окнами и запуск приложений"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -53,8 +45,6 @@ msgid "Arrangement of buttons on the titlebar"
 msgstr "Расположение кнопок в заголовке"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
@@ -99,11 +89,11 @@ msgstr "Отображать окна только текущей рабочей
 msgid "Activities Overview"
 msgstr "Обзор"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Избранное"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Приложения"
 
@@ -129,7 +119,6 @@ msgid "Workspace"
 msgstr "Рабочая область"
 
 #: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
 msgid "Add Rule"
 msgstr "Добавить правило"
 
@@ -146,11 +135,11 @@ msgstr "Добавить"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Не удалось извлечь диск «%s»:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Съёмные устройства"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Открыть файл"
 
@@ -171,7 +160,6 @@ msgstr ""
 "на панель."
 
 #: ../extensions/example/prefs.js:30
-#| msgid "Message:"
 msgid "Message"
 msgstr "Сообщение"
 
@@ -237,6 +225,12 @@ msgstr "Домашняя папка"
 msgid "Browse Network"
 msgstr "Обзор сети"
 
+# нужно уточнить как все происходит на самом деле
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#, fuzzy
+msgid "Cycle Screenshot Sizes"
+msgstr "Изменять размер окна при получении снимка для Центра приложений GNOME"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "ЦП"
@@ -274,33 +268,33 @@ msgstr "Восстановить"
 msgid "Maximize"
 msgstr "Развернуть"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:390
 msgid "Minimize all"
 msgstr "Свернуть все"
 
 # ну или "восстановить", правда тогда появляется неоднозначный повтор (unmaximize)
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:398
 msgid "Unminimize all"
 msgstr "Вернуть все"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:406
 msgid "Maximize all"
 msgstr "Развернуть все"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:415
 msgid "Unmaximize all"
 msgstr "Восстановить все"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:424
 msgid "Close all"
 msgstr "Закрыть все"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:706
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Индикатор рабочей области"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:869
 msgid "Window List"
 msgstr "Список окон"
 
@@ -317,24 +311,39 @@ msgstr ""
 "окон. Возможные значения: «never» — никогда; «auto» — автоматически; "
 "«always» — всегда."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Показывать список окон на всех мониторах"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Показывать ли список окон на всех подключенных мониторах или только на "
+"основном."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Группировка окон"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Никогда не группировать окна"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Группировать окна, если место ограничено"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Всегда группировать окна"
 
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Показывать на всех мониторах"
+
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
 msgid "Workspace Names"
 msgstr "Названия рабочих областей"
 
@@ -346,3 +355,9 @@ msgstr "Название"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Рабочая область %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "Классический GNOME Shell"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Управление окнами и запуск приложений"
