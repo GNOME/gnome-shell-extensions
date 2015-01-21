@@ -1,3 +1,8 @@
+3.15.4
+======
+* window-list: Improve interaction with system modal dialogs
+* updated translations (cs, de, es, eu, fur, hu, id, nb, pt_BR, ru, sl, vi)
+
 3.15.3.1
 ========
 * adjust to gnome-shell change
