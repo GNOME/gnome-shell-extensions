@@ -2,21 +2,23 @@
 # Copyright (C) 2013 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Jorge Pérez Pérez <jorgtum@gmail.com>, 2013.
+# Daniel Martinez <entaltoaragon@gmail.com>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-11-04 16:46+0000\n"
-"PO-Revision-Date: 2014-11-04 20:13+0100\n"
-"Last-Translator: Jorge Pérez Pérez <jorgtum@gmail.com>\n"
-"Language-Team: Aragonese <softaragones@googlegroups.com>\n"
+"POT-Creation-Date: 2015-01-22 08:35+0000\n"
+"PO-Revision-Date: 2015-01-22 19:27+0100\n"
+"Last-Translator: Daniel Martinez <entaltoaragon@gmail.com>\n"
+"Language-Team: Aragonés <softaragones@googlegroups.com>\n"
 "Language: an\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Gtranslator 2.91.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
@@ -26,14 +28,6 @@ msgstr "GNOME clasico"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Ista sesión encieta lo GNOME clasico"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "GNOME Shell clasico"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Chestión de finestras y inicio d'aplicacions"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -96,11 +90,11 @@ msgstr "Amostrar as finestras solament en l'aria de treballo actual"
 msgid "Activities Overview"
 msgstr "Anvista d'actividatz"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Aplicacions"
 
@@ -141,13 +135,13 @@ msgstr "Adhibir"
 #: ../extensions/drive-menu/extension.js:106
 #, javascript-format
 msgid "Ejecting drive '%s' failed:"
-msgstr "Ha fallau en fer fuera o dispositivo «%s»"
+msgstr "Ha fallau en fer fuera o dispositivo '%s'"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Dispositivos extraíbles"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Ubrir o fichero"
 
@@ -177,7 +171,7 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"«Example» tien por obchecto amostrar cómo construir as extensions de buen "
+"'Example' tien por obchecto amostrar cómo construir as extensions de buen "
 "comportamiento ta la Shell y por ixo tien poca funcionalidat por ell "
 "solenco.\n"
 "Manimenos, ye posible presonalizar o mensache de bienvenida."
@@ -219,7 +213,7 @@ msgstr "Puestos"
 #: ../extensions/places-menu/placeDisplay.js:57
 #, javascript-format
 msgid "Failed to launch \"%s\""
-msgstr "Ha fallau en lanzar «%s»"
+msgstr "Ha fallau en lanzar \"%s\""
 
 #: ../extensions/places-menu/placeDisplay.js:99
 #: ../extensions/places-menu/placeDisplay.js:122
@@ -236,7 +230,7 @@ msgstr "Examinar o ret"
 
 #: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
 msgid "Cycle Screenshot Sizes"
-msgstr "Mida d'os ciclos decaptura de pantalla"
+msgstr "Mida d'os ciclos de captura de pantalla"
 
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
@@ -274,32 +268,32 @@ msgstr "Restaurar"
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:390
 msgid "Minimize all"
 msgstr "Minimizar-lo tot"
 
-#: ../extensions/window-list/extension.js:312
+#: ../extensions/window-list/extension.js:398
 msgid "Unminimize all"
 msgstr "Restaurar-lo tot"
 
-#: ../extensions/window-list/extension.js:320
+#: ../extensions/window-list/extension.js:406
 msgid "Maximize all"
 msgstr "Maximizar-lo tot"
 
-#: ../extensions/window-list/extension.js:329
+#: ../extensions/window-list/extension.js:415
 msgid "Unmaximize all"
 msgstr "Restaurar-lo tot"
 
-#: ../extensions/window-list/extension.js:338
+#: ../extensions/window-list/extension.js:424
 msgid "Close all"
 msgstr "Zarrar-lo tot"
 
-#: ../extensions/window-list/extension.js:649
+#: ../extensions/window-list/extension.js:706
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador d'aria de treballo"
 
-#: ../extensions/window-list/extension.js:799
+#: ../extensions/window-list/extension.js:870
 msgid "Window List"
 msgstr "Lista de finestras"
 
@@ -315,21 +309,37 @@ msgstr ""
 "Decide quan agrupar as finestras dende a mesma aplicación en a lista de "
 "finestras. As valors posibles son «never», «auto» y «always»."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Amostrar a lista de finestras en todas as pantallas"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Indica si se debe amostrar a lista de finestras en todas as pantallas "
+"connectadas u solo que en a primaria."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Agrupación de finestras"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Nunca no agrupar as finestras"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Agrupar as finestras quan l'espacio siga limitau"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Agrupar siempre as finestras"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Amostrar en todas as pantallas"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
@@ -343,6 +353,12 @@ msgstr "Nombre"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Aria de treballo %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "GNOME Shell clasico"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Chestión de finestras y inicio d'aplicacions"
 
 #~ msgid "Suspend"
 #~ msgstr "Suspender"
