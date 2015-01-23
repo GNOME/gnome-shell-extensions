@@ -142,19 +142,17 @@ const WindowTitle = new Lang.Class({
         this._metaWindow = metaWindow;
         this.actor = new St.BoxLayout({ style_class: 'window-button-box' });
 
-        let app = Shell.WindowTracker.get_default().get_window_app(metaWindow);
-        this._icon = new St.Bin({ style_class: 'window-button-icon',
-                                  child: app.create_icon_texture(ICON_TEXTURE_SIZE) });
+        this._icon = new St.Bin({ style_class: 'window-button-icon' });
         this.actor.add(this._icon);
         this._label = new St.Label();
         this.actor.add(this._label);
 
         this._textureCache = St.TextureCache.get_default();
         this._iconThemeChangedId =
-            this._textureCache.connect('icon-theme-changed', Lang.bind(this,
-                function() {
-                    this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
-                }));
+            this._textureCache.connect('icon-theme-changed',
+                                       Lang.bind(this, this._updateIcon));
+        this._updateIcon();
+
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
 
         this._notifyTitleId =
@@ -176,6 +174,15 @@ const WindowTitle = new Lang.Class({
             this._label.text = '[%s]'.format(this._metaWindow.title);
         else
             this._label.text = this._metaWindow.title;
+    },
+
+    _updateIcon: function() {
+        let app = Shell.WindowTracker.get_default().get_window_app(this._metaWindow);
+        if (app)
+            this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
+        else
+            this._icon.child = new St.Icon({ icon_name: 'icon-missing',
+                                             icon_size: ICON_TEXTURE_SIZE });
     },
 
     _onDestroy: function() {
