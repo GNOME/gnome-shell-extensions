@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-04 18:45+0200\n"
-"PO-Revision-Date: 2014-11-04 18:45+0200\n"
+"POT-Creation-Date: 2015-01-26 21:10+0200\n"
+"PO-Revision-Date: 2015-01-26 21:10+0200\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
@@ -28,14 +28,6 @@ msgstr "GNOME קלסי"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "הפעלה זו מכניסה אותך למצב הקלסי של GNOME"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "מעטפת GNOME קלסית"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "ניהול חלונות וטעינת יישומים"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -95,11 +87,11 @@ msgstr "הצגת החלונות בלבד במרחב העבודה הנוכחי"
 msgid "Activities Overview"
 msgstr "סקירת פעילויות"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "מועדפים"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "יישומים"
 
@@ -141,11 +133,11 @@ msgstr "הוספה"
 msgid "Ejecting drive '%s' failed:"
 msgstr "שליפת הכונן „%s“ נכשלה:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "התקנים נתיקים"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "פתיחת קובץ"
 
@@ -272,32 +264,32 @@ msgstr "ביטול ההגדלה"
 msgid "Maximize"
 msgstr "הגדלה"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:390
 msgid "Minimize all"
 msgstr "מזעור הכל"
 
-#: ../extensions/window-list/extension.js:312
+#: ../extensions/window-list/extension.js:398
 msgid "Unminimize all"
 msgstr "ביטול מזעור הכל"
 
-#: ../extensions/window-list/extension.js:320
+#: ../extensions/window-list/extension.js:406
 msgid "Maximize all"
 msgstr "הגדלת הכל"
 
-#: ../extensions/window-list/extension.js:329
+#: ../extensions/window-list/extension.js:415
 msgid "Unmaximize all"
 msgstr "ביטול הגדלת הכל"
 
-#: ../extensions/window-list/extension.js:338
+#: ../extensions/window-list/extension.js:424
 msgid "Close all"
 msgstr "סגירת הכל"
 
-#: ../extensions/window-list/extension.js:649
+#: ../extensions/window-list/extension.js:706
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "מחוון מרחבי עבודה"
 
-#: ../extensions/window-list/extension.js:799
+#: ../extensions/window-list/extension.js:870
 msgid "Window List"
 msgstr "רשימת חלונות"
 
@@ -313,21 +305,37 @@ msgstr ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Show the window list on all monitors"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "קיבוץ חלונות"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "לעולם לא לקבץ חלונות"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "קיבוץ חלונות כאשר המקום מוגבל"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "תמיד לקבץ חלונות"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "הצגה בכל הצגים"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
@@ -341,6 +349,12 @@ msgstr "שם"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "מרחב עבודה %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "מעטפת GNOME קלסית"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "ניהול חלונות וטעינת יישומים"
 
 #~ msgid "Normal"
 #~ msgstr "רגיל"
