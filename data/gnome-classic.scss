@@ -1,0 +1,53 @@
+/* Use the gnome-shell theme, but with light colors */
+$variant: 'light';
+
+@import "../../gnome-shell/data/theme/_colors"; //use gtk colors
+@import "../../gnome-shell/data/theme/_drawing";
+@import "../../gnome-shell/data/theme/_common";
+
+/* Overrides */
+
+#panel {
+  background-color: $bg_color;
+  background-gradient-direction: vertical;
+  background-gradient-end: darken($bg_color,5%);
+  border-top-color: #666; /* we don't support non-uniform border-colors and
+                             use the top border color for any border, so we
+                             need to set it even if all we want is a bottom
+                             border */
+  border-bottom: 1px solid #666;
+  app-icon-bottom-clip: 0px;
+  &:overview {
+    background-color: #000;
+    background-gradient-end: #000;
+    border-top-color: #000;
+    border-bottom: 1px solid #000;
+  }
+}
+
+.tile-preview-left.on-primary,
+.tile-preview-right.on-primary,
+.tile-preview-left.tile-preview-right.on-primary {
+    /* keep in sync with -panel-corner-radius */
+    border-radius: 0;
+}
+
+.panel-corner,
+.panel-corner:active,
+.panel-corner:overview,
+.panel-corner:focus {
+    -panel-corner-radius: 0 !important;
+}
+
+.panel-button {
+  color: $fg_color !important;
+  &:active, &:overview, &:focus, &:checked {
+    // Trick due to St limitations. It needs a background to draw
+    // a box-shadow
+    background-color: $selected_bg_color !important;
+    color: $selected_fg_color !important;
+    box-shadow: none;
+    & > .system-status-icon { icon-shadow: none; }
+  }
+}
+
