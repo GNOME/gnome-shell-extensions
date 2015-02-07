@@ -3,14 +3,16 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
 # assar <asiersar@yahoo.com>, 2011.
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2013, 2014.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2013, 2015.
+# Edurne Labaka <elabaka@uzei.com>, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-12-30 08:37+0000\n"
-"PO-Revision-Date: 2014-12-30 15:16+0100\n"
+"POT-Creation-Date: 2015-02-07 16:48+0100\n"
+"PO-Revision-Date: 2015-02-07 16:50+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
@@ -43,14 +45,14 @@ msgstr ""
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Arrangement of buttons on the titlebar"
-msgstr "Titulu-barrako botoien antolaketa"
+msgstr "Botoien antolamendua titulu-barran"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
 msgstr ""
-"Gako honek org.gnome.desktop.wm.preferences-eko gakoa gainidazten du GNOME "
+"Gako honekorg.gnome.desktop.wm.preferences-eko gakoa gainidazten du GNOME "
 "Shell exekutatzen ari denean."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
@@ -134,7 +136,7 @@ msgid "Add"
 msgstr "Gehitu"
 
 #: ../extensions/drive-menu/extension.js:106
-#, javascript-format
+#, c-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Huts egin du '%s' unitatea egoztean: "
 
@@ -164,6 +166,8 @@ msgstr "Ez badago hutsik, panelean klik egitean erakutsiko den testua dauka."
 msgid "Message"
 msgstr "Mezua"
 
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
 #: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -209,7 +213,7 @@ msgid "Places"
 msgstr "Lekuak"
 
 #: ../extensions/places-menu/placeDisplay.js:57
-#, javascript-format
+#, c-format
 msgid "Failed to launch \"%s\""
 msgstr "Huts egin du '%s' abiaraztean"
 
@@ -291,7 +295,7 @@ msgstr "Itxi denak"
 msgid "Workspace Indicator"
 msgstr "Lan arearen adierazlea"
 
-#: ../extensions/window-list/extension.js:869
+#: ../extensions/window-list/extension.js:870
 msgid "Window List"
 msgstr "Leihoen zerrenda"
 
@@ -342,14 +346,14 @@ msgstr "Erakutsi pantaila guztietan"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
-msgstr "Laneko areak"
+msgstr "Laneko areen izenak"
 
 #: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "Izena"
 
 #: ../extensions/workspace-indicator/prefs.js:198
-#, javascript-format
+#, c-format
 msgid "Workspace %d"
 msgstr "%d. laneko area"
 
