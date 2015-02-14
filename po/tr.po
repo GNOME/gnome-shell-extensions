@@ -4,20 +4,20 @@
 # Osman Karagöz <osmank3@gmail.com>, 2012.
 # sabri ünal <yakushabb@gmail.com>, 2014.
 # Gökhan Gurbetoğlu <ggurbet@gmail.com>, 2014.
-# Muhammet Kara <muhammetk@gmail.com>, 2013, 2014.
+# Muhammet Kara <muhammetk@gmail.com>, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-12-03 08:34+0000\n"
-"PO-Revision-Date: 2014-12-04 09:02+0000\n"
+"POT-Creation-Date: 2015-02-14 08:39+0000\n"
+"PO-Revision-Date: 2015-02-14 15:43+0000\n"
 "Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr_TR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -28,14 +28,6 @@ msgstr "GNOME Klasik"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Bu oturum, GNOME Klasik sürümüne giriş yapmanızı sağlar."
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "Klasik GNOME Kabuğu"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Pencere yönetimi ve uygulama başlatma"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -253,32 +245,32 @@ msgstr "Önceki Boyut"
 msgid "Maximize"
 msgstr "En büyük duruma getir"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:390
 msgid "Minimize all"
 msgstr "Tümünü simge durumuna küçült"
 
-#: ../extensions/window-list/extension.js:312
+#: ../extensions/window-list/extension.js:398
 msgid "Unminimize all"
 msgstr "Tümünü Önceki Boyutuna Getir"
 
-#: ../extensions/window-list/extension.js:320
+#: ../extensions/window-list/extension.js:406
 msgid "Maximize all"
 msgstr "Tümünü  en büyük duruma getir"
 
-#: ../extensions/window-list/extension.js:329
+#: ../extensions/window-list/extension.js:415
 msgid "Unmaximize all"
 msgstr "Tümünü Önceki Boyutuna Getir"
 
-#: ../extensions/window-list/extension.js:338
+#: ../extensions/window-list/extension.js:424
 msgid "Close all"
 msgstr "Hepsini kapat"
 
-#: ../extensions/window-list/extension.js:649
+#: ../extensions/window-list/extension.js:706
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Çalışma Alanı Belirteci"
 
-#: ../extensions/window-list/extension.js:799
+#: ../extensions/window-list/extension.js:870
 msgid "Window List"
 msgstr "Pencere Listesi"
 
@@ -292,21 +284,35 @@ msgid ""
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr "Pencere listesinde aynı uygulamaların ne zaman gruplanacağına karar verir. Geçerli değerler  \"hiçbir zaman\", \"otomatik\" ve \"herzaman\" dır."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Tüm monitörlerde pencere listesini göster"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr "Pencere listesinin tüm bağlı monitörlerde mi yoksa sadece birincil monitörde mi gösterileceğini belirtir."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Pencere Gruplama"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Pencereleri hiçbir zaman gruplandırma"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Yer kısıtlı olduğunda pencereleri grupla"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Pencereleri her zaman gruplandır"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Tüm monitörlerde göster"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
