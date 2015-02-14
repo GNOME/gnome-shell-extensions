@@ -9,7 +9,6 @@ const St = imports.gi.St;
 const DND = imports.ui.dnd;
 const Lang = imports.lang;
 const Main = imports.ui.main;
-const MessageTray = imports.ui.messageTray;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
@@ -633,71 +632,6 @@ const AppButton = new Lang.Class({
 });
 
 
-const TrayButton = new Lang.Class({
-    Name: 'TrayButton',
-
-    _init: function() {
-        this._counterLabel = new St.Label({ x_align: Clutter.ActorAlign.CENTER,
-                                            x_expand: true,
-                                            y_align: Clutter.ActorAlign.CENTER,
-                                            y_expand: true });
-        this.actor = new St.Button({ style_class: 'summary-source-counter',
-                                     child: this._counterLabel,
-                                     layoutManager: new Clutter.BinLayout() });
-        this.actor.set_x_align(Clutter.ActorAlign.END);
-        this.actor.set_x_expand(true);
-        this.actor.set_y_expand(true);
-
-        this.actor.connect('clicked', Lang.bind(this,
-            function() {
-                if (Main.messageTray._trayState == MessageTray.State.HIDDEN)
-                    Main.messageTray.toggle();
-            }));
-        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
-
-        this._trayItemCount = 0;
-        Main.messageTray.getSources().forEach(Lang.bind(this,
-            function(source) {
-                this._sourceAdded(Main.messageTray, source);
-            }));
-        this._sourceAddedId =
-            Main.messageTray.connect('source-added',
-                                     Lang.bind(this, this._sourceAdded));
-        this._sourceRemovedId =
-            Main.messageTray.connect('source-removed',
-                                     Lang.bind(this, this._sourceRemoved));
-        this._updateVisibility();
-    },
-
-    _sourceAdded: function(tray, source) {
-        this._trayItemCount++;
-        this._updateVisibility();
-    },
-
-    _sourceRemoved: function(source) {
-        this._trayItemCount--;
-        this.actor.checked = false;
-        this._updateVisibility();
-    },
-
-    _updateVisibility: function() {
-        this._counterLabel.text = this._trayItemCount.toString();
-        this.actor.visible = this._trayItemCount > 0;
-    },
-
-    _onDestroy: function() {
-        Main.messageTray.getSources().forEach(Lang.bind(this,
-            function(source) {
-                if (!source._windowListDestroyId)
-                    return;
-                source.disconnect(source._windowListDestroyId)
-                delete source._windowListDestroyId;
-            }));
-        Main.messageTray.disconnect(this._sourceAddedId);
-        Main.messageTray.disconnect(this._sourceRemovedId);
-    }
-});
-
 const WorkspaceIndicator = new Lang.Class({
     Name: 'WindowList.WorkspaceIndicator',
     Extends: PanelMenu.Button,
@@ -857,13 +791,6 @@ const WindowList = new Lang.Class({
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menuManager.addMenu(this._workspaceIndicator.menu);
 
-        this._isOnBottomMonitor = this._monitor == Main.layoutManager.bottomMonitor;
-
-        if (this._isOnBottomMonitor) {
-            this._trayButton = new TrayButton();
-            indicatorsBox.add(this._trayButton.actor, { expand: false });
-        }
-
         Main.layoutManager.addChrome(this.actor, { affectsStruts: true,
                                                    trackFullscreen: true });
         Main.uiGroup.set_child_above_sibling(this.actor, Main.layoutManager.trayBox);
@@ -906,37 +833,17 @@ const WindowList = new Lang.Class({
             Main.overview.connect('showing', Lang.bind(this, function() {
                 this.actor.hide();
                 this._updateKeyboardAnchor();
-                this._updateMessageTrayAnchor();
             }));
 
         this._overviewHidingId =
             Main.overview.connect('hiding', Lang.bind(this, function() {
                 this.actor.visible = !Main.layoutManager.primaryMonitor.inFullscreen;
                 this._updateKeyboardAnchor();
-                this._updateMessageTrayAnchor();
             }));
-
-        if (this._isOnBottomMonitor) {
-            let actor = this.actor;
-            this._bottomHoverChangedId =
-                actor.connect('notify::hover', Lang.bind(Main.messageTray,
-                    function() {
-                        this._pointerInNotification = actor.hover;
-                        this._updateState();
-                    }));
-
-            this._notificationParent = Main.messageTray._notificationWidget.get_parent();
-            Main.messageTray._notificationWidget.hide();
-            Main.messageTray._notificationWidget.reparent(this.actor);
-            Main.messageTray._notificationWidget.show();
-        }
-
-        this._updateMessageTrayAnchor();
 
         this._fullscreenChangedId =
             global.screen.connect('in-fullscreen-changed', Lang.bind(this, function() {
                 this._updateKeyboardAnchor();
-                this._updateMessageTrayAnchor();
             }));
 
         this._dragBeginId =
@@ -1078,16 +985,6 @@ const WindowList = new Lang.Class({
 
         let anchorY = Main.overview.visible ? 0 : this.actor.height;
         Main.keyboard.actor.anchor_y = anchorY;
-    },
-
-    _updateMessageTrayAnchor: function() {
-        if (!this._isOnBottomMonitor)
-            return;
-
-        let anchorY = this.actor.visible ? this.actor.height : 0;
-
-        Main.messageTray.actor.anchor_y = anchorY;
-        Main.messageTray._notificationWidget.anchor_y = -anchorY;
     },
 
     _onAppStateChanged: function(appSys, app) {
@@ -1264,19 +1161,6 @@ const WindowList = new Lang.Class({
         global.window_manager.disconnect(this._switchWorkspaceId);
         this._switchWorkspaceId = 0;
 
-        if (this._bottomHoverChangedId)
-            this.actor.disconnect(this._bottomHoverChangedId);
-        this._bottomHoverChangedId = 0;
-
-        if (this._notificationParent) {
-            Main.messageTray._notificationWidget.reparent(this._notificationParent);
-            this._notificationParent = null;
-        }
-
-        if (this._isOnBottomMonitor) {
-            Main.messageTray.actor.anchor_y = 0;
-            Main.messageTray._notificationWidget.anchor_y = 0;
-        }
 
         Main.overview.disconnect(this._overviewShowingId);
         Main.overview.disconnect(this._overviewHidingId);
@@ -1304,12 +1188,6 @@ const Extension = new Lang.Class({
 
     enable: function() {
         this._windowLists = [];
-
-        this._injections['_trayDwellTimeout'] =
-            MessageTray.MessageTray.prototype._trayDwellTimeout;
-        MessageTray.MessageTray.prototype._trayDwellTimeout = function() {
-            return false;
-        };
 
         this._settings = Convenience.getSettings();
         this._showOnAllMonitorsChangedId =
@@ -1352,9 +1230,6 @@ const Extension = new Lang.Class({
             windowList.actor.destroy();
         });
         this._windowLists = null;
-
-        for (let prop in this._injections)
-            MessageTray.MessageTray.prototype[prop] = this._injections[prop];
     },
 
     someWindowListContains: function(actor) {
