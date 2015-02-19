@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-08-25 19:37+0000\n"
+"POT-Creation-Date: 2015-02-19 08:55+0000\n"
 "PO-Revision-Date: 2014-08-25 23:50+0200\n"
 "Last-Translator: Alain Lojewski <allomervan@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
@@ -27,14 +27,6 @@ msgstr "GNOME Classique"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Cette session vous connnecte à GNOME Classique"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "GNOME Shell Classique"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Gestion des fenêtres et lancement d'applications"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -56,8 +48,8 @@ msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
 msgstr ""
-"Cette clé remplace la clé dans org.gnome.desktop.wm.preferences lorsque GNOME Shell est en "
-"cours d'exécution."
+"Cette clé remplace la clé dans org.gnome.desktop.wm.preferences lorsque "
+"GNOME Shell est en cours d'exécution."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
@@ -99,11 +91,11 @@ msgstr "N'afficher les fenêtres que sur l'espace de travail actuel"
 msgid "Activities Overview"
 msgstr "Vue d'ensemble des activités"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Favoris"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Applications"
 
@@ -146,11 +138,11 @@ msgstr "Ajouter"
 msgid "Ejecting drive '%s' failed:"
 msgstr "L'éjection du disque « %s » a échoué :"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Périphériques amovibles"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Ouvrir le fichier"
 
@@ -237,6 +229,10 @@ msgstr "Dossier personnel"
 msgid "Browse Network"
 msgstr "Parcourir le réseau"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Passer à la taille de capture suivante"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
@@ -273,32 +269,32 @@ msgstr "Restaurer"
 msgid "Maximize"
 msgstr "Maximiser"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:390
 msgid "Minimize all"
 msgstr "Réduire tout"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:398
 msgid "Unminimize all"
 msgstr "Restaurer tout"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:406
 msgid "Maximize all"
 msgstr "Maximiser tout"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:415
 msgid "Unmaximize all"
 msgstr "Restaurer tout"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:424
 msgid "Close all"
 msgstr "Fermer tout"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:706
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicateur d'espace de travail"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:870
 msgid "Window List"
 msgstr "Liste de fenêtres"
 
@@ -315,21 +311,35 @@ msgstr ""
 "fenêtres. Les valeurs possibles sont « never » (jamais), « auto » et "
 "« always » (toujours)."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Afficher la liste des fenêtres sur tous les écrans"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr "Indique s'il faut afficher la liste des fenêtres sur tous les écrans connectés ou seulement l'écran principal."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Regroupement de fenêtres"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Ne jamais regrouper les fenêtres"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Regrouper les fenêtres quand l'espace est limité"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Toujours regrouper les fenêtres"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Afficher sur tous les écrans"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
@@ -344,8 +354,3 @@ msgstr "Nom"
 msgid "Workspace %d"
 msgstr "Espace de travail %d"
 
-#~ msgid "Control the visibility of the Suspend menu item"
-#~ msgstr "Gère la visibilité de l'élément de menu « mise en veille »"
-
-#~ msgid "Control the visibility of the Hibernate menu item"
-#~ msgstr "Gère la visibilité de l'élément de menu « hibernation »"
