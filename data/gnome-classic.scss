@@ -1,9 +1,9 @@
 /* Use the gnome-shell theme, but with light colors */
 $variant: 'light';
 
-@import "../../gnome-shell/data/theme/_colors"; //use gtk colors
-@import "../../gnome-shell/data/theme/_drawing";
-@import "../../gnome-shell/data/theme/_common";
+@import "gnome-shell-sass/_colors"; //use gtk colors
+@import "gnome-shell-sass/_drawing";
+@import "gnome-shell-sass/_common";
 
 /* Overrides */
 

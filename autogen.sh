@@ -12,6 +12,14 @@ test -f $srcdir/configure.ac || {
     exit 1
 }
 
+# Fetch submodules if needed
+if test ! -f data/gnome-shell-sass/COPYING;
+then
+  echo "+ Setting up submodules"
+  git submodule init
+fi
+git submodule update
+
 which gnome-autogen.sh || {
     echo "You need to install gnome-common from GNOME Git (or from"
     echo "your OS vendor's package manager)."
