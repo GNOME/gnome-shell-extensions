@@ -1,3 +1,9 @@
+3.15.90
+=======
+* classic: Visual refresh based on new shell theme
+* window-list: Adjust for gnome-shell changes
+* updated translations (an, el, eo, eu, fr, he, is, sv, tr)
+
 3.15.4
 ======
 * window-list: Improve interaction with system modal dialogs
