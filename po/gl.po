@@ -2,13 +2,13 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Fran Diéguez <frandieguez@gnome.org>, 2011.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-01 21:24+0200\n"
-"PO-Revision-Date: 2014-07-01 21:25+0200\n"
+"POT-Creation-Date: 2015-02-22 02:35+0100\n"
+"PO-Revision-Date: 2015-02-22 02:36+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -168,6 +168,8 @@ msgstr ""
 msgid "Message"
 msgstr "Mensaxe"
 
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
 #: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -229,6 +231,10 @@ msgstr "Cartafol persoal"
 msgid "Browse Network"
 msgstr "Explorar a rede"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Tamaño de capturas de pantalla cíclicos"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
@@ -265,32 +271,32 @@ msgstr "Restaurar"
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:304
 msgid "Minimize all"
 msgstr "Minimizar todo"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:312
 msgid "Unminimize all"
 msgstr "Restaurar todo"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:320
 msgid "Maximize all"
 msgstr "Maximizar todo"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:329
 msgid "Unmaximize all"
 msgstr "Restaurar todo"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:338
 msgid "Close all"
 msgstr "Pechar todo"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:649
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador de espazo de traballo"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:799
 msgid "Window List"
 msgstr "Lista de xanelas"
 
