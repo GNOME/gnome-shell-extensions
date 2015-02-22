@@ -170,7 +170,7 @@ StScrollBar {
   .modal-dialog .run-dialog-button-box {
     padding-top: 1em; }
   .modal-dialog .run-dialog-label {
-    font-size: fontsize(12.1);
+    font-size: 12pt;
     font-weight: bold;
     color: #d6d6d1;
     padding-bottom: .4em; }
@@ -182,7 +182,7 @@ StScrollBar {
 .show-processes-dialog-subject,
 .mount-question-dialog-subject,
 .end-session-dialog-subject {
-  font-size: fontsize(14.3); }
+  font-size: 14pt; }
 
 /* End Session Dialog */
 .end-session-dialog {
@@ -441,7 +441,12 @@ StScrollBar {
 .osd-window {
   text-align: center;
   font-weight: bold;
-  spacing: 1em; }
+  spacing: 1em;
+  margin: 32px;
+  min-width: 64px;
+  min-height: 64px; }
+  .osd-window .osd-monitor-label {
+    font-size: 3em; }
   .osd-window .level {
     height: 0.6em;
     border-radius: 0.3em;
@@ -516,6 +521,7 @@ StScrollBar {
   border-radius: 8px; }
 
 .osd-window,
+.resize-popup,
 .switcher-list, .workspace-switcher-container {
   color: #eeeeec;
   background-color: #2e3436;
@@ -529,7 +535,7 @@ StScrollBar {
   border: 1px solid #4a90d9; }
 
 .tile-preview-left.on-primary {
-  border-radius: 6px 6px 0 0 0; }
+  border-radius: 6px 6px 0 0; }
 
 .tile-preview-right.on-primary {
   border-radius: 0 6px 0 0; }
@@ -564,7 +570,9 @@ StScrollBar {
     color: #ccc;
     transition-duration: 100ms; }
     #panel .panel-button .app-menu-icon {
-      -st-icon-style: symbolic; }
+      -st-icon-style: symbolic;
+      margin-left: 4px;
+      margin-right: 4px; }
     #panel .panel-button:hover {
       color: #454f52; }
     #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
@@ -646,7 +654,6 @@ StScrollBar {
   color: white;
   background-color: transparent;
   width: 32px;
-  background-position: center;
   border-radius: 4px; }
   .pager-button:hover, .pager-button:focus {
     background-color: rgba(46, 52, 54, 0.05); }
@@ -1112,7 +1119,8 @@ StScrollBar {
   visible-width: 32px;
   spacing: 11px;
   padding: 8px;
-  border-radius: 9px 0 0 9px; }
+  border-radius: 9px 0 0 9px;
+  margin-bottom: 14px; }
   .workspace-thumbnails:rtl {
     border-radius: 0 9px 9px 0; }
 
