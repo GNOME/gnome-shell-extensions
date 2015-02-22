@@ -24,6 +24,20 @@ theme_DATA = 				\
 	$(srcdir)/gnome-classic-high-contrast.css	\
 	$(NULL)
 
+theme_sources =							\
+	$(srcdir)/gnome-classic.scss				\
+	$(srcdir)/gnome-shell-sass/_colors.scss			\
+	$(srcdir)/gnome-shell-sass/_common.scss			\
+	$(srcdir)/gnome-shell-sass/_drawing.scss		\
+	$(srcdir)/gnome-shell-sass/_high-contrast-colors.scss	\
+	$(NULL)
+
+%.css: %.scss $(theme_sources)
+	@if test -n "$(SASS)"; then \
+		if $(AM_V_P); then PS4= set -x; else echo "  GEN      $@"; fi; \
+		$(SASS) --sourcemap=none --update -f -q $<; \
+	fi
+
 gsettings_in_files = org.gnome.shell.extensions.classic-overrides.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_in_files:.xml.in=.xml)
 

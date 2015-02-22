@@ -76,6 +76,8 @@ done
 
 AC_SUBST(ENABLED_EXTENSIONS, [$ENABLED_EXTENSIONS])
 
+AC_PATH_PROG([SASS],[sass],[])
+
 dnl Please keep this sorted alphabetically
 AC_CONFIG_FILES([
   data/Makefile
