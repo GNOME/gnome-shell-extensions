@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2013, 2014.
+# Aurimas Černius <aurisc4@gmail.com>, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-06-02 19:27+0000\n"
-"PO-Revision-Date: 2014-06-02 23:22+0300\n"
+"POT-Creation-Date: 2015-02-23 20:41+0000\n"
+"PO-Revision-Date: 2015-02-23 23:09+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -30,14 +30,6 @@ msgstr "Klasikinis GNOME"
 msgid "This session logs you into GNOME Classic"
 msgstr "Šis seansas prijungs jus prie klasikinio GNOME"
 
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "Klasikinis GNOME Shell"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Langų valdymas ir programų paleidimas"
-
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
 msgstr "Prikabinti modalinį dialogą prie tėvinio lango"
@@ -53,8 +45,6 @@ msgid "Arrangement of buttons on the titlebar"
 msgstr "Mygtukų išdėstymas pavadinimo juostoje"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
@@ -98,11 +88,11 @@ msgstr "Rodyti tik dabartinio darbalaukio langus"
 msgid "Activities Overview"
 msgstr "Veiklų apžvalga"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Mėgiamiausi"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Programos"
 
@@ -128,7 +118,6 @@ msgid "Workspace"
 msgstr "Darbalaukis"
 
 #: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
 msgid "Add Rule"
 msgstr "Pridėti taisyklę"
 
@@ -145,11 +134,11 @@ msgstr "Pridėti"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Laikmenos „%s“ išstūmimas nepavyko:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Išimami įrenginiai"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Atverti failą"
 
@@ -169,7 +158,6 @@ msgstr ""
 "Jei netuščias, jis turi tekstą, kuri bus rodomas paspaudus ant skydelio."
 
 #: ../extensions/example/prefs.js:30
-#| msgid "Message:"
 msgid "Message"
 msgstr "Pranešimas"
 
@@ -234,6 +222,10 @@ msgstr "Namų aplankas"
 msgid "Browse Network"
 msgstr "Naršyti tinklą"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Sukti ekranvaizdžių dydžius ratu"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
@@ -250,52 +242,52 @@ msgstr "Temos pavadinimas"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Temos pavadinimas, kuri bus įkrauta iš ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:109
 msgid "Close"
 msgstr "Užverti"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Grąžinti iš sumažinimo"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Sumažinti"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Grąžinti iš išdidinimo"
 
-#: ../extensions/window-list/extension.js:128
+#: ../extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Išdidinti"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:396
 msgid "Minimize all"
 msgstr "Sumažinti visus"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:404
 msgid "Unminimize all"
 msgstr "Grąžinti visus iš sumažinimo"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:412
 msgid "Maximize all"
 msgstr "Išdidinti visus"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:421
 msgid "Unmaximize all"
 msgstr "Grąžinti visus iš išdidinimo"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:430
 msgid "Close all"
 msgstr "Užverti visus"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:647
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Darbalaukio indikatorius"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:804
 msgid "Window List"
 msgstr "Langų sąrašas"
 
@@ -311,24 +303,39 @@ msgstr ""
 "Nusprendžia, kada grupuoti tos pačios programos langus langų sąraše. Galimos "
 "vertės yra „never“, „auto“ ir „always“."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Rodyti langų sąrašą visuose monitoriuose"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Ar rodyti langų sąrašą visuose prijungtuose monitoriuose, ar tik "
+"pagrindiniame."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Langų grupavimas"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Niekada negrupuoti langų"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Grupuoti langus, kai yra ribotai vietos"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Visada grupuoti langus"
 
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Rodyti visuose monitoriuose"
+
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
 msgid "Workspace Names"
 msgstr "Darbalaukių pavadinimai"
 
@@ -340,3 +347,9 @@ msgstr "Pavadinimas"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Darbalaukis %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "Klasikinis GNOME Shell"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Langų valdymas ir programų paleidimas"
