@@ -169,6 +169,9 @@ const WindowTitle = new Lang.Class({
     },
 
     _updateTitle: function() {
+        if (!this._metaWindow.title)
+            return;
+
         if (this._metaWindow.minimized)
             this._label.text = '[%s]'.format(this._metaWindow.title);
         else
