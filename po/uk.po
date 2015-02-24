@@ -2,13 +2,13 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Alexandr Toorchyn <ilex@mail.ua>, 2011.
-# Daniel Korostil <ted.korostiled@gmail.com>, 2013, 2014.
+# Daniel Korostil <ted.korostiled@gmail.com>, 2013, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-20 23:29+0300\n"
-"PO-Revision-Date: 2014-09-20 23:31+0300\n"
+"POT-Creation-Date: 2015-02-24 22:53+0200\n"
+"PO-Revision-Date: 2015-02-24 22:57+0300\n"
 "Last-Translator: Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "Language: uk\n"
@@ -28,14 +28,6 @@ msgstr "Класичний GNOME"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Це — сеанс входу в класичний GNOME"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "Класична оболонка GNOME"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Керування вікнами і запускання програм"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -95,11 +87,11 @@ msgstr "Показувати вікна тільки з поточного ро�
 msgid "Activities Overview"
 msgstr "Огляд діяльності"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Улюблене"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Програми"
 
@@ -141,11 +133,11 @@ msgstr "Додати"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Не вдалося витягнути пристрій «%s»:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Змінні пристрої"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Відкрити Файли"
 
@@ -233,6 +225,10 @@ msgstr "Домівка"
 msgid "Browse Network"
 msgstr "Огляд мережі"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Розміри циклічних знімків"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "Процесор"
@@ -249,52 +245,52 @@ msgstr "Назва теми"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Назва теми, що завантажується з ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:109
 msgid "Close"
 msgstr "Закрити"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Відновити згорнуте"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Згорнути"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Відновити розгорнуте"
 
-#: ../extensions/window-list/extension.js:128
+#: ../extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Розгорнути"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:399
 msgid "Minimize all"
 msgstr "Згорнути все"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:407
 msgid "Unminimize all"
 msgstr "Відновити все згорнуте"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:415
 msgid "Maximize all"
 msgstr "Розгорнути все"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:424
 msgid "Unmaximize all"
 msgstr "Відновити все розгорнуте"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:433
 msgid "Close all"
 msgstr "Закрити все"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:650
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Покажчик робочого простору"
 
-#: ../extensions/window-list/extension.js:808
+#: ../extensions/window-list/extension.js:807
 msgid "Window List"
 msgstr "Перелік вікон"
 
@@ -310,21 +306,37 @@ msgstr ""
 "Визначає правила групування вікон програм у списку вікон. Можливими "
 "значеннями є «never», «auto» і «always»."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Показати перелік вікон на всіх моніторах"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Чи показувати переліку вікон на всіх під'єднаних моніторах, чи тільки на "
+"основному."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Групування вікон"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "ніколи не групувати вікна"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Групувати вікна коли простір обмежено"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Завжди групувати вікна"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Показувати на всіх моніторах"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
@@ -338,6 +350,12 @@ msgstr "Назва"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Робочий простір %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "Класична оболонка GNOME"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Керування вікнами і запускання програм"
 
 #~ msgid "Notifications"
 #~ msgstr "Сповіщення"
