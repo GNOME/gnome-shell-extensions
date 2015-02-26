@@ -75,6 +75,10 @@ StEntry {
     color: #8d9091;
     border-color: #f4f4f4;
     box-shadow: none; }
+  StEntry StIcon.capslock-warning {
+    icon-size: 16px;
+    warning-color: #f57900;
+    padding: 0 4px; }
 
 /* Scrollbars */
 StScrollBar {
@@ -116,11 +120,11 @@ StScrollBar {
   width: 24px;
   height: 22px;
   background-image: url("resource:///org/gnome/shell/theme/checkbox-off.svg"); }
-.check-box:focus Stbin {
+.check-box:focus StBin {
   background-image: url("resource:///org/gnome/shell/theme/checkbox-off-focused.svg"); }
-.check-box:checked Stbin {
+.check-box:checked StBin {
   background-image: url("resource:///org/gnome/shell/theme/checkbox.svg"); }
-.check-box:focus:checked Stbin {
+.check-box:focus:checked StBin {
   background-image: url("resource:///org/gnome/shell/theme/checkbox-focused.svg"); }
 
 /* Switches */
@@ -715,7 +719,7 @@ StScrollBar {
 
 /* Message list */
 .message-list {
-  width: 340px; }
+  width: 420px; }
 
 .message-list-sections {
   spacing: 1.5em; }
@@ -739,12 +743,15 @@ StScrollBar {
   background-color: black; }
 
 .message {
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  border-radius: 3px; }
   .message:hover, .message:focus {
     background-color: white; }
 
 .message-icon-bin {
-  padding: 5px; }
+  padding: 8px 0px 8px 8px; }
+  .message-icon-bin:rtl {
+    padding: 8px 8px 8px 0px; }
 
 .message-icon-bin > StIcon {
   icon-size: 48px; }
@@ -759,8 +766,7 @@ StScrollBar {
   font-weight: bold; }
 
 .message-content {
-  padding: 5px;
-  spacing: 5px; }
+  padding: 8px; }
 
 .system-switch-user-submenu-icon {
   icon-size: 24px;
@@ -883,6 +889,9 @@ StScrollBar {
 /* OVERVIEW */
 #overview {
   spacing: 24px; }
+
+.overview-controls {
+  padding-bottom: 32px; }
 
 .window-picker {
   -horizontal-spacing: 32px;
@@ -1119,8 +1128,7 @@ StScrollBar {
   visible-width: 32px;
   spacing: 11px;
   padding: 8px;
-  border-radius: 9px 0 0 9px;
-  margin-bottom: 14px; }
+  border-radius: 9px 0 0 9px; }
   .workspace-thumbnails:rtl {
     border-radius: 0 9px 9px 0; }
 
