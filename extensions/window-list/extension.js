@@ -803,7 +803,7 @@ const WindowList = new Lang.Class({
 
         Main.layoutManager.addChrome(this.actor, { affectsStruts: true,
                                                    trackFullscreen: true });
-        Main.uiGroup.set_child_above_sibling(this.actor, Main.layoutManager.trayBox);
+        Main.uiGroup.set_child_above_sibling(this.actor, Main.layoutManager.panelBox);
         Main.ctrlAltTabManager.addGroup(this.actor, _("Window List"), 'start-here-symbolic');
 
         this.actor.width = this._monitor.width;
@@ -825,7 +825,7 @@ const WindowList = new Lang.Class({
                         Main.uiGroup.set_child_above_sibling(this.actor, keyboardBox);
                     else
                         Main.uiGroup.set_child_above_sibling(this.actor,
-                                                             Main.layoutManager.trayBox);
+                                                             Main.layoutManager.panelBox);
                     this._updateKeyboardAnchor();
                 }));
 
