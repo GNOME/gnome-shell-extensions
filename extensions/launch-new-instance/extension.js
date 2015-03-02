@@ -1,6 +1,6 @@
 const AppDisplay = imports.ui.appDisplay;
 
-var _onActivateOriginal = null;
+let _activateOriginal = null;
 
 function init() {
 }
