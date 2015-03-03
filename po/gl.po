@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Fran Diéguez <frandieguez@gnome.org>, 2011.
 # Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-22 02:35+0100\n"
-"PO-Revision-Date: 2015-02-22 02:36+0200\n"
+"POT-Creation-Date: 2015-03-03 01:28+0100\n"
+"PO-Revision-Date: 2015-03-03 01:29+0100\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: gnome-l10n-gl@gnome.org\n"
+"Language-Team: Galician <>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -27,14 +28,6 @@ msgstr "GNOME clasico"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Esta sesión iniciarao en GNOME clásico"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "GNOME Shell clásico"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Xestor de xanelas e inicio de aplicativos"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -95,11 +88,11 @@ msgstr "Mostrar só as xanelas na área de traballo actual"
 msgid "Activities Overview"
 msgstr "Vista xeral de actividades"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Aplicativos"
 
@@ -141,11 +134,11 @@ msgstr "Engadir"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Fallo ao extraer a unidade «%s»:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Dispositivos extraíbeis"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Abrir ficheiro"
 
@@ -251,52 +244,52 @@ msgstr "Nome do tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "O nome do tema, a cargar desde ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:109
 msgid "Close"
 msgstr "Pechar"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Restabelecer"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Minimizar"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Restaurar"
 
-#: ../extensions/window-list/extension.js:128
+#: ../extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:399
 msgid "Minimize all"
 msgstr "Minimizar todo"
 
-#: ../extensions/window-list/extension.js:312
+#: ../extensions/window-list/extension.js:407
 msgid "Unminimize all"
 msgstr "Restaurar todo"
 
-#: ../extensions/window-list/extension.js:320
+#: ../extensions/window-list/extension.js:415
 msgid "Maximize all"
 msgstr "Maximizar todo"
 
-#: ../extensions/window-list/extension.js:329
+#: ../extensions/window-list/extension.js:424
 msgid "Unmaximize all"
 msgstr "Restaurar todo"
 
-#: ../extensions/window-list/extension.js:338
+#: ../extensions/window-list/extension.js:433
 msgid "Close all"
 msgstr "Pechar todo"
 
-#: ../extensions/window-list/extension.js:649
+#: ../extensions/window-list/extension.js:650
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador de espazo de traballo"
 
-#: ../extensions/window-list/extension.js:799
+#: ../extensions/window-list/extension.js:807
 msgid "Window List"
 msgstr "Lista de xanelas"
 
@@ -313,21 +306,37 @@ msgstr ""
 "valores posíbeis son \"never\" (nunca), \"auto\" (automático) e \"always"
 "\" (sempre)."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Mostrar a lista de xanelas en todos os monitores"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Indica se mostrar a lista de xanelas en todos os monitores conectados ou só "
+"no primario."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Agrupación de xanelas"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Non agrupar nunca as xanelas"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Agrupar as xanelas cando o espazo é limitado"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Agrupar sempre as xanelas"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Mostrar en todos os monitores"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
@@ -341,6 +350,12 @@ msgstr "Nome"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Espazos de traballo %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "GNOME Shell clásico"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Xestor de xanelas e inicio de aplicativos"
 
 #~ msgid "Suspend"
 #~ msgstr "Suspender"
