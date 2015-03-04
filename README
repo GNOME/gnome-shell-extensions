@@ -57,10 +57,6 @@ places-menu
 
   Shows a status Indicator for navigating to Places.
 
-systemMonitor
-
-  An message tray indicator showing CPU and memory loads.
-
 user-theme
 
   Loads a shell theme from ~/.themes/<name>/gnome-shell.

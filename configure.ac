@@ -29,7 +29,7 @@ AC_SUBST([SHELL_VERSION])
 dnl keep this in alphabetic order
 CLASSIC_EXTENSIONS="apps-menu places-menu alternate-tab launch-new-instance window-list"
 DEFAULT_EXTENSIONS="$CLASSIC_EXTENSIONS drive-menu screenshot-window-sizer windowsNavigator workspace-indicator"
-ALL_EXTENSIONS="$DEFAULT_EXTENSIONS auto-move-windows example native-window-placement systemMonitor user-theme"
+ALL_EXTENSIONS="$DEFAULT_EXTENSIONS auto-move-windows example native-window-placement user-theme"
 AC_SUBST(CLASSIC_EXTENSIONS, [$CLASSIC_EXTENSIONS])
 AC_SUBST(ALL_EXTENSIONS, [$ALL_EXTENSIONS])
 AC_ARG_ENABLE([extensions],
@@ -60,11 +60,6 @@ AM_CONDITIONAL([CLASSIC_MODE], [test x"$enable_classic_mode" != xno])
 ENABLED_EXTENSIONS=
 for e in $enable_extensions; do
 	case $e in
-		systemMonitor)
-			PKG_CHECK_MODULES(GTOP, libgtop-2.0 >= 2.28.3,
-					[ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"],
-					[AC_MSG_WARN([libgtop-2.0 not found, disabling systemMonitor])])
-			;;
 dnl		keep this in alphabetic order
 		alternate-tab|apps-menu|auto-move-windows|drive-menu|example|launch-new-instance|native-window-placement|places-menu|screenshot-window-sizer|user-theme|window-list|windowsNavigator|workspace-indicator)
 			ENABLED_EXTENSIONS="$ENABLED_EXTENSIONS $e"
@@ -90,7 +85,6 @@ AC_CONFIG_FILES([
   extensions/native-window-placement/Makefile
   extensions/places-menu/Makefile
   extensions/screenshot-window-sizer/Makefile
-  extensions/systemMonitor/Makefile
   extensions/user-theme/Makefile
   extensions/window-list/Makefile
   extensions/windowsNavigator/Makefile
