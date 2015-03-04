@@ -4,14 +4,14 @@
 # pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Piotr Drąg <piotrdrag@gmail.com>, 2011-2014.
-# Aviary.pl <gnomepl@aviary.pl>, 2011-2014.
+# Piotr Drąg <piotrdrag@gmail.com>, 2011-2015.
+# Aviary.pl <gnomepl@aviary.pl>, 2011-2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-03 16:20+0200\n"
-"PO-Revision-Date: 2014-09-03 16:24+0200\n"
+"POT-Creation-Date: 2015-03-04 23:17+0100\n"
+"PO-Revision-Date: 2015-03-04 23:18+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -31,14 +31,6 @@ msgstr "Klasyczne GNOME"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Ta sesja loguje do klasycznego środowiska GNOME"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "Klasyczna powłoka GNOME"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Zarządzanie oknami i uruchamianie programów"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -103,11 +95,11 @@ msgstr "Wyświetlanie tylko okien w bieżącym obszarze roboczym"
 msgid "Activities Overview"
 msgstr "Ekran podglądu"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Programy"
 
@@ -149,11 +141,11 @@ msgstr "Dodaj"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Wysunięcie napędu \"%s\" się nie powiodło:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Urządzenia wymienne"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Otwórz plik"
 
@@ -176,6 +168,8 @@ msgstr ""
 msgid "Message"
 msgstr "Wiadomość"
 
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
 #: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -238,6 +232,10 @@ msgstr "Katalog domowy"
 msgid "Browse Network"
 msgstr "Przeglądaj sieć"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Zmiana rozmiaru zrzutu ekranu"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "Procesor"
@@ -254,52 +252,52 @@ msgstr "Nazwa motywu"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Nazwa motywu do wczytania z katalogu ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:109
 msgid "Close"
 msgstr "Zamknij"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Cofnij minimalizację"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Zminimalizuj"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Cofnij maksymalizację"
 
-#: ../extensions/window-list/extension.js:128
+#: ../extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Zmaksymalizuj"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:399
 msgid "Minimize all"
 msgstr "Zminimalizuj wszystkie"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:407
 msgid "Unminimize all"
 msgstr "Cofnij minimalizację wszystkich"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:415
 msgid "Maximize all"
 msgstr "Zmaksymalizuj wszystkie"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:424
 msgid "Unmaximize all"
 msgstr "Cofnij maksymalizację wszystkich"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:433
 msgid "Close all"
 msgstr "Zamknij wszystkie"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:650
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Wskaźnik obszaru roboczego"
 
-#: ../extensions/window-list/extension.js:808
+#: ../extensions/window-list/extension.js:807
 msgid "Window List"
 msgstr "Lista okien"
 
@@ -315,21 +313,37 @@ msgstr ""
 "Określa, kiedy grupować okna tego samego programu na liście okien. Możliwe "
 "wartości to \"never\", \"auto\" i \"always\"."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Wyświetlanie listy okien na wszystkich monitorach"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Określa, czy wyświetlać listę okien na wszystkich podłączonych monitorach, "
+"czy tylko na głównym."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Grupowanie okien"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Bez grupowania okien"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Grupowanie okien, kiedy miejsce jest ograniczone"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Zawsze grupowanie okien"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Wyświetlanie na wszystkich monitorach"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
