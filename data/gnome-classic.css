@@ -393,14 +393,17 @@ StScrollBar {
       background-color: #e8e8e8;
       box-shadow: inset 0 1px 0px #adadad;
       font-weight: bold; }
-    .popup-menu .popup-menu-item:hover {
+    .popup-menu .popup-menu-item:focus {
       background-color: #4a90d9;
       color: #ffffff; }
+    .popup-menu .popup-menu-item:hover {
+      background-color: rgba(46, 52, 54, 0.1);
+      color: #2e3436; }
     .popup-menu .popup-menu-item:active {
       background-color: #3583d5;
       color: #ffffff; }
     .popup-menu .popup-menu-item:insensitive {
-      background-color: rgba(237, 237, 237, 0.5); }
+      color: rgba(46, 52, 54, 0.5); }
   .popup-menu .active {
     background-color: #4a90d9; }
   .popup-menu .popup-inactive-menu-item {
@@ -611,7 +614,9 @@ StScrollBar {
   margin: 0 1.5em; }
 
 .datemenu-calendar-column {
-  spacing: 0.5em;
+  spacing: 0.5em; }
+
+.datemenu-displays-section {
   padding-bottom: 3em; }
 
 .datemenu-today-button,
@@ -1325,6 +1330,27 @@ StScrollBar {
   color: pink; }
 
 /* Eeeky things */
+.legacy-tray {
+  background-color: #ededed;
+  border: 1px solid #a1a1a1;
+  border-bottom-width: 0; }
+  .legacy-tray:ltr {
+    border-radius: 0 6px 0 0;
+    border-left-width: 0; }
+  .legacy-tray:rtl {
+    border-radius: 6px 0 0 0;
+    border-right-width: 0; }
+
+.legacy-tray-handle StIcon {
+  icon-size: 24px; }
+
+.legacy-tray-icon-box {
+  padding: 6px;
+  spacing: 12px; }
+  .legacy-tray-icon-box StButton {
+    width: 24px;
+    height: 24px; }
+
 .magnifier-zoom-region {
   border: 2px solid #4a90d9; }
   .magnifier-zoom-region.full-screen {
@@ -1407,15 +1433,18 @@ StScrollBar {
     color: #ffffff; }
 
 .candidate-page-button-box {
-  height: 2em;
-  width: 80px; }
+  height: 2em; }
   .vertical .candidate-page-button-box {
     padding-top: 0.5em; }
   .horizontal .candidate-page-button-box {
     padding-left: 0.5em; }
 
+.candidate-page-button {
+  padding: 4px; }
+
 .candidate-page-button-previous {
-  border-radius: 4px 0px 0px 4px; }
+  border-radius: 4px 0px 0px 4px;
+  border-right-width: 0; }
 
 .candidate-page-button-next {
   border-radius: 0px 4px 4px 0px; }
