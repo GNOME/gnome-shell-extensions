@@ -476,7 +476,7 @@ const ApplicationsButton = new Lang.Class({
 
     _display: function() {
         this._applicationsButtons = new Array();
-        this.mainBox.style=('width: 640px;');
+        this.mainBox.style=('width: 35em;');
         this.mainBox.hide();
 
         //Load categories
