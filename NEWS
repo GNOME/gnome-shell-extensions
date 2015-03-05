@@ -1,3 +1,11 @@
+3.15.91
+=======
+* classic: Update theme
+* systemMonitor extension was removed, as the message tray where it
+  put its indicator no longer exists
+* window-list: Adjust for gnome-shell changes
+* updated translations (gl, it, kk, ko, lt, pl, sk, uk, zh_TW)
+
 3.15.90
 =======
 * classic: Visual refresh based on new shell theme
