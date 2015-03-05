@@ -81,12 +81,13 @@ StEntry {
     padding: 0 4px; }
 
 /* Scrollbars */
+StScrollView.vfade {
+  -st-vfade-offset: 68px; }
+StScrollView.hfade {
+  -st-hfade-offset: 68px; }
+
 StScrollBar {
   padding: 0; }
-  StScrollBar.vfade {
-    -st-vfade-offset: 68px; }
-  StScrollBar.hfade {
-    -st-hfade-offset: 68px; }
   StScrollView StScrollBar {
     min-width: 14px;
     min-height: 14px; }
@@ -393,10 +394,7 @@ StScrollBar {
       background-color: #e8e8e8;
       box-shadow: inset 0 1px 0px #adadad;
       font-weight: bold; }
-    .popup-menu .popup-menu-item:focus {
-      background-color: #4a90d9;
-      color: #ffffff; }
-    .popup-menu .popup-menu-item:hover {
+    .popup-menu .popup-menu-item:hover, .popup-menu .popup-menu-item:focus {
       background-color: rgba(46, 52, 54, 0.1);
       color: #2e3436; }
     .popup-menu .popup-menu-item:active {
@@ -1555,9 +1553,10 @@ StScrollBar {
     color: #ffffff; }
   .login-dialog-user-list-item .login-dialog-timed-login-indicator {
     height: 2px;
-    background-color: transparent; }
+    margin: 2px 0 0 0;
+    background-color: #eeeeec; }
   .login-dialog-user-list-item:focus .login-dialog-timed-login-indicator {
-    background-color: #2e3436; }
+    background-color: #ffffff; }
 
 .login-dialog-username,
 .user-widget-label {
