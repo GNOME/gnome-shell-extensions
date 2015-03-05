@@ -1,15 +1,15 @@
 # Serbian translation for gnome-shell-extensions.
-# Copyright (C) 2012 gnome-shell-extensions's COPYRIGHT HOLDER
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2012—2014.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Miloš Popović <gpopac@gmail.com>, 2012.
-# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012—2014.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012—2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-09-22 07:38+0000\n"
-"PO-Revision-Date: 2014-09-22 12:24+0200\n"
+"POT-Creation-Date: 2015-03-04 08:45+0000\n"
+"PO-Revision-Date: 2015-03-05 22:45+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -29,14 +29,6 @@ msgstr "Klasičan Gnom"
 msgid "This session logs you into GNOME Classic"
 msgstr "Ova sesija vas prijavljuje u klasičan Gnom"
 
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "Klasična Gnomova školjka"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Upravljanje prozorima i pokretanje programa"
-
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
 msgstr "Prikačinje prozorče roditeljskom prozoru"
@@ -52,8 +44,6 @@ msgid "Arrangement of buttons on the titlebar"
 msgstr "Raspored dugmića na traci naslova"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
@@ -98,11 +88,11 @@ msgstr "Prikazuje samo prozore u tekućem radnom prostoru"
 msgid "Activities Overview"
 msgstr "Pregled aktivnosti"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "Omiljeno"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "Programi"
 
@@ -128,7 +118,6 @@ msgid "Workspace"
 msgstr "Radni prostor"
 
 #: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
 msgid "Add Rule"
 msgstr "Dodaj pravilo"
 
@@ -145,11 +134,11 @@ msgstr "Dodaj"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Nisam uspeo da izbacim uređaj „%s“:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Uklonjivi uređaji"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "Otvori datoteku"
 
@@ -169,7 +158,6 @@ msgstr ""
 "Ukoliko upišete tekst ovde, on će biti prikazan kada kliknete na panel."
 
 #: ../extensions/example/prefs.js:30
-#| msgid "Message:"
 msgid "Message"
 msgstr "Poruka"
 
@@ -234,6 +222,10 @@ msgstr "Lično"
 msgid "Browse Network"
 msgstr "Razgledajte mrežu"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Kruži kroz veličine snimaka ekrana"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "Procesor"
@@ -250,52 +242,52 @@ msgstr "Naziv teme"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Naziv teme koji se učitava iz datoteke „~/.themes/name/gnome-shell“"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:109
 msgid "Close"
 msgstr "Zatvori"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Poništi umanjenje"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Umanji"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Poništi uvećanje"
 
-#: ../extensions/window-list/extension.js:128
+#: ../extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Uvećaj"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:399
 msgid "Minimize all"
 msgstr "Umanji sve"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:407
 msgid "Unminimize all"
 msgstr "Poništi umanjenje svega"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:415
 msgid "Maximize all"
 msgstr "Uvećaj sve"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:424
 msgid "Unmaximize all"
 msgstr "Poništi uvećanje svega"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:433
 msgid "Close all"
 msgstr "Zatvori sve"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:650
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Pokazatelj radnih prostora"
 
-#: ../extensions/window-list/extension.js:808
+#: ../extensions/window-list/extension.js:807
 msgid "Window List"
 msgstr "Spisak prozora"
 
@@ -312,24 +304,39 @@ msgstr ""
 "Dozvoljene vrednosti su „never“ (nikad), „auto“ (automatski) i "
 "„always“ (uvek)."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Prikazuje spisak prozora na svim monitorima"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Da li da prikaže spisak prozora na svim priključenim monitorima ili samo na "
+"glavnom."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Grupisanje prozora"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Nikad ne grupiši prozore"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Grupiši prozore kada je prostor ograničen"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Uvek grupiši prozore"
 
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Prikaži na svim monitorima"
+
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
 msgid "Workspace Names"
 msgstr "Nazivi radnih prostora"
 
@@ -341,3 +348,9 @@ msgstr "Naziv"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "%d. radni prostor"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "Klasična Gnomova školjka"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Upravljanje prozorima i pokretanje programa"
