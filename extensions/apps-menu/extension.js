@@ -86,10 +86,6 @@ const ApplicationMenuItem = new Lang.Class({
         this.parent(active, params);
     },
 
-    _getPreferredWidth: function(actor, forHeight, alloc) {
-        alloc.min_size = alloc.natural_size = -1;
-    },
-
     _updateIcon: function() {
         this._iconBin.set_child(this._app.create_icon_texture(APPLICATION_ICON_SIZE));
     }
