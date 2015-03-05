@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2012.
-# Changwoo Ryu <cwryu@debian.org>, 2013-2014.
+# Changwoo Ryu <cwryu@debian.org>, 2013-2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-09-04 19:38+0000\n"
-"PO-Revision-Date: 2014-09-05 07:14+0900\n"
+"POT-Creation-Date: 2015-03-04 20:44+0000\n"
+"PO-Revision-Date: 2015-03-05 11:12+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -28,14 +28,6 @@ msgstr "그놈 클래식"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "이 세션을 사용하면 그놈 클래식에 로그인합니다"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "그놈 셸 클래식"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "창 관리 및 프로그램 실행"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -54,7 +46,9 @@ msgstr "제목 표시줄의 단추 정렬"
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
-msgstr "그놈 셸을 실행할 때 org.gnome.desktop.wm.preferences에 있는 키 대신 사용됩니다."
+msgstr ""
+"그놈 셸을 실행할 때 org.gnome.desktop.wm.preferences에 있는 키 대신 사용됩니"
+"다."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
@@ -92,11 +86,11 @@ msgstr "현재 작업 공간의 창만 표시합니다"
 msgid "Activities Overview"
 msgstr "현재 활동"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:114
 msgid "Favorites"
 msgstr "즐겨찾기"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:283
 msgid "Applications"
 msgstr "프로그램"
 
@@ -138,11 +132,11 @@ msgstr "추가"
 msgid "Ejecting drive '%s' failed:"
 msgstr "'%s' 드라이브를 빼는데 실패했습니다:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "이동식 장치"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:151
 msgid "Open File"
 msgstr "파일 열기"
 
@@ -225,6 +219,10 @@ msgstr "홈"
 msgid "Browse Network"
 msgstr "네트워크 찾아보기"
 
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "스크린샷 크기 돌려보기"
+
 #: ../extensions/systemMonitor/extension.js:214
 msgid "CPU"
 msgstr "CPU"
@@ -241,52 +239,52 @@ msgstr "테마 이름"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "테마 이름, ~/.themes/name/gnome-shell 아래에서 읽어들입니다."
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:109
 msgid "Close"
 msgstr "닫기"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "최소화 취소"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "최소화"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "최대화 취소"
 
-#: ../extensions/window-list/extension.js:128
+#: ../extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "최대화"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:399
 msgid "Minimize all"
 msgstr "모두 최소화"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:407
 msgid "Unminimize all"
 msgstr "모두 최소화 취소"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:415
 msgid "Maximize all"
 msgstr "모두 최대화"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:424
 msgid "Unmaximize all"
 msgstr "모두 최대화 취소"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:433
 msgid "Close all"
 msgstr "모두 닫기"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:650
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "작업 공간 표시"
 
-#: ../extensions/window-list/extension.js:808
+#: ../extensions/window-list/extension.js:807
 msgid "Window List"
 msgstr "창 목록"
 
@@ -302,21 +300,35 @@ msgstr ""
 "창 목록에서 같은 프로그램의 창을 언제 모을지 결정합니다. 가능한 값은 \"never"
 "\", \"auto\", \"always\"입니다."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "모든 모니터의 창 목록 표시"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr "연결된 모든 모니터에 있는 창 목록을 표시할지, 아니면 주 모니터에 있는 창 목록만 표시할지."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "창 모으기"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "창을 모으지 않기"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "공간이 부족할 때 창 모으기"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "항상 창 모으기"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "모든 모니터 보이기"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
