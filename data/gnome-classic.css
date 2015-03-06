@@ -1755,27 +1755,27 @@ StScrollBar {
     background-gradient-end: #000;
     border-top-color: #000;
     border-bottom: 1px solid #000; }
+    #panel:overview .panel-button {
+      color: #fff; }
+  #panel .panel-button {
+    color: #2e3436; }
+    #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
+      background-color: #4a90d9 !important;
+      color: #ffffff !important;
+      box-shadow: none; }
+      #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon {
+        icon-shadow: none; }
+  #panel .panel-corner,
+  #panel .panel-corner:active,
+  #panel .panel-corner:overview,
+  #panel .panel-corner:focus {
+    -panel-corner-radius: 0; }
 
 .tile-preview-left.on-primary,
 .tile-preview-right.on-primary,
 .tile-preview-left.tile-preview-right.on-primary {
   /* keep in sync with -panel-corner-radius */
   border-radius: 0; }
-
-.panel-corner,
-.panel-corner:active,
-.panel-corner:overview,
-.panel-corner:focus {
-  -panel-corner-radius: 0 !important; }
-
-.panel-button {
-  color: #2e3436 !important; }
-  .panel-button:active, .panel-button:overview, .panel-button:focus, .panel-button:checked {
-    background-color: #4a90d9 !important;
-    color: #ffffff !important;
-    box-shadow: none; }
-    .panel-button:active > .system-status-icon, .panel-button:overview > .system-status-icon, .panel-button:focus > .system-status-icon, .panel-button:checked > .system-status-icon {
-      icon-shadow: none; }
 
 .toggle-switch-us {
   background-image: url("classic-toggle-off-us.svg"); }

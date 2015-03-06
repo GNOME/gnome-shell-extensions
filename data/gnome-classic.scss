@@ -22,6 +22,26 @@ $variant: 'light';
     background-gradient-end: #000;
     border-top-color: #000;
     border-bottom: 1px solid #000;
+    .panel-button { color: #fff; }
+  }
+
+  .panel-button {
+    color: $fg_color;
+    &:active, &:overview, &:focus, &:checked {
+      // Trick due to St limitations. It needs a background to draw
+      // a box-shadow
+      background-color: $selected_bg_color !important;
+      color: $selected_fg_color !important;
+      box-shadow: none;
+      & > .system-status-icon { icon-shadow: none; }
+    }
+  }
+  
+  .panel-corner,
+  .panel-corner:active,
+  .panel-corner:overview,
+  .panel-corner:focus {
+      -panel-corner-radius: 0;
   }
 }
 
@@ -32,24 +52,7 @@ $variant: 'light';
     border-radius: 0;
 }
 
-.panel-corner,
-.panel-corner:active,
-.panel-corner:overview,
-.panel-corner:focus {
-    -panel-corner-radius: 0 !important;
-}
 
-.panel-button {
-  color: $fg_color !important;
-  &:active, &:overview, &:focus, &:checked {
-    // Trick due to St limitations. It needs a background to draw
-    // a box-shadow
-    background-color: $selected_bg_color !important;
-    color: $selected_fg_color !important;
-    box-shadow: none;
-    & > .system-status-icon { icon-shadow: none; }
-  }
-}
 
 @each $v in us, intl {
   .toggle-switch-#{$v} {
