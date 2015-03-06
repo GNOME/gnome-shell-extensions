@@ -51,3 +51,10 @@ $variant: 'light';
   }
 }
 
+@each $v in us, intl {
+  .toggle-switch-#{$v} {
+    background-image: url("classic-toggle-off-#{$v}.svg");
+    &:checked { background-image: url("classic-toggle-on-#{$v}.svg"); }
+  }
+}
+

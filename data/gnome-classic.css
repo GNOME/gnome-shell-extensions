@@ -1776,3 +1776,13 @@ StScrollBar {
     box-shadow: none; }
     .panel-button:active > .system-status-icon, .panel-button:overview > .system-status-icon, .panel-button:focus > .system-status-icon, .panel-button:checked > .system-status-icon {
       icon-shadow: none; }
+
+.toggle-switch-us {
+  background-image: url("classic-toggle-off-us.svg"); }
+  .toggle-switch-us:checked {
+    background-image: url("classic-toggle-on-us.svg"); }
+
+.toggle-switch-intl {
+  background-image: url("classic-toggle-off-intl.svg"); }
+  .toggle-switch-intl:checked {
+    background-image: url("classic-toggle-on-intl.svg"); }
