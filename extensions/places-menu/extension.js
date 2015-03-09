@@ -82,9 +82,7 @@ const PlacesMenu = new Lang.Class({
                                    y_expand: true,
                                    y_align: Clutter.ActorAlign.CENTER });
         hbox.add_child(label);
-        hbox.add_child(new St.Label({ text: '\u25BE',
-                                      y_expand: true,
-                                      y_align: Clutter.ActorAlign.CENTER }));
+        hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
         this.actor.add_actor(hbox);
 
         this.placesManager = new PlaceDisplay.PlacesManager();

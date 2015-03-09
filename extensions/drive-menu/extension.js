@@ -128,9 +128,7 @@ const DriveMenu = new Lang.Class({
                                  style_class: 'system-status-icon' });
 
         hbox.add_child(icon);
-        hbox.add_child(new St.Label({ text: '\u25BE',
-                                      y_expand: true,
-                                      y_align: Clutter.ActorAlign.CENTER }));
+        hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
         this.actor.add_child(hbox);
 
 	this._monitor = Gio.VolumeMonitor.get();
