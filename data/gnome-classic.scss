@@ -8,6 +8,7 @@ $variant: 'light';
 /* Overrides */
 
 #panel {
+  font-weight: normal;
   background-color: $bg_color;
   background-gradient-direction: vertical;
   background-gradient-end: darken($bg_color,5%);
@@ -26,6 +27,9 @@ $variant: 'light';
   }
 
   .panel-button {
+    -natural-hpadding: 8px;
+    -minimum-hpadding: 4px;
+    font-weight: normal;
     color: $fg_color;
     &:active, &:overview, &:focus, &:checked {
       // Trick due to St limitations. It needs a background to draw
@@ -35,13 +39,14 @@ $variant: 'light';
       box-shadow: none;
       & > .system-status-icon { icon-shadow: none; }
     }
+    .app-menu-icon { width: 0; height: 0; margin: 0; } // shell's display:none; :D
   }
-  
+
   .panel-corner,
   .panel-corner:active,
   .panel-corner:overview,
   .panel-corner:focus {
-      -panel-corner-radius: 0;
+    -panel-corner-radius: 0;
   }
   &.lock-screen,
   &.unlock-screen, 
@@ -52,6 +57,9 @@ $variant: 'light';
     .panel-button { color: $osd_fg_color; }
   }
 }
+
+#appMenu { padding: 0 8px 0 8px; }
+.popup-menu-arrow { width: 0; height: 0;  } // shell's display: none;
 
 .tile-preview-left.on-primary,
 .tile-preview-right.on-primary,

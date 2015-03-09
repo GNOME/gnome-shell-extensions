@@ -1740,6 +1740,7 @@ StScrollBar {
 
 /* Overrides */
 #panel {
+  font-weight: normal;
   background-color: #ededed;
   background-gradient-direction: vertical;
   background-gradient-end: #e0e0e0;
@@ -1758,6 +1759,9 @@ StScrollBar {
     #panel:overview .panel-button {
       color: #fff; }
   #panel .panel-button {
+    -natural-hpadding: 8px;
+    -minimum-hpadding: 4px;
+    font-weight: normal;
     color: #2e3436; }
     #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
       background-color: #4a90d9 !important;
@@ -1765,6 +1769,10 @@ StScrollBar {
       box-shadow: none; }
       #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon {
         icon-shadow: none; }
+    #panel .panel-button .app-menu-icon {
+      width: 0;
+      height: 0;
+      margin: 0; }
   #panel .panel-corner,
   #panel .panel-corner:active,
   #panel .panel-corner:overview,
@@ -1776,6 +1784,13 @@ StScrollBar {
     background-gradient-end: rgba(46, 52, 54, 0.5); }
     #panel.lock-screen .panel-button, #panel.unlock-screen .panel-button, #panel.login-screen .panel-button {
       color: #eeeeec; }
+
+#appMenu {
+  padding: 0 8px 0 8px; }
+
+.popup-menu-arrow {
+  width: 0;
+  height: 0; }
 
 .tile-preview-left.on-primary,
 .tile-preview-right.on-primary,
