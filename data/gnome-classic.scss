@@ -43,7 +43,8 @@ $variant: 'light';
   .panel-corner:focus {
       -panel-corner-radius: 0;
   }
-  &.lock-screen, 
+  &.lock-screen,
+  &.unlock-screen, 
   &.login-screen { 
     background-color: transparentize($_bubble_bg_color, 0.5);
     background-gradient-start: transparentize($_bubble_bg_color, 0.5);
