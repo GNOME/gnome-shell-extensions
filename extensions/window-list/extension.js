@@ -649,6 +649,7 @@ const WorkspaceIndicator = new Lang.Class({
     _init: function(){
         this.parent(0.0, _("Workspace Indicator"));
         this.actor.add_style_class_name('window-list-workspace-indicator');
+        this.menu.actor.remove_style_class_name('panel-menu');
 
         let container = new St.Widget({ layout_manager: new Clutter.BinLayout(),
                                         x_expand: true, y_expand: true });
