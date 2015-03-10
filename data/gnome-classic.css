@@ -1770,6 +1770,12 @@ StScrollBar {
   #panel .panel-corner:overview,
   #panel .panel-corner:focus {
     -panel-corner-radius: 0; }
+  #panel.lock-screen, #panel.login-screen {
+    background-color: rgba(46, 52, 54, 0.5);
+    background-gradient-start: rgba(46, 52, 54, 0.5);
+    background-gradient-end: rgba(46, 52, 54, 0.5); }
+    #panel.lock-screen .panel-button, #panel.login-screen .panel-button {
+      color: #eeeeec; }
 
 .tile-preview-left.on-primary,
 .tile-preview-right.on-primary,
