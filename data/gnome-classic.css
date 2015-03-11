@@ -398,7 +398,7 @@ StScrollBar {
       background-color: rgba(46, 52, 54, 0.1);
       color: #2e3436; }
     .popup-menu .popup-menu-item:active {
-      background-color: #3583d5;
+      background-color: #4a90d9;
       color: #ffffff; }
     .popup-menu .popup-menu-item:insensitive {
       color: rgba(46, 52, 54, 0.5); }
@@ -793,12 +793,12 @@ StScrollBar {
   padding: 13px;
   border: 1px solid #adadad; }
   .system-menu-action:hover, .system-menu-action:focus {
-    color: #ffffff;
-    background-color: #4a90d9;
+    background-color: rgba(46, 52, 54, 0.1);
+    color: #2e3436;
     border: none;
     padding: 14px; }
   .system-menu-action:active {
-    background-color: #3583d5;
+    background-color: #4a90d9;
     color: #ffffff; }
   .system-menu-action > StIcon {
     icon-size: 16px; }
@@ -1156,7 +1156,7 @@ StScrollBar {
 
 /* NOTIFICATIONS & MESSAGE TRAY */
 .url-highlighter {
-  link-color: #4a90d9; }
+  link-color: #74aae2; }
 
 .notification-banner {
   font-size: 11pt;
