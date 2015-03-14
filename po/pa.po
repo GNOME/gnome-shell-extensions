@@ -2,14 +2,14 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# A S Alam <aalam@users.sf.net>, 2011, 2012, 2013, 2014.
+# A S Alam <aalam@users.sf.net>, 2011, 2012, 2013, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-09-08 19:35+0000\n"
-"PO-Revision-Date: 2014-09-08 21:14-0500\n"
+"POT-Creation-Date: 2015-03-13 20:45+0000\n"
+"PO-Revision-Date: 2015-03-13 21:34-0500\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
@@ -28,14 +28,6 @@ msgstr "ਗਨੋਮ ਕਲਾਸਿਕ"
 msgid "This session logs you into GNOME Classic"
 msgstr "ਇਹ ਸ਼ੈਸ਼ਨ ਤੁਹਾਨੂੰ ਗਨੋਮ ਕਲਾਸਿਕ ਵਿੱਚ ਲਾਗ ਕਰਦਾ ਹੈ"
 
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "ਗਨੋਮ ਸ਼ੈਲ ਕਲਾਸਿਕ"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "ਵਿੰਡੋ ਪਰਬੰਧ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਚਲਾਓ"
-
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
 msgstr "ਮੁੱਢਲੀ ਵਿੰਡੋ ਵਿੱਚ ਮਾਡਲ ਡਾਈਲਾਗ ਜੋੜੋ"
@@ -51,14 +43,13 @@ msgid "Arrangement of buttons on the titlebar"
 msgstr "ਟਾਈਟਲ-ਪੱਟੀ ਵਿੱਚ ਬਟਨਾਂ ਦਾ ਪ੍ਰਬੰਧ"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
 msgstr ""
 "ਇਹ ਕੁੰਜੀ ਗਨੋਮ ਸ਼ੈੱਲ ਚੱਲਣ ਦੇ ਦੌਰਾਨ  org.gnome.desktop.wm.preferencesr ਕੁੰਜੀ ਨੂੰ "
-"ਅਣਡਿੱਠਾ ਕਰਦੀ ਹੈ।"
+"ਅਣਡਿੱਠਾ "
+"ਕਰਦੀ ਹੈ।"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
@@ -96,11 +87,11 @@ msgstr "ਮੌਜੂਦਾ ਵਰਕਸਪੇਸ ਵਿੱਚੋਂ ਹੀ ਵ�
 msgid "Activities Overview"
 msgstr "ਸਰਗਰਮੀ ਝਲਕ"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:110
 msgid "Favorites"
 msgstr "ਪਸੰਦੀਦਾ"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:279
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ"
 
@@ -127,7 +118,6 @@ msgid "Workspace"
 msgstr "ਵਰਕਸਪੇਸ"
 
 #: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
 msgid "Add Rule"
 msgstr "ਨਿਯਮ ਜੋੜੋ"
 
@@ -144,11 +134,11 @@ msgstr "ਸ਼ਾਮਲ"
 msgid "Ejecting drive '%s' failed:"
 msgstr "ਡਰਾਇਵ '%s' ਬਾਹਰ ਕੱਢਣ ਲਈ ਫੇਲ੍ਹ:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "ਹਟਾਉਣਯੋਗ ਜੰਤਰ"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "ਫਾਇਲ ਖੋਲ੍ਹੋ"
 
@@ -169,7 +159,6 @@ msgstr ""
 "ਜਾਵੇਗਾ।"
 
 #: ../extensions/example/prefs.js:30
-#| msgid "Message:"
 msgid "Message"
 msgstr "ਸੁਨੇਹਾ"
 
@@ -238,13 +227,9 @@ msgstr "ਘਰ"
 msgid "Browse Network"
 msgstr "ਨੈੱਟਵਰਕ ਝਲਕ ਵੇਖੋ"
 
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "ਸੀਪੀਯੂ"
-
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "ਮੈਮੋਰੀ"
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "ਸਾਈਕਲ ਸਕਰੀਨਸ਼ਾਟ ਆਕਾਰ"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -254,47 +239,47 @@ msgstr "ਥੀਮ ਨਾਂ"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "ਥੀਮ ਦਾ ਨਾਂ, ਜੋ ~/.themes/name/gnome-shell ਤੋਂ ਲੋਡ ਕੀਤਾ ਜਾਵੇਗਾ"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:109
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "ਅਣ-ਨਿਊਨਤਮ"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "ਨਿਊਨਤਮ"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "ਅਣ-ਵੱਧੋ-ਵੱਧ"
 
-#: ../extensions/window-list/extension.js:128
+#: ../extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "ਵੱਧੋ-ਵੱਧ"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:399
 msgid "Minimize all"
 msgstr "ਸਭ ਨਿਊਨਤਮ ਕਰੋ"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:407
 msgid "Unminimize all"
 msgstr "ਸਭ ਅਣ-ਨਿਊਨਤਮ ਕਰੋ"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:415
 msgid "Maximize all"
 msgstr "ਸਭ ਵੱਧ-ਵੱਧ ਕਰੋ"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:424
 msgid "Unmaximize all"
 msgstr "ਸਭ ਅਣ-ਵੱਧੋ-ਵੱਧ ਕਰੋ"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:433
 msgid "Close all"
 msgstr "ਸਭ ਬੰਦ ਕਰੋ"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:650
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "ਵਰਕਸਪੇਸ ਇੰਡੀਕੇਟਰ"
@@ -316,24 +301,38 @@ msgstr ""
 "ਹਨ \"ਕਦੇ ਨਹੀਂ\", "
 "\"ਆਟੋ\" ਅਤੇ \"ਹਮੇਸ਼ਾ\"।"
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "ਸਭ ਮਾਨੀਟਰਾਂ ਉੱਤੇ ਵਿੰਡੋ ਸੂਚੀ ਵੇਖਾਓ"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"ਕੀ ਸਭ ਕਨੈਕਟ ਹੋਏ ਮਾਨੀਟਰਾਂ ਉੱਤੇ ਵਿੰਡੋ ਸੂਚੀ ਦੇਖਣੀ ਹੈ ਜਾਂ ਕੇਵਲ ਪ੍ਰਾਇਮਰੀ ਉੱਤੇ ਹੀ।"
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "ਵਿੰਡੋ ਗਰੁੱਪਿੰਗ"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "ਵਿੰਡੋ ਦਾ ਗਰੁੱਪ ਕਦੇ ਨਾ ਬਣਾਓ"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "ਜਦੋਂ ਥਾਂ ਥੋੜੀ ਹੋਵੇ ਤਾਂ ਵਿੰਡੋਜ਼ ਦਾ ਗਰੁੱਪ ਬਣਾਓ"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "ਵਿੰਡੋ ਦਾ ਗਰੁੱਪ ਹਮੇਸ਼ਾ ਬਣਾਓ"
 
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "ਸਭ ਮਾਨੀਟਰਾਂ ਉੱਤੇ ਵੇਖਾਓ"
+
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
 msgid "Workspace Names"
 msgstr "ਵਰਕਸਪੇਸ ਨਾਂ"
 
@@ -345,6 +344,18 @@ msgstr "ਨਾਂ"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "ਵਰਕਸਪੇਸ %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "ਗਨੋਮ ਸ਼ੈਲ ਕਲਾਸਿਕ"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "ਵਿੰਡੋ ਪਰਬੰਧ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਚਲਾਓ"
+
+#~ msgid "CPU"
+#~ msgstr "ਸੀਪੀਯੂ"
+
+#~ msgid "Memory"
+#~ msgstr "ਮੈਮੋਰੀ"
 
 #~ msgid "The application icon mode."
 #~ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਮੋਡ"
