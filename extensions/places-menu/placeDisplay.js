@@ -235,6 +235,28 @@ var PlacesManager = new Lang.Class({
         this._showDesktopIconsChangedId =
             this._settings.connect('changed::show-desktop-icons',
                                    Lang.bind(this, this._updateSpecials));
+
+        // unlike bookmark file, XDG's 'user-dirs.dirs' here only serves as a
+        // signal gnerator: when 'reload_user_special_dirs_cache' should be
+        // invoked, not a definitive source for user special dirs, which is
+        // handled by GLib as before.
+        this._userDirsFile = this._findUserDirsFile();
+        this._userDirsTimeoutId = 0;
+        this._userDirsMonitor = null;
+
+        if (this._userDirsFile) {
+            this._userDirsMonitor = this._userDirsFile.monitor_file(Gio.FileMonitorFlags.NONE, null);
+            this._userDirsMonitor.connect('changed', Lang.bind(this, function () {
+                if (this._userDirsTimeoutId > 0)
+                    return;
+                /* Defensive event compression */
+                this._userDirsTimeoutId = Mainloop.timeout_add(100, Lang.bind(this, function () {
+                    this._userDirsTimeoutId = 0;
+                    this._updateSpecials();
+                    return false;
+                }));
+            }));
+        }
         this._updateSpecials();
 
         /*
@@ -307,6 +329,9 @@ var PlacesManager = new Lang.Class({
 
         if (this._settings.get_boolean('show-desktop-icons'))
             dirs.push(GLib.UserDirectory.DIRECTORY_DESKTOP);
+
+        // Reload cache s.t. the changes on disk would appear here immediately
+        GLib.reload_user_special_dirs_cache();
 
         for (let i = 0; i < dirs.length; i++) {
             let specialPath = GLib.get_user_special_dir(dirs[i]);
@@ -412,6 +437,19 @@ var PlacesManager = new Lang.Class({
 
         this.emit('devices-updated');
         this.emit('network-updated');
+    },
+
+    _findUserDirsFile: function() {
+        let paths = [
+            GLib.build_filenamev([GLib.get_user_config_dir(), 'user-dirs.dirs']),
+        ];
+
+        for (let i = 0; i < paths.length; i++) {
+            if (GLib.file_test(paths[i], GLib.FileTest.EXISTS))
+                return Gio.File.new_for_path(paths[i]);
+        }
+
+        return null;
     },
 
     _findBookmarksFile: function() {
