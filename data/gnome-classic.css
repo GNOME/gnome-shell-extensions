@@ -394,7 +394,7 @@ StScrollBar {
       background-color: #e8e8e8;
       box-shadow: inset 0 1px 0px #adadad;
       font-weight: bold; }
-    .popup-menu .popup-menu-item:hover, .popup-menu .popup-menu-item:focus {
+    .popup-menu .popup-menu-item.selected {
       background-color: rgba(46, 52, 54, 0.1);
       color: #2e3436; }
     .popup-menu .popup-menu-item:active {
@@ -402,8 +402,6 @@ StScrollBar {
       color: #ffffff; }
     .popup-menu .popup-menu-item:insensitive {
       color: rgba(46, 52, 54, 0.5); }
-  .popup-menu .active {
-    background-color: #4a90d9; }
   .popup-menu .popup-inactive-menu-item {
     color: #2e3436; }
     .popup-menu .popup-inactive-menu-item:insensitive {
@@ -819,7 +817,7 @@ StScrollBar {
 .popup-menu-icon {
   icon-size: 1.09em; }
 
-.window-close, .notification-close {
+.window-close {
   background-image: url("resource:///org/gnome/shell/theme/close-window.svg");
   background-size: 32px;
   height: 32px;
@@ -829,12 +827,6 @@ StScrollBar {
   -shell-close-overlap: 16px; }
   .window-close:rtl {
     -st-background-image-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); }
-
-.notification-close {
-  -shell-close-overlap-x: 14px;
-  -shell-close-overlap-y: -12px; }
-  .notification-close:rtl {
-    -shell-close-overlap-x: -14px; }
 
 /* NETWORK DIALOGS */
 .nm-dialog {
@@ -1191,32 +1183,6 @@ StScrollBar {
     .notification-banner .notification-button:hover, .notification-banner .notification-buttonfocus {
       background-color: #292f30; }
 
-.notification {
-  font-size: 11pt;
-  width: 34em;
-  margin: 5px;
-  border-radius: 6px;
-  color: #eeeeec;
-  background-color: #2e3436;
-  border: 1px solid #a1a1a1;
-  spacing-rows: 4px;
-  padding: 8px;
-  spacing-columns: 10px; }
-
-.notification-unexpanded {
-  min-height: 48px;
-  height: 48px; }
-
-.notification-with-image {
-  min-height: 159px; }
-
-.notification-body {
-  spacing: 5px; }
-
-.notification-actions {
-  paddinf-top: 18px;
-  spacing: 6px; }
-
 .summary-source-counter {
   font-size: 10pt;
   font-weight: bold;
@@ -1230,36 +1196,20 @@ StScrollBar {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   border-radius: 0.9em; }
 
-.notification-scrollview {
-  max-height: 18em;
-  -st-vfade-offset: 24px; }
-  .notification-scrollview:ltr > StScrollBar {
-    padding-left: 6px; }
-  .notification-scrollview:rtl > StScrollBar {
-    padding-right: 6px; }
-
-.notification-button {
-  height: 24px; }
-
-.notification-icon-button {
-  border-radius: 5px;
-  padding: 5px;
-  height: 24px;
-  width: 24px; }
-  .notification-icon-button > StIcon {
-    icons-size: 16px;
-    width: 16px;
-    height: 16px;
-    padding: 2px; }
-
 .secondary-icon {
   icon-size: 1.09em; }
+
+.chat-body {
+  spacing: 5px; }
+
+.chat-response {
+  margin: 5px; }
 
 .chat-log-message {
   color: #17191a; }
 
-.chat-empty-line {
-  font-size: 4px; }
+.chat-new-group {
+  padding-top: 1em; }
 
 .chat-received {
   padding-left: 4px; }
@@ -1282,12 +1232,6 @@ StScrollBar {
   .chat-meta-message:rtl {
     padding-left: 0;
     padding-right: 4px; }
-
-.chat-notification-scrollview {
-  max-height: 22em; }
-
-.subscription-message {
-  font-style: italic; }
 
 .hotplug-transient-box {
   spacing: 6px;
@@ -1339,12 +1283,23 @@ StScrollBar {
     border-radius: 6px 0 0 0;
     border-right-width: 0; }
 
-.legacy-tray-handle StIcon {
-  icon-size: 24px; }
+.legacy-tray-handle,
+.legacy-tray-icon {
+  padding: 6px; }
+  .legacy-tray-handle StIcon,
+  .legacy-tray-icon StIcon {
+    icon-size: 24px; }
+  .legacy-tray-handle:hover, .legacy-tray-handle:focus,
+  .legacy-tray-icon:hover,
+  .legacy-tray-icon:focus {
+    background-color: rgba(46, 52, 54, 0.1); }
 
 .legacy-tray-icon-box {
-  padding: 6px;
   spacing: 12px; }
+  .legacy-tray-icon-box:ltr {
+    padding-left: 12px; }
+  .legacy-tray-icon-box:rtl {
+    padding-right: 12px; }
   .legacy-tray-icon-box StButton {
     width: 24px;
     height: 24px; }
