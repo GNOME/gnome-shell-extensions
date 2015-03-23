@@ -295,6 +295,7 @@ const ApplicationsButton = new Lang.Class({
         this._hidingId = Main.overview.connect('hiding', Lang.bind(this, function() {
             this.actor.remove_accessible_state (Atk.StateType.CHECKED);
         }));
+        this._setKeybinding();
 
         this.reloadFlag = false;
         this._createLayout();
@@ -332,6 +333,13 @@ const ApplicationsButton = new Lang.Class({
         Main.overview.disconnect(this._hidingId);
         Main.layoutManager.disconnect(this._panelBoxChangedId);
         appSys.disconnect(this._installedChangedId);
+
+        Main.wm.setCustomKeybindingHandler('panel-main-menu',
+                                           Shell.ActionMode.NORMAL |
+                                           Shell.ActionMode.OVERVIEW,
+                                           Main.sessionMode.hasOverview ?
+                                           Lang.bind(Main.overview, Main.overview.toggle) :
+                                           null);
     },
 
     _onCapturedEvent: function(actor, event) {
@@ -377,6 +385,15 @@ const ApplicationsButton = new Lang.Class({
            this.mainBox.show();
        }
        this.parent(menu, open);
+    },
+
+    _setKeybinding: function() {
+        Main.wm.setCustomKeybindingHandler('panel-main-menu',
+                                           Shell.ActionMode.NORMAL |
+                                           Shell.ActionMode.OVERVIEW,
+                                           Lang.bind(this, function() {
+                                               this.menu.toggle();
+                                           }));
     },
 
     _redisplay: function() {
@@ -587,26 +604,12 @@ function enable() {
     activitiesButton.container.hide();
     appsMenuButton = new ApplicationsButton();
     Main.panel.addToStatusArea('apps-menu', appsMenuButton, 1, 'left');
-
-    Main.wm.setCustomKeybindingHandler('panel-main-menu',
-                                       Shell.ActionMode.NORMAL |
-                                       Shell.ActionMode.OVERVIEW,
-                                       function() {
-                                           appsMenuButton.menu.toggle();
-                                       });
 }
 
 function disable() {
     Main.panel.menuManager.removeMenu(appsMenuButton.menu);
     appsMenuButton.destroy();
     activitiesButton.container.show();
-
-    Main.wm.setCustomKeybindingHandler('panel-main-menu',
-                                       Shell.ActionMode.NORMAL |
-                                       Shell.ActionMode.OVERVIEW,
-                                       Main.sessionMode.hasOverview ?
-                                       Lang.bind(Main.overview, Main.overview.toggle) :
-                                       null);
 }
 
 function init(metadata) {
