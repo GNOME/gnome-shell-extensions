@@ -295,6 +295,8 @@ const ApplicationsButton = new Lang.Class({
         this._hidingId = Main.overview.connect('hiding', Lang.bind(this, function() {
             this.actor.remove_accessible_state (Atk.StateType.CHECKED);
         }));
+        Main.layoutManager.connect('startup-complete',
+                                   Lang.bind(this, this._setKeybinding));
         this._setKeybinding();
 
         this.reloadFlag = false;
