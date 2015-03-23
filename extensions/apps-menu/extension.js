@@ -287,18 +287,19 @@ const ApplicationsButton = new Lang.Class({
         this.actor.label_actor = this._label;
 
         this.actor.connect('captured-event', Lang.bind(this, this._onCapturedEvent));
+        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
 
-        _showingId = Main.overview.connect('showing', Lang.bind(this, function() {
+        this._showingId = Main.overview.connect('showing', Lang.bind(this, function() {
             this.actor.add_accessible_state (Atk.StateType.CHECKED);
         }));
-        _hidingId = Main.overview.connect('hiding', Lang.bind(this, function() {
+        this._hidingId = Main.overview.connect('hiding', Lang.bind(this, function() {
             this.actor.remove_accessible_state (Atk.StateType.CHECKED);
         }));
 
         this.reloadFlag = false;
         this._createLayout();
         this._display();
-        _installedChangedId = appSys.connect('installed-changed', Lang.bind(this, function() {
+        this._installedChangedId = appSys.connect('installed-changed', Lang.bind(this, function() {
             if (this.menu.isOpen) {
                 this._redisplay();
                 this.mainBox.show();
@@ -310,7 +311,7 @@ const ApplicationsButton = new Lang.Class({
         // Since the hot corner uses stage coordinates, Clutter won't
         // queue relayouts for us when the panel moves. Queue a relayout
         // when that happens.
-        _panelBoxChangedId = Main.layoutManager.connect('panel-box-changed', Lang.bind(this, function() {
+        this._panelBoxChangedId = Main.layoutManager.connect('panel-box-changed', Lang.bind(this, function() {
             container.queue_relayout();
         }));
     },
@@ -324,6 +325,13 @@ const ApplicationsButton = new Lang.Class({
                                              pseudo_class: 'highlighted' });
         separator.connect('repaint', Lang.bind(this, this._onVertSepRepaint));
         return separator;
+    },
+
+    _onDestroy: function() {
+        Main.overview.disconnect(this._showingId);
+        Main.overview.disconnect(this._hidingId);
+        Main.layoutManager.disconnect(this._panelBoxChangedId);
+        appSys.disconnect(this._installedChangedId);
     },
 
     _onCapturedEvent: function(actor, event) {
@@ -573,10 +581,6 @@ const ApplicationsButton = new Lang.Class({
 
 let appsMenuButton;
 let activitiesButton;
-let _hidingId;
-let _installedChangedId;
-let _panelBoxChangedId;
-let _showingId;
 
 function enable() {
     activitiesButton = Main.panel.statusArea['activities'];
@@ -594,10 +598,6 @@ function enable() {
 
 function disable() {
     Main.panel.menuManager.removeMenu(appsMenuButton.menu);
-    appSys.disconnect(_installedChangedId);
-    Main.layoutManager.disconnect(_panelBoxChangedId);
-    Main.overview.disconnect(_hidingId);
-    Main.overview.disconnect(_showingId);
     appsMenuButton.destroy();
     activitiesButton.container.show();
 
