@@ -3,14 +3,14 @@
 #
 #
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012.
-# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2012, 2013, 2014.
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2012, 2013, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-09-28 07:44+0000\n"
-"PO-Revision-Date: 2014-09-28 16:38+0300\n"
+"POT-Creation-Date: 2015-04-03 07:58+0000\n"
+"PO-Revision-Date: 2015-04-03 20:41+0300\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -30,14 +30,6 @@ msgstr "Klasiskais GNOME"
 msgid "This session logs you into GNOME Classic"
 msgstr "Šī sesija ieraksta jūs klasiskajā GNOME vidē"
 
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "Klasiskā GNOME čaula"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Logu pārvaldība un lietotņu palaišana"
-
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
 msgstr "Pievienot modālo dialoglodziņu vecāka logam"
@@ -52,8 +44,6 @@ msgid "Arrangement of buttons on the titlebar"
 msgstr "Pogu izkārtojums virsraksta joslā"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
@@ -97,11 +87,11 @@ msgstr "Rādīt tikai logus, kas ir pašreizējā darbvietā"
 msgid "Activities Overview"
 msgstr "Aktivitāšu pārskats"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:110
 msgid "Favorites"
 msgstr "Izlase"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:279
 msgid "Applications"
 msgstr "Lietotnes"
 
@@ -127,7 +117,6 @@ msgid "Workspace"
 msgstr "Darbvieta"
 
 #: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
 msgid "Add Rule"
 msgstr "Pievienot kārtulu"
 
@@ -144,11 +133,11 @@ msgstr "Pievienot"
 msgid "Ejecting drive '%s' failed:"
 msgstr "Neizdevās izgrūst dzini “%s”:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Izņemamās ierīces"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "Atvērt datni"
 
@@ -169,7 +158,6 @@ msgstr ""
 "paneļa."
 
 #: ../extensions/example/prefs.js:30
-#| msgid "Message:"
 msgid "Message"
 msgstr "Ziņojums"
 
@@ -235,13 +223,9 @@ msgstr "Mājas"
 msgid "Browse Network"
 msgstr "Pārlūkot tīklu"
 
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "Procesors"
-
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "Atmiņa"
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Pārslēdz ekrānattēlu izmērus"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -251,52 +235,52 @@ msgstr "Motīva nosaukums"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Motīva nosaukums, ko ielādēt no ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:109
 msgid "Close"
 msgstr "Aizvērt"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Atminimizēt"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Minimizēt"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Atjaunot"
 
-#: ../extensions/window-list/extension.js:128
+#: ../extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Maksimizēt"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:399
 msgid "Minimize all"
 msgstr "Minimizēt visus"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:407
 msgid "Unminimize all"
 msgstr "Atminimizēt visus"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:415
 msgid "Maximize all"
 msgstr "Maksimizēt visus"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:424
 msgid "Unmaximize all"
 msgstr "Atmaksimizēt visus"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:433
 msgid "Close all"
 msgstr "Aizvērt visu"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:650
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Darbvietu indikators"
 
-#: ../extensions/window-list/extension.js:808
+#: ../extensions/window-list/extension.js:809
 msgid "Window List"
 msgstr "Logu saraksts"
 
@@ -312,24 +296,39 @@ msgstr ""
 "Nosaka, kad grupēt vienas programmas logus “Logu sarakstā”. Pieļaujamās "
 "vērtības ir “never”, “auto” un “always”."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Rāda logu sarakstu uz visiem monitoriem"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Vai logu sarakstu rādītu uz visiem pievienotajiem monitoriem, vai tikai uz "
+"primārā."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Logu grupēšana"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Nekad negrupēt logus"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Grupēt logus, kad vieta ir ierobežota"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Vienmēr grupēt logus"
 
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Rādīt uz visiem monitoriem"
+
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
 msgid "Workspace Names"
 msgstr "Darbvietu nosaukumi"
 
@@ -342,283 +341,3 @@ msgstr "Nosaukums"
 msgid "Workspace %d"
 msgstr "Darbvieta %d"
 
-#~ msgid "The application icon mode."
-#~ msgstr "Lietotnes ikonas režīms."
-
-#~ msgid ""
-#~ "Configures how the windows are shown in the switcher. Valid possibilities "
-#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-#~ "only' (shows only the application icon) or 'both'."
-#~ msgstr ""
-#~ "Konfigurē, kā pārslēdzējā tiek parādīts logs. Derīgās iespējas ir "
-#~ "“thumbnail-only” (rāda loga sīktēlu), “app-icon-only” (rāda tikai "
-#~ "lietotnes ikonu) vai “both” (abi)."
-
-#~ msgid "Suspend"
-#~ msgstr "Iesnaudināt"
-
-#~ msgid "Hibernate"
-#~ msgstr "Iemidzināt"
-
-#~ msgid "Power Off"
-#~ msgstr "Izslēgt"
-
-#~ msgid "Enable suspending"
-#~ msgstr "Aktivēt iesnaudināšanu"
-
-#~ msgid "Control the visibility of the Suspend menu item"
-#~ msgstr "Pārvaldīt iesnaudināšanas izvēlnes vienuma redzamību"
-
-#~ msgid "Enable hibernating"
-#~ msgstr "Aktivēt iemidzināšanu"
-
-#~ msgid "Control the visibility of the Hibernate menu item"
-#~ msgstr "Pārvaldīt iemidzināšanas izvēlnes vienuma redzamību"
-
-#~ msgid "Drag here to add favorites"
-#~ msgstr "Velciet šeit, lai pievienotu izlasei"
-
-#~ msgid "New Window"
-#~ msgstr "Jauns logs"
-
-#~ msgid "Quit Application"
-#~ msgstr "Iziet no lietotnes"
-
-#~ msgid "Remove from Favorites"
-#~ msgstr "Izņemt no izlases"
-
-#~ msgid "Position of the dock"
-#~ msgstr "Doka novietojums"
-
-#~ msgid ""
-#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
-#~ "or 'left'"
-#~ msgstr ""
-#~ "Iestata doka novietojumu ekrānā. Atļautās vērtības ir “right” vai “left”"
-
-#~ msgid "Icon size"
-#~ msgstr "Ikonas izmērs"
-
-#~ msgid "Sets icon size of the dock."
-#~ msgstr "Iestata ikonu izmēru dokā."
-
-#~ msgid "Enable/disable autohide"
-#~ msgstr "Aktivēt/deaktivēt automātisko slēpšanu"
-
-#~ msgid "Autohide effect"
-#~ msgstr "Automātiskās slēpšanas efekts"
-
-#~ msgid ""
-#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
-#~ "and 'move'"
-#~ msgstr ""
-#~ "Iestata doka slēpšanas efektu. Atļautās vērtības ir “resize” vai "
-#~ "“rescale” un “move”"
-
-#~ msgid "Autohide duration"
-#~ msgstr "Automātiskās slēpšanas ilgums"
-
-#~ msgid "Sets the time duration of the autohide effect."
-#~ msgstr "Iestata automātiskās slēpšanas efekta laiku."
-
-#~ msgid "Monitor"
-#~ msgstr "Monitors"
-
-#~ msgid ""
-#~ "Sets monitor to display dock in. The default value (-1) is the primary "
-#~ "monitor."
-#~ msgstr ""
-#~ "Iestata monitoru, lai rādītu doku. Noklusējuma vērtība (-1) nozīmē "
-#~ "primāro monitoru."
-
-#~ msgid "%s is away."
-#~ msgstr "%s ir prom."
-
-#~ msgid "%s is offline."
-#~ msgstr "%s ir nesaistē."
-
-#~ msgid "%s is online."
-#~ msgstr "%s ir tiešsaistē."
-
-#~ msgid "%s is busy."
-#~ msgstr "%s ir aizņemts."
-
-#~ msgid "Devices"
-#~ msgstr "Ierīces"
-
-#~ msgid "Bookmarks"
-#~ msgstr "Grāmatzīmes"
-
-#~ msgid "Network"
-#~ msgstr "Tīkls"
-
-#~ msgid "File System"
-#~ msgstr "Datņu sistēma"
-
-#~ msgid "Normal"
-#~ msgstr "Normāls"
-
-#~ msgid "Left"
-#~ msgstr "Pa kreisi"
-
-#~ msgid "Right"
-#~ msgstr "Pa labi"
-
-#~ msgid "Upside-down"
-#~ msgstr "Otrādi"
-
-#~ msgid "Display"
-#~ msgstr "Displejs"
-
-#~ msgid "Display Settings"
-#~ msgstr "Displeja iestatījumi"
-
-#~ msgid "The alt tab behaviour."
-#~ msgstr "Alt tab uzvedība."
-
-#~ msgid ""
-#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-#~ "workspace_icons. See the configuration dialogs for details."
-#~ msgstr ""
-#~ "Iestata Alt-Tab uzvedību. Iespējamās vērtības: all_thumbnails un "
-#~ "workspace_icons. Skatiet konfigurācijas dialoglodziņus, lai uzzinātu "
-#~ "vairāk."
-
-#~ msgid ""
-#~ "This mode presents all applications from all workspaces in one selection "
-#~ "list. Instead of using the application icon of every window, it uses "
-#~ "small thumbnails resembling the window itself."
-#~ msgstr ""
-#~ "Šis režīms parāda visas lietotnes no visām darbvietām vienā izvēles "
-#~ "sarakstā. Tā vietā, lai izmantotu lietotnes ikonu katrā logā, tas izmanto "
-#~ "sīktēlus, kas izskatās pēc paša loga."
-
-#~ msgid "Workspace & Icons"
-#~ msgstr "Darba vieta un ikonas"
-
-#~ msgid ""
-#~ "This mode let's you switch between the applications of your current "
-#~ "workspace and gives you additionally the option to switch to the last "
-#~ "used application of your previous workspace. This is always the last "
-#~ "symbol in the list and is segregated by a separator/vertical line if "
-#~ "available. \n"
-#~ "Every window is represented by its application icon."
-#~ msgstr ""
-#~ "Šis režīms ļauj jums pārslēgties starp lietotnēm jūsu pašreizējā "
-#~ "darbvietā un dod jums papildu iespēju pārslēgties uz pēdējo lietoto "
-#~ "lietotni iepriekšējā darbvietā. Tas vienmēr ir pēdējais simbols sarakstā "
-#~ "un ir atdalīts ar semikolu/vertikālu līniju, ja ir pieejams.\n"
-#~ "Katru logu reprezentē šī lietotnes ikona."
-
-#~ msgid "Move current selection to front before closing the popup"
-#~ msgstr ""
-#~ "Pārvietot pašreizējo izvēli uz priekšu pirms aizvērt uznirstošo lodziņu"
-
-#~ msgid ""
-#~ "The Alternate Tab can be used in different modes, that affect the way "
-#~ "windows are chosen and presented."
-#~ msgstr ""
-#~ "Alternate Tab var izmantot dažādos režīmos, kas ietekmē veidu, kā logi "
-#~ "tiek izvēlēti un attēloti."
-
-#~ msgid "Removable Devices"
-#~ msgstr "Noņemamās ierīces"
-
-#~ msgid "Configure display settings..."
-#~ msgstr "Konfigurēt displeja iestatījumus..."
-
-#~ msgid "Notifications"
-#~ msgstr "Paziņojumi"
-
-#~| msgid "My Account"
-#~ msgid "Online Accounts"
-#~ msgstr "Tiešsaistes konti"
-
-#~ msgid "Lock Screen"
-#~ msgstr "Bloķēt ekrānu"
-
-#~ msgid "Switch User"
-#~ msgstr "Mainīt lietotāju"
-
-#~ msgid "Log Out..."
-#~ msgstr "Izrakstīties..."
-
-#~ msgid ""
-#~ "This is the first time you use the Alternate Tab extension. \n"
-#~ "Please choose your preferred behaviour:\n"
-#~ "\n"
-#~ "All & Thumbnails:\n"
-#~ "    This mode presents all applications from all workspaces in one "
-#~ "selection \n"
-#~ "    list. Instead of using the application icon of every window, it uses "
-#~ "small \n"
-#~ "    thumbnails resembling the window itself. \n"
-#~ "\n"
-#~ "Workspace & Icons:\n"
-#~ "    This mode let's you switch between the applications of your current \n"
-#~ "    workspace and gives you additionally the option to switch to the last "
-#~ "used \n"
-#~ "    application of your previous workspace. This is always the last "
-#~ "symbol in \n"
-#~ "    the list and is segregated by a separator/vertical line if "
-#~ "available. \n"
-#~ "    Every window is represented by its application icon.  \n"
-#~ "\n"
-#~ "Native:\n"
-#~ "    This mode is the native GNOME 3 behaviour or in other words: "
-#~ "Clicking \n"
-#~ "    native switches the Alternate Tab extension off. \n"
-#~ msgstr ""
-#~ "Šī ir pirmā reize, kad izmantojat Alternate Tab paplašinājumu.\n"
-#~ "Lūdzu, izvēlieties vēlamo uzvedību:\n"
-#~ "\n"
-#~ "Viss un sīktēli:\n"
-#~ "    Šis režīms rāda visas lietotnes no visām daba vietām viena izlases "
-#~ "sarakstā.\n"
-#~ "    Tā vietā lai katrā logā izmantotu lietotnes ikonu, tas izmanto mazu "
-#~ "sīktēlu,\n"
-#~ "    kas pats atgādina logu.\n"
-#~ "\n"
-#~ "Darba vieta un ikonas:\n"
-#~ "    Šis režīms ļauj pārslēgties starp lietotnēm pašreizējā darba vietā "
-#~ "un \n"
-#~ "    dod jums iespēju pārslēgties uz iepriekš lietoto lietotni iepriekšējā "
-#~ "darba\n"
-#~ "    vietā. Tas vienmēr ir pēdējais simbols sarakstā un ir nošķirts ar \n"
-#~ "    atdalītāju vai vertikālu līniju, ja ir tāda ir pieejama.\n"
-#~ "    Katru logu attēlo tam atbilstošās lietotnes ikona.\n"
-#~ "\n"
-#~ "\n"
-#~ "Vietējs:     Šis režīms ir vietēja GNOME 3 uzvedība, jeb citiem vārdiem: "
-#~ "vietējais režīms\n"
-#~ "    izslēdz Alternate Tab paplašinājumu.\n"
-
-#~ msgid "Alt Tab Behaviour"
-#~ msgstr "Alt Tab uzvedība"
-
-#~ msgid "Cancel"
-#~ msgstr "Atcelt"
-
-#~ msgid "Ask the user for a default behaviour if true."
-#~ msgstr "Ja patiess, par noklusēto uzvedību vaicāt lietotājam."
-
-#~ msgid "Indicates if Alternate Tab is newly installed"
-#~ msgstr "Norāda, vai Alternate Tab ir tikko uzinstalēts"
-
-#~ msgid ""
-#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
-#~ "the default grid based algorithm, 'natural' to use another one that "
-#~ "reflects more the position and size of the actual window"
-#~ msgstr ""
-#~ "Algoritms, ko izmanto sīktēlu izkārtošanai pārskatā. 'grid', lai "
-#~ "izmantotu noklusēto algoritmu, 'natural', lai izmantotu citu, kas vairāk "
-#~ "atbilst logu novietojumam un izmēram."
-
-#~ msgid "Window placement strategy"
-#~ msgstr "Logu izvietojumu stratēģija"
-
-#~ msgid "Available"
-#~ msgstr "Pieejams"
-
-#~ msgid "Busy"
-#~ msgstr "Aizņemts"
