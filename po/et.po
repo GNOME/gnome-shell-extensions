@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-09-25 13:27+0000\n"
-"PO-Revision-Date: 2013-09-25 20:02+0300\n"
+"POT-Creation-Date: 2014-08-06 07:34+0000\n"
+"PO-Revision-Date: 2014-08-06 21:43+0300\n"
 "Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
 "Language-Team: Estonian <gnome-et-list@gnome.org>\n"
 "Language: et\n"
@@ -38,6 +38,16 @@ msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
 "See võti on tähtsam võtmest org.gnome.mutter GNOME Shelli käivitamisel."
+
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Nuppude järjestus tiitliribal"
+
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"See võti on tähtsam võtmest org.gnome.desktop.wm.preferences GNOME Shelli "
+"käivitamisel."
 
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "Akna automaatpaigutus on lubatud, kui aken lohistatakse ekraani serva"
@@ -88,7 +98,7 @@ msgstr "Rakendus"
 msgid "Workspace"
 msgstr "Tööala"
 
-msgid "Add rule"
+msgid "Add Rule"
 msgstr "Lisa reegel"
 
 msgid "Create new matching rule"
@@ -97,7 +107,7 @@ msgstr "Uue reegli loomine"
 msgid "Add"
 msgstr "Lisa"
 
-#, c-format
+#, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Seadme '%s' väljastamine nurjus:"
 
@@ -118,8 +128,9 @@ msgid ""
 "panel."
 msgstr "Kui see pole tühi, näidatakse seda teksti paneelile klõpsates."
 
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
+msgid "Message"
+msgstr "Sõnum"
+
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -128,9 +139,6 @@ msgstr ""
 "Näide hästi käituva Shelli laienduse koostamise kohta, see ise väga kasulik "
 "ei ole.\n"
 "See võimaldab muuta kõigest tervitusteksti."
-
-msgid "Message:"
-msgstr "Sõnum:"
 
 msgid "Use more screen for windows"
 msgstr "Rohkem pinda akende jaoks"
@@ -159,7 +167,7 @@ msgstr ""
 msgid "Places"
 msgstr "Asukohad"
 
-#, c-format
+#, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" käivitamine nurjus"
 
@@ -243,12 +251,12 @@ msgstr "Aknaid grupeeritakse, kui ruumi on vähe"
 msgid "Always group windows"
 msgstr "Aknaid grupeeritakse alati"
 
-msgid "Workspace names:"
-msgstr "Tööalade nimed:"
+msgid "Workspace Names"
+msgstr "Tööalade nimed"
 
 msgid "Name"
 msgstr "Nimi"
 
-#, c-format
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Tööala %d"
