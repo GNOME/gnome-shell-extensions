@@ -1,0 +1,310 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sveinn í Felli <sv1@fellsnet.is>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2015-04-26 20:01+0000\n"
+"PO-Revision-Date: 2015-04-27 15:38+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME Klassík"
+
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Þessi seta skráir þig inn í klassískt GNOME"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "Klassísk GNOME skel"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Gluggastjórnun og forritaræsing"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Vinnusvæði einungis á aðalskjá"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "Einungis smámynd"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "Einungis táknmynd forrits"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "Smámynd og táknmynd"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr ""
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "Birta eingöngu glugga á núverandi vinnusvæði"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Virkniyfirlit"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Eftirlæti"
+
+#: ../extensions/apps-menu/extension.js:282
+msgid "Applications"
+msgstr "Forrit"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Forrit og vinnusvæðalisti"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "Forrit"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "Vinnusvæði"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Bæta við reglu"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr ""
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Bæta við"
+
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Útspýting drifsins '%s' mistókst:"
+
+#: ../extensions/drive-menu/extension.js:123
+msgid "Removable devices"
+msgstr "Útskiptanleg tæki"
+
+#: ../extensions/drive-menu/extension.js:150
+msgid "Open File"
+msgstr "Opna skrá"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "Hæ heimur!"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "Varatexti ávarps."
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Skilaboð:"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Setja fyrirsagnir glugga efst"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "Staðir"
+
+#: ../extensions/places-menu/placeDisplay.js:57
+#, javascript-format
+msgid "Failed to launch \"%s\""
+msgstr "Mistókst að ræsa \"%s\""
+
+#: ../extensions/places-menu/placeDisplay.js:99
+#: ../extensions/places-menu/placeDisplay.js:122
+msgid "Computer"
+msgstr "Tölvan"
+
+#: ../extensions/places-menu/placeDisplay.js:200
+msgid "Home"
+msgstr "Heima"
+
+#: ../extensions/places-menu/placeDisplay.js:287
+msgid "Browse Network"
+msgstr "Flakka um net"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "Örgjörvi"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "Minni"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "Heiti þema"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Heiti á þema, hlaðið inn frá ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Close"
+msgstr "Loka"
+
+#: ../extensions/window-list/extension.js:120
+msgid "Unminimize"
+msgstr "Endurheimta"
+
+#: ../extensions/window-list/extension.js:121
+msgid "Minimize"
+msgstr "Lágmarka"
+
+#: ../extensions/window-list/extension.js:127
+msgid "Unmaximize"
+msgstr "Minnka glugga"
+
+#: ../extensions/window-list/extension.js:128
+msgid "Maximize"
+msgstr "Hámarka"
+
+#: ../extensions/window-list/extension.js:300
+msgid "Minimize all"
+msgstr "Lágmarka allt"
+
+#: ../extensions/window-list/extension.js:308
+msgid "Unminimize all"
+msgstr "Endurheimta allt"
+
+#: ../extensions/window-list/extension.js:316
+msgid "Maximize all"
+msgstr "Hámarka allt"
+
+#: ../extensions/window-list/extension.js:325
+msgid "Unmaximize all"
+msgstr "Minnka allt"
+
+#: ../extensions/window-list/extension.js:334
+msgid "Close all"
+msgstr "Loka öllu"
+
+#: ../extensions/window-list/extension.js:644
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Vinnusvæðavísir"
+
+#: ../extensions/window-list/extension.js:798
+msgid "Window List"
+msgstr "Gluggalisti"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Hvenær á að hópa glugga"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Tilgreinir hvenær safna eigi saman gluggum sama forrits í gluggalistanum. "
+"Möguleg gildi eru „aldrei‟, „sjálfvirkt‟ og „alltaf‟."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Hópun glugga"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Aldrei hópa glugga"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Hópa glugga þegar pláss er takmarkað"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Alltaf hópa glugga"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "Vinnusvæðanöfn:"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "Heiti"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Vinnusvæði %d"
+
