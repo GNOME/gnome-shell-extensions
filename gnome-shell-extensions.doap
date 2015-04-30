@@ -27,4 +27,11 @@ and will be picked automatically at next login.
       <gnome:userid>gcampagna</gnome:userid>
     </foaf:Person>
   </maintainer>
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Florian Müllner</foaf:name>
+      <foaf:mbox rdf:resource="mailto:fmuellner@gnome.org" />
+      <gnome:userid>fmuellner</gnome:userid>
+    </foaf:Person>
+  </maintainer>
 </Project>
