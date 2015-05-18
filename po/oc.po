@@ -1,0 +1,406 @@
+# Occitan translation for gnome-shell-extensions.
+# Copyright (C) 2011-12 Listed translators
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2013-09-27 14:18+0000\n"
+"PO-Revision-Date: 2015-05-18 16:36+0200\n"
+"Last-Translator: Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>\n"
+"Language-Team: Tot en òc (totenoc.eu)\n"
+"Language: oc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
+
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME Classic"
+
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Aquesta sesilha vos connècta a GNOME Classic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:1
+msgid "GNOME Shell Classic"
+msgstr "GNOME Shell Classic"
+
+#: ../data/gnome-shell-classic.desktop.in.in.h:2
+msgid "Window management and application launching"
+msgstr "Gestion de las fenèstras e aviada d'aplicacions"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Estacar las bóstias de dialòg modalas a lor fenèstra parenta"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Aquesta clau remplaça la clau dins org.gnome.mutter quand GNOME Shell es en "
+"cors d'execucion."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Activar la disposicion verticala quand las fenèstras son depausadas als "
+"bòrds de l'ecran"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid "Workspaces only on primary monitor"
+msgstr "Espacis de trabalh unicament sus l'ecran principal"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Retardar los cambiaments de focus en mòde mirga fins al moment que lo "
+"puntador arrèsta de bolegar"
+
+#: ../extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "Vinheta solament"
+
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "Icòna d'aplicacion solament"
+
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "Vinheta e icòna d'aplicacion"
+
+#: ../extensions/alternate-tab/prefs.js:37
+msgid "Present windows as"
+msgstr "Presentar la fenèstra coma"
+
+#: ../extensions/alternate-tab/prefs.js:62
+msgid "Show only windows in the current workspace"
+msgstr "Afichar pas las fenèstras que sus l'espaci de trabalh actual"
+
+#: ../extensions/apps-menu/extension.js:39
+msgid "Activities Overview"
+msgstr "Vista d'ensemble de las activitats"
+
+#: ../extensions/apps-menu/extension.js:113
+msgid "Favorites"
+msgstr "Favorits"
+
+#: ../extensions/apps-menu/extension.js:282
+msgid "Applications"
+msgstr "Aplicacions"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+msgid "Application and workspace list"
+msgstr "Lista d'aplicacions e d'espacis de trabalh"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Una lista de cadenas de caratèrs, que contenon caduna un identificant "
+"d'aplicacion (nom de fichièr desktop), seguit per un dos-punts e lo numèro "
+"de l'espaci de trabalh"
+
+#: ../extensions/auto-move-windows/prefs.js:55
+msgid "Application"
+msgstr "Aplicacion"
+
+#: ../extensions/auto-move-windows/prefs.js:64
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Workspace"
+msgstr "Espaci de trabalh"
+
+#: ../extensions/auto-move-windows/prefs.js:80
+msgid "Add rule"
+msgstr "Apondre una règla"
+
+#: ../extensions/auto-move-windows/prefs.js:94
+msgid "Create new matching rule"
+msgstr "Crear una règla novèla de concordància"
+
+#: ../extensions/auto-move-windows/prefs.js:98
+msgid "Add"
+msgstr "Apondre"
+
+#: ../extensions/drive-menu/extension.js:73
+#, javascript-format, javascript-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "L'ejeccion del disc « %s » a fracassat :"
+
+#: ../extensions/drive-menu/extension.js:90
+msgid "Removable devices"
+msgstr "Periferics amovibles"
+
+#: ../extensions/drive-menu/extension.js:117
+msgid "Open File"
+msgstr "Dobrir lo fichièr"
+
+#: ../extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "Adieu, lo mond !"
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "Autre tèxte d'acuèlh."
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"S'es pas void, conten lo tèxte que s'aficha quand clicatz "
+"sul tablèu de bòrd."
+
+#: ../extensions/example/prefs.js:30
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"Example a per tòca de far veire cossí bastir de bonas èxtensions pel Shell e "
+"en tant que tal, a pas tant de foncionalitats en se qu'aquò.\n"
+"Pasmens, es possible de personalizar lo messatge d'acuèlh."
+
+#: ../extensions/example/prefs.js:36
+msgid "Message:"
+msgstr "Messatge :"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "Utilizar mai d'ecran per las fenèstras"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Ensaja d'utilizar mai d'espaci d'ecran per plaçar las vinhetas de las fenèstras "
+"en s'adaptant a las proporcions de l'ecran e en las consolidant mai per "
+"redusir la zòna englobanta. Aqueste paramètre s'aplica pas qu'en utilizant "
+"l'estrategia de plaçament « natural »."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Plaçar los títols de las fenèstras en dessús"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Se verai, plaça los títols de las fenèstras en dessús de la vinheta "
+"correspondenta, aquò remplaça lo comportament per defaut que los plaça en "
+"dejós. Per qu'aqueste paramètre siá pres en compte, cal reaviar lo Shell."
+
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "Emplaçaments"
+
+#: ../extensions/places-menu/placeDisplay.js:56
+#, javascript-format, javascript-format
+msgid "Failed to launch \"%s\""
+msgstr "Impossible d'aviar « %s »"
+
+#: ../extensions/places-menu/placeDisplay.js:98
+#: ../extensions/places-menu/placeDisplay.js:121
+msgid "Computer"
+msgstr "Ordenador"
+
+#: ../extensions/places-menu/placeDisplay.js:199
+msgid "Home"
+msgstr "Dorsièr personal"
+
+#: ../extensions/places-menu/placeDisplay.js:286
+msgid "Browse Network"
+msgstr "Percórrer la ret"
+
+#: ../extensions/systemMonitor/extension.js:214
+msgid "CPU"
+msgstr "CPU"
+
+#: ../extensions/systemMonitor/extension.js:267
+msgid "Memory"
+msgstr "Memòria"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "Nom del tèma"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Lo nom del tèma, de cargar a partir de ~/.themes/name/gnome-shell"
+
+#: ../extensions/window-list/extension.js:92
+msgid "Close"
+msgstr "Tampar"
+
+#: ../extensions/window-list/extension.js:102
+msgid "Unminimize"
+msgstr "Restablir"
+
+#: ../extensions/window-list/extension.js:103
+msgid "Minimize"
+msgstr "Redusir"
+
+#: ../extensions/window-list/extension.js:109
+msgid "Unmaximize"
+msgstr "Restablir"
+
+#: ../extensions/window-list/extension.js:110
+msgid "Maximize"
+msgstr "Maximizar"
+
+#: ../extensions/window-list/extension.js:270
+msgid "Minimize all"
+msgstr "Redusir tot"
+
+#: ../extensions/window-list/extension.js:278
+msgid "Unminimize all"
+msgstr "Restablir tot"
+
+#: ../extensions/window-list/extension.js:286
+msgid "Maximize all"
+msgstr "Maximizar tot"
+
+#: ../extensions/window-list/extension.js:295
+msgid "Unmaximize all"
+msgstr "Restablir tot"
+
+#: ../extensions/window-list/extension.js:304
+msgid "Close all"
+msgstr "Tampar tot"
+
+#: ../extensions/window-list/extension.js:591
+#: ../extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indicator d'espaci de trabalh"
+
+#: ../extensions/window-list/extension.js:743
+msgid "Window List"
+msgstr "Lista de fenèstras"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+msgid "When to group windows"
+msgstr "Quand regropar las fenèstras"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Decidís quora regropar las fenèstras d'una meteissa aplicacion sus la lista "
+"de las fenèstras. Las valors possiblas son « never » (pas jamai), « auto » e "
+"« always » (totjorn)."
+
+#: ../extensions/window-list/prefs.js:30
+msgid "Window Grouping"
+msgstr "Regropament de fenèstras"
+
+#: ../extensions/window-list/prefs.js:49
+msgid "Never group windows"
+msgstr "Regropar pas jamai las fenèstras"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Group windows when space is limited"
+msgstr "Regropar las fenèstras quand l'espaci es limitat"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Always group windows"
+msgstr "Regropar totjorn las fenèstras"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+msgid "Workspace names:"
+msgstr "Noms dels espacis de trabalh :"
+
+#: ../extensions/workspace-indicator/prefs.js:152
+msgid "Name"
+msgstr "Nom"
+
+#: ../extensions/workspace-indicator/prefs.js:186
+#, javascript-format, javascript-format
+msgid "Workspace %d"
+msgstr "Espaci de trabalh %d"
+
+#~ msgid "Suspend"
+#~ msgstr "Metre en velha"
+
+#~ msgid "Hibernate"
+#~ msgstr "Ivernar"
+
+#~ msgid "Power Off"
+#~ msgstr "Atudar"
+
+#~ msgid "Enable suspending"
+#~ msgstr "Activar la mesa en velha"
+
+#~ msgid "Control the visibility of the Suspend menu item"
+#~ msgstr "Gerís la visibilitat de l'element de menú « mesa en velha »"
+
+#~ msgid "Enable hibernating"
+#~ msgstr "Activer l'hibernation"
+
+#~ msgid "Control the visibility of the Hibernate menu item"
+#~ msgstr "Gerís la visibilitat de l'element de menú « ivernacion »"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Left"
+#~ msgstr "Esquèrra"
+
+#~ msgid "Right"
+#~ msgstr "Drecha"
+
+#~ msgid "Upside-down"
+#~ msgstr "Capvirat"
+
+#~ msgid "Display"
+#~ msgstr "Afichar"
+
+#~ msgid "Display Settings"
+#~ msgstr "Afichar los paramètres"
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Ordre des boutons dans la barre de titre"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when running "
+#~ "GNOME Shell."
+#~ msgstr ""
+#~ "Cette clé remplace la clé dans org.gnome.desktop.wm.preferences lorsque "
+#~ "GNOME Shell est en cours d'exécution."
+
+#~ msgid "Add Rule"
+#~ msgstr "Ajouter une règle"
+
+#~ msgid "Message"
+#~ msgstr "Message"
+
+#~ msgid "Cycle Screenshot Sizes"
+#~ msgstr "Passer à la taille de capture suivante"
+
+#~ msgid "Show the window list on all monitors"
+#~ msgstr "Afficher la liste des fenêtres sur tous les écrans"
+
+#~ msgid ""
+#~ "Whether to show the window list on all connected monitors or only on the "
+#~ "primary one."
+#~ msgstr ""
+#~ "Indique s'il faut afficher la liste des fenêtres sur tous les écrans "
+#~ "connectés ou seulement l'écran principal."
+
+#~ msgid "Show on all monitors"
+#~ msgstr "Afficher sur tous les écrans"
+
+#~ msgid "Workspace Names"
+#~ msgstr "Noms des espaces de travail"
