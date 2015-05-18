@@ -1,23 +1,22 @@
 # Occitan translation for gnome-shell-extensions.
 # Copyright (C) 2011-12 Listed translators
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Cédric Valmary (totenoc.org) <cvalmary@yahoo.fr>, 2013.
-# None <None>, 2013.
+# Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
 "POT-Creation-Date: 2013-09-27 14:18+0000\n"
-"PO-Revision-Date: 2013-10-06 17:18+0200\n"
-"Last-Translator: None <None>\n"
-"Language-Team: totenoc.org\n"
+"PO-Revision-Date: 2015-05-18 16:36+0200\n"
+"Last-Translator: Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>\n"
+"Language-Team: Tot en òc (totenoc.eu)\n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Virtaal 0.7.0\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
@@ -45,8 +44,8 @@ msgstr "Estacar las bóstias de dialòg modalas a lor fenèstra parenta"
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Aquesta clau remplaça la clau dins org.gnome.mutter lorsque GNOME Shell es "
-"en cors d'execucion."
+"Aquesta clau remplaça la clau dins org.gnome.mutter quand GNOME Shell es en "
+"cors d'execucion."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Enable edge tiling when dropping windows on screen edges"
@@ -131,7 +130,7 @@ msgid "Add"
 msgstr "Apondre"
 
 #: ../extensions/drive-menu/extension.js:73
-#, javascript-format
+#, javascript-format, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "L'ejeccion del disc « %s » a fracassat :"
 
@@ -199,7 +198,7 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 "Se verai, plaça los títols de las fenèstras en dessús de la vinheta "
-"correspondenta, aquò remplaça lo compòrtament per defaut que los plaça en "
+"correspondenta, aquò remplaça lo comportament per defaut que los plaça en "
 "dejós. Per qu'aqueste paramètre siá pres en compte, cal reaviar lo Shell."
 
 #: ../extensions/places-menu/extension.js:78
@@ -208,7 +207,7 @@ msgid "Places"
 msgstr "Emplaçaments"
 
 #: ../extensions/places-menu/placeDisplay.js:56
-#, javascript-format
+#, javascript-format, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "Impossible d'aviar « %s »"
 
@@ -328,7 +327,7 @@ msgid "Name"
 msgstr "Nom"
 
 #: ../extensions/workspace-indicator/prefs.js:186
-#, javascript-format
+#, javascript-format, javascript-format
 msgid "Workspace %d"
 msgstr "Espaci de trabalh %d"
 
@@ -371,3 +370,37 @@ msgstr "Espaci de trabalh %d"
 #~ msgid "Display Settings"
 #~ msgstr "Afichar los paramètres"
 
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Ordre des boutons dans la barre de titre"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when running "
+#~ "GNOME Shell."
+#~ msgstr ""
+#~ "Cette clé remplace la clé dans org.gnome.desktop.wm.preferences lorsque "
+#~ "GNOME Shell est en cours d'exécution."
+
+#~ msgid "Add Rule"
+#~ msgstr "Ajouter une règle"
+
+#~ msgid "Message"
+#~ msgstr "Message"
+
+#~ msgid "Cycle Screenshot Sizes"
+#~ msgstr "Passer à la taille de capture suivante"
+
+#~ msgid "Show the window list on all monitors"
+#~ msgstr "Afficher la liste des fenêtres sur tous les écrans"
+
+#~ msgid ""
+#~ "Whether to show the window list on all connected monitors or only on the "
+#~ "primary one."
+#~ msgstr ""
+#~ "Indique s'il faut afficher la liste des fenêtres sur tous les écrans "
+#~ "connectés ou seulement l'écran principal."
+
+#~ msgid "Show on all monitors"
+#~ msgstr "Afficher sur tous les écrans"
+
+#~ msgid "Workspace Names"
+#~ msgstr "Noms des espaces de travail"
