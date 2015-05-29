@@ -96,10 +96,10 @@ StScrollBar {
     background-color: transparent; }
   StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
     border-radius: 8px;
-    background-color: #ededed;
+    background-color: #7a7e7f;
     margin: 3px; }
     StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
-      background-color: white; }
+      background-color: #54595a; }
     StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
       background-color: #4a90d9; }
 
@@ -489,10 +489,9 @@ StScrollBar {
 
 .switcher-arrow {
   border-color: transparent;
-  color: #a1a1a1; }
-
-.switcher-arrow:highlighted {
-  color: #2e3436; }
+  color: rgba(46, 52, 54, 0.8); }
+  .switcher-arrow:highlighted {
+    color: #2e3436; }
 
 .input-source-switcher-symbol {
   font-size: 34pt;
@@ -1742,13 +1741,13 @@ StScrollBar {
     border-bottom: none; }
     #panel.lock-screen .panel-button, #panel.unlock-screen .panel-button, #panel.login-screen .panel-button {
       color: #eeeeec; }
+  #panel .popup-menu-arrow {
+    width: 0;
+    height: 0; }
 
 #appMenu {
-  padding: 0 8px 0 8px; }
-
-.popup-menu-arrow {
-  width: 0;
-  height: 0; }
+  padding: 0 8px 0 8px;
+  spinner-image: url("classic-process-working.svg"); }
 
 .tile-preview-left.on-primary,
 .tile-preview-right.on-primary,
