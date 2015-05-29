@@ -57,11 +57,13 @@ $variant: 'light';
     border-bottom: none;
     .panel-button { color: $osd_fg_color; }
   }
+  .popup-menu-arrow { width: 0; height: 0;  } // shell's display: none;
 }
 
-#appMenu { padding: 0 8px 0 8px; }
-.popup-menu-arrow { width: 0; height: 0;  } // shell's display: none;
-
+#appMenu { 
+  padding: 0 8px 0 8px; 
+  spinner-image: url("classic-process-working.svg"); 
+}
 .tile-preview-left.on-primary,
 .tile-preview-right.on-primary,
 .tile-preview-left.tile-preview-right.on-primary {
