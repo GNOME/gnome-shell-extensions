@@ -74,7 +74,7 @@ const ApplicationMenuItem = new Lang.Class({
     },
 
     activate: function(event) {
-	this._app.open_new_window(event.get_time());
+	this._app.open_new_window(-1);
         this._button.selectCategory(null, null);
         this._button.menu.toggle();
 	this.parent(event);
