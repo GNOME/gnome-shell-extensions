@@ -139,11 +139,12 @@ const WindowTitle = new Lang.Class({
 
     _init: function(metaWindow) {
         this._metaWindow = metaWindow;
-        this.actor = new St.BoxLayout({ style_class: 'window-button-box' });
+        this.actor = new St.BoxLayout({ style_class: 'window-button-box',
+                                        x_expand: true, y_expand: true });
 
         this._icon = new St.Bin({ style_class: 'window-button-icon' });
         this.actor.add(this._icon);
-        this._label = new St.Label();
+        this._label = new St.Label({ y_align: Clutter.ActorAlign.CENTER });
         this.actor.add(this._label);
 
         this._textureCache = St.TextureCache.get_default();
@@ -205,6 +206,7 @@ const BaseButton = new Lang.Class({
 
         this.actor = new St.Button({ style_class: 'window-button',
                                      x_fill: true,
+                                     y_fill: true,
                                      can_focus: true,
                                      button_mask: St.ButtonMask.ONE |
                                                   St.ButtonMask.THREE });
@@ -472,6 +474,7 @@ const AppButton = new Lang.Class({
         this.actor.set_child(stack);
 
         this._singleWindowTitle = new St.Bin({ x_expand: true,
+                                               y_fill: true,
                                                x_align: St.Align.START });
         stack.add_actor(this._singleWindowTitle);
 
@@ -482,7 +485,8 @@ const AppButton = new Lang.Class({
         this._icon = new St.Bin({ style_class: 'window-button-icon',
                                   child: app.create_icon_texture(ICON_TEXTURE_SIZE) });
         this._multiWindowTitle.add(this._icon);
-        this._multiWindowTitle.add(new St.Label({ text: app.get_name() }));
+        this._multiWindowTitle.add(new St.Label({ text: app.get_name(),
+                                                  y_align: Clutter.ActorAlign.CENTER }));
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menu = new PopupMenu.PopupMenu(this.actor, 0.5, St.Side.BOTTOM);
