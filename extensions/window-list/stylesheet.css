@@ -2,7 +2,7 @@
   /* .window-button-icon height +
      .window-button vertical padding +
      .window-button > StWidget vertical padding) */
-  height: 30px;
+  height: 2.25em;
 }
 
 .window-list {
@@ -27,8 +27,8 @@
 }
 
 .window-button > StWidget {
-  -st-natural-width: 250px;
-  max-width: 250px;
+  -st-natural-width: 18.75em;
+  max-width: 18.75em;
   color: #bbb;
   background-color: black;
   border-radius: 4px;
