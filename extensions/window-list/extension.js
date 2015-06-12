@@ -813,8 +813,8 @@ const WindowList = new Lang.Class({
         Main.ctrlAltTabManager.addGroup(this.actor, _("Window List"), 'start-here-symbolic');
 
         this.actor.width = this._monitor.width;
-        this.actor.set_position(this._monitor.x,
-                                this._monitor.y + this._monitor.height - this.actor.height);
+        this.actor.connect('notify::height', Lang.bind(this, this._updatePosition));
+        this._updatePosition();
 
         this._appSystem = Shell.AppSystem.get_default();
         this._appStateChangedId =
@@ -913,6 +913,11 @@ const WindowList = new Lang.Class({
 
         active = Math.max(0, Math.min(active + diff, children.length-1));
         children[active].activate();
+    },
+
+    _updatePosition: function() {
+        this.actor.set_position(this._monitor.x,
+                                this._monitor.y + this._monitor.height - this.actor.height);
     },
 
     _updateWorkspaceIndicatorVisibility: function() {
