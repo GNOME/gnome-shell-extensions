@@ -12,7 +12,6 @@ const PopupMenu = imports.ui.popupMenu;
 const Gtk = imports.gi.Gtk;
 const GLib = imports.gi.GLib;
 const Signals = imports.signals;
-const Layout = imports.ui.layout;
 const Pango = imports.gi.Pango;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
@@ -200,23 +199,6 @@ const CategoryMenuItem = new Lang.Class({
             this._button.scrollToCatButton(this);
         }
         this.parent(active, params);
-    }
-});
-
-const HotCorner = new Lang.Class({
-    Name: 'HotCorner',
-    Extends: Layout.HotCorner,
-
-    _onCornerEntered : function() {
-        if (!this._entered) {
-            this._entered = true;
-            if (!Main.overview.animationInProgress) {
-                this._activationTime = Date.now() / 1000;
-                this.rippleAnimation();
-                Main.overview.toggle();
-            }
-        }
-        return false;
     }
 });
 
