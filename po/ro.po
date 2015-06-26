@@ -2,14 +2,14 @@
 # Copyright (C) 2014 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Bogdan Mințoi <mintoi.bogdan@gmail.com>, 2014.
-# Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2014.
+# Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-11-26 18:07+0000\n"
-"PO-Revision-Date: 2014-11-30 12:18+0200\n"
+"POT-Creation-Date: 2015-06-19 08:07+0000\n"
+"PO-Revision-Date: 2015-06-19 20:23+0200\n"
 "Last-Translator: Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>\n"
 "Language-Team: Gnome Romanian Translation Team\n"
 "Language: ro\n"
@@ -29,14 +29,6 @@ msgstr "GNOME Clasic"
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "Această sesiune vă autentifică în GNOME Clasic"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "Interfața clasică GNOME"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Gestionarea ferestrei și lansarea aplicației"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -72,6 +64,7 @@ msgstr "Spații de lucru doar pe monitorul principal"
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr ""
+"Întârzie schimbările de focus în modul maus până când cursorul se oprește"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -97,11 +90,11 @@ msgstr "Arată doar ferestrele aflate în spațiul de lucru actual"
 msgid "Activities Overview"
 msgstr "Panoramă activități"
 
-#: ../extensions/apps-menu/extension.js:114
+#: ../extensions/apps-menu/extension.js:110
 msgid "Favorites"
 msgstr "Favorite"
 
-#: ../extensions/apps-menu/extension.js:283
+#: ../extensions/apps-menu/extension.js:279
 msgid "Applications"
 msgstr "Aplicații"
 
@@ -148,7 +141,7 @@ msgstr "Scoaterea unității „%s” a eșuat:"
 msgid "Removable devices"
 msgstr "Dispozitive detașabile"
 
-#: ../extensions/drive-menu/extension.js:151
+#: ../extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "Deschide fișier"
 
@@ -165,6 +158,8 @@ msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
 msgstr ""
+"Dacă nu este gol, conține un text care va fi afișat când se apasă clic pe "
+"panou."
 
 #: ../extensions/example/prefs.js:30
 msgid "Message"
@@ -190,6 +185,10 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
+"Încearcă să utilizeze mai mult ecran pentru a plasa miniaturile ferestrelor "
+"adaptând raportul de aspect al ecranului, și consolidându-le pentru a reduce "
+"cadrul înconjurător. Această configurare este valabilă numai pentru "
+"strategia de plasare naturală."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -201,6 +200,10 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
+"Dacă este adevărat, va plasa titlul ferestrelor deasupra miniaturilor "
+"respective, înlocuind plasarea implicită a shell-ului în partea de jos. "
+"Schimbând această configurare necesită repornire shell-ului pentru a avea "
+"efect."
 
 #: ../extensions/places-menu/extension.js:78
 #: ../extensions/places-menu/extension.js:81
@@ -227,15 +230,7 @@ msgstr "Navighează rețeaua"
 
 #: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
 msgid "Cycle Screenshot Sizes"
-msgstr ""
-
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "CPU"
-
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "Memorie"
+msgstr "Ciclează dimensiunile capturilor de ecran"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -245,52 +240,52 @@ msgstr "Numele temei"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Numele temei, ce va fi încărcată din ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:109
 msgid "Close"
 msgstr "Închide"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Deminimizează"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Minimizează"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Demaximizează"
 
-#: ../extensions/window-list/extension.js:128
+#: ../extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Maximizează"
 
-#: ../extensions/window-list/extension.js:304
+#: ../extensions/window-list/extension.js:399
 msgid "Minimize all"
 msgstr "Minimizează tot"
 
-#: ../extensions/window-list/extension.js:312
+#: ../extensions/window-list/extension.js:407
 msgid "Unminimize all"
 msgstr "Deminimizează tot"
 
-#: ../extensions/window-list/extension.js:320
+#: ../extensions/window-list/extension.js:415
 msgid "Maximize all"
 msgstr "Maximizează tot"
 
-#: ../extensions/window-list/extension.js:329
+#: ../extensions/window-list/extension.js:424
 msgid "Unmaximize all"
 msgstr "Demaximizează tot"
 
-#: ../extensions/window-list/extension.js:338
+#: ../extensions/window-list/extension.js:433
 msgid "Close all"
 msgstr "Închide tot"
 
-#: ../extensions/window-list/extension.js:649
+#: ../extensions/window-list/extension.js:650
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicator al spațiului de lucru"
 
-#: ../extensions/window-list/extension.js:799
+#: ../extensions/window-list/extension.js:809
 msgid "Window List"
 msgstr "Lista ferestrelor"
 
@@ -306,21 +301,37 @@ msgstr ""
 "Decide când să fie grupate ferestrele aceleiași aplicații în lista "
 "ferestrei. Valorile posibile sunt „niciodată”, „auto” și „întotdeauna”."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "Afișează lista ferestrelor pe toate monitoarele"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Dacă să se arate lista ferestrelor pe toate monitoarele conectate sau doar "
+"pe cel primar."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Gruparea ferestrelor"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Nu grupa ferestrele niciodată"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Grupează ferestrele când spațiul e limitat"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Grupează ferestrele întotdeauna"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Arată pe toate monitoarele"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
@@ -334,3 +345,15 @@ msgstr "Nume"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Spațiu de lucru %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "Interfața clasică GNOME"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Gestionarea ferestrei și lansarea aplicației"
+
+#~ msgid "CPU"
+#~ msgstr "CPU"
+
+#~ msgid "Memory"
+#~ msgstr "Memorie"
