@@ -5,14 +5,15 @@
 # Fernando Carvalho <phaetonkde@gmail.com>, 2013.
 # António Lima <amrlima@gmail.com>, 2013.
 # Pedro Albuquerque <palbuquerque73@gmail.com>, 2014.
+# Bruno Ramalhete <bram.512@gmail.com>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.14\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2015-03-24 12:04+0000\n"
-"PO-Revision-Date: 2014-11-19 22:37+0100\n"
+"POT-Creation-Date: 2015-06-07 20:06+0000\n"
+"PO-Revision-Date: 2015-06-08 08:46+0100\n"
 "Last-Translator: Bruno Ramalhete <bram.512@gmail.com>\n"
 "Language-Team: gnome_pt@yahoogroups.com\n"
 "Language: pt\n"
@@ -20,27 +21,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-classic.desktop.in.h:1
 #: ../data/gnome-classic.session.desktop.in.in.h:1
 msgid "GNOME Classic"
-msgstr "GNOME Clássico"
+msgstr "GNOME clássico"
 
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
-msgstr "Esta é uma sessão no GNOME Clássico"
+msgstr "Esta sessão liga-o ao GNOME clássico"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
-msgstr "Anexar diálogo modal para a janela pai"
+msgstr "Anexar diálogo modal à janela mãe"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Esta chave substitui a chave na org.gnome.mutter ao executar a Consola GNOME."
+"Esta chave substitui a chave na org.gnome.mutter ao executar a interface "
+"GNOME."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Arrangement of buttons on the titlebar"
@@ -52,20 +54,21 @@ msgid ""
 "GNOME Shell."
 msgstr ""
 "Esta chave substitui a chave na org.gnome.desktop.wm.preferences ao executar "
-"a Shell do GNOME."
+"a interface do GNOME."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "Ativar a margem dos mosaicos ao largar janelas nos limites do ecrã"
+msgstr "Ativar margem em mosaicos ao largar janelas nas margens do ecrã"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
-msgstr "Áreas de trabalho apenas para monitor principal"
+msgstr "Áreas de trabalho só para monitor principal"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr ""
-"Atrasar alterações de foco nos modos de rato até que o ponteiro pare de mover"
+"Atrasar alterações de foco nos modos de rato até que o ponteiro pare de se "
+"mover"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -73,7 +76,7 @@ msgstr "Só miniaturas"
 
 #: ../extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
-msgstr "Apenas ícone da aplicação"
+msgstr "Só ícone da aplicação"
 
 #: ../extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
@@ -85,7 +88,7 @@ msgstr "Apresentar janelas como"
 
 #: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
-msgstr "Apresentar apenas janelas na área de trabalho atual"
+msgstr "Mostrar só janelas na área de trabalho atual"
 
 #: ../extensions/apps-menu/extension.js:39
 msgid "Activities Overview"
@@ -108,7 +111,7 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"Uma lista de expressões, cada uma contendo o id de uma aplicação (nome do "
+"Uma lista de cadeias, cada uma contendo uma id de aplicação (nome do "
 "ficheiro desktop), seguido de dois pontos e o número da área de trabalho"
 
 #: ../extensions/auto-move-windows/prefs.js:60
@@ -118,15 +121,15 @@ msgstr "Aplicação"
 #: ../extensions/auto-move-windows/prefs.js:69
 #: ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
-msgstr "Área de Trabalho"
+msgstr "Área de trabalho"
 
 #: ../extensions/auto-move-windows/prefs.js:85
 msgid "Add Rule"
-msgstr "Adicionar Regra"
+msgstr "Adicionar regra"
 
 #: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
-msgstr "Criar uma nova regra de correspondência"
+msgstr "Criar uma nova regra de comparação"
 
 #: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
@@ -143,7 +146,7 @@ msgstr "Dispositivos removíveis"
 
 #: ../extensions/drive-menu/extension.js:149
 msgid "Open File"
-msgstr "Abrir Ficheiro"
+msgstr "Abrir ficheiro"
 
 #: ../extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -158,8 +161,7 @@ msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
 msgstr ""
-"Se não estiver vazio, contém o texto que será apresentado ao se clicar no "
-"painel."
+"Se não estiver vazio, contém o texto que será mostrado ao clicar no painel."
 
 #: ../extensions/example/prefs.js:30
 msgid "Message"
@@ -172,7 +174,7 @@ msgid ""
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
 "Exemplo tem como objetivo mostrar como construir extensões bem comportadas "
-"para a Consola e, como tal, tem uma funcionalidade reduzida.\n"
+"para a interface e, como tal, tem uma funcionalidade reduzida.\n"
 "No entanto, é possível personalizar a mensagem de saudação."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
@@ -185,10 +187,10 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"Tentar utilizar mais ecrã para colocar miniaturas de janelas, adaptando a "
-"relação de aspecto do ecrã, e consolidá-los ainda mais para reduzir a caixa "
-"delimitadora. Esta definição aplica-se apenas com a estratégia de "
-"posicionamento natural."
+"Tentar utilizar mais ecrã para colocar miniaturas de janelas, adaptando-se à "
+"proporção do ecrã e consolidando-as ainda mais para reduzir a caixa "
+"delimitadora. Esta definição só se aplica com a estratégia de posicionamento "
+"natural."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -200,9 +202,9 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"Se verdadeiro, colocar títulos de janelas em cima da respectiva miniatura, "
-"substituindo a omissão da Consola de colocá-los na parte inferior. Alterar "
-"esta configuração requer reinicializar a Consola para ter efeito."
+"Se verdadeiro, coloca títulos de janelas em cima da respectiva miniatura, "
+"substituindo a predefinição, que as coloca no fundo. Alterar esta "
+"configuração requer reinicializar a interface para ter efeito."
 
 #: ../extensions/places-menu/extension.js:78
 #: ../extensions/places-menu/extension.js:81
@@ -221,11 +223,11 @@ msgstr "Computador"
 
 #: ../extensions/places-menu/placeDisplay.js:200
 msgid "Home"
-msgstr "Página Inicial"
+msgstr "Página inicial"
 
 #: ../extensions/places-menu/placeDisplay.js:287
 msgid "Browse Network"
-msgstr "Explorar a Rede"
+msgstr "Explorar a rede"
 
 #: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
 msgid "Cycle Screenshot Sizes"
@@ -237,7 +239,7 @@ msgstr "Nome do tema"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "O nome do tema, a ser lido de ~/.themes/name/gnome-shell"
+msgstr "O nome do tema, a ser carregado de ~/.themes/name/gnome-shell"
 
 #: ../extensions/window-list/extension.js:109
 msgid "Close"
@@ -245,7 +247,7 @@ msgstr "Fechar"
 
 #: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
-msgstr "Desminimizar"
+msgstr "Remover minimização"
 
 #: ../extensions/window-list/extension.js:120
 msgid "Minimize"
@@ -253,7 +255,7 @@ msgstr "Minimizar"
 
 #: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
-msgstr "Desmaximizar"
+msgstr "Remover maximização"
 
 #: ../extensions/window-list/extension.js:127
 msgid "Maximize"
@@ -265,7 +267,7 @@ msgstr "Minimizar todas"
 
 #: ../extensions/window-list/extension.js:407
 msgid "Unminimize all"
-msgstr "Desminimizar todas"
+msgstr "Remover todas as minimizações"
 
 #: ../extensions/window-list/extension.js:415
 msgid "Maximize all"
@@ -273,7 +275,7 @@ msgstr "Maximizar todas"
 
 #: ../extensions/window-list/extension.js:424
 msgid "Unmaximize all"
-msgstr "Desmaximizar todas"
+msgstr "Remover todas as maximizações"
 
 #: ../extensions/window-list/extension.js:433
 msgid "Close all"
@@ -282,11 +284,11 @@ msgstr "Fechar todas"
 #: ../extensions/window-list/extension.js:650
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
-msgstr "Indicador de Área de Trabalho"
+msgstr "Indicador de área de trabalho"
 
 #: ../extensions/window-list/extension.js:809
 msgid "Window List"
-msgstr "Lista de Janelas"
+msgstr "Lista de janelas"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
 msgid "When to group windows"
@@ -298,21 +300,23 @@ msgid ""
 "Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
 "Decide quando agrupar janelas da mesma aplicação na lista de janelas. "
-"Valores válidos são \"never\", \"auto\" e \"always\"."
+"Valores válidos são \"nunca\", \"auto\" e \"sempre\"."
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
 msgid "Show the window list on all monitors"
-msgstr ""
+msgstr "Mostrar a lista de janelas em todos os monitores"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr ""
+"Se deve mostrar a lista de janelas em todos os monitores ligados ou só no "
+"principal."
 
 #: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
-msgstr "Agrupar Janelas"
+msgstr "Agrupar janelas"
 
 #: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
@@ -328,11 +332,11 @@ msgstr "Agrupar sempre as janelas"
 
 #: ../extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
-msgstr ""
+msgstr "Mostrar em todos os monitores"
 
 #: ../extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
-msgstr "Nomes das Áreas de Trabalho"
+msgstr "Nomes das áreas de trabalho"
 
 #: ../extensions/workspace-indicator/prefs.js:157
 msgid "Name"
