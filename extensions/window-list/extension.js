@@ -57,7 +57,8 @@ function _onMenuStateChanged(menu, isOpen) {
 }
 
 function _getAppStableSequence(app) {
-    return app.get_windows().reduce(function(prev, cur) {
+    let windows = app.get_windows().filter(function(w) { return !w.skip_taskbar; });
+    return windows.reduce(function(prev, cur) {
         return Math.min(prev, cur.get_stable_sequence());
     }, Infinity);
 }
