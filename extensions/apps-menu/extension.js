@@ -411,7 +411,13 @@ const ApplicationsButton = new Lang.Class({
             if (nextType == GMenu.TreeItemType.ENTRY) {
                 let entry = iter.get_entry();
                 let appInfo = entry.get_app_info();
-                let app = appSys.lookup_app(entry.get_desktop_file_id());
+                let id;
+                try {
+                    id = appInfo.get_id(); // catch non-UTF8 filenames
+                } catch(e) {
+                    continue;
+                }
+                let app = appSys.lookup_app(id);
                 if (appInfo.should_show()) {
                     let menu_id = dir.get_menu_id();
                     this.applicationsByCategory[categoryId].push(app);
