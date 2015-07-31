@@ -195,7 +195,7 @@ const WorkspaceSettingsWidget = new GObject.Class({
         let iter = this._store.append();
         let index = this._store.get_path(iter).get_indices()[0];
 
-        let label = _("Workspace %d").format(index);
+        let label = _("Workspace %d").format(index + 1);
         this._store.set(iter, [this._store.Columns.LABEL], [label]);
     },
 
