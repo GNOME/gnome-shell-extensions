@@ -3,7 +3,7 @@
 #panel.bottom-panel {
     border-top-width: 1px;
     border-bottom-width: 0px;
-    height: 32px !important;
+    height: 2.25em !important;
   }
 
   .bottom-panel .window-button > StWidget {
