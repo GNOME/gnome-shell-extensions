@@ -18,6 +18,8 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 const N_ = function(x) { return x; }
 
+const BACKGROUND_SCHEMA = 'org.gnome.desktop.background';
+
 const Hostname1Iface = '<node> \
 <interface name="org.freedesktop.hostname1"> \
 <property name="PrettyHostname" type="s" access="read" /> \
@@ -193,32 +195,11 @@ const PlacesManager = new Lang.Class({
             network: [],
         };
 
-        let homePath = GLib.get_home_dir();
-
-        this._places.special.push(new PlaceInfo('special',
-                                                Gio.File.new_for_path(homePath),
-                                                _("Home")));
-
-        let specials = [];
-        for (let i = 0; i < DEFAULT_DIRECTORIES.length; i++) {
-            let specialPath = GLib.get_user_special_dir(DEFAULT_DIRECTORIES[i]);
-            if (specialPath == null || specialPath == homePath)
-                continue;
-
-            let file = Gio.File.new_for_path(specialPath), info;
-            try {
-                info = new PlaceInfo('special', file);
-            } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND)) {
-                continue;
-            }
-
-            specials.push(info);
-        }
-
-        specials.sort(function(a, b) {
-            return GLib.utf8_collate(a.name, b.name);
-        });
-        this._places.special = this._places.special.concat(specials);
+        this._settings = new Gio.Settings({ schema_id: BACKGROUND_SCHEMA });
+        this._showDesktopIconsChangedId =
+            this._settings.connect('changed::show-desktop-icons',
+                                   Lang.bind(this, this._updateSpecials));
+        this._updateSpecials();
 
         /*
         * Show devices, code more or less ported from nautilus-places-sidebar.c
@@ -262,6 +243,10 @@ const PlacesManager = new Lang.Class({
     },
 
     destroy: function() {
+        if (this._settings)
+            this._settings.disconnect(this._showDesktopIconsChangedId);
+        this._settings = null;
+
         for (let i = 0; i < this._volumeMonitorSignals.length; i++)
             this._volumeMonitor.disconnect(this._volumeMonitorSignals[i]);
 
@@ -269,6 +254,45 @@ const PlacesManager = new Lang.Class({
             this._monitor.cancel();
         if (this._bookmarkTimeoutId)
             Mainloop.source_remove(this._bookmarkTimeoutId);
+    },
+
+    _updateSpecials: function() {
+        this._places.special.forEach(function (p) { p.destroy(); });
+        this._places.special = [];
+
+        let homePath = GLib.get_home_dir();
+
+        this._places.special.push(new PlaceInfo('special',
+                                                Gio.File.new_for_path(homePath),
+                                                _("Home")));
+
+        let specials = [];
+        let dirs = DEFAULT_DIRECTORIES.slice();
+
+        if (this._settings.get_boolean('show-desktop-icons'))
+            dirs.push(GLib.UserDirectory.DIRECTORY_DESKTOP);
+
+        for (let i = 0; i < dirs.length; i++) {
+            let specialPath = GLib.get_user_special_dir(dirs[i]);
+            if (specialPath == null || specialPath == homePath)
+                continue;
+
+            let file = Gio.File.new_for_path(specialPath), info;
+            try {
+                info = new PlaceInfo('special', file);
+            } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND)) {
+                continue;
+            }
+
+            specials.push(info);
+        }
+
+        specials.sort(function(a, b) {
+            return GLib.utf8_collate(a.name, b.name);
+        });
+        this._places.special = this._places.special.concat(specials);
+
+        this.emit('special-updated');
     },
 
     _updateMounts: function() {
