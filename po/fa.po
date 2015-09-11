@@ -1,15 +1,15 @@
 # Persian translation for gnome-shell-extensions.
 # Copyright (C) 2011 Iranian Free Software Users Group (IFSUG.org) translation team.
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2011, 2013, 2014.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2011, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-08-28 07:40+0000\n"
-"PO-Revision-Date: 2014-08-28 19:59+0430\n"
+"POT-Creation-Date: 2015-09-10 20:20+0000\n"
+"PO-Revision-Date: 2015-09-11 23:44+0430\n"
 "Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
 "Language-Team: Persian <>\n"
 "Language: fa_IR\n"
@@ -17,11 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Poedit 1.8.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
+#: ../data/gnome-classic.desktop.in.h:1 ../data/gnome-classic.session.desktop.in.in.h:1
 msgid "GNOME Classic"
 msgstr "گنوم کلاسیک"
 
@@ -29,42 +28,29 @@ msgstr "گنوم کلاسیک"
 msgid "This session logs you into GNOME Classic"
 msgstr "این نشست شما را به گنوم کلاسیک وارد می‌کند"
 
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "گنوم‌شل کلاسیک"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "مدیریت پنجره‌ها و اجرا کننده برنامه‌ها"
-
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
 msgstr "اتصال محاوره modal به پنجره والد"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"این کلید، کلید org.gnome.mutter را در هنگام اجرای گنوم‌شل بازنویسی می‌کند."
+msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr "این کلید، کلید org.gnome.mutter را در هنگام اجرای گنوم‌شل بازنویسی می‌کند."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Arrangement of buttons on the titlebar"
 msgstr "چینش دکمه‌ها در نوار عنوان"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
+"This key overrides the key in org.gnome.desktop.wm.preferences when running GNOME "
+"Shell."
 msgstr ""
-"این کلید، کلید org.gnome.desktop.wm.preferences را در هنگام اجرای گنوم‌شل "
-"بازنویسی می‌کند."
+"این کلید، کلید org.gnome.desktop.wm.preferences را در هنگام اجرای گنوم‌شل بازنویسی "
+"می‌کند."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"فعال‌سازی چینش در گوشه‌ها هنگامی که پنجره‌ها در گوشه‌های صفحه‌نمایش می‌اندازید"
+msgstr "فعال‌سازی چینش در گوشه‌ها هنگامی که پنجره‌ها در گوشه‌های صفحه‌نمایش می‌اندازید"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
@@ -72,9 +58,7 @@ msgstr "فضا‌های کاری تنها در نمایشگر اصلی"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"به تاخیر انداختن تغییر تمرکز در حالت موشی تا زمانی که نشانگر از حرکت باز "
-"ایستد"
+msgstr "به تاخیر انداختن تغییر تمرکز در حالت موشی تا زمانی که نشانگر از حرکت باز ایستد"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -96,15 +80,15 @@ msgstr "نمایش پنجره به عنوان"
 msgid "Show only windows in the current workspace"
 msgstr "نمایش پنجره‌ها تنها در فضای‌کاری فعلی"
 
-#: ../extensions/apps-menu/extension.js:39
+#: ../extensions/apps-menu/extension.js:38
 msgid "Activities Overview"
 msgstr "نمای‌کلی فعالیت‌ها"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:109
 msgid "Favorites"
 msgstr "علاقه‌مندی‌ها"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:261
 msgid "Applications"
 msgstr "برنامه‌ها"
 
@@ -114,11 +98,11 @@ msgstr "فهرست برنامه‌ها و فضای‌کاری"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
-"A list of strings, each containing an application id (desktop file name), "
-"followed by a colon and the workspace number"
+"A list of strings, each containing an application id (desktop file name), followed by "
+"a colon and the workspace number"
 msgstr ""
-"فهرستی از رشته‌ها، هرکدام حاوی شناسه‌ی یک برنامه (نام پرونده رومیزی)، در "
-"ادامه‌ی یک ویرگول و شماره‌ی فضای کاری"
+"فهرستی از رشته‌ها، هرکدام حاوی شناسه‌ی یک برنامه (نام پرونده رومیزی)، در ادامه‌ی یک "
+"ویرگول و شماره‌ی فضای کاری"
 
 #: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
@@ -130,7 +114,6 @@ msgid "Workspace"
 msgstr "فضای‌کاری"
 
 #: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
 msgid "Add Rule"
 msgstr "اضافه کردن قاعده"
 
@@ -147,11 +130,11 @@ msgstr "اضافه"
 msgid "Ejecting drive '%s' failed:"
 msgstr "بیرون دادن دیسک‌گردان «%s» شکست خورد:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "دستگاه‌های جداشدنی"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "باز کردن پرونده"
 
@@ -165,25 +148,22 @@ msgstr "متن خوش‌آمد جای‌گزین"
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
 msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
+"If not empty, it contains the text that will be shown when clicking on the panel."
 msgstr ""
-"اگر خالی نباشد، حاوی متنی خواهد بود که که هنگام کلیک بر روی پنل نمایش داده "
-"می‌شود است."
+"اگر خالی نباشد، حاوی متنی خواهد بود که که هنگام کلیک بر روی پنل نمایش داده می‌شود است."
 
 #: ../extensions/example/prefs.js:30
-#| msgid "Message:"
 msgid "Message"
 msgstr "پیام"
 
 #: ../extensions/example/prefs.js:43
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
+"Example aims to show how to build well behaved extensions for the Shell and as such "
+"it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"هدف Example این است که نشان دهد چگونه می‌توان متصل‌شونده‌های صحیح برای گنوم‌شل "
-"ساخت و برای نمونه کمی قابلیت از خود نیز دارد.\n"
+"هدف Example این است که نشان دهد چگونه می‌توان متصل‌شونده‌های صحیح برای گنوم‌شل ساخت و "
+"برای نمونه کمی قابلیت از خود نیز دارد.\n"
 "با این وجود می‌توان پیام خوش‌آمد را تغییر داد."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
@@ -192,13 +172,13 @@ msgstr "استفاده از صفحه بیشتر برای پنجره"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
 msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. "
-"This setting applies only with the natural placement strategy."
+"Try to use more screen for placing window thumbnails by adapting to screen aspect "
+"ratio, and consolidating them further to reduce the bounding box. This setting "
+"applies only with the natural placement strategy."
 msgstr ""
-"Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. "
-"This setting applies only with the natural placement strategy."
+"Try to use more screen for placing window thumbnails by adapting to screen aspect "
+"ratio, and consolidating them further to reduce the bounding box. This setting "
+"applies only with the natural placement strategy."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -206,44 +186,38 @@ msgstr "قراردادن عنوان پنجره در بالا"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
+"If true, place window captions on top the respective thumbnail, overriding shell "
+"default of placing it at the bottom. Changing this setting requires restarting the "
+"shell to have any effect."
 msgstr ""
-"اگر بر روی درست باشد، عنوان پنجره را بالای تصویر آن قرار می‌دهد، که حالت "
-"پیش‌فرض شل در پایین را تغییر می‌دهد. تغییر این گزینه، نیاز به راه‌اندازی مجدد "
-"شل دارد تا تاثیر بگذارد."
+"اگر بر روی درست باشد، عنوان پنجره را بالای تصویر آن قرار می‌دهد، که حالت پیش‌فرض شل در "
+"پایین را تغییر می‌دهد. تغییر این گزینه، نیاز به راه‌اندازی مجدد شل دارد تا تاثیر بگذارد."
 
-#: ../extensions/places-menu/extension.js:78
-#: ../extensions/places-menu/extension.js:81
+#: ../extensions/places-menu/extension.js:78 ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "مکان‌ها"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: ../extensions/places-menu/placeDisplay.js:59
 #, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "اجرای «%s» شکست خورد"
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: ../extensions/places-menu/placeDisplay.js:101
+#: ../extensions/places-menu/placeDisplay.js:124
 msgid "Computer"
 msgstr "رایانه"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: ../extensions/places-menu/placeDisplay.js:267
 msgid "Home"
 msgstr "خانه"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: ../extensions/places-menu/placeDisplay.js:311
 msgid "Browse Network"
 msgstr "مرور شبکه"
 
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "سی‌پی‌یو"
-
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "حافظه"
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "تغییر اندازه تصاویر صفحه‌نمایش"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -273,32 +247,32 @@ msgstr "ناحداکثر کردن"
 msgid "Maximize"
 msgstr "حداکثر کردن"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:402
 msgid "Minimize all"
 msgstr "حداقل کردن همه"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:410
 msgid "Unminimize all"
 msgstr "ناحداقل کردن همه"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:418
 msgid "Maximize all"
 msgstr "حداکثر کردن همه"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:427
 msgid "Unmaximize all"
 msgstr "ناحداکثر کردن همه"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:436
 msgid "Close all"
 msgstr "بستن همه"
 
-#: ../extensions/window-list/extension.js:644
+#: ../extensions/window-list/extension.js:655
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "نشانگر فضای‌کاری"
 
-#: ../extensions/window-list/extension.js:798
+#: ../extensions/window-list/extension.js:814
 msgid "Window List"
 msgstr "فهرست پنجره"
 
@@ -308,30 +282,43 @@ msgstr "زمان گروه کردن پنجره‌ها"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
-"Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Decides when to group windows from the same application on the window list. Possible "
+"values are \"never\", \"auto\" and \"always\"."
 msgstr ""
-"تصمیم می‌گیرد که چه زمانی پنجره‌های یک برنامه واحد در فهرست پنجره‌ها گروه شوند. "
-"مقادیر ممکن عبارتند از «never»، «auto» و «always»"
+"تصمیم می‌گیرد که چه زمانی پنجره‌های یک برنامه واحد در فهرست پنجره‌ها گروه شوند. مقادیر "
+"ممکن عبارتند از «never»، «auto» و «always»"
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+msgid "Show the window list on all monitors"
+msgstr "نمایش فهرست پنجره‌ها در تمام نمایشگرها"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the primary one."
+msgstr ""
+"اینکه آیا فهرست پنجره‌ها در تمام نمایشگرهای متصل نمایش داده شود یا فقط در نمایشگر اصلی."
+
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "گروه‌سازی پنجره‌ها"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "هیچ‌گاه پنجره‌ها گروه نشوند"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "پنجره‌ها زمانی که فضا محدود است گروه شوند"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "همیشه پنجره‌ها گروه شوند"
 
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "نمایش در تمام نمایشگرها"
+
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
 msgid "Workspace Names"
 msgstr "نام فضاهای کاری"
 
@@ -343,6 +330,18 @@ msgstr "نام"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "فضای‌کاری %Id"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "گنوم‌شل کلاسیک"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "مدیریت پنجره‌ها و اجرا کننده برنامه‌ها"
+
+#~ msgid "CPU"
+#~ msgstr "سی‌پی‌یو"
+
+#~ msgid "Memory"
+#~ msgstr "حافظه"
 
 #~ msgid "The alt tab behaviour."
 #~ msgstr "رفتار alt tab."
@@ -361,11 +360,11 @@ msgstr "فضای‌کاری %Id"
 #~ msgstr "انتقالِ انتخاب فعلی به بالا قبل از بستن پنجره واشو"
 
 #~ msgid ""
-#~ "The Alternate Tab can be used in different modes, that affect the way "
-#~ "windows are chosen and presented."
+#~ "The Alternate Tab can be used in different modes, that affect the way windows are "
+#~ "chosen and presented."
 #~ msgstr ""
-#~ "«جای‌گزین Tab» می‌تواند در حالت‌های مختلفی استفاده شود، که در نحوه باز شدن و "
-#~ "انتخاب پنجره‌ها تاثیر می‌گذارد."
+#~ "«جای‌گزین Tab» می‌تواند در حالت‌های مختلفی استفاده شود، که در نحوه باز شدن و انتخاب "
+#~ "پنجره‌ها تاثیر می‌گذارد."
 
 #~ msgid "Suspend"
 #~ msgstr "تعلیق"
