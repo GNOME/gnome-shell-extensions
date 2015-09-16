@@ -1,3 +1,8 @@
+3.17.92
+=======
+* places: Include DESKTOP when desktop icons are enabled
+* updated translations (fa)
+
 3.17.91
 =======
 * updated translations (nl, pl, zh_TW)
