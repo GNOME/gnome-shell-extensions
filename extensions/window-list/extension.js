@@ -145,8 +145,8 @@ const WindowTitle = new Lang.Class({
 
         this._icon = new St.Bin({ style_class: 'window-button-icon' });
         this.actor.add(this._icon);
-        this._label = new St.Label({ y_align: Clutter.ActorAlign.CENTER });
-        this.actor.add(this._label);
+        this.label_actor = new St.Label({ y_align: Clutter.ActorAlign.CENTER });
+        this.actor.add(this.label_actor);
 
         this._textureCache = St.TextureCache.get_default();
         this._iconThemeChangedId =
@@ -175,9 +175,9 @@ const WindowTitle = new Lang.Class({
             return;
 
         if (this._metaWindow.minimized)
-            this._label.text = '[%s]'.format(this._metaWindow.title);
+            this.label_actor.text = '[%s]'.format(this._metaWindow.title);
         else
-            this._label.text = this._metaWindow.title;
+            this.label_actor.text = this._metaWindow.title;
     },
 
     _updateIcon: function() {
@@ -326,6 +326,7 @@ const WindowButton = new Lang.Class({
 
         this._windowTitle = new WindowTitle(this.metaWindow);
         this.actor.set_child(this._windowTitle.actor);
+        this.actor.label_actor = this._windowTitle.label_actor;
 
         this._contextMenu = new WindowContextMenu(this.actor, this.metaWindow);
         this._contextMenu.connect('open-state-changed', _onMenuStateChanged);
@@ -486,8 +487,11 @@ const AppButton = new Lang.Class({
         this._icon = new St.Bin({ style_class: 'window-button-icon',
                                   child: app.create_icon_texture(ICON_TEXTURE_SIZE) });
         this._multiWindowTitle.add(this._icon);
-        this._multiWindowTitle.add(new St.Label({ text: app.get_name(),
-                                                  y_align: Clutter.ActorAlign.CENTER }));
+
+        let label = new St.Label({ text: app.get_name(),
+                                   y_align: Clutter.ActorAlign.CENTER });
+        this._multiWindowTitle.add(label);
+        this._multiWindowTitle.label_actor = label;
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menu = new PopupMenu.PopupMenu(this.actor, 0.5, St.Side.BOTTOM);
@@ -578,6 +582,7 @@ const AppButton = new Lang.Class({
             }
             this._contextMenuManager.removeMenu(this._appContextMenu);
             this._contextMenu = this._windowContextMenu;
+            this.actor.label_actor = this._windowTitle.label_actor;
         } else {
             if (this._windowTitle) {
                 this.metaWindow = null;
@@ -588,6 +593,7 @@ const AppButton = new Lang.Class({
             }
             this._contextMenu = this._appContextMenu;
             this._contextMenuManager.addMenu(this._appContextMenu);
+            this.actor.label_actor = this._multiWindowTitle.label_actor;
         }
 
     },
