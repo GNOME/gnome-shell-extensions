@@ -190,6 +190,11 @@ const CategoryMenuItem = new Lang.Class({
         this._oldY = -1;
         this.actor.hover = false;
         Clutter.ungrab_pointer();
+
+        let source = event.get_source();
+        if (source instanceof St.Widget)
+            source.sync_hover();
+
         return false;
     },
 
