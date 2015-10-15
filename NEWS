@@ -1,3 +1,9 @@
+3.18.1
+======
+* window-list: Fix accessibility of window buttons
+* apps-menu: Fix unreliable highlight
+* updated translations (ar)
+
 3.18.0
 ======
 * Bump version
