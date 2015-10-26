@@ -409,9 +409,9 @@ StScrollBar {
   spacing-rows: 15px;
   spacing-columns: 1em; }
 
-/* Popvers/Menus */
+/* Popovers/Menus */
 .popup-menu {
-  min-width: 200px; }
+  min-width: 15em; }
   .popup-menu .popup-sub-menu {
     background-color: #e8e8e8;
     box-shadow: inset 0 -1px 0px #adadad; }
@@ -753,7 +753,7 @@ StScrollBar {
 
 /* Message list */
 .message-list {
-  width: 420px; }
+  width: 31.5em; }
 
 .message-list-sections {
   spacing: 1.5em; }
@@ -824,7 +824,7 @@ StScrollBar {
     color: transparent; }
 
 .aggregate-menu {
-  width: 280px; }
+  min-width: 21em; }
   .aggregate-menu .popup-menu-icon {
     padding: 0 4px; }
 
@@ -961,10 +961,14 @@ StScrollBar {
 .search-entry {
   width: 320px;
   padding: 7px 9px;
-  border-radius: 6px; }
+  border-radius: 6px;
+  border-color: #eeeeec;
+  color: #eeeeec;
+  background-color: #2e3436; }
   .search-entry:focus {
     padding: 6px 8px;
-    border-width: 2px; }
+    border-width: 2px;
+    border-color: #4a90d9; }
   .search-entry .search-entry-icon {
     icon-size: 1em;
     padding: 0 4px;
