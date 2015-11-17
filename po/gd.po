@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2015-11-17 16:25+0000\n"
-"PO-Revision-Date: 2015-11-17 16:35+0100\n"
+"POT-Creation-Date: 2015-11-17 16:36+0000\n"
+"PO-Revision-Date: 2015-11-17 17:12+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Fòram na Gàidhlig\n"
 "Language: gd\n"
@@ -30,8 +30,12 @@ msgstr "GNOME clasaigeach"
 msgid "This session logs you into GNOME Classic"
 msgstr "Clàraidh an seisean seo a-steach gu GNOME clasaigeach thu"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+#| msgid "Workspace Indicator"
+msgid "Workspaces only on primary monitor"
+msgstr "Rumannan-obrach air a' phrìomh-sgrìn a-mhàin"
+
 #: ../extensions/alternate-tab/prefs.js:20
-#| msgid "All & Thumbnails"
 msgid "Thumbnail only"
 msgstr "Dealbhagan a-mhàin"
 
@@ -56,23 +60,24 @@ msgid "Activities Overview"
 msgstr "Foir-shealladh nan gnìomhachdan"
 
 #: ../extensions/apps-menu/extension.js:109
-#| msgid "Add to Favorites"
 msgid "Favorites"
 msgstr "Annsachdan"
 
 #: ../extensions/apps-menu/extension.js:266
-#| msgid "Quit Application"
 msgid "Applications"
 msgstr "Aplacaidean"
 
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#| msgid "Application icon only"
+msgid "Application and workspace list"
+msgstr "Ìomhaigheag na h-aplacaid is liosta nan rumannan-obrach"
+
 #: ../extensions/auto-move-windows/prefs.js:60
-#| msgid "Quit Application"
 msgid "Application"
 msgstr "Aplacaid"
 
 #: ../extensions/auto-move-windows/prefs.js:69
 #: ../extensions/auto-move-windows/prefs.js:127
-#| msgid "Workspace & Icons"
 msgid "Workspace"
 msgstr "Rum-obrach"
 
@@ -186,13 +191,22 @@ msgstr "Dùin na h-uile"
 
 #: ../extensions/window-list/extension.js:661
 #: ../extensions/workspace-indicator/extension.js:30
-#| msgid "Workspace & Icons"
 msgid "Workspace Indicator"
 msgstr "Taisbeanair ruim-obrach"
 
 #: ../extensions/window-list/extension.js:820
 msgid "Window List"
 msgstr "Liosta nan uinneagan"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#| msgid "Never group windows"
+msgid "When to group windows"
+msgstr "Cuin a thèid na h-uinneagan a bhuidhneachadh"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#| msgid "Show on all monitors"
+msgid "Show the window list on all monitors"
+msgstr "Seall liosta nan uinneagan air a h-uile sgrìn"
 
 #: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
@@ -215,7 +229,6 @@ msgid "Show on all monitors"
 msgstr "Seall air a h-uile sgrìn"
 
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace & Icons"
 msgid "Workspace Names"
 msgstr "Ainmean nan rumannan-obrach"
 
@@ -225,7 +238,6 @@ msgstr "Ainm"
 
 #: ../extensions/workspace-indicator/prefs.js:198
 #, javascript-format
-#| msgid "Workspace & Icons"
 msgid "Workspace %d"
 msgstr "Rum-obrach %d"
 
