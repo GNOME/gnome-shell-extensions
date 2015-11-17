@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2011-09-09 20:38+0000\n"
-"PO-Revision-Date: 2015-11-17 16:24+0100\n"
+"POT-Creation-Date: 2015-11-17 16:25+0000\n"
+"PO-Revision-Date: 2015-11-17 16:35+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Fòram na Gàidhlig\n"
 "Language: gd\n"
@@ -21,174 +21,337 @@ msgstr ""
 "X-DamnedLies-Scope: partial\n"
 "X-Project-Style: gnome\n"
 
-#: ../extensions/alternative-status-menu/extension.js:44
-msgid "Notifications"
-msgstr "Brathan"
+#: ../data/gnome-classic.desktop.in.h:1
+#: ../data/gnome-classic.session.desktop.in.in.h:1
+msgid "GNOME Classic"
+msgstr "GNOME clasaigeach"
 
-#: ../extensions/alternative-status-menu/extension.js:52
-msgid "Online Accounts"
-msgstr "Cunntasan air loidhne"
+#: ../data/gnome-classic.desktop.in.h:2
+msgid "This session logs you into GNOME Classic"
+msgstr "Clàraidh an seisean seo a-steach gu GNOME clasaigeach thu"
 
-#: ../extensions/alternative-status-menu/extension.js:56
-msgid "System Settings"
-msgstr "Roghainnean an t-siostaim"
+#: ../extensions/alternate-tab/prefs.js:20
+#| msgid "All & Thumbnails"
+msgid "Thumbnail only"
+msgstr "Dealbhagan a-mhàin"
 
-#: ../extensions/alternative-status-menu/extension.js:63
-msgid "Lock Screen"
-msgstr "Glais an sgrìn"
+#: ../extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "Ìomhaigheag na h-aplacaid a-mhàin"
 
-#: ../extensions/alternative-status-menu/extension.js:68
-msgid "Switch User"
-msgstr "Gearr leum gu cleachdaiche eile"
+#: ../extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "Dealbhag is ìomhaigheag na h-aplacaid"
 
-#: ../extensions/alternative-status-menu/extension.js:73
-msgid "Log Out..."
-msgstr "Clàraich a-mach..."
+#: ../extensions/alternate-tab/prefs.js:38
+msgid "Present windows as"
+msgstr "Seall uinneagan mar"
 
-#: ../extensions/alternative-status-menu/extension.js:81
-msgid "Suspend"
-msgstr "Cuir 'na dhàil"
+#: ../extensions/alternate-tab/prefs.js:69
+msgid "Show only windows in the current workspace"
+msgstr "Na seall ach na h-uinneagan san rum-obrach làithreach"
 
-#: ../extensions/alternative-status-menu/extension.js:87
-msgid "Hibernate"
-msgstr "Dèan cadal-geamhraidh"
+#: ../extensions/apps-menu/extension.js:38
+msgid "Activities Overview"
+msgstr "Foir-shealladh nan gnìomhachdan"
 
-#: ../extensions/alternative-status-menu/extension.js:93
-msgid "Power Off..."
-msgstr "Cuir a' chumhachd dheth..."
+#: ../extensions/apps-menu/extension.js:109
+#| msgid "Add to Favorites"
+msgid "Favorites"
+msgstr "Annsachdan"
 
-#: ../extensions/alternate-tab/extension.js:44
-msgid ""
-"This is the first time you use the Alternate Tab extension. \n"
-"Please choose your preferred behaviour:\n"
-"\n"
-"All & Thumbnails:\n"
-"    This mode presents all applications from all workspaces in one "
-"selection \n"
-"    list. Instead of using the application icon of every window, it uses "
-"small \n"
-"    thumbnails resembling the window itself. \n"
-"\n"
-"Workspace & Icons:\n"
-"    This mode let's you switch between the applications of your current \n"
-"    workspace and gives you additionally the option to switch to the last "
-"used \n"
-"    application of your previous workspace. This is always the last symbol "
-"in \n"
-"    the list and is segregated by a separator/vertical line if available. \n"
-"    Every window is represented by its application icon.  \n"
-"\n"
-"Native:\n"
-"    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
-"    native switches the Alternate Tab extension off. \n"
-msgstr ""
-"Seo a' chiad turas a chì thu leudachan Alt Taba chaochlaidich. \n"
-"Tagh an giùlan as fhearr leat:\n"
-"\n"
-"Na h-uile ⁊ dealbhagan:\n"
-"    Seallaidh am modh seo dhut a h-uile aplacaid on a h-uile rum-obrach san "
-"aon\n"
-"    liosta taghaidh. An àite a bhith a' cleachdadh ìomhaigheag na "
-"h-aplacaide aig\n"
-"    gach uinneag, cleachdaidh e dealbhagan beaga a bhios coltach ris an "
-"uinneag \n"
-"    fhèin.\n"
-"\n"
-"Rum-obrach ⁊ dealbhagan:\n"
-"    Leis a' mhodh seo, 's urrainn ghut leum a ghearradh eadar aplacaidean an\n"
-"    ruim-obrach làithrich agad is gheibh thu roghainn a bharrachd gus leum a\n"
-"    ghearradh dhan aplacaid mu dheireadh a chleachd thu san rum-obrach "
-"roimhe.\n"
-"    'S e an samhla mu dheireadh air an liosta a bhios ann an-còmhnaidh agus "
-"thèid\n"
-"    e a sgaradh le sgaradair/loidhne inghearach ma bhios seo ri làimh. \n"
-"    Thèid gach uinneag a riochdachadh le ìomhaigheag a h-aplacaide.  \n"
-"\n"
-"Tùsail:\n"
-"    'S e an giùlan tùsail aig GNOME 3 a tha sa mhodh seo agus is ciall dha: "
-"Ma nì \n"
-"    thu briogadh air \"tùsail\", cuiridh seo leudachan Alt Taba dheth. \n"
+#: ../extensions/apps-menu/extension.js:266
+#| msgid "Quit Application"
+msgid "Applications"
+msgstr "Aplacaidean"
 
-#: ../extensions/alternate-tab/extension.js:269
-msgid "Alt Tab Behaviour"
-msgstr "Giùlan aig Alt Tab"
+#: ../extensions/auto-move-windows/prefs.js:60
+#| msgid "Quit Application"
+msgid "Application"
+msgstr "Aplacaid"
 
-#: ../extensions/alternate-tab/extension.js:285
-msgid "All & Thumbnails"
-msgstr "Na h-uile ⁊ dealbhagan"
+#: ../extensions/auto-move-windows/prefs.js:69
+#: ../extensions/auto-move-windows/prefs.js:127
+#| msgid "Workspace & Icons"
+msgid "Workspace"
+msgstr "Rum-obrach"
 
-#: ../extensions/alternate-tab/extension.js:292
-msgid "Workspace & Icons"
-msgstr "Rum-obrach ⁊ dealbhagan"
+#: ../extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
+msgstr "Cuir riaghailt ris"
 
-#: ../extensions/alternate-tab/extension.js:299
-msgid "Native"
-msgstr "Tùsail"
+#: ../extensions/auto-move-windows/prefs.js:106
+msgid "Create new matching rule"
+msgstr "Cruthaich riaghailt maidsidh ùr"
 
-#: ../extensions/alternate-tab/extension.js:306
-msgid "Cancel"
-msgstr "Sguir dheth"
+#: ../extensions/auto-move-windows/prefs.js:111
+msgid "Add"
+msgstr "Cuir ris"
 
-#: ../extensions/dock/extension.js:486
-msgid "Drag here to add favorites"
-msgstr "Slaod an-seo gus annsachdan a chur ris"
+#: ../extensions/drive-menu/extension.js:106
+#, javascript-format
+msgid "Ejecting drive '%s' failed:"
+msgstr "Cha deach leinn draibh \"%s\" a ghluasad a-mach:"
 
-#: ../extensions/dock/extension.js:820
-msgid "New Window"
-msgstr "Uinneag ùr"
+#: ../extensions/drive-menu/extension.js:124
+msgid "Removable devices"
+msgstr "Draibhean so-ghiùlain"
 
-#: ../extensions/dock/extension.js:822
-msgid "Quit Application"
-msgstr "Fàg an aplacaid"
+#: ../extensions/drive-menu/extension.js:149
+msgid "Open File"
+msgstr "Fosgail am faidhle"
 
-#: ../extensions/dock/extension.js:827
-msgid "Remove from Favorites"
-msgstr "Thoir air falbh o na h-annsachdan"
-
-#: ../extensions/dock/extension.js:828
-msgid "Add to Favorites"
-msgstr "Cuir ris na h-annsachdan"
-
-#: ../extensions/example/extension.js:11
+#: ../extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Shin thu, a shaoghail!"
 
-#: ../extensions/gajim/extension.js:227
-#, c-format
-msgid "%s is away."
-msgstr "Tha %s air falbh."
+#: ../extensions/example/prefs.js:30
+msgid "Message"
+msgstr "Teachdaireachd"
 
-#: ../extensions/gajim/extension.js:230
-#, c-format
-msgid "%s is offline."
-msgstr "Tha %s far loidhne."
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: ../extensions/example/prefs.js:43
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it's possible to customize the greeting message."
+msgstr ""
+"Tha am ball-eisimpleir airson sealltainn dhut mar a thogas tu leudachain le "
+"deagh-ghiùlan airson na Slige agus mar sin cha dèan e fhèin mòran.\n"
+"'S urrainn dhut an teachdaireachd fàilteachaidh a ghnàthachadh co-dhiù."
 
-#: ../extensions/gajim/extension.js:233
-#, c-format
-msgid "%s is online."
-msgstr "Tha %s air loidhne."
+#: ../extensions/places-menu/extension.js:78
+#: ../extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "Ionadan"
 
-#: ../extensions/gajim/extension.js:236
-#, c-format
-msgid "%s is busy."
-msgstr "Tha %s trang."
+#: ../extensions/places-menu/placeDisplay.js:59
+#, javascript-format
+msgid "Failed to launch \"%s\""
+msgstr "Cha b' urrainn dhuinn \"%s\" a chur gu dol"
 
-#: ../extensions/xrandr-indicator/extension.js:26
-msgid "Normal"
-msgstr "Àbhaisteach"
+#: ../extensions/places-menu/placeDisplay.js:101
+#: ../extensions/places-menu/placeDisplay.js:124
+msgid "Computer"
+msgstr "Coimpiutair"
 
-#: ../extensions/xrandr-indicator/extension.js:27
-msgid "Left"
-msgstr "Clì"
+#: ../extensions/places-menu/placeDisplay.js:267
+msgid "Home"
+msgstr "Dachaigh"
 
-#: ../extensions/xrandr-indicator/extension.js:28
-msgid "Right"
-msgstr "Deas"
+#: ../extensions/places-menu/placeDisplay.js:311
+msgid "Browse Network"
+msgstr "Brabhsaich an lìonra"
 
-#: ../extensions/xrandr-indicator/extension.js:29
-msgid "Upside-down"
-msgstr "Bun os cionn"
+#: ../extensions/window-list/extension.js:110
+msgid "Close"
+msgstr "Dùin"
 
-#: ../extensions/xrandr-indicator/extension.js:78
-msgid "Configure display settings..."
-msgstr "Rèitich roghainnean an uidheim-thaisbeanaidh..."
+#: ../extensions/window-list/extension.js:120
+msgid "Unminimize"
+msgstr "Neo-fhìor-lùghdaich"
+
+#: ../extensions/window-list/extension.js:121
+msgid "Minimize"
+msgstr "Fìor-lùghdaich"
+
+#: ../extensions/window-list/extension.js:127
+msgid "Unmaximize"
+msgstr "Neo-làn-mheudaich"
+
+#: ../extensions/window-list/extension.js:128
+msgid "Maximize"
+msgstr "Làn-mheudaich"
+
+#: ../extensions/window-list/extension.js:403
+msgid "Minimize all"
+msgstr "Fìor-lùghdaich na h-uile"
+
+#: ../extensions/window-list/extension.js:411
+msgid "Unminimize all"
+msgstr "Neo-fhìor-lùghdaich na h-uile"
+
+#: ../extensions/window-list/extension.js:419
+msgid "Maximize all"
+msgstr "Làn-mheudaich na h-uile"
+
+#: ../extensions/window-list/extension.js:428
+msgid "Unmaximize all"
+msgstr "Neo-làn-mheudaich na h-uile"
+
+#: ../extensions/window-list/extension.js:437
+msgid "Close all"
+msgstr "Dùin na h-uile"
+
+#: ../extensions/window-list/extension.js:661
+#: ../extensions/workspace-indicator/extension.js:30
+#| msgid "Workspace & Icons"
+msgid "Workspace Indicator"
+msgstr "Taisbeanair ruim-obrach"
+
+#: ../extensions/window-list/extension.js:820
+msgid "Window List"
+msgstr "Liosta nan uinneagan"
+
+#: ../extensions/window-list/prefs.js:32
+msgid "Window Grouping"
+msgstr "Buidhneachadh nan uinneagan"
+
+#: ../extensions/window-list/prefs.js:50
+msgid "Never group windows"
+msgstr "Na buidhnich na h-uinneagan idir"
+
+#: ../extensions/window-list/prefs.js:51
+msgid "Group windows when space is limited"
+msgstr "Buidhnich na h-uinneagan nuair a bhios an rum gann"
+
+#: ../extensions/window-list/prefs.js:52
+msgid "Always group windows"
+msgstr "Buidhnich na h-uinneagan an-còmhnaidh"
+
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Seall air a h-uile sgrìn"
+
+#: ../extensions/workspace-indicator/prefs.js:141
+#| msgid "Workspace & Icons"
+msgid "Workspace Names"
+msgstr "Ainmean nan rumannan-obrach"
+
+#: ../extensions/workspace-indicator/prefs.js:157
+msgid "Name"
+msgstr "Ainm"
+
+#: ../extensions/workspace-indicator/prefs.js:198
+#, javascript-format
+#| msgid "Workspace & Icons"
+msgid "Workspace %d"
+msgstr "Rum-obrach %d"
+
+#~ msgid "Notifications"
+#~ msgstr "Brathan"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Cunntasan air loidhne"
+
+#~ msgid "System Settings"
+#~ msgstr "Roghainnean an t-siostaim"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Glais an sgrìn"
+
+#~ msgid "Switch User"
+#~ msgstr "Gearr leum gu cleachdaiche eile"
+
+#~ msgid "Log Out..."
+#~ msgstr "Clàraich a-mach..."
+
+#~ msgid "Suspend"
+#~ msgstr "Cuir 'na dhàil"
+
+#~ msgid "Hibernate"
+#~ msgstr "Dèan cadal-geamhraidh"
+
+#~ msgid "Power Off..."
+#~ msgstr "Cuir a' chumhachd dheth..."
+
+#~ msgid ""
+#~ "This is the first time you use the Alternate Tab extension. \n"
+#~ "Please choose your preferred behaviour:\n"
+#~ "\n"
+#~ "All & Thumbnails:\n"
+#~ "    This mode presents all applications from all workspaces in one "
+#~ "selection \n"
+#~ "    list. Instead of using the application icon of every window, it uses "
+#~ "small \n"
+#~ "    thumbnails resembling the window itself. \n"
+#~ "\n"
+#~ "Workspace & Icons:\n"
+#~ "    This mode let's you switch between the applications of your current \n"
+#~ "    workspace and gives you additionally the option to switch to the last "
+#~ "used \n"
+#~ "    application of your previous workspace. This is always the last "
+#~ "symbol in \n"
+#~ "    the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
+#~ "    Every window is represented by its application icon.  \n"
+#~ "\n"
+#~ "Native:\n"
+#~ "    This mode is the native GNOME 3 behaviour or in other words: "
+#~ "Clicking \n"
+#~ "    native switches the Alternate Tab extension off. \n"
+#~ msgstr ""
+#~ "Seo a' chiad turas a chì thu leudachan Alt Taba chaochlaidich. \n"
+#~ "Tagh an giùlan as fhearr leat:\n"
+#~ "\n"
+#~ "Na h-uile ⁊ dealbhagan:\n"
+#~ "    Seallaidh am modh seo dhut a h-uile aplacaid on a h-uile rum-obrach "
+#~ "san aon\n"
+#~ "    liosta taghaidh. An àite a bhith a' cleachdadh ìomhaigheag na h-"
+#~ "aplacaide aig\n"
+#~ "    gach uinneag, cleachdaidh e dealbhagan beaga a bhios coltach ris an "
+#~ "uinneag \n"
+#~ "    fhèin.\n"
+#~ "\n"
+#~ "Rum-obrach ⁊ dealbhagan:\n"
+#~ "    Leis a' mhodh seo, 's urrainn ghut leum a ghearradh eadar aplacaidean "
+#~ "an\n"
+#~ "    ruim-obrach làithrich agad is gheibh thu roghainn a bharrachd gus "
+#~ "leum a\n"
+#~ "    ghearradh dhan aplacaid mu dheireadh a chleachd thu san rum-obrach "
+#~ "roimhe.\n"
+#~ "    'S e an samhla mu dheireadh air an liosta a bhios ann an-còmhnaidh "
+#~ "agus thèid\n"
+#~ "    e a sgaradh le sgaradair/loidhne inghearach ma bhios seo ri làimh. \n"
+#~ "    Thèid gach uinneag a riochdachadh le ìomhaigheag a h-aplacaide.  \n"
+#~ "\n"
+#~ "Tùsail:\n"
+#~ "    'S e an giùlan tùsail aig GNOME 3 a tha sa mhodh seo agus is ciall "
+#~ "dha: Ma nì \n"
+#~ "    thu briogadh air \"tùsail\", cuiridh seo leudachan Alt Taba dheth. \n"
+
+#~ msgid "Alt Tab Behaviour"
+#~ msgstr "Giùlan aig Alt Tab"
+
+#~ msgid "Native"
+#~ msgstr "Tùsail"
+
+#~ msgid "Cancel"
+#~ msgstr "Sguir dheth"
+
+#~ msgid "Drag here to add favorites"
+#~ msgstr "Slaod an-seo gus annsachdan a chur ris"
+
+#~ msgid "New Window"
+#~ msgstr "Uinneag ùr"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Thoir air falbh o na h-annsachdan"
+
+#~ msgid "%s is away."
+#~ msgstr "Tha %s air falbh."
+
+#~ msgid "%s is offline."
+#~ msgstr "Tha %s far loidhne."
+
+#~ msgid "%s is online."
+#~ msgstr "Tha %s air loidhne."
+
+#~ msgid "%s is busy."
+#~ msgstr "Tha %s trang."
+
+#~ msgid "Normal"
+#~ msgstr "Àbhaisteach"
+
+#~ msgid "Left"
+#~ msgstr "Clì"
+
+#~ msgid "Right"
+#~ msgstr "Deas"
+
+#~ msgid "Upside-down"
+#~ msgstr "Bun os cionn"
+
+#~ msgid "Configure display settings..."
+#~ msgstr "Rèitich roghainnean an uidheim-thaisbeanaidh..."
