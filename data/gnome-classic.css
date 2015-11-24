@@ -626,6 +626,8 @@ StScrollBar {
   #panel .panel-status-indicators-box,
   #panel .panel-status-menu-box {
     spacing: 2px; }
+  #panel .power-status.panel-status-indicators-box {
+    spacing: 0; }
   #panel .screencast-indicator {
     color: #f57900; }
 
@@ -962,7 +964,7 @@ StScrollBar {
   width: 320px;
   padding: 7px 9px;
   border-radius: 6px;
-  border-color: #eeeeec;
+  border-color: #747467;
   color: #eeeeec;
   background-color: #2e3436; }
   .search-entry:focus {
