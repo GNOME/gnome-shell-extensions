@@ -409,6 +409,9 @@ function enable() {
         Workspace.WindowOverlay.prototype.relayout = function(animate) {
             winInjections['relayout'].call(this, animate);
             let title = this.title;
+            let border = this.border;
+
+            this._parentActor.set_child_above_sibling(title, border);
 
             Tweener.removeTweens(title);
 
