@@ -407,30 +407,12 @@ function enable() {
         /// This is almost a direct copy of the original relayout function. Differences are marked.
         winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
         Workspace.WindowOverlay.prototype.relayout = function(animate) {
-            let button = this.closeButton;
+            winInjections['relayout'].call(this, animate);
             let title = this.title;
-            let border = this.border;
 
-            Tweener.removeTweens(button);
             Tweener.removeTweens(title);
-            Tweener.removeTweens(border);
 
             let [cloneX, cloneY, cloneWidth, cloneHeight] = this._windowClone.slot;
-
-            let layout = Meta.prefs_get_button_layout();
-            let side = layout.left_buttons.indexOf(Meta.ButtonFunction.CLOSE) > -1 ? St.Side.LEFT : St.Side.RIGHT;
-
-            let buttonX;
-            let buttonY = cloneY - (button.height - button._overlap);
-            if (side == St.Side.LEFT)
-                buttonX = cloneX - (button.width - button._overlap);
-            else
-                buttonX = cloneX + (cloneWidth - button._overlap);
-
-            if (animate)
-                this._animateOverlayActor(button, Math.floor(buttonX), Math.floor(buttonY), button.width);
-            else
-                button.set_position(Math.floor(buttonX), Math.floor(buttonY));
 
             // Clutter.Actor.get_preferred_width() will return the fixed width if one
             // is set, so we need to reset the width by calling set_width(-1), to forward
@@ -454,19 +436,6 @@ function enable() {
             else {
                 title.width = titleWidth;
                 title.set_position(Math.floor(titleX), Math.floor(titleY));
-            }
-
-            let borderX = cloneX - this.borderSize;
-            let borderY = cloneY - this.borderSize;
-            let borderWidth = cloneWidth + 2 * this.borderSize;
-            let borderHeight = cloneHeight + 2 * this.borderSize;
-
-            if (animate) {
-                this._animateOverlayActor(this.border, borderX, borderY,
-                                          borderWidth, borderHeight);
-            } else {
-                this.border.set_position(borderX, borderY);
-                this.border.set_size(borderWidth, borderHeight);
             }
         };
     }
