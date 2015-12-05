@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2015-01-15 08:36+0000\n"
-"PO-Revision-Date: 2015-01-26 13:42+0000\n"
+"POT-Creation-Date: 2015-12-04 22:18+0000\n"
+"PO-Revision-Date: 2015-12-05 12:20+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,12 +29,14 @@ msgstr "Þessi seta skráir þig inn í klassískt GNOME"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
-msgstr ""
+msgstr "Festa kvaðningarglugga við yfirglugga"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
+"Þetta hefur forgang fram yfir lykilinn í kjörstillingum org.gnome.mutter "
+"þegar GNOME Skelin er keyrð."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
 msgid "Arrangement of buttons on the titlebar"
@@ -45,10 +47,12 @@ msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
 msgstr ""
+"Þetta hefur forgang fram yfir lykilinn í kjörstillingum "
+"org.gnome.desktop.wm.þegar GNOME Skelin er keyrð."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
+msgstr "Virkja flísalögn við jaðra þegar gluggum er sleppt á skjájaðra"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
 msgid "Workspaces only on primary monitor"
@@ -57,6 +61,7 @@ msgstr "Vinnusvæði einungis á aðalskjá"
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr ""
+"Fresta breytingum á virkni í músarham þar til bendillinn hefur stöðvast"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -72,7 +77,7 @@ msgstr "Smámynd og táknmynd"
 
 #: ../extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
-msgstr ""
+msgstr "Birta glugga sem"
 
 #: ../extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
@@ -82,11 +87,11 @@ msgstr "Birta eingöngu glugga á núverandi vinnusvæði"
 msgid "Activities Overview"
 msgstr "Virkniyfirlit"
 
-#: ../extensions/apps-menu/extension.js:114
+#: ../extensions/apps-menu/extension.js:110
 msgid "Favorites"
 msgstr "Eftirlæti"
 
-#: ../extensions/apps-menu/extension.js:283
+#: ../extensions/apps-menu/extension.js:279
 msgid "Applications"
 msgstr "Forrit"
 
@@ -99,6 +104,8 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
+"Listi yfir textastrengi, þar sem hver þeirra inniheldur forritsauðkenni "
+"(heiti skjáborðsskrár) að viðbættum tvípunkti og svo númeri vinnusvæðis"
 
 #: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
@@ -115,7 +122,7 @@ msgstr "Bæta við reglu"
 
 #: ../extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
-msgstr ""
+msgstr "Búa til nýja samsvörunarreglu"
 
 #: ../extensions/auto-move-windows/prefs.js:111
 msgid "Add"
@@ -130,7 +137,7 @@ msgstr "Útspýting drifsins '%s' mistókst:"
 msgid "Removable devices"
 msgstr "Útskiptanleg tæki"
 
-#: ../extensions/drive-menu/extension.js:151
+#: ../extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "Opna skrá"
 
@@ -147,11 +154,15 @@ msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
 msgstr ""
+"Ef þetta er ekki autt, inniheldur það textann sem birtist þegar smellt er á "
+"spjaldið."
 
 #: ../extensions/example/prefs.js:30
 msgid "Message"
 msgstr "Skilaboð"
 
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
 #: ../extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
@@ -161,7 +172,7 @@ msgstr ""
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
 msgid "Use more screen for windows"
-msgstr ""
+msgstr "Nota meira af skjánum fyrir glugga"
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
 msgid ""
@@ -208,14 +219,6 @@ msgstr "Flakka um net"
 msgid "Cycle Screenshot Sizes"
 msgstr "Fletta í gegnum skjámyndastærðir"
 
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "Örgjörvi"
-
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "Minni"
-
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
 msgstr "Heiti þema"
@@ -224,52 +227,52 @@ msgstr "Heiti þema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Heiti á þema, hlaðið inn frá ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: ../extensions/window-list/extension.js:109
 msgid "Close"
 msgstr "Loka"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Endurheimta"
 
-#: ../extensions/window-list/extension.js:121
+#: ../extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Lágmarka"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Minnka glugga"
 
-#: ../extensions/window-list/extension.js:128
+#: ../extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Hámarka"
 
-#: ../extensions/window-list/extension.js:390
+#: ../extensions/window-list/extension.js:399
 msgid "Minimize all"
 msgstr "Lágmarka allt"
 
-#: ../extensions/window-list/extension.js:398
+#: ../extensions/window-list/extension.js:407
 msgid "Unminimize all"
 msgstr "Endurheimta allt"
 
-#: ../extensions/window-list/extension.js:406
+#: ../extensions/window-list/extension.js:415
 msgid "Maximize all"
 msgstr "Hámarka allt"
 
-#: ../extensions/window-list/extension.js:415
+#: ../extensions/window-list/extension.js:424
 msgid "Unmaximize all"
 msgstr "Minnka allt"
 
-#: ../extensions/window-list/extension.js:424
+#: ../extensions/window-list/extension.js:433
 msgid "Close all"
 msgstr "Loka öllu"
 
-#: ../extensions/window-list/extension.js:706
+#: ../extensions/window-list/extension.js:650
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Vinnusvæðavísir"
 
-#: ../extensions/window-list/extension.js:869
+#: ../extensions/window-list/extension.js:809
 msgid "Window List"
 msgstr "Gluggalisti"
 
@@ -329,4 +332,8 @@ msgstr "Heiti"
 msgid "Workspace %d"
 msgstr "Vinnusvæði %d"
 
+#~ msgid "CPU"
+#~ msgstr "Örgjörvi"
 
+#~ msgid "Memory"
+#~ msgstr "Minni"
