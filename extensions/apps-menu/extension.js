@@ -405,10 +405,8 @@ const ApplicationsButton = new Lang.Class({
                     continue;
                 }
                 let app = appSys.lookup_app(id);
-                if (appInfo.should_show()) {
-                    let menu_id = dir.get_menu_id();
+                if (appInfo.should_show())
                     this.applicationsByCategory[categoryId].push(app);
-                }
             } else if (nextType == GMenu.TreeItemType.DIRECTORY) {
                 let subdir = iter.get_directory();
                 if (!subdir.get_is_nodisplay())
