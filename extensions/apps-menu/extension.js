@@ -397,15 +397,14 @@ const ApplicationsButton = new Lang.Class({
         while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
             if (nextType == GMenu.TreeItemType.ENTRY) {
                 let entry = iter.get_entry();
-                let appInfo = entry.get_app_info();
                 let id;
                 try {
-                    id = appInfo.get_id(); // catch non-UTF8 filenames
+                    id = entry.get_desktop_file_id(); // catch non-UTF8 filenames
                 } catch(e) {
                     continue;
                 }
                 let app = appSys.lookup_app(id);
-                if (appInfo.should_show())
+                if (app.get_app_info().should_show())
                     this.applicationsByCategory[categoryId].push(app);
             } else if (nextType == GMenu.TreeItemType.DIRECTORY) {
                 let subdir = iter.get_directory();
