@@ -1,3 +1,9 @@
+3.19.3
+======
+* native-window-placement: Don't let border overlap title
+* apps-menu: Fix handling of .desktop files in subdirectories
+* updated translations (is)
+
 3.19.2
 ======
 * updated translations (gd)
