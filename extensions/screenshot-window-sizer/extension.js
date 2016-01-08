@@ -82,12 +82,20 @@ function cycleScreenshotSizes(display, screen, window, binding) {
     let workArea = window.get_work_area_current_monitor();
     let outerRect = window.get_frame_rect();
 
+    // Double both axes if on a hidpi display
+    let scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
+    let scaledSizes = SIZES.map(function(size) {
+        return size.map(function(wh) {
+            return wh * scaleFactor;
+        });
+    });
+
     // Find the nearest 16:9 size for the current window size
     let nearestIndex;
     let nearestError;
 
-    for (let i = 0; i < SIZES.length; i++) {
-        let [width, height] = SIZES[i];
+    for (let i = 0; i < scaledSizes.length; i++) {
+        let [width, height] = scaledSizes[i];
 
         // ignore sizes bigger than the workArea
         if (width > workArea.width || height > workArea.height)
@@ -102,11 +110,11 @@ function cycleScreenshotSizes(display, screen, window, binding) {
     }
 
     // get the next size up or down from ideal
-    let newIndex = (nearestIndex + (backwards ? -1 : 1)) % SIZES.length;
+    let newIndex = (nearestIndex + (backwards ? -1 : 1)) % scaledSizes.length;
     let newWidth, newHeight;
-    [newWidth, newHeight] = SIZES[newIndex];
+    [newWidth, newHeight] = scaledSizes[newIndex];
     if (newWidth > workArea.width || newHeight > workArea.height)
-        [newWidth, newHeight] = SIZES[0];
+        [newWidth, newHeight] = scaledSizes[0];
 
     // Push the window onscreen if it would be resized offscreen
     let newX = outerRect.x;
@@ -119,7 +127,9 @@ function cycleScreenshotSizes(display, screen, window, binding) {
     window.move_resize_frame(true, newX, newY, newWidth, newHeight);
 
     let newOuterRect = window.get_frame_rect();
-    let message = newOuterRect.width + 'x' + newOuterRect.height;
+    let message = '%d×%d'.format(
+            (newOuterRect.width / scaleFactor),
+            (newOuterRect.height / scaleFactor));
 
     // The new size might have been constrained by geometry hints (e.g. for
     // a terminal) - in that case, include the actual ratio to the message
