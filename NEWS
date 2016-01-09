@@ -1,3 +1,7 @@
+3.18.3
+======
+* apps-menu: Fix .desktop entries in subdirectories
+
 3.18.2
 ======
 * Fix classic style issues
