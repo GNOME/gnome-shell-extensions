@@ -1,3 +1,9 @@
+3.19.4
+======
+* screenshot-window-sizer: HiDPI support
+* Fix gnome-shell component in classic session
+* updated translations (lt)
+
 3.19.3
 ======
 * native-window-placement: Don't let border overlap title
