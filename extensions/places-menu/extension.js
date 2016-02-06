@@ -35,8 +35,16 @@ const PlaceMenuItem = new Lang.Class({
                                    icon_size: PLACE_ICON_SIZE });
 	this.actor.add_child(this._icon);
 
-        this._label = new St.Label({ text: info.name });
+        this._label = new St.Label({ text: info.name, x_expand: true });
         this.actor.add_child(this._label);
+
+        if (info.isRemovable()) {
+            this._ejectIcon = new St.Icon({ icon_name: 'media-eject-symbolic',
+                                            style_class: 'popup-menu-icon ' });
+            this._ejectButton = new St.Button({ child: this._ejectIcon });
+            this._ejectButton.connect('clicked', Lang.bind(info, info.eject));
+            this.actor.add_child(this._ejectButton);
+        }
 
         this._changedId = info.connect('changed',
                                        Lang.bind(this, this._propertiesChanged));

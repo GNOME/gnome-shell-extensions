@@ -180,6 +180,46 @@ const PlaceDeviceInfo = new Lang.Class({
 
     getIcon: function() {
         return this._mount.get_symbolic_icon();
+    },
+
+    isRemovable: function() {
+        return this._mount.can_eject();
+    },
+
+    eject: function() {
+        let mountOp = new ShellMountOperation.ShellMountOperation(this._mount);
+
+        if (this._mount.can_eject())
+            this._mount.eject_with_operation(Gio.MountUnmountFlags.NONE,
+                                             mountOp.mountOp,
+                                             null, // Gio.Cancellable
+                                             Lang.bind(this, this._ejectFinish));
+        else
+            this._mount.unmount_with_operation(Gio.MountUnmountFlags.NONE,
+                                               mountOp.mountOp,
+                                               null, // Gio.Cancellable
+                                               Lang.bind(this, this._unmountFinish));
+    },
+
+    _ejectFinish: function(mount, result) {
+        try {
+            mount.eject_with_operation_finish(result);
+        } catch(e) {
+            this._reportFailure(e);
+        }
+    },
+
+    _unmountFinish: function(mount, result) {
+        try {
+            mount.unmount_with_operation_finish(result);
+        } catch(e) {
+            this._reportFailure(e);
+        }
+    },
+
+    _reportFailure: function(exception) {
+        let msg = _("Ejecting drive '%s' failed:").format(this._mount.get_name());
+        Main.notifyError(msg, exception.message);
     }
 });
 
