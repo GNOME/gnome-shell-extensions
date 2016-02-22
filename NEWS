@@ -1,3 +1,7 @@
+3.18.4
+======
+* apps-menu: Ignore .desktop entries from legacy dirs
+
 3.18.3
 ======
 * apps-menu: Fix .desktop entries in subdirectories
