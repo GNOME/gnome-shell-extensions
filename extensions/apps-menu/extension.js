@@ -125,7 +125,10 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         else
             name = _('Favorites');
 
-        this.add_child(new St.Label({text: name}));
+        const label = new St.Label({text: name});
+        this.add_child(label);
+        this.actor.label_actor = label;
+
         this.connect('motion-event', this._onMotionEvent.bind(this));
         this.connect('notify::active', this._onActiveChanged.bind(this));
     }
