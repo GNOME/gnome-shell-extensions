@@ -1,14 +1,14 @@
 # Scottish Gaelic translation for gnome-shell-extensions.
 # Copyright (C) 2015 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# GunChleoc <fios@foramnagaidhlig.net>, 2015.
+# GunChleoc <fios@foramnagaidhlig.net>, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2015-11-17 16:36+0000\n"
-"PO-Revision-Date: 2015-11-17 17:12+0100\n"
+"POT-Creation-Date: 2016-04-29 09:49+0000\n"
+"PO-Revision-Date: 2016-04-29 11:09+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Fòram na Gàidhlig\n"
 "Language: gd\n"
@@ -30,10 +30,44 @@ msgstr "GNOME clasaigeach"
 msgid "This session logs you into GNOME Classic"
 msgstr "Clàraidh an seisean seo a-steach gu GNOME clasaigeach thu"
 
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+msgid "Attach modal dialog to the parent window"
+msgstr "Ceangail còmhradh mòdach ris an uinneag-pàraint"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Tar-àithnidh an iuchair seo an iuchair ann an org.gnome.mutter nuair a thèid "
+"Slige GNOME a ruith."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Seòrsachadh nam putanan air a' bhàr-tiotail"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"Tar-àithnidh an iuchair seo an iuchair ann an "
+"org.gnome.desktop.wm.preferences nuair a thèid Slige GNOME a ruith."
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr ""
+"Cuir leacadh nan oirean an comas nuair a thèid uinneagan a leigeil às aig "
+"oir na sgrìn"
+
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
-#| msgid "Workspace Indicator"
 msgid "Workspaces only on primary monitor"
 msgstr "Rumannan-obrach air a' phrìomh-sgrìn a-mhàin"
+
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Cuir dàil air atharraichean an fòcais ann am modh luchaige gus an sguir an "
+"tomhaire air gluasad"
 
 #: ../extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
@@ -68,9 +102,16 @@ msgid "Applications"
 msgstr "Aplacaidean"
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
-#| msgid "Application icon only"
 msgid "Application and workspace list"
 msgstr "Ìomhaigheag na h-aplacaid is liosta nan rumannan-obrach"
+
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Liosta dhe shreangan le id aplacaid (ainm faidhle desktop) aig gach tè air a "
+"leantainn le còilean is àireamh an ruim-obrach"
 
 #: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
@@ -110,6 +151,18 @@ msgstr "Fosgail am faidhle"
 msgid "Hello, world!"
 msgstr "Shin thu, a shaoghail!"
 
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+msgid "Alternative greeting text."
+msgstr "Teacsa fàilteachaidh eile."
+
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Mur eil seo falamh, tha an teacsa 'na bhroinn a thèid a shealltainn le "
+"briogadh air a' phanail."
+
 #: ../extensions/example/prefs.js:30
 msgid "Message"
 msgstr "Teachdaireachd"
@@ -125,6 +178,36 @@ msgstr ""
 "Tha am ball-eisimpleir airson sealltainn dhut mar a thogas tu leudachain le "
 "deagh-ghiùlan airson na Slige agus mar sin cha dèan e fhèin mòran.\n"
 "'S urrainn dhut an teachdaireachd fàilteachaidh a ghnàthachadh co-dhiù."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+msgid "Use more screen for windows"
+msgstr "Cleachd cuid nas motha dhen sgrìn airson uinneagan"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Feuch barrachd rum air an sgrìn a chleachdadh nuair a thèid dealbhagan nan "
+"uinneagan a chur ann le gleusadh a-rèir co-mheas deilbh na sgrìn agus le "
+"barrachd co-dhaingneachaidh ach am bi am bogsa-iadhaidh nas lugha. Cha bhi "
+"an roghainn seo an sàs ach leis an ro-innleachd suidheachaidh nàdarra."
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+msgid "Place window captions on top"
+msgstr "Cuir caipseanan nan uinneagan air a' bharr"
+
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Mas e true a th' ann, thèid caipseanan nan uinneagan a chur ri barr nan "
+"dealbhagan, a' tar-àithneadh bun-roghainn na slige a chuireas aig a' bhonn "
+"iad. Ma dh'atharraicheas tu an roghainn seo, feumaidh tu an t-slige a "
+"thòiseachadh às ùr gus an dèid a cur an sàs."
 
 #: ../extensions/places-menu/extension.js:78
 #: ../extensions/places-menu/extension.js:81
@@ -148,6 +231,18 @@ msgstr "Dachaigh"
 #: ../extensions/places-menu/placeDisplay.js:311
 msgid "Browse Network"
 msgstr "Brabhsaich an lìonra"
+
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+msgid "Cycle Screenshot Sizes"
+msgstr "Cuartaich meudan nan glacaidhean-sgrìn"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+msgid "Theme name"
+msgstr "Ainm an ùrlair"
+
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Ainm an ùrlair a thèid a luchdadh o ~/.themes/name/gnome-shell"
 
 #: ../extensions/window-list/extension.js:110
 msgid "Close"
@@ -199,14 +294,29 @@ msgid "Window List"
 msgstr "Liosta nan uinneagan"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
-#| msgid "Never group windows"
 msgid "When to group windows"
 msgstr "Cuin a thèid na h-uinneagan a bhuidhneachadh"
 
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
+msgstr ""
+"Mìnichidh seo cuin a thèid uinneagan aig an aon aplacaid a bhuidhneachadh "
+"air liosta nan uinneagan. 'S e \"never\", \"auto\" agus \"always\" a tha sna "
+"roghainnean dligheach."
+
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
-#| msgid "Show on all monitors"
 msgid "Show the window list on all monitors"
 msgstr "Seall liosta nan uinneagan air a h-uile sgrìn"
+
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Co-dhiù an dèid liosta nan uinneagan a shealltainn air gach sgrìn "
+"cheangailte no air a' phrìomh-thè a-mhàin."
 
 #: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
