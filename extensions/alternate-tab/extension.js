@@ -7,6 +7,7 @@ const Shell = imports.gi.Shell;
 
 const AltTab = imports.ui.altTab;
 const Main = imports.ui.main;
+const WindowManager = imports.ui.windowManager;
 
 let injections = {};
 
@@ -33,20 +34,32 @@ function enable() {
         return injections['_keyPressHandler'].call(this, keysym, action);
     };
 
-    setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._startWindowSwitcher));
-    setKeybinding('switch-group', Lang.bind(Main.wm, Main.wm._startWindowSwitcher));
-    setKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._startWindowSwitcher));
-    setKeybinding('switch-group-backward', Lang.bind(Main.wm, Main.wm._startWindowSwitcher));
+    Main.wm._forcedWindowSwitcher = function(display, screen, window, binding) {
+        /* prevent a corner case where both popups show up at once */
+        if (this._workspaceSwitcherPopup != null)
+            this._workspaceSwitcherPopup.destroy();
+
+        let tabPopup = new AltTab.WindowSwitcherPopup();
+
+        if (!tabPopup.show(binding.is_reversed(), binding.get_name(), binding.get_mask()))
+            tabPopup.destroy();
+    };
+
+    setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._forcedWindowSwitcher));
+    setKeybinding('switch-group', Lang.bind(Main.wm, Main.wm._forcedWindowSwitcher));
+    setKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._forcedWindowSwitcher));
+    setKeybinding('switch-group-backward', Lang.bind(Main.wm, Main.wm._forcedWindowSwitcher));
 }
 
 function disable() {
     var prop;
 
-    setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    setKeybinding('switch-group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    setKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-    setKeybinding('switch-group-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+    setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._startSwitcher));
+    setKeybinding('switch-group', Lang.bind(Main.wm, Main.wm._startSwitcher));
+    setKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._startSwitcher));
+    setKeybinding('switch-group-backward', Lang.bind(Main.wm, Main.wm._startSwitcher));
 
     for (prop in injections)
         AltTab.WindowSwitcherPopup.prototype[prop] = injections[prop];
+    delete Main.wm._forcedWindowSwitcher;
 }
