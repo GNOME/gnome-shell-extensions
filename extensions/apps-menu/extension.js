@@ -404,6 +404,8 @@ const ApplicationsButton = new Lang.Class({
                     continue;
                 }
                 let app = appSys.lookup_app(id);
+                if (!app)
+                    app = new Shell.App({ app_info: entry.get_app_info() });
                 if (app.get_app_info().should_show())
                     this.applicationsByCategory[categoryId].push(app);
             } else if (nextType == GMenu.TreeItemType.DIRECTORY) {
