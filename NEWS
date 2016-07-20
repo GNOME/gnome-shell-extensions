@@ -1,3 +1,6 @@
+3.21.4
+======
+* apps-menu: Fix entries from non-standard AppDir directories
 3.21.3
 ======
 * adjust to gnome-shell changes
