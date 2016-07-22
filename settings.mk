@@ -1,10 +1,9 @@
-gschemas_in = $(gschemaname).gschema.xml.in
+gsettings_SCHEMAS = $(gschemaname).gschema.xml
 
-@INTLTOOL_XML_NOMERGE_RULE@
-
-gsettings_SCHEMAS = $(gschemas_in:.xml.in=.xml)
+%.desktop:%.desktop.in
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 @GSETTINGS_RULES@
 
-CLEANFILES += $(gschemas_in:.xml.in=.valid) $(gsettings_SCHEMAS)
-EXTRA_DIST += $(gschemas_in)
+CLEANFILES += $(gsettings_SCHEMAS:.xml=.valid)
+EXTRA_DIST += $(gsettings_SCHEMAS)

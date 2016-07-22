@@ -1,3 +1,3 @@
 [GNOME Session]
-_Name=GNOME Classic
+Name=GNOME Classic
 RequiredComponents=org.gnome.Shell;gnome-settings-daemon;nautilus-classic;

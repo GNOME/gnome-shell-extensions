@@ -12,7 +12,9 @@ GETTEXT_PACKAGE=gnome-shell-extensions
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",
                    [The prefix for our gettext translation domains.])
-IT_PROG_INTLTOOL(0.26)
+
+AM_GNU_GETTEXT_VERSION([0.19.6])
+AM_GNU_GETTEXT([external])
 
 PKG_PROG_PKG_CONFIG([0.22])
 
