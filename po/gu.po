@@ -5,35 +5,27 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-09-02 07:39+0000\n"
-"PO-Revision-Date: 2014-09-02 15:45+0530\n"
-"Last-Translator: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2016-05-05 09:58+0000\n"
+"PO-Revision-Date: 2016-07-11 22:04+0200\n"
+"Last-Translator: વિશાલ ભલાણી <vishalbhalani89@gmail.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: gu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-DamnedLies-Scope: partial\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
+#: ../data/gnome-classic.desktop.in.h:1 ../data/gnome-classic.session.desktop.in.in.h:1
 msgid "GNOME Classic"
 msgstr "GNOME ક્લાસિક"
 
 #: ../data/gnome-classic.desktop.in.h:2
 msgid "This session logs you into GNOME Classic"
 msgstr "આ સત્ર તમને GNOME ક્લાસિકમાં પ્રવેશ આપે છે"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "GNOME શેલ ક્લાસિક"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "વિન્ડો સંચાલન અને કાર્યક્રમ શરૂઆત"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
 msgid "Attach modal dialog to the parent window"
@@ -48,13 +40,8 @@ msgid "Arrangement of buttons on the titlebar"
 msgstr "શીર્ષકપટ્ટી પર બટનોની ગોઠવણ"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"આ કી  org.gnome.desktop.wm.preferences માં કી ઉપર લખાઇ જશે જ્યારે GNOME શેલ ચાલી રહ્યુ હોય."
+msgid "This key overrides the key in org.gnome.desktop.wm.preferences when running GNOME Shell."
+msgstr "આ કી  org.gnome.desktop.wm.preferences માં કી ઉપર લખાઇ જશે જ્યારે GNOME શેલ ચાલી રહ્યુ હોય."
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
@@ -88,15 +75,15 @@ msgstr "આ તરીકે વિન્ડોને હાજર કરો"
 msgid "Show only windows in the current workspace"
 msgstr "વર્તમાન કામ કરવાની જગ્યામાં ફક્ત વિન્ડોને બતાવો"
 
-#: ../extensions/apps-menu/extension.js:39
+#: ../extensions/apps-menu/extension.js:38
 msgid "Activities Overview"
 msgstr "પ્રવૃત્તિ દૃશ્ય"
 
-#: ../extensions/apps-menu/extension.js:113
+#: ../extensions/apps-menu/extension.js:109
 msgid "Favorites"
 msgstr "પસંદીદા"
 
-#: ../extensions/apps-menu/extension.js:282
+#: ../extensions/apps-menu/extension.js:266
 msgid "Applications"
 msgstr "કાર્યક્રમો"
 
@@ -106,23 +93,21 @@ msgstr "કાર્યક્રમ અને કામ કરવાની જ�
 
 #: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
 msgid ""
-"A list of strings, each containing an application id (desktop file name), "
-"followed by a colon and the workspace number"
+"A list of strings, each containing an application id (desktop file name), followed by a colon "
+"and the workspace number"
 msgstr ""
-"શબ્દમાળાઓની યાદી, દરેક રંગ અને કામ કરવાની જગ્યા નંબર દ્દારા અનુસરેલ કાર્યક્રમ id "
-"(ડેસ્કટોપ ફાઇલ નામ) ને સામવી રહ્યુ છે"
+"શબ્દમાળાઓની યાદી, દરેક રંગ અને કામ કરવાની જગ્યા નંબર દ્દારા અનુસરેલ કાર્યક્રમ id (ડેસ્કટોપ ફાઇલ નામ) ને "
+"સામવી રહ્યુ છે"
 
 #: ../extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "કાર્યક્રમ"
 
-#: ../extensions/auto-move-windows/prefs.js:69
-#: ../extensions/auto-move-windows/prefs.js:127
+#: ../extensions/auto-move-windows/prefs.js:69 ../extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "કાર્ય કરવાની જગ્યા"
 
 #: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
 msgid "Add Rule"
 msgstr "નિયમ ઉમેરો"
 
@@ -139,11 +124,11 @@ msgstr "ઉમેરો"
 msgid "Ejecting drive '%s' failed:"
 msgstr "ડ્રાઇવ '%s' બહાર નીકાળતી વખતે નિષ્ફળતા:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "દૂર કરી શકાય તેવા ઉપકરણો"
 
-#: ../extensions/drive-menu/extension.js:150
+#: ../extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "ફાઇલને ખોલો"
 
@@ -156,24 +141,23 @@ msgid "Alternative greeting text."
 msgstr "વૈકલ્પિક શુભેચ્છા લખાણ."
 
 #: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
+msgid "If not empty, it contains the text that will be shown when clicking on the panel."
 msgstr "જો ખાલી ન હોય તો, તે લખાણને સમાવે છે કે જે બતાવશે જ્યારે પેનલ પર ક્લિક કરી રહ્યા હોય."
 
 #: ../extensions/example/prefs.js:30
-#| msgid "Message:"
 msgid "Message"
 msgstr "સંદેશો"
 
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
 #: ../extensions/example/prefs.js:43
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
+"Example aims to show how to build well behaved extensions for the Shell and as such it has "
+"little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
-"શેલ માટે સારી વર્તણૂકવાળા શેલ એક્સટેન્શનને કેવી રીતે બનાવવા તે આ ઉદાહરણ બતાવે છે તેની સાથે "
-"તેની પાસે તેની પોતાની પર થોડી કાર્યક્ષમતા છે.\n"
+"શેલ માટે સારી વર્તણૂકવાળા શેલ એક્સટેન્શનને કેવી રીતે બનાવવા તે આ ઉદાહરણ બતાવે છે તેની સાથે તેની પાસે તેની પોતાની "
+"પર થોડી કાર્યક્ષમતા છે.\n"
 "તેમ છતાં શુભેચ્છા સંદેશ કસ્ટમાઇઝ કરવા માટે શક્ય છે."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
@@ -182,13 +166,12 @@ msgstr "વિન્ડો માટે વધારે સ્ક્રીનન
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
 msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. "
-"This setting applies only with the natural placement strategy."
+"Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and "
+"consolidating them further to reduce the bounding box. This setting applies only with the "
+"natural placement strategy."
 msgstr ""
-"સ્ક્રીન આશરે દરને અપનાવીને વિન્ડો થમ્ભનેઇલને સ્થિત કરવા માટે વધારે સ્ક્રીનને વાપરવાનો પ્રયત્ન "
-"કરો, અને બાઉન્ડીંગ બોક્સને ઘટાડવા માટે તેઓને આગળ આશ્ર્વાસન આપો. આ સુયોજન ફક્ત કુદરતી સ્થાન "
-"યોજના સાથે લાગુ થાય છે."
+"સ્ક્રીન આશરે દરને અપનાવીને વિન્ડો થમ્ભનેઇલને સ્થિત કરવા માટે વધારે સ્ક્રીનને વાપરવાનો પ્રયત્ન કરો, અને બાઉન્ડીંગ "
+"બોક્સને ઘટાડવા માટે તેઓને આગળ આશ્ર્વાસન આપો. આ સુયોજન ફક્ત કુદરતી સ્થાન યોજના સાથે લાગુ થાય છે."
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
 msgid "Place window captions on top"
@@ -196,43 +179,33 @@ msgstr "ટોચે વિન્ડો કૅપ્શન વિન્ડોન
 
 #: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
 msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
+"If true, place window captions on top the respective thumbnail, overriding shell default of "
+"placing it at the bottom. Changing this setting requires restarting the shell to have any "
+"effect."
 msgstr ""
-"જો true હોય તો, થમ્ભનેઇલ પર કૅપ્શન વિન્ડોને સ્થિત કરો, નીચે તેને સ્થિત કરીને શેલ મૂળભૂત પર "
-"લખી રહ્યા છે. આ સુયોજનને બદલવાથી કોઇપણ અસર લાવવા માટે શેલને પુન:શરૂ કરવાની જરૂર છે."
+"જો true હોય તો, થમ્ભનેઇલ પર કૅપ્શન વિન્ડોને સ્થિત કરો, નીચે તેને સ્થિત કરીને શેલ મૂળભૂત પર લખી રહ્યા છે. આ "
+"સુયોજનને બદલવાથી કોઇપણ અસર લાવવા માટે શેલને પુન:શરૂ કરવાની જરૂર છે."
 
-#: ../extensions/places-menu/extension.js:78
-#: ../extensions/places-menu/extension.js:81
+#: ../extensions/places-menu/extension.js:78 ../extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "સ્થાનો"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: ../extensions/places-menu/placeDisplay.js:59
 #, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "\"%s\" ને શરૂ કરવામાં નિષ્ફળતા"
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: ../extensions/places-menu/placeDisplay.js:101 ../extensions/places-menu/placeDisplay.js:124
 msgid "Computer"
 msgstr "કમ્પ્યૂટર"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: ../extensions/places-menu/placeDisplay.js:267
 msgid "Home"
 msgstr "ઘર"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: ../extensions/places-menu/placeDisplay.js:311
 msgid "Browse Network"
 msgstr "નેટવર્ક બ્રાઉઝ કરો"
-
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "CPU"
-
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "મેમરી"
 
 #: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
 msgid "Theme name"
@@ -262,33 +235,31 @@ msgstr "મહત્તમમાંથી પાછુ લાવો"
 msgid "Maximize"
 msgstr "મહત્તમ કરો"
 
-#: ../extensions/window-list/extension.js:300
+#: ../extensions/window-list/extension.js:403
 msgid "Minimize all"
 msgstr "બધુ મહત્તમ કરો"
 
-#: ../extensions/window-list/extension.js:308
+#: ../extensions/window-list/extension.js:411
 msgid "Unminimize all"
 msgstr "બધાને ન્યૂનત્તમમાંથી પાછુ લાવો"
 
-#: ../extensions/window-list/extension.js:316
+#: ../extensions/window-list/extension.js:419
 msgid "Maximize all"
 msgstr "બધુ મહત્તમ કરો"
 
-#: ../extensions/window-list/extension.js:325
+#: ../extensions/window-list/extension.js:428
 msgid "Unmaximize all"
 msgstr "બધાને મહત્તમમાંથી પાછુ લાવો"
 
-#: ../extensions/window-list/extension.js:334
+#: ../extensions/window-list/extension.js:437
 msgid "Close all"
 msgstr "બધુ બંધ કરો"
 
-#: ../extensions/window-list/extension.js:644
-#: ../extensions/workspace-indicator/extension.js:30
+#: ../extensions/window-list/extension.js:661 ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "કામ કરવાની જગ્યાનું સૂચક"
 
-#: ../extensions/window-list/extension.js:798
-#| msgid "Window Grouping"
+#: ../extensions/window-list/extension.js:820
 msgid "Window List"
 msgstr "વિન્ડો યાદી"
 
@@ -298,30 +269,33 @@ msgstr "વિન્ડોના જૂથ ક્યારે પાડવા"
 
 #: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
 msgid ""
-"Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Decides when to group windows from the same application on the window list. Possible values "
+"are \"never\", \"auto\" and \"always\"."
 msgstr ""
-"વિન્ડોની મેનુ પર એક જ કાર્યક્રમમાંથી વિન્ડોના જૂથો કયારે પાડવા તે નક્કી કરે છે. \"ક્યારેય "
-"નહિ\", \"આપોઆપ\" અને \"હંમેશા\" તેની શક્ય કિંમતો છે."
+"વિન્ડોની મેનુ પર એક જ કાર્યક્રમમાંથી વિન્ડોના જૂથો કયારે પાડવા તે નક્કી કરે છે. \"ક્યારેય નહિ\", \"આપોઆપ\" "
+"અને \"હંમેશા\" તેની શક્ય કિંમતો છે."
 
-#: ../extensions/window-list/prefs.js:30
+#: ../extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "વિન્ડો જૂથ થઈ રહ્યુ છે"
 
-#: ../extensions/window-list/prefs.js:49
+#: ../extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "જૂથ વિન્ડો કદી નહિં"
 
-#: ../extensions/window-list/prefs.js:50
+#: ../extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "જૂથ વિન્ડો જ્યારે જગ્યા મર્યાદિત હોય"
 
-#: ../extensions/window-list/prefs.js:51
+#: ../extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "હંમેશા જૂથ વિન્ડો"
 
+#: ../extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "બધા મોનિટર પર બતાવો"
+
 #: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
 msgid "Workspace Names"
 msgstr "કામ કરવાની જગ્યાના નામો"
 
@@ -333,6 +307,18 @@ msgstr "નામ"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "કામ કરવાની જગ્યા %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "GNOME શેલ ક્લાસિક"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "વિન્ડો સંચાલન અને કાર્યક્રમ શરૂઆત"
+
+#~ msgid "CPU"
+#~ msgstr "CPU"
+
+#~ msgid "Memory"
+#~ msgstr "મેમરી"
 
 #~ msgid "Suspend"
 #~ msgstr "અટકાવો"
