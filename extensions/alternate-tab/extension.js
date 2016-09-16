@@ -23,11 +23,9 @@ function enable() {
     AltTab.WindowSwitcherPopup.prototype._keyPressHandler = function(keysym, action) {
         switch(action) {
             case Meta.KeyBindingAction.SWITCH_APPLICATIONS:
-            case Meta.KeyBindingAction.SWITCH_GROUP:
               action = Meta.KeyBindingAction.SWITCH_WINDOWS;
               break;
             case Meta.KeyBindingAction.SWITCH_APPLICATIONS_BACKWARD:
-            case Meta.KeyBindingAction.SWITCH_GROUP_BACKWARD:
               action = Meta.KeyBindingAction.SWITCH_WINDOWS_BACKWARD;
               break;
         }
@@ -46,18 +44,14 @@ function enable() {
     };
 
     setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._forcedWindowSwitcher));
-    setKeybinding('switch-group', Lang.bind(Main.wm, Main.wm._forcedWindowSwitcher));
     setKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._forcedWindowSwitcher));
-    setKeybinding('switch-group-backward', Lang.bind(Main.wm, Main.wm._forcedWindowSwitcher));
 }
 
 function disable() {
     var prop;
 
     setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._startSwitcher));
-    setKeybinding('switch-group', Lang.bind(Main.wm, Main.wm._startSwitcher));
     setKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._startSwitcher));
-    setKeybinding('switch-group-backward', Lang.bind(Main.wm, Main.wm._startSwitcher));
 
     for (prop in injections)
         AltTab.WindowSwitcherPopup.prototype[prop] = injections[prop];
