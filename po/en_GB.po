@@ -7,10 +7,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-27 22:05+0100\n"
-"PO-Revision-Date: 2012-09-21 21:00-0400\n"
-"Last-Translator: Philip Withnall <philip@tecnocode.co.uk>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2016-08-19 21:17+0000\n"
+"PO-Revision-Date: 2016-09-18 12:40+0200\n"
+"Last-Translator: David King <amigadave@amigadave.com>\n"
 "Language-Team: Sugar Labs\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
@@ -20,38 +21,32 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Classic"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "This session logs you into GNOME Classic"
 
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "GNOME Shell Classic"
-
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "Window management and application launching"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
 msgid "Attach modal dialog to the parent window"
 msgstr "Attach modal dialogue to the parent window"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
 msgid "Arrangement of buttons on the titlebar"
 msgstr "Arrangement of buttons on the titlebar"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
@@ -59,55 +54,55 @@ msgstr ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "Enable edge tiling when dropping windows on screen edges"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
 msgid "Workspaces only on primary monitor"
 msgstr "Workspaces only on primary monitor"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr "Delay focus changes in mouse mode until the pointer stops moving"
 
-#: ../extensions/alternate-tab/prefs.js:20
+#: extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Thumbnail only"
 
-#: ../extensions/alternate-tab/prefs.js:21
+#: extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Application icon only"
 
-#: ../extensions/alternate-tab/prefs.js:22
+#: extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Thumbnail and application icon"
 
-#: ../extensions/alternate-tab/prefs.js:37
+#: extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "Present windows as"
 
-#: ../extensions/alternate-tab/prefs.js:62
+#: extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "Show only windows in the current workspace"
 
-#: ../extensions/apps-menu/extension.js:39
+#: extensions/apps-menu/extension.js:38
 msgid "Activities Overview"
 msgstr "Activities Overview"
 
-#: ../extensions/apps-menu/extension.js:113
+#: extensions/apps-menu/extension.js:109
 msgid "Favorites"
 msgstr "Favourites"
 
-#: ../extensions/apps-menu/extension.js:282
+#: extensions/apps-menu/extension.js:266
 msgid "Applications"
 msgstr "Applications"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
 msgstr "Application and workspace list"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -115,49 +110,49 @@ msgstr ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 
-#: ../extensions/auto-move-windows/prefs.js:55
+#: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Application"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:69
+#: extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "Workspace"
 
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
-msgstr "Add rule"
+#: extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
+msgstr "Add Rule"
 
-#: ../extensions/auto-move-windows/prefs.js:94
+#: extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "Create new matching rule"
 
-#: ../extensions/auto-move-windows/prefs.js:98
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "Add"
 
-#: ../extensions/drive-menu/extension.js:106
+#: extensions/drive-menu/extension.js:106
 #, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "Ejecting drive '%s' failed:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Removable devices"
 
-#: ../extensions/drive-menu/extension.js:150
+#: extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "Open File"
 
-#: ../extensions/example/extension.js:17
+#: extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Hello, world!"
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
 msgid "Alternative greeting text."
 msgstr "Alternative greeting text."
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
@@ -165,7 +160,13 @@ msgstr ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
 
-#: ../extensions/example/prefs.js:30
+#: extensions/example/prefs.js:30
+msgid "Message"
+msgstr "Message"
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: extensions/example/prefs.js:43
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -175,15 +176,11 @@ msgstr ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "Message:"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
 msgstr "Use more screen for windows"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -193,11 +190,11 @@ msgstr ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
 msgstr "Place window captions on top"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
@@ -207,99 +204,95 @@ msgstr ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 
-#: ../extensions/places-menu/extension.js:78
-#: ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:78
+#: extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Places"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "Failed to launch \"%s\""
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: extensions/places-menu/placeDisplay.js:101
+#: extensions/places-menu/placeDisplay.js:124
 msgid "Computer"
 msgstr "Computer"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: extensions/places-menu/placeDisplay.js:267
 msgid "Home"
 msgstr "Home"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: extensions/places-menu/placeDisplay.js:311
 msgid "Browse Network"
 msgstr "Browse Network"
 
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "CPU"
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+msgid "Cycle Screenshot Sizes"
+msgstr "Cycle Screenshot Sizes"
 
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "Memory"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
 msgstr "Theme name"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Close"
 
-#: ../extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Unminimise"
 
-#: ../extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "Minimise"
 
-#: ../extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Unmaximise"
 
-#: ../extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "Maximise"
 
-#: ../extensions/window-list/extension.js:300
+#: extensions/window-list/extension.js:403
 msgid "Minimize all"
 msgstr "Minimise all"
 
-#: ../extensions/window-list/extension.js:308
+#: extensions/window-list/extension.js:411
 msgid "Unminimize all"
 msgstr "Unminimise all"
 
-#: ../extensions/window-list/extension.js:316
+#: extensions/window-list/extension.js:419
 msgid "Maximize all"
 msgstr "Maximise all"
 
-#: ../extensions/window-list/extension.js:325
+#: extensions/window-list/extension.js:428
 msgid "Unmaximize all"
 msgstr "Unmaximise all"
 
-#: ../extensions/window-list/extension.js:334
+#: extensions/window-list/extension.js:437
 msgid "Close all"
 msgstr "Close all"
 
-#: ../extensions/window-list/extension.js:644
-#: ../extensions/workspace-indicator/extension.js:30
+#: extensions/window-list/extension.js:661
+#: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Workspace Indicator"
 
-#: ../extensions/window-list/extension.js:798
+#: extensions/window-list/extension.js:820
 msgid "Window List"
 msgstr "Window List"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
 msgstr "When to group windows"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
@@ -307,34 +300,62 @@ msgstr ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are \"never\", \"auto\" and \"always\"."
 
-#: ../extensions/window-list/prefs.js:30
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+msgid "Show the window list on all monitors"
+msgstr "Show the window list on all monitors"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+
+#: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Window Grouping"
 
-#: ../extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Never group windows"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Group windows when space is limited"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Always group windows"
 
-#: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "Workspace names:"
+#: extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Show on all monitors"
 
-#: ../extensions/workspace-indicator/prefs.js:152
+#: extensions/workspace-indicator/prefs.js:141
+msgid "Workspace Names"
+msgstr "Workspace Names"
+
+#: extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "Name"
 
-#: ../extensions/workspace-indicator/prefs.js:186
+#: extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Workspace %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "GNOME Shell Classic"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Window management and application launching"
+
+#~ msgid "CPU"
+#~ msgstr "CPU"
+
+#~ msgid "Memory"
+#~ msgstr "Memory"
 
 #~ msgid "The application icon mode."
 #~ msgstr "The application icon mode."
