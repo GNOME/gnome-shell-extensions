@@ -152,6 +152,12 @@ const WindowTitle = new Lang.Class({
         this._iconThemeChangedId =
             this._textureCache.connect('icon-theme-changed',
                                        Lang.bind(this, this._updateIcon));
+        this._notifyWmClass =
+            this._metaWindow.connect('notify::wm-class',
+                                     Lang.bind(this, this._updateIcon));
+        this._notifyAppId =
+            this._metaWindow.connect('notify::gtk-application-id',
+                                     Lang.bind(this, this._updateIcon));
         this._updateIcon();
 
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
@@ -193,6 +199,8 @@ const WindowTitle = new Lang.Class({
         this._textureCache.disconnect(this._iconThemeChangedId);
         this._metaWindow.disconnect(this._notifyTitleId);
         this._metaWindow.disconnect(this._notifyMinimizedId);
+        this._metaWindow.disconnect(this._notifyWmClass);
+        this._metaWindow.disconnect(this._notifyAppId);
     }
 });
 
