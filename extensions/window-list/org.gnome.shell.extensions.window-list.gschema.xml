@@ -12,7 +12,7 @@
       <summary>When to group windows</summary>
       <description>
         Decides when to group windows from the same application on the
-        window list. Possible values are "never", "auto" and "always".
+        window list. Possible values are “never”, “auto” and “always”.
       </description>
     </key>
     <key name="show-on-all-monitors" type="b">

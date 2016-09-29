@@ -103,7 +103,7 @@ const MountMenuItem = new Lang.Class({
     },
 
     _reportFailure: function(exception) {
-	let msg = _("Ejecting drive '%s' failed:").format(this.mount.get_name());
+	let msg = _("Ejecting drive “%s” failed:").format(this.mount.get_name());
 	Main.notifyError(msg, exception.message);
     },
 

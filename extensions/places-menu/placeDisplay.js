@@ -56,7 +56,7 @@ const PlaceInfo = new Lang.Class({
                 Gio.AppInfo.launch_default_for_uri(file.get_uri(), launchContext);
             });
         } catch(e) {
-            Main.notifyError(_("Failed to launch \"%s\"").format(this.name), e.message);
+            Main.notifyError(_("Failed to launch “%s”").format(this.name), e.message);
         }
     },
 

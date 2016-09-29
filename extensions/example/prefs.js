@@ -42,7 +42,7 @@ const ExamplePrefsWidget = new GObject.Class({
 	// translated
 	let primaryText = _("Example aims to show how to build well behaved \
 extensions for the Shell and as such it has little functionality on its own.\n\
-Nevertheless it's possible to customize the greeting message.");
+Nevertheless it’s possible to customize the greeting message.");
 
 	this.add(new Gtk.Label({ label: primaryText,
                                  wrap: true, xalign: 0 }));
