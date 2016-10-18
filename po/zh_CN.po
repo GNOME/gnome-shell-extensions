@@ -11,316 +11,327 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2015-04-17 08:12+0000\n"
-"PO-Revision-Date: 2015-05-03 10:39+0800\n"
+"POT-Creation-Date: 2016-10-11 08:03+0000\n"
+"PO-Revision-Date: 2016-10-18 17:39+0800\n"
 "Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnome-classic.desktop.in.h:1 ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME 经典模式"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "该会话将登录到“GNOME 经典模式”"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
 msgid "Attach modal dialog to the parent window"
 msgstr "将模式对话框附着到父窗口"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr "当运行 GNOME Shell 时该键会覆盖 org.gnome.mutter 中的键。"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
 msgid "Arrangement of buttons on the titlebar"
 msgstr "标题栏上按钮的排列"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
 msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running GNOME "
-"Shell."
-msgstr "当运行 GNOME Shell 时该键会覆盖 org.gnome.desktop.wm.preferences 中的键。"
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"当运行 GNOME Shell 时该键会覆盖 org.gnome.desktop.wm.preferences 中的键。"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "启用将窗口拖拽到屏幕边缘时平铺显示的功能"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
 msgid "Workspaces only on primary monitor"
 msgstr "仅在主显示器上显示工作区"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr "将鼠标模式下焦点的切换推迟到光标停止移动之后"
 
-#: ../extensions/alternate-tab/prefs.js:20
+#: extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "仅缩略图"
 
-#: ../extensions/alternate-tab/prefs.js:21
+#: extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "仅应用程序图标"
 
-#: ../extensions/alternate-tab/prefs.js:22
+#: extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "缩略图和应用程序图标"
 
-#: ../extensions/alternate-tab/prefs.js:38
+#: extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "窗口展现为"
 
-#: ../extensions/alternate-tab/prefs.js:69
+#: extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "仅显示当前工作区中的窗口"
 
-#: ../extensions/apps-menu/extension.js:39
+#: extensions/apps-menu/extension.js:38
 msgid "Activities Overview"
 msgstr "活动概览"
 
-#: ../extensions/apps-menu/extension.js:110
+#: extensions/apps-menu/extension.js:109
 msgid "Favorites"
 msgstr "收藏"
 
-#: ../extensions/apps-menu/extension.js:279
+#: extensions/apps-menu/extension.js:266
 msgid "Applications"
 msgstr "应用程序"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
 msgstr "应用程序和工作区列表"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
 msgid ""
-"A list of strings, each containing an application id (desktop file name), followed by "
-"a colon and the workspace number"
-msgstr "一系列字符串，每个字符串包含一个应用程序标识(桌面文件名称)、冒号加工作区号"
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"一系列字符串，每个字符串包含一个应用程序标识(桌面文件名称)、冒号加工作区号"
 
-#: ../extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "应用程序"
 
-#: ../extensions/auto-move-windows/prefs.js:69
-#: ../extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:69
+#: extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "工作区"
 
-#: ../extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:85
 msgid "Add Rule"
 msgstr "添加规则"
 
-#: ../extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "创建新的匹配规则"
 
-#: ../extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "添加"
 
-#: ../extensions/drive-menu/extension.js:106
+#: extensions/drive-menu/extension.js:106
 #, javascript-format
 msgid "Ejecting drive '%s' failed:"
 msgstr "弹出驱动器“%s”失败："
 
-#: ../extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "可移动设备"
 
-#: ../extensions/drive-menu/extension.js:149
+#: extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "打开文件管理器"
 
-#: ../extensions/example/extension.js:17
+#: extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Hello, world!"
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
 msgid "Alternative greeting text."
 msgstr "替代的祝福语。"
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
 msgid ""
-"If not empty, it contains the text that will be shown when clicking on the panel."
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
 msgstr "如果不为空，所包含的文本会在点击面板时显示。"
 
-#: ../extensions/example/prefs.js:30
+#: extensions/example/prefs.js:30
 msgid "Message"
 msgstr "消息"
 
-#: ../extensions/example/prefs.js:43
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: extensions/example/prefs.js:43
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such "
-"it has little functionality on its own.\n"
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
 "Nevertheless it's possible to customize the greeting message."
 msgstr ""
 "示例意在展示如何为 Shell 创建良好工作的扩展，本身功能有限。\n"
 "尽管如此，它还是具备定制祝福语的功能。"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
 msgstr "展现窗口时利用更多屏幕空间"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen aspect "
-"ratio, and consolidating them further to reduce the bounding box. This setting "
-"applies only with the natural placement strategy."
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
 msgstr ""
-"尝试通过适应屏幕宽高比，以及相互组合以减少包围框，在摆放窗口缩略图时利用更多屏幕空间。"
-"此设置只应用于自然摆放策略。"
+"尝试通过适应屏幕宽高比，以及相互组合以减少包围框，在摆放窗口缩略图时利用更多"
+"屏幕空间。此设置只应用于自然摆放策略。"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
 msgstr "窗口说明文字在上"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
-"If true, place window captions on top the respective thumbnail, overriding shell "
-"default of placing it at the bottom. Changing this setting requires restarting the "
-"shell to have any effect."
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
 msgstr ""
-"如果设置为 true，则将窗口说明文字放置在对应窗口的缩略图上方，而不是默认的下方。修改此"
-"设置需要重启 GNOME Shell 以使设置生效。"
+"如果设置为 true，则将窗口说明文字放置在对应窗口的缩略图上方，而不是默认的下"
+"方。修改此设置需要重启 GNOME Shell 以使设置生效。"
 
-#: ../extensions/places-menu/extension.js:78 ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:78
+#: extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "位置"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
 msgid "Failed to launch \"%s\""
 msgstr "无法启动“%s”"
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: extensions/places-menu/placeDisplay.js:101
+#: extensions/places-menu/placeDisplay.js:124
 msgid "Computer"
 msgstr "计算机"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: extensions/places-menu/placeDisplay.js:267
 msgid "Home"
 msgstr "主文件夹"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: extensions/places-menu/placeDisplay.js:311
 msgid "Browse Network"
 msgstr "浏览网络"
 
-#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
-msgstr ""
+msgstr "圆形屏幕截图大小"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
 msgstr "主题名称"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "从 ~/.themes/name/gnome-shell 加载的主题名称"
 
-#: ../extensions/window-list/extension.js:109
+#: extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "关闭"
 
-#: ../extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "取消最小化"
 
-#: ../extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "最小化"
 
-#: ../extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "取消最大化"
 
-#: ../extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "最大化"
 
-#: ../extensions/window-list/extension.js:399
+#: extensions/window-list/extension.js:411
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: ../extensions/window-list/extension.js:407
+#: extensions/window-list/extension.js:419
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: ../extensions/window-list/extension.js:415
+#: extensions/window-list/extension.js:427
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: ../extensions/window-list/extension.js:424
+#: extensions/window-list/extension.js:436
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: ../extensions/window-list/extension.js:433
+#: extensions/window-list/extension.js:445
 msgid "Close all"
 msgstr "全部关闭"
 
-#: ../extensions/window-list/extension.js:650
-#: ../extensions/workspace-indicator/extension.js:30
+#: extensions/window-list/extension.js:669
+#: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "工作区指示器"
 
-#: ../extensions/window-list/extension.js:809
+#: extensions/window-list/extension.js:828
 msgid "Window List"
 msgstr "窗口列表"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
 msgstr "何时分组窗口"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
-"Decides when to group windows from the same application on the window list. Possible "
-"values are \"never\", \"auto\" and \"always\"."
+"Decides when to group windows from the same application on the window list. "
+"Possible values are \"never\", \"auto\" and \"always\"."
 msgstr ""
-"决定何时对窗口列表上的同一应用的窗口进行分组。可用值有“never”(从不)、“auto”(自动)"
-"和“always”(总是)。"
+"决定何时对窗口列表上的同一应用的窗口进行分组。可用值有“never”(从"
+"不)、“auto”(自动)和“always”(总是)。"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
 msgstr "在所有显示器上显示窗口列表"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
 msgid ""
-"Whether to show the window list on all connected monitors or only on the primary one."
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
 msgstr "是否在所有连接的显示器上显示窗口列表或仅在主显示器上显示。"
 
-#: ../extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "窗口分组"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "从不将窗口分组"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "当空间有限时将窗口分组"
 
-#: ../extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "总是对窗口分组"
 
-#: ../extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
 msgstr "在所有显示器上显示"
 
-#: ../extensions/workspace-indicator/prefs.js:141
+#: extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
 msgstr "工作区名称"
 
-#: ../extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "名称"
 
-#: ../extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "工作区 %d"
@@ -380,12 +391,12 @@ msgstr "工作区 %d"
 #~ msgstr "应用程序图标模式。"
 
 #~ msgid ""
-#~ "Configures how the windows are shown in the switcher. Valid possibilities are "
-#~ "'thumbnail-only' (shows a thumbnail of the window), 'app-icon-only' (shows only "
-#~ "the application icon) or 'both'."
+#~ "Configures how the windows are shown in the switcher. Valid possibilities "
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
+#~ "only' (shows only the application icon) or 'both'."
 #~ msgstr ""
-#~ "配置窗口在切换器中的显示方式。有效值包括“仅缩略图”(显示窗口的缩略图)、“仅应用程序图"
-#~ "标”(仅显示应用程序图标)或“全部”。"
+#~ "配置窗口在切换器中的显示方式。有效值包括“仅缩略图”(显示窗口的缩略图)、“仅"
+#~ "应用程序图标”(仅显示应用程序图标)或“全部”。"
 
 #~ msgid "Drag here to add favorites"
 #~ msgstr "拖放到这里以添加收藏"
@@ -403,7 +414,8 @@ msgstr "工作区 %d"
 #~ msgstr "Dock 位置"
 
 #~ msgid ""
-#~ "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
 #~ msgstr "设置 Dock 在屏幕上的位置。允许的值有“右”或“左”。"
 
 #~ msgid "Icon size"
@@ -419,7 +431,8 @@ msgstr "工作区 %d"
 #~ msgstr "自动隐藏效果"
 
 #~ msgid ""
-#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and 'move'"
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
+#~ "and 'move'"
 #~ msgstr "设置隐藏 Dock 的效果。允许的值有“resize”、“rescale”和“move”"
 
 #~ msgid "Autohide duration"
@@ -432,7 +445,8 @@ msgstr "工作区 %d"
 #~ msgstr "显示器"
 
 #~ msgid ""
-#~ "Sets monitor to display dock in. The default value (-1) is the primary monitor."
+#~ "Sets monitor to display dock in. The default value (-1) is the primary "
+#~ "monitor."
 #~ msgstr "设置显示 Dock 的显示器。默认值(-1)是主显示器。"
 
 #~ msgid "%s is away."
@@ -466,38 +480,40 @@ msgstr "工作区 %d"
 #~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
 #~ "workspace_icons. See the configuration dialogs for details."
 #~ msgstr ""
-#~ "设置 Alt-Tab 行为。可取的值有：native(原生)、all_thumbnails(所有缩略图) 和 "
-#~ "workspace_icons(工作区内图标)。详情参阅配置对话框。"
+#~ "设置 Alt-Tab 行为。可取的值有：native(原生)、all_thumbnails(所有缩略图) "
+#~ "和 workspace_icons(工作区内图标)。详情参阅配置对话框。"
 
 #~ msgid ""
-#~ "This mode presents all applications from all workspaces in one selection list. "
-#~ "Instead of using the application icon of every window, it uses small thumbnails "
-#~ "resembling the window itself."
+#~ "This mode presents all applications from all workspaces in one selection "
+#~ "list. Instead of using the application icon of every window, it uses "
+#~ "small thumbnails resembling the window itself."
 #~ msgstr ""
-#~ "此模式将在一个选择列表中展示全部工作区中的所有应用程序。它使用小缩略图而非各窗口的"
-#~ "应用程序图标来代表窗口。"
+#~ "此模式将在一个选择列表中展示全部工作区中的所有应用程序。它使用小缩略图而非"
+#~ "各窗口的应用程序图标来代表窗口。"
 
 #~ msgid "Workspace & Icons"
 #~ msgstr "工作区和图标"
 
 #~ msgid ""
-#~ "This mode let's you switch between the applications of your current workspace and "
-#~ "gives you additionally the option to switch to the last used application of your "
-#~ "previous workspace. This is always the last symbol in the list and is segregated "
-#~ "by a separator/vertical line if available. \n"
+#~ "This mode let's you switch between the applications of your current "
+#~ "workspace and gives you additionally the option to switch to the last "
+#~ "used application of your previous workspace. This is always the last "
+#~ "symbol in the list and is segregated by a separator/vertical line if "
+#~ "available. \n"
 #~ "Every window is represented by its application icon."
 #~ msgstr ""
-#~ "此模式让您在当前工作区中的应用程序及上个工作区、上次使用的应用程序间切换。上次使用"
-#~ "这项总是列表中的最后一个符号，并以分隔符或竖线区别(若可能)。\n"
+#~ "此模式让您在当前工作区中的应用程序及上个工作区、上次使用的应用程序间切换。"
+#~ "上次使用这项总是列表中的最后一个符号，并以分隔符或竖线区别(若可能)。\n"
 #~ "每个窗口以其应用程序图标展示。"
 
 #~ msgid "Move current selection to front before closing the popup"
 #~ msgstr "在关闭弹出界面前将当前选择移到前面"
 
 #~ msgid ""
-#~ "The Alternate Tab can be used in different modes, that affect the way windows are "
-#~ "chosen and presented."
-#~ msgstr "Alternate Tab 有多种使用模式，所使用模式会影响窗口展示和选择的方式。"
+#~ "The Alternate Tab can be used in different modes, that affect the way "
+#~ "windows are chosen and presented."
+#~ msgstr ""
+#~ "Alternate Tab 有多种使用模式，所使用模式会影响窗口展示和选择的方式。"
 
 #~ msgid "Removable Devices"
 #~ msgstr "可移动设备"
