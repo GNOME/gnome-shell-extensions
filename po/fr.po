@@ -353,4 +353,3 @@ msgstr "Nom"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Espace de travail %d"
-

@@ -337,4 +337,3 @@ msgstr "नाम"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "कार्यस्थान %d"
-
