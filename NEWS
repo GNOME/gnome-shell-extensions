@@ -1,3 +1,8 @@
+3.23.2
+======
+* alternateTab: Don't take over 'switch-group' shortcut
+* updated translations (zh_CN)
+
 3.22.1
 ======
 * window-list: Update icon on app changes
