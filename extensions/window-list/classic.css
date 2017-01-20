@@ -44,7 +44,3 @@
     color: #888;
     box-shadow: inset -1px -1px 1px rgba(0,0,0,0.5);
   }
-
-  .bottom-panel .window-button.minimized > StWidget {
-    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.5);
-  }
