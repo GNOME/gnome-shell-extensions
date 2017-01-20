@@ -813,10 +813,15 @@ const WindowList = new Lang.Class({
         this._workspaceIndicator = new WorkspaceIndicator();
         indicatorsBox.add(this._workspaceIndicator.container, { expand: false, y_fill: true });
 
+        this._mutterSettings = new Gio.Settings({ schema_id: 'org.gnome.mutter' });
         this._workspaceSettings = this._getWorkspaceSettings();
         this._workspacesOnlyOnPrimaryChangedId =
             this._workspaceSettings.connect('changed::workspaces-only-on-primary',
                                             Lang.bind(this, this._updateWorkspaceIndicatorVisibility));
+        this._dynamicWorkspacesSettings = this._getDynamicWorkspacesSettings();
+        this._dynamicWorkspacesChangedId =
+            this._dynamicWorkspacesSettings.connect('changed::dynamic-workspaces',
+                                                    Lang.bind(this, this._updateWorkspaceIndicatorVisibility));
         this._updateWorkspaceIndicatorVisibility();
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
@@ -898,11 +903,17 @@ const WindowList = new Lang.Class({
         this._groupingModeChanged();
     },
 
+    _getDynamicWorkspacesSettings: function() {
+        if (this._workspaceSettings.list_keys().indexOf('dynamic-workspaces') > -1)
+            return this._workspaceSettings;
+        return this._mutterSettings;
+    },
+
     _getWorkspaceSettings: function() {
         let settings = global.get_overrides_settings();
         if (settings.list_keys().indexOf('workspaces-only-on-primary') > -1)
             return settings;
-        return new Gio.Settings({ schema_id: 'org.gnome.mutter' });
+        return this._mutterSettings;
     },
 
     _onScrollEvent: function(actor, event) {
@@ -936,9 +947,12 @@ const WindowList = new Lang.Class({
     },
 
     _updateWorkspaceIndicatorVisibility: function() {
-        this._workspaceIndicator.actor.visible =
-            this._monitor == Main.layoutManager.primaryMonitor ||
-            !this._workspaceSettings.get_boolean('workspaces-only-on-primary');
+        let hasWorkspaces = this._dynamicWorkspacesSettings.get_boolean('dynamic-workspaces') ||
+                            global.screen.n_workspaces > 1;
+        let workspacesOnMonitor = this._monitor == Main.layoutManager.primaryMonitor ||
+                                  !this._workspaceSettings.get_boolean('workspaces-only-on-primary');
+
+        this._workspaceIndicator.actor.visible = hasWorkspaces && workspacesOnMonitor;
     },
 
     _getPreferredUngroupedWindowListWidth: function() {
@@ -1109,6 +1123,8 @@ const WindowList = new Lang.Class({
                                   Lang.bind(this, this._onWindowRemoved));
             this._workspaceSignals.set(workspace, signals);
         }
+
+        this._updateWorkspaceIndicatorVisibility();
     },
 
     _disconnectWorkspaceSignals: function() {
@@ -1177,6 +1193,7 @@ const WindowList = new Lang.Class({
 
     _onDestroy: function() {
         this._workspaceSettings.disconnect(this._workspacesOnlyOnPrimaryChangedId);
+        this._dynamicWorkspacesSettings.disconnect(this._dynamicWorkspacesChangedId);
 
         this._workspaceIndicator.destroy();
 
