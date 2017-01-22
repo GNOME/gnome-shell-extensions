@@ -299,4 +299,3 @@ msgstr "Nama"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Ruangkerja %d"
-
