@@ -7,7 +7,7 @@
   }
 
   .bottom-panel .window-button > StWidget {
-    background-gradient-drection: vertical;
+    background-gradient-direction: vertical;
     background-color: #fff;
     background-gradient-start: #fff;
     background-gradient-end: #eee;
