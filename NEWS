@@ -1,3 +1,9 @@
+3.23.90
+=======
+* window-list: Improve styling
+* window-list: Hide workspace indicator when there's a single (static) workspace
+* new translation (be)
+
 3.23.2
 ======
 * alternateTab: Don't take over 'switch-group' shortcut
