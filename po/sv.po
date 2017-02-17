@@ -1,341 +1,352 @@
 # Swedish translation for gnome-shell-extensions.
-# Copyright © 2011, 2012, 2014, 2015 Free Software Foundation, Inc.
+# Copyright © 2011, 2012, 2014, 2015, 2017 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Daniel Nylander <po@danielnylander.se>, 2011, 2012.
 # Mattias Eriksson <snaggen@gmail.com>, 2014.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2015-01-24 08:34+0000\n"
-"PO-Revision-Date: 2015-01-25 11:46+0100\n"
+"POT-Creation-Date: 2017-02-16 01:20+0000\n"
+"PO-Revision-Date: 2017-02-17 20:05+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.8.11\n"
 
-#: ../data/gnome-classic.desktop.in.h:1 ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Klassisk"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Denna session loggar in dig till GNOME Klassisk"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
 msgid "Attach modal dialog to the parent window"
 msgstr "Koppla samman modal dialog till föräldrafönstret"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "Denna nyckel överskuggar nyckeln i org.gnome.mutter när GNOME-skalet körs."
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Denna nyckel överskuggar nyckeln i org.gnome.mutter när GNOME-skalet körs."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
 msgid "Arrangement of buttons on the titlebar"
 msgstr "Arrangemang för knappar i titelraden"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
 msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running GNOME "
-"Shell."
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
 msgstr ""
-"Denna nyckel överskuggar nyckeln i org.gnome.desktop.wm.preferences när GNOME-skalet "
-"körs."
+"Denna nyckel överskuggar nyckeln i org.gnome.desktop.wm.preferences när "
+"GNOME-skalet körs."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "Slå på kantdockning när fönster släpps på skärmkanter"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
 msgid "Workspaces only on primary monitor"
 msgstr "Arbetsytor endast på primär skärm"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr "Fördröj fokusändringar i musläge tills pekare slutar röra sig"
 
-#: ../extensions/alternate-tab/prefs.js:20
+#: extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Endast miniatyrbild"
 
-#: ../extensions/alternate-tab/prefs.js:21
+#: extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Endast programikon"
 
-#: ../extensions/alternate-tab/prefs.js:22
+#: extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Miniatyrbild och programikon"
 
-#: ../extensions/alternate-tab/prefs.js:38
+#: extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "Presentera fönster som"
 
-#: ../extensions/alternate-tab/prefs.js:69
+#: extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "Visa endast fönster på den aktuella arbetsytan"
 
-#: ../extensions/apps-menu/extension.js:39
+#: extensions/apps-menu/extension.js:38
 msgid "Activities Overview"
 msgstr "Aktivitetsöversikt"
 
-#: ../extensions/apps-menu/extension.js:114
+#: extensions/apps-menu/extension.js:109
 msgid "Favorites"
 msgstr "Favoriter"
 
-#: ../extensions/apps-menu/extension.js:283
+#: extensions/apps-menu/extension.js:266
 msgid "Applications"
 msgstr "Program"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
 msgstr "Lista över program och arbetsyta"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
 msgid ""
-"A list of strings, each containing an application id (desktop file name), followed by "
-"a colon and the workspace number"
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
 msgstr ""
-"En lista över strängar, var och en innehållande ett program-id (skrivbordsfilnamn), "
-"följt av ett kolontecken och arbetsytans nummer"
+"En lista över strängar, var och en innehållande ett program-id "
+"(skrivbordsfilnamn), följt av ett kolontecken och arbetsytans nummer"
 
-#: ../extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Program"
 
-#: ../extensions/auto-move-windows/prefs.js:69
-#: ../extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:69
+#: extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "Arbetsyta"
 
-#: ../extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:85
 msgid "Add Rule"
 msgstr "Lägg till regel"
 
-#: ../extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "Skapa ny matchande regel"
 
-#: ../extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "Lägg till"
 
-#: ../extensions/drive-menu/extension.js:106
+#: extensions/drive-menu/extension.js:106
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
-msgstr "Utmatning av disk \"%s\" misslyckades:"
+msgid "Ejecting drive “%s” failed:"
+msgstr "Utmatning av disk ”%s” misslyckades:"
 
-#: ../extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Flyttbara enheter"
 
-#: ../extensions/drive-menu/extension.js:151
+#: extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "Öppna fil"
 
-#: ../extensions/example/extension.js:17
+#: extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Hej, världen!"
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
 msgid "Alternative greeting text."
 msgstr "Alternativ hälsningstext."
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
 msgid ""
-"If not empty, it contains the text that will be shown when clicking on the panel."
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
 msgstr ""
-"Om inte tom, innehåller den text som kommer att visas när man klickar på panelen."
+"Om inte tom, innehåller den text som kommer att visas när man klickar på "
+"panelen."
 
-#: ../extensions/example/prefs.js:30
+#: extensions/example/prefs.js:30
 msgid "Message"
 msgstr "Meddelande"
 
-#: ../extensions/example/prefs.js:43
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: extensions/example/prefs.js:43
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such "
-"it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it’s possible to customize the greeting message."
 msgstr ""
-"Exemplet ämnar visa hur man bygger ett väluppfostrat tillägg för skalet och som "
-"sådant har det lite funktionalitet i sig självt.\n"
+"Exemplet ämnar visa hur man bygger ett väluppfostrat tillägg för skalet och "
+"som sådant har det lite funktionalitet i sig självt.\n"
 "Hur som helst är det i alla fall möjligt att anpassa välkomstmeddelandet."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
 msgstr "Använd mer av skärmen för fönster"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen aspect "
-"ratio, and consolidating them further to reduce the bounding box. This setting "
-"applies only with the natural placement strategy."
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
 msgstr ""
-"Försök att använda mer skärm för att placera fönsterminiatyrer genom att anpassa till "
-"skärmens bildförhållande, och sammanfoga dem ytterligare genom att reducera den "
-"begränsande ytan. Denna inställning gäller endast med naturlig placeringsstrategi."
+"Försök att använda mer skärm för att placera fönsterminiatyrer genom att "
+"anpassa till skärmens bildförhållande, och sammanfoga dem ytterligare genom "
+"att reducera den begränsande ytan. Denna inställning gäller endast med "
+"naturlig placeringsstrategi."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
 msgstr "Placera fönstertitlar överst"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
-"If true, place window captions on top the respective thumbnail, overriding shell "
-"default of placing it at the bottom. Changing this setting requires restarting the "
-"shell to have any effect."
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
 msgstr ""
-"Om sant, placera fönster titlar över respektive miniatyrbild, överskuggar skalets "
-"standardplacering under miniatyrbilden. För att ändra denna inställning krävs att "
-"skalet startas om för att den ska få effekt."
+"Om sant, placera fönster titlar över respektive miniatyrbild, överskuggar "
+"skalets standardplacering under miniatyrbilden. För att ändra denna "
+"inställning krävs att skalet startas om för att den ska få effekt."
 
-#: ../extensions/places-menu/extension.js:78 ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:78
+#: extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Platser"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-msgid "Failed to launch \"%s\""
-msgstr "Misslyckades att starta \"%s\""
+msgid "Failed to launch “%s”"
+msgstr "Misslyckades att starta ”%s”"
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: extensions/places-menu/placeDisplay.js:101
+#: extensions/places-menu/placeDisplay.js:124
 msgid "Computer"
 msgstr "Dator"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: extensions/places-menu/placeDisplay.js:267
 msgid "Home"
 msgstr "Hem"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: extensions/places-menu/placeDisplay.js:311
 msgid "Browse Network"
 msgstr "Bläddra i nätverket"
 
-#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Växla skärmbildsstorlekar"
 
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "CPU"
-
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "Minne"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
 msgstr "Temanamn"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Namnet på temat, kommer att läsas in från ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Stäng"
 
-#: ../extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Avminimera"
 
-#: ../extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "Minimera"
 
-#: ../extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Avmaximera"
 
-#: ../extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "Maximera"
 
-#: ../extensions/window-list/extension.js:390
+#: extensions/window-list/extension.js:411
 msgid "Minimize all"
 msgstr "Minimera alla"
 
-#: ../extensions/window-list/extension.js:398
+#: extensions/window-list/extension.js:419
 msgid "Unminimize all"
 msgstr "Avminimera alla"
 
-#: ../extensions/window-list/extension.js:406
+#: extensions/window-list/extension.js:427
 msgid "Maximize all"
 msgstr "Maximera alla"
 
-#: ../extensions/window-list/extension.js:415
+#: extensions/window-list/extension.js:436
 msgid "Unmaximize all"
 msgstr "Avmaximera alla"
 
-#: ../extensions/window-list/extension.js:424
+#: extensions/window-list/extension.js:445
 msgid "Close all"
 msgstr "Stäng alla"
 
-#: ../extensions/window-list/extension.js:706
-#: ../extensions/workspace-indicator/extension.js:30
+#: extensions/window-list/extension.js:669
+#: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Arbetsyteindikator"
 
-#: ../extensions/window-list/extension.js:870
+#: extensions/window-list/extension.js:833
 msgid "Window List"
 msgstr "Fönsterlista"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
 msgstr "När ska fönster grupperas"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
-"Decides when to group windows from the same application on the window list. Possible "
-"values are \"never\", \"auto\" and \"always\"."
+"Decides when to group windows from the same application on the window list. "
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
-"Avgör när fönster från samma program ska grupperas i fönsterlistan. Möjliga värden är "
-"\"never\" (aldrig), \"auto\" och \"always\" (alltid)."
+"Avgör när fönster från samma program ska grupperas i fönsterlistan. Möjliga "
+"värden är ”never” (aldrig), ”auto” och ”always” (alltid)."
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
 msgstr "Visa fönsterlistan på alla skärmar"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
 msgid ""
-"Whether to show the window list on all connected monitors or only on the primary one."
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
 msgstr ""
-"Huruvida fönsterlistan ska visas på alla anslutna skärmar eller bara på den primära."
+"Huruvida fönsterlistan ska visas på alla anslutna skärmar eller bara på den "
+"primära."
 
-#: ../extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Fönstergruppering"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Gruppera aldrig fönster"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Gruppera fönster när utrymmet är begränsat"
 
-#: ../extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Gruppera alltid fönster"
 
-#: ../extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
 msgstr "Visa på alla skärmar"
 
-#: ../extensions/workspace-indicator/prefs.js:141
+#: extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
 msgstr "Namn på arbetsytor"
 
-#: ../extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "Namn"
 
-#: ../extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Arbetsyta %d"
+
+#~ msgid "CPU"
+#~ msgstr "CPU"
+
+#~ msgid "Memory"
+#~ msgstr "Minne"
