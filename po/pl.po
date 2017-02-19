@@ -1,15 +1,16 @@
 # Polish translation for gnome-shell-extensions.
-# Copyright © 2011-2016 the gnome-shell-extensions authors.
+# Copyright © 2011-2017 the gnome-shell-extensions authors.
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Piotr Drąg <piotrdrag@gmail.com>, 2011-2016.
-# Aviary.pl <community-poland@mozilla.org>, 2011-2016.
+# Piotr Drąg <piotrdrag@gmail.com>, 2011-2017.
+# Aviary.pl <community-poland@mozilla.org>, 2011-2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 23:17+0000\n"
-"PO-Revision-Date: 2016-09-09 02:54+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2017-02-16 01:20+0000\n"
+"PO-Revision-Date: 2017-02-19 21:50+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -136,7 +137,7 @@ msgstr "Dodaj"
 
 #: extensions/drive-menu/extension.js:106
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
+msgid "Ejecting drive “%s” failed:"
 msgstr "Wysunięcie napędu „%s” się nie powiodło:"
 
 #: extensions/drive-menu/extension.js:124
@@ -172,10 +173,10 @@ msgstr "Wiadomość"
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
+"Nevertheless it’s possible to customize the greeting message."
 msgstr ""
-"Przykład, jak tworzyć poprawne rozszerzenia dla powłoki, mające jak "
-"najmniej własnych funkcji.\n"
+"Przykład, jak tworzyć poprawne rozszerzenia dla powłoki, mające jak najmniej "
+"własnych funkcji.\n"
 "Niemniej można dostosować wiadomość powitalną."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
@@ -214,7 +215,7 @@ msgstr "Miejsca"
 
 #: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-msgid "Failed to launch \"%s\""
+msgid "Failed to launch “%s”"
 msgstr "Uruchomienie „%s” się nie powiodło"
 
 #: extensions/places-menu/placeDisplay.js:101
@@ -262,32 +263,32 @@ msgstr "Cofnij maksymalizację"
 msgid "Maximize"
 msgstr "Zmaksymalizuj"
 
-#: extensions/window-list/extension.js:403
+#: extensions/window-list/extension.js:411
 msgid "Minimize all"
 msgstr "Zminimalizuj wszystkie"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:419
 msgid "Unminimize all"
 msgstr "Cofnij minimalizację wszystkich"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:427
 msgid "Maximize all"
 msgstr "Zmaksymalizuj wszystkie"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:436
 msgid "Unmaximize all"
 msgstr "Cofnij maksymalizację wszystkich"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:445
 msgid "Close all"
 msgstr "Zamknij wszystkie"
 
-#: extensions/window-list/extension.js:661
+#: extensions/window-list/extension.js:669
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Wskaźnik obszaru roboczego"
 
-#: extensions/window-list/extension.js:820
+#: extensions/window-list/extension.js:833
 msgid "Window List"
 msgstr "Lista okien"
 
@@ -298,7 +299,7 @@ msgstr "Kiedy grupować okna"
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Określa, kiedy grupować okna tego samego programu na liście okien. Możliwe "
 "wartości to „never” (nigdy), „auto” (automatycznie) i „always” (zawsze)."
