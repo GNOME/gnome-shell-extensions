@@ -2,13 +2,14 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Alexandr Toorchyn <ilex@mail.ua>, 2011.
-# Daniel Korostil <ted.korostiled@gmail.com>, 2013, 2014, 2015.
+# Daniel Korostil <ted.korostiled@gmail.com>, 2013, 2014, 2015, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-24 22:53+0200\n"
-"PO-Revision-Date: 2015-02-24 22:57+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2017-02-20 13:55+0200\n"
+"PO-Revision-Date: 2017-02-20 13:56+0300\n"
 "Last-Translator: Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "Language: uk\n"
@@ -20,30 +21,21 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
-msgid "GNOME Classic"
-msgstr "Класичний GNOME"
-
-#: ../data/gnome-classic.desktop.in.h:2
-msgid "This session logs you into GNOME Classic"
-msgstr "Це — сеанс входу в класичний GNOME"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:1
 msgid "Attach modal dialog to the parent window"
 msgstr "Приєднати модальне вікно до батьківського вікна"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:2
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
 "Цей ключ нехтує ключем у org.gnome.mutter, коли запущено оболонку GNOME."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:3
 msgid "Arrangement of buttons on the titlebar"
 msgstr "Компонування кнопок на смужці заголовку"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:4
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
@@ -51,15 +43,15 @@ msgstr ""
 "Цей ключ нехтує ключем у org.gnome.desktop.wm.preferences, коли запущено "
 "GNOME Shell."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "Увімкнути розбиття країв, коли кладуться вікна на краї екрана"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "Робочий простір лише на основному моніторі"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr "Затримувати зміни фокусу миші, поки вказівник не перестане рухатись"
 
@@ -83,23 +75,23 @@ msgstr "Представляти вікна як"
 msgid "Show only windows in the current workspace"
 msgstr "Показувати вікна тільки з поточного робочого простору"
 
-#: ../extensions/apps-menu/extension.js:39
+#: ../extensions/apps-menu/extension.js:38
 msgid "Activities Overview"
 msgstr "Огляд діяльності"
 
-#: ../extensions/apps-menu/extension.js:114
+#: ../extensions/apps-menu/extension.js:109
 msgid "Favorites"
 msgstr "Улюблене"
 
-#: ../extensions/apps-menu/extension.js:283
+#: ../extensions/apps-menu/extension.js:266
 msgid "Applications"
 msgstr "Програми"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.h:1
 msgid "Application and workspace list"
 msgstr "Програма і список робочих просторів"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.h:2
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -130,14 +122,14 @@ msgstr "Додати"
 
 #: ../extensions/drive-menu/extension.js:106
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
+msgid "Ejecting drive “%s” failed:"
 msgstr "Не вдалося витягнути пристрій «%s»:"
 
 #: ../extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Змінні пристрої"
 
-#: ../extensions/drive-menu/extension.js:151
+#: ../extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "Відкрити Файли"
 
@@ -145,11 +137,11 @@ msgstr "Відкрити Файли"
 msgid "Hello, world!"
 msgstr "Привіт, світе!"
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.h:1
 msgid "Alternative greeting text."
 msgstr "Додатковий вітальний текст."
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.h:2
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
@@ -167,17 +159,17 @@ msgstr "Надпис"
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
+"Nevertheless it’s possible to customize the greeting message."
 msgstr ""
 "Приклад зроблено, щоб показувати, як зібрати правильні розширення для "
 "оболонки і саме по собі воно не має багато функціональності.\n"
 "Попри це, воно змінює вітальний текст. "
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.h:1
 msgid "Use more screen for windows"
 msgstr "Використовувати додаткову площу екрана для вікон"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.h:2
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -188,11 +180,11 @@ msgstr ""
 "розмірів обмежувальної рамки. Цей параметр застосовується тільки для "
 "алгоритму розміщенням мініатюр «natural»."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.h:3
 msgid "Place window captions on top"
 msgstr "Розміщувати заголовки вікон зверху"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.h:4
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
@@ -207,110 +199,102 @@ msgstr ""
 msgid "Places"
 msgstr "Місця"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: ../extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-msgid "Failed to launch \"%s\""
+msgid "Failed to launch “%s”"
 msgstr "Не вдалося запустити «%s»"
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: ../extensions/places-menu/placeDisplay.js:101
+#: ../extensions/places-menu/placeDisplay.js:124
 msgid "Computer"
 msgstr "Комп'ютер"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: ../extensions/places-menu/placeDisplay.js:267
 msgid "Home"
 msgstr "Домівка"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: ../extensions/places-menu/placeDisplay.js:311
 msgid "Browse Network"
 msgstr "Огляд мережі"
 
-#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.h:1
 msgid "Cycle Screenshot Sizes"
 msgstr "Розміри циклічних знімків"
 
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "Процесор"
-
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "Пам'ять"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.h:1
 msgid "Theme name"
 msgstr "Назва теми"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Назва теми, що завантажується з ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Закрити"
 
-#: ../extensions/window-list/extension.js:119
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Відновити згорнуте"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "Згорнути"
 
-#: ../extensions/window-list/extension.js:126
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Відновити розгорнуте"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "Розгорнути"
 
-#: ../extensions/window-list/extension.js:399
+#: ../extensions/window-list/extension.js:411
 msgid "Minimize all"
 msgstr "Згорнути все"
 
-#: ../extensions/window-list/extension.js:407
+#: ../extensions/window-list/extension.js:419
 msgid "Unminimize all"
 msgstr "Відновити все згорнуте"
 
-#: ../extensions/window-list/extension.js:415
+#: ../extensions/window-list/extension.js:427
 msgid "Maximize all"
 msgstr "Розгорнути все"
 
-#: ../extensions/window-list/extension.js:424
+#: ../extensions/window-list/extension.js:436
 msgid "Unmaximize all"
 msgstr "Відновити все розгорнуте"
 
-#: ../extensions/window-list/extension.js:433
+#: ../extensions/window-list/extension.js:445
 msgid "Close all"
 msgstr "Закрити все"
 
-#: ../extensions/window-list/extension.js:650
+#: ../extensions/window-list/extension.js:669
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Покажчик робочого простору"
 
-#: ../extensions/window-list/extension.js:807
+#: ../extensions/window-list/extension.js:833
 msgid "Window List"
 msgstr "Перелік вікон"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.h:1
 msgid "When to group windows"
 msgstr "Умови групування вікон"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Визначає правила групування вікон програм у списку вікон. Можливими "
 "значеннями є «never», «auto» і «always»."
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.h:3
 msgid "Show the window list on all monitors"
 msgstr "Показати перелік вікон на всіх моніторах"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.h:4
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -350,6 +334,18 @@ msgstr "Назва"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Робочий простір %d"
+
+#~ msgid "GNOME Classic"
+#~ msgstr "Класичний GNOME"
+
+#~ msgid "This session logs you into GNOME Classic"
+#~ msgstr "Це — сеанс входу в класичний GNOME"
+
+#~ msgid "CPU"
+#~ msgstr "Процесор"
+
+#~ msgid "Memory"
+#~ msgstr "Пам'ять"
 
 #~ msgid "GNOME Shell Classic"
 #~ msgstr "Класична оболонка GNOME"
