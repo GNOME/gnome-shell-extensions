@@ -7,11 +7,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N"
-"+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-12-23 20:39+0000\n"
-"PO-Revision-Date: 2014-12-24 11:53+0700\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2017-02-16 01:20+0000\n"
+"PO-Revision-Date: 2017-02-21 16:47+0700\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -19,310 +19,338 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.8.11\n"
 
-#: ../data/gnome-classic.desktop.in.h:1 ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Klasik"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Sesi ini memasukkan Anda ke GNOME Klasik"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
 msgid "Attach modal dialog to the parent window"
 msgstr "Cantolkan dialog modal ke jendela induk"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "Kunci ini menimpa kunci dalam org.gnome.mutter ketika menjalankan GNOME Shell."
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Kunci ini menimpa kunci dalam org.gnome.mutter ketika menjalankan GNOME "
+"Shell."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
 msgid "Arrangement of buttons on the titlebar"
 msgstr "Pengaturan tombol-tombol pada bilah judul"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-msgid "This key overrides the key in org.gnome.desktop.wm.preferences when running GNOME Shell."
-msgstr "Kunci ini menimpa kunci dalam org.gnome.desktop.wm.preferences ketika menjalankan GNOME Shell."
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"Kunci ini menimpa kunci dalam org.gnome.desktop.wm.preferences ketika "
+"menjalankan GNOME Shell."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr "Aktifkan pengubinan tepi ketika menjatuhkan jendela ke tepi layar"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
 msgid "Workspaces only on primary monitor"
 msgstr "Ruang kerja hanya pada monitor primer"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr "Tunda perubahan fokus dalam mode tetikus sampai penunjuk berhenti bergerak"
+msgstr ""
+"Tunda perubahan fokus dalam mode tetikus sampai penunjuk berhenti bergerak"
 
-#: ../extensions/alternate-tab/prefs.js:20
+#: extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Hanya gambar mini"
 
-#: ../extensions/alternate-tab/prefs.js:21
+#: extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Hanya ikon aplikasi"
 
-#: ../extensions/alternate-tab/prefs.js:22
+#: extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Gambar mini dan ikon aplikasi"
 
-#: ../extensions/alternate-tab/prefs.js:38
+#: extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "Sajikan jendela sebagai"
 
-#: ../extensions/alternate-tab/prefs.js:69
+#: extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "Hanya tampilkan jendela dalam ruang kerja kini"
 
-#: ../extensions/apps-menu/extension.js:39
+#: extensions/apps-menu/extension.js:38
 msgid "Activities Overview"
 msgstr "Ringkasan Aktivitas"
 
-#: ../extensions/apps-menu/extension.js:114
+#: extensions/apps-menu/extension.js:109
 msgid "Favorites"
 msgstr "Favorit"
 
-#: ../extensions/apps-menu/extension.js:283
+#: extensions/apps-menu/extension.js:266
 msgid "Applications"
 msgstr "Aplikasi"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
 msgstr "Aplikasi dan daftar ruang kerja"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
 msgid ""
-"A list of strings, each containing an application id (desktop file name), followed by a colon and the "
-"workspace number"
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
 msgstr ""
-"Daftar string, masing-masing memuat id aplikasi (nama berkas desktop), diikuti oleh titik dua dan nomor "
-"ruang kerja"
+"Daftar string, masing-masing memuat id aplikasi (nama berkas desktop), "
+"diikuti oleh titik dua dan nomor ruang kerja"
 
-#: ../extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Aplikasi"
 
-#: ../extensions/auto-move-windows/prefs.js:69 ../extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:69
+#: extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "Ruang Kerja"
 
-#: ../extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:85
 msgid "Add Rule"
 msgstr "Tambah Aturan"
 
-#: ../extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "Buat aturan pencocokan baru"
 
-#: ../extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "Tambah"
 
-#: ../extensions/drive-menu/extension.js:106
+#: extensions/drive-menu/extension.js:106
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
-msgstr "Saat mengeluarkan drive '%s' gagal:"
+msgid "Ejecting drive “%s” failed:"
+msgstr "Saat mengeluarkan drive \"%s\" gagal:"
 
-#: ../extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Perangkat yang dapat dilepas"
 
-#: ../extensions/drive-menu/extension.js:151
+#: extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "Buka Berkas"
 
-#: ../extensions/example/extension.js:17
+#: extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Hai, dunia!"
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
 msgid "Alternative greeting text."
 msgstr "Teks penyapa alternatif."
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid "If not empty, it contains the text that will be shown when clicking on the panel."
-msgstr "Bila tak kosong, ini memuat teks yang akan ditampilkan ketika klik pada panel."
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr ""
+"Bila tak kosong, ini memuat teks yang akan ditampilkan ketika klik pada "
+"panel."
 
-#: ../extensions/example/prefs.js:30
+#: extensions/example/prefs.js:30
 msgid "Message"
 msgstr "Pesan"
 
-#: ../extensions/example/prefs.js:43
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: extensions/example/prefs.js:43
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such it has little "
-"functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it’s possible to customize the greeting message."
 msgstr ""
-"Example bertujuan menampilkan bagaimana membangun ekstensi yang berkelakuan baik bagi Shell dan karena itu "
-"hanya memiliki sedikit fungsi.\n"
+"Example bertujuan menampilkan bagaimana membangun ekstensi yang berkelakuan "
+"baik bagi Shell dan karena itu hanya memiliki sedikit fungsi.\n"
 "Namun, tetap mungkin untuk mengatur pesan sapaan."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
 msgstr "Pakai lebih banyak layar bagi jendela"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating "
-"them further to reduce the bounding box. This setting applies only with the natural placement strategy."
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
 msgstr ""
-"Mencoba memakai lebih banyak layar untuk menempatkan gambar mini jendela dengan menyesuaikan ke rasio aspek "
-"layar, dan menyatukan mereka lebih jauh untuk mengurangi kotak pembatas. Pengaturan ini hanya berlaku pada "
-"strategi penempatan alami."
+"Mencoba memakai lebih banyak layar untuk menempatkan gambar mini jendela "
+"dengan menyesuaikan ke rasio aspek layar, dan menyatukan mereka lebih jauh "
+"untuk mengurangi kotak pembatas. Pengaturan ini hanya berlaku pada strategi "
+"penempatan alami."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
 msgstr "Tempatkan keterangan jendela di atas"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
-"If true, place window captions on top the respective thumbnail, overriding shell default of placing it at "
-"the bottom. Changing this setting requires restarting the shell to have any effect."
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
 msgstr ""
-"Bila true, menempatkan keterangan jendela di bagian atas gambar mini masing-masing, menimpa bawaan shell "
-"yang menempatkannya di bagian bawah. Mengubah ini memerlukan memulai ulang shell agar berdampak."
+"Bila true, menempatkan keterangan jendela di bagian atas gambar mini masing-"
+"masing, menimpa bawaan shell yang menempatkannya di bagian bawah. Mengubah "
+"ini memerlukan memulai ulang shell agar berdampak."
 
-#: ../extensions/places-menu/extension.js:78 ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:78
+#: extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Tempat"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-msgid "Failed to launch \"%s\""
+msgid "Failed to launch “%s”"
 msgstr "Gagal meluncurkan \"%s\""
 
-#: ../extensions/places-menu/placeDisplay.js:99 ../extensions/places-menu/placeDisplay.js:122
+#: extensions/places-menu/placeDisplay.js:101
+#: extensions/places-menu/placeDisplay.js:124
 msgid "Computer"
 msgstr "Komputer"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: extensions/places-menu/placeDisplay.js:267
 msgid "Home"
 msgstr "Rumah"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: extensions/places-menu/placeDisplay.js:311
 msgid "Browse Network"
 msgstr "Ramban Jaringan"
 
-#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Berpindah Antar Ukuran Cuplikan Layar"
 
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "CPU"
-
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "Memori"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
 msgstr "Nama tema"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Nama tema, untuk dimuat dari ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Tutup"
 
-#: ../extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Tak minimalkan"
 
-#: ../extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "Minimalkan"
 
-#: ../extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Tak maksimalkan"
 
-#: ../extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "Maksimalkan"
 
-#: ../extensions/window-list/extension.js:390
+#: extensions/window-list/extension.js:411
 msgid "Minimize all"
 msgstr "Minimalkan semua"
 
-#: ../extensions/window-list/extension.js:398
+#: extensions/window-list/extension.js:419
 msgid "Unminimize all"
 msgstr "Tak minimalkan semua"
 
-#: ../extensions/window-list/extension.js:406
+#: extensions/window-list/extension.js:427
 msgid "Maximize all"
 msgstr "Maksimalkan semua"
 
-#: ../extensions/window-list/extension.js:415
+#: extensions/window-list/extension.js:436
 msgid "Unmaximize all"
 msgstr "Tak maksimalkan semua"
 
-#: ../extensions/window-list/extension.js:424
+#: extensions/window-list/extension.js:445
 msgid "Close all"
 msgstr "Tutup semua"
 
-#: ../extensions/window-list/extension.js:706 ../extensions/workspace-indicator/extension.js:30
+#: extensions/window-list/extension.js:669
+#: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indikator Ruang Kerja"
 
-#: ../extensions/window-list/extension.js:869
+#: extensions/window-list/extension.js:833
 msgid "Window List"
 msgstr "Daftar Jendela"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
 msgstr "Kapan mengelompokkan jendela"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
-"Decides when to group windows from the same application on the window list. Possible values are \"never\", "
-"\"auto\" and \"always\"."
+"Decides when to group windows from the same application on the window list. "
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
-"Menentukan kapan mengelompokkan jendela dari aplikasi yang sama pada daftar jendela. Nilai-nilai yang "
-"mungkin adalah \"never\" (tak pernah), \"auto\" (otomatis), atau \"always\" (selalu)."
+"Menentukan kapan mengelompokkan jendela dari aplikasi yang sama pada daftar "
+"jendela. Nilai-nilai yang mungkin adalah \"never\" (tak pernah), \"auto"
+"\" (otomatis), atau \"always\" (selalu)."
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
 msgstr "Tampilkan daftar jendela pada semua monitor"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
-msgid "Whether to show the window list on all connected monitors or only on the primary one."
-msgstr "Apakah menampilkan daftar jendela pada semua monitor yang tersambung atau hanya pada yang utama."
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Apakah menampilkan daftar jendela pada semua monitor yang tersambung atau "
+"hanya pada yang utama."
 
-#: ../extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Pengelompokan Jendela"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Jangan pernah kelompokkan jendela"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Kelompokkan jendela ketika ruang terbatas"
 
-#: ../extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Selalu kelompokkan jendela"
 
-#: ../extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
 msgstr "Tampilkan pada semua monitor"
 
-#: ../extensions/workspace-indicator/prefs.js:141
+#: extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
 msgstr "Nama Ruang Kerja"
 
-#: ../extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "Nama"
 
-#: ../extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Ruang Kerja %d"
+
+#~ msgid "CPU"
+#~ msgstr "CPU"
+
+#~ msgid "Memory"
+#~ msgstr "Memori"
