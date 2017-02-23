@@ -6,328 +6,342 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2015-07-05 08:17+0000\n"
-"PO-Revision-Date: 2015-07-05 14:57+0100\n"
+"POT-Creation-Date: 2017-02-22 18:40+0000\n"
+"PO-Revision-Date: 2017-02-24 00:51+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.8.11\n"
 
-#: ../data/gnome-classic.desktop.in.h:1 ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Classic"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Cheste session a si invie cun GNOME classic"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
 msgid "Attach modal dialog to the parent window"
 msgstr "Tache il balcon modâl al balcon gjenitôr"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Cheste clâf a sorplante che in org.gnome.mutter quanche al è in esecuzion GNOME Shell."
+"Cheste clâf a sorplante che in org.gnome.mutter quanche al è in esecuzion "
+"GNOME Shell."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
 msgid "Arrangement of buttons on the titlebar"
 msgstr "Disposizion dai botons te sbare dal titul"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
 msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running GNOME "
-"Shell."
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
 msgstr ""
-"Cheste clâf a sorplante chê in org.gnome.desktop.wm.preferences cuant che al è in "
-"esecuzion GNOME Shell."
+"Cheste clâf a sorplante chê in org.gnome.desktop.wm.preferences cuant che al "
+"è in esecuzion GNOME Shell."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
-"Abilite la tasseladure sul ôr cuant che i balcons a vegnin molâts sul ôr dal visôr"
+"Abilite la tasseladure sul ôr cuant che i balcons a vegnin molâts sul ôr dal "
+"visôr"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
 msgid "Workspaces only on primary monitor"
 msgstr "Spazis di lavôr dome sul visôr principâl"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr ""
-"Tarde la mude dal focus te modalitât mouse fintremai che il pontadôr no si ferme"
+"Tarde la mude dal focus te modalitât mouse fintremai che il pontadôr no si "
+"ferme"
 
-#: ../extensions/alternate-tab/prefs.js:20
+#: extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Dome miniaturis"
 
-#: ../extensions/alternate-tab/prefs.js:21
+#: extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Dome l'icone de aplicazion"
 
-#: ../extensions/alternate-tab/prefs.js:22
+#: extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Miniature e icone de aplicazion"
 
-#: ../extensions/alternate-tab/prefs.js:38
+#: extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "Mostre i barcons come"
 
-#: ../extensions/alternate-tab/prefs.js:69
+#: extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "Mostre dome i balcons dal spazi di lavôr corint"
 
-#: ../extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:38
 msgid "Activities Overview"
 msgstr "Panoramiche ativitâts"
 
-#: ../extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:109
 msgid "Favorites"
 msgstr "Preferîts"
 
-#: ../extensions/apps-menu/extension.js:261
+#: extensions/apps-menu/extension.js:266
 msgid "Applications"
 msgstr "Aplicazions"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
 msgstr "Liste aplicazions e spazi di lavôr"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
 msgid ""
-"A list of strings, each containing an application id (desktop file name), followed by "
-"a colon and the workspace number"
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
 msgstr ""
 "Une liste di stringhis, ogniune a ten il ID di une aplicazion (non dal file ."
 "desktop), seguît di doi ponts e il numar dal spazi di lavôr"
 
-#: ../extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Aplicazion"
 
-#: ../extensions/auto-move-windows/prefs.js:69
-#: ../extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:69
+#: extensions/auto-move-windows/prefs.js:127
 msgid "Workspace"
 msgstr "Spazi di lavôr"
 
-#: ../extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:85
 msgid "Add Rule"
 msgstr "Zonte regule"
 
-#: ../extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
 msgstr "Cree une gnove regule di corispondence"
 
-#: ../extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Add"
 msgstr "Zonte"
 
-#: ../extensions/drive-menu/extension.js:106
+#: extensions/drive-menu/extension.js:106
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
-msgstr "No rivât a parâ fûr l'unitât «%s»:"
+msgid "Ejecting drive “%s” failed:"
+msgstr "No si è rivâts a parâ fûr la unitât “%s”»:"
 
-#: ../extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:124
 msgid "Removable devices"
 msgstr "Argagn rimovibil"
 
-#: ../extensions/drive-menu/extension.js:149
+#: extensions/drive-menu/extension.js:149
 msgid "Open File"
 msgstr "Vierç File"
 
-#: ../extensions/example/extension.js:17
+#: extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Mandi, mont!"
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
 msgid "Alternative greeting text."
 msgstr "Test di benvignût alternatîf"
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
 msgid ""
-"If not empty, it contains the text that will be shown when clicking on the panel."
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
 msgstr "Se no vueit, al ten il test che al vegnarà mostrât scliçant sul panel."
 
-#: ../extensions/example/prefs.js:30
+#: extensions/example/prefs.js:30
 msgid "Message"
 msgstr "Messaç"
 
-#: ../extensions/example/prefs.js:43
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: extensions/example/prefs.js:43
 msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such "
-"it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it’s possible to customize the greeting message."
 msgstr ""
-"Example al ponte a mostrâ come imbastî une estension de Shell che a si compuarti ben "
-"e par chest no'n d'a tantis funzions.\n"
-"Ad ogni mût al è pussibil modificâ il messaç di benvignût. "
+"Example al ponte a mostrâ cemût imbastî estensions de Shell che si "
+"compuartedin ben e par chest no 'ndi à tantis funzions.\n"
+"Ad ogni mût al è pussibil personalizâ il messaç di benvignût."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
 msgstr "Dopre plui spazi par i balcons"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen aspect "
-"ratio, and consolidating them further to reduce the bounding box. This setting "
-"applies only with the natural placement strategy."
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
 msgstr ""
-"Cîr di doprâ plui puest par plaçâ lis miniaturis dai balcons, adatânsi al rapuart di "
-"aspiet dal visôr e consolidanlis ancjemo di plui par ridusi il spazi complessîf. "
-"Cheste impostazion a si apliche dome se l'algoritmo di posizionament al è \"natural\"."
+"Cîr di doprâ plui puest par plaçâ lis miniaturis dai balcons, adatânsi al "
+"rapuart di aspiet dal visôr e consolidanlis ancjemo di plui par ridusi il "
+"spazi complessîf. Cheste impostazion a si apliche dome se l'algoritmo di "
+"posizionament al è \"natural\"."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
 msgstr "Met il titul dal balcon insomp"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
-"If true, place window captions on top the respective thumbnail, overriding shell "
-"default of placing it at the bottom. Changing this setting requires restarting the "
-"shell to have any effect."
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
 msgstr ""
-"Se VÊR, al place i titui dai balcons insomp as relativis miniaturis, lant in volte al "
-"compuartament normâl de shell, che lis place in bas.Cambiant cheste impostazion a si "
-"scugne tornâ a inviâ la shell."
+"Se VÊR, al place i titui dai balcons insomp as relativis miniaturis, lant in "
+"volte al compuartament normâl de shell, che lis place in bas.Cambiant cheste "
+"impostazion a si scugne tornâ a inviâ la shell."
 
-#: ../extensions/places-menu/extension.js:78 ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:78
+#: extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Puescj"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-msgid "Failed to launch \"%s\""
-msgstr "Inviament di «%s» falît"
+msgid "Failed to launch “%s”"
+msgstr "No si è rivâts a inviâ “%s”"
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: extensions/places-menu/placeDisplay.js:101
+#: extensions/places-menu/placeDisplay.js:124
 msgid "Computer"
 msgstr "Computer"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: extensions/places-menu/placeDisplay.js:267
 msgid "Home"
 msgstr "Cjase"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: extensions/places-menu/placeDisplay.js:311
 msgid "Browse Network"
 msgstr "Esplore rêt"
 
-#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Dimensions screenshot ciclic"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
 msgstr "Non dal teme"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Il non dal teme, che si cjame da ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:109
+#: extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Siere"
 
-#: ../extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Gjave minimizazion"
 
-#: ../extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "Minimize"
 
-#: ../extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Gjave massimizazion"
 
-#: ../extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "Massimize"
 
-#: ../extensions/window-list/extension.js:401
+#: extensions/window-list/extension.js:411
 msgid "Minimize all"
 msgstr "Minimize ducj"
 
-#: ../extensions/window-list/extension.js:409
+#: extensions/window-list/extension.js:419
 msgid "Unminimize all"
 msgstr "Gjave a ducj la minimizazion"
 
-#: ../extensions/window-list/extension.js:417
+#: extensions/window-list/extension.js:427
 msgid "Maximize all"
 msgstr "Massimize ducj"
 
-#: ../extensions/window-list/extension.js:426
+#: extensions/window-list/extension.js:436
 msgid "Unmaximize all"
 msgstr "Gjave a ducj la massimizazion"
 
-#: ../extensions/window-list/extension.js:435
+#: extensions/window-list/extension.js:445
 msgid "Close all"
 msgstr "Siere ducj"
 
-#: ../extensions/window-list/extension.js:654
-#: ../extensions/workspace-indicator/extension.js:30
+#: extensions/window-list/extension.js:669
+#: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicadôr spazi di lavôr"
 
-#: ../extensions/window-list/extension.js:813
+#: extensions/window-list/extension.js:833
 msgid "Window List"
 msgstr "Liste balcons"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
 msgstr "Quant ingrumâ i balcons"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
-"Decides when to group windows from the same application on the window list. Possible "
-"values are \"never\", \"auto\" and \"always\"."
+"Decides when to group windows from the same application on the window list. "
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
-"Decît quant ingrumâ i balcons de stesse aplicazion su le liste dai balcons. I "
-"pussibii valôrs a son \"never\", \"auto\" e \"always\"."
+"Al decît cuant intropâ i balcons de stesse aplicazion su le liste dai "
+"balcons. I pussibii valôrs a son “never”, “auto” e “always”."
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
 msgstr "Mostre la liste dai barcons su ducj i visôrs"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
 msgid ""
-"Whether to show the window list on all connected monitors or only on the primary one."
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
 msgstr ""
-"Indiche se mostrâ la liste dai barcons su ducj i visôrs tacâts o nome sul principâl."
+"Indiche se mostrâ la liste dai barcons su ducj i visôrs tacâts o nome sul "
+"principâl."
 
-#: ../extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Ingrumament balcons"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "No ingrumâ i balcons"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Ingrume i balcons quanche al'è pôc puest"
 
-#: ../extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Ingrume simpri i balcons"
 
-#: ../extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
 msgstr "Mostre su ducj i visôrs"
 
-#: ../extensions/workspace-indicator/prefs.js:141
+#: extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
 msgstr "Nons dai spazis di lavôr"
 
-#: ../extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "Non"
 
-#: ../extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Spazi di lavôr %d"
