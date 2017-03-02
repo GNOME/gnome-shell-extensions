@@ -6,10 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-01-20 15:31+0000\n"
-"PO-Revision-Date: 2017-02-04 12:24+0300\n"
+"POT-Creation-Date: 2017-02-22 18:40+0000\n"
+"PO-Revision-Date: 2017-03-02 19:49+0300\n"
+"Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "X-Generator: Poedit 1.8.11\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -38,8 +38,7 @@ msgstr "Прымацаваць мадальны дыялог да бацькоў
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Гэты ключ засланяе ключ у org.gnome.mutter калі запушчаны GNOME Shell."
+msgstr "Гэты ключ засланяе ключ у org.gnome.mutter калі запушчаны GNOME Shell."
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
 msgid "Arrangement of buttons on the titlebar"
@@ -132,8 +131,8 @@ msgstr "Дадаць"
 
 #: extensions/drive-menu/extension.js:106
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
-msgstr "Не ўдалося выняць прывод '%s':"
+msgid "Ejecting drive “%s” failed:"
+msgstr "Не ўдалося выняць прывод \"%s\":"
 
 #: extensions/drive-menu/extension.js:124
 msgid "Removable devices"
@@ -169,7 +168,7 @@ msgstr "Паведамленне"
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
+"Nevertheless it’s possible to customize the greeting message."
 msgstr ""
 "Example пакажа як ствараць пашырэнні для Shell. Сам па сабе ён мае мала "
 "функцыянальнасці.\n"
@@ -185,10 +184,10 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"Спрабаваць выкарыстаць большую плошчу экрана для размяшчэння мініяцюр "
-"шляхам змянення суадносінаў бакоў экрана і ўшчыльняючы іх з мэтай змяншэння "
-"памераў абмежавальнай рамкі. Гэты параметр ужываецца толькі разам з "
-"звычайным размяшчэннем мініяцюр."
+"Спрабаваць выкарыстаць большую плошчу экрана для размяшчэння мініяцюр шляхам "
+"змянення суадносінаў бакоў экрана і ўшчыльняючы іх з мэтай змяншэння памераў "
+"абмежавальнай рамкі. Гэты параметр ужываецца толькі разам з звычайным "
+"размяшчэннем мініяцюр."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
@@ -211,7 +210,7 @@ msgstr "Месцы"
 
 #: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-msgid "Failed to launch \"%s\""
+msgid "Failed to launch “%s”"
 msgstr "Не ўдалося запусціць \"%s\""
 
 #: extensions/places-menu/placeDisplay.js:101
@@ -296,7 +295,7 @@ msgstr "Калі групаваць вокны"
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Вырашае калі групаваць вокны адной праграмы ў спісе вокнаў. Магчымыя "
 "значэнні: \"never\" (ніколі), \"auto\" (аўтаматычна), \"always\" (заўсёды)."
