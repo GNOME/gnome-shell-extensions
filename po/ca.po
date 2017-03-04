@@ -7,8 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-18 04:43-0400\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2017-03-04 10:07+0100\n"
 "PO-Revision-Date: 2014-08-17 14:38+0200\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -18,31 +19,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
-msgid "GNOME Classic"
-msgstr "GNOME clàssic"
-
-#: ../data/gnome-classic.desktop.in.h:2
-msgid "This session logs you into GNOME Classic"
-msgstr "Aquesta sessió us permet utilitzar el GNOME clàssic"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:1
 msgid "Attach modal dialog to the parent window"
 msgstr "Adjunta el diàleg modal a la finestra pare"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:2
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
 "Si s'executa el GNOME Shell, aquesta clau sobreescriu la clau «org.gnome."
 "mutter»."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:3
 msgid "Arrangement of buttons on the titlebar"
 msgstr "Disposició dels botons en la barra de títol"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:4
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
@@ -50,17 +42,17 @@ msgstr ""
 "Si s'executa el GNOME Shell, aquesta clau sobreescriu la clau «org.gnome."
 "desktop.wm.preferences»."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:5
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
 "Habilita la tesselització a les vores en deixar anar les finestres a les "
 "vores de la pantalla"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:6
 msgid "Workspaces only on primary monitor"
 msgstr "Els espais de treball només es mostren en el monitor principal"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:7
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr ""
 "Retarda el canvi de focus, en mode ratolí, fins que el punter estigui quiet"
@@ -85,23 +77,23 @@ msgstr "Mostra les finestres com a"
 msgid "Show only windows in the current workspace"
 msgstr "Mostra només les icones de l'espai de treball actual"
 
-#: ../extensions/apps-menu/extension.js:39
+#: ../extensions/apps-menu/extension.js:38
 msgid "Activities Overview"
 msgstr "Vista general d'activitats"
 
-#: ../extensions/apps-menu/extension.js:110
+#: ../extensions/apps-menu/extension.js:109
 msgid "Favorites"
 msgstr "Preferides"
 
-#: ../extensions/apps-menu/extension.js:279
+#: ../extensions/apps-menu/extension.js:266
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.h:1
 msgid "Application and workspace list"
 msgstr "Aplicació i llista d'espais de treball"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.h:2
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -133,7 +125,7 @@ msgstr "Afegeix"
 
 #: ../extensions/drive-menu/extension.js:106
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
+msgid "Ejecting drive “%s” failed:"
 msgstr "Ha fallat l'expulsió de la unitat «%s»:"
 
 #: ../extensions/drive-menu/extension.js:124
@@ -148,11 +140,11 @@ msgstr "Obre el fitxer"
 msgid "Hello, world!"
 msgstr "Hola, món!"
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.h:1
 msgid "Alternative greeting text."
 msgstr "Text de rebuda alternatiu."
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.h:2
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
@@ -169,18 +161,18 @@ msgstr "Missatge"
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
+"Nevertheless it’s possible to customize the greeting message."
 msgstr ""
 "L'«Example» està pensat com una extensió del GNOME Shell que demostri la "
 "manera correcta de crear extensions. Com a extensió pròpiament dita no fa "
 "gairebé res.\n"
-"Tot i així permet personalitzar el missatge del rebedor."
+"Tot i així permet personalitzar el missatge de benvinguda."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.h:1
 msgid "Use more screen for windows"
 msgstr "Utilitza més pantalla per les finestres"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.h:2
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -192,11 +184,11 @@ msgstr ""
 "configuració només s'aplica a l'estratègia de posicionament de finestres "
 "natural."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.h:3
 msgid "Place window captions on top"
 msgstr "Posiciona els títols de les finestres al damunt"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.h:4
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
@@ -212,103 +204,103 @@ msgstr ""
 msgid "Places"
 msgstr "Llocs"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: ../extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-msgid "Failed to launch \"%s\""
+msgid "Failed to launch “%s”"
 msgstr "No s'ha pogut iniciar «%s»"
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: ../extensions/places-menu/placeDisplay.js:101
+#: ../extensions/places-menu/placeDisplay.js:124
 msgid "Computer"
 msgstr "Ordinador"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: ../extensions/places-menu/placeDisplay.js:267
 msgid "Home"
 msgstr "Inici"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: ../extensions/places-menu/placeDisplay.js:311
 msgid "Browse Network"
 msgstr "Navega per la xarxa"
 
-#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.h:1
 msgid "Cycle Screenshot Sizes"
 msgstr "Mostra cíclicament mides de captura de pantalla"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.h:1
 msgid "Theme name"
 msgstr "Nom del tema"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.h:2
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "El nom del tema que es carregarà des de ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:109
+#: ../extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Tanca"
 
-#: ../extensions/window-list/extension.js:119
+#: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Desminimitza"
 
-#: ../extensions/window-list/extension.js:120
+#: ../extensions/window-list/extension.js:121
 msgid "Minimize"
 msgstr "Minimitza"
 
-#: ../extensions/window-list/extension.js:126
+#: ../extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Desmaximitza"
 
-#: ../extensions/window-list/extension.js:127
+#: ../extensions/window-list/extension.js:128
 msgid "Maximize"
 msgstr "Maximitza"
 
-#: ../extensions/window-list/extension.js:399
+#: ../extensions/window-list/extension.js:411
 msgid "Minimize all"
 msgstr "Minimitza-ho tot"
 
-#: ../extensions/window-list/extension.js:407
+#: ../extensions/window-list/extension.js:419
 msgid "Unminimize all"
 msgstr "Desminimitza-ho tot"
 
-#: ../extensions/window-list/extension.js:415
+#: ../extensions/window-list/extension.js:427
 msgid "Maximize all"
 msgstr "Maximitza-ho tot"
 
-#: ../extensions/window-list/extension.js:424
+#: ../extensions/window-list/extension.js:436
 msgid "Unmaximize all"
 msgstr "Desmaximitza-ho tot"
 
-#: ../extensions/window-list/extension.js:433
+#: ../extensions/window-list/extension.js:445
 msgid "Close all"
 msgstr "Tanca-ho tot"
 
-#: ../extensions/window-list/extension.js:650
+#: ../extensions/window-list/extension.js:669
 #: ../extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador de l'espai de treball"
 
-#: ../extensions/window-list/extension.js:808
+#: ../extensions/window-list/extension.js:833
 msgid "Window List"
 msgstr "Llista de finestres"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.h:1
 msgid "When to group windows"
 msgstr "Quan s'han d'agrupar les finestres"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.h:2
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Decideix quan s'han d'agrupar les finestres de la mateixa aplicació a la "
 "llista de finestres. Els valors possibles són: «never» (mai), "
 "«auto» (automàticament) i «always» (sempre)."
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.h:3
 msgid "Show the window list on all monitors"
 msgstr "Mostra la llista de finestres a tots els monitors"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.h:4
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -348,6 +340,12 @@ msgstr "Nom"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Espai de treball %d"
+
+#~ msgid "GNOME Classic"
+#~ msgstr "GNOME clàssic"
+
+#~ msgid "This session logs you into GNOME Classic"
+#~ msgstr "Aquesta sessió us permet utilitzar el GNOME clàssic"
 
 #~ msgid "GNOME Shell Classic"
 #~ msgstr "GNOME Shell clàssic"
