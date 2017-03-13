@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:3
 msgid "Arrangement of buttons on the titlebar"
-msgstr "Disposició dels botons en la barra de títol"
+msgstr "Disposició dels botons en la barra de títol"
 
 #: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.h:4
 msgid ""
@@ -179,7 +179,7 @@ msgid ""
 "This setting applies only with the natural placement strategy."
 msgstr ""
 "Intenta utilitzar més espai de la pantalla per posicionar les miniatures de "
-"les finestres adaptant-les al ràtio d'aspecte de la pantalla, consolidant-"
+"les finestres adaptant-les a la ràtio d'aspecte de la pantalla, consolidant-"
 "les més per reduir la capsa que les envolta. Aquest paràmetre de "
 "configuració només s'aplica a l'estratègia de posicionament de finestres "
 "natural."
@@ -196,7 +196,7 @@ msgid ""
 msgstr ""
 "Si és «true» (cert), posiciona el títol de la finestra damunt de la "
 "miniatura corresponent, substituint el comportament per defecte del Shell de "
-"posicionar-lo a baix. Cal reiniciar el Shell per tal de que aquest canvi "
+"posicionar-lo a baix. Cal reiniciar el Shell per tal que aquest canvi "
 "tingui efecte."
 
 #: ../extensions/places-menu/extension.js:78
