@@ -286,6 +286,7 @@ const ApplicationsButton = new Lang.Class({
                                    Lang.bind(this, this._setKeybinding));
         this._setKeybinding();
 
+        this._applicationsButtons = new Map();
         this.reloadFlag = false;
         this._createLayout();
         this._display();
@@ -494,7 +495,7 @@ const ApplicationsButton = new Lang.Class({
     },
 
     _display: function() {
-        this._applicationsButtons = new Array();
+        this._applicationsButtons.clear();
         this.mainBox.style=('width: 35em;');
         this.mainBox.hide();
 
@@ -553,12 +554,13 @@ const ApplicationsButton = new Lang.Class({
          if (apps) {
             for (let i = 0; i < apps.length; i++) {
                let app = apps[i];
-               if (!this._applicationsButtons[app]) {
-                  let applicationMenuItem = new ApplicationMenuItem(this, app);
-                  this._applicationsButtons[app] = applicationMenuItem;
+               let item = this._applicationsButtons.get(app);
+               if (!item) {
+                  item = new ApplicationMenuItem(this, app);
+                  this._applicationsButtons.set(app, item);
                }
-               if (!this._applicationsButtons[app].actor.get_parent())
-                  this.applicationsBox.add_actor(this._applicationsButtons[app].actor);
+               if (!item.actor.get_parent())
+                  this.applicationsBox.add_actor(item.actor);
             }
          }
     },
