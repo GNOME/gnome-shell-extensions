@@ -1,16 +1,19 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 
 const Atk = imports.gi.Atk;
+const DND = imports.ui.dnd;
 const GMenu = imports.gi.GMenu;
 const Lang = imports.lang;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 const Clutter = imports.gi.Clutter;
 const Main = imports.ui.main;
+const Meta = imports.gi.Meta;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 const Gtk = imports.gi.Gtk;
 const GLib = imports.gi.GLib;
+const Gio = imports.gi.Gio;
 const Signals = imports.signals;
 const Pango = imports.gi.Pango;
 
@@ -70,6 +73,16 @@ const ApplicationMenuItem = new Lang.Class({
                 textureCache.disconnect(iconThemeChangedId);
             }));
         this._updateIcon();
+
+        this.actor._delegate = this;
+        let draggable = DND.makeDraggable(this.actor);
+
+        draggable.connect('drag-begin', () => {
+            Shell.util_set_hidden_from_pick(Main.legacyTray.actor, true);
+        });
+        draggable.connect('drag-end', () => {
+            Shell.util_set_hidden_from_pick(Main.legacyTray.actor, false);
+        });
     },
 
     activate: function(event) {
@@ -85,8 +98,16 @@ const ApplicationMenuItem = new Lang.Class({
         this.parent(active, params);
     },
 
+    getDragActor: function() {
+        return this._app.create_icon_texture(APPLICATION_ICON_SIZE);
+    },
+
+    getDragActorSource: function() {
+        return this._iconBin;
+    },
+
     _updateIcon: function() {
-        this._iconBin.set_child(this._app.create_icon_texture(APPLICATION_ICON_SIZE));
+        this._iconBin.set_child(this.getDragActor());
     }
 });
 
@@ -246,6 +267,94 @@ const ApplicationsMenu = new Lang.Class({
     }
 });
 
+const DesktopTarget = new Lang.Class({
+    Name: 'DesktopTarget',
+
+    _init: function() {
+        this._desktop = null;
+        this._desktopDestroyedId = 0;
+
+        this._windowAddedId =
+            global.window_group.connect('actor-added',
+                                        Lang.bind(this, this._onWindowAdded));
+
+        global.get_window_actors().forEach(a => {
+            this._onWindowAdded(a.get_parent(), a);
+        });
+    },
+
+    _onWindowAdded: function(group, actor) {
+        if (!(actor instanceof Meta.WindowActor))
+            return;
+
+        if (actor.meta_window.get_window_type() == Meta.WindowType.DESKTOP)
+            this._setDesktop(actor);
+    },
+
+    _setDesktop: function(desktop) {
+        if (this._desktop) {
+            this._desktop.disconnect(this._desktopDestroyedId);
+            this._desktopDestroyedId = 0;
+
+            delete this._desktop._delegate;
+        }
+
+        this._desktop = desktop;
+
+        if (this._desktop) {
+            this._desktopDestroyedId = this._desktop.connect('destroy', () => {
+                this._setDesktop(null);
+            });
+            this._desktop._delegate = this;
+        }
+    },
+
+    _getSourceAppInfo: function(source) {
+        if (!(source instanceof ApplicationMenuItem))
+            return null;
+        return source._app.app_info;
+    },
+
+    destroy: function() {
+        if (this._windowAddedId)
+            global.window_group.disconnect(this._windowAddedId);
+        this._windowAddedId = 0;
+
+        this._setDesktop(null);
+    },
+
+    handleDragOver: function(source, actor, x, y, time) {
+        let appInfo = this._getSourceAppInfo(source);
+        if (!appInfo)
+            return DND.DragMotionResult.CONTINUE;
+
+        return DND.DragMotionResult.COPY_DROP;
+    },
+
+    acceptDrop: function(source, actor, x, y, time) {
+        let appInfo = this._getSourceAppInfo(source);
+        if (!appInfo)
+            return false;
+
+        this.emit('app-dropped');
+
+        let desktop = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DESKTOP);
+
+        let src = Gio.File.new_for_path(appInfo.get_filename());
+        let dst = Gio.File.new_for_path(GLib.build_filenamev([desktop, src.get_basename()]));
+
+        try {
+            // copy_async() isn't introspectable :-(
+            src.copy(dst, Gio.FileCopyFlags.OVERWRITE, null, null);
+        } catch(e) {
+            log('Failed to copy to desktop: ' + e.message);
+        }
+
+        return true;
+    }
+});
+Signals.addSignalMethods(DesktopTarget.prototype);
+
 const ApplicationsButton = new Lang.Class({
     Name: 'ApplicationsButton',
     Extends: PanelMenu.Button,
@@ -285,6 +394,11 @@ const ApplicationsButton = new Lang.Class({
         Main.layoutManager.connect('startup-complete',
                                    Lang.bind(this, this._setKeybinding));
         this._setKeybinding();
+
+        this._desktopTarget = new DesktopTarget();
+        this._desktopTarget.connect('app-dropped', () => {
+            this.menu.close();
+        });
 
         this._applicationsButtons = new Map();
         this.reloadFlag = false;
@@ -330,6 +444,8 @@ const ApplicationsButton = new Lang.Class({
                                            Main.sessionMode.hasOverview ?
                                            Lang.bind(Main.overview, Main.overview.toggle) :
                                            null);
+
+        this._desktopTarget.destroy();
     },
 
     _onCapturedEvent: function(actor, event) {
