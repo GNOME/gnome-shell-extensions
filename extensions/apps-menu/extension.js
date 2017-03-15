@@ -77,6 +77,13 @@ const ApplicationMenuItem = new Lang.Class({
         this.actor._delegate = this;
         let draggable = DND.makeDraggable(this.actor);
 
+        let maybeStartDrag = draggable._maybeStartDrag;
+        draggable._maybeStartDrag = (event) => {
+            if (this._dragEnabled)
+                return maybeStartDrag.call(draggable, event);
+            return false;
+        };
+
         draggable.connect('drag-begin', () => {
             Shell.util_set_hidden_from_pick(Main.legacyTray.actor, true);
         });
@@ -96,6 +103,10 @@ const ApplicationMenuItem = new Lang.Class({
         if (active)
             this._button.scrollToButton(this);
         this.parent(active, params);
+    },
+
+    setDragEnabled: function(enable) {
+        this._dragEnabled = enable;
     },
 
     getDragActor: function() {
@@ -283,6 +294,10 @@ const DesktopTarget = new Lang.Class({
         });
     },
 
+    get hasDesktop() {
+        return this._desktop != null;
+    },
+
     _onWindowAdded: function(group, actor) {
         if (!(actor instanceof Meta.WindowActor))
             return;
@@ -300,6 +315,7 @@ const DesktopTarget = new Lang.Class({
         }
 
         this._desktop = desktop;
+        this.emit('desktop-changed');
 
         if (this._desktop) {
             this._desktopDestroyedId = this._desktop.connect('destroy', () => {
@@ -398,6 +414,11 @@ const ApplicationsButton = new Lang.Class({
         this._desktopTarget = new DesktopTarget();
         this._desktopTarget.connect('app-dropped', () => {
             this.menu.close();
+        });
+        this._desktopTarget.connect('desktop-changed', () => {
+            this._applicationsButtons.forEach(item => {
+                item.setDragEnabled(this._desktopTarget.hasDesktop);
+            });
         });
 
         this._applicationsButtons = new Map();
@@ -673,6 +694,7 @@ const ApplicationsButton = new Lang.Class({
                let item = this._applicationsButtons.get(app);
                if (!item) {
                   item = new ApplicationMenuItem(this, app);
+                  item.setDragEnabled(this._desktopTarget.hasDesktop);
                   this._applicationsButtons.set(app, item);
                }
                if (!item.actor.get_parent())
