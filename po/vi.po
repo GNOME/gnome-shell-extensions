@@ -2,15 +2,15 @@
 # Copyright © 2016 GNOME i18n Project for Vietnamese.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2011.
-# Trần Ngọc Quân <vnwildman@gmail.com>, 2014, 2016.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2014, 2016, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2016-08-29 23:17+0000\n"
-"PO-Revision-Date: 2016-09-05 15:11+0700\n"
+"POT-Creation-Date: 2017-03-22 18:33+0000\n"
+"PO-Revision-Date: 2017-03-27 15:17+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
 "Language: vi\n"
@@ -85,15 +85,15 @@ msgstr "Cửa sổ hiện tại như là"
 msgid "Show only windows in the current workspace"
 msgstr "Chỉ hiển thị các cửa sổ trong không gian làm việc hiện tại"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Tổng quan hoạt động"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Ưa thích"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:391
 msgid "Applications"
 msgstr "Ứng dụng"
 
@@ -132,7 +132,7 @@ msgstr "Thêm"
 
 #: extensions/drive-menu/extension.js:106
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
+msgid "Ejecting drive “%s” failed:"
 msgstr "Gặp lỗi khi đẩy đĩa “%s” ra:"
 
 #: extensions/drive-menu/extension.js:124
@@ -169,7 +169,7 @@ msgstr "Thông báo"
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
+"Nevertheless it’s possible to customize the greeting message."
 msgstr ""
 "Ví dụ có mục đích hướng dẫn làm cách nào để xây dựng các phần mở rộng chạy "
 "tốt cho Hệ vỏ và do vậy nó chỉ có một ít chức năng.\n"
@@ -210,7 +210,7 @@ msgstr "Mở nhanh"
 
 #: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-msgid "Failed to launch \"%s\""
+msgid "Failed to launch “%s”"
 msgstr "Gặp lỗi khi khởi chạy \"%s\""
 
 #: extensions/places-menu/placeDisplay.js:101
@@ -258,32 +258,32 @@ msgstr "Thôi phóng lớn"
 msgid "Maximize"
 msgstr "Phóng to hết cỡ"
 
-#: extensions/window-list/extension.js:403
+#: extensions/window-list/extension.js:411
 msgid "Minimize all"
 msgstr "Thu nhỏ tất cả"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:419
 msgid "Unminimize all"
 msgstr "Thôi thu nhỏ tất cả"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:427
 msgid "Maximize all"
 msgstr "Phóng to tất cả"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:436
 msgid "Unmaximize all"
 msgstr "Thôi phóng to tất cả"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:445
 msgid "Close all"
 msgstr "Đóng tất cả"
 
-#: extensions/window-list/extension.js:661
+#: extensions/window-list/extension.js:669
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Bộ chỉ thị không gian làm việc"
 
-#: extensions/window-list/extension.js:820
+#: extensions/window-list/extension.js:833
 msgid "Window List"
 msgstr "Danh sách cửa sổ"
 
@@ -294,10 +294,10 @@ msgstr "Khi nào thì nhóm các cửa sổ lại"
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Quyết định khi nào thì nhóm các cửa sổ của cùng một ứng dụng trên danh sách "
-"cửa số. Các giá trị có thể là \"never\", \"auto\" và \"always\"."
+"cửa số. Các giá trị có thể là “never”, “auto” và “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
