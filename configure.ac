@@ -73,7 +73,7 @@ done
 
 AC_SUBST(ENABLED_EXTENSIONS, [$ENABLED_EXTENSIONS])
 
-AC_PATH_PROG([SASS],[sass],[])
+AC_PATH_PROG([SASSC],[sassc],[])
 
 dnl Please keep this sorted alphabetically
 AC_CONFIG_FILES([

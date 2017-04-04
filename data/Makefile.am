@@ -33,9 +33,9 @@ theme_sources =							\
 	$(NULL)
 
 %.css: %.scss $(theme_sources)
-	@if test -n "$(SASS)"; then \
+	@if test -n "$(SASSC)"; then \
 		if $(AM_V_P); then PS4= set -x; else echo "  GEN      $@"; fi; \
-		$(SASS) --sourcemap=none --update -f -q $<; \
+		$(SASSC) -a $< $@; \
 	fi
 
 gsettings_SCHEMAS = org.gnome.shell.extensions.classic-overrides.gschema.xml
