@@ -1,13 +1,13 @@
 ## Creating a New Extension
 
-To create a new extension, add a subdirectory in extensions.
-Then create a Makefile.am like the one in example, replacing
-the EXTENSION_ID with the basename of your extension, which
-must match the UUID in metadata.json.
-If you need additional files, add them to EXTENSION_EXTRA.
+To create a new extension, add a subdirectory in extensions. Then create
+a meson.build from the provided [template](extensions/meson.build.template).
+If you need additional sources, add them to extension_sources. Similarily add
+GSettings schemas to extension_schemas and other files to extension_data.
 
-Then modify extensions/Makefile.am and configure.ac. It should
-be pretty self-explanatory.
+Then modify the [toplevel Meson file](meson.build) to add the new
+extension name in the appropriate set (that is one of classic_extensions,
+default_extensions or all_extensions).
 
 Don't forget to add any translatable file to po/POTFILES.in, and
 then you're done.
