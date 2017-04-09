@@ -1,0 +1,18 @@
+option('extension_set',
+  type: 'combo',
+  choices: ['classic', 'default', 'all'],
+  value: 'default',
+  description: 'Predefined sets of extensions'
+)
+
+option('enable_extensions',
+  type: 'string',
+  value: '',
+  description: 'Space separated list of extensions to enable instead of a predefined set.'
+)
+
+option('classic_mode',
+  type: 'boolean',
+  value: false,
+  description: 'Enable installing data files for classic mode.'
+)
