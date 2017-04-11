@@ -1,0 +1,346 @@
+# Croatian translation for gnome-shell-extensions.
+# Copyright (C) 2017 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"shell&keywords=I18N+L10N&component=extensions\n"
+"POT-Creation-Date: 2017-04-11 00:22+0000\n"
+"PO-Revision-Date: 2017-04-11 15:24+0200\n"
+"Language-Team: Croatian <hr@li.org>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+msgid "GNOME Classic"
+msgstr "GNOME klasičan"
+
+#: data/gnome-classic.desktop.in:4
+msgid "This session logs you into GNOME Classic"
+msgstr "Ova sesija vas prijavljuje u klasičan GNOME"
+
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
+msgid "Attach modal dialog to the parent window"
+msgstr "Pričvrsti prozore dijaloga na nadređeni prozor"
+
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
+msgid ""
+"This key overrides the key in org.gnome.mutter when running GNOME Shell."
+msgstr ""
+"Ova vrijednost zaobilazi org.gnome.mutter kada je pokrenuta GNOME ljuska."
+
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
+msgid "Arrangement of buttons on the titlebar"
+msgstr "Poravnanja tipka naslovne trake"
+
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
+msgid ""
+"This key overrides the key in org.gnome.desktop.wm.preferences when running "
+"GNOME Shell."
+msgstr ""
+"Ova vrijednost zaobilazi org.gnome.desktop.wm.preferences kada je pokrenuta "
+"GNOME ljuska."
+
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
+msgid "Enable edge tiling when dropping windows on screen edges"
+msgstr "Omogući rubno popločavanje pri ispuštanju prozora na rubovima zaslona"
+
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
+msgid "Workspaces only on primary monitor"
+msgstr "Radni prostori samo na glavnom zaslonu"
+
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
+msgid "Delay focus changes in mouse mode until the pointer stops moving"
+msgstr ""
+"Odgodi promjenu fokusa u načinu rada s mišem dok se pokazivač ne prestane "
+"pomicati"
+
+#: extensions/alternate-tab/prefs.js:20
+msgid "Thumbnail only"
+msgstr "Samo ikone"
+
+#: extensions/alternate-tab/prefs.js:21
+msgid "Application icon only"
+msgstr "Samo ikone aplikacija"
+
+#: extensions/alternate-tab/prefs.js:22
+msgid "Thumbnail and application icon"
+msgstr "Ikone minijatura i aplikacija"
+
+#: extensions/alternate-tab/prefs.js:38
+msgid "Present windows as"
+msgstr "Sadašnji prozora kao"
+
+#: extensions/alternate-tab/prefs.js:69
+msgid "Show only windows in the current workspace"
+msgstr "Prikaži samo prozore u trenutnom radnom prostoru"
+
+#: extensions/apps-menu/extension.js:41
+msgid "Activities Overview"
+msgstr "Pregled aktivnosti"
+
+#: extensions/apps-menu/extension.js:141
+msgid "Favorites"
+msgstr "Omiljeni"
+
+#: extensions/apps-menu/extension.js:391
+msgid "Applications"
+msgstr "Aplikacije"
+
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+msgid "Application and workspace list"
+msgstr "Aplikacije i popis radnih prozora"
+
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"Popis nizova, svaki sadrži aplikaciju (naziv datoteke prečaca), slijedeći "
+"stupac i broj radnog prostora"
+
+#: extensions/auto-move-windows/prefs.js:60
+msgid "Application"
+msgstr "Aplikacija"
+
+#: extensions/auto-move-windows/prefs.js:69
+#: extensions/auto-move-windows/prefs.js:127
+msgid "Workspace"
+msgstr "Radni prostor"
+
+#: extensions/auto-move-windows/prefs.js:85
+msgid "Add Rule"
+msgstr "Dodaj pravilo"
+
+#: extensions/auto-move-windows/prefs.js:106
+msgid "Create new matching rule"
+msgstr "Dodaj novo pravilo"
+
+#: extensions/auto-move-windows/prefs.js:111
+msgid "Add"
+msgstr "Dodaj"
+
+#: extensions/drive-menu/extension.js:106
+#, javascript-format
+msgid "Ejecting drive “%s” failed:"
+msgstr "Izbacivanje uređaja “%s” neuspjelo:"
+
+#: extensions/drive-menu/extension.js:124
+msgid "Removable devices"
+msgstr "Prijenosni uređaji"
+
+#: extensions/drive-menu/extension.js:149
+msgid "Open File"
+msgstr "Otvori datoteku"
+
+#: extensions/example/extension.js:17
+msgid "Hello, world!"
+msgstr "Pozdrav svijete!"
+
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
+msgid "Alternative greeting text."
+msgstr "Zamjenski tekst pozdrava."
+
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
+msgid ""
+"If not empty, it contains the text that will be shown when clicking on the "
+"panel."
+msgstr "Ako nije prazno, sadrži tekst koji će se prikazati pri kliku na panel."
+
+#: extensions/example/prefs.js:30
+msgid "Message"
+msgstr "Poruka"
+
+#. TRANSLATORS: Example is the name of the extension, should not be
+#. translated
+#: extensions/example/prefs.js:43
+msgid ""
+"Example aims to show how to build well behaved extensions for the Shell and "
+"as such it has little functionality on its own.\n"
+"Nevertheless it’s possible to customize the greeting message."
+msgstr ""
+"Cilj primjera je prikazati kako izgraditi proširenje koje se dobro ponaša u "
+"ljusci i kao takvo ima ograničenu funkcionalnost.\n"
+"Unatoč tome još uvijek je moguće promijeniti poruku pozdrava."
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+msgid "Use more screen for windows"
+msgstr "Koristi više zaslona za prozore"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Pokušaj koristiti više zaslona za smještaj minijatura prozora prilagodbi "
+"omjeru prikaza zaslona, i njihovim budućim objedinjiavanjem u svrhu "
+"smanjenja graničnog okvira. Ova postavka se samo primjenjuje sa strategijom "
+"prirodnog smještaja."
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+msgid "Place window captions on top"
+msgstr "Smjesti naslov prozora na vrh"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"Ako je odabrano, smjesti naslov prozora na vrh odgovarajuće minijature, "
+"zaobilazeći zadano smještanje ljuske na dnu. Promjena ove postavke zahtijeva "
+"ponovno pokretanje ljuske kako bi se primijenila."
+
+#: extensions/places-menu/extension.js:78
+#: extensions/places-menu/extension.js:81
+msgid "Places"
+msgstr "Lokacije"
+
+#: extensions/places-menu/placeDisplay.js:59
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr "Neuspješno pokretanje “%s”"
+
+#: extensions/places-menu/placeDisplay.js:101
+#: extensions/places-menu/placeDisplay.js:124
+msgid "Computer"
+msgstr "Računalo"
+
+#: extensions/places-menu/placeDisplay.js:267
+msgid "Home"
+msgstr "Osobna mapa"
+
+#: extensions/places-menu/placeDisplay.js:311
+msgid "Browse Network"
+msgstr "Pregledaj mrežu"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+msgid "Cycle Screenshot Sizes"
+msgstr "Veličina slijeda snimke zaslona"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+msgid "Theme name"
+msgstr "Naziv teme"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Naziv teme, mora se učitati iz ~/.themes/name/gnome-shell"
+
+#: extensions/window-list/extension.js:110
+msgid "Close"
+msgstr "Zatvori"
+
+#: extensions/window-list/extension.js:120
+msgid "Unminimize"
+msgstr "Vrati"
+
+#: extensions/window-list/extension.js:121
+msgid "Minimize"
+msgstr "Smanji"
+
+#: extensions/window-list/extension.js:127
+msgid "Unmaximize"
+msgstr "Prikaži u prozoru"
+
+#: extensions/window-list/extension.js:128
+msgid "Maximize"
+msgstr "Uvećaj"
+
+#: extensions/window-list/extension.js:411
+msgid "Minimize all"
+msgstr "Smanji sve"
+
+#: extensions/window-list/extension.js:419
+msgid "Unminimize all"
+msgstr "Vrati sve"
+
+#: extensions/window-list/extension.js:427
+msgid "Maximize all"
+msgstr "Uvećaj sve"
+
+#: extensions/window-list/extension.js:436
+msgid "Unmaximize all"
+msgstr "Prikaži u prozoru sve"
+
+#: extensions/window-list/extension.js:445
+msgid "Close all"
+msgstr "Zatvori sve"
+
+#: extensions/window-list/extension.js:669
+#: extensions/workspace-indicator/extension.js:30
+msgid "Workspace Indicator"
+msgstr "Indikator radnog prostora"
+
+#: extensions/window-list/extension.js:833
+msgid "Window List"
+msgstr "Popis prozora"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+msgid "When to group windows"
+msgstr "Kada grupirati prozore"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are “never”, “auto” and “always”."
+msgstr ""
+"Odlučuje kada grupirati prozore od iste aplikacije u popisu prozora. Moguće "
+"vrijednosti su:  “never”, “auto” i “always”."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+msgid "Show the window list on all monitors"
+msgstr "Prikaži ikone radne površine na svim zaslonima"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"Treba li prikazati popis prozora na svim povezanim zaslonima ili smo na "
+"glavnom."
+
+#: extensions/window-list/prefs.js:32
+msgid "Window Grouping"
+msgstr "Grupiranje prozora"
+
+#: extensions/window-list/prefs.js:50
+msgid "Never group windows"
+msgstr "Nikada grupiraj prozore"
+
+#: extensions/window-list/prefs.js:51
+msgid "Group windows when space is limited"
+msgstr "Grupiraj prozore kada je prostor ograničen"
+
+#: extensions/window-list/prefs.js:52
+msgid "Always group windows"
+msgstr "Uvijek grupiraj prozore"
+
+#: extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr "Prikaži na svim zaslonima"
+
+#: extensions/workspace-indicator/prefs.js:141
+msgid "Workspace Names"
+msgstr "Nazivi radnih prostora"
+
+#: extensions/workspace-indicator/prefs.js:157
+msgid "Name"
+msgstr "Naziv"
+
+#: extensions/workspace-indicator/prefs.js:198
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Radni prostor %d"
