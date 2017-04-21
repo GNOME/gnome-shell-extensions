@@ -331,6 +331,30 @@ const DesktopTarget = new Lang.Class({
         return source._app.app_info;
     },
 
+    _markTrusted: function(file) {
+        let modeAttr = Gio.FILE_ATTRIBUTE_UNIX_MODE;
+        let trustedAttr = 'metadata::trusted';
+        let queryFlags = Gio.FileQueryInfoFlags.NONE;
+        let ioPriority = GLib.PRIORITY_DEFAULT;
+
+        file.query_info_async(modeAttr, queryFlags, ioPriority, null,
+            (o, res) => {
+                try {
+                    let info = o.query_info_finish(res);
+                    let mode = info.get_attribute_uint32(modeAttr) | 0100;
+
+                    info.set_attribute_uint32(modeAttr, mode);
+                    info.set_attribute_string(trustedAttr, 'yes');
+                    file.set_attributes_async (info, queryFlags, ioPriority, null,
+                        (o, res) => {
+                            o.set_attributes_finish(res);
+                        });
+                } catch(e) {
+                    log('Failed to mark file as trusted: ' + e.message);
+                }
+            });
+    },
+
     destroy: function() {
         if (this._windowAddedId)
             global.window_group.disconnect(this._windowAddedId);
@@ -362,6 +386,7 @@ const DesktopTarget = new Lang.Class({
         try {
             // copy_async() isn't introspectable :-(
             src.copy(dst, Gio.FileCopyFlags.OVERWRITE, null, null);
+            this._markTrusted(dst);
         } catch(e) {
             log('Failed to copy to desktop: ' + e.message);
         }
