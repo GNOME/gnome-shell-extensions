@@ -331,6 +331,23 @@ const DesktopTarget = new Lang.Class({
         return source._app.app_info;
     },
 
+    _touchFile: function(file) {
+        let queryFlags = Gio.FileQueryInfoFlags.NONE;
+        let ioPriority = GLib.PRIORITY_DEFAULT;
+
+        let info = new Gio.FileInfo();
+        info.set_attribute_uint64(Gio.FILE_ATTRIBUTE_TIME_ACCESS,
+                                  GLib.get_real_time());
+        file.set_attributes_async (info, queryFlags, ioPriority, null,
+            (o, res) => {
+                try {
+                    o.set_attributes_finish(res);
+                } catch(e) {
+                    log('Failed to update access time: ' + e.message);
+                }
+            });
+    },
+
     _markTrusted: function(file) {
         let modeAttr = Gio.FILE_ATTRIBUTE_UNIX_MODE;
         let trustedAttr = 'metadata::trusted';
@@ -348,6 +365,9 @@ const DesktopTarget = new Lang.Class({
                     file.set_attributes_async (info, queryFlags, ioPriority, null,
                         (o, res) => {
                             o.set_attributes_finish(res);
+
+                            // Hack: force nautilus to reload file info
+                            this._touchFile(file);
                         });
                 } catch(e) {
                     log('Failed to mark file as trusted: ' + e.message);
