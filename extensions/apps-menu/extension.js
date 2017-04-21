@@ -623,7 +623,7 @@ const ApplicationsButton = new Lang.Class({
         this.applicationsBox = new St.BoxLayout({ vertical: true });
         this.applicationsScrollBox.add_actor(this.applicationsBox);
         this.categoriesBox = new St.BoxLayout({ vertical: true });
-        this.categoriesScrollBox.add_actor(this.categoriesBox, { expand: true, x_fill: false });
+        this.categoriesScrollBox.add_actor(this.categoriesBox);
 
         this.mainBox.add(this.leftBox);
         this.mainBox.add(this._createVertSeparator(), { expand: false, x_fill: false, y_fill: true});
