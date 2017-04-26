@@ -61,24 +61,31 @@ const PlaceInfo = new Lang.Class({
     },
 
     getIcon: function() {
-        try {
-            let info = this.file.query_info('standard::symbolic-icon', 0, null);
-	    return info.get_symbolic_icon();
-        } catch(e if e instanceof Gio.IOErrorEnum) {
-            // return a generic icon for this kind
-            switch (this.kind) {
-            case 'network':
+        this.file.query_info_async('standard::symbolic-icon', 0, 0, null,
+                                   Lang.bind(this, function(file, result) {
+                                       try {
+                                           let info = file.query_info_finish(result);
+                                           this.icon = info.get_symbolic_icon();
+                                           this.emit('changed');
+                                       } catch(e if e instanceof Gio.IOErrorEnum) {
+                                           return;
+                                       }
+                                   }));
+
+        // return a generic icon for this kind for now, until we have the
+        // icon from the query info above
+        switch (this.kind) {
+        case 'network':
+            return new Gio.ThemedIcon({ name: 'folder-remote-symbolic' });
+        case 'devices':
+            return new Gio.ThemedIcon({ name: 'drive-harddisk-symbolic' });
+        case 'special':
+        case 'bookmarks':
+        default:
+            if (!this.file.is_native())
                 return new Gio.ThemedIcon({ name: 'folder-remote-symbolic' });
-            case 'devices':
-                return new Gio.ThemedIcon({ name: 'drive-harddisk-symbolic' });
-            case 'special':
-            case 'bookmarks':
-            default:
-                if (!this.file.is_native())
-                    return new Gio.ThemedIcon({ name: 'folder-remote-symbolic' });
-                else
-                    return new Gio.ThemedIcon({ name: 'folder-symbolic' });
-            }
+            else
+                return new Gio.ThemedIcon({ name: 'folder-symbolic' });
         }
     },
 
