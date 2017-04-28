@@ -50,7 +50,13 @@ const PlaceInfo = new Lang.Class({
                 Gio.AppInfo.launch_default_for_uri_finish(result);
             } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
                 this.file.mount_enclosing_volume(0, null, null, (file, result) => {
-                    file.mount_enclosing_volume_finish(result);
+                    try {
+                        file.mount_enclosing_volume_finish(result);
+                    } catch(e) {
+                        Main.notifyError(_("Failed to mount volume for “%s”").format(this.name), e.message);
+                        return;
+                    }
+
                     if (tryMount) {
                         let callback = this._createLaunchCallback(launchContext, false);
                         Gio.AppInfo.launch_default_for_uri_async(file.get_uri(),
