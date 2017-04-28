@@ -12,6 +12,7 @@ const DND = imports.ui.dnd;
 const Main = imports.ui.main;
 const Params = imports.misc.params;
 const Search = imports.ui.search;
+const ShellMountOperation = imports.ui.shellMountOperation;
 const Util = imports.misc.util;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
@@ -49,9 +50,17 @@ const PlaceInfo = new Lang.Class({
             try {
                 Gio.AppInfo.launch_default_for_uri_finish(result);
             } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
-                this.file.mount_enclosing_volume(0, null, null, (file, result) => {
+                let source = {
+                    get_icon: () => { return this.icon; }
+                };
+                let op = new ShellMountOperation.ShellMountOperation(source);
+                this.file.mount_enclosing_volume(0, op.mountOp, null, (file, result) => {
                     try {
+                        op.close();
                         file.mount_enclosing_volume_finish(result);
+                    } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.FAILED_HANDLED)) {
+                        // e.g. user canceled the password dialog
+                        return;
                     } catch(e) {
                         Main.notifyError(_("Failed to mount volume for “%s”").format(this.name), e.message);
                         return;
