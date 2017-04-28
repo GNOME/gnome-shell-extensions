@@ -44,20 +44,34 @@ const PlaceInfo = new Lang.Class({
         return false;
     },
 
+    _createLaunchCallback: function(launchContext, tryMount) {
+        return (_ignored, result) => {
+            try {
+                Gio.AppInfo.launch_default_for_uri_finish(result);
+            } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
+                this.file.mount_enclosing_volume(0, null, null, (file, result) => {
+                    file.mount_enclosing_volume_finish(result);
+                    if (tryMount) {
+                        let callback = this._createLaunchCallback(launchContext, false);
+                        Gio.AppInfo.launch_default_for_uri_async(file.get_uri(),
+                                                                 launchContext,
+                                                                 null,
+                                                                 callback);
+                    }
+                });
+            } catch(e) {
+                Main.notifyError(_("Failed to launch “%s”").format(this.name), e.message);
+            }
+        }
+    },
+
     launch: function(timestamp) {
         let launchContext = global.create_app_launch_context(timestamp, -1);
-
-        try {
-            Gio.AppInfo.launch_default_for_uri(this.file.get_uri(),
-                                               launchContext);
-        } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
-            this.file.mount_enclosing_volume(0, null, null, function(file, result) {
-                file.mount_enclosing_volume_finish(result);
-                Gio.AppInfo.launch_default_for_uri(file.get_uri(), launchContext);
-            });
-        } catch(e) {
-            Main.notifyError(_("Failed to launch “%s”").format(this.name), e.message);
-        }
+        let callback = this._createLaunchCallback(launchContext, true);
+        Gio.AppInfo.launch_default_for_uri_async(this.file.get_uri(),
+                                                 launchContext,
+                                                 null,
+                                                 callback);
     },
 
     getIcon: function() {
