@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-22 18:40+0000\n"
-"PO-Revision-Date: 2017-02-24 00:51+0100\n"
+"POT-Creation-Date: 2017-04-28 13:38+0000\n"
+"PO-Revision-Date: 2017-04-30 13:33+0200\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 1.8.12\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -88,15 +88,15 @@ msgstr "Mostre i barcons come"
 msgid "Show only windows in the current workspace"
 msgstr "Mostre dome i balcons dal spazi di lavôr corint"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Panoramiche ativitâts"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Preferîts"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Aplicazions"
 
@@ -210,21 +210,26 @@ msgstr ""
 msgid "Places"
 msgstr "Puescj"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:56
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "No si è rivâts a montâ il volum par “%s”"
+
+#: extensions/places-menu/placeDisplay.js:69
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "No si è rivâts a inviâ “%s”"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:128
+#: extensions/places-menu/placeDisplay.js:151
 msgid "Computer"
 msgstr "Computer"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:294
 msgid "Home"
 msgstr "Cjase"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:338
 msgid "Browse Network"
 msgstr "Esplore rêt"
 
