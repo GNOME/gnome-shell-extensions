@@ -1,3 +1,9 @@
+3.24.2
+======
+* apps-menu: Mark copied launchers as trusted
+* places-menu: Make icon lookup asynchronous
+* updated translations (hr)
+
 3.24.1
 ======
 * apps-menu: Allow creating desktop launchers via DND
