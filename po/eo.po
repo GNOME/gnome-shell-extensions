@@ -248,7 +248,7 @@ msgstr "La nomo de la etoso, malfermigi de ~/.themes/name/gnome-shell"
 
 #: ../extensions/window-list/extension.js:110
 msgid "Close"
-msgstr "Malfermi"
+msgstr "Fermi"
 
 #: ../extensions/window-list/extension.js:120
 msgid "Unminimize"
