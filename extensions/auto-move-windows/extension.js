@@ -63,11 +63,11 @@ const WindowMover = new Lang.Class({
                 log ('Cannot find application for window');
             return;
         }
-        let app_id = app.get_id();
+        let app_id = app.get_id().replace('.desktop','');
         for ( let j = 0 ; j < spaces.length; j++ ) {
             let apps_to_space = spaces[j].split(":");
             // Match application id
-            if (apps_to_space[0] == app_id) {
+            if (apps_to_space[0].indexOf(app_id) == 0) {
                 let workspace_num = parseInt(apps_to_space[1]) - 1;
 
                 if (workspace_num >= global.screen.n_workspaces)
