@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-04-28 13:38+0000\n"
-"PO-Revision-Date: 2017-04-30 13:33+0200\n"
+"POT-Creation-Date: 2017-05-12 15:29+0000\n"
+"PO-Revision-Date: 2017-05-25 14:31+0200\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -143,8 +143,8 @@ msgid "Removable devices"
 msgstr "Argagn rimovibil"
 
 #: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Vierç File"
+msgid "Open Files"
+msgstr "Vierç i file"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
