@@ -781,7 +781,7 @@ const WindowList = new Lang.Class({
         this._monitor = monitor;
 
         this.actor = new St.Widget({ name: 'panel',
-                                     style_class: 'bottom-panel',
+                                     style_class: 'bottom-panel solid',
                                      reactive: true,
                                      track_hover: true,
                                      layout_manager: new Clutter.BinLayout()});
