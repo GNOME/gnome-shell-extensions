@@ -6,17 +6,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-16 01:20+0000\n"
-"PO-Revision-Date: 2017-02-16 09:08+0500\n"
+"POT-Creation-Date: 2017-05-09 17:31+0000\n"
+"PO-Revision-Date: 2017-06-17 13:50+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -85,15 +85,15 @@ msgstr "Терезелерді қалайша ұсыну"
 msgid "Show only windows in the current workspace"
 msgstr "Тек ағымдағы жұмыс орнынан терезелерді көрсету"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Шолу көрінісі"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Таңдамалылар"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Қолданбалар"
 
@@ -140,8 +140,8 @@ msgid "Removable devices"
 msgstr "Алынатын құрылғылар"
 
 #: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Файлды ашу"
+msgid "Open Files"
+msgstr "Файлдарды ашу"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -207,21 +207,26 @@ msgstr ""
 msgid "Places"
 msgstr "Орындар"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:56
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "\"%s\" үшін томды тіркеу сәтсіз аяқталды"
+
+#: extensions/places-menu/placeDisplay.js:69
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "\"%s\" жөнелту сәтсіз аяқталды"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:128
+#: extensions/places-menu/placeDisplay.js:151
 msgid "Computer"
 msgstr "Компьютер"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:294
 msgid "Home"
 msgstr "Үй бумасы"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:338
 msgid "Browse Network"
 msgstr "Желіні шолу"
 
