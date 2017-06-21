@@ -1,3 +1,9 @@
+3.25.3
+======
+* places-menu: Use mount operation if necessary
+* window-list: Respect MWM hints
+* updated translations (es, fur, kk)
+
 3.25.2
 ======
 * places-menu: Make URI launching asynchronous
