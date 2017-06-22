@@ -147,11 +147,18 @@ function init() {
 function enable() {
     Main.wm.addKeybinding('cycle-screenshot-sizes',
                           Convenience.getSettings(),
-                          Meta.KeyBindingFlags.PER_WINDOW | Meta.KeyBindingFlags.REVERSES,
+                          Meta.KeyBindingFlags.PER_WINDOW,
+                          Shell.ActionMode.NORMAL,
+                          cycleScreenshotSizes);
+    Main.wm.addKeybinding('cycle-screenshot-sizes-backward',
+                          Convenience.getSettings(),
+                          Meta.KeyBindingFlags.PER_WINDOW |
+                          Meta.KeyBindingFlags.IS_REVERSED,
                           Shell.ActionMode.NORMAL,
                           cycleScreenshotSizes);
 }
 
 function disable() {
     Main.wm.removeKeybinding('cycle-screenshot-sizes');
+    Main.wm.removeKeybinding('cycle-screenshot-sizes-backward');
 }
