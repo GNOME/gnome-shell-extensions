@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-16 01:20+0000\n"
-"PO-Revision-Date: 2017-02-19 21:50+0100\n"
+"POT-Creation-Date: 2017-07-05 15:07+0000\n"
+"PO-Revision-Date: 2017-07-06 16:30+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -90,15 +90,15 @@ msgstr "Wyświetlanie okien jako"
 msgid "Show only windows in the current workspace"
 msgstr "Wyświetlanie tylko okien w bieżącym obszarze roboczym"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Ekran podglądu"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Programy"
 
@@ -218,22 +218,26 @@ msgstr "Miejsca"
 msgid "Failed to launch “%s”"
 msgstr "Uruchomienie „%s” się nie powiodło"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:108
+#: extensions/places-menu/placeDisplay.js:131
 msgid "Computer"
 msgstr "Komputer"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:274
 msgid "Home"
 msgstr "Katalog domowy"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:318
 msgid "Browse Network"
 msgstr "Przeglądaj sieć"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Zmiana rozmiaru zrzutu ekranu"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Zmiana rozmiaru zrzutu ekranu wstecz"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
