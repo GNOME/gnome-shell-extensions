@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-05-12 15:29+0000\n"
-"PO-Revision-Date: 2017-05-25 14:31+0200\n"
+"POT-Creation-Date: 2017-07-06 14:32+0000\n"
+"PO-Revision-Date: 2017-07-07 00:55+0200\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -210,32 +210,36 @@ msgstr ""
 msgid "Places"
 msgstr "Puescj"
 
-#: extensions/places-menu/placeDisplay.js:56
+#: extensions/places-menu/placeDisplay.js:65
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "No si è rivâts a montâ il volum par “%s”"
 
-#: extensions/places-menu/placeDisplay.js:69
+#: extensions/places-menu/placeDisplay.js:78
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "No si è rivâts a inviâ “%s”"
 
-#: extensions/places-menu/placeDisplay.js:128
-#: extensions/places-menu/placeDisplay.js:151
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Computer"
 
-#: extensions/places-menu/placeDisplay.js:294
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Cjase"
 
-#: extensions/places-menu/placeDisplay.js:338
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Esplore rêt"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
-msgstr "Dimensions screenshot ciclic"
+msgstr "Dimensions caturis di schermi ciclichis"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Dimensions caturis di schermi ciclichis indaûr"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -249,48 +253,48 @@ msgstr "Il non dal teme, che si cjame da ~/.themes/name/gnome-shell"
 msgid "Close"
 msgstr "Siere"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Gjave minimizazion"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Minimize"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Gjave massimizazion"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Massimize"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Minimize ducj"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Gjave a ducj la minimizazion"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Massimize ducj"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Gjave a ducj la massimizazion"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Siere ducj"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicadôr spazi di lavôr"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Liste balcons"
 
