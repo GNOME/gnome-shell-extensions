@@ -2,16 +2,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2013, 2014, 2015.
+# Aurimas Černius <aurisc4@gmail.com>, 2013, 2014, 2015, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-03-06 11:53+0000\n"
-"PO-Revision-Date: 2017-03-06 23:31+0200\n"
-"Last-Translator: Moo\n"
+"POT-Creation-Date: 2017-07-05 15:07+0000\n"
+"PO-Revision-Date: 2017-07-10 23:18+0300\n"
+"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -86,15 +86,15 @@ msgstr "Pateikti langus kaip"
 msgid "Show only windows in the current workspace"
 msgstr "Rodyti tik dabartinės darbo srities langus"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Veiklų apžvalga"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Mėgiamiausi"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Programos"
 
@@ -141,8 +141,9 @@ msgid "Removable devices"
 msgstr "Išimami įrenginiai"
 
 #: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Atverti failą"
+#| msgid "Open File"
+msgid "Open Files"
+msgstr "Atverti failai"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -208,26 +209,37 @@ msgstr ""
 msgid "Places"
 msgstr "Vietos"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:65
+#, javascript-format
+#| msgid "Failed to launch “%s”"
+msgid "Failed to mount volume for “%s”"
+msgstr "Nepavyko prijungti tomo „%s“"
+
+#: extensions/places-menu/placeDisplay.js:78
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Nepavyko paleisti „%s“"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Kompiuteris"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Namų aplankas"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Naršyti tinklą"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
+msgstr "Sukti ekranvaizdžių dydžius ratu"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
 msgstr "Sukti ekranvaizdžių dydžius ratu"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
@@ -242,48 +254,48 @@ msgstr "Temos pavadinimas, kuri bus įkrauta iš ~/.themes/name/gnome-shell"
 msgid "Close"
 msgstr "Užverti"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Grąžinti iš sumažinimo"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Sumažinti"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Grąžinti iš išdidinimo"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Išdidinti"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Sumažinti visus"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Grąžinti visus iš sumažinimo"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Išdidinti visus"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Grąžinti visus iš išdidinimo"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Užverti visus"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Darbo srities indikatorius"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Langų sąrašas"
 
