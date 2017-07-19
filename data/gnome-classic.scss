@@ -9,7 +9,7 @@ $variant: 'light';
 
 #panel {
   font-weight: normal;
-  background-color: $bg_color;
+  background-color: $bg_color !important;
   background-gradient-direction: vertical;
   background-gradient-end: darken($bg_color,5%);
   border-top-color: #666; /* we don't support non-uniform border-colors and
@@ -30,7 +30,8 @@ $variant: 'light';
     -natural-hpadding: 8px;
     -minimum-hpadding: 4px;
     font-weight: normal;
-    color: $fg_color;
+    color: $fg_color !important;
+    text-shadow: none;
     &:active, &:overview, &:focus, &:checked {
       // Trick due to St limitations. It needs a background to draw
       // a box-shadow
@@ -38,6 +39,10 @@ $variant: 'light';
       color: $selected_fg_color !important;
       box-shadow: none;
       & > .system-status-icon { icon-shadow: none; }
+    }
+    &:hover {
+      text-shadow: none;
+      & .system-status-icon { icon-shadow: none; }
     }
     .app-menu-icon { width: 0; height: 0; margin: 0; } // shell's display:none; :D
   }

@@ -1908,7 +1908,7 @@ StScrollBar {
 /* Overrides */
 #panel {
   font-weight: normal;
-  background-color: #ededed;
+  background-color: #ededed !important;
   background-gradient-direction: vertical;
   background-gradient-end: #e0e0e0;
   border-top-color: #666;
@@ -1929,12 +1929,17 @@ StScrollBar {
     -natural-hpadding: 8px;
     -minimum-hpadding: 4px;
     font-weight: normal;
-    color: #2e3436; }
+    color: #2e3436 !important;
+    text-shadow: none; }
     #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
       background-color: #4a90d9 !important;
       color: #ffffff !important;
       box-shadow: none; }
       #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon {
+        icon-shadow: none; }
+    #panel .panel-button:hover {
+      text-shadow: none; }
+      #panel .panel-button:hover .system-status-icon {
         icon-shadow: none; }
     #panel .panel-button .app-menu-icon {
       width: 0;
