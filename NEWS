@@ -1,3 +1,8 @@
+3.25.4
+======
+* screenshot-window-sizer: Fix backward cycling
+* updated translations (ar, be, ca, cs, de, fur, id, lt, pl, sk)
+
 3.25.3
 ======
 * places-menu: Use mount operation if necessary
