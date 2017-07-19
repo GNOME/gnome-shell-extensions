@@ -1,3 +1,8 @@
+3.24.3
+======
+* screenshot-window-sizer: Fix backward cycling
+* updated translations (cs, de, id, pl)
+
 3.24.2
 ======
 * apps-menu: Mark copied launchers as trusted
