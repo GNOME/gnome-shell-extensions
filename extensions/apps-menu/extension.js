@@ -478,13 +478,6 @@ const ApplicationsButton = new Lang.Class({
                 this.reloadFlag = true;
             }
         }));
-
-        // Since the hot corner uses stage coordinates, Clutter won't
-        // queue relayouts for us when the panel moves. Queue a relayout
-        // when that happens.
-        this._panelBoxChangedId = Main.layoutManager.connect('panel-box-changed', Lang.bind(this, function() {
-            container.queue_relayout();
-        }));
     },
 
     get hotCorner() {
