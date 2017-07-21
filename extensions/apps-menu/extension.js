@@ -494,7 +494,6 @@ const ApplicationsButton = new Lang.Class({
     _onDestroy: function() {
         Main.overview.disconnect(this._showingId);
         Main.overview.disconnect(this._hidingId);
-        Main.layoutManager.disconnect(this._panelBoxChangedId);
         appSys.disconnect(this._installedChangedId);
 
         Main.wm.setCustomKeybindingHandler('panel-main-menu',
