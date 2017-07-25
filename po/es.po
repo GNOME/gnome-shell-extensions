@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-05-09 17:31+0000\n"
-"PO-Revision-Date: 2017-06-05 16:20+0200\n"
+"POT-Creation-Date: 2017-07-20 23:40+0000\n"
+"PO-Revision-Date: 2017-07-24 15:40+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -145,7 +145,6 @@ msgid "Removable devices"
 msgstr "Dispositivos extraíbles"
 
 #: extensions/drive-menu/extension.js:149
-#| msgid "Open File"
 msgid "Open Files"
 msgstr "Abrir archivos"
 
@@ -216,32 +215,36 @@ msgstr ""
 msgid "Places"
 msgstr "Lugares"
 
-#: extensions/places-menu/placeDisplay.js:56
+#: extensions/places-menu/placeDisplay.js:65
 #, javascript-format
-#| msgid "Failed to launch “%s”"
 msgid "Failed to mount volume for “%s”"
 msgstr "Falló al montar el volumen para «%s»"
 
-#: extensions/places-menu/placeDisplay.js:69
+#: extensions/places-menu/placeDisplay.js:78
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Falló al lanzar «%s»"
 
-#: extensions/places-menu/placeDisplay.js:128
-#: extensions/places-menu/placeDisplay.js:151
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Equipo"
 
-#: extensions/places-menu/placeDisplay.js:294
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Carpeta personal"
 
-#: extensions/places-menu/placeDisplay.js:338
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Examinar la red"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
+msgstr "Tamaños de capturas de pantalla cíclicos"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
 msgstr "Tamaños de capturas de pantalla cíclicos"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
@@ -256,48 +259,48 @@ msgstr "El nombre del tema, que se carga desde ~/.themes/nombre/gnome-shell"
 msgid "Close"
 msgstr "Cerrar"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Desminimizar"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Minimizar"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Desmaximizar"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Minimizar todo"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Desminimizar todo"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Maximizar todo"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Desmaximizar todo"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Cerrar todo"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador de área de trabajo"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Lista de ventanas"
 
