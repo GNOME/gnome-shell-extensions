@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-07-05 15:07+0000\n"
-"PO-Revision-Date: 2017-07-06 16:30+0200\n"
+"POT-Creation-Date: 2017-08-11 01:33+0000\n"
+"PO-Revision-Date: 2017-08-11 03:33+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -135,18 +135,19 @@ msgstr "Utwórz nową pasującą regułę"
 msgid "Add"
 msgstr "Dodaj"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:107
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Wysunięcie napędu „%s” się nie powiodło:"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:125
 msgid "Removable devices"
 msgstr "Urządzenia wymienne"
 
-#: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Otwórz plik"
+#: extensions/drive-menu/extension.js:150
+msgid "Open Files"
+msgstr "Otwórz menedżer plików"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -213,21 +214,26 @@ msgstr ""
 msgid "Places"
 msgstr "Miejsca"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:65
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Zamontowanie woluminu dla „%s” się nie powiodło"
+
+#: extensions/places-menu/placeDisplay.js:78
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Uruchomienie „%s” się nie powiodło"
 
-#: extensions/places-menu/placeDisplay.js:108
-#: extensions/places-menu/placeDisplay.js:131
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Komputer"
 
-#: extensions/places-menu/placeDisplay.js:274
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Katalog domowy"
 
-#: extensions/places-menu/placeDisplay.js:318
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Przeglądaj sieć"
 
@@ -251,48 +257,48 @@ msgstr "Nazwa motywu do wczytania z katalogu ~/.themes/name/gnome-shell"
 msgid "Close"
 msgstr "Zamknij"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Cofnij minimalizację"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Zminimalizuj"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Cofnij maksymalizację"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Zmaksymalizuj"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Zminimalizuj wszystkie"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Cofnij minimalizację wszystkich"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Zmaksymalizuj wszystkie"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Cofnij maksymalizację wszystkich"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Zamknij wszystkie"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Wskaźnik obszaru roboczego"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Lista okien"
 
