@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-16 01:20+0000\n"
-"PO-Revision-Date: 2017-02-25 19:52+0200\n"
+"POT-Creation-Date: 2017-07-05 15:07+0000\n"
+"PO-Revision-Date: 2017-08-12 19:10+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <(nothing)>\n"
 "Language: sr\n"
@@ -86,15 +86,15 @@ msgstr "Прикажи прозоре као"
 msgid "Show only windows in the current workspace"
 msgstr "Приказује само прозоре у текућем радном простору"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Преглед активности"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Омиљено"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Програми"
 
@@ -133,7 +133,6 @@ msgstr "Додај"
 
 #: extensions/drive-menu/extension.js:106
 #, javascript-format
-#| msgid "Ejecting drive '%s' failed:"
 msgid "Ejecting drive “%s” failed:"
 msgstr "Нисам успео да избацим уређај „%s“:"
 
@@ -167,10 +166,6 @@ msgstr "Порука"
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
 #: extensions/example/prefs.js:43
-#| msgid ""
-#| "Example aims to show how to build well behaved extensions for the Shell "
-#| "and as such it has little functionality on its own.\n"
-#| "Nevertheless it's possible to customize the greeting message."
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -215,26 +210,30 @@ msgstr "Места"
 
 #: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-#| msgid "Failed to launch \"%s\""
 msgid "Failed to launch “%s”"
 msgstr "Нисам успео да покренем „%s“"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:108
+#: extensions/places-menu/placeDisplay.js:131
 msgid "Computer"
 msgstr "Рачунар"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:274
 msgid "Home"
 msgstr "Личнo"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:318
 msgid "Browse Network"
 msgstr "Разгледајте мрежу"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Кружи кроз величине снимака екрана"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Кружи уназад кроз величине снимака екрана"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -298,16 +297,13 @@ msgid "When to group windows"
 msgstr "Када груписати прозоре"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
-#| msgid ""
-#| "Decides when to group windows from the same application on the window "
-#| "list. Possible values are \"never\", \"auto\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Одређује када ће бити груписани прозори истог програма у списку прозора. "
-"Дозвољене вредности су „never“ (никад), „auto“ (аутоматски) и „always“ "
-"(увек)."
+"Дозвољене вредности су „never“ (никад), „auto“ (аутоматски) и "
+"„always“ (увек)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
