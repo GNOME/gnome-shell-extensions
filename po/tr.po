@@ -5,22 +5,23 @@
 # sabri ünal <yakushabb@gmail.com>, 2014.
 # Gökhan Gurbetoğlu <ggurbet@gmail.com>, 2014.
 # Muhammet Kara <muhammetk@gmail.com>, 2013, 2014, 2015.
+# Furkan Tokaç <developmentft@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-22 18:40+0000\n"
-"PO-Revision-Date: 2017-03-01 18:14+0300\n"
-"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
-"Language-Team: Türkçe <gnome-turk@gnome.org>\n"
+"POT-Creation-Date: 2017-07-05 15:07+0000\n"
+"PO-Revision-Date: 2017-08-11 03:46-0400\n"
+"Last-Translator: Furkan Tokaç <developmentft@gmail.com>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -32,7 +33,7 @@ msgstr "Bu oturum, GNOME Klasik sürümüne giriş yapmanızı sağlar."
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
 msgid "Attach modal dialog to the parent window"
-msgstr "Yardımcı iletişim penceresini üst pencereye iliştir"
+msgstr "Yardımcı iletişim penceresini ana pencereye iliştir"
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
@@ -90,15 +91,15 @@ msgstr "Pencereleri farklı sun"
 msgid "Show only windows in the current workspace"
 msgstr "Sadece geçerli çalışma alanındaki pencereleri göster"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Etkinlikler Genel Görünümü"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
-msgstr "Gözdeler"
+msgstr "Favoriler"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Uygulamalar"
 
@@ -145,8 +146,9 @@ msgid "Removable devices"
 msgstr "Çıkarılabilir aygıtlar"
 
 #: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Dosya Aç"
+#| msgid "Open File"
+msgid "Open Files"
+msgstr "Dosyaları Aç"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -174,7 +176,7 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it’s possible to customize the greeting message."
 msgstr ""
-"Bu örnek, Shell için uygun uzantıların nasıl geliştirileceğini göstermeyi "
+"Bu örnek, Shell için uygun eklentilerin nasıl geliştirileceğini göstermeyi "
 "amaçlar; bu yüzden kendi başına çok az işleve sahiptir.\n"
 "Yine de karşılama iletisini özelleştirmek mümkündür."
 
@@ -203,37 +205,48 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"Eğer doğruysa, kabukta öntanıml olarak alta yerleştirme ayarını geçersiz kıl "
-"ve pencere açıklamalarını ilgili küçük resimlerin üstüne yerleştir. Bu "
-"ayarda yapılan değişikliklerin etkili olması için kabuğun yeniden "
-"başlatılması gerekir."
+"Eğer doğruysa, pencere açıklamalarını ilgili küçük resimlerin üzerine "
+"yerleştir ve kabukta öntanımlı olan alta yerleştirme ayarını geçersiz kıl. "
+"Yapılan değişikliklerin etkili olması için kabuğun yeniden başlatılması "
+"gerekir."
 
 #: extensions/places-menu/extension.js:78
 #: extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Yerler"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:65
+#, javascript-format
+#| msgid "Failed to launch “%s”"
+msgid "Failed to mount volume for “%s”"
+msgstr "Disk bölümü “%s” oluşturulamadı"
+
+#: extensions/places-menu/placeDisplay.js:78
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "“%s” başlatılamadı"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Bilgisayar"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Başlangıç"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Ağa Gözat"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Ekran Görüntüsü Boyutları Arasında Geçiş Yap"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Ekran Görüntüsü Boyutları Arasında Tersine Geçiş Yap"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -247,48 +260,48 @@ msgstr "~/.themes/name/gnome-shell konumundan edinilen tema adı"
 msgid "Close"
 msgstr "Kapat"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
-msgstr "Önceki Boyutuna Getir"
+msgstr "Önceki duruma getir"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Simge durumuna küçült"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
-msgstr "Önceki Boyut"
+msgstr "Önceki duruma getir"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "En büyük duruma getir"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Tümünü simge durumuna küçült"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
-msgstr "Tümünü Önceki Boyutuna Getir"
-
-#: extensions/window-list/extension.js:427
-msgid "Maximize all"
-msgstr "Tümünü  en büyük duruma getir"
+msgstr "Tümünü önceki duruma getir"
 
 #: extensions/window-list/extension.js:436
-msgid "Unmaximize all"
-msgstr "Tümünü Önceki Boyutuna Getir"
+msgid "Maximize all"
+msgstr "Tümünü en büyük duruma getir"
 
 #: extensions/window-list/extension.js:445
+msgid "Unmaximize all"
+msgstr "Tümünü önceki duruma getir"
+
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Tümünü kapat"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Çalışma Alanı Belirteci"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Pencere Listesi"
 
@@ -302,11 +315,11 @@ msgid ""
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Pencere listesinde aynı uygulamaların ne zaman gruplanacağına karar verir. "
-"Geçerli değerler  “hiçbir zaman”, “otomatik” ve “herzaman”dır."
+"Olası değerler “hiçbir zaman”, “otomatik” ve “her zaman”dır."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
-msgstr "Tüm monitörlerde pencere listesini göster"
+msgstr "Pencere listesini tüm monitörlerde göster"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
 msgid ""
