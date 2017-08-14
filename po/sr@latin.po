@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-16 01:20+0000\n"
-"PO-Revision-Date: 2017-02-25 19:52+0200\n"
+"POT-Creation-Date: 2017-08-12 22:59+0000\n"
+"PO-Revision-Date: 2017-08-14 21:26+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <(nothing)>\n"
+"Language-Team: srpski <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -86,15 +86,15 @@ msgstr "Prikaži prozore kao"
 msgid "Show only windows in the current workspace"
 msgstr "Prikazuje samo prozore u tekućem radnom prostoru"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Pregled aktivnosti"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Omiljeno"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Programi"
 
@@ -131,19 +131,20 @@ msgstr "Dodajte novo pravilo za poklapanje"
 msgid "Add"
 msgstr "Dodaj"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:107
 #, javascript-format
-#| msgid "Ejecting drive '%s' failed:"
 msgid "Ejecting drive “%s” failed:"
 msgstr "Nisam uspeo da izbacim uređaj „%s“:"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:125
 msgid "Removable devices"
 msgstr "Uklonjivi uređaji"
 
-#: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Otvori datoteku"
+#: extensions/drive-menu/extension.js:150
+#| msgid "Open File"
+msgid "Open Files"
+msgstr "Otvori datoteke"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -167,10 +168,6 @@ msgstr "Poruka"
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
 #: extensions/example/prefs.js:43
-#| msgid ""
-#| "Example aims to show how to build well behaved extensions for the Shell "
-#| "and as such it has little functionality on its own.\n"
-#| "Nevertheless it's possible to customize the greeting message."
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -213,28 +210,38 @@ msgstr ""
 msgid "Places"
 msgstr "Mesta"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:65
 #, javascript-format
-#| msgid "Failed to launch \"%s\""
+#| msgid "Failed to launch “%s”"
+msgid "Failed to mount volume for “%s”"
+msgstr "Nisam uspeo da prikačim volumen za „%s“"
+
+#: extensions/places-menu/placeDisplay.js:78
+#, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Nisam uspeo da pokrenem „%s“"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Računar"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Lično"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Razgledajte mrežu"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Kruži kroz veličine snimaka ekrana"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Kruži unazad kroz veličine snimaka ekrana"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -248,48 +255,48 @@ msgstr "Naziv teme koji se učitava iz datoteke „~/.themes/name/gnome-shell“
 msgid "Close"
 msgstr "Zatvori"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Poništi umanjenje"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Umanji"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Poništi uvećanje"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Uvećaj"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Umanji sve"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Poništi umanjenje svega"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Uvećaj sve"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Poništi uvećanje svega"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Zatvori sve"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Pokazatelj radnih prostora"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Spisak prozora"
 
@@ -298,16 +305,13 @@ msgid "When to group windows"
 msgstr "Kada grupisati prozore"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
-#| msgid ""
-#| "Decides when to group windows from the same application on the window "
-#| "list. Possible values are \"never\", \"auto\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Određuje kada će biti grupisani prozori istog programa u spisku prozora. "
-"Dozvoljene vrednosti su „never“ (nikad), „auto“ (automatski) i „always“ "
-"(uvek)."
+"Dozvoljene vrednosti su „never“ (nikad), „auto“ (automatski) i "
+"„always“ (uvek)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
