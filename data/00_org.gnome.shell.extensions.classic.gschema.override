@@ -1,0 +1,5 @@
+[org.gnome.mutter:GNOME-Classic]
+dynamic-workspaces=false
+
+[org.gnome.desktop.wm.preferences:GNOME-Classic]
+button-layout='appmenu:minimize,maximize,close'

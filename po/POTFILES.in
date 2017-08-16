@@ -1,6 +1,5 @@
 data/gnome-classic.desktop.in
 data/gnome-classic.session.desktop.in
-data/org.gnome.shell.extensions.classic-overrides.gschema.xml
 extensions/alternate-tab/prefs.js
 extensions/apps-menu/extension.js
 extensions/auto-move-windows/extension.js

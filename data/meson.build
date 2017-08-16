@@ -59,5 +59,5 @@ custom_target(style + '.css',
 
 install_data(theme_data, install_dir: themedir)
 
-classic_schema = 'org.gnome.shell.extensions.classic-overrides.gschema.xml'
-install_data(classic_schema, install_dir: schemadir)
+classic_override = '00_org.gnome.shell.extensions.classic.gschema.override'
+install_data(classic_override, install_dir: schemadir)
