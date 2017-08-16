@@ -42,7 +42,6 @@ classic_extensions = [
 
 default_extensions = classic_extensions
 default_extensions += [
-  'alternate-tab',
   'drive-menu',
   'screenshot-window-sizer',
   'windowsNavigator',

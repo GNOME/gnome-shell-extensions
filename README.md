@@ -15,10 +15,6 @@ Bugs should be reported to the GNOME [bug tracking system][bug-tracker].
 
 ## Extensions
 
- * alternate-tab
- 
-     Lets you use classic Alt+Tab (window-based instead of app-based) in GNOME Shell.
-
  * apps-menu
 
      Lets you reach an application using gnome 2.x style menu on the panel.
