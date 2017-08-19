@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-16 01:20+0000\n"
-"PO-Revision-Date: 2017-02-22 19:33+0100\n"
+"POT-Creation-Date: 2017-08-11 01:33+0000\n"
+"PO-Revision-Date: 2017-08-19 18:40+0200\n"
 "Last-Translator: Alain Lojewski <allomervan@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -39,7 +39,7 @@ msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
 "Cette clé remplace la clé dans org.gnome.mutter lorsque GNOME Shell est en "
-"cours d'exécution."
+"cours d’exécution."
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
 msgid "Arrangement of buttons on the titlebar"
@@ -51,22 +51,22 @@ msgid ""
 "GNOME Shell."
 msgstr ""
 "Cette clé remplace la clé dans org.gnome.desktop.wm.preferences lorsque "
-"GNOME Shell est en cours d'exécution."
+"GNOME Shell est en cours d’exécution."
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
 "Activer la disposition verticale lorsque les fenêtres sont déposées aux "
-"bords de l'écran"
+"bords de l’écran"
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
 msgid "Workspaces only on primary monitor"
-msgstr "Espaces de travail uniquement sur l'écran principal"
+msgstr "Espaces de travail uniquement sur l’écran principal"
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr ""
-"Retarder les changements de focus en mode souris jusqu'à ce que le pointeur "
+"Retarder les changements de focus en mode souris jusqu’à ce que le pointeur "
 "arrête de bouger"
 
 #: extensions/alternate-tab/prefs.js:20
@@ -75,11 +75,11 @@ msgstr "Vignette seulement"
 
 #: extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
-msgstr "Icône d'application seulement"
+msgstr "Icône d’application seulement"
 
 #: extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
-msgstr "Vignette et icône d'application"
+msgstr "Vignette et icône d’application"
 
 #: extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
@@ -87,23 +87,23 @@ msgstr "Présenter la fenêtre comme"
 
 #: extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
-msgstr "N'afficher les fenêtres que sur l'espace de travail actuel"
+msgstr "N’afficher les fenêtres que sur l’espace de travail actuel"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
-msgstr "Vue d'ensemble des activités"
+msgstr "Vue d’ensemble des activités"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Favoris"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Applications"
 
 #: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
-msgstr "Liste d'applications et d'espaces de travail"
+msgstr "Liste d’applications et d’espaces de travail"
 
 #: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
 msgid ""
@@ -111,8 +111,8 @@ msgid ""
 "followed by a colon and the workspace number"
 msgstr ""
 "Une liste de chaînes de caratères, contenant chacune un identifiant "
-"d'application (nom de fichier desktop), suivi par un deux-points et le "
-"numéro de l'espace de travail"
+"d’application (nom de fichier desktop), suivi par un deux-points et le "
+"numéro de l’espace de travail"
 
 #: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
@@ -135,18 +135,19 @@ msgstr "Créer une nouvelle règle de concordance"
 msgid "Add"
 msgstr "Ajouter"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:107
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
-msgstr "L'éjection du disque « %s » a échoué :"
+msgstr "L’éjection du disque « %s » a échoué :"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:125
 msgid "Removable devices"
 msgstr "Périphériques amovibles"
 
-#: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Ouvrir le fichier"
+#: extensions/drive-menu/extension.js:150
+msgid "Open Files"
+msgstr "Ouvrir Fichiers"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -154,14 +155,14 @@ msgstr "Bonjour le monde !"
 
 #: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
 msgid "Alternative greeting text."
-msgstr "Autre texte d'accueil."
+msgstr "Autre texte d’accueil."
 
 #: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
 msgstr ""
-"S'il n'est pas vide, il contient le texte qui s'affiche lorsque vous cliquez "
+"S’il n’est pas vide, il contient le texte qui s’affiche lorsque vous cliquez "
 "sur le tableau de bord."
 
 #: extensions/example/prefs.js:30
@@ -177,12 +178,12 @@ msgid ""
 "Nevertheless it’s possible to customize the greeting message."
 msgstr ""
 "Example a pour but de montrer comment construire de bonnes extensions pour "
-"le Shell et en tant que tel, il n'a que peu de fonctionnalités en soi.\n"
-"Il est néanmoins possible de personnaliser le message d'accueil."
+"le Shell et en tant que tel, il n’a que peu de fonctionnalités en soi.\n"
+"Il est néanmoins possible de personnaliser le message d’accueil."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
-msgstr "Utiliser plus d'écran pour les fenêtres"
+msgstr "Utiliser plus d’écran pour les fenêtres"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
@@ -190,9 +191,9 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"Essaye d'utiliser plus d'espace écran pour placer les vignettes des fenêtres "
-"en s'adaptant aux proportions de l'écran et en les consolidant davantage "
-"pour réduire la zone englobante. Ce paramètre ne s'applique qu'en utilisant "
+"Essaye d’utiliser plus d’espace écran pour placer les vignettes des fenêtres "
+"en s’adaptant aux proportions de l’écran et en les consolidant davantage "
+"pour réduire la zone englobante. Ce paramètre ne s’applique qu’en utilisant "
 "la stratégie de placement « natural »."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
@@ -215,27 +216,36 @@ msgstr ""
 msgid "Places"
 msgstr "Emplacements"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:65
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Impossible de monter le volume « %s »"
+
+#: extensions/places-menu/placeDisplay.js:78
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Impossible de lancer « %s »"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Ordinateur"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Dossier personnel"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Parcourir le réseau"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Passer à la taille de capture suivante"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Passer à la taille de capture précédante"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -249,48 +259,48 @@ msgstr "Le nom du thème, à charger à partir de ~/.themes/name/gnome-shell"
 msgid "Close"
 msgstr "Fermer"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Restaurer"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Réduire"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Restaurer"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Maximiser"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Réduire tout"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Restaurer tout"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Maximiser tout"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Restaurer tout"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Fermer tout"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
-msgstr "Indicateur d'espace de travail"
+msgstr "Indicateur d’espace de travail"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Liste de fenêtres"
 
@@ -303,7 +313,7 @@ msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
-"Décide quand regrouper les fenêtres d'une même application sur la liste des "
+"Décide quand regrouper les fenêtres d’une même application sur la liste des "
 "fenêtres. Les valeurs possibles sont « never » (jamais), « auto » et "
 "« always » (toujours)."
 
@@ -316,8 +326,8 @@ msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr ""
-"Indique s'il faut afficher la liste des fenêtres sur tous les écrans "
-"connectés ou seulement l'écran principal."
+"Indique s’il faut afficher la liste des fenêtres sur tous les écrans "
+"connectés ou seulement l’écran principal."
 
 #: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
@@ -329,7 +339,7 @@ msgstr "Ne jamais regrouper les fenêtres"
 
 #: extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
-msgstr "Regrouper les fenêtres quand l'espace est limité"
+msgstr "Regrouper les fenêtres quand l’espace est limité"
 
 #: extensions/window-list/prefs.js:52
 msgid "Always group windows"
