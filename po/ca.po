@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-07-07 19:43+0000\n"
+"POT-Creation-Date: 2017-08-19 16:41+0000\n"
 "PO-Revision-Date: 2017-07-08 13:29+0100\n"
-"Last-Translator: Francesc Famadas <kiski97@gmail.com>\n"
+"Last-Translator: Jordi Mas <jmas@softcatala.org>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -134,16 +134,17 @@ msgstr "Crea una regla de coincidència nova"
 msgid "Add"
 msgstr "Afegeix"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:107
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Ha fallat l'expulsió de la unitat «%s»:"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:125
 msgid "Removable devices"
 msgstr "Dispositius extraïbles"
 
-#: extensions/drive-menu/extension.js:149
+#: extensions/drive-menu/extension.js:150
 msgid "Open Files"
 msgstr "Obre els fitxers"
 
@@ -243,10 +244,8 @@ msgid "Cycle Screenshot Sizes"
 msgstr "Mostra cíclicament mides de captura de pantalla"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
-#, fuzzy
-#| msgid "Cycle Screenshot Sizes"
 msgid "Cycle Screenshot Sizes Backward"
-msgstr "Mostra cíclicament mides de captura de pantalla"
+msgstr "Mostra cíclicament cap enrere mides de captura de pantalla"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
