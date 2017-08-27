@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-22 18:40+0000\n"
-"PO-Revision-Date: 2017-02-27 07:35+0800\n"
-"Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
+"POT-Creation-Date: 2017-08-11 01:33+0000\n"
+"PO-Revision-Date: 2017-08-27 11:31+0800\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -82,15 +82,15 @@ msgstr "視窗呈現方式"
 msgid "Show only windows in the current workspace"
 msgstr "僅顯示目前工作區中的視窗"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "活動概覽"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "喜好"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "應用程式"
 
@@ -127,17 +127,18 @@ msgstr "建立新的比對規則"
 msgid "Add"
 msgstr "加入"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:107
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "裝置「%s」退出失敗："
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:125
 msgid "Removable devices"
 msgstr "可移除式裝置"
 
-#: extensions/drive-menu/extension.js:149
-msgid "Open File"
+#: extensions/drive-menu/extension.js:150
+msgid "Open Files"
 msgstr "開啟檔案"
 
 #: extensions/example/extension.js:17
@@ -156,7 +157,7 @@ msgstr "若不是空的，它則包含點擊面板時會顯示的文字。"
 
 #: extensions/example/prefs.js:30
 msgid "Message"
-msgstr "訊息："
+msgstr "訊息"
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
@@ -166,7 +167,7 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it’s possible to customize the greeting message."
 msgstr ""
-"Example 旨要顯示如何替 Shell 建立行為良好的擴充套件，但它自己本身沒有什麼功"
+"Example 旨要顯示如何替 Shell 建立行為良好的擴充功能，但它自己本身沒有什麼功"
 "能。\n"
 "不過，它可以讓您自訂歡迎訊息。"
 
@@ -201,27 +202,36 @@ msgstr ""
 msgid "Places"
 msgstr "位置"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:65
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "無法掛載儲存區「%s」"
+
+#: extensions/places-menu/placeDisplay.js:78
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "無法啟動「%s」"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "電腦"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "家目錄"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "瀏覽網路"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
-msgstr "循環螢幕擷圖次數"
+msgstr "循環螢幕擷圖大小"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "往回循環螢幕擷圖大小"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -235,48 +245,48 @@ msgstr "主題的名稱，要從 ~/.themes/name/gnome-shell 載入"
 msgid "Close"
 msgstr "關閉"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "取消最小化"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "最小化"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "取消最大化"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "最大化"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "全部關閉"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "工作區指示器"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "視窗列表"
 
