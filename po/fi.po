@@ -10,10 +10,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-16 01:20+0000\n"
-"PO-Revision-Date: 2017-02-18 20:43+0200\n"
+"POT-Creation-Date: 2017-08-11 01:33+0000\n"
+"PO-Revision-Date: 2017-08-29 12:32+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -89,15 +89,15 @@ msgstr "Ikkunoiden esittäminen"
 msgid "Show only windows in the current workspace"
 msgstr "Näytä vain nykyisessä työtilassa olevat ikkunat"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Yleisnäkymä"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Suosikit"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Sovellukset"
 
@@ -132,19 +132,20 @@ msgstr "Luo uusi vastaava sääntö"
 msgid "Add"
 msgstr "Lisää"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:107
 #, javascript-format
-#| msgid "Ejecting drive '%s' failed:"
 msgid "Ejecting drive “%s” failed:"
 msgstr "Aseman “%s” irrottaminen epäonnistui:"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:125
 msgid "Removable devices"
 msgstr "Erilliset tallennusvälineet"
 
-#: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Avaa tiedosto"
+#: extensions/drive-menu/extension.js:150
+#| msgid "Open File"
+msgid "Open Files"
+msgstr "Avaa tiedostonhallinta"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -203,27 +204,38 @@ msgstr ""
 msgid "Places"
 msgstr "Sijainnit"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:65
 #, javascript-format
-#| msgid "Failed to launch \"%s\""
+#| msgid "Failed to launch “%s”"
+msgid "Failed to mount volume for “%s”"
+msgstr "Taltion “%s” liittäminen epäonnistui"
+
+#: extensions/places-menu/placeDisplay.js:78
+#, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Kohteen “%s” käynnistys epäonnistui"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Tietokone"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Koti"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Selaa verkkoa"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
+msgstr "Vaihtele kuvakaappausten kokojen välillä"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#, fuzzy
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
 msgstr "Vaihtele kuvakaappausten kokojen välillä"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
@@ -238,48 +250,48 @@ msgstr "Teeman nimi, ladataan sijainnista ~/.themes/name/gnome-shell"
 msgid "Close"
 msgstr "Sulje"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Palauta pienennys"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Pienennä"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Palauta suurennus"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Suurenna"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Pienennä kaikki"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Palauta kaikkien koko"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Suurenna kaikki"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Palauta kaikkien koko"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Sulje kaikki"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Työtilan ilmaisin"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Ikkunaluettelo"
 
@@ -288,9 +300,6 @@ msgid "When to group windows"
 msgstr "Milloin ikkunat ryhmitetään"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
-#| msgid ""
-#| "Decides when to group windows from the same application on the window "
-#| "list. Possible values are \"never\", \"auto\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
