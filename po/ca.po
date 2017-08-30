@@ -56,7 +56,7 @@ msgstr ""
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
-"Habilita la tesselització a les vores en deixar anar les finestres a les "
+"Habilita la tessel·lització a les vores en deixar anar les finestres a les "
 "vores de la pantalla"
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
