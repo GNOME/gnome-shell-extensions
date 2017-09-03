@@ -1,24 +1,24 @@
 # Hungarian translation of
-# Copyright (C) 2011, 2012, 2013. Free Software Foundation, Inc.
+# Copyright (C) 2011, 2012, 2013, 2017. Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
 # Biró Balázs <arch.scar at gmail dot com>, 2011.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012, 2013.
-# Balázs Úr <urbalazs at gmail dot com>, 2013, 2014.
+# Balázs Úr <urbalazs at gmail dot com>, 2013, 2014, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-16 01:20+0000\n"
-"PO-Revision-Date: 2017-02-22 17:12+0100\n"
-"Last-Translator: Meskó Balázs <meskobalazs@gmail.com>\n"
+"POT-Creation-Date: 2017-08-15 14:00+0000\n"
+"PO-Revision-Date: 2017-09-03 18:47+0200\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -88,15 +88,15 @@ msgstr "Ablakok megjelenítése mint"
 msgid "Show only windows in the current workspace"
 msgstr "Csak az aktuális munkaterület ablakainak megjelenítése"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Tevékenységek áttekintés"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Kedvencek"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Alkalmazások"
 
@@ -216,22 +216,27 @@ msgstr "Helyek"
 msgid "Failed to launch “%s”"
 msgstr "„%s” indítása meghiúsult"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:108
+#: extensions/places-menu/placeDisplay.js:131
 msgid "Computer"
 msgstr "Számítógép"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:274
 msgid "Home"
 msgstr "Saját mappa"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:318
 msgid "Browse Network"
 msgstr "Hálózat tallózása"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Képernyőképméretek végigléptetése"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Képernyőképméretek végigléptetése visszafelé"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -348,213 +353,3 @@ msgstr "Név"
 msgid "Workspace %d"
 msgstr "%d. munkaterület"
 
-#~ msgid "CPU"
-#~ msgstr "CPU"
-
-#~ msgid "Memory"
-#~ msgstr "Memória"
-
-#~ msgid "GNOME Shell Classic"
-#~ msgstr "Klasszikus GNOME Shell"
-
-#~ msgid "Window management and application launching"
-#~ msgstr "Ablakkezelés és alkalmazásindítás"
-
-#~ msgid "Normal"
-#~ msgstr "Normál"
-
-#~ msgid "Left"
-#~ msgstr "Balra"
-
-#~ msgid "Right"
-#~ msgstr "Jobbra"
-
-#~ msgid "Upside-down"
-#~ msgstr "Fejjel lefelé"
-
-#~ msgid "Display"
-#~ msgstr "Kijelző"
-
-#~ msgid "Display Settings"
-#~ msgstr "Kijelzőbeállítások"
-
-#~ msgid "Suspend"
-#~ msgstr "Felfüggesztés"
-
-#~ msgid "Hibernate"
-#~ msgstr "Hibernálás"
-
-#~ msgid "Power Off"
-#~ msgstr "Kikapcsolás"
-
-#~ msgid "Enable suspending"
-#~ msgstr "Felfüggesztés engedélyezése"
-
-#~ msgid "Control the visibility of the Suspend menu item"
-#~ msgstr "A Felfüggesztés menüelem láthatóságának módosítása"
-
-#~ msgid "Enable hibernating"
-#~ msgstr "Hibernálás engedélyezése"
-
-#~ msgid "Control the visibility of the Hibernate menu item"
-#~ msgstr "A Hibernálás menüelem láthatóságának módosítása"
-
-#~ msgid "Devices"
-#~ msgstr "Eszközök"
-
-#~ msgid "Bookmarks"
-#~ msgstr "Könyvjelzők"
-
-#~ msgid "Network"
-#~ msgstr "Hálózat"
-
-#~ msgid "File System"
-#~ msgstr "Fájlrendszer"
-
-#~ msgid "The application icon mode."
-#~ msgstr "Az alkalmazásikon módja."
-
-#~ msgid ""
-#~ "Configures how the windows are shown in the switcher. Valid possibilities "
-#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-#~ "only' (shows only the application icon) or 'both'."
-#~ msgstr ""
-#~ "Az ablakok megjelenésének beállítása a váltóban. Lehetséges értékek: "
-#~ "„thumbnail-only” (az ablak bélyegképének megjelenítése), „app-icon-"
-#~ "only” (az alkalmazás ikonjának megjelenítése) vagy „both” (mindkettő)."
-
-#~ msgid "Drag here to add favorites"
-#~ msgstr "Húzza ide kedvenceit"
-
-#~ msgid "New Window"
-#~ msgstr "Új ablak"
-
-#~ msgid "Quit Application"
-#~ msgstr "Alkalmazás bezárása"
-
-#~ msgid "Remove from Favorites"
-#~ msgstr "Eltávolítás a Kedvencek közül"
-
-#~ msgid "Position of the dock"
-#~ msgstr "A dokk pozíciója"
-
-#~ msgid ""
-#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
-#~ "or 'left'"
-#~ msgstr ""
-#~ "A dokk pozíciója a képernyőn. Lehetséges értékek: „right” (jobb) vagy "
-#~ "„left” (bal)"
-
-#~ msgid "Icon size"
-#~ msgstr "Ikonméret"
-
-#~ msgid "Sets icon size of the dock."
-#~ msgstr "Az ikonméret megadása a dokkon."
-
-#~ msgid "Enable/disable autohide"
-#~ msgstr "Automatikus rejtés engedélyezése vagy tiltása"
-
-#~ msgid "Autohide effect"
-#~ msgstr "Automatikus rejtés effektusa"
-
-#~ msgid ""
-#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
-#~ "and 'move'"
-#~ msgstr ""
-#~ "A dokk elrejtésének effektusa. Lehetséges értékek: "
-#~ "„resize” (átméretezés), „rescale” (újraméretezés) és „move” (áthelyezés)"
-
-#~ msgid "Autohide duration"
-#~ msgstr "Automatikus rejtés hossza"
-
-#~ msgid "Sets the time duration of the autohide effect."
-#~ msgstr "Az automatikus rejtés effektus hosszának beállítása."
-
-#~ msgid "Monitor"
-#~ msgstr "Monitor"
-
-#~ msgid ""
-#~ "Sets monitor to display dock in. The default value (-1) is the primary "
-#~ "monitor."
-#~ msgstr ""
-#~ "A dokk megjelenítése ezen a monitoron. Az alapértelmezett érték (-1) az "
-#~ "elsődleges monitor."
-
-#~ msgid "%s is away."
-#~ msgstr "%s távol van."
-
-#~ msgid "%s is offline."
-#~ msgstr "%s kilépett."
-
-#~ msgid "%s is online."
-#~ msgstr "%s elérhető."
-
-#~ msgid "%s is busy."
-#~ msgstr "%s elfoglalt."
-
-#~ msgid ""
-#~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
-#~ "workspace_icons. See the configuration dialogs for details."
-#~ msgstr ""
-#~ "Az Alt-Tab viselkedésének megadása. Lehetséges értékek: all_thumbnails és "
-#~ "workspace_icons. Részletekért lásd a beállítóablakokat."
-
-#~ msgid "The alt tab behaviour."
-#~ msgstr "Az Alt-Tab viselkedése."
-
-#~ msgid ""
-#~ "This mode presents all applications from all workspaces in one selection "
-#~ "list. Instead of using the application icon of every window, it uses "
-#~ "small thumbnails resembling the window itself."
-#~ msgstr ""
-#~ "Ez a mód minden munkaterület alkalmazásait egy kijelölőlistában jeleníti "
-#~ "meg. Minden ablak alkalmazásikonjának használata helyett kis "
-#~ "bélyegképeket használ, amelyek magára az ablakra hasonlítanak."
-
-#~ msgid "Workspace & Icons"
-#~ msgstr "Munkaterület és ikonok"
-
-#~ msgid ""
-#~ "This mode let's you switch between the applications of your current "
-#~ "workspace and gives you additionally the option to switch to the last "
-#~ "used application of your previous workspace. This is always the last "
-#~ "symbol in the list and is segregated by a separator/vertical line if "
-#~ "available. \n"
-#~ "Every window is represented by its application icon."
-#~ msgstr ""
-#~ "Ez a mód lehetővé teszi a váltást a jelenlegi munkaterület alkalmazásai "
-#~ "között, és lehetővé teszi az előző munkaterület utoljára használt "
-#~ "alkalmazására váltást. Ez mindig a lista utolsó eleme, és egy elválasztó/"
-#~ "függőleges vonal választja el, ha elérhető.\n"
-#~ "Minden ablakot az alkalmazásikonja jelképez."
-
-#~ msgid "Move current selection to front before closing the popup"
-#~ msgstr "Aktuális kijelölés előtérbe hozása a felugró ablak bezárása előtt"
-
-#~ msgid ""
-#~ "The Alternate Tab can be used in different modes, that affect the way "
-#~ "windows are chosen and presented."
-#~ msgstr ""
-#~ "A váltás lap különböző módokon használható, amelyek befolyásolják az "
-#~ "ablakok kiválasztásának és megjelenítésének módját."
-
-#~ msgid "Configure display settings..."
-#~ msgstr "Kijelzőbeállítások…"
-
-#~ msgid "Available"
-#~ msgstr "Elérhető"
-
-#~ msgid "Busy"
-#~ msgstr "Elfoglalt"
-
-#~ msgid "My Account"
-#~ msgstr "Saját fiók"
-
-#~ msgid "Lock Screen"
-#~ msgstr "Képernyő zárolása"
-
-#~ msgid "Switch User"
-#~ msgstr "Felhasználóváltás"
-
-#~ msgid "Log Out..."
-#~ msgstr "Kijelentkezés…"
