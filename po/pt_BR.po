@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-07-05 15:07+0000\n"
-"PO-Revision-Date: 2017-08-12 19:55-0200\n"
+"POT-Creation-Date: 2017-08-12 22:59+0000\n"
+"PO-Revision-Date: 2017-09-03 10:29-0200\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -139,18 +139,20 @@ msgstr "Criar uma nova regra coincidente"
 msgid "Add"
 msgstr "Adicionar"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:107
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Falha ao ejetar a unidade “%s”:"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:125
 msgid "Removable devices"
 msgstr "Dispositivos removíveis"
 
-#: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Abrir arquivo"
+#: extensions/drive-menu/extension.js:150
+#| msgid "Open File"
+msgid "Open Files"
+msgstr "Abrir arquivos"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -218,21 +220,27 @@ msgstr ""
 msgid "Places"
 msgstr "Locais"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:65
+#, javascript-format
+#| msgid "Failed to launch “%s”"
+msgid "Failed to mount volume for “%s”"
+msgstr "Falha ao montar volume para “%s”"
+
+#: extensions/places-menu/placeDisplay.js:78
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Falha ao iniciar “%s”"
 
-#: extensions/places-menu/placeDisplay.js:108
-#: extensions/places-menu/placeDisplay.js:131
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Computador"
 
-#: extensions/places-menu/placeDisplay.js:274
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Pasta pessoal"
 
-#: extensions/places-menu/placeDisplay.js:318
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Navegar na rede"
 
@@ -241,7 +249,6 @@ msgid "Cycle Screenshot Sizes"
 msgstr "Alterna entre tamanhos de captura de telas"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
-#| msgid "Cycle Screenshot Sizes"
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Alterna entre tamanhos de captura de telas no sentido contrário"
 
@@ -257,48 +264,48 @@ msgstr "O nome do tema, para ser carregado de ~/.themes/nome/gnome-shell"
 msgid "Close"
 msgstr "Fechar"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Desfazer janelas minimizadas"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Minimizar"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Desfazer janelas maximizadas"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Minimizar todas"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Desfazer todas as janelas minimizadas"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Maximizar todas"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Desfazer todas as janelas maximizadas"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Fechar todas"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Indicador de espaços de trabalho"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Lista de janelas"
 
