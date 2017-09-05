@@ -220,7 +220,7 @@ const DEFAULT_DIRECTORIES = [
     GLib.UserDirectory.DIRECTORY_VIDEOS,
 ];
 
-const PlacesManager = new Lang.Class({
+var PlacesManager = new Lang.Class({
     Name: 'PlacesManager',
 
     _init: function() {
