@@ -62,7 +62,7 @@ const ApplicationMenuItem = new Lang.Class({
 
         let appLabel = new St.Label({ text: app.get_name(), y_expand: true,
                                       y_align: Clutter.ActorAlign.CENTER });
-        this.actor.add_child(appLabel, { expand: true });
+        this.actor.add_child(appLabel);
         this.actor.label_actor = appLabel;
 
         let textureCache = St.TextureCache.get_default();
