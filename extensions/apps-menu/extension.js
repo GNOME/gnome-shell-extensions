@@ -358,7 +358,7 @@ const DesktopTarget = new Lang.Class({
             (o, res) => {
                 try {
                     let info = o.query_info_finish(res);
-                    let mode = info.get_attribute_uint32(modeAttr) | 0100;
+                    let mode = info.get_attribute_uint32(modeAttr) | 0o100;
 
                     info.set_attribute_uint32(modeAttr, mode);
                     info.set_attribute_string(trustedAttr, 'yes');
