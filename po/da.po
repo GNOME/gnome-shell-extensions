@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
 # Kris Thomsen <mail@kristhomsen.dk>, 2011-2014.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2015.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2015, 2017.
 # Joe Hansen <joedalton2@yahoo.dk>, 2017.
 #
 msgid ""
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-22 18:40+0000\n"
-"PO-Revision-Date: 2017-03-05 02:26+0100\n"
+"POT-Creation-Date: 2017-08-11 01:33+0000\n"
+"PO-Revision-Date: 2017-09-10 17:13+0200\n"
 "Last-Translator: Kris Thomsen <mail@kristhomsen.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -88,15 +88,15 @@ msgstr "Præsentér vindue som"
 msgid "Show only windows in the current workspace"
 msgstr "Vis kun vinduer i det nuværende arbejdsområde"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Aktivitetsoversigt"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Programmer"
 
@@ -133,18 +133,19 @@ msgstr "Opret ny regel for match"
 msgid "Add"
 msgstr "Tilføj"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:107
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Udskubning af drevet “%s” mislykkedes:"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:125
 msgid "Removable devices"
 msgstr "Flytbare enheder"
 
-#: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Åbn fil"
+#: extensions/drive-menu/extension.js:150
+msgid "Open Files"
+msgstr "Åbn filer"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -214,27 +215,36 @@ msgstr ""
 msgid "Places"
 msgstr "Steder"
 
-#: extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:65
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Kunne ikke montere diskenhed for “%s”"
+
+#: extensions/places-menu/placeDisplay.js:78
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Kunne ikke åbne “%s”"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Computer"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Hjem"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Gennemse netværk"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Gennemgå størrelser af skærmbillede"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Gennemgå størrelser af skærmbillede baglæns"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -248,48 +258,48 @@ msgstr "Navnet på temaet, som indlæses fra ~/.themes/name/gnome-shell"
 msgid "Close"
 msgstr "Luk"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Afminimér"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Minimér"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Afmaksimér"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Maksimér"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Minimér"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Afminimér alle"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Maksimér alle"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Afmaksimér alle"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Luk alle"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Arbejdsområdeindikator"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Vinduesliste"
 
@@ -303,8 +313,7 @@ msgid ""
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Afgør hvornår vinduer fra samme program skal grupperes i vindueslisten. "
-"Mulige værdier er “never” (aldrig), “auto” (automatisk) og “always” "
-"(altid)."
+"Mulige værdier er “never” (aldrig), “auto” (automatisk) og “always” (altid)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
@@ -350,4 +359,3 @@ msgstr "Navn"
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Arbejdsområde %d"
-
