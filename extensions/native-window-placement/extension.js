@@ -431,8 +431,8 @@ function enable() {
             let titleX = cloneX + (cloneWidth - titleWidth) / 2;
 
             /// this is the actual difference to original gnome-shell:
-            //let titleY = cloneY + cloneHeight + title._spacing;
-            let titleY = cloneY - title.height + title._spacing;
+            //let titleY = cloneY + cloneHeight - (title.height - this.borderSize) / 2;
+            let titleY = cloneY - (title.height - this.borderSize) / 2;
 
             if (animate)
                 this._animateOverlayActor(title, Math.floor(titleX), Math.floor(titleY), titleWidth);
