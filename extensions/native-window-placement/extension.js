@@ -1,20 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
-// import just everything from workspace.js:
-const Clutter = imports.gi.Clutter;
-const Gio = imports.gi.Gio;
 const Lang = imports.lang;
-const Mainloop = imports.mainloop;
-const Meta = imports.gi.Meta;
-const Pango = imports.gi.Pango;
-const Shell = imports.gi.Shell;
-const St = imports.gi.St;
-const Signals = imports.signals;
 
-const DND = imports.ui.dnd;
-const Lightbox = imports.ui.lightbox;
-const Main = imports.ui.main;
 const Overview = imports.ui.overview;
-const Panel = imports.ui.panel;
 const Tweener = imports.ui.tweener;
 
 const Workspace = imports.ui.workspace;
@@ -30,25 +17,6 @@ const WINDOW_PLACEMENT_NATURAL_GRID_FALLBACK = true;                // fallback 
 const WINDOW_PLACEMENT_NATURAL_ACCURACY = 20;                       // accuracy of window translate moves  (KDE-default: 20)
 const WINDOW_PLACEMENT_NATURAL_GAPS = 5;                            // half of the minimum gap between windows
 const WINDOW_PLACEMENT_NATURAL_MAX_TRANSLATIONS = 5000;             // safety limit for preventing endless loop if something is wrong in the algorithm
-
-const PLACE_WINDOW_CAPTIONS_ON_TOP = true;                          // place window titles in overview on top of windows with overlap parameter
-
-const WORKSPACE_BORDER_GAP = 10;                                    // minimum gap between the workspace area and the workspace selector
-const WINDOW_AREA_TOP_GAP = 20;                                     // minimum gap between the workspace area and the top border. This keeps window captions and close buttons visible. 13px (26/2) should currently be enough.
-
-const BUTTON_LAYOUT_SCHEMA = 'org.gnome.desktop.wm.preferences';
-const BUTTON_LAYOUT_KEY = 'button-layout';
-
-function injectToFunction(parent, name, func) {
-    let origin = parent[name];
-    parent[name] = function() {
-        let ret;
-        ret = origin.apply(this, arguments);
-        if (ret === undefined)
-            ret = func.apply(this, arguments);
-        return ret;
-    }
-}
 
 const Rect = new Lang.Class({
     Name: 'NativeWindowPlacement.Rect',
