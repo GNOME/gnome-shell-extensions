@@ -371,43 +371,12 @@ function enable() {
 
     /// position window titles on top of windows in overlay ////
     if (windowCaptionsOnTop) {
-
-        /// This is almost a direct copy of the original relayout function. Differences are marked.
         winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
         Workspace.WindowOverlay.prototype.relayout = function(animate) {
+            let [, , , cloneHeight] = this._windowClone.slot;
+            this.title.translation_y = -cloneHeight;
+
             winInjections['relayout'].call(this, animate);
-            let title = this.title;
-            let border = this.border;
-
-            this._parentActor.set_child_above_sibling(title, border);
-
-            Tweener.removeTweens(title);
-
-            let [cloneX, cloneY, cloneWidth, cloneHeight] = this._windowClone.slot;
-
-            // Clutter.Actor.get_preferred_width() will return the fixed width if one
-            // is set, so we need to reset the width by calling set_width(-1), to forward
-            // the call down to StLabel.
-            // We also need to save and restore the current width, otherwise the animation
-            // starts from the wrong point.
-            let prevTitleWidth = title.width;
-            title.set_width(-1);
-            let [titleMinWidth, titleNatWidth] = title.get_preferred_width(-1);
-            let titleWidth = Math.max(titleMinWidth, Math.min(titleNatWidth, cloneWidth));
-            title.width = prevTitleWidth;
-
-            let titleX = cloneX + (cloneWidth - titleWidth) / 2;
-
-            /// this is the actual difference to original gnome-shell:
-            //let titleY = cloneY + cloneHeight - (title.height - this.borderSize) / 2;
-            let titleY = cloneY - (title.height - this.borderSize) / 2;
-
-            if (animate)
-                this._animateOverlayActor(title, Math.floor(titleX), Math.floor(titleY), titleWidth);
-            else {
-                title.width = titleWidth;
-                title.set_position(Math.floor(titleX), Math.floor(titleY));
-            }
         };
     }
 }
