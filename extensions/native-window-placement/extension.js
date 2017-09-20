@@ -1,11 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 const Lang = imports.lang;
 
-const Overview = imports.ui.overview;
-const Tweener = imports.ui.tweener;
-
 const Workspace = imports.ui.workspace;
-const WindowPositionFlags = Workspace.WindowPositionFlags;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
@@ -78,39 +74,31 @@ const Rect = new Lang.Class({
     }
 });
 
-let winInjections, workspaceInjections, connectedSignals;
+const NaturalLayoutStrategy = new Lang.Class({
+    Name: 'NaturalLayoutStrategy',
+    Extends: Workspace.LayoutStrategy,
 
-function resetState() {
-    winInjections = { };
-    workspaceInjections = { };
-    connectedSignals = [ ];
-}
+    _init: function(settings) {
+        this._settings = settings;
+    },
 
-function enable() {
-    resetState();
-
-    let settings = Convenience.getSettings();
-    let useMoreScreen = settings.get_boolean('use-more-screen');
-    let signalId = settings.connect('changed::use-more-screen', function() {
-        useMoreScreen = settings.get_boolean('use-more-screen');
-    });
-    connectedSignals.push({ obj: settings, id: signalId });
+    computeLayout: function(windows, layout) {
+        layout.windows = windows;
+    },
 
     /**
-     * _calculateWindowTransformationsNatural:
-     * @clones: Array of #MetaWindow
-     *
      * Returns clones with matching target coordinates and scales to arrange windows in a natural way that no overlap exists and relative window size is preserved.
      * This function is almost a 1:1 copy of the function
      * PresentWindowsEffect::calculateWindowTransformationsNatural() from KDE, see:
      * https://projects.kde.org/projects/kde/kdebase/kde-workspace/repository/revisions/master/entry/kwin/effects/presentwindows/presentwindows.cpp
      */
-    Workspace.Workspace.prototype._calculateWindowTransformationsNatural = function(clones, area) {
+    computeWindowSlots: function(layout, area) {
         // As we are using pseudo-random movement (See "slot") we need to make sure the list
         // is always sorted the same way no matter which window is currently active.
 
         let area_rect = new Rect(area.x, area.y, area.width, area.height);
         let bounds = area_rect.copy();
+        let clones = layout.windows;
 
         let direction = 0;
         let directions = [];
@@ -168,7 +156,7 @@ function enable() {
                         rects[j].translate(diff[0], diff[1]);
 
 
-                        if (useMoreScreen) {
+                        if (this._settings.get_boolean('use-more-screen')) {
                             // Try to keep the bounding rect the same aspect as the screen so that more
                             // screen real estate is utilised. We do this by splitting the screen into nine
                             // equal sections, if the window center is in any of the corner sections pull the
@@ -258,115 +246,28 @@ function enable() {
 
         return slots;
     }
-    workspaceInjections['_calculateWindowTransformationsNatural'] = undefined;
+});
 
-    /**
-     * _updateWindowPositions:
-     * @flags:
-     *  INITIAL - this is the initial positioning of the windows.
-     *  ANIMATE - Indicates that we need animate changing position.
-     */
-    workspaceInjections['_updateWindowPositions'] = Workspace.Workspace.prototype._updateWindowPositions;
-    Workspace.Workspace.prototype._updateWindowPositions = function(flags) {
-            if (this._currentLayout == null) {
-                this._recalculateWindowPositions(flags);
-                return;
-            }
+let winInjections, workspaceInjections;
 
-            let initialPositioning = flags & WindowPositionFlags.INITIAL;
-            let animate = flags & WindowPositionFlags.ANIMATE;
+function resetState() {
+    winInjections = { };
+    workspaceInjections = { };
+}
 
-            let layout = this._currentLayout;
-            let strategy = layout.strategy;
+function enable() {
+    resetState();
 
-            let [, , padding] = this._getSpacingAndPadding();
-            let area = Workspace.padArea(this._actualGeometry, padding);
+    let settings = Convenience.getSettings();
 
-            /// EDIT replace this version by our own:
-            //let slots = strategy.computeWindowSlots(layout, area);
+    workspaceInjections['_getBestLayout'] = Workspace.Workspace.prototype._getBestLayout;
+    Workspace.Workspace.prototype._getBestLayout = function(windows) {
+        let strategy = new NaturalLayoutStrategy(settings);
+        let layout = { strategy };
+        strategy.computeLayout(windows, layout);
 
-
-            /// EDIT copied from _realRecalculateWindowPositions:
-            let clones = this._windows.slice();
-            if (clones.length == 0)
-                return;
-
-            clones.sort(function(a, b) {
-                return a.metaWindow.get_stable_sequence() - b.metaWindow.get_stable_sequence();
-            });
-
-            if (this._reservedSlot)
-                clones.push(this._reservedSlot);
-
-            /// EDIT our own window placement function:
-            let slots = this._calculateWindowTransformationsNatural(clones, area);
-
-
-            let currentWorkspace = global.screen.get_active_workspace();
-            let isOnCurrentWorkspace = this.metaWorkspace == null || this.metaWorkspace == currentWorkspace;
-
-            for (let i = 0; i < slots.length; i++) {
-                let slot = slots[i];
-                let [x, y, scale, clone] = slot;
-                let metaWindow = clone.metaWindow;
-                let overlay = clone.overlay;
-                clone.slotId = i;
-
-                // Positioning a window currently being dragged must be avoided;
-                // we'll just leave a blank spot in the layout for it.
-                if (clone.inDrag)
-                    continue;
-
-                let cloneWidth = clone.actor.width * scale;
-                let cloneHeight = clone.actor.height * scale;
-                clone.slot = [x, y, cloneWidth, cloneHeight];
-
-                if (overlay && (initialPositioning || !clone.positioned))
-                    overlay.hide();
-
-                if (!clone.positioned) {
-                    // This window appeared after the overview was already up
-                    // Grow the clone from the center of the slot
-                    clone.actor.x = x + cloneWidth / 2;
-                    clone.actor.y = y + cloneHeight / 2;
-                    clone.actor.scale_x = 0;
-                    clone.actor.scale_y = 0;
-                    clone.positioned = true;
-                }
-
-                if (animate && isOnCurrentWorkspace) {
-                    if (!metaWindow.showing_on_its_workspace()) {
-                        /* Hidden windows should fade in and grow
-                         * therefore we need to resize them now so they
-                         * can be scaled up later */
-                        if (initialPositioning) {
-                            clone.actor.opacity = 0;
-                            clone.actor.scale_x = 0;
-                            clone.actor.scale_y = 0;
-                            clone.actor.x = x;
-                            clone.actor.y = y;
-                        }
-
-                        Tweener.addTween(clone.actor,
-                                         { opacity: 255,
-                                           time: Overview.ANIMATION_TIME,
-                                           transition: 'easeInQuad'
-                                         });
-                    }
-
-                    this._animateClone(clone, overlay, x, y, scale, initialPositioning);
-                } else {
-                    // cancel any active tweens (otherwise they might override our changes)
-                    Tweener.removeTweens(clone.actor);
-                    clone.actor.set_position(x, y);
-                    clone.actor.set_scale(scale, scale);
-                    clone.overlay.relayout(false);
-                    this._showWindowOverlay(clone, overlay, isOnCurrentWorkspace);
-                }
-            }
-        }
-
-
+        return layout;
+    }
 
     /// position window titles on top of windows in overlay ////
     winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
@@ -394,9 +295,6 @@ function disable() {
         removeInjection(Workspace.Workspace.prototype, workspaceInjections, i);
     for (i in winInjections)
         removeInjection(Workspace.WindowOverlay.prototype, winInjections, i);
-
-    for each (i in connectedSignals)
-        i.obj.disconnect(i.id);
 
     global.stage.queue_relayout();
     resetState();
