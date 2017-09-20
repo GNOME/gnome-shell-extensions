@@ -91,7 +91,6 @@ function enable() {
 
     let settings = Convenience.getSettings();
     let useMoreScreen = settings.get_boolean('use-more-screen');
-    let windowCaptionsOnTop = settings.get_boolean('window-captions-on-top');
     let signalId = settings.connect('changed::use-more-screen', function() {
         useMoreScreen = settings.get_boolean('use-more-screen');
     });
@@ -370,15 +369,15 @@ function enable() {
 
 
     /// position window titles on top of windows in overlay ////
-    if (windowCaptionsOnTop) {
-        winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
-        Workspace.WindowOverlay.prototype.relayout = function(animate) {
+    winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
+    Workspace.WindowOverlay.prototype.relayout = function(animate) {
+        if (settings.get_boolean('window-captions-on-top')) {
             let [, , , cloneHeight] = this._windowClone.slot;
             this.title.translation_y = -cloneHeight;
+        }
 
-            winInjections['relayout'].call(this, animate);
-        };
-    }
+        winInjections['relayout'].call(this, animate);
+    };
 }
 
 function removeInjection(object, injection, name) {
