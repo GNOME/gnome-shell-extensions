@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-02-22 18:40+0000\n"
-"PO-Revision-Date: 2017-04-08 22:12+0300\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gnome.org>\n"
+"POT-Creation-Date: 2017-08-11 01:33+0000\n"
+"PO-Revision-Date: 2017-09-09 14:10+0200\n"
+"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
 "Language-Team: team@lists.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -93,15 +93,15 @@ msgstr "Παρουσίαση παραθύρων ως"
 msgid "Show only windows in the current workspace"
 msgstr "Εμφάνιση μόνο των παραθύρων του τρέχοντος χώρου εργασίας"
 
-#: extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Επισκόπηση δραστηριοτήτων"
 
-#: extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Αγαπημένα"
 
-#: extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Εφαρμογές"
 
@@ -139,18 +139,19 @@ msgstr "Δημιουργία νέου κανόνα αντιστοίχισης"
 msgid "Add"
 msgstr "Προσθήκη"
 
-#: extensions/drive-menu/extension.js:106
-#, javascript-format
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:107
 msgid "Ejecting drive “%s” failed:"
 msgstr "Αποτυχία εξαγωγής του δίσκου «%s»:"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:125
 msgid "Removable devices"
 msgstr "Αφαιρούμενες συσκευές"
 
-#: extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Άνοιγμα αρχείου"
+#: extensions/drive-menu/extension.js:150
+#| msgid "Open File"
+msgid "Open Files"
+msgstr "Άνοιγμα αρχείων"
 
 #: extensions/example/extension.js:17
 msgid "Hello, world!"
@@ -220,27 +221,36 @@ msgstr ""
 msgid "Places"
 msgstr "Τοποθεσίες"
 
-#: extensions/places-menu/placeDisplay.js:59
-#, javascript-format
+#: extensions/places-menu/placeDisplay.js:65
+#| msgid "Failed to launch “%s”"
+msgid "Failed to mount volume for “%s”"
+msgstr "Αποτυχία προσάρτησης τόμου για «%s»"
+
+#: extensions/places-menu/placeDisplay.js:78
 msgid "Failed to launch “%s”"
 msgstr "Αποτυχία εκκίνησης «%s»"
 
-#: extensions/places-menu/placeDisplay.js:101
-#: extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Υπολογιστής"
 
-#: extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Προσωπικός φάκελος"
 
-#: extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Περιήγηση δικτύου"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Περιδιάβαση τα μεγέθη των στιγμιοτύπων"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Μεγέθη κυκλικών στιγμιοτύπων προς τα πίσω"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -255,48 +265,48 @@ msgstr ""
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Αποελαχιστοποίηση"
 
-#: extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Ελαχιστοποίηση"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Απομεγιστοποίηση"
 
-#: extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Μεγιστοποίηση"
 
-#: extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Ελαχιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Αποελαχιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:427
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Μεγιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Απομεγιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Κλείσιμο όλων"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:678
 #: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Δείκτης χώρου εργασίας"
 
-#: extensions/window-list/extension.js:833
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Λίστα παραθύρου"
 
@@ -354,7 +364,6 @@ msgid "Name"
 msgstr "Όνομα"
 
 #: extensions/workspace-indicator/prefs.js:198
-#, javascript-format
 msgid "Workspace %d"
 msgstr "Χώρος εργασίας %d"
 
