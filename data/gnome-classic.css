@@ -658,7 +658,7 @@ StScrollBar {
 
 /* TOP BAR */
 #panel {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.35);
   /* transition from solid to transparent */
   transition-duration: 500ms;
   font-weight: bold;
@@ -669,7 +669,7 @@ StScrollBar {
     spacing: 4px; }
   #panel .panel-corner {
     -panel-corner-radius: 6px;
-    -panel-corner-background-color: rgba(0, 0, 0, 0.2);
+    -panel-corner-background-color: rgba(0, 0, 0, 0.35);
     -panel-corner-border-width: 2px;
     -panel-corner-border-color: transparent; }
     #panel .panel-corner:active, #panel .panel-corner:overview, #panel .panel-corner:focus {
@@ -683,7 +683,7 @@ StScrollBar {
     -minimum-hpadding: 6px;
     font-weight: bold;
     color: #eee;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.9);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
     transition-duration: 100ms; }
     #panel .panel-button .app-menu-icon {
       -st-icon-style: symbolic;
@@ -692,14 +692,14 @@ StScrollBar {
     #panel .panel-button .system-status-icon,
     #panel .panel-button .app-menu-icon > StIcon,
     #panel .panel-button .popup-menu-arrow {
-      icon-shadow: 0px 0px 2px rgba(0, 0, 0, 0.9); }
+      icon-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9); }
     #panel .panel-button:hover {
       color: #454f52;
-      text-shadow: 0px 0px 8px black; }
+      text-shadow: 0px 1px 6px black; }
       #panel .panel-button:hover .system-status-icon,
       #panel .panel-button:hover .app-menu-icon > StIcon,
       #panel .panel-button:hover .popup-menu-arrow {
-        icon-shadow: 0px 0px 8px black; }
+        icon-shadow: 0px 1px 6px black; }
     #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
       background-color: rgba(0, 0, 0, 0.01);
       box-shadow: inset 0 -2px 0px #5f9ddd;
@@ -919,17 +919,17 @@ StScrollBar {
     background-color: #fafafa; }
 
 .message-icon-bin {
-  padding: 10px 3px 10px 10px; }
+  padding: 0.68em 0.2em 0.68em 0.68em; }
   .message-icon-bin:rtl {
-    padding: 10px 10px 10px 3px; }
+    padding: 0.68em 0.68em 0.68em 0.2em; }
 
 .message-icon-bin > StIcon {
   color: black;
-  icon-size: 16px;
+  icon-size: 1.09em;
   -st-icon-style: symbolic; }
 
 .message-secondary-bin {
-  padding: 0 12px; }
+  padding: 0 0.82em; }
 
 .message-secondary-bin > .event-time {
   color: black;
@@ -939,7 +939,7 @@ StScrollBar {
   padding-bottom: 0.13em; }
 
 .message-secondary-bin > StIcon {
-  icon-size: 16px; }
+  icon-size: 1.09em; }
 
 .message-title {
   color: #222728; }
@@ -1026,12 +1026,12 @@ StScrollBar {
   background-image: url("resource:///org/gnome/shell/theme/close-window.svg");
   background-size: 32px;
   height: 32px;
-  width: 32px; }
-
-.window-close {
+  width: 32px;
   -shell-close-overlap: 16px; }
-  .window-close:rtl {
-    -st-background-image-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); }
+  .window-close:hover {
+    background-image: url("resource:///org/gnome/shell/theme/close-window-hover.svg"); }
+  .window-close:active {
+    background-image: url("resource:///org/gnome/shell/theme/close-window-active.svg"); }
 
 /* NETWORK DIALOGS */
 .nm-dialog {
