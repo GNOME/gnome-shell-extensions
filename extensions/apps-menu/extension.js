@@ -592,6 +592,8 @@ const ApplicationsButton = new Lang.Class({
                     app = new Shell.App({ app_info: entry.get_app_info() });
                 if (app.get_app_info().should_show())
                     this.applicationsByCategory[categoryId].push(app);
+            } else if (nextType == GMenu.TreeItemType.SEPARATOR) {
+                this.applicationsByCategory[categoryId].push('separator');
             } else if (nextType == GMenu.TreeItemType.DIRECTORY) {
                 let subdir = iter.get_directory();
                 if (!subdir.get_is_nodisplay())
@@ -714,7 +716,10 @@ const ApplicationsButton = new Lang.Class({
 
     selectCategory: function(dir, categoryMenuItem) {
         this.applicationsBox.get_children().forEach(c => {
-            this.applicationsBox.remove_actor(c);
+            if (c._delegate instanceof PopupMenu.PopupSeparatorMenuItem)
+                c._delegate.destroy();
+            else
+                this.applicationsBox.remove_actor(c);
         });
 
         if (dir)
@@ -727,7 +732,11 @@ const ApplicationsButton = new Lang.Class({
          if (apps) {
             for (let i = 0; i < apps.length; i++) {
                let app = apps[i];
-               let item = this._applicationsButtons.get(app);
+               let item;
+               if (app instanceof Shell.App)
+                   item = this._applicationsButtons.get(app);
+               else
+                   item = new PopupMenu.PopupSeparatorMenuItem();
                if (!item) {
                   item = new ApplicationMenuItem(this, app);
                   item.setDragEnabled(this._desktopTarget.hasDesktop);
