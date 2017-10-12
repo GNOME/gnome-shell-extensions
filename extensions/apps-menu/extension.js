@@ -712,19 +712,10 @@ const ApplicationsButton = new Lang.Class({
         this.mainBox.style+=('height: ' + height);
     },
 
-    _clearApplicationsBox: function(selectedActor) {
-        let actors = this.applicationsBox.get_children();
-        for (let i = 0; i < actors.length; i++) {
-            let actor = actors[i];
-            this.applicationsBox.remove_actor(actor);
-        }
-    },
-
     selectCategory: function(dir, categoryMenuItem) {
-        if (categoryMenuItem)
-            this._clearApplicationsBox(categoryMenuItem.actor);
-        else
-            this._clearApplicationsBox(null);
+        this.applicationsBox.get_children().forEach(c => {
+            this.applicationsBox.remove_actor(c);
+        });
 
         if (dir)
             this._displayButtons(this._listApplications(dir.get_menu_id()));
