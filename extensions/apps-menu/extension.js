@@ -466,18 +466,25 @@ const ApplicationsButton = new Lang.Class({
             });
         });
 
+        this._tree = new GMenu.Tree({ menu_basename: 'applications.menu' });
+        this._treeChangedId = this._tree.connect('changed',
+                                                 Lang.bind(this, this._onTreeChanged));
+
         this._applicationsButtons = new Map();
         this.reloadFlag = false;
         this._createLayout();
         this._display();
-        this._installedChangedId = appSys.connect('installed-changed', Lang.bind(this, function() {
-            if (this.menu.isOpen) {
-                this._redisplay();
-                this.mainBox.show();
-            } else {
-                this.reloadFlag = true;
-            }
-        }));
+        this._installedChangedId = appSys.connect('installed-changed',
+                                                  Lang.bind(this, this._onTreeChanged));
+    },
+
+    _onTreeChanged: function() {
+        if (this.menu.isOpen) {
+            this._redisplay();
+            this.mainBox.show();
+        } else {
+            this.reloadFlag = true;
+        }
     },
 
     get hotCorner() {
@@ -495,6 +502,8 @@ const ApplicationsButton = new Lang.Class({
         Main.overview.disconnect(this._showingId);
         Main.overview.disconnect(this._hidingId);
         appSys.disconnect(this._installedChangedId);
+        this._tree.disconnect(this._treeChangedId);
+        this._tree = null;
 
         Main.wm.setCustomKeybindingHandler('panel-main-menu',
                                            Shell.ActionMode.NORMAL |
@@ -675,9 +684,8 @@ const ApplicationsButton = new Lang.Class({
 
         //Load categories
         this.applicationsByCategory = {};
-        let tree = new GMenu.Tree({ menu_basename: 'applications.menu' });
-        tree.load_sync();
-        let root = tree.get_root_directory();
+        this._tree.load_sync();
+        let root = this._tree.get_root_directory();
         let categoryMenuItem = new CategoryMenuItem(this, null);
         this.categoriesBox.add_actor(categoryMenuItem.actor);
         let iter = root.iter();
