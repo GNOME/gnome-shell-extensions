@@ -36,7 +36,7 @@ const ActivitiesMenuItem = new Lang.Class({
     Extends: PopupMenu.PopupBaseMenuItem,
 
     _init: function(button) {
-	this.parent();
+        this.parent();
         this._button = button;
         this.actor.add_child(new St.Label({ text: _("Activities Overview") }));
     },
@@ -44,7 +44,7 @@ const ActivitiesMenuItem = new Lang.Class({
     activate: function(event) {
         this._button.menu.toggle();
         Main.overview.toggle();
-	this.parent(event);
+        this.parent(event);
     },
 });
 
@@ -53,8 +53,8 @@ const ApplicationMenuItem = new Lang.Class({
     Extends: PopupMenu.PopupBaseMenuItem,
 
     _init: function(button, app) {
-	this.parent();
-	this._app = app;
+        this.parent();
+        this._app = app;
         this._button = button;
 
         this._iconBin = new St.Bin();
@@ -93,10 +93,10 @@ const ApplicationMenuItem = new Lang.Class({
     },
 
     activate: function(event) {
-	this._app.open_new_window(-1);
+        this._app.open_new_window(-1);
         this._button.selectCategory(null, null);
         this._button.menu.toggle();
-	this.parent(event);
+        this.parent(event);
     },
 
     setActive: function(active, params) {
@@ -127,8 +127,8 @@ const CategoryMenuItem = new Lang.Class({
     Extends: PopupMenu.PopupBaseMenuItem,
 
     _init: function(button, category) {
-	this.parent();
-	this._category = category;
+        this.parent();
+        this._category = category;
         this._button = button;
 
         this._oldX = -1;
@@ -147,7 +147,7 @@ const CategoryMenuItem = new Lang.Class({
     activate: function(event) {
         this._button.selectCategory(this._category, this);
         this._button.scrollToCatButton(this);
-	this.parent(event);
+        this.parent(event);
     },
 
     _isNavigatingSubmenu: function([x, y]) {
@@ -249,7 +249,7 @@ const ApplicationsMenu = new Lang.Class({
     },
 
     isEmpty: function() {
-	return false;
+        return false;
     },
 
     open: function(animate) {
