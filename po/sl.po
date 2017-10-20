@@ -2,7 +2,7 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2011–2017.
+# Matej Urbančič <mateju@svn.gnome.org>, + 2011–2017.
 #
 msgid ""
 msgstr ""
@@ -111,7 +111,7 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"Seznam nizov z določilom ID programa (namizno ime programa), ki mu sledi "
+"Seznam nizov z določilom ID programa (ime programa), ki mu sledi "
 "dvopičje in nato številka delovne površine."
 
 #: extensions/auto-move-windows/prefs.js:60
@@ -129,7 +129,7 @@ msgstr "Dodaj pravilo"
 
 #: extensions/auto-move-windows/prefs.js:106
 msgid "Create new matching rule"
-msgstr "Ustvari novo pravilo skladanja"
+msgstr "Ustvari novo skladno pravilo"
 
 #: extensions/auto-move-windows/prefs.js:111
 msgid "Add"
@@ -160,9 +160,7 @@ msgstr "Nadomestno pozdravno besedilo."
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
-msgstr ""
-"V kolikor vrednost ni prazna, vsebuje besedilo, ki bo prikazano ob kliku na "
-"pladenj."
+msgstr "Vpisano besedilo bo prikazano ob kliku na pladenj."
 
 #: extensions/example/prefs.js:30
 msgid "Message"
@@ -176,8 +174,8 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it’s possible to customize the greeting message."
 msgstr ""
-"Primer je oblikovan kot predloga za izgradnjo kakovostnih razširitev za "
-"lupino, zato je delovanje deloma prilagojeno.\n"
+"Primer je oblikovan kot predloga za izgradnjo kakovostnih razširitev "
+"za lupino, zato je delovanje deloma prilagojeno.\n"
 "Kljub vsemu je mogoče prilagajati pozdravno sporočilo."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
@@ -192,7 +190,7 @@ msgid ""
 msgstr ""
 "Poskusi uporabiti več zaslona za postavitev sličic oken s prilagajanjem "
 "razmerja velikosti zaslona in prilagajanjem postavitve okvirja. Nastavitev "
-"je mogoče uporabiti le z naravnim načinom postavitve okna."
+"je mogoče uporabiti le z naravnim načinom postavitve."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
@@ -204,9 +202,9 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice in s "
-"tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba "
-"lupino ponovno zagnati."
+"Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice"
+"in s tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je "
+"treba lupino ponovno zagnati."
 
 #: extensions/places-menu/extension.js:78
 #: extensions/places-menu/extension.js:81
@@ -282,11 +280,11 @@ msgstr "Pomanjšaj vse"
 
 #: extensions/window-list/extension.js:436
 msgid "Maximize all"
-msgstr "Razpni"
+msgstr "Razpni vse"
 
 #: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
-msgstr "_Pomanjšaj vse"
+msgstr "Pomanjšaj vse"
 
 #: extensions/window-list/extension.js:454
 msgid "Close all"
@@ -311,7 +309,7 @@ msgid ""
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Določi, kdaj se okna istega programa v seznamu programov združujejo. "
-"Veljavne vrednosti so \"nikoli\", \"samodejno\" in \"vedno\"."
+"Veljavne vrednosti so »nikoli«, »samodejno« in »vedno«."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
@@ -322,7 +320,7 @@ msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr ""
-"Ali naj bo prikazan seznam okna na vseh povezanih zasloni ali le na osnovnem."
+"Ali naj bo prikazan seznam oken na vseh povezanih zasloni ali le na osnovnem."
 
 #: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
@@ -334,11 +332,11 @@ msgstr "Nikoli ne združuj oken"
 
 #: extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
-msgstr "Združi okna v skupine, ko je prostor omejen"
+msgstr "Združi okna, ko je prostor omejen"
 
 #: extensions/window-list/prefs.js:52
 msgid "Always group windows"
-msgstr "Vedno združuj okna"
+msgstr "Okna vedno združi"
 
 #: extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
@@ -416,9 +414,9 @@ msgstr "Delovna površina %d"
 #~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
 #~ "only' (shows only the application icon) or 'both'."
 #~ msgstr ""
-#~ "Nastavitev prikaza oken v preklopniku. Veljavne možnosti so 'le sličice', "
-#~ "kar pokaže pomanjšano sličico okna, 'le ikono programa', kar pokaže ikono "
-#~ "in možnost 'oboje', torej ikono in pomanjšano sličico."
+#~ "Nastavitev prikaza oken v preklopniku. Veljavne možnosti so »le sličice«, "
+#~ "kar pokaže pomanjšano sličico okna, »le ikona programa«, kar pokaže ikono "
+#~ "in možnost »oboje«, torej ikono in pomanjšano sličico."
 
 #~ msgid "Devices"
 #~ msgstr "Naprave"
@@ -451,8 +449,8 @@ msgstr "Delovna površina %d"
 #~ "Sets the position of the dock in the screen. Allowed values are 'right' "
 #~ "or 'left'"
 #~ msgstr ""
-#~ "Določi položaj sidrišča na zaslonu. Dovoljeni vrednosti sta 'desno' ali "
-#~ "'levo'."
+#~ "Določi položaj sidrišča na zaslonu. Dovoljeni vrednosti sta »desno« ali "
+#~ "»levo«."
 
 #~ msgid "Icon size"
 #~ msgstr "Velikost ikone"
@@ -470,8 +468,8 @@ msgstr "Delovna površina %d"
 #~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
 #~ "and 'move'"
 #~ msgstr ""
-#~ "Določi učinek skrivanja sidrišča. Dovoljeni vrednosti sta 'spremeni "
-#~ "velikost', 'prilagodi velikost' ali 'premakni'."
+#~ "Določi učinek skrivanja sidrišča. Dovoljeni vrednosti sta »spremeni "
+#~ "velikost«, »prilagodi velikost« ali »premakni«."
 
 #~ msgid "Autohide duration"
 #~ msgstr "Trajanje samodejnega skrivanja"
@@ -511,8 +509,8 @@ msgstr "Delovna površina %d"
 #~ "Sets the Alt-Tab behaviour. Possible values are: all_thumbnails and "
 #~ "workspace_icons. See the configuration dialogs for details."
 #~ msgstr ""
-#~ "Določi obnašanje tipk Alt-Tab. Mogoče vrednosti so: vse_sličice in "
-#~ "ikone_delovne_površine. Za več podrobnosti si oglejte nastavitve."
+#~ "Določi obnašanje tipk Alt-Tab. Mogoče vrednosti so: »vse sličice« in "
+#~ "»ikone delovne površine«. Za več podrobnosti si oglejte nastavitve."
 
 #~ msgid ""
 #~ "This mode presents all applications from all workspaces in one selection "
