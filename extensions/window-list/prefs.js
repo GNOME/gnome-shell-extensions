@@ -16,13 +16,10 @@ function init() {
     Convenience.initTranslations();
 }
 
-const WindowListPrefsWidget = new GObject.Class({
-    Name: 'WindowList.Prefs.Widget',
-    GTypeName: 'WindowListPrefsWidget',
-    Extends: Gtk.Grid,
-
+const WindowListPrefsWidget = GObject.registerClass(
+class WindowListPrefsWidget extends Gtk.Grid {
     _init(params) {
-        this.parent(params);
+        super._init(params);
 
         this.margin = 24;
         this.row_spacing = 6;

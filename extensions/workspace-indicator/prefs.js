@@ -17,18 +17,15 @@ const Convenience = Me.imports.convenience;
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
 
-const WorkspaceNameModel = new GObject.Class({
-    Name: 'WorkspaceIndicator.WorkspaceNameModel',
-    GTypeName: 'WorkspaceNameModel',
-    Extends: Gtk.ListStore,
-
-    Columns: {
-        LABEL: 0,
-    },
-
+const WorkspaceNameModel = GObject.registerClass(
+class WorkspaceNameModel extends Gtk.ListStore {
     _init(params) {
-        this.parent(params);
+        super._init(params);
         this.set_column_types([GObject.TYPE_STRING]);
+
+        this.Columns = {
+            LABEL: 0,
+        };
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
         //this._settings.connect('changed::workspace-names', Lang.bind(this, this._reloadFromSettings));
@@ -40,7 +37,7 @@ const WorkspaceNameModel = new GObject.Class({
         this.connect('row-changed', Lang.bind(this, this._onRowChanged));
         this.connect('row-inserted', Lang.bind(this, this._onRowInserted));
         this.connect('row-deleted', Lang.bind(this, this._onRowDeleted));
-    },
+    }
 
     _reloadFromSettings() {
         if (this._preventChanges)
@@ -67,7 +64,7 @@ const WorkspaceNameModel = new GObject.Class({
         }
 
         this._preventChanges = false;
-    },
+    }
 
     _onRowChanged(self, path, iter) {
         if (this._preventChanges)
@@ -88,7 +85,7 @@ const WorkspaceNameModel = new GObject.Class({
         this._settings.set_strv(WORKSPACE_KEY, names);
 
         this._preventChanges = false;
-    },
+    }
 
     _onRowInserted(self, path, iter) {
         if (this._preventChanges)
@@ -103,7 +100,7 @@ const WorkspaceNameModel = new GObject.Class({
         this._settings.set_strv(WORKSPACE_KEY, names);
 
         this._preventChanges = false;
-    },
+    }
 
     _onRowDeleted(self, path) {
         if (this._preventChanges)
@@ -125,16 +122,13 @@ const WorkspaceNameModel = new GObject.Class({
         this._settings.set_strv(WORKSPACE_KEY, names);
 
         this._preventChanges = false;
-    },
+    }
 });
 
-const WorkspaceSettingsWidget = new GObject.Class({
-    Name: 'WorkspaceIndicator.WorkspaceSettingsWidget',
-    GTypeName: 'WorkspaceSettingsWidget',
-    Extends: Gtk.Grid,
-
+const WorkspaceSettingsWidget = GObject.registerClass(
+class WorkspaceSettingsWidget extends Gtk.Grid {
     _init(params) {
-        this.parent(params);
+        super._init(params);
         this.margin = 12;
         this.orientation = Gtk.Orientation.VERTICAL;
 
@@ -181,14 +175,14 @@ const WorkspaceSettingsWidget = new GObject.Class({
         delButton.sensitive = selection.count_selected_rows() > 0;
 
         this.add(toolbar);
-    },
+    }
 
     _cellEdited(renderer, path, new_text) {
         let [ok, iter] = this._store.get_iter_from_string(path);
 
         if (ok)
             this._store.set(iter, [this._store.Columns.LABEL], [new_text]);
-    },
+    }
 
     _newClicked() {
         let iter = this._store.append();
@@ -196,7 +190,7 @@ const WorkspaceSettingsWidget = new GObject.Class({
 
         let label = _("Workspace %d").format(index + 1);
         this._store.set(iter, [this._store.Columns.LABEL], [label]);
-    },
+    }
 
     _delClicked() {
         let [any, model, iter] = this._treeView.get_selection().get_selected();

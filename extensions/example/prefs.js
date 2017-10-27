@@ -16,13 +16,10 @@ function init() {
     Convenience.initTranslations();
 }
 
-const ExamplePrefsWidget = new GObject.Class({
-    Name: 'Example.Prefs.Widget',
-    GTypeName: 'ExamplePrefsWidget',
-    Extends: Gtk.Grid,
-
+const ExamplePrefsWidget = GObject.registerClass(
+class ExamplePrefsWidget extends Gtk.Grid {
     _init(params) {
-        this.parent(params);
+        super._init(params);
         this.margin = 12;
         this.row_spacing = this.column_spacing = 6;
         this.set_orientation(Gtk.Orientation.VERTICAL);
