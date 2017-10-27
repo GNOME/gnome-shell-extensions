@@ -22,12 +22,12 @@ const ExamplePrefsWidget = new GObject.Class({
     Extends: Gtk.Grid,
 
     _init: function(params) {
-	this.parent(params);
+        this.parent(params);
         this.margin = 12;
         this.row_spacing = this.column_spacing = 6;
         this.set_orientation(Gtk.Orientation.VERTICAL);
 
-	this.add(new Gtk.Label({ label: '<b>' + _("Message") + '</b>',
+        this.add(new Gtk.Label({ label: '<b>' + _("Message") + '</b>',
                                  use_markup: true,
                                  halign: Gtk.Align.START }));
 
@@ -35,16 +35,16 @@ const ExamplePrefsWidget = new GObject.Class({
                                     margin_bottom: 12 });
         this.add(entry);
 
-	this._settings = Convenience.getSettings();
-	this._settings.bind('hello-text', entry, 'text', Gio.SettingsBindFlags.DEFAULT);
+        this._settings = Convenience.getSettings();
+        this._settings.bind('hello-text', entry, 'text', Gio.SettingsBindFlags.DEFAULT);
 
-	// TRANSLATORS: Example is the name of the extension, should not be
-	// translated
-	let primaryText = _("Example aims to show how to build well behaved \
+        // TRANSLATORS: Example is the name of the extension, should not be
+        // translated
+        let primaryText = _("Example aims to show how to build well behaved \
 extensions for the Shell and as such it has little functionality on its own.\n\
 Nevertheless it’s possible to customize the greeting message.");
 
-	this.add(new Gtk.Label({ label: primaryText,
+        this.add(new Gtk.Label({ label: primaryText,
                                  wrap: true, xalign: 0 }));
     }
 });

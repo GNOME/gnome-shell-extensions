@@ -31,7 +31,7 @@ const AltTabSettingsWidget = new GObject.Class({
         this.parent(params);
         this.margin = 24;
         this.row_spacing = 6;
-	this.orientation = Gtk.Orientation.VERTICAL;
+        this.orientation = Gtk.Orientation.VERTICAL;
 
         this._settings = new Gio.Settings({ schema_id: 'org.gnome.shell.window-switcher' });
 
@@ -66,10 +66,10 @@ const AltTabSettingsWidget = new GObject.Class({
                 radio.active = true;
         }
 
-	let check = new Gtk.CheckButton({ label: _("Show only windows in the current workspace"),
-	                                  margin_top: 6 });
-	this._settings.bind(SETTINGS_CURRENT_WORKSPACE_ONLY, check, 'active', Gio.SettingsBindFlags.DEFAULT);
-	this.add(check);
+        let check = new Gtk.CheckButton({ label: _("Show only windows in the current workspace"),
+                                          margin_top: 6 });
+        this._settings.bind(SETTINGS_CURRENT_WORKSPACE_ONLY, check, 'active', Gio.SettingsBindFlags.DEFAULT);
+        this.add(check);
     },
 });
 

@@ -117,19 +117,19 @@ function myCheckWorkspaces() {
 
     let windows = global.get_window_actors();
     for (i = 0; i < windows.length; i++) {
-	let winActor = windows[i];
+        let winActor = windows[i];
         let win = winActor.meta_window;
-	if (win.is_on_all_workspaces())
+        if (win.is_on_all_workspaces())
             continue;
 
-	let workspaceIndex = win.get_workspace().index();
-	emptyWorkspaces[workspaceIndex] = false;
+        let workspaceIndex = win.get_workspace().index();
+        emptyWorkspaces[workspaceIndex] = false;
     }
 
     // If we don't have an empty workspace at the end, add one
     if (!emptyWorkspaces[emptyWorkspaces.length -1]) {
-	global.screen.append_new_workspace(false, global.get_current_time());
-	emptyWorkspaces.push(false);
+        global.screen.append_new_workspace(false, global.get_current_time());
+        emptyWorkspaces.push(false);
     }
 
     let activeWorkspaceIndex = global.screen.get_active_workspace_index();

@@ -43,7 +43,7 @@ function disable() {
     log ('Example extension disabled');
 
     if (signalId) {
-	Main.panel.actor.disconnect(signalId);
-	signalId = 0;
+        Main.panel.actor.disconnect(signalId);
+        signalId = 0;
     }
 }
