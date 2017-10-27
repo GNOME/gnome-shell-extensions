@@ -20,7 +20,7 @@ function _showHello() {
     let monitor = Main.layoutManager.primaryMonitor;
     global.stage.add_actor(label);
     label.set_position(Math.floor (monitor.width / 2 - label.width / 2), Math.floor(monitor.height / 2 - label.height / 2));
-    Mainloop.timeout_add(3000, function () { label.destroy(); });
+    Mainloop.timeout_add(3000, function() { label.destroy(); });
 }
 
 // Put your extension initialization code here

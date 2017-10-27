@@ -26,7 +26,7 @@ const WorkspaceIndicator = new Lang.Class({
     Name: 'WorkspaceIndicator.WorkspaceIndicator',
     Extends: PanelMenu.Button,
 
-    _init: function(){
+    _init: function() {
 	this.parent(0.0, _("Workspace Indicator"));
 
 	this._currentWorkspace = global.screen.get_active_workspace().index();
@@ -74,7 +74,7 @@ const WorkspaceIndicator = new Lang.Class({
 	this.statusLabel.set_text(this._labelText());
     },
 
-    _labelText : function(workspaceIndex) {
+    _labelText: function(workspaceIndex) {
 	if(workspaceIndex == undefined) {
 	    workspaceIndex = this._currentWorkspace;
 	    return (workspaceIndex + 1).toString();
@@ -82,7 +82,7 @@ const WorkspaceIndicator = new Lang.Class({
 	return Meta.prefs_get_workspace_name(workspaceIndex);
     },
 
-    _createWorkspacesSection : function() {
+    _createWorkspacesSection: function() {
 	this._workspaceSection.removeAll();
 	this.workspacesItems = [];
 	this._currentWorkspace = global.screen.get_active_workspace().index();
@@ -105,14 +105,14 @@ const WorkspaceIndicator = new Lang.Class({
 	this.statusLabel.set_text(this._labelText());
     },
 
-    _activate : function (index) {
+    _activate: function(index) {
 	if(index >= 0 && index <  global.screen.n_workspaces) {
 	    let metaWorkspace = global.screen.get_workspace_by_index(index);
 	    metaWorkspace.activate(global.get_current_time());
 	}
     },
 
-    _onScrollEvent : function(actor, event) {
+    _onScrollEvent: function(actor, event) {
 	let direction = event.get_scroll_direction();
 	let diff = 0;
 	if (direction == Clutter.ScrollDirection.DOWN) {
