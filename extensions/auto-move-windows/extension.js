@@ -22,7 +22,7 @@ let settings;
 const WindowMover = new Lang.Class({
     Name: 'AutoMoveWindows.WindowMover',
 
-    _init: function() {
+    _init() {
         this._settings = settings;
         this._windowTracker = Shell.WindowTracker.get_default();
 
@@ -31,21 +31,21 @@ const WindowMover = new Lang.Class({
         this._windowCreatedId = display.connect_after('window-created', Lang.bind(this, this._findAndMove));
     },
 
-    destroy: function() {
+    destroy() {
         if (this._windowCreatedId) {
             global.screen.get_display().disconnect(this._windowCreatedId);
             this._windowCreatedId = 0;
         }
     },
 
-    _ensureAtLeastWorkspaces: function(num, window) {
+    _ensureAtLeastWorkspaces(num, window) {
         for (let j = global.screen.n_workspaces; j <= num; j++) {
             window.change_workspace_by_index(j-1, false);
             global.screen.append_new_workspace(false, 0);
         }
     },
 
-    _findAndMove: function(display, window, noRecurse) {
+    _findAndMove(display, window, noRecurse) {
         if (window.skip_taskbar)
             return;
 

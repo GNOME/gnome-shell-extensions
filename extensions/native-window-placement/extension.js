@@ -17,18 +17,18 @@ const WINDOW_PLACEMENT_NATURAL_MAX_TRANSLATIONS = 5000;             // safety li
 const Rect = new Lang.Class({
     Name: 'NativeWindowPlacement.Rect',
 
-    _init: function(x, y, width, height) {
+    _init(x, y, width, height) {
         [this.x, this.y, this.width, this.height] = [x, y, width, height];
     },
 
     /**
      * used in _calculateWindowTransformationsNatural to replace Meta.Rectangle that is too slow.
      */
-    copy: function() {
+    copy() {
         return new Rect(this.x, this.y, this.width, this.height);
     },
 
-    union: function(rect2) {
+    union(rect2) {
         let dest = this.copy();
         if (rect2.x < dest.x)
           {
@@ -48,7 +48,7 @@ const Rect = new Lang.Class({
         return dest;
     },
 
-    adjusted: function(dx, dy, dx2, dy2) {
+    adjusted(dx, dy, dx2, dy2) {
         let dest = this.copy();
         dest.x += dx;
         dest.y += dy;
@@ -57,18 +57,18 @@ const Rect = new Lang.Class({
         return dest;
     },
 
-    overlap: function(rect2) {
+    overlap(rect2) {
         return !((this.x + this.width    <= rect2.x) ||
                  (rect2.x + rect2.width  <= this.x) ||
                  (this.y + this.height   <= rect2.y) ||
                  (rect2.y + rect2.height <= this.y));
     },
 
-    center: function() {
+    center() {
         return [this.x + this.width / 2, this.y + this.height / 2];
     },
 
-    translate: function(dx, dy) {
+    translate(dx, dy) {
         this.x += dx;
         this.y += dy;
     }
@@ -78,11 +78,11 @@ const NaturalLayoutStrategy = new Lang.Class({
     Name: 'NaturalLayoutStrategy',
     Extends: Workspace.LayoutStrategy,
 
-    _init: function(settings) {
+    _init(settings) {
         this._settings = settings;
     },
 
-    computeLayout: function(windows, layout) {
+    computeLayout(windows, layout) {
         layout.windows = windows;
     },
 
@@ -92,7 +92,7 @@ const NaturalLayoutStrategy = new Lang.Class({
      * PresentWindowsEffect::calculateWindowTransformationsNatural() from KDE, see:
      * https://projects.kde.org/projects/kde/kdebase/kde-workspace/repository/revisions/master/entry/kwin/effects/presentwindows/presentwindows.cpp
      */
-    computeWindowSlots: function(layout, area) {
+    computeWindowSlots(layout, area) {
         // As we are using pseudo-random movement (See "slot") we need to make sure the list
         // is always sorted the same way no matter which window is currently active.
 

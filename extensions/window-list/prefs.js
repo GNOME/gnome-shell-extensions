@@ -21,7 +21,7 @@ const WindowListPrefsWidget = new GObject.Class({
     GTypeName: 'WindowListPrefsWidget',
     Extends: Gtk.Grid,
 
-    _init: function(params) {
+    _init(params) {
         this.parent(params);
 
         this.margin = 24;

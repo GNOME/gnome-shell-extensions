@@ -26,7 +26,7 @@ const WorkspaceIndicator = new Lang.Class({
     Name: 'WorkspaceIndicator.WorkspaceIndicator',
     Extends: PanelMenu.Button,
 
-    _init: function() {
+    _init() {
         this.parent(0.0, _("Workspace Indicator"));
 
         this._currentWorkspace = global.screen.get_active_workspace().index();
@@ -54,7 +54,7 @@ const WorkspaceIndicator = new Lang.Class({
         this._settingsChangedId = this._settings.connect('changed::' + WORKSPACE_KEY, Lang.bind(this, this._createWorkspacesSection));
     },
 
-    destroy: function() {
+    destroy() {
         for (let i = 0; i < this._screenSignals.length; i++)
             global.screen.disconnect(this._screenSignals[i]);
 
@@ -66,7 +66,7 @@ const WorkspaceIndicator = new Lang.Class({
         this.parent();
     },
 
-    _updateIndicator: function() {
+    _updateIndicator() {
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
         this._currentWorkspace = global.screen.get_active_workspace().index();
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
@@ -74,7 +74,7 @@ const WorkspaceIndicator = new Lang.Class({
         this.statusLabel.set_text(this._labelText());
     },
 
-    _labelText: function(workspaceIndex) {
+    _labelText(workspaceIndex) {
         if(workspaceIndex == undefined) {
             workspaceIndex = this._currentWorkspace;
             return (workspaceIndex + 1).toString();
@@ -82,7 +82,7 @@ const WorkspaceIndicator = new Lang.Class({
         return Meta.prefs_get_workspace_name(workspaceIndex);
     },
 
-    _createWorkspacesSection: function() {
+    _createWorkspacesSection() {
         this._workspaceSection.removeAll();
         this.workspacesItems = [];
         this._currentWorkspace = global.screen.get_active_workspace().index();
@@ -105,14 +105,14 @@ const WorkspaceIndicator = new Lang.Class({
         this.statusLabel.set_text(this._labelText());
     },
 
-    _activate: function(index) {
+    _activate(index) {
         if(index >= 0 && index <  global.screen.n_workspaces) {
             let metaWorkspace = global.screen.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
     },
 
-    _onScrollEvent: function(actor, event) {
+    _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
         let diff = 0;
         if (direction == Clutter.ScrollDirection.DOWN) {

@@ -35,13 +35,13 @@ const ActivitiesMenuItem = new Lang.Class({
     Name: 'ActivitiesMenuItem',
     Extends: PopupMenu.PopupBaseMenuItem,
 
-    _init: function(button) {
+    _init(button) {
         this.parent();
         this._button = button;
         this.actor.add_child(new St.Label({ text: _("Activities Overview") }));
     },
 
-    activate: function(event) {
+    activate(event) {
         this._button.menu.toggle();
         Main.overview.toggle();
         this.parent(event);
@@ -52,7 +52,7 @@ const ApplicationMenuItem = new Lang.Class({
     Name: 'ApplicationMenuItem',
     Extends: PopupMenu.PopupBaseMenuItem,
 
-    _init: function(button, app) {
+    _init(button, app) {
         this.parent();
         this._app = app;
         this._button = button;
@@ -91,32 +91,32 @@ const ApplicationMenuItem = new Lang.Class({
         });
     },
 
-    activate: function(event) {
+    activate(event) {
         this._app.open_new_window(-1);
         this._button.selectCategory(null, null);
         this._button.menu.toggle();
         this.parent(event);
     },
 
-    setActive: function(active, params) {
+    setActive(active, params) {
         if (active)
             this._button.scrollToButton(this);
         this.parent(active, params);
     },
 
-    setDragEnabled: function(enable) {
+    setDragEnabled(enable) {
         this._dragEnabled = enable;
     },
 
-    getDragActor: function() {
+    getDragActor() {
         return this._app.create_icon_texture(APPLICATION_ICON_SIZE);
     },
 
-    getDragActorSource: function() {
+    getDragActorSource() {
         return this._iconBin;
     },
 
-    _updateIcon: function() {
+    _updateIcon() {
         this._iconBin.set_child(this.getDragActor());
     }
 });
@@ -125,7 +125,7 @@ const CategoryMenuItem = new Lang.Class({
     Name: 'CategoryMenuItem',
     Extends: PopupMenu.PopupBaseMenuItem,
 
-    _init: function(button, category) {
+    _init(button, category) {
         this.parent();
         this._category = category;
         this._button = button;
@@ -143,13 +143,13 @@ const CategoryMenuItem = new Lang.Class({
         this.actor.connect('motion-event', Lang.bind(this, this._onMotionEvent));
     },
 
-    activate: function(event) {
+    activate(event) {
         this._button.selectCategory(this._category, this);
         this._button.scrollToCatButton(this);
         this.parent(event);
     },
 
-    _isNavigatingSubmenu: function([x, y]) {
+    _isNavigatingSubmenu([x, y]) {
         let [posX, posY] = this.actor.get_transformed_position();
 
         if (this._oldX == -1) {
@@ -206,7 +206,7 @@ const CategoryMenuItem = new Lang.Class({
         return false;
     },
 
-    _onMotionEvent: function(actor, event) {
+    _onMotionEvent(actor, event) {
         if (!Clutter.get_pointer_grab()) {
             this._oldX = -1;
             this._oldY = -1;
@@ -229,7 +229,7 @@ const CategoryMenuItem = new Lang.Class({
         return false;
     },
 
-    setActive: function(active, params) {
+    setActive(active, params) {
         if (active) {
             this._button.selectCategory(this._category, this);
             this._button.scrollToCatButton(this);
@@ -242,23 +242,23 @@ const ApplicationsMenu = new Lang.Class({
     Name: 'ApplicationsMenu',
     Extends: PopupMenu.PopupMenu,
 
-    _init: function(sourceActor, arrowAlignment, arrowSide, button) {
+    _init(sourceActor, arrowAlignment, arrowSide, button) {
         this.parent(sourceActor, arrowAlignment, arrowSide);
         this._button = button;
     },
 
-    isEmpty: function() {
+    isEmpty() {
         return false;
     },
 
-    open: function(animate) {
+    open(animate) {
         this._button.hotCorner.setBarrierSize(0);
         if (this._button.hotCorner.actor) // fallback corner
             this._button.hotCorner.actor.hide();
         this.parent(animate);
     },
 
-    close: function(animate) {
+    close(animate) {
         let size = Main.layoutManager.panelBox.height;
         this._button.hotCorner.setBarrierSize(size);
         if (this._button.hotCorner.actor) // fallback corner
@@ -266,7 +266,7 @@ const ApplicationsMenu = new Lang.Class({
         this.parent(animate);
     },
 
-    toggle: function() {
+    toggle() {
         if (this.isOpen) {
             this._button.selectCategory(null, null);
         } else {
@@ -280,7 +280,7 @@ const ApplicationsMenu = new Lang.Class({
 const DesktopTarget = new Lang.Class({
     Name: 'DesktopTarget',
 
-    _init: function() {
+    _init() {
         this._desktop = null;
         this._desktopDestroyedId = 0;
 
@@ -297,7 +297,7 @@ const DesktopTarget = new Lang.Class({
         return this._desktop != null;
     },
 
-    _onWindowAdded: function(group, actor) {
+    _onWindowAdded(group, actor) {
         if (!(actor instanceof Meta.WindowActor))
             return;
 
@@ -305,7 +305,7 @@ const DesktopTarget = new Lang.Class({
             this._setDesktop(actor);
     },
 
-    _setDesktop: function(desktop) {
+    _setDesktop(desktop) {
         if (this._desktop) {
             this._desktop.disconnect(this._desktopDestroyedId);
             this._desktopDestroyedId = 0;
@@ -324,13 +324,13 @@ const DesktopTarget = new Lang.Class({
         }
     },
 
-    _getSourceAppInfo: function(source) {
+    _getSourceAppInfo(source) {
         if (!(source instanceof ApplicationMenuItem))
             return null;
         return source._app.app_info;
     },
 
-    _touchFile: function(file) {
+    _touchFile(file) {
         let queryFlags = Gio.FileQueryInfoFlags.NONE;
         let ioPriority = GLib.PRIORITY_DEFAULT;
 
@@ -347,7 +347,7 @@ const DesktopTarget = new Lang.Class({
             });
     },
 
-    _markTrusted: function(file) {
+    _markTrusted(file) {
         let modeAttr = Gio.FILE_ATTRIBUTE_UNIX_MODE;
         let trustedAttr = 'metadata::trusted';
         let queryFlags = Gio.FileQueryInfoFlags.NONE;
@@ -374,7 +374,7 @@ const DesktopTarget = new Lang.Class({
             });
     },
 
-    destroy: function() {
+    destroy() {
         if (this._windowAddedId)
             global.window_group.disconnect(this._windowAddedId);
         this._windowAddedId = 0;
@@ -382,7 +382,7 @@ const DesktopTarget = new Lang.Class({
         this._setDesktop(null);
     },
 
-    handleDragOver: function(source, actor, x, y, time) {
+    handleDragOver(source, actor, x, y, time) {
         let appInfo = this._getSourceAppInfo(source);
         if (!appInfo)
             return DND.DragMotionResult.CONTINUE;
@@ -390,7 +390,7 @@ const DesktopTarget = new Lang.Class({
         return DND.DragMotionResult.COPY_DROP;
     },
 
-    acceptDrop: function(source, actor, x, y, time) {
+    acceptDrop(source, actor, x, y, time) {
         let appInfo = this._getSourceAppInfo(source);
         if (!appInfo)
             return false;
@@ -419,7 +419,7 @@ const ApplicationsButton = new Lang.Class({
     Name: 'ApplicationsButton',
     Extends: PanelMenu.Button,
 
-    _init: function() {
+    _init() {
         this.parent(1.0, null, false);
 
         this.setMenu(new ApplicationsMenu(this.actor, 1.0, St.Side.TOP, this));
@@ -483,14 +483,14 @@ const ApplicationsButton = new Lang.Class({
         return Main.layoutManager.hotCorners[Main.layoutManager.primaryIndex];
     },
 
-    _createVertSeparator: function() {
+    _createVertSeparator() {
         let separator = new St.DrawingArea({ style_class: 'calendar-vertical-separator',
                                              pseudo_class: 'highlighted' });
         separator.connect('repaint', Lang.bind(this, this._onVertSepRepaint));
         return separator;
     },
 
-    _onDestroy: function() {
+    _onDestroy() {
         Main.overview.disconnect(this._showingId);
         Main.overview.disconnect(this._hidingId);
         appSys.disconnect(this._installedChangedId);
@@ -505,7 +505,7 @@ const ApplicationsButton = new Lang.Class({
         this._desktopTarget.destroy();
     },
 
-    _onCapturedEvent: function(actor, event) {
+    _onCapturedEvent(actor, event) {
         if (event.type() == Clutter.EventType.BUTTON_PRESS) {
             if (!Main.overview.shouldToggleByCornerOrButton())
                 return true;
@@ -513,7 +513,7 @@ const ApplicationsButton = new Lang.Class({
         return false;
     },
 
-    _onMenuKeyPress: function(actor, event) {
+    _onMenuKeyPress(actor, event) {
         let symbol = event.get_key_symbol();
         if (symbol == Clutter.KEY_Left || symbol == Clutter.KEY_Right) {
             let direction = symbol == Clutter.KEY_Left ? Gtk.DirectionType.LEFT
@@ -524,7 +524,7 @@ const ApplicationsButton = new Lang.Class({
         return this.parent(actor, event);
     },
 
-    _onVertSepRepaint: function(area) {
+    _onVertSepRepaint(area) {
         let cr = area.get_context();
         let themeNode = area.get_theme_node();
         let [width, height] = area.get_surface_size();
@@ -539,7 +539,7 @@ const ApplicationsButton = new Lang.Class({
         cr.stroke();
     },
 
-    _onOpenStateChanged: function(menu, open) {
+    _onOpenStateChanged(menu, open) {
        if (open) {
            if (this.reloadFlag) {
                this._redisplay();
@@ -550,20 +550,20 @@ const ApplicationsButton = new Lang.Class({
        this.parent(menu, open);
     },
 
-    _setKeybinding: function() {
+    _setKeybinding() {
         Main.wm.setCustomKeybindingHandler('panel-main-menu',
                                            Shell.ActionMode.NORMAL |
                                            Shell.ActionMode.OVERVIEW,
                                            () => { this.menu.toggle(); });
     },
 
-    _redisplay: function() {
+    _redisplay() {
         this.applicationsBox.destroy_all_children();
         this.categoriesBox.destroy_all_children();
         this._display();
     },
 
-    _loadCategory: function(categoryId, dir) {
+    _loadCategory(categoryId, dir) {
         let iter = dir.iter();
         let nextType;
         while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
@@ -588,7 +588,7 @@ const ApplicationsButton = new Lang.Class({
         }
     },
 
-    scrollToButton: function(button) {
+    scrollToButton(button) {
         let appsScrollBoxAdj = this.applicationsScrollBox.get_vscroll_bar().get_adjustment();
         let appsScrollBoxAlloc = this.applicationsScrollBox.get_allocation_box();
         let currentScrollValue = appsScrollBoxAdj.get_value();
@@ -603,7 +603,7 @@ const ApplicationsButton = new Lang.Class({
             appsScrollBoxAdj.set_value(newScrollValue);
     },
 
-    scrollToCatButton: function(button) {
+    scrollToCatButton(button) {
         let catsScrollBoxAdj = this.categoriesScrollBox.get_vscroll_bar().get_adjustment();
         let catsScrollBoxAlloc = this.categoriesScrollBox.get_allocation_box();
         let currentScrollValue = catsScrollBoxAdj.get_value();
@@ -618,7 +618,7 @@ const ApplicationsButton = new Lang.Class({
             catsScrollBoxAdj.set_value(newScrollValue);
     },
 
-    _createLayout: function() {
+    _createLayout() {
         let section = new PopupMenu.PopupMenuSection();
         this.menu.addMenuItem(section);
         this.mainBox = new St.BoxLayout({ vertical: false });
@@ -661,7 +661,7 @@ const ApplicationsButton = new Lang.Class({
         section.actor.add_actor(this.mainBox);
     },
 
-    _display: function() {
+    _display() {
         this._applicationsButtons.clear();
         this.mainBox.style=('width: 35em;');
         this.mainBox.hide();
@@ -697,7 +697,7 @@ const ApplicationsButton = new Lang.Class({
         this.mainBox.style+=('height: ' + height);
     },
 
-    _clearApplicationsBox: function(selectedActor) {
+    _clearApplicationsBox(selectedActor) {
         let actors = this.applicationsBox.get_children();
         for (let i = 0; i < actors.length; i++) {
             let actor = actors[i];
@@ -705,7 +705,7 @@ const ApplicationsButton = new Lang.Class({
         }
     },
 
-    selectCategory: function(dir, categoryMenuItem) {
+    selectCategory(dir, categoryMenuItem) {
         if (categoryMenuItem)
             this._clearApplicationsBox(categoryMenuItem.actor);
         else
@@ -717,7 +717,7 @@ const ApplicationsButton = new Lang.Class({
             this._displayButtons(this._listApplications(null));
     },
 
-    _displayButtons: function(apps) {
+    _displayButtons(apps) {
          if (apps) {
             for (let i = 0; i < apps.length; i++) {
                let app = apps[i];
@@ -733,7 +733,7 @@ const ApplicationsButton = new Lang.Class({
          }
     },
 
-    _listApplications: function(category_menu_id) {
+    _listApplications(category_menu_id) {
         let applist;
 
         if (category_menu_id) {
@@ -754,7 +754,7 @@ const ApplicationsButton = new Lang.Class({
         return applist;
     },
 
-    destroy: function() {
+    destroy() {
         this.menu.actor.get_children().forEach(c => { c.destroy() });
         this.parent();
     }

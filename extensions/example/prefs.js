@@ -21,7 +21,7 @@ const ExamplePrefsWidget = new GObject.Class({
     GTypeName: 'ExamplePrefsWidget',
     Extends: Gtk.Grid,
 
-    _init: function(params) {
+    _init(params) {
         this.parent(params);
         this.margin = 12;
         this.row_spacing = this.column_spacing = 6;
