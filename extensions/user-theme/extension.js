@@ -12,17 +12,15 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
-const ThemeManager = new Lang.Class({
-    Name: 'UserTheme.ThemeManager',
-
-    _init() {
+class ThemeManager {
+    constructor() {
         this._settings = Convenience.getSettings();
-    },
+    }
 
     enable() {
         this._changedId = this._settings.connect('changed::'+SETTINGS_KEY, Lang.bind(this, this._changeTheme));
         this._changeTheme();
-    },
+    }
 
     disable() {
         if (this._changedId) {
@@ -32,7 +30,7 @@ const ThemeManager = new Lang.Class({
 
         Main.setThemeStylesheet(null);
         Main.loadTheme();
-    },
+    }
 
     _changeTheme() {
         let _stylesheet = null;
@@ -64,7 +62,7 @@ const ThemeManager = new Lang.Class({
         Main.setThemeStylesheet(_stylesheet);
         Main.loadTheme();
     }
-});
+};
 
 function init() {
     return new ThemeManager();

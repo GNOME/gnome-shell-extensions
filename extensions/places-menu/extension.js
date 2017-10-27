@@ -23,12 +23,9 @@ const PlaceDisplay = Me.imports.placeDisplay;
 
 const PLACE_ICON_SIZE = 16;
 
-const PlaceMenuItem = new Lang.Class({
-    Name: 'PlaceMenuItem',
-    Extends: PopupMenu.PopupBaseMenuItem,
-
-    _init(info) {
-        this.parent();
+class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
+    constructor(info) {
+        super();
         this._info = info;
 
         this._icon = new St.Icon({ gicon: info.icon,
@@ -48,7 +45,7 @@ const PlaceMenuItem = new Lang.Class({
 
         this._changedId = info.connect('changed',
                                        Lang.bind(this, this._propertiesChanged));
-    },
+    }
 
     destroy() {
         if (this._changedId) {
@@ -56,20 +53,20 @@ const PlaceMenuItem = new Lang.Class({
             this._changedId = 0;
         }
 
-        this.parent();
-    },
+        super.destroy();
+    }
 
     activate(event) {
         this._info.launch(event.get_time());
 
-        this.parent(event);
-    },
+        super.activate(event);
+    }
 
     _propertiesChanged(info) {
         this._icon.gicon = info.icon;
         this._label.text = info.name;
-    },
-});
+    }
+};
 
 const SECTIONS = [
     'special',
@@ -78,12 +75,9 @@ const SECTIONS = [
     'network'
 ]
 
-const PlacesMenu = new Lang.Class({
-    Name: 'PlacesMenu.PlacesMenu',
-    Extends: PanelMenu.Button,
-
-    _init() {
-        this.parent(0.0, _("Places"));
+class PlacesMenu extends PanelMenu.Button {
+    constructor() {
+        super(0.0, _("Places"));
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
         let label = new St.Label({ text: _("Places"),
@@ -108,18 +102,18 @@ const PlacesMenu = new Lang.Class({
             this.menu.addMenuItem(this._sections[id]);
             this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
         }
-    },
+    }
 
     destroy() {
         this.placesManager.destroy();
 
-        this.parent();
-    },
+        super.destroy();
+    }
 
     _redisplay(id) {
         this._sections[id].removeAll();
         this._create(id);
-    },
+    }
 
     _create(id) {
         let places = this.placesManager.get(id);
@@ -129,7 +123,7 @@ const PlacesMenu = new Lang.Class({
 
         this._sections[id].actor.visible = places.length > 0;
     }
-});
+};
 
 function init() {
     Convenience.initTranslations();
