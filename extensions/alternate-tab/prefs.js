@@ -3,11 +3,10 @@
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
 const GObject = imports.gi.GObject;
-const Lang = imports.lang;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
-const N_ = function(e) { return e };
+const N_ = e => e;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
@@ -56,10 +55,10 @@ const AltTabSettingsWidget = new GObject.Class({
             let name = Gettext.gettext(MODES[mode]);
 
             radio = new Gtk.RadioButton({ group: radio, label: name, valign: Gtk.Align.START });
-            radio.connect('toggled', Lang.bind(this, function(widget) {
+            radio.connect('toggled', widget => {
                 if (widget.active)
                     this._settings.set_string(SETTINGS_APP_ICON_MODE, modeCapture);
-            }));
+            });
             grid.add(radio);
 
             if (mode == currentMode)

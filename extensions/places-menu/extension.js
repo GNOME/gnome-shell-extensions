@@ -14,7 +14,7 @@ const Panel = imports.ui.panel;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
-const N_ = function(x) { return x; }
+const N_ = x => x;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
@@ -100,9 +100,9 @@ const PlacesMenu = new Lang.Class({
         for (let i=0; i < SECTIONS.length; i++) {
             let id = SECTIONS[i];
             this._sections[id] = new PopupMenu.PopupMenuSection();
-            this.placesManager.connect(id + '-updated', Lang.bind(this, function() {
+            this.placesManager.connect(id + '-updated', () => {
                 this._redisplay(id);
-            }));
+            });
 
             this._create(id);
             this.menu.addMenuItem(this._sections[id]);

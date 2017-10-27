@@ -3,7 +3,6 @@
 const Gio = imports.gi.Gio;
 const GObject = imports.gi.GObject;
 const Gtk = imports.gi.Gtk;
-const Lang = imports.lang;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
@@ -66,10 +65,10 @@ const WindowListPrefsWidget = new GObject.Class({
                                           group: radio });
             grid.add(radio);
 
-            radio.connect('toggled', Lang.bind(this, function(button) {
+            radio.connect('toggled', button => {
                 if (button.active)
                     this._settings.set_string('grouping-mode', mode);
-            }));
+            });
         }
 
         let check = new Gtk.CheckButton({ label: _("Show on all monitors"),

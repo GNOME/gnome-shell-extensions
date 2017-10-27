@@ -84,11 +84,7 @@ function cycleScreenshotSizes(display, screen, window, binding) {
 
     // Double both axes if on a hidpi display
     let scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
-    let scaledSizes = SIZES.map(function(size) {
-        return size.map(function(wh) {
-            return wh * scaleFactor;
-        });
-    });
+    let scaledSizes = SIZES.map(size => size.map(wh => wh * scaleFactor));
 
     // Find the nearest 16:9 size for the current window size
     let nearestIndex;

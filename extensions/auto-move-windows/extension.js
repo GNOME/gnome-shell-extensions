@@ -55,10 +55,10 @@ const WindowMover = new Lang.Class({
         if (!app) {
             if (!noRecurse) {
                 // window is not tracked yet
-                Mainloop.idle_add(Lang.bind(this, function() {
+                Mainloop.idle_add(() => {
                     this._findAndMove(display, window, true);
                     return false;
-                }));
+                });
             } else
                 log ('Cannot find application for window');
             return;
