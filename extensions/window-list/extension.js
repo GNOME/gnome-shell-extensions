@@ -573,7 +573,6 @@ const AppButton = new Lang.Class({
         });
     },
 
-
     getWindowList: function() {
         return this.app.get_windows().filter(Lang.bind(this, function(win) {
             return this._isWindowVisible(win);
@@ -674,7 +673,7 @@ const WorkspaceIndicator = new Lang.Class({
     Name: 'WindowList.WorkspaceIndicator',
     Extends: PanelMenu.Button,
 
-    _init: function(){
+    _init: function() {
         this.parent(0.0, _("Workspace Indicator"), true);
         this.setMenu(new PopupMenu.PopupMenu(this.actor, 0.0, St.Side.BOTTOM));
         this.actor.add_style_class_name('window-list-workspace-indicator');

@@ -250,11 +250,11 @@ var PlacesManager = new Lang.Class({
 
         if (this._bookmarksFile) {
             this._monitor = this._bookmarksFile.monitor_file(Gio.FileMonitorFlags.NONE, null);
-            this._monitor.connect('changed', Lang.bind(this, function () {
+            this._monitor.connect('changed', Lang.bind(this, function() {
                 if (this._bookmarkTimeoutId > 0)
                     return;
                 /* Defensive event compression */
-                this._bookmarkTimeoutId = Mainloop.timeout_add(100, Lang.bind(this, function () {
+                this._bookmarkTimeoutId = Mainloop.timeout_add(100, Lang.bind(this, function() {
                     this._bookmarkTimeoutId = 0;
                     this._reloadBookmarks();
                     return false;
@@ -293,7 +293,7 @@ var PlacesManager = new Lang.Class({
     },
 
     _updateSpecials: function() {
-        this._places.special.forEach(function (p) { p.destroy(); });
+        this._places.special.forEach(function(p) { p.destroy(); });
         this._places.special = [];
 
         let homePath = GLib.get_home_dir();
@@ -335,9 +335,9 @@ var PlacesManager = new Lang.Class({
         let networkMounts = [];
         let networkVolumes = [];
 
-        this._places.devices.forEach(function (p) { p.destroy(); });
+        this._places.devices.forEach(function(p) { p.destroy(); });
         this._places.devices = [];
-        this._places.network.forEach(function (p) { p.destroy(); });
+        this._places.network.forEach(function(p) { p.destroy(); });
         this._places.network = [];
 
         /* Add standard places */
@@ -502,7 +502,7 @@ var PlacesManager = new Lang.Class({
         this._places[kind].push(volItem);
     },
 
-    get: function (kind) {
+    get: function(kind) {
         return this._places[kind];
     }
 });
