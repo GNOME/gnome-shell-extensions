@@ -28,22 +28,24 @@ const Hostname1Iface = '<node> \
 </node>';
 const Hostname1 = Gio.DBusProxy.makeProxyWrapper(Hostname1Iface);
 
-const PlaceInfo = new Lang.Class({
-    Name: 'PlaceInfo',
+class PlaceInfo {
+    constructor() {
+        this._init.apply(this, arguments);
+    }
 
     _init(kind, file, name, icon) {
         this.kind = kind;
         this.file = file;
         this.name = name || this._getFileName();
         this.icon = icon ? new Gio.ThemedIcon({ name: icon }) : this.getIcon();
-    },
+    }
 
     destroy() {
-    },
+    }
 
     isRemovable() {
         return false;
-    },
+    }
 
     _createLaunchCallback(launchContext, tryMount) {
         return (_ignored, result) => {
@@ -78,7 +80,7 @@ const PlaceInfo = new Lang.Class({
                 Main.notifyError(_("Failed to launch “%s”").format(this.name), e.message);
             }
         }
-    },
+    }
 
     launch(timestamp) {
         let launchContext = global.create_app_launch_context(timestamp, -1);
@@ -87,7 +89,7 @@ const PlaceInfo = new Lang.Class({
                                                  launchContext,
                                                  null,
                                                  callback);
-    },
+    }
 
     getIcon() {
         this.file.query_info_async('standard::symbolic-icon', 0, 0, null,
@@ -116,7 +118,7 @@ const PlaceInfo = new Lang.Class({
             else
                 return new Gio.ThemedIcon({ name: 'folder-symbolic' });
         }
-    },
+    }
 
     _getFileName() {
         try {
@@ -125,16 +127,13 @@ const PlaceInfo = new Lang.Class({
         } catch(e if e instanceof Gio.IOErrorEnum) {
             return this.file.get_basename();
         }
-    },
-});
+    }
+};
 Signals.addSignalMethods(PlaceInfo.prototype);
 
-const RootInfo = new Lang.Class({
-    Name: 'RootInfo',
-    Extends: PlaceInfo,
-
+class RootInfo extends PlaceInfo {
     _init() {
-        this.parent('devices', Gio.File.new_for_path('/'), _("Computer"));
+        super._init('devices', Gio.File.new_for_path('/'), _("Computer"));
 
         this._proxy = new Hostname1(Gio.DBus.system,
                                     'org.freedesktop.hostname1',
@@ -147,11 +146,11 @@ const RootInfo = new Lang.Class({
                                                             Lang.bind(this, this._propertiesChanged));
                                         this._propertiesChanged(obj);
                                     });
-    },
+    }
 
     getIcon() {
         return new Gio.ThemedIcon({ name: 'drive-harddisk-symbolic' });
-    },
+    }
 
     _propertiesChanged(proxy) {
         // GDBusProxy will emit a g-properties-changed when hostname1 goes down
@@ -160,41 +159,35 @@ const RootInfo = new Lang.Class({
             this.name = proxy.PrettyHostname || _("Computer");
             this.emit('changed');
         }
-    },
+    }
 
     destroy() {
         this._proxy.run_dispose();
-        this.parent();
+        super.destroy();
     }
-});
+};
 
 
-const PlaceDeviceInfo = new Lang.Class({
-    Name: 'PlaceDeviceInfo',
-    Extends: PlaceInfo,
-
+class PlaceDeviceInfo extends PlaceInfo {
     _init(kind, mount) {
         this._mount = mount;
-        this.parent(kind, mount.get_root(), mount.get_name());
-    },
+        super._init(kind, mount.get_root(), mount.get_name());
+    }
 
     getIcon() {
         return this._mount.get_symbolic_icon();
     }
-});
+};
 
-const PlaceVolumeInfo = new Lang.Class({
-    Name: 'PlaceVolumeInfo',
-    Extends: PlaceInfo,
-
+class PlaceVolumeInfo extends PlaceInfo {
     _init(kind, volume) {
         this._volume = volume;
-        this.parent(kind, volume.get_activation_root(), volume.get_name());
-    },
+        super._init(kind, volume.get_activation_root(), volume.get_name());
+    }
 
     launch(timestamp) {
         if (this.file) {
-            this.parent(timestamp);
+            super.launch(timestamp);
             return;
         }
 
@@ -203,14 +196,14 @@ const PlaceVolumeInfo = new Lang.Class({
 
             let mount = volume.get_mount();
             this.file = mount.get_root();
-            this.parent(timestamp);
+            super.launch(timestamp);
         });
-    },
+    }
 
     getIcon() {
         return this._volume.get_symbolic_icon();
     }
-});
+};
 
 const DEFAULT_DIRECTORIES = [
     GLib.UserDirectory.DIRECTORY_DOCUMENTS,
@@ -220,10 +213,8 @@ const DEFAULT_DIRECTORIES = [
     GLib.UserDirectory.DIRECTORY_VIDEOS,
 ];
 
-var PlacesManager = new Lang.Class({
-    Name: 'PlacesManager',
-
-    _init() {
+var PlacesManager = class {
+    constructor() {
         this._places = {
             special: [],
             devices: [],
@@ -263,7 +254,7 @@ var PlacesManager = new Lang.Class({
 
             this._reloadBookmarks();
         }
-    },
+    }
 
     _connectVolumeMonitorSignals() {
         const signals = ['volume-added', 'volume-removed', 'volume-changed',
@@ -276,7 +267,7 @@ var PlacesManager = new Lang.Class({
             let id = this._volumeMonitor.connect(signals[i], func);
             this._volumeMonitorSignals.push(id);
         }
-    },
+    }
 
     destroy() {
         if (this._settings)
@@ -290,7 +281,7 @@ var PlacesManager = new Lang.Class({
             this._monitor.cancel();
         if (this._bookmarkTimeoutId)
             Mainloop.source_remove(this._bookmarkTimeoutId);
-    },
+    }
 
     _updateSpecials() {
         this._places.special.forEach(p => { p.destroy(); });
@@ -327,7 +318,7 @@ var PlacesManager = new Lang.Class({
         this._places.special = this._places.special.concat(specials);
 
         this.emit('special-updated');
-    },
+    }
 
     _updateMounts() {
         let networkMounts = [];
@@ -410,7 +401,7 @@ var PlacesManager = new Lang.Class({
 
         this.emit('devices-updated');
         this.emit('network-updated');
-    },
+    }
 
     _findBookmarksFile() {
         let paths = [
@@ -424,7 +415,7 @@ var PlacesManager = new Lang.Class({
         }
 
         return null;
-    },
+    }
 
     _reloadBookmarks() {
 
@@ -474,7 +465,7 @@ var PlacesManager = new Lang.Class({
         this._places.bookmarks = bookmarks;
 
         this.emit('bookmarks-updated');
-    },
+    }
 
     _addMount(kind, mount) {
         let devItem;
@@ -486,7 +477,7 @@ var PlacesManager = new Lang.Class({
         }
 
         this._places[kind].push(devItem);
-    },
+    }
 
     _addVolume(kind, volume) {
         let volItem;
@@ -498,10 +489,10 @@ var PlacesManager = new Lang.Class({
         }
 
         this._places[kind].push(volItem);
-    },
+    }
 
     get(kind) {
         return this._places[kind];
     }
-});
+};
 Signals.addSignalMethods(PlacesManager.prototype);

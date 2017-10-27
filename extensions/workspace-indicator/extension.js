@@ -22,12 +22,9 @@ const Convenience = Me.imports.convenience;
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
 
-const WorkspaceIndicator = new Lang.Class({
-    Name: 'WorkspaceIndicator.WorkspaceIndicator',
-    Extends: PanelMenu.Button,
-
-    _init() {
-        this.parent(0.0, _("Workspace Indicator"));
+class WorkspaceIndicator extends PanelMenu.Button {
+    constructor() {
+        super(0.0, _("Workspace Indicator"));
 
         this._currentWorkspace = global.screen.get_active_workspace().index();
         this.statusLabel = new St.Label({ y_align: Clutter.ActorAlign.CENTER,
@@ -52,7 +49,7 @@ const WorkspaceIndicator = new Lang.Class({
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
         this._settingsChangedId = this._settings.connect('changed::' + WORKSPACE_KEY, Lang.bind(this, this._createWorkspacesSection));
-    },
+    }
 
     destroy() {
         for (let i = 0; i < this._screenSignals.length; i++)
@@ -63,8 +60,8 @@ const WorkspaceIndicator = new Lang.Class({
             this._settingsChangedId = 0;
         }
 
-        this.parent();
-    },
+        super.destroy();
+    }
 
     _updateIndicator() {
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
@@ -72,7 +69,7 @@ const WorkspaceIndicator = new Lang.Class({
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
         this.statusLabel.set_text(this._labelText());
-    },
+    }
 
     _labelText(workspaceIndex) {
         if(workspaceIndex == undefined) {
@@ -80,7 +77,7 @@ const WorkspaceIndicator = new Lang.Class({
             return (workspaceIndex + 1).toString();
         }
         return Meta.prefs_get_workspace_name(workspaceIndex);
-    },
+    }
 
     _createWorkspacesSection() {
         this._workspaceSection.removeAll();
@@ -103,14 +100,14 @@ const WorkspaceIndicator = new Lang.Class({
         }
 
         this.statusLabel.set_text(this._labelText());
-    },
+    }
 
     _activate(index) {
         if(index >= 0 && index <  global.screen.n_workspaces) {
             let metaWorkspace = global.screen.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
-    },
+    }
 
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
@@ -125,8 +122,8 @@ const WorkspaceIndicator = new Lang.Class({
 
         let newIndex = global.screen.get_active_workspace().index() + diff;
         this._activate(newIndex);
-    },
-});
+    }
+};
 
 function init(meta) {
     Convenience.initTranslations();

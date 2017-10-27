@@ -31,29 +31,23 @@ const HORIZ_FACTOR = 5;
 const MENU_HEIGHT_OFFSET = 132;
 const NAVIGATION_REGION_OVERSHOOT = 50;
 
-const ActivitiesMenuItem = new Lang.Class({
-    Name: 'ActivitiesMenuItem',
-    Extends: PopupMenu.PopupBaseMenuItem,
-
-    _init(button) {
-        this.parent();
+class ActivitiesMenuItem extends PopupMenu.PopupBaseMenuItem {
+    constructor(button) {
+        super();
         this._button = button;
         this.actor.add_child(new St.Label({ text: _("Activities Overview") }));
-    },
+    }
 
     activate(event) {
         this._button.menu.toggle();
         Main.overview.toggle();
-        this.parent(event);
-    },
-});
+        super.activate(event);
+    }
+};
 
-const ApplicationMenuItem = new Lang.Class({
-    Name: 'ApplicationMenuItem',
-    Extends: PopupMenu.PopupBaseMenuItem,
-
-    _init(button, app) {
-        this.parent();
+class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
+    constructor(button, app) {
+        super();
         this._app = app;
         this._button = button;
 
@@ -89,44 +83,41 @@ const ApplicationMenuItem = new Lang.Class({
         draggable.connect('drag-end', () => {
             Shell.util_set_hidden_from_pick(Main.legacyTray.actor, false);
         });
-    },
+    }
 
     activate(event) {
         this._app.open_new_window(-1);
         this._button.selectCategory(null, null);
         this._button.menu.toggle();
-        this.parent(event);
-    },
+        super.activate(event);
+    }
 
     setActive(active, params) {
         if (active)
             this._button.scrollToButton(this);
-        this.parent(active, params);
-    },
+        super.setActive(active, params);
+    }
 
     setDragEnabled(enable) {
         this._dragEnabled = enable;
-    },
+    }
 
     getDragActor() {
         return this._app.create_icon_texture(APPLICATION_ICON_SIZE);
-    },
+    }
 
     getDragActorSource() {
         return this._iconBin;
-    },
+    }
 
     _updateIcon() {
         this._iconBin.set_child(this.getDragActor());
     }
-});
+};
 
-const CategoryMenuItem = new Lang.Class({
-    Name: 'CategoryMenuItem',
-    Extends: PopupMenu.PopupBaseMenuItem,
-
-    _init(button, category) {
-        this.parent();
+class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
+    constructor(button, category) {
+        super();
         this._category = category;
         this._button = button;
 
@@ -141,13 +132,13 @@ const CategoryMenuItem = new Lang.Class({
 
         this.actor.add_child(new St.Label({ text: name }));
         this.actor.connect('motion-event', Lang.bind(this, this._onMotionEvent));
-    },
+    }
 
     activate(event) {
         this._button.selectCategory(this._category, this);
         this._button.scrollToCatButton(this);
-        this.parent(event);
-    },
+        super.activate(event);
+    }
 
     _isNavigatingSubmenu([x, y]) {
         let [posX, posY] = this.actor.get_transformed_position();
@@ -204,7 +195,7 @@ const CategoryMenuItem = new Lang.Class({
              return true;
 
         return false;
-    },
+    }
 
     _onMotionEvent(actor, event) {
         if (!Clutter.get_pointer_grab()) {
@@ -227,44 +218,41 @@ const CategoryMenuItem = new Lang.Class({
             source.sync_hover();
 
         return false;
-    },
+    }
 
     setActive(active, params) {
         if (active) {
             this._button.selectCategory(this._category, this);
             this._button.scrollToCatButton(this);
         }
-        this.parent(active, params);
+        super.setActive(active, params);
     }
-});
+};
 
-const ApplicationsMenu = new Lang.Class({
-    Name: 'ApplicationsMenu',
-    Extends: PopupMenu.PopupMenu,
-
-    _init(sourceActor, arrowAlignment, arrowSide, button) {
-        this.parent(sourceActor, arrowAlignment, arrowSide);
+class ApplicationsMenu extends PopupMenu.PopupMenu {
+    constructor(sourceActor, arrowAlignment, arrowSide, button) {
+        super(sourceActor, arrowAlignment, arrowSide);
         this._button = button;
-    },
+    }
 
     isEmpty() {
         return false;
-    },
+    }
 
     open(animate) {
         this._button.hotCorner.setBarrierSize(0);
         if (this._button.hotCorner.actor) // fallback corner
             this._button.hotCorner.actor.hide();
-        this.parent(animate);
-    },
+        super.open(animate);
+    }
 
     close(animate) {
         let size = Main.layoutManager.panelBox.height;
         this._button.hotCorner.setBarrierSize(size);
         if (this._button.hotCorner.actor) // fallback corner
             this._button.hotCorner.actor.show();
-        this.parent(animate);
-    },
+        super.close(animate);
+    }
 
     toggle() {
         if (this.isOpen) {
@@ -273,14 +261,12 @@ const ApplicationsMenu = new Lang.Class({
             if (Main.overview.visible)
                 Main.overview.hide();
         }
-        this.parent();
+        super.toggle();
     }
-});
+};
 
-const DesktopTarget = new Lang.Class({
-    Name: 'DesktopTarget',
-
-    _init() {
+class DesktopTarget {
+    constructor() {
         this._desktop = null;
         this._desktopDestroyedId = 0;
 
@@ -291,11 +277,11 @@ const DesktopTarget = new Lang.Class({
         global.get_window_actors().forEach(a => {
             this._onWindowAdded(a.get_parent(), a);
         });
-    },
+    }
 
     get hasDesktop() {
         return this._desktop != null;
-    },
+    }
 
     _onWindowAdded(group, actor) {
         if (!(actor instanceof Meta.WindowActor))
@@ -303,7 +289,7 @@ const DesktopTarget = new Lang.Class({
 
         if (actor.meta_window.get_window_type() == Meta.WindowType.DESKTOP)
             this._setDesktop(actor);
-    },
+    }
 
     _setDesktop(desktop) {
         if (this._desktop) {
@@ -322,13 +308,13 @@ const DesktopTarget = new Lang.Class({
             });
             this._desktop._delegate = this;
         }
-    },
+    }
 
     _getSourceAppInfo(source) {
         if (!(source instanceof ApplicationMenuItem))
             return null;
         return source._app.app_info;
-    },
+    }
 
     _touchFile(file) {
         let queryFlags = Gio.FileQueryInfoFlags.NONE;
@@ -345,7 +331,7 @@ const DesktopTarget = new Lang.Class({
                     log('Failed to update access time: ' + e.message);
                 }
             });
-    },
+    }
 
     _markTrusted(file) {
         let modeAttr = Gio.FILE_ATTRIBUTE_UNIX_MODE;
@@ -372,7 +358,7 @@ const DesktopTarget = new Lang.Class({
                     log('Failed to mark file as trusted: ' + e.message);
                 }
             });
-    },
+    }
 
     destroy() {
         if (this._windowAddedId)
@@ -380,7 +366,7 @@ const DesktopTarget = new Lang.Class({
         this._windowAddedId = 0;
 
         this._setDesktop(null);
-    },
+    }
 
     handleDragOver(source, actor, x, y, time) {
         let appInfo = this._getSourceAppInfo(source);
@@ -388,7 +374,7 @@ const DesktopTarget = new Lang.Class({
             return DND.DragMotionResult.CONTINUE;
 
         return DND.DragMotionResult.COPY_DROP;
-    },
+    }
 
     acceptDrop(source, actor, x, y, time) {
         let appInfo = this._getSourceAppInfo(source);
@@ -412,15 +398,12 @@ const DesktopTarget = new Lang.Class({
 
         return true;
     }
-});
+};
 Signals.addSignalMethods(DesktopTarget.prototype);
 
-const ApplicationsButton = new Lang.Class({
-    Name: 'ApplicationsButton',
-    Extends: PanelMenu.Button,
-
-    _init() {
-        this.parent(1.0, null, false);
+class ApplicationsButton extends PanelMenu.Button {
+    constructor() {
+        super(1.0, null, false);
 
         this.setMenu(new ApplicationsMenu(this.actor, 1.0, St.Side.TOP, this));
         Main.panel.menuManager.addMenu(this.menu);
@@ -477,18 +460,18 @@ const ApplicationsButton = new Lang.Class({
                 this.reloadFlag = true;
             }
         });
-    },
+    }
 
     get hotCorner() {
         return Main.layoutManager.hotCorners[Main.layoutManager.primaryIndex];
-    },
+    }
 
     _createVertSeparator() {
         let separator = new St.DrawingArea({ style_class: 'calendar-vertical-separator',
                                              pseudo_class: 'highlighted' });
         separator.connect('repaint', Lang.bind(this, this._onVertSepRepaint));
         return separator;
-    },
+    }
 
     _onDestroy() {
         Main.overview.disconnect(this._showingId);
@@ -503,7 +486,7 @@ const ApplicationsButton = new Lang.Class({
                                            null);
 
         this._desktopTarget.destroy();
-    },
+    }
 
     _onCapturedEvent(actor, event) {
         if (event.type() == Clutter.EventType.BUTTON_PRESS) {
@@ -511,7 +494,7 @@ const ApplicationsButton = new Lang.Class({
                 return true;
         }
         return false;
-    },
+    }
 
     _onMenuKeyPress(actor, event) {
         let symbol = event.get_key_symbol();
@@ -521,8 +504,8 @@ const ApplicationsButton = new Lang.Class({
             if (this.menu.actor.navigate_focus(global.stage.key_focus, direction, false))
                 return true;
         }
-        return this.parent(actor, event);
-    },
+        return super._onMenuKeyPress(actor, event);
+    }
 
     _onVertSepRepaint(area) {
         let cr = area.get_context();
@@ -537,7 +520,7 @@ const ApplicationsButton = new Lang.Class({
         cr.setDash([1, 3], 1); // Hard-code for now
         cr.setLineWidth(stippleWidth);
         cr.stroke();
-    },
+    }
 
     _onOpenStateChanged(menu, open) {
        if (open) {
@@ -547,21 +530,21 @@ const ApplicationsButton = new Lang.Class({
            }
            this.mainBox.show();
        }
-       this.parent(menu, open);
-    },
+       super._onOpenStateChanged(menu, open);
+    }
 
     _setKeybinding() {
         Main.wm.setCustomKeybindingHandler('panel-main-menu',
                                            Shell.ActionMode.NORMAL |
                                            Shell.ActionMode.OVERVIEW,
                                            () => { this.menu.toggle(); });
-    },
+    }
 
     _redisplay() {
         this.applicationsBox.destroy_all_children();
         this.categoriesBox.destroy_all_children();
         this._display();
-    },
+    }
 
     _loadCategory(categoryId, dir) {
         let iter = dir.iter();
@@ -586,7 +569,7 @@ const ApplicationsButton = new Lang.Class({
                     this._loadCategory(categoryId, subdir);
             }
         }
-    },
+    }
 
     scrollToButton(button) {
         let appsScrollBoxAdj = this.applicationsScrollBox.get_vscroll_bar().get_adjustment();
@@ -601,7 +584,7 @@ const ApplicationsButton = new Lang.Class({
             newScrollValue = buttonAlloc.y2 - boxHeight + 10;
         if (newScrollValue != currentScrollValue)
             appsScrollBoxAdj.set_value(newScrollValue);
-    },
+    }
 
     scrollToCatButton(button) {
         let catsScrollBoxAdj = this.categoriesScrollBox.get_vscroll_bar().get_adjustment();
@@ -616,7 +599,7 @@ const ApplicationsButton = new Lang.Class({
             newScrollValue = buttonAlloc.y2 - boxHeight + 10;
         if (newScrollValue != currentScrollValue)
             catsScrollBoxAdj.set_value(newScrollValue);
-    },
+    }
 
     _createLayout() {
         let section = new PopupMenu.PopupMenuSection();
@@ -659,7 +642,7 @@ const ApplicationsButton = new Lang.Class({
         this.mainBox.add(this._createVertSeparator(), { expand: false, x_fill: false, y_fill: true});
         this.mainBox.add(this.applicationsScrollBox, { expand: true, x_fill: true, y_fill: true });
         section.actor.add_actor(this.mainBox);
-    },
+    }
 
     _display() {
         this._applicationsButtons.clear();
@@ -695,7 +678,7 @@ const ApplicationsButton = new Lang.Class({
 
         let height = this.categoriesBox.height + MENU_HEIGHT_OFFSET + 'px';
         this.mainBox.style+=('height: ' + height);
-    },
+    }
 
     _clearApplicationsBox(selectedActor) {
         let actors = this.applicationsBox.get_children();
@@ -703,7 +686,7 @@ const ApplicationsButton = new Lang.Class({
             let actor = actors[i];
             this.applicationsBox.remove_actor(actor);
         }
-    },
+    }
 
     selectCategory(dir, categoryMenuItem) {
         if (categoryMenuItem)
@@ -715,7 +698,7 @@ const ApplicationsButton = new Lang.Class({
             this._displayButtons(this._listApplications(dir.get_menu_id()));
         else
             this._displayButtons(this._listApplications(null));
-    },
+    }
 
     _displayButtons(apps) {
          if (apps) {
@@ -731,7 +714,7 @@ const ApplicationsButton = new Lang.Class({
                   this.applicationsBox.add_actor(item.actor);
             }
          }
-    },
+    }
 
     _listApplications(category_menu_id) {
         let applist;
@@ -752,13 +735,13 @@ const ApplicationsButton = new Lang.Class({
         }
 
         return applist;
-    },
+    }
 
     destroy() {
         this.menu.actor.get_children().forEach(c => { c.destroy() });
-        this.parent();
+        super.destroy();
     }
-});
+};
 
 let appsMenuButton;
 let activitiesButton;

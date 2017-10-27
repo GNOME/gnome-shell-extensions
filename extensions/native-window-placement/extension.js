@@ -1,6 +1,4 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
-const Lang = imports.lang;
-
 const Workspace = imports.ui.workspace;
 
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -14,19 +12,17 @@ const WINDOW_PLACEMENT_NATURAL_ACCURACY = 20;                       // accuracy 
 const WINDOW_PLACEMENT_NATURAL_GAPS = 5;                            // half of the minimum gap between windows
 const WINDOW_PLACEMENT_NATURAL_MAX_TRANSLATIONS = 5000;             // safety limit for preventing endless loop if something is wrong in the algorithm
 
-const Rect = new Lang.Class({
-    Name: 'NativeWindowPlacement.Rect',
-
-    _init(x, y, width, height) {
+class Rect {
+    constructor(x, y, width, height) {
         [this.x, this.y, this.width, this.height] = [x, y, width, height];
-    },
+    }
 
     /**
      * used in _calculateWindowTransformationsNatural to replace Meta.Rectangle that is too slow.
      */
     copy() {
         return new Rect(this.x, this.y, this.width, this.height);
-    },
+    }
 
     union(rect2) {
         let dest = this.copy();
@@ -46,7 +42,7 @@ const Rect = new Lang.Class({
           dest.height = rect2.y + rect2.height - dest.y;
 
         return dest;
-    },
+    }
 
     adjusted(dx, dy, dx2, dy2) {
         let dest = this.copy();
@@ -55,36 +51,34 @@ const Rect = new Lang.Class({
         dest.width += -dx + dx2;
         dest.height += -dy + dy2;
         return dest;
-    },
+    }
 
     overlap(rect2) {
         return !((this.x + this.width    <= rect2.x) ||
                  (rect2.x + rect2.width  <= this.x) ||
                  (this.y + this.height   <= rect2.y) ||
                  (rect2.y + rect2.height <= this.y));
-    },
+    }
 
     center() {
         return [this.x + this.width / 2, this.y + this.height / 2];
-    },
+    }
 
     translate(dx, dy) {
         this.x += dx;
         this.y += dy;
     }
-});
+};
 
-const NaturalLayoutStrategy = new Lang.Class({
-    Name: 'NaturalLayoutStrategy',
-    Extends: Workspace.LayoutStrategy,
-
-    _init(settings) {
+class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
+    constructor(settings) {
+        super();
         this._settings = settings;
-    },
+    }
 
     computeLayout(windows, layout) {
         layout.windows = windows;
-    },
+    }
 
     /**
      * Returns clones with matching target coordinates and scales to arrange windows in a natural way that no overlap exists and relative window size is preserved.
@@ -246,7 +240,7 @@ const NaturalLayoutStrategy = new Lang.Class({
 
         return slots;
     }
-});
+};
 
 let winInjections, workspaceInjections;
 

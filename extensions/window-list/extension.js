@@ -64,12 +64,9 @@ function _getAppStableSequence(app) {
 }
 
 
-const WindowContextMenu = new Lang.Class({
-    Name: 'WindowContextMenu',
-    Extends: PopupMenu.PopupMenu,
-
-    _init(source, metaWindow) {
-        this.parent(source, 0.5, St.Side.BOTTOM);
+class WindowContextMenu extends PopupMenu.PopupMenu {
+    constructor(source, metaWindow) {
+        super(source, 0.5, St.Side.BOTTOM);
 
         this._metaWindow = metaWindow;
 
@@ -123,31 +120,29 @@ const WindowContextMenu = new Lang.Class({
             this._maximizeItem.setSensitive(this._metaWindow.can_maximize());
             this._closeItem.setSensitive(this._metaWindow.can_close());
         });
-    },
+    }
 
     _updateMinimizeItem() {
         this._minimizeItem.label.text = this._metaWindow.minimized ? _("Unminimize")
                                                                    : _("Minimize");
-    },
+    }
 
     _updateMaximizeItem() {
         let maximized = this._metaWindow.maximized_vertically &&
                         this._metaWindow.maximized_horizontally;
         this._maximizeItem.label.text = maximized ? _("Unmaximize")
                                                   : _("Maximize");
-    },
+    }
 
     _onDestroy() {
         this._metaWindow.disconnect(this._notifyMinimizedId);
         this._metaWindow.disconnect(this._notifyMaximizedHId);
         this._metaWindow.disconnect(this._notifyMaximizedVId);
     }
-});
+};
 
-const WindowTitle = new Lang.Class({
-    Name: 'WindowTitle',
-
-    _init(metaWindow) {
+class WindowTitle {
+    constructor(metaWindow) {
         this._metaWindow = metaWindow;
         this.actor = new St.BoxLayout({ style_class: 'window-button-box',
                                         x_expand: true, y_expand: true });
@@ -178,12 +173,12 @@ const WindowTitle = new Lang.Class({
             this._metaWindow.connect('notify::minimized',
                                     Lang.bind(this, this._minimizedChanged));
         this._minimizedChanged();
-    },
+    }
 
     _minimizedChanged() {
         this._icon.opacity = this._metaWindow.minimized ? 128 : 255;
         this._updateTitle();
-    },
+    }
 
     _updateTitle() {
         if (!this._metaWindow.title)
@@ -193,7 +188,7 @@ const WindowTitle = new Lang.Class({
             this.label_actor.text = '[%s]'.format(this._metaWindow.title);
         else
             this.label_actor.text = this._metaWindow.title;
-    },
+    }
 
     _updateIcon() {
         let app = Shell.WindowTracker.get_default().get_window_app(this._metaWindow);
@@ -202,7 +197,7 @@ const WindowTitle = new Lang.Class({
         else
             this._icon.child = new St.Icon({ icon_name: 'icon-missing',
                                              icon_size: ICON_TEXTURE_SIZE });
-    },
+    }
 
     _onDestroy() {
         this._textureCache.disconnect(this._iconThemeChangedId);
@@ -211,14 +206,14 @@ const WindowTitle = new Lang.Class({
         this._metaWindow.disconnect(this._notifyWmClass);
         this._metaWindow.disconnect(this._notifyAppId);
     }
-});
+};
 
 
-const BaseButton = new Lang.Class({
-    Name: 'BaseButton',
-    Abstract: true,
+class BaseButton {
+    constructor(perMonitor, monitorIndex) {
+        if (this.constructor === BaseButton)
+            throw new TypeError('Cannot instantiate abstract class BaseButton');
 
-    _init(perMonitor, monitorIndex) {
         this._perMonitor = perMonitor;
         this._monitorIndex = monitorIndex;
 
@@ -250,47 +245,47 @@ const BaseButton = new Lang.Class({
                 global.screen.connect('window-left-monitor',
                     Lang.bind(this, this._windowEnteredOrLeftMonitor));
         }
-    },
+    }
 
     get active() {
         return this.actor.has_style_class_name('focused');
-    },
+    }
 
     activate() {
         if (this.active)
             return;
 
         this._onClicked(this.actor, 1);
-    },
+    }
 
     _onClicked(actor, button) {
         throw new Error('Not implemented');
-    },
+    }
 
     _canOpenPopupMenu() {
         return true;
-    },
+    }
 
     _onPopupMenu(actor) {
         if (!this._canOpenPopupMenu() || this._contextMenu.isOpen)
             return;
         _openMenu(this._contextMenu);
-    },
+    }
 
     _isFocused() {
         throw new Error('Not implemented');
-    },
+    }
 
     _updateStyle() {
         if (this._isFocused())
             this.actor.add_style_class_name('focused');
         else
             this.actor.remove_style_class_name('focused');
-    },
+    }
 
     _windowEnteredOrLeftMonitor(metaScreen, monitorIndex, metaWindow) {
         throw new Error('Not implemented');
-    },
+    }
 
     _isWindowVisible(window) {
         let workspace = global.screen.get_active_workspace();
@@ -298,11 +293,11 @@ const BaseButton = new Lang.Class({
         return !window.skip_taskbar &&
                window.located_on_workspace(workspace) &&
                (!this._perMonitor || window.get_monitor() == this._monitorIndex);
-    },
+    }
 
     _updateVisibility() {
         throw new Error('Not implemented');
-    },
+    }
 
     _getIconGeometry() {
         let rect = new Meta.Rectangle();
@@ -311,11 +306,11 @@ const BaseButton = new Lang.Class({
         [rect.width, rect.height] = this.actor.get_transformed_size();
 
         return rect;
-    },
+    }
 
     _updateIconGeometry() {
         throw new Error('Not implemented');
-    },
+    }
 
     _onDestroy() {
         global.window_manager.disconnect(this._switchWorkspaceId);
@@ -328,15 +323,12 @@ const BaseButton = new Lang.Class({
             global.screen.disconnect(this._windowLeftMonitorId);
         this._windowLeftMonitorId = 0;
     }
-});
+};
 
 
-const WindowButton = new Lang.Class({
-    Name: 'WindowButton',
-    Extends: BaseButton,
-
-    _init(metaWindow, perMonitor, monitorIndex) {
-        this.parent(perMonitor, monitorIndex);
+class WindowButton extends BaseButton {
+    constructor(metaWindow, perMonitor, monitorIndex) {
+        super(perMonitor, monitorIndex);
 
         this.metaWindow = metaWindow;
         this._updateVisibility();
@@ -359,7 +351,7 @@ const WindowButton = new Lang.Class({
             global.display.connect('notify::focus-window',
                                    Lang.bind(this, this._updateStyle));
         this._updateStyle();
-    },
+    }
 
     _onClicked(actor, button) {
         if (this._contextMenu.isOpen) {
@@ -371,49 +363,46 @@ const WindowButton = new Lang.Class({
             _minimizeOrActivateWindow(this.metaWindow);
         else
             _openMenu(this._contextMenu);
-    },
+    }
 
     _isFocused() {
         return global.display.focus_window == this.metaWindow;
-    },
+    }
 
     _updateStyle() {
-        this.parent();
+        super._updateStyle();
 
         if (this.metaWindow.minimized)
             this.actor.add_style_class_name('minimized');
         else
             this.actor.remove_style_class_name('minimized');
-    },
+    }
 
     _windowEnteredOrLeftMonitor(metaScreen, monitorIndex, metaWindow) {
         if (monitorIndex == this._monitorIndex && metaWindow == this.metaWindow)
             this._updateVisibility();
-    },
+    }
 
     _updateVisibility() {
         this.actor.visible = this._isWindowVisible(this.metaWindow);
-    },
+    }
 
     _updateIconGeometry() {
         this.metaWindow.set_icon_geometry(this._getIconGeometry());
-    },
+    }
 
     _onDestroy() {
-        this.parent();
+        super._onDestroy();
         this.metaWindow.disconnect(this._workspaceChangedId);
         global.display.disconnect(this._notifyFocusId);
         this._contextMenu.destroy();
     }
-});
+};
 
 
-const AppContextMenu = new Lang.Class({
-    Name: 'AppContextMenu',
-    Extends: PopupMenu.PopupMenu,
-
-    _init(source, appButton) {
-        this.parent(source, 0.5, St.Side.BOTTOM);
+class AppContextMenu extends PopupMenu.PopupMenu {
+    constructor(source, appButton) {
+        super(source, 0.5, St.Side.BOTTOM);
 
         this._appButton = appButton;
 
@@ -454,7 +443,7 @@ const AppContextMenu = new Lang.Class({
             });
         });
         this.addMenuItem(item);
-    },
+    }
 
     open(animate) {
         let windows = this._appButton.getWindowList();
@@ -467,16 +456,13 @@ const AppContextMenu = new Lang.Class({
             return w.maximized_horizontally && w.maximized_vertically;
         });
 
-        this.parent(animate);
+        super.open(animate);
     }
-});
+};
 
-const AppButton = new Lang.Class({
-    Name: 'AppButton',
-    Extends: BaseButton,
-
-    _init(app, perMonitor, monitorIndex) {
-        this.parent(perMonitor, monitorIndex);
+class AppButton extends BaseButton {
+    constructor(app, perMonitor, monitorIndex) {
+        super(perMonitor, monitorIndex);
 
         this.app = app;
         this._updateVisibility();
@@ -531,7 +517,7 @@ const AppButton = new Lang.Class({
             this._windowTracker.connect('notify::focus-app',
                                         Lang.bind(this, this._updateStyle));
         this._updateStyle();
-    },
+    }
 
     _windowEnteredOrLeftMonitor(metaScreen, monitorIndex, metaWindow) {
         if (this._windowTracker.get_window_app(metaWindow) == this.app &&
@@ -539,7 +525,7 @@ const AppButton = new Lang.Class({
             this._updateVisibility();
             this._windowsChanged();
         }
-    },
+    }
 
     _updateVisibility() {
         if (!this._perMonitor) {
@@ -549,22 +535,22 @@ const AppButton = new Lang.Class({
         } else {
             this.actor.visible = this.getWindowList().length >= 1;
         }
-    },
+    }
 
     _isFocused() {
         return this._windowTracker.focus_app == this.app;
-    },
+    }
 
     _updateIconGeometry() {
         let rect = this._getIconGeometry();
 
         let windows = this.app.get_windows();
         windows.forEach(w => { w.set_icon_geometry(rect); });
-    },
+    }
 
     getWindowList() {
         return this.app.get_windows().filter(win => this._isWindowVisible(win));
-    },
+    }
 
     _windowsChanged() {
         let windows = this.getWindowList();
@@ -599,7 +585,7 @@ const AppButton = new Lang.Class({
             this.actor.label_actor = this._multiWindowTitle.label_actor;
         }
 
-    },
+    }
 
     _onClicked(actor, button) {
         let menuWasOpen = this._menu.isOpen;
@@ -636,32 +622,29 @@ const AppButton = new Lang.Class({
                 return;
             _openMenu(this._contextMenu);
         }
-    },
+    }
 
     _canOpenPopupMenu() {
         return !this._menu.isOpen;
-    },
+    }
 
     _onMenuActivate(menu, child) {
         child._window.activate(global.get_current_time());
-    },
+    }
 
     _onDestroy() {
-        this.parent();
+        super._onDestroy();
         this._textureCache.disconnect(this._iconThemeChangedId);
         this._windowTracker.disconnect(this._notifyFocusId);
         this.app.disconnect(this._windowsChangedId);
         this._menu.destroy();
     }
-});
+};
 
 
-const WorkspaceIndicator = new Lang.Class({
-    Name: 'WindowList.WorkspaceIndicator',
-    Extends: PanelMenu.Button,
-
-    _init() {
-        this.parent(0.0, _("Workspace Indicator"), true);
+class WorkspaceIndicator extends PanelMenu.Button {
+    constructor() {
+        super(0.0, _("Workspace Indicator"), true);
         this.setMenu(new PopupMenu.PopupMenu(this.actor, 0.0, St.Side.BOTTOM));
         this.actor.add_style_class_name('window-list-workspace-indicator');
         this.menu.actor.remove_style_class_name('panel-menu');
@@ -687,7 +670,7 @@ const WorkspaceIndicator = new Lang.Class({
 
         this._settings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.preferences' });
         this._settingsChangedId = this._settings.connect('changed::workspace-names', Lang.bind(this, this._updateMenu));
-    },
+    }
 
     destroy() {
         for (let i = 0; i < this._screenSignals.length; i++)
@@ -698,8 +681,8 @@ const WorkspaceIndicator = new Lang.Class({
             this._settingsChangedId = 0;
         }
 
-        this.parent();
-    },
+        super.destroy();
+    }
 
     _updateIndicator() {
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
@@ -707,14 +690,14 @@ const WorkspaceIndicator = new Lang.Class({
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
         this.statusLabel.set_text(this._getStatusText());
-    },
+    }
 
     _getStatusText() {
         let current = global.screen.get_active_workspace().index();
         let total = global.screen.n_workspaces;
 
         return '%d / %d'.format(current + 1, total);
-    },
+    }
 
     _updateMenu() {
         this.menu.removeAll();
@@ -738,14 +721,14 @@ const WorkspaceIndicator = new Lang.Class({
         }
 
         this.statusLabel.set_text(this._getStatusText());
-    },
+    }
 
     _activate(index) {
         if(index >= 0 && index < global.screen.n_workspaces) {
             let metaWorkspace = global.screen.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
-    },
+    }
 
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
@@ -760,18 +743,16 @@ const WorkspaceIndicator = new Lang.Class({
 
         let newIndex = this._currentWorkspace + diff;
         this._activate(newIndex);
-    },
+    }
 
     _allocate(actor, box, flags) {
         if (actor.get_n_children() > 0)
             actor.get_first_child().allocate(box, flags);
     }
-});
+};
 
-const WindowList = new Lang.Class({
-    Name: 'WindowList',
-
-    _init(perMonitor, monitor) {
+class WindowList {
+    constructor(perMonitor, monitor) {
         this._perMonitor = perMonitor;
         this._monitor = monitor;
 
@@ -895,20 +876,20 @@ const WindowList = new Lang.Class({
                                    Lang.bind(this, this._groupingModeChanged));
         this._grouped = undefined;
         this._groupingModeChanged();
-    },
+    }
 
     _getDynamicWorkspacesSettings() {
         if (this._workspaceSettings.list_keys().indexOf('dynamic-workspaces') > -1)
             return this._workspaceSettings;
         return this._mutterSettings;
-    },
+    }
 
     _getWorkspaceSettings() {
         let settings = global.get_overrides_settings();
         if (settings.list_keys().indexOf('workspaces-only-on-primary') > -1)
             return settings;
         return this._mutterSettings;
-    },
+    }
 
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
@@ -931,12 +912,12 @@ const WindowList = new Lang.Class({
 
         active = Math.max(0, Math.min(active + diff, children.length-1));
         children[active].activate();
-    },
+    }
 
     _updatePosition() {
         this.actor.set_position(this._monitor.x,
                                 this._monitor.y + this._monitor.height - this.actor.height);
-    },
+    }
 
     _updateWorkspaceIndicatorVisibility() {
         let hasWorkspaces = this._dynamicWorkspacesSettings.get_boolean('dynamic-workspaces') ||
@@ -945,7 +926,7 @@ const WindowList = new Lang.Class({
                                   !this._workspaceSettings.get_boolean('workspaces-only-on-primary');
 
         this._workspaceIndicator.actor.visible = hasWorkspaces && workspacesOnMonitor;
-    },
+    }
 
     _getPreferredUngroupedWindowListWidth() {
         if (this._windowList.get_n_children() == 0)
@@ -964,12 +945,12 @@ const WindowList = new Lang.Class({
             return this._windowList.get_preferred_width(-1)[1];
 
         return nWindows * childWidth + (nWindows - 1) * spacing;
-    },
+    }
 
     _getMaxWindowListWidth() {
         let indicatorsBox = this._workspaceIndicator.actor.get_parent();
         return this.actor.width - indicatorsBox.get_preferred_width(-1)[1];
-    },
+    }
 
     _groupingModeChanged() {
         this._groupingMode = this._settings.get_enum('grouping-mode');
@@ -980,7 +961,7 @@ const WindowList = new Lang.Class({
             this._grouped = this._groupingMode == GroupingMode.ALWAYS;
             this._populateWindowList();
         }
-    },
+    }
 
     _checkGrouping() {
         if (this._groupingMode != GroupingMode.AUTO)
@@ -994,7 +975,7 @@ const WindowList = new Lang.Class({
             this._grouped = grouped;
             this._populateWindowList();
         }
-    },
+    }
 
     _populateWindowList() {
         this._windowList.destroy_all_children();
@@ -1014,7 +995,7 @@ const WindowList = new Lang.Class({
             for (let i = 0; i < apps.length; i++)
                 this._addApp(apps[i]);
         }
-    },
+    }
 
     _updateKeyboardAnchor() {
         if (!Main.keyboard.actor)
@@ -1022,7 +1003,7 @@ const WindowList = new Lang.Class({
 
         let anchorY = Main.overview.visible ? 0 : this.actor.height;
         Main.keyboard.actor.anchor_y = anchorY;
-    },
+    }
 
     _onAppStateChanged(appSys, app) {
         if (!this._grouped)
@@ -1032,7 +1013,7 @@ const WindowList = new Lang.Class({
             this._addApp(app);
         else if (app.state == Shell.AppState.STOPPED)
             this._removeApp(app);
-    },
+    }
 
     _addApp(app) {
         let button = new AppButton(app, this._perMonitor, this._monitor.index);
@@ -1040,7 +1021,7 @@ const WindowList = new Lang.Class({
                                              true, true, true,
                                              Clutter.BoxAlignment.START,
                                              Clutter.BoxAlignment.START);
-    },
+    }
 
     _removeApp(app) {
         let children = this._windowList.get_children();
@@ -1050,7 +1031,7 @@ const WindowList = new Lang.Class({
                 return;
             }
         }
-    },
+    }
 
     _onWindowAdded(ws, win) {
         if (win.skip_taskbar)
@@ -1073,7 +1054,7 @@ const WindowList = new Lang.Class({
                                              true, true, true,
                                              Clutter.BoxAlignment.START,
                                              Clutter.BoxAlignment.START);
-    },
+    }
 
     _onWindowRemoved(ws, win) {
         if (this._grouped)
@@ -1092,7 +1073,7 @@ const WindowList = new Lang.Class({
                 return;
             }
         }
-    },
+    }
 
     _onWorkspacesChanged() {
         let numWorkspaces = global.screen.n_workspaces;
@@ -1112,7 +1093,7 @@ const WindowList = new Lang.Class({
         }
 
         this._updateWorkspaceIndicatorVisibility();
-    },
+    }
 
     _disconnectWorkspaceSignals() {
         let numWorkspaces = global.screen.n_workspaces;
@@ -1123,16 +1104,16 @@ const WindowList = new Lang.Class({
             workspace.disconnect(signals._windowAddedId);
             workspace.disconnect(signals._windowRemovedId);
         }
-    },
+    }
 
     _onDragBegin() {
         DND.addDragMonitor(this._dragMonitor);
-    },
+    }
 
     _onDragEnd() {
         DND.removeDragMonitor(this._dragMonitor);
         this._removeActivateTimeout();
-    },
+    }
 
     _onDragMotion(dragEvent) {
         if (Main.overview.visible ||
@@ -1157,14 +1138,14 @@ const WindowList = new Lang.Class({
                                               Lang.bind(this, this._activateWindow));
 
         return DND.DragMotionResult.CONTINUE;
-    },
+    }
 
     _removeActivateTimeout() {
         if (this._dndTimeoutId)
             GLib.source_remove (this._dndTimeoutId);
         this._dndTimeoutId = 0;
         this._dndWindow = null;
-    },
+    }
 
     _activateWindow() {
         let [x, y] = global.get_pointer();
@@ -1176,7 +1157,7 @@ const WindowList = new Lang.Class({
         this._dndTimeoutId = 0;
 
         return false;
-    },
+    }
 
     _onDestroy() {
         this._workspaceSettings.disconnect(this._workspacesOnlyOnPrimaryChangedId);
@@ -1216,15 +1197,13 @@ const WindowList = new Lang.Class({
         for (let i = 0; i < windows.length; i++)
             windows[i].metaWindow.set_icon_geometry(null);
     }
-});
+};
 
-const Extension = new Lang.Class({
-    Name: 'Extension',
-
-    _init() {
+class Extension {
+    constructor() {
         this._windowLists = null;
         this._injections = {};
-    },
+    }
 
     enable() {
         this._windowLists = [];
@@ -1239,7 +1218,7 @@ const Extension = new Lang.Class({
                                        Lang.bind(this, this._buildWindowLists));
 
         this._buildWindowLists();
-    },
+    }
 
     _buildWindowLists() {
         this._windowLists.forEach(list => { list.actor.destroy(); });
@@ -1251,7 +1230,7 @@ const Extension = new Lang.Class({
             if (showOnAllMonitors || monitor == Main.layoutManager.primaryMonitor)
                 this._windowLists.push(new WindowList(showOnAllMonitors, monitor));
         });
-    },
+    }
 
     disable() {
         if (!this._windowLists)
@@ -1268,12 +1247,12 @@ const Extension = new Lang.Class({
             windowList.actor.destroy();
         });
         this._windowLists = null;
-    },
+    }
 
     someWindowListContains(actor) {
         return this._windowLists.some(list => list.actor.contains(actor));
     }
-});
+};
 
 function init() {
     return new Extension();

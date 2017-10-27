@@ -18,12 +18,9 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
-const MountMenuItem = new Lang.Class({
-    Name: 'DriveMenu.MountMenuItem',
-    Extends: PopupMenu.PopupBaseMenuItem,
-
-    _init(mount) {
-        this.parent();
+class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
+    constructor(mount) {
+        super();
 
         this.label = new St.Label({ text: mount.get_name() });
         this.actor.add(this.label, { expand: true });
@@ -39,7 +36,7 @@ const MountMenuItem = new Lang.Class({
 
         this._changedId = mount.connect('changed', Lang.bind(this, this._syncVisibility));
         this._syncVisibility();
-    },
+    }
 
     destroy() {
         if (this._changedId) {
@@ -47,8 +44,8 @@ const MountMenuItem = new Lang.Class({
             this._changedId = 0;
         }
 
-        this.parent();
-    },
+        super.destroy();
+    }
 
     _isInteresting() {
         if (!this.mount.can_eject() && !this.mount.can_unmount())
@@ -65,11 +62,11 @@ const MountMenuItem = new Lang.Class({
         }
 
         return volume.get_identifier('class') != 'network';
-    },
+    }
 
     _syncVisibility() {
         this.actor.visible = this._isInteresting();
-    },
+    }
 
     _eject() {
         let mountOp = new ShellMountOperation.ShellMountOperation(this.mount);
@@ -84,7 +81,7 @@ const MountMenuItem = new Lang.Class({
                                               mountOp.mountOp,
                                               null, // Gio.Cancellable
                                               Lang.bind(this, this._unmountFinish));
-    },
+    }
 
     _unmountFinish(mount, result) {
         try {
@@ -92,7 +89,7 @@ const MountMenuItem = new Lang.Class({
         } catch(e) {
             this._reportFailure(e);
         }
-    },
+    }
 
     _ejectFinish(mount, result) {
         try {
@@ -100,29 +97,26 @@ const MountMenuItem = new Lang.Class({
         } catch(e) {
             this._reportFailure(e);
         }
-    },
+    }
 
     _reportFailure(exception) {
         // TRANSLATORS: %s is the filesystem name
         let msg = _("Ejecting drive “%s” failed:").format(this.mount.get_name());
         Main.notifyError(msg, exception.message);
-    },
+    }
 
     activate(event) {
         let context = global.create_app_launch_context(event.get_time(), -1);
         Gio.AppInfo.launch_default_for_uri(this.mount.get_root().get_uri(),
                                            context);
 
-        this.parent(event);
+        super.activate(event);
     }
-});
+};
 
-const DriveMenu = new Lang.Class({
-    Name: 'DriveMenu.DriveMenu',
-    Extends: PanelMenu.Button,
-
-    _init() {
-        this.parent(0.0, _("Removable devices"));
+class DriveMenu extends PanelMenu.Button {
+    constructor() {
+        super(0.0, _("Removable devices"));
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
         let icon = new St.Icon({ icon_name: 'media-eject-symbolic',
@@ -154,20 +148,20 @@ const DriveMenu = new Lang.Class({
         });
 
         this._updateMenuVisibility();
-    },
+    }
 
     _updateMenuVisibility() {
         if (this._mounts.filter(i => i.actor.visible).length > 0)
             this.actor.show();
         else
             this.actor.hide();
-    },
+    }
 
     _addMount(mount) {
         let item = new MountMenuItem(mount);
         this._mounts.unshift(item);
         this.menu.addMenuItem(item, 0);
-    },
+    }
 
     _removeMount(mount) {
         for (let i = 0; i < this._mounts.length; i++) {
@@ -179,7 +173,7 @@ const DriveMenu = new Lang.Class({
             }
         }
         log ('Removing a mount that was never added to the menu');
-    },
+    }
 
     destroy() {
         if (this._connectedId) {
@@ -189,9 +183,9 @@ const DriveMenu = new Lang.Class({
             this._disconnectedId = 0;
         }
 
-        this.parent();
-    },
-});
+        super.destroy();
+    }
+};
 
 function init() {
     Convenience.initTranslations();
