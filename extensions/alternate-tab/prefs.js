@@ -26,7 +26,7 @@ const AltTabSettingsWidget = new GObject.Class({
     GTypeName: 'AltTabSettingsWidget',
     Extends: Gtk.Grid,
 
-    _init: function(params) {
+    _init(params) {
         this.parent(params);
         this.margin = 24;
         this.row_spacing = 6;

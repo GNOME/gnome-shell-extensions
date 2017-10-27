@@ -22,7 +22,7 @@ const MountMenuItem = new Lang.Class({
     Name: 'DriveMenu.MountMenuItem',
     Extends: PopupMenu.PopupBaseMenuItem,
 
-    _init: function(mount) {
+    _init(mount) {
         this.parent();
 
         this.label = new St.Label({ text: mount.get_name() });
@@ -41,7 +41,7 @@ const MountMenuItem = new Lang.Class({
         this._syncVisibility();
     },
 
-    destroy: function() {
+    destroy() {
         if (this._changedId) {
             this.mount.disconnect(this._changedId);
             this._changedId = 0;
@@ -50,7 +50,7 @@ const MountMenuItem = new Lang.Class({
         this.parent();
     },
 
-    _isInteresting: function() {
+    _isInteresting() {
         if (!this.mount.can_eject() && !this.mount.can_unmount())
             return false;
         if (this.mount.is_shadowed())
@@ -67,11 +67,11 @@ const MountMenuItem = new Lang.Class({
         return volume.get_identifier('class') != 'network';
     },
 
-    _syncVisibility: function() {
+    _syncVisibility() {
         this.actor.visible = this._isInteresting();
     },
 
-    _eject: function() {
+    _eject() {
         let mountOp = new ShellMountOperation.ShellMountOperation(this.mount);
 
         if (this.mount.can_eject())
@@ -86,7 +86,7 @@ const MountMenuItem = new Lang.Class({
                                               Lang.bind(this, this._unmountFinish));
     },
 
-    _unmountFinish: function(mount, result) {
+    _unmountFinish(mount, result) {
         try {
             mount.unmount_with_operation_finish(result);
         } catch(e) {
@@ -94,7 +94,7 @@ const MountMenuItem = new Lang.Class({
         }
     },
 
-    _ejectFinish: function(mount, result) {
+    _ejectFinish(mount, result) {
         try {
             mount.eject_with_operation_finish(result);
         } catch(e) {
@@ -102,13 +102,13 @@ const MountMenuItem = new Lang.Class({
         }
     },
 
-    _reportFailure: function(exception) {
+    _reportFailure(exception) {
         // TRANSLATORS: %s is the filesystem name
         let msg = _("Ejecting drive “%s” failed:").format(this.mount.get_name());
         Main.notifyError(msg, exception.message);
     },
 
-    activate: function(event) {
+    activate(event) {
         let context = global.create_app_launch_context(event.get_time(), -1);
         Gio.AppInfo.launch_default_for_uri(this.mount.get_root().get_uri(),
                                            context);
@@ -121,7 +121,7 @@ const DriveMenu = new Lang.Class({
     Name: 'DriveMenu.DriveMenu',
     Extends: PanelMenu.Button,
 
-    _init: function() {
+    _init() {
         this.parent(0.0, _("Removable devices"));
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
@@ -156,20 +156,20 @@ const DriveMenu = new Lang.Class({
         this._updateMenuVisibility();
     },
 
-    _updateMenuVisibility: function() {
+    _updateMenuVisibility() {
         if (this._mounts.filter(i => i.actor.visible).length > 0)
             this.actor.show();
         else
             this.actor.hide();
     },
 
-    _addMount: function(mount) {
+    _addMount(mount) {
         let item = new MountMenuItem(mount);
         this._mounts.unshift(item);
         this.menu.addMenuItem(item, 0);
     },
 
-    _removeMount: function(mount) {
+    _removeMount(mount) {
         for (let i = 0; i < this._mounts.length; i++) {
             let item = this._mounts[i];
             if (item.mount == mount) {
@@ -181,7 +181,7 @@ const DriveMenu = new Lang.Class({
         log ('Removing a mount that was never added to the menu');
     },
 
-    destroy: function() {
+    destroy() {
         if (this._connectedId) {
             this._monitor.disconnect(this._connectedId);
             this._monitor.disconnect(this._disconnectedId);

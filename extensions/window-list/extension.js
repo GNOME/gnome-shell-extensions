@@ -68,7 +68,7 @@ const WindowContextMenu = new Lang.Class({
     Name: 'WindowContextMenu',
     Extends: PopupMenu.PopupMenu,
 
-    _init: function(source, metaWindow) {
+    _init(source, metaWindow) {
         this.parent(source, 0.5, St.Side.BOTTOM);
 
         this._metaWindow = metaWindow;
@@ -125,19 +125,19 @@ const WindowContextMenu = new Lang.Class({
         });
     },
 
-    _updateMinimizeItem: function() {
+    _updateMinimizeItem() {
         this._minimizeItem.label.text = this._metaWindow.minimized ? _("Unminimize")
                                                                    : _("Minimize");
     },
 
-    _updateMaximizeItem: function() {
+    _updateMaximizeItem() {
         let maximized = this._metaWindow.maximized_vertically &&
                         this._metaWindow.maximized_horizontally;
         this._maximizeItem.label.text = maximized ? _("Unmaximize")
                                                   : _("Maximize");
     },
 
-    _onDestroy: function() {
+    _onDestroy() {
         this._metaWindow.disconnect(this._notifyMinimizedId);
         this._metaWindow.disconnect(this._notifyMaximizedHId);
         this._metaWindow.disconnect(this._notifyMaximizedVId);
@@ -147,7 +147,7 @@ const WindowContextMenu = new Lang.Class({
 const WindowTitle = new Lang.Class({
     Name: 'WindowTitle',
 
-    _init: function(metaWindow) {
+    _init(metaWindow) {
         this._metaWindow = metaWindow;
         this.actor = new St.BoxLayout({ style_class: 'window-button-box',
                                         x_expand: true, y_expand: true });
@@ -180,12 +180,12 @@ const WindowTitle = new Lang.Class({
         this._minimizedChanged();
     },
 
-    _minimizedChanged: function() {
+    _minimizedChanged() {
         this._icon.opacity = this._metaWindow.minimized ? 128 : 255;
         this._updateTitle();
     },
 
-    _updateTitle: function() {
+    _updateTitle() {
         if (!this._metaWindow.title)
             return;
 
@@ -195,7 +195,7 @@ const WindowTitle = new Lang.Class({
             this.label_actor.text = this._metaWindow.title;
     },
 
-    _updateIcon: function() {
+    _updateIcon() {
         let app = Shell.WindowTracker.get_default().get_window_app(this._metaWindow);
         if (app)
             this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
@@ -204,7 +204,7 @@ const WindowTitle = new Lang.Class({
                                              icon_size: ICON_TEXTURE_SIZE });
     },
 
-    _onDestroy: function() {
+    _onDestroy() {
         this._textureCache.disconnect(this._iconThemeChangedId);
         this._metaWindow.disconnect(this._notifyTitleId);
         this._metaWindow.disconnect(this._notifyMinimizedId);
@@ -218,7 +218,7 @@ const BaseButton = new Lang.Class({
     Name: 'BaseButton',
     Abstract: true,
 
-    _init: function(perMonitor, monitorIndex) {
+    _init(perMonitor, monitorIndex) {
         this._perMonitor = perMonitor;
         this._monitorIndex = monitorIndex;
 
@@ -256,43 +256,43 @@ const BaseButton = new Lang.Class({
         return this.actor.has_style_class_name('focused');
     },
 
-    activate: function() {
+    activate() {
         if (this.active)
             return;
 
         this._onClicked(this.actor, 1);
     },
 
-    _onClicked: function(actor, button) {
+    _onClicked(actor, button) {
         throw new Error('Not implemented');
     },
 
-    _canOpenPopupMenu: function() {
+    _canOpenPopupMenu() {
         return true;
     },
 
-    _onPopupMenu: function(actor) {
+    _onPopupMenu(actor) {
         if (!this._canOpenPopupMenu() || this._contextMenu.isOpen)
             return;
         _openMenu(this._contextMenu);
     },
 
-    _isFocused: function() {
+    _isFocused() {
         throw new Error('Not implemented');
     },
 
-    _updateStyle: function() {
+    _updateStyle() {
         if (this._isFocused())
             this.actor.add_style_class_name('focused');
         else
             this.actor.remove_style_class_name('focused');
     },
 
-    _windowEnteredOrLeftMonitor: function(metaScreen, monitorIndex, metaWindow) {
+    _windowEnteredOrLeftMonitor(metaScreen, monitorIndex, metaWindow) {
         throw new Error('Not implemented');
     },
 
-    _isWindowVisible: function(window) {
+    _isWindowVisible(window) {
         let workspace = global.screen.get_active_workspace();
 
         return !window.skip_taskbar &&
@@ -300,11 +300,11 @@ const BaseButton = new Lang.Class({
                (!this._perMonitor || window.get_monitor() == this._monitorIndex);
     },
 
-    _updateVisibility: function() {
+    _updateVisibility() {
         throw new Error('Not implemented');
     },
 
-    _getIconGeometry: function() {
+    _getIconGeometry() {
         let rect = new Meta.Rectangle();
 
         [rect.x, rect.y] = this.actor.get_transformed_position();
@@ -313,11 +313,11 @@ const BaseButton = new Lang.Class({
         return rect;
     },
 
-    _updateIconGeometry: function() {
+    _updateIconGeometry() {
         throw new Error('Not implemented');
     },
 
-    _onDestroy: function() {
+    _onDestroy() {
         global.window_manager.disconnect(this._switchWorkspaceId);
 
         if (this._windowEnteredMonitorId)
@@ -335,7 +335,7 @@ const WindowButton = new Lang.Class({
     Name: 'WindowButton',
     Extends: BaseButton,
 
-    _init: function(metaWindow, perMonitor, monitorIndex) {
+    _init(metaWindow, perMonitor, monitorIndex) {
         this.parent(perMonitor, monitorIndex);
 
         this.metaWindow = metaWindow;
@@ -361,7 +361,7 @@ const WindowButton = new Lang.Class({
         this._updateStyle();
     },
 
-    _onClicked: function(actor, button) {
+    _onClicked(actor, button) {
         if (this._contextMenu.isOpen) {
             this._contextMenu.close();
             return;
@@ -373,11 +373,11 @@ const WindowButton = new Lang.Class({
             _openMenu(this._contextMenu);
     },
 
-    _isFocused: function() {
+    _isFocused() {
         return global.display.focus_window == this.metaWindow;
     },
 
-    _updateStyle: function() {
+    _updateStyle() {
         this.parent();
 
         if (this.metaWindow.minimized)
@@ -386,20 +386,20 @@ const WindowButton = new Lang.Class({
             this.actor.remove_style_class_name('minimized');
     },
 
-    _windowEnteredOrLeftMonitor: function(metaScreen, monitorIndex, metaWindow) {
+    _windowEnteredOrLeftMonitor(metaScreen, monitorIndex, metaWindow) {
         if (monitorIndex == this._monitorIndex && metaWindow == this.metaWindow)
             this._updateVisibility();
     },
 
-    _updateVisibility: function() {
+    _updateVisibility() {
         this.actor.visible = this._isWindowVisible(this.metaWindow);
     },
 
-    _updateIconGeometry: function() {
+    _updateIconGeometry() {
         this.metaWindow.set_icon_geometry(this._getIconGeometry());
     },
 
-    _onDestroy: function() {
+    _onDestroy() {
         this.parent();
         this.metaWindow.disconnect(this._workspaceChangedId);
         global.display.disconnect(this._notifyFocusId);
@@ -412,7 +412,7 @@ const AppContextMenu = new Lang.Class({
     Name: 'AppContextMenu',
     Extends: PopupMenu.PopupMenu,
 
-    _init: function(source, appButton) {
+    _init(source, appButton) {
         this.parent(source, 0.5, St.Side.BOTTOM);
 
         this._appButton = appButton;
@@ -456,7 +456,7 @@ const AppContextMenu = new Lang.Class({
         this.addMenuItem(item);
     },
 
-    open: function(animate) {
+    open(animate) {
         let windows = this._appButton.getWindowList();
         this._minimizeItem.actor.visible = windows.some(w => !w.minimized);
         this._unminimizeItem.actor.visible = windows.some(w => w.minimized);
@@ -475,7 +475,7 @@ const AppButton = new Lang.Class({
     Name: 'AppButton',
     Extends: BaseButton,
 
-    _init: function(app, perMonitor, monitorIndex) {
+    _init(app, perMonitor, monitorIndex) {
         this.parent(perMonitor, monitorIndex);
 
         this.app = app;
@@ -533,7 +533,7 @@ const AppButton = new Lang.Class({
         this._updateStyle();
     },
 
-    _windowEnteredOrLeftMonitor: function(metaScreen, monitorIndex, metaWindow) {
+    _windowEnteredOrLeftMonitor(metaScreen, monitorIndex, metaWindow) {
         if (this._windowTracker.get_window_app(metaWindow) == this.app &&
             monitorIndex == this._monitorIndex) {
             this._updateVisibility();
@@ -541,7 +541,7 @@ const AppButton = new Lang.Class({
         }
     },
 
-    _updateVisibility: function() {
+    _updateVisibility() {
         if (!this._perMonitor) {
             // fast path: use ShellApp API to avoid iterating over all windows.
             let workspace = global.screen.get_active_workspace();
@@ -551,22 +551,22 @@ const AppButton = new Lang.Class({
         }
     },
 
-    _isFocused: function() {
+    _isFocused() {
         return this._windowTracker.focus_app == this.app;
     },
 
-    _updateIconGeometry: function() {
+    _updateIconGeometry() {
         let rect = this._getIconGeometry();
 
         let windows = this.app.get_windows();
         windows.forEach(w => { w.set_icon_geometry(rect); });
     },
 
-    getWindowList: function() {
+    getWindowList() {
         return this.app.get_windows().filter(win => this._isWindowVisible(win));
     },
 
-    _windowsChanged: function() {
+    _windowsChanged() {
         let windows = this.getWindowList();
         this._singleWindowTitle.visible = windows.length == 1;
         this._multiWindowTitle.visible = !this._singleWindowTitle.visible;
@@ -601,7 +601,7 @@ const AppButton = new Lang.Class({
 
     },
 
-    _onClicked: function(actor, button) {
+    _onClicked(actor, button) {
         let menuWasOpen = this._menu.isOpen;
         if (menuWasOpen)
             this._menu.close();
@@ -638,15 +638,15 @@ const AppButton = new Lang.Class({
         }
     },
 
-    _canOpenPopupMenu: function() {
+    _canOpenPopupMenu() {
         return !this._menu.isOpen;
     },
 
-    _onMenuActivate: function(menu, child) {
+    _onMenuActivate(menu, child) {
         child._window.activate(global.get_current_time());
     },
 
-    _onDestroy: function() {
+    _onDestroy() {
         this.parent();
         this._textureCache.disconnect(this._iconThemeChangedId);
         this._windowTracker.disconnect(this._notifyFocusId);
@@ -660,7 +660,7 @@ const WorkspaceIndicator = new Lang.Class({
     Name: 'WindowList.WorkspaceIndicator',
     Extends: PanelMenu.Button,
 
-    _init: function() {
+    _init() {
         this.parent(0.0, _("Workspace Indicator"), true);
         this.setMenu(new PopupMenu.PopupMenu(this.actor, 0.0, St.Side.BOTTOM));
         this.actor.add_style_class_name('window-list-workspace-indicator');
@@ -689,7 +689,7 @@ const WorkspaceIndicator = new Lang.Class({
         this._settingsChangedId = this._settings.connect('changed::workspace-names', Lang.bind(this, this._updateMenu));
     },
 
-    destroy: function() {
+    destroy() {
         for (let i = 0; i < this._screenSignals.length; i++)
             global.screen.disconnect(this._screenSignals[i]);
 
@@ -701,7 +701,7 @@ const WorkspaceIndicator = new Lang.Class({
         this.parent();
     },
 
-    _updateIndicator: function() {
+    _updateIndicator() {
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
         this._currentWorkspace = global.screen.get_active_workspace().index();
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
@@ -709,14 +709,14 @@ const WorkspaceIndicator = new Lang.Class({
         this.statusLabel.set_text(this._getStatusText());
     },
 
-    _getStatusText: function() {
+    _getStatusText() {
         let current = global.screen.get_active_workspace().index();
         let total = global.screen.n_workspaces;
 
         return '%d / %d'.format(current + 1, total);
     },
 
-    _updateMenu: function() {
+    _updateMenu() {
         this.menu.removeAll();
         this.workspacesItems = [];
         this._currentWorkspace = global.screen.get_active_workspace().index();
@@ -740,14 +740,14 @@ const WorkspaceIndicator = new Lang.Class({
         this.statusLabel.set_text(this._getStatusText());
     },
 
-    _activate: function(index) {
+    _activate(index) {
         if(index >= 0 && index < global.screen.n_workspaces) {
             let metaWorkspace = global.screen.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
     },
 
-    _onScrollEvent: function(actor, event) {
+    _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
         let diff = 0;
         if (direction == Clutter.ScrollDirection.DOWN) {
@@ -762,7 +762,7 @@ const WorkspaceIndicator = new Lang.Class({
         this._activate(newIndex);
     },
 
-    _allocate: function(actor, box, flags) {
+    _allocate(actor, box, flags) {
         if (actor.get_n_children() > 0)
             actor.get_first_child().allocate(box, flags);
     }
@@ -771,7 +771,7 @@ const WorkspaceIndicator = new Lang.Class({
 const WindowList = new Lang.Class({
     Name: 'WindowList',
 
-    _init: function(perMonitor, monitor) {
+    _init(perMonitor, monitor) {
         this._perMonitor = perMonitor;
         this._monitor = monitor;
 
@@ -897,20 +897,20 @@ const WindowList = new Lang.Class({
         this._groupingModeChanged();
     },
 
-    _getDynamicWorkspacesSettings: function() {
+    _getDynamicWorkspacesSettings() {
         if (this._workspaceSettings.list_keys().indexOf('dynamic-workspaces') > -1)
             return this._workspaceSettings;
         return this._mutterSettings;
     },
 
-    _getWorkspaceSettings: function() {
+    _getWorkspaceSettings() {
         let settings = global.get_overrides_settings();
         if (settings.list_keys().indexOf('workspaces-only-on-primary') > -1)
             return settings;
         return this._mutterSettings;
     },
 
-    _onScrollEvent: function(actor, event) {
+    _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
         let diff = 0;
         if (direction == Clutter.ScrollDirection.DOWN)
@@ -933,12 +933,12 @@ const WindowList = new Lang.Class({
         children[active].activate();
     },
 
-    _updatePosition: function() {
+    _updatePosition() {
         this.actor.set_position(this._monitor.x,
                                 this._monitor.y + this._monitor.height - this.actor.height);
     },
 
-    _updateWorkspaceIndicatorVisibility: function() {
+    _updateWorkspaceIndicatorVisibility() {
         let hasWorkspaces = this._dynamicWorkspacesSettings.get_boolean('dynamic-workspaces') ||
                             global.screen.n_workspaces > 1;
         let workspacesOnMonitor = this._monitor == Main.layoutManager.primaryMonitor ||
@@ -947,7 +947,7 @@ const WindowList = new Lang.Class({
         this._workspaceIndicator.actor.visible = hasWorkspaces && workspacesOnMonitor;
     },
 
-    _getPreferredUngroupedWindowListWidth: function() {
+    _getPreferredUngroupedWindowListWidth() {
         if (this._windowList.get_n_children() == 0)
             return this._windowList.get_preferred_width(-1)[1];
 
@@ -966,12 +966,12 @@ const WindowList = new Lang.Class({
         return nWindows * childWidth + (nWindows - 1) * spacing;
     },
 
-    _getMaxWindowListWidth: function() {
+    _getMaxWindowListWidth() {
         let indicatorsBox = this._workspaceIndicator.actor.get_parent();
         return this.actor.width - indicatorsBox.get_preferred_width(-1)[1];
     },
 
-    _groupingModeChanged: function() {
+    _groupingModeChanged() {
         this._groupingMode = this._settings.get_enum('grouping-mode');
 
         if (this._groupingMode == GroupingMode.AUTO) {
@@ -982,7 +982,7 @@ const WindowList = new Lang.Class({
         }
     },
 
-    _checkGrouping: function() {
+    _checkGrouping() {
         if (this._groupingMode != GroupingMode.AUTO)
             return;
 
@@ -996,7 +996,7 @@ const WindowList = new Lang.Class({
         }
     },
 
-    _populateWindowList: function() {
+    _populateWindowList() {
         this._windowList.destroy_all_children();
 
         if (!this._grouped) {
@@ -1016,7 +1016,7 @@ const WindowList = new Lang.Class({
         }
     },
 
-    _updateKeyboardAnchor: function() {
+    _updateKeyboardAnchor() {
         if (!Main.keyboard.actor)
             return;
 
@@ -1024,7 +1024,7 @@ const WindowList = new Lang.Class({
         Main.keyboard.actor.anchor_y = anchorY;
     },
 
-    _onAppStateChanged: function(appSys, app) {
+    _onAppStateChanged(appSys, app) {
         if (!this._grouped)
             return;
 
@@ -1034,7 +1034,7 @@ const WindowList = new Lang.Class({
             this._removeApp(app);
     },
 
-    _addApp: function(app) {
+    _addApp(app) {
         let button = new AppButton(app, this._perMonitor, this._monitor.index);
         this._windowList.layout_manager.pack(button.actor,
                                              true, true, true,
@@ -1042,7 +1042,7 @@ const WindowList = new Lang.Class({
                                              Clutter.BoxAlignment.START);
     },
 
-    _removeApp: function(app) {
+    _removeApp(app) {
         let children = this._windowList.get_children();
         for (let i = 0; i < children.length; i++) {
             if (children[i]._delegate.app == app) {
@@ -1052,7 +1052,7 @@ const WindowList = new Lang.Class({
         }
     },
 
-    _onWindowAdded: function(ws, win) {
+    _onWindowAdded(ws, win) {
         if (win.skip_taskbar)
             return;
 
@@ -1075,7 +1075,7 @@ const WindowList = new Lang.Class({
                                              Clutter.BoxAlignment.START);
     },
 
-    _onWindowRemoved: function(ws, win) {
+    _onWindowRemoved(ws, win) {
         if (this._grouped)
             this._checkGrouping();
 
@@ -1094,7 +1094,7 @@ const WindowList = new Lang.Class({
         }
     },
 
-    _onWorkspacesChanged: function() {
+    _onWorkspacesChanged() {
         let numWorkspaces = global.screen.n_workspaces;
         for (let i = 0; i < numWorkspaces; i++) {
             let workspace = global.screen.get_workspace_by_index(i);
@@ -1114,7 +1114,7 @@ const WindowList = new Lang.Class({
         this._updateWorkspaceIndicatorVisibility();
     },
 
-    _disconnectWorkspaceSignals: function() {
+    _disconnectWorkspaceSignals() {
         let numWorkspaces = global.screen.n_workspaces;
         for (let i = 0; i < numWorkspaces; i++) {
             let workspace = global.screen.get_workspace_by_index(i);
@@ -1125,16 +1125,16 @@ const WindowList = new Lang.Class({
         }
     },
 
-    _onDragBegin: function() {
+    _onDragBegin() {
         DND.addDragMonitor(this._dragMonitor);
     },
 
-    _onDragEnd: function() {
+    _onDragEnd() {
         DND.removeDragMonitor(this._dragMonitor);
         this._removeActivateTimeout();
     },
 
-    _onDragMotion: function(dragEvent) {
+    _onDragMotion(dragEvent) {
         if (Main.overview.visible ||
             !this.actor.contains(dragEvent.targetActor)) {
             this._removeActivateTimeout();
@@ -1159,14 +1159,14 @@ const WindowList = new Lang.Class({
         return DND.DragMotionResult.CONTINUE;
     },
 
-    _removeActivateTimeout: function() {
+    _removeActivateTimeout() {
         if (this._dndTimeoutId)
             GLib.source_remove (this._dndTimeoutId);
         this._dndTimeoutId = 0;
         this._dndWindow = null;
     },
 
-    _activateWindow: function() {
+    _activateWindow() {
         let [x, y] = global.get_pointer();
         let pickedActor = global.stage.get_actor_at_pos(Clutter.PickMode.ALL, x, y);
 
@@ -1178,7 +1178,7 @@ const WindowList = new Lang.Class({
         return false;
     },
 
-    _onDestroy: function() {
+    _onDestroy() {
         this._workspaceSettings.disconnect(this._workspacesOnlyOnPrimaryChangedId);
         this._dynamicWorkspacesSettings.disconnect(this._dynamicWorkspacesChangedId);
 
@@ -1221,12 +1221,12 @@ const WindowList = new Lang.Class({
 const Extension = new Lang.Class({
     Name: 'Extension',
 
-    _init: function() {
+    _init() {
         this._windowLists = null;
         this._injections = {};
     },
 
-    enable: function() {
+    enable() {
         this._windowLists = [];
 
         this._settings = Convenience.getSettings();
@@ -1241,7 +1241,7 @@ const Extension = new Lang.Class({
         this._buildWindowLists();
     },
 
-    _buildWindowLists: function() {
+    _buildWindowLists() {
         this._windowLists.forEach(list => { list.actor.destroy(); });
         this._windowLists = [];
 
@@ -1253,7 +1253,7 @@ const Extension = new Lang.Class({
         });
     },
 
-    disable: function() {
+    disable() {
         if (!this._windowLists)
             return;
 
@@ -1270,7 +1270,7 @@ const Extension = new Lang.Class({
         this._windowLists = null;
     },
 
-    someWindowListContains: function(actor) {
+    someWindowListContains(actor) {
         return this._windowLists.some(list => list.actor.contains(actor));
     }
 });

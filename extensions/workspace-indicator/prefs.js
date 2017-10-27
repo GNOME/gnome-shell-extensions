@@ -26,7 +26,7 @@ const WorkspaceNameModel = new GObject.Class({
         LABEL: 0,
     },
 
-    _init: function(params) {
+    _init(params) {
         this.parent(params);
         this.set_column_types([GObject.TYPE_STRING]);
 
@@ -42,7 +42,7 @@ const WorkspaceNameModel = new GObject.Class({
         this.connect('row-deleted', Lang.bind(this, this._onRowDeleted));
     },
 
-    _reloadFromSettings: function() {
+    _reloadFromSettings() {
         if (this._preventChanges)
             return;
         this._preventChanges = true;
@@ -69,7 +69,7 @@ const WorkspaceNameModel = new GObject.Class({
         this._preventChanges = false;
     },
 
-    _onRowChanged: function(self, path, iter) {
+    _onRowChanged(self, path, iter) {
         if (this._preventChanges)
             return;
         this._preventChanges = true;
@@ -90,7 +90,7 @@ const WorkspaceNameModel = new GObject.Class({
         this._preventChanges = false;
     },
 
-    _onRowInserted: function(self, path, iter) {
+    _onRowInserted(self, path, iter) {
         if (this._preventChanges)
             return;
         this._preventChanges = true;
@@ -105,7 +105,7 @@ const WorkspaceNameModel = new GObject.Class({
         this._preventChanges = false;
     },
 
-    _onRowDeleted: function(self, path) {
+    _onRowDeleted(self, path) {
         if (this._preventChanges)
             return;
         this._preventChanges = true;
@@ -133,7 +133,7 @@ const WorkspaceSettingsWidget = new GObject.Class({
     GTypeName: 'WorkspaceSettingsWidget',
     Extends: Gtk.Grid,
 
-    _init: function(params) {
+    _init(params) {
         this.parent(params);
         this.margin = 12;
         this.orientation = Gtk.Orientation.VERTICAL;
@@ -183,14 +183,14 @@ const WorkspaceSettingsWidget = new GObject.Class({
         this.add(toolbar);
     },
 
-    _cellEdited: function(renderer, path, new_text) {
+    _cellEdited(renderer, path, new_text) {
         let [ok, iter] = this._store.get_iter_from_string(path);
 
         if (ok)
             this._store.set(iter, [this._store.Columns.LABEL], [new_text]);
     },
 
-    _newClicked: function() {
+    _newClicked() {
         let iter = this._store.append();
         let index = this._store.get_path(iter).get_indices()[0];
 
@@ -198,7 +198,7 @@ const WorkspaceSettingsWidget = new GObject.Class({
         this._store.set(iter, [this._store.Columns.LABEL], [label]);
     },
 
-    _delClicked: function() {
+    _delClicked() {
         let [any, model, iter] = this._treeView.get_selection().get_selected();
 
         if (any)

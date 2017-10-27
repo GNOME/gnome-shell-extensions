@@ -31,21 +31,21 @@ const Hostname1 = Gio.DBusProxy.makeProxyWrapper(Hostname1Iface);
 const PlaceInfo = new Lang.Class({
     Name: 'PlaceInfo',
 
-    _init: function(kind, file, name, icon) {
+    _init(kind, file, name, icon) {
         this.kind = kind;
         this.file = file;
         this.name = name || this._getFileName();
         this.icon = icon ? new Gio.ThemedIcon({ name: icon }) : this.getIcon();
     },
 
-    destroy: function() {
+    destroy() {
     },
 
-    isRemovable: function() {
+    isRemovable() {
         return false;
     },
 
-    _createLaunchCallback: function(launchContext, tryMount) {
+    _createLaunchCallback(launchContext, tryMount) {
         return (_ignored, result) => {
             try {
                 Gio.AppInfo.launch_default_for_uri_finish(result);
@@ -80,7 +80,7 @@ const PlaceInfo = new Lang.Class({
         }
     },
 
-    launch: function(timestamp) {
+    launch(timestamp) {
         let launchContext = global.create_app_launch_context(timestamp, -1);
         let callback = this._createLaunchCallback(launchContext, true);
         Gio.AppInfo.launch_default_for_uri_async(this.file.get_uri(),
@@ -89,7 +89,7 @@ const PlaceInfo = new Lang.Class({
                                                  callback);
     },
 
-    getIcon: function() {
+    getIcon() {
         this.file.query_info_async('standard::symbolic-icon', 0, 0, null,
                                    (file, result) => {
                                        try {
@@ -118,7 +118,7 @@ const PlaceInfo = new Lang.Class({
         }
     },
 
-    _getFileName: function() {
+    _getFileName() {
         try {
             let info = this.file.query_info('standard::display-name', 0, null);
             return info.get_display_name();
@@ -133,7 +133,7 @@ const RootInfo = new Lang.Class({
     Name: 'RootInfo',
     Extends: PlaceInfo,
 
-    _init: function() {
+    _init() {
         this.parent('devices', Gio.File.new_for_path('/'), _("Computer"));
 
         this._proxy = new Hostname1(Gio.DBus.system,
@@ -149,11 +149,11 @@ const RootInfo = new Lang.Class({
                                     });
     },
 
-    getIcon: function() {
+    getIcon() {
         return new Gio.ThemedIcon({ name: 'drive-harddisk-symbolic' });
     },
 
-    _propertiesChanged: function(proxy) {
+    _propertiesChanged(proxy) {
         // GDBusProxy will emit a g-properties-changed when hostname1 goes down
         // ignore it
         if (proxy.g_name_owner) {
@@ -162,7 +162,7 @@ const RootInfo = new Lang.Class({
         }
     },
 
-    destroy: function() {
+    destroy() {
         this._proxy.run_dispose();
         this.parent();
     }
@@ -173,20 +173,20 @@ const PlaceDeviceInfo = new Lang.Class({
     Name: 'PlaceDeviceInfo',
     Extends: PlaceInfo,
 
-    _init: function(kind, mount) {
+    _init(kind, mount) {
         this._mount = mount;
         this.parent(kind, mount.get_root(), mount.get_name());
     },
 
-    getIcon: function() {
+    getIcon() {
         return this._mount.get_symbolic_icon();
     },
 
-    isRemovable: function() {
+    isRemovable() {
         return this._mount.can_eject();
     },
 
-    eject: function() {
+    eject() {
         let mountOp = new ShellMountOperation.ShellMountOperation(this._mount);
 
         if (this._mount.can_eject())
@@ -201,7 +201,7 @@ const PlaceDeviceInfo = new Lang.Class({
                                                Lang.bind(this, this._unmountFinish));
     },
 
-    _ejectFinish: function(mount, result) {
+    _ejectFinish(mount, result) {
         try {
             mount.eject_with_operation_finish(result);
         } catch(e) {
@@ -209,7 +209,7 @@ const PlaceDeviceInfo = new Lang.Class({
         }
     },
 
-    _unmountFinish: function(mount, result) {
+    _unmountFinish(mount, result) {
         try {
             mount.unmount_with_operation_finish(result);
         } catch(e) {
@@ -217,7 +217,7 @@ const PlaceDeviceInfo = new Lang.Class({
         }
     },
 
-    _reportFailure: function(exception) {
+    _reportFailure(exception) {
         let msg = _("Ejecting drive “%s” failed:").format(this._mount.get_name());
         Main.notifyError(msg, exception.message);
     }
@@ -227,12 +227,12 @@ const PlaceVolumeInfo = new Lang.Class({
     Name: 'PlaceVolumeInfo',
     Extends: PlaceInfo,
 
-    _init: function(kind, volume) {
+    _init(kind, volume) {
         this._volume = volume;
         this.parent(kind, volume.get_activation_root(), volume.get_name());
     },
 
-    launch: function(timestamp) {
+    launch(timestamp) {
         if (this.file) {
             this.parent(timestamp);
             return;
@@ -247,7 +247,7 @@ const PlaceVolumeInfo = new Lang.Class({
         });
     },
 
-    getIcon: function() {
+    getIcon() {
         return this._volume.get_symbolic_icon();
     }
 });
@@ -263,7 +263,7 @@ const DEFAULT_DIRECTORIES = [
 var PlacesManager = new Lang.Class({
     Name: 'PlacesManager',
 
-    _init: function() {
+    _init() {
         this._places = {
             special: [],
             devices: [],
@@ -305,7 +305,7 @@ var PlacesManager = new Lang.Class({
         }
     },
 
-    _connectVolumeMonitorSignals: function() {
+    _connectVolumeMonitorSignals() {
         const signals = ['volume-added', 'volume-removed', 'volume-changed',
                          'mount-added', 'mount-removed', 'mount-changed',
                          'drive-connected', 'drive-disconnected', 'drive-changed'];
@@ -318,7 +318,7 @@ var PlacesManager = new Lang.Class({
         }
     },
 
-    destroy: function() {
+    destroy() {
         if (this._settings)
             this._settings.disconnect(this._showDesktopIconsChangedId);
         this._settings = null;
@@ -332,7 +332,7 @@ var PlacesManager = new Lang.Class({
             Mainloop.source_remove(this._bookmarkTimeoutId);
     },
 
-    _updateSpecials: function() {
+    _updateSpecials() {
         this._places.special.forEach(p => { p.destroy(); });
         this._places.special = [];
 
@@ -369,7 +369,7 @@ var PlacesManager = new Lang.Class({
         this.emit('special-updated');
     },
 
-    _updateMounts: function() {
+    _updateMounts() {
         let networkMounts = [];
         let networkVolumes = [];
 
@@ -452,7 +452,7 @@ var PlacesManager = new Lang.Class({
         this.emit('network-updated');
     },
 
-    _findBookmarksFile: function() {
+    _findBookmarksFile() {
         let paths = [
             GLib.build_filenamev([GLib.get_user_config_dir(), 'gtk-3.0', 'bookmarks']),
             GLib.build_filenamev([GLib.get_home_dir(), '.gtk-bookmarks']),
@@ -466,7 +466,7 @@ var PlacesManager = new Lang.Class({
         return null;
     },
 
-    _reloadBookmarks: function() {
+    _reloadBookmarks() {
 
         this._bookmarks = [];
 
@@ -516,7 +516,7 @@ var PlacesManager = new Lang.Class({
         this.emit('bookmarks-updated');
     },
 
-    _addMount: function(kind, mount) {
+    _addMount(kind, mount) {
         let devItem;
 
         try {
@@ -528,7 +528,7 @@ var PlacesManager = new Lang.Class({
         this._places[kind].push(devItem);
     },
 
-    _addVolume: function(kind, volume) {
+    _addVolume(kind, volume) {
         let volItem;
 
         try {
@@ -540,7 +540,7 @@ var PlacesManager = new Lang.Class({
         this._places[kind].push(volItem);
     },
 
-    get: function(kind) {
+    get(kind) {
         return this._places[kind];
     }
 });

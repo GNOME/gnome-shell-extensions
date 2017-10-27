@@ -27,7 +27,7 @@ const PlaceMenuItem = new Lang.Class({
     Name: 'PlaceMenuItem',
     Extends: PopupMenu.PopupBaseMenuItem,
 
-    _init: function(info) {
+    _init(info) {
         this.parent();
         this._info = info;
 
@@ -50,7 +50,7 @@ const PlaceMenuItem = new Lang.Class({
                                        Lang.bind(this, this._propertiesChanged));
     },
 
-    destroy: function() {
+    destroy() {
         if (this._changedId) {
             this._info.disconnect(this._changedId);
             this._changedId = 0;
@@ -59,13 +59,13 @@ const PlaceMenuItem = new Lang.Class({
         this.parent();
     },
 
-    activate: function(event) {
+    activate(event) {
         this._info.launch(event.get_time());
 
         this.parent(event);
     },
 
-    _propertiesChanged: function(info) {
+    _propertiesChanged(info) {
         this._icon.gicon = info.icon;
         this._label.text = info.name;
     },
@@ -82,7 +82,7 @@ const PlacesMenu = new Lang.Class({
     Name: 'PlacesMenu.PlacesMenu',
     Extends: PanelMenu.Button,
 
-    _init: function() {
+    _init() {
         this.parent(0.0, _("Places"));
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
@@ -110,18 +110,18 @@ const PlacesMenu = new Lang.Class({
         }
     },
 
-    destroy: function() {
+    destroy() {
         this.placesManager.destroy();
 
         this.parent();
     },
 
-    _redisplay: function(id) {
+    _redisplay(id) {
         this._sections[id].removeAll();
         this._create(id);
     },
 
-    _create: function(id) {
+    _create(id) {
         let places = this.placesManager.get(id);
 
         for (let i = 0; i < places.length; i++)

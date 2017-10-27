@@ -15,16 +15,16 @@ const Convenience = Me.imports.convenience;
 const ThemeManager = new Lang.Class({
     Name: 'UserTheme.ThemeManager',
 
-    _init: function() {
+    _init() {
         this._settings = Convenience.getSettings();
     },
 
-    enable: function() {
+    enable() {
         this._changedId = this._settings.connect('changed::'+SETTINGS_KEY, Lang.bind(this, this._changeTheme));
         this._changeTheme();
     },
 
-    disable: function() {
+    disable() {
         if (this._changedId) {
             this._settings.disconnect(this._changedId);
             this._changedId = 0;
@@ -34,7 +34,7 @@ const ThemeManager = new Lang.Class({
         Main.loadTheme();
     },
 
-    _changeTheme: function() {
+    _changeTheme() {
         let _stylesheet = null;
         let _themeName = this._settings.get_string(SETTINGS_KEY);
 
