@@ -28,12 +28,12 @@ const PlaceMenuItem = new Lang.Class({
     Extends: PopupMenu.PopupBaseMenuItem,
 
     _init: function(info) {
-	this.parent();
-	this._info = info;
+        this.parent();
+        this._info = info;
 
         this._icon = new St.Icon({ gicon: info.icon,
                                    icon_size: PLACE_ICON_SIZE });
-	this.actor.add_child(this._icon);
+        this.actor.add_child(this._icon);
 
         this._label = new St.Label({ text: info.name });
         this.actor.add_child(this._label);
@@ -52,9 +52,9 @@ const PlaceMenuItem = new Lang.Class({
     },
 
     activate: function(event) {
-	this._info.launch(event.get_time());
+        this._info.launch(event.get_time());
 
-	this.parent(event);
+        this.parent(event);
     },
 
     _propertiesChanged: function(info) {
@@ -87,29 +87,29 @@ const PlacesMenu = new Lang.Class({
 
         this.placesManager = new PlaceDisplay.PlacesManager();
 
-	this._sections = { };
+        this._sections = { };
 
-	for (let i=0; i < SECTIONS.length; i++) {
-	    let id = SECTIONS[i];
-	    this._sections[id] = new PopupMenu.PopupMenuSection();
-	    this.placesManager.connect(id + '-updated', Lang.bind(this, function() {
-		this._redisplay(id);
-	    }));
+        for (let i=0; i < SECTIONS.length; i++) {
+            let id = SECTIONS[i];
+            this._sections[id] = new PopupMenu.PopupMenuSection();
+            this.placesManager.connect(id + '-updated', Lang.bind(this, function() {
+                this._redisplay(id);
+            }));
 
-	    this._create(id);
-	    this.menu.addMenuItem(this._sections[id]);
-	    this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-	}
+            this._create(id);
+            this.menu.addMenuItem(this._sections[id]);
+            this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+        }
     },
 
     destroy: function() {
-	this.placesManager.destroy();
+        this.placesManager.destroy();
 
         this.parent();
     },
 
     _redisplay: function(id) {
-	this._sections[id].removeAll();
+        this._sections[id].removeAll();
         this._create(id);
     },
 
@@ -119,7 +119,7 @@ const PlacesMenu = new Lang.Class({
         for (let i = 0; i < places.length; i++)
             this._sections[id].addMenuItem(new PlaceMenuItem(places[i]));
 
-	this._sections[id].actor.visible = places.length > 0;
+        this._sections[id].actor.visible = places.length > 0;
     }
 });
 
@@ -134,7 +134,7 @@ function enable() {
 
     let pos = 1;
     if ('apps-menu' in Main.panel.statusArea)
-	pos = 2;
+        pos = 2;
     Main.panel.addToStatusArea('places-menu', _indicator, pos, 'left');
 }
 
