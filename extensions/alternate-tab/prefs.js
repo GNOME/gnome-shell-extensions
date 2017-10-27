@@ -21,13 +21,10 @@ const MODES = {
     'both': N_("Thumbnail and application icon"),
 };
 
-const AltTabSettingsWidget = new GObject.Class({
-    Name: 'AlternateTab.Prefs.AltTabSettingsWidget',
-    GTypeName: 'AltTabSettingsWidget',
-    Extends: Gtk.Grid,
-
+const AltTabSettingsWidget = GObject.registerClass(
+class AltTabSettingsWidget extends Gtk.Grid {
     _init(params) {
-        this.parent(params);
+        super._init(params);
         this.margin = 24;
         this.row_spacing = 6;
         this.orientation = Gtk.Orientation.VERTICAL;
@@ -69,7 +66,7 @@ const AltTabSettingsWidget = new GObject.Class({
                                           margin_top: 6 });
         this._settings.bind(SETTINGS_CURRENT_WORKSPACE_ONLY, check, 'active', Gio.SettingsBindFlags.DEFAULT);
         this.add(check);
-    },
+    }
 });
 
 function init() {

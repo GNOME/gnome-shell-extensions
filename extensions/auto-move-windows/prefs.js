@@ -26,13 +26,11 @@ const Columns = {
     ADJUSTMENT: 4
 };
 
-const Widget = new GObject.Class({
-    Name: 'AutoMoveWindows.Prefs.Widget',
+const Widget = GObject.registerClass({
     GTypeName: 'AutoMoveWindowsPrefsWidget',
-    Extends: Gtk.Grid,
-
+}, class Widget extends Gtk.Grid {
     _init(params) {
-        this.parent(params);
+        super._init(params);
         this.set_orientation(Gtk.Orientation.VERTICAL);
 
         this._settings = Convenience.getSettings();
@@ -95,7 +93,7 @@ const Widget = new GObject.Class({
 
         this._changedPermitted = true;
         this._refresh();
-    },
+    }
 
     _createNew() {
         let dialog = new Gtk.Dialog({ title: _("Create new matching rule"),
@@ -158,7 +156,7 @@ const Widget = new GObject.Class({
             dialog.destroy();
         });
         dialog.show_all();
-    },
+    }
 
     _deleteSelected() {
         let [any, model, iter] = this._treeView.get_selection().get_selected();
@@ -171,7 +169,7 @@ const Widget = new GObject.Class({
             this._changedPermitted = true;
             this._store.remove(iter);
         }
-    },
+    }
 
     _workspaceEdited(renderer, pathString, text) {
         let index = parseInt(text);
@@ -185,7 +183,7 @@ const Widget = new GObject.Class({
         this._changeItem(appInfo.get_id(), index);
         this._store.set_value(iter, Columns.WORKSPACE, index);
         this._changedPermitted = true;
-    },
+    }
 
     _refresh() {
         if (!this._changedPermitted)
@@ -215,18 +213,18 @@ const Widget = new GObject.Class({
 
         if (validItems.length != currentItems.length) // some items were filtered out
             this._settings.set_strv(SETTINGS_KEY, validItems);
-    },
+    }
 
     _checkId(id) {
         let items = this._settings.get_strv(SETTINGS_KEY);
         return !items.some(i => i.startsWith(id + ':'));
-    },
+    }
 
     _appendItem(id, workspace) {
         let currentItems = this._settings.get_strv(SETTINGS_KEY);
         currentItems.push(id + ':' + workspace);
         this._settings.set_strv(SETTINGS_KEY, currentItems);
-    },
+    }
 
     _removeItem(id) {
         let currentItems = this._settings.get_strv(SETTINGS_KEY);
@@ -236,7 +234,7 @@ const Widget = new GObject.Class({
             return;
         currentItems.splice(index, 1);
         this._settings.set_strv(SETTINGS_KEY, currentItems);
-    },
+    }
 
     _changeItem(id, workspace) {
         let currentItems = this._settings.get_strv(SETTINGS_KEY);
