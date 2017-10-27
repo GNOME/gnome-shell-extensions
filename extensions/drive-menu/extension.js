@@ -133,21 +133,21 @@ const DriveMenu = new Lang.Class({
         this.actor.add_child(hbox);
 
         this._monitor = Gio.VolumeMonitor.get();
-        this._addedId = this._monitor.connect('mount-added', Lang.bind(this, function(monitor, mount) {
+        this._addedId = this._monitor.connect('mount-added', (monitor, mount) => {
             this._addMount(mount);
             this._updateMenuVisibility();
-        }));
-        this._removedId = this._monitor.connect('mount-removed', Lang.bind(this, function(monitor, mount) {
+        });
+        this._removedId = this._monitor.connect('mount-removed', (monitor, mount) => {
             this._removeMount(mount);
             this._updateMenuVisibility();
-        }));
+        });
 
         this._mounts = [ ];
 
         this._monitor.get_mounts().forEach(Lang.bind(this, this._addMount));
 
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-        this.menu.addAction(_("Open Files"), function(event) {
+        this.menu.addAction(_("Open Files"), event => {
             let appSystem = Shell.AppSystem.get_default();
             let app = appSystem.lookup_app('org.gnome.Nautilus.desktop');
             app.activate_full(-1, event.get_time());
@@ -157,7 +157,7 @@ const DriveMenu = new Lang.Class({
     },
 
     _updateMenuVisibility: function() {
-        if (this._mounts.filter(function(i) i.actor.visible).length > 0)
+        if (this._mounts.filter(i => i.actor.visible).length > 0)
             this.actor.show();
         else
             this.actor.hide();

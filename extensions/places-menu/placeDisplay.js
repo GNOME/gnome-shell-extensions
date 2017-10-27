@@ -17,7 +17,7 @@ const Util = imports.misc.util;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
-const N_ = function(x) { return x; }
+const N_ = x => x;
 
 const BACKGROUND_SCHEMA = 'org.gnome.desktop.background';
 
@@ -91,7 +91,7 @@ const PlaceInfo = new Lang.Class({
 
     getIcon: function() {
         this.file.query_info_async('standard::symbolic-icon', 0, 0, null,
-                                   Lang.bind(this, function(file, result) {
+                                   (file, result) => {
                                        try {
                                            let info = file.query_info_finish(result);
                                            this.icon = info.get_symbolic_icon();
@@ -99,7 +99,7 @@ const PlaceInfo = new Lang.Class({
                                        } catch(e if e instanceof Gio.IOErrorEnum) {
                                            return;
                                        }
-                                   }));
+                                   });
 
         // return a generic icon for this kind for now, until we have the
         // icon from the query info above
@@ -139,14 +139,14 @@ const RootInfo = new Lang.Class({
         this._proxy = new Hostname1(Gio.DBus.system,
                                     'org.freedesktop.hostname1',
                                     '/org/freedesktop/hostname1',
-                                    Lang.bind(this, function(obj, error) {
+                                    (obj, error) => {
                                         if (error)
                                             return;
 
                                         this._proxy.connect('g-properties-changed',
                                                             Lang.bind(this, this._propertiesChanged));
                                         this._propertiesChanged(obj);
-                                    }));
+                                    });
     },
 
     getIcon: function() {
@@ -198,13 +198,13 @@ const PlaceVolumeInfo = new Lang.Class({
             return;
         }
 
-        this._volume.mount(0, null, null, Lang.bind(this, function(volume, result) {
+        this._volume.mount(0, null, null, (volume, result) => {
             volume.mount_finish(result);
 
             let mount = volume.get_mount();
             this.file = mount.get_root();
             this.parent(timestamp);
-        }));
+        });
     },
 
     getIcon: function() {
@@ -250,16 +250,16 @@ var PlacesManager = new Lang.Class({
 
         if (this._bookmarksFile) {
             this._monitor = this._bookmarksFile.monitor_file(Gio.FileMonitorFlags.NONE, null);
-            this._monitor.connect('changed', Lang.bind(this, function() {
+            this._monitor.connect('changed', () => {
                 if (this._bookmarkTimeoutId > 0)
                     return;
                 /* Defensive event compression */
-                this._bookmarkTimeoutId = Mainloop.timeout_add(100, Lang.bind(this, function() {
+                this._bookmarkTimeoutId = Mainloop.timeout_add(100, () => {
                     this._bookmarkTimeoutId = 0;
                     this._reloadBookmarks();
                     return false;
-                }));
-            }));
+                });
+            });
 
             this._reloadBookmarks();
         }
@@ -293,7 +293,7 @@ var PlacesManager = new Lang.Class({
     },
 
     _updateSpecials: function() {
-        this._places.special.forEach(function(p) { p.destroy(); });
+        this._places.special.forEach(p => { p.destroy(); });
         this._places.special = [];
 
         let homePath = GLib.get_home_dir();
@@ -323,9 +323,7 @@ var PlacesManager = new Lang.Class({
             specials.push(info);
         }
 
-        specials.sort(function(a, b) {
-            return GLib.utf8_collate(a.name, b.name);
-        });
+        specials.sort((a, b) => GLib.utf8_collate(a.name, b.name));
         this._places.special = this._places.special.concat(specials);
 
         this.emit('special-updated');
@@ -335,9 +333,9 @@ var PlacesManager = new Lang.Class({
         let networkMounts = [];
         let networkVolumes = [];
 
-        this._places.devices.forEach(function(p) { p.destroy(); });
+        this._places.devices.forEach(p => { p.destroy(); });
         this._places.devices = [];
-        this._places.network.forEach(function(p) { p.destroy(); });
+        this._places.network.forEach(p => { p.destroy(); });
         this._places.network = [];
 
         /* Add standard places */

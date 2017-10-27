@@ -8,7 +8,7 @@ const Lang = imports.lang;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
-const N_ = function(e) { return e };
+const N_ = e => e;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
@@ -88,10 +88,9 @@ const Widget = new GObject.Class({
         toolbar.add(delButton);
 
         let selection = this._treeView.get_selection();
-        selection.connect('changed',
-            function() {
-                delButton.sensitive = selection.count_selected_rows() > 0;
-            });
+        selection.connect('changed', () => {
+            delButton.sensitive = selection.count_selected_rows() > 0;
+        });
         delButton.sensitive = selection.count_selected_rows() > 0;
 
         this._changedPermitted = true;
@@ -111,11 +110,9 @@ const Widget = new GObject.Class({
                                   row_spacing: 15,
                                   margin: 10 });
         dialog._appChooser = new Gtk.AppChooserWidget({ show_all: true });
-        dialog._appChooser.connect('application-selected', Lang.bind(this,
-            function(w, appInfo) {
-                addButton.sensitive = appInfo &&
-                                      this._checkId(appInfo.get_id());
-            }));
+        dialog._appChooser.connect('application-selected', (w, appInfo) => {
+            addButton.sensitive = appInfo && this._checkId(appInfo.get_id());
+        });
         let appInfo = dialog._appChooser.get_app_info();
         addButton.sensitive = appInfo && this._checkId(appInfo.get_id());
 
@@ -132,7 +129,7 @@ const Widget = new GObject.Class({
         grid.attach(dialog._spin, 1, 1, 1, 1);
         dialog.get_content_area().add(grid);
 
-        dialog.connect('response', Lang.bind(this, function(dialog, id) {
+        dialog.connect('response', (dialog, id) => {
             if (id != Gtk.ResponseType.OK) {
                 dialog.destroy();
                 return;
@@ -159,7 +156,7 @@ const Widget = new GObject.Class({
                             [appInfo, appInfo.get_icon(), appInfo.get_display_name(), index, adj]);
 
             dialog.destroy();
-        }));
+        });
         dialog.show_all();
     },
 
@@ -222,7 +219,7 @@ const Widget = new GObject.Class({
 
     _checkId: function(id) {
         let items = this._settings.get_strv(SETTINGS_KEY);
-        return !items.some(function(i) { return i.startsWith(id + ':'); });
+        return !items.some(i => i.startsWith(id + ':'));
     },
 
     _appendItem: function(id, workspace) {
@@ -233,9 +230,7 @@ const Widget = new GObject.Class({
 
     _removeItem: function(id) {
         let currentItems = this._settings.get_strv(SETTINGS_KEY);
-        let index = currentItems.map(function(el) {
-            return el.split(':')[0];
-        }).indexOf(id);
+        let index = currentItems.map(el => el.split(':')[0]).indexOf(id);
 
         if (index < 0)
             return;
@@ -245,9 +240,7 @@ const Widget = new GObject.Class({
 
     _changeItem: function(id, workspace) {
         let currentItems = this._settings.get_strv(SETTINGS_KEY);
-        let index = currentItems.map(function(el) {
-            return el.split(':')[0];
-        }).indexOf(id);
+        let index = currentItems.map(el => el.split(':')[0]).indexOf(id);
 
         if (index < 0)
             currentItems.push(id + ':' + workspace);

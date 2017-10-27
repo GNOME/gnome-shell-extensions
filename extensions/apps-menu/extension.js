@@ -68,10 +68,9 @@ const ApplicationMenuItem = new Lang.Class({
         let textureCache = St.TextureCache.get_default();
         let iconThemeChangedId = textureCache.connect('icon-theme-changed',
                                                       Lang.bind(this, this._updateIcon));
-        this.actor.connect('destroy', Lang.bind(this,
-            function() {
-                textureCache.disconnect(iconThemeChangedId);
-            }));
+        this.actor.connect('destroy', () => {
+            textureCache.disconnect(iconThemeChangedId);
+        });
         this._updateIcon();
 
         this.actor._delegate = this;
@@ -446,12 +445,12 @@ const ApplicationsButton = new Lang.Class({
         this.actor.connect('captured-event', Lang.bind(this, this._onCapturedEvent));
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
 
-        this._showingId = Main.overview.connect('showing', Lang.bind(this, function() {
+        this._showingId = Main.overview.connect('showing', () => {
             this.actor.add_accessible_state (Atk.StateType.CHECKED);
-        }));
-        this._hidingId = Main.overview.connect('hiding', Lang.bind(this, function() {
+        });
+        this._hidingId = Main.overview.connect('hiding', () => {
             this.actor.remove_accessible_state (Atk.StateType.CHECKED);
-        }));
+        });
         Main.layoutManager.connect('startup-complete',
                                    Lang.bind(this, this._setKeybinding));
         this._setKeybinding();
@@ -470,14 +469,14 @@ const ApplicationsButton = new Lang.Class({
         this.reloadFlag = false;
         this._createLayout();
         this._display();
-        this._installedChangedId = appSys.connect('installed-changed', Lang.bind(this, function() {
+        this._installedChangedId = appSys.connect('installed-changed', () => {
             if (this.menu.isOpen) {
                 this._redisplay();
                 this.mainBox.show();
             } else {
                 this.reloadFlag = true;
             }
-        }));
+        });
     },
 
     get hotCorner() {
@@ -555,9 +554,7 @@ const ApplicationsButton = new Lang.Class({
         Main.wm.setCustomKeybindingHandler('panel-main-menu',
                                            Shell.ActionMode.NORMAL |
                                            Shell.ActionMode.OVERVIEW,
-                                           Lang.bind(this, function() {
-                                               this.menu.toggle();
-                                           }));
+                                           () => { this.menu.toggle(); });
     },
 
     _redisplay: function() {
@@ -631,23 +628,19 @@ const ApplicationsButton = new Lang.Class({
                                                          style_class: 'apps-menu vfade' });
         this.applicationsScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         let vscroll = this.applicationsScrollBox.get_vscroll_bar();
-        vscroll.connect('scroll-start', Lang.bind(this, function() {
+        vscroll.connect('scroll-start', () => {
             this.menu.passEvents = true;
-        }));
-        vscroll.connect('scroll-stop', Lang.bind(this, function() {
+        });
+        vscroll.connect('scroll-stop', () => {
             this.menu.passEvents = false;
-        }));
+        });
         this.categoriesScrollBox = new St.ScrollView({ x_fill: true, y_fill: false,
                                                        y_align: St.Align.START,
                                                        style_class: 'vfade' });
         this.categoriesScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         vscroll = this.categoriesScrollBox.get_vscroll_bar();
-        vscroll.connect('scroll-start', Lang.bind(this, function() {
-                              this.menu.passEvents = true;
-                          }));
-        vscroll.connect('scroll-stop', Lang.bind(this, function() {
-            this.menu.passEvents = false;
-        }));
+        vscroll.connect('scroll-start', () => { this.menu.passEvents = true; });
+        vscroll.connect('scroll-stop', () => { this.menu.passEvents = false; });
         this.leftBox.add(this.categoriesScrollBox, { expand: true,
                                                      x_fill: true, y_fill: true,
                                                      y_align: St.Align.START });
@@ -745,7 +738,7 @@ const ApplicationsButton = new Lang.Class({
 
         if (category_menu_id) {
             applist = this.applicationsByCategory[category_menu_id];
-            applist.sort(function(a,b) {
+            applist.sort((a, b) => {
                 return a.get_name().toLowerCase() > b.get_name().toLowerCase();
             });
         } else {
@@ -762,7 +755,7 @@ const ApplicationsButton = new Lang.Class({
     },
 
     destroy: function() {
-        this.menu.actor.get_children().forEach(function(c) { c.destroy() });
+        this.menu.actor.get_children().forEach(c => { c.destroy() });
         this.parent();
     }
 });

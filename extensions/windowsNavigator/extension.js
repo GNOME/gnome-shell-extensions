@@ -233,9 +233,9 @@ function enable() {
                                                           visible: false }));
 
             this.actor.add_actor(this._tip);
-            let signalId = this.actor.connect('notify::scale-x', Lang.bind(this, function() {
+            let signalId = this.actor.connect('notify::scale-x', () => {
                 this._tip.set_scale(1 / this.actor.scale_x, 1 / this.actor.scale_x);
-            }));
+            });
             connectedSignals.push({ obj: this.actor, id: signalId });
         } else
             this._tip = null;

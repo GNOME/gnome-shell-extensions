@@ -8,7 +8,7 @@ const Lang = imports.lang;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
-const N_ = function(e) { return e };
+const N_ = e => e;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
@@ -175,10 +175,9 @@ const WorkspaceSettingsWidget = new GObject.Class({
         toolbar.add(delButton);
 
         let selection = this._treeView.get_selection();
-        selection.connect('changed',
-            function() {
-                delButton.sensitive = selection.count_selected_rows() > 0;
-            });
+        selection.connect('changed', () => {
+            delButton.sensitive = selection.count_selected_rows() > 0;
+        });
         delButton.sensitive = selection.count_selected_rows() > 0;
 
         this.add(toolbar);

@@ -57,8 +57,8 @@ function _onMenuStateChanged(menu, isOpen) {
 }
 
 function _getAppStableSequence(app) {
-    let windows = app.get_windows().filter(function(w) { return !w.skip_taskbar; });
-    return windows.reduce(function(prev, cur) {
+    let windows = app.get_windows().filter(w => !w.skip_taskbar);
+    return windows.reduce((prev, cur) => {
         return Math.min(prev, cur.get_stable_sequence());
     }, Infinity);
 }
@@ -74,12 +74,12 @@ const WindowContextMenu = new Lang.Class({
         this._metaWindow = metaWindow;
 
         this._minimizeItem = new PopupMenu.PopupMenuItem('');
-        this._minimizeItem.connect('activate', Lang.bind(this, function() {
+        this._minimizeItem.connect('activate', () => {
             if (this._metaWindow.minimized)
                 this._metaWindow.unminimize();
             else
                 this._metaWindow.minimize();
-        }));
+        });
         this.addMenuItem(this._minimizeItem);
 
         this._notifyMinimizedId =
@@ -88,7 +88,7 @@ const WindowContextMenu = new Lang.Class({
         this._updateMinimizeItem();
 
         this._maximizeItem = new PopupMenu.PopupMenuItem('');
-        this._maximizeItem.connect('activate', Lang.bind(this, function() {
+        this._maximizeItem.connect('activate', () => {
             if (this._metaWindow.maximized_vertically &&
                 this._metaWindow.maximized_horizontally)
                 this._metaWindow.unmaximize(Meta.MaximizeFlags.HORIZONTAL |
@@ -96,7 +96,7 @@ const WindowContextMenu = new Lang.Class({
             else
                 this._metaWindow.maximize(Meta.MaximizeFlags.HORIZONTAL |
                                           Meta.MaximizeFlags.VERTICAL);
-        }));
+        });
         this.addMenuItem(this._maximizeItem);
 
         this._notifyMaximizedHId =
@@ -108,9 +108,9 @@ const WindowContextMenu = new Lang.Class({
         this._updateMaximizeItem();
 
         this._closeItem = new PopupMenu.PopupMenuItem(_("Close"));
-        this._closeItem.connect('activate', Lang.bind(this, function() {
+        this._closeItem.connect('activate', () => {
             this._metaWindow.delete(global.get_current_time());
-        }));
+        });
         this.addMenuItem(this._closeItem);
 
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
@@ -418,60 +418,52 @@ const AppContextMenu = new Lang.Class({
         this._appButton = appButton;
 
         this._minimizeItem = new PopupMenu.PopupMenuItem(_("Minimize all"));
-        this._minimizeItem.connect('activate', Lang.bind(this, function() {
-            this._appButton.getWindowList().forEach(function(w) {
-                w.minimize();
-            });
-        }));
+        this._minimizeItem.connect('activate', () => {
+            this._appButton.getWindowList().forEach(w => { w.minimize(); });
+        });
         this.addMenuItem(this._minimizeItem);
 
         this._unminimizeItem = new PopupMenu.PopupMenuItem(_("Unminimize all"));
-        this._unminimizeItem.connect('activate', Lang.bind(this, function() {
-            this._appButton.getWindowList().forEach(function(w) {
-                w.unminimize();
-            });
-        }));
+        this._unminimizeItem.connect('activate', () => {
+            this._appButton.getWindowList().forEach(w => { w.unminimize(); });
+        });
         this.addMenuItem(this._unminimizeItem);
 
         this._maximizeItem = new PopupMenu.PopupMenuItem(_("Maximize all"));
-        this._maximizeItem.connect('activate', Lang.bind(this, function() {
-            this._appButton.getWindowList().forEach(function(w) {
+        this._maximizeItem.connect('activate', () => {
+            this._appButton.getWindowList().forEach(w => {
                 w.maximize(Meta.MaximizeFlags.HORIZONTAL |
                            Meta.MaximizeFlags.VERTICAL);
             });
-        }));
+        });
         this.addMenuItem(this._maximizeItem);
 
         this._unmaximizeItem = new PopupMenu.PopupMenuItem(_("Unmaximize all"));
-        this._unmaximizeItem.connect('activate', Lang.bind(this, function() {
-            this._appButton.getWindowList().forEach(function(w) {
+        this._unmaximizeItem.connect('activate', () => {
+            this._appButton.getWindowList().forEach(w => {
                 w.unmaximize(Meta.MaximizeFlags.HORIZONTAL |
                              Meta.MaximizeFlags.VERTICAL);
             });
-        }));
+        });
         this.addMenuItem(this._unmaximizeItem);
 
         let item = new PopupMenu.PopupMenuItem(_("Close all"));
-        item.connect('activate', Lang.bind(this, function() {
-            this._appButton.getWindowList().forEach(function(w) {
+        item.connect('activate', () => {
+            this._appButton.getWindowList().forEach(w => {
                 w.delete(global.get_current_time());
             });
-        }));
+        });
         this.addMenuItem(item);
     },
 
     open: function(animate) {
         let windows = this._appButton.getWindowList();
-        this._minimizeItem.actor.visible = windows.some(function(w) {
-            return !w.minimized;
-        });
-        this._unminimizeItem.actor.visible = windows.some(function(w) {
-            return w.minimized;
-        });
-        this._maximizeItem.actor.visible = windows.some(function(w) {
+        this._minimizeItem.actor.visible = windows.some(w => !w.minimized);
+        this._unminimizeItem.actor.visible = windows.some(w => w.minimized);
+        this._maximizeItem.actor.visible = windows.some(w => {
             return !(w.maximized_horizontally && w.maximized_vertically);
         });
-        this._unmaximizeItem.actor.visible = windows.some(function(w) {
+        this._unmaximizeItem.actor.visible = windows.some(w => {
             return w.maximized_horizontally && w.maximized_vertically;
         });
 
@@ -525,10 +517,9 @@ const AppButton = new Lang.Class({
 
         this._textureCache = St.TextureCache.get_default();
         this._iconThemeChangedId =
-            this._textureCache.connect('icon-theme-changed', Lang.bind(this,
-                function() {
-                    this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
-                }));
+            this._textureCache.connect('icon-theme-changed', () => {
+                this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
+            });
 
         this._windowsChangedId =
             this.app.connect('windows-changed',
@@ -568,15 +559,11 @@ const AppButton = new Lang.Class({
         let rect = this._getIconGeometry();
 
         let windows = this.app.get_windows();
-        windows.forEach(function(w) {
-            w.set_icon_geometry(rect);
-        });
+        windows.forEach(w => { w.set_icon_geometry(rect); });
     },
 
     getWindowList: function() {
-        return this.app.get_windows().filter(Lang.bind(this, function(win) {
-            return this._isWindowVisible(win);
-        }));
+        return this.app.get_windows().filter(win => this._isWindowVisible(win));
     },
 
     _windowsChanged: function() {
@@ -739,9 +726,9 @@ const WorkspaceIndicator = new Lang.Class({
             let item = new PopupMenu.PopupMenuItem(name);
             item.workspaceId = i;
 
-            item.connect('activate', Lang.bind(this, function(item, event) {
+            item.connect('activate', (item, event) => {
                 this._activate(item.workspaceId);
-            }));
+            });
 
             if (i == this._currentWorkspace)
                 item.setOrnament(PopupMenu.Ornament.DOT);
@@ -807,12 +794,11 @@ const WindowList = new Lang.Class({
                                            y_expand: true });
         box.add(this._windowList, { expand: true });
 
-        this._windowList.connect('style-changed', Lang.bind(this,
-            function() {
-                let node = this._windowList.get_theme_node();
-                let spacing = node.get_length('spacing');
-                this._windowList.layout_manager.spacing = spacing;
-            }));
+        this._windowList.connect('style-changed', () => {
+            let node = this._windowList.get_theme_node();
+            let spacing = node.get_length('spacing');
+            this._windowList.layout_manager.spacing = spacing;
+        });
         this._windowList.connect('scroll-event', Lang.bind(this, this._onScrollEvent));
 
         let indicatorsBox = new St.BoxLayout({ x_align: Clutter.ActorAlign.END });
@@ -851,7 +837,7 @@ const WindowList = new Lang.Class({
 
         this._keyboardVisiblechangedId =
             Main.layoutManager.connect('keyboard-visible-changed',
-                Lang.bind(this, function(o, state) {
+                (o, state) => {
                     Main.layoutManager.keyboardBox.visible = state;
                     let keyboardBox = Main.layoutManager.keyboardBox;
                     keyboardBox.visible = state;
@@ -861,7 +847,7 @@ const WindowList = new Lang.Class({
                         Main.uiGroup.set_child_above_sibling(this.actor,
                                                              Main.layoutManager.panelBox);
                     this._updateKeyboardAnchor();
-                }));
+                });
 
         this._workspaceSignals = new Map();
         this._nWorkspacesChangedId =
@@ -874,21 +860,21 @@ const WindowList = new Lang.Class({
                                           Lang.bind(this, this._checkGrouping));
 
         this._overviewShowingId =
-            Main.overview.connect('showing', Lang.bind(this, function() {
+            Main.overview.connect('showing', () => {
                 this.actor.hide();
                 this._updateKeyboardAnchor();
-            }));
+            });
 
         this._overviewHidingId =
-            Main.overview.connect('hiding', Lang.bind(this, function() {
+            Main.overview.connect('hiding', () => {
                 this.actor.visible = !Main.layoutManager.primaryMonitor.inFullscreen;
                 this._updateKeyboardAnchor();
-            }));
+            });
 
         this._fullscreenChangedId =
-            global.screen.connect('in-fullscreen-changed', Lang.bind(this, function() {
+            global.screen.connect('in-fullscreen-changed', () => {
                 this._updateKeyboardAnchor();
-            }));
+            });
 
         this._dragBeginId =
             Main.xdndHandler.connect('drag-begin',
@@ -934,9 +920,7 @@ const WindowList = new Lang.Class({
         else
             return;
 
-        let children = this._windowList.get_children().map(function(actor) {
-            return actor._delegate;
-        });
+        let children = this._windowList.get_children().map(a => a._delegate);
         let active = 0;
         for (let i = 0; i < children.length; i++) {
             if (children[i].active) {
@@ -973,11 +957,8 @@ const WindowList = new Lang.Class({
 
         let workspace = global.screen.get_active_workspace();
         let windows = global.display.get_tab_list(Meta.TabList.NORMAL, workspace);
-        if (this._perMonitor) {
-            windows = windows.filter(Lang.bind(this, function(window) {
-                return window.get_monitor() == this._monitor.index;
-            }));
-        }
+        if (this._perMonitor)
+            windows = windows.filter(w => w.get_monitor() == this._monitor.index);
         let nWindows = windows.length;
         if (nWindows == 0)
             return this._windowList.get_preferred_width(-1)[1];
@@ -1019,19 +1000,17 @@ const WindowList = new Lang.Class({
         this._windowList.destroy_all_children();
 
         if (!this._grouped) {
-            let windows = global.get_window_actors().sort(
-                function(w1, w2) {
-                    return w1.metaWindow.get_stable_sequence() -
-                           w2.metaWindow.get_stable_sequence();
-                });
+            let windows = global.get_window_actors().sort((w1, w2) => {
+                return w1.metaWindow.get_stable_sequence() -
+                       w2.metaWindow.get_stable_sequence();
+            });
             for (let i = 0; i < windows.length; i++)
                 this._onWindowAdded(null, windows[i].metaWindow);
         } else {
-            let apps = this._appSystem.get_running().sort(
-                function(a1, a2) {
-                    return _getAppStableSequence(a1) -
-                           _getAppStableSequence(a2);
-                });
+            let apps = this._appSystem.get_running().sort((a1, a2) => {
+                return _getAppStableSequence(a1) -
+                       _getAppStableSequence(a2);
+            });
             for (let i = 0; i < apps.length; i++)
                 this._addApp(apps[i]);
         }
@@ -1263,17 +1242,15 @@ const Extension = new Lang.Class({
     },
 
     _buildWindowLists: function() {
-        this._windowLists.forEach(function(windowList) {
-            windowList.actor.destroy();
-        });
+        this._windowLists.forEach(list => { list.actor.destroy(); });
         this._windowLists = [];
 
         let showOnAllMonitors = this._settings.get_boolean('show-on-all-monitors');
 
-        Main.layoutManager.monitors.forEach(Lang.bind(this, function(monitor) {
+        Main.layoutManager.monitors.forEach(monitor => {
             if (showOnAllMonitors || monitor == Main.layoutManager.primaryMonitor)
                 this._windowLists.push(new WindowList(showOnAllMonitors, monitor));
-        }));
+        });
     },
 
     disable: function() {
@@ -1286,7 +1263,7 @@ const Extension = new Lang.Class({
         Main.layoutManager.disconnect(this._monitorsChangedId);
         this._monitorsChangedId = 0;
 
-        this._windowLists.forEach(function(windowList) {
+        this._windowLists.forEach(windowList => {
             windowList.actor.hide();
             windowList.actor.destroy();
         });
@@ -1294,9 +1271,7 @@ const Extension = new Lang.Class({
     },
 
     someWindowListContains: function(actor) {
-        return this._windowLists.some(function(windowList) {
-            return windowList.actor.contains(actor);
-        });
+        return this._windowLists.some(list => list.actor.contains(actor));
     }
 });
 
