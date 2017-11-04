@@ -167,6 +167,11 @@ const WindowTitle = new Lang.Class({
         this._notifyAppId =
             this._metaWindow.connect('notify::gtk-application-id',
                                      Lang.bind(this, this._updateIcon));
+
+        let appSys = Shell.AppSystem.get_default();
+        this._appStateChangedSignalId =
+            appSys.connect('app-state-changed', Lang.bind(this, this._updateIcon));
+
         this._updateIcon();
 
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
@@ -210,6 +215,9 @@ const WindowTitle = new Lang.Class({
         this._metaWindow.disconnect(this._notifyMinimizedId);
         this._metaWindow.disconnect(this._notifyWmClass);
         this._metaWindow.disconnect(this._notifyAppId);
+
+        let appSys = Shell.AppSystem.get_default();
+        appSys.disconnect(this._appStateChangedSignalId);
     }
 });
 
