@@ -3,7 +3,6 @@
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Shell = imports.gi.Shell;
-const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 const Signals = imports.signals;
 const St = imports.gi.St;
@@ -143,7 +142,7 @@ class RootInfo extends PlaceInfo {
                                             return;
 
                                         this._proxy.connect('g-properties-changed',
-                                                            Lang.bind(this, this._propertiesChanged));
+                                                            this._propertiesChanged.bind(this));
                                         this._propertiesChanged(obj);
                                     });
     }
@@ -189,12 +188,12 @@ class PlaceDeviceInfo extends PlaceInfo {
             this._mount.eject_with_operation(Gio.MountUnmountFlags.NONE,
                                              mountOp.mountOp,
                                              null, // Gio.Cancellable
-                                             Lang.bind(this, this._ejectFinish));
+                                             this._ejectFinish.bind(this));
         else
             this._mount.unmount_with_operation(Gio.MountUnmountFlags.NONE,
                                                mountOp.mountOp,
                                                null, // Gio.Cancellable
-                                               Lang.bind(this, this._unmountFinish));
+                                               this._unmountFinish.bind(this));
     }
 
     _ejectFinish(mount, result) {
@@ -265,7 +264,7 @@ var PlacesManager = class {
         this._settings = new Gio.Settings({ schema_id: BACKGROUND_SCHEMA });
         this._showDesktopIconsChangedId =
             this._settings.connect('changed::show-desktop-icons',
-                                   Lang.bind(this, this._updateSpecials));
+                                   this._updateSpecials.bind(this));
         this._updateSpecials();
 
         /*
@@ -302,7 +301,7 @@ var PlacesManager = class {
                          'drive-connected', 'drive-disconnected', 'drive-changed'];
 
         this._volumeMonitorSignals = [];
-        let func = Lang.bind(this, this._updateMounts);
+        let func = this._updateMounts.bind(this);
         for (let i = 0; i < signals.length; i++) {
             let id = this._volumeMonitor.connect(signals[i], func);
             this._volumeMonitorSignals.push(id);

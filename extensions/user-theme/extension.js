@@ -3,7 +3,6 @@
 
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
-const Lang = imports.lang;
 const Main = imports.ui.main;
 
 const SETTINGS_KEY = 'name';
@@ -18,7 +17,7 @@ class ThemeManager {
     }
 
     enable() {
-        this._changedId = this._settings.connect('changed::'+SETTINGS_KEY, Lang.bind(this, this._changeTheme));
+        this._changedId = this._settings.connect('changed::'+SETTINGS_KEY, this._changeTheme.bind(this));
         this._changeTheme();
     }
 

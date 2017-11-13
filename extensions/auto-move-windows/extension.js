@@ -3,7 +3,6 @@
 
 const Glib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
-const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
@@ -26,7 +25,7 @@ class WindowMover {
 
         let display = global.screen.get_display();
         // Connect after so the handler from ShellWindowTracker has already run
-        this._windowCreatedId = display.connect_after('window-created', Lang.bind(this, this._findAndMove));
+        this._windowCreatedId = display.connect_after('window-created', this._findAndMove.bind(this));
     }
 
     destroy() {

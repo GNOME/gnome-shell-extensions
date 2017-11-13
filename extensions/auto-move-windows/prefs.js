@@ -4,7 +4,6 @@
 const Gio = imports.gi.Gio;
 const GObject = imports.gi.GObject;
 const Gtk = imports.gi.Gtk;
-const Lang = imports.lang;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
@@ -34,7 +33,7 @@ const Widget = GObject.registerClass({
         this.set_orientation(Gtk.Orientation.VERTICAL);
 
         this._settings = Convenience.getSettings();
-        this._settings.connect('changed', Lang.bind(this, this._refresh));
+        this._settings.connect('changed', this._refresh.bind(this));
         this._changedPermitted = false;
 
         this._store = new Gtk.ListStore();
@@ -63,7 +62,7 @@ const Widget = GObject.registerClass({
         let workspaceColumn = new Gtk.TreeViewColumn({ title: _("Workspace"),
                                                        sort_column_id: Columns.WORKSPACE });
         let workspaceRenderer = new Gtk.CellRendererSpin({ editable: true });
-        workspaceRenderer.connect('edited', Lang.bind(this, this._workspaceEdited));
+        workspaceRenderer.connect('edited', this._workspaceEdited.bind(this));
         workspaceColumn.pack_start(workspaceRenderer, true);
         workspaceColumn.add_attribute(workspaceRenderer, "adjustment", Columns.ADJUSTMENT);
         workspaceColumn.add_attribute(workspaceRenderer, "text", Columns.WORKSPACE);
@@ -78,11 +77,11 @@ const Widget = GObject.registerClass({
         let newButton = new Gtk.ToolButton({ icon_name: 'bookmark-new-symbolic',
                                              label: _("Add Rule"),
                                              is_important: true });
-        newButton.connect('clicked', Lang.bind(this, this._createNew));
+        newButton.connect('clicked', this._createNew.bind(this));
         toolbar.add(newButton);
 
         let delButton = new Gtk.ToolButton({ icon_name: 'edit-delete-symbolic'  });
-        delButton.connect('clicked', Lang.bind(this, this._deleteSelected));
+        delButton.connect('clicked', this._deleteSelected.bind(this));
         toolbar.add(delButton);
 
         let selection = this._treeView.get_selection();

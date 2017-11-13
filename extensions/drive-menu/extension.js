@@ -1,7 +1,6 @@
 // Drive menu extension
 const Clutter = imports.gi.Clutter;
 const Gio = imports.gi.Gio;
-const Lang = imports.lang;
 const St = imports.gi.St;
 const Shell = imports.gi.Shell;
 
@@ -31,10 +30,10 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
         let ejectIcon = new St.Icon({ icon_name: 'media-eject-symbolic',
                                       style_class: 'popup-menu-icon ' });
         let ejectButton = new St.Button({ child: ejectIcon });
-        ejectButton.connect('clicked', Lang.bind(this, this._eject));
+        ejectButton.connect('clicked', this._eject.bind(this));
         this.actor.add(ejectButton);
 
-        this._changedId = mount.connect('changed', Lang.bind(this, this._syncVisibility));
+        this._changedId = mount.connect('changed', this._syncVisibility.bind(this));
         this._syncVisibility();
     }
 
@@ -75,12 +74,12 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
             this.mount.eject_with_operation(Gio.MountUnmountFlags.NONE,
                                             mountOp.mountOp,
                                             null, // Gio.Cancellable
-                                            Lang.bind(this, this._ejectFinish));
+                                            this._ejectFinish.bind(this));
         else
             this.mount.unmount_with_operation(Gio.MountUnmountFlags.NONE,
                                               mountOp.mountOp,
                                               null, // Gio.Cancellable
-                                              Lang.bind(this, this._unmountFinish));
+                                              this._unmountFinish.bind(this));
     }
 
     _unmountFinish(mount, result) {
@@ -138,7 +137,7 @@ class DriveMenu extends PanelMenu.Button {
 
         this._mounts = [ ];
 
-        this._monitor.get_mounts().forEach(Lang.bind(this, this._addMount));
+        this._monitor.get_mounts().forEach(this._addMount.bind(this));
 
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
         this.menu.addAction(_("Open Files"), event => {

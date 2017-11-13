@@ -3,7 +3,6 @@
 const Clutter = imports.gi.Clutter;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
-const Lang = imports.lang;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 
@@ -39,12 +38,12 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
             this._ejectIcon = new St.Icon({ icon_name: 'media-eject-symbolic',
                                             style_class: 'popup-menu-icon ' });
             this._ejectButton = new St.Button({ child: this._ejectIcon });
-            this._ejectButton.connect('clicked', Lang.bind(info, info.eject));
+            this._ejectButton.connect('clicked', info.eject.bind(info));
             this.actor.add_child(this._ejectButton);
         }
 
         this._changedId = info.connect('changed',
-                                       Lang.bind(this, this._propertiesChanged));
+                                       this._propertiesChanged.bind(this));
     }
 
     destroy() {

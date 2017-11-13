@@ -3,7 +3,6 @@
 const Atk = imports.gi.Atk;
 const DND = imports.ui.dnd;
 const GMenu = imports.gi.GMenu;
-const Lang = imports.lang;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 const Clutter = imports.gi.Clutter;
@@ -61,7 +60,7 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         let textureCache = St.TextureCache.get_default();
         let iconThemeChangedId = textureCache.connect('icon-theme-changed',
-                                                      Lang.bind(this, this._updateIcon));
+                                                      this._updateIcon.bind(this));
         this.actor.connect('destroy', () => {
             textureCache.disconnect(iconThemeChangedId);
         });
@@ -131,7 +130,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
             name = _("Favorites");
 
         this.actor.add_child(new St.Label({ text: name }));
-        this.actor.connect('motion-event', Lang.bind(this, this._onMotionEvent));
+        this.actor.connect('motion-event', this._onMotionEvent.bind(this));
     }
 
     activate(event) {
@@ -272,7 +271,7 @@ class DesktopTarget {
 
         this._windowAddedId =
             global.window_group.connect('actor-added',
-                                        Lang.bind(this, this._onWindowAdded));
+                                        this._onWindowAdded.bind(this));
 
         global.get_window_actors().forEach(a => {
             this._onWindowAdded(a.get_parent(), a);
@@ -425,8 +424,8 @@ class ApplicationsButton extends PanelMenu.Button {
         this.actor.name = 'panelApplications';
         this.actor.label_actor = this._label;
 
-        this.actor.connect('captured-event', Lang.bind(this, this._onCapturedEvent));
-        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
+        this.actor.connect('captured-event', this._onCapturedEvent.bind(this));
+        this.actor.connect('destroy', this._onDestroy.bind(this));
 
         this._showingId = Main.overview.connect('showing', () => {
             this.actor.add_accessible_state (Atk.StateType.CHECKED);
@@ -435,7 +434,7 @@ class ApplicationsButton extends PanelMenu.Button {
             this.actor.remove_accessible_state (Atk.StateType.CHECKED);
         });
         Main.layoutManager.connect('startup-complete',
-                                   Lang.bind(this, this._setKeybinding));
+                                   this._setKeybinding.bind(this));
         this._setKeybinding();
 
         this._desktopTarget = new DesktopTarget();
@@ -450,14 +449,14 @@ class ApplicationsButton extends PanelMenu.Button {
 
         this._tree = new GMenu.Tree({ menu_basename: 'applications.menu' });
         this._treeChangedId = this._tree.connect('changed',
-                                                 Lang.bind(this, this._onTreeChanged));
+                                                 this._onTreeChanged.bind(this));
 
         this._applicationsButtons = new Map();
         this.reloadFlag = false;
         this._createLayout();
         this._display();
         this._installedChangedId = appSys.connect('installed-changed',
-                                                  Lang.bind(this, this._onTreeChanged));
+                                                  this._onTreeChanged.bind(this));
     }
 
     _onTreeChanged() {
@@ -476,7 +475,7 @@ class ApplicationsButton extends PanelMenu.Button {
     _createVertSeparator() {
         let separator = new St.DrawingArea({ style_class: 'calendar-vertical-separator',
                                              pseudo_class: 'highlighted' });
-        separator.connect('repaint', Lang.bind(this, this._onVertSepRepaint));
+        separator.connect('repaint', this._onVertSepRepaint.bind(this));
         return separator;
     }
 
@@ -491,7 +490,7 @@ class ApplicationsButton extends PanelMenu.Button {
                                            Shell.ActionMode.NORMAL |
                                            Shell.ActionMode.OVERVIEW,
                                            Main.sessionMode.hasOverview ?
-                                           Lang.bind(Main.overview, Main.overview.toggle) :
+                                           Main.overview.toggle.bind(Main.overview) :
                                            null);
 
         this._desktopTarget.destroy();
