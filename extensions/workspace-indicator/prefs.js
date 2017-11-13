@@ -4,7 +4,6 @@ const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const GObject = imports.gi.GObject;
 const Gtk = imports.gi.Gtk;
-const Lang = imports.lang;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
@@ -28,15 +27,15 @@ class WorkspaceNameModel extends Gtk.ListStore {
         };
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
-        //this._settings.connect('changed::workspace-names', Lang.bind(this, this._reloadFromSettings));
+        //this._settings.connect('changed::workspace-names', this._reloadFromSettings.bind(this));
 
         this._reloadFromSettings();
 
         // overriding class closure doesn't work, because GtkTreeModel
         // plays tricks with marshallers and class closures
-        this.connect('row-changed', Lang.bind(this, this._onRowChanged));
-        this.connect('row-inserted', Lang.bind(this, this._onRowInserted));
-        this.connect('row-deleted', Lang.bind(this, this._onRowDeleted));
+        this.connect('row-changed', this._onRowChanged.bind(this));
+        this.connect('row-inserted', this._onRowInserted.bind(this));
+        this.connect('row-deleted', this._onRowDeleted.bind(this));
     }
 
     _reloadFromSettings() {
@@ -150,7 +149,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
 
         let column = new Gtk.TreeViewColumn({ title: _("Name") });
         let renderer = new Gtk.CellRendererText({ editable: true });
-        renderer.connect('edited', Lang.bind(this, this._cellEdited));
+        renderer.connect('edited', this._cellEdited.bind(this));
         column.pack_start(renderer, true);
         column.add_attribute(renderer, 'text', this._store.Columns.LABEL);
         this._treeView.append_column(column);
@@ -161,11 +160,11 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
         toolbar.get_style_context().add_class(Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 
         let newButton = new Gtk.ToolButton({ icon_name: 'list-add-symbolic' });
-        newButton.connect('clicked', Lang.bind(this, this._newClicked));
+        newButton.connect('clicked', this._newClicked.bind(this));
         toolbar.add(newButton);
 
         let delButton = new Gtk.ToolButton({ icon_name: 'list-remove-symbolic' });
-        delButton.connect('clicked', Lang.bind(this, this._delClicked));
+        delButton.connect('clicked', this._delClicked.bind(this));
         toolbar.add(delButton);
 
         let selection = this._treeView.get_selection();

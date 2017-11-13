@@ -1,6 +1,5 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 const Clutter = imports.gi.Clutter;
-const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 const St = imports.gi.St;
 
@@ -244,8 +243,10 @@ function enable() {
     workViewInjections['_init'] = injectToFunction(WorkspacesView.WorkspacesView.prototype, '_init', function(width, height, x, y, workspaces) {
         this._pickWorkspace = false;
         this._pickWindow = false;
-        this._keyPressEventId = global.stage.connect('key-press-event', Lang.bind(this, this._onKeyPress));
-        this._keyReleaseEventId = global.stage.connect('key-release-event', Lang.bind(this, this._onKeyRelease));
+        this._keyPressEventId =
+            global.stage.connect('key-press-event', this._onKeyPress.bind(this));
+        this._keyReleaseEventId =
+            global.stage.connect('key-release-event', this._onKeyRelease.bind(this));
         connectedSignals.push({ obj: global.stage, id: this._keyPressEventId });
         connectedSignals.push({ obj: global.stage, id: this._keyReleaseEventId });
     });

@@ -7,7 +7,6 @@ const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 
 const DND = imports.ui.dnd;
-const Lang = imports.lang;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
@@ -81,7 +80,7 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
 
         this._notifyMinimizedId =
             this._metaWindow.connect('notify::minimized',
-                                     Lang.bind(this, this._updateMinimizeItem));
+                                     this._updateMinimizeItem.bind(this));
         this._updateMinimizeItem();
 
         this._maximizeItem = new PopupMenu.PopupMenuItem('');
@@ -98,10 +97,10 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
 
         this._notifyMaximizedHId =
             this._metaWindow.connect('notify::maximized-horizontally',
-                                     Lang.bind(this, this._updateMaximizeItem));
+                                     this._updateMaximizeItem.bind(this));
         this._notifyMaximizedVId =
             this._metaWindow.connect('notify::maximized-vertically',
-                                     Lang.bind(this, this._updateMaximizeItem));
+                                     this._updateMaximizeItem.bind(this));
         this._updateMaximizeItem();
 
         this._closeItem = new PopupMenu.PopupMenuItem(_("Close"));
@@ -110,7 +109,7 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
         });
         this.addMenuItem(this._closeItem);
 
-        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
+        this.actor.connect('destroy', this._onDestroy.bind(this));
 
         this.connect('open-state-changed', () => {
             if (!this.isOpen)
@@ -155,23 +154,23 @@ class WindowTitle {
         this._textureCache = St.TextureCache.get_default();
         this._iconThemeChangedId =
             this._textureCache.connect('icon-theme-changed',
-                                       Lang.bind(this, this._updateIcon));
+                                       this._updateIcon.bind(this));
         this._notifyWmClass =
             this._metaWindow.connect('notify::wm-class',
-                                     Lang.bind(this, this._updateIcon));
+                                     this._updateIcon.bind(this));
         this._notifyAppId =
             this._metaWindow.connect('notify::gtk-application-id',
-                                     Lang.bind(this, this._updateIcon));
+                                     this._updateIcon.bind(this));
         this._updateIcon();
 
-        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
+        this.actor.connect('destroy', this._onDestroy.bind(this));
 
         this._notifyTitleId =
             this._metaWindow.connect('notify::title',
-                                    Lang.bind(this, this._updateTitle));
+                                     this._updateTitle.bind(this));
         this._notifyMinimizedId =
             this._metaWindow.connect('notify::minimized',
-                                    Lang.bind(this, this._minimizedChanged));
+                                     this._minimizedChanged.bind(this));
         this._minimizedChanged();
     }
 
@@ -226,24 +225,24 @@ class BaseButton {
         this.actor._delegate = this;
 
         this.actor.connect('allocation-changed',
-                           Lang.bind(this, this._updateIconGeometry));
-        this.actor.connect('clicked', Lang.bind(this, this._onClicked));
-        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
-        this.actor.connect('popup-menu', Lang.bind(this, this._onPopupMenu));
+                           this._updateIconGeometry.bind(this));
+        this.actor.connect('clicked', this._onClicked.bind(this));
+        this.actor.connect('destroy', this._onDestroy.bind(this));
+        this.actor.connect('popup-menu', this._onPopupMenu.bind(this));
 
         this._contextMenuManager = new PopupMenu.PopupMenuManager(this);
 
         this._switchWorkspaceId =
             global.window_manager.connect('switch-workspace',
-                                          Lang.bind(this, this._updateVisibility));
+                                          this._updateVisibility.bind(this));
 
         if (this._perMonitor) {
             this._windowEnteredMonitorId =
                 global.screen.connect('window-entered-monitor',
-                    Lang.bind(this, this._windowEnteredOrLeftMonitor));
+                    this._windowEnteredOrLeftMonitor.bind(this));
             this._windowLeftMonitorId =
                 global.screen.connect('window-left-monitor',
-                    Lang.bind(this, this._windowEnteredOrLeftMonitor));
+                    this._windowEnteredOrLeftMonitor.bind(this));
         }
     }
 
@@ -345,11 +344,11 @@ class WindowButton extends BaseButton {
 
         this._workspaceChangedId =
             this.metaWindow.connect('workspace-changed',
-                                    Lang.bind(this, this._updateVisibility));
+                                    this._updateVisibility.bind(this));
 
         this._notifyFocusId =
             global.display.connect('notify::focus-window',
-                                   Lang.bind(this, this._updateStyle));
+                                   this._updateStyle.bind(this));
         this._updateStyle();
     }
 
@@ -492,7 +491,7 @@ class AppButton extends BaseButton {
         this._menu = new PopupMenu.PopupMenu(this.actor, 0.5, St.Side.BOTTOM);
         this._menu.connect('open-state-changed', _onMenuStateChanged);
         this._menu.actor.hide();
-        this._menu.connect('activate', Lang.bind(this, this._onMenuActivate));
+        this._menu.connect('activate', this._onMenuActivate.bind(this));
         this._menuManager.addMenu(this._menu);
         Main.uiGroup.add_actor(this._menu.actor);
 
@@ -509,13 +508,13 @@ class AppButton extends BaseButton {
 
         this._windowsChangedId =
             this.app.connect('windows-changed',
-                             Lang.bind(this, this._windowsChanged));
+                             this._windowsChanged.bind(this));
         this._windowsChanged();
 
         this._windowTracker = Shell.WindowTracker.get_default();
         this._notifyFocusId =
             this._windowTracker.connect('notify::focus-app',
-                                        Lang.bind(this, this._updateStyle));
+                                        this._updateStyle.bind(this));
         this._updateStyle();
     }
 
@@ -662,14 +661,18 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this.workspacesItems = [];
 
         this._screenSignals = [];
-        this._screenSignals.push(global.screen.connect('notify::n-workspaces', Lang.bind(this,this._updateMenu)));
-        this._screenSignals.push(global.screen.connect_after('workspace-switched', Lang.bind(this,this._updateIndicator)));
+        this._screenSignals.push(global.screen.connect('notify::n-workspaces',
+                                                       this._updateMenu.bind(this)));
+        this._screenSignals.push(global.screen.connect_after('workspace-switched',
+                                                             this._updateIndicator.bind(this)));
 
-        this.actor.connect('scroll-event', Lang.bind(this, this._onScrollEvent));
+        this.actor.connect('scroll-event', this._onScrollEvent.bind(this));
         this._updateMenu();
 
         this._settings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.preferences' });
-        this._settingsChangedId = this._settings.connect('changed::workspace-names', Lang.bind(this, this._updateMenu));
+        this._settingsChangedId =
+            this._settings.connect('changed::workspace-names',
+                                   this._updateMenu.bind(this));
     }
 
     destroy() {
@@ -761,7 +764,7 @@ class WindowList {
                                      reactive: true,
                                      track_hover: true,
                                      layout_manager: new Clutter.BinLayout()});
-        this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
+        this.actor.connect('destroy', this._onDestroy.bind(this));
 
         let box = new St.BoxLayout({ x_expand: true, y_expand: true });
         this.actor.add_actor(box);
@@ -780,7 +783,7 @@ class WindowList {
             let spacing = node.get_length('spacing');
             this._windowList.layout_manager.spacing = spacing;
         });
-        this._windowList.connect('scroll-event', Lang.bind(this, this._onScrollEvent));
+        this._windowList.connect('scroll-event', this._onScrollEvent.bind(this));
 
         let indicatorsBox = new St.BoxLayout({ x_align: Clutter.ActorAlign.END });
         box.add(indicatorsBox);
@@ -792,11 +795,11 @@ class WindowList {
         this._workspaceSettings = this._getWorkspaceSettings();
         this._workspacesOnlyOnPrimaryChangedId =
             this._workspaceSettings.connect('changed::workspaces-only-on-primary',
-                                            Lang.bind(this, this._updateWorkspaceIndicatorVisibility));
+                                            this._updateWorkspaceIndicatorVisibility.bind(this));
         this._dynamicWorkspacesSettings = this._getDynamicWorkspacesSettings();
         this._dynamicWorkspacesChangedId =
             this._dynamicWorkspacesSettings.connect('changed::dynamic-workspaces',
-                                                    Lang.bind(this, this._updateWorkspaceIndicatorVisibility));
+                                                    this._updateWorkspaceIndicatorVisibility.bind(this));
         this._updateWorkspaceIndicatorVisibility();
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
@@ -808,13 +811,13 @@ class WindowList {
         Main.ctrlAltTabManager.addGroup(this.actor, _("Window List"), 'start-here-symbolic');
 
         this.actor.width = this._monitor.width;
-        this.actor.connect('notify::height', Lang.bind(this, this._updatePosition));
+        this.actor.connect('notify::height', this._updatePosition.bind(this));
         this._updatePosition();
 
         this._appSystem = Shell.AppSystem.get_default();
         this._appStateChangedId =
             this._appSystem.connect('app-state-changed',
-                                    Lang.bind(this, this._onAppStateChanged));
+                                    this._onAppStateChanged.bind(this));
 
         this._keyboardVisiblechangedId =
             Main.layoutManager.connect('keyboard-visible-changed',
@@ -833,12 +836,12 @@ class WindowList {
         this._workspaceSignals = new Map();
         this._nWorkspacesChangedId =
             global.screen.connect('notify::n-workspaces',
-                                  Lang.bind(this, this._onWorkspacesChanged));
+                                  this._onWorkspacesChanged.bind(this));
         this._onWorkspacesChanged();
 
         this._switchWorkspaceId =
             global.window_manager.connect('switch-workspace',
-                                          Lang.bind(this, this._checkGrouping));
+                                          this._checkGrouping.bind(this));
 
         this._overviewShowingId =
             Main.overview.connect('showing', () => {
@@ -859,12 +862,12 @@ class WindowList {
 
         this._dragBeginId =
             Main.xdndHandler.connect('drag-begin',
-                                     Lang.bind(this, this._onDragBegin));
+                                     this._onDragBegin.bind(this));
         this._dragEndId =
             Main.xdndHandler.connect('drag-end',
-                                     Lang.bind(this, this._onDragEnd));
+                                     this._onDragEnd.bind(this));
         this._dragMonitor = {
-            dragMotion: Lang.bind(this, this._onDragMotion)
+            dragMotion: this._onDragMotion.bind(this)
         };
 
         this._dndTimeoutId = 0;
@@ -873,7 +876,7 @@ class WindowList {
         this._settings = Convenience.getSettings();
         this._groupingModeChangedId =
             this._settings.connect('changed::grouping-mode',
-                                   Lang.bind(this, this._groupingModeChanged));
+                                   this._groupingModeChanged.bind(this));
         this._grouped = undefined;
         this._groupingModeChanged();
     }
@@ -1085,10 +1088,10 @@ class WindowList {
             let signals = { windowAddedId: 0, windowRemovedId: 0 };
             signals._windowAddedId =
                 workspace.connect_after('window-added',
-                                        Lang.bind(this, this._onWindowAdded));
+                                        this._onWindowAdded.bind(this));
             signals._windowRemovedId =
                 workspace.connect('window-removed',
-                                  Lang.bind(this, this._onWindowRemoved));
+                                  this._onWindowRemoved.bind(this));
             this._workspaceSignals.set(workspace, signals);
         }
 
@@ -1135,7 +1138,7 @@ class WindowList {
         this._dndWindow = hoveredWindow;
         this._dndTimeoutId = GLib.timeout_add(GLib.PRIORITY_DEFAULT,
                                               DND_ACTIVATE_TIMEOUT,
-                                              Lang.bind(this, this._activateWindow));
+                                              this._activateWindow.bind(this));
 
         return DND.DragMotionResult.CONTINUE;
     }
@@ -1211,11 +1214,11 @@ class Extension {
         this._settings = Convenience.getSettings();
         this._showOnAllMonitorsChangedId =
             this._settings.connect('changed::show-on-all-monitors',
-                                   Lang.bind(this, this._buildWindowLists));
+                                   this._buildWindowLists.bind(this));
 
         this._monitorsChangedId =
             Main.layoutManager.connect('monitors-changed',
-                                       Lang.bind(this, this._buildWindowLists));
+                                       this._buildWindowLists.bind(this));
 
         this._buildWindowLists();
     }

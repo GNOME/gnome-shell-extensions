@@ -3,7 +3,6 @@
 const Clutter = imports.gi.Clutter;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
-const Lang = imports.lang;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 
@@ -36,7 +35,7 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
         this.actor.add_child(this._label);
 
         this._changedId = info.connect('changed',
-                                       Lang.bind(this, this._propertiesChanged));
+                                       this._propertiesChanged.bind(this));
     }
 
     destroy() {

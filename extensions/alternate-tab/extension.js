@@ -1,7 +1,6 @@
 /* -*- mode: js; js-basic-offset: 4; indent-tabs-mode: nil -*- */
 
 const Clutter = imports.gi.Clutter;
-const Lang = imports.lang;
 const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
 
@@ -43,15 +42,19 @@ function enable() {
             tabPopup.destroy();
     };
 
-    setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._forcedWindowSwitcher));
-    setKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._forcedWindowSwitcher));
+    setKeybinding('switch-applications',
+                  Main.wm._forcedWindowSwitcher.bind(Main.wm));
+    setKeybinding('switch-applications-backward',
+                  Main.wm._forcedWindowSwitcher.bind(Main.wm));
 }
 
 function disable() {
     var prop;
 
-    setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._startSwitcher));
-    setKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._startSwitcher));
+    setKeybinding('switch-applications',
+                  Main.wm._startSwitcher.bind(Main.wm));
+    setKeybinding('switch-applications-backward',
+                  Main.wm._startSwitcher.bind(Main.wm));
 
     for (prop in injections)
         AltTab.WindowSwitcherPopup.prototype[prop] = injections[prop];
