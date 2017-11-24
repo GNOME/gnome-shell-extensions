@@ -12,8 +12,7 @@ For more information about GNOME Shell Extensions
 For general information about GNOME Shell
  https://wiki.gnome.org/Projects/GnomeShell
 
-Bugs should be reported at https://bugzilla.gnome.org against the 'gnome-shell'
-product, with the 'extensions' component.
+Bugs should be reported at https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues.
 
 Extensions
 ==========
