@@ -31,10 +31,6 @@ auto-move-windows
 each application as soon as it creates a window, in a manner configurable with a
 GSettings key.
 
-dock
-
-  Shows a dock-style task switcher on the right side of the screen.
-
 drive-menu
   Shows a status menu for rapid unmount and power off of external storage devices
   (i.e. pendrives)
@@ -43,9 +39,9 @@ example
 
   A minimal example illustrating how to write extensions.
 
-gajim
+launch-new-instance
 
-  Integration with Gajim, a Jabber/XMPP instant messaging client.
+  Changes application icons to always launch a new instance when activated.
 
 native-window-placement
 
@@ -56,13 +52,25 @@ places-menu
 
   Shows a status Indicator for navigating to Places.
 
+screenshot-window-sizer
+
+  Adds a shortcut for resizing the focus window to a size that is suitable for GNOME Software screenshots
+
 user-theme
 
   Loads a shell theme from ~/.themes/<name>/gnome-shell.
 
+window-list
+
+  Adds a bottom panel with a traditional window list.
+
 windowsNavigator
 
   Allow keyboard selection of windows and workspaces in overlay mode.
+
+workspace-indicator
+
+  Adds a simple workspace switcher to the top bar.
 
 License
 =======
