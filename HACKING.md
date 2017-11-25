@@ -1,4 +1,4 @@
---- Creating a New Extension ---
+## Creating a New Extension
 
 To create a new extension, add a subdirectory in extensions.
 Then create a Makefile.am like the one in example, replacing
@@ -15,12 +15,10 @@ The Gettext domain you should choose is gnome-shell-extensions,
 not gnome-shell, unless you're sure there is the string you
 need in gnome-shell.
 
---- Coding Style ---
+## Coding Style
 
-Generally, we follow GJS coding style (you can find it at
-http://git.gnome.org/browse/gjs/tree/doc/Style_Guide.txt), which
-in short is: indent 4 spaces, no tabs, space after comma, no space
-after function call.
+Generally, we follow [GJS coding style][coding-style], which in short is:
+indent 4 spaces, no tabs, space after comma, no space after function call.
 
 The Emacs mode line for this
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
@@ -29,3 +27,5 @@ Imports should be at the top, in two groups, one for standard
 imports (like imports.lang or imports.dbus) and introspection,
 the other for Shell API. Within the same group, put everything
 in alphabetic order.
+
+[coding-style]: https://gitlab.gnome.org/GNOME/gjs/blob/master/doc/Style_Guide.md
