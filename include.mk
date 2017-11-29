@@ -1,4 +1,4 @@
-extensionurl = http://git.gnome.org/gnome-shell-extensions
+extensionurl = https://gitlab.gnome.org/GNOME/gnome-shell-extensions
 
 # Change these to modify how installation is performed
 topextensiondir = $(datadir)/gnome-shell/extensions
