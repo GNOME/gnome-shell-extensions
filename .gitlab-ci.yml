@@ -1,0 +1,13 @@
+image: fedora:rawhide
+
+stages:
+ - build
+
+before_script:
+  - dnf install -y meson gettext itstool gjs-devel desktop-file-utils
+
+build-shell-extensions:
+  stage: build
+  script:
+    - meson _build .
+    - ninja -C _build test install
