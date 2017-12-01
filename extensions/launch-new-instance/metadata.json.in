@@ -4,7 +4,7 @@
 "settings-schema": "@gschemaname@",
 "gettext-domain": "@gettext_domain@",
 "name": "Launch new instance",
-"description": "Always launch a new instance when clicking in the dash or the application view.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME Bugzilla instead.",
+"description": "Always launch a new instance when clicking in the dash or the application view.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME's GitLab instance instead.",
 "shell-version": [ "@shell_current@" ],
 "url": "@url@"
 }

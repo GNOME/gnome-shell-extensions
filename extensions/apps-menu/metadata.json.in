@@ -3,7 +3,7 @@
 "uuid": "@uuid@",
 "gettext-domain": "@gettext_domain@",
 "name": "Applications Menu",
-"description": "Add a category-based menu for applications.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME Bugzilla instead.",
+"description": "Add a category-based menu for applications.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME's GitLab instance instead.",
 "original-authors": [ "e2002@bk.ru", "debarshir@gnome.org" ],
 "shell-version": [ "@shell_current@" ],
 "url": "@url@"

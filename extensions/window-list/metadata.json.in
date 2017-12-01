@@ -4,7 +4,7 @@
 "settings-schema": "@gschemaname@",
 "gettext-domain": "@gettext_domain@",
 "name": "Window List",
-"description": "Display a window list at the bottom of the screen.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME Bugzilla instead.",
+"description": "Display a window list at the bottom of the screen.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME's GitLab instance instead.",
 "shell-version": [ "@shell_current@" ],
 "url": "@url@"
 }

@@ -4,7 +4,7 @@
 "settings-schema": "@gschemaname@",
 "gettext-domain": "@gettext_domain@",
 "name": "AlternateTab",
-"description": "Substitute Alt-Tab with a window based switcher that does not group by application.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME Bugzilla instead.",
+"description": "Substitute Alt-Tab with a window based switcher that does not group by application.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME's GitLab instance instead.",
 "original-authors": [  "jw@bargsten.org", "thomas.bouffon@gmail.com" ],
 "shell-version": [ "@shell_current@" ],
 "url": "@url@"
