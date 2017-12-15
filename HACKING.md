@@ -9,6 +9,10 @@ Then modify the [toplevel Meson file](meson.build) to add the new
 extension name in the appropriate set (that is one of classic_extensions,
 default_extensions or all_extensions).
 
+Finally, to be able to enable the extension invididually, modify the
+[Meson's options file](meson_options.txt) file by adding the extension name to
+the enable_extensions choice's field.
+
 Don't forget to add any translatable file to po/POTFILES.in, and
 then you're done.
 The Gettext domain you should choose is gnome-shell-extensions,
