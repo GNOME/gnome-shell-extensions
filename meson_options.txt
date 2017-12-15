@@ -6,8 +6,8 @@ option('extension_set',
 )
 
 option('enable_extensions',
-  type: 'string',
-  value: '',
+  type: 'array',
+  value: [],
   description: 'Space separated list of extensions to enable instead of a predefined set.'
 )
 
