@@ -1,6 +1,6 @@
 project('gnome-shell-extensions',
   version: '3.27.1',
-  meson_version: '>= 0.37.0',
+  meson_version: '>= 0.44.0',
   license: 'GPL2+'
 )
 
@@ -56,7 +56,7 @@ all_extensions += [
   'user-theme'
 ]
 
-enabled_extensions = get_option('enable_extensions').split()
+enabled_extensions = get_option('enable_extensions')
 
 if enabled_extensions.length() == 0
   set = get_option('extension_set')
@@ -81,13 +81,6 @@ if classic_mode_enabled
     endif
   endforeach
 endif
-
-# Sanity check: Make sure enabled extensions are valid
-foreach e : enabled_extensions
-  if not all_extensions.contains(e)
-    error('Invalid extension @0@.'.format(e))
-  endif
-endforeach
 
 if classic_mode_enabled
   subdir('data')

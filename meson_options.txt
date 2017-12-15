@@ -6,8 +6,9 @@ option('extension_set',
 )
 
 option('enable_extensions',
-  type: 'string',
-  value: '',
+  type: 'array',
+  choices: ['alternate-tab', 'apps-menu', 'auto-move-windows', 'drive-menu', 'example', 'launch-new-instance', 'native-window-placement', 'places-menu', 'screenshot-window-sizer', 'user-theme',  'window-list', 'windowsNavigator', 'workspace-indicator'],
+  value: [],
   description: 'Space separated list of extensions to enable instead of a predefined set.'
 )
 
