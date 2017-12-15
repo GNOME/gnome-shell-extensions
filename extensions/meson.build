@@ -3,7 +3,7 @@ js_sources = extensionlib
 
 metadata_name = 'metadata.json'
 
-foreach e : all_extensions
+foreach e : enabled_extensions
   uuid = e + '@gnome-shell-extensions.gcampax.github.com'
 
   metadata_conf = configuration_data()
@@ -21,11 +21,9 @@ foreach e : all_extensions
 
   js_sources += extension_sources
 
-  if (enabled_extensions.contains(e))
-    install_data (extension_sources + extension_data + extensionlib,
-      install_dir: join_paths(extensiondir, uuid)
-    )
-  endif
+  install_data (extension_sources + extension_data + extensionlib,
+    install_dir: join_paths(extensiondir, uuid)
+  )
 endforeach
 
 install_data (extension_schemas,
