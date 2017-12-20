@@ -8,7 +8,7 @@ option('extension_set',
 option('enable_extensions',
   type: 'array',
   value: [],
-  description: 'Space separated list of extensions to enable instead of a predefined set.'
+  description: 'Comma separated list of extensions to enable instead of a predefined set.'
 )
 
 option('classic_mode',
