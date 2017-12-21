@@ -2,7 +2,6 @@
 // Start apps on custom workspaces
 
 const Lang = imports.lang;
-const Mainloop = imports.mainloop;
 const Shell = imports.gi.Shell;
 
 const Main = imports.ui.main;
@@ -16,12 +15,13 @@ const WindowMover = new Lang.Class({
 
     _init: function() {
         this._settings = Convenience.getSettings();
-        this._windowTracker = Shell.WindowTracker.get_default();
+        this._appSystem = Shell.AppSystem.get_default();
         this._appConfigs = new Map();
+        this._appData = new Map();
 
-        let display = global.screen.get_display();
-        // Connect after so the handler from ShellWindowTracker has already run
-        this._windowCreatedId = display.connect_after('window-created', Lang.bind(this, this._findAndMove));
+        this._appsChangedId =
+            this._appSystem.connect('installed-changed',
+                                    Lang.bind(this, this._updateAppData));
 
         this._settings.connect('changed', this._updateAppConfigs.bind(this));
         this._updateAppConfigs();
@@ -34,50 +34,79 @@ const WindowMover = new Lang.Class({
             let [appId, num] = v.split(':');
             this._appConfigs.set(appId, parseInt(num) - 1);
         });
+
+        this._updateAppData();
+    },
+
+    _updateAppData: function() {
+        let ids = [...this._appConfigs.keys()];
+        let removedApps = [...this._appData.keys()].filter(
+            a => !ids.includes(a.id)
+        );
+        removedApps.forEach(app => {
+            app.disconnect(this._appData.get(app).windowsChangedId);
+            this._appData.delete(app);
+        });
+
+        let addedApps = ids.map(id => this._appSystem.lookup_app(id)).filter(
+            app => app != null && !this._appData.has(app)
+        );
+        addedApps.forEach(app => {
+            let data = {
+                windowsChangedId: app.connect('windows-changed',
+                                              this._appWindowsChanged.bind(this)),
+                moveWindowsId: 0,
+                windows: app.get_windows()
+            }
+            this._appData.set(app, data);
+        });
     },
 
     destroy: function() {
-        if (this._windowCreatedId) {
-            global.screen.get_display().disconnect(this._windowCreatedId);
-            this._windowCreatedId = 0;
+        if (this._appsChangedId) {
+            this._appSystem.disconnect(this._appsChangedId);
+            this._appsChangedId = 0;
         }
 
         if (this._settings) {
             this._settings.run_dispose();
             this._settings = null;
         }
+
+        this._appConfigs.clear();
+        this._updateAppData();
     },
 
-    _ensureAtLeastWorkspaces: function(num, window) {
-        for (let i = global.screen.n_workspaces; i <= num; i++) {
-            window.change_workspace_by_index(i - 1, false);
-            global.screen.append_new_workspace(false, 0);
-        }
-    },
-
-    _findAndMove: function(display, window, noRecurse) {
+    _moveWindow: function(window, workspaceNum) {
         if (window.skip_taskbar)
             return;
 
-        let app = this._windowTracker.get_window_app(window);
-        if (!app) {
-            if (!noRecurse) {
-                // window is not tracked yet
-                Mainloop.idle_add(Lang.bind(this, function() {
-                    this._findAndMove(display, window, true);
-                    return false;
-                }));
-            } else
-                log ('Cannot find application for window');
-            return;
+        // ensure we have the required number of workspaces
+        for (let i = global.screen.n_workspaces; i <= workspaceNum; i++) {
+            window.change_workspace_by_index(i - 1, false);
+            global.screen.append_new_workspace(false, 0);
         }
-        let workspaceNum = this._appConfigs.get(app.get_id());
-        if (workspaceNum !== undefined) {
-            if (workspaceNum >= global.screen.n_workspaces)
-                this._ensureAtLeastWorkspaces(workspaceNum, window);
 
-            window.change_workspace_by_index(workspaceNum, false);
-        }
+        window.change_workspace_by_index(workspaceNum, false);
+    },
+
+    _appWindowsChanged: function(app) {
+        let data = this._appData.get(app);
+        let windows = app.get_windows();
+
+        // If get_compositor_private() returns non-NULL on a removed windows,
+        // the window still exists and is just moved to a different workspace
+        // or something; assume it'll be added back immediately, so keep it
+        // to avoid moving it again
+        windows.push(...data.windows.filter(
+            w => !windows.includes(w) && w.get_compositor_private() != null
+        ));
+
+        let workspaceNum = this._appConfigs.get(app.id);
+        windows.filter(w => !data.windows.includes(w)).forEach(window => {
+            this._moveWindow(window, workspaceNum);
+        });
+        data.windows = windows;
     }
 });
 
