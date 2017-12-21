@@ -11,26 +11,40 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
-const SETTINGS_KEY = 'application-list';
-
-let settings;
-
 const WindowMover = new Lang.Class({
     Name: 'AutoMoveWindows.WindowMover',
 
     _init: function() {
-        this._settings = settings;
+        this._settings = Convenience.getSettings();
         this._windowTracker = Shell.WindowTracker.get_default();
+        this._appConfigs = new Map();
 
         let display = global.screen.get_display();
         // Connect after so the handler from ShellWindowTracker has already run
         this._windowCreatedId = display.connect_after('window-created', Lang.bind(this, this._findAndMove));
+
+        this._settings.connect('changed', this._updateAppConfigs.bind(this));
+        this._updateAppConfigs();
+    },
+
+    _updateAppConfigs: function() {
+        this._appConfigs.clear();
+
+        this._settings.get_strv('application-list').forEach(v => {
+            let [appId, num] = v.split(':');
+            this._appConfigs.set(appId, parseInt(num) - 1);
+        });
     },
 
     destroy: function() {
         if (this._windowCreatedId) {
             global.screen.get_display().disconnect(this._windowCreatedId);
             this._windowCreatedId = 0;
+        }
+
+        if (this._settings) {
+            this._settings.run_dispose();
+            this._settings = null;
         }
     },
 
@@ -45,8 +59,6 @@ const WindowMover = new Lang.Class({
         if (window.skip_taskbar)
             return;
 
-        let spaces = this._settings.get_strv(SETTINGS_KEY);
-
         let app = this._windowTracker.get_window_app(window);
         if (!app) {
             if (!noRecurse) {
@@ -59,18 +71,12 @@ const WindowMover = new Lang.Class({
                 log ('Cannot find application for window');
             return;
         }
-        let app_id = app.get_id();
-        for (let i = 0; i < spaces.length; i++) {
-            let appsToSpace = spaces[i].split(":");
-            // Match application id
-            if (appsToSpace[0] == app_id) {
-                let workspaceNum = parseInt(appsToSpace[1]) - 1;
+        let workspaceNum = this._appConfigs.get(app.get_id());
+        if (workspaceNum !== undefined) {
+            if (workspaceNum >= global.screen.n_workspaces)
+                this._ensureAtLeastWorkspaces(workspaceNum, window);
 
-                if (workspaceNum >= global.screen.n_workspaces)
-                    this._ensureAtLeastWorkspaces(workspace_num, window);
-
-                window.change_workspace_by_index(workspaceNum, false);
-            }
+            window.change_workspace_by_index(workspaceNum, false);
         }
     }
 });
@@ -80,7 +86,6 @@ let winMover;
 
 function init() {
     Convenience.initTranslations();
-    settings = Convenience.getSettings();
 }
 
 function myCheckWorkspaces() {
