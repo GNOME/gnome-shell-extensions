@@ -32,8 +32,8 @@ class WindowMover {
     }
 
     _ensureAtLeastWorkspaces(num, window) {
-        for (let j = global.screen.n_workspaces; j <= num; j++) {
-            window.change_workspace_by_index(j-1, false);
+        for (let i = global.screen.n_workspaces; i <= num; i++) {
+            window.change_workspace_by_index(i - 1, false);
             global.screen.append_new_workspace(false, 0);
         }
     }
@@ -57,16 +57,16 @@ class WindowMover {
             return;
         }
         let app_id = app.get_id();
-        for ( let j = 0 ; j < spaces.length; j++ ) {
-            let apps_to_space = spaces[j].split(":");
+        for (let i = 0; i < spaces.length; i++) {
+            let appsToSpace = spaces[i].split(":");
             // Match application id
-            if (apps_to_space[0] == app_id) {
-                let workspace_num = parseInt(apps_to_space[1]) - 1;
+            if (appsToSpace[0] == app_id) {
+                let workspaceNum = parseInt(appsToSpace[1]) - 1;
 
-                if (workspace_num >= global.screen.n_workspaces)
+                if (workspaceNum >= global.screen.n_workspaces)
                     this._ensureAtLeastWorkspaces(workspace_num, window);
 
-                window.change_workspace_by_index(workspace_num, false);
+                window.change_workspace_by_index(workspaceNum, false);
             }
         }
     }
