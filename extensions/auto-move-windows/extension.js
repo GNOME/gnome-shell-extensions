@@ -85,62 +85,20 @@ function init() {
 }
 
 function myCheckWorkspaces() {
-    let i;
-    let emptyWorkspaces = new Array(this._workspaces.length);
-
-    if (!Meta.prefs_get_dynamic_workspaces()) {
-        this._checkWorkspacesId = 0;
-        return false;
+    let keepAliveWorkspaces = [];
+    let foundNonEmpty = false;
+    for (let i = this._workspaces.length - 1; i >= 0; i--) {
+        if (!foundNonEmpty)
+            foundNonEmpty = this._workspaces[i].list_windows().length > 0;
+        else if (!this._workspaces[i]._keepAliveId)
+            keepAliveWorkspaces.push(this._workspaces[i]);
     }
 
-    for (i = 0; i < this._workspaces.length; i++) {
-        let lastRemoved = this._workspaces[i]._lastRemovedWindow;
-        if ((lastRemoved &&
-             (lastRemoved.get_window_type() == Meta.WindowType.SPLASHSCREEN ||
-              lastRemoved.get_window_type() == Meta.WindowType.DIALOG ||
-              lastRemoved.get_window_type() == Meta.WindowType.MODAL_DIALOG)) ||
-            this._workspaces[i]._keepAliveId)
-            emptyWorkspaces[i] = false;
-        else
-            emptyWorkspaces[i] = true;
-    }
+    // make sure the original method only removes empty workspaces at the end
+    keepAliveWorkspaces.forEach(ws => { ws._keepAliveId = 1; });
+    prevCheckWorkspaces.call(this);
+    keepAliveWorkspaces.forEach(ws => { delete ws._keepAliveId; });
 
-    let sequences = Shell.WindowTracker.get_default().get_startup_sequences();
-    for (i = 0; i < sequences.length; i++) {
-        let index = sequences[i].get_workspace();
-        if (index >= 0 && index <= global.screen.n_workspaces)
-            emptyWorkspaces[index] = false;
-    }
-
-    let windows = global.get_window_actors();
-    for (i = 0; i < windows.length; i++) {
-        let winActor = windows[i];
-        let win = winActor.meta_window;
-        if (win.is_on_all_workspaces())
-            continue;
-
-        let workspaceIndex = win.get_workspace().index();
-        emptyWorkspaces[workspaceIndex] = false;
-    }
-
-    // If we don't have an empty workspace at the end, add one
-    if (!emptyWorkspaces[emptyWorkspaces.length -1]) {
-        global.screen.append_new_workspace(false, global.get_current_time());
-        emptyWorkspaces.push(false);
-    }
-
-    let activeWorkspaceIndex = global.screen.get_active_workspace_index();
-    emptyWorkspaces[activeWorkspaceIndex] = false;
-
-    // Delete other empty workspaces; do it from the end to avoid index changes
-    for (i = emptyWorkspaces.length - 2; i >= 0; i--) {
-        if (emptyWorkspaces[i])
-            global.screen.remove_workspace(this._workspaces[i], global.get_current_time());
-        else
-            break;
-    }
-
-    this._checkWorkspacesId = 0;
     return false;
 }
 
