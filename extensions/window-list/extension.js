@@ -162,11 +162,11 @@ const WindowTitle = new Lang.Class({
             this._textureCache.connect('icon-theme-changed',
                                        Lang.bind(this, this._updateIcon));
         this._notifyWmClass =
-            this._metaWindow.connect('notify::wm-class',
-                                     Lang.bind(this, this._updateIcon));
+            this._metaWindow.connect_after('notify::wm-class',
+                                           Lang.bind(this, this._updateIcon));
         this._notifyAppId =
-            this._metaWindow.connect('notify::gtk-application-id',
-                                     Lang.bind(this, this._updateIcon));
+            this._metaWindow.connect_after('notify::gtk-application-id',
+                                           Lang.bind(this, this._updateIcon));
         this._updateIcon();
 
         this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
