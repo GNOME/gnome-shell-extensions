@@ -156,11 +156,11 @@ class WindowTitle {
             this._textureCache.connect('icon-theme-changed',
                                        this._updateIcon.bind(this));
         this._notifyWmClass =
-            this._metaWindow.connect('notify::wm-class',
-                                     this._updateIcon.bind(this));
+            this._metaWindow.connect_after('notify::wm-class',
+                                           this._updateIcon.bind(this));
         this._notifyAppId =
-            this._metaWindow.connect('notify::gtk-application-id',
-                                     this._updateIcon.bind(this));
+            this._metaWindow.connect_after('notify::gtk-application-id',
+                                           this._updateIcon.bind(this));
         this._updateIcon();
 
         this.actor.connect('destroy', this._onDestroy.bind(this));
