@@ -161,6 +161,11 @@ class WindowTitle {
         this._notifyAppId =
             this._metaWindow.connect('notify::gtk-application-id',
                                      this._updateIcon.bind(this));
+
+        let appSys = Shell.AppSystem.get_default();
+        this._appStateChangedSignalId =
+            appSys.connect('app-state-changed', this._updateIcon.bind(this));
+
         this._updateIcon();
 
         this.actor.connect('destroy', this._onDestroy.bind(this));
@@ -204,6 +209,9 @@ class WindowTitle {
         this._metaWindow.disconnect(this._notifyMinimizedId);
         this._metaWindow.disconnect(this._notifyWmClass);
         this._metaWindow.disconnect(this._notifyAppId);
+
+        let appSys = Shell.AppSystem.get_default();
+        appSys.disconnect(this._appStateChangedSignalId);
     }
 };
 
