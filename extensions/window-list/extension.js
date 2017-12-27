@@ -5,6 +5,7 @@ const Gtk = imports.gi.Gtk;
 const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
+const Signals = imports.signals;
 
 const DND = imports.ui.dnd;
 const Main = imports.ui.main;
@@ -350,6 +351,38 @@ class WindowButton extends BaseButton {
             global.display.connect('notify::focus-window',
                                    this._updateStyle.bind(this));
         this._updateStyle();
+
+        this._draggable = DND.makeDraggable(this.actor);
+        this._draggable.connect('drag-begin', this._onDragBegin.bind(this));
+        this._draggable.connect('drag-cancelled', this._onDragCancelled.bind(this));
+        this._draggable.connect('drag-end', this._onDragEnd.bind(this));
+    }
+
+    _onDragBegin() {
+        this.actor.opacity = 100;
+        this.emit('drag-begin');
+    }
+
+    _onDragCancelled() {
+        this.actor.opacity = 255;
+        this.emit('drag-cancelled');
+    }
+
+    _onDragEnd() {
+        this.actor.opacity = 255;
+        this.emit('drag-end');
+    }
+
+    getDragActor() {
+        let dragButton = new WindowButton(this.metaWindow);
+        dragButton.actor.set_width(this.actor.get_width());
+        dragButton.actor.set_height(this.actor.get_height());
+
+        return dragButton.actor;
+    }
+
+    getDragActorSource() {
+        return this.actor;
     }
 
     _onClicked(actor, button) {
@@ -397,6 +430,7 @@ class WindowButton extends BaseButton {
         this._contextMenu.destroy();
     }
 };
+Signals.addSignalMethods(WindowButton.prototype);
 
 
 class AppContextMenu extends PopupMenu.PopupMenu {
@@ -866,12 +900,6 @@ class WindowList {
         this._dragEndId =
             Main.xdndHandler.connect('drag-end',
                                      this._onDragEnd.bind(this));
-        this._dragMonitor = {
-            dragMotion: this._onDragMotion.bind(this)
-        };
-
-        this._dndTimeoutId = 0;
-        this._dndWindow = null;
 
         this._settings = Convenience.getSettings();
         this._groupingModeChangedId =
@@ -879,6 +907,10 @@ class WindowList {
                                    this._groupingModeChanged.bind(this));
         this._grouped = undefined;
         this._groupingModeChanged();
+
+        this.actor._delegate = this;
+        this.dragButton= null;
+        this._dragMonitor = { dragMotion: this._onDragMotion.bind(this) };
     }
 
     _getDynamicWorkspacesSettings() {
@@ -1057,6 +1089,10 @@ class WindowList {
                                              true, true, true,
                                              Clutter.BoxAlignment.START,
                                              Clutter.BoxAlignment.START);
+
+        button.connect('drag-begin', this._onDragBegin.bind(this));
+        button.connect('drag-cancelled', this._onDragCancelled.bind(this));
+        button.connect('drag-end', this._onDragEnd.bind(this));
     }
 
     _onWindowRemoved(ws, win) {
@@ -1113,53 +1149,48 @@ class WindowList {
         DND.addDragMonitor(this._dragMonitor);
     }
 
+    _onDragCancelled() {
+        DND.removeDragMonitor(this._dragMonitor);
+        this.dragButton = null;
+    }
+
     _onDragEnd() {
         DND.removeDragMonitor(this._dragMonitor);
-        this._removeActivateTimeout();
+        this.dragButton = null;
     }
 
     _onDragMotion(dragEvent) {
-        if (Main.overview.visible ||
-            !this.actor.contains(dragEvent.targetActor)) {
-            this._removeActivateTimeout();
-            return DND.DragMotionResult.CONTINUE;
-        }
-
-        let hoveredWindow = null;
-        if (dragEvent.targetActor._delegate)
-            hoveredWindow = dragEvent.targetActor._delegate.metaWindow;
-
-        if (!hoveredWindow ||
-            this._dndWindow == hoveredWindow)
-            return DND.DragMotionResult.CONTINUE;
-
-        this._removeActivateTimeout();
-
-        this._dndWindow = hoveredWindow;
-        this._dndTimeoutId = GLib.timeout_add(GLib.PRIORITY_DEFAULT,
-                                              DND_ACTIVATE_TIMEOUT,
-                                              this._activateWindow.bind(this));
-
         return DND.DragMotionResult.CONTINUE;
     }
 
-    _removeActivateTimeout() {
-        if (this._dndTimeoutId)
-            GLib.source_remove (this._dndTimeoutId);
-        this._dndTimeoutId = 0;
-        this._dndWindow = null;
+    handleDragOver(source, actor, x, y, time) {
+        this._moveDragButton(source, actor, x, y);
+        return DND.DragMotionResult.COPY_DROP;
     }
 
-    _activateWindow() {
-        let [x, y] = global.get_pointer();
-        let pickedActor = global.stage.get_actor_at_pos(Clutter.PickMode.ALL, x, y);
+    acceptDrop(source, actor, x, y, time) {
+        this._moveDragButton(source, actor, x, y);
+        return true;
+    }
 
-        if (this._dndWindow && this.actor.contains(pickedActor))
-            this._dndWindow.activate(global.get_current_time());
-        this._dndWindow = null;
-        this._dndTimeoutId = 0;
+    _moveDragButton(source, actor, x ,y) {
+        let numChildren = this._windowList.get_n_children();
+        let firstChild = this._windowList.get_first_child();
+        let position = Math.floor((x - firstChild.x) / firstChild.width);
 
-        return false;
+        if (position >= numChildren)
+            position = numChildren - 1;
+
+        if (this.dragButton == null)
+            this.dragButton = this._findDragButton(source);
+
+        this._windowList.set_child_at_index(this.dragButton, position);
+    }
+
+    _findDragButton(source) {
+        return this._windowList.get_children().find(
+            c => c._delegate.metaWindow == source.metaWindow
+        );
     }
 
     _onDestroy() {
@@ -1206,6 +1237,7 @@ class Extension {
     constructor() {
         this._windowLists = null;
         this._injections = {};
+        this._windowListsPreserve= [];
     }
 
     enable() {
@@ -1224,6 +1256,9 @@ class Extension {
     }
 
     _buildWindowLists() {
+        if (this._windowListsPreserve.length == 0)
+            this._storeWindowLists();
+
         this._windowLists.forEach(list => { list.actor.destroy(); });
         this._windowLists = [];
 
@@ -1232,6 +1267,42 @@ class Extension {
         Main.layoutManager.monitors.forEach(monitor => {
             if (showOnAllMonitors || monitor == Main.layoutManager.primaryMonitor)
                 this._windowLists.push(new WindowList(showOnAllMonitors, monitor));
+        });
+
+        this._windowLists.forEach(windowList => this._restoreWindowList(windowList));
+
+        this._windowListsPreserve = [];
+    }
+
+    _storeWindowLists() {
+        this._windowLists.forEach(list => {
+            let windowList = [];
+            list._windowList.get_children().forEach(
+                c => windowList.push(c._delegate.metaWindow)
+            );
+
+            this._windowListsPreserve.push({ monitor: list._monitor,
+                                             windowList: windowList });
+        });
+    }
+
+    _restoreWindowList(windowList) {
+        let preserveList = this._windowListsPreserve.find(
+            l => l.monitor == windowList._monitor
+        );
+        if (preserveList == null)
+            return;
+
+        let position = 0;
+        preserveList.windowList.forEach(metaWindow => {
+            let button = windowList._windowList.get_children().find(
+                c => c._delegate.metaWindow == metaWindow
+            );
+
+            if (button != null) {
+                windowList._windowList.set_child_at_index(button, position);
+                position++;
+            }
         });
     }
 
@@ -1245,6 +1316,7 @@ class Extension {
         Main.layoutManager.disconnect(this._monitorsChangedId);
         this._monitorsChangedId = 0;
 
+        this._storeWindowLists();
         this._windowLists.forEach(windowList => {
             windowList.actor.hide();
             windowList.actor.destroy();
