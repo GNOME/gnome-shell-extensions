@@ -135,14 +135,16 @@ function enable() {
         if(Main.overview.viewSelector._activePage != Main.overview.viewSelector._workspacesPage)
             return false;
 
+        let workspaceManager = global.workspace_manager;
+
         if ((o.get_key_symbol() == Clutter.KEY_Alt_L ||
              o.get_key_symbol() == Clutter.KEY_Alt_R)
             && !this._pickWorkspace) {
             this._prevFocusActor = global.stage.get_key_focus();
             global.stage.set_key_focus(null);
-            this._active = global.screen.get_active_workspace_index();
+            this._active = workspaceManager.get_active_workspace_index();
             this._pickWindow = true;
-            this._workspaces[global.screen.get_active_workspace_index()].showWindowsTooltips();
+            this._workspaces[workspaceManager.get_active_workspace_index()].showWindowsTooltips();
             return true;
         }
         if ((o.get_key_symbol() == Clutter.KEY_Control_L ||
@@ -166,7 +168,7 @@ function enable() {
             return true;
 
         if (this._pickWindow) {
-            if (this._active != global.screen.get_active_workspace_index()) {
+            if (this._active != workspaceManager.get_active_workspace_index()) {
                 this._hideTooltips();
                 return false;
             }
