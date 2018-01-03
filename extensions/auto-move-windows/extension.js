@@ -79,9 +79,10 @@ class WindowMover {
             return;
 
         // ensure we have the required number of workspaces
-        for (let i = global.screen.n_workspaces; i <= workspaceNum; i++) {
+        let workspaceManager = global.workspace_manager;
+        for (let i = workspaceManager.n_workspaces; i <= workspaceNum; i++) {
             window.change_workspace_by_index(i - 1, false);
-            global.screen.append_new_workspace(false, 0);
+            workspaceManager.append_new_workspace(false, 0);
         }
 
         window.change_workspace_by_index(workspaceNum, false);
