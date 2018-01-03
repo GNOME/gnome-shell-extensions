@@ -31,7 +31,7 @@ function enable() {
         return injections['_keyPressHandler'].call(this, keysym, action);
     };
 
-    Main.wm._forcedWindowSwitcher = function(display, screen, window, binding) {
+    Main.wm._forcedWindowSwitcher = function(display, window, binding) {
         /* prevent a corner case where both popups show up at once */
         if (this._workspaceSwitcherPopup != null)
             this._workspaceSwitcherPopup.destroy();

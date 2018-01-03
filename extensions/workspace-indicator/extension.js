@@ -25,7 +25,9 @@ class WorkspaceIndicator extends PanelMenu.Button {
     constructor() {
         super(0.0, _("Workspace Indicator"));
 
-        this._currentWorkspace = global.screen.get_active_workspace().index();
+        let workspaceManager = global.workspace_manager;
+
+        this._currentWorkspace = workspaceManager.get_active_workspace().index();
         this.statusLabel = new St.Label({ y_align: Clutter.ActorAlign.CENTER,
                                           text: this._labelText() });
 
@@ -35,12 +37,13 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._workspaceSection = new PopupMenu.PopupMenuSection();
         this.menu.addMenuItem(this._workspaceSection);
 
-        this._screenSignals = [];
-        this._screenSignals.push(global.screen.connect_after('workspace-added',                                                              this._createWorkspacesSection.bind(this)));
-        this._screenSignals.push(global.screen.connect_after('workspace-removed',
-                                                             this._createWorkspacesSection.bind(this)));
-        this._screenSignals.push(global.screen.connect_after('workspace-switched',
-                                                             this._updateIndicator.bind(this)));
+        this._workspaceManagerSignals = [];
+        this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-added',
+                                                                          this._createWorkspacesSection.bind(this)));
+        this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-removed',
+                                                                          this._createWorkspacesSection.bind(this)));
+        this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-switched',
+                                                                          this._updateIndicator.bind(this)));
 
         this.actor.connect('scroll-event', this._onScrollEvent.bind(this));
         this._createWorkspacesSection();
@@ -55,8 +58,8 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     destroy() {
-        for (let i = 0; i < this._screenSignals.length; i++)
-            global.screen.disconnect(this._screenSignals[i]);
+        for (let i = 0; i < this._workspaceManagerSignals.length; i++)
+            global.workspace_manager.disconnect(this._workspaceManagerSignals[i]);
 
         if (this._settingsChangedId) {
             this._settings.disconnect(this._settingsChangedId);
@@ -68,7 +71,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
     _updateIndicator() {
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
-        this._currentWorkspace = global.screen.get_active_workspace().index();
+        this._currentWorkspace = global.workspace_manager.get_active_workspace().index();
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
         this.statusLabel.set_text(this._labelText());
@@ -83,12 +86,14 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _createWorkspacesSection() {
+        let workspaceManager = global.workspace_manager;
+
         this._workspaceSection.removeAll();
         this.workspacesItems = [];
-        this._currentWorkspace = global.screen.get_active_workspace().index();
+        this._currentWorkspace = workspaceManager.get_active_workspace().index();
 
         let i = 0;
-        for(; i < global.screen.n_workspaces; i++) {
+        for(; i < workspaceManager.n_workspaces; i++) {
             this.workspacesItems[i] = new PopupMenu.PopupMenuItem(this._labelText(i));
             this._workspaceSection.addMenuItem(this.workspacesItems[i]);
             this.workspacesItems[i].workspaceId = i;
@@ -106,8 +111,10 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _activate(index) {
-        if(index >= 0 && index <  global.screen.n_workspaces) {
-            let metaWorkspace = global.screen.get_workspace_by_index(index);
+        let workspaceManager = global.workspace_manager;
+
+        if(index >= 0 && index <  workspaceManager.n_workspaces) {
+            let metaWorkspace = workspaceManager.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
     }
@@ -123,7 +130,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             return;
         }
 
-        let newIndex = global.screen.get_active_workspace().index() + diff;
+        let newIndex = global.workspace_manager.get_active_workspace().index() + diff;
         this._activate(newIndex);
     }
 };

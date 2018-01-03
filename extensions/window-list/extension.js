@@ -238,10 +238,10 @@ class BaseButton {
 
         if (this._perMonitor) {
             this._windowEnteredMonitorId =
-                global.screen.connect('window-entered-monitor',
+                global.display.connect('window-entered-monitor',
                     this._windowEnteredOrLeftMonitor.bind(this));
             this._windowLeftMonitorId =
-                global.screen.connect('window-left-monitor',
+                global.display.connect('window-left-monitor',
                     this._windowEnteredOrLeftMonitor.bind(this));
         }
     }
@@ -282,12 +282,12 @@ class BaseButton {
             this.actor.remove_style_class_name('focused');
     }
 
-    _windowEnteredOrLeftMonitor(metaScreen, monitorIndex, metaWindow) {
+    _windowEnteredOrLeftMonitor(metaDisplay, monitorIndex, metaWindow) {
         throw new Error('Not implemented');
     }
 
     _isWindowVisible(window) {
-        let workspace = global.screen.get_active_workspace();
+        let workspace = global.workspace_manager.get_active_workspace();
 
         return !window.skip_taskbar &&
                window.located_on_workspace(workspace) &&
@@ -315,11 +315,11 @@ class BaseButton {
         global.window_manager.disconnect(this._switchWorkspaceId);
 
         if (this._windowEnteredMonitorId)
-            global.screen.disconnect(this._windowEnteredMonitorId);
+            global.display.disconnect(this._windowEnteredMonitorId);
         this._windowEnteredMonitorId = 0;
 
         if (this._windowLeftMonitorId)
-            global.screen.disconnect(this._windowLeftMonitorId);
+            global.display.disconnect(this._windowLeftMonitorId);
         this._windowLeftMonitorId = 0;
     }
 };
@@ -377,7 +377,7 @@ class WindowButton extends BaseButton {
             this.actor.remove_style_class_name('minimized');
     }
 
-    _windowEnteredOrLeftMonitor(metaScreen, monitorIndex, metaWindow) {
+    _windowEnteredOrLeftMonitor(metaDisplay, monitorIndex, metaWindow) {
         if (monitorIndex == this._monitorIndex && metaWindow == this.metaWindow)
             this._updateVisibility();
     }
@@ -518,7 +518,7 @@ class AppButton extends BaseButton {
         this._updateStyle();
     }
 
-    _windowEnteredOrLeftMonitor(metaScreen, monitorIndex, metaWindow) {
+    _windowEnteredOrLeftMonitor(metaDisplay, monitorIndex, metaWindow) {
         if (this._windowTracker.get_window_app(metaWindow) == this.app &&
             monitorIndex == this._monitorIndex) {
             this._updateVisibility();
@@ -529,7 +529,7 @@ class AppButton extends BaseButton {
     _updateVisibility() {
         if (!this._perMonitor) {
             // fast path: use ShellApp API to avoid iterating over all windows.
-            let workspace = global.screen.get_active_workspace();
+            let workspace = global.workspace_manager.get_active_workspace();
             this.actor.visible = this.app.is_on_workspace(workspace);
         } else {
             this.actor.visible = this.getWindowList().length >= 1;
@@ -652,7 +652,9 @@ class WorkspaceIndicator extends PanelMenu.Button {
                                         x_expand: true, y_expand: true });
         this.actor.add_actor(container);
 
-        this._currentWorkspace = global.screen.get_active_workspace().index();
+        let workspaceManager = global.workspace_manager;
+
+        this._currentWorkspace = workspaceManager.get_active_workspace().index();
         this.statusLabel = new St.Label({ text: this._getStatusText(),
                                           x_align: Clutter.ActorAlign.CENTER,
                                           y_align: Clutter.ActorAlign.CENTER });
@@ -660,11 +662,11 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
         this.workspacesItems = [];
 
-        this._screenSignals = [];
-        this._screenSignals.push(global.screen.connect('notify::n-workspaces',
-                                                       this._updateMenu.bind(this)));
-        this._screenSignals.push(global.screen.connect_after('workspace-switched',
-                                                             this._updateIndicator.bind(this)));
+        this._workspaceManagerSignals = [];
+        this._workspaceManagerSignals.push(workspaceManager.connect('notify::n-workspaces',
+                                                                    this._updateMenu.bind(this)));
+        this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-switched',
+                                                                          this._updateIndicator.bind(this)));
 
         this.actor.connect('scroll-event', this._onScrollEvent.bind(this));
         this._updateMenu();
@@ -676,8 +678,8 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     destroy() {
-        for (let i = 0; i < this._screenSignals.length; i++)
-            global.screen.disconnect(this._screenSignals[i]);
+        for (let i = 0; i < this._workspaceManagerSignals.length; i++)
+            global.workspace_manager.disconnect(this._workspaceManagerSignals[i]);
 
         if (this._settingsChangedId) {
             this._settings.disconnect(this._settingsChangedId);
@@ -689,25 +691,28 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
     _updateIndicator() {
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
-        this._currentWorkspace = global.screen.get_active_workspace().index();
+        this._currentWorkspace = global.workspace_manager.get_active_workspace().index();
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
         this.statusLabel.set_text(this._getStatusText());
     }
 
     _getStatusText() {
-        let current = global.screen.get_active_workspace().index();
-        let total = global.screen.n_workspaces;
+        let workspaceManager = global.workspace_manager;
+        let current = workspaceManager.get_active_workspace().index();
+        let total = workspaceManager.n_workspaces;
 
         return '%d / %d'.format(current + 1, total);
     }
 
     _updateMenu() {
+        let workspaceManager = global.workspace_manager;
+
         this.menu.removeAll();
         this.workspacesItems = [];
-        this._currentWorkspace = global.screen.get_active_workspace().index();
+        this._currentWorkspace = workspaceManager.get_active_workspace().index();
 
-        for(let i = 0; i < global.screen.n_workspaces; i++) {
+        for(let i = 0; i < workspaceManager.n_workspaces; i++) {
             let name = Meta.prefs_get_workspace_name(i);
             let item = new PopupMenu.PopupMenuItem(name);
             item.workspaceId = i;
@@ -727,8 +732,10 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _activate(index) {
-        if(index >= 0 && index < global.screen.n_workspaces) {
-            let metaWorkspace = global.screen.get_workspace_by_index(index);
+        let workspaceManager = global.workspace_manager;
+
+        if(index >= 0 && index < workspaceManager.n_workspaces) {
+            let metaWorkspace = workspaceManager.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
     }
@@ -833,10 +840,12 @@ class WindowList {
                     this._updateKeyboardAnchor();
                 });
 
+        let workspaceManager = global.workspace_manager;
+
         this._workspaceSignals = new Map();
         this._nWorkspacesChangedId =
-            global.screen.connect('notify::n-workspaces',
-                                  this._onWorkspacesChanged.bind(this));
+            workspaceManager.connect('notify::n-workspaces',
+                                     this._onWorkspacesChanged.bind(this));
         this._onWorkspacesChanged();
 
         this._switchWorkspaceId =
@@ -856,7 +865,7 @@ class WindowList {
             });
 
         this._fullscreenChangedId =
-            global.screen.connect('in-fullscreen-changed', () => {
+            global.display.connect('in-fullscreen-changed', () => {
                 this._updateKeyboardAnchor();
             });
 
@@ -923,8 +932,9 @@ class WindowList {
     }
 
     _updateWorkspaceIndicatorVisibility() {
+        let workspaceManager = global.workspace_manager;
         let hasWorkspaces = this._dynamicWorkspacesSettings.get_boolean('dynamic-workspaces') ||
-                            global.screen.n_workspaces > 1;
+                            workspaceManager.n_workspaces > 1;
         let workspacesOnMonitor = this._monitor == Main.layoutManager.primaryMonitor ||
                                   !this._workspaceSettings.get_boolean('workspaces-only-on-primary');
 
@@ -939,7 +949,7 @@ class WindowList {
         let [, childWidth] = children[0].get_preferred_width(-1);
         let spacing = this._windowList.layout_manager.spacing;
 
-        let workspace = global.screen.get_active_workspace();
+        let workspace = global.workspace_manager.get_active_workspace();
         let windows = global.display.get_tab_list(Meta.TabList.NORMAL, workspace);
         if (this._perMonitor)
             windows = windows.filter(w => w.get_monitor() == this._monitor.index);
@@ -1079,9 +1089,11 @@ class WindowList {
     }
 
     _onWorkspacesChanged() {
-        let numWorkspaces = global.screen.n_workspaces;
+        let workspaceManager = global.workspace_manager;
+        let numWorkspaces = workspaceManager.n_workspaces;
+
         for (let i = 0; i < numWorkspaces; i++) {
-            let workspace = global.screen.get_workspace_by_index(i);
+            let workspace = workspaceManager.get_workspace_by_index(i);
             if (this._workspaceSignals.has(workspace))
                 continue;
 
@@ -1099,9 +1111,11 @@ class WindowList {
     }
 
     _disconnectWorkspaceSignals() {
-        let numWorkspaces = global.screen.n_workspaces;
+        let workspaceManager = global.workspace_manager;
+        let numWorkspaces = workspaceManager.n_workspaces;
+
         for (let i = 0; i < numWorkspaces; i++) {
-            let workspace = global.screen.get_workspace_by_index(i);
+            let workspace = workspaceManager.get_workspace_by_index(i);
             let signals = this._workspaceSignals.get(workspace);
             this._workspaceSignals.delete(workspace);
             workspace.disconnect(signals._windowAddedId);
@@ -1179,7 +1193,7 @@ class WindowList {
         Main.layoutManager.hideKeyboard();
 
         this._disconnectWorkspaceSignals();
-        global.screen.disconnect(this._nWorkspacesChangedId);
+        global.workspace_manager.disconnect(this._nWorkspacesChangedId);
         this._nWorkspacesChangedId = 0;
 
         global.window_manager.disconnect(this._switchWorkspaceId);
@@ -1189,7 +1203,7 @@ class WindowList {
         Main.overview.disconnect(this._overviewShowingId);
         Main.overview.disconnect(this._overviewHidingId);
 
-        global.screen.disconnect(this._fullscreenChangedId);
+        global.display.disconnect(this._fullscreenChangedId);
 
         Main.xdndHandler.disconnect(this._dragBeginId);
         Main.xdndHandler.disconnect(this._dragEndId);
