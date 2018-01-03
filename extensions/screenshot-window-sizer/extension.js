@@ -69,7 +69,7 @@ let SIZES = [
     [1600, 900]
 ];
 
-function cycleScreenshotSizes(display, screen, window, binding) {
+function cycleScreenshotSizes(display, window, binding) {
     // Probably this isn't useful with 5 sizes, but you can decrease instead
     // of increase by holding down shift.
     let modifiers = binding.get_modifiers();
