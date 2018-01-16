@@ -1,11 +1,8 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 // Start apps on custom workspaces
 
-const Glib = imports.gi.GLib;
-const Gio = imports.gi.Gio;
 const Mainloop = imports.mainloop;
 const Shell = imports.gi.Shell;
-const St = imports.gi.St;
 
 const Main = imports.ui.main;
 
