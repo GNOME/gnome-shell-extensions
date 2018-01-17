@@ -4,7 +4,7 @@ js_sources = extensionlib
 metadata_name = 'metadata.json'
 
 foreach e : all_extensions
-  uuid = e + '@gnome-shell-extensions.gcampax.github.com'
+  uuid = e + uuid_suffix
 
   metadata_conf = configuration_data()
   metadata_conf.set('extension_id', e)

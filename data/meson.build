@@ -13,8 +13,13 @@ foreach s : sessions
   )
 endforeach
 
+classic_uuids = []
+foreach e : classic_extensions
+    classic_uuids += e + uuid_suffix
+endforeach
+
 mode_conf = configuration_data()
-mode_conf.set('CLASSIC_EXTENSIONS', '"' + '", "'.join(classic_extensions) + '"')
+mode_conf.set('CLASSIC_EXTENSIONS', '"' + '", "'.join(classic_uuids) + '"')
 
 mode_file = 'classic.json'
 configure_file(

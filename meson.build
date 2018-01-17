@@ -32,6 +32,8 @@ else
   shell_version = '.'.join(ver_arr)
 endif
 
+uuid_suffix = '@gnome-shell-extensions.gcampax.github.com'
+
 classic_extensions = [
   'alternate-tab',
   'apps-menu',
