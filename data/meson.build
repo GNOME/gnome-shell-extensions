@@ -56,3 +56,6 @@ if sassc.found()
 endif
 
 install_data(theme_data, install_dir: themedir)
+
+classic_schema = 'org.gnome.shell.extensions.classic-overrides.gschema.xml'
+install_data(classic_schema, install_dir: schemadir)
