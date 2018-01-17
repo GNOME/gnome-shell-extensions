@@ -14,7 +14,7 @@ foreach s : sessions
 endforeach
 
 mode_conf = configuration_data()
-mode_conf.set('CLASSIC_EXTENSIONS', ','.join(classic_extensions))
+mode_conf.set('CLASSIC_EXTENSIONS', '"' + '", "'.join(classic_extensions) + '"')
 
 mode_file = 'classic.json'
 configure_file(
