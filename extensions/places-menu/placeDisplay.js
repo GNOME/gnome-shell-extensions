@@ -136,17 +136,18 @@ const RootInfo = new Lang.Class({
     _init: function() {
         this.parent('devices', Gio.File.new_for_path('/'), _("Computer"));
 
-        this._proxy = new Hostname1(Gio.DBus.system,
-                                    'org.freedesktop.hostname1',
-                                    '/org/freedesktop/hostname1',
-                                    Lang.bind(this, function(obj, error) {
-                                        if (error)
-                                            return;
+        new Hostname1(Gio.DBus.system,
+                      'org.freedesktop.hostname1',
+                      '/org/freedesktop/hostname1',
+                      Lang.bind(this, function(obj, error) {
+                          if (error)
+                              return;
 
-                                        this._proxy.connect('g-properties-changed',
-                                                            Lang.bind(this, this._propertiesChanged));
-                                        this._propertiesChanged(obj);
-                                    }));
+                          this._proxy = obj;
+                          this._proxy.connect('g-properties-changed',
+                                              Lang.bind(this, this._propertiesChanged));
+                          this._propertiesChanged(obj);
+                      }));
     },
 
     getIcon: function() {
@@ -163,7 +164,10 @@ const RootInfo = new Lang.Class({
     },
 
     destroy: function() {
-        this._proxy.run_dispose();
+        if (this._proxy) {
+            this._proxy.run_dispose();
+            this._proxy = null;
+        }
         this.parent();
     }
 });
