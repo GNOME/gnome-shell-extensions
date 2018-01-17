@@ -134,17 +134,16 @@ class RootInfo extends PlaceInfo {
     _init() {
         super._init('devices', Gio.File.new_for_path('/'), _("Computer"));
 
-        this._proxy = new Hostname1(Gio.DBus.system,
-                                    'org.freedesktop.hostname1',
-                                    '/org/freedesktop/hostname1',
-                                    (obj, error) => {
-                                        if (error)
-                                            return;
+        let busName = 'org.freedesktop.hostname1';
+        let objPath = '/org/freedesktop/hostname1';
+        this._proxy = new Hostname1(Gio.DBus.system, busName, objPath, (obj, error) => {
+            if (error)
+                return;
 
-                                        this._proxy.connect('g-properties-changed',
-                                                            this._propertiesChanged.bind(this));
-                                        this._propertiesChanged(obj);
-                                    });
+            this._proxy.connect('g-properties-changed',
+                                this._propertiesChanged.bind(this));
+            this._propertiesChanged(obj);
+        });
     }
 
     getIcon() {
