@@ -136,10 +136,11 @@ class RootInfo extends PlaceInfo {
 
         let busName = 'org.freedesktop.hostname1';
         let objPath = '/org/freedesktop/hostname1';
-        this._proxy = new Hostname1(Gio.DBus.system, busName, objPath, (obj, error) => {
+        new Hostname1(Gio.DBus.system, busName, objPath, (obj, error) => {
             if (error)
                 return;
 
+            this._proxy = obj;
             this._proxy.connect('g-properties-changed',
                                 this._propertiesChanged.bind(this));
             this._propertiesChanged(obj);
@@ -160,7 +161,10 @@ class RootInfo extends PlaceInfo {
     }
 
     destroy() {
-        this._proxy.run_dispose();
+        if (this._proxy) {
+            this._proxy.run_dispose();
+            this._proxy = null;
+        }
         super.destroy();
     }
 };
