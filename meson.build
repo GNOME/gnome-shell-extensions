@@ -37,6 +37,7 @@ uuid_suffix = '@gnome-shell-extensions.gcampax.github.com'
 classic_extensions = [
   'alternate-tab',
   'apps-menu',
+  'places-menu',
   'launch-new-instance',
   'window-list'
 ]

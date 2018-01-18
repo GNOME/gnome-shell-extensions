@@ -1955,6 +1955,3 @@ StScrollBar {
 
 .calendar-day-with-events {
   background-image: url("calendar-today.svg"); }
-
-.message-list-clear-button.button {
-  color: #2e3436; }
