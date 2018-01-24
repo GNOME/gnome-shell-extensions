@@ -19,11 +19,11 @@ $variant: 'light';
   border-bottom: 1px solid #666;
   app-icon-bottom-clip: 0px;
   &:overview {
-    background-color: #000;
+    background-color: #000 !important;
     background-gradient-end: #000;
     border-top-color: #000;
     border-bottom: 1px solid #000;
-    .panel-button { color: #fff; }
+    .panel-button { color: #fff !important; }
   }
 
   .panel-button {
