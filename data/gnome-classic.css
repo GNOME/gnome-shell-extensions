@@ -1917,6 +1917,8 @@ StScrollBar {
       width: 0;
       height: 0;
       margin: 0; }
+    #panel .panel-button .system-status-icon {
+      icon-shadow: none; }
   #panel .panel-corner,
   #panel .panel-corner:active,
   #panel .panel-corner:overview,
