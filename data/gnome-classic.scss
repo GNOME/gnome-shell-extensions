@@ -90,3 +90,12 @@ $variant: 'light';
 .message-list-clear-button.button {
   color: $fg_color
 }
+
+.notification-banner {
+  background-color: $bg_color !important;
+  color: $fg_color;
+  .notification-button {
+    background-color: darken($bg_color,5%);
+    &:hover, &focus { background-color: darken($bg_color,2%); }
+  }
+}
