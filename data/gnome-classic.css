@@ -1878,9 +1878,9 @@ StScrollBar {
   padding: 6px; }
 
 /* Overrides */
-#panel {
+#panel, #panel.solid {
   font-weight: normal;
-  background-color: #ededed !important;
+  background-color: #ededed;
   background-gradient-direction: vertical;
   background-gradient-end: #e0e0e0;
   border-top-color: #666;
@@ -1890,48 +1890,51 @@ StScrollBar {
                              border */
   border-bottom: 1px solid #666;
   app-icon-bottom-clip: 0px; }
-  #panel:overview {
+  #panel:overview, #panel.solid:overview {
     background-color: #000;
     background-gradient-end: #000;
     border-top-color: #000;
     border-bottom: 1px solid #000; }
-    #panel:overview .panel-button {
+    #panel:overview .panel-button, #panel.solid:overview .panel-button {
       color: #fff; }
-  #panel .panel-button {
+  #panel .panel-button, #panel.solid .panel-button {
     -natural-hpadding: 8px;
     -minimum-hpadding: 4px;
     font-weight: normal;
-    color: #2e3436 !important;
+    color: #2e3436;
     text-shadow: none; }
-    #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
+    #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked, #panel.solid .panel-button:active, #panel.solid .panel-button:overview, #panel.solid .panel-button:focus, #panel.solid .panel-button:checked {
       background-color: #4a90d9 !important;
       color: #ffffff !important;
       box-shadow: none; }
-      #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon {
+      #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon, #panel.solid .panel-button:active > .system-status-icon, #panel.solid .panel-button:overview > .system-status-icon, #panel.solid .panel-button:focus > .system-status-icon, #panel.solid .panel-button:checked > .system-status-icon {
         icon-shadow: none; }
-    #panel .panel-button:hover {
+    #panel .panel-button:hover, #panel.solid .panel-button:hover {
       text-shadow: none; }
-      #panel .panel-button:hover .system-status-icon {
+      #panel .panel-button:hover .system-status-icon, #panel.solid .panel-button:hover .system-status-icon {
         icon-shadow: none; }
-    #panel .panel-button .app-menu-icon {
+    #panel .panel-button .app-menu-icon, #panel.solid .panel-button .app-menu-icon {
       width: 0;
       height: 0;
       margin: 0; }
-    #panel .panel-button .system-status-icon {
+    #panel .panel-button .system-status-icon, #panel.solid .panel-button .system-status-icon {
       icon-shadow: none; }
   #panel .panel-corner,
   #panel .panel-corner:active,
   #panel .panel-corner:overview,
-  #panel .panel-corner:focus {
+  #panel .panel-corner:focus, #panel.solid .panel-corner,
+  #panel.solid .panel-corner:active,
+  #panel.solid .panel-corner:overview,
+  #panel.solid .panel-corner:focus {
     -panel-corner-radius: 0; }
-  #panel.lock-screen, #panel.unlock-screen, #panel.login-screen {
+  #panel.lock-screen, #panel.unlock-screen, #panel.login-screen, #panel.solid.lock-screen, #panel.solid.unlock-screen, #panel.solid.login-screen {
     background-color: rgba(46, 52, 54, 0.5);
     background-gradient-start: rgba(46, 52, 54, 0.5);
     background-gradient-end: rgba(46, 52, 54, 0.5);
     border-bottom: none; }
-    #panel.lock-screen .panel-button, #panel.unlock-screen .panel-button, #panel.login-screen .panel-button {
+    #panel.lock-screen .panel-button, #panel.unlock-screen .panel-button, #panel.login-screen .panel-button, #panel.solid.lock-screen .panel-button, #panel.solid.unlock-screen .panel-button, #panel.solid.login-screen .panel-button {
       color: #eeeeec; }
-  #panel .popup-menu-arrow {
+  #panel .popup-menu-arrow, #panel.solid .popup-menu-arrow {
     width: 0;
     height: 0; }
 

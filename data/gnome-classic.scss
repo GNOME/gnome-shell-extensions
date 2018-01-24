@@ -7,9 +7,9 @@ $variant: 'light';
 
 /* Overrides */
 
-#panel {
+#panel, #panel.solid {
   font-weight: normal;
-  background-color: $bg_color !important;
+  background-color: $bg_color;
   background-gradient-direction: vertical;
   background-gradient-end: darken($bg_color,5%);
   border-top-color: #666; /* we don't support non-uniform border-colors and
@@ -30,7 +30,7 @@ $variant: 'light';
     -natural-hpadding: 8px;
     -minimum-hpadding: 4px;
     font-weight: normal;
-    color: $fg_color !important;
+    color: $fg_color;
     text-shadow: none;
     &:active, &:overview, &:focus, &:checked {
       // Trick due to St limitations. It needs a background to draw
