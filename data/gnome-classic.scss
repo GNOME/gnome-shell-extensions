@@ -45,6 +45,10 @@ $variant: 'light';
       & .system-status-icon { icon-shadow: none; }
     }
     .app-menu-icon { width: 0; height: 0; margin: 0; } // shell's display:none; :D
+
+    .system-status-icon {
+      icon-shadow: none;
+    }
   }
 
   .panel-corner,
