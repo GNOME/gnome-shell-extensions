@@ -90,3 +90,15 @@ $variant: 'light';
 .message-list-clear-button.button {
   color: $fg_color
 }
+
+.notification-banner {
+  .message-title {
+    color: darken($_bubble_fg_color,5%);
+  }
+  .message-content {
+    color: darken($_bubble_fg_color,20%);
+  }
+  .message-icon-bin > StIcon {
+    color: darken($_bubble_fg_color,20%);
+  }
+}

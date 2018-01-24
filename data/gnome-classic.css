@@ -1958,3 +1958,12 @@ StScrollBar {
 
 .message-list-clear-button.button {
   color: #2e3436; }
+
+.notification-banner .message-title {
+  color: #e2e2df; }
+
+.notification-banner .message-content {
+  color: #bebeb6; }
+
+.notification-banner .message-icon-bin > StIcon {
+  color: #bebeb6; }
