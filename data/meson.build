@@ -43,22 +43,19 @@ theme_data = [
   'classic-toggle-off-us.svg',
   'classic-toggle-on-intl.svg',
   'classic-toggle-on-us.svg',
-  'gnome-classic.css',
   'gnome-classic-high-contrast.css'
 ]
 
-update_theme = files('update-theme.sh')
-
-if sassc.found()
-  style = 'gnome-classic'
-  custom_target(style + '.css',
-    input: style + '.scss',
-    output: style + '.css',
-    depend_files: theme_sources + files(style + '.css'),
-    command: [update_theme, '@INPUT@', '@OUTPUT@'],
-    build_by_default: true
-  )
-endif
+sassc = find_program('sassc', required: true)
+style = 'gnome-classic'
+custom_target(style + '.css',
+  input: style + '.scss',
+  output: style + '.css',
+  depend_files: theme_sources,
+  command: [sassc, '-a', '@INPUT@', '@OUTPUT@'],
+  install: true,
+  install_dir: themedir
+)
 
 install_data(theme_data, install_dir: themedir)
 
