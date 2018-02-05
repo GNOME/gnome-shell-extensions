@@ -1,6 +1,2 @@
-To generate the css files, from the project directory:
-
-sassc -a gnome-classic.scss gnome-classic.css
-
 To update the gnome-shell-sass submodule to latest upstream commit:
 git submodule update --rebase
