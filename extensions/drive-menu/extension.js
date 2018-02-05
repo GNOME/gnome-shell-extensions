@@ -62,13 +62,21 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         let volume = this.mount.get_volume();
 
-        if (!volume) {
-            // probably a GDaemonMount, could be network or
-            // local, but we can't tell; assume it's local for now
-            return true;
+        if (volume)
+            return volume.get_identifier('class') !== 'network';
+
+        const root = this.mount.get_root();
+
+        try {
+            const attr = Gio.FILE_ATTRIBUTE_FILESYSTEM_REMOTE;
+            const info = root.query_filesystem_info(attr, null);
+            return !info.get_attribute_boolean(attr);
+        } catch (e) {
+            log(`Failed to query filesystem: ${e.message}`);
         }
 
-        return volume.get_identifier('class') !== 'network';
+        // Hack, fall back to looking at GType
+        return Gio._LocalFilePrototype.isPrototypeOf(root);
     }
 
     _syncVisibility() {
