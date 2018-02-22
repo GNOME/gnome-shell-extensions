@@ -1,3 +1,22 @@
+3.27.91
+=======
+* places-menu: Support unmounting ejectable places [Rémy; #17]
+* apps-menu: Support separators and custom sort order [Florian; #27]
+* Port to meson [Florian; #31, #45]
+* window-list: Fix missing icons on wayland [Florian; #10]
+* places-menu: Fix terminating gnome-shell with recent gjs [Florian; #44]
+* auto-move: Make it work with wayland windows [Florian; #33]
+* Classic theme fixes [Florian, Jonas; #26, #41, #39, #40]
+* Require sassc for classic styling [Florian; !28]
+* Misc. bug fixes [Piotr, Florian; #772211, #32, #30]
+
+Contributors:
+  Jeremy Bicha, Piotr Drąg, Jonas Kümmerlin, Rémy Lefevre, Iñigo Martínez,
+  Florian Müllner
+
+Translators:
+  Matej Urbančič [sl], Kjartan Maraas [nb]
+
 3.27.1
 ======
 * updated translations (ca@valencia)
