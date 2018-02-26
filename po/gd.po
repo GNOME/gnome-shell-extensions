@@ -1,14 +1,14 @@
 # Scottish Gaelic translation for gnome-shell-extensions.
 # Copyright (C) 2015 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# GunChleoc <fios@foramnagaidhlig.net>, 2015, 2016.
+# GunChleoc <fios@foramnagaidhlig.net>, 2015, 2016, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2016-04-29 09:49+0000\n"
-"PO-Revision-Date: 2016-04-29 11:09+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-"
+"extensions/issues\n"
+"POT-Creation-Date: 2017-12-18 18:40+0000\n"
+"PO-Revision-Date: 2018-02-26 12:52+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Fòram na Gàidhlig\n"
 "Language: gd\n"
@@ -21,91 +21,93 @@ msgstr ""
 "X-DamnedLies-Scope: partial\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME clasaigeach"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Clàraidh an seisean seo a-steach gu GNOME clasaigeach thu"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
 msgid "Attach modal dialog to the parent window"
 msgstr "Ceangail còmhradh mòdach ris an uinneag-pàraint"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
 "Tar-àithnidh an iuchair seo an iuchair ann an org.gnome.mutter nuair a thèid "
 "Slige GNOME a ruith."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
 msgid "Arrangement of buttons on the titlebar"
-msgstr "Seòrsachadh nam putanan air a' bhàr-tiotail"
+msgstr "Seòrsachadh nam putanan air a’ bhàr-tiotail"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
 msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
 msgstr ""
-"Tar-àithnidh an iuchair seo an iuchair ann an "
-"org.gnome.desktop.wm.preferences nuair a thèid Slige GNOME a ruith."
+"Tar-àithnidh an iuchair seo an iuchair ann an org.gnome.desktop.wm."
+"preferences nuair a thèid Slige GNOME a ruith."
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
 msgid "Enable edge tiling when dropping windows on screen edges"
 msgstr ""
 "Cuir leacadh nan oirean an comas nuair a thèid uinneagan a leigeil às aig "
 "oir na sgrìn"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
 msgid "Workspaces only on primary monitor"
-msgstr "Rumannan-obrach air a' phrìomh-sgrìn a-mhàin"
+msgstr "Rumannan-obrach air a’ phrìomh-sgrìn a-mhàin"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
+#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
 msgid "Delay focus changes in mouse mode until the pointer stops moving"
 msgstr ""
 "Cuir dàil air atharraichean an fòcais ann am modh luchaige gus an sguir an "
 "tomhaire air gluasad"
 
-#: ../extensions/alternate-tab/prefs.js:20
+#: extensions/alternate-tab/prefs.js:20
 msgid "Thumbnail only"
 msgstr "Dealbhagan a-mhàin"
 
-#: ../extensions/alternate-tab/prefs.js:21
+#: extensions/alternate-tab/prefs.js:21
 msgid "Application icon only"
 msgstr "Ìomhaigheag na h-aplacaid a-mhàin"
 
-#: ../extensions/alternate-tab/prefs.js:22
+#: extensions/alternate-tab/prefs.js:22
 msgid "Thumbnail and application icon"
 msgstr "Dealbhag is ìomhaigheag na h-aplacaid"
 
-#: ../extensions/alternate-tab/prefs.js:38
+#: extensions/alternate-tab/prefs.js:38
 msgid "Present windows as"
 msgstr "Seall uinneagan mar"
 
-#: ../extensions/alternate-tab/prefs.js:69
+#: extensions/alternate-tab/prefs.js:69
 msgid "Show only windows in the current workspace"
 msgstr "Na seall ach na h-uinneagan san rum-obrach làithreach"
 
-#: ../extensions/apps-menu/extension.js:38
+#: extensions/apps-menu/extension.js:41
 msgid "Activities Overview"
 msgstr "Foir-shealladh nan gnìomhachdan"
 
-#: ../extensions/apps-menu/extension.js:109
+#: extensions/apps-menu/extension.js:141
 msgid "Favorites"
 msgstr "Annsachdan"
 
-#: ../extensions/apps-menu/extension.js:266
+#: extensions/apps-menu/extension.js:436
 msgid "Applications"
 msgstr "Aplacaidean"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
 msgstr "Ìomhaigheag na h-aplacaid is liosta nan rumannan-obrach"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -113,77 +115,84 @@ msgstr ""
 "Liosta dhe shreangan le id aplacaid (ainm faidhle desktop) aig gach tè air a "
 "leantainn le còilean is àireamh an ruim-obrach"
 
-#: ../extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:56
 msgid "Application"
 msgstr "Aplacaid"
 
-#: ../extensions/auto-move-windows/prefs.js:69
-#: ../extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:65
+#: extensions/auto-move-windows/prefs.js:123
 msgid "Workspace"
 msgstr "Rum-obrach"
 
-#: ../extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:81
 msgid "Add Rule"
 msgstr "Cuir riaghailt ris"
 
-#: ../extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:102
 msgid "Create new matching rule"
 msgstr "Cruthaich riaghailt maidsidh ùr"
 
-#: ../extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:107
 msgid "Add"
 msgstr "Cuir ris"
 
-#: ../extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:107
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
-msgstr "Cha deach leinn draibh \"%s\" a ghluasad a-mach:"
+#| msgid "Ejecting drive '%s' failed:"
+msgid "Ejecting drive “%s” failed:"
+msgstr "Cha deach leinn draibh “%s” a ghluasad a-mach:"
 
-#: ../extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:125
 msgid "Removable devices"
 msgstr "Draibhean so-ghiùlain"
 
-#: ../extensions/drive-menu/extension.js:149
-msgid "Open File"
-msgstr "Fosgail am faidhle"
+#: extensions/drive-menu/extension.js:150
+#| msgid "Open File"
+msgid "Open Files"
+msgstr "Fosgail faidhlichean"
 
-#: ../extensions/example/extension.js:17
+#: extensions/example/extension.js:17
 msgid "Hello, world!"
 msgstr "Shin thu, a shaoghail!"
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
 msgid "Alternative greeting text."
 msgstr "Teacsa fàilteachaidh eile."
 
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
+#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
 msgid ""
 "If not empty, it contains the text that will be shown when clicking on the "
 "panel."
 msgstr ""
-"Mur eil seo falamh, tha an teacsa 'na bhroinn a thèid a shealltainn le "
-"briogadh air a' phanail."
+"Mur eil seo falamh, tha an teacsa ’na bhroinn a thèid a shealltainn le "
+"briogadh air a’ phanail."
 
-#: ../extensions/example/prefs.js:30
+#: extensions/example/prefs.js:30
 msgid "Message"
 msgstr "Teachdaireachd"
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
-#: ../extensions/example/prefs.js:43
+#: extensions/example/prefs.js:43
+#| msgid ""
+#| "Example aims to show how to build well behaved extensions for the Shell "
+#| "and as such it has little functionality on its own.\n"
+#| "Nevertheless it's possible to customize the greeting message."
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
+"Nevertheless it’s possible to customize the greeting message."
 msgstr ""
 "Tha am ball-eisimpleir airson sealltainn dhut mar a thogas tu leudachain le "
 "deagh-ghiùlan airson na Slige agus mar sin cha dèan e fhèin mòran.\n"
-"'S urrainn dhut an teachdaireachd fàilteachaidh a ghnàthachadh co-dhiù."
+"’S urrainn dhut an teachdaireachd fàilteachaidh a ghnàthachadh co-dhiù."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
 msgstr "Cleachd cuid nas motha dhen sgrìn airson uinneagan"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -194,159 +203,173 @@ msgstr ""
 "barrachd co-dhaingneachaidh ach am bi am bogsa-iadhaidh nas lugha. Cha bhi "
 "an roghainn seo an sàs ach leis an ro-innleachd suidheachaidh nàdarra."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
-msgstr "Cuir caipseanan nan uinneagan air a' bharr"
+msgstr "Cuir caipseanan nan uinneagan air a’ bharr"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"Mas e true a th' ann, thèid caipseanan nan uinneagan a chur ri barr nan "
-"dealbhagan, a' tar-àithneadh bun-roghainn na slige a chuireas aig a' bhonn "
-"iad. Ma dh'atharraicheas tu an roghainn seo, feumaidh tu an t-slige a "
+"Mas e true a th’ ann, thèid caipseanan nan uinneagan a chur ri barr nan "
+"dealbhagan, a’ tar-àithneadh bun-roghainn na slige a chuireas aig a’ bhonn "
+"iad. Ma dh’atharraicheas tu an roghainn seo, feumaidh tu an t-slige a "
 "thòiseachadh às ùr gus an dèid a cur an sàs."
 
-#: ../extensions/places-menu/extension.js:78
-#: ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:78
+#: extensions/places-menu/extension.js:81
 msgid "Places"
 msgstr "Ionadan"
 
-#: ../extensions/places-menu/placeDisplay.js:59
+#: extensions/places-menu/placeDisplay.js:65
 #, javascript-format
-msgid "Failed to launch \"%s\""
-msgstr "Cha b' urrainn dhuinn \"%s\" a chur gu dol"
+msgid "Failed to mount volume for “%s”"
+msgstr "Cha b’ urrainn dhuinn an t-iom-dhraibh airson “%s” a mhunntachadh"
 
-#: ../extensions/places-menu/placeDisplay.js:101
-#: ../extensions/places-menu/placeDisplay.js:124
+#: extensions/places-menu/placeDisplay.js:78
+#, javascript-format
+#| msgid "Failed to launch \"%s\""
+msgid "Failed to launch “%s”"
+msgstr "Cha b’ urrainn dhuinn “%s” a chur gu dol"
+
+#: extensions/places-menu/placeDisplay.js:137
+#: extensions/places-menu/placeDisplay.js:160
 msgid "Computer"
 msgstr "Coimpiutair"
 
-#: ../extensions/places-menu/placeDisplay.js:267
+#: extensions/places-menu/placeDisplay.js:303
 msgid "Home"
 msgstr "Dachaigh"
 
-#: ../extensions/places-menu/placeDisplay.js:311
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Browse Network"
 msgstr "Brabhsaich an lìonra"
 
-#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Cuartaich meudan nan glacaidhean-sgrìn"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Cuartaich meudan nan glacaidhean-sgrìn gu contrarra"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
 msgstr "Ainm an ùrlair"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Ainm an ùrlair a thèid a luchdadh o ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:110
 msgid "Close"
 msgstr "Dùin"
 
-#: ../extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:129
 msgid "Unminimize"
 msgstr "Neo-fhìor-lùghdaich"
 
-#: ../extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:130
 msgid "Minimize"
 msgstr "Fìor-lùghdaich"
 
-#: ../extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:136
 msgid "Unmaximize"
 msgstr "Neo-làn-mheudaich"
 
-#: ../extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:137
 msgid "Maximize"
 msgstr "Làn-mheudaich"
 
-#: ../extensions/window-list/extension.js:403
+#: extensions/window-list/extension.js:420
 msgid "Minimize all"
 msgstr "Fìor-lùghdaich na h-uile"
 
-#: ../extensions/window-list/extension.js:411
+#: extensions/window-list/extension.js:428
 msgid "Unminimize all"
 msgstr "Neo-fhìor-lùghdaich na h-uile"
 
-#: ../extensions/window-list/extension.js:419
+#: extensions/window-list/extension.js:436
 msgid "Maximize all"
 msgstr "Làn-mheudaich na h-uile"
 
-#: ../extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:445
 msgid "Unmaximize all"
 msgstr "Neo-làn-mheudaich na h-uile"
 
-#: ../extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:454
 msgid "Close all"
 msgstr "Dùin na h-uile"
 
-#: ../extensions/window-list/extension.js:661
-#: ../extensions/workspace-indicator/extension.js:30
+#: extensions/window-list/extension.js:678
+#: extensions/workspace-indicator/extension.js:30
 msgid "Workspace Indicator"
 msgstr "Taisbeanair ruim-obrach"
 
-#: ../extensions/window-list/extension.js:820
+#: extensions/window-list/extension.js:842
 msgid "Window List"
 msgstr "Liosta nan uinneagan"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
 msgstr "Cuin a thèid na h-uinneagan a bhuidhneachadh"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#| msgid ""
+#| "Decides when to group windows from the same application on the window "
+#| "list. Possible values are \"never\", \"auto\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Mìnichidh seo cuin a thèid uinneagan aig an aon aplacaid a bhuidhneachadh "
-"air liosta nan uinneagan. 'S e \"never\", \"auto\" agus \"always\" a tha sna "
+"air liosta nan uinneagan. ’S e “never”, “auto” agus “always” a tha sna "
 "roghainnean dligheach."
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
 msgstr "Seall liosta nan uinneagan air a h-uile sgrìn"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr ""
 "Co-dhiù an dèid liosta nan uinneagan a shealltainn air gach sgrìn "
-"cheangailte no air a' phrìomh-thè a-mhàin."
+"cheangailte no air a’ phrìomh-thè a-mhàin."
 
-#: ../extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Buidhneachadh nan uinneagan"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:50
 msgid "Never group windows"
 msgstr "Na buidhnich na h-uinneagan idir"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:51
 msgid "Group windows when space is limited"
 msgstr "Buidhnich na h-uinneagan nuair a bhios an rum gann"
 
-#: ../extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:52
 msgid "Always group windows"
 msgstr "Buidhnich na h-uinneagan an-còmhnaidh"
 
-#: ../extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
 msgstr "Seall air a h-uile sgrìn"
 
-#: ../extensions/workspace-indicator/prefs.js:141
+#: extensions/workspace-indicator/prefs.js:141
 msgid "Workspace Names"
 msgstr "Ainmean nan rumannan-obrach"
 
-#: ../extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:157
 msgid "Name"
 msgstr "Ainm"
 
-#: ../extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:198
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Rum-obrach %d"
