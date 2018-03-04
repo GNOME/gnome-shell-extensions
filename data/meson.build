@@ -1,12 +1,11 @@
 sessions = [
-  ['gnome-classic.session.desktop.in', sessiondir],
-  ['gnome-classic.desktop.in', xsessiondir]
+  ['gnome-classic.session.desktop', sessiondir],
+  ['gnome-classic.desktop', xsessiondir]
 ]
 foreach s : sessions
-  name_array = s[0].split('.')
   i18n.merge_file('',
-    input:  s[0],
-    output: '.'.join([name_array[0], name_array[1]]),
+    input:  s[0] + '.in',
+    output: s[0],
     po_dir: '../po',
     install: true,
     install_dir: s[1],
