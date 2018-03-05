@@ -4,7 +4,7 @@ stages:
  - build
 
 before_script:
-  - dnf install -y meson gettext gjs-devel
+  - dnf install --repo=fedora -y meson gettext gjs-devel
 
 build-shell-extensions:
   stage: build
