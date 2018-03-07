@@ -742,7 +742,6 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     destroy() {
-        this.menu.actor.get_children().forEach(c => { c.destroy() });
         super.destroy();
     }
 };
