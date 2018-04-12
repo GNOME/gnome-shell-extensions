@@ -888,7 +888,7 @@ class WindowList {
     }
 
     _getWorkspaceSettings() {
-        let settings = global.get_overrides_settings();
+        let settings = global.get_overrides_settings() || this._mutterSettings;
         if (settings.list_keys().indexOf('workspaces-only-on-primary') > -1)
             return settings;
         return this._mutterSettings;
