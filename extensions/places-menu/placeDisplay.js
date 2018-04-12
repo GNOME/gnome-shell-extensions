@@ -385,7 +385,7 @@ var PlacesManager = class {
 
             for(let j = 0; j < volumes.length; j++) {
                 let identifier = volumes[j].get_identifier('class');
-                if (identifier && identifier.indexOf('network') >= 0) {
+                if (identifier && identifier.includes('network')) {
                     networkVolumes.push(volumes[j]);
                 } else {
                     let mount = volumes[j].get_mount();
@@ -402,7 +402,7 @@ var PlacesManager = class {
                 continue;
 
             let identifier = volumes[i].get_identifier('class');
-            if (identifier && identifier.indexOf('network') >= 0) {
+            if (identifier && identifier.includes('network')) {
                 networkVolumes.push(volumes[i]);
             } else {
                 let mount = volumes[i].get_mount();

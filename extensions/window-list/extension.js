@@ -882,14 +882,14 @@ class WindowList {
     }
 
     _getDynamicWorkspacesSettings() {
-        if (this._workspaceSettings.list_keys().indexOf('dynamic-workspaces') > -1)
+        if (this._workspaceSettings.list_keys().includes('dynamic-workspaces'))
             return this._workspaceSettings;
         return this._mutterSettings;
     }
 
     _getWorkspaceSettings() {
         let settings = global.get_overrides_settings() || this._mutterSettings;
-        if (settings.list_keys().indexOf('workspaces-only-on-primary') > -1)
+        if (settings.list_keys().includes('workspaces-only-on-primary'))
             return settings;
         return this._mutterSettings;
     }
