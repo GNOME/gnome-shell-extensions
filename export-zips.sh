@@ -22,6 +22,7 @@ for f in $extensiondir/*; do
   schema=$schemadir/org.gnome.shell.extensions.$name.gschema.xml
 
   cp $srcdir/NEWS $srcdir/COPYING $f
+  cp -r $localedir $f
 
   if [ -f $schema ]; then
     mkdir $f/schemas
