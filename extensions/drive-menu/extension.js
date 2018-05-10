@@ -175,11 +175,11 @@ class DriveMenu extends PanelMenu.Button {
     }
 
     destroy() {
-        if (this._connectedId) {
-            this._monitor.disconnect(this._connectedId);
-            this._monitor.disconnect(this._disconnectedId);
-            this._connectedId = 0;
-            this._disconnectedId = 0;
+        if (this._addedId) {
+            this._monitor.disconnect(this._addedId);
+            this._monitor.disconnect(this._removedId);
+            this._addedId = 0;
+            this._removedId = 0;
         }
 
         super.destroy();
