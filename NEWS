@@ -1,3 +1,10 @@
+3.29.3
+======
+* Adjust to global.screen removal [Jonas; #759538]
+
+Contributors:
+  Jonas Ådahl, Florian Müllner
+
 3.29.2
 ======
 * Misc. bug fixes [Florian; #69]
