@@ -799,14 +799,12 @@ class WindowList {
         indicatorsBox.add(this._workspaceIndicator.container, { expand: false, y_fill: true });
 
         this._mutterSettings = new Gio.Settings({ schema_id: 'org.gnome.mutter' });
-        this._workspaceSettings = this._getWorkspaceSettings();
         this._workspacesOnlyOnPrimaryChangedId =
-            this._workspaceSettings.connect('changed::workspaces-only-on-primary',
-                                            this._updateWorkspaceIndicatorVisibility.bind(this));
-        this._dynamicWorkspacesSettings = this._getDynamicWorkspacesSettings();
+            this._mutterSettings.connect('changed::workspaces-only-on-primary',
+                                         this._updateWorkspaceIndicatorVisibility.bind(this));
         this._dynamicWorkspacesChangedId =
-            this._dynamicWorkspacesSettings.connect('changed::dynamic-workspaces',
-                                                    this._updateWorkspaceIndicatorVisibility.bind(this));
+            this._mutterSettings.connect('changed::dynamic-workspaces',
+                                         this._updateWorkspaceIndicatorVisibility.bind(this));
         this._updateWorkspaceIndicatorVisibility();
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
@@ -890,19 +888,6 @@ class WindowList {
         this._groupingModeChanged();
     }
 
-    _getDynamicWorkspacesSettings() {
-        if (this._workspaceSettings.list_keys().includes('dynamic-workspaces'))
-            return this._workspaceSettings;
-        return this._mutterSettings;
-    }
-
-    _getWorkspaceSettings() {
-        let settings = global.get_overrides_settings() || this._mutterSettings;
-        if (settings.list_keys().includes('workspaces-only-on-primary'))
-            return settings;
-        return this._mutterSettings;
-    }
-
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
         let diff = 0;
@@ -933,10 +918,10 @@ class WindowList {
 
     _updateWorkspaceIndicatorVisibility() {
         let workspaceManager = global.workspace_manager;
-        let hasWorkspaces = this._dynamicWorkspacesSettings.get_boolean('dynamic-workspaces') ||
+        let hasWorkspaces = this._mutterSettings.get_boolean('dynamic-workspaces') ||
                             workspaceManager.n_workspaces > 1;
         let workspacesOnMonitor = this._monitor == Main.layoutManager.primaryMonitor ||
-                                  !this._workspaceSettings.get_boolean('workspaces-only-on-primary');
+                                  !this._mutterSettings.get_boolean('workspaces-only-on-primary');
 
         this._workspaceIndicator.actor.visible = hasWorkspaces && workspacesOnMonitor;
     }
@@ -1177,8 +1162,8 @@ class WindowList {
     }
 
     _onDestroy() {
-        this._workspaceSettings.disconnect(this._workspacesOnlyOnPrimaryChangedId);
-        this._dynamicWorkspacesSettings.disconnect(this._dynamicWorkspacesChangedId);
+        this._mutterSettings.disconnect(this._workspacesOnlyOnPrimaryChangedId);
+        this._mutterSettings.disconnect(this._dynamicWorkspacesChangedId);
 
         this._workspaceIndicator.destroy();
 
