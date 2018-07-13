@@ -51,7 +51,6 @@ default_extensions += [
 all_extensions = default_extensions
 all_extensions += [
   'auto-move-windows',
-  'example',
   'native-window-placement',
   'user-theme'
 ]

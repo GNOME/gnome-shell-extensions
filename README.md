@@ -30,10 +30,6 @@ GSettings key.
      Shows a status menu for rapid unmount and power off of external storage devices
   (i.e. pendrives)
 
- * example
-
-     A minimal example illustrating how to write extensions.
-
  * launch-new-instance
 
      Changes application icons to always launch a new instance when activated.
