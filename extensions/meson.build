@@ -1,4 +1,4 @@
-extension_schemas = []
+ extension_schemas = []
 js_sources = extensionlib
 
 metadata_name = 'metadata.json'
@@ -13,8 +13,22 @@ foreach e : all_extensions
   metadata_conf.set('gettext_domain', gettext_domain)
   metadata_conf.set('shell_current', shell_version)
   metadata_conf.set('url', 'https://gitlab.gnome.org/GNOME/gnome-shell-extensions')
-
-  extension_sources = files(e + '/extension.js')
+  extension_sources = []
+  if (e == 'desktop-icons')
+    desktop_icons_filenames = ['/extension.js',
+                               '/dbusUtils.js',
+                               '/desktopContainer.js',
+                               '/desktopManager.js',
+                               '/fileContainer.js',
+                               '/queue.js',
+                               '/settings.js'
+                               ]
+    foreach file : desktop_icons_filenames
+      extension_sources += files(e + file)
+    endforeach
+  else
+    extension_sources = [files(e + '/extension.js')]
+  endif
   extension_data = files(e + '/stylesheet.css')
 
   subdir(e)
