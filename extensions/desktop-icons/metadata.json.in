@@ -1,0 +1,11 @@
+{
+"extension-id": "@extension_id@",
+"uuid": "@uuid@",
+"settings-schema": "@gschemaname@",
+"gettext-domain": "@gettext_domain@",
+"name": "Desktop Icons",
+"description": "Provide desktop icons support for classic mode",
+"original-authors": [  "csoriano@redhat.com" ],
+"shell-version": [ "@shell_current@" ],
+"url": "@url@"
+}

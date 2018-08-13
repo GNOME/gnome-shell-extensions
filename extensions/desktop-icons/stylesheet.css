@@ -1,0 +1,25 @@
+.file-item {
+    padding: 6px;
+}
+
+.file-item:hover {
+   background-color: rgba(238, 238, 238, 0.2);
+}
+
+.file-item:selected {
+   background-color: rgba(74, 144, 217, 0.6);
+}
+
+.rubber-band {
+   background-color: rgba(74, 144, 238, 0.4);
+}
+
+.name-label {
+    text-shadow: 1px 1px black;
+    color: white;
+    text-align: center;
+}
+
+.draggable {
+    background-color: red;
+}

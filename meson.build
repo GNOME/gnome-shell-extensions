@@ -38,7 +38,8 @@ classic_extensions = [
   'apps-menu',
   'places-menu',
   'launch-new-instance',
-  'window-list'
+  'window-list',
+  'desktop-icons'
 ]
 
 default_extensions = classic_extensions
