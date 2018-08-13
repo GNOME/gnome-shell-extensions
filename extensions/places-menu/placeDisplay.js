@@ -50,33 +50,35 @@ class PlaceInfo {
         return (_ignored, result) => {
             try {
                 Gio.AppInfo.launch_default_for_uri_finish(result);
-            } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
-                let source = {
-                    get_icon: () => { return this.icon; }
-                };
-                let op = new ShellMountOperation.ShellMountOperation(source);
-                this.file.mount_enclosing_volume(0, op.mountOp, null, (file, result) => {
-                    try {
-                        op.close();
-                        file.mount_enclosing_volume_finish(result);
-                    } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.FAILED_HANDLED)) {
-                        // e.g. user canceled the password dialog
-                        return;
-                    } catch(e) {
-                        Main.notifyError(_("Failed to mount volume for “%s”").format(this.name), e.message);
-                        return;
-                    }
-
-                    if (tryMount) {
-                        let callback = this._createLaunchCallback(launchContext, false);
-                        Gio.AppInfo.launch_default_for_uri_async(file.get_uri(),
-                                                                 launchContext,
-                                                                 null,
-                                                                 callback);
-                    }
-                });
             } catch(e) {
-                Main.notifyError(_("Failed to launch “%s”").format(this.name), e.message);
+                if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
+                    let source = {
+                        get_icon: () => { return this.icon; }
+                    };
+                    let op = new ShellMountOperation.ShellMountOperation(source);
+                    this.file.mount_enclosing_volume(0, op.mountOp, null, (file, result) => {
+                        try {
+                            op.close();
+                            file.mount_enclosing_volume_finish(result);
+                        } catch(e) {
+                            if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.FAILED_HANDLED))
+                                // e.g. user canceled the password dialog
+                                return;
+                            Main.notifyError(_("Failed to mount volume for “%s”").format(this.name), e.message);
+                            return;
+                        }
+
+                        if (tryMount) {
+                            let callback = this._createLaunchCallback(launchContext, false);
+                            Gio.AppInfo.launch_default_for_uri_async(file.get_uri(),
+                                                                     launchContext,
+                                                                     null,
+                                                                     callback);
+                        }
+                    });
+                } else {
+                    Main.notifyError(_("Failed to launch “%s”").format(this.name), e.message);
+                }
             }
         }
     }
@@ -97,8 +99,10 @@ class PlaceInfo {
                                            let info = file.query_info_finish(result);
                                            this.icon = info.get_symbolic_icon();
                                            this.emit('changed');
-                                       } catch(e if e instanceof Gio.IOErrorEnum) {
-                                           return;
+                                       } catch(e) {
+                                           if (e instanceof Gio.IOErrorEnum)
+                                               return;
+                                           throw e;
                                        }
                                    });
 
@@ -123,8 +127,10 @@ class PlaceInfo {
         try {
             let info = this.file.query_info('standard::display-name', 0, null);
             return info.get_display_name();
-        } catch(e if e instanceof Gio.IOErrorEnum) {
-            return this.file.get_basename();
+        } catch(e) {
+            if (e instanceof Gio.IOErrorEnum)
+                return this.file.get_basename();
+            throw e;
         }
     }
 };
@@ -349,8 +355,10 @@ var PlacesManager = class {
             let file = Gio.File.new_for_path(specialPath), info;
             try {
                 info = new PlaceInfo('special', file);
-            } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND)) {
-                continue;
+            } catch(e) {
+                if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND))
+                    continue;
+                throw e;
             }
 
             specials.push(info);
@@ -514,8 +522,10 @@ var PlacesManager = class {
 
         try {
             devItem = new PlaceDeviceInfo(kind, mount);
-        } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND)) {
-            return;
+        } catch(e) {
+            if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND))
+                return;
+            throw e;
         }
 
         this._places[kind].push(devItem);
@@ -526,8 +536,10 @@ var PlacesManager = class {
 
         try {
             volItem = new PlaceVolumeInfo(kind, volume);
-        } catch(e if e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND)) {
-            return;
+        } catch(e) {
+            if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND))
+                return;
+            throw e;
         }
 
         this._places[kind].push(volItem);
