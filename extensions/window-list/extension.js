@@ -5,6 +5,7 @@ const Gtk = imports.gi.Gtk;
 const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
+const Signals = imports.signals;
 
 const DND = imports.ui.dnd;
 const Main = imports.ui.main;
@@ -350,6 +351,38 @@ class WindowButton extends BaseButton {
             global.display.connect('notify::focus-window',
                                    this._updateStyle.bind(this));
         this._updateStyle();
+
+        this._draggable = DND.makeDraggable(this.actor);
+        this._draggable.connect('drag-begin', this._onDragBegin.bind(this));
+        this._draggable.connect('drag-cancelled', this._onDragCancelled.bind(this));
+        this._draggable.connect('drag-end', this._onDragEnd.bind(this));
+    }
+
+    _onDragBegin() {
+        this.actor.opacity = 100;
+        this.emit('drag-begin');
+    }
+
+    _onDragCancelled() {
+        this.actor.opacity = 255;
+        this.emit('drag-cancelled');
+    }
+
+    _onDragEnd() {
+        this.actor.opacity = 255;
+        this.emit('drag-end');
+    }
+
+    getDragActor() {
+        let dragButton = new WindowButton(this.metaWindow);
+        dragButton.actor.set_width(this.actor.get_width());
+        dragButton.actor.set_height(this.actor.get_height());
+
+        return dragButton.actor;
+    }
+
+    getDragActorSource() {
+        return this.actor;
     }
 
     _onClicked(actor, button) {
@@ -397,6 +430,7 @@ class WindowButton extends BaseButton {
         this._contextMenu.destroy();
     }
 };
+Signals.addSignalMethods(WindowButton.prototype);
 
 
 class AppContextMenu extends PopupMenu.PopupMenu {
@@ -516,6 +550,38 @@ class AppButton extends BaseButton {
             this._windowTracker.connect('notify::focus-app',
                                         this._updateStyle.bind(this));
         this._updateStyle();
+
+        this._draggable = DND.makeDraggable(this.actor);
+        this._draggable.connect('drag-begin', this._onDragBegin.bind(this));
+        this._draggable.connect('drag-cancelled', this._onDragCancelled.bind(this));
+        this._draggable.connect('drag-end', this._onDragEnd.bind(this));
+    }
+
+    _onDragBegin() {
+        this.actor.opacity = 100;
+        this.emit('drag-begin');
+    }
+
+    _onDragCancelled() {
+        this.actor.opacity = 255;
+        this.emit('drag-cancelled');
+    }
+
+    _onDragEnd() {
+        this.actor.opacity = 255;
+        this.emit('drag-end');
+    }
+
+    getDragActor() {
+        let dragButton = new AppButton(this.app, this._perMonitor, this._monitorIndex);
+        dragButton.actor.set_width(this.actor.get_width());
+        dragButton.actor.set_height(this.actor.get_height());
+
+        return dragButton.actor;
+    }
+
+    getDragActorSource() {
+        return this.actor;
     }
 
     _windowEnteredOrLeftMonitor(metaDisplay, monitorIndex, metaWindow) {
@@ -639,7 +705,7 @@ class AppButton extends BaseButton {
         this._menu.destroy();
     }
 };
-
+Signals.addSignalMethods(AppButton.prototype);
 
 class WorkspaceIndicator extends PanelMenu.Button {
     constructor() {
@@ -880,6 +946,8 @@ class WindowList {
         this._dndTimeoutId = 0;
         this._dndWindow = null;
 
+        this.actor._delegate = this;
+
         this._settings = Convenience.getSettings();
         this._groupingModeChangedId =
             this._settings.connect('changed::grouping-mode',
@@ -1052,6 +1120,10 @@ class WindowList {
                                              true, true, true,
                                              Clutter.BoxAlignment.START,
                                              Clutter.BoxAlignment.START);
+
+        button.connect('drag-begin', this._onDragBegin.bind(this));
+        button.connect('drag-cancelled', this._onDragCancelled.bind(this));
+        button.connect('drag-end', this._onDragEnd.bind(this));
     }
 
     _onWindowRemoved(ws, win) {
@@ -1071,6 +1143,10 @@ class WindowList {
                 return;
             }
         }
+    }
+
+    _onDragCancelled() {
+        DND.removeDragMonitor(this._dragMonitor);
     }
 
     _onWorkspacesChanged() {
@@ -1161,6 +1237,60 @@ class WindowList {
         return false;
     }
 
+    handleDragOver(source, actor, x, y, time) {
+        this._moveDragButton(source, actor, x, y);
+        return DND.DragMotionResult.COPY_DROP;
+    }
+
+    acceptDrop(source, actor, x, y, time) {
+        this._moveDragButton(source, actor, x, y);
+        return true;
+    }
+
+    _moveDragButton(source, actor, x ,y) {
+        let numChildren = this._windowList.get_n_children();
+        let firstChild = this._windowList.get_first_child();
+        let position = Math.floor((x - firstChild.x) / firstChild.width);
+
+        if (position >= numChildren)
+            position = numChildren - 1;
+
+        let dragButton = this._findDragButton(source);
+
+        let button;
+        if (dragButton._delegate.app)
+            button = dragButton._delegate.app;
+        else
+            button = dragButton._delegate.metaWindow;
+
+        if (!button._windowListPosition) {
+            this._windowList.set_child_at_index(dragButton, position);
+            this._updateWindowListPosition();
+        } else if ((button._windowListPosition -1) != position) {
+            this._windowList.set_child_at_index(dragButton, position);
+            this._updateWindowListPosition();
+        }
+    }
+
+    _updateWindowListPosition() {
+        let children = this._windowList.get_children();
+        for (let i = 0; i < children.length; i++) {
+            if (children[i]._delegate.app)
+                children[i]._delegate.app._windowListPosition = i + 1;
+            else
+                children[i]._delegate.metaWindow._windowListPosition = i + 1;
+        }
+    }
+
+    _findDragButton(source) {
+        if (source.app)
+            return this._windowList.get_children().find(
+                c => c._delegate.app == source.app );
+        else
+            return this._windowList.get_children().find(
+                c => c._delegate.metaWindow == source.metaWindow );
+    }
+
     _onDestroy() {
         this._mutterSettings.disconnect(this._workspacesOnlyOnPrimaryChangedId);
         this._mutterSettings.disconnect(this._dynamicWorkspacesChangedId);
@@ -1220,6 +1350,22 @@ class Extension {
                                        this._buildWindowLists.bind(this));
 
         this._buildWindowLists();
+
+        this._windowLists.forEach(windowList => this._restoreWindowList(windowList));
+    }
+
+    _restoreWindowList(windowList) {
+        let children = windowList._windowList.get_children();
+        for (let i = 0; i < children.length; i++) {
+            let button;
+            if (children[i]._delegate.app)
+                button = children[i]._delegate.app;
+            else
+                button = children[i]._delegate.metaWindow;
+
+            if (button._windowListPosition)
+                windowList._windowList.set_child_at_index(children[i], button._windowListPosition - 1);
+        }
     }
 
     _buildWindowLists() {
