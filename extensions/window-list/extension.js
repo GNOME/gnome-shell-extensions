@@ -27,6 +27,10 @@ const GroupingMode = {
     ALWAYS: 2
 };
 
+let Bindings = {
+  midCloseswindow: false
+};
+
 
 function _minimizeOrActivateWindow(window) {
         let focusWindow = global.display.focus_window;
@@ -229,6 +233,7 @@ class BaseButton {
         this.actor.connect('clicked', this._onClicked.bind(this));
         this.actor.connect('destroy', this._onDestroy.bind(this));
         this.actor.connect('popup-menu', this._onPopupMenu.bind(this));
+        this.actor.connect('button-press-event', this._onButtonPress.bind(this));
 
         this._contextMenuManager = new PopupMenu.PopupMenuManager(this);
 
@@ -259,6 +264,10 @@ class BaseButton {
 
     _onClicked(actor, button) {
         throw new Error('Not implemented');
+    }
+
+    _onButtonPress() {
+        return;
     }
 
     _canOpenPopupMenu() {
@@ -349,10 +358,12 @@ class WindowButton extends BaseButton {
         this._notifyFocusId =
             global.display.connect('notify::focus-window',
                                    this._updateStyle.bind(this));
+
         this._updateStyle();
     }
 
     _onClicked(actor, button) {
+        global.log("WindowButton::_onClicked: " + button);
         if (this._contextMenu.isOpen) {
             this._contextMenu.close();
             return;
@@ -362,6 +373,13 @@ class WindowButton extends BaseButton {
             _minimizeOrActivateWindow(this.metaWindow);
         else
             _openMenu(this._contextMenu);
+    }
+
+    _onButtonPress(actor, e) {
+        global.log("WindowButton::_onButtonPress");
+        if (Bindings.midCloseswindow && e.get_button() === Clutter.BUTTON_MIDDLE) {
+            this.metaWindow.delete(global.get_current_time());
+        }
     }
 
     _isFocused() {
@@ -1210,6 +1228,7 @@ class Extension {
 
     enable() {
         this._windowLists = [];
+        let me = this;
 
         this._settings = Convenience.getSettings();
         this._showOnAllMonitorsChangedId =
@@ -1219,6 +1238,12 @@ class Extension {
         this._monitorsChangedId =
             Main.layoutManager.connect('monitors-changed',
                                        this._buildWindowLists.bind(this));
+
+        Bindings.midCloseswindow = this._settings.get_boolean('middle-click-closes-window');
+        this._midClosesWindowChangedId =
+            this._settings.connect('changed::middle-click-closes-window', function() {
+                  Bindings.midCloseswindow = me._settings.get_boolean('middle-click-closes-window');
+            });
 
         this._buildWindowLists();
     }
@@ -1240,6 +1265,7 @@ class Extension {
             return;
 
         this._settings.disconnect(this._showOnAllMonitorsChangedId);
+        this._settings.disconnect(this._midClosesWindowChangedId);
         this._showOnAllMonitorsChangedId = 0;
 
         Main.layoutManager.disconnect(this._monitorsChangedId);

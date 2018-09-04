@@ -72,6 +72,11 @@ class WindowListPrefsWidget extends Gtk.Grid {
                                           margin_top: 6 });
         this._settings.bind('show-on-all-monitors', check, 'active', Gio.SettingsBindFlags.DEFAULT);
         this.add(check);
+
+        let check2 = new Gtk.CheckButton({ label: _("Close window with middle button"),
+                                          margin_top: 6 });
+        this._settings.bind('middle-click-closes-window', check2, 'active', Gio.SettingsBindFlags.DEFAULT);
+        this.add(check2);
     }
 });
 

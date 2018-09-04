@@ -23,5 +23,13 @@
         only on the primary one.
       </description>
     </key>
+    <key name="middle-click-closes-window" type="b">
+      <default>false</default>
+      <summary>Close window with middle button</summary>
+      <description>
+        Whether to close the window when clicking on button with
+        middle mouse button.
+      </description>
+    </key>
   </schema>
 </schemalist>
