@@ -685,7 +685,10 @@ class ApplicationsButton extends PanelMenu.Button {
         //Load applications
         this._displayButtons(this._listApplications(null));
 
-        let height = this.categoriesBox.height + MENU_HEIGHT_OFFSET + 'px';
+        let themeContext = St.ThemeContext.get_for_stage(global.stage);
+        let scaleFactor = themeContext.scale_factor;
+        let categoriesHeight = this.categoriesBox.height / scaleFactor;
+        let height = Math.round(categoriesHeight) + MENU_HEIGHT_OFFSET + 'px';
         this.mainBox.style+=('height: ' + height);
     }
 
