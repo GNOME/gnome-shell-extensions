@@ -28,8 +28,8 @@ class WindowMover {
         this._appConfigs.clear();
 
         this._settings.get_strv('application-list').forEach(v => {
-            let [appId, num] = v.split(':');
-            this._appConfigs.set(appId, parseInt(num) - 1);
+            let [appId, num, workspaceSwitch] = v.split(':');
+            this._appConfigs.set(appId, parseInt(num) - 1 + ":" + workspaceSwitch);
         });
 
         this._updateAppData();
@@ -74,18 +74,27 @@ class WindowMover {
         this._updateAppData();
     }
 
-    _moveWindow(window, workspaceNum) {
+    _moveWindow(window, workspaceNum, workspaceSwitch) {
         if (window.skip_taskbar)
             return;
 
-        // ensure we have the required number of workspaces
+        // Ensure we have the required number of workspaces
         let workspaceManager = global.workspace_manager;
         for (let i = workspaceManager.n_workspaces; i <= workspaceNum; i++) {
             window.change_workspace_by_index(i - 1, false);
             workspaceManager.append_new_workspace(false, 0);
         }
 
+        // If the window is on the right workspace, don't do anything
+        if (window.get_workspace().index() == workspaceNum)
+            return;
+
         window.change_workspace_by_index(workspaceNum, false);
+        if (workspaceSwitch === true) {
+            let metaWorkspace = workspaceManager.get_workspace_by_index(workspaceNum);
+            // Add value to get_current_time() to stop gnome-shell from crashing.
+            metaWorkspace.activate_with_focus(window, global.get_current_time()+1);
+        }
     }
 
     _appWindowsChanged(app) {
@@ -100,9 +109,9 @@ class WindowMover {
             w => !windows.includes(w) && w.get_compositor_private() != null
         ));
 
-        let workspaceNum = this._appConfigs.get(app.id);
+        let [workspaceNum, workspaceSwitch] = this._appConfigs.get(app.id).split(':');
         windows.filter(w => !data.windows.includes(w)).forEach(window => {
-            this._moveWindow(window, workspaceNum);
+            this._moveWindow(window, parseInt(workspaceNum), (workspaceSwitch === 'true'));
         });
         data.windows = windows;
     }

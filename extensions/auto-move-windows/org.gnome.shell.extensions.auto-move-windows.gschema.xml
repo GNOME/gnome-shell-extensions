@@ -4,7 +4,7 @@
       <!-- FIXME: should be a(su), when JS supports more of GVariant -->
       <default>[ ]</default>
       <summary>Application and workspace list</summary>
-      <description>A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number</description>
+      <description>A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number, followed by another colon and true/false to indicate switching workspace.</description>
     </key>
   </schema>
 </schemalist>

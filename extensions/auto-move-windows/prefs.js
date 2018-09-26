@@ -22,7 +22,8 @@ const Columns = {
     DISPLAY_NAME: 1,
     ICON: 2,
     WORKSPACE: 3,
-    ADJUSTMENT: 4
+    ADJUSTMENT: 4,
+    WORKSPACE_SWITCH: 5
 };
 
 const Widget = GObject.registerClass({
@@ -38,7 +39,7 @@ const Widget = GObject.registerClass({
 
         this._store = new Gtk.ListStore();
         this._store.set_column_types([Gio.AppInfo, GObject.TYPE_STRING, Gio.Icon, GObject.TYPE_INT,
-                                      Gtk.Adjustment]);
+                                      Gtk.Adjustment, GObject.TYPE_BOOLEAN]);
 
         let scrolled = new Gtk.ScrolledWindow({ shadow_type: Gtk.ShadowType.IN});
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
@@ -49,7 +50,7 @@ const Widget = GObject.registerClass({
                                             hexpand: true, vexpand: true });
         this._treeView.get_selection().set_mode(Gtk.SelectionMode.SINGLE);
 
-        let appColumn = new Gtk.TreeViewColumn({ expand: true, sort_column_id: Columns.DISPLAY_NAME,
+        let appColumn = new Gtk.TreeViewColumn({ min_width: 375, sort_column_id: Columns.DISPLAY_NAME,
                                                  title: _("Application") });
         let iconRenderer = new Gtk.CellRendererPixbuf;
         appColumn.pack_start(iconRenderer, false);
@@ -62,11 +63,19 @@ const Widget = GObject.registerClass({
         let workspaceColumn = new Gtk.TreeViewColumn({ title: _("Workspace"),
                                                        sort_column_id: Columns.WORKSPACE });
         let workspaceRenderer = new Gtk.CellRendererSpin({ editable: true });
-        workspaceRenderer.connect('edited', this._workspaceEdited.bind(this));
+        workspaceRenderer.connect('edited', this._settingEdited.bind(this));
         workspaceColumn.pack_start(workspaceRenderer, true);
         workspaceColumn.add_attribute(workspaceRenderer, "adjustment", Columns.ADJUSTMENT);
         workspaceColumn.add_attribute(workspaceRenderer, "text", Columns.WORKSPACE);
         this._treeView.append_column(workspaceColumn);
+
+        let workspaceSwitchColumn = new Gtk.TreeViewColumn({ title: _("Switch Workspace"),
+                                                       sort_column_id: Columns.WORKSPACE_SWITCH, });
+        let workspaceSwitchRenderer = new Gtk.CellRendererToggle({ activatable: true });
+        workspaceSwitchRenderer.connect('toggled', this._settingEdited.bind(this));
+        workspaceSwitchColumn.pack_start(workspaceSwitchRenderer, true);
+        workspaceSwitchColumn.add_attribute(workspaceSwitchRenderer, "active", Columns.WORKSPACE_SWITCH);
+        this._treeView.append_column(workspaceSwitchColumn);
 
         scrolled.add(this._treeView);
 
@@ -124,6 +133,13 @@ const Widget = GObject.registerClass({
                                             snap_to_ticks: true });
         dialog._spin.set_value(1);
         grid.attach(dialog._spin, 1, 1, 1, 1);
+
+        grid.attach(new Gtk.Label({ label: _("Switch workspace when moving"),
+                                    halign: Gtk.Align.END }), 0, 2, 1, 1);
+        dialog._switch = new Gtk.Switch({ active: false,
+                                          halign: Gtk.Align.START });
+        grid.attach(dialog._switch, 1, 2, 1, 1);
+
         dialog.get_content_area().add(grid);
 
         dialog.connect('response', (dialog, id) => {
@@ -138,9 +154,10 @@ const Widget = GObject.registerClass({
             let index = Math.floor(dialog._spin.value);
             if (isNaN(index) || index < 0)
                 index = 1;
+            let workspaceSwitch = dialog._switch.active;
 
             this._changedPermitted = false;
-            this._appendItem(appInfo.get_id(), index);
+            this._appendItem(appInfo.get_id(), index, workspaceSwitch);
             this._changedPermitted = true;
 
             let iter = this._store.append();
@@ -149,8 +166,8 @@ const Widget = GObject.registerClass({
                                            step_increment: 1,
                                            value: index });
             this._store.set(iter,
-                            [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT],
-                            [appInfo, appInfo.get_icon(), appInfo.get_display_name(), index, adj]);
+                            [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT, Columns.WORKSPACE_SWITCH],
+                            [appInfo, appInfo.get_icon(), appInfo.get_display_name(), index, adj, workspaceSwitch]);
 
             dialog.destroy();
         });
@@ -170,17 +187,33 @@ const Widget = GObject.registerClass({
         }
     }
 
-    _workspaceEdited(renderer, pathString, text) {
+    _settingEdited(renderer, pathString, text) {
+        let workspaceChange = false;
         let index = parseInt(text);
-        if (isNaN(index) || index < 0)
-            index = 1;
+        let workspaceSwitch = false;
+
+        if (renderer.active === undefined)
+            workspaceChange = true;
+
         let path = Gtk.TreePath.new_from_string(pathString);
         let [model, iter] = this._store.get_iter(path);
         let appInfo = this._store.get_value(iter, Columns.APPINFO);
+        if (workspaceChange === true) {
+            if (isNaN(index) || index < 0)
+                index = 1;
+            workspaceSwitch = this._store.get_value(iter, Columns.WORKSPACE_SWITCH);
+        } else {
+            index = this._store.get_value(iter, Columns.WORKSPACE);
+            workspaceSwitch = !renderer.active
+            renderer.active = !renderer.active
+        }
 
         this._changedPermitted = false;
-        this._changeItem(appInfo.get_id(), index);
-        this._store.set_value(iter, Columns.WORKSPACE, index);
+        this._changeItem(appInfo.get_id(), index, workspaceSwitch);
+        if (workspaceChange === true)
+            this._store.set_value(iter, Columns.WORKSPACE, index);
+        else
+            this._store.set_value(iter, Columns.WORKSPACE_SWITCH, workspaceSwitch);
         this._changedPermitted = true;
     }
 
@@ -194,7 +227,7 @@ const Widget = GObject.registerClass({
         let currentItems = this._settings.get_strv(SETTINGS_KEY);
         let validItems = [ ];
         for (let i = 0; i < currentItems.length; i++) {
-            let [id, index] = currentItems[i].split(':');
+            let [id, index, workspaceSwitch] = currentItems[i].split(':');
             let appInfo = Gio.DesktopAppInfo.new(id);
             if (!appInfo)
                 continue;
@@ -206,8 +239,8 @@ const Widget = GObject.registerClass({
                                            step_increment: 1,
                                            value: index });
             this._store.set(iter,
-                            [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT],
-                            [appInfo, appInfo.get_icon(), appInfo.get_display_name(), parseInt(index), adj]);
+                            [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT, Columns.WORKSPACE_SWITCH],
+                            [appInfo, appInfo.get_icon(), appInfo.get_display_name(), parseInt(index), adj, (workspaceSwitch === 'true')]);
         }
 
         if (validItems.length != currentItems.length) // some items were filtered out
@@ -219,9 +252,9 @@ const Widget = GObject.registerClass({
         return !items.some(i => i.startsWith(id + ':'));
     }
 
-    _appendItem(id, workspace) {
+    _appendItem(id, workspace, workspaceSwitch) {
         let currentItems = this._settings.get_strv(SETTINGS_KEY);
-        currentItems.push(id + ':' + workspace);
+        currentItems.push(id + ':' + workspace + ':' + workspaceSwitch);
         this._settings.set_strv(SETTINGS_KEY, currentItems);
     }
 
@@ -235,14 +268,14 @@ const Widget = GObject.registerClass({
         this._settings.set_strv(SETTINGS_KEY, currentItems);
     }
 
-    _changeItem(id, workspace) {
+    _changeItem(id, workspace, workspaceSwitch) {
         let currentItems = this._settings.get_strv(SETTINGS_KEY);
         let index = currentItems.map(el => el.split(':')[0]).indexOf(id);
 
         if (index < 0)
-            currentItems.push(id + ':' + workspace);
+            currentItems.push(id + ':' + workspace + ':' + workspaceSwitch);
         else
-            currentItems[index] = id + ':' + workspace;
+            currentItems[index] = id + ':' + workspace + ':' + workspaceSwitch;
         this._settings.set_strv(SETTINGS_KEY, currentItems);
     }
 });
