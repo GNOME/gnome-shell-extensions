@@ -899,16 +899,9 @@ class WindowList {
             return;
 
         let children = this._windowList.get_children().map(a => a._delegate);
-        let active = 0;
-        for (let i = 0; i < children.length; i++) {
-            if (children[i].active) {
-                active = i;
-                break;
-            }
-        }
-
-        active = Math.max(0, Math.min(active + diff, children.length-1));
-        children[active].activate();
+        let active = children.findIndex(c => c.active);
+        let newActive = Math.max(0, Math.min(active + diff, children.length-1));
+        children[newActive].activate();
     }
 
     _updatePosition() {
@@ -1023,12 +1016,9 @@ class WindowList {
 
     _removeApp(app) {
         let children = this._windowList.get_children();
-        for (let i = 0; i < children.length; i++) {
-            if (children[i]._delegate.app == app) {
-                children[i].destroy();
-                return;
-            }
-        }
+        let child = children.find(c => c._delegate.app == app);
+        if (child)
+            child.destroy();
     }
 
     _onWindowAdded(ws, win) {
@@ -1042,10 +1032,8 @@ class WindowList {
             return;
 
         let children = this._windowList.get_children();
-        for (let i = 0; i < children.length; i++) {
-            if (children[i]._delegate.metaWindow == win)
-                return;
-        }
+        if (children.find(c => c._delegate.metaWindow == win))
+            return;
 
         let button = new WindowButton(win, this._perMonitor, this._monitor.index);
         this._windowList.layout_manager.pack(button.actor,
@@ -1065,12 +1053,9 @@ class WindowList {
             return; // not actually removed, just moved to another workspace
 
         let children = this._windowList.get_children();
-        for (let i = 0; i < children.length; i++) {
-            if (children[i]._delegate.metaWindow == win) {
-                children[i].destroy();
-                return;
-            }
-        }
+        let child = children.find(c => c._delegate.metaWindow == win);
+        if (child)
+            child.destroy();
     }
 
     _onWorkspacesChanged() {
