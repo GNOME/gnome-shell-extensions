@@ -898,7 +898,9 @@ class WindowList {
         else
             return;
 
-        let children = this._windowList.get_children().map(a => a._delegate);
+        let children = this._windowList.get_children()
+            .filter(c => c.visible)
+            .map(a => a._delegate);
         let active = children.findIndex(c => c.active);
         let newActive = Math.max(0, Math.min(active + diff, children.length-1));
         children[newActive].activate();
