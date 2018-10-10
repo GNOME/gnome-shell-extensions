@@ -33,7 +33,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this.statusLabel = new St.Label({ y_align: Clutter.ActorAlign.CENTER,
                                           text: this._labelText() });
 
-        this.actor.add_actor(this.statusLabel);
+        this.add_actor(this.statusLabel);
 
         this.workspacesItems = [];
         this._workspaceSection = new PopupMenu.PopupMenuSection();
@@ -47,7 +47,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-switched',
                                                                           this._updateIndicator.bind(this)));
 
-        this.actor.connect('scroll-event', this._onScrollEvent.bind(this));
+        this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._createWorkspacesSection();
 
         //styling
