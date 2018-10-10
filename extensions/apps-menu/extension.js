@@ -3,6 +3,7 @@
 const Atk = imports.gi.Atk;
 const DND = imports.ui.dnd;
 const GMenu = imports.gi.GMenu;
+const GObject = imports.gi.GObject;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 const Clutter = imports.gi.Clutter;
@@ -400,9 +401,10 @@ class DesktopTarget {
 };
 Signals.addSignalMethods(DesktopTarget.prototype);
 
+let ApplicationsButton = GObject.registerClass(
 class ApplicationsButton extends PanelMenu.Button {
-    constructor() {
-        super(1.0, null, false);
+    _init() {
+        super._init(1.0, null, false);
 
         this.setMenu(new ApplicationsMenu(this.actor, 1.0, St.Side.TOP, this));
         Main.panel.menuManager.addMenu(this.menu);
@@ -743,7 +745,7 @@ class ApplicationsButton extends PanelMenu.Button {
 
         return applist;
     }
-};
+});
 
 let appsMenuButton;
 let activitiesButton;
