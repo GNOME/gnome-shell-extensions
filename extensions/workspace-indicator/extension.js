@@ -1,6 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 
 const Gio = imports.gi.Gio;
+const GObject = imports.gi.GObject;
 const Meta = imports.gi.Meta;
 const Clutter = imports.gi.Clutter;
 const St = imports.gi.St;
@@ -21,9 +22,10 @@ const Convenience = Me.imports.convenience;
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
 
+let WorkspaceIndicator = GObject.registerClass(
 class WorkspaceIndicator extends PanelMenu.Button {
-    constructor() {
-        super(0.0, _("Workspace Indicator"));
+    _init() {
+        super._init(0.0, _("Workspace Indicator"));
 
         let workspaceManager = global.workspace_manager;
 
@@ -133,7 +135,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         let newIndex = global.workspace_manager.get_active_workspace().index() + diff;
         this._activate(newIndex);
     }
-};
+});
 
 function init(meta) {
     Convenience.initTranslations();
