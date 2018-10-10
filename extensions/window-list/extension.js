@@ -646,13 +646,13 @@ let WorkspaceIndicator = GObject.registerClass(
 class WorkspaceIndicator extends PanelMenu.Button {
     _init() {
         super._init(0.0, _("Workspace Indicator"), true);
-        this.setMenu(new PopupMenu.PopupMenu(this.actor, 0.0, St.Side.BOTTOM));
-        this.actor.add_style_class_name('window-list-workspace-indicator');
+        this.setMenu(new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM));
+        this.add_style_class_name('window-list-workspace-indicator');
         this.menu.actor.remove_style_class_name('panel-menu');
 
         let container = new St.Widget({ layout_manager: new Clutter.BinLayout(),
                                         x_expand: true, y_expand: true });
-        this.actor.add_actor(container);
+        this.add_actor(container);
 
         let workspaceManager = global.workspace_manager;
 
@@ -670,7 +670,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-switched',
                                                                           this._updateIndicator.bind(this)));
 
-        this.actor.connect('scroll-event', this._onScrollEvent.bind(this));
+        this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._updateMenu();
 
         this._settings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.preferences' });
