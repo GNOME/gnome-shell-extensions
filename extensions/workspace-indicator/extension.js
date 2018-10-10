@@ -59,7 +59,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
                                    this._createWorkspacesSection.bind(this));
     }
 
-    destroy() {
+    _onDestroy() {
         for (let i = 0; i < this._workspaceManagerSignals.length; i++)
             global.workspace_manager.disconnect(this._workspaceManagerSignals[i]);
 
@@ -68,7 +68,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             this._settingsChangedId = 0;
         }
 
-        super.destroy();
+        super._onDestroy();
     }
 
     _updateIndicator() {
