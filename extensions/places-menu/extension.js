@@ -105,10 +105,10 @@ class PlacesMenu extends PanelMenu.Button {
         }
     }
 
-    destroy() {
+    _onDestroy() {
         this.placesManager.destroy();
 
-        super.destroy();
+        super._onDestroy();
     }
 
     _redisplay(id) {
