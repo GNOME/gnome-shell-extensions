@@ -125,7 +125,7 @@ class DriveMenu extends PanelMenu.Button {
 
         hbox.add_child(icon);
         hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
-        this.actor.add_child(hbox);
+        this.add_child(hbox);
 
         this._monitor = Gio.VolumeMonitor.get();
         this._addedId = this._monitor.connect('mount-added', (monitor, mount) => {
@@ -153,9 +153,9 @@ class DriveMenu extends PanelMenu.Button {
 
     _updateMenuVisibility() {
         if (this._mounts.filter(i => i.actor.visible).length > 0)
-            this.actor.show();
+            this.show();
         else
-            this.actor.hide();
+            this.hide();
     }
 
     _addMount(mount) {
