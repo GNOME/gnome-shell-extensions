@@ -1,6 +1,7 @@
 const Clutter = imports.gi.Clutter;
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
+const GObject = imports.gi.GObject;
 const Gtk = imports.gi.Gtk;
 const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
@@ -641,9 +642,10 @@ class AppButton extends BaseButton {
 };
 
 
+let WorkspaceIndicator = GObject.registerClass(
 class WorkspaceIndicator extends PanelMenu.Button {
-    constructor() {
-        super(0.0, _("Workspace Indicator"), true);
+    _init() {
+        super._init(0.0, _("Workspace Indicator"), true);
         this.setMenu(new PopupMenu.PopupMenu(this.actor, 0.0, St.Side.BOTTOM));
         this.actor.add_style_class_name('window-list-workspace-indicator');
         this.menu.actor.remove_style_class_name('panel-menu');
@@ -759,7 +761,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         if (actor.get_n_children() > 0)
             actor.get_first_child().allocate(box, flags);
     }
-};
+});
 
 class WindowList {
     constructor(perMonitor, monitor) {
