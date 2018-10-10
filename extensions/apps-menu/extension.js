@@ -743,10 +743,6 @@ class ApplicationsButton extends PanelMenu.Button {
 
         return applist;
     }
-
-    destroy() {
-        super.destroy();
-    }
 };
 
 let appsMenuButton;
