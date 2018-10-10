@@ -1,6 +1,7 @@
 // Drive menu extension
 const Clutter = imports.gi.Clutter;
 const Gio = imports.gi.Gio;
+const GObject = imports.gi.GObject;
 const St = imports.gi.St;
 const Shell = imports.gi.Shell;
 
@@ -113,9 +114,10 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 };
 
+let DriveMenu = GObject.registerClass(
 class DriveMenu extends PanelMenu.Button {
-    constructor() {
-        super(0.0, _("Removable devices"));
+    _init() {
+        super._init(0.0, _("Removable devices"));
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
         let icon = new St.Icon({ icon_name: 'media-eject-symbolic',
@@ -184,7 +186,7 @@ class DriveMenu extends PanelMenu.Button {
 
         super.destroy();
     }
-};
+});
 
 function init() {
     Convenience.initTranslations();
