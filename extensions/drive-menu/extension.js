@@ -176,7 +176,7 @@ class DriveMenu extends PanelMenu.Button {
         log ('Removing a mount that was never added to the menu');
     }
 
-    destroy() {
+    _onDestroy() {
         if (this._addedId) {
             this._monitor.disconnect(this._addedId);
             this._monitor.disconnect(this._removedId);
@@ -184,7 +184,7 @@ class DriveMenu extends PanelMenu.Button {
             this._removedId = 0;
         }
 
-        super.destroy();
+        super._onDestroy();
     }
 });
 
