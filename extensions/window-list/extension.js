@@ -642,8 +642,8 @@ class AppButton extends BaseButton {
 
 
 class WorkspaceIndicator extends PanelMenu.Button {
-    constructor() {
-        super(0.0, _("Workspace Indicator"), true);
+    _init() {
+        super._init(0.0, _("Workspace Indicator"), true);
         this.setMenu(new PopupMenu.PopupMenu(this.actor, 0.0, St.Side.BOTTOM));
         this.actor.add_style_class_name('window-list-workspace-indicator');
         this.menu.actor.remove_style_class_name('panel-menu');
