@@ -406,13 +406,13 @@ class ApplicationsButton extends PanelMenu.Button {
     _init() {
         super._init(1.0, null, false);
 
-        this.setMenu(new ApplicationsMenu(this.actor, 1.0, St.Side.TOP, this));
+        this.setMenu(new ApplicationsMenu(this, 1.0, St.Side.TOP, this));
         Main.panel.menuManager.addMenu(this.menu);
 
         // At this moment applications menu is not keyboard navigable at
         // all (so not accessible), so it doesn't make sense to set as
         // role ATK_ROLE_MENU like other elements of the panel.
-        this.actor.accessible_role = Atk.Role.LABEL;
+        this.accessible_role = Atk.Role.LABEL;
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
 
@@ -422,18 +422,17 @@ class ApplicationsButton extends PanelMenu.Button {
         hbox.add_child(this._label);
         hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
 
-        this.actor.add_actor(hbox);
-        this.actor.name = 'panelApplications';
-        this.actor.label_actor = this._label;
+        this.add_actor(hbox);
+        this.name = 'panelApplications';
+        this.label_actor = this._label;
 
-        this.actor.connect('captured-event', this._onCapturedEvent.bind(this));
-        this.actor.connect('destroy', this._onDestroy.bind(this));
+        this.connect('captured-event', this._onCapturedEvent.bind(this));
 
         this._showingId = Main.overview.connect('showing', () => {
-            this.actor.add_accessible_state (Atk.StateType.CHECKED);
+            this.add_accessible_state (Atk.StateType.CHECKED);
         });
         this._hidingId = Main.overview.connect('hiding', () => {
-            this.actor.remove_accessible_state (Atk.StateType.CHECKED);
+            this.remove_accessible_state (Atk.StateType.CHECKED);
         });
         Main.layoutManager.connect('startup-complete',
                                    this._setKeybinding.bind(this));
