@@ -2,6 +2,7 @@ const Clutter = imports.gi.Clutter;
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
+const Lang = imports.lang;
 const Meta = imports.gi.Meta;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
@@ -641,9 +642,12 @@ class AppButton extends BaseButton {
 };
 
 
-class WorkspaceIndicator extends PanelMenu.Button {
-    constructor() {
-        super(0.0, _("Workspace Indicator"), true);
+let WorkspaceIndicator = new Lang.Class({
+    Name: 'WorkspaceIndicator',
+    Extends: PanelMenu.Button,
+
+    _init() {
+        this.parent(0.0, _("Workspace Indicator"), true);
         this.setMenu(new PopupMenu.PopupMenu(this.actor, 0.0, St.Side.BOTTOM));
         this.actor.add_style_class_name('window-list-workspace-indicator');
         this.menu.actor.remove_style_class_name('panel-menu');
@@ -675,7 +679,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._settingsChangedId =
             this._settings.connect('changed::workspace-names',
                                    this._updateMenu.bind(this));
-    }
+    },
 
     destroy() {
         for (let i = 0; i < this._workspaceManagerSignals.length; i++)
@@ -686,8 +690,8 @@ class WorkspaceIndicator extends PanelMenu.Button {
             this._settingsChangedId = 0;
         }
 
-        super.destroy();
-    }
+        this.parent.destroy();
+    },
 
     _updateIndicator() {
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
@@ -695,7 +699,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
         this.statusLabel.set_text(this._getStatusText());
-    }
+    },
 
     _getStatusText() {
         let workspaceManager = global.workspace_manager;
@@ -703,7 +707,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         let total = workspaceManager.n_workspaces;
 
         return '%d / %d'.format(current + 1, total);
-    }
+    },
 
     _updateMenu() {
         let workspaceManager = global.workspace_manager;
@@ -729,7 +733,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         }
 
         this.statusLabel.set_text(this._getStatusText());
-    }
+    },
 
     _activate(index) {
         let workspaceManager = global.workspace_manager;
@@ -738,7 +742,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             let metaWorkspace = workspaceManager.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
-    }
+    },
 
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
@@ -753,13 +757,13 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
         let newIndex = this._currentWorkspace + diff;
         this._activate(newIndex);
-    }
+    },
 
     _allocate(actor, box, flags) {
         if (actor.get_n_children() > 0)
             actor.get_first_child().allocate(box, flags);
     }
-};
+});
 
 class WindowList {
     constructor(perMonitor, monitor) {
