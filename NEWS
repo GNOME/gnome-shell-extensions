@@ -1,3 +1,11 @@
+3.31.2
+======
+* Remove obsolete alternate-tab extension [Florian; #786496]
+* Adjust to gnome-shell changes [Florian; #113]
+
+Contributors:
+  Florian Müllner
+
 3.30.1
 ======
 * apps-menu: Fix height on HiDPI systems [Florian; #102]
