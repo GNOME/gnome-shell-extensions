@@ -42,6 +42,7 @@ default_extensions += [
   'drive-menu',
   'light-style',
   'screenshot-window-sizer',
+  'status-icons',
   'system-monitor',
   'windowsNavigator',
   'workspace-indicator'
