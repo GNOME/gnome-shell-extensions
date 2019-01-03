@@ -10,8 +10,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2015-03-24 13:21+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2018-11-13 00:26+0000\n"
 "PO-Revision-Date: 2015-03-24 23:41+0900\n"
 "Last-Translator: Hajime Taira <htaira@redhat.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -21,289 +22,321 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME クラシック"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "GNOME クラシックモードでログインします"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
-msgid "Attach modal dialog to the parent window"
-msgstr "モーダルダイアログを親ウィンドウに結び付ける"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "GNOME Shell 使用時は、このキーが、org.gnome.mutter の同じキーよりも優先します。"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
-msgid "Arrangement of buttons on the titlebar"
-msgstr "タイトルバー上のボタンの配置"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-msgid "This key overrides the key in org.gnome.desktop.wm.preferences when running GNOME Shell."
-msgstr "GNOME Shell 使用時は、このキーが、org.gnome.desktop.wm.preferences の同じキーよりも優先します。"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "ウィンドウを画面の端に移動させたときにタイル状に配置する"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
-msgid "Workspaces only on primary monitor"
-msgstr "プライマリモニターのみワークスペースを切り替える"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr "ポインターの動作が止まるまでマウスモードでのフォーカスの変更を遅らせる"
-
-#: ../extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "サムネイルのみ"
-
-#: ../extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "アプリケーションアイコンのみ"
-
-#: ../extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "サムネイルとアプリケーションアイコン"
-
-#: ../extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "ウィンドウの表示方法"
-
-#: ../extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "現在のワークスペースのウィンドウのみ表示する"
-
-#: ../extensions/apps-menu/extension.js:39
+#: extensions/apps-menu/extension.js:38
 msgid "Activities Overview"
 msgstr "アクティビティ"
 
-#: ../extensions/apps-menu/extension.js:110
+#: extensions/apps-menu/extension.js:131
 msgid "Favorites"
 msgstr "お気に入り"
 
-#: ../extensions/apps-menu/extension.js:279
+#: extensions/apps-menu/extension.js:419
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
 msgstr "アプリケーションとワークスペースのリスト"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
-msgstr "アプリケーションの識別子 (.desktop ファイル名) とコロンの後にワークスペース番号を付与した文字列を要素とするリストです"
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"アプリケーションの識別子 (.desktop ファイル名) とコロンの後にワークスペース番"
+"号を付与した文字列を要素とするリストです"
 
-#: ../extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:53
 msgid "Application"
 msgstr "アプリケーション"
 
-#: ../extensions/auto-move-windows/prefs.js:69
-#: ../extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:62
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Workspace"
 msgstr "ワークスペース"
 
-#: ../extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:78
 msgid "Add Rule"
 msgstr "ルールを追加"
 
-#: ../extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:98
 msgid "Create new matching rule"
 msgstr "新規ルールの作成"
 
-#: ../extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:103
 msgid "Add"
 msgstr "追加"
 
-#: ../extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:104
+#: extensions/places-menu/placeDisplay.js:225
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
-msgstr "ドライブ '%s' の取り出しに失敗しました:"
+msgid "Ejecting drive “%s” failed:"
+msgstr "ドライブ“%s”の取り出しに失敗しました:"
 
-#: ../extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:120
 msgid "Removable devices"
 msgstr "リムーバブルデバイス"
 
-#: ../extensions/drive-menu/extension.js:149
-msgid "Open File"
+#: extensions/drive-menu/extension.js:145
+msgid "Open Files"
 msgstr "ファイルを開く"
 
-#: ../extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Hello, world!"
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
-msgid "Alternative greeting text."
-msgstr "代わりの挨拶テキストです。"
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid "If not empty, it contains the text that will be shown when clicking on the panel."
-msgstr "空でない場合、指定したテキストが、パネルをクリックした時に表示されます。"
-
-#: ../extensions/example/prefs.js:30
-msgid "Message"
-msgstr "メッセージ"
-
-#: ../extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
-msgstr ""
-"Example は、うまく動作する GNOME Shell 拡張機能の構築方法を示すことを目的としています。それ自体の機能はほんとどありません。\n"
-"それでも、挨拶メッセージをカスタマイズすることはできます。"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
 msgstr "ウィンドウにたくさんの画面を使うかどうか"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
-msgstr "ウィンドウのサムネイルを複数配置する際に、画面のアスペクト比に合わせて、境界部分を減らすことにより、ウィンドウを統合することで、さらにたくさんの画面を使用できるようにするかどうかです。この設定は 'natural' の配置アルゴリズムを採用している場合にのみ適用されます。"
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"ウィンドウのサムネイルを複数配置する際に、画面のアスペクト比に合わせて、境界"
+"部分を減らすことにより、ウィンドウを統合することで、さらにたくさんの画面を使"
+"用できるようにするかどうかです。この設定は 'natural' の配置アルゴリズムを採用"
+"している場合にのみ適用されます。"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
 msgstr "ウィンドウのタイトルバーを上端に表示するかどうか"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
-msgstr "TRUE にすると、ウィンドウのサムネイルの上端にそのウィンドウのタイトルバーを表示します (これは、サムネイルの下端にタイトルバーを表示する GNOME シェルのデフォルト値よりも優先されます)。この設定を適用する際は GNOME シェルを再起動してください。"
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+"TRUE にすると、ウィンドウのサムネイルの上端にそのウィンドウのタイトルバーを表"
+"示します (これは、サムネイルの下端にタイトルバーを表示する GNOME シェルのデ"
+"フォルト値よりも優先されます)。この設定を適用する際は GNOME シェルを再起動し"
+"てください。"
 
-#: ../extensions/places-menu/extension.js:78
-#: ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "場所"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
-msgid "Failed to launch \"%s\""
-msgstr "\"%s\" の起動に失敗"
+msgid "Failed to mount volume for “%s”"
+msgstr ""
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: extensions/places-menu/placeDisplay.js:80
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr "“%s”の起動に失敗"
+
+#: extensions/places-menu/placeDisplay.js:141
+#: extensions/places-menu/placeDisplay.js:164
 msgid "Computer"
 msgstr "コンピューター"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: extensions/places-menu/placeDisplay.js:342
 msgid "Home"
 msgstr "ホーム"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: extensions/places-menu/placeDisplay.js:386
 msgid "Browse Network"
 msgstr "ネットワークを表示"
 
-#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "スクリーンショットのサイズを変更する"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+msgid "Cycle Screenshot Sizes Backward"
+msgstr ""
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
 msgstr "テーマの名前"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "テーマの名前です (~/.themes/name/gnome-shell 配下に格納します)"
 
-#: ../extensions/window-list/extension.js:109
+#: extensions/window-list/extension.js:107
 msgid "Close"
 msgstr "閉じる"
 
-#: ../extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:126
 msgid "Unminimize"
 msgstr "最小化解除"
 
-#: ../extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:127
 msgid "Minimize"
 msgstr "最小化"
 
-#: ../extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:133
 msgid "Unmaximize"
 msgstr "最大化解除"
 
-#: ../extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:134
 msgid "Maximize"
 msgstr "最大化"
 
-#: ../extensions/window-list/extension.js:399
+#: extensions/window-list/extension.js:409
 msgid "Minimize all"
 msgstr "全て最小化"
 
-#: ../extensions/window-list/extension.js:407
+#: extensions/window-list/extension.js:415
 msgid "Unminimize all"
 msgstr "全て最小化解除"
 
-#: ../extensions/window-list/extension.js:415
+#: extensions/window-list/extension.js:421
 msgid "Maximize all"
 msgstr "全て最大化"
 
-#: ../extensions/window-list/extension.js:424
+#: extensions/window-list/extension.js:430
 msgid "Unmaximize all"
 msgstr "全て最大化解除"
 
-#: ../extensions/window-list/extension.js:433
+#: extensions/window-list/extension.js:439
 msgid "Close all"
 msgstr "全て閉じる"
 
-#: ../extensions/window-list/extension.js:650
-#: ../extensions/workspace-indicator/extension.js:30
+#: extensions/window-list/extension.js:648
+#: extensions/workspace-indicator/extension.js:28
 msgid "Workspace Indicator"
 msgstr "ワークスペースインジケーター"
 
-#: ../extensions/window-list/extension.js:809
+#: extensions/window-list/extension.js:818
 msgid "Window List"
 msgstr "ウィンドウのリスト"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
 msgstr "ウインドウをグループ化する条件"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
-msgid "Decides when to group windows from the same application on the window list. Possible values are \"never\", \"auto\" and \"always\"."
-msgstr "ウィンドウ一覧にある同じアプリケーションをグループ化する条件を指定します。指定可能な値は、\"never\", \"auto\", \"always\" です。"
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are “never”, “auto” and “always”."
+msgstr ""
+"ウィンドウ一覧にある同じアプリケーションをグループ化する条件を指定します。指"
+"定可能な値は、“never”, “auto”, “always”です。"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
 msgstr "すべてのモニターにウィンドウリストを表示する"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
-msgid "Whether to show the window list on all connected monitors or only on the primary one."
-msgstr "ウィンドウリストをすべての接続モニターに表示するかプライマリーモニターにのみ表示するかの設定です。"
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"ウィンドウリストをすべての接続モニターに表示するかプライマリーモニターにのみ"
+"表示するかの設定です。"
 
-#: ../extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:28
 msgid "Window Grouping"
 msgstr "ウィンドウのグループ化"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "ウィンドウをグループ化しない"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "ウィンドウ一覧の幅が制限される時にグループ化する"
 
-#: ../extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "ウィンドウをグループ化する"
 
-#: ../extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:71
 msgid "Show on all monitors"
 msgstr "すべてのモニターに表示する"
 
-#: ../extensions/workspace-indicator/prefs.js:141
+#: extensions/workspace-indicator/prefs.js:134
 msgid "Workspace Names"
 msgstr "ワークスペース名"
 
-#: ../extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:150
 msgid "Name"
 msgstr "名前"
 
-#: ../extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:190
 #, javascript-format
 msgid "Workspace %d"
 msgstr "ワークスペース %d"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "モーダルダイアログを親ウィンドウに結び付ける"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "GNOME Shell 使用時は、このキーが、org.gnome.mutter の同じキーよりも優先し"
+#~ "ます。"
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "タイトルバー上のボタンの配置"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
+#~ "running GNOME Shell."
+#~ msgstr ""
+#~ "GNOME Shell 使用時は、このキーが、org.gnome.desktop.wm.preferences の同じ"
+#~ "キーよりも優先します。"
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr "ウィンドウを画面の端に移動させたときにタイル状に配置する"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "プライマリモニターのみワークスペースを切り替える"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr ""
+#~ "ポインターの動作が止まるまでマウスモードでのフォーカスの変更を遅らせる"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "サムネイルのみ"
+
+#~ msgid "Application icon only"
+#~ msgstr "アプリケーションアイコンのみ"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "サムネイルとアプリケーションアイコン"
+
+#~ msgid "Present windows as"
+#~ msgstr "ウィンドウの表示方法"
+
+#~ msgid "Show only windows in the current workspace"
+#~ msgstr "現在のワークスペースのウィンドウのみ表示する"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Hello, world!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "代わりの挨拶テキストです。"
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on "
+#~ "the panel."
+#~ msgstr ""
+#~ "空でない場合、指定したテキストが、パネルをクリックした時に表示されます。"
+
+#~ msgid "Message"
+#~ msgstr "メッセージ"
+
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell "
+#~ "and as such it has little functionality on its own.\n"
+#~ "Nevertheless it's possible to customize the greeting message."
+#~ msgstr ""
+#~ "Example は、うまく動作する GNOME Shell 拡張機能の構築方法を示すことを目的"
+#~ "としています。それ自体の機能はほんとどありません。\n"
+#~ "それでも、挨拶メッセージをカスタマイズすることはできます。"
 
 #~ msgid "GNOME Shell Classic"
 #~ msgstr "GNOME Shell クラシック"
@@ -390,11 +423,18 @@ msgstr "ワークスペース %d"
 #~ msgstr "ドックに表示するアイコンの大きさを指定します。"
 
 #, fuzzy
-#~ msgid "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
-#~ msgstr "ドックをデスクトップに表示する位置を指定します。指定可能な値: 'right'、'left'"
+#~ msgid ""
+#~ "Sets the effect of the hide dock. Allowed values are 'resize' or 'rescale'"
+#~ msgstr ""
+#~ "ドックをデスクトップに表示する位置を指定します。指定可能な値: "
+#~ "'right'、'left'"
 
-#~ msgid "Sets the position of the dock in the screen. Allowed values are 'right' or 'left'"
-#~ msgstr "ドックをデスクトップに表示する位置を指定します。指定可能な値: 'right'、'left'"
+#~ msgid ""
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
+#~ "or 'left'"
+#~ msgstr ""
+#~ "ドックをデスクトップに表示する位置を指定します。指定可能な値: "
+#~ "'right'、'left'"
 
 #~ msgid "%s is away."
 #~ msgstr "%s さんは離席中です。"
@@ -408,8 +448,15 @@ msgstr "ワークスペース %d"
 #~ msgid "%s is busy."
 #~ msgstr "%s さんは取り込み中です。"
 
-#~ msgid "The algorithm used to layout thumbnails in the overview. 'grid' to use the default grid based algorithm, 'natural' to use another one that reflects more the position and size of the actual window"
-#~ msgstr "オーバービュー・モードでウィンドウのサムネイルを配置する際のアルゴリズムです。指定可能な値: 'grid' (原則的に格子状に配置していくアルゴリズム)、'natural' (ウィンドウの実際の位置や大きさを考慮して配置していくアルゴリズム)"
+#~ msgid ""
+#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
+#~ "the default grid based algorithm, 'natural' to use another one that "
+#~ "reflects more the position and size of the actual window"
+#~ msgstr ""
+#~ "オーバービュー・モードでウィンドウのサムネイルを配置する際のアルゴリズムで"
+#~ "す。指定可能な値: 'grid' (原則的に格子状に配置していくアルゴリズ"
+#~ "ム)、'natural' (ウィンドウの実際の位置や大きさを考慮して配置していくアルゴ"
+#~ "リズム)"
 
 #~ msgid "Window placement strategy"
 #~ msgstr "ウィンドウを配置するアルゴリズム"
