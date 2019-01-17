@@ -3,21 +3,23 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Claude Paroz <claude@2xlibre.net>, 2011.
 # Alain Lojewski <allomervan@gmail.com>, 2012-2013.
+# Charles Monzat <charles.monzat@numericable.fr>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-08-11 01:33+0000\n"
-"PO-Revision-Date: 2017-08-19 18:40+0200\n"
-"Last-Translator: Alain Lojewski <allomervan@gmail.com>\n"
-"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2018-11-13 00:23+0000\n"
+"PO-Revision-Date: 2018-11-14 17:56+0100\n"
+"Last-Translator: Charles Monzat <charles.monzat@numericable.fr>\n"
+"Language-Team: français <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 3.30.0\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -25,79 +27,37 @@ msgstr "GNOME Classique"
 
 #: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
-msgstr "Cette session vous connnecte à GNOME Classique"
+msgstr "Cette session vous connecte à GNOME Classique"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "Attacher les boîtes de dialogue modales à leur fenêtre parente"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Cette clé remplace la clé dans org.gnome.mutter lorsque GNOME Shell est en "
-"cours d’exécution."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Ordre des boutons dans la barre de titre"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Cette clé remplace la clé dans org.gnome.desktop.wm.preferences lorsque "
-"GNOME Shell est en cours d’exécution."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"Activer la disposition verticale lorsque les fenêtres sont déposées aux "
-"bords de l’écran"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "Espaces de travail uniquement sur l’écran principal"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"Retarder les changements de focus en mode souris jusqu’à ce que le pointeur "
-"arrête de bouger"
-
-#: extensions/alternate-tab/prefs.js:20
+#: extensions/alternate-tab/prefs.js:19
 msgid "Thumbnail only"
 msgstr "Vignette seulement"
 
-#: extensions/alternate-tab/prefs.js:21
+#: extensions/alternate-tab/prefs.js:20
 msgid "Application icon only"
 msgstr "Icône d’application seulement"
 
-#: extensions/alternate-tab/prefs.js:22
+#: extensions/alternate-tab/prefs.js:21
 msgid "Thumbnail and application icon"
 msgstr "Vignette et icône d’application"
 
-#: extensions/alternate-tab/prefs.js:38
+#: extensions/alternate-tab/prefs.js:34
 msgid "Present windows as"
 msgstr "Présenter la fenêtre comme"
 
-#: extensions/alternate-tab/prefs.js:69
+#: extensions/alternate-tab/prefs.js:65
 msgid "Show only windows in the current workspace"
 msgstr "N’afficher les fenêtres que sur l’espace de travail actuel"
 
-#: extensions/apps-menu/extension.js:41
+#: extensions/apps-menu/extension.js:37
 msgid "Activities Overview"
 msgstr "Vue d’ensemble des activités"
 
-#: extensions/apps-menu/extension.js:141
+#: extensions/apps-menu/extension.js:130
 msgid "Favorites"
 msgstr "Favoris"
 
-#: extensions/apps-menu/extension.js:436
+#: extensions/apps-menu/extension.js:417
 msgid "Applications"
 msgstr "Applications"
 
@@ -110,42 +70,43 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"Une liste de chaînes de caratères, contenant chacune un identifiant "
+"Une liste de chaînes de caractères, contenant chacune un identifiant "
 "d’application (nom de fichier desktop), suivi par un deux-points et le "
 "numéro de l’espace de travail"
 
-#: extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:53
 msgid "Application"
 msgstr "Application"
 
-#: extensions/auto-move-windows/prefs.js:69
-#: extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:62
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Workspace"
 msgstr "Espace de travail"
 
-#: extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:78
 msgid "Add Rule"
 msgstr "Ajouter une règle"
 
-#: extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:98
 msgid "Create new matching rule"
 msgstr "Créer une nouvelle règle de concordance"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:103
 msgid "Add"
 msgstr "Ajouter"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:107
+#: extensions/drive-menu/extension.js:103
+#: extensions/places-menu/placeDisplay.js:225
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "L’éjection du disque « %s » a échoué :"
 
-#: extensions/drive-menu/extension.js:125
+#: extensions/drive-menu/extension.js:118
 msgid "Removable devices"
 msgstr "Périphériques amovibles"
 
-#: extensions/drive-menu/extension.js:150
+#: extensions/drive-menu/extension.js:143
 msgid "Open Files"
 msgstr "Ouvrir Fichiers"
 
@@ -165,13 +126,13 @@ msgstr ""
 "S’il n’est pas vide, il contient le texte qui s’affiche lorsque vous cliquez "
 "sur le tableau de bord."
 
-#: extensions/example/prefs.js:30
+#: extensions/example/prefs.js:27
 msgid "Message"
 msgstr "Message"
 
 #. TRANSLATORS: Example is the name of the extension, should not be
 #. translated
-#: extensions/example/prefs.js:43
+#: extensions/example/prefs.js:40
 msgid ""
 "Example aims to show how to build well behaved extensions for the Shell and "
 "as such it has little functionality on its own.\n"
@@ -211,31 +172,31 @@ msgstr ""
 "dessous. Pour que ce paramètre soit pris en compte, il faut redémarrer le "
 "Shell."
 
-#: extensions/places-menu/extension.js:78
-#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:79
+#: extensions/places-menu/extension.js:82
 msgid "Places"
 msgstr "Emplacements"
 
-#: extensions/places-menu/placeDisplay.js:65
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Impossible de monter le volume « %s »"
 
-#: extensions/places-menu/placeDisplay.js:78
+#: extensions/places-menu/placeDisplay.js:80
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Impossible de lancer « %s »"
 
-#: extensions/places-menu/placeDisplay.js:137
-#: extensions/places-menu/placeDisplay.js:160
+#: extensions/places-menu/placeDisplay.js:141
+#: extensions/places-menu/placeDisplay.js:164
 msgid "Computer"
 msgstr "Ordinateur"
 
-#: extensions/places-menu/placeDisplay.js:303
+#: extensions/places-menu/placeDisplay.js:342
 msgid "Home"
 msgstr "Dossier personnel"
 
-#: extensions/places-menu/placeDisplay.js:347
+#: extensions/places-menu/placeDisplay.js:386
 msgid "Browse Network"
 msgstr "Parcourir le réseau"
 
@@ -245,7 +206,7 @@ msgstr "Passer à la taille de capture suivante"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
 msgid "Cycle Screenshot Sizes Backward"
-msgstr "Passer à la taille de capture précédante"
+msgstr "Passer à la taille de capture précédente"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -255,52 +216,52 @@ msgstr "Nom du thème"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Le nom du thème, à charger à partir de ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:106
 msgid "Close"
 msgstr "Fermer"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Restaurer"
 
-#: extensions/window-list/extension.js:130
+#: extensions/window-list/extension.js:126
 msgid "Minimize"
 msgstr "Réduire"
 
-#: extensions/window-list/extension.js:136
+#: extensions/window-list/extension.js:132
 msgid "Unmaximize"
 msgstr "Restaurer"
 
-#: extensions/window-list/extension.js:137
+#: extensions/window-list/extension.js:133
 msgid "Maximize"
 msgstr "Maximiser"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:408
 msgid "Minimize all"
-msgstr "Réduire tout"
+msgstr "Tout réduire"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:414
 msgid "Unminimize all"
-msgstr "Restaurer tout"
+msgstr "Tout restaurer"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:420
 msgid "Maximize all"
-msgstr "Maximiser tout"
+msgstr "Tout maximiser"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:429
 msgid "Unmaximize all"
-msgstr "Restaurer tout"
+msgstr "Tout restaurer"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:438
 msgid "Close all"
-msgstr "Fermer tout"
+msgstr "Tout fermer"
 
-#: extensions/window-list/extension.js:678
-#: extensions/workspace-indicator/extension.js:30
+#: extensions/window-list/extension.js:646
+#: extensions/workspace-indicator/extension.js:26
 msgid "Workspace Indicator"
 msgstr "Indicateur d’espace de travail"
 
-#: extensions/window-list/extension.js:842
+#: extensions/window-list/extension.js:816
 msgid "Window List"
 msgstr "Liste de fenêtres"
 
@@ -329,38 +290,70 @@ msgstr ""
 "Indique s’il faut afficher la liste des fenêtres sur tous les écrans "
 "connectés ou seulement l’écran principal."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:28
 msgid "Window Grouping"
 msgstr "Regroupement de fenêtres"
 
-#: extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "Ne jamais regrouper les fenêtres"
 
-#: extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "Regrouper les fenêtres quand l’espace est limité"
 
-#: extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "Toujours regrouper les fenêtres"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:71
 msgid "Show on all monitors"
 msgstr "Afficher sur tous les écrans"
 
-#: extensions/workspace-indicator/prefs.js:141
+#: extensions/workspace-indicator/prefs.js:134
 msgid "Workspace Names"
 msgstr "Noms des espaces de travail"
 
-#: extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:150
 msgid "Name"
 msgstr "Nom"
 
-#: extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:190
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Espace de travail %d"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Attacher les boîtes de dialogue modales à leur fenêtre parente"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "Cette clé remplace la clé dans org.gnome.mutter lorsque GNOME Shell est "
+#~ "en cours d’exécution."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Ordre des boutons dans la barre de titre"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
+#~ "running GNOME Shell."
+#~ msgstr ""
+#~ "Cette clé remplace la clé dans org.gnome.desktop.wm.preferences lorsque "
+#~ "GNOME Shell est en cours d’exécution."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr ""
+#~ "Activer la disposition verticale lorsque les fenêtres sont déposées aux "
+#~ "bords de l’écran"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Espaces de travail uniquement sur l’écran principal"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr ""
+#~ "Retarder les changements de focus en mode souris jusqu’à ce que le "
+#~ "pointeur arrête de bouger"
 
 #~ msgid "CPU"
 #~ msgstr "CPU"
