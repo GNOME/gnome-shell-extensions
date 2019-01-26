@@ -54,7 +54,7 @@ class WindowMover {
                                               this._appWindowsChanged.bind(this)),
                 moveWindowsId: 0,
                 windows: app.get_windows()
-            }
+            };
             this._appData.set(app, data);
         });
     }
@@ -106,7 +106,7 @@ class WindowMover {
         });
         data.windows = windows;
     }
-};
+}
 
 let prevCheckWorkspaces;
 let winMover;

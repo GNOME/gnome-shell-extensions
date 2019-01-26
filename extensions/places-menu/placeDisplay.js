@@ -75,7 +75,7 @@ class PlaceInfo {
                     Main.notifyError(_("Failed to launch “%s”").format(this.name), e.message);
                 }
             }
-        }
+        };
     }
 
     launch(timestamp) {
@@ -128,7 +128,7 @@ class PlaceInfo {
             throw e;
         }
     }
-};
+}
 Signals.addSignalMethods(PlaceInfo.prototype);
 
 class RootInfo extends PlaceInfo {
@@ -168,7 +168,7 @@ class RootInfo extends PlaceInfo {
         }
         super.destroy();
     }
-};
+}
 
 
 class PlaceDeviceInfo extends PlaceInfo {
@@ -220,7 +220,7 @@ class PlaceDeviceInfo extends PlaceInfo {
         let msg = _("Ejecting drive “%s” failed:").format(this._mount.get_name());
         Main.notifyError(msg, exception.message);
     }
-};
+}
 
 class PlaceVolumeInfo extends PlaceInfo {
     _init(kind, volume) {
@@ -246,7 +246,7 @@ class PlaceVolumeInfo extends PlaceInfo {
     getIcon() {
         return this._volume.get_symbolic_icon();
     }
-};
+}
 
 const DEFAULT_DIRECTORIES = [
     GLib.UserDirectory.DIRECTORY_DOCUMENTS,
@@ -278,7 +278,7 @@ var PlacesManager = class {
         this._connectVolumeMonitorSignals();
         this._updateMounts();
 
-        this._bookmarksFile = this._findBookmarksFile()
+        this._bookmarksFile = this._findBookmarksFile();
         this._bookmarkTimeoutId = 0;
         this._monitor = null;
 

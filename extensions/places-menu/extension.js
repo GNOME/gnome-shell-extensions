@@ -62,14 +62,14 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._icon.gicon = info.icon;
         this._label.text = info.name;
     }
-};
+}
 
 const SECTIONS = [
     'special',
     'devices',
     'bookmarks',
     'network'
-]
+];
 
 let PlacesMenu = GObject.registerClass(
 class PlacesMenu extends PanelMenu.Button {
