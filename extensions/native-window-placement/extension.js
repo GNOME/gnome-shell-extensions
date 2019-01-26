@@ -66,7 +66,7 @@ class Rect {
         this.x += dx;
         this.y += dy;
     }
-};
+}
 
 class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
     constructor(settings) {
@@ -231,7 +231,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
 
         return slots;
     }
-};
+}
 
 let winInjections, workspaceInjections;
 
@@ -252,7 +252,7 @@ function enable() {
         strategy.computeLayout(windows, layout);
 
         return layout;
-    }
+    };
 
     /// position window titles on top of windows in overlay ////
     winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;

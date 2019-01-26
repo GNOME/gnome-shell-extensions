@@ -139,7 +139,7 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
         this._metaWindow.disconnect(this._notifyMaximizedHId);
         this._metaWindow.disconnect(this._notifyMaximizedVId);
     }
-};
+}
 
 class WindowTitle {
     constructor(metaWindow) {
@@ -206,7 +206,7 @@ class WindowTitle {
         this._metaWindow.disconnect(this._notifyWmClass);
         this._metaWindow.disconnect(this._notifyAppId);
     }
-};
+}
 
 
 class BaseButton {
@@ -323,7 +323,7 @@ class BaseButton {
             global.display.disconnect(this._windowLeftMonitorId);
         this._windowLeftMonitorId = 0;
     }
-};
+}
 
 
 class WindowButton extends BaseButton {
@@ -397,7 +397,7 @@ class WindowButton extends BaseButton {
         global.display.disconnect(this._notifyFocusId);
         this._contextMenu.destroy();
     }
-};
+}
 
 
 class AppContextMenu extends PopupMenu.PopupMenu {
@@ -458,7 +458,7 @@ class AppContextMenu extends PopupMenu.PopupMenu {
 
         super.open(animate);
     }
-};
+}
 
 class AppButton extends BaseButton {
     constructor(app, perMonitor, monitorIndex) {
@@ -639,7 +639,7 @@ class AppButton extends BaseButton {
         this.app.disconnect(this._windowsChangedId);
         this._menu.destroy();
     }
-};
+}
 
 
 let WorkspaceIndicator = GObject.registerClass(
@@ -1188,7 +1188,7 @@ class WindowList {
         for (let i = 0; i < windows.length; i++)
             windows[i].metaWindow.set_icon_geometry(null);
     }
-};
+}
 
 class Extension {
     constructor() {
@@ -1243,7 +1243,7 @@ class Extension {
     someWindowListContains(actor) {
         return this._windowLists.some(list => list.actor.contains(actor));
     }
-};
+}
 
 function init() {
     return new Extension();

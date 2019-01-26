@@ -14,7 +14,7 @@ function injectToFunction(parent, name, func) {
         if (ret === undefined)
             ret = func.apply(this, arguments);
         return ret;
-    }
+    };
     return origin;
 }
 
@@ -35,13 +35,13 @@ function enable() {
         this._text.raise_top();
         this._text.show();
         this._text.text = (this._windowClone.slotId + 1).toString();
-    }
+    };
     winInjections['showTooltip'] = undefined;
 
     Workspace.WindowOverlay.prototype.hideTooltip = function() {
         if (this._text && this._text.visible)
             this._text.hide();
-    }
+    };
     winInjections['hideTooltip'] = undefined;
 
     Workspace.Workspace.prototype.showTooltip = function() {
@@ -64,7 +64,7 @@ function enable() {
         this._tip.y = area.y;
         this._tip.show();
         this._tip.raise_top();
-    }
+    };
     workspaceInjections['showTooltip'] = undefined;
 
     Workspace.Workspace.prototype.hideTooltip = function() {
@@ -73,7 +73,7 @@ function enable() {
         if (!this._tip.get_parent())
             return;
         this._tip.hide();
-    }
+    };
     workspaceInjections['hideTooltip'] = undefined;
 
     Workspace.Workspace.prototype.getWindowWithTooltip = function(id) {
@@ -82,7 +82,7 @@ function enable() {
                 return this._windows[i].metaWindow;
         }
         return null;
-    }
+    };
     workspaceInjections['getWindowWithTooltip'] = undefined;
 
     Workspace.Workspace.prototype.showWindowsTooltips = function() {
@@ -90,7 +90,7 @@ function enable() {
             if (this._windowOverlays[i] != null)
                 this._windowOverlays[i].showTooltip();
         }
-    }
+    };
     workspaceInjections['showWindowsTooltips'] = undefined;
 
     Workspace.Workspace.prototype.hideWindowsTooltips = function() {
@@ -98,7 +98,7 @@ function enable() {
             if (this._windowOverlays[i] != null)
                 this._windowOverlays[i].hideTooltip();
         }
-    }
+    };
     workspaceInjections['hideWindowsTooltips'] = undefined;
 
     WorkspacesView.WorkspacesView.prototype._hideTooltips = function() {
@@ -107,7 +107,7 @@ function enable() {
         this._pickWindow = false;
         for (let i = 0; i < this._workspaces.length; i++)
             this._workspaces[i].hideWindowsTooltips();
-    }
+    };
     workViewInjections['_hideTooltips'] = undefined;
 
     WorkspacesView.WorkspacesView.prototype._hideWorkspacesTooltips = function() {
@@ -115,7 +115,7 @@ function enable() {
         this._pickWorkspace = false;
         for (let i = 0; i < this._workspaces.length; i++)
             this._workspaces[i].hideTooltip();
-    }
+    };
     workViewInjections['_hideWorkspacesTooltips'] = undefined;
 
     WorkspacesView.WorkspacesView.prototype._onKeyRelease = function(s, o) {
@@ -127,7 +127,7 @@ function enable() {
             (o.get_key_symbol() == Clutter.KEY_Control_L ||
              o.get_key_symbol() == Clutter.KEY_Control_R))
             this._hideWorkspacesTooltips();
-    }
+    };
     workViewInjections['_onKeyRelease'] = undefined;
 
     WorkspacesView.WorkspacesView.prototype._onKeyPress = function(s, o) {
@@ -208,7 +208,7 @@ function enable() {
             return true;
         }
         return false;
-    }
+    };
     workViewInjections['_onKeyPress'] = undefined;
 
     winInjections['_init'] = injectToFunction(Workspace.WindowOverlay.prototype, '_init', function(windowClone, parentActor) {

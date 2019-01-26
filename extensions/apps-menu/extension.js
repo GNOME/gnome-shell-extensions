@@ -42,7 +42,7 @@ class ActivitiesMenuItem extends PopupMenu.PopupBaseMenuItem {
         Main.overview.toggle();
         super.activate(event);
     }
-};
+}
 
 class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
     constructor(button, app) {
@@ -112,7 +112,7 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
     _updateIcon() {
         this._iconBin.set_child(this.getDragActor());
     }
-};
+}
 
 class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
     constructor(button, category) {
@@ -226,7 +226,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         }
         super.setActive(active, params);
     }
-};
+}
 
 class ApplicationsMenu extends PopupMenu.PopupMenu {
     constructor(sourceActor, arrowAlignment, arrowSide, button) {
@@ -262,7 +262,7 @@ class ApplicationsMenu extends PopupMenu.PopupMenu {
         }
         super.toggle();
     }
-};
+}
 
 class DesktopTarget {
     constructor() {
@@ -397,7 +397,7 @@ class DesktopTarget {
 
         return true;
     }
-};
+}
 Signals.addSignalMethods(DesktopTarget.prototype);
 
 let ApplicationsButton = GObject.registerClass(

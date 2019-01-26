@@ -65,7 +65,7 @@ class ThemeManager {
         Main.setThemeStylesheet(_stylesheet);
         Main.loadTheme();
     }
-};
+}
 
 function init() {
     return new ThemeManager();
