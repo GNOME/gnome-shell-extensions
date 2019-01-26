@@ -386,13 +386,13 @@ var PlacesManager = class {
         for (let i = 0; i < drives.length; i++) {
             let volumes = drives[i].get_volumes();
 
-            for(let j = 0; j < volumes.length; j++) {
+            for (let j = 0; j < volumes.length; j++) {
                 let identifier = volumes[j].get_identifier('class');
                 if (identifier && identifier.includes('network')) {
                     networkVolumes.push(volumes[j]);
                 } else {
                     let mount = volumes[j].get_mount();
-                    if(mount != null)
+                    if (mount != null)
                         this._addMount('devices', mount);
                 }
             }
@@ -400,8 +400,8 @@ var PlacesManager = class {
 
         /* add all volumes that is not associated with a drive */
         let volumes = this._volumeMonitor.get_volumes();
-        for(let i = 0; i < volumes.length; i++) {
-            if(volumes[i].get_drive() != null)
+        for (let i = 0; i < volumes.length; i++) {
+            if (volumes[i].get_drive() != null)
                 continue;
 
             let identifier = volumes[i].get_identifier('class');
@@ -409,18 +409,18 @@ var PlacesManager = class {
                 networkVolumes.push(volumes[i]);
             } else {
                 let mount = volumes[i].get_mount();
-                if(mount != null)
+                if (mount != null)
                     this._addMount('devices', mount);
             }
         }
 
         /* add mounts that have no volume (/etc/mtab mounts, ftp, sftp,...) */
         let mounts = this._volumeMonitor.get_mounts();
-        for(let i = 0; i < mounts.length; i++) {
-            if(mounts[i].is_shadowed())
+        for (let i = 0; i < mounts.length; i++) {
+            if (mounts[i].is_shadowed())
                 continue;
 
-            if(mounts[i].get_volume())
+            if (mounts[i].get_volume())
                 continue;
 
             let root = mounts[i].get_default_location();

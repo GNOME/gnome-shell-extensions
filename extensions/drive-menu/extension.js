@@ -135,7 +135,7 @@ class DriveMenu extends PanelMenu.Button {
             this._updateMenuVisibility();
         });
 
-        this._mounts = [ ];
+        this._mounts = [];
 
         this._monitor.get_mounts().forEach(this._addMount.bind(this));
 

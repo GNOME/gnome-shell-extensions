@@ -714,7 +714,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this.workspacesItems = [];
         this._currentWorkspace = workspaceManager.get_active_workspace().index();
 
-        for(let i = 0; i < workspaceManager.n_workspaces; i++) {
+        for (let i = 0; i < workspaceManager.n_workspaces; i++) {
             let name = Meta.prefs_get_workspace_name(i);
             let item = new PopupMenu.PopupMenuItem(name);
             item.workspaceId = i;
@@ -736,7 +736,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _activate(index) {
         let workspaceManager = global.workspace_manager;
 
-        if(index >= 0 && index < workspaceManager.n_workspaces) {
+        if (index >= 0 && index < workspaceManager.n_workspaces) {
             let metaWorkspace = workspaceManager.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
@@ -772,7 +772,7 @@ class WindowList {
                                      style_class: 'bottom-panel solid',
                                      reactive: true,
                                      track_hover: true,
-                                     layout_manager: new Clutter.BinLayout()});
+                                     layout_manager: new Clutter.BinLayout() });
         this.actor.connect('destroy', this._onDestroy.bind(this));
 
         let box = new St.BoxLayout({ x_expand: true, y_expand: true });
@@ -904,7 +904,7 @@ class WindowList {
             .filter(c => c.visible)
             .map(a => a._delegate);
         let active = children.findIndex(c => c.active);
-        let newActive = Math.max(0, Math.min(active + diff, children.length-1));
+        let newActive = Math.max(0, Math.min(active + diff, children.length - 1));
         children[newActive].activate();
     }
 

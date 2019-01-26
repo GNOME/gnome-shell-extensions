@@ -521,7 +521,7 @@ class ApplicationsButton extends PanelMenu.Button {
         let [width, height] = area.get_surface_size();
         let stippleColor = themeNode.get_color('-stipple-color');
         let stippleWidth = themeNode.get_length('-stipple-width');
-        let x = Math.floor(width/2) + 0.5;
+        let x = Math.floor(width / 2) + 0.5;
         cr.moveTo(x, 0);
         cr.lineTo(x, height);
         Clutter.cairo_set_source_color(cr, stippleColor);
@@ -649,14 +649,14 @@ class ApplicationsButton extends PanelMenu.Button {
         this.categoriesScrollBox.add_actor(this.categoriesBox);
 
         this.mainBox.add(this.leftBox);
-        this.mainBox.add(this._createVertSeparator(), { expand: false, x_fill: false, y_fill: true});
+        this.mainBox.add(this._createVertSeparator(), { expand: false, x_fill: false, y_fill: true });
         this.mainBox.add(this.applicationsScrollBox, { expand: true, x_fill: true, y_fill: true });
         section.actor.add_actor(this.mainBox);
     }
 
     _display() {
         this._applicationsButtons.clear();
-        this.mainBox.style=('width: 35em;');
+        this.mainBox.style = 'width: 35em;';
         this.mainBox.hide();
 
         //Load categories

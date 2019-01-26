@@ -188,7 +188,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                                 diff[1] = bounds.y + bounds.height - iCenter[1];
                             }
                             if (diff[0] != 0 || diff[1] != 0) {
-                                let length = Math.sqrt(diff[0]*diff[0] + diff[1]*diff[1]);
+                                let length = Math.sqrt(diff[0] * diff[0] + diff[1] * diff[1]);
                                 diff[0] *= WINDOW_PLACEMENT_NATURAL_ACCURACY / length / 2;   // /2 to make it less influencing than the normal center-move above
                                 diff[1] *= WINDOW_PLACEMENT_NATURAL_ACCURACY / length / 2;
                                 rects[i].translate(diff[0], diff[1]);
