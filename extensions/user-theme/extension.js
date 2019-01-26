@@ -17,7 +17,7 @@ class ThemeManager {
     }
 
     enable() {
-        this._changedId = this._settings.connect('changed::'+SETTINGS_KEY, this._changeTheme.bind(this));
+        this._changedId = this._settings.connect(`changed::${SETTINGS_KEY}`, this._changeTheme.bind(this));
         this._changeTheme();
     }
 
@@ -59,7 +59,7 @@ class ThemeManager {
         }
 
         if (_stylesheet)
-            global.log('loading user theme: ' + _stylesheet);
+            global.log(`loading user theme: ${_stylesheet}`);
         else
             global.log('loading default theme (Adwaita)');
         Main.setThemeStylesheet(_stylesheet);

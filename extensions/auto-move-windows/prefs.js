@@ -216,12 +216,12 @@ const Widget = GObject.registerClass({
 
     _checkId(id) {
         let items = this._settings.get_strv(SETTINGS_KEY);
-        return !items.some(i => i.startsWith(id + ':'));
+        return !items.some(i => i.startsWith(`${id}:`));
     }
 
     _appendItem(id, workspace) {
         let currentItems = this._settings.get_strv(SETTINGS_KEY);
-        currentItems.push(id + ':' + workspace);
+        currentItems.push(`${id}:${workspace}`);
         this._settings.set_strv(SETTINGS_KEY, currentItems);
     }
 
@@ -240,9 +240,9 @@ const Widget = GObject.registerClass({
         let index = currentItems.map(el => el.split(':')[0]).indexOf(id);
 
         if (index < 0)
-            currentItems.push(id + ':' + workspace);
+            currentItems.push(`${id}:${workspace}`);
         else
-            currentItems[index] = id + ':' + workspace;
+            currentItems[index] = `${id}:${workspace}`;
         this._settings.set_strv(SETTINGS_KEY, currentItems);
     }
 });

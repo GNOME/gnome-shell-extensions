@@ -25,7 +25,7 @@ class WindowListPrefsWidget extends Gtk.Grid {
         this.row_spacing = 6;
         this.orientation = Gtk.Orientation.VERTICAL;
 
-        let groupingLabel = '<b>' + _("Window Grouping") + '</b>';
+        let groupingLabel = '<b>%s</b>'.format(_("Window Grouping"));
         this.add(new Gtk.Label({ label: groupingLabel, use_markup: true,
                                  halign: Gtk.Align.START }));
 
