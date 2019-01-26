@@ -1,6 +1,5 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 const Clutter = imports.gi.Clutter;
-const Mainloop = imports.mainloop;
 const St = imports.gi.St;
 
 const Main = imports.ui.main;

@@ -15,7 +15,6 @@ const Gtk = imports.gi.Gtk;
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Signals = imports.signals;
-const Pango = imports.gi.Pango;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;

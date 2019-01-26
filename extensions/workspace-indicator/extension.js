@@ -5,10 +5,8 @@ const GObject = imports.gi.GObject;
 const Meta = imports.gi.Meta;
 const Clutter = imports.gi.Clutter;
 const St = imports.gi.St;
-const Mainloop = imports.mainloop;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
-const Panel = imports.ui.panel;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;

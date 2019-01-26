@@ -5,14 +5,9 @@ const Gio = imports.gi.Gio;
 const Shell = imports.gi.Shell;
 const Mainloop = imports.mainloop;
 const Signals = imports.signals;
-const St = imports.gi.St;
 
-const DND = imports.ui.dnd;
 const Main = imports.ui.main;
-const Params = imports.misc.params;
-const Search = imports.ui.search;
 const ShellMountOperation = imports.ui.shellMountOperation;
-const Util = imports.misc.util;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
