@@ -110,7 +110,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         super.activate(event);
     }
-};
+}
 
 let DriveMenu = GObject.registerClass(
 class DriveMenu extends PanelMenu.Button {
