@@ -53,7 +53,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
         this._settingsChangedId =
-            this._settings.connect('changed::' + WORKSPACE_KEY,
+            this._settings.connect(`changed::${WORKSPACE_KEY}`,
                                    this._createWorkspacesSection.bind(this));
     }
 

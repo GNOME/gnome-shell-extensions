@@ -327,7 +327,7 @@ class DesktopTarget {
                 try {
                     o.set_attributes_finish(res);
                 } catch (e) {
-                    log('Failed to update access time: ' + e.message);
+                    log(`Failed to update access time: ${e.message}`);
                 }
             });
     }
@@ -354,7 +354,7 @@ class DesktopTarget {
                             this._touchFile(file);
                         });
                 } catch (e) {
-                    log('Failed to mark file as trusted: ' + e.message);
+                    log(`Failed to mark file as trusted: ${e.message}`);
                 }
             });
     }
@@ -392,7 +392,7 @@ class DesktopTarget {
             src.copy(dst, Gio.FileCopyFlags.OVERWRITE, null, null);
             this._markTrusted(dst);
         } catch (e) {
-            log('Failed to copy to desktop: ' + e.message);
+            log(`Failed to copy to desktop: ${e.message}`);
         }
 
         return true;
@@ -688,8 +688,8 @@ class ApplicationsButton extends PanelMenu.Button {
         let themeContext = St.ThemeContext.get_for_stage(global.stage);
         let scaleFactor = themeContext.scale_factor;
         let categoriesHeight = this.categoriesBox.height / scaleFactor;
-        let height = Math.round(categoriesHeight) + MENU_HEIGHT_OFFSET + 'px';
-        this.mainBox.style+=('height: ' + height);
+        let height = Math.round(categoriesHeight) + MENU_HEIGHT_OFFSET;
+        this.mainBox.style += `height: ${height}px`;
     }
 
     selectCategory(dir) {

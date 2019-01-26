@@ -130,7 +130,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
         this.margin = 12;
         this.orientation = Gtk.Orientation.VERTICAL;
 
-        this.add(new Gtk.Label({ label: '<b>' + _("Workspace Names") + '</b>',
+        this.add(new Gtk.Label({ label: '<b>%s</b>'.format(_("Workspace Names")),
                                  use_markup: true, margin_bottom: 6,
                                  hexpand: true, halign: Gtk.Align.START }));
 
