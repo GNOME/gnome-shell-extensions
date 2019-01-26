@@ -40,7 +40,7 @@ const Widget = GObject.registerClass({
         this._store.set_column_types([Gio.AppInfo, GObject.TYPE_STRING, Gio.Icon, GObject.TYPE_INT,
                                       Gtk.Adjustment]);
 
-        let scrolled = new Gtk.ScrolledWindow({ shadow_type: Gtk.ShadowType.IN});
+        let scrolled = new Gtk.ScrolledWindow({ shadow_type: Gtk.ShadowType.IN });
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         this.add(scrolled);
 
@@ -192,7 +192,7 @@ const Widget = GObject.registerClass({
         this._store.clear();
 
         let currentItems = this._settings.get_strv(SETTINGS_KEY);
-        let validItems = [ ];
+        let validItems = [];
         for (let i = 0; i < currentItems.length; i++) {
             let [id, index] = currentItems[i].split(':');
             let appInfo = Gio.DesktopAppInfo.new(id);

@@ -21,11 +21,11 @@ function injectToFunction(parent, name, func) {
 let winInjections, workspaceInjections, workViewInjections, createdActors, connectedSignals;
 
 function resetState() {
-    winInjections = { };
-    workspaceInjections = { };
-    workViewInjections = { };
-    createdActors = [ ];
-    connectedSignals = [ ];
+    winInjections = {};
+    workspaceInjections = {};
+    workViewInjections = {};
+    createdActors = [];
+    connectedSignals = [];
 }
 
 function enable() {
@@ -131,7 +131,7 @@ function enable() {
     workViewInjections['_onKeyRelease'] = undefined;
 
     WorkspacesView.WorkspacesView.prototype._onKeyPress = function(s, o) {
-        if(Main.overview.viewSelector._activePage != Main.overview.viewSelector._workspacesPage)
+        if (Main.overview.viewSelector._activePage != Main.overview.viewSelector._workspacesPage)
             return false;
 
         let workspaceManager = global.workspace_manager;
@@ -255,7 +255,7 @@ function enable() {
     workViewInjections['_onDestroy'] = injectToFunction(WorkspacesView.WorkspacesView.prototype, '_onDestroy', function() {
         global.stage.disconnect(this._keyPressEventId);
         global.stage.disconnect(this._keyReleaseEventId);
-        connectedSignals = [ ];
+        connectedSignals = [];
     });
 }
 

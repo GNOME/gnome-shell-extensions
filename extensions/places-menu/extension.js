@@ -88,7 +88,7 @@ class PlacesMenu extends PanelMenu.Button {
 
         this._sections = { };
 
-        for (let i=0; i < SECTIONS.length; i++) {
+        for (let i = 0; i < SECTIONS.length; i++) {
             let id = SECTIONS[i];
             this._sections[id] = new PopupMenu.PopupMenuSection();
             this.placesManager.connect(id + '-updated', () => {
