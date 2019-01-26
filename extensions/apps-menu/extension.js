@@ -326,7 +326,7 @@ class DesktopTarget {
             (o, res) => {
                 try {
                     o.set_attributes_finish(res);
-                } catch(e) {
+                } catch (e) {
                     log('Failed to update access time: ' + e.message);
                 }
             });
@@ -353,7 +353,7 @@ class DesktopTarget {
                             // Hack: force nautilus to reload file info
                             this._touchFile(file);
                         });
-                } catch(e) {
+                } catch (e) {
                     log('Failed to mark file as trusted: ' + e.message);
                 }
             });
@@ -391,7 +391,7 @@ class DesktopTarget {
             // copy_async() isn't introspectable :-(
             src.copy(dst, Gio.FileCopyFlags.OVERWRITE, null, null);
             this._markTrusted(dst);
-        } catch(e) {
+        } catch (e) {
             log('Failed to copy to desktop: ' + e.message);
         }
 
@@ -563,7 +563,7 @@ class ApplicationsButton extends PanelMenu.Button {
                 let id;
                 try {
                     id = entry.get_desktop_file_id(); // catch non-UTF8 filenames
-                } catch(e) {
+                } catch (e) {
                     continue;
                 }
                 let app = appSys.lookup_app(id);
