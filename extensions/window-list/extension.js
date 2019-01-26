@@ -1,3 +1,4 @@
+/* exported init */
 const Clutter = imports.gi.Clutter;
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;

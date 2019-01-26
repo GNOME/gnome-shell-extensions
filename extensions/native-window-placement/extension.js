@@ -1,4 +1,5 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
+/* exported enable disable */
 const Workspace = imports.ui.workspace;
 
 const ExtensionUtils = imports.misc.extensionUtils;

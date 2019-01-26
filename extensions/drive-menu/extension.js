@@ -1,3 +1,4 @@
+/* exported init enable disable */
 // Drive menu extension
 const Gio = imports.gi.Gio;
 const GObject = imports.gi.GObject;

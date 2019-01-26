@@ -1,3 +1,4 @@
+/* exported enable disable */
 /* Screenshot Window Sizer for Gnome Shell
  *
  * Copyright (c) 2013 Owen Taylor <otaylor@redhat.com>

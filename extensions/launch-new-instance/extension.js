@@ -1,3 +1,4 @@
+/* exported enable disable */
 const AppDisplay = imports.ui.appDisplay;
 
 let _activateOriginal = null;
