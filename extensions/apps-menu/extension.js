@@ -87,7 +87,7 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
 
     activate(event) {
         this._app.open_new_window(-1);
-        this._button.selectCategory(null, null);
+        this._button.selectCategory(null);
         this._button.menu.toggle();
         super.activate(event);
     }
@@ -135,7 +135,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     activate(event) {
-        this._button.selectCategory(this._category, this);
+        this._button.selectCategory(this._category);
         this._button.scrollToCatButton(this);
         super.activate(event);
     }
@@ -222,7 +222,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
 
     setActive(active, params) {
         if (active) {
-            this._button.selectCategory(this._category, this);
+            this._button.selectCategory(this._category);
             this._button.scrollToCatButton(this);
         }
         super.setActive(active, params);
@@ -256,7 +256,7 @@ class ApplicationsMenu extends PopupMenu.PopupMenu {
 
     toggle() {
         if (this.isOpen) {
-            this._button.selectCategory(null, null);
+            this._button.selectCategory(null);
         } else {
             if (Main.overview.visible)
                 Main.overview.hide();
@@ -693,7 +693,7 @@ class ApplicationsButton extends PanelMenu.Button {
         this.mainBox.style+=('height: ' + height);
     }
 
-    selectCategory(dir, categoryMenuItem) {
+    selectCategory(dir) {
         this.applicationsBox.get_children().forEach(c => {
             if (c._delegate instanceof PopupMenu.PopupSeparatorMenuItem)
                 c._delegate.destroy();
