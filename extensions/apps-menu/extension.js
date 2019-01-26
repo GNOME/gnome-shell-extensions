@@ -191,7 +191,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         // cross-product of AB and AP. See:
         // http://stackoverflow.com/questions/3461453/determine-which-side-of-a-line-a-point-lies
         if (((this.actor.width * y) - (NAVIGATION_REGION_OVERSHOOT * x)) <= 0)
-             return true;
+            return true;
 
         return false;
     }
@@ -531,14 +531,14 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     _onOpenStateChanged(menu, open) {
-       if (open) {
-           if (this.reloadFlag) {
-               this._redisplay();
-               this.reloadFlag = false;
-           }
-           this.mainBox.show();
-       }
-       super._onOpenStateChanged(menu, open);
+        if (open) {
+            if (this.reloadFlag) {
+                this._redisplay();
+                this.reloadFlag = false;
+            }
+            this.mainBox.show();
+        }
+        super._onOpenStateChanged(menu, open);
     }
 
     _setKeybinding() {
@@ -707,23 +707,23 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     _displayButtons(apps) {
-         if (apps) {
+        if (apps) {
             for (let i = 0; i < apps.length; i++) {
-               let app = apps[i];
-               let item;
-               if (app instanceof Shell.App)
-                   item = this._applicationsButtons.get(app);
-               else
-                   item = new PopupMenu.PopupSeparatorMenuItem();
-               if (!item) {
-                  item = new ApplicationMenuItem(this, app);
-                  item.setDragEnabled(this._desktopTarget.hasDesktop);
-                  this._applicationsButtons.set(app, item);
-               }
-               if (!item.actor.get_parent())
-                  this.applicationsBox.add_actor(item.actor);
+                let app = apps[i];
+                let item;
+                if (app instanceof Shell.App)
+                    item = this._applicationsButtons.get(app);
+                else
+                    item = new PopupMenu.PopupSeparatorMenuItem();
+                if (!item) {
+                    item = new ApplicationMenuItem(this, app);
+                    item.setDragEnabled(this._desktopTarget.hasDesktop);
+                    this._applicationsButtons.set(app, item);
+                }
+                if (!item.actor.get_parent())
+                    this.applicationsBox.add_actor(item.actor);
             }
-         }
+        }
     }
 
     _listApplications(category_menu_id) {

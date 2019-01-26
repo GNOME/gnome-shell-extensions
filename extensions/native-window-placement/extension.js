@@ -24,20 +24,18 @@ class Rect {
 
     union(rect2) {
         let dest = this.copy();
-        if (rect2.x < dest.x)
-          {
+        if (rect2.x < dest.x) {
             dest.width += dest.x - rect2.x;
             dest.x = rect2.x;
-          }
-        if (rect2.y < dest.y)
-          {
+        }
+        if (rect2.y < dest.y) {
             dest.height += dest.y - rect2.y;
             dest.y = rect2.y;
-          }
+        }
         if (rect2.x + rect2.width > dest.x + dest.width)
-          dest.width = rect2.x + rect2.width - dest.x;
+            dest.width = rect2.x + rect2.width - dest.x;
         if (rect2.y + rect2.height > dest.y + dest.height)
-          dest.height = rect2.y + rect2.height - dest.y;
+            dest.height = rect2.y + rect2.height - dest.y;
 
         return dest;
     }
@@ -116,9 +114,9 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             for (let i = 0; i < rects.length; i++) {
                 for (let j = 0; j < rects.length; j++) {
                     if (i != j && rects[i].adjusted(-WINDOW_PLACEMENT_NATURAL_GAPS, -WINDOW_PLACEMENT_NATURAL_GAPS,
-                                                    WINDOW_PLACEMENT_NATURAL_GAPS, WINDOW_PLACEMENT_NATURAL_GAPS).overlap(
-                                                     rects[j].adjusted(-WINDOW_PLACEMENT_NATURAL_GAPS, -WINDOW_PLACEMENT_NATURAL_GAPS,
-                                                                       WINDOW_PLACEMENT_NATURAL_GAPS, WINDOW_PLACEMENT_NATURAL_GAPS))) {
+                                                    WINDOW_PLACEMENT_NATURAL_GAPS, WINDOW_PLACEMENT_NATURAL_GAPS)
+                                          .overlap(rects[j].adjusted(-WINDOW_PLACEMENT_NATURAL_GAPS, -WINDOW_PLACEMENT_NATURAL_GAPS,
+                                                                     WINDOW_PLACEMENT_NATURAL_GAPS, WINDOW_PLACEMENT_NATURAL_GAPS))) {
                         loop_counter++;
                         overlap = true;
 
