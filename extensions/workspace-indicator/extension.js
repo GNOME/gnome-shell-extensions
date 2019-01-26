@@ -1,4 +1,5 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
+/* exported init enable disable */
 
 const Gio = imports.gi.Gio;
 const GObject = imports.gi.GObject;

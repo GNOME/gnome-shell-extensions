@@ -1,5 +1,6 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 // Load shell theme from ~/.themes/name/gnome-shell
+/* exported init */
 
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;

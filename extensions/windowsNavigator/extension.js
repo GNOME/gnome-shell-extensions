@@ -1,4 +1,5 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
+/* exported enable disable */
 const Clutter = imports.gi.Clutter;
 const St = imports.gi.St;
 

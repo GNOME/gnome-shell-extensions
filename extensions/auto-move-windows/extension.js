@@ -1,5 +1,6 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 // Start apps on custom workspaces
+/* exported init enable disable */
 
 const Shell = imports.gi.Shell;
 
