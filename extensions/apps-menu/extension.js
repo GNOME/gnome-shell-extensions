@@ -761,6 +761,6 @@ function disable() {
     activitiesButton.container.show();
 }
 
-function init(metadata) {
+function init() {
     Convenience.initTranslations();
 }
