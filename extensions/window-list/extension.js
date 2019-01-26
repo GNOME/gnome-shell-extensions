@@ -258,7 +258,7 @@ class BaseButton {
         this._onClicked(this.actor, 1);
     }
 
-    _onClicked(actor, button) {
+    _onClicked(_actor, _button) {
         throw new Error('Not implemented');
     }
 
@@ -266,7 +266,7 @@ class BaseButton {
         return true;
     }
 
-    _onPopupMenu(actor) {
+    _onPopupMenu(_actor) {
         if (!this._canOpenPopupMenu() || this._contextMenu.isOpen)
             return;
         _openMenu(this._contextMenu);
@@ -283,7 +283,7 @@ class BaseButton {
             this.actor.remove_style_class_name('focused');
     }
 
-    _windowEnteredOrLeftMonitor(metaDisplay, monitorIndex, metaWindow) {
+    _windowEnteredOrLeftMonitor(_metaDisplay, _monitorIndex, _metaWindow) {
         throw new Error('Not implemented');
     }
 
@@ -719,7 +719,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             let item = new PopupMenu.PopupMenuItem(name);
             item.workspaceId = i;
 
-            item.connect('activate', (item, event) => {
+            item.connect('activate', (item, _event) => {
                 this._activate(item.workspaceId);
             });
 

@@ -367,7 +367,7 @@ class DesktopTarget {
         this._setDesktop(null);
     }
 
-    handleDragOver(source, actor, x, y, time) {
+    handleDragOver(source, _actor, _x, _y, _time) {
         let appInfo = this._getSourceAppInfo(source);
         if (!appInfo)
             return DND.DragMotionResult.CONTINUE;
@@ -375,7 +375,7 @@ class DesktopTarget {
         return DND.DragMotionResult.COPY_DROP;
     }
 
-    acceptDrop(source, actor, x, y, time) {
+    acceptDrop(source, _actor, _x, _y, _time) {
         let appInfo = this._getSourceAppInfo(source);
         if (!appInfo)
             return false;

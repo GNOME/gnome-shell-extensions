@@ -190,7 +190,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
     }
 
     _delClicked() {
-        let [any, model, iter] = this._treeView.get_selection().get_selected();
+        let [any, model_, iter] = this._treeView.get_selection().get_selected();
 
         if (any)
             this._store.remove(iter);

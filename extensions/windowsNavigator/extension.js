@@ -218,7 +218,7 @@ function enable() {
         parentActor.add_actor(this._text);
     });
 
-    winInjections['relayout'] = injectToFunction(Workspace.WindowOverlay.prototype, 'relayout', function(animate) {
+    winInjections['relayout'] = injectToFunction(Workspace.WindowOverlay.prototype, 'relayout', function(_animate) {
         let [cloneX, cloneY, cloneWidth, cloneHeight] = this._windowClone.slot;
 
         let textX = cloneX - 2;
@@ -241,7 +241,7 @@ function enable() {
             this._tip = null;
     });
 
-    workViewInjections['_init'] = injectToFunction(WorkspacesView.WorkspacesView.prototype, '_init', function(width, height, x, y, workspaces) {
+    workViewInjections['_init'] = injectToFunction(WorkspacesView.WorkspacesView.prototype, '_init', function(_width, _height, _x, _y, _workspaces) {
         this._pickWorkspace = false;
         this._pickWindow = false;
         this._keyPressEventId =
