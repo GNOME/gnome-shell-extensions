@@ -30,12 +30,12 @@ const GroupingMode = {
 
 
 function _minimizeOrActivateWindow(window) {
-        let focusWindow = global.display.focus_window;
-        if (focusWindow == window ||
-            focusWindow && focusWindow.get_transient_for() == window)
-            window.minimize();
-        else
-            window.activate(global.get_current_time());
+    let focusWindow = global.display.focus_window;
+    if (focusWindow == window ||
+        focusWindow && focusWindow.get_transient_for() == window)
+        window.minimize();
+    else
+        window.activate(global.get_current_time());
 }
 
 function _openMenu(menu) {
@@ -240,10 +240,10 @@ class BaseButton {
         if (this._perMonitor) {
             this._windowEnteredMonitorId =
                 global.display.connect('window-entered-monitor',
-                    this._windowEnteredOrLeftMonitor.bind(this));
+                                       this._windowEnteredOrLeftMonitor.bind(this));
             this._windowLeftMonitorId =
                 global.display.connect('window-left-monitor',
-                    this._windowEnteredOrLeftMonitor.bind(this));
+                                       this._windowEnteredOrLeftMonitor.bind(this));
         }
     }
 

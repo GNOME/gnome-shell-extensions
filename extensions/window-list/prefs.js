@@ -53,8 +53,8 @@ class WindowListPrefsWidget extends Gtk.Grid {
             let mode = modes[i];
             let label = modeLabels[mode];
             if (!label) {
-               log('Unhandled option "%s" for grouping-mode'.format(mode));
-               continue;
+                log('Unhandled option "%s" for grouping-mode'.format(mode));
+                continue;
             }
 
             radio = new Gtk.RadioButton({ active: currentMode == mode,
