@@ -284,7 +284,3 @@ function disable() {
     global.stage.queue_relayout();
     resetState();
 }
-
-function init() {
-    /* do nothing */
-}

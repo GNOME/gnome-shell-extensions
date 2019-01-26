@@ -284,7 +284,3 @@ function disable() {
 
     resetState();
 }
-
-function init() {
-    /* do nothing */
-}

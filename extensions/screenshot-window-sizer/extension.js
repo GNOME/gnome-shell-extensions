@@ -136,9 +136,6 @@ function cycleScreenshotSizes(display, window, binding) {
     flashMessage(message);
 }
 
-function init() {
-}
-
 function enable() {
     Main.wm.addKeybinding('cycle-screenshot-sizes',
                           Convenience.getSettings(),
