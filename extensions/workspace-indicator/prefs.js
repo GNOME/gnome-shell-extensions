@@ -114,7 +114,7 @@ class WorkspaceNameModel extends Gtk.ListStore {
         names.splice(index, 1);
 
         // compact the array
-        for (let i = names.length -1; i >= 0 && !names[i]; i++)
+        for (let i = names.length - 1; i >= 0 && !names[i]; i++)
             names.pop();
 
         this._settings.set_strv(WORKSPACE_KEY, names);

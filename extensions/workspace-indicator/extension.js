@@ -78,7 +78,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _labelText(workspaceIndex) {
-        if(workspaceIndex == undefined) {
+        if (workspaceIndex == undefined) {
             workspaceIndex = this._currentWorkspace;
             return (workspaceIndex + 1).toString();
         }
@@ -93,7 +93,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._currentWorkspace = workspaceManager.get_active_workspace().index();
 
         let i = 0;
-        for(; i < workspaceManager.n_workspaces; i++) {
+        for (; i < workspaceManager.n_workspaces; i++) {
             this.workspacesItems[i] = new PopupMenu.PopupMenuItem(this._labelText(i));
             this._workspaceSection.addMenuItem(this.workspacesItems[i]);
             this.workspacesItems[i].workspaceId = i;
@@ -112,7 +112,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _activate(index) {
         let workspaceManager = global.workspace_manager;
 
-        if(index >= 0 && index <  workspaceManager.n_workspaces) {
+        if (index >= 0 && index <  workspaceManager.n_workspaces) {
             let metaWorkspace = workspaceManager.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
