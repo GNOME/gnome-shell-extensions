@@ -157,7 +157,7 @@ const Widget = GObject.registerClass({
     }
 
     _deleteSelected() {
-        let [any, model, iter] = this._treeView.get_selection().get_selected();
+        let [any, model_, iter] = this._treeView.get_selection().get_selected();
 
         if (any) {
             let appInfo = this._store.get_value(iter, Columns.APPINFO);
@@ -174,7 +174,7 @@ const Widget = GObject.registerClass({
         if (isNaN(index) || index < 0)
             index = 1;
         let path = Gtk.TreePath.new_from_string(pathString);
-        let [model, iter] = this._store.get_iter(path);
+        let [model_, iter] = this._store.get_iter(path);
         let appInfo = this._store.get_value(iter, Columns.APPINFO);
 
         this._changedPermitted = false;

@@ -219,7 +219,7 @@ function enable() {
     });
 
     winInjections['relayout'] = injectToFunction(Workspace.WindowOverlay.prototype, 'relayout', function(_animate) {
-        let [cloneX, cloneY, cloneWidth, cloneHeight] = this._windowClone.slot;
+        let [cloneX, cloneY, cloneWidth_, cloneHeight_] = this._windowClone.slot;
 
         let textX = cloneX - 2;
         let textY = cloneY - 2;
