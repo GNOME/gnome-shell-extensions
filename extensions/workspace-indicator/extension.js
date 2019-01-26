@@ -98,7 +98,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             this._workspaceSection.addMenuItem(this.workspacesItems[i]);
             this.workspacesItems[i].workspaceId = i;
             this.workspacesItems[i].label_actor = this.statusLabel;
-            this.workspacesItems[i].connect('activate', (actor, event) => {
+            this.workspacesItems[i].connect('activate', (actor, _event) => {
                 this._activate(actor.workspaceId);
             });
 
