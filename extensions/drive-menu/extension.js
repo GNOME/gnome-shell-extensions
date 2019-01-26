@@ -84,7 +84,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     _unmountFinish(mount, result) {
         try {
             mount.unmount_with_operation_finish(result);
-        } catch(e) {
+        } catch (e) {
             this._reportFailure(e);
         }
     }
@@ -92,7 +92,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     _ejectFinish(mount, result) {
         try {
             mount.eject_with_operation_finish(result);
-        } catch(e) {
+        } catch (e) {
             this._reportFailure(e);
         }
     }
