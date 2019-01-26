@@ -45,7 +45,7 @@ class PlaceInfo {
         return (_ignored, result) => {
             try {
                 Gio.AppInfo.launch_default_for_uri_finish(result);
-            } catch(e) {
+            } catch (e) {
                 if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
                     let source = {
                         get_icon: () => { return this.icon; }
@@ -55,7 +55,7 @@ class PlaceInfo {
                         try {
                             op.close();
                             file.mount_enclosing_volume_finish(result);
-                        } catch(e) {
+                        } catch (e) {
                             if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.FAILED_HANDLED))
                                 // e.g. user canceled the password dialog
                                 return;
@@ -94,7 +94,7 @@ class PlaceInfo {
                                            let info = file.query_info_finish(result);
                                            this.icon = info.get_symbolic_icon();
                                            this.emit('changed');
-                                       } catch(e) {
+                                       } catch (e) {
                                            if (e instanceof Gio.IOErrorEnum)
                                                return;
                                            throw e;
@@ -122,7 +122,7 @@ class PlaceInfo {
         try {
             let info = this.file.query_info('standard::display-name', 0, null);
             return info.get_display_name();
-        } catch(e) {
+        } catch (e) {
             if (e instanceof Gio.IOErrorEnum)
                 return this.file.get_basename();
             throw e;
@@ -203,7 +203,7 @@ class PlaceDeviceInfo extends PlaceInfo {
     _ejectFinish(mount, result) {
         try {
             mount.eject_with_operation_finish(result);
-        } catch(e) {
+        } catch (e) {
             this._reportFailure(e);
         }
     }
@@ -211,7 +211,7 @@ class PlaceDeviceInfo extends PlaceInfo {
     _unmountFinish(mount, result) {
         try {
             mount.unmount_with_operation_finish(result);
-        } catch(e) {
+        } catch (e) {
             this._reportFailure(e);
         }
     }
@@ -350,7 +350,7 @@ var PlacesManager = class {
             let file = Gio.File.new_for_path(specialPath), info;
             try {
                 info = new PlaceInfo('special', file);
-            } catch(e) {
+            } catch (e) {
                 if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND))
                     continue;
                 throw e;
@@ -517,7 +517,7 @@ var PlacesManager = class {
 
         try {
             devItem = new PlaceDeviceInfo(kind, mount);
-        } catch(e) {
+        } catch (e) {
             if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND))
                 return;
             throw e;
@@ -531,7 +531,7 @@ var PlacesManager = class {
 
         try {
             volItem = new PlaceVolumeInfo(kind, volume);
-        } catch(e) {
+        } catch (e) {
             if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND))
                 return;
             throw e;
