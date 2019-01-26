@@ -134,7 +134,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 });
 
-function init(meta) {
+function init() {
     Convenience.initTranslations();
 }
 
