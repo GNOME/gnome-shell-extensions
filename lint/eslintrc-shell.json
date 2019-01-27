@@ -1,4 +1,10 @@
 {
+    "rules": {
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ]
+    },
     "globals": {
         "global": false,
         "_": false,
