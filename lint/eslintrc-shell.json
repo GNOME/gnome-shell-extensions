@@ -1,0 +1,9 @@
+{
+    "globals": {
+        "global": false,
+        "_": false,
+        "C_": false,
+        "N_": false,
+        "ngettext": false
+    }
+}
