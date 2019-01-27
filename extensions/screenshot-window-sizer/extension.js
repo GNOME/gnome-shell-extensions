@@ -31,7 +31,7 @@ const Convenience = Me.imports.convenience;
 
 const MESSAGE_FADE_TIME = 2;
 
-let text, button;
+let text;
 
 function hideMessage() {
     text.destroy();

@@ -6,8 +6,6 @@ const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
 // testing settings for natural window placement strategy:
-const WINDOW_PLACEMENT_NATURAL_FILLGAPS = true;                     // enlarge windows at the end to fill gaps         // not implemented yet
-const WINDOW_PLACEMENT_NATURAL_GRID_FALLBACK = true;                // fallback to grid mode if all windows have the same size and positions.     // not implemented yet
 const WINDOW_PLACEMENT_NATURAL_ACCURACY = 20;                       // accuracy of window translate moves  (KDE-default: 20)
 const WINDOW_PLACEMENT_NATURAL_GAPS = 5;                            // half of the minimum gap between windows
 const WINDOW_PLACEMENT_NATURAL_MAX_TRANSLATIONS = 5000;             // safety limit for preventing endless loop if something is wrong in the algorithm
@@ -222,14 +220,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             rects[i].translate(-bounds.x, -bounds.y);
         }
 
-        // TODO: Implement the KDE part "Try to fill the gaps by enlarging windows if they have the space" here. (If this is wanted)
-
         // rescale to workspace
-        let scales = [];
-
-        let buttonOuterHeight, captionHeight;
-        let buttonOuterWidth = 0;
-
         let slots = [];
         for (let i = 0; i < rects.length; i++) {
             rects[i].x = rects[i].x * scale + area_rect.x;
