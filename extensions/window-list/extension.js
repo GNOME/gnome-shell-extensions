@@ -50,7 +50,7 @@ function _onMenuStateChanged(menu, isOpen) {
     if (isOpen)
         return;
 
-    let [x, y,] = global.get_pointer();
+    let [x, y] = global.get_pointer();
     let actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
     if (Me.stateObj.someWindowListContains(actor))
         actor.sync_hover();
