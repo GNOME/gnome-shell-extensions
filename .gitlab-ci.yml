@@ -1,13 +1,11 @@
-image: fedora:latest
-
 stages:
  - build
 
-before_script:
-  - dnf install -y meson gettext mozjs60-devel
-
 build-shell-extensions:
+  image: fedora:latest
   stage: build
+  before_script:
+    - dnf install -y meson gettext mozjs60-devel
   script:
     - meson _build .
     - ninja -C _build test install
