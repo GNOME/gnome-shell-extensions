@@ -665,6 +665,9 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
         this.workspacesItems = [];
 
+        let label_text = 'foo';
+        let label = new St.Label({ text: label_text });
+
         this._workspaceManagerSignals = [];
         this._workspaceManagerSignals.push(workspaceManager.connect('notify::n-workspaces',
                                                                     this._updateMenu.bind(this)));
