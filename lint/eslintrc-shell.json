@@ -1,6 +1,13 @@
 {
     "rules": {
         "arrow-spacing": "error",
+        "camelcase": [
+            "error",
+            {
+                "properties": "never",
+                "allow": ["^vfunc_"]
+            }
+        ],
         "object-curly-spacing": [
             "error",
             "always"
