@@ -22,7 +22,7 @@ xsessiondir = join_paths(datadir, 'xsessions')
 
 extensionlib = files('lib/convenience.js')
 
-js52 = find_program('js52', required: false)
+js60 = find_program('js60', required: false)
 
 ver_arr = meson.project_version().split('.')
 if ver_arr[1].to_int().is_even()

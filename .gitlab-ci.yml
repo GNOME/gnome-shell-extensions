@@ -4,7 +4,7 @@ stages:
  - build
 
 before_script:
-  - dnf install -y meson gettext mozjs52-devel
+  - dnf install -y meson gettext mozjs60-devel
 
 build-shell-extensions:
   stage: build
