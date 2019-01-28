@@ -21,6 +21,7 @@
             {
                 "ignoredNodes": [
                     "ArrayExpression > ObjectExpression",
+                    "CallExpression[callee.object.name=GObject][callee.property.name=registerClass] > ClassExpression:first-child",
                     "ConditionalExpression"
                 ],
                 "MemberExpression": "off"
