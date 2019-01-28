@@ -88,8 +88,8 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
         // As we are using pseudo-random movement (See "slot") we need to make sure the list
         // is always sorted the same way no matter which window is currently active.
 
-        let area_rect = new Rect(area.x, area.y, area.width, area.height);
-        let bounds = area_rect.copy();
+        let areaRect = new Rect(area.x, area.y, area.width, area.height);
+        let bounds = areaRect.copy();
         let clones = layout.windows;
 
         let direction = 0;
@@ -109,7 +109,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             }
         }
 
-        let loop_counter = 0;
+        let loopCounter = 0;
         let overlap;
         do {
             overlap = false;
@@ -119,21 +119,21 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                                                     WINDOW_PLACEMENT_NATURAL_GAPS, WINDOW_PLACEMENT_NATURAL_GAPS).overlap(
                                                      rects[j].adjusted(-WINDOW_PLACEMENT_NATURAL_GAPS, -WINDOW_PLACEMENT_NATURAL_GAPS,
                                                                        WINDOW_PLACEMENT_NATURAL_GAPS, WINDOW_PLACEMENT_NATURAL_GAPS))) {
-                        loop_counter++;
+                        loopCounter++;
                         overlap = true;
 
                         // TODO: something like a Point2D would be nicer here:
 
                         // Determine pushing direction
-                        let i_center = rects[i].center();
-                        let j_center = rects[j].center();
-                        let diff = [j_center[0] - i_center[0], j_center[1] - i_center[1]];
+                        let iCenter = rects[i].center();
+                        let jCenter = rects[j].center();
+                        let diff = [jCenter[0] - iCenter[0], jCenter[1] - iCenter[1]];
 
                         // Prevent dividing by zero and non-movement
                         if (diff[0] == 0 && diff[1] == 0)
                             diff[0] = 1;
                         // Try to keep screen/workspace aspect ratio
-                        if ( bounds.height / bounds.width > area_rect.height / area_rect.width )
+                        if ( bounds.height / bounds.width > areaRect.height / areaRect.width )
                             diff[0] *= 2;
                         else
                             diff[1] *= 2;
@@ -162,7 +162,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                             let xSection = Math.round((rects[i].x - bounds.x) / (bounds.width / 3));
                             let ySection = Math.round((rects[i].y - bounds.y) / (bounds.height / 3));
 
-                            let i_center = rects[i].center();
+                            let iCenter = rects[i].center();
                             diff[0] = 0;
                             diff[1] = 0;
                             if (xSection != 1 || ySection != 1) { // Remove this if you want the center to pull as well
@@ -172,20 +172,20 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                                     ySection = (directions[i] % 2 ? 2 : 0);
                             }
                             if (xSection == 0 && ySection == 0) {
-                                diff[0] = bounds.x - i_center[0];
-                                diff[1] = bounds.y - i_center[1];
+                                diff[0] = bounds.x - iCenter[0];
+                                diff[1] = bounds.y - iCenter[1];
                             }
                             if (xSection == 2 && ySection == 0) {
-                                diff[0] = bounds.x + bounds.width - i_center[0];
-                                diff[1] = bounds.y - i_center[1];
+                                diff[0] = bounds.x + bounds.width - iCenter[0];
+                                diff[1] = bounds.y - iCenter[1];
                             }
                             if (xSection == 2 && ySection == 2) {
-                                diff[0] = bounds.x + bounds.width - i_center[0];
-                                diff[1] = bounds.y + bounds.height - i_center[1];
+                                diff[0] = bounds.x + bounds.width - iCenter[0];
+                                diff[1] = bounds.y + bounds.height - iCenter[1];
                             }
                             if (xSection == 0 && ySection == 2) {
-                                diff[0] = bounds.x - i_center[0];
-                                diff[1] = bounds.y + bounds.height - i_center[1];
+                                diff[0] = bounds.x - iCenter[0];
+                                diff[1] = bounds.y + bounds.height - iCenter[1];
                             }
                             if (diff[0] != 0 || diff[1] != 0) {
                                 let length = Math.sqrt(diff[0]*diff[0] + diff[1]*diff[1]);
@@ -201,19 +201,19 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                     }
                 }
             }
-        } while (overlap && loop_counter < WINDOW_PLACEMENT_NATURAL_MAX_TRANSLATIONS);
+        } while (overlap && loopCounter < WINDOW_PLACEMENT_NATURAL_MAX_TRANSLATIONS);
 
         // Work out scaling by getting the most top-left and most bottom-right window coords.
         let scale;
-        scale = Math.min(area_rect.width / bounds.width,
-                         area_rect.height / bounds.height,
+        scale = Math.min(areaRect.width / bounds.width,
+                         areaRect.height / bounds.height,
                          1.0);
 
         // Make bounding rect fill the screen size for later steps
-        bounds.x = bounds.x - (area_rect.width - bounds.width * scale) / 2;
-        bounds.y = bounds.y - (area_rect.height - bounds.height * scale) / 2;
-        bounds.width = area_rect.width / scale;
-        bounds.height = area_rect.height / scale;
+        bounds.x = bounds.x - (areaRect.width - bounds.width * scale) / 2;
+        bounds.y = bounds.y - (areaRect.height - bounds.height * scale) / 2;
+        bounds.width = areaRect.width / scale;
+        bounds.height = areaRect.height / scale;
 
         // Move all windows back onto the screen and set their scale
         for (let i = 0; i < rects.length; i++) {
@@ -223,8 +223,8 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
         // rescale to workspace
         let slots = [];
         for (let i = 0; i < rects.length; i++) {
-            rects[i].x = rects[i].x * scale + area_rect.x;
-            rects[i].y = rects[i].y * scale + area_rect.y;
+            rects[i].x = rects[i].x * scale + areaRect.x;
+            rects[i].y = rects[i].y * scale + areaRect.y;
 
             slots.push([rects[i].x, rects[i].y, scale, clones[i]]);
         }

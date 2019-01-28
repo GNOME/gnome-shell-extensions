@@ -726,11 +726,11 @@ class ApplicationsButton extends PanelMenu.Button {
          }
     }
 
-    _listApplications(category_menu_id) {
+    _listApplications(categoryMenuId) {
         let applist;
 
-        if (category_menu_id) {
-            applist = this.applicationsByCategory[category_menu_id];
+        if (categoryMenuId) {
+            applist = this.applicationsByCategory[categoryMenuId];
         } else {
             applist = new Array();
             let favorites = global.settings.get_strv('favorite-apps');

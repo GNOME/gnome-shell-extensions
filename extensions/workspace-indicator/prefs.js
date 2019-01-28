@@ -175,11 +175,11 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
         this.add(toolbar);
     }
 
-    _cellEdited(renderer, path, new_text) {
+    _cellEdited(renderer, path, newText) {
         let [ok, iter] = this._store.get_iter_from_string(path);
 
         if (ok)
-            this._store.set(iter, [this._store.Columns.LABEL], [new_text]);
+            this._store.set(iter, [this._store.Columns.LABEL], [newText]);
     }
 
     _newClicked() {
