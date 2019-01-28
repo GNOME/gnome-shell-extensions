@@ -118,8 +118,7 @@ const Widget = GObject.registerClass({
                                     halign: Gtk.Align.END }), 0, 1, 1, 1);
         let adjustment = new Gtk.Adjustment({ lower: 1,
                                               upper: WORKSPACE_MAX,
-                                              step_increment: 1
-                                            });
+                                              step_increment: 1 });
         dialog._spin = new Gtk.SpinButton({ adjustment: adjustment,
                                             snap_to_ticks: true });
         dialog._spin.set_value(1);

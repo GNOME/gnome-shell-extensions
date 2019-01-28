@@ -143,8 +143,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
                                             headers_visible: false,
                                             reorderable: true,
                                             hexpand: true,
-                                            vexpand: true
-                                          });
+                                            vexpand: true });
 
         let column = new Gtk.TreeViewColumn({ title: _("Name") });
         let renderer = new Gtk.CellRendererText({ editable: true });
