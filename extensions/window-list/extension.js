@@ -671,7 +671,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-switched',
                                                                           this._updateIndicator.bind(this)));
 
-        this.connect('scroll-event', this._onScrollEvent.bind(this));
+         this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._updateMenu();
 
         this._settings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.preferences' });
