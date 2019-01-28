@@ -1,5 +1,19 @@
 stages:
+ - source_check
  - build
+
+variables:
+ - LINT_LOG: "eslint-report.txt"
+
+eslint:
+  image: registry.gitlab.gnome.org/gnome/gjs:fedora.static-analysis
+  stage: source_check
+  script:
+    - eslint -o $LINT_LOG -c lint/eslintrc-legacy.json --no-color . || { cat $LINT_LOG; false; }
+  artifacts:
+    paths:
+      - ${LINT_LOG}
+    when: on_failure
 
 build-shell-extensions:
   image: fedora:latest
