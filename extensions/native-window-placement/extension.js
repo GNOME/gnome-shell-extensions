@@ -3,8 +3,6 @@
 const Workspace = imports.ui.workspace;
 
 const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 // testing settings for natural window placement strategy:
 const WINDOW_PLACEMENT_NATURAL_ACCURACY = 20;                       // accuracy of window translate moves  (KDE-default: 20)
@@ -242,7 +240,7 @@ function resetState() {
 function enable() {
     resetState();
 
-    let settings = Convenience.getSettings();
+    let settings = ExtensionUtils.getSettings();
 
     workspaceInjections['_getBestLayout'] = Workspace.Workspace.prototype._getBestLayout;
     Workspace.Workspace.prototype._getBestLayout = function(windows) {

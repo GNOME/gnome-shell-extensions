@@ -9,12 +9,10 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
 const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 
 function init() {
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }
 
 const WindowListPrefsWidget = GObject.registerClass(
@@ -38,7 +36,7 @@ class WindowListPrefsWidget extends Gtk.Grid {
                                   column_spacing: 6 });
         align.add(grid);
 
-        this._settings = Convenience.getSettings();
+        this._settings = ExtensionUtils.getSettings();
         let currentMode = this._settings.get_string('grouping-mode');
         let range = this._settings.get_range('grouping-mode');
         let modes = range.deep_unpack()[1].deep_unpack();

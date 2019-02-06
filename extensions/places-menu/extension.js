@@ -15,7 +15,6 @@ const N_ = x => x;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 const PlaceDisplay = Me.imports.placeDisplay;
 
 const PLACE_ICON_SIZE = 16;
@@ -124,7 +123,7 @@ class PlacesMenu extends PanelMenu.Button {
 });
 
 function init() {
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }
 
 let _indicator;

@@ -15,7 +15,6 @@ const PopupMenu = imports.ui.popupMenu;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
@@ -883,7 +882,7 @@ class WindowList {
         this._dndTimeoutId = 0;
         this._dndWindow = null;
 
-        this._settings = Convenience.getSettings();
+        this._settings = ExtensionUtils.getSettings();
         this._groupingModeChangedId =
             this._settings.connect('changed::grouping-mode',
                                    this._groupingModeChanged.bind(this));
@@ -1200,7 +1199,7 @@ class Extension {
     enable() {
         this._windowLists = [];
 
-        this._settings = Convenience.getSettings();
+        this._settings = ExtensionUtils.getSettings();
         this._showOnAllMonitorsChangedId =
             this._settings.connect('changed::show-on-all-monitors',
                                    this._buildWindowLists.bind(this));

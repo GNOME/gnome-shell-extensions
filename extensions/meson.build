@@ -1,5 +1,5 @@
 extension_schemas = []
-js_sources = extensionlib
+js_sources = []
 
 metadata_name = 'metadata.json'
 
@@ -22,7 +22,7 @@ foreach e : all_extensions
   js_sources += extension_sources
 
   if (enabled_extensions.contains(e))
-    install_data (extension_sources + extension_data + extensionlib,
+    install_data (extension_sources + extension_data,
       install_dir: join_paths(extensiondir, uuid)
     )
   endif

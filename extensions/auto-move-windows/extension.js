@@ -7,12 +7,10 @@ const Shell = imports.gi.Shell;
 const Main = imports.ui.main;
 
 const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 class WindowMover {
     constructor() {
-        this._settings = Convenience.getSettings();
+        this._settings = ExtensionUtils.getSettings();
         this._appSystem = Shell.AppSystem.get_default();
         this._appConfigs = new Map();
         this._appData = new Map();
@@ -113,7 +111,7 @@ let prevCheckWorkspaces;
 let winMover;
 
 function init() {
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }
 
 function myCheckWorkspaces() {

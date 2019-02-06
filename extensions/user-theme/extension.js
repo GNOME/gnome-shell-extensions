@@ -9,12 +9,10 @@ const Main = imports.ui.main;
 const SETTINGS_KEY = 'name';
 
 const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 class ThemeManager {
     constructor() {
-        this._settings = Convenience.getSettings();
+        this._settings = ExtensionUtils.getSettings();
     }
 
     enable() {

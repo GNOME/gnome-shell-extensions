@@ -10,8 +10,6 @@ const _ = Gettext.gettext;
 const N_ = e => e;
 
 const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
@@ -199,7 +197,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
 });
 
 function init() {
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }
 
 function buildPrefsWidget() {

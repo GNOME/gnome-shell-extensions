@@ -11,8 +11,6 @@ const _ = Gettext.gettext;
 const N_ = e => e;
 
 const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 const SETTINGS_KEY = 'application-list';
 
@@ -33,7 +31,7 @@ const Widget = GObject.registerClass({
         super._init(params);
         this.set_orientation(Gtk.Orientation.VERTICAL);
 
-        this._settings = Convenience.getSettings();
+        this._settings = ExtensionUtils.getSettings();
         this._settings.connect('changed', this._refresh.bind(this));
         this._changedPermitted = false;
 
@@ -249,7 +247,7 @@ const Widget = GObject.registerClass({
 
 
 function init() {
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }
 
 function buildPrefsWidget() {

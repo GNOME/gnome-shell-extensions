@@ -14,8 +14,6 @@ const PopupMenu = imports.ui.popupMenu;
 const ShellMountOperation = imports.ui.shellMountOperation;
 
 const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     constructor(mount) {
@@ -188,7 +186,7 @@ class DriveMenu extends PanelMenu.Button {
 });
 
 function init() {
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }
 
 let _indicator;

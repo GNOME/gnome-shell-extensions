@@ -21,8 +21,6 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
 const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 const appSys = Shell.AppSystem.get_default();
 
@@ -763,5 +761,5 @@ function disable() {
 }
 
 function init() {
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }

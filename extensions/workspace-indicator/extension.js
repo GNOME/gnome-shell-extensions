@@ -15,8 +15,6 @@ const _ = Gettext.gettext;
 const Main = imports.ui.main;
 
 const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
@@ -136,7 +134,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
 });
 
 function init() {
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }
 
 let _indicator;

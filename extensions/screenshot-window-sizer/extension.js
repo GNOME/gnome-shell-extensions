@@ -27,8 +27,6 @@ const Main = imports.ui.main;
 const Tweener = imports.ui.tweener;
 
 const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 
 const MESSAGE_FADE_TIME = 2;
 
@@ -139,12 +137,12 @@ function cycleScreenshotSizes(display, window, binding) {
 
 function enable() {
     Main.wm.addKeybinding('cycle-screenshot-sizes',
-                          Convenience.getSettings(),
+                          ExtensionUtils.getSettings(),
                           Meta.KeyBindingFlags.PER_WINDOW,
                           Shell.ActionMode.NORMAL,
                           cycleScreenshotSizes);
     Main.wm.addKeybinding('cycle-screenshot-sizes-backward',
-                          Convenience.getSettings(),
+                          ExtensionUtils.getSettings(),
                           Meta.KeyBindingFlags.PER_WINDOW |
                           Meta.KeyBindingFlags.IS_REVERSED,
                           Shell.ActionMode.NORMAL,

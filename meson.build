@@ -20,8 +20,6 @@ schemadir = join_paths(datadir, 'glib-2.0', 'schemas')
 sessiondir = join_paths(datadir, 'gnome-session', 'sessions')
 xsessiondir = join_paths(datadir, 'xsessions')
 
-extensionlib = files('lib/convenience.js')
-
 js60 = find_program('js60', required: false)
 
 ver_arr = meson.project_version().split('.')
