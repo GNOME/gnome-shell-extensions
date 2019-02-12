@@ -35,6 +35,19 @@
                 "afterColon": true
             }
         ],
+        "no-restricted-properties": [
+            "error",
+            {
+                "object": "Lang",
+                "property": "bind",
+                "message": "Please use arrow notation or Function.prototype.bind()."
+            },
+            {
+                "object": "Lang",
+                "property": "Class",
+                "message": "Please use ES6 classes."
+            }
+        ],
         "no-unused-vars": [
             "error",
             {
