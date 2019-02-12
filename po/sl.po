@@ -2,7 +2,7 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, + 2011–2017.
+# Matej Urbančič <mateju@svn.gnome.org>, + 2011–2019.
 #
 msgid ""
 msgstr ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "shell&keywords=I18N+L10N&component=extensions\n"
 "POT-Creation-Date: 2017-07-07 10:35+0200\n"
-"PO-Revision-Date: 2017-07-07 10:36+0200\n"
+"PO-Revision-Date: 2019-02-12 20:43+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -32,7 +32,7 @@ msgstr "Seja omogoča prijavo v običajno namizje GNOME."
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
 msgid "Attach modal dialog to the parent window"
-msgstr "Priponi modalno pogovorno okno nadrejenemu oknu"
+msgstr "Pripni modalno pogovorno okno nadrejenemu oknu"
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
@@ -41,8 +41,8 @@ msgstr "Priponi modalno pogovorno okno nadrejenemu oknu"
 msgid ""
 "This key overrides the key in org.gnome.mutter when running GNOME Shell."
 msgstr ""
-"Možnost prepiše ključ med nastavitvami org.gnome.mutter med zagonom lupine "
-"GNOME."
+"Možnost med zagonom lupine GNOME prepiše ključ med nastavitvami org.gnome."
+"mutter."
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
 msgid "Arrangement of buttons on the titlebar"
@@ -53,8 +53,8 @@ msgid ""
 "This key overrides the key in org.gnome.desktop.wm.preferences when running "
 "GNOME Shell."
 msgstr ""
-"Možnost prepiše ključ med nastavitvami org.gnome.desktop.wm med zagonom "
-"lupine GNOME."
+"Možnost med zagonom lupine GNOME prepiše ključ med nastavitvami org.gnome."
+"desktop.wm."
 
 #: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
 msgid "Enable edge tiling when dropping windows on screen edges"
@@ -111,8 +111,8 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"Seznam nizov z določilom ID programa (ime programa), ki mu sledi "
-"dvopičje in nato številka delovne površine."
+"Seznam nizov z določilom ID programa (ime programa), ki mu sledi dvopičje in "
+"nato številka delovne površine."
 
 #: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
@@ -174,8 +174,8 @@ msgid ""
 "as such it has little functionality on its own.\n"
 "Nevertheless it’s possible to customize the greeting message."
 msgstr ""
-"Primer je oblikovan kot predloga za izgradnjo kakovostnih razširitev "
-"za lupino, zato je delovanje deloma prilagojeno.\n"
+"Primer je oblikovan kot predloga za izgradnjo kakovostnih razširitev za "
+"lupino, zato je delovanje deloma prilagojeno.\n"
 "Kljub vsemu je mogoče prilagajati pozdravno sporočilo."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
@@ -202,9 +202,9 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice"
-"in s tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je "
-"treba lupino ponovno zagnati."
+"Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice in s "
+"tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba "
+"lupino ponovno zagnati."
 
 #: extensions/places-menu/extension.js:78
 #: extensions/places-menu/extension.js:81
