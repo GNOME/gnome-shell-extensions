@@ -74,13 +74,6 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
                 return maybeStartDrag.call(draggable, event);
             return false;
         };
-
-        draggable.connect('drag-begin', () => {
-            Shell.util_set_hidden_from_pick(Main.legacyTray.actor, true);
-        });
-        draggable.connect('drag-end', () => {
-            Shell.util_set_hidden_from_pick(Main.legacyTray.actor, false);
-        });
     }
 
     activate(event) {
