@@ -1,8 +1,6 @@
 // -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
 
-const GLib = imports.gi.GLib;
-const Gio = imports.gi.Gio;
-const Shell = imports.gi.Shell;
+const { Gio, GLib, Shell } = imports.gi;
 const Mainloop = imports.mainloop;
 const Signals = imports.signals;
 

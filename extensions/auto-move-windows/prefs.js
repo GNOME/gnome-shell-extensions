@@ -2,9 +2,7 @@
 // Start apps on custom workspaces
 /* exported init buildPrefsWidget */
 
-const Gio = imports.gi.Gio;
-const GObject = imports.gi.GObject;
-const Gtk = imports.gi.Gtk;
+const { Gio, GObject, Gtk } = imports.gi;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;

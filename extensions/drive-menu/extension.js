@@ -1,9 +1,6 @@
 /* exported init enable disable */
 // Drive menu extension
-const Gio = imports.gi.Gio;
-const GObject = imports.gi.GObject;
-const St = imports.gi.St;
-const Shell = imports.gi.Shell;
+const { Gio, GObject, Shell, St } = imports.gi;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;

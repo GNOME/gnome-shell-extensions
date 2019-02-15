@@ -1,11 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported init enable disable */
 
-const Gio = imports.gi.Gio;
-const GObject = imports.gi.GObject;
-const Meta = imports.gi.Meta;
-const Clutter = imports.gi.Clutter;
-const St = imports.gi.St;
+const { Clutter, Gio, GObject, Meta, St } = imports.gi;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 

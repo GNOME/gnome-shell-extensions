@@ -19,9 +19,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-const Meta = imports.gi.Meta;
-const Shell = imports.gi.Shell;
-const St = imports.gi.St;
+const { Meta, Shell, St } = imports.gi;
 
 const Main = imports.ui.main;
 const Tweener = imports.ui.tweener;

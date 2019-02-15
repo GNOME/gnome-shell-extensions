@@ -1,20 +1,12 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 /* exported init enable disable */
 
-const Atk = imports.gi.Atk;
+const { Atk, Clutter, Gio, GLib, GMenu,
+        GObject, Gtk, Meta, Shell, St } = imports.gi;
 const DND = imports.ui.dnd;
-const GMenu = imports.gi.GMenu;
-const GObject = imports.gi.GObject;
-const Shell = imports.gi.Shell;
-const St = imports.gi.St;
-const Clutter = imports.gi.Clutter;
 const Main = imports.ui.main;
-const Meta = imports.gi.Meta;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
-const Gtk = imports.gi.Gtk;
-const GLib = imports.gi.GLib;
-const Gio = imports.gi.Gio;
 const Signals = imports.signals;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');

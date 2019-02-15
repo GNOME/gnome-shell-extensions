@@ -2,8 +2,7 @@
 // Load shell theme from ~/.themes/name/gnome-shell
 /* exported init */
 
-const GLib = imports.gi.GLib;
-const Gio = imports.gi.Gio;
+const { Gio, GLib } = imports.gi;
 const Main = imports.ui.main;
 
 const SETTINGS_KEY = 'name';
