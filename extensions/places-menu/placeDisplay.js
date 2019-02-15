@@ -1,7 +1,6 @@
 // -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
 
 const { Gio, GLib, Shell } = imports.gi;
-const Mainloop = imports.mainloop;
 const Signals = imports.signals;
 
 const Main = imports.ui.main;
@@ -286,11 +285,12 @@ var PlacesManager = class {
                 if (this._bookmarkTimeoutId > 0)
                     return;
                 /* Defensive event compression */
-                this._bookmarkTimeoutId = Mainloop.timeout_add(100, () => {
-                    this._bookmarkTimeoutId = 0;
-                    this._reloadBookmarks();
-                    return false;
-                });
+                this._bookmarkTimeoutId = GLib.timeout_add(
+                    GLib.PRIORITY_DEFAULT, 100, () => {
+                        this._bookmarkTimeoutId = 0;
+                        this._reloadBookmarks();
+                        return false;
+                    });
             });
 
             this._reloadBookmarks();
@@ -321,7 +321,7 @@ var PlacesManager = class {
         if (this._monitor)
             this._monitor.cancel();
         if (this._bookmarkTimeoutId)
-            Mainloop.source_remove(this._bookmarkTimeoutId);
+            GLib.source_remove(this._bookmarkTimeoutId);
     }
 
     _updateSpecials() {
