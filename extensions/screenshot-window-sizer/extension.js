@@ -47,8 +47,9 @@ function flashMessage(message) {
     text.opacity = 255;
 
     let monitor = Main.layoutManager.primaryMonitor;
-    text.set_position(monitor.x + Math.floor(monitor.width / 2 - text.width / 2),
-                      monitor.y + Math.floor(monitor.height / 2 - text.height / 2));
+    text.set_position(
+        monitor.x + Math.floor(monitor.width / 2 - text.width / 2),
+        monitor.y + Math.floor(monitor.height / 2 - text.height / 2));
 
     Tweener.addTween(text, {
         opacity: 0,
@@ -137,17 +138,18 @@ function cycleScreenshotSizes(display, window, binding) {
 }
 
 function enable() {
-    Main.wm.addKeybinding('cycle-screenshot-sizes',
-                          ExtensionUtils.getSettings(),
-                          Meta.KeyBindingFlags.PER_WINDOW,
-                          Shell.ActionMode.NORMAL,
-                          cycleScreenshotSizes);
-    Main.wm.addKeybinding('cycle-screenshot-sizes-backward',
-                          ExtensionUtils.getSettings(),
-                          Meta.KeyBindingFlags.PER_WINDOW |
-                          Meta.KeyBindingFlags.IS_REVERSED,
-                          Shell.ActionMode.NORMAL,
-                          cycleScreenshotSizes);
+    Main.wm.addKeybinding(
+        'cycle-screenshot-sizes',
+        ExtensionUtils.getSettings(),
+        Meta.KeyBindingFlags.PER_WINDOW,
+        Shell.ActionMode.NORMAL,
+        cycleScreenshotSizes);
+    Main.wm.addKeybinding(
+        'cycle-screenshot-sizes-backward',
+        ExtensionUtils.getSettings(),
+        Meta.KeyBindingFlags.PER_WINDOW | Meta.KeyBindingFlags.IS_REVERSED,
+        Shell.ActionMode.NORMAL,
+        cycleScreenshotSizes);
 }
 
 function disable() {
