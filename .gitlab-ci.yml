@@ -34,6 +34,6 @@ eslint:
 build-shell-extensions:
   stage: build
   script:
-    - meson _build .
+    - meson -Dclassic_mode=true _build .
     - ninja -C _build test install
   <<: *only_default
