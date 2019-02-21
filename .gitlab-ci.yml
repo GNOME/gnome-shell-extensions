@@ -16,6 +16,7 @@ check_commit_log:
     image: registry.gitlab.gnome.org/gnome/gjs:fedora.static-analysis
     stage: commit_check
     script:
+        - env
         - ./.gitlab-ci/check-commit-log.sh
     only:
         - merge_requests
