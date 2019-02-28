@@ -128,7 +128,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
         this.orientation = Gtk.Orientation.VERTICAL;
 
         this.add(new Gtk.Label({
-            label: '<b>%s</b>'.format(_("Workspace Names")),
+            label: '<b>%s</b>'.format(_('Workspace Names')),
             use_markup: true,
             margin_bottom: 6,
             hexpand: true,
@@ -148,7 +148,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
             vexpand: true
         });
 
-        let column = new Gtk.TreeViewColumn({ title: _("Name") });
+        let column = new Gtk.TreeViewColumn({ title: _('Name') });
         let renderer = new Gtk.CellRendererText({ editable: true });
         renderer.connect('edited', this._cellEdited.bind(this));
         column.pack_start(renderer, true);
@@ -188,7 +188,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
         let iter = this._store.append();
         let index = this._store.get_path(iter).get_indices()[0];
 
-        let label = _("Workspace %d").format(index + 1);
+        let label = _('Workspace %d').format(index + 1);
         this._store.set(iter, [this._store.Columns.LABEL], [label]);
     }
 

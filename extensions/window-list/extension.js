@@ -97,7 +97,7 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
                                      this._updateMaximizeItem.bind(this));
         this._updateMaximizeItem();
 
-        this._closeItem = new PopupMenu.PopupMenuItem(_("Close"));
+        this._closeItem = new PopupMenu.PopupMenuItem(_('Close'));
         this._closeItem.connect('activate', () => {
             this._metaWindow.delete(global.get_current_time());
         });
@@ -117,14 +117,14 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
 
     _updateMinimizeItem() {
         this._minimizeItem.label.text = this._metaWindow.minimized ?
-            _("Unminimize") : _("Minimize");
+            _('Unminimize') : _('Minimize');
     }
 
     _updateMaximizeItem() {
         let maximized = this._metaWindow.maximized_vertically &&
                         this._metaWindow.maximized_horizontally;
         this._maximizeItem.label.text = maximized ?
-            _("Unmaximize") : _("Maximize");
+            _('Unmaximize') : _('Maximize');
     }
 
     _onDestroy() {
@@ -405,19 +405,19 @@ class AppContextMenu extends PopupMenu.PopupMenu {
 
         this._appButton = appButton;
 
-        this._minimizeItem = new PopupMenu.PopupMenuItem(_("Minimize all"));
+        this._minimizeItem = new PopupMenu.PopupMenuItem(_('Minimize all'));
         this._minimizeItem.connect('activate', () => {
             this._appButton.getWindowList().forEach(w => w.minimize());
         });
         this.addMenuItem(this._minimizeItem);
 
-        this._unminimizeItem = new PopupMenu.PopupMenuItem(_("Unminimize all"));
+        this._unminimizeItem = new PopupMenu.PopupMenuItem(_('Unminimize all'));
         this._unminimizeItem.connect('activate', () => {
             this._appButton.getWindowList().forEach(w => w.unminimize());
         });
         this.addMenuItem(this._unminimizeItem);
 
-        this._maximizeItem = new PopupMenu.PopupMenuItem(_("Maximize all"));
+        this._maximizeItem = new PopupMenu.PopupMenuItem(_('Maximize all'));
         this._maximizeItem.connect('activate', () => {
             this._appButton.getWindowList().forEach(w => {
                 w.maximize(Meta.MaximizeFlags.HORIZONTAL |
@@ -426,7 +426,7 @@ class AppContextMenu extends PopupMenu.PopupMenu {
         });
         this.addMenuItem(this._maximizeItem);
 
-        this._unmaximizeItem = new PopupMenu.PopupMenuItem(_("Unmaximize all"));
+        this._unmaximizeItem = new PopupMenu.PopupMenuItem(_('Unmaximize all'));
         this._unmaximizeItem.connect('activate', () => {
             this._appButton.getWindowList().forEach(w => {
                 w.unmaximize(Meta.MaximizeFlags.HORIZONTAL |
@@ -435,7 +435,7 @@ class AppContextMenu extends PopupMenu.PopupMenu {
         });
         this.addMenuItem(this._unmaximizeItem);
 
-        let item = new PopupMenu.PopupMenuItem(_("Close all"));
+        let item = new PopupMenu.PopupMenuItem(_('Close all'));
         item.connect('activate', () => {
             this._appButton.getWindowList().forEach(w => {
                 w.delete(global.get_current_time());
@@ -652,7 +652,7 @@ class AppButton extends BaseButton {
 let WorkspaceIndicator = GObject.registerClass(
 class WorkspaceIndicator extends PanelMenu.Button {
     _init() {
-        super._init(0.0, _("Workspace Indicator"), true);
+        super._init(0.0, _('Workspace Indicator'), true);
         this.setMenu(new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM));
         this.add_style_class_name('window-list-workspace-indicator');
         this.menu.actor.remove_style_class_name('panel-menu');
@@ -833,7 +833,7 @@ class WindowList {
             trackFullscreen: true
         });
         Main.uiGroup.set_child_above_sibling(this.actor, Main.layoutManager.panelBox);
-        Main.ctrlAltTabManager.addGroup(this.actor, _("Window List"), 'start-here-symbolic');
+        Main.ctrlAltTabManager.addGroup(this.actor, _('Window List'), 'start-here-symbolic');
 
         this.actor.width = this._monitor.width;
         this.actor.connect('notify::height', this._updatePosition.bind(this));

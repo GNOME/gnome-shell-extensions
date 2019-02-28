@@ -18,7 +18,7 @@ const WORKSPACE_KEY = 'workspace-names';
 let WorkspaceIndicator = GObject.registerClass(
 class WorkspaceIndicator extends PanelMenu.Button {
     _init() {
-        super._init(0.0, _("Workspace Indicator"));
+        super._init(0.0, _('Workspace Indicator'));
 
         let workspaceManager = global.workspace_manager;
 

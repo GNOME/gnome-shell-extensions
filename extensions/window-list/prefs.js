@@ -22,7 +22,7 @@ class WindowListPrefsWidget extends Gtk.Grid {
         this.row_spacing = 6;
         this.orientation = Gtk.Orientation.VERTICAL;
 
-        let groupingLabel = '<b>%s</b>'.format(_("Window Grouping"));
+        let groupingLabel = '<b>%s</b>'.format(_('Window Grouping'));
         this.add(new Gtk.Label({
             label: groupingLabel, use_markup: true,
             halign: Gtk.Align.START
@@ -44,9 +44,9 @@ class WindowListPrefsWidget extends Gtk.Grid {
         let modes = range.deep_unpack()[1].deep_unpack();
 
         let modeLabels = {
-            'never': _("Never group windows"),
-            'auto': _("Group windows when space is limited"),
-            'always': _("Always group windows")
+            'never': _('Never group windows'),
+            'auto': _('Group windows when space is limited'),
+            'always': _('Always group windows')
         };
 
         let radio = null;
@@ -72,7 +72,7 @@ class WindowListPrefsWidget extends Gtk.Grid {
         }
 
         let check = new Gtk.CheckButton({
-            label: _("Show on all monitors"),
+            label: _('Show on all monitors'),
             margin_top: 6
         });
         this._settings.bind('show-on-all-monitors', check, 'active', Gio.SettingsBindFlags.DEFAULT);

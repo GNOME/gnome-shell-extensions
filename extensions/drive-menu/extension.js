@@ -97,7 +97,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
     _reportFailure(exception) {
         // TRANSLATORS: %s is the filesystem name
-        let msg = _("Ejecting drive “%s” failed:").format(this.mount.get_name());
+        let msg = _('Ejecting drive “%s” failed:').format(this.mount.get_name());
         Main.notifyError(msg, exception.message);
     }
 
@@ -113,7 +113,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 let DriveMenu = GObject.registerClass(
 class DriveMenu extends PanelMenu.Button {
     _init() {
-        super._init(0.0, _("Removable devices"));
+        super._init(0.0, _('Removable devices'));
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
         let icon = new St.Icon({
@@ -140,7 +140,7 @@ class DriveMenu extends PanelMenu.Button {
         this._monitor.get_mounts().forEach(this._addMount.bind(this));
 
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-        this.menu.addAction(_("Open Files"), event => {
+        this.menu.addAction(_('Open Files'), event => {
             let appSystem = Shell.AppSystem.get_default();
             let app = appSystem.lookup_app('org.gnome.Nautilus.desktop');
             app.activate_full(-1, event.get_time());

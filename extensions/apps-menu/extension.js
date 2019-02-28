@@ -26,7 +26,7 @@ class ActivitiesMenuItem extends PopupMenu.PopupBaseMenuItem {
     constructor(button) {
         super();
         this._button = button;
-        this.actor.add_child(new St.Label({ text: _("Activities Overview") }));
+        this.actor.add_child(new St.Label({ text: _('Activities Overview') }));
     }
 
     activate(event) {
@@ -115,7 +115,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         if (this._category)
             name = this._category.get_name();
         else
-            name = _("Favorites");
+            name = _('Favorites');
 
         this.actor.add_child(new St.Label({ text: name }));
         this.actor.connect('motion-event', this._onMotionEvent.bind(this));
@@ -404,7 +404,7 @@ class ApplicationsButton extends PanelMenu.Button {
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
 
         this._label = new St.Label({
-            text: _("Applications"),
+            text: _('Applications'),
             y_expand: true,
             y_align: Clutter.ActorAlign.CENTER
         });

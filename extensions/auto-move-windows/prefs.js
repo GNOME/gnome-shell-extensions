@@ -57,25 +57,25 @@ const Widget = GObject.registerClass({
         let appColumn = new Gtk.TreeViewColumn({
             expand: true,
             sort_column_id: Columns.DISPLAY_NAME,
-            title: _("Application")
+            title: _('Application')
         });
         let iconRenderer = new Gtk.CellRendererPixbuf;
         appColumn.pack_start(iconRenderer, false);
-        appColumn.add_attribute(iconRenderer, "gicon", Columns.ICON);
+        appColumn.add_attribute(iconRenderer, 'gicon', Columns.ICON);
         let nameRenderer = new Gtk.CellRendererText;
         appColumn.pack_start(nameRenderer, true);
-        appColumn.add_attribute(nameRenderer, "text", Columns.DISPLAY_NAME);
+        appColumn.add_attribute(nameRenderer, 'text', Columns.DISPLAY_NAME);
         this._treeView.append_column(appColumn);
 
         let workspaceColumn = new Gtk.TreeViewColumn({
-            title: _("Workspace"),
+            title: _('Workspace'),
             sort_column_id: Columns.WORKSPACE
         });
         let workspaceRenderer = new Gtk.CellRendererSpin({ editable: true });
         workspaceRenderer.connect('edited', this._workspaceEdited.bind(this));
         workspaceColumn.pack_start(workspaceRenderer, true);
-        workspaceColumn.add_attribute(workspaceRenderer, "adjustment", Columns.ADJUSTMENT);
-        workspaceColumn.add_attribute(workspaceRenderer, "text", Columns.WORKSPACE);
+        workspaceColumn.add_attribute(workspaceRenderer, 'adjustment', Columns.ADJUSTMENT);
+        workspaceColumn.add_attribute(workspaceRenderer, 'text', Columns.WORKSPACE);
         this._treeView.append_column(workspaceColumn);
 
         scrolled.add(this._treeView);
@@ -86,7 +86,7 @@ const Widget = GObject.registerClass({
 
         let newButton = new Gtk.ToolButton({
             icon_name: 'bookmark-new-symbolic',
-            label: _("Add Rule"),
+            label: _('Add Rule'),
             is_important: true
         });
         newButton.connect('clicked', this._createNew.bind(this));
@@ -108,13 +108,13 @@ const Widget = GObject.registerClass({
 
     _createNew() {
         let dialog = new Gtk.Dialog({
-            title: _("Create new matching rule"),
+            title: _('Create new matching rule'),
             transient_for: this.get_toplevel(),
             use_header_bar: true,
             modal: true
         });
         dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL);
-        let addButton = dialog.add_button(_("Add"), Gtk.ResponseType.OK);
+        let addButton = dialog.add_button(_('Add'), Gtk.ResponseType.OK);
         dialog.set_default_response(Gtk.ResponseType.OK);
 
         let grid = new Gtk.Grid({
@@ -131,7 +131,7 @@ const Widget = GObject.registerClass({
 
         grid.attach(dialog._appChooser, 0, 0, 2, 1);
         grid.attach(new Gtk.Label({
-            label: _("Workspace"),
+            label: _('Workspace'),
             halign: Gtk.Align.END
         }), 0, 1, 1, 1);
         let adjustment = new Gtk.Adjustment({

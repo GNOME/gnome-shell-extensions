@@ -76,11 +76,11 @@ const SECTIONS = [
 let PlacesMenu = GObject.registerClass(
 class PlacesMenu extends PanelMenu.Button {
     _init() {
-        super._init(0.0, _("Places"));
+        super._init(0.0, _('Places'));
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
         let label = new St.Label({
-            text: _("Places"),
+            text: _('Places'),
             y_expand: true,
             y_align: Clutter.ActorAlign.CENTER
         });
