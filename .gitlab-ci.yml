@@ -21,7 +21,7 @@ check_commit_log:
         - merge_requests
 
 eslint:
-  image: registry.gitlab.gnome.org/gnome/gjs:fedora.static-analysis
+  image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v1
   stage: source_check
   script:
     - sh lint/generate-report.sh -o $LINT_LOG || { cat $LINT_LOG; false; }
@@ -32,10 +32,8 @@ eslint:
     when: on_failure
 
 build-shell-extensions:
-  image: fedora:latest
+  image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v1
   stage: build
-  before_script:
-    - dnf install -y meson gettext mozjs60-devel
   script:
     - meson _build .
     - ninja -C _build test install
