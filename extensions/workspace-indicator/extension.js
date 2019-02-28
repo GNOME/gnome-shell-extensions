@@ -23,8 +23,10 @@ class WorkspaceIndicator extends PanelMenu.Button {
         let workspaceManager = global.workspace_manager;
 
         this._currentWorkspace = workspaceManager.get_active_workspace().index();
-        this.statusLabel = new St.Label({ y_align: Clutter.ActorAlign.CENTER,
-                                          text: this._labelText() });
+        this.statusLabel = new St.Label({
+            y_align: Clutter.ActorAlign.CENTER,
+            text: this._labelText()
+        });
 
         this.add_actor(this.statusLabel);
 

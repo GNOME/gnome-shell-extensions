@@ -22,16 +22,20 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
         super();
         this._info = info;
 
-        this._icon = new St.Icon({ gicon: info.icon,
-                                   icon_size: PLACE_ICON_SIZE });
+        this._icon = new St.Icon({
+            gicon: info.icon,
+            icon_size: PLACE_ICON_SIZE
+        });
         this.actor.add_child(this._icon);
 
         this._label = new St.Label({ text: info.name, x_expand: true });
         this.actor.add_child(this._label);
 
         if (info.isRemovable()) {
-            this._ejectIcon = new St.Icon({ icon_name: 'media-eject-symbolic',
-                                            style_class: 'popup-menu-icon ' });
+            this._ejectIcon = new St.Icon({
+                icon_name: 'media-eject-symbolic',
+                style_class: 'popup-menu-icon'
+            });
             this._ejectButton = new St.Button({ child: this._ejectIcon });
             this._ejectButton.connect('clicked', info.eject.bind(info));
             this.actor.add_child(this._ejectButton);
@@ -75,9 +79,11 @@ class PlacesMenu extends PanelMenu.Button {
         super._init(0.0, _("Places"));
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
-        let label = new St.Label({ text: _("Places"),
-                                   y_expand: true,
-                                   y_align: Clutter.ActorAlign.CENTER });
+        let label = new St.Label({
+            text: _("Places"),
+            y_expand: true,
+            y_align: Clutter.ActorAlign.CENTER
+        });
         hbox.add_child(label);
         hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
         this.add_actor(hbox);

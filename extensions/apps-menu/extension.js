@@ -1,8 +1,9 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 /* exported init enable disable */
 
-const { Atk, Clutter, Gio, GLib, GMenu,
-        GObject, Gtk, Meta, Shell, St } = imports.gi;
+const {
+    Atk, Clutter, Gio, GLib, GMenu, GObject, Gtk, Meta, Shell, St
+} = imports.gi;
 const DND = imports.ui.dnd;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
@@ -44,8 +45,11 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._iconBin = new St.Bin();
         this.actor.add_child(this._iconBin);
 
-        let appLabel = new St.Label({ text: app.get_name(), y_expand: true,
-                                      y_align: Clutter.ActorAlign.CENTER });
+        let appLabel = new St.Label({
+            text: app.get_name(),
+            y_expand: true,
+            y_align: Clutter.ActorAlign.CENTER
+        });
         this.actor.add_child(appLabel);
         this.actor.label_actor = appLabel;
 
@@ -399,9 +403,11 @@ class ApplicationsButton extends PanelMenu.Button {
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
 
-        this._label = new St.Label({ text: _("Applications"),
-                                     y_expand: true,
-                                     y_align: Clutter.ActorAlign.CENTER });
+        this._label = new St.Label({
+            text: _("Applications"),
+            y_expand: true,
+            y_align: Clutter.ActorAlign.CENTER
+        });
         hbox.add_child(this._label);
         hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
 
@@ -457,8 +463,10 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     _createVertSeparator() {
-        let separator = new St.DrawingArea({ style_class: 'calendar-vertical-separator',
-                                             pseudo_class: 'highlighted' });
+        let separator = new St.DrawingArea({
+            style_class: 'calendar-vertical-separator',
+            pseudo_class: 'highlighted'
+        });
         separator.connect('repaint', this._onVertSepRepaint.bind(this));
         return separator;
     }
@@ -600,9 +608,12 @@ class ApplicationsButton extends PanelMenu.Button {
         this.menu.addMenuItem(section);
         this.mainBox = new St.BoxLayout({ vertical: false });
         this.leftBox = new St.BoxLayout({ vertical: true });
-        this.applicationsScrollBox = new St.ScrollView({ x_fill: true, y_fill: false,
-                                                         y_align: St.Align.START,
-                                                         style_class: 'apps-menu vfade' });
+        this.applicationsScrollBox = new St.ScrollView({
+            x_fill: true,
+            y_fill: false,
+            y_align: St.Align.START,
+            style_class: 'apps-menu vfade'
+        });
         this.applicationsScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         let vscroll = this.applicationsScrollBox.get_vscroll_bar();
         vscroll.connect('scroll-start', () => {
@@ -611,21 +622,30 @@ class ApplicationsButton extends PanelMenu.Button {
         vscroll.connect('scroll-stop', () => {
             this.menu.passEvents = false;
         });
-        this.categoriesScrollBox = new St.ScrollView({ x_fill: true, y_fill: false,
-                                                       y_align: St.Align.START,
-                                                       style_class: 'vfade' });
+        this.categoriesScrollBox = new St.ScrollView({
+            x_fill: true,
+            y_fill: false,
+            y_align: St.Align.START,
+            style_class: 'vfade'
+        });
         this.categoriesScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         vscroll = this.categoriesScrollBox.get_vscroll_bar();
         vscroll.connect('scroll-start', () => this.menu.passEvents = true);
         vscroll.connect('scroll-stop', () => this.menu.passEvents = false);
-        this.leftBox.add(this.categoriesScrollBox, { expand: true,
-                                                     x_fill: true, y_fill: true,
-                                                     y_align: St.Align.START });
+        this.leftBox.add(this.categoriesScrollBox, {
+            expand: true,
+            x_fill: true,
+            y_fill: true,
+            y_align: St.Align.START
+        });
 
         let activities = new ActivitiesMenuItem(this);
-        this.leftBox.add(activities.actor, { expand: false,
-                                             x_fill: true, y_fill: false,
-                                             y_align: St.Align.START });
+        this.leftBox.add(activities.actor, {
+            expand: false,
+            x_fill: true,
+            y_fill: false,
+            y_align: St.Align.START
+        });
 
         this.applicationsBox = new St.BoxLayout({ vertical: true });
         this.applicationsScrollBox.add_actor(this.applicationsBox);
@@ -633,8 +653,16 @@ class ApplicationsButton extends PanelMenu.Button {
         this.categoriesScrollBox.add_actor(this.categoriesBox);
 
         this.mainBox.add(this.leftBox);
-        this.mainBox.add(this._createVertSeparator(), { expand: false, x_fill: false, y_fill: true });
-        this.mainBox.add(this.applicationsScrollBox, { expand: true, x_fill: true, y_fill: true });
+        this.mainBox.add(this._createVertSeparator(), {
+            expand: false,
+            x_fill: false,
+            y_fill: true
+        });
+        this.mainBox.add(this.applicationsScrollBox, {
+            expand: true,
+            x_fill: true,
+            y_fill: true
+        });
         section.actor.add_actor(this.mainBox);
     }
 

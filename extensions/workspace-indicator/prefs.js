@@ -127,20 +127,26 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
         this.margin = 12;
         this.orientation = Gtk.Orientation.VERTICAL;
 
-        this.add(new Gtk.Label({ label: '<b>%s</b>'.format(_("Workspace Names")),
-                                 use_markup: true, margin_bottom: 6,
-                                 hexpand: true, halign: Gtk.Align.START }));
+        this.add(new Gtk.Label({
+            label: '<b>%s</b>'.format(_("Workspace Names")),
+            use_markup: true,
+            margin_bottom: 6,
+            hexpand: true,
+            halign: Gtk.Align.START
+        }));
 
         let scrolled = new Gtk.ScrolledWindow({ shadow_type: Gtk.ShadowType.IN });
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         this.add(scrolled);
 
         this._store = new WorkspaceNameModel();
-        this._treeView = new Gtk.TreeView({ model: this._store,
-                                            headers_visible: false,
-                                            reorderable: true,
-                                            hexpand: true,
-                                            vexpand: true });
+        this._treeView = new Gtk.TreeView({
+            model: this._store,
+            headers_visible: false,
+            reorderable: true,
+            hexpand: true,
+            vexpand: true
+        });
 
         let column = new Gtk.TreeViewColumn({ title: _("Name") });
         let renderer = new Gtk.CellRendererText({ editable: true });

@@ -229,8 +229,10 @@ function enable() {
 
     workspaceInjections['_init'] = injectToFunction(Workspace.Workspace.prototype, '_init', function(metaWorkspace) {
         if (metaWorkspace && metaWorkspace.index() < 9) {
-            createdActors.push(this._tip = new St.Label({ style_class: 'extension-windowsNavigator-window-tooltip',
-                                                          visible: false }));
+            createdActors.push(this._tip = new St.Label({
+                style_class: 'extension-windowsNavigator-window-tooltip',
+                visible: false
+            }));
 
             this.actor.add_actor(this._tip);
             let signalId = this.actor.connect('notify::scale-x', () => {

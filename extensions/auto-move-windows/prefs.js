@@ -47,12 +47,18 @@ const Widget = GObject.registerClass({
         this.add(scrolled);
 
 
-        this._treeView = new Gtk.TreeView({ model: this._store,
-                                            hexpand: true, vexpand: true });
+        this._treeView = new Gtk.TreeView({
+            model: this._store,
+            hexpand: true,
+            vexpand: true
+        });
         this._treeView.get_selection().set_mode(Gtk.SelectionMode.SINGLE);
 
-        let appColumn = new Gtk.TreeViewColumn({ expand: true, sort_column_id: Columns.DISPLAY_NAME,
-                                                 title: _("Application") });
+        let appColumn = new Gtk.TreeViewColumn({
+            expand: true,
+            sort_column_id: Columns.DISPLAY_NAME,
+            title: _("Application")
+        });
         let iconRenderer = new Gtk.CellRendererPixbuf;
         appColumn.pack_start(iconRenderer, false);
         appColumn.add_attribute(iconRenderer, "gicon", Columns.ICON);
@@ -61,8 +67,10 @@ const Widget = GObject.registerClass({
         appColumn.add_attribute(nameRenderer, "text", Columns.DISPLAY_NAME);
         this._treeView.append_column(appColumn);
 
-        let workspaceColumn = new Gtk.TreeViewColumn({ title: _("Workspace"),
-                                                       sort_column_id: Columns.WORKSPACE });
+        let workspaceColumn = new Gtk.TreeViewColumn({
+            title: _("Workspace"),
+            sort_column_id: Columns.WORKSPACE
+        });
         let workspaceRenderer = new Gtk.CellRendererSpin({ editable: true });
         workspaceRenderer.connect('edited', this._workspaceEdited.bind(this));
         workspaceColumn.pack_start(workspaceRenderer, true);
@@ -76,13 +84,15 @@ const Widget = GObject.registerClass({
         toolbar.get_style_context().add_class(Gtk.STYLE_CLASS_INLINE_TOOLBAR);
         this.add(toolbar);
 
-        let newButton = new Gtk.ToolButton({ icon_name: 'bookmark-new-symbolic',
-                                             label: _("Add Rule"),
-                                             is_important: true });
+        let newButton = new Gtk.ToolButton({
+            icon_name: 'bookmark-new-symbolic',
+            label: _("Add Rule"),
+            is_important: true
+        });
         newButton.connect('clicked', this._createNew.bind(this));
         toolbar.add(newButton);
 
-        let delButton = new Gtk.ToolButton({ icon_name: 'edit-delete-symbolic'  });
+        let delButton = new Gtk.ToolButton({ icon_name: 'edit-delete-symbolic' });
         delButton.connect('clicked', this._deleteSelected.bind(this));
         toolbar.add(delButton);
 
@@ -97,17 +107,21 @@ const Widget = GObject.registerClass({
     }
 
     _createNew() {
-        let dialog = new Gtk.Dialog({ title: _("Create new matching rule"),
-                                      transient_for: this.get_toplevel(),
-                                      use_header_bar: true,
-                                      modal: true });
+        let dialog = new Gtk.Dialog({
+            title: _("Create new matching rule"),
+            transient_for: this.get_toplevel(),
+            use_header_bar: true,
+            modal: true
+        });
         dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL);
         let addButton = dialog.add_button(_("Add"), Gtk.ResponseType.OK);
         dialog.set_default_response(Gtk.ResponseType.OK);
 
-        let grid = new Gtk.Grid({ column_spacing: 10,
-                                  row_spacing: 15,
-                                  margin: 10 });
+        let grid = new Gtk.Grid({
+            column_spacing: 10,
+            row_spacing: 15,
+            margin: 10
+        });
         dialog._appChooser = new Gtk.AppChooserWidget({ show_all: true });
         dialog._appChooser.connect('application-selected', (w, appInfo) => {
             addButton.sensitive = appInfo && this._checkId(appInfo.get_id());
@@ -116,13 +130,19 @@ const Widget = GObject.registerClass({
         addButton.sensitive = appInfo && this._checkId(appInfo.get_id());
 
         grid.attach(dialog._appChooser, 0, 0, 2, 1);
-        grid.attach(new Gtk.Label({ label: _("Workspace"),
-                                    halign: Gtk.Align.END }), 0, 1, 1, 1);
-        let adjustment = new Gtk.Adjustment({ lower: 1,
-                                              upper: WORKSPACE_MAX,
-                                              step_increment: 1 });
-        dialog._spin = new Gtk.SpinButton({ adjustment: adjustment,
-                                            snap_to_ticks: true });
+        grid.attach(new Gtk.Label({
+            label: _("Workspace"),
+            halign: Gtk.Align.END
+        }), 0, 1, 1, 1);
+        let adjustment = new Gtk.Adjustment({
+            lower: 1,
+            upper: WORKSPACE_MAX,
+            step_increment: 1
+        });
+        dialog._spin = new Gtk.SpinButton({
+            adjustment: adjustment,
+            snap_to_ticks: true
+        });
         dialog._spin.set_value(1);
         grid.attach(dialog._spin, 1, 1, 1, 1);
         dialog.get_content_area().add(grid);
@@ -145,10 +165,12 @@ const Widget = GObject.registerClass({
             this._changedPermitted = true;
 
             let iter = this._store.append();
-            let adj = new Gtk.Adjustment({ lower: 1,
-                                           upper: WORKSPACE_MAX,
-                                           step_increment: 1,
-                                           value: index });
+            let adj = new Gtk.Adjustment({
+                lower: 1,
+                upper: WORKSPACE_MAX,
+                step_increment: 1,
+                value: index
+            });
             this._store.set(iter,
                             [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT],
                             [appInfo, appInfo.get_icon(), appInfo.get_display_name(), index, adj]);
@@ -202,10 +224,12 @@ const Widget = GObject.registerClass({
             validItems.push(currentItems[i]);
 
             let iter = this._store.append();
-            let adj = new Gtk.Adjustment({ lower: 1,
-                                           upper: WORKSPACE_MAX,
-                                           step_increment: 1,
-                                           value: index });
+            let adj = new Gtk.Adjustment({
+                lower: 1,
+                upper: WORKSPACE_MAX,
+                step_increment: 1,
+                value: index
+            });
             this._store.set(iter,
                             [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT],
                             [appInfo, appInfo.get_icon(), appInfo.get_display_name(), parseInt(index), adj]);

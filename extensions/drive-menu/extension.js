@@ -22,8 +22,10 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         this.mount = mount;
 
-        let ejectIcon = new St.Icon({ icon_name: 'media-eject-symbolic',
-                                      style_class: 'popup-menu-icon ' });
+        let ejectIcon = new St.Icon({
+            icon_name: 'media-eject-symbolic',
+            style_class: 'popup-menu-icon'
+        });
         let ejectButton = new St.Button({ child: ejectIcon });
         ejectButton.connect('clicked', this._eject.bind(this));
         this.actor.add(ejectButton);
@@ -114,8 +116,10 @@ class DriveMenu extends PanelMenu.Button {
         super._init(0.0, _("Removable devices"));
 
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
-        let icon = new St.Icon({ icon_name: 'media-eject-symbolic',
-                                 style_class: 'system-status-icon' });
+        let icon = new St.Icon({
+            icon_name: 'media-eject-symbolic',
+            style_class: 'system-status-icon'
+        });
 
         hbox.add_child(icon);
         hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));

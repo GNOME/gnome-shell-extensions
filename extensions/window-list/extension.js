@@ -137,8 +137,11 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
 class WindowTitle {
     constructor(metaWindow) {
         this._metaWindow = metaWindow;
-        this.actor = new St.BoxLayout({ style_class: 'window-button-box',
-                                        x_expand: true, y_expand: true });
+        this.actor = new St.BoxLayout({
+            style_class: 'window-button-box',
+            x_expand: true,
+            y_expand: true
+        });
 
         this._icon = new St.Bin({ style_class: 'window-button-icon' });
         this.actor.add(this._icon);
@@ -188,8 +191,10 @@ class WindowTitle {
         if (app)
             this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
         else
-            this._icon.child = new St.Icon({ icon_name: 'icon-missing',
-                                             icon_size: ICON_TEXTURE_SIZE });
+            this._icon.child = new St.Icon({
+                icon_name: 'icon-missing',
+                icon_size: ICON_TEXTURE_SIZE
+            });
     }
 
     _onDestroy() {
@@ -210,12 +215,13 @@ class BaseButton {
         this._perMonitor = perMonitor;
         this._monitorIndex = monitorIndex;
 
-        this.actor = new St.Button({ style_class: 'window-button',
-                                     x_fill: true,
-                                     y_fill: true,
-                                     can_focus: true,
-                                     button_mask: St.ButtonMask.ONE |
-                                                  St.ButtonMask.THREE });
+        this.actor = new St.Button({
+            style_class: 'window-button',
+            x_fill: true,
+            y_fill: true,
+            can_focus: true,
+            button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE
+        });
         this.actor._delegate = this;
 
         this.actor.connect('allocation-changed',
@@ -463,21 +469,29 @@ class AppButton extends BaseButton {
         let stack = new St.Widget({ layout_manager: new Clutter.BinLayout() });
         this.actor.set_child(stack);
 
-        this._singleWindowTitle = new St.Bin({ x_expand: true,
-                                               y_fill: true,
-                                               x_align: St.Align.START });
+        this._singleWindowTitle = new St.Bin({
+            x_expand: true,
+            y_fill: true,
+            x_align: St.Align.START
+        });
         stack.add_actor(this._singleWindowTitle);
 
-        this._multiWindowTitle = new St.BoxLayout({ style_class: 'window-button-box',
-                                                    x_expand: true });
+        this._multiWindowTitle = new St.BoxLayout({
+            style_class: 'window-button-box',
+            x_expand: true
+        });
         stack.add_actor(this._multiWindowTitle);
 
-        this._icon = new St.Bin({ style_class: 'window-button-icon',
-                                  child: app.create_icon_texture(ICON_TEXTURE_SIZE) });
+        this._icon = new St.Bin({
+            style_class: 'window-button-icon',
+            child: app.create_icon_texture(ICON_TEXTURE_SIZE)
+        });
         this._multiWindowTitle.add(this._icon);
 
-        let label = new St.Label({ text: app.get_name(),
-                                   y_align: Clutter.ActorAlign.CENTER });
+        let label = new St.Label({
+            text: app.get_name(),
+            y_align: Clutter.ActorAlign.CENTER
+        });
         this._multiWindowTitle.add(label);
         this._multiWindowTitle.label_actor = label;
 
@@ -643,16 +657,21 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this.add_style_class_name('window-list-workspace-indicator');
         this.menu.actor.remove_style_class_name('panel-menu');
 
-        let container = new St.Widget({ layout_manager: new Clutter.BinLayout(),
-                                        x_expand: true, y_expand: true });
+        let container = new St.Widget({
+            layout_manager: new Clutter.BinLayout(),
+            x_expand: true,
+            y_expand: true
+        });
         this.add_actor(container);
 
         let workspaceManager = global.workspace_manager;
 
         this._currentWorkspace = workspaceManager.get_active_workspace().index();
-        this.statusLabel = new St.Label({ text: this._getStatusText(),
-                                          x_align: Clutter.ActorAlign.CENTER,
-                                          y_align: Clutter.ActorAlign.CENTER });
+        this.statusLabel = new St.Label({
+            text: this._getStatusText(),
+            x_align: Clutter.ActorAlign.CENTER,
+            y_align: Clutter.ActorAlign.CENTER
+        });
         container.add_actor(this.statusLabel);
 
         this.workspacesItems = [];
@@ -761,23 +780,27 @@ class WindowList {
         this._perMonitor = perMonitor;
         this._monitor = monitor;
 
-        this.actor = new St.Widget({ name: 'panel',
-                                     style_class: 'bottom-panel solid',
-                                     reactive: true,
-                                     track_hover: true,
-                                     layout_manager: new Clutter.BinLayout() });
+        this.actor = new St.Widget({
+            name: 'panel',
+            style_class: 'bottom-panel solid',
+            reactive: true,
+            track_hover: true,
+            layout_manager: new Clutter.BinLayout()
+        });
         this.actor.connect('destroy', this._onDestroy.bind(this));
 
         let box = new St.BoxLayout({ x_expand: true, y_expand: true });
         this.actor.add_actor(box);
 
         let layout = new Clutter.BoxLayout({ homogeneous: true });
-        this._windowList = new St.Widget({ style_class: 'window-list',
-                                           reactive: true,
-                                           layout_manager: layout,
-                                           x_align: Clutter.ActorAlign.START,
-                                           x_expand: true,
-                                           y_expand: true });
+        this._windowList = new St.Widget({
+            style_class: 'window-list',
+            reactive: true,
+            layout_manager: layout,
+            x_align: Clutter.ActorAlign.START,
+            x_expand: true,
+            y_expand: true
+        });
         box.add(this._windowList, { expand: true });
 
         this._windowList.connect('style-changed', () => {
@@ -805,8 +828,10 @@ class WindowList {
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menuManager.addMenu(this._workspaceIndicator.menu);
 
-        Main.layoutManager.addChrome(this.actor, { affectsStruts: true,
-                                                   trackFullscreen: true });
+        Main.layoutManager.addChrome(this.actor, {
+            affectsStruts: true,
+            trackFullscreen: true
+        });
         Main.uiGroup.set_child_above_sibling(this.actor, Main.layoutManager.panelBox);
         Main.ctrlAltTabManager.addGroup(this.actor, _("Window List"), 'start-here-symbolic');
 

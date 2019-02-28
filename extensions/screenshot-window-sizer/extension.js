@@ -50,11 +50,12 @@ function flashMessage(message) {
     text.set_position(monitor.x + Math.floor(monitor.width / 2 - text.width / 2),
                       monitor.y + Math.floor(monitor.height / 2 - text.height / 2));
 
-    Tweener.addTween(text,
-                     { opacity: 0,
-                       time: MESSAGE_FADE_TIME,
-                       transition: 'easeOutQuad',
-                       onComplete: hideMessage });
+    Tweener.addTween(text, {
+        opacity: 0,
+        time: MESSAGE_FADE_TIME,
+        transition: 'easeOutQuad',
+        onComplete: hideMessage
+    });
 }
 
 let SIZES = [

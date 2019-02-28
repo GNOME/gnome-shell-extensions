@@ -23,15 +23,19 @@ class WindowListPrefsWidget extends Gtk.Grid {
         this.orientation = Gtk.Orientation.VERTICAL;
 
         let groupingLabel = '<b>%s</b>'.format(_("Window Grouping"));
-        this.add(new Gtk.Label({ label: groupingLabel, use_markup: true,
-                                 halign: Gtk.Align.START }));
+        this.add(new Gtk.Label({
+            label: groupingLabel, use_markup: true,
+            halign: Gtk.Align.START
+        }));
 
         let align = new Gtk.Alignment({ left_padding: 12 });
         this.add(align);
 
-        let grid = new Gtk.Grid({ orientation: Gtk.Orientation.VERTICAL,
-                                  row_spacing: 6,
-                                  column_spacing: 6 });
+        let grid = new Gtk.Grid({
+            orientation: Gtk.Orientation.VERTICAL,
+            row_spacing: 6,
+            column_spacing: 6
+        });
         align.add(grid);
 
         this._settings = ExtensionUtils.getSettings();
@@ -54,9 +58,11 @@ class WindowListPrefsWidget extends Gtk.Grid {
                 continue;
             }
 
-            radio = new Gtk.RadioButton({ active: currentMode == mode,
-                                          label: label,
-                                          group: radio });
+            radio = new Gtk.RadioButton({
+                active: currentMode == mode,
+                label: label,
+                group: radio
+            });
             grid.add(radio);
 
             radio.connect('toggled', button => {
@@ -65,8 +71,10 @@ class WindowListPrefsWidget extends Gtk.Grid {
             });
         }
 
-        let check = new Gtk.CheckButton({ label: _("Show on all monitors"),
-                                          margin_top: 6 });
+        let check = new Gtk.CheckButton({
+            label: _("Show on all monitors"),
+            margin_top: 6
+        });
         this._settings.bind('show-on-all-monitors', check, 'active', Gio.SettingsBindFlags.DEFAULT);
         this.add(check);
     }
