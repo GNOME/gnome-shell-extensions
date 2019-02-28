@@ -20,8 +20,7 @@
             4,
             {
                 "ignoredNodes": [
-                    "CallExpression[callee.object.name=GObject][callee.property.name=registerClass] > ClassExpression:first-child",
-                    "ConditionalExpression"
+                    "CallExpression[callee.object.name=GObject][callee.property.name=registerClass] > ClassExpression:first-child"
                 ],
                 "MemberExpression": "off"
             }

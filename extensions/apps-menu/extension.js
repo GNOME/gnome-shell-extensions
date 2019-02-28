@@ -470,12 +470,12 @@ class ApplicationsButton extends PanelMenu.Button {
         this._tree.disconnect(this._treeChangedId);
         this._tree = null;
 
+        let handler = Main.sessionMode.hasOverview ?
+            Main.overview.toggle.bind(Main.overview) : null;
         Main.wm.setCustomKeybindingHandler('panel-main-menu',
                                            Shell.ActionMode.NORMAL |
                                            Shell.ActionMode.OVERVIEW,
-                                           Main.sessionMode.hasOverview ?
-                                           Main.overview.toggle.bind(Main.overview) :
-                                           null);
+                                           handler);
 
         this._desktopTarget.destroy();
     }
@@ -491,8 +491,8 @@ class ApplicationsButton extends PanelMenu.Button {
     _onMenuKeyPress(actor, event) {
         let symbol = event.get_key_symbol();
         if (symbol == Clutter.KEY_Left || symbol == Clutter.KEY_Right) {
-            let direction = symbol == Clutter.KEY_Left ? Gtk.DirectionType.LEFT
-                                                       : Gtk.DirectionType.RIGHT;
+            let direction = symbol == Clutter.KEY_Left ?
+                Gtk.DirectionType.LEFT : Gtk.DirectionType.RIGHT;
             if (this.menu.actor.navigate_focus(global.stage.key_focus, direction, false))
                 return true;
         }
