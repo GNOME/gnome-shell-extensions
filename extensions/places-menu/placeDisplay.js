@@ -298,9 +298,17 @@ var PlacesManager = class {
     }
 
     _connectVolumeMonitorSignals() {
-        const signals = ['volume-added', 'volume-removed', 'volume-changed',
-                         'mount-added', 'mount-removed', 'mount-changed',
-                         'drive-connected', 'drive-disconnected', 'drive-changed'];
+        const signals = [
+            'volume-added',
+            'volume-removed',
+            'volume-changed',
+            'mount-added',
+            'mount-removed',
+            'mount-changed',
+            'drive-connected',
+            'drive-disconnected',
+            'drive-changed'
+        ];
 
         this._volumeMonitorSignals = [];
         let func = this._updateMounts.bind(this);

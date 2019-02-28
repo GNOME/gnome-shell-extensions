@@ -34,8 +34,13 @@ const Widget = GObject.registerClass({
         this._changedPermitted = false;
 
         this._store = new Gtk.ListStore();
-        this._store.set_column_types([Gio.AppInfo, GObject.TYPE_STRING, Gio.Icon, GObject.TYPE_INT,
-                                      Gtk.Adjustment]);
+        this._store.set_column_types([
+            Gio.AppInfo,
+            GObject.TYPE_STRING,
+            Gio.Icon,
+            GObject.TYPE_INT,
+            Gtk.Adjustment
+        ]);
 
         let scrolled = new Gtk.ScrolledWindow({ shadow_type: Gtk.ShadowType.IN });
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
