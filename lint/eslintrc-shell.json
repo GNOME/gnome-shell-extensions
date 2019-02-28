@@ -20,19 +20,10 @@
             4,
             {
                 "ignoredNodes": [
-                    "ArrayExpression > ObjectExpression",
                     "CallExpression[callee.object.name=GObject][callee.property.name=registerClass] > ClassExpression:first-child",
                     "ConditionalExpression"
                 ],
                 "MemberExpression": "off"
-            }
-        ],
-        "key-spacing": [
-            "error",
-            {
-                "mode": "minimum",
-                "beforeColon": false,
-                "afterColon": true
             }
         ],
         "no-restricted-properties": [
