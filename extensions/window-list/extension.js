@@ -401,13 +401,13 @@ class AppContextMenu extends PopupMenu.PopupMenu {
 
         this._minimizeItem = new PopupMenu.PopupMenuItem(_("Minimize all"));
         this._minimizeItem.connect('activate', () => {
-            this._appButton.getWindowList().forEach(w => { w.minimize(); });
+            this._appButton.getWindowList().forEach(w => w.minimize());
         });
         this.addMenuItem(this._minimizeItem);
 
         this._unminimizeItem = new PopupMenu.PopupMenuItem(_("Unminimize all"));
         this._unminimizeItem.connect('activate', () => {
-            this._appButton.getWindowList().forEach(w => { w.unminimize(); });
+            this._appButton.getWindowList().forEach(w => w.unminimize());
         });
         this.addMenuItem(this._unminimizeItem);
 
@@ -538,7 +538,7 @@ class AppButton extends BaseButton {
         let rect = this._getIconGeometry();
 
         let windows = this.app.get_windows();
-        windows.forEach(w => { w.set_icon_geometry(rect); });
+        windows.forEach(w => w.set_icon_geometry(rect));
     }
 
     getWindowList() {
@@ -1205,7 +1205,7 @@ class Extension {
     }
 
     _buildWindowLists() {
-        this._windowLists.forEach(list => { list.actor.destroy(); });
+        this._windowLists.forEach(list => list.actor.destroy());
         this._windowLists = [];
 
         let showOnAllMonitors = this._settings.get_boolean('show-on-all-monitors');

@@ -529,7 +529,7 @@ class ApplicationsButton extends PanelMenu.Button {
         Main.wm.setCustomKeybindingHandler('panel-main-menu',
                                            Shell.ActionMode.NORMAL |
                                            Shell.ActionMode.OVERVIEW,
-                                           () => { this.menu.toggle(); });
+                                           () => this.menu.toggle());
     }
 
     _redisplay() {
@@ -616,8 +616,8 @@ class ApplicationsButton extends PanelMenu.Button {
                                                        style_class: 'vfade' });
         this.categoriesScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         vscroll = this.categoriesScrollBox.get_vscroll_bar();
-        vscroll.connect('scroll-start', () => { this.menu.passEvents = true; });
-        vscroll.connect('scroll-stop', () => { this.menu.passEvents = false; });
+        vscroll.connect('scroll-start', () => this.menu.passEvents = true);
+        vscroll.connect('scroll-stop', () => this.menu.passEvents = false);
         this.leftBox.add(this.categoriesScrollBox, { expand: true,
                                                      x_fill: true, y_fill: true,
                                                      y_align: St.Align.START });

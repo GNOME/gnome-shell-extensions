@@ -45,7 +45,7 @@ class PlaceInfo {
             } catch (e) {
                 if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
                     let source = {
-                        get_icon: () => { return this.icon; }
+                        get_icon: () => this.icon
                     };
                     let op = new ShellMountOperation.ShellMountOperation(source);
                     this.file.mount_enclosing_volume(0, op.mountOp, null, (file, result) => {
@@ -325,7 +325,7 @@ var PlacesManager = class {
     }
 
     _updateSpecials() {
-        this._places.special.forEach(p => { p.destroy(); });
+        this._places.special.forEach(p => p.destroy());
         this._places.special = [];
 
         let homePath = GLib.get_home_dir();
@@ -367,9 +367,9 @@ var PlacesManager = class {
         let networkMounts = [];
         let networkVolumes = [];
 
-        this._places.devices.forEach(p => { p.destroy(); });
+        this._places.devices.forEach(p => p.destroy());
         this._places.devices = [];
-        this._places.network.forEach(p => { p.destroy(); });
+        this._places.network.forEach(p => p.destroy());
         this._places.network = [];
 
         /* Add standard places */

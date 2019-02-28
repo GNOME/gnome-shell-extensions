@@ -125,9 +125,9 @@ function myCheckWorkspaces() {
     }
 
     // make sure the original method only removes empty workspaces at the end
-    keepAliveWorkspaces.forEach(ws => { ws._keepAliveId = 1; });
+    keepAliveWorkspaces.forEach(ws => ws._keepAliveId = 1);
     prevCheckWorkspaces.call(this);
-    keepAliveWorkspaces.forEach(ws => { delete ws._keepAliveId; });
+    keepAliveWorkspaces.forEach(ws => delete ws._keepAliveId);
 
     return false;
 }
