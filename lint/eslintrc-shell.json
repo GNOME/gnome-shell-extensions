@@ -1,34 +1,10 @@
 {
     "rules": {
-        "arrow-spacing": "error",
         "camelcase": [
             "error",
             {
                 "properties": "never",
                 "allow": ["^vfunc_"]
-            }
-        ],
-        "indent": [
-            "error",
-            4,
-            {
-                "ignoredNodes": [
-                    "CallExpression[callee.object.name=GObject][callee.property.name=registerClass] > ClassExpression:first-child"
-                ],
-                "MemberExpression": "off"
-            }
-        ],
-        "no-restricted-properties": [
-            "error",
-            {
-                "object": "Lang",
-                "property": "bind",
-                "message": "Please use arrow notation or Function.prototype.bind()."
-            },
-            {
-                "object": "Lang",
-                "property": "Class",
-                "message": "Please use ES6 classes."
             }
         ],
         "no-unused-vars": [
