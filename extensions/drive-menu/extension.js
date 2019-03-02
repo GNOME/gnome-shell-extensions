@@ -73,10 +73,10 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         if (this.mount.can_eject())
             this.mount.eject_with_operation(...unmountArgs,
-                                            this._ejectFinish.bind(this));
+                this._ejectFinish.bind(this));
         else
             this.mount.unmount_with_operation(...unmountArgs,
-                                              this._unmountFinish.bind(this));
+                this._unmountFinish.bind(this));
     }
 
     _unmountFinish(mount, result) {
@@ -102,9 +102,9 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     activate(event) {
+        let uri = this.mount.get_root().get_uri();
         let context = global.create_app_launch_context(event.get_time(), -1);
-        Gio.AppInfo.launch_default_for_uri(this.mount.get_root().get_uri(),
-                                           context);
+        Gio.AppInfo.launch_default_for_uri(uri, context);
 
         super.activate(event);
     }
