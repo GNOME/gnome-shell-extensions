@@ -34,13 +34,14 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._workspaceSection = new PopupMenu.PopupMenuSection();
         this.menu.addMenuItem(this._workspaceSection);
 
-        this._workspaceManagerSignals = [];
-        this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-added',
-                                                                          this._createWorkspacesSection.bind(this)));
-        this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-removed',
-                                                                          this._createWorkspacesSection.bind(this)));
-        this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-switched',
-                                                                          this._updateIndicator.bind(this)));
+        this._workspaceManagerSignals = [
+            workspaceManager.connect_after('workspace-added',
+                this._createWorkspacesSection.bind(this)),
+            workspaceManager.connect_after('workspace-removed',
+                this._createWorkspacesSection.bind(this)),
+            workspaceManager.connect_after('workspace-switched',
+                this._updateIndicator.bind(this))
+        ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._createWorkspacesSection();
@@ -49,9 +50,9 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this.statusLabel.add_style_class_name('panel-workspace-indicator');
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
-        this._settingsChangedId =
-            this._settings.connect(`changed::${WORKSPACE_KEY}`,
-                                   this._createWorkspacesSection.bind(this));
+        this._settingsChangedId = this._settings.connect(
+            `changed::${WORKSPACE_KEY}`,
+            this._createWorkspacesSection.bind(this));
     }
 
     _onDestroy() {
