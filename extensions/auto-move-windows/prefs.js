@@ -221,17 +221,20 @@ const Widget = GObject.registerClass({
             this._settings.set_strv(SETTINGS_KEY, validItems);
     }
 
-    _appendRow(appInfo, index) {
+    _appendRow(appInfo, workspace) {
         let iter = this._store.append();
+        let icon = appInfo.get_icon();
+        let displayName = appInfo.get_display_name();
         let adj = new Gtk.Adjustment({
             lower: 1,
             upper: WORKSPACE_MAX,
             step_increment: 1,
-            value: index
+            value: workspace
         });
+        let { APPINFO, ICON, DISPLAY_NAME, WORKSPACE, ADJUSTMENT } = Columns;
         this._store.set(iter,
-                        [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT],
-                        [appInfo, appInfo.get_icon(), appInfo.get_display_name(), index, adj]);
+                        [APPINFO, ICON, DISPLAY_NAME, WORKSPACE, ADJUSTMENT],
+                        [appInfo, icon, displayName, workspace, adj]);
     }
 
     _checkId(id) {
