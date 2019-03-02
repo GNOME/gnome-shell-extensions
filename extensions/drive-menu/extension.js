@@ -65,17 +65,17 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _eject() {
-        let mountOp = new ShellMountOperation.ShellMountOperation(this.mount);
+        let unmountArgs = [
+            Gio.MountUnmountFlags.NONE,
+            (new ShellMountOperation.ShellMountOperation(this.mount)).mountOp,
+            null // Gio.Cancellable
+        ];
 
         if (this.mount.can_eject())
-            this.mount.eject_with_operation(Gio.MountUnmountFlags.NONE,
-                                            mountOp.mountOp,
-                                            null, // Gio.Cancellable
+            this.mount.eject_with_operation(...unmountArgs,
                                             this._ejectFinish.bind(this));
         else
-            this.mount.unmount_with_operation(Gio.MountUnmountFlags.NONE,
-                                              mountOp.mountOp,
-                                              null, // Gio.Cancellable
+            this.mount.unmount_with_operation(...unmountArgs,
                                               this._unmountFinish.bind(this));
     }
 
