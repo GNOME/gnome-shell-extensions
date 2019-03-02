@@ -233,8 +233,8 @@ const Widget = GObject.registerClass({
         });
         let { APPINFO, ICON, DISPLAY_NAME, WORKSPACE, ADJUSTMENT } = Columns;
         this._store.set(iter,
-                        [APPINFO, ICON, DISPLAY_NAME, WORKSPACE, ADJUSTMENT],
-                        [appInfo, icon, displayName, workspace, adj]);
+            [APPINFO, ICON, DISPLAY_NAME, WORKSPACE, ADJUSTMENT],
+            [appInfo, icon, displayName, workspace, adj]);
     }
 
     _checkId(id) {

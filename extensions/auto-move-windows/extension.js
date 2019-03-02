@@ -17,7 +17,7 @@ class WindowMover {
 
         this._appsChangedId =
             this._appSystem.connect('installed-changed',
-                                    this._updateAppData.bind(this));
+                this._updateAppData.bind(this));
 
         this._settings.connect('changed', this._updateAppConfigs.bind(this));
         this._updateAppConfigs();
@@ -50,7 +50,7 @@ class WindowMover {
         addedApps.forEach(app => {
             let data = {
                 windowsChangedId: app.connect('windows-changed',
-                                              this._appWindowsChanged.bind(this)),
+                    this._appWindowsChanged.bind(this)),
                 moveWindowsId: 0,
                 windows: app.get_windows()
             };
