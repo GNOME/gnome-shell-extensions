@@ -43,34 +43,35 @@ class PlaceInfo {
             try {
                 Gio.AppInfo.launch_default_for_uri_finish(result);
             } catch (e) {
-                if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
-                    let source = {
-                        get_icon: () => this.icon
-                    };
-                    let op = new ShellMountOperation.ShellMountOperation(source);
-                    this.file.mount_enclosing_volume(0, op.mountOp, null, (file, result) => {
-                        try {
-                            op.close();
-                            file.mount_enclosing_volume_finish(result);
-                        } catch (e) {
-                            if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.FAILED_HANDLED))
-                                // e.g. user canceled the password dialog
-                                return;
-                            Main.notifyError(_('Failed to mount volume for “%s”').format(this.name), e.message);
-                            return;
-                        }
-
-                        if (tryMount) {
-                            let callback = this._createLaunchCallback(launchContext, false);
-                            Gio.AppInfo.launch_default_for_uri_async(file.get_uri(),
-                                                                     launchContext,
-                                                                     null,
-                                                                     callback);
-                        }
-                    });
-                } else {
+                if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
                     Main.notifyError(_('Failed to launch “%s”').format(this.name), e.message);
+                    return;
                 }
+
+                let source = {
+                    get_icon: () => this.icon
+                };
+                let op = new ShellMountOperation.ShellMountOperation(source);
+                this.file.mount_enclosing_volume(0, op.mountOp, null, (file, result) => {
+                    try {
+                        op.close();
+                        file.mount_enclosing_volume_finish(result);
+                    } catch (e) {
+                        if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.FAILED_HANDLED))
+                            // e.g. user canceled the password dialog
+                            return;
+                        Main.notifyError(_('Failed to mount volume for “%s”').format(this.name), e.message);
+                        return;
+                    }
+
+                    if (tryMount) {
+                        let callback = this._createLaunchCallback(launchContext, false);
+                        Gio.AppInfo.launch_default_for_uri_async(file.get_uri(),
+                                                                 launchContext,
+                                                                 null,
+                                                                 callback);
+                    }
+                });
             }
         };
     }
