@@ -73,8 +73,8 @@ function cycleScreenshotSizes(display, window, binding) {
     let backwards = (modifiers & Meta.VirtualModifier.SHIFT_MASK) != 0;
 
     // Unmaximize first
-    if (window.maximized_horizontally || window.maximizedVertically)
-        window.unmaximize(Meta.MaximizeFlags.HORIZONTAL | Meta.MaximizeFlags.VERTICAL);
+    if (window.get_maximized() != 0)
+        window.unmaximize(Meta.MaximizeFlags.BOTH);
 
     let workArea = window.get_work_area_current_monitor();
     let outerRect = window.get_frame_rect();

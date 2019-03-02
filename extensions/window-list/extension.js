@@ -79,13 +79,10 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
 
         this._maximizeItem = new PopupMenu.PopupMenuItem('');
         this._maximizeItem.connect('activate', () => {
-            if (this._metaWindow.maximized_vertically &&
-                this._metaWindow.maximized_horizontally)
-                this._metaWindow.unmaximize(Meta.MaximizeFlags.HORIZONTAL |
-                                            Meta.MaximizeFlags.VERTICAL);
+            if (this._metaWindow.get_maximized() == Meta.MaximizeFlags.BOTH)
+                this._metaWindow.unmaximize(Meta.MaximizeFlags.BOTH);
             else
-                this._metaWindow.maximize(Meta.MaximizeFlags.HORIZONTAL |
-                                          Meta.MaximizeFlags.VERTICAL);
+                this._metaWindow.maximize(Meta.MaximizeFlags.BOTH);
         });
         this.addMenuItem(this._maximizeItem);
 
@@ -420,8 +417,7 @@ class AppContextMenu extends PopupMenu.PopupMenu {
         this._maximizeItem = new PopupMenu.PopupMenuItem(_('Maximize all'));
         this._maximizeItem.connect('activate', () => {
             this._appButton.getWindowList().forEach(w => {
-                w.maximize(Meta.MaximizeFlags.HORIZONTAL |
-                           Meta.MaximizeFlags.VERTICAL);
+                w.maximize(Meta.MaximizeFlags.BOTH);
             });
         });
         this.addMenuItem(this._maximizeItem);
@@ -429,8 +425,7 @@ class AppContextMenu extends PopupMenu.PopupMenu {
         this._unmaximizeItem = new PopupMenu.PopupMenuItem(_('Unmaximize all'));
         this._unmaximizeItem.connect('activate', () => {
             this._appButton.getWindowList().forEach(w => {
-                w.unmaximize(Meta.MaximizeFlags.HORIZONTAL |
-                             Meta.MaximizeFlags.VERTICAL);
+                w.unmaximize(Meta.MaximizeFlags.BOTH);
             });
         });
         this.addMenuItem(this._unmaximizeItem);
@@ -449,10 +444,10 @@ class AppContextMenu extends PopupMenu.PopupMenu {
         this._minimizeItem.actor.visible = windows.some(w => !w.minimized);
         this._unminimizeItem.actor.visible = windows.some(w => w.minimized);
         this._maximizeItem.actor.visible = windows.some(w => {
-            return !(w.maximized_horizontally && w.maximized_vertically);
+            return w.get_maximized() != Meta.MaximizeFlags.BOTH;
         });
         this._unmaximizeItem.actor.visible = windows.some(w => {
-            return w.maximized_horizontally && w.maximized_vertically;
+            return w.get_maximized() == Meta.MaximizeFlags.BOTH;
         });
 
         super.open(animate);
