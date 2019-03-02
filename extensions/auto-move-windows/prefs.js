@@ -164,16 +164,7 @@ const Widget = GObject.registerClass({
             this._appendItem(appInfo.get_id(), index);
             this._changedPermitted = true;
 
-            let iter = this._store.append();
-            let adj = new Gtk.Adjustment({
-                lower: 1,
-                upper: WORKSPACE_MAX,
-                step_increment: 1,
-                value: index
-            });
-            this._store.set(iter,
-                            [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT],
-                            [appInfo, appInfo.get_icon(), appInfo.get_display_name(), index, adj]);
+            this._appendRow(appInfo, index);
 
             dialog.destroy();
         });
@@ -223,20 +214,24 @@ const Widget = GObject.registerClass({
                 continue;
             validItems.push(currentItems[i]);
 
-            let iter = this._store.append();
-            let adj = new Gtk.Adjustment({
-                lower: 1,
-                upper: WORKSPACE_MAX,
-                step_increment: 1,
-                value: index
-            });
-            this._store.set(iter,
-                            [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT],
-                            [appInfo, appInfo.get_icon(), appInfo.get_display_name(), parseInt(index), adj]);
+            this._appendRow(appInfo, parseInt(index));
         }
 
         if (validItems.length != currentItems.length) // some items were filtered out
             this._settings.set_strv(SETTINGS_KEY, validItems);
+    }
+
+    _appendRow(appInfo, index) {
+        let iter = this._store.append();
+        let adj = new Gtk.Adjustment({
+            lower: 1,
+            upper: WORKSPACE_MAX,
+            step_increment: 1,
+            value: index
+        });
+        this._store.set(iter,
+                        [Columns.APPINFO, Columns.ICON, Columns.DISPLAY_NAME, Columns.WORKSPACE, Columns.ADJUSTMENT],
+                        [appInfo, appInfo.get_icon(), appInfo.get_display_name(), index, adj]);
     }
 
     _checkId(id) {
