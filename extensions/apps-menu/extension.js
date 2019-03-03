@@ -721,22 +721,20 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     _displayButtons(apps) {
-        if (apps) {
-            for (let i = 0; i < apps.length; i++) {
-                let app = apps[i];
-                let item;
-                if (app instanceof Shell.App)
-                    item = this._applicationsButtons.get(app);
-                else
-                    item = new PopupMenu.PopupSeparatorMenuItem();
-                if (!item) {
-                    item = new ApplicationMenuItem(this, app);
-                    item.setDragEnabled(this._desktopTarget.hasDesktop);
-                    this._applicationsButtons.set(app, item);
-                }
-                if (!item.actor.get_parent())
-                    this.applicationsBox.add_actor(item.actor);
+        for (let i = 0; i < apps.length; i++) {
+            let app = apps[i];
+            let item;
+            if (app instanceof Shell.App)
+                item = this._applicationsButtons.get(app);
+            else
+                item = new PopupMenu.PopupSeparatorMenuItem();
+            if (!item) {
+                item = new ApplicationMenuItem(this, app);
+                item.setDragEnabled(this._desktopTarget.hasDesktop);
+                this._applicationsButtons.set(app, item);
             }
+            if (!item.actor.get_parent())
+                this.applicationsBox.add_actor(item.actor);
         }
     }
 
