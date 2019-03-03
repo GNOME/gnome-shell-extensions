@@ -30,37 +30,29 @@ class ThemeManager {
     }
 
     _changeTheme() {
-        let _stylesheet = null;
-        let _themeName = this._settings.get_string(SETTINGS_KEY);
+        let stylesheet = null;
+        let themeName = this._settings.get_string(SETTINGS_KEY);
 
-        if (_themeName) {
-            let _userCssStylesheet = GLib.build_filenamev([
-                GLib.get_home_dir(), '.themes', _themeName, 'gnome-shell', 'gnome-shell.css'
-            ]);
-            let file = Gio.file_new_for_path(_userCssStylesheet);
-            if (file.query_exists(null))
-                _stylesheet = _userCssStylesheet;
-            else {
-                let sysdirs = GLib.get_system_data_dirs();
-                sysdirs.unshift(GLib.get_user_data_dir());
-                for (let i = 0; i < sysdirs.length; i++) {
-                    _userCssStylesheet = GLib.build_filenamev([
-                        sysdirs[i], 'themes', _themeName, 'gnome-shell', 'gnome-shell.css'
-                    ]);
-                    let file = Gio.file_new_for_path(_userCssStylesheet);
-                    if (file.query_exists(null)) {
-                        _stylesheet = _userCssStylesheet;
-                        break;
-                    }
-                }
-            }
+        if (themeName) {
+            let stylesheetPaths = [
+                [GLib.get_home_dir(), '.themes'],
+                [GLib.get_user_data_dir(), 'themes'],
+                ...GLib.get_system_data_dirs().map(dir => [dir, 'themes'])
+            ].map(themeDir => GLib.build_filenamev([
+                ...themeDir, themeName, 'gnome-shell', 'gnome-shell.css'
+            ]));
+
+            stylesheet = stylesheetPaths.find(path => {
+                let file = Gio.file_new_for_path(path);
+                return file.query_exists(null);
+            });
         }
 
-        if (_stylesheet)
-            global.log(`loading user theme: ${_stylesheet}`);
+        if (stylesheet)
+            global.log(`loading user theme: ${stylesheet}`);
         else
             global.log('loading default theme (Adwaita)');
-        Main.setThemeStylesheet(_stylesheet);
+        Main.setThemeStylesheet(stylesheet);
         Main.loadTheme();
     }
 }
