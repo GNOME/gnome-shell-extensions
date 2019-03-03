@@ -34,17 +34,11 @@ class ThemeManager {
         let _themeName = this._settings.get_string(SETTINGS_KEY);
 
         if (_themeName) {
-            let _userCssStylesheetCompat = GLib.build_filenamev([
+            let _userCssStylesheet = GLib.build_filenamev([
                 GLib.get_home_dir(), '.themes', _themeName, 'gnome-shell', 'gnome-shell.css'
             ]);
-            let fileCompat = Gio.file_new_for_path(_userCssStylesheetCompat);
-            let _userCssStylesheet = GLib.build_filenamev([
-                GLib.get_user_data_dir(), 'themes', _themeName, 'gnome-shell', 'gnome-shell.css'
-            ]);
             let file = Gio.file_new_for_path(_userCssStylesheet);
-            if (fileCompat.query_exists(null))
-                _stylesheet = _userCssStylesheetCompat;
-            else if (file.query_exists(null))
+            if (file.query_exists(null))
                 _stylesheet = _userCssStylesheet;
             else {
                 let sysdirs = GLib.get_system_data_dirs();
