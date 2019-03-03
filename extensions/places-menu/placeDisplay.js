@@ -71,18 +71,21 @@ class PlaceInfo {
     }
 
     getIcon() {
-        this.file.query_info_async('standard::symbolic-icon', 0, 0, null,
-                                   (file, result) => {
-                                       try {
-                                           let info = file.query_info_finish(result);
-                                           this.icon = info.get_symbolic_icon();
-                                           this.emit('changed');
-                                       } catch (e) {
-                                           if (e instanceof Gio.IOErrorEnum)
-                                               return;
-                                           throw e;
-                                       }
-                                   });
+        this.file.query_info_async('standard::symbolic-icon',
+            Gio.FileQueryInfoFlags.NONE,
+            0,
+            null,
+            (file, result) => {
+                try {
+                    let info = file.query_info_finish(result);
+                    this.icon = info.get_symbolic_icon();
+                    this.emit('changed');
+                } catch (e) {
+                    if (e instanceof Gio.IOErrorEnum)
+                        return;
+                    throw e;
+                }
+            });
 
         // return a generic icon for this kind for now, until we have the
         // icon from the query info above
@@ -152,7 +155,7 @@ class RootInfo extends PlaceInfo {
 
             this._proxy = obj;
             this._proxy.connect('g-properties-changed',
-                                this._propertiesChanged.bind(this));
+                this._propertiesChanged.bind(this));
             this._propertiesChanged(obj);
         });
     }
@@ -203,10 +206,10 @@ class PlaceDeviceInfo extends PlaceInfo {
 
         if (this._mount.can_eject())
             this._mount.eject_with_operation(...unmountArgs,
-                                             this._ejectFinish.bind(this));
+                this._ejectFinish.bind(this));
         else
             this._mount.unmount_with_operation(...unmountArgs,
-                                               this._unmountFinish.bind(this));
+                this._unmountFinish.bind(this));
     }
 
     _ejectFinish(mount, result) {
@@ -275,9 +278,8 @@ var PlacesManager = class {
         };
 
         this._settings = new Gio.Settings({ schema_id: BACKGROUND_SCHEMA });
-        this._showDesktopIconsChangedId =
-            this._settings.connect('changed::show-desktop-icons',
-                                   this._updateSpecials.bind(this));
+        this._showDesktopIconsChangedId = this._settings.connect(
+            'changed::show-desktop-icons', this._updateSpecials.bind(this));
         this._updateSpecials();
 
         /*
@@ -350,9 +352,10 @@ var PlacesManager = class {
 
         let homePath = GLib.get_home_dir();
 
-        this._places.special.push(new PlaceInfo('special',
-                                                Gio.File.new_for_path(homePath),
-                                                _('Home')));
+        this._places.special.push(new PlaceInfo(
+            'special',
+            Gio.File.new_for_path(homePath),
+            _('Home')));
 
         let specials = [];
         let dirs = DEFAULT_DIRECTORIES.slice();
@@ -394,10 +397,11 @@ var PlacesManager = class {
 
         /* Add standard places */
         this._places.devices.push(new RootInfo());
-        this._places.network.push(new PlaceInfo('network',
-                                                Gio.File.new_for_uri('network:///'),
-                                                _('Browse Network'),
-                                                'network-workgroup-symbolic'));
+        this._places.network.push(new PlaceInfo(
+            'network',
+            Gio.File.new_for_uri('network:///'),
+            _('Browse Network'),
+            'network-workgroup-symbolic'));
 
         /* first go through all connected drives */
         let drives = this._volumeMonitor.get_connected_drives();

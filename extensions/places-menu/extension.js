@@ -42,7 +42,7 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
         }
 
         this._changedId = info.connect('changed',
-                                       this._propertiesChanged.bind(this));
+            this._propertiesChanged.bind(this));
     }
 
     destroy() {
