@@ -72,9 +72,8 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
         });
         this.addMenuItem(this._minimizeItem);
 
-        this._notifyMinimizedId =
-            this._metaWindow.connect('notify::minimized',
-                                     this._updateMinimizeItem.bind(this));
+        this._notifyMinimizedId = this._metaWindow.connect(
+            'notify::minimized', this._updateMinimizeItem.bind(this));
         this._updateMinimizeItem();
 
         this._maximizeItem = new PopupMenu.PopupMenuItem('');
@@ -86,12 +85,12 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
         });
         this.addMenuItem(this._maximizeItem);
 
-        this._notifyMaximizedHId =
-            this._metaWindow.connect('notify::maximized-horizontally',
-                                     this._updateMaximizeItem.bind(this));
-        this._notifyMaximizedVId =
-            this._metaWindow.connect('notify::maximized-vertically',
-                                     this._updateMaximizeItem.bind(this));
+        this._notifyMaximizedHId = this._metaWindow.connect(
+            'notify::maximized-horizontally',
+            this._updateMaximizeItem.bind(this));
+        this._notifyMaximizedVId = this._metaWindow.connect(
+            'notify::maximized-vertically',
+            this._updateMaximizeItem.bind(this));
         this._updateMaximizeItem();
 
         this._closeItem = new PopupMenu.PopupMenuItem(_('Close'));
@@ -146,25 +145,20 @@ class WindowTitle {
         this.actor.add(this.label_actor);
 
         this._textureCache = St.TextureCache.get_default();
-        this._iconThemeChangedId =
-            this._textureCache.connect('icon-theme-changed',
-                                       this._updateIcon.bind(this));
-        this._notifyWmClass =
-            this._metaWindow.connect_after('notify::wm-class',
-                                           this._updateIcon.bind(this));
-        this._notifyAppId =
-            this._metaWindow.connect_after('notify::gtk-application-id',
-                                           this._updateIcon.bind(this));
+        this._iconThemeChangedId = this._textureCache.connect(
+            'icon-theme-changed', this._updateIcon.bind(this));
+        this._notifyWmClass = this._metaWindow.connect_after(
+            'notify::wm-class', this._updateIcon.bind(this));
+        this._notifyAppId = this._metaWindow.connect_after(
+            'notify::gtk-application-id', this._updateIcon.bind(this));
         this._updateIcon();
 
         this.actor.connect('destroy', this._onDestroy.bind(this));
 
-        this._notifyTitleId =
-            this._metaWindow.connect('notify::title',
-                                     this._updateTitle.bind(this));
-        this._notifyMinimizedId =
-            this._metaWindow.connect('notify::minimized',
-                                     this._minimizedChanged.bind(this));
+        this._notifyTitleId = this._metaWindow.connect(
+            'notify::title', this._updateTitle.bind(this));
+        this._notifyMinimizedId = this._metaWindow.connect(
+            'notify::minimized', this._minimizedChanged.bind(this));
         this._minimizedChanged();
     }
 
@@ -222,24 +216,23 @@ class BaseButton {
         this.actor._delegate = this;
 
         this.actor.connect('allocation-changed',
-                           this._updateIconGeometry.bind(this));
+            this._updateIconGeometry.bind(this));
         this.actor.connect('clicked', this._onClicked.bind(this));
         this.actor.connect('destroy', this._onDestroy.bind(this));
         this.actor.connect('popup-menu', this._onPopupMenu.bind(this));
 
         this._contextMenuManager = new PopupMenu.PopupMenuManager(this);
 
-        this._switchWorkspaceId =
-            global.window_manager.connect('switch-workspace',
-                                          this._updateVisibility.bind(this));
+        this._switchWorkspaceId = global.window_manager.connect(
+            'switch-workspace', this._updateVisibility.bind(this));
 
         if (this._perMonitor) {
-            this._windowEnteredMonitorId =
-                global.display.connect('window-entered-monitor',
-                                       this._windowEnteredOrLeftMonitor.bind(this));
-            this._windowLeftMonitorId =
-                global.display.connect('window-left-monitor',
-                                       this._windowEnteredOrLeftMonitor.bind(this));
+            this._windowEnteredMonitorId = global.display.connect(
+                'window-entered-monitor',
+                this._windowEnteredOrLeftMonitor.bind(this));
+            this._windowLeftMonitorId = global.display.connect(
+                'window-left-monitor',
+                this._windowEnteredOrLeftMonitor.bind(this));
         }
     }
 
@@ -339,13 +332,11 @@ class WindowButton extends BaseButton {
         this._contextMenuManager.addMenu(this._contextMenu);
         Main.uiGroup.add_actor(this._contextMenu.actor);
 
-        this._workspaceChangedId =
-            this.metaWindow.connect('workspace-changed',
-                                    this._updateVisibility.bind(this));
+        this._workspaceChangedId = this.metaWindow.connect(
+            'workspace-changed', this._updateVisibility.bind(this));
 
-        this._notifyFocusId =
-            global.display.connect('notify::focus-window',
-                                   this._updateStyle.bind(this));
+        this._notifyFocusId = global.display.connect(
+            'notify::focus-window', this._updateStyle.bind(this));
         this._updateStyle();
     }
 
@@ -509,15 +500,13 @@ class AppButton extends BaseButton {
                 this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
             });
 
-        this._windowsChangedId =
-            this.app.connect('windows-changed',
-                             this._windowsChanged.bind(this));
+        this._windowsChangedId = this.app.connect(
+            'windows-changed', this._windowsChanged.bind(this));
         this._windowsChanged();
 
         this._windowTracker = Shell.WindowTracker.get_default();
-        this._notifyFocusId =
-            this._windowTracker.connect('notify::focus-app',
-                                        this._updateStyle.bind(this));
+        this._notifyFocusId = this._windowTracker.connect(
+            'notify::focus-app', this._updateStyle.bind(this));
         this._updateStyle();
     }
 
@@ -565,8 +554,8 @@ class AppButton extends BaseButton {
                 this._windowTitle = new WindowTitle(this.metaWindow);
                 this._singleWindowTitle.child = this._windowTitle.actor;
                 this._windowContextMenu = new WindowContextMenu(this.actor, this.metaWindow);
-                this._windowContextMenu.connect('open-state-changed',
-                                                _onMenuStateChanged);
+                this._windowContextMenu.connect(
+                    'open-state-changed', _onMenuStateChanged);
                 Main.uiGroup.add_actor(this._windowContextMenu.actor);
                 this._windowContextMenu.actor.hide();
                 this._contextMenuManager.addMenu(this._windowContextMenu);
@@ -671,19 +660,19 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
         this.workspacesItems = [];
 
-        this._workspaceManagerSignals = [];
-        this._workspaceManagerSignals.push(workspaceManager.connect('notify::n-workspaces',
-                                                                    this._updateMenu.bind(this)));
-        this._workspaceManagerSignals.push(workspaceManager.connect_after('workspace-switched',
-                                                                          this._updateIndicator.bind(this)));
+        this._workspaceManagerSignals = [
+            workspaceManager.connect('notify::n-workspaces',
+                this._updateMenu.bind(this)),
+            workspaceManager.connect_after('workspace-switched',
+                this._updateIndicator.bind(this))
+        ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._updateMenu();
 
         this._settings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.preferences' });
-        this._settingsChangedId =
-            this._settings.connect('changed::workspace-names',
-                                   this._updateMenu.bind(this));
+        this._settingsChangedId = this._settings.connect(
+            'changed::workspace-names', this._updateMenu.bind(this));
     }
 
     _onDestroy() {
@@ -812,12 +801,12 @@ class WindowList {
         indicatorsBox.add(this._workspaceIndicator.container, { expand: false, y_fill: true });
 
         this._mutterSettings = new Gio.Settings({ schema_id: 'org.gnome.mutter' });
-        this._workspacesOnlyOnPrimaryChangedId =
-            this._mutterSettings.connect('changed::workspaces-only-on-primary',
-                                         this._updateWorkspaceIndicatorVisibility.bind(this));
-        this._dynamicWorkspacesChangedId =
-            this._mutterSettings.connect('changed::dynamic-workspaces',
-                                         this._updateWorkspaceIndicatorVisibility.bind(this));
+        this._workspacesOnlyOnPrimaryChangedId = this._mutterSettings.connect(
+            'changed::workspaces-only-on-primary',
+            this._updateWorkspaceIndicatorVisibility.bind(this));
+        this._dynamicWorkspacesChangedId = this._mutterSettings.connect(
+            'changed::dynamic-workspaces',
+            this._updateWorkspaceIndicatorVisibility.bind(this));
         this._updateWorkspaceIndicatorVisibility();
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
@@ -835,59 +824,54 @@ class WindowList {
         this._updatePosition();
 
         this._appSystem = Shell.AppSystem.get_default();
-        this._appStateChangedId =
-            this._appSystem.connect('app-state-changed',
-                                    this._onAppStateChanged.bind(this));
+        this._appStateChangedId = this._appSystem.connect(
+            'app-state-changed', this._onAppStateChanged.bind(this));
 
-        this._keyboardVisiblechangedId =
-            Main.layoutManager.connect('keyboard-visible-changed',
-                (o, state) => {
-                    Main.layoutManager.keyboardBox.visible = state;
-                    let keyboardBox = Main.layoutManager.keyboardBox;
-                    keyboardBox.visible = state;
-                    if (state)
-                        Main.uiGroup.set_child_above_sibling(this.actor, keyboardBox);
-                    else
-                        Main.uiGroup.set_child_above_sibling(this.actor,
-                                                             Main.layoutManager.panelBox);
-                    this._updateKeyboardAnchor();
-                });
+        this._keyboardVisiblechangedId = Main.layoutManager.connect(
+            'keyboard-visible-changed',
+            (o, state) => {
+                Main.layoutManager.keyboardBox.visible = state;
+                let keyboardBox = Main.layoutManager.keyboardBox;
+                keyboardBox.visible = state;
+                if (state) {
+                    Main.uiGroup.set_child_above_sibling(
+                        this.actor, keyboardBox);
+                } else {
+                    Main.uiGroup.set_child_above_sibling(
+                        this.actor, Main.layoutManager.panelBox);
+                }
+                this._updateKeyboardAnchor();
+            });
 
         let workspaceManager = global.workspace_manager;
 
         this._workspaceSignals = new Map();
-        this._nWorkspacesChangedId =
-            workspaceManager.connect('notify::n-workspaces',
-                                     this._onWorkspacesChanged.bind(this));
+        this._nWorkspacesChangedId = workspaceManager.connect(
+            'notify::n-workspaces', this._onWorkspacesChanged.bind(this));
         this._onWorkspacesChanged();
 
-        this._switchWorkspaceId =
-            global.window_manager.connect('switch-workspace',
-                                          this._checkGrouping.bind(this));
+        this._switchWorkspaceId = global.window_manager.connect(
+            'switch-workspace', this._checkGrouping.bind(this));
 
-        this._overviewShowingId =
-            Main.overview.connect('showing', () => {
-                this.actor.hide();
-                this._updateKeyboardAnchor();
-            });
+        this._overviewShowingId = Main.overview.connect('showing', () => {
+            this.actor.hide();
+            this._updateKeyboardAnchor();
+        });
 
-        this._overviewHidingId =
-            Main.overview.connect('hiding', () => {
-                this.actor.visible = !Main.layoutManager.primaryMonitor.inFullscreen;
-                this._updateKeyboardAnchor();
-            });
+        this._overviewHidingId = Main.overview.connect('hiding', () => {
+            this.actor.visible = !Main.layoutManager.primaryMonitor.inFullscreen;
+            this._updateKeyboardAnchor();
+        });
 
         this._fullscreenChangedId =
             global.display.connect('in-fullscreen-changed', () => {
                 this._updateKeyboardAnchor();
             });
 
-        this._dragBeginId =
-            Main.xdndHandler.connect('drag-begin',
-                                     this._onDragBegin.bind(this));
-        this._dragEndId =
-            Main.xdndHandler.connect('drag-end',
-                                     this._onDragEnd.bind(this));
+        this._dragBeginId = Main.xdndHandler.connect('drag-begin',
+            this._onDragBegin.bind(this));
+        this._dragEndId = Main.xdndHandler.connect('drag-end',
+            this._onDragEnd.bind(this));
         this._dragMonitor = {
             dragMotion: this._onDragMotion.bind(this)
         };
@@ -896,9 +880,8 @@ class WindowList {
         this._dndWindow = null;
 
         this._settings = ExtensionUtils.getSettings();
-        this._groupingModeChangedId =
-            this._settings.connect('changed::grouping-mode',
-                                   this._groupingModeChanged.bind(this));
+        this._groupingModeChangedId = this._settings.connect(
+            'changed::grouping-mode', this._groupingModeChanged.bind(this));
         this._grouped = undefined;
         this._groupingModeChanged();
     }
@@ -922,8 +905,9 @@ class WindowList {
     }
 
     _updatePosition() {
-        this.actor.set_position(this._monitor.x,
-                                this._monitor.y + this._monitor.height - this.actor.height);
+        this.actor.set_position(
+            this._monitor.x,
+            this._monitor.y + this._monitor.height - this.actor.height);
     }
 
     _updateWorkspaceIndicatorVisibility() {
@@ -1026,9 +1010,9 @@ class WindowList {
     _addApp(app) {
         let button = new AppButton(app, this._perMonitor, this._monitor.index);
         this._windowList.layout_manager.pack(button.actor,
-                                             true, true, true,
-                                             Clutter.BoxAlignment.START,
-                                             Clutter.BoxAlignment.START);
+            true, true, true,
+            Clutter.BoxAlignment.START,
+            Clutter.BoxAlignment.START);
     }
 
     _removeApp(app) {
@@ -1054,9 +1038,9 @@ class WindowList {
 
         let button = new WindowButton(win, this._perMonitor, this._monitor.index);
         this._windowList.layout_manager.pack(button.actor,
-                                             true, true, true,
-                                             Clutter.BoxAlignment.START,
-                                             Clutter.BoxAlignment.START);
+            true, true, true,
+            Clutter.BoxAlignment.START,
+            Clutter.BoxAlignment.START);
     }
 
     _onWindowRemoved(ws, win) {
@@ -1085,12 +1069,10 @@ class WindowList {
                 continue;
 
             let signals = { windowAddedId: 0, windowRemovedId: 0 };
-            signals._windowAddedId =
-                workspace.connect_after('window-added',
-                                        this._onWindowAdded.bind(this));
-            signals._windowRemovedId =
-                workspace.connect('window-removed',
-                                  this._onWindowRemoved.bind(this));
+            signals._windowAddedId = workspace.connect_after(
+                'window-added', this._onWindowAdded.bind(this));
+            signals._windowRemovedId = workspace.connect(
+                'window-removed', this._onWindowRemoved.bind(this));
             this._workspaceSignals.set(workspace, signals);
         }
 
@@ -1138,8 +1120,7 @@ class WindowList {
 
         this._dndWindow = hoveredWindow;
         this._dndTimeoutId = GLib.timeout_add(GLib.PRIORITY_DEFAULT,
-                                              DND_ACTIVATE_TIMEOUT,
-                                              this._activateWindow.bind(this));
+            DND_ACTIVATE_TIMEOUT, this._activateWindow.bind(this));
 
         return DND.DragMotionResult.CONTINUE;
     }
@@ -1213,13 +1194,11 @@ class Extension {
         this._windowLists = [];
 
         this._settings = ExtensionUtils.getSettings();
-        this._showOnAllMonitorsChangedId =
-            this._settings.connect('changed::show-on-all-monitors',
-                                   this._buildWindowLists.bind(this));
+        this._showOnAllMonitorsChangedId = this._settings.connect(
+            'changed::show-on-all-monitors', this._buildWindowLists.bind(this));
 
-        this._monitorsChangedId =
-            Main.layoutManager.connect('monitors-changed',
-                                       this._buildWindowLists.bind(this));
+        this._monitorsChangedId = Main.layoutManager.connect(
+            'monitors-changed', this._buildWindowLists.bind(this));
 
         this._buildWindowLists();
     }
