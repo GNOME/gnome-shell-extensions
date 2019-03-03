@@ -680,17 +680,19 @@ class ApplicationsButton extends PanelMenu.Button {
         let iter = root.iter();
         let nextType;
         while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
-            if (nextType == GMenu.TreeItemType.DIRECTORY) {
-                let dir = iter.get_directory();
-                if (!dir.get_is_nodisplay()) {
-                    let categoryId = dir.get_menu_id();
-                    this.applicationsByCategory[categoryId] = [];
-                    this._loadCategory(categoryId, dir);
-                    if (this.applicationsByCategory[categoryId].length > 0) {
-                        let categoryMenuItem = new CategoryMenuItem(this, dir);
-                        this.categoriesBox.add_actor(categoryMenuItem.actor);
-                    }
-                }
+            if (nextType != GMenu.TreeItemType.DIRECTORY)
+                continue;
+
+            let dir = iter.get_directory();
+            if (dir.get_is_nodisplay())
+                continue;
+
+            let categoryId = dir.get_menu_id();
+            this.applicationsByCategory[categoryId] = [];
+            this._loadCategory(categoryId, dir);
+            if (this.applicationsByCategory[categoryId].length > 0) {
+                let categoryMenuItem = new CategoryMenuItem(this, dir);
+                this.categoriesBox.add_actor(categoryMenuItem.actor);
             }
         }
 
