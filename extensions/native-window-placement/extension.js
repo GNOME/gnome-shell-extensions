@@ -203,9 +203,10 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
 
         // Work out scaling by getting the most top-left and most bottom-right window coords.
         let scale;
-        scale = Math.min(areaRect.width / bounds.width,
-                         areaRect.height / bounds.height,
-                         1.0);
+        scale = Math.min(
+            areaRect.width / bounds.width,
+            areaRect.height / bounds.height,
+            1.0);
 
         // Make bounding rect fill the screen size for later steps
         bounds.x = bounds.x - (areaRect.width - bounds.width * scale) / 2;
