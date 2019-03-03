@@ -38,51 +38,36 @@ class PlaceInfo {
         return false;
     }
 
-    _createLaunchCallback(launchContext, tryMount) {
-        return (_ignored, result) => {
-            try {
-                Gio.AppInfo.launch_default_for_uri_finish(result);
-            } catch (e) {
-                if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
-                    Main.notifyError(_('Failed to launch “%s”').format(this.name), e.message);
-                    return;
-                }
-
-                let source = {
-                    get_icon: () => this.icon
-                };
-                let op = new ShellMountOperation.ShellMountOperation(source);
-                this.file.mount_enclosing_volume(0, op.mountOp, null, (file, result) => {
-                    try {
-                        op.close();
-                        file.mount_enclosing_volume_finish(result);
-                    } catch (e) {
-                        if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.FAILED_HANDLED))
-                            // e.g. user canceled the password dialog
-                            return;
-                        Main.notifyError(_('Failed to mount volume for “%s”').format(this.name), e.message);
-                        return;
-                    }
-
-                    if (tryMount) {
-                        let callback = this._createLaunchCallback(launchContext, false);
-                        Gio.AppInfo.launch_default_for_uri_async(file.get_uri(),
-                                                                 launchContext,
-                                                                 null,
-                                                                 callback);
-                    }
-                });
+    async _ensureMountAndLaunch(context, tryMount) {
+        try {
+            await this._launchDefaultForUri(this.file.get_uri(), context, null);
+        } catch (e) {
+            if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
+                Main.notifyError(_('Failed to launch “%s”').format(this.name), e.message);
+                return;
             }
-        };
+
+            let source = {
+                get_icon: () => this.icon
+            };
+            let op = new ShellMountOperation.ShellMountOperation(source);
+            try {
+                await this._mountEnclosingVolume(0, op.mountOp, null);
+
+                if (tryMount)
+                    this._ensureMountAndLaunch(context, false);
+            } catch (e) {
+                if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.FAILED_HANDLED))
+                    Main.notifyError(_('Failed to mount volume for “%s”').format(this.name), e.message);
+            } finally {
+                op.close();
+            }
+        }
     }
 
     launch(timestamp) {
         let launchContext = global.create_app_launch_context(timestamp, -1);
-        let callback = this._createLaunchCallback(launchContext, true);
-        Gio.AppInfo.launch_default_for_uri_async(this.file.get_uri(),
-                                                 launchContext,
-                                                 null,
-                                                 callback);
+        this._ensureMountAndLaunch(launchContext, true);
     }
 
     getIcon() {
@@ -125,6 +110,32 @@ class PlaceInfo {
                 return this.file.get_basename();
             throw e;
         }
+    }
+
+    _launchDefaultForUri(uri, context, cancel) {
+        return new Promise((resolve, reject) => {
+            Gio.AppInfo.launch_default_for_uri_async(uri, context, cancel, (o, res) => {
+                try {
+                    Gio.AppInfo.launch_default_for_uri_finish(res);
+                    resolve();
+                } catch (e) {
+                    reject(e);
+                }
+            });
+        });
+    }
+
+    _mountEnclosingVolume(flags, mountOp, cancel) {
+        return new Promise((resolve, reject) => {
+            this.file.mount_enclosing_volume(flags, mountOp, cancel, (o, res) => {
+                try {
+                    this.file.mount_enclosing_volume_finish(res);
+                    resolve();
+                } catch (e) {
+                    reject(e);
+                }
+            });
+        });
     }
 }
 Signals.addSignalMethods(PlaceInfo.prototype);
