@@ -58,7 +58,7 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         let textureCache = St.TextureCache.get_default();
         let iconThemeChangedId = textureCache.connect('icon-theme-changed',
-                                                      this._updateIcon.bind(this));
+            this._updateIcon.bind(this));
         this.actor.connect('destroy', () => {
             textureCache.disconnect(iconThemeChangedId);
         });
@@ -262,7 +262,7 @@ class DesktopTarget {
 
         this._windowAddedId =
             global.window_group.connect('actor-added',
-                                        this._onWindowAdded.bind(this));
+                this._onWindowAdded.bind(this));
 
         global.get_window_actors().forEach(a => {
             this._onWindowAdded(a.get_parent(), a);
@@ -322,8 +322,8 @@ class DesktopTarget {
 
             // Hack: force nautilus to reload file info
             info = new Gio.FileInfo();
-            info.set_attribute_uint64(Gio.FILE_ATTRIBUTE_TIME_ACCESS,
-                                      GLib.get_real_time());
+            info.set_attribute_uint64(
+                Gio.FILE_ATTRIBUTE_TIME_ACCESS, GLib.get_real_time());
             try {
                 await file.set_attributes_async(info, queryFlags, ioPriority, null);
             } catch (e) {
@@ -411,7 +411,7 @@ class ApplicationsButton extends PanelMenu.Button {
             this.remove_accessible_state (Atk.StateType.CHECKED);
         });
         Main.layoutManager.connect('startup-complete',
-                                   this._setKeybinding.bind(this));
+            this._setKeybinding.bind(this));
         this._setKeybinding();
 
         this._desktopTarget = new DesktopTarget();
@@ -426,14 +426,14 @@ class ApplicationsButton extends PanelMenu.Button {
 
         this._tree = new GMenu.Tree({ menu_basename: 'applications.menu' });
         this._treeChangedId = this._tree.connect('changed',
-                                                 this._onTreeChanged.bind(this));
+            this._onTreeChanged.bind(this));
 
         this._applicationsButtons = new Map();
         this.reloadFlag = false;
         this._createLayout();
         this._display();
         this._installedChangedId = appSys.connect('installed-changed',
-                                                  this._onTreeChanged.bind(this));
+            this._onTreeChanged.bind(this));
     }
 
     _onTreeChanged() {
@@ -465,12 +465,11 @@ class ApplicationsButton extends PanelMenu.Button {
         this._tree.disconnect(this._treeChangedId);
         this._tree = null;
 
-        let handler = Main.sessionMode.hasOverview ?
-            Main.overview.toggle.bind(Main.overview) : null;
         Main.wm.setCustomKeybindingHandler('panel-main-menu',
-                                           Shell.ActionMode.NORMAL |
-                                           Shell.ActionMode.OVERVIEW,
-                                           handler);
+            Shell.ActionMode.NORMAL | Shell.ActionMode.OVERVIEW,
+            Main.sessionMode.hasOverview
+                ? Main.overview.toggle.bind(Main.overview)
+                : null);
 
         this._desktopTarget.destroy();
     }
@@ -522,9 +521,8 @@ class ApplicationsButton extends PanelMenu.Button {
 
     _setKeybinding() {
         Main.wm.setCustomKeybindingHandler('panel-main-menu',
-                                           Shell.ActionMode.NORMAL |
-                                           Shell.ActionMode.OVERVIEW,
-                                           () => this.menu.toggle());
+            Shell.ActionMode.NORMAL | Shell.ActionMode.OVERVIEW,
+            () => this.menu.toggle());
     }
 
     _redisplay() {
