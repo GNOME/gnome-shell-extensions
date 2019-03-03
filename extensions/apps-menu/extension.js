@@ -22,6 +22,9 @@ const HORIZ_FACTOR = 5;
 const MENU_HEIGHT_OFFSET = 132;
 const NAVIGATION_REGION_OVERSHOOT = 50;
 
+Gio._promisify(Gio._LocalFilePrototype, 'query_info_async', 'query_info_finish');
+Gio._promisify(Gio._LocalFilePrototype, 'set_attributes_async', 'set_attributes_finish');
+
 class ActivitiesMenuItem extends PopupMenu.PopupBaseMenuItem {
     constructor(button) {
         super();
@@ -303,48 +306,32 @@ class DesktopTarget {
         return source._app.app_info;
     }
 
-    _touchFile(file) {
-        let queryFlags = Gio.FileQueryInfoFlags.NONE;
-        let ioPriority = GLib.PRIORITY_DEFAULT;
-
-        let info = new Gio.FileInfo();
-        info.set_attribute_uint64(Gio.FILE_ATTRIBUTE_TIME_ACCESS,
-                                  GLib.get_real_time());
-        file.set_attributes_async (info, queryFlags, ioPriority, null,
-            (o, res) => {
-                try {
-                    o.set_attributes_finish(res);
-                } catch (e) {
-                    log(`Failed to update access time: ${e.message}`);
-                }
-            });
-    }
-
-    _markTrusted(file) {
+    async _markTrusted(file) {
         let modeAttr = Gio.FILE_ATTRIBUTE_UNIX_MODE;
         let trustedAttr = 'metadata::trusted';
         let queryFlags = Gio.FileQueryInfoFlags.NONE;
         let ioPriority = GLib.PRIORITY_DEFAULT;
 
-        file.query_info_async(modeAttr, queryFlags, ioPriority, null,
-            (o, res) => {
-                try {
-                    let info = o.query_info_finish(res);
-                    let mode = info.get_attribute_uint32(modeAttr) | 0o100;
+        try {
+            let info = await file.query_info_async(modeAttr, queryFlags, ioPriority, null);
 
-                    info.set_attribute_uint32(modeAttr, mode);
-                    info.set_attribute_string(trustedAttr, 'yes');
-                    file.set_attributes_async (info, queryFlags, ioPriority, null,
-                        (o, res) => {
-                            o.set_attributes_finish(res);
+            let mode = info.get_attribute_uint32(modeAttr) | 0o100;
+            info.set_attribute_uint32(modeAttr, mode);
+            info.set_attribute_string(trustedAttr, 'yes');
+            await file.set_attributes_async(info, queryFlags, ioPriority, null);
 
-                            // Hack: force nautilus to reload file info
-                            this._touchFile(file);
-                        });
-                } catch (e) {
-                    log(`Failed to mark file as trusted: ${e.message}`);
-                }
-            });
+            // Hack: force nautilus to reload file info
+            info = new Gio.FileInfo();
+            info.set_attribute_uint64(Gio.FILE_ATTRIBUTE_TIME_ACCESS,
+                                      GLib.get_real_time());
+            try {
+                await file.set_attributes_async(info, queryFlags, ioPriority, null);
+            } catch (e) {
+                log(`Failed to update access time: ${e.message}`);
+            }
+        } catch (e) {
+            log(`Failed to mark file as trusted: ${e.message}`);
+        }
     }
 
     destroy() {
