@@ -1009,8 +1009,8 @@ class WindowList {
         if (!Main.keyboard.actor)
             return;
 
-        let anchorY = Main.overview.visible ? 0 : this.actor.height;
-        Main.keyboard.actor.anchor_y = anchorY;
+        let translationY = Main.overview.visible ? 0 : this.actor.height;
+        Main.keyboard.actor.translation_y = -translationY;
     }
 
     _onAppStateChanged(appSys, app) {
