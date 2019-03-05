@@ -1,3 +1,10 @@
+3.31.92
+=======
+* Misc. bug fixes and cleanups [Florian; !57, !58, !59, !60]
+
+Contributors:
+  Florian Müllner
+
 3.31.91
 =======
 * apps-menu: Remove outdated legacy-tray handling [Florian; !53]
