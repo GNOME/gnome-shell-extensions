@@ -3,107 +3,49 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Ryan LORTIE <desrt@desrt.ca>, 2013.
 # Daniel PUENTES <blatberk@openmailbox.org>, 2015.
-# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2011, 2015.
-#
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2011-2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2015-01-31 08:37+0000\n"
-"PO-Revision-Date: 2015-02-01 16:13+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2019-03-02 10:57+0000\n"
+"PO-Revision-Date: 2019-03-06 22:14+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
-"Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
+"Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME-klasika"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Ĉi seanco ensalutas vin GNOME-klasiken"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
-msgid "Attach modal dialog to the parent window"
-msgstr "Kunligi modalan dialogon al la patra fenestro"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Ĉi ŝlosilo atutas la ŝlosilon en org.gnome.mutter kiam rulanta GNOME-ŝelon."
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Aranĝo de butonoj en la titolbreto"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Ĉi tiu ŝlosilo anstataŭas la ŝlosilon en org.gnome.desktop.wm.preferences "
-"kiam GNOME-ŝelo rulas."
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"Aktivigi kahelan aranĝon kiam demetante fenestrojn sur ekranaj borderoj"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
-msgid "Workspaces only on primary monitor"
-msgstr "Laborspacoj nur sur la ĉefa ekrano"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr "En musa reĝimo, prokrasti ŝanĝi fokuson ĝis la musmontrilo haltas"
-
-#: ../extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "Miniaturo nur"
-
-#: ../extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "Aplikaĵa piktogramo nur"
-
-#: ../extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "Miniaturo kaj aplikaĵo piktogramo"
-
-#: ../extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "Prezenti fenestron kiel"
-
-#: ../extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "Montri nur fenestrojn en la aktuala laborspaco"
-
-#: ../extensions/apps-menu/extension.js:39
+#: extensions/apps-menu/extension.js:29
 msgid "Activities Overview"
 msgstr "Aktivecoj-Superrigardon"
 
-#: ../extensions/apps-menu/extension.js:114
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Plej ŝatataj"
 
-#: ../extensions/apps-menu/extension.js:283
+#: extensions/apps-menu/extension.js:407
 msgid "Applications"
 msgstr "Aplikaĵoj"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
 msgstr "Aplikaĵa kaj laborspaca listo"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -111,76 +53,49 @@ msgstr ""
 "Listo de ĉenoj, ĉiu enhavas aplikaĵan identigilon ('desktop' dosiernomo), "
 "sevkita per dupunkto kaj la laborspaca numero"
 
-#: ../extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Aplikaĵo"
 
-#: ../extensions/auto-move-windows/prefs.js:69
-#: ../extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Laborspaco"
 
-#: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Aldoni regulon"
 
-#: ../extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Krei novan kongruantan regulon"
 
-#: ../extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Aldoni"
 
-#: ../extensions/drive-menu/extension.js:106
-msgid "Ejecting drive '%s' failed:"
-msgstr "Elĵeto de volumo '%s' malsukcesis:"
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:100
+#: extensions/places-menu/placeDisplay.js:217
+#, javascript-format
+#| msgid "Ejecting drive '%s' failed:"
+msgid "Ejecting drive “%s” failed:"
+msgstr "Elĵeto de volumo “%s” malsukcesis:"
 
-#: ../extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:116
 msgid "Removable devices"
 msgstr "Demeteblaj aparatoj"
 
-#: ../extensions/drive-menu/extension.js:151
-msgid "Open File"
-msgstr "Malfermi dosieron"
+#: extensions/drive-menu/extension.js:143
+#| msgid "Open File"
+msgid "Open Files"
+msgstr "Malfermi dosierojn"
 
-#: ../extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Saluton, mondo!"
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
-msgid "Alternative greeting text."
-msgstr "Alterna saluta teksto."
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"Se ne malplena, enhavas la tekston kiu estos montrita kiam alklakante sur la "
-"panelo."
-
-#: ../extensions/example/prefs.js:30
-#| msgid "Message:"
-msgid "Message"
-msgstr "Mesaĝo"
-
-#: ../extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
-msgstr ""
-"Ekzemplo klopodas montri kial krei bone-kondutantan etendojn por la ŝelo kaj "
-"sekve ne havas multan funkcion.\n"
-"Tamen, eblas agordi la salutan mesagon."
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
 msgstr "Uzi pli da ekrano por fenetroj"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -190,11 +105,11 @@ msgstr ""
 "aspekta rilatumo, kaj kunfandi ilin plu por redukti la limigan keston. Ĉi "
 "agordo uzitas nur kun la natura lokada strategio."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
 msgstr "Meti fenestrajn apudskribojn supre"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
@@ -204,153 +119,240 @@ msgstr ""
 "estas meti ĝin malsupre). Si vi ŝanĝas ĉi agordon tiam vi devas restartigi "
 "la ŝelon."
 
-#: ../extensions/places-menu/extension.js:78
-#: ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:79
+#: extensions/places-menu/extension.js:83
 msgid "Places"
 msgstr "Lokoj"
 
-#: ../extensions/places-menu/placeDisplay.js:57
-msgid "Failed to launch \"%s\""
-msgstr "Malsukceis lanĉi \"%s\""
+#: extensions/places-menu/placeDisplay.js:59
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr ""
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: extensions/places-menu/placeDisplay.js:72
+#, javascript-format
+#| msgid "Failed to launch \"%s\""
+msgid "Failed to launch “%s”"
+msgstr "Malsukcesis lanĉi “%s”"
+
+#: extensions/places-menu/placeDisplay.js:133
+#: extensions/places-menu/placeDisplay.js:156
 msgid "Computer"
 msgstr "Komputilo"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: extensions/places-menu/placeDisplay.js:343
 msgid "Home"
 msgstr "Domo"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: extensions/places-menu/placeDisplay.js:387
 msgid "Browse Network"
 msgstr "Foliumi reton"
 
-#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Cikle montri ekrankopiajn grandojn"
 
-#: ../extensions/systemMonitor/extension.js:214
-msgid "CPU"
-msgstr "Ĉefprocesoro"
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#, fuzzy
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Cikle montri ekrankopiajn grandojn"
 
-#: ../extensions/systemMonitor/extension.js:267
-msgid "Memory"
-msgstr "Memoro"
-
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
 msgstr "Etosnomo"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "La nomo de la etoso, malfermigi de ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:100
 msgid "Close"
 msgstr "Malfermi"
 
-#: ../extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Neplejetigi"
 
-#: ../extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Plejetigi"
 
-#: ../extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Nemaksimumigi"
 
-#: ../extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Maksimumigi"
 
-#: ../extensions/window-list/extension.js:390
+#: extensions/window-list/extension.js:408
 msgid "Minimize all"
 msgstr "Plejetigi ĉiujn"
 
-#: ../extensions/window-list/extension.js:398
+#: extensions/window-list/extension.js:414
 msgid "Unminimize all"
 msgstr "Neplejetigi ĉiujn"
 
-#: ../extensions/window-list/extension.js:406
+#: extensions/window-list/extension.js:420
 msgid "Maximize all"
 msgstr "Maksimumigi ĉiujn"
 
-#: ../extensions/window-list/extension.js:415
+#: extensions/window-list/extension.js:429
 msgid "Unmaximize all"
 msgstr "Nemaksimumigi ĉiujn"
 
-#: ../extensions/window-list/extension.js:424
+#: extensions/window-list/extension.js:438
 msgid "Close all"
 msgstr "Fermi ĉiujn"
 
-#: ../extensions/window-list/extension.js:706
-#: ../extensions/workspace-indicator/extension.js:30
+#: extensions/window-list/extension.js:655
+#: extensions/workspace-indicator/extension.js:21
 msgid "Workspace Indicator"
 msgstr "Laborspaco Indikilo"
 
-#: ../extensions/window-list/extension.js:870
+#: extensions/window-list/extension.js:836
 msgid "Window List"
 msgstr "Fenestra listo"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
 msgstr "Kiam grupigi fenestrojn"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#, fuzzy
+#| msgid ""
+#| "Decides when to group windows from the same application on the window "
+#| "list. Possible values are \"never\", \"auto\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Decidas kiam grupi fenestrojn de la sama aplikaĵo en la fenestra listo. "
-"Validaj valoroj estas \"never\" (neniam), \"auto\" (aŭtomate) kaj \"always"
-"\" (ĉiam)."
+"Validaj valoroj estas “never” (neniam), “auto” (aŭtomate) kaj “always” "
+"(ĉiam)."
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
 msgstr "Montri la fenestroliston en ĉiuj ekranoj"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr ""
 "Ĉu montri la fenestroliston en ĉiuj konektitaj ekranoj aŭ nur en la ĉefa."
 
-#: ../extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Fenestra grupigo"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Neniam grupigi fenestrojn"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Grupigi fenestrojn kiam spaco limitas"
 
-#: ../extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Ĉiam grupigi fenestrojn"
 
-#: ../extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
 msgstr "Montri en ĉiuj ekranoj"
 
-#: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Laborspacaj nomoj"
 
-#: ../extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Nomo"
 
-#: ../extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:191
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Laborspaco %d"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Kunligi modalan dialogon al la patra fenestro"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "Ĉi ŝlosilo atutas la ŝlosilon en org.gnome.mutter kiam rulanta GNOME-"
+#~ "ŝelon."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Aranĝo de butonoj en la titolbreto"
+
+#~| msgid ""
+#~| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
+#~ "running GNOME Shell."
+#~ msgstr ""
+#~ "Ĉi tiu ŝlosilo anstataŭas la ŝlosilon en org.gnome.desktop.wm.preferences "
+#~ "kiam GNOME-ŝelo rulas."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr ""
+#~ "Aktivigi kahelan aranĝon kiam demetante fenestrojn sur ekranaj borderoj"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Laborspacoj nur sur la ĉefa ekrano"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr "En musa reĝimo, prokrasti ŝanĝi fokuson ĝis la musmontrilo haltas"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "Miniaturo nur"
+
+#~ msgid "Application icon only"
+#~ msgstr "Aplikaĵa piktogramo nur"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "Miniaturo kaj aplikaĵo piktogramo"
+
+#~ msgid "Present windows as"
+#~ msgstr "Prezenti fenestron kiel"
+
+#~ msgid "Show only windows in the current workspace"
+#~ msgstr "Montri nur fenestrojn en la aktuala laborspaco"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Saluton, mondo!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "Alterna saluta teksto."
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on "
+#~ "the panel."
+#~ msgstr ""
+#~ "Se ne malplena, enhavas la tekston kiu estos montrita kiam alklakante sur "
+#~ "la panelo."
+
+#~| msgid "Message:"
+#~ msgid "Message"
+#~ msgstr "Mesaĝo"
+
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell "
+#~ "and as such it has little functionality on its own.\n"
+#~ "Nevertheless it's possible to customize the greeting message."
+#~ msgstr ""
+#~ "Ekzemplo klopodas montri kial krei bone-kondutantan etendojn por la ŝelo "
+#~ "kaj sekve ne havas multan funkcion.\n"
+#~ "Tamen, eblas agordi la salutan mesagon."
+
+#~ msgid "CPU"
+#~ msgstr "Ĉefprocesoro"
+
+#~ msgid "Memory"
+#~ msgstr "Memoro"
 
 #~ msgid "GNOME Shell Classic"
 #~ msgstr "GNOME-ŝelo-klasika"
