@@ -1,355 +1,302 @@
 # Tajik translation for gnome-shell-extensions.
 # Copyright (C) 2013 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Victor Ibragimov <victor.ibragimov@gmail.com>, 2013, 2014, 2015
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2013, 2014, 2015, 2019
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2015-03-09 20:46+0000\n"
-"PO-Revision-Date: 2015-03-10 11:25+0500\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
+"POT-Creation-Date: 2019-03-02 10:57+0000\n"
+"PO-Revision-Date: 2019-03-06 19:50+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <tg@li.org>\n"
 "Language: tg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME-и классикӣ"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Ин ҷаласа шуморо ба GNOME-и классикӣ ворид мекунад"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
-msgid "Attach modal dialog to the parent window"
-msgstr "Замима кардани равзанаи гуфтугӯи модалӣ ба равзанаи асосӣ"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Ҳангоми иҷрокунии GNOME Shell ин калид калидеро дар org.gnome.mutter "
-"ҷойгузин мекунад."
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Мураттабсозии тугмаҳо дар навори унвон"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-#| msgid ""
-#| "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Ин тугма тугмаро дар хусусиятҳои org.gnome.desktop.wm.preferences ҳангоми "
-"иҷрокунии восити GNOME лағв мекунад."
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"Фаъол кардани лавҳаҳои канорӣ ҳангоми интиқолдиҳии равзанаҳо ба канорҳои "
-"экран"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
-msgid "Workspaces only on primary monitor"
-msgstr "Фазоҳои корӣ танҳо дар монитори асосӣ"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"Ҳангоми истифодаи муш таъхири фокус тағйир меёбад, то он вақте ки курсор "
-"намеистад"
-
-#: ../extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "Танҳо тасвирҳои пешнамоишӣ"
-
-#: ../extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "Танҳо нишонаи барнома"
-
-#: ../extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "Тасвирҳои пешнамоишӣ ва нишонаҳои барномаҳо"
-
-#: ../extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "Намоиш додани равзанаҳо ҳамчун"
-
-#: ../extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "Намоиш додани равзанаҳо танҳо дар фазои кории ҷорӣ"
-
-#: ../extensions/apps-menu/extension.js:39
+#: extensions/apps-menu/extension.js:29
 msgid "Activities Overview"
 msgstr "Хулосаи фаъолият"
 
-#: ../extensions/apps-menu/extension.js:110
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Баргузидаҳо"
 
-#: ../extensions/apps-menu/extension.js:279
+#: extensions/apps-menu/extension.js:407
 msgid "Applications"
 msgstr "Барномаҳо"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
 msgstr "Рӯйхати барномаҳо ва фазоҳои корӣ"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
-msgid ""
-"A list of strings, each containing an application id (desktop file name), "
-"followed by a colon and the workspace number"
-msgstr ""
-"Рӯйхати сатрҳое, ки рақами мушаххаси барномаҳоро дар бар мегиранд (номҳои "
-"файлҳои мизи корӣ) ва бо ду нуқта ва рақами фазо ҷудо мешаванд"
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+msgid "A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number"
+msgstr "Рӯйхати сатрҳое, ки рақами мушаххаси барномаҳоро дар бар мегиранд (номҳои файлҳои мизи корӣ) ва бо ду нуқта ва рақами фазо ҷудо мешаванд"
 
-#: ../extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Барнома"
 
-#: ../extensions/auto-move-windows/prefs.js:69
-#: ../extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:71 extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Фазои корӣ"
 
-#: ../extensions/auto-move-windows/prefs.js:85
-#| msgid "Add rule"
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Илова кардани қоида"
 
-#: ../extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Эҷод кардани қоидаи мувофиқати нав"
 
-#: ../extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Илова кардан"
 
-#: ../extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:100 extensions/places-menu/placeDisplay.js:217
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
+#| msgid "Ejecting drive '%s' failed:"
+msgid "Ejecting drive “%s” failed:"
 msgstr "Баровардани диски '%s' қатъ шудааст:"
 
-#: ../extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:116
 msgid "Removable devices"
 msgstr "Дастгоҳҳои ҷудошаванда"
 
-#: ../extensions/drive-menu/extension.js:151
-msgid "Open File"
+#: extensions/drive-menu/extension.js:143
+#| msgid "Open File"
+msgid "Open Files"
 msgstr "Кушодани файл"
 
-#: ../extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Салом, ҷаҳон!"
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
-msgid "Alternative greeting text."
-msgstr "Матни табрики иловагӣ."
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"Агар холӣ набошад, матнро дар бар мегирад, ки ҳангоми зеркунӣ ба панел "
-"намоиш дода мешавад."
-
-#: ../extensions/example/prefs.js:30
-#| msgid "Message:"
-msgid "Message"
-msgstr "Паём"
-
-#: ../extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
-msgstr ""
-"Ин мисол намоиш медиҳад, ки чӣ тавр пасвандҳои танзимшуда барои Восит бояд "
-"таҳия карда шаванд, зеро ки худи онҳо фунскияҳои кам доранд.\n"
-"Бо вуҷуди ин, фармоишдиҳии паёми табрик имконпазир аст."
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
 msgstr "Истифодаи экрани бештар барои равзанаҳо"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
-msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. "
-"This setting applies only with the natural placement strategy."
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+msgid "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating them further to reduce the bounding box. This setting applies only with the natural placement strategy."
 msgstr ""
-"Кӯшиш кунед, ки экрани бештарро бо мувофиқсозии таносуби экран ва "
-"маҳдудкунии сарҳадҳои қуттиҳо барои ҷойгиркунии тасвирҳои пешнамоишии "
-"равзана истифода баред. Ин танзимот танҳо барои стратегияи ҷойгиркунии асил "
-"мувофиқ мебошад."
+"Кӯшиш кунед, ки экрани бештарро бо мувофиқсозии таносуби экран ва маҳдудкунии сарҳадҳои қуттиҳо барои ҷойгиркунии тасвирҳои пешнамоишии равзана истифода баред. Ин танзимот танҳо барои стратегияи ҷойгиркунии асил мувофиқ мебошад."
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
 msgstr "Ҷойгир кардани зернависҳои равзана ба боло"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
-msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+msgid "If true, place window captions on top the respective thumbnail, overriding shell default of placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
 msgstr ""
-"Агар қимати \"true\" бошад, зернависҳои равзанаро ба болои тасвири "
-"пешнамоишии мувофиқ, бо ҷойгузинкунии навбати восити пешфарз ба поён, ҷойгир "
-"мекунад. Барои татбиқ кардани таъсири ин танзимот шумо бояд воситро бозоғозӣ "
-"кунед."
+"Агар қимати \"true\" бошад, зернависҳои равзанаро ба болои тасвири пешнамоишии мувофиқ, бо ҷойгузинкунии навбати восити пешфарз ба поён, ҷойгир мекунад. Барои татбиқ кардани таъсири ин танзимот шумо бояд воситро бозоғозӣ кунед."
 
-#: ../extensions/places-menu/extension.js:78
-#: ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:79 extensions/places-menu/extension.js:83
 msgid "Places"
 msgstr "Ҷойҳо"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-msgid "Failed to launch \"%s\""
-msgstr "Оғоз бахшидани \"%s\" қатъ шудааст"
+msgid "Failed to mount volume for “%s”"
+msgstr "Васлкунии ҳаҷми диск барои “%s” иҷро нашуд"
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: extensions/places-menu/placeDisplay.js:72
+#, javascript-format
+#| msgid "Failed to launch \"%s\""
+msgid "Failed to launch “%s”"
+msgstr "Оғози “%s” қатъ шуд"
+
+#: extensions/places-menu/placeDisplay.js:133 extensions/places-menu/placeDisplay.js:156
 msgid "Computer"
 msgstr "Компютер"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: extensions/places-menu/placeDisplay.js:343
 msgid "Home"
 msgstr "Асосӣ"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: extensions/places-menu/placeDisplay.js:387
 msgid "Browse Network"
 msgstr "Тамошо кардани шабака"
 
-#: ../extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
 msgstr "Андозаҳои скриншоти ҳалқа"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#| msgid "Cycle Screenshot Sizes"
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Андозаҳои скриншоти ҳалқа"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
 msgstr "Номи мавзӯъ"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Номи мавзӯъ аз ~/.themes/name/gnome-shell боргирӣ мешавад"
 
-#: ../extensions/window-list/extension.js:109
+#: extensions/window-list/extension.js:100
 msgid "Close"
 msgstr "Пӯшидан"
 
-#: ../extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Бекор кардани ҳадди ақал"
 
-#: ../extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Ҳадди ақал сохтан"
 
-#: ../extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Бекор кардани ҳадди аксар"
 
-#: ../extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Ҳадди аксар сохтан"
 
-#: ../extensions/window-list/extension.js:399
+#: extensions/window-list/extension.js:408
 msgid "Minimize all"
 msgstr "Ҳамаро бо ҳадди ақал сохтан"
 
-#: ../extensions/window-list/extension.js:407
+#: extensions/window-list/extension.js:414
 msgid "Unminimize all"
 msgstr "Бекор кардани ҳадди ақал барои ҳама"
 
-#: ../extensions/window-list/extension.js:415
+#: extensions/window-list/extension.js:420
 msgid "Maximize all"
 msgstr "Ҳамаро бо ҳадди аксар сохтан"
 
-#: ../extensions/window-list/extension.js:424
+#: extensions/window-list/extension.js:429
 msgid "Unmaximize all"
 msgstr "Бекор кардани ҳадди аксар барои ҳама"
 
-#: ../extensions/window-list/extension.js:433
+#: extensions/window-list/extension.js:438
 msgid "Close all"
 msgstr "Ҳамаро пӯшонидан"
 
-#: ../extensions/window-list/extension.js:650
-#: ../extensions/workspace-indicator/extension.js:30
+#: extensions/window-list/extension.js:655 extensions/workspace-indicator/extension.js:21
 msgid "Workspace Indicator"
 msgstr "Нишондиҳандаи фазои кор"
 
-#: ../extensions/window-list/extension.js:807
+#: extensions/window-list/extension.js:836
 msgid "Window List"
 msgstr "Рӯйхати равзанаҳо"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
 msgstr "Шартҳои гурӯҳбандии равзанаҳо"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
-msgid ""
-"Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
-msgstr ""
-"Қарор медиҳад, ки дар кадом ҳолат равзанаҳо аз худи барномаҳо дар рӯйхати "
-"равзанаҳо гурӯҳбандӣ мешаванд. Қиматҳои имконпазир: \"ҳеҷ гоҳ\", \"ба таври "
-"худкор\" ва \"ҳамеша\"."
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#| msgid "Decides when to group windows from the same application on the window list. Possible values are \"never\", \"auto\" and \"always\"."
+msgid "Decides when to group windows from the same application on the window list. Possible values are “never”, “auto” and “always”."
+msgstr "Қарор медиҳад, ки дар кадом ҳолат равзанаҳо аз худи барномаҳо дар рӯйхати равзанаҳо гурӯҳбандӣ мешаванд. Қиматҳои имконпазир: \"ҳеҷ гоҳ\", \"ба таври худкор\" ва \"ҳамеша\"."
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:3
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
 msgstr "Намоиш додани рӯйхати равзанаҳо дар ҳамаи мониторҳо"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:4
-msgid ""
-"Whether to show the window list on all connected monitors or only on the "
-"primary one."
-msgstr ""
-"Намоиш додани рӯйхати равзанаҳо дар ҳамаи мониторҳои пайвастшуда ё намоиш "
-"додани танҳо дар монитори асосӣ."
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid "Whether to show the window list on all connected monitors or only on the primary one."
+msgstr "Намоиш додани рӯйхати равзанаҳо дар ҳамаи мониторҳои пайвастшуда ё намоиш додани танҳо дар монитори асосӣ."
 
-#: ../extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Гурӯҳбандии равзанаҳо"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Ҳеҷ гоҳ равзанаҳоро гурӯҳбандӣ накардан"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Гурӯҳбандии равзанаҳо барои фазои маҳдудшуда"
 
-#: ../extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Ҳамеша равзанаҳоро гурӯҳбандӣ кардан"
 
-#: ../extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
 msgstr "Намоиш додан дар ҳамаи мониторҳо"
 
-#: ../extensions/workspace-indicator/prefs.js:141
-#| msgid "Workspace names:"
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Номҳои фазоҳои корӣ"
 
-#: ../extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Ном"
 
-#: ../extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:191
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Фазои кории %d"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Замима кардани равзанаи гуфтугӯи модалӣ ба равзанаи асосӣ"
+
+#~ msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr "Ҳангоми иҷрокунии GNOME Shell ин калид калидеро дар org.gnome.mutter ҷойгузин мекунад."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Мураттабсозии тугмаҳо дар навори унвон"
+
+#~| msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgid "This key overrides the key in org.gnome.desktop.wm.preferences when running GNOME Shell."
+#~ msgstr "Ин тугма тугмаро дар хусусиятҳои org.gnome.desktop.wm.preferences ҳангоми иҷрокунии восити GNOME лағв мекунад."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr "Фаъол кардани лавҳаҳои канорӣ ҳангоми интиқолдиҳии равзанаҳо ба канорҳои экран"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Фазоҳои корӣ танҳо дар монитори асосӣ"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr "Ҳангоми истифодаи муш таъхири фокус тағйир меёбад, то он вақте ки курсор намеистад"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "Танҳо тасвирҳои пешнамоишӣ"
+
+#~ msgid "Application icon only"
+#~ msgstr "Танҳо нишонаи барнома"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "Тасвирҳои пешнамоишӣ ва нишонаҳои барномаҳо"
+
+#~ msgid "Present windows as"
+#~ msgstr "Намоиш додани равзанаҳо ҳамчун"
+
+#~ msgid "Show only windows in the current workspace"
+#~ msgstr "Намоиш додани равзанаҳо танҳо дар фазои кории ҷорӣ"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Салом, ҷаҳон!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "Матни табрики иловагӣ."
+
+#~ msgid "If not empty, it contains the text that will be shown when clicking on the panel."
+#~ msgstr "Агар холӣ набошад, матнро дар бар мегирад, ки ҳангоми зеркунӣ ба панел намоиш дода мешавад."
+
+#~| msgid "Message:"
+#~ msgid "Message"
+#~ msgstr "Паём"
+
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
+#~ "Nevertheless it's possible to customize the greeting message."
+#~ msgstr ""
+#~ "Ин мисол намоиш медиҳад, ки чӣ тавр пасвандҳои танзимшуда барои Восит бояд таҳия карда шаванд, зеро ки худи онҳо фунскияҳои кам доранд.\n"
+#~ "Бо вуҷуди ин, фармоишдиҳии паёми табрик имконпазир аст."
 
 #~ msgid "GNOME Shell Classic"
 #~ msgstr "Восити GNOME-и классикӣ"
