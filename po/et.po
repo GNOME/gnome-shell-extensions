@@ -6,85 +6,44 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-08-06 07:34+0000\n"
-"PO-Revision-Date: 2014-08-06 21:43+0300\n"
-"Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2019-03-02 10:57+0000\n"
+"PO-Revision-Date: 2019-03-10 19:24+0200\n"
+"Last-Translator: Mart Raudsepp <leio@gentoo.org>\n"
 "Language-Team: Estonian <gnome-et-list@gnome.org>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 2.2\n"
 
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
 msgstr "Klassikaline GNOME"
 
+#: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "See on klassikalise GNOME seanss"
 
-msgid "GNOME Shell Classic"
-msgstr "GNOME klassikaline kest"
-
-msgid "Window management and application launching"
-msgstr "Akende haldus ja rakenduste käivitamine"
-
-msgid "Attach modal dialog to the parent window"
-msgstr "Modaalsed dialoogid on vanemakna küljes"
-
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"See võti on tähtsam võtmest org.gnome.mutter GNOME Shelli käivitamisel."
-
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Nuppude järjestus tiitliribal"
-
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"See võti on tähtsam võtmest org.gnome.desktop.wm.preferences GNOME Shelli "
-"käivitamisel."
-
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "Akna automaatpaigutus on lubatud, kui aken lohistatakse ekraani serva"
-
-msgid "Workspaces only on primary monitor"
-msgstr "Tööalad on ainult peamisel ekraanil"
-
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr "Hiire all asuv aken saab fookuse alles hiire peatumisel"
-
-msgid "Thumbnail only"
-msgstr "Ainult pisipilt"
-
-msgid "Application icon only"
-msgstr "Ainult rakenduse ikoon"
-
-msgid "Thumbnail and application icon"
-msgstr "Pisipilt ja rakenduse ikoon"
-
-msgid "Present windows as"
-msgstr "Aknaid esitletakse kui"
-
-msgid "Show only windows in the current workspace"
-msgstr "Näidatakse ainult käesoleva tööala aknaid"
-
+#: extensions/apps-menu/extension.js:29
 msgid "Activities Overview"
 msgstr "Tegevuste ülevaade"
 
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Lemmikud"
 
+#: extensions/apps-menu/extension.js:407
 msgid "Applications"
 msgstr "Rakendused"
 
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
 msgid "Application and workspace list"
 msgstr "Rakenduste ja tööalade loend"
 
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -92,57 +51,47 @@ msgstr ""
 "Rakenduste loend, sõnedest, mis sisaldavad rakenduse id-d (desktop faili "
 "nimi), koolonit ja tööala numbrit."
 
+#: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Rakendus"
 
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Tööala"
 
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Lisa reegel"
 
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Uue reegli loomine"
 
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Lisa"
 
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:100
+#: extensions/places-menu/placeDisplay.js:217
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
-msgstr "Seadme '%s' väljastamine nurjus:"
+msgid "Ejecting drive “%s” failed:"
+msgstr "Seadme „%s“ väljastamine nurjus:"
 
+#: extensions/drive-menu/extension.js:116
 msgid "Removable devices"
 msgstr "Eemaldatavad seadmed"
 
-msgid "Open File"
-msgstr "Faili avamine"
+#: extensions/drive-menu/extension.js:143
+msgid "Open Files"
+msgstr "Failide avamine"
 
-msgid "Hello, world!"
-msgstr "Tere, maailm!"
-
-msgid "Alternative greeting text."
-msgstr "Alternatiivne tervitustekst."
-
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr "Kui see pole tühi, näidatakse seda teksti paneelile klõpsates."
-
-msgid "Message"
-msgstr "Sõnum"
-
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
-msgstr ""
-"Näide hästi käituva Shelli laienduse koostamise kohta, see ise väga kasulik "
-"ei ole.\n"
-"See võimaldab muuta kõigest tervitusteksti."
-
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
 msgstr "Rohkem pinda akende jaoks"
 
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -152,9 +101,11 @@ msgstr ""
 "ja paigutatakse aknad üksteisele lähemale. See säte kehtib ainult koos "
 "akende loomuliku paigutusega."
 
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
 msgstr "Akende pealkirjad on üleval"
 
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
@@ -164,99 +115,229 @@ msgstr ""
 "Shelli vaikimisi viisi, alla asetamist. Selle sätte muutmine mõjub alles "
 "pärast Shelli taaskäivitust."
 
+#: extensions/places-menu/extension.js:79
+#: extensions/places-menu/extension.js:83
 msgid "Places"
 msgstr "Asukohad"
 
+#: extensions/places-menu/placeDisplay.js:59
 #, javascript-format
-msgid "Failed to launch \"%s\""
-msgstr "\"%s\" käivitamine nurjus"
+msgid "Failed to mount volume for “%s”"
+msgstr ""
 
+#: extensions/places-menu/placeDisplay.js:72
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr "„%s“ käivitamine nurjus"
+
+#: extensions/places-menu/placeDisplay.js:133
+#: extensions/places-menu/placeDisplay.js:156
 msgid "Computer"
 msgstr "Arvuti"
 
+#: extensions/places-menu/placeDisplay.js:343
 msgid "Home"
 msgstr "Kodu"
 
+#: extensions/places-menu/placeDisplay.js:387
 msgid "Browse Network"
 msgstr "Võrgu sirvimine"
 
-msgid "CPU"
-msgstr "Protsessor"
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+msgid "Cycle Screenshot Sizes"
+msgstr ""
 
-msgid "Memory"
-msgstr "Mälu"
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+msgid "Cycle Screenshot Sizes Backward"
+msgstr ""
 
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
 msgstr "Kujunduse nimi"
 
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Kujunduse nimi, mis laaditakse asukohast ~/.themes/name/gnome-shell"
 
+#: extensions/window-list/extension.js:100
 msgid "Close"
 msgstr "Sulge"
 
+#: extensions/window-list/extension.js:120
 msgid "Unminimize"
 msgstr "Taasta"
 
+#: extensions/window-list/extension.js:120
 msgid "Minimize"
 msgstr "Minimeeri"
 
+#: extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Taasta suurus"
 
+#: extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Maksimeeri"
 
+#: extensions/window-list/extension.js:408
 msgid "Minimize all"
 msgstr "Minimeeri kõik"
 
+#: extensions/window-list/extension.js:414
 msgid "Unminimize all"
 msgstr "Taasta kõik"
 
+#: extensions/window-list/extension.js:420
 msgid "Maximize all"
 msgstr "Maksimeeri kõik"
 
+#: extensions/window-list/extension.js:429
 msgid "Unmaximize all"
 msgstr "Taasta kõigi suurus"
 
+#: extensions/window-list/extension.js:438
 msgid "Close all"
 msgstr "Sulge kõik"
 
+#: extensions/window-list/extension.js:655
+#: extensions/workspace-indicator/extension.js:21
 msgid "Workspace Indicator"
 msgstr "Tööala näitaja"
 
+#: extensions/window-list/extension.js:836
 msgid "Window List"
 msgstr "Akende loend"
 
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
 msgstr "Millal aknaid grupeeritakse"
 
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Määrab, millal akende loendis sama rakenduse aknaid grupeeritakse. "
-"Võimalikud väärtused on \"never\" (mitte kunagi), \"auto\" (automaatselt) ja "
-"\"always\" (alati)."
+"Võimalikud väärtused on „never“ (mitte kunagi), „auto“ (automaatselt) ja "
+"„always“ (alati)."
 
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+msgid "Show the window list on all monitors"
+msgstr ""
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Akende grupeerimine"
 
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Aknaid ei grupeerita kunagi"
 
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Aknaid grupeeritakse, kui ruumi on vähe"
 
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Aknaid grupeeritakse alati"
 
+#: extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr ""
+
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Tööalade nimed"
 
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Nimi"
 
+#: extensions/workspace-indicator/prefs.js:191
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Tööala %d"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "GNOME klassikaline kest"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "Akende haldus ja rakenduste käivitamine"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Modaalsed dialoogid on vanemakna küljes"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "See võti on tähtsam võtmest org.gnome.mutter GNOME Shelli käivitamisel."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Nuppude järjestus tiitliribal"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
+#~ "running GNOME Shell."
+#~ msgstr ""
+#~ "See võti on tähtsam võtmest org.gnome.desktop.wm.preferences GNOME Shelli "
+#~ "käivitamisel."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr ""
+#~ "Akna automaatpaigutus on lubatud, kui aken lohistatakse ekraani serva"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Tööalad on ainult peamisel ekraanil"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr "Hiire all asuv aken saab fookuse alles hiire peatumisel"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "Ainult pisipilt"
+
+#~ msgid "Application icon only"
+#~ msgstr "Ainult rakenduse ikoon"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "Pisipilt ja rakenduse ikoon"
+
+#~ msgid "Present windows as"
+#~ msgstr "Aknaid esitletakse kui"
+
+#~ msgid "Show only windows in the current workspace"
+#~ msgstr "Näidatakse ainult käesoleva tööala aknaid"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Tere, maailm!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "Alternatiivne tervitustekst."
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on "
+#~ "the panel."
+#~ msgstr "Kui see pole tühi, näidatakse seda teksti paneelile klõpsates."
+
+#~ msgid "Message"
+#~ msgstr "Sõnum"
+
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell "
+#~ "and as such it has little functionality on its own.\n"
+#~ "Nevertheless it's possible to customize the greeting message."
+#~ msgstr ""
+#~ "Näide hästi käituva Shelli laienduse koostamise kohta, see ise väga "
+#~ "kasulik ei ole.\n"
+#~ "See võimaldab muuta kõigest tervitusteksti."
+
+#~ msgid "CPU"
+#~ msgstr "Protsessor"
+
+#~ msgid "Memory"
+#~ msgstr "Mälu"
