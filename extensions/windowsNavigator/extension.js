@@ -1,50 +1,65 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
-/* exported enable disable */
+/* exported init enable disable */
 const { Clutter, St } = imports.gi;
 
 const Main = imports.ui.main;
 const Workspace = imports.ui.workspace;
 const WorkspacesView = imports.ui.workspacesView;
 
-function injectToFunction(parent, name, func) {
-    let origin = parent[name];
-    parent[name] = function() {
-        let ret;
-        ret = origin.apply(this, arguments);
-        if (ret === undefined)
-            ret = func.apply(this, arguments);
-        return ret;
-    };
-    return origin;
-}
+var MyWindowOverlay = class extends Workspace.WindowOverlay {
+    constructor(windowClone, parentActor) {
+        super(windowClone, parentActor);
 
-let winInjections, workspaceInjections, workViewInjections, createdActors, connectedSignals;
+        this._id = null;
+        this._text = new St.Label({
+            style_class: 'extension-windowsNavigator-window-tooltip',
+            visible: false
+        });
+        parentActor.add_actor(this._text);
+    }
 
-function resetState() {
-    winInjections = {};
-    workspaceInjections = {};
-    workViewInjections = {};
-    createdActors = [];
-    connectedSignals = [];
-}
-
-function enable() {
-    resetState();
-
-    Workspace.WindowOverlay.prototype.showTooltip = function() {
+    showTooltip() {
         this._text.raise_top();
         this._text.show();
         this._text.text = (this._windowClone.slotId + 1).toString();
-    };
-    winInjections['showTooltip'] = undefined;
+    }
 
-    Workspace.WindowOverlay.prototype.hideTooltip = function() {
+    hideTooltip() {
         if (this._text && this._text.visible)
             this._text.hide();
-    };
-    winInjections['hideTooltip'] = undefined;
+    }
 
-    Workspace.Workspace.prototype.showTooltip = function() {
+    relayout(animate) {
+        super.relayout(animate);
+
+        let [cloneX, cloneY, cloneWidth_, cloneHeight_] = this._windowClone.slot;
+
+        let textX = cloneX - 2;
+        let textY = cloneY - 2;
+        this._text.set_position(Math.floor(textX) + 5, Math.floor(textY) + 5);
+        this._text.raise_top();
+    }
+};
+
+var MyWorkspace = class extends Workspace.Workspace {
+    constructor(metaWorkspace, monitorIndex) {
+        super(metaWorkspace, monitorIndex);
+
+        if (metaWorkspace && metaWorkspace.index() < 9) {
+            this._tip = new St.Label({
+                style_class: 'extension-windowsNavigator-window-tooltip',
+                visible: false
+            });
+            this.actor.add_actor(this._tip);
+
+            this.actor.connect('notify::scale-x', () => {
+                this._tip.set_scale(1 / this.actor.scale_x, 1 / this.actor.scale_x);
+            });
+        } else
+            this._tip = null;
+    }
+
+    showTooltip() {
         if (this._tip == null || this._actualGeometry == null)
             return;
         this._tip.text = (this.metaWorkspace.index() + 1).toString();
@@ -64,61 +79,74 @@ function enable() {
         this._tip.y = area.y;
         this._tip.show();
         this._tip.raise_top();
-    };
-    workspaceInjections['showTooltip'] = undefined;
+    }
 
-    Workspace.Workspace.prototype.hideTooltip = function() {
+    hideTooltip() {
         if (this._tip == null)
             return;
         if (!this._tip.get_parent())
             return;
         this._tip.hide();
-    };
-    workspaceInjections['hideTooltip'] = undefined;
+    }
 
-    Workspace.Workspace.prototype.getWindowWithTooltip = function(id) {
+    getWindowWithTooltip(id) {
         for (let i = 0; i < this._windows.length; i++) {
             if ((this._windows[i].slotId + 1) == id)
                 return this._windows[i].metaWindow;
         }
         return null;
-    };
-    workspaceInjections['getWindowWithTooltip'] = undefined;
+    }
 
-    Workspace.Workspace.prototype.showWindowsTooltips = function() {
+    showWindowsTooltips() {
         for (let i in this._windowOverlays) {
             if (this._windowOverlays[i] != null)
                 this._windowOverlays[i].showTooltip();
         }
-    };
-    workspaceInjections['showWindowsTooltips'] = undefined;
+    }
 
-    Workspace.Workspace.prototype.hideWindowsTooltips = function() {
+    hideWindowsTooltips() {
         for (let i in this._windowOverlays) {
             if (this._windowOverlays[i] != null)
                 this._windowOverlays[i].hideTooltip();
         }
-    };
-    workspaceInjections['hideWindowsTooltips'] = undefined;
+    }
+};
 
-    WorkspacesView.WorkspacesView.prototype._hideTooltips = function() {
+var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
+    constructor(width, height, x, y, workspaces) {
+        super(width, height, x, y, workspaces);
+
+        this._pickWorkspace = false;
+        this._pickWindow = false;
+        this._keyPressEventId =
+            global.stage.connect('key-press-event', this._onKeyPress.bind(this));
+        this._keyReleaseEventId =
+            global.stage.connect('key-release-event', this._onKeyRelease.bind(this));
+    }
+
+    _onDestroy() {
+        super._onDestroy();
+
+        global.stage.disconnect(this._keyPressEventId);
+        global.stage.disconnect(this._keyReleaseEventId);
+    }
+
+    _hideTooltips() {
         if (global.stage.get_key_focus() == global.stage)
             global.stage.set_key_focus(this._prevFocusActor);
         this._pickWindow = false;
         for (let i = 0; i < this._workspaces.length; i++)
             this._workspaces[i].hideWindowsTooltips();
-    };
-    workViewInjections['_hideTooltips'] = undefined;
+    }
 
-    WorkspacesView.WorkspacesView.prototype._hideWorkspacesTooltips = function() {
+    _hideWorkspacesTooltips() {
         global.stage.set_key_focus(this._prevFocusActor);
         this._pickWorkspace = false;
         for (let i = 0; i < this._workspaces.length; i++)
             this._workspaces[i].hideTooltip();
-    };
-    workViewInjections['_hideWorkspacesTooltips'] = undefined;
+    }
 
-    WorkspacesView.WorkspacesView.prototype._onKeyRelease = function(s, o) {
+    _onKeyRelease(s, o) {
         if (this._pickWindow &&
             (o.get_key_symbol() == Clutter.KEY_Alt_L ||
              o.get_key_symbol() == Clutter.KEY_Alt_R))
@@ -127,11 +155,11 @@ function enable() {
             (o.get_key_symbol() == Clutter.KEY_Control_L ||
              o.get_key_symbol() == Clutter.KEY_Control_R))
             this._hideWorkspacesTooltips();
-    };
-    workViewInjections['_onKeyRelease'] = undefined;
+    }
 
-    WorkspacesView.WorkspacesView.prototype._onKeyPress = function(s, o) {
-        if (Main.overview.viewSelector._activePage != Main.overview.viewSelector._workspacesPage)
+    _onKeyPress(s, o) {
+        let viewSelector = Main.overview.viewSelector;
+        if (viewSelector._activePage != viewSelector._workspacesPage)
             return false;
 
         let workspaceManager = global.workspace_manager;
@@ -208,81 +236,25 @@ function enable() {
             return true;
         }
         return false;
-    };
-    workViewInjections['_onKeyPress'] = undefined;
+    }
+};
 
-    winInjections['_init'] = injectToFunction(Workspace.WindowOverlay.prototype, '_init', function(windowClone, parentActor) {
-        this._id = null;
-        createdActors.push(this._text = new St.Label({ style_class: 'extension-windowsNavigator-window-tooltip' }));
-        this._text.hide();
-        parentActor.add_actor(this._text);
-    });
+let origWindowOverlay, origWorkspace, origWorkspacesView;
 
-    winInjections['relayout'] = injectToFunction(Workspace.WindowOverlay.prototype, 'relayout', function(_animate) {
-        let [cloneX, cloneY, cloneWidth_, cloneHeight_] = this._windowClone.slot;
-
-        let textX = cloneX - 2;
-        let textY = cloneY - 2;
-        this._text.set_position(Math.floor(textX) + 5, Math.floor(textY) + 5);
-        this._text.raise_top();
-    });
-
-    workspaceInjections['_init'] = injectToFunction(Workspace.Workspace.prototype, '_init', function(metaWorkspace) {
-        if (metaWorkspace && metaWorkspace.index() < 9) {
-            createdActors.push(this._tip = new St.Label({
-                style_class: 'extension-windowsNavigator-window-tooltip',
-                visible: false
-            }));
-
-            this.actor.add_actor(this._tip);
-            let signalId = this.actor.connect('notify::scale-x', () => {
-                this._tip.set_scale(1 / this.actor.scale_x, 1 / this.actor.scale_x);
-            });
-            connectedSignals.push({ obj: this.actor, id: signalId });
-        } else
-            this._tip = null;
-    });
-
-    workViewInjections['_init'] = injectToFunction(WorkspacesView.WorkspacesView.prototype, '_init', function(_width, _height, _x, _y, _workspaces) {
-        this._pickWorkspace = false;
-        this._pickWindow = false;
-        this._keyPressEventId =
-            global.stage.connect('key-press-event', this._onKeyPress.bind(this));
-        this._keyReleaseEventId =
-            global.stage.connect('key-release-event', this._onKeyRelease.bind(this));
-        connectedSignals.push({ obj: global.stage, id: this._keyPressEventId });
-        connectedSignals.push({ obj: global.stage, id: this._keyReleaseEventId });
-    });
-
-    workViewInjections['_onDestroy'] = injectToFunction(WorkspacesView.WorkspacesView.prototype, '_onDestroy', function() {
-        global.stage.disconnect(this._keyPressEventId);
-        global.stage.disconnect(this._keyReleaseEventId);
-        connectedSignals = [];
-    });
+function init() {
+    origWindowOverlay = Workspace.WindowOverlay;
+    origWorkspace = Workspace.Workspace;
+    origWorkspacesView = WorkspacesView.WorkspacesView;
 }
 
-function removeInjection(object, injection, name) {
-    if (injection[name] === undefined)
-        delete object[name];
-    else
-        object[name] = injection[name];
+function enable() {
+    Workspace.WindowOverlay = MyWindowOverlay;
+    Workspace.Workspace = MyWorkspace;
+    WorkspacesView.WorkspacesView = MyWorkspacesView;
 }
 
 function disable() {
-    let i;
-
-    for (i in workspaceInjections)
-        removeInjection(Workspace.Workspace.prototype, workspaceInjections, i);
-    for (i in winInjections)
-        removeInjection(Workspace.WindowOverlay.prototype, winInjections, i);
-    for (i in workViewInjections)
-        removeInjection(WorkspacesView.WorkspacesView.prototype, workViewInjections, i);
-
-    for (i of connectedSignals)
-        i.obj.disconnect(i.id);
-
-    for (i of createdActors)
-        i.destroy();
-
-    resetState();
+    Workspace.WindowOverlay = origWindowOverlay;
+    Workspace.Workspace = origWorkspace;
+    WorkspacesView.WorkspacesView = origWorkspacesView;
 }
