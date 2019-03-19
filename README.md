@@ -15,6 +15,12 @@ Bugs should be reported to the GNOME [bug tracking system][bug-tracker].
 
 ## Extensions
 
+ * alternate-tab (**OBSOLETE**)
+ 
+     Lets you use classic Alt+Tab (window-based instead of app-based) in GNOME Shell.
+     This extension is obsolete since GNOME 3.30, see [this blogpost][alternatetab-post]
+     for further details.
+
  * apps-menu
 
      Lets you reach an application using gnome 2.x style menu on the panel.
@@ -74,3 +80,4 @@ file for details.
 [shell-page]: https://wiki.gnome.org/Projects/GnomeShell
 [bug-tracker]: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues
 [license]: COPYING
+[alternatetab-post]: https://blogs.gnome.org/fmuellner/2018/10/11/the-future-of-alternatetab-and-why-you-need-not-worry/
