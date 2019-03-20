@@ -239,22 +239,26 @@ var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
     }
 };
 
-let origWindowOverlay, origWorkspace, origWorkspacesView;
+class Extension {
+    constructor() {
+        this._origWindowOverlay = Workspace.WindowOverlay
+        this._origWorkspace = Workspace.Workspace;
+        this._origWorkspacesView = WorkspacesView.WorkspacesView;
+    }
+
+    enable() {
+        Workspace.WindowOverlay = MyWindowOverlay;
+        Workspace.Workspace = MyWorkspace;
+        WorkspacesView.WorkspacesView = MyWorkspacesView;
+    }
+
+    disable() {
+        Workspace.WindowOverlay = this._origWindowOverlay;
+        Workspace.Workspace = this._origWorkspace;
+        WorkspacesView.WorkspacesView = this._origWorkspacesView;
+    }
+}
 
 function init() {
-    origWindowOverlay = Workspace.WindowOverlay
-    origWorkspace = Workspace.Workspace;
-    origWorkspacesView = WorkspacesView.WorkspacesView;
-}
-
-function enable() {
-    Workspace.WindowOverlay = MyWindowOverlay;
-    Workspace.Workspace = MyWorkspace;
-    WorkspacesView.WorkspacesView = MyWorkspacesView;
-}
-
-function disable() {
-    Workspace.WindowOverlay = origWindowOverlay;
-    Workspace.Workspace = origWorkspace;
-    WorkspacesView.WorkspacesView = origWorkspacesView;
+    return new Extension();
 }
