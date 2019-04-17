@@ -1,3 +1,12 @@
+3.32.1
+======
+* Fix windowsNavigator extension after ES6 port [Florian; #143]
+* screenshot-window-sizer: Add phone screenshot sizes [Adrien; !65]
+* Misc. bug fixes and cleanups [Fabian; !62]
+
+Contributors:
+  Florian Müllner, Adrien Plazas, Fabian P. Schmidt
+
 3.32.0
 ======
 
