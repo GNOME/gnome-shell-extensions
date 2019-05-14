@@ -6,14 +6,13 @@
     height: 2.25em ;
   }
 
-  .bottom-panel .window-button > StWidget {
+  .bottom-panel .window-button > StWidget,
+  .bottom-panel .window-picker-toggle > StWidget {
     background-gradient-drection: vertical;
     background-color: #fff;
     background-gradient-start: #fff;
     background-gradient-end: #eee;
     color: #000;
-    -st-natural-width: 18.7em;
-    max-width: 18.75em;
     color: #2e3436;
     background-color: #eee;
     border-radius: 2px;
@@ -22,7 +21,17 @@
     text-shadow: 0 0 transparent;
   }
 
-  .bottom-panel .window-button:hover > StWidget {
+  .bottom-panel .window-button > StWidget {
+    -st-natural-width: 18.7em;
+    max-width: 18.75em;
+  }
+
+  .bottom-panel .window-picker-toggle > StWidet {
+    border: 1px solid rgba(0,0,0,0.3);
+  }
+
+  .bottom-panel .window-button:hover > StWidget,
+  .bottom-panel .window-picker-toggle:hover > StWidget {
     background-color: #f9f9f9;
   }
 
@@ -31,7 +40,8 @@
     box-shadow: inset 1px 1px 2px rgba(0,0,0,0.5);
   }
 
-  .bottom-panel .window-button.focused > StWidget {
+  .bottom-panel .window-button.focused > StWidget,
+  .bottom-panel .window-picker-toggle:checked > StWidget {
     background-color: #ddd;
     box-shadow: inset 1px 1px 1px rgba(0,0,0,0.5);
   }

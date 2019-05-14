@@ -26,9 +26,8 @@
   spacing: 4px;
 }
 
-.window-button > StWidget {
-  -st-natural-width: 18.75em;
-  max-width: 18.75em;
+.window-button > StWidget,
+.window-picker-toggle > StWidget {
   color: #bbb;
   background-color: black;
   border-radius: 4px;
@@ -37,7 +36,21 @@
   text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
-.window-button:hover > StWidget {
+.window-picker-toggle {
+  padding: 3px;
+}
+
+.window-picker-toggle > StWidet {
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.window-button > StWidget {
+  -st-natural-width: 18.75em;
+  max-width: 18.75em;
+}
+
+.window-button:hover > StWidget,
+.window-picker-toggle:hover > StWidget {
   color: white;
   background-color: #1f1f1f;
 }
@@ -47,12 +60,14 @@
   box-shadow: inset 2px 2px 4px rgba(255,255,255,0.5);
 }
 
-.window-button.focused > StWidget {
+.window-button.focused > StWidget,
+.window-picker-toggle:checked > StWidget {
   color: white;
   box-shadow: inset 1px 1px 4px rgba(255,255,255,0.7);
 }
 
-.window-button.focused:active > StWidget {
+.window-button.focused:active > StWidget,
+.window-picker-toggle:checked:active > StWidget {
   box-shadow: inset 2px 2px 4px rgba(255,255,255,0.7);
 }
 
