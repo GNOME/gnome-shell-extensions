@@ -1,3 +1,10 @@
+3.33.1
+======
+* Misc. bug fixes [Florian; !64]
+
+Contributors:
+  Florian Müllner
+
 3.32.1
 ======
 * Fix windowsNavigator extension after ES6 port [Florian; #143]
