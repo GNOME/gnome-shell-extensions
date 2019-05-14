@@ -3,11 +3,14 @@ const { Clutter, Gio, GLib, GObject, Gtk, Meta, Shell, St } = imports.gi;
 
 const DND = imports.ui.dnd;
 const Main = imports.ui.main;
+const Overview = imports.ui.overview;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
+const Tweener = imports.ui.tweener;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
+const { WindowPicker, WindowPickerToggle } = Me.imports.windowPicker;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
@@ -776,6 +779,12 @@ class WindowList {
         let box = new St.BoxLayout({ x_expand: true, y_expand: true });
         this.actor.add_actor(box);
 
+        let toggle = new WindowPickerToggle();
+        box.add_actor(toggle);
+
+        toggle.connect('notify::checked',
+            this._updateWindowListVisibility.bind(this));
+
         let layout = new Clutter.BoxLayout({ homogeneous: true });
         this._windowList = new St.Widget({
             style_class: 'window-list',
@@ -918,6 +927,19 @@ class WindowList {
                                   !this._mutterSettings.get_boolean('workspaces-only-on-primary');
 
         this._workspaceIndicator.visible = hasWorkspaces && workspacesOnMonitor;
+    }
+
+    _updateWindowListVisibility() {
+        let visible = !Main.windowPicker.visible;
+
+        Tweener.addTween(this._windowList, {
+            opacity: visible ? 255 : 0,
+            transition: 'ease-out-quad',
+            time: Overview.ANIMATION_TIME
+        });
+
+        this._windowList.reactive = visible;
+        this._windowList.get_children().forEach(c => c.reactive = visible);
     }
 
     _getPreferredUngroupedWindowListWidth() {
@@ -1187,7 +1209,7 @@ class WindowList {
 class Extension {
     constructor() {
         this._windowLists = null;
-        this._injections = {};
+        this._hideOverviewOrig = Main.overview.hide;
     }
 
     enable() {
@@ -1199,6 +1221,13 @@ class Extension {
 
         this._monitorsChangedId = Main.layoutManager.connect(
             'monitors-changed', this._buildWindowLists.bind(this));
+
+        Main.windowPicker = new WindowPicker();
+
+        Main.overview.hide = () => {
+            Main.windowPicker.close();
+            this._hideOverviewOrig.call(Main.overview);
+        };
 
         this._buildWindowLists();
     }
@@ -1230,6 +1259,11 @@ class Extension {
             windowList.actor.destroy();
         });
         this._windowLists = null;
+
+        Main.windowPicker.actor.destroy();
+        delete Main.windowPicker;
+
+        Main.overview.hide = this._hideOverviewOrig;
     }
 
     someWindowListContains(actor) {
