@@ -25,21 +25,6 @@ const NAVIGATION_REGION_OVERSHOOT = 50;
 Gio._promisify(Gio._LocalFilePrototype, 'query_info_async', 'query_info_finish');
 Gio._promisify(Gio._LocalFilePrototype, 'set_attributes_async', 'set_attributes_finish');
 
-var ActivitiesMenuItem = GObject.registerClass(
-class ActivitiesMenuItem extends PopupMenu.PopupBaseMenuItem {
-    _init(button) {
-        super._init();
-        this._button = button;
-        this.add_child(new St.Label({ text: _('Activities Overview') }));
-    }
-
-    activate(event) {
-        this._button.menu.toggle();
-        Main.overview.toggle();
-        super.activate(event);
-    }
-});
-
 var ApplicationMenuItem = GObject.registerClass(
 class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
     _init(button, app) {
@@ -233,21 +218,6 @@ class ApplicationsMenu extends PopupMenu.PopupMenu {
         return false;
     }
 
-    open(animate) {
-        this._button.hotCorner.setBarrierSize(0);
-        if (this._button.hotCorner.actor) // fallback corner
-            this._button.hotCorner.actor.hide();
-        super.open(animate);
-    }
-
-    close(animate) {
-        let size = Main.layoutManager.panelBox.height;
-        this._button.hotCorner.setBarrierSize(size);
-        if (this._button.hotCorner.actor) // fallback corner
-            this._button.hotCorner.actor.show();
-        super.close(animate);
-    }
-
     toggle() {
         if (this.isOpen) {
             this._button.selectCategory(null);
@@ -406,8 +376,6 @@ class ApplicationsButton extends PanelMenu.Button {
         this.name = 'panelApplications';
         this.label_actor = this._label;
 
-        this.connect('captured-event', this._onCapturedEvent.bind(this));
-
         this._showingId = Main.overview.connect('showing', () => {
             this.add_accessible_state (Atk.StateType.CHECKED);
         });
@@ -449,10 +417,6 @@ class ApplicationsButton extends PanelMenu.Button {
         }
     }
 
-    get hotCorner() {
-        return Main.layoutManager.hotCorners[Main.layoutManager.primaryIndex];
-    }
-
     _createVertSeparator() {
         let separator = new St.DrawingArea({
             style_class: 'calendar-vertical-separator',
@@ -478,14 +442,6 @@ class ApplicationsButton extends PanelMenu.Button {
                 : null);
 
         this._desktopTarget.destroy();
-    }
-
-    _onCapturedEvent(actor, event) {
-        if (event.type() == Clutter.EventType.BUTTON_PRESS) {
-            if (!Main.overview.shouldToggleByCornerOrButton())
-                return true;
-        }
-        return false;
     }
 
     _onMenuKeyPress(actor, event) {
@@ -630,14 +586,6 @@ class ApplicationsButton extends PanelMenu.Button {
             y_align: St.Align.START
         });
 
-        let activities = new ActivitiesMenuItem(this);
-        this.leftBox.add(activities, {
-            expand: false,
-            x_fill: true,
-            y_fill: false,
-            y_align: St.Align.START
-        });
-
         this.applicationsBox = new St.BoxLayout({ vertical: true });
         this.applicationsScrollBox.add_actor(this.applicationsBox);
         this.categoriesBox = new St.BoxLayout({ vertical: true });
@@ -749,19 +697,16 @@ class ApplicationsButton extends PanelMenu.Button {
 });
 
 let appsMenuButton;
-let activitiesButton;
 
 function enable() {
-    activitiesButton = Main.panel.statusArea['activities'];
-    activitiesButton.container.hide();
     appsMenuButton = new ApplicationsButton();
-    Main.panel.addToStatusArea('apps-menu', appsMenuButton, 1, 'left');
+    let index = Main.sessionMode.panel.left.indexOf('activities') + 1;
+    Main.panel.addToStatusArea('apps-menu', appsMenuButton, index, 'left');
 }
 
 function disable() {
     Main.panel.menuManager.removeMenu(appsMenuButton.menu);
     appsMenuButton.destroy();
-    activitiesButton.container.show();
 }
 
 function init() {
