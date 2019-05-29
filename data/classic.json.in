@@ -1,8 +1,9 @@
 {
     "parentMode": "user",
     "stylesheetName": "gnome-classic.css",
+    "hasOverview": false,
     "enabledExtensions": [@CLASSIC_EXTENSIONS@],
-    "panel": { "left": ["activities", "appMenu"],
+    "panel": { "left": ["appMenu"],
                "center": [],
                "right": ["a11y", "keyboard", "dateMenu", "aggregateMenu"]
              }
