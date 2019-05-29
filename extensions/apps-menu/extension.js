@@ -25,11 +25,12 @@ const NAVIGATION_REGION_OVERSHOOT = 50;
 Gio._promisify(Gio._LocalFilePrototype, 'query_info_async', 'query_info_finish');
 Gio._promisify(Gio._LocalFilePrototype, 'set_attributes_async', 'set_attributes_finish');
 
+var ActivitiesMenuItem = GObject.registerClass(
 class ActivitiesMenuItem extends PopupMenu.PopupBaseMenuItem {
-    constructor(button) {
-        super();
+    _init(button) {
+        super._init();
         this._button = button;
-        this.actor.add_child(new St.Label({ text: _('Activities Overview') }));
+        this.add_child(new St.Label({ text: _('Activities Overview') }));
     }
 
     activate(event) {
@@ -37,35 +38,36 @@ class ActivitiesMenuItem extends PopupMenu.PopupBaseMenuItem {
         Main.overview.toggle();
         super.activate(event);
     }
-}
+});
 
+var ApplicationMenuItem = GObject.registerClass(
 class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
-    constructor(button, app) {
-        super();
+    _init(button, app) {
+        super._init();
         this._app = app;
         this._button = button;
 
         this._iconBin = new St.Bin();
-        this.actor.add_child(this._iconBin);
+        this.add_child(this._iconBin);
 
         let appLabel = new St.Label({
             text: app.get_name(),
             y_expand: true,
             y_align: Clutter.ActorAlign.CENTER
         });
-        this.actor.add_child(appLabel);
-        this.actor.label_actor = appLabel;
+        this.add_child(appLabel);
+        this.label_actor = appLabel;
 
         let textureCache = St.TextureCache.get_default();
         let iconThemeChangedId = textureCache.connect('icon-theme-changed',
             this._updateIcon.bind(this));
-        this.actor.connect('destroy', () => {
+        this.connect('destroy', () => {
             textureCache.disconnect(iconThemeChangedId);
         });
         this._updateIcon();
 
-        this.actor._delegate = this;
-        let draggable = DND.makeDraggable(this.actor);
+        this._delegate = this;
+        let draggable = DND.makeDraggable(this);
 
         let maybeStartDrag = draggable._maybeStartDrag;
         draggable._maybeStartDrag = (event) => {
@@ -103,11 +105,12 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
     _updateIcon() {
         this._iconBin.set_child(this.getDragActor());
     }
-}
+});
 
+var CategoryMenuItem = GObject.registerClass(
 class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
-    constructor(button, category) {
-        super();
+    _init(button, category) {
+        super._init();
         this._category = category;
         this._button = button;
 
@@ -120,8 +123,9 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         else
             name = _('Favorites');
 
-        this.actor.add_child(new St.Label({ text: name }));
-        this.actor.connect('motion-event', this._onMotionEvent.bind(this));
+        this.add_child(new St.Label({ text: name }));
+        this.connect('motion-event', this._onMotionEvent.bind(this));
+        this.connect('notify::active', this._onActiveChanged.bind(this));
     }
 
     activate(event) {
@@ -131,7 +135,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _isNavigatingSubmenu([x, y]) {
-        let [posX, posY] = this.actor.get_transformed_position();
+        let [posX, posY] = this.get_transformed_position();
 
         if (this._oldX == -1) {
             this._oldX = x;
@@ -146,11 +150,11 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._oldY = y;
 
         // If it lies outside the x-coordinates then it is definitely outside.
-        if (posX > x || posX + this.actor.width < x)
+        if (posX > x || posX + this.width < x)
             return false;
 
         // If it lies inside the menu item then it is definitely inside.
-        if (posY <= y && posY + this.actor.height >= y)
+        if (posY <= y && posY + this.height >= y)
             return true;
 
         // We want the keep-up triangle only if the movement is more
@@ -171,17 +175,17 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         // only check for triangle ABC.
         if (posY > y) {
             let offset = posY - y;
-            y = posY + this.actor.height + offset;
+            y = posY + this.height + offset;
         }
 
         // Ensure that A is (0, 0).
         x -= posX;
-        y -= posY + this.actor.height;
+        y -= posY + this.height;
 
         // Check which side of line AB the point P lies on by taking the
         // cross-product of AB and AP. See:
         // http://stackoverflow.com/questions/3461453/determine-which-side-of-a-line-a-point-lies
-        if (((this.actor.width * y) - (NAVIGATION_REGION_OVERSHOOT * x)) <= 0)
+        if (((this.width * y) - (NAVIGATION_REGION_OVERSHOOT * x)) <= 0)
             return true;
 
         return false;
@@ -191,16 +195,16 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         if (!Clutter.get_pointer_grab()) {
             this._oldX = -1;
             this._oldY = -1;
-            Clutter.grab_pointer(this.actor);
+            Clutter.grab_pointer(this);
         }
-        this.actor.hover = true;
+        this.hover = true;
 
         if (this._isNavigatingSubmenu(event.get_coords()))
             return true;
 
         this._oldX = -1;
         this._oldY = -1;
-        this.actor.hover = false;
+        this.hover = false;
         Clutter.ungrab_pointer();
 
         let source = event.get_source();
@@ -210,14 +214,14 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         return false;
     }
 
-    setActive(active, params) {
-        if (active) {
-            this._button.selectCategory(this._category);
-            this._button.scrollToCatButton(this);
-        }
-        super.setActive(active, params);
+    _onActiveChanged() {
+        if (!this.active)
+            return;
+
+        this._button.selectCategory(this._category);
+        this._button.scrollToCatButton(this);
     }
-}
+});
 
 class ApplicationsMenu extends PopupMenu.PopupMenu {
     constructor(sourceActor, arrowAlignment, arrowSide, button) {
@@ -563,7 +567,7 @@ class ApplicationsButton extends PanelMenu.Button {
         let appsScrollBoxAlloc = this.applicationsScrollBox.get_allocation_box();
         let currentScrollValue = appsScrollBoxAdj.get_value();
         let boxHeight = appsScrollBoxAlloc.y2 - appsScrollBoxAlloc.y1;
-        let buttonAlloc = button.actor.get_allocation_box();
+        let buttonAlloc = button.get_allocation_box();
         let newScrollValue = currentScrollValue;
         if (currentScrollValue > buttonAlloc.y1 - 10)
             newScrollValue = buttonAlloc.y1 - 10;
@@ -578,7 +582,7 @@ class ApplicationsButton extends PanelMenu.Button {
         let catsScrollBoxAlloc = this.categoriesScrollBox.get_allocation_box();
         let currentScrollValue = catsScrollBoxAdj.get_value();
         let boxHeight = catsScrollBoxAlloc.y2 - catsScrollBoxAlloc.y1;
-        let buttonAlloc = button.actor.get_allocation_box();
+        let buttonAlloc = button.get_allocation_box();
         let newScrollValue = currentScrollValue;
         if (currentScrollValue > buttonAlloc.y1 - 10)
             newScrollValue = buttonAlloc.y1 - 10;
@@ -625,7 +629,7 @@ class ApplicationsButton extends PanelMenu.Button {
         });
 
         let activities = new ActivitiesMenuItem(this);
-        this.leftBox.add(activities.actor, {
+        this.leftBox.add(activities, {
             expand: false,
             x_fill: true,
             y_fill: false,
@@ -661,7 +665,7 @@ class ApplicationsButton extends PanelMenu.Button {
         this._tree.load_sync();
         let root = this._tree.get_root_directory();
         let categoryMenuItem = new CategoryMenuItem(this, null);
-        this.categoriesBox.add_actor(categoryMenuItem.actor);
+        this.categoriesBox.add_actor(categoryMenuItem);
         let iter = root.iter();
         let nextType;
         while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
@@ -677,7 +681,7 @@ class ApplicationsButton extends PanelMenu.Button {
             this._loadCategory(categoryId, dir);
             if (this.applicationsByCategory[categoryId].length > 0) {
                 let categoryMenuItem = new CategoryMenuItem(this, dir);
-                this.categoriesBox.add_actor(categoryMenuItem.actor);
+                this.categoriesBox.add_actor(categoryMenuItem);
             }
         }
 
@@ -718,8 +722,8 @@ class ApplicationsButton extends PanelMenu.Button {
                 item.setDragEnabled(this._desktopTarget.hasDesktop);
                 this._applicationsButtons.set(app, item);
             }
-            if (!item.actor.get_parent())
-                this.applicationsBox.add_actor(item.actor);
+            if (!item.get_parent())
+                this.applicationsBox.add_actor(item);
         }
     }
 
