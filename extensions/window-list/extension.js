@@ -917,7 +917,7 @@ class WindowList {
         let workspacesOnMonitor = this._monitor == Main.layoutManager.primaryMonitor ||
                                   !this._mutterSettings.get_boolean('workspaces-only-on-primary');
 
-        this._workspaceIndicator.actor.visible = hasWorkspaces && workspacesOnMonitor;
+        this._workspaceIndicator.visible = hasWorkspaces && workspacesOnMonitor;
     }
 
     _getPreferredUngroupedWindowListWidth() {
@@ -940,7 +940,7 @@ class WindowList {
     }
 
     _getMaxWindowListWidth() {
-        let indicatorsBox = this._workspaceIndicator.actor.get_parent();
+        let indicatorsBox = this._workspaceIndicator.get_parent();
         return this.actor.width - indicatorsBox.get_preferred_width(-1)[1];
     }
 
