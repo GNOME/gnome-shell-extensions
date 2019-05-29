@@ -12,15 +12,18 @@ const ShellMountOperation = imports.ui.shellMountOperation;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
+var MountMenuItem = GObject.registerClass(
 class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
-    constructor(mount) {
-        super();
+    _init(mount) {
+        super._init();
 
         this.label = new St.Label({ text: mount.get_name() });
-        this.actor.add(this.label, { expand: true });
-        this.actor.label_actor = this.label;
+        this.add(this.label, { expand: true });
+        this.label_actor = this.label;
 
         this.mount = mount;
+
+        this.connect('destroy', this._onDestroy.bind(this));
 
         let ejectIcon = new St.Icon({
             icon_name: 'media-eject-symbolic',
@@ -28,13 +31,13 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
         });
         let ejectButton = new St.Button({ child: ejectIcon });
         ejectButton.connect('clicked', this._eject.bind(this));
-        this.actor.add(ejectButton);
+        this.add(ejectButton);
 
         this._changedId = mount.connect('changed', this._syncVisibility.bind(this));
         this._syncVisibility();
     }
 
-    destroy() {
+    _onDestroy() {
         if (this._changedId) {
             this.mount.disconnect(this._changedId);
             this._changedId = 0;
@@ -61,7 +64,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _syncVisibility() {
-        this.actor.visible = this._isInteresting();
+        this.visible = this._isInteresting();
     }
 
     _eject() {
@@ -108,7 +111,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         super.activate(event);
     }
-}
+});
 
 let DriveMenu = GObject.registerClass(
 class DriveMenu extends PanelMenu.Button {
