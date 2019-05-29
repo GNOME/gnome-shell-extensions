@@ -221,7 +221,7 @@ class BaseButton {
         this.actor.connect('destroy', this._onDestroy.bind(this));
         this.actor.connect('popup-menu', this._onPopupMenu.bind(this));
 
-        this._contextMenuManager = new PopupMenu.PopupMenuManager(this);
+        this._contextMenuManager = new PopupMenu.PopupMenuManager(this.actor);
 
         this._switchWorkspaceId = global.window_manager.connect(
             'switch-workspace', this._updateVisibility.bind(this));
@@ -481,7 +481,7 @@ class AppButton extends BaseButton {
         this._multiWindowTitle.add(label);
         this._multiWindowTitle.label_actor = label;
 
-        this._menuManager = new PopupMenu.PopupMenuManager(this);
+        this._menuManager = new PopupMenu.PopupMenuManager(this.actor);
         this._menu = new PopupMenu.PopupMenu(this.actor, 0.5, St.Side.BOTTOM);
         this._menu.connect('open-state-changed', _onMenuStateChanged);
         this._menu.actor.hide();
@@ -809,7 +809,7 @@ class WindowList {
             this._updateWorkspaceIndicatorVisibility.bind(this));
         this._updateWorkspaceIndicatorVisibility();
 
-        this._menuManager = new PopupMenu.PopupMenuManager(this);
+        this._menuManager = new PopupMenu.PopupMenuManager(this.actor);
         this._menuManager.addMenu(this._workspaceIndicator.menu);
 
         Main.layoutManager.addChrome(this.actor, {
