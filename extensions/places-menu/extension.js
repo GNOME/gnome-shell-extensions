@@ -17,19 +17,20 @@ const PlaceDisplay = Me.imports.placeDisplay;
 
 const PLACE_ICON_SIZE = 16;
 
+var PlaceMenuItem = GObject.registerClass(
 class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
-    constructor(info) {
-        super();
+    _init(info) {
+        super._init();
         this._info = info;
 
         this._icon = new St.Icon({
             gicon: info.icon,
             icon_size: PLACE_ICON_SIZE
         });
-        this.actor.add_child(this._icon);
+        this.add_child(this._icon);
 
         this._label = new St.Label({ text: info.name, x_expand: true });
-        this.actor.add_child(this._label);
+        this.add_child(this._label);
 
         if (info.isRemovable()) {
             this._ejectIcon = new St.Icon({
@@ -38,7 +39,7 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
             });
             this._ejectButton = new St.Button({ child: this._ejectIcon });
             this._ejectButton.connect('clicked', info.eject.bind(info));
-            this.actor.add_child(this._ejectButton);
+            this.add_child(this._ejectButton);
         }
 
         this._changedId = info.connect('changed',
@@ -64,7 +65,7 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._icon.gicon = info.icon;
         this._label.text = info.name;
     }
-}
+});
 
 const SECTIONS = [
     'special',
