@@ -7,6 +7,25 @@ const PopupMenu = imports.ui.popupMenu;
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
+let WorkspaceThumbnail = GObject.registerClass({
+    GTypeName: 'WindowListWorkspaceThumbnail'
+}, class WorkspaceThumbnail extends St.Button {
+    _init(index) {
+        super._init({
+            style_class: 'workspace'
+        });
+
+        this._index = index;
+    }
+
+    // eslint-disable-next-line camelcase
+    on_clicked() {
+        let ws = global.workspace_manager.get_workspace_by_index(this._index);
+        if (ws)
+            ws.activate(global.get_current_time());
+    }
+});
+
 var WorkspaceIndicator = GObject.registerClass({
     GTypeName: 'WindowListWorkspaceIndicator'
 }, class WorkspaceIndicator extends PanelMenu.Button {
@@ -36,17 +55,30 @@ var WorkspaceIndicator = GObject.registerClass({
         });
         container.add_actor(this._statusBin);
 
+        this._thumbnailsBox = new St.BoxLayout({
+            style_class: 'workspaces-box',
+            y_expand: true,
+            reactive: true
+        });
+        this._thumbnailsBox.connect('scroll-event',
+            this._onScrollEvent.bind(this));
+        container.add_actor(this._thumbnailsBox);
+
         this._workspacesItems = [];
 
         this._workspaceManagerSignals = [
             workspaceManager.connect('notify::n-workspaces',
                 this._nWorkspacesChanged.bind(this)),
             workspaceManager.connect_after('workspace-switched',
-                this._onWorkspaceSwitched.bind(this))
+                this._onWorkspaceSwitched.bind(this)),
+            workspaceManager.connect('notify::layout-rows',
+                this._onWorkspaceOrientationChanged.bind(this))
         ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._updateMenu();
+        this._updateThumbnails();
+        this._onWorkspaceOrientationChanged();
 
         this._settings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.preferences' });
         this._settingsChangedId = this._settings.connect(
@@ -65,17 +97,27 @@ var WorkspaceIndicator = GObject.registerClass({
         super._onDestroy();
     }
 
+    _onWorkspaceOrientationChanged() {
+        let vertical = global.workspace_manager.layout_rows == -1;
+        this.reactive = vertical;
+
+        this._statusBin.visible = vertical;
+        this._thumbnailsBox.visible = !vertical;
+    }
+
     _onWorkspaceSwitched() {
         let workspaceManager = global.workspace_manager;
         this._currentWorkspace = workspaceManager.get_active_workspace_index();
 
         this._updateMenuOrnament();
+        this._updateActiveThumbnail();
 
         this._statusLabel.set_text(this._getStatusText());
     }
 
     _nWorkspacesChanged() {
         this._updateMenu();
+        this._updateThumbnails();
     }
 
     _updateMenuOrnament() {
@@ -83,6 +125,16 @@ var WorkspaceIndicator = GObject.registerClass({
             this._workspacesItems[i].setOrnament(i == this._currentWorkspace
                 ? PopupMenu.Ornament.DOT
                 : PopupMenu.Ornament.NONE);
+        }
+    }
+
+    _updateActiveThumbnail() {
+        let thumbs = this._thumbnailsBox.get_children();
+        for (let i = 0; i < thumbs.length; i++) {
+            if (i == this._currentWorkspace)
+                thumbs[i].add_style_class_name('active');
+            else
+                thumbs[i].remove_style_class_name('active');
         }
     }
 
@@ -126,6 +178,18 @@ var WorkspaceIndicator = GObject.registerClass({
         }
 
         this._statusLabel.set_text(this._getStatusText());
+    }
+
+    _updateThumbnails() {
+        let workspaceManager = global.workspace_manager;
+
+        this._thumbnailsBox.destroy_all_children();
+
+        for (let i = 0; i < workspaceManager.n_workspaces; i++) {
+            let thumb = new WorkspaceThumbnail(i);
+            this._thumbnailsBox.add_actor(thumb);
+        }
+        this._updateActiveThumbnail();
     }
 
     _activate(index) {
