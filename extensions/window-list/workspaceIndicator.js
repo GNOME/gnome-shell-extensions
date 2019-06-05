@@ -26,14 +26,14 @@ var WorkspaceIndicator = GObject.registerClass({
         let workspaceManager = global.workspace_manager;
 
         this._currentWorkspace = workspaceManager.get_active_workspace().index();
-        this.statusLabel = new St.Label({
+        this._statusLabel = new St.Label({
             text: this._getStatusText(),
             x_align: Clutter.ActorAlign.CENTER,
             y_align: Clutter.ActorAlign.CENTER
         });
-        container.add_actor(this.statusLabel);
+        container.add_actor(this._statusLabel);
 
-        this.workspacesItems = [];
+        this._workspacesItems = [];
 
         this._workspaceManagerSignals = [
             workspaceManager.connect('notify::n-workspaces',
@@ -63,11 +63,11 @@ var WorkspaceIndicator = GObject.registerClass({
     }
 
     _updateIndicator() {
-        this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
+        this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
         this._currentWorkspace = global.workspace_manager.get_active_workspace().index();
-        this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
+        this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
-        this.statusLabel.set_text(this._getStatusText());
+        this._statusLabel.set_text(this._getStatusText());
     }
 
     _getStatusText() {
@@ -82,7 +82,7 @@ var WorkspaceIndicator = GObject.registerClass({
         let workspaceManager = global.workspace_manager;
 
         this.menu.removeAll();
-        this.workspacesItems = [];
+        this._workspacesItems = [];
         this._currentWorkspace = workspaceManager.get_active_workspace().index();
 
         for (let i = 0; i < workspaceManager.n_workspaces; i++) {
@@ -98,10 +98,10 @@ var WorkspaceIndicator = GObject.registerClass({
                 item.setOrnament(PopupMenu.Ornament.DOT);
 
             this.menu.addMenuItem(item);
-            this.workspacesItems[i] = item;
+            this._workspacesItems[i] = item;
         }
 
-        this.statusLabel.set_text(this._getStatusText());
+        this._statusLabel.set_text(this._getStatusText());
     }
 
     _activate(index) {
