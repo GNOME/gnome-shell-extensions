@@ -70,13 +70,11 @@
   height: 24px;
 }
 
-.window-list-workspace-indicator {
-  padding: 3px;
-}
-
-.window-list-workspace-indicator > StWidget {
+.window-list-workspace-indicator .status-label-bin {
   background-color: rgba(200, 200, 200, .3);
   border: 1px solid #cccccc;
+  padding: 0 3px;
+  margin: 3px 0;
 }
 
 .notification {
