@@ -4,7 +4,7 @@ extension_data += configure_file(
   configuration: metadata_conf
 )
 
-extension_sources += files('prefs.js', 'windowPicker.js')
+extension_sources += files('prefs.js', 'windowPicker.js', 'workspaceIndicator.js')
 extension_schemas += files(metadata_conf.get('gschemaname') + '.gschema.xml')
 
 if classic_mode_enabled
