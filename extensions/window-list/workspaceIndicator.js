@@ -47,7 +47,7 @@ var WorkspaceIndicator = GObject.registerClass({
 
         this._settings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.preferences' });
         this._settingsChangedId = this._settings.connect(
-            'changed::workspace-names', this._updateMenu.bind(this));
+            'changed::workspace-names', this._updateMenuLabels.bind(this));
     }
 
     _onDestroy() {
@@ -76,6 +76,14 @@ var WorkspaceIndicator = GObject.registerClass({
         let total = workspaceManager.n_workspaces;
 
         return '%d / %d'.format(current + 1, total);
+    }
+
+    _updateMenuLabels() {
+        for (let i = 0; i < this._workspacesItems.length; i++) {
+            let item = this._workspacesItems[i];
+            let name = Meta.prefs_get_workspace_name(i);
+            item.label.text = name;
+        }
     }
 
     _updateMenu() {
