@@ -40,9 +40,9 @@ var WorkspaceIndicator = GObject.registerClass({
 
         this._workspaceManagerSignals = [
             workspaceManager.connect('notify::n-workspaces',
-                this._updateMenu.bind(this)),
+                this._nWorkspacesChanged.bind(this)),
             workspaceManager.connect_after('workspace-switched',
-                this._updateIndicator.bind(this))
+                this._onWorkspaceSwitched.bind(this))
         ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
@@ -65,12 +65,25 @@ var WorkspaceIndicator = GObject.registerClass({
         super._onDestroy();
     }
 
-    _updateIndicator() {
-        this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
-        this._currentWorkspace = global.workspace_manager.get_active_workspace_index();
-        this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
+    _onWorkspaceSwitched() {
+        let workspaceManager = global.workspace_manager;
+        this._currentWorkspace = workspaceManager.get_active_workspace_index();
+
+        this._updateMenuOrnament();
 
         this._statusLabel.set_text(this._getStatusText());
+    }
+
+    _nWorkspacesChanged() {
+        this._updateMenu();
+    }
+
+    _updateMenuOrnament() {
+        for (let i = 0; i < this._workspacesItems.length; i++) {
+            this._workspacesItems[i].setOrnament(i == this._currentWorkspace
+                ? PopupMenu.Ornament.DOT
+                : PopupMenu.Ornament.NONE);
+        }
     }
 
     _getStatusText() {
