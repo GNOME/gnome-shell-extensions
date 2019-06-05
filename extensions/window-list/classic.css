@@ -54,3 +54,12 @@
     color: #888;
     box-shadow: inset -1px -1px 1px rgba(0,0,0,0.5);
   }
+
+/* workspace switcher */
+.window-list-workspace-indicator .workspace {
+  background-color: #ddd;
+}
+
+.window-list-workspace-indicator .workspace.active {
+  background-color: #ccc;
+ }
