@@ -77,6 +77,30 @@
   margin: 3px 0;
 }
 
+.window-list-workspace-indicator .workspaces-box {
+  spacing: 3px;
+  padding: 3px;
+}
+
+.window-list-workspace-indicator .workspace {
+  border: 1px solid #cccccc;
+  width: 52px;
+}
+
+.window-list-workspace-indicator .workspace:first-child:ltr,
+.window-list-workspace-indicator .workspace:last-child:rtl {
+  border-radius: 4px 0 0 4px;
+}
+
+.window-list-workspace-indicator .workspace:first-child:rtl,
+.window-list-workspace-indicator .workspace:last-child:ltr {
+  border-radius: 0 4px 4px 0;
+}
+
+.window-list-workspace-indicator .workspace.active {
+  background-color: rgba(200, 200, 200, .3);
+}
+
 .notification {
   font-weight: normal;
 }
