@@ -7,8 +7,9 @@ const PopupMenu = imports.ui.popupMenu;
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
-var WorkspaceIndicator = GObject.registerClass(
-class WorkspaceIndicator extends PanelMenu.Button {
+var WorkspaceIndicator = GObject.registerClass({
+    GTypeName: 'WindowListWorkspaceIndicator'
+}, class WorkspaceIndicator extends PanelMenu.Button {
     _init() {
         super._init(0.0, _('Workspace Indicator'), true);
         this.setMenu(new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM));
