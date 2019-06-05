@@ -25,7 +25,7 @@ var WorkspaceIndicator = GObject.registerClass({
 
         let workspaceManager = global.workspace_manager;
 
-        this._currentWorkspace = workspaceManager.get_active_workspace().index();
+        this._currentWorkspace = workspaceManager.get_active_workspace_index();
         this._statusLabel = new St.Label({
             text: this._getStatusText(),
             x_align: Clutter.ActorAlign.CENTER,
@@ -64,7 +64,7 @@ var WorkspaceIndicator = GObject.registerClass({
 
     _updateIndicator() {
         this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
-        this._currentWorkspace = global.workspace_manager.get_active_workspace().index();
+        this._currentWorkspace = global.workspace_manager.get_active_workspace_index();
         this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
         this._statusLabel.set_text(this._getStatusText());
@@ -72,7 +72,7 @@ var WorkspaceIndicator = GObject.registerClass({
 
     _getStatusText() {
         let workspaceManager = global.workspace_manager;
-        let current = workspaceManager.get_active_workspace().index();
+        let current = workspaceManager.get_active_workspace_index();
         let total = workspaceManager.n_workspaces;
 
         return '%d / %d'.format(current + 1, total);
@@ -91,7 +91,7 @@ var WorkspaceIndicator = GObject.registerClass({
 
         this.menu.removeAll();
         this._workspacesItems = [];
-        this._currentWorkspace = workspaceManager.get_active_workspace().index();
+        this._currentWorkspace = workspaceManager.get_active_workspace_index();
 
         for (let i = 0; i < workspaceManager.n_workspaces; i++) {
             let name = Meta.prefs_get_workspace_name(i);
