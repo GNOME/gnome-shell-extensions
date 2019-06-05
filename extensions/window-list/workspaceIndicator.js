@@ -26,12 +26,15 @@ var WorkspaceIndicator = GObject.registerClass({
         let workspaceManager = global.workspace_manager;
 
         this._currentWorkspace = workspaceManager.get_active_workspace_index();
-        this._statusLabel = new St.Label({
-            text: this._getStatusText(),
-            x_align: Clutter.ActorAlign.CENTER,
-            y_align: Clutter.ActorAlign.CENTER
+        this._statusLabel = new St.Label({ text: this._getStatusText() });
+
+        this._statusBin = new St.Bin({
+            style_class: 'status-label-bin',
+            x_expand: true,
+            y_expand: true,
+            child: this._statusLabel
         });
-        container.add_actor(this._statusLabel);
+        container.add_actor(this._statusBin);
 
         this._workspacesItems = [];
 
