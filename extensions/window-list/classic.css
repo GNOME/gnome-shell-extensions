@@ -47,3 +47,12 @@
     color: #888;
     box-shadow: none;
   }
+
+/* workspace switcher */
+.window-list-workspace-indicator .workspace {
+  background-color: #ddd;
+}
+
+.window-list-workspace-indicator .workspace.active {
+  background-color: #ccc;
+}
