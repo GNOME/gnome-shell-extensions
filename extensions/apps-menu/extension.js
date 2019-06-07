@@ -219,12 +219,8 @@ class ApplicationsMenu extends PopupMenu.PopupMenu {
     }
 
     toggle() {
-        if (this.isOpen) {
+        if (this.isOpen)
             this._button.selectCategory(null);
-        } else {
-            if (Main.overview.visible)
-                Main.overview.hide();
-        }
         super.toggle();
     }
 }
