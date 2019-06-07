@@ -67,6 +67,8 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._button.selectCategory(null);
         this._button.menu.toggle();
         super.activate(event);
+
+        Main.overview.hide();
     }
 
     setActive(active, params) {
