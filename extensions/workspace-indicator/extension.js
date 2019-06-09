@@ -23,14 +23,14 @@ class WorkspaceIndicator extends PanelMenu.Button {
         let workspaceManager = global.workspace_manager;
 
         this._currentWorkspace = workspaceManager.get_active_workspace().index();
-        this.statusLabel = new St.Label({
+        this._statusLabel = new St.Label({
             y_align: Clutter.ActorAlign.CENTER,
             text: this._labelText()
         });
 
-        this.add_actor(this.statusLabel);
+        this.add_actor(this._statusLabel);
 
-        this.workspacesItems = [];
+        this._workspacesItems = [];
         this._workspaceSection = new PopupMenu.PopupMenuSection();
         this.menu.addMenuItem(this._workspaceSection);
 
@@ -47,7 +47,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._createWorkspacesSection();
 
         //styling
-        this.statusLabel.add_style_class_name('panel-workspace-indicator');
+        this._statusLabel.add_style_class_name('panel-workspace-indicator');
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
         this._settingsChangedId = this._settings.connect(
@@ -68,11 +68,11 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _updateIndicator() {
-        this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
+        this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
         this._currentWorkspace = global.workspace_manager.get_active_workspace().index();
-        this.workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
+        this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
-        this.statusLabel.set_text(this._labelText());
+        this._statusLabel.set_text(this._labelText());
     }
 
     _labelText(workspaceIndex) {
@@ -87,24 +87,24 @@ class WorkspaceIndicator extends PanelMenu.Button {
         let workspaceManager = global.workspace_manager;
 
         this._workspaceSection.removeAll();
-        this.workspacesItems = [];
+        this._workspacesItems = [];
         this._currentWorkspace = workspaceManager.get_active_workspace().index();
 
         let i = 0;
         for (; i < workspaceManager.n_workspaces; i++) {
-            this.workspacesItems[i] = new PopupMenu.PopupMenuItem(this._labelText(i));
-            this._workspaceSection.addMenuItem(this.workspacesItems[i]);
-            this.workspacesItems[i].workspaceId = i;
-            this.workspacesItems[i].label_actor = this.statusLabel;
-            this.workspacesItems[i].connect('activate', (actor, _event) => {
+            this._workspacesItems[i] = new PopupMenu.PopupMenuItem(this._labelText(i));
+            this._workspaceSection.addMenuItem(this._workspacesItems[i]);
+            this._workspacesItems[i].workspaceId = i;
+            this._workspacesItems[i].label_actor = this._statusLabel;
+            this._workspacesItems[i].connect('activate', (actor, _event) => {
                 this._activate(actor.workspaceId);
             });
 
             if (i == this._currentWorkspace)
-                this.workspacesItems[i].setOrnament(PopupMenu.Ornament.DOT);
+                this._workspacesItems[i].setOrnament(PopupMenu.Ornament.DOT);
         }
 
-        this.statusLabel.set_text(this._labelText());
+        this._statusLabel.set_text(this._labelText());
     }
 
     _activate(index) {
