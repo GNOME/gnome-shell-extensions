@@ -23,6 +23,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
         this._currentWorkspace = workspaceManager.get_active_workspace_index();
         this._statusLabel = new St.Label({
+            style_class: 'panel-workspace-indicator',
             y_align: Clutter.ActorAlign.CENTER,
             text: this._labelText()
         });
@@ -42,9 +43,6 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._createWorkspacesSection();
-
-        //styling
-        this._statusLabel.add_style_class_name('panel-workspace-indicator');
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
         this._settingsChangedId = this._settings.connect(
