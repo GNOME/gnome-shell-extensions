@@ -34,12 +34,10 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this.menu.addMenuItem(this._workspaceSection);
 
         this._workspaceManagerSignals = [
-            workspaceManager.connect_after('workspace-added',
-                this._createWorkspacesSection.bind(this)),
-            workspaceManager.connect_after('workspace-removed',
-                this._createWorkspacesSection.bind(this)),
+            workspaceManager.connect_after('notify::n-workspaces',
+                this._nWorkspacesChanged.bind(this)),
             workspaceManager.connect_after('workspace-switched',
-                this._updateIndicator.bind(this))
+                this._onWorkspaceSwitched.bind(this))
         ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
@@ -66,12 +64,24 @@ class WorkspaceIndicator extends PanelMenu.Button {
         super._onDestroy();
     }
 
-    _updateIndicator() {
-        this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
+    _onWorkspaceSwitched() {
         this._currentWorkspace = global.workspace_manager.get_active_workspace_index();
-        this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
+
+        this._updateMenuOrnament();
 
         this._statusLabel.set_text(this._labelText());
+    }
+
+    _nWorkspacesChanged() {
+        this._createWorkspacesSection();
+    }
+
+    _updateMenuOrnament() {
+        for (let i = 0; i < this._workspacesItems.length; i++) {
+            this._workspacesItems[i].setOrnament(i == this._currentWorkspace
+                ? PopupMenu.Ornament.DOT
+                : PopupMenu.Ornament.NONE);
+        }
     }
 
     _labelText(workspaceIndex) {
