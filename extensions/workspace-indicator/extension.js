@@ -20,6 +20,13 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _init() {
         super._init(0.0, _('Workspace Indicator'));
 
+        let container = new St.Widget({
+            layout_manager: new Clutter.BinLayout(),
+            x_expand: true,
+            y_expand: true
+        });
+        this.add_actor(container);
+
         let workspaceManager = global.workspace_manager;
 
         this._currentWorkspace = workspaceManager.get_active_workspace_index();
@@ -29,7 +36,15 @@ class WorkspaceIndicator extends PanelMenu.Button {
             text: this._labelText()
         });
 
-        this.add_actor(this._statusLabel);
+        container.add_actor(this._statusLabel);
+
+        this._thumbnailsBox = new St.BoxLayout({
+            style_class: 'panel-workspace-indicator-box',
+            y_expand: true,
+            reactive: true
+        });
+
+        container.add_actor(this._thumbnailsBox);
 
         this._workspacesItems = [];
         this._workspaceSection = new PopupMenu.PopupMenuSection();
@@ -39,11 +54,16 @@ class WorkspaceIndicator extends PanelMenu.Button {
             workspaceManager.connect_after('notify::n-workspaces',
                 this._nWorkspacesChanged.bind(this)),
             workspaceManager.connect_after('workspace-switched',
-                this._onWorkspaceSwitched.bind(this))
+                this._onWorkspaceSwitched.bind(this)),
+            workspaceManager.connect('notify::layout-rows',
+                this._onWorkspaceOrientationChanged.bind(this))
         ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
+        this._thumbnailsBox.connect('scroll-event', this._onScrollEvent.bind(this));
         this._createWorkspacesSection();
+        this._updateThumbnails();
+        this._onWorkspaceOrientationChanged();
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
         this._settingsChangedId = this._settings.connect(
@@ -63,16 +83,26 @@ class WorkspaceIndicator extends PanelMenu.Button {
         super._onDestroy();
     }
 
+    _onWorkspaceOrientationChanged() {
+        let vertical = global.workspace_manager.layout_rows == -1;
+        this.reactive = vertical;
+
+        this._statusLabel.visible = vertical;
+        this._thumbnailsBox.visible = !vertical;
+    }
+
     _onWorkspaceSwitched() {
         this._currentWorkspace = global.workspace_manager.get_active_workspace_index();
 
         this._updateMenuOrnament();
+        this._updateActiveThumbnail();
 
         this._statusLabel.set_text(this._labelText());
     }
 
     _nWorkspacesChanged() {
         this._createWorkspacesSection();
+        this._updateThumbnails();
     }
 
     _updateMenuOrnament() {
@@ -80,6 +110,16 @@ class WorkspaceIndicator extends PanelMenu.Button {
             this._workspacesItems[i].setOrnament(i == this._currentWorkspace
                 ? PopupMenu.Ornament.DOT
                 : PopupMenu.Ornament.NONE);
+        }
+    }
+
+    _updateActiveThumbnail() {
+        let thumbs = this._thumbnailsBox.get_children();
+        for (let i = 0; i < thumbs.length; i++) {
+            if (i == this._currentWorkspace)
+                thumbs[i].add_style_class_name('active');
+            else
+                thumbs[i].remove_style_class_name('active');
         }
     }
 
@@ -118,6 +158,25 @@ class WorkspaceIndicator extends PanelMenu.Button {
         }
 
         this._statusLabel.set_text(this._labelText());
+    }
+
+    _updateThumbnails() {
+        let workspaceManager = global.workspace_manager;
+
+        this._thumbnailsBox.destroy_all_children();
+
+        for (let i = 0; i < workspaceManager.n_workspaces; i++) {
+            let thumb = new St.Button({
+                style_class: 'workspace',
+                child: new St.Label({ text: `${i + 1}` })
+            });
+            thumb.connect('clicked', () => {
+                this._activate(i);
+            });
+
+            this._thumbnailsBox.add_actor(thumb);
+        }
+        this._updateActiveThumbnail();
     }
 
     _activate(index) {
