@@ -1,5 +1,19 @@
-.panel-workspace-indicator {
+.panel-workspace-indicator,
+.panel-workspace-indicator-box .workspace {
 	padding: 0 8px;
-	background-color: rgba(200, 200, 200, .5);
 	border: 1px solid #cccccc;
+}
+
+.panel-workspace-indicator,
+.panel-workspace-indicator-box .workspace.active {
+	background-color: rgba(200, 200, 200, .5);
+}
+
+.panel-workspace-indicator-box .workspace {
+    background-color: rgba(200, 200, 200, .3);
+    border-left-width: 0;
+}
+
+.panel-workspace-indicator-box .workspace:first-child {
+    border-left-width: 1px;
 }
