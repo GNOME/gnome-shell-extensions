@@ -22,7 +22,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
         let workspaceManager = global.workspace_manager;
 
-        this._currentWorkspace = workspaceManager.get_active_workspace().index();
+        this._currentWorkspace = workspaceManager.get_active_workspace_index();
         this._statusLabel = new St.Label({
             y_align: Clutter.ActorAlign.CENTER,
             text: this._labelText()
@@ -69,7 +69,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
     _updateIndicator() {
         this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.NONE);
-        this._currentWorkspace = global.workspace_manager.get_active_workspace().index();
+        this._currentWorkspace = global.workspace_manager.get_active_workspace_index();
         this._workspacesItems[this._currentWorkspace].setOrnament(PopupMenu.Ornament.DOT);
 
         this._statusLabel.set_text(this._labelText());
@@ -93,7 +93,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
         this._workspaceSection.removeAll();
         this._workspacesItems = [];
-        this._currentWorkspace = workspaceManager.get_active_workspace().index();
+        this._currentWorkspace = workspaceManager.get_active_workspace_index();
 
         let i = 0;
         for (; i < workspaceManager.n_workspaces; i++) {
@@ -132,7 +132,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             return;
         }
 
-        let newIndex = global.workspace_manager.get_active_workspace().index() + diff;
+        let newIndex = global.workspace_manager.get_active_workspace_index() + diff;
         this._activate(newIndex);
     }
 });
