@@ -51,7 +51,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
         this._settingsChangedId = this._settings.connect(
             `changed::${WORKSPACE_KEY}`,
-            this._createWorkspacesSection.bind(this));
+            this._updateMenuLabels.bind(this));
     }
 
     _onDestroy() {
@@ -80,6 +80,11 @@ class WorkspaceIndicator extends PanelMenu.Button {
             return (workspaceIndex + 1).toString();
         }
         return Meta.prefs_get_workspace_name(workspaceIndex);
+    }
+
+    _updateMenuLabels() {
+        for (let i = 0; i < this._workspacesItems.length; i++)
+            this._workspacesItems[i].label.text = this._labelText(i);
     }
 
     _createWorkspacesSection() {
