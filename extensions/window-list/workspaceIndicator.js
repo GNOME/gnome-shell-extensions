@@ -1,6 +1,8 @@
 /* exported WorkspaceIndicator */
-const { Clutter, Gio, GObject, Meta, St } = imports.gi;
+const { Clutter, Gio, GObject, Meta, Shell, St } = imports.gi;
 
+const DND = imports.ui.dnd;
+const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
@@ -16,6 +18,31 @@ let WorkspaceThumbnail = GObject.registerClass({
         });
 
         this._index = index;
+        this._delegate = this; // needed for DND
+    }
+
+    acceptDrop(source) {
+        if (!source.realWindow)
+            return false;
+
+        let window = source.realWindow.get_meta_window();
+        this._moveWindow(window);
+        return true;
+    }
+
+    handleDragOver(source) {
+        if (source.realWindow)
+            return DND.DragMotionResult.MOVE_DROP
+        else
+            return DND.DragMotionResult.CONTINUE;
+    }
+
+
+    _moveWindow(window) {
+        let monitorIndex = Main.layoutManager.findIndexForActor(this);
+        if (monitorIndex != window.get_monitor())
+            window.move_to_monitor(monitorIndex);
+        window.change_workspace_by_index(this._index, false);
     }
 
     // eslint-disable-next-line camelcase
