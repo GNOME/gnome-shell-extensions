@@ -1,6 +1,7 @@
 /* exported WorkspaceIndicator */
-const { Clutter, Gio, GObject, Meta, St } = imports.gi;
+const { Clutter, Gio, GObject, Meta, Shell, St } = imports.gi;
 
+const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
@@ -16,6 +17,38 @@ let WorkspaceThumbnail = GObject.registerClass({
         });
 
         this._index = index;
+        this._delegate = this; // needed for DND
+
+        this._grabOpEndId = global.display.connect('grab-op-end',
+            (dpy, dpy_, window, grabOp) => {
+                if (grabOp != Meta.GrabOp.MOVING)
+                    return;
+
+                let [x, y] = global.get_pointer();
+                let alloc = Shell.util_get_transformed_allocation(this);
+                if (alloc.contains(x, y))
+                    this._moveWindow(window);
+            });
+
+        this.connect('destroy', () => {
+            global.display.disconnect(this._grabOpEndId);
+        });
+    }
+
+    acceptDrop(source) {
+        if (!source.realWindow)
+            return false;
+
+        let window = source.realWindow.get_meta_window();
+        this._moveWindow(window);
+        return true;
+    }
+
+    _moveWindow(window) {
+        let monitorIndex = Main.layoutManager.findIndexForActor(this);
+        if (monitorIndex != window.get_monitor())
+            window.move_to_monitor(monitorIndex);
+        window.change_workspace_by_index(this._index, false);
     }
 
     // eslint-disable-next-line camelcase
