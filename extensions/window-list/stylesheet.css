@@ -121,6 +121,16 @@
   background-color: rgba(200, 200, 200, .3);
 }
 
+.window-list-window-preview {
+  background-color: #252525;
+  border: 1px solid #ccc;
+}
+
+.window-list-window-preview.active {
+  background-color: #353535;
+  border: 2px solid #ccc;
+}
+
 .notification {
   font-weight: normal;
 }
