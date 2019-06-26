@@ -56,3 +56,13 @@
 .window-list-workspace-indicator .workspace.active {
   background-color: #ccc;
 }
+
+.window-list-window-preview {
+  background-color: #ededed;
+  border: 1px solid #ccc;
+}
+
+.window-list-window-preview.active {
+  background-color: #f6f5f4;
+  border: 2px solid #888;
+}

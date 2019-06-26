@@ -9,16 +9,131 @@ const PopupMenu = imports.ui.popupMenu;
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
+let WindowPreview = GObject.registerClass({
+    GTypeName: 'WindowListWindowPreview'
+}, class WindowPreview extends St.Button {
+    _init(window) {
+        super._init({
+            style_class: 'window-list-window-preview'
+        });
+
+        this._delegate = this;
+        DND.makeDraggable(this, { restoreOnSuccess: true });
+
+        this._window = window;
+
+        this.connect('destroy', this._onDestroy.bind(this));
+
+        this._sizeChangedId = this._window.connect('size-changed',
+            this._relayout.bind(this));
+        this._positionChangedId = this._window.connect('position-changed',
+            this._relayout.bind(this));
+        this._minimizedChangedId = this._window.connect('notify::minimized',
+            this._relayout.bind(this));
+        this._monitorEnteredId = global.display.connect('window-entered-monitor',
+            this._relayout.bind(this));
+        this._monitorLeftId = global.display.connect('window-left-monitor',
+            this._relayout.bind(this));
+
+        // Do initial layout when we get a parent
+        let id = this.connect('parent-set', () => {
+            this.disconnect(id);
+            if (!this.get_parent())
+                return;
+            this._laterId = Meta.later_add(Meta.LaterType.BEFORE_REDRAW, () => {
+                this._laterId = 0;
+                this._relayout();
+                return false;
+            });
+        });
+
+        this._focusChangedId = global.display.connect('notify::focus-window',
+            this._onFocusChanged.bind(this));
+        this._onFocusChanged();
+    }
+
+    // needed for DND
+    get realWindow() {
+        return this._window.get_compositor_private();
+    }
+
+    _onDestroy() {
+        this._window.disconnect(this._sizeChangedId);
+        this._window.disconnect(this._positionChangedId);
+        this._window.disconnect(this._minimizedChangedId);
+        global.display.disconnect(this._monitorEnteredId);
+        global.display.disconnect(this._monitorLeftId);
+        global.display.disconnect(this._focusChangedId);
+        if (this._laterId)
+            Meta.later_remove(this._laterId);
+    }
+
+    _onFocusChanged() {
+        if (global.display.focus_window == this._window)
+            this.add_style_class_name('active');
+        else
+            this.remove_style_class_name('active');
+    }
+
+    _relayout() {
+        let monitor = Main.layoutManager.findIndexForActor(this);
+        this.visible = monitor == this._window.get_monitor() &&
+            this._window.showing_on_its_workspace();
+
+        if (!this.visible)
+            return;
+
+        let workArea = Main.layoutManager.getWorkAreaForMonitor(monitor);
+        let hscale = this.get_parent().allocation.get_width() / workArea.width;
+        let vscale = this.get_parent().allocation.get_height() / workArea.height;
+
+        let frameRect = this._window.get_frame_rect();
+        this.set_size(
+            Math.round(Math.min(frameRect.width, workArea.width) * hscale),
+            Math.round(Math.min(frameRect.height, workArea.height) * vscale));
+        this.set_position(
+            Math.round(frameRect.x * hscale),
+            Math.round(frameRect.y * vscale));
+    }
+});
+
 let WorkspaceThumbnail = GObject.registerClass({
     GTypeName: 'WindowListWorkspaceThumbnail'
 }, class WorkspaceThumbnail extends St.Button {
     _init(index) {
         super._init({
-            style_class: 'workspace'
+            style_class: 'workspace',
+            child: new Clutter.Actor({
+                layout_manager: new Clutter.BinLayout(),
+                clip_to_allocation: true
+            }),
+            x_fill: true,
+            y_fill: true
         });
+
+        this.connect('destroy', this._onDestroy.bind(this));
 
         this._index = index;
         this._delegate = this; // needed for DND
+
+        this._windowPreviews = new Map();
+
+        let workspaceManager = global.workspace_manager;
+        this._workspace = workspaceManager.get_workspace_by_index(index);
+
+        this._windowAddedId = this._workspace.connect('window-added',
+            (ws, window) => {
+                this._addWindow(window);
+            });
+        this._windowRemovedId = this._workspace.connect('window-removed',
+            (ws, window) => {
+                this._removeWindow(window);
+            });
+        this._restackedId = global.display.connect('restacked',
+            this._onRestacked.bind(this));
+
+        this._workspace.list_windows().forEach(w => this._addWindow(w));
+        this._onRestacked();
     }
 
     acceptDrop(source) {
@@ -37,6 +152,37 @@ let WorkspaceThumbnail = GObject.registerClass({
             return DND.DragMotionResult.CONTINUE;
     }
 
+    _addWindow(window) {
+        if (this._windowPreviews.has(window))
+            return;
+
+        let preview = new WindowPreview(window);
+        preview.connect('clicked', (a, btn) => this.emit('clicked', btn));
+        this._windowPreviews.set(window, preview);
+        this.child.add_child(preview);
+    }
+
+    _removeWindow(window) {
+        let preview = this._windowPreviews.get(window);
+        if (!preview)
+            return;
+
+        this._windowPreviews.delete(window);
+        preview.destroy();
+    }
+
+    _onRestacked() {
+        let lastPreview = null;
+        let windows = global.get_window_actors().map(a => a.meta_window);
+        for (let i = 0; i < windows.length; i++) {
+            let preview = this._windowPreviews.get(windows[i]);
+            if (!preview)
+                continue;
+
+            this.child.set_child_above_sibling(preview, lastPreview);
+            lastPreview = preview;
+        }
+    }
 
     _moveWindow(window) {
         let monitorIndex = Main.layoutManager.findIndexForActor(this);
@@ -49,6 +195,12 @@ let WorkspaceThumbnail = GObject.registerClass({
         let ws = global.workspace_manager.get_workspace_by_index(this._index);
         if (ws)
             ws.activate(global.get_current_time());
+    }
+
+    _onDestroy() {
+        this._workspace.disconnect(this._windowAddedId);
+        this._workspace.disconnect(this._windowRemovedId);
+        global.display.disconnect(this._restackedId);
     }
 });
 
