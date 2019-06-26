@@ -44,3 +44,13 @@
     color: #888;
     box-shadow: inset -1px -1px 1px rgba(0,0,0,0.5);
   }
+
+.window-list-window-preview {
+  background-color: #ededed;
+  border: 1px solid #ccc;
+}
+
+.window-list-window-preview.active {
+  background-color: #f6f5f4;
+  border: 2px solid #ccc;
+}
