@@ -459,6 +459,8 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     _onDestroy() {
+        super._onDestroy();
+
         Main.overview.disconnect(this._showingId);
         Main.overview.disconnect(this._hidingId);
         appSys.disconnect(this._installedChangedId);
