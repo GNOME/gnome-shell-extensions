@@ -1,7 +1,15 @@
-.panel-workspace-indicator,
-.panel-workspace-indicator-box .workspace {
+.panel-workspace-indicator {
 	padding: 0 8px;
 	border: 1px solid #cccccc;
+}
+
+.panel-workspace-indicator-box {
+    padding: 2px 0;
+}
+
+.panel-workspace-indicator-box .workspace {
+    border: 1px solid #cccccc;
+    width: 48px;
 }
 
 .panel-workspace-indicator,
@@ -16,4 +24,14 @@
 
 .panel-workspace-indicator-box .workspace:first-child {
     border-left-width: 1px;
+}
+
+.workspace-indicator-window-preview {
+    background-color: #252525;
+    border: 1px solid #ccc;
+}
+
+.workspace-indicator-window-preview {
+    background-color: #353535;
+    border: 2px solid #ccc;
 }
