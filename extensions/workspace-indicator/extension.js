@@ -109,7 +109,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _activate(index) {
         let workspaceManager = global.workspace_manager;
 
-        if (index >= 0 && index <  workspaceManager.n_workspaces) {
+        if (index >= 0 && index < workspaceManager.n_workspaces) {
             let metaWorkspace = workspaceManager.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
