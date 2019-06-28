@@ -28,3 +28,13 @@
 .panel-workspace-indicator-box .workspace:first-child {
     border-left-width: 1px;
 }
+
+.workspace-indicator-window-preview {
+    background-color: #252525;
+    border: 1px solid #ccc;
+}
+
+.workspace-indicator-window-preview.active {
+    background-color: #353535;
+    border: 2px solid #ccc;
+}
