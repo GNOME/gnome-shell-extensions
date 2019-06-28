@@ -2,15 +2,14 @@
 /* exported init enable disable */
 
 const { Clutter, Gio, GObject, Meta, St } = imports.gi;
+
+const ExtensionUtils = imports.misc.extensionUtils;
+const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
-
-const Main = imports.ui.main;
-
-const ExtensionUtils = imports.misc.extensionUtils;
 
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';

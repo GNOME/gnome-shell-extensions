@@ -1,8 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported enable disable */
-const Workspace = imports.ui.workspace;
-
 const ExtensionUtils = imports.misc.extensionUtils;
+const Workspace = imports.ui.workspace;
 
 // testing settings for natural window placement strategy:
 const WINDOW_PLACEMENT_NATURAL_ACCURACY = 20;                       // accuracy of window translate moves  (KDE-default: 20)

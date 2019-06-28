@@ -3,11 +3,11 @@
 /* exported init */
 
 const { Gio, GLib } = imports.gi;
+
+const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 
 const SETTINGS_KEY = 'name';
-
-const ExtensionUtils = imports.misc.extensionUtils;
 
 class ThemeManager {
     constructor() {

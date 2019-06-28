@@ -21,10 +21,9 @@
 
 const { Meta, Shell, St } = imports.gi;
 
+const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 const Tweener = imports.ui.tweener;
-
-const ExtensionUtils = imports.misc.extensionUtils;
 
 const MESSAGE_FADE_TIME = 2;
 

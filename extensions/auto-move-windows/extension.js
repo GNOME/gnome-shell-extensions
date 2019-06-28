@@ -4,9 +4,8 @@
 
 const Shell = imports.gi.Shell;
 
-const Main = imports.ui.main;
-
 const ExtensionUtils = imports.misc.extensionUtils;
+const Main = imports.ui.main;
 
 class WindowMover {
     constructor() {

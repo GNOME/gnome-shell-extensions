@@ -4,16 +4,16 @@
 const {
     Atk, Clutter, Gio, GLib, GMenu, GObject, Gtk, Meta, Shell, St
 } = imports.gi;
+const Signals = imports.signals;
+
 const DND = imports.ui.dnd;
+const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
-const Signals = imports.signals;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
-
-const ExtensionUtils = imports.misc.extensionUtils;
 
 const appSys = Shell.AppSystem.get_default();
 
