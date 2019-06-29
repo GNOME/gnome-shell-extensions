@@ -255,6 +255,6 @@ class WindowPickerToggle extends St.Button {
     _onDestroy() {
         if (this._overlayKeyId)
             global.display.disconnect(this._overlayKeyId);
-        this._overlayKeyId == 0;
+        this._overlayKeyId = 0;
     }
 });
