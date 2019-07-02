@@ -67,6 +67,8 @@ var WindowPicker = class {
         this._visible = false;
         this._modal = false;
 
+        this._overlayKeyId = 0;
+
         this.actor = new Clutter.Actor();
 
         this.actor.connect('destroy', this._onDestroy.bind(this));
@@ -101,6 +103,15 @@ var WindowPicker = class {
         this._updateBackgrounds();
 
         Main.uiGroup.insert_child_below(this.actor, global.window_group);
+
+        if (!Main.sessionMode.hasOverview) {
+            this._overlayKeyId = global.display.connect('overlay-key', () => {
+                if (!this._visible)
+                    this.open();
+                else
+                    this.close();
+            });
+        }
     }
 
     get visible() {
@@ -188,6 +199,10 @@ var WindowPicker = class {
         if (this._monitorsChangedId)
             Main.layoutManager.disconnect(this._monitorsChangedId);
         this._monitorsChangedId = 0;
+
+        if (this._overlayKeyId)
+            global.display.disconnect(this._overlayKeyId);
+        this._overlayKeyId = 0;
     }
 
     _updateBackgrounds() {
@@ -227,10 +242,6 @@ class WindowPickerToggle extends St.Button {
             toggle_mode: true
         });
 
-        this._overlayKeyId = 0;
-
-        this.connect('destroy', this._onDestroy.bind(this));
-
         this.connect('notify::checked', () => {
             if (this.checked)
                 Main.windowPicker.open();
@@ -238,23 +249,8 @@ class WindowPickerToggle extends St.Button {
                 Main.windowPicker.close();
         });
 
-        if (!Main.sessionMode.hasOverview) {
-            this._overlayKeyId = global.display.connect('overlay-key', () => {
-                if (!Main.windowPicker.visible)
-                    Main.windowPicker.open();
-                else
-                    Main.windowPicker.close();
-            });
-        }
-
         Main.windowPicker.connect('open-state-changed', () => {
             this.checked = Main.windowPicker.visible;
         });
-    }
-
-    _onDestroy() {
-        if (this._overlayKeyId)
-            global.display.disconnect(this._overlayKeyId);
-        this._overlayKeyId = 0;
     }
 });
