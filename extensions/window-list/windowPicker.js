@@ -68,6 +68,7 @@ var WindowPicker = class {
         this._modal = false;
 
         this._overlayKeyId = 0;
+        this._stageKeyPressId = 0;
 
         this.actor = new Clutter.Actor();
 
@@ -132,6 +133,16 @@ var WindowPicker = class {
         this._fakeOverviewAnimation();
         this._workspacesDisplay.show(false);
 
+        this._stageKeyPressId = global.stage.connect('key-press-event',
+            (a, event) => {
+                let sym = event.get_key_symbol();
+                if (sym == Clutter.KEY_Escape) {
+                    this.close();
+                    return Clutter.EVENT_STOP;
+                }
+                return Clutter.EVENT_PROPAGATE;
+            });
+
         this.emit('open-state-changed', this._visible);
     }
 
@@ -150,6 +161,9 @@ var WindowPicker = class {
             this._workspacesDisplay.hide();
             this._fakeOverviewVisible(false);
         });
+
+        global.stage.disconnect(this._stageKeyPressId);
+        this._stageKeyPressId = 0;
 
         this.emit('open-state-changed', this._visible);
     }
@@ -203,6 +217,10 @@ var WindowPicker = class {
         if (this._overlayKeyId)
             global.display.disconnect(this._overlayKeyId);
         this._overlayKeyId = 0;
+
+        if (this._stageKeyPressId)
+            global.stage.disconnect(this._stageKeyPressId);
+        this._stageKeyPressId = 0;
     }
 
     _updateBackgrounds() {
