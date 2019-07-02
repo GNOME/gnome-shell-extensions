@@ -4,7 +4,7 @@
             "error",
             {
                 "properties": "never",
-                "allow": ["^vfunc_"]
+                "allow": ["^vfunc_", "^on_"]
             }
         ],
         "no-unused-vars": [
