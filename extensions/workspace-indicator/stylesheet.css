@@ -1,23 +1,22 @@
 .panel-workspace-indicator {
 	padding: 0 8px;
-	border: 1px solid #cccccc;
+	border-width: 1px;
+	border-style: solid;
 }
 
 .panel-workspace-indicator-box {
     padding: 2px 0;
 }
 
+.panel-workspace-indicator,
+.panel-workspace-indicator-box .workspace.active {
+	background-color: rgba(0, 0, 0, .9);
+	border-color: #3584e4;
+}
+
 .panel-workspace-indicator-box .workspace {
     border: 1px solid #cccccc;
     width: 48px;
-}
-
-.panel-workspace-indicator,
-.panel-workspace-indicator-box .workspace.active {
-	background-color: rgba(200, 200, 200, .5);
-}
-
-.panel-workspace-indicator-box .workspace {
     background-color: rgba(200, 200, 200, .3);
     border-left-width: 0;
 }
@@ -27,11 +26,6 @@
 }
 
 .workspace-indicator-window-preview {
-    background-color: #252525;
-    border: 1px solid #ccc;
-}
-
-.workspace-indicator-window-preview {
     background-color: #353535;
-    border: 2px solid #ccc;
+    border: 2px solid red; /* I can't get this to do anything! :/ */
 }
