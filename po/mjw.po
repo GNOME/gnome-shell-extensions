@@ -1,0 +1,249 @@
+# Karbi (India) translation for gnome-shell-extensions.
+# Copyright (C) 2019 gnome-shell-extensions's Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# Jor Teron <jor.teron@gmail.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2019-07-02 19:23+0000\n"
+"PO-Revision-Date: 2019-07-14 00:00+0530\n"
+"Last-Translator: Jor Teron <jor.teron@gmail.com>\n"
+"Language-Team: Karbi <mjw@li.org>\n"
+"Language: mjw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: gedit 3.28.1\n"
+
+#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+msgid "GNOME Classic"
+msgstr "GNOME Classic"
+
+#: data/gnome-classic.desktop.in:4
+msgid "This session logs you into GNOME Classic"
+msgstr ""
+
+#: extensions/apps-menu/extension.js:111
+msgid "Favorites"
+msgstr ""
+
+#: extensions/apps-menu/extension.js:366
+msgid "Applications"
+msgstr ""
+
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+msgid "Application and workspace list"
+msgstr ""
+
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+
+#: extensions/auto-move-windows/prefs.js:60
+msgid "Application"
+msgstr ""
+
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
+msgid "Workspace"
+msgstr ""
+
+#: extensions/auto-move-windows/prefs.js:89
+msgid "Add Rule"
+msgstr ""
+
+#: extensions/auto-move-windows/prefs.js:111
+msgid "Create new matching rule"
+msgstr ""
+
+#: extensions/auto-move-windows/prefs.js:117
+msgid "Add"
+msgstr ""
+
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:102
+#: extensions/places-menu/placeDisplay.js:232
+#, javascript-format
+msgid "Ejecting drive “%s” failed:"
+msgstr ""
+
+#: extensions/drive-menu/extension.js:118
+msgid "Removable devices"
+msgstr ""
+
+#: extensions/drive-menu/extension.js:145
+msgid "Open Files"
+msgstr "Files kangpu"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+msgid "Use more screen for windows"
+msgstr ""
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+msgid "Place window captions on top"
+msgstr ""
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+
+#: extensions/places-menu/extension.js:80
+#: extensions/places-menu/extension.js:84
+msgid "Places"
+msgstr ""
+
+#: extensions/places-menu/placeDisplay.js:46
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr ""
+
+#: extensions/places-menu/placeDisplay.js:61
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr ""
+
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
+msgid "Computer"
+msgstr "Computer"
+
+#: extensions/places-menu/placeDisplay.js:358
+msgid "Home"
+msgstr "Home"
+
+#: extensions/places-menu/placeDisplay.js:403
+msgid "Browse Network"
+msgstr ""
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+msgid "Cycle Screenshot Sizes"
+msgstr ""
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+msgid "Cycle Screenshot Sizes Backward"
+msgstr ""
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+msgid "Theme name"
+msgstr "Theme amen"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Theme amem, kewan ji pen ~/.themes/name/gnome-shell"
+
+#: extensions/window-list/extension.js:99
+msgid "Close"
+msgstr "Kanghap"
+
+#: extensions/window-list/extension.js:119
+msgid "Unminimize"
+msgstr "Pabi-thuthe"
+
+#: extensions/window-list/extension.js:119
+msgid "Minimize"
+msgstr "Pabi"
+
+#: extensions/window-list/extension.js:126
+msgid "Unmaximize"
+msgstr "Pathe-thuthe"
+
+#: extensions/window-list/extension.js:126
+msgid "Maximize"
+msgstr "Pathe"
+
+#: extensions/window-list/extension.js:399
+msgid "Minimize all"
+msgstr "Kado-kawe pabi"
+
+#: extensions/window-list/extension.js:405
+msgid "Unminimize all"
+msgstr "Kado-kawe pabi-thuthe"
+
+#: extensions/window-list/extension.js:411
+msgid "Maximize all"
+msgstr "Kathe-kawe pathe"
+
+#: extensions/window-list/extension.js:419
+msgid "Unmaximize all"
+msgstr "Kado-kawe pathe-thuthe"
+
+#: extensions/window-list/extension.js:427
+msgid "Close all"
+msgstr "Kado-kawe kanghap"
+
+#: extensions/window-list/extension.js:642
+#: extensions/workspace-indicator/extension.js:20
+msgid "Workspace Indicator"
+msgstr ""
+
+#: extensions/window-list/extension.js:829
+msgid "Window List"
+msgstr ""
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+msgid "When to group windows"
+msgstr "Mentu hutsi windows muluk nangji"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are “never”, “auto” and “always”."
+msgstr ""
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+msgid "Show the window list on all monitors"
+msgstr ""
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+
+#: extensions/window-list/prefs.js:25
+msgid "Window Grouping"
+msgstr "Windows muluk"
+
+#: extensions/window-list/prefs.js:47
+msgid "Never group windows"
+msgstr "Windows muluk ri"
+
+#: extensions/window-list/prefs.js:48
+msgid "Group windows when space is limited"
+msgstr "Adim bihek te windows muluk noi"
+
+#: extensions/window-list/prefs.js:49
+msgid "Always group windows"
+msgstr "Windows muluk vek nangji"
+
+#: extensions/window-list/prefs.js:75
+msgid "Show on all monitors"
+msgstr ""
+
+#: extensions/workspace-indicator/prefs.js:131
+msgid "Workspace Names"
+msgstr "Workspace amen hai"
+
+#: extensions/workspace-indicator/prefs.js:151
+msgid "Name"
+msgstr "Amen"
+
+#: extensions/workspace-indicator/prefs.js:191
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Workspace amen %d"
