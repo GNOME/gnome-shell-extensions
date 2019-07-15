@@ -32,18 +32,20 @@ $variant: 'light';
     font-weight: normal;
     color: $fg_color;
     text-shadow: none;
-    &:active, &:overview, &:focus, &:checked {
-      // Trick due to St limitations. It needs a background to draw
-      // a box-shadow
-      background-color: $selected_bg_color !important;
-      color: $selected_fg_color !important;
-      box-shadow: none;
-      & > .system-status-icon { icon-shadow: none; }
-    }
     &:hover {
+      color: lighten($fg_color,10%);
       text-shadow: none;
       & .system-status-icon { icon-shadow: none; }
     }
+    &:active, &:overview, &:focus, &:checked {
+      // Trick due to St limitations. It needs a background to draw
+      // a box-shadow
+      background-color: $selected_bg_color;
+      color: $selected_fg_color;
+      box-shadow: none;
+      & > .system-status-icon { icon-shadow: none; }
+    }
+
     .app-menu-icon { width: 0; height: 0; margin: 0; } // shell's display:none; :D
 
     .system-status-icon {
