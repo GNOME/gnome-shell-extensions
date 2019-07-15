@@ -4,30 +4,23 @@
     border-top-width: 1px;
     border-bottom-width: 0px;
     height: 2.25em ;
+    padding: 2px;
   }
 
   .bottom-panel .window-button > StWidget,
   .bottom-panel .window-picker-toggle > StWidget {
-    background-gradient-drection: vertical;
-    background-color: #fff;
-    background-gradient-start: #fff;
-    background-gradient-end: #eee;
-    color: #000;
     color: #2e3436;
     background-color: #eee;
-    border-radius: 2px;
+    border-radius: 3px;
     padding: 3px 6px 1px;
-    box-shadow: inset -1px -1px 1px rgba(0,0,0,0.5);
-    text-shadow: 0 0 transparent;
+    box-shadow: none;
+    text-shadow: none;
+    border: 1px solid rgba(0,0,0,0.2);
   }
 
   .bottom-panel .window-button > StWidget {
     -st-natural-width: 18.7em;
     max-width: 18.75em;
-  }
-
-  .bottom-panel .window-picker-toggle > StWidet {
-    border: 1px solid rgba(0,0,0,0.3);
   }
 
   .bottom-panel .window-button:hover > StWidget,
@@ -37,13 +30,13 @@
 
   .bottom-panel .window-button:active > StWidget,
   .bottom-panel .window-button:focus > StWidget {
-    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.5);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
   }
 
   .bottom-panel .window-button.focused > StWidget,
   .bottom-panel .window-picker-toggle:checked > StWidget {
-    background-color: #ddd;
-    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.5);
+    background-color: #ccc;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
   }
 
   .bottom-panel .window-button.focused:hover > StWidget {
@@ -52,5 +45,5 @@
 
   .bottom-panel .window-button.minimized > StWidget {
     color: #888;
-    box-shadow: inset -1px -1px 1px rgba(0,0,0,0.5);
+    box-shadow: none;
   }
