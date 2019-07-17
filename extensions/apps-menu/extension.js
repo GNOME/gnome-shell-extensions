@@ -90,7 +90,9 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _updateIcon() {
-        this._iconBin.set_child(this.getDragActor());
+        let icon = this.getDragActor();
+        icon.style_class = 'icon-dropshadow';
+        this._iconBin.set_child(icon);
     }
 });
 
