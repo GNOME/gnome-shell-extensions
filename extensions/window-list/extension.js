@@ -1,5 +1,5 @@
 /* exported init */
-const { Clutter, Gio, GLib, Gtk, Meta, Shell, St } = imports.gi;
+const { Clutter, Gio, GLib, GObject, Gtk, Meta, Shell, St } = imports.gi;
 
 const DND = imports.ui.dnd;
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -133,19 +133,22 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
     }
 }
 
-class WindowTitle {
-    constructor(metaWindow) {
+const WindowTitle = GObject.registerClass({
+    GTypeName: 'WindowListWindowTitle'
+}, class WindowTitle extends St.BoxLayout {
+    _init(metaWindow) {
         this._metaWindow = metaWindow;
-        this.actor = new St.BoxLayout({
+
+        super._init({
             style_class: 'window-button-box',
             x_expand: true,
             y_expand: true
         });
 
         this._icon = new St.Bin({ style_class: 'window-button-icon' });
-        this.actor.add(this._icon);
+        this.add(this._icon);
         this.label_actor = new St.Label({ y_align: Clutter.ActorAlign.CENTER });
-        this.actor.add(this.label_actor);
+        this.add(this.label_actor);
 
         this._textureCache = St.TextureCache.get_default();
         this._iconThemeChangedId = this._textureCache.connect(
@@ -156,7 +159,7 @@ class WindowTitle {
             'notify::gtk-application-id', this._updateIcon.bind(this));
         this._updateIcon();
 
-        this.actor.connect('destroy', this._onDestroy.bind(this));
+        this.connect('destroy', this._onDestroy.bind(this));
 
         this._notifyTitleId = this._metaWindow.connect(
             'notify::title', this._updateTitle.bind(this));
@@ -198,33 +201,32 @@ class WindowTitle {
         this._metaWindow.disconnect(this._notifyWmClass);
         this._metaWindow.disconnect(this._notifyAppId);
     }
-}
+});
 
 
-class BaseButton {
-    constructor(perMonitor, monitorIndex) {
-        if (this.constructor === BaseButton)
-            throw new TypeError('Cannot instantiate abstract class BaseButton');
-
+const BaseButton = GObject.registerClass({
+    GTypeName: 'WindowListBaseButton',
+    GTypeFlags: GObject.TypeFlags.ABSTRACT
+}, class BaseButton extends St.Button {
+    _init(perMonitor, monitorIndex) {
         this._perMonitor = perMonitor;
         this._monitorIndex = monitorIndex;
 
-        this.actor = new St.Button({
+        super._init({
             style_class: 'window-button',
             x_fill: true,
             y_fill: true,
             can_focus: true,
             button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE
         });
-        this.actor._delegate = this;
 
-        this.actor.connect('allocation-changed',
+        this.connect('allocation-changed',
             this._updateIconGeometry.bind(this));
-        this.actor.connect('clicked', this._onClicked.bind(this));
-        this.actor.connect('destroy', this._onDestroy.bind(this));
-        this.actor.connect('popup-menu', this._onPopupMenu.bind(this));
+        this.connect('clicked', this._onClicked.bind(this));
+        this.connect('destroy', this._onDestroy.bind(this));
+        this.connect('popup-menu', this._onPopupMenu.bind(this));
 
-        this._contextMenuManager = new PopupMenu.PopupMenuManager(this.actor);
+        this._contextMenuManager = new PopupMenu.PopupMenuManager(this);
 
         this._switchWorkspaceId = global.window_manager.connect(
             'switch-workspace', this._updateVisibility.bind(this));
@@ -240,14 +242,14 @@ class BaseButton {
     }
 
     get active() {
-        return this.actor.has_style_class_name('focused');
+        return this.has_style_class_name('focused');
     }
 
     activate() {
         if (this.active)
             return;
 
-        this._onClicked(this.actor, 1);
+        this._onClicked(this, 1);
     }
 
     _onClicked(_actor, _button) {
@@ -272,9 +274,9 @@ class BaseButton {
 
     _updateStyle() {
         if (this._isFocused())
-            this.actor.add_style_class_name('focused');
+            this.add_style_class_name('focused');
         else
-            this.actor.remove_style_class_name('focused');
+            this.remove_style_class_name('focused');
     }
 
     _windowEnteredOrLeftMonitor(_metaDisplay, _monitorIndex, _metaWindow) {
@@ -298,8 +300,8 @@ class BaseButton {
     _getIconGeometry() {
         let rect = new Meta.Rectangle();
 
-        [rect.x, rect.y] = this.actor.get_transformed_position();
-        [rect.width, rect.height] = this.actor.get_transformed_size();
+        [rect.x, rect.y] = this.get_transformed_position();
+        [rect.width, rect.height] = this.get_transformed_size();
 
         return rect;
     }
@@ -320,21 +322,23 @@ class BaseButton {
             global.display.disconnect(this._windowLeftMonitorId);
         this._windowLeftMonitorId = 0;
     }
-}
+});
 
 
-class WindowButton extends BaseButton {
-    constructor(metaWindow, perMonitor, monitorIndex) {
-        super(perMonitor, monitorIndex);
+const WindowButton = GObject.registerClass({
+    GTypeName: 'WindowListWindowButton'
+}, class WindowButton extends BaseButton {
+    _init(metaWindow, perMonitor, monitorIndex) {
+        super._init(perMonitor, monitorIndex);
 
         this.metaWindow = metaWindow;
         this._updateVisibility();
 
         this._windowTitle = new WindowTitle(this.metaWindow);
-        this.actor.set_child(this._windowTitle.actor);
-        this.actor.label_actor = this._windowTitle.label_actor;
+        this.set_child(this._windowTitle);
+        this.label_actor = this._windowTitle.label_actor;
 
-        this._contextMenu = new WindowContextMenu(this.actor, this.metaWindow);
+        this._contextMenu = new WindowContextMenu(this, this.metaWindow);
         this._contextMenu.connect('open-state-changed', _onMenuStateChanged);
         this._contextMenu.actor.hide();
         this._contextMenuManager.addMenu(this._contextMenu);
@@ -368,9 +372,9 @@ class WindowButton extends BaseButton {
         super._updateStyle();
 
         if (this.metaWindow.minimized)
-            this.actor.add_style_class_name('minimized');
+            this.add_style_class_name('minimized');
         else
-            this.actor.remove_style_class_name('minimized');
+            this.remove_style_class_name('minimized');
     }
 
     _windowEnteredOrLeftMonitor(metaDisplay, monitorIndex, metaWindow) {
@@ -379,7 +383,7 @@ class WindowButton extends BaseButton {
     }
 
     _updateVisibility() {
-        this.actor.visible = this._isWindowVisible(this.metaWindow);
+        this.visible = this._isWindowVisible(this.metaWindow);
     }
 
     _updateIconGeometry() {
@@ -392,14 +396,14 @@ class WindowButton extends BaseButton {
         global.display.disconnect(this._notifyFocusId);
         this._contextMenu.destroy();
     }
-}
+});
 
 
 class AppContextMenu extends PopupMenu.PopupMenu {
-    constructor(source, appButton) {
+    constructor(source) {
         super(source, 0.5, St.Side.BOTTOM);
 
-        this._appButton = appButton;
+        this._appButton = source;
 
         this._minimizeItem = new PopupMenu.PopupMenuItem(_('Minimize all'));
         this._minimizeItem.connect('activate', () => {
@@ -453,15 +457,17 @@ class AppContextMenu extends PopupMenu.PopupMenu {
     }
 }
 
-class AppButton extends BaseButton {
-    constructor(app, perMonitor, monitorIndex) {
-        super(perMonitor, monitorIndex);
+const AppButton = GObject.registerClass({
+    GTypeName: 'WindowListAppButton',
+}, class AppButton extends BaseButton {
+    _init(app, perMonitor, monitorIndex) {
+        super._init(perMonitor, monitorIndex);
 
         this.app = app;
         this._updateVisibility();
 
         let stack = new St.Widget({ layout_manager: new Clutter.BinLayout() });
-        this.actor.set_child(stack);
+        this.set_child(stack);
 
         this._singleWindowTitle = new St.Bin({
             x_expand: true,
@@ -489,15 +495,15 @@ class AppButton extends BaseButton {
         this._multiWindowTitle.add(label);
         this._multiWindowTitle.label_actor = label;
 
-        this._menuManager = new PopupMenu.PopupMenuManager(this.actor);
-        this._menu = new PopupMenu.PopupMenu(this.actor, 0.5, St.Side.BOTTOM);
+        this._menuManager = new PopupMenu.PopupMenuManager(this);
+        this._menu = new PopupMenu.PopupMenu(this, 0.5, St.Side.BOTTOM);
         this._menu.connect('open-state-changed', _onMenuStateChanged);
         this._menu.actor.hide();
         this._menu.connect('activate', this._onMenuActivate.bind(this));
         this._menuManager.addMenu(this._menu);
         Main.uiGroup.add_actor(this._menu.actor);
 
-        this._appContextMenu = new AppContextMenu(this.actor, this);
+        this._appContextMenu = new AppContextMenu(this);
         this._appContextMenu.connect('open-state-changed', _onMenuStateChanged);
         this._appContextMenu.actor.hide();
         Main.uiGroup.add_actor(this._appContextMenu.actor);
@@ -530,9 +536,9 @@ class AppButton extends BaseButton {
         if (!this._perMonitor) {
             // fast path: use ShellApp API to avoid iterating over all windows.
             let workspace = global.workspace_manager.get_active_workspace();
-            this.actor.visible = this.app.is_on_workspace(workspace);
+            this.visible = this.app.is_on_workspace(workspace);
         } else {
-            this.actor.visible = this.getWindowList().length >= 1;
+            this.visible = this.getWindowList().length >= 1;
         }
     }
 
@@ -560,8 +566,8 @@ class AppButton extends BaseButton {
             if (!this._windowTitle) {
                 this.metaWindow = windows[0];
                 this._windowTitle = new WindowTitle(this.metaWindow);
-                this._singleWindowTitle.child = this._windowTitle.actor;
-                this._windowContextMenu = new WindowContextMenu(this.actor, this.metaWindow);
+                this._singleWindowTitle.child = this._windowTitle;
+                this._windowContextMenu = new WindowContextMenu(this, this.metaWindow);
                 this._windowContextMenu.connect(
                     'open-state-changed', _onMenuStateChanged);
                 Main.uiGroup.add_actor(this._windowContextMenu.actor);
@@ -570,7 +576,7 @@ class AppButton extends BaseButton {
             }
             this._contextMenuManager.removeMenu(this._appContextMenu);
             this._contextMenu = this._windowContextMenu;
-            this.actor.label_actor = this._windowTitle.label_actor;
+            this.label_actor = this._windowTitle.label_actor;
         } else {
             if (this._windowTitle) {
                 this.metaWindow = null;
@@ -581,7 +587,7 @@ class AppButton extends BaseButton {
             }
             this._contextMenu = this._appContextMenu;
             this._contextMenuManager.addMenu(this._appContextMenu);
-            this.actor.label_actor = this._multiWindowTitle.label_actor;
+            this.label_actor = this._multiWindowTitle.label_actor;
         }
 
     }
@@ -610,7 +616,7 @@ class AppButton extends BaseButton {
                 for (let i = 0; i < windows.length; i++) {
                     let windowTitle = new WindowTitle(windows[i]);
                     let item = new PopupMenu.PopupBaseMenuItem();
-                    item.add_actor(windowTitle.actor);
+                    item.add_actor(windowTitle);
                     item._window = windows[i];
                     this._menu.addMenuItem(item);
                 }
@@ -638,25 +644,27 @@ class AppButton extends BaseButton {
         this.app.disconnect(this._windowsChangedId);
         this._menu.destroy();
     }
-}
+});
 
 
-class WindowList {
-    constructor(perMonitor, monitor) {
+const WindowList = GObject.registerClass({
+    GTypeName: 'WindowListWindowList',
+}, class WindowList extends St.Widget {
+    _init(perMonitor, monitor) {
         this._perMonitor = perMonitor;
         this._monitor = monitor;
 
-        this.actor = new St.Widget({
+        super._init({
             name: 'panel',
             style_class: 'bottom-panel solid',
             reactive: true,
             track_hover: true,
             layout_manager: new Clutter.BinLayout()
         });
-        this.actor.connect('destroy', this._onDestroy.bind(this));
+        this.connect('destroy', this._onDestroy.bind(this));
 
         let box = new St.BoxLayout({ x_expand: true, y_expand: true });
-        this.actor.add_actor(box);
+        this.add_actor(box);
 
         let toggle = new WindowPickerToggle();
         box.add_actor(toggle);
@@ -697,18 +705,18 @@ class WindowList {
             this._updateWorkspaceIndicatorVisibility.bind(this));
         this._updateWorkspaceIndicatorVisibility();
 
-        this._menuManager = new PopupMenu.PopupMenuManager(this.actor);
+        this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menuManager.addMenu(this._workspaceIndicator.menu);
 
-        Main.layoutManager.addChrome(this.actor, {
+        Main.layoutManager.addChrome(this, {
             affectsStruts: true,
             trackFullscreen: true
         });
-        Main.uiGroup.set_child_above_sibling(this.actor, Main.layoutManager.panelBox);
-        Main.ctrlAltTabManager.addGroup(this.actor, _('Window List'), 'start-here-symbolic');
+        Main.uiGroup.set_child_above_sibling(this, Main.layoutManager.panelBox);
+        Main.ctrlAltTabManager.addGroup(this, _('Window List'), 'start-here-symbolic');
 
-        this.actor.width = this._monitor.width;
-        this.actor.connect('notify::height', this._updatePosition.bind(this));
+        this.width = this._monitor.width;
+        this.connect('notify::height', this._updatePosition.bind(this));
         this._updatePosition();
 
         this._appSystem = Shell.AppSystem.get_default();
@@ -723,10 +731,10 @@ class WindowList {
                 keyboardBox.visible = state;
                 if (state) {
                     Main.uiGroup.set_child_above_sibling(
-                        this.actor, keyboardBox);
+                        this, keyboardBox);
                 } else {
                     Main.uiGroup.set_child_above_sibling(
-                        this.actor, Main.layoutManager.panelBox);
+                        this, Main.layoutManager.panelBox);
                 }
                 this._updateKeyboardAnchor();
             });
@@ -742,12 +750,12 @@ class WindowList {
             'switch-workspace', this._checkGrouping.bind(this));
 
         this._overviewShowingId = Main.overview.connect('showing', () => {
-            this.actor.hide();
+            this.hide();
             this._updateKeyboardAnchor();
         });
 
         this._overviewHidingId = Main.overview.connect('hiding', () => {
-            this.actor.visible = !Main.layoutManager.primaryMonitor.inFullscreen;
+            this.visible = !Main.layoutManager.primaryMonitor.inFullscreen;
             this._updateKeyboardAnchor();
         });
 
@@ -785,17 +793,16 @@ class WindowList {
             return;
 
         let children = this._windowList.get_children()
-            .filter(c => c.visible)
-            .map(a => a._delegate);
+            .filter(c => c.visible);
         let active = children.findIndex(c => c.active);
         let newActive = Math.max(0, Math.min(active + diff, children.length - 1));
         children[newActive].activate();
     }
 
     _updatePosition() {
-        this.actor.set_position(
+        this.set_position(
             this._monitor.x,
-            this._monitor.y + this._monitor.height - this.actor.height);
+            this._monitor.y + this._monitor.height - this.height);
     }
 
     _updateWorkspaceIndicatorVisibility() {
@@ -842,7 +849,7 @@ class WindowList {
 
     _getMaxWindowListWidth() {
         let indicatorsBox = this._workspaceIndicator.get_parent();
-        return this.actor.width - indicatorsBox.get_preferred_width(-1)[1];
+        return this.width - indicatorsBox.get_preferred_width(-1)[1];
     }
 
     _groupingModeChanged() {
@@ -894,7 +901,7 @@ class WindowList {
         if (!Main.keyboard.actor)
             return;
 
-        let translationY = Main.overview.visible ? 0 : this.actor.height;
+        let translationY = Main.overview.visible ? 0 : this.height;
         Main.keyboard.actor.translation_y = -translationY;
     }
 
@@ -910,7 +917,7 @@ class WindowList {
 
     _addApp(app) {
         let button = new AppButton(app, this._perMonitor, this._monitor.index);
-        this._windowList.layout_manager.pack(button.actor,
+        this._windowList.layout_manager.pack(button,
             true, true, true,
             Clutter.BoxAlignment.START,
             Clutter.BoxAlignment.START);
@@ -918,7 +925,7 @@ class WindowList {
 
     _removeApp(app) {
         let children = this._windowList.get_children();
-        let child = children.find(c => c._delegate.app == app);
+        let child = children.find(c => c.app == app);
         if (child)
             child.destroy();
     }
@@ -934,11 +941,11 @@ class WindowList {
             return;
 
         let children = this._windowList.get_children();
-        if (children.find(c => c._delegate.metaWindow == win))
+        if (children.find(c => c.metaWindow == win))
             return;
 
         let button = new WindowButton(win, this._perMonitor, this._monitor.index);
-        this._windowList.layout_manager.pack(button.actor,
+        this._windowList.layout_manager.pack(button,
             true, true, true,
             Clutter.BoxAlignment.START,
             Clutter.BoxAlignment.START);
@@ -955,7 +962,7 @@ class WindowList {
             return; // not actually removed, just moved to another workspace
 
         let children = this._windowList.get_children();
-        let child = children.find(c => c._delegate.metaWindow == win);
+        let child = children.find(c => c.metaWindow == win);
         if (child)
             child.destroy();
     }
@@ -1004,15 +1011,12 @@ class WindowList {
 
     _onDragMotion(dragEvent) {
         if (Main.overview.visible ||
-            !this.actor.contains(dragEvent.targetActor)) {
+            !this.contains(dragEvent.targetActor)) {
             this._removeActivateTimeout();
             return DND.DragMotionResult.CONTINUE;
         }
 
-        let hoveredWindow = null;
-        if (dragEvent.targetActor._delegate)
-            hoveredWindow = dragEvent.targetActor._delegate.metaWindow;
-
+        let hoveredWindow = dragEvent.targetActor.metaWindow;
         if (!hoveredWindow ||
             this._dndWindow == hoveredWindow)
             return DND.DragMotionResult.CONTINUE;
@@ -1037,7 +1041,7 @@ class WindowList {
         let [x, y] = global.get_pointer();
         let pickedActor = global.stage.get_actor_at_pos(Clutter.PickMode.ALL, x, y);
 
-        if (this._dndWindow && this.actor.contains(pickedActor))
+        if (this._dndWindow && this.contains(pickedActor))
             this._dndWindow.activate(global.get_current_time());
         this._dndWindow = null;
         this._dndTimeoutId = 0;
@@ -1051,7 +1055,7 @@ class WindowList {
 
         this._workspaceIndicator.destroy();
 
-        Main.ctrlAltTabManager.removeGroup(this.actor);
+        Main.ctrlAltTabManager.removeGroup(this);
 
         this._appSystem.disconnect(this._appStateChangedId);
         this._appStateChangedId = 0;
@@ -1083,7 +1087,7 @@ class WindowList {
         for (let i = 0; i < windows.length; i++)
             windows[i].metaWindow.set_icon_geometry(null);
     }
-}
+});
 
 class Extension {
     constructor() {
@@ -1112,7 +1116,7 @@ class Extension {
     }
 
     _buildWindowLists() {
-        this._windowLists.forEach(list => list.actor.destroy());
+        this._windowLists.forEach(list => list.destroy());
         this._windowLists = [];
 
         let showOnAllMonitors = this._settings.get_boolean('show-on-all-monitors');
@@ -1134,19 +1138,19 @@ class Extension {
         this._monitorsChangedId = 0;
 
         this._windowLists.forEach(windowList => {
-            windowList.actor.hide();
-            windowList.actor.destroy();
+            windowList.hide();
+            windowList.destroy();
         });
         this._windowLists = null;
 
-        Main.windowPicker.actor.destroy();
+        Main.windowPicker.destroy();
         delete Main.windowPicker;
 
         Main.overview.hide = this._hideOverviewOrig;
     }
 
     someWindowListContains(actor) {
-        return this._windowLists.some(list => list.actor.contains(actor));
+        return this._windowLists.some(list => list.contains(actor));
     }
 }
 

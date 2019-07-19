@@ -1,6 +1,5 @@
 /* exported WindowPicker, WindowPickerToggle */
 const { Clutter, GLib, GObject, Meta, Shell, St } = imports.gi;
-const Signals = imports.signals;
 
 const Layout = imports.ui.layout;
 const Main = imports.ui.main;
@@ -51,7 +50,7 @@ let MyWorkspacesDisplay = class extends WorkspacesDisplay {
 
         this._workspacesViews.forEach(v => {
             Main.layoutManager.overviewGroup.remove_actor(v.actor);
-            Main.windowPicker.actor.add_actor(v.actor);
+            Main.windowPicker.add_actor(v.actor);
         });
     }
 
@@ -62,27 +61,33 @@ let MyWorkspacesDisplay = class extends WorkspacesDisplay {
     }
 };
 
-var WindowPicker = class {
-    constructor() {
+var WindowPicker = GObject.registerClass({
+    GTypeName: 'WindowListWindowPicker',
+    Signals: {
+        'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] },
+        'scroll-event': { param_types: [Clutter.Event.$gtype] }
+    }
+}, class extends Clutter.Actor {
+    _init() {
         this._visible = false;
         this._modal = false;
 
         this._overlayKeyId = 0;
         this._stageKeyPressId = 0;
 
-        this.actor = new Clutter.Actor();
+        super._init();
 
-        this.actor.connect('destroy', this._onDestroy.bind(this));
+        this.connect('destroy', this._onDestroy.bind(this));
 
         global.bind_property('screen-width',
-            this.actor, 'width',
+            this, 'width',
             GObject.BindingFlags.SYNC_CREATE);
         global.bind_property('screen-height',
-            this.actor, 'height',
+            this, 'height',
             GObject.BindingFlags.SYNC_CREATE);
 
         this._backgroundGroup = new Meta.BackgroundGroup({ reactive: true });
-        this.actor.add_child(this._backgroundGroup);
+        this.add_child(this._backgroundGroup);
 
         this._backgroundGroup.connect('scroll-event', (a, ev) => {
             this.emit('scroll-event', ev);
@@ -93,7 +98,7 @@ var WindowPicker = class {
         Main.overview.addAction = a => this._backgroundGroup.add_action(a);
 
         this._workspacesDisplay = new MyWorkspacesDisplay();
-        this.actor.add_child(this._workspacesDisplay.actor);
+        this.add_child(this._workspacesDisplay.actor);
 
         Main.overview.addAction = addActionOrig;
 
@@ -103,7 +108,7 @@ var WindowPicker = class {
             this._updateBackgrounds.bind(this));
         this._updateBackgrounds();
 
-        Main.uiGroup.insert_child_below(this.actor, global.window_group);
+        Main.uiGroup.insert_child_below(this, global.window_group);
 
         if (!Main.sessionMode.hasOverview) {
             this._overlayKeyId = global.display.connect('overlay-key', () => {
@@ -194,7 +199,7 @@ var WindowPicker = class {
             if (this._modal)
                 return true;
 
-            this._modal = Main.pushModal(this.actor, {
+            this._modal = Main.pushModal(this, {
                 actionMode: Shell.ActionMode.OVERVIEW
             });
 
@@ -203,7 +208,7 @@ var WindowPicker = class {
                 return false;
             }
         } else if (this._modal) {
-            Main.popModal(this.actor);
+            Main.popModal(this);
             this._modal = false;
         }
         return true;
@@ -234,8 +239,7 @@ var WindowPicker = class {
     _unshadeBackgrounds() {
         Main.overview._unshadeBackgrounds.call(this);
     }
-};
-Signals.addSignalMethods(WindowPicker.prototype);
+});
 
 var WindowPickerToggle = GObject.registerClass(
 class WindowPickerToggle extends St.Button {
