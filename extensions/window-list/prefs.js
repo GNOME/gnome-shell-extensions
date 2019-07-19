@@ -77,6 +77,13 @@ class WindowListPrefsWidget extends Gtk.Grid {
         });
         this._settings.bind('show-on-all-monitors', check, 'active', Gio.SettingsBindFlags.DEFAULT);
         this.add(check);
+
+        check = new Gtk.CheckButton({
+            label: _('Show windows from all workspaces'),
+            margin_top: 6
+        });
+        this._settings.bind('display-all-workspaces', check, 'active', Gio.SettingsBindFlags.DEFAULT);
+        this.add(check);
     }
 });
 

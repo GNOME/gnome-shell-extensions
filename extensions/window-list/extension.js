@@ -206,11 +206,18 @@ const WindowTitle = GObject.registerClass({
 
 const BaseButton = GObject.registerClass({
     GTypeName: 'WindowListBaseButton',
-    GTypeFlags: GObject.TypeFlags.ABSTRACT
+    GTypeFlags: GObject.TypeFlags.ABSTRACT,
+    Properties: {
+        'ignore-workspace': GObject.ParamSpec.boolean(
+            'ignore-workspace', 'ignore-workspace', 'ignore-workspace',
+            GObject.ParamFlags.READWRITE,
+            false)
+    }
 }, class BaseButton extends St.Button {
     _init(perMonitor, monitorIndex) {
         this._perMonitor = perMonitor;
         this._monitorIndex = monitorIndex;
+        this._ignoreWorkspace = false;
 
         super._init({
             style_class: 'window-button',
@@ -243,6 +250,22 @@ const BaseButton = GObject.registerClass({
 
     get active() {
         return this.has_style_class_name('focused');
+    }
+
+    // eslint-disable-next-line camelcase
+    get ignore_workspace() {
+        return this._ignoreWorkspace;
+    }
+
+    // eslint-disable-next-line camelcase
+    set ignore_workspace(ignore) {
+        if (this._ignoreWorkspace == ignore)
+            return;
+
+        this._ignoreWorkspace = ignore;
+        this.notify('ignore-workspace');
+
+        this._updateVisibility();
     }
 
     activate() {
@@ -288,7 +311,7 @@ const BaseButton = GObject.registerClass({
         let workspace = global.workspace_manager.get_active_workspace();
 
         return !window.skip_taskbar &&
-               window.located_on_workspace(workspace) &&
+               (this._ignoreWorkspace || window.located_on_workspace(workspace)) &&
                (!this._perMonitor || window.get_monitor() == this._monitorIndex);
     }
 
@@ -533,7 +556,9 @@ const AppButton = GObject.registerClass({
     }
 
     _updateVisibility() {
-        if (!this._perMonitor) {
+        if (this._ignoreWorkspace) {
+            this.visible = true;
+        } else if (!this._perMonitor) {
             // fast path: use ShellApp API to avoid iterating over all windows.
             let workspace = global.workspace_manager.get_active_workspace();
             this.visible = this.app.is_on_workspace(workspace);
@@ -917,6 +942,8 @@ const WindowList = GObject.registerClass({
 
     _addApp(app) {
         let button = new AppButton(app, this._perMonitor, this._monitor.index);
+        this._settings.bind('display-all-workspaces',
+            button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
         this._windowList.layout_manager.pack(button,
             true, true, true,
             Clutter.BoxAlignment.START,
@@ -945,6 +972,8 @@ const WindowList = GObject.registerClass({
             return;
 
         let button = new WindowButton(win, this._perMonitor, this._monitor.index);
+        this._settings.bind('display-all-workspaces',
+            button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
         this._windowList.layout_manager.pack(button,
             true, true, true,
             Clutter.BoxAlignment.START,
