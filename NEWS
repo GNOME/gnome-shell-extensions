@@ -1,3 +1,22 @@
+3.33.4
+======
+* Make GNOME Classic more classic:
+  - Disable GNOME 3 overview [Florian; !69]
+  - Add window picker button to window list [Florian; !73, !80]
+  - Style improvements and fixes [Jakub; #169, !82]
+  - Support horizontal workspace layout in window list [Florian; !70]
+  - Add draggable previews to window list workspace switcher [Florian; !74]
+  - Arrange workspaces horizontally [Florian; !72]
+* workspace-indicator: Support horizontal workspace layout [Florian; !71]
+* workspace-indicator: Add draggable previews [Florian; !77]
+* Misc. bug fixes and cleanups [Florian; !75, !76, !79, !78, #168, !84]
+
+Contributors:
+  Florian Müllner, Jakub Steiner, Jor Teron
+
+Translators:
+  Jor Teron [mjw]
+
 3.33.3
 ======
 * Misc. bug fixes [Florian, Marco; !67, !68]
