@@ -251,7 +251,8 @@ class BaseButton {
     }
 
     _onClicked(_actor, _button) {
-        throw new Error('Not implemented');
+        throw new GObject.NotImplementedError(
+            `_onClicked in ${this.constructor.name}`);
     }
 
     _canOpenPopupMenu() {
@@ -265,7 +266,8 @@ class BaseButton {
     }
 
     _isFocused() {
-        throw new Error('Not implemented');
+        throw new GObject.NotImplementedError(
+            `_isFocused in ${this.constructor.name}`);
     }
 
     _updateStyle() {
@@ -276,7 +278,8 @@ class BaseButton {
     }
 
     _windowEnteredOrLeftMonitor(_metaDisplay, _monitorIndex, _metaWindow) {
-        throw new Error('Not implemented');
+        throw new GObject.NotImplementedError(
+            `_windowEnteredOrLeftMonitor in ${this.constructor.name}`);
     }
 
     _isWindowVisible(window) {
@@ -288,7 +291,8 @@ class BaseButton {
     }
 
     _updateVisibility() {
-        throw new Error('Not implemented');
+        throw new GObject.NotImplementedError(
+            `_updateVisibility in ${this.constructor.name}`);
     }
 
     _getIconGeometry() {
@@ -301,7 +305,8 @@ class BaseButton {
     }
 
     _updateIconGeometry() {
-        throw new Error('Not implemented');
+        throw new GObject.NotImplementedError(
+            `_updateIconGeometry in ${this.constructor.name}`);
     }
 
     _onDestroy() {
