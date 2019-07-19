@@ -152,7 +152,7 @@ class DriveMenu extends PanelMenu.Button {
     }
 
     _updateMenuVisibility() {
-        if (this._mounts.filter(i => i.actor.visible).length > 0)
+        if (this._mounts.filter(i => i.visible).length > 0)
             this.show();
         else
             this.hide();

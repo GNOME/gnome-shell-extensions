@@ -435,12 +435,12 @@ class AppContextMenu extends PopupMenu.PopupMenu {
 
     open(animate) {
         let windows = this._appButton.getWindowList();
-        this._minimizeItem.actor.visible = windows.some(w => !w.minimized);
-        this._unminimizeItem.actor.visible = windows.some(w => w.minimized);
-        this._maximizeItem.actor.visible = windows.some(w => {
+        this._minimizeItem.visible = windows.some(w => !w.minimized);
+        this._unminimizeItem.visible = windows.some(w => w.minimized);
+        this._maximizeItem.visible = windows.some(w => {
             return w.get_maximized() != Meta.MaximizeFlags.BOTH;
         });
-        this._unmaximizeItem.actor.visible = windows.some(w => {
+        this._unmaximizeItem.visible = windows.some(w => {
             return w.get_maximized() == Meta.MaximizeFlags.BOTH;
         });
 
@@ -605,7 +605,7 @@ class AppButton extends BaseButton {
                 for (let i = 0; i < windows.length; i++) {
                     let windowTitle = new WindowTitle(windows[i]);
                     let item = new PopupMenu.PopupBaseMenuItem();
-                    item.actor.add_actor(windowTitle.actor);
+                    item.add_actor(windowTitle.actor);
                     item._window = windows[i];
                     this._menu.addMenuItem(item);
                 }
