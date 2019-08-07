@@ -134,7 +134,7 @@ function init() {
 let _indicator;
 
 function enable() {
-    _indicator = new PlacesMenu;
+    _indicator = new PlacesMenu();
 
     let pos = Main.sessionMode.panel.left.indexOf('appMenu');
     if ('apps-menu' in Main.panel.statusArea)

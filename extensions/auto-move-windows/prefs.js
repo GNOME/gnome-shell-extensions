@@ -59,10 +59,10 @@ const Widget = GObject.registerClass({
             sort_column_id: Columns.DISPLAY_NAME,
             title: _('Application')
         });
-        let iconRenderer = new Gtk.CellRendererPixbuf;
+        let iconRenderer = new Gtk.CellRendererPixbuf();
         appColumn.pack_start(iconRenderer, false);
         appColumn.add_attribute(iconRenderer, 'gicon', Columns.ICON);
-        let nameRenderer = new Gtk.CellRendererText;
+        let nameRenderer = new Gtk.CellRendererText();
         appColumn.pack_start(nameRenderer, true);
         appColumn.add_attribute(nameRenderer, 'text', Columns.DISPLAY_NAME);
         this._treeView.append_column(appColumn);
