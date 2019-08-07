@@ -683,13 +683,9 @@ class ApplicationsButton extends PanelMenu.Button {
         if (categoryMenuId) {
             applist = this.applicationsByCategory[categoryMenuId];
         } else {
-            applist = new Array();
-            let favorites = global.settings.get_strv('favorite-apps');
-            for (let i = 0; i < favorites.length; i++) {
-                let app = appSys.lookup_app(favorites[i]);
-                if (app)
-                    applist.push(app);
-            }
+            applist = global.settings.get_strv('favorite-apps')
+               .map(id => appSys.lookup_app(id))
+               .filter(app => app);
         }
 
         return applist;
