@@ -366,7 +366,7 @@ var PlacesManager = class {
 
         for (let i = 0; i < dirs.length; i++) {
             let specialPath = GLib.get_user_special_dir(dirs[i]);
-            if (specialPath == null || specialPath == homePath)
+            if (!specialPath || specialPath == homePath)
                 continue;
 
             let file = Gio.File.new_for_path(specialPath), info;
@@ -415,7 +415,7 @@ var PlacesManager = class {
                     networkVolumes.push(volumes[j]);
                 } else {
                     let mount = volumes[j].get_mount();
-                    if (mount != null)
+                    if (mount)
                         this._addMount('devices', mount);
                 }
             }
@@ -424,7 +424,7 @@ var PlacesManager = class {
         /* add all volumes that is not associated with a drive */
         let volumes = this._volumeMonitor.get_volumes();
         for (let i = 0; i < volumes.length; i++) {
-            if (volumes[i].get_drive() != null)
+            if (volumes[i].get_drive())
                 continue;
 
             let identifier = volumes[i].get_identifier('class');
@@ -432,7 +432,7 @@ var PlacesManager = class {
                 networkVolumes.push(volumes[i]);
             } else {
                 let mount = volumes[i].get_mount();
-                if (mount != null)
+                if (mount)
                     this._addMount('devices', mount);
             }
         }

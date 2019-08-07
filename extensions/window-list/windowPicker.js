@@ -24,7 +24,7 @@ let MyWorkspacesDisplay = class extends WorkspacesDisplay {
     }
 
     show(...args) {
-        if (this._scrollEventId == 0) {
+        if (!this._scrollEventId) {
             this._scrollEventId = Main.windowPicker.connect('scroll-event',
                 this._onScrollEvent.bind(this));
         }

@@ -53,7 +53,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         let volume = this.mount.get_volume();
 
-        if (volume == null) {
+        if (!volume) {
             // probably a GDaemonMount, could be network or
             // local, but we can't tell; assume it's local for now
             return true;
