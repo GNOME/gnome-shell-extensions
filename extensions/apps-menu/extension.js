@@ -2,7 +2,7 @@
 /* exported init enable disable */
 
 const {
-    Atk, Clutter, Gio, GLib, GMenu, GObject, Gtk, Meta, Shell, St
+    Atk, Clutter, Gio, GLib, GMenu, GObject, Gtk, Meta, Shell, St,
 } = imports.gi;
 const Signals = imports.signals;
 
@@ -38,7 +38,7 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         let appLabel = new St.Label({
             text: app.get_name(),
             y_expand: true,
-            y_align: Clutter.ActorAlign.CENTER
+            y_align: Clutter.ActorAlign.CENTER,
         });
         this.add_child(appLabel);
         this.label_actor = appLabel;
@@ -367,7 +367,7 @@ class ApplicationsButton extends PanelMenu.Button {
         this._label = new St.Label({
             text: _('Applications'),
             y_expand: true,
-            y_align: Clutter.ActorAlign.CENTER
+            y_align: Clutter.ActorAlign.CENTER,
         });
         hbox.add_child(this._label);
         hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
@@ -420,7 +420,7 @@ class ApplicationsButton extends PanelMenu.Button {
     _createVertSeparator() {
         let separator = new St.DrawingArea({
             style_class: 'calendar-vertical-separator',
-            pseudo_class: 'highlighted'
+            pseudo_class: 'highlighted',
         });
         separator.connect('repaint', this._onVertSepRepaint.bind(this));
         return separator;
@@ -559,7 +559,7 @@ class ApplicationsButton extends PanelMenu.Button {
             x_fill: true,
             y_fill: false,
             y_align: St.Align.START,
-            style_class: 'apps-menu vfade'
+            style_class: 'apps-menu vfade',
         });
         this.applicationsScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         let vscroll = this.applicationsScrollBox.get_vscroll_bar();
@@ -573,7 +573,7 @@ class ApplicationsButton extends PanelMenu.Button {
             x_fill: true,
             y_fill: false,
             y_align: St.Align.START,
-            style_class: 'vfade'
+            style_class: 'vfade',
         });
         this.categoriesScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         vscroll = this.categoriesScrollBox.get_vscroll_bar();
@@ -583,7 +583,7 @@ class ApplicationsButton extends PanelMenu.Button {
             expand: true,
             x_fill: true,
             y_fill: true,
-            y_align: St.Align.START
+            y_align: St.Align.START,
         });
 
         this.applicationsBox = new St.BoxLayout({ vertical: true });
@@ -595,12 +595,12 @@ class ApplicationsButton extends PanelMenu.Button {
         this.mainBox.add(this._createVertSeparator(), {
             expand: false,
             x_fill: false,
-            y_fill: true
+            y_fill: true,
         });
         this.mainBox.add(this.applicationsScrollBox, {
             expand: true,
             x_fill: true,
-            y_fill: true
+            y_fill: true,
         });
         section.actor.add_actor(this.mainBox);
     }

@@ -10,11 +10,11 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
 let WindowPreview = GObject.registerClass({
-    GTypeName: 'WindowListWindowPreview'
+    GTypeName: 'WindowListWindowPreview',
 }, class WindowPreview extends St.Button {
     _init(window) {
         super._init({
-            style_class: 'window-list-window-preview'
+            style_class: 'window-list-window-preview',
         });
 
         this._delegate = this;
@@ -98,17 +98,17 @@ let WindowPreview = GObject.registerClass({
 });
 
 let WorkspaceThumbnail = GObject.registerClass({
-    GTypeName: 'WindowListWorkspaceThumbnail'
+    GTypeName: 'WindowListWorkspaceThumbnail',
 }, class WorkspaceThumbnail extends St.Button {
     _init(index) {
         super._init({
             style_class: 'workspace',
             child: new Clutter.Actor({
                 layout_manager: new Clutter.BinLayout(),
-                clip_to_allocation: true
+                clip_to_allocation: true,
             }),
             x_fill: true,
-            y_fill: true
+            y_fill: true,
         });
 
         this.connect('destroy', this._onDestroy.bind(this));
@@ -205,7 +205,7 @@ let WorkspaceThumbnail = GObject.registerClass({
 });
 
 var WorkspaceIndicator = GObject.registerClass({
-    GTypeName: 'WindowListWorkspaceIndicator'
+    GTypeName: 'WindowListWorkspaceIndicator',
 }, class WorkspaceIndicator extends PanelMenu.Button {
     _init() {
         super._init(0.0, _('Workspace Indicator'), true);
@@ -216,7 +216,7 @@ var WorkspaceIndicator = GObject.registerClass({
         let container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
             x_expand: true,
-            y_expand: true
+            y_expand: true,
         });
         this.add_actor(container);
 
@@ -229,14 +229,14 @@ var WorkspaceIndicator = GObject.registerClass({
             style_class: 'status-label-bin',
             x_expand: true,
             y_expand: true,
-            child: this._statusLabel
+            child: this._statusLabel,
         });
         container.add_actor(this._statusBin);
 
         this._thumbnailsBox = new St.BoxLayout({
             style_class: 'workspaces-box',
             y_expand: true,
-            reactive: true
+            reactive: true,
         });
         this._thumbnailsBox.connect('scroll-event',
             this._onScrollEvent.bind(this));
@@ -250,7 +250,7 @@ var WorkspaceIndicator = GObject.registerClass({
             workspaceManager.connect_after('workspace-switched',
                 this._onWorkspaceSwitched.bind(this)),
             workspaceManager.connect('notify::layout-rows',
-                this._onWorkspaceOrientationChanged.bind(this))
+                this._onWorkspaceOrientationChanged.bind(this)),
         ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));

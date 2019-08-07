@@ -37,9 +37,9 @@ class ThemeManager {
             let stylesheetPaths = [
                 [GLib.get_home_dir(), '.themes'],
                 [GLib.get_user_data_dir(), 'themes'],
-                ...GLib.get_system_data_dirs().map(dir => [dir, 'themes'])
+                ...GLib.get_system_data_dirs().map(dir => [dir, 'themes']),
             ].map(themeDir => GLib.build_filenamev([
-                ...themeDir, themeName, 'gnome-shell', 'gnome-shell.css'
+                ...themeDir, themeName, 'gnome-shell', 'gnome-shell.css',
             ]));
 
             stylesheet = stylesheetPaths.find(path => {

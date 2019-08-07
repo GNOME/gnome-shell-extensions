@@ -130,7 +130,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
             use_markup: true,
             margin_bottom: 6,
             hexpand: true,
-            halign: Gtk.Align.START
+            halign: Gtk.Align.START,
         }));
 
         let scrolled = new Gtk.ScrolledWindow({ shadow_type: Gtk.ShadowType.IN });
@@ -143,7 +143,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
             headers_visible: false,
             reorderable: true,
             hexpand: true,
-            vexpand: true
+            vexpand: true,
         });
 
         let column = new Gtk.TreeViewColumn({ title: _('Name') });
