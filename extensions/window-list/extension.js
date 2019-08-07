@@ -114,15 +114,15 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
     }
 
     _updateMinimizeItem() {
-        this._minimizeItem.label.text = this._metaWindow.minimized ?
-            _('Unminimize') : _('Minimize');
+        this._minimizeItem.label.text = this._metaWindow.minimized
+            ? _('Unminimize') : _('Minimize');
     }
 
     _updateMaximizeItem() {
         let maximized = this._metaWindow.maximized_vertically &&
                         this._metaWindow.maximized_horizontally;
-        this._maximizeItem.label.text = maximized ?
-            _('Unmaximize') : _('Maximize');
+        this._maximizeItem.label.text = maximized
+            ? _('Unmaximize') : _('Maximize');
     }
 
     _onDestroy() {
