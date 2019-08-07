@@ -77,8 +77,8 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         super.setActive(active, params);
     }
 
-    setDragEnabled(enable) {
-        this._dragEnabled = enable;
+    setDragEnabled(enabled) {
+        this._dragEnabled = enabled;
     }
 
     getDragActor() {
@@ -630,7 +630,7 @@ class ApplicationsButton extends PanelMenu.Button {
             this.applicationsByCategory[categoryId] = [];
             this._loadCategory(categoryId, dir);
             if (this.applicationsByCategory[categoryId].length > 0) {
-                let categoryMenuItem = new CategoryMenuItem(this, dir);
+                categoryMenuItem = new CategoryMenuItem(this, dir);
                 this.categoriesBox.add_actor(categoryMenuItem);
             }
         }

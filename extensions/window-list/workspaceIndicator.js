@@ -344,7 +344,7 @@ var WorkspaceIndicator = GObject.registerClass({
             let item = new PopupMenu.PopupMenuItem(name);
             item.workspaceId = i;
 
-            item.connect('activate', (item, _event) => {
+            item.connect('activate', () => {
                 this._activate(item.workspaceId);
             });
 

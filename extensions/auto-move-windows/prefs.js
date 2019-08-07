@@ -147,13 +147,13 @@ const Widget = GObject.registerClass({
         grid.attach(dialog._spin, 1, 1, 1, 1);
         dialog.get_content_area().add(grid);
 
-        dialog.connect('response', (dialog, id) => {
+        dialog.connect('response', (dlg, id) => {
             if (id != Gtk.ResponseType.OK) {
                 dialog.destroy();
                 return;
             }
 
-            let appInfo = dialog._appChooser.get_app_info();
+            appInfo = dialog._appChooser.get_app_info();
             if (!appInfo)
                 return;
             let index = Math.floor(dialog._spin.value);

@@ -41,9 +41,9 @@ class PlaceInfo {
     async _ensureMountAndLaunch(context, tryMount) {
         try {
             await this._launchDefaultForUri(this.file.get_uri(), context, null);
-        } catch (e) {
-            if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
-                Main.notifyError(_('Failed to launch “%s”').format(this.name), e.message);
+        } catch (err) {
+            if (!err.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
+                Main.notifyError(_('Failed to launch “%s”').format(this.name), err.message);
                 return;
             }
 
@@ -505,16 +505,16 @@ var PlacesManager = class {
                 continue;
 
             let duplicate = false;
-            for (let i = 0; i < this._places.special.length; i++) {
-                if (file.equal(this._places.special[i].file)) {
+            for (let j = 0; i < this._places.special.length; j++) {
+                if (file.equal(this._places.special[j].file)) {
                     duplicate = true;
                     break;
                 }
             }
             if (duplicate)
                 continue;
-            for (let i = 0; i < bookmarks.length; i++) {
-                if (file.equal(bookmarks[i].file)) {
+            for (let j = 0; j < bookmarks.length; j++) {
+                if (file.equal(bookmarks[j].file)) {
                     duplicate = true;
                     break;
                 }
