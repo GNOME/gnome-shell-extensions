@@ -20,8 +20,8 @@ const Hostname1Iface = '<node> \
 const Hostname1 = Gio.DBusProxy.makeProxyWrapper(Hostname1Iface);
 
 class PlaceInfo {
-    constructor() {
-        this._init.apply(this, arguments);
+    constructor(...params) {
+        this._init(...params);
     }
 
     _init(kind, file, name, icon) {
