@@ -140,7 +140,7 @@ const Widget = GObject.registerClass({
             step_increment: 1
         });
         dialog._spin = new Gtk.SpinButton({
-            adjustment: adjustment,
+            adjustment,
             snap_to_ticks: true
         });
         dialog._spin.set_value(1);
