@@ -13,9 +13,7 @@ class Rect {
         [this.x, this.y, this.width, this.height] = [x, y, width, height];
     }
 
-    /**
-     * used in _calculateWindowTransformationsNatural to replace Meta.Rectangle that is too slow.
-     */
+    // used in _calculateWindowTransformationsNatural to replace Meta.Rectangle that is too slow.
     copy() {
         return new Rect(this.x, this.y, this.width, this.height);
     }
@@ -74,7 +72,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
         layout.windows = windows;
     }
 
-    /**
+    /*
      * Returns clones with matching target coordinates and scales to arrange windows in a natural way that no overlap exists and relative window size is preserved.
      * This function is almost a 1:1 copy of the function
      * PresentWindowsEffect::calculateWindowTransformationsNatural() from KDE, see:
@@ -252,7 +250,7 @@ function enable() {
         return layout;
     };
 
-    /// position window titles on top of windows in overlay ////
+    // position window titles on top of windows in overlay
     winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
     Workspace.WindowOverlay.prototype.relayout = function(animate) {
         if (settings.get_boolean('window-captions-on-top')) {
