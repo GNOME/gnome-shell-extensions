@@ -387,13 +387,13 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
         let diff = 0;
-        if (direction == Clutter.ScrollDirection.DOWN) {
+        if (direction == Clutter.ScrollDirection.DOWN)
             diff = 1;
-        } else if (direction == Clutter.ScrollDirection.UP) {
+        else if (direction == Clutter.ScrollDirection.UP)
             diff = -1;
-        } else {
+        else
             return;
-        }
+
 
         let newIndex = global.workspace_manager.get_active_workspace_index() + diff;
         this._activate(newIndex);

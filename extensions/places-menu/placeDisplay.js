@@ -204,12 +204,13 @@ class PlaceDeviceInfo extends PlaceInfo {
             null // Gio.Cancellable
         ];
 
-        if (this._mount.can_eject())
+        if (this._mount.can_eject()) {
             this._mount.eject_with_operation(...unmountArgs,
                 this._ejectFinish.bind(this));
-        else
+        } else {
             this._mount.unmount_with_operation(...unmountArgs,
                 this._unmountFinish.bind(this));
+        }
     }
 
     _ejectFinish(mount, result) {
@@ -462,9 +463,9 @@ var PlacesManager = class {
             this._addVolume('network', networkVolumes[i]);
         }
 
-        for (let i = 0; i < networkMounts.length; i++) {
+        for (let i = 0; i < networkMounts.length; i++)
             this._addMount('network', networkMounts[i]);
-        }
+
 
         this.emit('devices-updated');
         this.emit('network-updated');

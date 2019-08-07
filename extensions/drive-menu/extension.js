@@ -73,12 +73,13 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
             null // Gio.Cancellable
         ];
 
-        if (this.mount.can_eject())
+        if (this.mount.can_eject()) {
             this.mount.eject_with_operation(...unmountArgs,
                 this._ejectFinish.bind(this));
-        else
+        } else {
             this.mount.unmount_with_operation(...unmountArgs,
                 this._unmountFinish.bind(this));
+        }
     }
 
     _unmountFinish(mount, result) {
