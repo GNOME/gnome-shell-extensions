@@ -173,7 +173,7 @@ class DriveMenu extends PanelMenu.Button {
                 return;
             }
         }
-        log ('Removing a mount that was never added to the menu');
+        log('Removing a mount that was never added to the menu');
     }
 
     _onDestroy() {

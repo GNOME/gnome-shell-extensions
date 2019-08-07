@@ -377,10 +377,10 @@ class ApplicationsButton extends PanelMenu.Button {
         this.label_actor = this._label;
 
         this._showingId = Main.overview.connect('showing', () => {
-            this.add_accessible_state (Atk.StateType.CHECKED);
+            this.add_accessible_state(Atk.StateType.CHECKED);
         });
         this._hidingId = Main.overview.connect('hiding', () => {
-            this.remove_accessible_state (Atk.StateType.CHECKED);
+            this.remove_accessible_state(Atk.StateType.CHECKED);
         });
         Main.layoutManager.connect('startup-complete',
             this._setKeybinding.bind(this));
@@ -610,7 +610,7 @@ class ApplicationsButton extends PanelMenu.Button {
         this.mainBox.style = 'width: 35em;';
         this.mainBox.hide();
 
-        //Load categories
+        // Load categories
         this.applicationsByCategory = {};
         this._tree.load_sync();
         let root = this._tree.get_root_directory();
@@ -635,7 +635,7 @@ class ApplicationsButton extends PanelMenu.Button {
             }
         }
 
-        //Load applications
+        // Load applications
         this._displayButtons(this._listApplications(null));
 
         let themeContext = St.ThemeContext.get_for_stage(global.stage);

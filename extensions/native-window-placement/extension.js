@@ -128,7 +128,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                         if (diff[0] == 0 && diff[1] == 0)
                             diff[0] = 1;
                         // Try to keep screen/workspace aspect ratio
-                        if ( bounds.height / bounds.width > areaRect.height / areaRect.width )
+                        if (bounds.height / bounds.width > areaRect.height / areaRect.width)
                             diff[0] *= 2;
                         else
                             diff[1] *= 2;
@@ -242,7 +242,7 @@ function enable() {
     let settings = ExtensionUtils.getSettings();
 
     workspaceInjections['_getBestLayout'] = Workspace.Workspace.prototype._getBestLayout;
-    Workspace.Workspace.prototype._getBestLayout = function(windows) {
+    Workspace.Workspace.prototype._getBestLayout = function (windows) {
         let strategy = new NaturalLayoutStrategy(settings);
         let layout = { strategy };
         strategy.computeLayout(windows, layout);
@@ -252,7 +252,7 @@ function enable() {
 
     // position window titles on top of windows in overlay
     winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
-    Workspace.WindowOverlay.prototype.relayout = function(animate) {
+    Workspace.WindowOverlay.prototype.relayout = function (animate) {
         if (settings.get_boolean('window-captions-on-top')) {
             let [, , , cloneHeight] = this._windowClone.slot;
             this.title.translation_y = -cloneHeight;

@@ -1060,7 +1060,7 @@ const WindowList = GObject.registerClass({
 
     _removeActivateTimeout() {
         if (this._dndTimeoutId)
-            GLib.source_remove (this._dndTimeoutId);
+            GLib.source_remove(this._dndTimeoutId);
         this._dndTimeoutId = 0;
         this._dndWindow = null;
     }
