@@ -13,7 +13,7 @@ var MyWindowOverlay = class extends Workspace.WindowOverlay {
         this._id = null;
         this._text = new St.Label({
             style_class: 'extension-windowsNavigator-window-tooltip',
-            visible: false
+            visible: false,
         });
         parentActor.add_actor(this._text);
     }
@@ -48,7 +48,7 @@ var MyWorkspace = class extends Workspace.Workspace {
         if (metaWorkspace && metaWorkspace.index() < 9) {
             this._tip = new St.Label({
                 style_class: 'extension-windowsNavigator-window-tooltip',
-                visible: false
+                visible: false,
             });
             this.actor.add_actor(this._tip);
 

@@ -51,7 +51,7 @@ class WindowMover {
                 windowsChangedId: app.connect('windows-changed',
                     this._appWindowsChanged.bind(this)),
                 moveWindowsId: 0,
-                windows: app.get_windows()
+                windows: app.get_windows(),
             };
             this._appData.set(app, data);
         });

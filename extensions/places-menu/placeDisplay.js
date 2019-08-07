@@ -48,7 +48,7 @@ class PlaceInfo {
             }
 
             let source = {
-                get_icon: () => this.icon
+                get_icon: () => this.icon,
             };
             let op = new ShellMountOperation.ShellMountOperation(source);
             try {
@@ -201,7 +201,7 @@ class PlaceDeviceInfo extends PlaceInfo {
         let unmountArgs = [
             Gio.MountUnmountFlags.NONE,
             (new ShellMountOperation.ShellMountOperation(this._mount)).mountOp,
-            null // Gio.Cancellable
+            null, // Gio.Cancellable
         ];
 
         if (this._mount.can_eject()) {
@@ -322,7 +322,7 @@ var PlacesManager = class {
             'mount-changed',
             'drive-connected',
             'drive-disconnected',
-            'drive-changed'
+            'drive-changed',
         ];
 
         this._volumeMonitorSignals = [];

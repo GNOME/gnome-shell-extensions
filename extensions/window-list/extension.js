@@ -20,7 +20,7 @@ const DND_ACTIVATE_TIMEOUT = 500;
 const GroupingMode = {
     NEVER: 0,
     AUTO: 1,
-    ALWAYS: 2
+    ALWAYS: 2,
 };
 
 
@@ -133,7 +133,7 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
 }
 
 const WindowTitle = GObject.registerClass({
-    GTypeName: 'WindowListWindowTitle'
+    GTypeName: 'WindowListWindowTitle',
 }, class WindowTitle extends St.BoxLayout {
     _init(metaWindow) {
         this._metaWindow = metaWindow;
@@ -141,7 +141,7 @@ const WindowTitle = GObject.registerClass({
         super._init({
             style_class: 'window-button-box',
             x_expand: true,
-            y_expand: true
+            y_expand: true,
         });
 
         this._icon = new St.Bin({ style_class: 'window-button-icon' });
@@ -189,7 +189,7 @@ const WindowTitle = GObject.registerClass({
         } else {
             this._icon.child = new St.Icon({
                 icon_name: 'icon-missing',
-                icon_size: ICON_TEXTURE_SIZE
+                icon_size: ICON_TEXTURE_SIZE,
             });
         }
     }
@@ -211,8 +211,8 @@ const BaseButton = GObject.registerClass({
         'ignore-workspace': GObject.ParamSpec.boolean(
             'ignore-workspace', 'ignore-workspace', 'ignore-workspace',
             GObject.ParamFlags.READWRITE,
-            false)
-    }
+            false),
+    },
 }, class BaseButton extends St.Button {
     _init(perMonitor, monitorIndex) {
         this._perMonitor = perMonitor;
@@ -224,7 +224,7 @@ const BaseButton = GObject.registerClass({
             x_fill: true,
             y_fill: true,
             can_focus: true,
-            button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE
+            button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE,
         });
 
         this.connect('allocation-changed',
@@ -349,7 +349,7 @@ const BaseButton = GObject.registerClass({
 
 
 const WindowButton = GObject.registerClass({
-    GTypeName: 'WindowListWindowButton'
+    GTypeName: 'WindowListWindowButton',
 }, class WindowButton extends BaseButton {
     _init(metaWindow, perMonitor, monitorIndex) {
         super._init(perMonitor, monitorIndex);
@@ -495,25 +495,25 @@ const AppButton = GObject.registerClass({
         this._singleWindowTitle = new St.Bin({
             x_expand: true,
             y_fill: true,
-            x_align: St.Align.START
+            x_align: St.Align.START,
         });
         stack.add_actor(this._singleWindowTitle);
 
         this._multiWindowTitle = new St.BoxLayout({
             style_class: 'window-button-box',
-            x_expand: true
+            x_expand: true,
         });
         stack.add_actor(this._multiWindowTitle);
 
         this._icon = new St.Bin({
             style_class: 'window-button-icon',
-            child: app.create_icon_texture(ICON_TEXTURE_SIZE)
+            child: app.create_icon_texture(ICON_TEXTURE_SIZE),
         });
         this._multiWindowTitle.add(this._icon);
 
         let label = new St.Label({
             text: app.get_name(),
-            y_align: Clutter.ActorAlign.CENTER
+            y_align: Clutter.ActorAlign.CENTER,
         });
         this._multiWindowTitle.add(label);
         this._multiWindowTitle.label_actor = label;
@@ -684,7 +684,7 @@ const WindowList = GObject.registerClass({
             style_class: 'bottom-panel solid',
             reactive: true,
             track_hover: true,
-            layout_manager: new Clutter.BinLayout()
+            layout_manager: new Clutter.BinLayout(),
         });
         this.connect('destroy', this._onDestroy.bind(this));
 
@@ -704,7 +704,7 @@ const WindowList = GObject.registerClass({
             layout_manager: layout,
             x_align: Clutter.ActorAlign.START,
             x_expand: true,
-            y_expand: true
+            y_expand: true,
         });
         box.add(this._windowList, { expand: true });
 
@@ -735,7 +735,7 @@ const WindowList = GObject.registerClass({
 
         Main.layoutManager.addChrome(this, {
             affectsStruts: true,
-            trackFullscreen: true
+            trackFullscreen: true,
         });
         Main.uiGroup.set_child_above_sibling(this, Main.layoutManager.panelBox);
         Main.ctrlAltTabManager.addGroup(this, _('Window List'), 'start-here-symbolic');
@@ -794,7 +794,7 @@ const WindowList = GObject.registerClass({
         this._dragEndId = Main.xdndHandler.connect('drag-end',
             this._onDragEnd.bind(this));
         this._dragMonitor = {
-            dragMotion: this._onDragMotion.bind(this)
+            dragMotion: this._onDragMotion.bind(this),
         };
 
         this._dndTimeoutId = 0;

@@ -25,7 +25,7 @@ class WindowListPrefsWidget extends Gtk.Grid {
         let groupingLabel = '<b>%s</b>'.format(_('Window Grouping'));
         this.add(new Gtk.Label({
             label: groupingLabel, use_markup: true,
-            halign: Gtk.Align.START
+            halign: Gtk.Align.START,
         }));
 
         let align = new Gtk.Alignment({ left_padding: 12 });
@@ -34,7 +34,7 @@ class WindowListPrefsWidget extends Gtk.Grid {
         let grid = new Gtk.Grid({
             orientation: Gtk.Orientation.VERTICAL,
             row_spacing: 6,
-            column_spacing: 6
+            column_spacing: 6,
         });
         align.add(grid);
 
@@ -46,7 +46,7 @@ class WindowListPrefsWidget extends Gtk.Grid {
         let modeLabels = {
             'never': _('Never group windows'),
             'auto': _('Group windows when space is limited'),
-            'always': _('Always group windows')
+            'always': _('Always group windows'),
         };
 
         let radio = null;
@@ -61,7 +61,7 @@ class WindowListPrefsWidget extends Gtk.Grid {
             radio = new Gtk.RadioButton({
                 active: currentMode == mode,
                 label,
-                group: radio
+                group: radio,
             });
             grid.add(radio);
 
@@ -73,14 +73,14 @@ class WindowListPrefsWidget extends Gtk.Grid {
 
         let check = new Gtk.CheckButton({
             label: _('Show on all monitors'),
-            margin_top: 6
+            margin_top: 6,
         });
         this._settings.bind('show-on-all-monitors', check, 'active', Gio.SettingsBindFlags.DEFAULT);
         this.add(check);
 
         check = new Gtk.CheckButton({
             label: _('Show windows from all workspaces'),
-            margin_top: 6
+            margin_top: 6,
         });
         this._settings.bind('display-all-workspaces', check, 'active', Gio.SettingsBindFlags.DEFAULT);
         this.add(check);

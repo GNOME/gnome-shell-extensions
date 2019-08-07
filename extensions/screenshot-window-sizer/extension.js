@@ -64,7 +64,7 @@ let SIZES = [
     [1200, 675],
     [1600, 900],
     [360, 654], // Phone portrait maximized
-    [720, 360] // Phone landscape fullscreen
+    [720, 360], // Phone landscape fullscreen
 ];
 
 function cycleScreenshotSizes(display, window, binding) {

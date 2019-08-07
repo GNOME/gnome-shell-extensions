@@ -16,11 +16,11 @@ const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
 
 let WindowPreview = GObject.registerClass({
-    GTypeName: 'WorkspaceIndicatorWindowPreview'
+    GTypeName: 'WorkspaceIndicatorWindowPreview',
 }, class WindowPreview extends St.Button {
     _init(window) {
         super._init({
-            style_class: 'workspace-indicator-window-preview'
+            style_class: 'workspace-indicator-window-preview',
         });
 
         this._delegate = this;
@@ -104,17 +104,17 @@ let WindowPreview = GObject.registerClass({
 });
 
 let WorkspaceThumbnail = GObject.registerClass({
-    GTypeName: 'WorkspaceIndicatorWorkspaceThumbnail'
+    GTypeName: 'WorkspaceIndicatorWorkspaceThumbnail',
 }, class WorkspaceThumbnail extends St.Button {
     _init(index) {
         super._init({
             style_class: 'workspace',
             child: new Clutter.Actor({
                 layout_manager: new Clutter.BinLayout(),
-                clip_to_allocation: true
+                clip_to_allocation: true,
             }),
             x_fill: true,
-            y_fill: true
+            y_fill: true,
         });
 
         this.connect('destroy', this._onDestroy.bind(this));
@@ -218,7 +218,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         let container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
             x_expand: true,
-            y_expand: true
+            y_expand: true,
         });
         this.add_actor(container);
 
@@ -228,7 +228,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._statusLabel = new St.Label({
             style_class: 'panel-workspace-indicator',
             y_align: Clutter.ActorAlign.CENTER,
-            text: this._labelText()
+            text: this._labelText(),
         });
 
         container.add_actor(this._statusLabel);
@@ -236,7 +236,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._thumbnailsBox = new St.BoxLayout({
             style_class: 'panel-workspace-indicator-box',
             y_expand: true,
-            reactive: true
+            reactive: true,
         });
 
         container.add_actor(this._thumbnailsBox);
@@ -251,7 +251,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             workspaceManager.connect_after('workspace-switched',
                 this._onWorkspaceSwitched.bind(this)),
             workspaceManager.connect('notify::layout-rows',
-                this._onWorkspaceOrientationChanged.bind(this))
+                this._onWorkspaceOrientationChanged.bind(this)),
         ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));

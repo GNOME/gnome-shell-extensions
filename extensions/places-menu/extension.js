@@ -25,7 +25,7 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         this._icon = new St.Icon({
             gicon: info.icon,
-            icon_size: PLACE_ICON_SIZE
+            icon_size: PLACE_ICON_SIZE,
         });
         this.add_child(this._icon);
 
@@ -35,7 +35,7 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
         if (info.isRemovable()) {
             this._ejectIcon = new St.Icon({
                 icon_name: 'media-eject-symbolic',
-                style_class: 'popup-menu-icon'
+                style_class: 'popup-menu-icon',
             });
             this._ejectButton = new St.Button({ child: this._ejectIcon });
             this._ejectButton.connect('clicked', info.eject.bind(info));
@@ -71,7 +71,7 @@ const SECTIONS = [
     'special',
     'devices',
     'bookmarks',
-    'network'
+    'network',
 ];
 
 let PlacesMenu = GObject.registerClass(
@@ -83,7 +83,7 @@ class PlacesMenu extends PanelMenu.Button {
         let label = new St.Label({
             text: _('Places'),
             y_expand: true,
-            y_align: Clutter.ActorAlign.CENTER
+            y_align: Clutter.ActorAlign.CENTER,
         });
         hbox.add_child(label);
         hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
