@@ -55,8 +55,9 @@ var MyWorkspace = class extends Workspace.Workspace {
             this.actor.connect('notify::scale-x', () => {
                 this._tip.set_scale(1 / this.actor.scale_x, 1 / this.actor.scale_x);
             });
-        } else
+        } else {
             this._tip = null;
+        }
     }
 
     showTooltip() {

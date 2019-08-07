@@ -98,9 +98,9 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             // This is used when the window is on the edge of the screen to try to use as much screen real estate as possible.
             directions[i] = direction;
             direction++;
-            if (direction == 4) {
+            if (direction == 4)
                 direction = 0;
-            }
+
         }
 
         let loopCounter = 0;
@@ -212,9 +212,9 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
         bounds.height = areaRect.height / scale;
 
         // Move all windows back onto the screen and set their scale
-        for (let i = 0; i < rects.length; i++) {
+        for (let i = 0; i < rects.length; i++)
             rects[i].translate(-bounds.x, -bounds.y);
-        }
+
 
         // rescale to workspace
         let slots = [];

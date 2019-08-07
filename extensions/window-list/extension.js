@@ -184,13 +184,14 @@ const WindowTitle = GObject.registerClass({
 
     _updateIcon() {
         let app = Shell.WindowTracker.get_default().get_window_app(this._metaWindow);
-        if (app)
+        if (app) {
             this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
-        else
+        } else {
             this._icon.child = new St.Icon({
                 icon_name: 'icon-missing',
                 icon_size: ICON_TEXTURE_SIZE
             });
+        }
     }
 
     _onDestroy() {
