@@ -75,7 +75,7 @@ let WindowPreview = GObject.registerClass({
     }
 
     _onFocusChanged() {
-        if (global.display.focus_window == this._window)
+        if (global.display.focus_window === this._window)
             this.add_style_class_name('active');
         else
             this.remove_style_class_name('active');
@@ -83,7 +83,7 @@ let WindowPreview = GObject.registerClass({
 
     _relayout() {
         let monitor = Main.layoutManager.findIndexForActor(this);
-        this.visible = monitor == this._window.get_monitor() &&
+        this.visible = monitor === this._window.get_monitor() &&
             this._window.showing_on_its_workspace();
 
         if (!this.visible)
@@ -192,7 +192,7 @@ let WorkspaceThumbnail = GObject.registerClass({
 
     _moveWindow(window) {
         let monitorIndex = Main.layoutManager.findIndexForActor(this);
-        if (monitorIndex != window.get_monitor())
+        if (monitorIndex !== window.get_monitor())
             window.move_to_monitor(monitorIndex);
         window.change_workspace_by_index(this._index, false);
     }
@@ -281,7 +281,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _onWorkspaceOrientationChanged() {
-        let vertical = global.workspace_manager.layout_rows == -1;
+        let vertical = global.workspace_manager.layout_rows === -1;
         this.reactive = vertical;
 
         this._statusLabel.visible = vertical;
@@ -310,7 +310,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
     _updateMenuOrnament() {
         for (let i = 0; i < this._workspacesItems.length; i++) {
-            this._workspacesItems[i].setOrnament(i == this._currentWorkspace
+            this._workspacesItems[i].setOrnament(i === this._currentWorkspace
                 ? PopupMenu.Ornament.DOT
                 : PopupMenu.Ornament.NONE);
         }
@@ -319,7 +319,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _updateActiveThumbnail() {
         let thumbs = this._thumbnailsBox.get_children();
         for (let i = 0; i < thumbs.length; i++) {
-            if (i == this._currentWorkspace)
+            if (i === this._currentWorkspace)
                 thumbs[i].add_style_class_name('active');
             else
                 thumbs[i].remove_style_class_name('active');
@@ -327,7 +327,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _labelText(workspaceIndex) {
-        if (workspaceIndex == undefined) {
+        if (workspaceIndex === undefined) {
             workspaceIndex = this._currentWorkspace;
             return (workspaceIndex + 1).toString();
         }
@@ -356,7 +356,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
                 this._activate(actor.workspaceId);
             });
 
-            if (i == this._currentWorkspace)
+            if (i === this._currentWorkspace)
                 this._workspacesItems[i].setOrnament(PopupMenu.Ornament.DOT);
         }
 
@@ -387,9 +387,9 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
         let diff = 0;
-        if (direction == Clutter.ScrollDirection.DOWN)
+        if (direction === Clutter.ScrollDirection.DOWN)
             diff = 1;
-        else if (direction == Clutter.ScrollDirection.UP)
+        else if (direction === Clutter.ScrollDirection.UP)
             diff = -1;
         else
             return;

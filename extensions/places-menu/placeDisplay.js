@@ -366,7 +366,7 @@ var PlacesManager = class {
 
         for (let i = 0; i < dirs.length; i++) {
             let specialPath = GLib.get_user_special_dir(dirs[i]);
-            if (!specialPath || specialPath == homePath)
+            if (!specialPath || specialPath === homePath)
                 continue;
 
             let file = Gio.File.new_for_path(specialPath), info;

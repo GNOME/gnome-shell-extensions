@@ -95,7 +95,7 @@ class WindowMover {
         // or something; assume it'll be added back immediately, so keep it
         // to avoid moving it again
         windows.push(...data.windows.filter(
-            w => !windows.includes(w) && w.get_compositor_private() != null
+            w => !windows.includes(w) && w.get_compositor_private() !== null
         ));
 
         let workspaceNum = this._appConfigs.get(app.id);

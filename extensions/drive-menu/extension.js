@@ -59,7 +59,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
             return true;
         }
 
-        return volume.get_identifier('class') != 'network';
+        return volume.get_identifier('class') !== 'network';
     }
 
     _syncVisibility() {
@@ -168,7 +168,7 @@ class DriveMenu extends PanelMenu.Button {
     _removeMount(mount) {
         for (let i = 0; i < this._mounts.length; i++) {
             let item = this._mounts[i];
-            if (item.mount == mount) {
+            if (item.mount === mount) {
                 item.destroy();
                 this._mounts.splice(i, 1);
                 return;

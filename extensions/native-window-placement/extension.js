@@ -98,7 +98,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             // This is used when the window is on the edge of the screen to try to use as much screen real estate as possible.
             directions[i] = direction;
             direction++;
-            if (direction == 4)
+            if (direction === 4)
                 direction = 0;
 
         }
@@ -113,7 +113,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                         .map(v => (v *= WINDOW_PLACEMENT_NATURAL_GAPS));
                     let iAdjusted = rects[i].adjusted(...adjustments);
                     let jAdjusted = rects[j].adjusted(...adjustments);
-                    if (i != j && iAdjusted.overlap(jAdjusted)) {
+                    if (i !== j && iAdjusted.overlap(jAdjusted)) {
                         loopCounter++;
                         overlap = true;
 
@@ -125,7 +125,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                         let diff = [jCenter[0] - iCenter[0], jCenter[1] - iCenter[1]];
 
                         // Prevent dividing by zero and non-movement
-                        if (diff[0] == 0 && diff[1] == 0)
+                        if (diff[0] === 0 && diff[1] === 0)
                             diff[0] = 1;
                         // Try to keep screen/workspace aspect ratio
                         if (bounds.height / bounds.width > areaRect.height / areaRect.width)
@@ -160,29 +160,29 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                             iCenter = rects[i].center();
                             diff[0] = 0;
                             diff[1] = 0;
-                            if (xSection != 1 || ySection != 1) { // Remove this if you want the center to pull as well
-                                if (xSection == 1)
+                            if (xSection !== 1 || ySection !== 1) { // Remove this if you want the center to pull as well
+                                if (xSection === 1)
                                     xSection = directions[i] / 2 ? 2 : 0;
-                                if (ySection == 1)
+                                if (ySection === 1)
                                     ySection = directions[i] % 2 ? 2 : 0;
                             }
-                            if (xSection == 0 && ySection == 0) {
+                            if (xSection === 0 && ySection === 0) {
                                 diff[0] = bounds.x - iCenter[0];
                                 diff[1] = bounds.y - iCenter[1];
                             }
-                            if (xSection == 2 && ySection == 0) {
+                            if (xSection === 2 && ySection === 0) {
                                 diff[0] = bounds.x + bounds.width - iCenter[0];
                                 diff[1] = bounds.y - iCenter[1];
                             }
-                            if (xSection == 2 && ySection == 2) {
+                            if (xSection === 2 && ySection === 2) {
                                 diff[0] = bounds.x + bounds.width - iCenter[0];
                                 diff[1] = bounds.y + bounds.height - iCenter[1];
                             }
-                            if (xSection == 0 && ySection == 2) {
+                            if (xSection === 0 && ySection === 2) {
                                 diff[0] = bounds.x - iCenter[0];
                                 diff[1] = bounds.y + bounds.height - iCenter[1];
                             }
-                            if (diff[0] != 0 || diff[1] != 0) {
+                            if (diff[0] !== 0 || diff[1] !== 0) {
                                 length = Math.sqrt(diff[0] * diff[0] + diff[1] * diff[1]);
                                 diff[0] *= WINDOW_PLACEMENT_NATURAL_ACCURACY / length / 2;   // /2 to make it less influencing than the normal center-move above
                                 diff[1] *= WINDOW_PLACEMENT_NATURAL_ACCURACY / length / 2;
