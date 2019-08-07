@@ -195,7 +195,7 @@ function init() {
 let _indicator;
 
 function enable() {
-    _indicator = new DriveMenu;
+    _indicator = new DriveMenu();
     Main.panel.addToStatusArea('drive-menu', _indicator);
 }
 

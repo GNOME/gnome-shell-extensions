@@ -407,7 +407,7 @@ function init() {
 let _indicator;
 
 function enable() {
-    _indicator = new WorkspaceIndicator;
+    _indicator = new WorkspaceIndicator();
     Main.panel.addToStatusArea('workspace-indicator', _indicator);
 }
 
