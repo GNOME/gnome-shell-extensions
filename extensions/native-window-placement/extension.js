@@ -157,7 +157,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                             let xSection = Math.round((rects[i].x - bounds.x) / (bounds.width / 3));
                             let ySection = Math.round((rects[i].y - bounds.y) / (bounds.height / 3));
 
-                            let iCenter = rects[i].center();
+                            iCenter = rects[i].center();
                             diff[0] = 0;
                             diff[1] = 0;
                             if (xSection != 1 || ySection != 1) { // Remove this if you want the center to pull as well
@@ -183,7 +183,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                                 diff[1] = bounds.y + bounds.height - iCenter[1];
                             }
                             if (diff[0] != 0 || diff[1] != 0) {
-                                let length = Math.sqrt(diff[0] * diff[0] + diff[1] * diff[1]);
+                                length = Math.sqrt(diff[0] * diff[0] + diff[1] * diff[1]);
                                 diff[0] *= WINDOW_PLACEMENT_NATURAL_ACCURACY / length / 2;   // /2 to make it less influencing than the normal center-move above
                                 diff[1] *= WINDOW_PLACEMENT_NATURAL_ACCURACY / length / 2;
                                 rects[i].translate(diff[0], diff[1]);
