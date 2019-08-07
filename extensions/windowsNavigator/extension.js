@@ -92,7 +92,7 @@ var MyWorkspace = class extends Workspace.Workspace {
 
     getWindowWithTooltip(id) {
         for (let i = 0; i < this._windows.length; i++) {
-            if (this._windows[i].slotId + 1 == id)
+            if (this._windows[i].slotId + 1 === id)
                 return this._windows[i].metaWindow;
         }
         return null;
@@ -133,7 +133,7 @@ var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
     }
 
     _hideTooltips() {
-        if (global.stage.get_key_focus() == global.stage)
+        if (global.stage.get_key_focus() === global.stage)
             global.stage.set_key_focus(this._prevFocusActor);
         this._pickWindow = false;
         for (let i = 0; i < this._workspaces.length; i++)
@@ -149,24 +149,24 @@ var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
 
     _onKeyRelease(s, o) {
         if (this._pickWindow &&
-            (o.get_key_symbol() == Clutter.KEY_Alt_L ||
-             o.get_key_symbol() == Clutter.KEY_Alt_R))
+            (o.get_key_symbol() === Clutter.KEY_Alt_L ||
+             o.get_key_symbol() === Clutter.KEY_Alt_R))
             this._hideTooltips();
         if (this._pickWorkspace &&
-            (o.get_key_symbol() == Clutter.KEY_Control_L ||
-             o.get_key_symbol() == Clutter.KEY_Control_R))
+            (o.get_key_symbol() === Clutter.KEY_Control_L ||
+             o.get_key_symbol() === Clutter.KEY_Control_R))
             this._hideWorkspacesTooltips();
     }
 
     _onKeyPress(s, o) {
         let { viewSelector } = Main.overview;
-        if (viewSelector._activePage != viewSelector._workspacesPage)
+        if (viewSelector._activePage !== viewSelector._workspacesPage)
             return false;
 
         let workspaceManager = global.workspace_manager;
 
-        if ((o.get_key_symbol() == Clutter.KEY_Alt_L ||
-             o.get_key_symbol() == Clutter.KEY_Alt_R) &&
+        if ((o.get_key_symbol() === Clutter.KEY_Alt_L ||
+             o.get_key_symbol() === Clutter.KEY_Alt_R) &&
             !this._pickWorkspace) {
             this._prevFocusActor = global.stage.get_key_focus();
             global.stage.set_key_focus(null);
@@ -175,8 +175,8 @@ var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
             this._workspaces[workspaceManager.get_active_workspace_index()].showWindowsTooltips();
             return true;
         }
-        if ((o.get_key_symbol() == Clutter.KEY_Control_L ||
-             o.get_key_symbol() == Clutter.KEY_Control_R) &&
+        if ((o.get_key_symbol() === Clutter.KEY_Control_L ||
+             o.get_key_symbol() === Clutter.KEY_Control_R) &&
             !this._pickWindow) {
             this._prevFocusActor = global.stage.get_key_focus();
             global.stage.set_key_focus(null);
@@ -186,17 +186,17 @@ var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
             return true;
         }
 
-        if (global.stage.get_key_focus() != global.stage)
+        if (global.stage.get_key_focus() !== global.stage)
             return false;
 
         // ignore shift presses, they're required to get numerals in azerty keyboards
         if ((this._pickWindow || this._pickWorkspace) &&
-            (o.get_key_symbol() == Clutter.KEY_Shift_L ||
-             o.get_key_symbol() == Clutter.KEY_Shift_R))
+            (o.get_key_symbol() === Clutter.KEY_Shift_L ||
+             o.get_key_symbol() === Clutter.KEY_Shift_R))
             return true;
 
         if (this._pickWindow) {
-            if (this._active != workspaceManager.get_active_workspace_index()) {
+            if (this._active !== workspaceManager.get_active_workspace_index()) {
                 this._hideTooltips();
                 return false;
             }

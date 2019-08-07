@@ -148,7 +148,7 @@ const Widget = GObject.registerClass({
         dialog.get_content_area().add(grid);
 
         dialog.connect('response', (dlg, id) => {
-            if (id != Gtk.ResponseType.OK) {
+            if (id !== Gtk.ResponseType.OK) {
                 dialog.destroy();
                 return;
             }
@@ -217,7 +217,7 @@ const Widget = GObject.registerClass({
             this._appendRow(appInfo, parseInt(index));
         }
 
-        if (validItems.length != currentItems.length) // some items were filtered out
+        if (validItems.length !== currentItems.length) // some items were filtered out
             this._settings.set_strv(SETTINGS_KEY, validItems);
     }
 

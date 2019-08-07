@@ -71,10 +71,10 @@ function cycleScreenshotSizes(display, window, binding) {
     // Probably this isn't useful with 5 sizes, but you can decrease instead
     // of increase by holding down shift.
     let modifiers = binding.get_modifiers();
-    let backwards = (modifiers & Meta.VirtualModifier.SHIFT_MASK) != 0;
+    let backwards = (modifiers & Meta.VirtualModifier.SHIFT_MASK) !== 0;
 
     // Unmaximize first
-    if (window.get_maximized() != 0)
+    if (window.get_maximized() !== 0)
         window.unmaximize(Meta.MaximizeFlags.BOTH);
 
     let workArea = window.get_work_area_current_monitor();
@@ -97,7 +97,7 @@ function cycleScreenshotSizes(display, window, binding) {
 
         // get the best initial window size
         let error = Math.abs(width - outerRect.width) + Math.abs(height - outerRect.height);
-        if (nearestIndex == null || error < nearestError) {
+        if (nearestIndex === undefined || error < nearestError) {
             nearestIndex = i;
             nearestError = error;
         }

@@ -126,7 +126,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
     _isNavigatingSubmenu([x, y]) {
         let [posX, posY] = this.get_transformed_position();
 
-        if (this._oldX == -1) {
+        if (this._oldX === -1) {
             this._oldX = x;
             this._oldY = y;
             return true;
@@ -244,14 +244,14 @@ class DesktopTarget {
     }
 
     get hasDesktop() {
-        return this._desktop != null;
+        return this._desktop !== null;
     }
 
     _onWindowAdded(group, actor) {
         if (!(actor instanceof Meta.WindowActor))
             return;
 
-        if (actor.meta_window.get_window_type() == Meta.WindowType.DESKTOP)
+        if (actor.meta_window.get_window_type() === Meta.WindowType.DESKTOP)
             this._setDesktop(actor);
     }
 
@@ -446,7 +446,7 @@ class ApplicationsButton extends PanelMenu.Button {
 
     _onMenuKeyPress(actor, event) {
         let symbol = event.get_key_symbol();
-        if (symbol == Clutter.KEY_Left || symbol == Clutter.KEY_Right) {
+        if (symbol === Clutter.KEY_Left || symbol === Clutter.KEY_Right) {
             let direction = symbol === Clutter.KEY_Left
                 ? Gtk.DirectionType.LEFT : Gtk.DirectionType.RIGHT;
             if (this.menu.actor.navigate_focus(global.stage.key_focus, direction, false))
@@ -496,8 +496,8 @@ class ApplicationsButton extends PanelMenu.Button {
     _loadCategory(categoryId, dir) {
         let iter = dir.iter();
         let nextType;
-        while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
-            if (nextType == GMenu.TreeItemType.ENTRY) {
+        while ((nextType = iter.next()) !== GMenu.TreeItemType.INVALID) {
+            if (nextType === GMenu.TreeItemType.ENTRY) {
                 let entry = iter.get_entry();
                 let id;
                 try {
@@ -510,9 +510,9 @@ class ApplicationsButton extends PanelMenu.Button {
                     app = new Shell.App({ app_info: entry.get_app_info() });
                 if (app.get_app_info().should_show())
                     this.applicationsByCategory[categoryId].push(app);
-            } else if (nextType == GMenu.TreeItemType.SEPARATOR) {
+            } else if (nextType === GMenu.TreeItemType.SEPARATOR) {
                 this.applicationsByCategory[categoryId].push('separator');
-            } else if (nextType == GMenu.TreeItemType.DIRECTORY) {
+            } else if (nextType === GMenu.TreeItemType.DIRECTORY) {
                 let subdir = iter.get_directory();
                 if (!subdir.get_is_nodisplay())
                     this._loadCategory(categoryId, subdir);
@@ -531,7 +531,7 @@ class ApplicationsButton extends PanelMenu.Button {
             newScrollValue = buttonAlloc.y1 - 10;
         if (boxHeight + currentScrollValue < buttonAlloc.y2 + 10)
             newScrollValue = buttonAlloc.y2 - boxHeight + 10;
-        if (newScrollValue != currentScrollValue)
+        if (newScrollValue !== currentScrollValue)
             appsScrollBoxAdj.set_value(newScrollValue);
     }
 
@@ -546,7 +546,7 @@ class ApplicationsButton extends PanelMenu.Button {
             newScrollValue = buttonAlloc.y1 - 10;
         if (boxHeight + currentScrollValue < buttonAlloc.y2 + 10)
             newScrollValue = buttonAlloc.y2 - boxHeight + 10;
-        if (newScrollValue != currentScrollValue)
+        if (newScrollValue !== currentScrollValue)
             catsScrollBoxAdj.set_value(newScrollValue);
     }
 
@@ -618,8 +618,8 @@ class ApplicationsButton extends PanelMenu.Button {
         this.categoriesBox.add_actor(categoryMenuItem);
         let iter = root.iter();
         let nextType;
-        while ((nextType = iter.next()) != GMenu.TreeItemType.INVALID) {
-            if (nextType != GMenu.TreeItemType.DIRECTORY)
+        while ((nextType = iter.next()) !== GMenu.TreeItemType.INVALID) {
+            if (nextType !== GMenu.TreeItemType.DIRECTORY)
                 continue;
 
             let dir = iter.get_directory();

@@ -141,7 +141,7 @@ var WindowPicker = GObject.registerClass({
         this._stageKeyPressId = global.stage.connect('key-press-event',
             (a, event) => {
                 let sym = event.get_key_symbol();
-                if (sym == Clutter.KEY_Escape) {
+                if (sym === Clutter.KEY_Escape) {
                     this.close();
                     return Clutter.EVENT_STOP;
                 }
