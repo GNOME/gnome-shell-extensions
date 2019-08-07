@@ -91,7 +91,7 @@ var MyWorkspace = class extends Workspace.Workspace {
 
     getWindowWithTooltip(id) {
         for (let i = 0; i < this._windows.length; i++) {
-            if ((this._windows[i].slotId + 1) == id)
+            if (this._windows[i].slotId + 1 == id)
                 return this._windows[i].metaWindow;
         }
         return null;

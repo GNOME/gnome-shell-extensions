@@ -46,10 +46,10 @@ class Rect {
     }
 
     overlap(rect2) {
-        return !((this.x + this.width    <= rect2.x) ||
-                 (rect2.x + rect2.width  <= this.x) ||
-                 (this.y + this.height   <= rect2.y) ||
-                 (rect2.y + rect2.height <= this.y));
+        return !(this.x + this.width    <= rect2.x ||
+                 rect2.x + rect2.width  <= this.x ||
+                 this.y + this.height   <= rect2.y ||
+                 rect2.y + rect2.height <= this.y);
     }
 
     center() {
@@ -162,9 +162,9 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                             diff[1] = 0;
                             if (xSection != 1 || ySection != 1) { // Remove this if you want the center to pull as well
                                 if (xSection == 1)
-                                    xSection = (directions[i] / 2 ? 2 : 0);
+                                    xSection = directions[i] / 2 ? 2 : 0;
                                 if (ySection == 1)
-                                    ySection = (directions[i] % 2 ? 2 : 0);
+                                    ySection = directions[i] % 2 ? 2 : 0;
                             }
                             if (xSection == 0 && ySection == 0) {
                                 diff[0] = bounds.x - iCenter[0];
