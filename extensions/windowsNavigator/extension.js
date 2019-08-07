@@ -61,7 +61,7 @@ var MyWorkspace = class extends Workspace.Workspace {
     }
 
     showTooltip() {
-        if (this._tip == null || this._actualGeometry == null)
+        if (!this._tip || !this._actualGeometry)
             return;
         this._tip.text = (this.metaWorkspace.index() + 1).toString();
 
@@ -83,7 +83,7 @@ var MyWorkspace = class extends Workspace.Workspace {
     }
 
     hideTooltip() {
-        if (this._tip == null)
+        if (!this._tip)
             return;
         if (!this._tip.get_parent())
             return;
@@ -100,14 +100,14 @@ var MyWorkspace = class extends Workspace.Workspace {
 
     showWindowsTooltips() {
         for (let i in this._windowOverlays) {
-            if (this._windowOverlays[i] != null)
+            if (this._windowOverlays[i])
                 this._windowOverlays[i].showTooltip();
         }
     }
 
     hideWindowsTooltips() {
         for (let i in this._windowOverlays) {
-            if (this._windowOverlays[i] != null)
+            if (this._windowOverlays[i])
                 this._windowOverlays[i].hideTooltip();
         }
     }

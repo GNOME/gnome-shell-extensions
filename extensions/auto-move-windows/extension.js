@@ -44,7 +44,7 @@ class WindowMover {
         });
 
         let addedApps = ids.map(id => this._appSystem.lookup_app(id)).filter(
-            app => app != null && !this._appData.has(app)
+            app => app && !this._appData.has(app)
         );
         addedApps.forEach(app => {
             let data = {
