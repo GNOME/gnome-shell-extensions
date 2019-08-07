@@ -128,7 +128,7 @@ function cycleScreenshotSizes(display, window, binding) {
     // The new size might have been constrained by geometry hints (e.g. for
     // a terminal) - in that case, include the actual ratio to the message
     // we flash
-    let actualNumerator = (newOuterRect.width / newOuterRect.height) * 9;
+    let actualNumerator = 9 * newOuterRect.width / newOuterRect.height;
     if (Math.abs(actualNumerator - 16) > 0.01)
         message += ' (%.2f:9)'.format(actualNumerator);
 
