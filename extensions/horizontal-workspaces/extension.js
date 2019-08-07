@@ -16,7 +16,7 @@ class Extension {
             1,
             -1);
 
-        ThumbnailsBox.prototype._updateSwitcherVisibility = function() {
+        ThumbnailsBox.prototype._updateSwitcherVisibility = function () {
             this.hide();
         };
     }

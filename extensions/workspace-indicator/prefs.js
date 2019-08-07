@@ -51,7 +51,7 @@ class WorkspaceNameModel extends Gtk.ListStore {
         while (ok)
             ok = this.remove(iter);
 
-        for ( ; i < newNames.length; i++) {
+        for (; i < newNames.length; i++) {
             iter = this.append();
             this.set(iter, [this.Columns.LABEL], [newNames[i]]);
         }
