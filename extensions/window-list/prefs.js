@@ -60,7 +60,7 @@ class WindowListPrefsWidget extends Gtk.Grid {
 
             radio = new Gtk.RadioButton({
                 active: currentMode == mode,
-                label: label,
+                label,
                 group: radio
             });
             grid.add(radio);
