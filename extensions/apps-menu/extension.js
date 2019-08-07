@@ -577,8 +577,8 @@ class ApplicationsButton extends PanelMenu.Button {
         });
         this.categoriesScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         vscroll = this.categoriesScrollBox.get_vscroll_bar();
-        vscroll.connect('scroll-start', () => this.menu.passEvents = true);
-        vscroll.connect('scroll-stop', () => this.menu.passEvents = false);
+        vscroll.connect('scroll-start', () => (this.menu.passEvents = true));
+        vscroll.connect('scroll-stop', () => (this.menu.passEvents = false));
         this.leftBox.add(this.categoriesScrollBox, {
             expand: true,
             x_fill: true,

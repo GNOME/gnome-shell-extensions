@@ -110,7 +110,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             for (let i = 0; i < rects.length; i++) {
                 for (let j = 0; j < rects.length; j++) {
                     let adjustments = [-1, -1, 1, 1]
-                        .map(v => v *= WINDOW_PLACEMENT_NATURAL_GAPS);
+                        .map(v => (v *= WINDOW_PLACEMENT_NATURAL_GAPS));
                     let iAdjusted = rects[i].adjusted(...adjustments);
                     let jAdjusted = rects[j].adjusted(...adjustments);
                     if (i != j && iAdjusted.overlap(jAdjusted)) {

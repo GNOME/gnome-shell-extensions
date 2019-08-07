@@ -849,7 +849,7 @@ const WindowList = GObject.registerClass({
         });
 
         this._windowList.reactive = visible;
-        this._windowList.get_children().forEach(c => c.reactive = visible);
+        this._windowList.get_children().forEach(c => (c.reactive = visible));
     }
 
     _getPreferredUngroupedWindowListWidth() {
