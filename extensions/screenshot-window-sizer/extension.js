@@ -122,8 +122,8 @@ function cycleScreenshotSizes(display, window, binding) {
 
     let newOuterRect = window.get_frame_rect();
     let message = '%d×%d'.format(
-        (newOuterRect.width / scaleFactor),
-        (newOuterRect.height / scaleFactor));
+        newOuterRect.width / scaleFactor,
+        newOuterRect.height / scaleFactor);
 
     // The new size might have been constrained by geometry hints (e.g. for
     // a terminal) - in that case, include the actual ratio to the message

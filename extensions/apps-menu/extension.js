@@ -55,7 +55,7 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         let draggable = DND.makeDraggable(this);
 
         let maybeStartDrag = draggable._maybeStartDrag;
-        draggable._maybeStartDrag = (event) => {
+        draggable._maybeStartDrag = event => {
             if (this._dragEnabled)
                 return maybeStartDrag.call(draggable, event);
             return false;
@@ -174,7 +174,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         // Check which side of line AB the point P lies on by taking the
         // cross-product of AB and AP. See:
         // http://stackoverflow.com/questions/3461453/determine-which-side-of-a-line-a-point-lies
-        if (((this.width * y) - (NAVIGATION_REGION_OVERSHOOT * x)) <= 0)
+        if (this.width * y - NAVIGATION_REGION_OVERSHOOT * x <= 0)
             return true;
 
         return false;

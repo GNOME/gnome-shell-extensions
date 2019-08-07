@@ -894,7 +894,7 @@ const WindowList = GObject.registerClass({
         let maxWidth = this._getMaxWindowListWidth();
         let natWidth = this._getPreferredUngroupedWindowListWidth();
 
-        let grouped = (maxWidth < natWidth);
+        let grouped = maxWidth < natWidth;
         if (this._grouped !== grouped) {
             this._grouped = grouped;
             this._populateWindowList();
