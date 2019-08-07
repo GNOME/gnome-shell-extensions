@@ -165,8 +165,8 @@ var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
         let workspaceManager = global.workspace_manager;
 
         if ((o.get_key_symbol() == Clutter.KEY_Alt_L ||
-             o.get_key_symbol() == Clutter.KEY_Alt_R)
-            && !this._pickWorkspace) {
+             o.get_key_symbol() == Clutter.KEY_Alt_R) &&
+            !this._pickWorkspace) {
             this._prevFocusActor = global.stage.get_key_focus();
             global.stage.set_key_focus(null);
             this._active = workspaceManager.get_active_workspace_index();
@@ -175,8 +175,8 @@ var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
             return true;
         }
         if ((o.get_key_symbol() == Clutter.KEY_Control_L ||
-             o.get_key_symbol() == Clutter.KEY_Control_R)
-            && !this._pickWindow) {
+             o.get_key_symbol() == Clutter.KEY_Control_R) &&
+            !this._pickWindow) {
             this._prevFocusActor = global.stage.get_key_focus();
             global.stage.set_key_focus(null);
             this._pickWorkspace = true;
