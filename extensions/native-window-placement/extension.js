@@ -206,8 +206,8 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             1.0);
 
         // Make bounding rect fill the screen size for later steps
-        bounds.x = bounds.x - (areaRect.width - bounds.width * scale) / 2;
-        bounds.y = bounds.y - (areaRect.height - bounds.height * scale) / 2;
+        bounds.x -= (areaRect.width - bounds.width * scale) / 2;
+        bounds.y -= (areaRect.height - bounds.height * scale) / 2;
         bounds.width = areaRect.width / scale;
         bounds.height = areaRect.height / scale;
 
