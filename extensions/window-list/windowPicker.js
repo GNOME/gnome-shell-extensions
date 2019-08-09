@@ -64,8 +64,7 @@ let MyWorkspacesDisplay = class extends WorkspacesDisplay {
 var WindowPicker = GObject.registerClass({
     GTypeName: 'WindowListWindowPicker',
     Signals: {
-        'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] },
-        'scroll-event': { param_types: [Clutter.Event.$gtype] }
+        'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] }
     }
 }, class extends Clutter.Actor {
     _init() {
