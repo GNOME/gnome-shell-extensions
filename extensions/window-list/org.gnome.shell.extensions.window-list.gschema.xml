@@ -15,6 +15,13 @@
         window list. Possible values are “never”, “auto” and “always”.
       </description>
     </key>
+    <key name="display-all-workspaces" type="b">
+      <default>false</default>
+      <summary>Show windows from all workspaces</summary>
+      <description>
+        Whether to show windows from all workspaces or only the current one.
+      </description>
+    </key>
     <key name="show-on-all-monitors" type="b">
       <default>false</default>
       <summary>Show the window list on all monitors</summary>
