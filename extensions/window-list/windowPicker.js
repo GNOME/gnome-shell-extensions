@@ -176,7 +176,7 @@ var WindowPicker = GObject.registerClass({
         Main.overview.animationInProgress = true;
         GLib.timeout_add(
             GLib.PRIORITY_DEFAULT,
-            Overview.ANIMATION_TIME * 1000,
+            Overview.ANIMATION_TIME,
             () => {
                 Main.overview.animationInProgress = false;
                 if (onComplete)
