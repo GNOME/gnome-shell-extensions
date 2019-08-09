@@ -846,7 +846,7 @@ const WindowList = GObject.registerClass({
         Tweener.addTween(this._windowList, {
             opacity: visible ? 255 : 0,
             transition: 'ease-out-quad',
-            time: Overview.ANIMATION_TIME
+            time: Overview.ANIMATION_TIME / 1000
         });
 
         this._windowList.reactive = visible;

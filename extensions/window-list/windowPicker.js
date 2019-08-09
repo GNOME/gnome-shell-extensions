@@ -64,8 +64,7 @@ let MyWorkspacesDisplay = class extends WorkspacesDisplay {
 var WindowPicker = GObject.registerClass({
     GTypeName: 'WindowListWindowPicker',
     Signals: {
-        'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] },
-        'scroll-event': { param_types: [Clutter.Event.$gtype] }
+        'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] }
     }
 }, class extends Clutter.Actor {
     _init() {
@@ -177,7 +176,7 @@ var WindowPicker = GObject.registerClass({
         Main.overview.animationInProgress = true;
         GLib.timeout_add(
             GLib.PRIORITY_DEFAULT,
-            Overview.ANIMATION_TIME * 1000,
+            Overview.ANIMATION_TIME,
             () => {
                 Main.overview.animationInProgress = false;
                 if (onComplete)
