@@ -25,7 +25,7 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 const Tweener = imports.ui.tweener;
 
-const MESSAGE_FADE_TIME = 2;
+const MESSAGE_FADE_TIME = 2000;
 
 let text;
 
@@ -40,7 +40,7 @@ function flashMessage(message) {
         Main.uiGroup.add_actor(text);
     }
 
-    Tweener.removeTweens(text);
+    text.remove_all_transitions();
     text.text = message;
 
     text.opacity = 255;
@@ -50,11 +50,11 @@ function flashMessage(message) {
         monitor.x + Math.floor(monitor.width / 2 - text.width / 2),
         monitor.y + Math.floor(monitor.height / 2 - text.height / 2));
 
-    Tweener.addTween(text, {
+    text.ease({
         opacity: 0,
-        time: MESSAGE_FADE_TIME,
-        transition: 'easeOutQuad',
-        onComplete: hideMessage
+        duration: MESSAGE_FADE_TIME,
+        mode: Clutter.AnimationMode.EASE_OUT_QUAD,
+        onComplete: hideMessage,
     });
 }
 

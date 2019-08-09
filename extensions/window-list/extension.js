@@ -6,7 +6,6 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 const Overview = imports.ui.overview;
 const PopupMenu = imports.ui.popupMenu;
-const Tweener = imports.ui.tweener;
 
 const Me = ExtensionUtils.getCurrentExtension();
 const { WindowPicker, WindowPickerToggle } = Me.imports.windowPicker;
@@ -843,10 +842,10 @@ const WindowList = GObject.registerClass({
     _updateWindowListVisibility() {
         let visible = !Main.windowPicker.visible;
 
-        Tweener.addTween(this._windowList, {
+        this._windowList.ease({
             opacity: visible ? 255 : 0,
-            transition: 'ease-out-quad',
-            time: Overview.ANIMATION_TIME / 1000
+            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
+            duration: Overview.ANIMATION_TIME,
         });
 
         this._windowList.reactive = visible;
