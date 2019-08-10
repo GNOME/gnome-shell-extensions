@@ -23,8 +23,6 @@ class WorkspaceNameModel extends Gtk.ListStore {
         };
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
-        //this._settings.connect('changed::workspace-names', this._reloadFromSettings.bind(this));
-
         this._reloadFromSettings();
 
         // overriding class closure doesn't work, because GtkTreeModel
