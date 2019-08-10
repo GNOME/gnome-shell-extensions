@@ -3,10 +3,6 @@ rules:
     - error
     - properties: never
       allow: [^vfunc_, ^on_]
-  no-unused-vars:
-    - error
-    - argsIgnorePattern: ^_
-      varsIgnorePattern: _$
   object-curly-spacing:
     - error
     - always
