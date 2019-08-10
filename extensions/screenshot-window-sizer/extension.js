@@ -19,11 +19,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-const { Meta, Shell, St } = imports.gi;
+const { Clutter, Meta, Shell, St } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
-const Tweener = imports.ui.tweener;
 
 const MESSAGE_FADE_TIME = 2000;
 
