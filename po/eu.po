@@ -5,21 +5,20 @@
 # assar <asiersar@yahoo.com>, 2011.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2013, 2015, 2017.
 # Edurne Labaka <elabaka@uzei.com>, 2015.
+# Asier Sarasua Garmendia  <asier.sarasua@gmail.com>, 2019.
+#
 msgid ""
-msgstr ""
-"Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-08-11 01:33+0000\n"
-"PO-Revision-Date: 2017-08-27 15:49+0200\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+msgstr "Project-Id-Version: gnome-shell-extensions master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
+"POT-Creation-Date: 2019-07-20 12:03+0000\n"
+"PO-Revision-Date: 2019-08-11 10:00+0100\n"
+"Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -30,76 +29,11 @@ msgstr "GNOME Klasikoa"
 msgid "This session logs you into GNOME Classic"
 msgstr "Saio honek GNOME Klasikoa hasten du"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "Erantsi elkarrizketa-koadro modala leiho gurasoari"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Gako honek org.gnome.mutter-eko gakoa gainidazten du GNOME Shell exekutatzen "
-"ari denean."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Botoien antolamendua titulu-barran"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Gako honekorg.gnome.desktop.wm.preferences-eko gakoa gainidazten du GNOME "
-"Shell exekutatzen ari denean."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"Gaitu ertza lauza gisa ezartzea leihoak pantailaren ertzetara jaregitean"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "Laneko areak pantaila nagusian soilik"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"Fokuaren aldaketaren atzerapena saguaren moduan erakusleak mugitzeari utzi "
-"arte"
-
-#: extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "Koadro txikiak soilik"
-
-#: extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "Aplikazioen ikonoa soilik"
-
-#: extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "Koadro txikien eta aplikazioen ikonoa"
-
-#: extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "Aurkeztu leihoa honela"
-
-#: extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "Erakutsi leihoak bakarrik uneko laneko arean"
-
-#: extensions/apps-menu/extension.js:41
-msgid "Activities Overview"
-msgstr "Jardueren ikuspegi orokorra"
-
-#: extensions/apps-menu/extension.js:141
+#: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Gogokoak"
 
-#: extensions/apps-menu/extension.js:436
+#: extensions/apps-menu/extension.js:368
 msgid "Applications"
 msgstr "Aplikazioak"
 
@@ -111,75 +45,43 @@ msgstr "Aplikazioen eta laneko areen zerrenda"
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
-msgstr ""
-"Kateen zerrenda bat, bakoitzak aplikazio-ID bat duena (mahaigainaren "
-"fitxategi-izena) eta jarraian bi puntu eta laneko arearen zenbakia dituena"
+msgstr "Kateen zerrenda bat, bakoitzak aplikazio-ID bat duena (mahaigainaren fitxategi-izena) eta jarraian bi puntu eta laneko arearen zenbakia dituena"
 
 #: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Aplikazioa"
 
-#: extensions/auto-move-windows/prefs.js:69
-#: extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Laneko area"
 
-#: extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Gehitu araua"
 
-#: extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Sortu bat datorren arau berria"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Gehitu"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:107
+#: extensions/drive-menu/extension.js:102
+#: extensions/places-menu/placeDisplay.js:232
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
-msgstr "Huts egin du “%s“ unitatea egoztean: "
+msgstr "Huts egin du “%s“ unitatea egoztean:"
 
-#: extensions/drive-menu/extension.js:125
+#: extensions/drive-menu/extension.js:118
 msgid "Removable devices"
 msgstr "Gailu aldagarriak"
 
-#: extensions/drive-menu/extension.js:150
-#| msgid "Open File"
+#: extensions/drive-menu/extension.js:145
 msgid "Open Files"
 msgstr "Ireki fitxategiak"
-
-#: extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Kaixo mundua!"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
-msgid "Alternative greeting text."
-msgstr "Ongi etorriaren bestelako testua."
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr "Ez badago hutsik, panelean klik egitean erakutsiko den testua dauka."
-
-#: extensions/example/prefs.js:30
-msgid "Message"
-msgstr "Mezua"
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it’s possible to customize the greeting message."
-msgstr ""
-"Shell-erako portaera egokia duten hedapenak nola eraikitzen den erakusteko "
-"helburua du adibideak,  ondorioz bere kasa funtzionalitate baxukoa da.\n"
-"Hala ere, ongi etorriko mezua pertsonalizatzeko aukera dago."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
@@ -190,11 +92,7 @@ msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
-msgstr ""
-"Saiatu pantaila gehiago erabiltzen leihoen koadro txikiak kokatzeko "
-"pantailaren aspektu-erlaziora egokituz, eta haiek taldekatu muga-koadroa "
-"txikiagotzeko. Ezarpen hau kokapen naturalaren estrategiarekin soilik "
-"aplikatzen da."
+msgstr "Saiatu pantaila gehiago erabiltzen leihoen koadro txikiak kokatzeko pantailaren aspektu-erlaziora egokituz, eta haiek taldekatu muga-koadroa txikiagotzeko. Ezarpen hau kokapen naturalaren estrategiarekin soilik aplikatzen da."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
@@ -205,37 +103,33 @@ msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
-msgstr ""
-"TRUE (egia) bada, leihoen epigrafeak dagokien koadro txikien gainean jarriko "
-"ditu, Shell-aren lehenespena (behean jartzearena) gainidatziz. Ezarpen hau "
-"aldatzeko eta aplikatzeko Shell berrabiarazi behar da."
+msgstr "TRUE (egia) bada, leihoen epigrafeak dagokien koadro txikien gainean jarriko ditu, Shell-aren lehenespena (behean jartzearena) gainidatziz. Ezarpen hau aldatzeko eta aplikatzeko Shell berrabiarazi behar da."
 
-#: extensions/places-menu/extension.js:78
-#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:80
+#: extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "Lekuak"
 
-#: extensions/places-menu/placeDisplay.js:65
+#: extensions/places-menu/placeDisplay.js:46
 #, javascript-format
-#| msgid "Failed to launch “%s”"
+msgid "Failed to launch “%s”"
+msgstr "Huts egin du '%s' abiaraztean"
+
+#: extensions/places-menu/placeDisplay.js:61
+#, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Huts egin du “%s“(r)en bolumena muntatzean"
 
-#: extensions/places-menu/placeDisplay.js:78
-#, javascript-format
-msgid "Failed to launch “%s”"
-msgstr "Huts egin du “%s“ abiaraztean"
-
-#: extensions/places-menu/placeDisplay.js:137
-#: extensions/places-menu/placeDisplay.js:160
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Ordenagailua"
 
-#: extensions/places-menu/placeDisplay.js:303
+#: extensions/places-menu/placeDisplay.js:358
 msgid "Home"
 msgstr "Karpeta nagusia"
 
-#: extensions/places-menu/placeDisplay.js:347
+#: extensions/places-menu/placeDisplay.js:403
 msgid "Browse Network"
 msgstr "Arakatu sarea"
 
@@ -244,7 +138,6 @@ msgid "Cycle Screenshot Sizes"
 msgstr "Pantaila-argazkien tamainak begiztan"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
-#| msgid "Cycle Screenshot Sizes"
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Pantaila-argazkien tamainak atzerantz begiztan"
 
@@ -256,54 +149,49 @@ msgstr "Gaiaren izena"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Gaiaren izena, ~/.themes/izena/gnome-shell direktoriotik kargatzeko"
 
-#: extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:99
 msgid "Close"
 msgstr "Itxi"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Leheneratu"
 
-#: extensions/window-list/extension.js:130
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "Minimizatu"
 
-#: extensions/window-list/extension.js:136
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Desmaximizatu"
 
-#: extensions/window-list/extension.js:137
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "Maximizatu"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:408
 msgid "Minimize all"
 msgstr "Minimizatu denak"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:414
 msgid "Unminimize all"
 msgstr "Leheneratu denak"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:420
 msgid "Maximize all"
 msgstr "Maximizatu denak"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:428
 msgid "Unmaximize all"
 msgstr "Desmaximizatu denak"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:436
 msgid "Close all"
 msgstr "Itxi denak"
 
-#: extensions/window-list/extension.js:678
-#: extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Lan arearen adierazlea"
-
-#: extensions/window-list/extension.js:842
+#: extensions/window-list/extension.js:716
 msgid "Window List"
-msgstr "Leihoen zerrenda"
+msgstr "Leiho-zerrenda"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
@@ -313,10 +201,7 @@ msgstr "Noiz elkartu leihoak"
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
-msgstr ""
-"Aplikazio bereko leihoak leihoen zerrendan noiz elkartuko diren erabakitzen "
-"du. Balio erabilgarriak: “never“ (inoiz ere ez), “auto“ (automatikoa) eta "
-"“always“ (beti)."
+msgstr "Aplikazio bereko leihoak leihoen zerrendan noiz elkartuko diren erabakitzen du. Balio erabilgarriak: “never“ (inoiz ere ez), “auto“ (automatikoa) eta “always“ (beti)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 msgid "Show the window list on all monitors"
@@ -326,23 +211,21 @@ msgstr "Erakutsi leihoen zerrenda pantaila guztietan"
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
-msgstr ""
-"Leihoen zerrenda konektatutako pantaila guztietan edo soilik pantaila "
-"nagusian erakutsiko den."
+msgstr "Leihoen zerrenda konektatutako pantaila guztietan edo soilik pantaila nagusian erakutsiko den."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
-msgstr "Leihoak elkartzea"
+msgstr "Leiho-elkartzea"
 
-#: extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Leihoak inoiz ez elkartu"
 
-#: extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Elkartu leihoak lekua mugatuta dagoenean"
 
-#: extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Elkartu beti leihoak"
 
@@ -350,18 +233,97 @@ msgstr "Elkartu beti leihoak"
 msgid "Show on all monitors"
 msgstr "Erakutsi pantaila guztietan"
 
-#: extensions/workspace-indicator/prefs.js:141
+#: extensions/window-list/workspaceIndicator.js:211
+#: extensions/workspace-indicator/extension.js:216
+msgid "Workspace Indicator"
+msgstr "Lan arearen adierazlea"
+
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Laneko areen izenak"
 
-#: extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Izena"
 
-#: extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:191
 #, javascript-format
 msgid "Workspace %d"
 msgstr "%d. laneko area"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Erantsi elkarrizketa-koadro modala leiho gurasoari"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "Gako honek org.gnome.mutter-eko gakoa gainidazten du GNOME Shell "
+#~ "exekutatzen ari denean."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Botoien antolamendua titulu-barran"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
+#~ "running GNOME Shell."
+#~ msgstr ""
+#~ "Gako honekorg.gnome.desktop.wm.preferences-eko gakoa gainidazten du GNOME "
+#~ "Shell exekutatzen ari denean."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr ""
+#~ "Gaitu ertza lauza gisa ezartzea leihoak pantailaren ertzetara jaregitean"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Laneko areak pantaila nagusian soilik"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr ""
+#~ "Fokuaren aldaketaren atzerapena saguaren moduan erakusleak mugitzeari "
+#~ "utzi arte"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "Koadro txikiak soilik"
+
+#~ msgid "Application icon only"
+#~ msgstr "Aplikazioen ikonoa soilik"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "Koadro txikien eta aplikazioen ikonoa"
+
+#~ msgid "Present windows as"
+#~ msgstr "Aurkeztu leihoa honela"
+
+#~ msgid "Show only windows in the current workspace"
+#~ msgstr "Erakutsi leihoak bakarrik uneko laneko arean"
+
+#~ msgid "Activities Overview"
+#~ msgstr "Jardueren ikuspegi orokorra"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Kaixo mundua!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "Ongi etorriaren bestelako testua."
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on "
+#~ "the panel."
+#~ msgstr ""
+#~ "Ez badago hutsik, panelean klik egitean erakutsiko den testua dauka."
+
+#~ msgid "Message"
+#~ msgstr "Mezua"
+
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell "
+#~ "and as such it has little functionality on its own.\n"
+#~ "Nevertheless it’s possible to customize the greeting message."
+#~ msgstr ""
+#~ "Shell-erako portaera egokia duten hedapenak nola eraikitzen den "
+#~ "erakusteko helburua du adibideak,  ondorioz bere kasa funtzionalitate "
+#~ "baxukoa da.\n"
+#~ "Hala ere, ongi etorriko mezua pertsonalizatzeko aukera dago."
 
 #~ msgid "CPU"
 #~ msgstr "PUZ"
@@ -375,7 +337,6 @@ msgstr "%d. laneko area"
 #~ msgid "Window management and application launching"
 #~ msgstr "Leiho-kudeaketa eta aplikazioak abiaraztea"
 
-#, fuzzy
 #~ msgid "Online Accounts"
 #~ msgstr "Nire kontua"
 
