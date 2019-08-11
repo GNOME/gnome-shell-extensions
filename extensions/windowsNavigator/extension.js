@@ -158,7 +158,7 @@ var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
     }
 
     _onKeyPress(s, o) {
-        let viewSelector = Main.overview.viewSelector;
+        let { viewSelector } = Main.overview;
         if (viewSelector._activePage != viewSelector._workspacesPage)
             return false;
 

@@ -2,7 +2,7 @@
 // Start apps on custom workspaces
 /* exported init enable disable */
 
-const Shell = imports.gi.Shell;
+const { Shell } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
