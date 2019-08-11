@@ -495,7 +495,7 @@ var PlacesManager = class {
         for (let i = 0; i < lines.length; i++) {
             let line = lines[i];
             let components = line.split(' ');
-            let bookmark = components[0];
+            let [bookmark] = components;
 
             if (!bookmark)
                 continue;
