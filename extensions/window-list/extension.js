@@ -751,7 +751,7 @@ const WindowList = GObject.registerClass({
             'keyboard-visible-changed',
             (o, state) => {
                 Main.layoutManager.keyboardBox.visible = state;
-                let keyboardBox = Main.layoutManager.keyboardBox;
+                let { keyboardBox } = Main.layoutManager;
                 keyboardBox.visible = state;
                 if (state) {
                     Main.uiGroup.set_child_above_sibling(
@@ -858,7 +858,7 @@ const WindowList = GObject.registerClass({
 
         let children = this._windowList.get_children();
         let [, childWidth] = children[0].get_preferred_width(-1);
-        let spacing = this._windowList.layout_manager.spacing;
+        let { spacing } = this._windowList.layout_manager;
 
         let workspace = global.workspace_manager.get_active_workspace();
         let windows = global.display.get_tab_list(Meta.TabList.NORMAL, workspace);
