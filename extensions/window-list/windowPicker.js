@@ -6,17 +6,17 @@ const Main = imports.ui.main;
 const Overview = imports.ui.overview;
 const { WorkspacesDisplay } = imports.ui.workspacesView;
 
-let MyWorkspacesDisplay = class extends WorkspacesDisplay {
-    constructor() {
-        super();
+let MyWorkspacesDisplay = GObject.registerClass({
+    GTypeName: 'WindowList_MyWorkspacesDisplay'
+}, class MyWorkspacesDisplay extends WorkspacesDisplay {
+    _init() {
+        super._init();
 
-        this.actor.add_constraint(
+        this.add_constraint(
             new Layout.MonitorConstraint({
                 primary: true,
                 work_area: true
             }));
-
-        this.actor.connect('destroy', this._onDestroy.bind(this));
 
         this._workareasChangedId = global.display.connect('workareas-changed',
             this._onWorkAreasChanged.bind(this));
@@ -49,8 +49,8 @@ let MyWorkspacesDisplay = class extends WorkspacesDisplay {
         super._updateWorkspacesViews();
 
         this._workspacesViews.forEach(v => {
-            Main.layoutManager.overviewGroup.remove_actor(v.actor);
-            Main.windowPicker.add_actor(v.actor);
+            Main.layoutManager.overviewGroup.remove_actor(v);
+            Main.windowPicker.add_actor(v);
         });
     }
 
@@ -58,8 +58,10 @@ let MyWorkspacesDisplay = class extends WorkspacesDisplay {
         if (this._workareasChangedId)
             global.display.disconnect(this._workareasChangedId);
         this._workareasChangedId = 0;
+
+        super._onDestroy();
     }
-};
+});
 
 var WindowPicker = GObject.registerClass({
     GTypeName: 'WindowListWindowPicker',
@@ -97,7 +99,7 @@ var WindowPicker = GObject.registerClass({
         Main.overview.addAction = a => this._backgroundGroup.add_action(a);
 
         this._workspacesDisplay = new MyWorkspacesDisplay();
-        this.add_child(this._workspacesDisplay.actor);
+        this.add_child(this._workspacesDisplay);
 
         Main.overview.addAction = addActionOrig;
 

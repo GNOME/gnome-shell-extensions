@@ -6,9 +6,11 @@ const Main = imports.ui.main;
 const Workspace = imports.ui.workspace;
 const WorkspacesView = imports.ui.workspacesView;
 
-var MyWindowOverlay = class extends Workspace.WindowOverlay {
-    constructor(windowClone, parentActor) {
-        super(windowClone, parentActor);
+var MyWindowOverlay = GObject.registerClass({
+    GTypeName: 'WindowsNavigator_MyWindowOverlay'
+}, class MyWindowOverlay extends Workspace.WindowOverlay {
+    _init(windowClone, parentActor) {
+        super._init(windowClone, parentActor);
 
         this._id = null;
         this._text = new St.Label({
@@ -39,21 +41,23 @@ var MyWindowOverlay = class extends Workspace.WindowOverlay {
         this._text.set_position(Math.floor(textX) + 5, Math.floor(textY) + 5);
         this._text.raise_top();
     }
-};
+});
 
-var MyWorkspace = class extends Workspace.Workspace {
-    constructor(metaWorkspace, monitorIndex) {
-        super(metaWorkspace, monitorIndex);
+var MyWorkspace = GObject.registerClass({
+    GTypeName: 'WindowsNavigator_MyWorkspace'
+}, class MyWorkspace extends Workspace.Workspace {
+    _init(metaWorkspace, monitorIndex) {
+        super._init(metaWorkspace, monitorIndex);
 
         if (metaWorkspace && metaWorkspace.index() < 9) {
             this._tip = new St.Label({
                 style_class: 'extension-windowsNavigator-window-tooltip',
                 visible: false
             });
-            this.actor.add_actor(this._tip);
+            this.add_actor(this._tip);
 
-            this.actor.connect('notify::scale-x', () => {
-                this._tip.set_scale(1 / this.actor.scale_x, 1 / this.actor.scale_x);
+            this.connect('notify::scale-x', () => {
+                this._tip.set_scale(1 / this.scale_x, 1 / this.scale_x);
             });
         } else
             this._tip = null;
@@ -66,7 +70,7 @@ var MyWorkspace = class extends Workspace.Workspace {
 
         // Hand code this instead of using _getSpacingAndPadding
         // because that fails on empty workspaces
-        let node = this.actor.get_theme_node();
+        let node = this.get_theme_node();
         let padding = {
             left: node.get_padding(St.Side.LEFT),
             top: node.get_padding(St.Side.TOP),
@@ -110,11 +114,13 @@ var MyWorkspace = class extends Workspace.Workspace {
                 this._windowOverlays[i].hideTooltip();
         }
     }
-};
+});
 
-var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
-    constructor(width, height, x, y, workspaces) {
-        super(width, height, x, y, workspaces);
+var MyWorkspacesView = GObject.registerClass({
+    GTypeName: 'WindowsNavigator_MyWorkspacesView'
+}, class MyWorkspacesView extends WorkspacesView.WorkspacesView {
+    _init(width, height, x, y, workspaces) {
+        super._init(width, height, x, y, workspaces);
 
         this._pickWorkspace = false;
         this._pickWindow = false;
@@ -237,7 +243,7 @@ var MyWorkspacesView = class extends WorkspacesView.WorkspacesView {
         }
         return false;
     }
-};
+});
 
 class Extension {
     constructor() {
