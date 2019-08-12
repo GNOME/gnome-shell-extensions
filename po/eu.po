@@ -10,8 +10,8 @@
 msgid ""
 msgstr "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
-"POT-Creation-Date: 2019-07-20 12:03+0000\n"
-"PO-Revision-Date: 2019-08-11 10:00+0100\n"
+"POT-Creation-Date: 2019-08-11 13:48+0000\n"
+"PO-Revision-Date: 2019-08-12 00:42+0200\n"
 "Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -20,6 +20,7 @@ msgstr "Project-Id-Version: gnome-shell-extensions master\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Project-Style: gnome\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -149,47 +150,47 @@ msgstr "Gaiaren izena"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Gaiaren izena, ~/.themes/izena/gnome-shell direktoriotik kargatzeko"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Itxi"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Unminimize"
 msgstr "Leheneratu"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Minimize"
 msgstr "Minimizatu"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Unmaximize"
 msgstr "Desmaximizatu"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Maximize"
 msgstr "Maximizatu"
 
-#: extensions/window-list/extension.js:408
+#: extensions/window-list/extension.js:430
 msgid "Minimize all"
 msgstr "Minimizatu denak"
 
-#: extensions/window-list/extension.js:414
+#: extensions/window-list/extension.js:436
 msgid "Unminimize all"
 msgstr "Leheneratu denak"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:442
 msgid "Maximize all"
 msgstr "Maximizatu denak"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:450
 msgid "Unmaximize all"
 msgstr "Desmaximizatu denak"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:458
 msgid "Close all"
 msgstr "Itxi denak"
 
-#: extensions/window-list/extension.js:716
+#: extensions/window-list/extension.js:740
 msgid "Window List"
 msgstr "Leiho-zerrenda"
 
@@ -204,10 +205,19 @@ msgid ""
 msgstr "Aplikazio bereko leihoak leihoen zerrendan noiz elkartuko diren erabakitzen du. Balio erabilgarriak: “never“ (inoiz ere ez), “auto“ (automatikoa) eta “always“ (beti)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:82
+msgid "Show windows from all workspaces"
+msgstr "Erakutsi laneko area guztietako leihoak"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr "Laneko area guztietako leihoak edo uneko areakoak soilik erakutsiko diren."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "Erakutsi leihoen zerrenda pantaila guztietan"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -293,9 +303,6 @@ msgstr "%d. laneko area"
 
 #~ msgid "Present windows as"
 #~ msgstr "Aurkeztu leihoa honela"
-
-#~ msgid "Show only windows in the current workspace"
-#~ msgstr "Erakutsi leihoak bakarrik uneko laneko arean"
 
 #~ msgid "Activities Overview"
 #~ msgstr "Jardueren ikuspegi orokorra"
