@@ -2,15 +2,15 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Petr Kovar <pknbe@volny.cz>, 2013.
-# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013, 2014, 2015, 2017.
+# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013, 2014, 2015, 2017, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-07-05 15:07+0000\n"
-"PO-Revision-Date: 2017-07-10 16:48+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2019-08-09 22:24+0000\n"
+"PO-Revision-Date: 2019-08-16 10:16+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -28,71 +28,11 @@ msgstr "GNOME klasik"
 msgid "This session logs you into GNOME Classic"
 msgstr "Toto sezení vás přihlásí do GNOME klasik"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "Modální dialogová okna připojovat k rodičovskému oknu"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "Když běží GNOME Shell, tento klíč přepíše klíč v org.gnome.mutter"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Uspořádání tlačítek v záhlaví"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Když běží GNOME Shell, tento klíč přepíše klíč v org.gnome.desktop.wm."
-"preferences"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "Okna upuštěná u okraje obrazovky nechat řadit jako dlaždice"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "Pracovní plochy jen na hlavním monitoru"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr "Neměnit zaměření v režimu s myší, dokud se nezastaví ukazatel"
-
-#: extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "Pouze náhled"
-
-#: extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "Pouze ikona aplikace"
-
-#: extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "Náhled a ikona aplikace"
-
-#: extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "Představovat okna jako"
-
-#: extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "Zobrazovat pouze okna z aktuální pracovní plochy"
-
-#: extensions/apps-menu/extension.js:41
-msgid "Activities Overview"
-msgstr "Přehled činností"
-
-#: extensions/apps-menu/extension.js:141
+#: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Oblíbené"
 
-#: extensions/apps-menu/extension.js:436
+#: extensions/apps-menu/extension.js:368
 msgid "Applications"
 msgstr "Aplikace"
 
@@ -112,66 +52,37 @@ msgstr ""
 msgid "Application"
 msgstr "Aplikace"
 
-#: extensions/auto-move-windows/prefs.js:69
-#: extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Pracovní plocha"
 
-#: extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Přidat pravidlo"
 
-#: extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Vytvoření nového srovnávacího pravidla"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Přidat"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:102
+#: extensions/places-menu/placeDisplay.js:232
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Vysunutí disku „%s“ selhalo:"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:118
 msgid "Removable devices"
 msgstr "Výměnná zařízení"
 
-#: extensions/drive-menu/extension.js:149
+#: extensions/drive-menu/extension.js:145
 msgid "Open Files"
 msgstr "Otevřít soubory"
-
-#: extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Ahoj světe!"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
-msgid "Alternative greeting text."
-msgstr "Alternativní uvítací text"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"Pokud není prázdné, obsahuje text, který se objeví po kliknutí na panel."
-
-#: extensions/example/prefs.js:30
-msgid "Message"
-msgstr "Zpráva"
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it’s possible to customize the greeting message."
-msgstr ""
-"Rozšíření Example vám má jen ukázat, jak sestavit dobře fungující rozšíření "
-"pro Shell, a tak je jeho praktické využití pramalé.\n"
-"Přesto si můžete alespoň upravit uvítací zprávu."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
@@ -201,31 +112,31 @@ msgstr ""
 "přepíše výchozí chování shellu, který jej umisťuje dolů. Změna tohoto "
 "nastavení vyžaduje restart shellu, aby se projevila."
 
-#: extensions/places-menu/extension.js:78
-#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:80
+#: extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "Místa"
 
-#: extensions/places-menu/placeDisplay.js:65
-#, javascript-format
-msgid "Failed to mount volume for “%s”"
-msgstr "Selhalo připojení svazku pro „%s“"
-
-#: extensions/places-menu/placeDisplay.js:78
+#: extensions/places-menu/placeDisplay.js:46
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Selhalo spuštění „%s“"
 
-#: extensions/places-menu/placeDisplay.js:137
-#: extensions/places-menu/placeDisplay.js:160
+#: extensions/places-menu/placeDisplay.js:61
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Selhalo připojení svazku pro „%s“"
+
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Počítač"
 
-#: extensions/places-menu/placeDisplay.js:303
+#: extensions/places-menu/placeDisplay.js:358
 msgid "Home"
 msgstr "Domů"
 
-#: extensions/places-menu/placeDisplay.js:347
+#: extensions/places-menu/placeDisplay.js:403
 msgid "Browse Network"
 msgstr "Procházet síť"
 
@@ -245,52 +156,47 @@ msgstr "Název motivu"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Název motivu, který se má načíst z ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:99
 msgid "Close"
 msgstr "Zavřít"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Zrušit minimalizaci"
 
-#: extensions/window-list/extension.js:130
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "Minimalizovat"
 
-#: extensions/window-list/extension.js:136
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Zrušit maximalizaci"
 
-#: extensions/window-list/extension.js:137
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "Maximalizovat"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:431
 msgid "Minimize all"
 msgstr "Minimalizovat všechna"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:437
 msgid "Unminimize all"
 msgstr "Zrušit minimalizaci všech"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:443
 msgid "Maximize all"
 msgstr "Maximalizovat všechna"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:451
 msgid "Unmaximize all"
 msgstr "Zrušit maximalizaci všech"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:459
 msgid "Close all"
 msgstr "Zavřít všechna"
 
-#: extensions/window-list/extension.js:678
-#: extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Ukazatel pracovní plochy"
-
-#: extensions/window-list/extension.js:842
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Seznam oken"
 
@@ -307,10 +213,19 @@ msgstr ""
 "hodnoty jsou „never“ (nikdy), „auto“ (automaticky) a „always“ (vždy)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:82
+msgid "Show windows from all workspaces"
+msgstr "Zobrazovat okna ze všech pracovních ploch"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr "Zda zobrazovat okna ze všech pracovních ploch nebo jen z aktuální."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "Zobrazovat seznam oken na všech monitorech"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -318,19 +233,19 @@ msgstr ""
 "Zda zobrazovat seznam oken na všech připojených monitorech nebo jen na "
 "hlavním."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Seskupování oken"
 
-#: extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Nikdy neseskupovat okna"
 
-#: extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Seskupovat okna při nedostatku místa"
 
-#: extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Vždy seskupovat okna"
 
@@ -338,15 +253,20 @@ msgstr "Vždy seskupovat okna"
 msgid "Show on all monitors"
 msgstr "Zobrazovat na všech monitorech"
 
-#: extensions/workspace-indicator/prefs.js:141
+#: extensions/window-list/workspaceIndicator.js:211
+#: extensions/workspace-indicator/extension.js:216
+msgid "Workspace Indicator"
+msgstr "Ukazatel pracovní plochy"
+
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Názvy pracovních ploch"
 
-#: extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Název"
 
-#: extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:191
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Pracovní plocha %d"
