@@ -504,9 +504,15 @@ var PlacesManager = class {
             if (file.is_native() && !file.query_exists(null))
                 continue;
 
+            let label = null;
+            if (components.length > 1)
+                label = components.slice(1).join(' ');
+
             let duplicate = false;
             for (let i = 0; i < this._places.special.length; i++) {
                 if (file.equal(this._places.special[i].file)) {
+                    this._places.special[i].name = label;
+                    this._places.special[i].emit('changed');
                     duplicate = true;
                     break;
                 }
@@ -521,10 +527,6 @@ var PlacesManager = class {
             }
             if (duplicate)
                 continue;
-
-            let label = null;
-            if (components.length > 1)
-                label = components.slice(1).join(' ');
 
             bookmarks.push(new PlaceInfo('bookmarks', file, label));
         }
