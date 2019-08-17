@@ -10,10 +10,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-08-11 01:33+0000\n"
-"PO-Revision-Date: 2017-08-29 12:32+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2019-08-09 22:24+0000\n"
+"PO-Revision-Date: 2019-08-17 16:00+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Project-Style: gnome\n"
 "X-POT-Import-Date: 2012-03-05 15:06:12+0000\n"
 
@@ -33,71 +33,11 @@ msgstr "Perinteinen Gnome"
 msgid "This session logs you into GNOME Classic"
 msgstr "Tämä istunto kirjaa sinut perinteiseen Gnomeen"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "Liitä modaali-ikkuna ylätason ikkunaan"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Painikkeiden järjestys otsikkopalkissa"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "Työtilat vain ensisijaisella näytöllä"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"Aseta viive kohdistusmuutoksille hiiritilassa, kunnes hiiren osoitin "
-"lopettaa liikkumisen"
-
-#: extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "Pelkkä pienoiskuva"
-
-#: extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "Pelkkä sovelluksen kuvake"
-
-#: extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "Pienoiskuva ja sovelluksen kuvake"
-
-#: extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "Ikkunoiden esittäminen"
-
-#: extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "Näytä vain nykyisessä työtilassa olevat ikkunat"
-
-#: extensions/apps-menu/extension.js:41
-msgid "Activities Overview"
-msgstr "Yleisnäkymä"
-
-#: extensions/apps-menu/extension.js:141
+#: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Suosikit"
 
-#: extensions/apps-menu/extension.js:436
+#: extensions/apps-menu/extension.js:368
 msgid "Applications"
 msgstr "Sovellukset"
 
@@ -115,64 +55,37 @@ msgstr ""
 msgid "Application"
 msgstr "Sovellus"
 
-#: extensions/auto-move-windows/prefs.js:69
-#: extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Työtila"
 
-#: extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Lisää sääntö"
 
-#: extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Luo uusi vastaava sääntö"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Lisää"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:107
+#: extensions/drive-menu/extension.js:102
+#: extensions/places-menu/placeDisplay.js:232
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Aseman “%s” irrottaminen epäonnistui:"
 
-#: extensions/drive-menu/extension.js:125
+#: extensions/drive-menu/extension.js:118
 msgid "Removable devices"
 msgstr "Erilliset tallennusvälineet"
 
-#: extensions/drive-menu/extension.js:150
-#| msgid "Open File"
+#: extensions/drive-menu/extension.js:145
 msgid "Open Files"
 msgstr "Avaa tiedostonhallinta"
-
-#: extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Hei, maailma!"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
-msgid "Alternative greeting text."
-msgstr "Vaihtoehtoinen tervehdysteksti."
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr "Jos ei tyhjä, sisältää paneelia napsauttaessa näytettävän tekstin."
-
-#: extensions/example/prefs.js:30
-msgid "Message"
-msgstr "Viesti"
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it’s possible to customize the greeting message."
-msgstr ""
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
@@ -199,32 +112,31 @@ msgstr ""
 "Tämä syrjäyttää oletusasetuksen, eli otsikkotekstin asettamisen pienoiskuvan "
 "alle. Tämän asetuksen muutos vaatii Gnomen uudelleenkäynnistyksen."
 
-#: extensions/places-menu/extension.js:78
-#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:80
+#: extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "Sijainnit"
 
-#: extensions/places-menu/placeDisplay.js:65
-#, javascript-format
-#| msgid "Failed to launch “%s”"
-msgid "Failed to mount volume for “%s”"
-msgstr "Taltion “%s” liittäminen epäonnistui"
-
-#: extensions/places-menu/placeDisplay.js:78
+#: extensions/places-menu/placeDisplay.js:46
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Kohteen “%s” käynnistys epäonnistui"
 
-#: extensions/places-menu/placeDisplay.js:137
-#: extensions/places-menu/placeDisplay.js:160
+#: extensions/places-menu/placeDisplay.js:61
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Taltion “%s” liittäminen epäonnistui"
+
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Tietokone"
 
-#: extensions/places-menu/placeDisplay.js:303
+#: extensions/places-menu/placeDisplay.js:358
 msgid "Home"
 msgstr "Koti"
 
-#: extensions/places-menu/placeDisplay.js:347
+#: extensions/places-menu/placeDisplay.js:403
 msgid "Browse Network"
 msgstr "Selaa verkkoa"
 
@@ -246,52 +158,47 @@ msgstr "Teeman nimi"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Teeman nimi, ladataan sijainnista ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:99
 msgid "Close"
 msgstr "Sulje"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Palauta pienennys"
 
-#: extensions/window-list/extension.js:130
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "Pienennä"
 
-#: extensions/window-list/extension.js:136
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Palauta suurennus"
 
-#: extensions/window-list/extension.js:137
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "Suurenna"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:431
 msgid "Minimize all"
 msgstr "Pienennä kaikki"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:437
 msgid "Unminimize all"
 msgstr "Palauta kaikkien koko"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:443
 msgid "Maximize all"
 msgstr "Suurenna kaikki"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:451
 msgid "Unmaximize all"
 msgstr "Palauta kaikkien koko"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:459
 msgid "Close all"
 msgstr "Sulje kaikki"
 
-#: extensions/window-list/extension.js:678
-#: extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Työtilan ilmaisin"
-
-#: extensions/window-list/extension.js:842
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Ikkunaluettelo"
 
@@ -308,10 +215,21 @@ msgstr ""
 "Mahdolliset arvot ovat “never”, “auto” ja “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:82
+msgid "Show windows from all workspaces"
+msgstr "Näytä ikkunat kaikista työtiloista"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr ""
+"Näytetäänkö ikkunat kaikista työtiloista vai ainoastaan nykyisestä "
+"työtilasta."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "Näytä ikkunaluettelo kaikilla näytöillä"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -319,19 +237,19 @@ msgstr ""
 "Näytetäänkö ikkunaluettelo kaikilla liitetyillä näytöillä vai ainoastaan "
 "ensisijaisella näytöllä."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Ikkunoiden ryhmitys"
 
-#: extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Älä ryhmitä ikkunoita koskaan"
 
-#: extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Ryhmitä ikkunat tilan ollessa rajallinen"
 
-#: extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Ryhmitä ikkunat aina"
 
@@ -339,18 +257,66 @@ msgstr "Ryhmitä ikkunat aina"
 msgid "Show on all monitors"
 msgstr "Näytä kaikilla näytöillä"
 
-#: extensions/workspace-indicator/prefs.js:141
+#: extensions/window-list/workspaceIndicator.js:211
+#: extensions/workspace-indicator/extension.js:216
+msgid "Workspace Indicator"
+msgstr "Työtilan ilmaisin"
+
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Työtilojen nimet"
 
-#: extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Nimi"
 
-#: extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:191
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Työtila %d"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Liitä modaali-ikkuna ylätason ikkunaan"
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Painikkeiden järjestys otsikkopalkissa"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Työtilat vain ensisijaisella näytöllä"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr ""
+#~ "Aseta viive kohdistusmuutoksille hiiritilassa, kunnes hiiren osoitin "
+#~ "lopettaa liikkumisen"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "Pelkkä pienoiskuva"
+
+#~ msgid "Application icon only"
+#~ msgstr "Pelkkä sovelluksen kuvake"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "Pienoiskuva ja sovelluksen kuvake"
+
+#~ msgid "Present windows as"
+#~ msgstr "Ikkunoiden esittäminen"
+
+#~ msgid "Activities Overview"
+#~ msgstr "Yleisnäkymä"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Hei, maailma!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "Vaihtoehtoinen tervehdysteksti."
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on "
+#~ "the panel."
+#~ msgstr "Jos ei tyhjä, sisältää paneelia napsauttaessa näytettävän tekstin."
+
+#~ msgid "Message"
+#~ msgstr "Viesti"
 
 #~ msgid "CPU"
 #~ msgstr "Suoritin"
