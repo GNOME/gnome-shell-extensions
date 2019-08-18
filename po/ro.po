@@ -8,9 +8,10 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2017-12-06 16:42+0000\n"
-"PO-Revision-Date: 2018-01-08 19:10+0200\n"
-"Last-Translator: Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>\n"
+"POT-Creation-Date: 2019-08-09 22:24+0000\n"
+"PO-Revision-Date: 2019-08-18 14:22+0300\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28 [at] gmail [dot] "
+"com>\n"
 "Language-Team: Gnome Romanian Translation Team\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -29,75 +30,11 @@ msgstr "GNOME Clasic"
 msgid "This session logs you into GNOME Classic"
 msgstr "Această sesiune vă autentifică în GNOME Clasic"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "Atașează dialogul modal la fereastra părinte"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Această cheie înlocuiește cheia corespondentă din org.gnome.mutter când "
-"interfața GNOME rulează."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Aranjamentul butoanelor din bara de titlu"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Această cheie înlocuiește cheia corespondentă din org.gnome.desktop.wm."
-"preferences când interfața GNOME rulează."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"Activează mozaic lateral la plasarea ferestrelor pe marginile ecranului"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "Spații de lucru doar pe monitorul principal"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"Întârzie schimbările de focus în modul maus până când cursorul se oprește"
-
-#: extensions/alternate-tab/prefs.js:19
-msgid "Thumbnail only"
-msgstr "Doar miniatură"
-
-#: extensions/alternate-tab/prefs.js:20
-msgid "Application icon only"
-msgstr "Doar pictograma aplicației"
-
-#: extensions/alternate-tab/prefs.js:21
-msgid "Thumbnail and application icon"
-msgstr "Miniatură și pictograma aplicației"
-
-#: extensions/alternate-tab/prefs.js:34
-msgid "Present windows as"
-msgstr "Prezintă ferestrele ca"
-
-#: extensions/alternate-tab/prefs.js:65
-msgid "Show only windows in the current workspace"
-msgstr "Arată doar ferestrele aflate în spațiul de lucru actual"
-
-#: extensions/apps-menu/extension.js:37
-msgid "Activities Overview"
-msgstr "Panoramă activități"
-
-#: extensions/apps-menu/extension.js:130
+#: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Favorite"
 
-#: extensions/apps-menu/extension.js:417
+#: extensions/apps-menu/extension.js:368
 msgid "Applications"
 msgstr "Aplicații"
 
@@ -114,32 +51,31 @@ msgstr ""
 "fișierului de birou) urmat de simbolul „două puncte” și un număr al "
 "spațiului de lucru"
 
-#: extensions/auto-move-windows/prefs.js:53
+#: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Aplicație"
 
-#: extensions/auto-move-windows/prefs.js:62
-#: extensions/auto-move-windows/prefs.js:117
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Spațiu de lucru"
 
-#: extensions/auto-move-windows/prefs.js:78
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Adaugă o regulă"
 
-#: extensions/auto-move-windows/prefs.js:98
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Creează o regulă nouă de potrivire"
 
-#: extensions/auto-move-windows/prefs.js:103
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Adaugă"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:103
-#: extensions/places-menu/placeDisplay.js:216
+#: extensions/drive-menu/extension.js:102
+#: extensions/places-menu/placeDisplay.js:232
 #, javascript-format
-#| msgid "Ejecting drive '%s' failed:"
 msgid "Ejecting drive “%s” failed:"
 msgstr "Scoaterea unității „%s” a eșuat:"
 
@@ -147,46 +83,9 @@ msgstr "Scoaterea unității „%s” a eșuat:"
 msgid "Removable devices"
 msgstr "Dispozitive detașabile"
 
-#: extensions/drive-menu/extension.js:143
-#| msgid "Open File"
+#: extensions/drive-menu/extension.js:145
 msgid "Open Files"
 msgstr "Deschide fișiere"
-
-#: extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Bună ziua, lume!"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
-msgid "Alternative greeting text."
-msgstr "Text alternativ de salut."
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"Dacă nu este gol, conține un text care va fi afișat când se apasă clic pe "
-"panou."
-
-#: extensions/example/prefs.js:27
-msgid "Message"
-msgstr "Mesaj"
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: extensions/example/prefs.js:40
-#| msgid ""
-#| "Example aims to show how to build well behaved extensions for the Shell "
-#| "and as such it has little functionality on its own.\n"
-#| "Nevertheless it's possible to customize the greeting message."
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it’s possible to customize the greeting message."
-msgstr ""
-"Exemplul are ca scop să prezinte cum anume să construiți extensii pentru "
-"Shell, ce se comportă corect, și au o funcționalitate proprie redusă.\n"
-"Cu toate acestea, este posibil să personalizați mesajul de întâmpinare."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
@@ -218,32 +117,31 @@ msgstr ""
 "Schimbând această configurare necesită repornire shell-ului pentru a avea "
 "efect."
 
-#: extensions/places-menu/extension.js:79
-#: extensions/places-menu/extension.js:82
+#: extensions/places-menu/extension.js:80
+#: extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "Locații"
 
-#: extensions/places-menu/placeDisplay.js:66
+#: extensions/places-menu/placeDisplay.js:46
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr "Eșec la lansarea „%s”"
+
+#: extensions/places-menu/placeDisplay.js:61
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Eșec la montarea volumului pentru „%s”"
 
-#: extensions/places-menu/placeDisplay.js:79
-#, javascript-format
-#| msgid "Failed to launch \"%s\""
-msgid "Failed to launch “%s”"
-msgstr "Eșec la lansarea „%s”"
-
-#: extensions/places-menu/placeDisplay.js:135
-#: extensions/places-menu/placeDisplay.js:158
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Calculator"
 
-#: extensions/places-menu/placeDisplay.js:333
+#: extensions/places-menu/placeDisplay.js:358
 msgid "Home"
 msgstr "Acasă"
 
-#: extensions/places-menu/placeDisplay.js:375
+#: extensions/places-menu/placeDisplay.js:403
 msgid "Browse Network"
 msgstr "Navighează rețeaua"
 
@@ -252,7 +150,6 @@ msgid "Cycle Screenshot Sizes"
 msgstr "Ciclează dimensiunile capturilor de ecran"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
-#| msgid "Cycle Screenshot Sizes"
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Ciclează dimensiunile capturilor de ecran în sens invers"
 
@@ -264,52 +161,47 @@ msgstr "Numele temei"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Numele temei, ce va fi încărcată din ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:99
 msgid "Close"
 msgstr "Închide"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Deminimizează"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "Minimizează"
 
-#: extensions/window-list/extension.js:132
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Demaximizează"
 
-#: extensions/window-list/extension.js:133
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "Maximizează"
 
-#: extensions/window-list/extension.js:408
+#: extensions/window-list/extension.js:431
 msgid "Minimize all"
 msgstr "Minimizează tot"
 
-#: extensions/window-list/extension.js:414
+#: extensions/window-list/extension.js:437
 msgid "Unminimize all"
 msgstr "Deminimizează tot"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:443
 msgid "Maximize all"
 msgstr "Maximizează tot"
 
-#: extensions/window-list/extension.js:429
+#: extensions/window-list/extension.js:451
 msgid "Unmaximize all"
 msgstr "Demaximizează tot"
 
-#: extensions/window-list/extension.js:438
+#: extensions/window-list/extension.js:459
 msgid "Close all"
 msgstr "Închide tot"
 
-#: extensions/window-list/extension.js:646
-#: extensions/workspace-indicator/extension.js:26
-msgid "Workspace Indicator"
-msgstr "Indicator al spațiului de lucru"
-
-#: extensions/window-list/extension.js:811
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Lista ferestrelor"
 
@@ -318,9 +210,6 @@ msgid "When to group windows"
 msgstr "Când să fie grupate ferestrele"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
-#| msgid ""
-#| "Decides when to group windows from the same application on the window "
-#| "list. Possible values are \"never\", \"auto\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
@@ -329,10 +218,21 @@ msgstr ""
 "ferestrei. Valorile posibile sunt „niciodată”, „auto” și „întotdeauna”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:82
+msgid "Show windows from all workspaces"
+msgstr "Arată ferestrele din toate spațiile de lucru"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr ""
+"Dacă să se arate ferestrele din toate spațiile de lucru sau doar din cel "
+"curent."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "Afișează lista ferestrelor pe toate monitoarele"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -340,38 +240,117 @@ msgstr ""
 "Dacă să se arate lista ferestrelor pe toate monitoarele conectate sau doar "
 "pe cel primar."
 
-#: extensions/window-list/prefs.js:28
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Gruparea ferestrelor"
 
-#: extensions/window-list/prefs.js:46
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Nu grupa ferestrele niciodată"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Grupează ferestrele când spațiul e limitat"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Grupează ferestrele întotdeauna"
 
-#: extensions/window-list/prefs.js:71
+#: extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
 msgstr "Arată pe toate monitoarele"
 
-#: extensions/workspace-indicator/prefs.js:134
+#: extensions/window-list/workspaceIndicator.js:211
+#: extensions/workspace-indicator/extension.js:216
+msgid "Workspace Indicator"
+msgstr "Indicator al spațiului de lucru"
+
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Numele spațiilor de lucru"
 
-#: extensions/workspace-indicator/prefs.js:150
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Nume"
 
-#: extensions/workspace-indicator/prefs.js:190
+#: extensions/workspace-indicator/prefs.js:191
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Spațiu de lucru %d"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Atașează dialogul modal la fereastra părinte"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "Această cheie înlocuiește cheia corespondentă din org.gnome.mutter când "
+#~ "interfața GNOME rulează."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Aranjamentul butoanelor din bara de titlu"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
+#~ "running GNOME Shell."
+#~ msgstr ""
+#~ "Această cheie înlocuiește cheia corespondentă din org.gnome.desktop.wm."
+#~ "preferences când interfața GNOME rulează."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr ""
+#~ "Activează mozaic lateral la plasarea ferestrelor pe marginile ecranului"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Spații de lucru doar pe monitorul principal"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr ""
+#~ "Întârzie schimbările de focus în modul maus până când cursorul se oprește"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "Doar miniatură"
+
+#~ msgid "Application icon only"
+#~ msgstr "Doar pictograma aplicației"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "Miniatură și pictograma aplicației"
+
+#~ msgid "Present windows as"
+#~ msgstr "Prezintă ferestrele ca"
+
+#~ msgid "Activities Overview"
+#~ msgstr "Panoramă activități"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Bună ziua, lume!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "Text alternativ de salut."
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on "
+#~ "the panel."
+#~ msgstr ""
+#~ "Dacă nu este gol, conține un text care va fi afișat când se apasă clic pe "
+#~ "panou."
+
+#~ msgid "Message"
+#~ msgstr "Mesaj"
+
+#~| msgid ""
+#~| "Example aims to show how to build well behaved extensions for the Shell "
+#~| "and as such it has little functionality on its own.\n"
+#~| "Nevertheless it's possible to customize the greeting message."
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell "
+#~ "and as such it has little functionality on its own.\n"
+#~ "Nevertheless it’s possible to customize the greeting message."
+#~ msgstr ""
+#~ "Exemplul are ca scop să prezinte cum anume să construiți extensii pentru "
+#~ "Shell, ce se comportă corect, și au o funcționalitate proprie redusă.\n"
+#~ "Cu toate acestea, este posibil să personalizați mesajul de întâmpinare."
 
 #~ msgid "GNOME Shell Classic"
 #~ msgstr "Interfața clasică GNOME"
