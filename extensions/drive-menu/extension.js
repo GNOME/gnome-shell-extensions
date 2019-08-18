@@ -54,9 +54,9 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
         let volume = this.mount.get_volume();
 
         if (volume == null) {
-            // probably a GDaemonMount, could be network or
-            // local, but we can't tell; assume it's local for now
-            return true;
+            let attr = Gio.FILE_ATTRIBUTE_FILESYSTEM_REMOTE;
+            let info = this.mount.get_root().query_filesystem_info(attr, null);
+            return !info.get_attribute_boolean(attr);
         }
 
         return volume.get_identifier('class') != 'network';
