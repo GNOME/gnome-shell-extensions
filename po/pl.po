@@ -1,16 +1,16 @@
 # Polish translation for gnome-shell-extensions.
-# Copyright © 2011-2017 the gnome-shell-extensions authors.
+# Copyright © 2011-2019 the gnome-shell-extensions authors.
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Piotr Drąg <piotrdrag@gmail.com>, 2011-2017.
-# Aviary.pl <community-poland@mozilla.org>, 2011-2017.
+# Piotr Drąg <piotrdrag@gmail.com>, 2011-2019.
+# Aviary.pl <community-poland@mozilla.org>, 2011-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-08-11 01:33+0000\n"
-"PO-Revision-Date: 2017-08-11 03:33+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2019-08-09 22:24+0000\n"
+"PO-Revision-Date: 2019-08-20 19:23+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -28,77 +28,11 @@ msgstr "Klasyczne GNOME"
 msgid "This session logs you into GNOME Classic"
 msgstr "Ta sesja loguje do klasycznego środowiska GNOME"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "Dołączanie modalnych okien dialogowych do okien nadrzędnych"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Ten klucz zastępuje klucz w „org.gnome.mutter”, kiedy uruchomiona jest "
-"powłoka GNOME."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Kolejność przycisków na pasku tytułowym"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Ten klucz zastępuje klucz w „org.gnome.desktop.wm.preferences”, kiedy "
-"uruchomiona jest powłoka GNOME."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"Włączenie kafelkowania przy krawędziach podczas przenoszenia okien do "
-"krawędzi ekranu"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "Obszary robocze tylko na pierwszym monitorze"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"Opóźnienie zmiany aktywności w trybie myszy do momentu, w którym kursor się "
-"zatrzymuje"
-
-#: extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "Tylko miniatury"
-
-#: extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "Tylko ikony programów"
-
-#: extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "Miniatura i ikona programu"
-
-#: extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "Wyświetlanie okien jako"
-
-#: extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "Wyświetlanie tylko okien w bieżącym obszarze roboczym"
-
-#: extensions/apps-menu/extension.js:41
-msgid "Activities Overview"
-msgstr "Ekran podglądu"
-
-#: extensions/apps-menu/extension.js:141
+#: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: extensions/apps-menu/extension.js:436
+#: extensions/apps-menu/extension.js:368
 msgid "Applications"
 msgstr "Programy"
 
@@ -118,67 +52,37 @@ msgstr ""
 msgid "Application"
 msgstr "Program"
 
-#: extensions/auto-move-windows/prefs.js:69
-#: extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Obszar roboczy"
 
-#: extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Dodaj regułę"
 
-#: extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Utwórz nową pasującą regułę"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Dodaj"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:107
+#: extensions/drive-menu/extension.js:102
+#: extensions/places-menu/placeDisplay.js:232
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Wysunięcie napędu „%s” się nie powiodło:"
 
-#: extensions/drive-menu/extension.js:125
+#: extensions/drive-menu/extension.js:118
 msgid "Removable devices"
 msgstr "Urządzenia wymienne"
 
-#: extensions/drive-menu/extension.js:150
+#: extensions/drive-menu/extension.js:145
 msgid "Open Files"
 msgstr "Otwórz menedżer plików"
-
-#: extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Witaj, świecie!"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
-msgid "Alternative greeting text."
-msgstr "Alternatywny tekst powitalny."
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"Jeśli nie jest puste, to zawiera tekst wyświetlany po kliknięciu panelu."
-
-#: extensions/example/prefs.js:30
-msgid "Message"
-msgstr "Wiadomość"
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it’s possible to customize the greeting message."
-msgstr ""
-"Przykład, jak tworzyć poprawne rozszerzenia dla powłoki, mające jak najmniej "
-"własnych funkcji.\n"
-"Niemniej można dostosować wiadomość powitalną."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
@@ -209,31 +113,31 @@ msgstr ""
 "powłokę. Zmiana tego ustawienia wymaga ponownego uruchomienia powłoki, aby "
 "uwzględnić zmiany."
 
-#: extensions/places-menu/extension.js:78
-#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:80
+#: extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "Miejsca"
 
-#: extensions/places-menu/placeDisplay.js:65
-#, javascript-format
-msgid "Failed to mount volume for “%s”"
-msgstr "Zamontowanie woluminu dla „%s” się nie powiodło"
-
-#: extensions/places-menu/placeDisplay.js:78
+#: extensions/places-menu/placeDisplay.js:46
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Uruchomienie „%s” się nie powiodło"
 
-#: extensions/places-menu/placeDisplay.js:137
-#: extensions/places-menu/placeDisplay.js:160
+#: extensions/places-menu/placeDisplay.js:61
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Zamontowanie woluminu dla „%s” się nie powiodło"
+
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Komputer"
 
-#: extensions/places-menu/placeDisplay.js:303
+#: extensions/places-menu/placeDisplay.js:358
 msgid "Home"
 msgstr "Katalog domowy"
 
-#: extensions/places-menu/placeDisplay.js:347
+#: extensions/places-menu/placeDisplay.js:403
 msgid "Browse Network"
 msgstr "Przeglądaj sieć"
 
@@ -253,52 +157,47 @@ msgstr "Nazwa motywu"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Nazwa motywu do wczytania z katalogu ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:99
 msgid "Close"
 msgstr "Zamknij"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Cofnij minimalizację"
 
-#: extensions/window-list/extension.js:130
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "Zminimalizuj"
 
-#: extensions/window-list/extension.js:136
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Cofnij maksymalizację"
 
-#: extensions/window-list/extension.js:137
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "Zmaksymalizuj"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:431
 msgid "Minimize all"
 msgstr "Zminimalizuj wszystkie"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:437
 msgid "Unminimize all"
 msgstr "Cofnij minimalizację wszystkich"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:443
 msgid "Maximize all"
 msgstr "Zmaksymalizuj wszystkie"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:451
 msgid "Unmaximize all"
 msgstr "Cofnij maksymalizację wszystkich"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:459
 msgid "Close all"
 msgstr "Zamknij wszystkie"
 
-#: extensions/window-list/extension.js:678
-#: extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Wskaźnik obszaru roboczego"
-
-#: extensions/window-list/extension.js:842
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Lista okien"
 
@@ -315,30 +214,40 @@ msgstr ""
 "wartości to „never” (nigdy), „auto” (automatycznie) i „always” (zawsze)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:82
+msgid "Show windows from all workspaces"
+msgstr "Wyświetlanie okien ze wszystkich obszarów roboczych"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr ""
+"Czy wyświetlać okna ze wszystkich obszarów roboczych, czy tylko z obecnego."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "Wyświetlanie listy okien na wszystkich monitorach"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr ""
-"Określa, czy wyświetlać listę okien na wszystkich podłączonych monitorach, "
-"czy tylko na głównym."
+"Czy wyświetlać listę okien na wszystkich podłączonych monitorach, czy tylko "
+"na głównym."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Grupowanie okien"
 
-#: extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Bez grupowania okien"
 
-#: extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Grupowanie okien, kiedy miejsce jest ograniczone"
 
-#: extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Stałe grupowanie okien"
 
@@ -346,15 +255,20 @@ msgstr "Stałe grupowanie okien"
 msgid "Show on all monitors"
 msgstr "Wyświetlanie na wszystkich monitorach"
 
-#: extensions/workspace-indicator/prefs.js:141
+#: extensions/window-list/workspaceIndicator.js:211
+#: extensions/workspace-indicator/extension.js:216
+msgid "Workspace Indicator"
+msgstr "Wskaźnik obszaru roboczego"
+
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Nazwy obszarów roboczych"
 
-#: extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Nazwa"
 
-#: extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:191
 #, javascript-format
 msgid "Workspace %d"
 msgstr "%d. obszar roboczy"
