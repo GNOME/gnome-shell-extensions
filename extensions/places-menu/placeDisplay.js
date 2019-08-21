@@ -506,7 +506,7 @@ var PlacesManager = class {
                 continue;
 
             let duplicate = false;
-            for (let j = 0; i < this._places.special.length; j++) {
+            for (let j = 0; j < this._places.special.length; j++) {
                 if (file.equal(this._places.special[j].file)) {
                     duplicate = true;
                     break;
