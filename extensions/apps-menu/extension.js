@@ -181,10 +181,11 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _onMotionEvent(actor, event) {
-        if (!Clutter.get_pointer_grab()) {
+        let device = event.get_device();
+        if (!device.get_grabbed_actor()) {
             this._oldX = -1;
             this._oldY = -1;
-            Clutter.grab_pointer(this);
+            device.grab(this);
         }
         this.hover = true;
 
@@ -194,7 +195,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._oldX = -1;
         this._oldY = -1;
         this.hover = false;
-        Clutter.ungrab_pointer();
+        device.ungrab();
 
         let source = event.get_source();
         if (source instanceof St.Widget)
