@@ -26,7 +26,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         let ejectIcon = new St.Icon({
             icon_name: 'media-eject-symbolic',
-            style_class: 'popup-menu-icon'
+            style_class: 'popup-menu-icon',
         });
         let ejectButton = new St.Button({ child: ejectIcon });
         ejectButton.connect('clicked', this._eject.bind(this));
@@ -53,13 +53,13 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         let volume = this.mount.get_volume();
 
-        if (volume == null) {
+        if (!volume) {
             // probably a GDaemonMount, could be network or
             // local, but we can't tell; assume it's local for now
             return true;
         }
 
-        return volume.get_identifier('class') != 'network';
+        return volume.get_identifier('class') !== 'network';
     }
 
     _syncVisibility() {
@@ -70,15 +70,16 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
         let unmountArgs = [
             Gio.MountUnmountFlags.NONE,
             (new ShellMountOperation.ShellMountOperation(this.mount)).mountOp,
-            null // Gio.Cancellable
+            null, // Gio.Cancellable
         ];
 
-        if (this.mount.can_eject())
+        if (this.mount.can_eject()) {
             this.mount.eject_with_operation(...unmountArgs,
                 this._ejectFinish.bind(this));
-        else
+        } else {
             this.mount.unmount_with_operation(...unmountArgs,
                 this._unmountFinish.bind(this));
+        }
     }
 
     _unmountFinish(mount, result) {
@@ -120,7 +121,7 @@ class DriveMenu extends PanelMenu.Button {
         let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
         let icon = new St.Icon({
             icon_name: 'media-eject-symbolic',
-            style_class: 'system-status-icon'
+            style_class: 'system-status-icon',
         });
 
         hbox.add_child(icon);
@@ -167,13 +168,13 @@ class DriveMenu extends PanelMenu.Button {
     _removeMount(mount) {
         for (let i = 0; i < this._mounts.length; i++) {
             let item = this._mounts[i];
-            if (item.mount == mount) {
+            if (item.mount === mount) {
                 item.destroy();
                 this._mounts.splice(i, 1);
                 return;
             }
         }
-        log ('Removing a mount that was never added to the menu');
+        log('Removing a mount that was never added to the menu');
     }
 
     _onDestroy() {
@@ -195,7 +196,7 @@ function init() {
 let _indicator;
 
 function enable() {
-    _indicator = new DriveMenu;
+    _indicator = new DriveMenu();
     Main.panel.addToStatusArea('drive-menu', _indicator);
 }
 

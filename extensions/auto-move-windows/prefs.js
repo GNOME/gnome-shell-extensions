@@ -19,7 +19,7 @@ const Columns = {
     DISPLAY_NAME: 1,
     ICON: 2,
     WORKSPACE: 3,
-    ADJUSTMENT: 4
+    ADJUSTMENT: 4,
 };
 
 const Widget = GObject.registerClass({
@@ -39,7 +39,7 @@ const Widget = GObject.registerClass({
             GObject.TYPE_STRING,
             Gio.Icon,
             GObject.TYPE_INT,
-            Gtk.Adjustment
+            Gtk.Adjustment,
         ]);
 
         let scrolled = new Gtk.ScrolledWindow({ shadow_type: Gtk.ShadowType.IN });
@@ -50,26 +50,26 @@ const Widget = GObject.registerClass({
         this._treeView = new Gtk.TreeView({
             model: this._store,
             hexpand: true,
-            vexpand: true
+            vexpand: true,
         });
         this._treeView.get_selection().set_mode(Gtk.SelectionMode.SINGLE);
 
         let appColumn = new Gtk.TreeViewColumn({
             expand: true,
             sort_column_id: Columns.DISPLAY_NAME,
-            title: _('Application')
+            title: _('Application'),
         });
-        let iconRenderer = new Gtk.CellRendererPixbuf;
+        let iconRenderer = new Gtk.CellRendererPixbuf();
         appColumn.pack_start(iconRenderer, false);
         appColumn.add_attribute(iconRenderer, 'gicon', Columns.ICON);
-        let nameRenderer = new Gtk.CellRendererText;
+        let nameRenderer = new Gtk.CellRendererText();
         appColumn.pack_start(nameRenderer, true);
         appColumn.add_attribute(nameRenderer, 'text', Columns.DISPLAY_NAME);
         this._treeView.append_column(appColumn);
 
         let workspaceColumn = new Gtk.TreeViewColumn({
             title: _('Workspace'),
-            sort_column_id: Columns.WORKSPACE
+            sort_column_id: Columns.WORKSPACE,
         });
         let workspaceRenderer = new Gtk.CellRendererSpin({ editable: true });
         workspaceRenderer.connect('edited', this._workspaceEdited.bind(this));
@@ -87,7 +87,7 @@ const Widget = GObject.registerClass({
         let newButton = new Gtk.ToolButton({
             icon_name: 'bookmark-new-symbolic',
             label: _('Add Rule'),
-            is_important: true
+            is_important: true,
         });
         newButton.connect('clicked', this._createNew.bind(this));
         toolbar.add(newButton);
@@ -111,7 +111,7 @@ const Widget = GObject.registerClass({
             title: _('Create new matching rule'),
             transient_for: this.get_toplevel(),
             use_header_bar: true,
-            modal: true
+            modal: true,
         });
         dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL);
         let addButton = dialog.add_button(_('Add'), Gtk.ResponseType.OK);
@@ -120,7 +120,7 @@ const Widget = GObject.registerClass({
         let grid = new Gtk.Grid({
             column_spacing: 10,
             row_spacing: 15,
-            margin: 10
+            margin: 10,
         });
         dialog._appChooser = new Gtk.AppChooserWidget({ show_all: true });
         dialog._appChooser.connect('application-selected', (w, appInfo) => {
@@ -132,28 +132,28 @@ const Widget = GObject.registerClass({
         grid.attach(dialog._appChooser, 0, 0, 2, 1);
         grid.attach(new Gtk.Label({
             label: _('Workspace'),
-            halign: Gtk.Align.END
+            halign: Gtk.Align.END,
         }), 0, 1, 1, 1);
         let adjustment = new Gtk.Adjustment({
             lower: 1,
             upper: WORKSPACE_MAX,
-            step_increment: 1
+            step_increment: 1,
         });
         dialog._spin = new Gtk.SpinButton({
-            adjustment: adjustment,
-            snap_to_ticks: true
+            adjustment,
+            snap_to_ticks: true,
         });
         dialog._spin.set_value(1);
         grid.attach(dialog._spin, 1, 1, 1, 1);
         dialog.get_content_area().add(grid);
 
-        dialog.connect('response', (dialog, id) => {
-            if (id != Gtk.ResponseType.OK) {
+        dialog.connect('response', (dlg, id) => {
+            if (id !== Gtk.ResponseType.OK) {
                 dialog.destroy();
                 return;
             }
 
-            let appInfo = dialog._appChooser.get_app_info();
+            appInfo = dialog._appChooser.get_app_info();
             if (!appInfo)
                 return;
             let index = Math.floor(dialog._spin.value);
@@ -217,7 +217,7 @@ const Widget = GObject.registerClass({
             this._appendRow(appInfo, parseInt(index));
         }
 
-        if (validItems.length != currentItems.length) // some items were filtered out
+        if (validItems.length !== currentItems.length) // some items were filtered out
             this._settings.set_strv(SETTINGS_KEY, validItems);
     }
 
@@ -229,7 +229,7 @@ const Widget = GObject.registerClass({
             lower: 1,
             upper: WORKSPACE_MAX,
             step_increment: 1,
-            value: workspace
+            value: workspace,
         });
         let { APPINFO, ICON, DISPLAY_NAME, WORKSPACE, ADJUSTMENT } = Columns;
         this._store.set(iter,

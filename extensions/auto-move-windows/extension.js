@@ -2,7 +2,7 @@
 // Start apps on custom workspaces
 /* exported init enable disable */
 
-const Shell = imports.gi.Shell;
+const { Shell } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
@@ -44,14 +44,14 @@ class WindowMover {
         });
 
         let addedApps = ids.map(id => this._appSystem.lookup_app(id)).filter(
-            app => app != null && !this._appData.has(app)
+            app => app && !this._appData.has(app)
         );
         addedApps.forEach(app => {
             let data = {
                 windowsChangedId: app.connect('windows-changed',
                     this._appWindowsChanged.bind(this)),
                 moveWindowsId: 0,
-                windows: app.get_windows()
+                windows: app.get_windows(),
             };
             this._appData.set(app, data);
         });
@@ -95,7 +95,7 @@ class WindowMover {
         // or something; assume it'll be added back immediately, so keep it
         // to avoid moving it again
         windows.push(...data.windows.filter(
-            w => !windows.includes(w) && w.get_compositor_private() != null
+            w => !windows.includes(w) && w.get_compositor_private() !== null
         ));
 
         let workspaceNum = this._appConfigs.get(app.id);
@@ -124,7 +124,7 @@ function myCheckWorkspaces() {
     }
 
     // make sure the original method only removes empty workspaces at the end
-    keepAliveWorkspaces.forEach(ws => ws._keepAliveId = 1);
+    keepAliveWorkspaces.forEach(ws => (ws._keepAliveId = 1));
     prevCheckWorkspaces.call(this);
     keepAliveWorkspaces.forEach(ws => delete ws._keepAliveId);
 

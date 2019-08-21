@@ -64,17 +64,17 @@ let SIZES = [
     [1200, 675],
     [1600, 900],
     [360, 654], // Phone portrait maximized
-    [720, 360] // Phone landscape fullscreen
+    [720, 360], // Phone landscape fullscreen
 ];
 
 function cycleScreenshotSizes(display, window, binding) {
     // Probably this isn't useful with 5 sizes, but you can decrease instead
     // of increase by holding down shift.
     let modifiers = binding.get_modifiers();
-    let backwards = (modifiers & Meta.VirtualModifier.SHIFT_MASK) != 0;
+    let backwards = (modifiers & Meta.VirtualModifier.SHIFT_MASK) !== 0;
 
     // Unmaximize first
-    if (window.get_maximized() != 0)
+    if (window.get_maximized() !== 0)
         window.unmaximize(Meta.MaximizeFlags.BOTH);
 
     let workArea = window.get_work_area_current_monitor();
@@ -97,7 +97,7 @@ function cycleScreenshotSizes(display, window, binding) {
 
         // get the best initial window size
         let error = Math.abs(width - outerRect.width) + Math.abs(height - outerRect.height);
-        if (nearestIndex == null || error < nearestError) {
+        if (nearestIndex === undefined || error < nearestError) {
             nearestIndex = i;
             nearestError = error;
         }
@@ -122,13 +122,13 @@ function cycleScreenshotSizes(display, window, binding) {
 
     let newOuterRect = window.get_frame_rect();
     let message = '%d×%d'.format(
-        (newOuterRect.width / scaleFactor),
-        (newOuterRect.height / scaleFactor));
+        newOuterRect.width / scaleFactor,
+        newOuterRect.height / scaleFactor);
 
     // The new size might have been constrained by geometry hints (e.g. for
     // a terminal) - in that case, include the actual ratio to the message
     // we flash
-    let actualNumerator = (newOuterRect.width / newOuterRect.height) * 9;
+    let actualNumerator = 9 * newOuterRect.width / newOuterRect.height;
     if (Math.abs(actualNumerator - 16) > 0.01)
         message += ' (%.2f:9)'.format(actualNumerator);
 

@@ -20,8 +20,8 @@ const Hostname1Iface = '<node> \
 const Hostname1 = Gio.DBusProxy.makeProxyWrapper(Hostname1Iface);
 
 class PlaceInfo {
-    constructor() {
-        this._init.apply(this, arguments);
+    constructor(...params) {
+        this._init(...params);
     }
 
     _init(kind, file, name, icon) {
@@ -41,14 +41,14 @@ class PlaceInfo {
     async _ensureMountAndLaunch(context, tryMount) {
         try {
             await this._launchDefaultForUri(this.file.get_uri(), context, null);
-        } catch (e) {
-            if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
-                Main.notifyError(_('Failed to launch “%s”').format(this.name), e.message);
+        } catch (err) {
+            if (!err.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
+                Main.notifyError(_('Failed to launch “%s”').format(this.name), err.message);
                 return;
             }
 
             let source = {
-                get_icon: () => this.icon
+                get_icon: () => this.icon,
             };
             let op = new ShellMountOperation.ShellMountOperation(source);
             try {
@@ -201,15 +201,16 @@ class PlaceDeviceInfo extends PlaceInfo {
         let unmountArgs = [
             Gio.MountUnmountFlags.NONE,
             (new ShellMountOperation.ShellMountOperation(this._mount)).mountOp,
-            null // Gio.Cancellable
+            null, // Gio.Cancellable
         ];
 
-        if (this._mount.can_eject())
+        if (this._mount.can_eject()) {
             this._mount.eject_with_operation(...unmountArgs,
                 this._ejectFinish.bind(this));
-        else
+        } else {
             this._mount.unmount_with_operation(...unmountArgs,
                 this._unmountFinish.bind(this));
+        }
     }
 
     _ejectFinish(mount, result) {
@@ -321,7 +322,7 @@ var PlacesManager = class {
             'mount-changed',
             'drive-connected',
             'drive-disconnected',
-            'drive-changed'
+            'drive-changed',
         ];
 
         this._volumeMonitorSignals = [];
@@ -365,7 +366,7 @@ var PlacesManager = class {
 
         for (let i = 0; i < dirs.length; i++) {
             let specialPath = GLib.get_user_special_dir(dirs[i]);
-            if (specialPath == null || specialPath == homePath)
+            if (!specialPath || specialPath === homePath)
                 continue;
 
             let file = Gio.File.new_for_path(specialPath), info;
@@ -414,7 +415,7 @@ var PlacesManager = class {
                     networkVolumes.push(volumes[j]);
                 } else {
                     let mount = volumes[j].get_mount();
-                    if (mount != null)
+                    if (mount)
                         this._addMount('devices', mount);
                 }
             }
@@ -423,7 +424,7 @@ var PlacesManager = class {
         /* add all volumes that is not associated with a drive */
         let volumes = this._volumeMonitor.get_volumes();
         for (let i = 0; i < volumes.length; i++) {
-            if (volumes[i].get_drive() != null)
+            if (volumes[i].get_drive())
                 continue;
 
             let identifier = volumes[i].get_identifier('class');
@@ -431,7 +432,7 @@ var PlacesManager = class {
                 networkVolumes.push(volumes[i]);
             } else {
                 let mount = volumes[i].get_mount();
-                if (mount != null)
+                if (mount)
                     this._addMount('devices', mount);
             }
         }
@@ -462,9 +463,9 @@ var PlacesManager = class {
             this._addVolume('network', networkVolumes[i]);
         }
 
-        for (let i = 0; i < networkMounts.length; i++) {
+        for (let i = 0; i < networkMounts.length; i++)
             this._addMount('network', networkMounts[i]);
-        }
+
 
         this.emit('devices-updated');
         this.emit('network-updated');
@@ -495,7 +496,7 @@ var PlacesManager = class {
         for (let i = 0; i < lines.length; i++) {
             let line = lines[i];
             let components = line.split(' ');
-            let bookmark = components[0];
+            let [bookmark] = components;
 
             if (!bookmark)
                 continue;
@@ -505,16 +506,16 @@ var PlacesManager = class {
                 continue;
 
             let duplicate = false;
-            for (let i = 0; i < this._places.special.length; i++) {
-                if (file.equal(this._places.special[i].file)) {
+            for (let j = 0; i < this._places.special.length; j++) {
+                if (file.equal(this._places.special[j].file)) {
                     duplicate = true;
                     break;
                 }
             }
             if (duplicate)
                 continue;
-            for (let i = 0; i < bookmarks.length; i++) {
-                if (file.equal(bookmarks[i].file)) {
+            for (let j = 0; j < bookmarks.length; j++) {
+                if (file.equal(bookmarks[j].file)) {
                     duplicate = true;
                     break;
                 }

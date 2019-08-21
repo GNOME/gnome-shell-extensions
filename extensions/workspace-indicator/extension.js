@@ -16,11 +16,11 @@ const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
 
 let WindowPreview = GObject.registerClass({
-    GTypeName: 'WorkspaceIndicatorWindowPreview'
+    GTypeName: 'WorkspaceIndicatorWindowPreview',
 }, class WindowPreview extends St.Button {
     _init(window) {
         super._init({
-            style_class: 'workspace-indicator-window-preview'
+            style_class: 'workspace-indicator-window-preview',
         });
 
         this._delegate = this;
@@ -75,7 +75,7 @@ let WindowPreview = GObject.registerClass({
     }
 
     _onFocusChanged() {
-        if (global.display.focus_window == this._window)
+        if (global.display.focus_window === this._window)
             this.add_style_class_name('active');
         else
             this.remove_style_class_name('active');
@@ -83,7 +83,7 @@ let WindowPreview = GObject.registerClass({
 
     _relayout() {
         let monitor = Main.layoutManager.findIndexForActor(this);
-        this.visible = monitor == this._window.get_monitor() &&
+        this.visible = monitor === this._window.get_monitor() &&
             this._window.showing_on_its_workspace();
 
         if (!this.visible)
@@ -104,17 +104,17 @@ let WindowPreview = GObject.registerClass({
 });
 
 let WorkspaceThumbnail = GObject.registerClass({
-    GTypeName: 'WorkspaceIndicatorWorkspaceThumbnail'
+    GTypeName: 'WorkspaceIndicatorWorkspaceThumbnail',
 }, class WorkspaceThumbnail extends St.Button {
     _init(index) {
         super._init({
             style_class: 'workspace',
             child: new Clutter.Actor({
                 layout_manager: new Clutter.BinLayout(),
-                clip_to_allocation: true
+                clip_to_allocation: true,
             }),
             x_fill: true,
-            y_fill: true
+            y_fill: true,
         });
 
         this.connect('destroy', this._onDestroy.bind(this));
@@ -192,7 +192,7 @@ let WorkspaceThumbnail = GObject.registerClass({
 
     _moveWindow(window) {
         let monitorIndex = Main.layoutManager.findIndexForActor(this);
-        if (monitorIndex != window.get_monitor())
+        if (monitorIndex !== window.get_monitor())
             window.move_to_monitor(monitorIndex);
         window.change_workspace_by_index(this._index, false);
     }
@@ -218,7 +218,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         let container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
             x_expand: true,
-            y_expand: true
+            y_expand: true,
         });
         this.add_actor(container);
 
@@ -228,7 +228,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._statusLabel = new St.Label({
             style_class: 'panel-workspace-indicator',
             y_align: Clutter.ActorAlign.CENTER,
-            text: this._labelText()
+            text: this._labelText(),
         });
 
         container.add_actor(this._statusLabel);
@@ -236,7 +236,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._thumbnailsBox = new St.BoxLayout({
             style_class: 'panel-workspace-indicator-box',
             y_expand: true,
-            reactive: true
+            reactive: true,
         });
 
         container.add_actor(this._thumbnailsBox);
@@ -251,7 +251,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             workspaceManager.connect_after('workspace-switched',
                 this._onWorkspaceSwitched.bind(this)),
             workspaceManager.connect('notify::layout-rows',
-                this._onWorkspaceOrientationChanged.bind(this))
+                this._onWorkspaceOrientationChanged.bind(this)),
         ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
@@ -281,7 +281,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _onWorkspaceOrientationChanged() {
-        let vertical = global.workspace_manager.layout_rows == -1;
+        let vertical = global.workspace_manager.layout_rows === -1;
         this.reactive = vertical;
 
         this._statusLabel.visible = vertical;
@@ -310,7 +310,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
     _updateMenuOrnament() {
         for (let i = 0; i < this._workspacesItems.length; i++) {
-            this._workspacesItems[i].setOrnament(i == this._currentWorkspace
+            this._workspacesItems[i].setOrnament(i === this._currentWorkspace
                 ? PopupMenu.Ornament.DOT
                 : PopupMenu.Ornament.NONE);
         }
@@ -319,7 +319,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _updateActiveThumbnail() {
         let thumbs = this._thumbnailsBox.get_children();
         for (let i = 0; i < thumbs.length; i++) {
-            if (i == this._currentWorkspace)
+            if (i === this._currentWorkspace)
                 thumbs[i].add_style_class_name('active');
             else
                 thumbs[i].remove_style_class_name('active');
@@ -327,7 +327,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _labelText(workspaceIndex) {
-        if (workspaceIndex == undefined) {
+        if (workspaceIndex === undefined) {
             workspaceIndex = this._currentWorkspace;
             return (workspaceIndex + 1).toString();
         }
@@ -356,7 +356,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
                 this._activate(actor.workspaceId);
             });
 
-            if (i == this._currentWorkspace)
+            if (i === this._currentWorkspace)
                 this._workspacesItems[i].setOrnament(PopupMenu.Ornament.DOT);
         }
 
@@ -387,13 +387,13 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
         let diff = 0;
-        if (direction == Clutter.ScrollDirection.DOWN) {
+        if (direction === Clutter.ScrollDirection.DOWN)
             diff = 1;
-        } else if (direction == Clutter.ScrollDirection.UP) {
+        else if (direction === Clutter.ScrollDirection.UP)
             diff = -1;
-        } else {
+        else
             return;
-        }
+
 
         let newIndex = global.workspace_manager.get_active_workspace_index() + diff;
         this._activate(newIndex);
@@ -407,7 +407,7 @@ function init() {
 let _indicator;
 
 function enable() {
-    _indicator = new WorkspaceIndicator;
+    _indicator = new WorkspaceIndicator();
     Main.panel.addToStatusArea('workspace-indicator', _indicator);
 }
 

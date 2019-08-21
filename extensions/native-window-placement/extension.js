@@ -13,9 +13,7 @@ class Rect {
         [this.x, this.y, this.width, this.height] = [x, y, width, height];
     }
 
-    /**
-     * used in _calculateWindowTransformationsNatural to replace Meta.Rectangle that is too slow.
-     */
+    // used in _calculateWindowTransformationsNatural to replace Meta.Rectangle that is too slow.
     copy() {
         return new Rect(this.x, this.y, this.width, this.height);
     }
@@ -48,10 +46,10 @@ class Rect {
     }
 
     overlap(rect2) {
-        return !((this.x + this.width    <= rect2.x) ||
-                 (rect2.x + rect2.width  <= this.x) ||
-                 (this.y + this.height   <= rect2.y) ||
-                 (rect2.y + rect2.height <= this.y));
+        return !(this.x + this.width    <= rect2.x ||
+                 rect2.x + rect2.width  <= this.x ||
+                 this.y + this.height   <= rect2.y ||
+                 rect2.y + rect2.height <= this.y);
     }
 
     center() {
@@ -74,7 +72,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
         layout.windows = windows;
     }
 
-    /**
+    /*
      * Returns clones with matching target coordinates and scales to arrange windows in a natural way that no overlap exists and relative window size is preserved.
      * This function is almost a 1:1 copy of the function
      * PresentWindowsEffect::calculateWindowTransformationsNatural() from KDE, see:
@@ -100,9 +98,9 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             // This is used when the window is on the edge of the screen to try to use as much screen real estate as possible.
             directions[i] = direction;
             direction++;
-            if (direction == 4) {
+            if (direction === 4)
                 direction = 0;
-            }
+
         }
 
         let loopCounter = 0;
@@ -112,10 +110,10 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             for (let i = 0; i < rects.length; i++) {
                 for (let j = 0; j < rects.length; j++) {
                     let adjustments = [-1, -1, 1, 1]
-                        .map(v => v *= WINDOW_PLACEMENT_NATURAL_GAPS);
+                        .map(v => (v *= WINDOW_PLACEMENT_NATURAL_GAPS));
                     let iAdjusted = rects[i].adjusted(...adjustments);
                     let jAdjusted = rects[j].adjusted(...adjustments);
-                    if (i != j && iAdjusted.overlap(jAdjusted)) {
+                    if (i !== j && iAdjusted.overlap(jAdjusted)) {
                         loopCounter++;
                         overlap = true;
 
@@ -127,10 +125,10 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                         let diff = [jCenter[0] - iCenter[0], jCenter[1] - iCenter[1]];
 
                         // Prevent dividing by zero and non-movement
-                        if (diff[0] == 0 && diff[1] == 0)
+                        if (diff[0] === 0 && diff[1] === 0)
                             diff[0] = 1;
                         // Try to keep screen/workspace aspect ratio
-                        if ( bounds.height / bounds.width > areaRect.height / areaRect.width )
+                        if (bounds.height / bounds.width > areaRect.height / areaRect.width)
                             diff[0] *= 2;
                         else
                             diff[1] *= 2;
@@ -159,33 +157,33 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
                             let xSection = Math.round((rects[i].x - bounds.x) / (bounds.width / 3));
                             let ySection = Math.round((rects[i].y - bounds.y) / (bounds.height / 3));
 
-                            let iCenter = rects[i].center();
+                            iCenter = rects[i].center();
                             diff[0] = 0;
                             diff[1] = 0;
-                            if (xSection != 1 || ySection != 1) { // Remove this if you want the center to pull as well
-                                if (xSection == 1)
-                                    xSection = (directions[i] / 2 ? 2 : 0);
-                                if (ySection == 1)
-                                    ySection = (directions[i] % 2 ? 2 : 0);
+                            if (xSection !== 1 || ySection !== 1) { // Remove this if you want the center to pull as well
+                                if (xSection === 1)
+                                    xSection = directions[i] / 2 ? 2 : 0;
+                                if (ySection === 1)
+                                    ySection = directions[i] % 2 ? 2 : 0;
                             }
-                            if (xSection == 0 && ySection == 0) {
+                            if (xSection === 0 && ySection === 0) {
                                 diff[0] = bounds.x - iCenter[0];
                                 diff[1] = bounds.y - iCenter[1];
                             }
-                            if (xSection == 2 && ySection == 0) {
+                            if (xSection === 2 && ySection === 0) {
                                 diff[0] = bounds.x + bounds.width - iCenter[0];
                                 diff[1] = bounds.y - iCenter[1];
                             }
-                            if (xSection == 2 && ySection == 2) {
+                            if (xSection === 2 && ySection === 2) {
                                 diff[0] = bounds.x + bounds.width - iCenter[0];
                                 diff[1] = bounds.y + bounds.height - iCenter[1];
                             }
-                            if (xSection == 0 && ySection == 2) {
+                            if (xSection === 0 && ySection === 2) {
                                 diff[0] = bounds.x - iCenter[0];
                                 diff[1] = bounds.y + bounds.height - iCenter[1];
                             }
-                            if (diff[0] != 0 || diff[1] != 0) {
-                                let length = Math.sqrt(diff[0] * diff[0] + diff[1] * diff[1]);
+                            if (diff[0] !== 0 || diff[1] !== 0) {
+                                length = Math.sqrt(diff[0] * diff[0] + diff[1] * diff[1]);
                                 diff[0] *= WINDOW_PLACEMENT_NATURAL_ACCURACY / length / 2;   // /2 to make it less influencing than the normal center-move above
                                 diff[1] *= WINDOW_PLACEMENT_NATURAL_ACCURACY / length / 2;
                                 rects[i].translate(diff[0], diff[1]);
@@ -208,15 +206,15 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             1.0);
 
         // Make bounding rect fill the screen size for later steps
-        bounds.x = bounds.x - (areaRect.width - bounds.width * scale) / 2;
-        bounds.y = bounds.y - (areaRect.height - bounds.height * scale) / 2;
+        bounds.x -= (areaRect.width - bounds.width * scale) / 2;
+        bounds.y -= (areaRect.height - bounds.height * scale) / 2;
         bounds.width = areaRect.width / scale;
         bounds.height = areaRect.height / scale;
 
         // Move all windows back onto the screen and set their scale
-        for (let i = 0; i < rects.length; i++) {
+        for (let i = 0; i < rects.length; i++)
             rects[i].translate(-bounds.x, -bounds.y);
-        }
+
 
         // rescale to workspace
         let slots = [];
@@ -244,7 +242,7 @@ function enable() {
     let settings = ExtensionUtils.getSettings();
 
     workspaceInjections['_getBestLayout'] = Workspace.Workspace.prototype._getBestLayout;
-    Workspace.Workspace.prototype._getBestLayout = function(windows) {
+    Workspace.Workspace.prototype._getBestLayout = function (windows) {
         let strategy = new NaturalLayoutStrategy(settings);
         let layout = { strategy };
         strategy.computeLayout(windows, layout);
@@ -252,9 +250,9 @@ function enable() {
         return layout;
     };
 
-    /// position window titles on top of windows in overlay ////
+    // position window titles on top of windows in overlay
     winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
-    Workspace.WindowOverlay.prototype.relayout = function(animate) {
+    Workspace.WindowOverlay.prototype.relayout = function (animate) {
         if (settings.get_boolean('window-captions-on-top')) {
             let [, , , cloneHeight] = this._windowClone.slot;
             this.title.translation_y = -cloneHeight;

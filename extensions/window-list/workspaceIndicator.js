@@ -10,11 +10,11 @@ const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
 let WindowPreview = GObject.registerClass({
-    GTypeName: 'WindowListWindowPreview'
+    GTypeName: 'WindowListWindowPreview',
 }, class WindowPreview extends St.Button {
     _init(window) {
         super._init({
-            style_class: 'window-list-window-preview'
+            style_class: 'window-list-window-preview',
         });
 
         this._delegate = this;
@@ -69,7 +69,7 @@ let WindowPreview = GObject.registerClass({
     }
 
     _onFocusChanged() {
-        if (global.display.focus_window == this._window)
+        if (global.display.focus_window === this._window)
             this.add_style_class_name('active');
         else
             this.remove_style_class_name('active');
@@ -77,7 +77,7 @@ let WindowPreview = GObject.registerClass({
 
     _relayout() {
         let monitor = Main.layoutManager.findIndexForActor(this);
-        this.visible = monitor == this._window.get_monitor() &&
+        this.visible = monitor === this._window.get_monitor() &&
             this._window.showing_on_its_workspace();
 
         if (!this.visible)
@@ -98,17 +98,17 @@ let WindowPreview = GObject.registerClass({
 });
 
 let WorkspaceThumbnail = GObject.registerClass({
-    GTypeName: 'WindowListWorkspaceThumbnail'
+    GTypeName: 'WindowListWorkspaceThumbnail',
 }, class WorkspaceThumbnail extends St.Button {
     _init(index) {
         super._init({
             style_class: 'workspace',
             child: new Clutter.Actor({
                 layout_manager: new Clutter.BinLayout(),
-                clip_to_allocation: true
+                clip_to_allocation: true,
             }),
             x_fill: true,
-            y_fill: true
+            y_fill: true,
         });
 
         this.connect('destroy', this._onDestroy.bind(this));
@@ -186,7 +186,7 @@ let WorkspaceThumbnail = GObject.registerClass({
 
     _moveWindow(window) {
         let monitorIndex = Main.layoutManager.findIndexForActor(this);
-        if (monitorIndex != window.get_monitor())
+        if (monitorIndex !== window.get_monitor())
             window.move_to_monitor(monitorIndex);
         window.change_workspace_by_index(this._index, false);
     }
@@ -205,7 +205,7 @@ let WorkspaceThumbnail = GObject.registerClass({
 });
 
 var WorkspaceIndicator = GObject.registerClass({
-    GTypeName: 'WindowListWorkspaceIndicator'
+    GTypeName: 'WindowListWorkspaceIndicator',
 }, class WorkspaceIndicator extends PanelMenu.Button {
     _init() {
         super._init(0.0, _('Workspace Indicator'), true);
@@ -216,7 +216,7 @@ var WorkspaceIndicator = GObject.registerClass({
         let container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
             x_expand: true,
-            y_expand: true
+            y_expand: true,
         });
         this.add_actor(container);
 
@@ -229,14 +229,14 @@ var WorkspaceIndicator = GObject.registerClass({
             style_class: 'status-label-bin',
             x_expand: true,
             y_expand: true,
-            child: this._statusLabel
+            child: this._statusLabel,
         });
         container.add_actor(this._statusBin);
 
         this._thumbnailsBox = new St.BoxLayout({
             style_class: 'workspaces-box',
             y_expand: true,
-            reactive: true
+            reactive: true,
         });
         this._thumbnailsBox.connect('scroll-event',
             this._onScrollEvent.bind(this));
@@ -250,7 +250,7 @@ var WorkspaceIndicator = GObject.registerClass({
             workspaceManager.connect_after('workspace-switched',
                 this._onWorkspaceSwitched.bind(this)),
             workspaceManager.connect('notify::layout-rows',
-                this._onWorkspaceOrientationChanged.bind(this))
+                this._onWorkspaceOrientationChanged.bind(this)),
         ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
@@ -276,7 +276,7 @@ var WorkspaceIndicator = GObject.registerClass({
     }
 
     _onWorkspaceOrientationChanged() {
-        let vertical = global.workspace_manager.layout_rows == -1;
+        let vertical = global.workspace_manager.layout_rows === -1;
         this.reactive = vertical;
 
         this._statusBin.visible = vertical;
@@ -300,7 +300,7 @@ var WorkspaceIndicator = GObject.registerClass({
 
     _updateMenuOrnament() {
         for (let i = 0; i < this._workspacesItems.length; i++) {
-            this._workspacesItems[i].setOrnament(i == this._currentWorkspace
+            this._workspacesItems[i].setOrnament(i === this._currentWorkspace
                 ? PopupMenu.Ornament.DOT
                 : PopupMenu.Ornament.NONE);
         }
@@ -309,7 +309,7 @@ var WorkspaceIndicator = GObject.registerClass({
     _updateActiveThumbnail() {
         let thumbs = this._thumbnailsBox.get_children();
         for (let i = 0; i < thumbs.length; i++) {
-            if (i == this._currentWorkspace)
+            if (i === this._currentWorkspace)
                 thumbs[i].add_style_class_name('active');
             else
                 thumbs[i].remove_style_class_name('active');
@@ -344,11 +344,11 @@ var WorkspaceIndicator = GObject.registerClass({
             let item = new PopupMenu.PopupMenuItem(name);
             item.workspaceId = i;
 
-            item.connect('activate', (item, _event) => {
+            item.connect('activate', () => {
                 this._activate(item.workspaceId);
             });
 
-            if (i == this._currentWorkspace)
+            if (i === this._currentWorkspace)
                 item.setOrnament(PopupMenu.Ornament.DOT);
 
             this.menu.addMenuItem(item);
@@ -382,13 +382,12 @@ var WorkspaceIndicator = GObject.registerClass({
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
         let diff = 0;
-        if (direction == Clutter.ScrollDirection.DOWN) {
+        if (direction === Clutter.ScrollDirection.DOWN)
             diff = 1;
-        } else if (direction == Clutter.ScrollDirection.UP) {
+        else if (direction === Clutter.ScrollDirection.UP)
             diff = -1;
-        } else {
+        else
             return;
-        }
 
         let newIndex = this._currentWorkspace + diff;
         this._activate(newIndex);

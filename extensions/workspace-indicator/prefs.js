@@ -23,8 +23,6 @@ class WorkspaceNameModel extends Gtk.ListStore {
         };
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
-        //this._settings.connect('changed::workspace-names', this._reloadFromSettings.bind(this));
-
         this._reloadFromSettings();
 
         // overriding class closure doesn't work, because GtkTreeModel
@@ -53,7 +51,7 @@ class WorkspaceNameModel extends Gtk.ListStore {
         while (ok)
             ok = this.remove(iter);
 
-        for ( ; i < newNames.length; i++) {
+        for (; i < newNames.length; i++) {
             iter = this.append();
             this.set(iter, [this.Columns.LABEL], [newNames[i]]);
         }
@@ -132,7 +130,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
             use_markup: true,
             margin_bottom: 6,
             hexpand: true,
-            halign: Gtk.Align.START
+            halign: Gtk.Align.START,
         }));
 
         let scrolled = new Gtk.ScrolledWindow({ shadow_type: Gtk.ShadowType.IN });
@@ -145,7 +143,7 @@ class WorkspaceSettingsWidget extends Gtk.Grid {
             headers_visible: false,
             reorderable: true,
             hexpand: true,
-            vexpand: true
+            vexpand: true,
         });
 
         let column = new Gtk.TreeViewColumn({ title: _('Name') });

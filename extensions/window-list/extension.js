@@ -20,14 +20,14 @@ const DND_ACTIVATE_TIMEOUT = 500;
 const GroupingMode = {
     NEVER: 0,
     AUTO: 1,
-    ALWAYS: 2
+    ALWAYS: 2,
 };
 
 
 function _minimizeOrActivateWindow(window) {
     let focusWindow = global.display.focus_window;
-    if (focusWindow == window ||
-        focusWindow && focusWindow.get_transient_for() == window)
+    if (focusWindow === window ||
+        focusWindow && focusWindow.get_transient_for() === window)
         window.minimize();
     else
         window.activate(global.get_current_time());
@@ -37,7 +37,7 @@ function _openMenu(menu) {
     menu.open();
 
     let event = Clutter.get_current_event();
-    if (event && event.type() == Clutter.EventType.KEY_RELEASE)
+    if (event && event.type() === Clutter.EventType.KEY_RELEASE)
         menu.actor.navigate_focus(null, Gtk.DirectionType.TAB_FORWARD, false);
 }
 
@@ -80,7 +80,7 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
 
         this._maximizeItem = new PopupMenu.PopupMenuItem('');
         this._maximizeItem.connect('activate', () => {
-            if (this._metaWindow.get_maximized() == Meta.MaximizeFlags.BOTH)
+            if (this._metaWindow.get_maximized() === Meta.MaximizeFlags.BOTH)
                 this._metaWindow.unmaximize(Meta.MaximizeFlags.BOTH);
             else
                 this._metaWindow.maximize(Meta.MaximizeFlags.BOTH);
@@ -114,15 +114,15 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
     }
 
     _updateMinimizeItem() {
-        this._minimizeItem.label.text = this._metaWindow.minimized ?
-            _('Unminimize') : _('Minimize');
+        this._minimizeItem.label.text = this._metaWindow.minimized
+            ? _('Unminimize') : _('Minimize');
     }
 
     _updateMaximizeItem() {
         let maximized = this._metaWindow.maximized_vertically &&
                         this._metaWindow.maximized_horizontally;
-        this._maximizeItem.label.text = maximized ?
-            _('Unmaximize') : _('Maximize');
+        this._maximizeItem.label.text = maximized
+            ? _('Unmaximize') : _('Maximize');
     }
 
     _onDestroy() {
@@ -133,7 +133,7 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
 }
 
 const WindowTitle = GObject.registerClass({
-    GTypeName: 'WindowListWindowTitle'
+    GTypeName: 'WindowListWindowTitle',
 }, class WindowTitle extends St.BoxLayout {
     _init(metaWindow) {
         this._metaWindow = metaWindow;
@@ -141,7 +141,7 @@ const WindowTitle = GObject.registerClass({
         super._init({
             style_class: 'window-button-box',
             x_expand: true,
-            y_expand: true
+            y_expand: true,
         });
 
         this._icon = new St.Bin({ style_class: 'window-button-icon' });
@@ -184,13 +184,14 @@ const WindowTitle = GObject.registerClass({
 
     _updateIcon() {
         let app = Shell.WindowTracker.get_default().get_window_app(this._metaWindow);
-        if (app)
+        if (app) {
             this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
-        else
+        } else {
             this._icon.child = new St.Icon({
                 icon_name: 'icon-missing',
-                icon_size: ICON_TEXTURE_SIZE
+                icon_size: ICON_TEXTURE_SIZE,
             });
+        }
     }
 
     _onDestroy() {
@@ -210,8 +211,8 @@ const BaseButton = GObject.registerClass({
         'ignore-workspace': GObject.ParamSpec.boolean(
             'ignore-workspace', 'ignore-workspace', 'ignore-workspace',
             GObject.ParamFlags.READWRITE,
-            false)
-    }
+            false),
+    },
 }, class BaseButton extends St.Button {
     _init(perMonitor, monitorIndex) {
         this._perMonitor = perMonitor;
@@ -223,7 +224,7 @@ const BaseButton = GObject.registerClass({
             x_fill: true,
             y_fill: true,
             can_focus: true,
-            button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE
+            button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE,
         });
 
         this.connect('allocation-changed',
@@ -258,7 +259,7 @@ const BaseButton = GObject.registerClass({
 
     // eslint-disable-next-line camelcase
     set ignore_workspace(ignore) {
-        if (this._ignoreWorkspace == ignore)
+        if (this._ignoreWorkspace === ignore)
             return;
 
         this._ignoreWorkspace = ignore;
@@ -311,7 +312,7 @@ const BaseButton = GObject.registerClass({
 
         return !window.skip_taskbar &&
                (this._ignoreWorkspace || window.located_on_workspace(workspace)) &&
-               (!this._perMonitor || window.get_monitor() == this._monitorIndex);
+               (!this._perMonitor || window.get_monitor() === this._monitorIndex);
     }
 
     _updateVisibility() {
@@ -348,7 +349,7 @@ const BaseButton = GObject.registerClass({
 
 
 const WindowButton = GObject.registerClass({
-    GTypeName: 'WindowListWindowButton'
+    GTypeName: 'WindowListWindowButton',
 }, class WindowButton extends BaseButton {
     _init(metaWindow, perMonitor, monitorIndex) {
         super._init(perMonitor, monitorIndex);
@@ -380,14 +381,14 @@ const WindowButton = GObject.registerClass({
             return;
         }
 
-        if (button == 1)
+        if (button === 1)
             _minimizeOrActivateWindow(this.metaWindow);
         else
             _openMenu(this._contextMenu);
     }
 
     _isFocused() {
-        return global.display.focus_window == this.metaWindow;
+        return global.display.focus_window === this.metaWindow;
     }
 
     _updateStyle() {
@@ -400,7 +401,7 @@ const WindowButton = GObject.registerClass({
     }
 
     _windowEnteredOrLeftMonitor(metaDisplay, monitorIndex, metaWindow) {
-        if (monitorIndex == this._monitorIndex && metaWindow == this.metaWindow)
+        if (monitorIndex === this._monitorIndex && metaWindow === this.metaWindow)
             this._updateVisibility();
     }
 
@@ -469,10 +470,10 @@ class AppContextMenu extends PopupMenu.PopupMenu {
         this._minimizeItem.visible = windows.some(w => !w.minimized);
         this._unminimizeItem.visible = windows.some(w => w.minimized);
         this._maximizeItem.visible = windows.some(w => {
-            return w.get_maximized() != Meta.MaximizeFlags.BOTH;
+            return w.get_maximized() !== Meta.MaximizeFlags.BOTH;
         });
         this._unmaximizeItem.visible = windows.some(w => {
-            return w.get_maximized() == Meta.MaximizeFlags.BOTH;
+            return w.get_maximized() === Meta.MaximizeFlags.BOTH;
         });
 
         super.open(animate);
@@ -494,25 +495,25 @@ const AppButton = GObject.registerClass({
         this._singleWindowTitle = new St.Bin({
             x_expand: true,
             y_fill: true,
-            x_align: St.Align.START
+            x_align: St.Align.START,
         });
         stack.add_actor(this._singleWindowTitle);
 
         this._multiWindowTitle = new St.BoxLayout({
             style_class: 'window-button-box',
-            x_expand: true
+            x_expand: true,
         });
         stack.add_actor(this._multiWindowTitle);
 
         this._icon = new St.Bin({
             style_class: 'window-button-icon',
-            child: app.create_icon_texture(ICON_TEXTURE_SIZE)
+            child: app.create_icon_texture(ICON_TEXTURE_SIZE),
         });
         this._multiWindowTitle.add(this._icon);
 
         let label = new St.Label({
             text: app.get_name(),
-            y_align: Clutter.ActorAlign.CENTER
+            y_align: Clutter.ActorAlign.CENTER,
         });
         this._multiWindowTitle.add(label);
         this._multiWindowTitle.label_actor = label;
@@ -547,8 +548,8 @@ const AppButton = GObject.registerClass({
     }
 
     _windowEnteredOrLeftMonitor(metaDisplay, monitorIndex, metaWindow) {
-        if (this._windowTracker.get_window_app(metaWindow) == this.app &&
-            monitorIndex == this._monitorIndex) {
+        if (this._windowTracker.get_window_app(metaWindow) === this.app &&
+            monitorIndex === this._monitorIndex) {
             this._updateVisibility();
             this._windowsChanged();
         }
@@ -567,7 +568,7 @@ const AppButton = GObject.registerClass({
     }
 
     _isFocused() {
-        return this._windowTracker.focus_app == this.app;
+        return this._windowTracker.focus_app === this.app;
     }
 
     _updateIconGeometry() {
@@ -583,7 +584,7 @@ const AppButton = GObject.registerClass({
 
     _windowsChanged() {
         let windows = this.getWindowList();
-        this._singleWindowTitle.visible = windows.length == 1;
+        this._singleWindowTitle.visible = windows.length === 1;
         this._multiWindowTitle.visible = !this._singleWindowTitle.visible;
 
         if (this._singleWindowTitle.visible) {
@@ -625,12 +626,12 @@ const AppButton = GObject.registerClass({
         if (contextMenuWasOpen)
             this._contextMenu.close();
 
-        if (button == 1) {
+        if (button === 1) {
             if (menuWasOpen)
                 return;
 
             let windows = this.getWindowList();
-            if (windows.length == 1) {
+            if (windows.length === 1) {
                 if (contextMenuWasOpen)
                     return;
                 _minimizeOrActivateWindow(windows[0]);
@@ -683,7 +684,7 @@ const WindowList = GObject.registerClass({
             style_class: 'bottom-panel solid',
             reactive: true,
             track_hover: true,
-            layout_manager: new Clutter.BinLayout()
+            layout_manager: new Clutter.BinLayout(),
         });
         this.connect('destroy', this._onDestroy.bind(this));
 
@@ -703,7 +704,7 @@ const WindowList = GObject.registerClass({
             layout_manager: layout,
             x_align: Clutter.ActorAlign.START,
             x_expand: true,
-            y_expand: true
+            y_expand: true,
         });
         box.add(this._windowList, { expand: true });
 
@@ -734,7 +735,7 @@ const WindowList = GObject.registerClass({
 
         Main.layoutManager.addChrome(this, {
             affectsStruts: true,
-            trackFullscreen: true
+            trackFullscreen: true,
         });
         Main.uiGroup.set_child_above_sibling(this, Main.layoutManager.panelBox);
         Main.ctrlAltTabManager.addGroup(this, _('Window List'), 'start-here-symbolic');
@@ -751,7 +752,7 @@ const WindowList = GObject.registerClass({
             'keyboard-visible-changed',
             (o, state) => {
                 Main.layoutManager.keyboardBox.visible = state;
-                let keyboardBox = Main.layoutManager.keyboardBox;
+                let { keyboardBox } = Main.layoutManager;
                 keyboardBox.visible = state;
                 if (state) {
                     Main.uiGroup.set_child_above_sibling(
@@ -793,7 +794,7 @@ const WindowList = GObject.registerClass({
         this._dragEndId = Main.xdndHandler.connect('drag-end',
             this._onDragEnd.bind(this));
         this._dragMonitor = {
-            dragMotion: this._onDragMotion.bind(this)
+            dragMotion: this._onDragMotion.bind(this),
         };
 
         this._dndTimeoutId = 0;
@@ -809,9 +810,9 @@ const WindowList = GObject.registerClass({
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
         let diff = 0;
-        if (direction == Clutter.ScrollDirection.DOWN)
+        if (direction === Clutter.ScrollDirection.DOWN)
             diff = 1;
-        else if (direction == Clutter.ScrollDirection.UP)
+        else if (direction === Clutter.ScrollDirection.UP)
             diff = -1;
         else
             return;
@@ -833,7 +834,7 @@ const WindowList = GObject.registerClass({
         let workspaceManager = global.workspace_manager;
         let hasWorkspaces = this._mutterSettings.get_boolean('dynamic-workspaces') ||
                             workspaceManager.n_workspaces > 1;
-        let workspacesOnMonitor = this._monitor == Main.layoutManager.primaryMonitor ||
+        let workspacesOnMonitor = this._monitor === Main.layoutManager.primaryMonitor ||
                                   !this._mutterSettings.get_boolean('workspaces-only-on-primary');
 
         this._workspaceIndicator.visible = hasWorkspaces && workspacesOnMonitor;
@@ -849,23 +850,23 @@ const WindowList = GObject.registerClass({
         });
 
         this._windowList.reactive = visible;
-        this._windowList.get_children().forEach(c => c.reactive = visible);
+        this._windowList.get_children().forEach(c => (c.reactive = visible));
     }
 
     _getPreferredUngroupedWindowListWidth() {
-        if (this._windowList.get_n_children() == 0)
+        if (this._windowList.get_n_children() === 0)
             return this._windowList.get_preferred_width(-1)[1];
 
         let children = this._windowList.get_children();
         let [, childWidth] = children[0].get_preferred_width(-1);
-        let spacing = this._windowList.layout_manager.spacing;
+        let { spacing } = this._windowList.layout_manager;
 
         let workspace = global.workspace_manager.get_active_workspace();
         let windows = global.display.get_tab_list(Meta.TabList.NORMAL, workspace);
         if (this._perMonitor)
-            windows = windows.filter(w => w.get_monitor() == this._monitor.index);
+            windows = windows.filter(w => w.get_monitor() === this._monitor.index);
         let nWindows = windows.length;
-        if (nWindows == 0)
+        if (nWindows === 0)
             return this._windowList.get_preferred_width(-1)[1];
 
         return nWindows * childWidth + (nWindows - 1) * spacing;
@@ -879,22 +880,22 @@ const WindowList = GObject.registerClass({
     _groupingModeChanged() {
         this._groupingMode = this._settings.get_enum('grouping-mode');
 
-        if (this._groupingMode == GroupingMode.AUTO) {
+        if (this._groupingMode === GroupingMode.AUTO) {
             this._checkGrouping();
         } else {
-            this._grouped = this._groupingMode == GroupingMode.ALWAYS;
+            this._grouped = this._groupingMode === GroupingMode.ALWAYS;
             this._populateWindowList();
         }
     }
 
     _checkGrouping() {
-        if (this._groupingMode != GroupingMode.AUTO)
+        if (this._groupingMode !== GroupingMode.AUTO)
             return;
 
         let maxWidth = this._getMaxWindowListWidth();
         let natWidth = this._getPreferredUngroupedWindowListWidth();
 
-        let grouped = (maxWidth < natWidth);
+        let grouped = maxWidth < natWidth;
         if (this._grouped !== grouped) {
             this._grouped = grouped;
             this._populateWindowList();
@@ -933,9 +934,9 @@ const WindowList = GObject.registerClass({
         if (!this._grouped)
             return;
 
-        if (app.state == Shell.AppState.RUNNING)
+        if (app.state === Shell.AppState.RUNNING)
             this._addApp(app);
-        else if (app.state == Shell.AppState.STOPPED)
+        else if (app.state === Shell.AppState.STOPPED)
             this._removeApp(app);
     }
 
@@ -951,7 +952,7 @@ const WindowList = GObject.registerClass({
 
     _removeApp(app) {
         let children = this._windowList.get_children();
-        let child = children.find(c => c.app == app);
+        let child = children.find(c => c.app === app);
         if (child)
             child.destroy();
     }
@@ -967,7 +968,7 @@ const WindowList = GObject.registerClass({
             return;
 
         let children = this._windowList.get_children();
-        if (children.find(c => c.metaWindow == win))
+        if (children.find(c => c.metaWindow === win))
             return;
 
         let button = new WindowButton(win, this._perMonitor, this._monitor.index);
@@ -990,7 +991,7 @@ const WindowList = GObject.registerClass({
             return; // not actually removed, just moved to another workspace
 
         let children = this._windowList.get_children();
-        let child = children.find(c => c.metaWindow == win);
+        let child = children.find(c => c.metaWindow === win);
         if (child)
             child.destroy();
     }
@@ -1046,7 +1047,7 @@ const WindowList = GObject.registerClass({
 
         let hoveredWindow = dragEvent.targetActor.metaWindow;
         if (!hoveredWindow ||
-            this._dndWindow == hoveredWindow)
+            this._dndWindow === hoveredWindow)
             return DND.DragMotionResult.CONTINUE;
 
         this._removeActivateTimeout();
@@ -1060,7 +1061,7 @@ const WindowList = GObject.registerClass({
 
     _removeActivateTimeout() {
         if (this._dndTimeoutId)
-            GLib.source_remove (this._dndTimeoutId);
+            GLib.source_remove(this._dndTimeoutId);
         this._dndTimeoutId = 0;
         this._dndWindow = null;
     }
@@ -1150,7 +1151,7 @@ class Extension {
         let showOnAllMonitors = this._settings.get_boolean('show-on-all-monitors');
 
         Main.layoutManager.monitors.forEach(monitor => {
-            if (showOnAllMonitors || monitor == Main.layoutManager.primaryMonitor)
+            if (showOnAllMonitors || monitor === Main.layoutManager.primaryMonitor)
                 this._windowLists.push(new WindowList(showOnAllMonitors, monitor));
         });
     }

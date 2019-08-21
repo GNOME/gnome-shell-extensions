@@ -13,7 +13,7 @@ let MyWorkspacesDisplay = class extends WorkspacesDisplay {
         this.actor.add_constraint(
             new Layout.MonitorConstraint({
                 primary: true,
-                work_area: true
+                work_area: true,
             }));
 
         this.actor.connect('destroy', this._onDestroy.bind(this));
@@ -24,9 +24,10 @@ let MyWorkspacesDisplay = class extends WorkspacesDisplay {
     }
 
     show(...args) {
-        if (this._scrollEventId == 0)
+        if (!this._scrollEventId) {
             this._scrollEventId = Main.windowPicker.connect('scroll-event',
                 this._onScrollEvent.bind(this));
+        }
 
         super.show(...args);
     }
@@ -64,8 +65,8 @@ let MyWorkspacesDisplay = class extends WorkspacesDisplay {
 var WindowPicker = GObject.registerClass({
     GTypeName: 'WindowListWindowPicker',
     Signals: {
-        'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] }
-    }
+        'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] },
+    },
 }, class extends Clutter.Actor {
     _init() {
         this._visible = false;
@@ -140,7 +141,7 @@ var WindowPicker = GObject.registerClass({
         this._stageKeyPressId = global.stage.connect('key-press-event',
             (a, event) => {
                 let sym = event.get_key_symbol();
-                if (sym == Clutter.KEY_Escape) {
+                if (sym === Clutter.KEY_Escape) {
                     this.close();
                     return Clutter.EVENT_STOP;
                 }
@@ -199,7 +200,7 @@ var WindowPicker = GObject.registerClass({
                 return true;
 
             this._modal = Main.pushModal(this, {
-                actionMode: Shell.ActionMode.OVERVIEW
+                actionMode: Shell.ActionMode.OVERVIEW,
             });
 
             if (!this._modal) {
@@ -244,7 +245,7 @@ var WindowPickerToggle = GObject.registerClass(
 class WindowPickerToggle extends St.Button {
     _init() {
         let iconBin = new St.Widget({
-            layout_manager: new Clutter.BinLayout()
+            layout_manager: new Clutter.BinLayout(),
         });
         iconBin.add_child(new St.Icon({
             icon_name: 'focus-windows-symbolic',
@@ -252,7 +253,7 @@ class WindowPickerToggle extends St.Button {
             x_expand: true,
             y_expand: true,
             x_align: Clutter.ActorAlign.CENTER,
-            y_align: Clutter.ActorAlign.CENTER
+            y_align: Clutter.ActorAlign.CENTER,
         }));
         super._init({
             style_class: 'window-picker-toggle',
@@ -260,7 +261,7 @@ class WindowPickerToggle extends St.Button {
             visible: !Main.sessionMode.hasOverview,
             x_fill: true,
             y_fill: true,
-            toggle_mode: true
+            toggle_mode: true,
         });
 
         this.connect('notify::checked', () => {
