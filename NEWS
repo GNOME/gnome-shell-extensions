@@ -1,3 +1,15 @@
+3.33.91
+=======
+* Misc. bug fixes and cleanups [Florian; !88, !90, !91, !92]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Asier Sarasua Garmendia [eu], Anders Jonsson [sv], Marek Černocký [cs],
+  Kukuh Syafaat [id], Jiri Grönroos [fi], Florentina Mușat [ro],
+  Aurimas Černius [lt], Daniel Mustieles [es], Piotr Drąg [pl], Jordi Mas [ca],
+  Danial Behzadi [fa]
 3.33.90
 =======
 * window-list: Support showing windows from all workspaces [Florian; #154]
