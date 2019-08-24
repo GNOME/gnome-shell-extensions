@@ -3,14 +3,14 @@
 #
 #
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012.
-# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2012, 2013, 2014, 2015, 2017.
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2012, 2013, 2014, 2015, 2017, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-s"
-"hell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-08-11 01:33+0000\n"
-"PO-Revision-Date: 2017-08-28 10:26+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/is"
+"sues\n"
+"POT-Creation-Date: 2019-08-09 22:24+0000\n"
+"PO-Revision-Date: 2019-08-24 17:32+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -29,71 +29,11 @@ msgstr "Klasiskais GNOME"
 msgid "This session logs you into GNOME Classic"
 msgstr "Šī sesija ieraksta jūs klasiskajā GNOME vidē"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "Pievienot modālo dialoglodziņu vecāka logam"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "Šī atslēga pārraksta org.gnome.mutter atslēgu, darbinot GNOME čaulu."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Pogu izkārtojums virsraksta joslā"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Šī atslēga pārraksta org.gnome.desktop.wm.preferences atslēgu, darbinot "
-"GNOME čaulu."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "Aktivēt logu sānisko izklāšanu, kad to nomet uz ekrāna malas"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "Darbvietas tikai uz galvenā monitora"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr "Peles režīmā aizkavēt fokusa izmaiņas, līdz rādītājs pārstāj kustēties"
-
-#: extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "Tikai sīktēli"
-
-#: extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "Tikai lietotnes ikonas"
-
-#: extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "Sīktēli un lietotņu ikonas"
-
-#: extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "Rādīt logus kā"
-
-#: extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "Rādīt tikai logus, kas ir pašreizējā darbvietā"
-
-#: extensions/apps-menu/extension.js:41
-msgid "Activities Overview"
-msgstr "Aktivitāšu pārskats"
-
-#: extensions/apps-menu/extension.js:141
+#: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Izlase"
 
-#: extensions/apps-menu/extension.js:436
+#: extensions/apps-menu/extension.js:368
 msgid "Applications"
 msgstr "Lietotnes"
 
@@ -113,69 +53,37 @@ msgstr ""
 msgid "Application"
 msgstr "Lietotne"
 
-#: extensions/auto-move-windows/prefs.js:69
-#: extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Darbvieta"
 
-#: extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Pievienot kārtulu"
 
-#: extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Izveidot jaunu atbilstošu kārtulu"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Pievienot"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:107
+#: extensions/drive-menu/extension.js:102
+#: extensions/places-menu/placeDisplay.js:232
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Neizdevās izgrūst dzini “%s”:"
 
-#: extensions/drive-menu/extension.js:125
+#: extensions/drive-menu/extension.js:118
 msgid "Removable devices"
 msgstr "Izņemamās ierīces"
 
-#: extensions/drive-menu/extension.js:150
-#| msgid "Open File"
+#: extensions/drive-menu/extension.js:145
 msgid "Open Files"
 msgstr "Atvērt datnes"
-
-#: extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Sveika pasaule!"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
-msgid "Alternative greeting text."
-msgstr "Alternatīvs sveikšanas teksts."
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"Ja nav tukšs, tas satur tekstu, kas tiks rādīts, kas tiek klikšķināts uz "
-"paneļa."
-
-#: extensions/example/prefs.js:30
-msgid "Message"
-msgstr "Ziņojums"
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it’s possible to customize the greeting message."
-msgstr ""
-"Example mēģina parādīt, kā veidot pieklājīgas uzvedības paplašinājumus "
-"čaulai un kā tādam tam pašam par sevi nav lielas jēgas.\n"
-"Tomēr, tam var pielāgot sveiciena ziņojumu."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
@@ -206,32 +114,31 @@ msgstr ""
 "noklusēto novietojumu (apakšā). Lai šī iestatījuma izmaiņas stātos spēkā, "
 "jāpārstartē čaula."
 
-#: extensions/places-menu/extension.js:78
-#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:80
+#: extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "Vietas"
 
-#: extensions/places-menu/placeDisplay.js:65
-#, javascript-format
-#| msgid "Failed to launch “%s”"
-msgid "Failed to mount volume for “%s”"
-msgstr "Neizdevās montēt “%s” sējumu"
-
-#: extensions/places-menu/placeDisplay.js:78
+#: extensions/places-menu/placeDisplay.js:46
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Neizdevās palaist “%s”"
 
-#: extensions/places-menu/placeDisplay.js:137
-#: extensions/places-menu/placeDisplay.js:160
+#: extensions/places-menu/placeDisplay.js:61
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Neizdevās montēt “%s” sējumu"
+
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Dators"
 
-#: extensions/places-menu/placeDisplay.js:303
+#: extensions/places-menu/placeDisplay.js:358
 msgid "Home"
 msgstr "Mājas"
 
-#: extensions/places-menu/placeDisplay.js:347
+#: extensions/places-menu/placeDisplay.js:403
 msgid "Browse Network"
 msgstr "Pārlūkot tīklu"
 
@@ -240,7 +147,6 @@ msgid "Cycle Screenshot Sizes"
 msgstr "Pārslēdz ekrānattēlu izmērus"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
-#| msgid "Cycle Screenshot Sizes"
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Pārslēdz ekrānattēlu izmērus pretēji"
 
@@ -252,52 +158,47 @@ msgstr "Motīva nosaukums"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Motīva nosaukums, ko ielādēt no ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:99
 msgid "Close"
 msgstr "Aizvērt"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Atminimizēt"
 
-#: extensions/window-list/extension.js:130
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "Minimizēt"
 
-#: extensions/window-list/extension.js:136
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Atjaunot"
 
-#: extensions/window-list/extension.js:137
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "Maksimizēt"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:431
 msgid "Minimize all"
 msgstr "Minimizēt visus"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:437
 msgid "Unminimize all"
 msgstr "Atminimizēt visus"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:443
 msgid "Maximize all"
 msgstr "Maksimizēt visus"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:451
 msgid "Unmaximize all"
 msgstr "Atmaksimizēt visus"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:459
 msgid "Close all"
 msgstr "Aizvērt visu"
 
-#: extensions/window-list/extension.js:678
-#: extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Darbvietu indikators"
-
-#: extensions/window-list/extension.js:842
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Logu saraksts"
 
@@ -314,10 +215,23 @@ msgstr ""
 "vērtības ir “never”, “auto” un “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:82
+#| msgid "Show only windows in the current workspace"
+msgid "Show windows from all workspaces"
+msgstr "Rādīt logus no visām darba vietām"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#| msgid ""
+#| "Whether to show the window list on all connected monitors or only on the "
+#| "primary one."
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr "Vai rādīt logus no visām darbvietām, vai tikai pašreizējā darbvietā."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "Rāda logu sarakstu uz visiem monitoriem"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -325,19 +239,19 @@ msgstr ""
 "Vai logu sarakstu rādītu uz visiem pievienotajiem monitoriem, vai tikai uz "
 "primārā."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Logu grupēšana"
 
-#: extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Nekad negrupēt logus"
 
-#: extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Grupēt logus, kad vieta ir ierobežota"
 
-#: extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Vienmēr grupēt logus"
 
@@ -345,16 +259,88 @@ msgstr "Vienmēr grupēt logus"
 msgid "Show on all monitors"
 msgstr "Rādīt uz visiem monitoriem"
 
-#: extensions/workspace-indicator/prefs.js:141
+#: extensions/window-list/workspaceIndicator.js:211
+#: extensions/workspace-indicator/extension.js:216
+msgid "Workspace Indicator"
+msgstr "Darbvietu indikators"
+
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Darbvietu nosaukumi"
 
-#: extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Nosaukums"
 
-#: extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:191
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Darbvieta %d"
 
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Pievienot modālo dialoglodziņu vecāka logam"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "Šī atslēga pārraksta org.gnome.mutter atslēgu, darbinot GNOME čaulu."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Pogu izkārtojums virsraksta joslā"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
+#~ "running GNOME Shell."
+#~ msgstr ""
+#~ "Šī atslēga pārraksta org.gnome.desktop.wm.preferences atslēgu, darbinot "
+#~ "GNOME čaulu."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr "Aktivēt logu sānisko izklāšanu, kad to nomet uz ekrāna malas"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Darbvietas tikai uz galvenā monitora"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr ""
+#~ "Peles režīmā aizkavēt fokusa izmaiņas, līdz rādītājs pārstāj kustēties"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "Tikai sīktēli"
+
+#~ msgid "Application icon only"
+#~ msgstr "Tikai lietotnes ikonas"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "Sīktēli un lietotņu ikonas"
+
+#~ msgid "Present windows as"
+#~ msgstr "Rādīt logus kā"
+
+#~ msgid "Activities Overview"
+#~ msgstr "Aktivitāšu pārskats"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Sveika pasaule!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "Alternatīvs sveikšanas teksts."
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on "
+#~ "the panel."
+#~ msgstr ""
+#~ "Ja nav tukšs, tas satur tekstu, kas tiks rādīts, kas tiek klikšķināts uz "
+#~ "paneļa."
+
+#~ msgid "Message"
+#~ msgstr "Ziņojums"
+
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell "
+#~ "and as such it has little functionality on its own.\n"
+#~ "Nevertheless it’s possible to customize the greeting message."
+#~ msgstr ""
+#~ "Example mēģina parādīt, kā veidot pieklājīgas uzvedības paplašinājumus "
+#~ "čaulai un kā tādam tam pašam par sevi nav lielas jēgas.\n"
+#~ "Tomēr, tam var pielāgot sveiciena ziņojumu."
