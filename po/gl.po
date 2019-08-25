@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-07-05 15:07+0000\n"
-"PO-Revision-Date: 2017-08-07 15:04+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2019-08-09 22:24+0000\n"
+"PO-Revision-Date: 2019-08-25 18:13+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -28,73 +28,11 @@ msgstr "GNOME clasico"
 msgid "This session logs you into GNOME Classic"
 msgstr "Esta sesión iniciarao en GNOME clásico"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "Anexar o diálogo modal á xanela pai"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Esta chave sobrescribe a chave en org.gnome.mutter cando executa GNOME Shell."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Ordenación dos botóns na barra de título"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Esta chave sobrescribe a chave en org.gnome.desktop.wm.preferences ao "
-"executar GNOME Shell."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "Activar o mosaico nos bordos ao arrastrar xanelas aos bordos da xanela"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "Espazos de traballo só no monitor primario"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"Atrasar o cambio de foco no modo rato até que o punteiro se deteña ao moverse"
-
-#: extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "Só miniaturas"
-
-#: extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "Só icona do aplicativo"
-
-#: extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "Miniatura e icona do aplicativo"
-
-#: extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "Presentar xanelas como"
-
-#: extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "Mostrar só as xanelas na área de traballo actual"
-
-#: extensions/apps-menu/extension.js:41
-msgid "Activities Overview"
-msgstr "Vista xeral de actividades"
-
-#: extensions/apps-menu/extension.js:141
+#: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: extensions/apps-menu/extension.js:436
+#: extensions/apps-menu/extension.js:368
 msgid "Applications"
 msgstr "Aplicativos"
 
@@ -107,74 +45,44 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"Unha lista de cadeas, cada unha das cales contén un id de aplicativo (nome "
-"de ficheiro desktop), seguido por unha coma e o número do espazo de traballo"
+"Unha lista de cadeas, cada unha das cales contén un id de aplicativo (nome de "
+"ficheiro desktop), seguido por unha coma e o número do espazo de traballo"
 
 #: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "Aplicativo"
 
-#: extensions/auto-move-windows/prefs.js:69
-#: extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Área de traballo"
 
-#: extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Engadir regra"
 
-#: extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Crear regra de coincidencia nova"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Engadir"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:102
+#: extensions/places-menu/placeDisplay.js:232
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Fallo ao extraer a unidade «%s»:"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:118
 msgid "Removable devices"
 msgstr "Dispositivos extraíbeis"
 
-#: extensions/drive-menu/extension.js:149
-#| msgid "Open File"
+#: extensions/drive-menu/extension.js:145
 msgid "Open Files"
 msgstr "Abrir ficheiros"
-
-#: extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Hola, mundo!"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
-msgid "Alternative greeting text."
-msgstr "Texto de benvida alternativo"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"Se non está baleiro, contén o texto que se despregará ao premer sobre o panel"
-
-#: extensions/example/prefs.js:30
-msgid "Message"
-msgstr "Mensaxe"
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it’s possible to customize the greeting message."
-msgstr ""
-"«Exemplo» pretende mostrar como construir extensións de bo comportamento "
-"para a Shell e por iso ten pouca funcionalidade por si só.\n"
-"Porén, é posíbel personalizar a mensaxe de benvida."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
@@ -183,12 +91,12 @@ msgstr "Usar máis pantalla para as xanelas"
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. "
-"This setting applies only with the natural placement strategy."
+"aspect ratio, and consolidating them further to reduce the bounding box. This "
+"setting applies only with the natural placement strategy."
 msgstr ""
 "Tente usar máis pantalla para dispor as miniaturas das xanelas adaptándose á "
-"taxa de aspecto da pantalla e consolidalas para reducir a caixa saltante. "
-"Esta configuración aplícase só para a estratexia de disposición natural."
+"taxa de aspecto da pantalla e consolidalas para reducir a caixa saltante. Esta "
+"configuración aplícase só para a estratexia de disposición natural."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
@@ -200,36 +108,34 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"Se é verdadeiro, dispor os títulos das xanelas enriba da miniatura "
-"respectiva, omitindo a disposición inferior por omisión do shell. Se cambia "
-"esta configuración deberá reiniciar o shell para que se apliquen os cambios."
+"Se é verdadeiro, dispor os títulos das xanelas enriba da miniatura respectiva, "
+"omitindo a disposición inferior por omisión do shell. Se cambia esta "
+"configuración deberá reiniciar o shell para que se apliquen os cambios."
 
-#: extensions/places-menu/extension.js:78
-#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:80 extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "Lugares"
 
-#: extensions/places-menu/placeDisplay.js:65
-#, javascript-format
-#| msgid "Failed to launch “%s”"
-msgid "Failed to mount volume for “%s”"
-msgstr "Produciuse un fallo ao montar o volume para «%s»"
-
-#: extensions/places-menu/placeDisplay.js:78
+#: extensions/places-menu/placeDisplay.js:46
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Produciuse un fallo ao iniciar «%s»"
 
-#: extensions/places-menu/placeDisplay.js:137
-#: extensions/places-menu/placeDisplay.js:160
+#: extensions/places-menu/placeDisplay.js:61
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Produciuse un fallo ao montar o volume para «%s»"
+
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Computador"
 
-#: extensions/places-menu/placeDisplay.js:303
+#: extensions/places-menu/placeDisplay.js:358
 msgid "Home"
 msgstr "Cartafol persoal"
 
-#: extensions/places-menu/placeDisplay.js:347
+#: extensions/places-menu/placeDisplay.js:403
 msgid "Browse Network"
 msgstr "Explorar a rede"
 
@@ -238,7 +144,6 @@ msgid "Cycle Screenshot Sizes"
 msgstr "Tamaño de capturas de pantalla cíclicos"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
-#| msgid "Cycle Screenshot Sizes"
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Tamaño de capturas de pantalla cíclicos cara atrás"
 
@@ -250,52 +155,47 @@ msgstr "Nome do tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "O nome do tema, a cargar desde ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:99
 msgid "Close"
 msgstr "Pechar"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Restabelecer"
 
-#: extensions/window-list/extension.js:130
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "Minimizar"
 
-#: extensions/window-list/extension.js:136
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Restaurar"
 
-#: extensions/window-list/extension.js:137
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:431
 msgid "Minimize all"
 msgstr "Minimizar todo"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:437
 msgid "Unminimize all"
 msgstr "Restaurar todo"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:443
 msgid "Maximize all"
 msgstr "Maximizar todo"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:451
 msgid "Unmaximize all"
 msgstr "Restaurar todo"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:459
 msgid "Close all"
 msgstr "Pechar todo"
 
-#: extensions/window-list/extension.js:678
-#: extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Indicador de espazo de traballo"
-
-#: extensions/window-list/extension.js:842
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Lista de xanelas"
 
@@ -309,34 +209,43 @@ msgid ""
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Decide cando agrupar as xanelas do mesmo aplicativo na lista de xanelas. Os "
-"valores posíbeis son «never» (nunca), «auto» (automático) e "
-"«always» (sempre)."
+"valores posíbeis son «never» (nunca), «auto» (automático) e «always» (sempre)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:82
+msgid "Show windows from all workspaces"
+msgstr "Mostrar as xanelas de todos os espazos de traballo"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr ""
+"Indica se mostrar as xanelas de todos os espazos de traballo ou só no actual."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "Mostrar a lista de xanelas en todos os monitores"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr ""
-"Indica se mostrar a lista de xanelas en todos os monitores conectados ou só "
-"no primario."
+"Indica se mostrar a lista de xanelas en todos os monitores conectados ou só no "
+"primario."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Agrupación de xanelas"
 
-#: extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Non agrupar nunca as xanelas"
 
-#: extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Agrupar as xanelas cando o espazo é limitado"
 
-#: extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Agrupar sempre as xanelas"
 
@@ -344,18 +253,90 @@ msgstr "Agrupar sempre as xanelas"
 msgid "Show on all monitors"
 msgstr "Mostrar en todos os monitores"
 
-#: extensions/workspace-indicator/prefs.js:141
+#: extensions/window-list/workspaceIndicator.js:211
+#: extensions/workspace-indicator/extension.js:216
+msgid "Workspace Indicator"
+msgstr "Indicador de espazo de traballo"
+
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Nomes dos espazos de traballo"
 
-#: extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Nome"
 
-#: extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:191
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Espazos de traballo %d"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Anexar o diálogo modal á xanela pai"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "Esta chave sobrescribe a chave en org.gnome.mutter cando executa GNOME Shell."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Ordenación dos botóns na barra de título"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when running "
+#~ "GNOME Shell."
+#~ msgstr ""
+#~ "Esta chave sobrescribe a chave en org.gnome.desktop.wm.preferences ao "
+#~ "executar GNOME Shell."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr "Activar o mosaico nos bordos ao arrastrar xanelas aos bordos da xanela"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Espazos de traballo só no monitor primario"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr ""
+#~ "Atrasar o cambio de foco no modo rato até que o punteiro se deteña ao moverse"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "Só miniaturas"
+
+#~ msgid "Application icon only"
+#~ msgstr "Só icona do aplicativo"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "Miniatura e icona do aplicativo"
+
+#~ msgid "Present windows as"
+#~ msgstr "Presentar xanelas como"
+
+#~ msgid "Activities Overview"
+#~ msgstr "Vista xeral de actividades"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Hola, mundo!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "Texto de benvida alternativo"
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on the "
+#~ "panel."
+#~ msgstr ""
+#~ "Se non está baleiro, contén o texto que se despregará ao premer sobre o panel"
+
+#~ msgid "Message"
+#~ msgstr "Mensaxe"
+
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell and "
+#~ "as such it has little functionality on its own.\n"
+#~ "Nevertheless it’s possible to customize the greeting message."
+#~ msgstr ""
+#~ "«Exemplo» pretende mostrar como construir extensións de bo comportamento "
+#~ "para a Shell e por iso ten pouca funcionalidade por si só.\n"
+#~ "Porén, é posíbel personalizar a mensaxe de benvida."
 
 #~ msgid "CPU"
 #~ msgstr "CPU"
@@ -428,9 +409,9 @@ msgstr "Espazos de traballo %d"
 #~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
 #~ "only' (shows only the application icon) or 'both'."
 #~ msgstr ""
-#~ "Configura como se mostran as xanelas no intercambiador. As opcións "
-#~ "posíbeis son «thumbnail-only» (mostra unha miniatura da xanela, «app-icon-"
-#~ "only» (só mostra a icona do aplicativo) ou «both» (móstranse ambas cosas)."
+#~ "Configura como se mostran as xanelas no intercambiador. As opcións posíbeis "
+#~ "son «thumbnail-only» (mostra unha miniatura da xanela, «app-icon-only» (só "
+#~ "mostra a icona do aplicativo) ou «both» (móstranse ambas cosas)."
 
 #~ msgid "Drag here to add favorites"
 #~ msgstr "Arrastre aquí para engadir aos favoritos"
@@ -448,11 +429,11 @@ msgstr "Espazos de traballo %d"
 #~ msgstr "Posición da doca"
 
 #~ msgid ""
-#~ "Sets the position of the dock in the screen. Allowed values are 'right' "
-#~ "or 'left'"
+#~ "Sets the position of the dock in the screen. Allowed values are 'right' or "
+#~ "'left'"
 #~ msgstr ""
-#~ "Estabelece a posición da doca na pantalla. Os valores permitidos son "
-#~ "«right» e «left»"
+#~ "Estabelece a posición da doca na pantalla. Os valores permitidos son «right» "
+#~ "e «left»"
 
 #~ msgid "Icon size"
 #~ msgstr "Tamaño da icona"
@@ -467,8 +448,8 @@ msgstr "Espazos de traballo %d"
 #~ msgstr "Efecto de autoagochado"
 
 #~ msgid ""
-#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' "
-#~ "and 'move'"
+#~ "Sets the effect of the hide dock. Allowed values are 'resize', 'rescale' and "
+#~ "'move'"
 #~ msgstr ""
 #~ "Estabelece o efecto de agochado da doca. Os valores permitidos son "
 #~ "«resize» (redimensionar( e «rescale» (re-escalar) e «move» (mover)"
@@ -486,8 +467,8 @@ msgstr "Espazos de traballo %d"
 #~ "Sets monitor to display dock in. The default value (-1) is the primary "
 #~ "monitor."
 #~ msgstr ""
-#~ "Estabelece a pantalla na que mostrar o taboleiro. O valor predeterminado "
-#~ "es (-1), que é a pantalla principal."
+#~ "Estabelece a pantalla na que mostrar o taboleiro. O valor predeterminado es "
+#~ "(-1), que é a pantalla principal."
 
 #~ msgid "%s is away."
 #~ msgstr "%s está ausente."
@@ -516,46 +497,43 @@ msgstr "Espazos de traballo %d"
 #~ msgstr ""
 #~ "Estabelece o comportamento do Alt+Tab. Os valores posíbeis son: "
 #~ "«native» (nativo), «all_thumbnails» (todo e miniaturas) e "
-#~ "«worspace_icons» (iconas de áreas de traballo). Para obter información "
-#~ "máis detallada, consulte a configuración dos diálogos."
+#~ "«worspace_icons» (iconas de áreas de traballo). Para obter información máis "
+#~ "detallada, consulte a configuración dos diálogos."
 
 #~ msgid ""
 #~ "This mode presents all applications from all workspaces in one selection "
-#~ "list. Instead of using the application icon of every window, it uses "
-#~ "small thumbnails resembling the window itself."
+#~ "list. Instead of using the application icon of every window, it uses small "
+#~ "thumbnails resembling the window itself."
 #~ msgstr ""
-#~ "Este modo presenta todos os aplicativos de todas as áreas de traballo "
-#~ "nunha lista de selección. No lugar de usar a icona de aplicativo de cada "
-#~ "xanela, usa pequenas miniaturas que semellan a propia xanela."
+#~ "Este modo presenta todos os aplicativos de todas as áreas de traballo nunha "
+#~ "lista de selección. No lugar de usar a icona de aplicativo de cada xanela, "
+#~ "usa pequenas miniaturas que semellan a propia xanela."
 
 #~ msgid "Workspace & Icons"
 #~ msgstr "Espazos de traballo e iconas"
 
 #~ msgid ""
 #~ "This mode let's you switch between the applications of your current "
-#~ "workspace and gives you additionally the option to switch to the last "
-#~ "used application of your previous workspace. This is always the last "
-#~ "symbol in the list and is segregated by a separator/vertical line if "
-#~ "available. \n"
+#~ "workspace and gives you additionally the option to switch to the last used "
+#~ "application of your previous workspace. This is always the last symbol in "
+#~ "the list and is segregated by a separator/vertical line if available. \n"
 #~ "Every window is represented by its application icon."
 #~ msgstr ""
-#~ "Este modo permítelle alternar entre os aplicativos da súa área de "
-#~ "traballo actual e dálle a opción de cambiar ao último aplicativo "
-#~ "empregada da súa área de traballo anterior. Este sempre é o último "
-#~ "símbolo da lista e está separado por un separador/liña vertical se está "
-#~ "dispoñíbel.\n"
+#~ "Este modo permítelle alternar entre os aplicativos da súa área de traballo "
+#~ "actual e dálle a opción de cambiar ao último aplicativo empregada da súa "
+#~ "área de traballo anterior. Este sempre é o último símbolo da lista e está "
+#~ "separado por un separador/liña vertical se está dispoñíbel.\n"
 #~ "Cada xanela está representada pola súa icona de aplicativo."
 
 #~ msgid "Move current selection to front before closing the popup"
-#~ msgstr ""
-#~ "Mover a selección actual ao frente antes de pechar a xanela emerxente"
+#~ msgstr "Mover a selección actual ao frente antes de pechar a xanela emerxente"
 
 #~ msgid ""
 #~ "The Alternate Tab can be used in different modes, that affect the way "
 #~ "windows are chosen and presented."
 #~ msgstr ""
-#~ "A combinación de teclas Alt+Tab pódese usar en diferentes modos, que "
-#~ "afectan á maneira na que se elixen e presentan as xanelas."
+#~ "A combinación de teclas Alt+Tab pódese usar en diferentes modos, que afectan "
+#~ "á maneira na que se elixen e presentan as xanelas."
 
 #~ msgid "Notifications"
 #~ msgstr "Notificacións"
@@ -587,15 +565,13 @@ msgstr "Espazos de traballo %d"
 #~ "    This mode let's you switch between the applications of your current \n"
 #~ "    workspace and gives you additionally the option to switch to the last "
 #~ "used \n"
-#~ "    application of your previous workspace. This is always the last "
-#~ "symbol in \n"
-#~ "    the list and is segregated by a separator/vertical line if "
-#~ "available. \n"
+#~ "    application of your previous workspace. This is always the last symbol "
+#~ "in \n"
+#~ "    the list and is segregated by a separator/vertical line if available. \n"
 #~ "    Every window is represented by its application icon.  \n"
 #~ "\n"
 #~ "Native:\n"
-#~ "    This mode is the native GNOME 3 behaviour or in other words: "
-#~ "Clicking \n"
+#~ "    This mode is the native GNOME 3 behaviour or in other words: Clicking \n"
 #~ "    native switches the Alternate Tab extension off. \n"
 #~ msgstr ""
 #~ "É a primeira vez que usa a extensión de Tab alternativo.\n"
@@ -604,8 +580,7 @@ msgstr "Espazos de traballo %d"
 #~ "Todo e miniaturas:\n"
 #~ "    Este modo mostra tódolos aplicativos de tódolos espazos de traballa "
 #~ "nunha\n"
-#~ "    lista de selección. No lugar de usar as iconas de aplicativos para "
-#~ "cada\n"
+#~ "    lista de selección. No lugar de usar as iconas de aplicativos para cada\n"
 #~ "    xanela, usa miniaturas pequenas que representan as xanelas.\n"
 #~ "\n"
 #~ "Espazos de traballo e iconas:\n"
@@ -613,15 +588,13 @@ msgstr "Espazos de traballo %d"
 #~ "traballo \n"
 #~ "    actual e permítelle engadir a opción de cambiar entre o último "
 #~ "aplicativo\n"
-#~ "    usado do seu espazo de traballo anterior. Sempre é o último símbolo "
-#~ "na\n"
+#~ "    usado do seu espazo de traballo anterior. Sempre é o último símbolo na\n"
 #~ "    lista e está separado por unha liña separador/vertical se está "
 #~ "dispoñíbel.\n"
 #~ "    Cada xanela está representada pola icona do aplicativo.\n"
 #~ "\n"
 #~ "Nativo:\n"
-#~ "    Este modo é o comportamento nativo de GNOME 3 ou noutras palabras: "
-#~ "ao \n"
+#~ "    Este modo é o comportamento nativo de GNOME 3 ou noutras palabras: ao \n"
 #~ "    seleccionar nativo desactiva a extensión Tab alternativo.\n"
 
 #~ msgid "Alt Tab Behaviour"
@@ -640,13 +613,13 @@ msgstr "Espazos de traballo %d"
 #~ msgstr "Indica se o Tab alternativo está instalado recentemente"
 
 #~ msgid ""
-#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use "
-#~ "the default grid based algorithm, 'natural' to use another one that "
-#~ "reflects more the position and size of the actual window"
+#~ "The algorithm used to layout thumbnails in the overview. 'grid' to use the "
+#~ "default grid based algorithm, 'natural' to use another one that reflects "
+#~ "more the position and size of the actual window"
 #~ msgstr ""
 #~ "O algoritmo usado pola disposición de miniaturas na vista previa. «grid» "
-#~ "para usar o algoritmo predeterminado baseado na grella, «natural» para "
-#~ "usar outro que reflexa máis a posición e tamaño da xanela actual"
+#~ "para usar o algoritmo predeterminado baseado na grella, «natural» para usar "
+#~ "outro que reflexa máis a posición e tamaño da xanela actual"
 
 #~ msgid "Window placement strategy"
 #~ msgstr "Estratexia de disposición de xanelas"
