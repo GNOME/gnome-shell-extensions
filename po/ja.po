@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2018-11-13 00:26+0000\n"
+"POT-Creation-Date: 2019-08-09 22:24+0000\n"
 "PO-Revision-Date: 2015-03-24 23:41+0900\n"
 "Last-Translator: Hajime Taira <htaira@redhat.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -30,15 +30,11 @@ msgstr "GNOME クラシック"
 msgid "This session logs you into GNOME Classic"
 msgstr "GNOME クラシックモードでログインします"
 
-#: extensions/apps-menu/extension.js:38
-msgid "Activities Overview"
-msgstr "アクティビティ"
-
-#: extensions/apps-menu/extension.js:131
+#: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "お気に入り"
 
-#: extensions/apps-menu/extension.js:419
+#: extensions/apps-menu/extension.js:368
 msgid "Applications"
 msgstr "アプリケーション"
 
@@ -54,35 +50,35 @@ msgstr ""
 "アプリケーションの識別子 (.desktop ファイル名) とコロンの後にワークスペース番"
 "号を付与した文字列を要素とするリストです"
 
-#: extensions/auto-move-windows/prefs.js:53
+#: extensions/auto-move-windows/prefs.js:60
 msgid "Application"
 msgstr "アプリケーション"
 
-#: extensions/auto-move-windows/prefs.js:62
-#: extensions/auto-move-windows/prefs.js:117
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "ワークスペース"
 
-#: extensions/auto-move-windows/prefs.js:78
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "ルールを追加"
 
-#: extensions/auto-move-windows/prefs.js:98
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "新規ルールの作成"
 
-#: extensions/auto-move-windows/prefs.js:103
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "追加"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:104
-#: extensions/places-menu/placeDisplay.js:225
+#: extensions/drive-menu/extension.js:102
+#: extensions/places-menu/placeDisplay.js:232
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "ドライブ“%s”の取り出しに失敗しました:"
 
-#: extensions/drive-menu/extension.js:120
+#: extensions/drive-menu/extension.js:118
 msgid "Removable devices"
 msgstr "リムーバブルデバイス"
 
@@ -120,31 +116,31 @@ msgstr ""
 "フォルト値よりも優先されます)。この設定を適用する際は GNOME シェルを再起動し"
 "てください。"
 
-#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:80
 #: extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "場所"
 
-#: extensions/places-menu/placeDisplay.js:67
-#, javascript-format
-msgid "Failed to mount volume for “%s”"
-msgstr ""
-
-#: extensions/places-menu/placeDisplay.js:80
+#: extensions/places-menu/placeDisplay.js:46
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "“%s”の起動に失敗"
 
-#: extensions/places-menu/placeDisplay.js:141
-#: extensions/places-menu/placeDisplay.js:164
+#: extensions/places-menu/placeDisplay.js:61
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr ""
+
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "コンピューター"
 
-#: extensions/places-menu/placeDisplay.js:342
+#: extensions/places-menu/placeDisplay.js:358
 msgid "Home"
 msgstr "ホーム"
 
-#: extensions/places-menu/placeDisplay.js:386
+#: extensions/places-menu/placeDisplay.js:403
 msgid "Browse Network"
 msgstr "ネットワークを表示"
 
@@ -164,52 +160,47 @@ msgstr "テーマの名前"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "テーマの名前です (~/.themes/name/gnome-shell 配下に格納します)"
 
-#: extensions/window-list/extension.js:107
+#: extensions/window-list/extension.js:99
 msgid "Close"
 msgstr "閉じる"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "最小化解除"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "最小化"
 
-#: extensions/window-list/extension.js:133
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "最大化解除"
 
-#: extensions/window-list/extension.js:134
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "最大化"
 
-#: extensions/window-list/extension.js:409
+#: extensions/window-list/extension.js:431
 msgid "Minimize all"
 msgstr "全て最小化"
 
-#: extensions/window-list/extension.js:415
+#: extensions/window-list/extension.js:437
 msgid "Unminimize all"
 msgstr "全て最小化解除"
 
-#: extensions/window-list/extension.js:421
+#: extensions/window-list/extension.js:443
 msgid "Maximize all"
 msgstr "全て最大化"
 
-#: extensions/window-list/extension.js:430
+#: extensions/window-list/extension.js:451
 msgid "Unmaximize all"
 msgstr "全て最大化解除"
 
-#: extensions/window-list/extension.js:439
+#: extensions/window-list/extension.js:459
 msgid "Close all"
 msgstr "全て閉じる"
 
-#: extensions/window-list/extension.js:648
-#: extensions/workspace-indicator/extension.js:28
-msgid "Workspace Indicator"
-msgstr "ワークスペースインジケーター"
-
-#: extensions/window-list/extension.js:818
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "ウィンドウのリスト"
 
@@ -226,10 +217,27 @@ msgstr ""
 "定可能な値は、“never”, “auto”, “always”です。"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:82
+#, fuzzy
+#| msgid "Show only windows in the current workspace"
+msgid "Show windows from all workspaces"
+msgstr "現在のワークスペースのウィンドウのみ表示する"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#, fuzzy
+#| msgid ""
+#| "Whether to show the window list on all connected monitors or only on the "
+#| "primary one."
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr ""
+"ウィンドウリストをすべての接続モニターに表示するかプライマリーモニターにのみ"
+"表示するかの設定です。"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "すべてのモニターにウィンドウリストを表示する"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -237,38 +245,46 @@ msgstr ""
 "ウィンドウリストをすべての接続モニターに表示するかプライマリーモニターにのみ"
 "表示するかの設定です。"
 
-#: extensions/window-list/prefs.js:28
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "ウィンドウのグループ化"
 
-#: extensions/window-list/prefs.js:46
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "ウィンドウをグループ化しない"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "ウィンドウ一覧の幅が制限される時にグループ化する"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "ウィンドウをグループ化する"
 
-#: extensions/window-list/prefs.js:71
+#: extensions/window-list/prefs.js:75
 msgid "Show on all monitors"
 msgstr "すべてのモニターに表示する"
 
-#: extensions/workspace-indicator/prefs.js:134
+#: extensions/window-list/workspaceIndicator.js:211
+#: extensions/workspace-indicator/extension.js:216
+msgid "Workspace Indicator"
+msgstr "ワークスペースインジケーター"
+
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "ワークスペース名"
 
-#: extensions/workspace-indicator/prefs.js:150
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "名前"
 
-#: extensions/workspace-indicator/prefs.js:190
+#: extensions/workspace-indicator/prefs.js:191
 #, javascript-format
 msgid "Workspace %d"
 msgstr "ワークスペース %d"
+
+#~ msgid "Activities Overview"
+#~ msgstr "アクティビティ"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "モーダルダイアログを親ウィンドウに結び付ける"
@@ -310,9 +326,6 @@ msgstr "ワークスペース %d"
 
 #~ msgid "Present windows as"
 #~ msgstr "ウィンドウの表示方法"
-
-#~ msgid "Show only windows in the current workspace"
-#~ msgstr "現在のワークスペースのウィンドウのみ表示する"
 
 #~ msgid "Hello, world!"
 #~ msgstr "Hello, world!"
