@@ -6,6 +6,7 @@
 # Nishio Futoshi <fut_nis@d3.dion.ne.jp>, 2013.
 # Ikuya Awashiro <ikuya@fruitsbasket.info>, 2014.
 # Hajime Taira <htaira@redhat.com>, 2014, 2015.
+# sicklylife <translation@sicklylife.jp>, 2019.
 #
 msgid ""
 msgstr ""
@@ -13,8 +14,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
 "POT-Creation-Date: 2019-08-09 22:24+0000\n"
-"PO-Revision-Date: 2015-03-24 23:41+0900\n"
-"Last-Translator: Hajime Taira <htaira@redhat.com>\n"
+"PO-Revision-Date: 2019-08-27 21:57+0900\n"
+"Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -124,12 +125,12 @@ msgstr "場所"
 #: extensions/places-menu/placeDisplay.js:46
 #, javascript-format
 msgid "Failed to launch “%s”"
-msgstr "“%s”の起動に失敗"
+msgstr "“%s”の起動に失敗しました"
 
 #: extensions/places-menu/placeDisplay.js:61
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
-msgstr ""
+msgstr "“%s”のマウントに失敗しました"
 
 #: extensions/places-menu/placeDisplay.js:148
 #: extensions/places-menu/placeDisplay.js:171
@@ -218,20 +219,14 @@ msgstr ""
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 #: extensions/window-list/prefs.js:82
-#, fuzzy
-#| msgid "Show only windows in the current workspace"
 msgid "Show windows from all workspaces"
-msgstr "現在のワークスペースのウィンドウのみ表示する"
+msgstr "すべてのワークスペースのウィンドウを表示する"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
-#, fuzzy
-#| msgid ""
-#| "Whether to show the window list on all connected monitors or only on the "
-#| "primary one."
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr ""
-"ウィンドウリストをすべての接続モニターに表示するかプライマリーモニターにのみ"
-"表示するかの設定です。"
+"ウィンドウをすべてのワークスペースから表示するか現在のワークスペースにあるウィン"
+"ドウのみ表示するかの設定です。"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
