@@ -1,3 +1,11 @@
+3.33.92
+=======
+
+Translators:
+  Марко Костић [sr], Tim Sabsch [de], Rūdolfs Mazurs [lv], Matej Urbančič [sl],
+  Balázs Úr [hu], Claude Paroz [fr], Fran Dieguez [gl], Changwoo Ryu [ko],
+  Ryuta Fujii [ja], Fabio Tomat [fur], Goran Vidović [hr]
+
 3.33.91
 =======
 * Misc. bug fixes and cleanups [Florian; !88, !90, !91, !92]
