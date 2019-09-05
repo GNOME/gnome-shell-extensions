@@ -5,22 +5,23 @@
 # Ιωάννης Ζαμπούκας <ioza1964@yahoo.gr>, 2011.
 # Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013, 2015.
 # Vangelis Skarmoutsos <skarmoutsosv@gmail.com>, 2013.
-# Efstathios Iosifidis <iosifidis@opensuse.org>, 2013.
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2013-2019.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-08-11 01:33+0000\n"
-"PO-Revision-Date: 2017-09-09 14:10+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2019-08-09 22:24+0000\n"
+"PO-Revision-Date: 2019-09-05 19:27+0300\n"
 "Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
-"Language-Team: team@lists.gnome.gr\n"
+"Language-Team: Greek, Modern (1453-) <gnome-el-list@gnome.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.7\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 3.32.1\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -31,77 +32,11 @@ msgstr "GNOME Classic"
 msgid "This session logs you into GNOME Classic"
 msgstr "Αυτή η συνεδρία σας συνδέει στο GNOME Classic"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "Προσάρτηση αποκλειστικού διαλόγου στο γονικό παράθυρο"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Αυτό το κλειδί επικαλύπτει το κλειδί στο org.gnome.mutter όταν εκτελείται το "
-"GNOME Shell."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Διάταξη κουμπιών της γραμμής τίτλου"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Αυτό το κλειδί επικαλύπτει το κλειδί στο org.gnome.mutter όταν εκτελείται το "
-"GNOME Shell."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"Ενεργοποίηση προσκόλλησης στην άκρη, όταν αφήνονται παράθυρα στα άκρα της "
-"οθόνης"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "Χώροι εργασίας μόνο στην κύρια οθόνη"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"Καθυστέρηση εστίασης αλλαγών στην κατάσταση ποντικιού μέχρι να σταματήσει να "
-"κινείται ο δείκτης"
-
-#: extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "Μόνο μικρογραφία"
-
-#: extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "Μόνο εικονίδιο εφαρμογής"
-
-#: extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "Μικρογραφία και εικονίδιο εφαρμογής"
-
-#: extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "Παρουσίαση παραθύρων ως"
-
-#: extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "Εμφάνιση μόνο των παραθύρων του τρέχοντος χώρου εργασίας"
-
-#: extensions/apps-menu/extension.js:41
-msgid "Activities Overview"
-msgstr "Επισκόπηση δραστηριοτήτων"
-
-#: extensions/apps-menu/extension.js:141
+#: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Αγαπημένα"
 
-#: extensions/apps-menu/extension.js:436
+#: extensions/apps-menu/extension.js:368
 msgid "Applications"
 msgstr "Εφαρμογές"
 
@@ -122,69 +57,37 @@ msgstr ""
 msgid "Application"
 msgstr "Εφαρμογή"
 
-#: extensions/auto-move-windows/prefs.js:69
-#: extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:71
+#: extensions/auto-move-windows/prefs.js:134
 msgid "Workspace"
 msgstr "Χώρος εργασίας"
 
-#: extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:89
 msgid "Add Rule"
 msgstr "Προσθήκη κανόνα"
 
-#: extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:111
 msgid "Create new matching rule"
 msgstr "Δημιουργία νέου κανόνα αντιστοίχισης"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:117
 msgid "Add"
 msgstr "Προσθήκη"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:107
+#: extensions/drive-menu/extension.js:102
+#: extensions/places-menu/placeDisplay.js:232
+#, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Αποτυχία εξαγωγής του δίσκου «%s»:"
 
-#: extensions/drive-menu/extension.js:125
+#: extensions/drive-menu/extension.js:118
 msgid "Removable devices"
 msgstr "Αφαιρούμενες συσκευές"
 
-#: extensions/drive-menu/extension.js:150
-#| msgid "Open File"
+#: extensions/drive-menu/extension.js:145
 msgid "Open Files"
 msgstr "Άνοιγμα αρχείων"
-
-#: extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Γεια σου, κόσμε!"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
-msgid "Alternative greeting text."
-msgstr "Εναλλακτικό κείμενο χαιρετισμού."
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"Αν δεν είναι κενό, περιέχει το κείμενο που θα εμφανιστεί όταν γίνεται κλικ "
-"στον πίνακα εφαρμογών."
-
-#: extensions/example/prefs.js:30
-msgid "Message"
-msgstr "Μήνυμα"
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it’s possible to customize the greeting message."
-msgstr ""
-"Το παράδειγμα στοχεύει να δείξει πώς δημιουργούμε επεκτάσεις που "
-"συμπεριφέρονται σωστά στο κέλυφος και ως τέτοιο έχει μικρή λειτουργικότητα "
-"από μόνο του.\n"
-"Παρ' όλα αυτά είναι δυνατό να προσαρμόσετε το μήνυμα χαιρετισμού."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
@@ -216,30 +119,31 @@ msgstr ""
 "στο κάτω μέρος. Η αλλαγή αυτής της ρύθμισης απαιτεί επανεκκίνηση του "
 "κελύφους για να υπάρξει κάποιο αποτέλεσμα."
 
-#: extensions/places-menu/extension.js:78
-#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:80
+#: extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "Τοποθεσίες"
 
-#: extensions/places-menu/placeDisplay.js:65
-#| msgid "Failed to launch “%s”"
-msgid "Failed to mount volume for “%s”"
-msgstr "Αποτυχία προσάρτησης τόμου για «%s»"
-
-#: extensions/places-menu/placeDisplay.js:78
+#: extensions/places-menu/placeDisplay.js:46
+#, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Αποτυχία εκκίνησης «%s»"
 
-#: extensions/places-menu/placeDisplay.js:137
-#: extensions/places-menu/placeDisplay.js:160
+#: extensions/places-menu/placeDisplay.js:61
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Αποτυχία προσάρτησης τόμου για «%s»"
+
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Υπολογιστής"
 
-#: extensions/places-menu/placeDisplay.js:303
+#: extensions/places-menu/placeDisplay.js:358
 msgid "Home"
 msgstr "Προσωπικός φάκελος"
 
-#: extensions/places-menu/placeDisplay.js:347
+#: extensions/places-menu/placeDisplay.js:403
 msgid "Browse Network"
 msgstr "Περιήγηση δικτύου"
 
@@ -248,7 +152,6 @@ msgid "Cycle Screenshot Sizes"
 msgstr "Περιδιάβαση τα μεγέθη των στιγμιοτύπων"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
-#| msgid "Cycle Screenshot Sizes"
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Μεγέθη κυκλικών στιγμιοτύπων προς τα πίσω"
 
@@ -261,52 +164,47 @@ msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr ""
 "Το όνομα του θέματος που θα φορτωθεί από το ~ /.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:99
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Αποελαχιστοποίηση"
 
-#: extensions/window-list/extension.js:130
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "Ελαχιστοποίηση"
 
-#: extensions/window-list/extension.js:136
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Απομεγιστοποίηση"
 
-#: extensions/window-list/extension.js:137
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "Μεγιστοποίηση"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:431
 msgid "Minimize all"
 msgstr "Ελαχιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:437
 msgid "Unminimize all"
 msgstr "Αποελαχιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:443
 msgid "Maximize all"
 msgstr "Μεγιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:451
 msgid "Unmaximize all"
 msgstr "Απομεγιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:459
 msgid "Close all"
 msgstr "Κλείσιμο όλων"
 
-#: extensions/window-list/extension.js:678
-#: extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Δείκτης χώρου εργασίας"
-
-#: extensions/window-list/extension.js:842
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Λίστα παραθύρου"
 
@@ -324,10 +222,24 @@ msgstr ""
 "«always» (πάντα)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:82
+#| msgid "Show only windows in the current workspace"
+msgid "Show windows from all workspaces"
+msgstr "Εμφάνιση των παραθύρων από όλους τους χώρους εργασίας"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#| msgid ""
+#| "Whether to show the window list on all connected monitors or only on the "
+#| "primary one."
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr ""
+"Αν θα εμφανίζονται παράθυρα όλων των χώρων εργασίας ή μόνο του τρέχοντα."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "Να εμφανίζεται ο κατάλογος παραθύρων σε όλες τις οθόνες"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -335,19 +247,19 @@ msgstr ""
 "Αν θα εμφανίζεται ο κατάλογος παραθύρων όλων των συνδεμένων οθονών ή μόνο "
 "της κύριας οθόνης."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Ομαδοποίηση παραθύρου"
 
-#: extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Να μη γίνεται ποτέ ομαδοποίηση παραθύρων"
 
-#: extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Ομαδοποίηση παραθύρων όταν ο χώρος είναι περιορισμένος"
 
-#: extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Να γίνεται πάντα ομαδοποίηση παραθύρων"
 
@@ -355,17 +267,96 @@ msgstr "Να γίνεται πάντα ομαδοποίηση παραθύρων
 msgid "Show on all monitors"
 msgstr "Να εμφανίζεται σε όλες τις οθόνες"
 
-#: extensions/workspace-indicator/prefs.js:141
+#: extensions/window-list/workspaceIndicator.js:211
+#: extensions/workspace-indicator/extension.js:216
+msgid "Workspace Indicator"
+msgstr "Δείκτης χώρου εργασίας"
+
+#: extensions/workspace-indicator/prefs.js:131
 msgid "Workspace Names"
 msgstr "Ονόματα χώρων εργασίας:"
 
-#: extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:151
 msgid "Name"
 msgstr "Όνομα"
 
-#: extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:191
+#, javascript-format
 msgid "Workspace %d"
 msgstr "Χώρος εργασίας %d"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Προσάρτηση αποκλειστικού διαλόγου στο γονικό παράθυρο"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "Αυτό το κλειδί επικαλύπτει το κλειδί στο org.gnome.mutter όταν εκτελείται "
+#~ "το GNOME Shell."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Διάταξη κουμπιών της γραμμής τίτλου"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
+#~ "running GNOME Shell."
+#~ msgstr ""
+#~ "Αυτό το κλειδί επικαλύπτει το κλειδί στο org.gnome.mutter όταν εκτελείται "
+#~ "το GNOME Shell."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr ""
+#~ "Ενεργοποίηση προσκόλλησης στην άκρη, όταν αφήνονται παράθυρα στα άκρα της "
+#~ "οθόνης"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Χώροι εργασίας μόνο στην κύρια οθόνη"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr ""
+#~ "Καθυστέρηση εστίασης αλλαγών στην κατάσταση ποντικιού μέχρι να σταματήσει "
+#~ "να κινείται ο δείκτης"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "Μόνο μικρογραφία"
+
+#~ msgid "Application icon only"
+#~ msgstr "Μόνο εικονίδιο εφαρμογής"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "Μικρογραφία και εικονίδιο εφαρμογής"
+
+#~ msgid "Present windows as"
+#~ msgstr "Παρουσίαση παραθύρων ως"
+
+#~ msgid "Activities Overview"
+#~ msgstr "Επισκόπηση δραστηριοτήτων"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Γεια σου, κόσμε!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "Εναλλακτικό κείμενο χαιρετισμού."
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on "
+#~ "the panel."
+#~ msgstr ""
+#~ "Αν δεν είναι κενό, περιέχει το κείμενο που θα εμφανιστεί όταν γίνεται "
+#~ "κλικ στον πίνακα εφαρμογών."
+
+#~ msgid "Message"
+#~ msgstr "Μήνυμα"
+
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell "
+#~ "and as such it has little functionality on its own.\n"
+#~ "Nevertheless it’s possible to customize the greeting message."
+#~ msgstr ""
+#~ "Το παράδειγμα στοχεύει να δείξει πώς δημιουργούμε επεκτάσεις που "
+#~ "συμπεριφέρονται σωστά στο κέλυφος και ως τέτοιο έχει μικρή "
+#~ "λειτουργικότητα από μόνο του.\n"
+#~ "Παρ' όλα αυτά είναι δυνατό να προσαρμόσετε το μήνυμα χαιρετισμού."
 
 #~ msgid "CPU"
 #~ msgstr "CPU"
