@@ -77,6 +77,7 @@ class WindowPreview extends St.Button {
     _relayout() {
         let monitor = Main.layoutManager.findIndexForActor(this);
         this.visible = monitor === this._window.get_monitor() &&
+            this._window.window_type !== Meta.WindowType.DESKTOP &&
             this._window.showing_on_its_workspace();
 
         if (!this.visible)
