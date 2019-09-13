@@ -3,6 +3,9 @@ stages:
  - source_check
  - build
 
+variables:
+ LINT_LOG: "eslint-report.txt"
+
 .only_default: &only_default
     only:
         - branches
@@ -21,11 +24,11 @@ eslint:
   image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v1
   stage: source_check
   script:
-    - ./.gitlab-ci/run-eslint.sh
+    - eslint -o $LINT_LOG --no-color || { cat $LINT_LOG; false; }
   <<: *only_default
   artifacts:
     paths:
-      - reports
+      - ${LINT_LOG}
     when: on_failure
 
 build-shell-extensions:
