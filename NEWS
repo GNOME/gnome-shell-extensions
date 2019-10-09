@@ -1,3 +1,14 @@
+3.34.1
+======
+* Adjust to gnome-settings-daemon plugin removals [Xiaoguang; !94]
+
+Contributors:
+  Florian Müllner, Xiaoguang Wang
+
+Translators:
+  Nathan Follens [nl], Dušan Kazik [sk], Ask Hjorth Larsen [da],
+  Yi-Jyun Pan [zh_TW]
+
 3.34.0
 ======
 
