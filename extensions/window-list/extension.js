@@ -923,11 +923,11 @@ const WindowList = GObject.registerClass({
     }
 
     _updateKeyboardAnchor() {
-        if (!Main.keyboard.actor)
+        if (!Main.keyboard.keyboardActor)
             return;
 
         let translationY = Main.overview.visible ? 0 : this.height;
-        Main.keyboard.actor.translation_y = -translationY;
+        Main.keyboard.keyboardActor.translation_y = -translationY;
     }
 
     _onAppStateChanged(appSys, app) {
