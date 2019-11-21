@@ -174,12 +174,12 @@ var WindowPicker = GObject.registerClass({
     }
 
     _fakeOverviewAnimation(onComplete) {
-        Main.overview.animationInProgress = true;
+        Main.overview._animationInProgress = true;
         GLib.timeout_add(
             GLib.PRIORITY_DEFAULT,
             Overview.ANIMATION_TIME,
             () => {
-                Main.overview.animationInProgress = false;
+                Main.overview._animationInProgress = false;
                 if (onComplete)
                     onComplete();
             });
@@ -187,7 +187,7 @@ var WindowPicker = GObject.registerClass({
 
     _fakeOverviewVisible(visible) {
         // Fake overview state for WorkspacesDisplay
-        Main.overview.visible = visible;
+        Main.overview._visible = visible;
 
         // Hide real windows
         Main.layoutManager._inOverview = visible;
