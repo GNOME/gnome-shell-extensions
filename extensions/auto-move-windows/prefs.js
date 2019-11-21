@@ -22,9 +22,8 @@ const Columns = {
     ADJUSTMENT: 4,
 };
 
-const Widget = GObject.registerClass({
-    GTypeName: 'AutoMoveWindowsPrefsWidget',
-}, class Widget extends Gtk.Grid {
+const Widget = GObject.registerClass(
+class Widget extends Gtk.Grid {
     _init(params) {
         super._init(params);
         this.set_orientation(Gtk.Orientation.VERTICAL);

@@ -15,9 +15,8 @@ const _ = Gettext.gettext;
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
 
-let WindowPreview = GObject.registerClass({
-    GTypeName: 'WorkspaceIndicatorWindowPreview',
-}, class WindowPreview extends St.Button {
+let WindowPreview = GObject.registerClass(
+class WindowPreview extends St.Button {
     _init(window) {
         super._init({
             style_class: 'workspace-indicator-window-preview',
@@ -103,9 +102,8 @@ let WindowPreview = GObject.registerClass({
     }
 });
 
-let WorkspaceThumbnail = GObject.registerClass({
-    GTypeName: 'WorkspaceIndicatorWorkspaceThumbnail',
-}, class WorkspaceThumbnail extends St.Button {
+let WorkspaceThumbnail = GObject.registerClass(
+class WorkspaceThumbnail extends St.Button {
     _init(index) {
         super._init({
             style_class: 'workspace',

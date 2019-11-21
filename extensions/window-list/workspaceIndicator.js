@@ -9,9 +9,8 @@ const PopupMenu = imports.ui.popupMenu;
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
-let WindowPreview = GObject.registerClass({
-    GTypeName: 'WindowListWindowPreview',
-}, class WindowPreview extends St.Button {
+let WindowPreview = GObject.registerClass(
+class WindowPreview extends St.Button {
     _init(window) {
         super._init({
             style_class: 'window-list-window-preview',
@@ -97,9 +96,8 @@ let WindowPreview = GObject.registerClass({
     }
 });
 
-let WorkspaceThumbnail = GObject.registerClass({
-    GTypeName: 'WindowListWorkspaceThumbnail',
-}, class WorkspaceThumbnail extends St.Button {
+let WorkspaceThumbnail = GObject.registerClass(
+class WorkspaceThumbnail extends St.Button {
     _init(index) {
         super._init({
             style_class: 'workspace',
@@ -204,9 +202,8 @@ let WorkspaceThumbnail = GObject.registerClass({
     }
 });
 
-var WorkspaceIndicator = GObject.registerClass({
-    GTypeName: 'WindowListWorkspaceIndicator',
-}, class WorkspaceIndicator extends PanelMenu.Button {
+var WorkspaceIndicator = GObject.registerClass(
+class WorkspaceIndicator extends PanelMenu.Button {
     _init() {
         super._init(0.0, _('Workspace Indicator'), true);
         this.setMenu(new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM));

@@ -6,9 +6,8 @@ const Main = imports.ui.main;
 const Workspace = imports.ui.workspace;
 const WorkspacesView = imports.ui.workspacesView;
 
-var MyWindowOverlay = GObject.registerClass({
-    GTypeName: 'WindowsNavigator_MyWindowOverlay'
-}, class MyWindowOverlay extends Workspace.WindowOverlay {
+var MyWindowOverlay = GObject.registerClass(
+class MyWindowOverlay extends Workspace.WindowOverlay {
     _init(windowClone, parentActor) {
         super._init(windowClone, parentActor);
 
@@ -43,9 +42,8 @@ var MyWindowOverlay = GObject.registerClass({
     }
 });
 
-var MyWorkspace = GObject.registerClass({
-    GTypeName: 'WindowsNavigator_MyWorkspace'
-}, class MyWorkspace extends Workspace.Workspace {
+var MyWorkspace = GObject.registerClass(
+class MyWorkspace extends Workspace.Workspace {
     _init(metaWorkspace, monitorIndex) {
         super._init(metaWorkspace, monitorIndex);
 
@@ -117,9 +115,8 @@ var MyWorkspace = GObject.registerClass({
     }
 });
 
-var MyWorkspacesView = GObject.registerClass({
-    GTypeName: 'WindowsNavigator_MyWorkspacesView'
-}, class MyWorkspacesView extends WorkspacesView.WorkspacesView {
+var MyWorkspacesView = GObject.registerClass(
+class MyWorkspacesView extends WorkspacesView.WorkspacesView {
     _init(width, height, x, y, workspaces) {
         super._init(width, height, x, y, workspaces);
 

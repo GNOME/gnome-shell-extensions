@@ -132,9 +132,8 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
     }
 }
 
-const WindowTitle = GObject.registerClass({
-    GTypeName: 'WindowListWindowTitle',
-}, class WindowTitle extends St.BoxLayout {
+const WindowTitle = GObject.registerClass(
+class WindowTitle extends St.BoxLayout {
     _init(metaWindow) {
         this._metaWindow = metaWindow;
 
@@ -205,7 +204,6 @@ const WindowTitle = GObject.registerClass({
 
 
 const BaseButton = GObject.registerClass({
-    GTypeName: 'WindowListBaseButton',
     GTypeFlags: GObject.TypeFlags.ABSTRACT,
     Properties: {
         'ignore-workspace': GObject.ParamSpec.boolean(
@@ -348,9 +346,8 @@ const BaseButton = GObject.registerClass({
 });
 
 
-const WindowButton = GObject.registerClass({
-    GTypeName: 'WindowListWindowButton',
-}, class WindowButton extends BaseButton {
+const WindowButton = GObject.registerClass(
+class WindowButton extends BaseButton {
     _init(metaWindow, perMonitor, monitorIndex) {
         super._init(perMonitor, monitorIndex);
 
@@ -480,9 +477,8 @@ class AppContextMenu extends PopupMenu.PopupMenu {
     }
 }
 
-const AppButton = GObject.registerClass({
-    GTypeName: 'WindowListAppButton',
-}, class AppButton extends BaseButton {
+const AppButton = GObject.registerClass(
+class AppButton extends BaseButton {
     _init(app, perMonitor, monitorIndex) {
         super._init(perMonitor, monitorIndex);
 
@@ -672,9 +668,8 @@ const AppButton = GObject.registerClass({
 });
 
 
-const WindowList = GObject.registerClass({
-    GTypeName: 'WindowListWindowList',
-}, class WindowList extends St.Widget {
+const WindowList = GObject.registerClass(
+class WindowList extends St.Widget {
     _init(perMonitor, monitor) {
         this._perMonitor = perMonitor;
         this._monitor = monitor;

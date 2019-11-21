@@ -6,9 +6,8 @@ const Main = imports.ui.main;
 const Overview = imports.ui.overview;
 const { WorkspacesDisplay } = imports.ui.workspacesView;
 
-let MyWorkspacesDisplay = GObject.registerClass({
-    GTypeName: 'WindowList_MyWorkspacesDisplay'
-}, class MyWorkspacesDisplay extends WorkspacesDisplay {
+let MyWorkspacesDisplay = GObject.registerClass(
+class MyWorkspacesDisplay extends WorkspacesDisplay {
     _init() {
         super._init();
 
@@ -65,7 +64,6 @@ let MyWorkspacesDisplay = GObject.registerClass({
 });
 
 var WindowPicker = GObject.registerClass({
-    GTypeName: 'WindowListWindowPicker',
     Signals: {
         'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] },
     },
