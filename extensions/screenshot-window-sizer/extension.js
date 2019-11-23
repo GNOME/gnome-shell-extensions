@@ -82,7 +82,8 @@ function cycleScreenshotSizes(display, window, binding) {
 
     // Double both axes if on a hidpi display
     let scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
-    let scaledSizes = SIZES.map(size => size.map(wh => wh * scaleFactor));
+    let scaledSizes = SIZES.map(size => size.map(wh => wh * scaleFactor))
+        .filter(([w, h]) => w <= workArea.width && h <= workArea.height);
 
     // Find the nearest 16:9 size for the current window size
     let nearestIndex;
@@ -105,10 +106,7 @@ function cycleScreenshotSizes(display, window, binding) {
 
     // get the next size up or down from ideal
     let newIndex = (nearestIndex + (backwards ? -1 : 1)) % scaledSizes.length;
-    let newWidth, newHeight;
-    [newWidth, newHeight] = scaledSizes[newIndex];
-    if (newWidth > workArea.width || newHeight > workArea.height)
-        [newWidth, newHeight] = scaledSizes[0];
+    let [newWidth, newHeight] = scaledSizes[newIndex];
 
     // Push the window onscreen if it would be resized offscreen
     let newX = outerRect.x;
