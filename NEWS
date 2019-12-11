@@ -1,3 +1,13 @@
+3.35.2
+======
+* Adjust to gnome-shell changes [Marco, Florian; !89, !95, !96]
+* window-list, workspace-indicator: Exclude DESKTOP windows from previews
+  [Florian; !93]
+* screenshot-window-sizer: Fix cycling through all valid sizes [Willy; !97]
+
+Contributors:
+  Marco Trevisan (Treviño), Florian Müllner, Willy Stadnick
+
 3.34.1
 ======
 * Adjust to gnome-settings-daemon plugin removals [Xiaoguang; !94]
