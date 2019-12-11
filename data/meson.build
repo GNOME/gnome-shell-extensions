@@ -61,3 +61,11 @@ install_data(theme_data, install_dir: themedir)
 
 classic_override = '00_org.gnome.shell.extensions.classic.gschema.override'
 install_data(classic_override, install_dir: schemadir)
+
+if systemd_enabled
+  install_data(
+    'gnome-classic.session.conf',
+    rename: join_paths('gnome-session@gnome-classic.target.d', 'session.conf'),
+    install_dir: systemd_userunitdir,
+  )
+endif

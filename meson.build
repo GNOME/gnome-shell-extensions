@@ -1,10 +1,12 @@
 project('gnome-shell-extensions',
   version: '3.37.3',
-  meson_version: '>= 0.44.0',
+  meson_version: '>= 0.47.0',
   license: 'GPL2+'
 )
 
 gettext_domain = meson.project_name()
+
+prefix = get_option('prefix')
 
 gnome = import('gnome')
 i18n = import('i18n')
@@ -76,6 +78,13 @@ if classic_mode_enabled
             'but the required extension @0@ is not.'.format(e))
     endif
   endforeach
+
+  systemd_enabled = get_option('systemd')
+  dep_systemd = dependency('systemd', version: '>= 242', required: systemd_enabled)
+  if dep_systemd.found()
+    systemd_userunitdir = dep_systemd.get_pkgconfig_variable('systemduserunitdir',
+                                                             define_variable: ['prefix', prefix])
+  endif
 endif
 
 # Sanity check: Make sure enabled extensions are valid
