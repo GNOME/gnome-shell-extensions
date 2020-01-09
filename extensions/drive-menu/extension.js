@@ -17,7 +17,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
         super._init();
 
         this.label = new St.Label({ text: mount.get_name() });
-        this.add(this.label, { expand: true });
+        this.add_child(this.label);
         this.label_actor = this.label;
 
         this.mount = mount;
