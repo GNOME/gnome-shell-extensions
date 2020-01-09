@@ -9,7 +9,22 @@ const { WorkspacesDisplay } = imports.ui.workspacesView;
 let MyWorkspacesDisplay = GObject.registerClass(
 class MyWorkspacesDisplay extends WorkspacesDisplay {
     _init() {
-        super._init();
+        let workspaceManager = global.workspace_manager;
+
+        this._workspaceAdjustment = new St.Adjustment({
+            value: workspaceManager.get_active_workspace_index(),
+            lower: 0,
+            page_increment: 1,
+            page_size: 1,
+            step_increment: 0,
+            upper: workspaceManager.n_workspaces,
+        });
+
+        this._nWorkspacesChangedId =
+            workspaceManager.connect('notify::n-workspaces',
+                this._updateAdjustment.bind(this));
+
+        super._init(this._workspaceAdjustment);
 
         this.add_constraint(
             new Layout.MonitorConstraint({
@@ -45,6 +60,14 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
         this.setWorkspacesFullGeometry(workarea);
     }
 
+    _updateAdjustment() {
+        let workspaceManager = global.workspace_manager;
+        this._workspaceAdjustment.set({
+            upper: workspaceManager.n_workspaces,
+            value: workspaceManager.get_active_workspace_index(),
+        });
+    }
+
     _updateWorkspacesViews() {
         super._updateWorkspacesViews();
 
@@ -58,6 +81,10 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
         if (this._workareasChangedId)
             global.display.disconnect(this._workareasChangedId);
         this._workareasChangedId = 0;
+
+        if (this._nWorkspacesChangedId)
+            global.workspace_manager.disconnect(this._nWorkspacesNotifyId),
+        this._nWorkspacesNotifyId = 0;
 
         super._onDestroy();
     }
