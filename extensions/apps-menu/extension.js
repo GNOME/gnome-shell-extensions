@@ -557,10 +557,8 @@ class ApplicationsButton extends PanelMenu.Button {
         this.mainBox = new St.BoxLayout({ vertical: false });
         this.leftBox = new St.BoxLayout({ vertical: true });
         this.applicationsScrollBox = new St.ScrollView({
-            x_fill: true,
-            y_fill: false,
-            y_align: St.Align.START,
             style_class: 'apps-menu vfade',
+            x_expand: true,
         });
         this.applicationsScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         let vscroll = this.applicationsScrollBox.get_vscroll_bar();
@@ -571,21 +569,13 @@ class ApplicationsButton extends PanelMenu.Button {
             this.menu.passEvents = false;
         });
         this.categoriesScrollBox = new St.ScrollView({
-            x_fill: true,
-            y_fill: false,
-            y_align: St.Align.START,
             style_class: 'vfade',
         });
         this.categoriesScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         vscroll = this.categoriesScrollBox.get_vscroll_bar();
         vscroll.connect('scroll-start', () => (this.menu.passEvents = true));
         vscroll.connect('scroll-stop', () => (this.menu.passEvents = false));
-        this.leftBox.add(this.categoriesScrollBox, {
-            expand: true,
-            x_fill: true,
-            y_fill: true,
-            y_align: St.Align.START,
-        });
+        this.leftBox.add_child(this.categoriesScrollBox);
 
         this.applicationsBox = new St.BoxLayout({ vertical: true });
         this.applicationsScrollBox.add_actor(this.applicationsBox);
@@ -593,16 +583,8 @@ class ApplicationsButton extends PanelMenu.Button {
         this.categoriesScrollBox.add_actor(this.categoriesBox);
 
         this.mainBox.add(this.leftBox);
-        this.mainBox.add(this._createVertSeparator(), {
-            expand: false,
-            x_fill: false,
-            y_fill: true,
-        });
-        this.mainBox.add(this.applicationsScrollBox, {
-            expand: true,
-            x_fill: true,
-            y_fill: true,
-        });
+        this.mainBox.add_child(this._createVertSeparator());
+        this.mainBox.add_child(this.applicationsScrollBox);
         section.actor.add_actor(this.mainBox);
     }
 
