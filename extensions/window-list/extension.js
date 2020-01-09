@@ -701,7 +701,7 @@ class WindowList extends St.Widget {
             x_expand: true,
             y_expand: true,
         });
-        box.add(this._windowList, { expand: true });
+        box.add_child(this._windowList);
 
         this._windowList.connect('style-changed', () => {
             let node = this._windowList.get_theme_node();
@@ -714,7 +714,7 @@ class WindowList extends St.Widget {
         box.add(indicatorsBox);
 
         this._workspaceIndicator = new WorkspaceIndicator();
-        indicatorsBox.add(this._workspaceIndicator.container, { expand: false, y_fill: true });
+        indicatorsBox.add_child(this._workspaceIndicator.container);
 
         this._mutterSettings = new Gio.Settings({ schema_id: 'org.gnome.mutter' });
         this._workspacesOnlyOnPrimaryChangedId = this._mutterSettings.connect(
