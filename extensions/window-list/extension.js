@@ -146,6 +146,7 @@ class WindowTitle extends St.BoxLayout {
         this._icon = new St.Bin({ style_class: 'window-button-icon' });
         this.add(this._icon);
         this.label_actor = new St.Label({ y_align: Clutter.ActorAlign.CENTER });
+        this.label_actor.clutter_text.single_line_mode = true;
         this.add(this.label_actor);
 
         this._textureCache = St.TextureCache.get_default();
