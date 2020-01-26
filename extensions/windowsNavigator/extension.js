@@ -19,7 +19,7 @@ class MyWindowOverlay extends Workspace.WindowOverlay {
     }
 
     showTooltip() {
-        this._text.raise_top();
+        this._parentActor.set_child_below_sibling(this._text, null);
         this._text.show();
         this._text.text = (this._windowClone.slotId + 1).toString();
     }
@@ -37,7 +37,7 @@ class MyWindowOverlay extends Workspace.WindowOverlay {
         let textX = cloneX - 2;
         let textY = cloneY - 2;
         this._text.set_position(Math.floor(textX) + 5, Math.floor(textY) + 5);
-        this._text.raise_top();
+        this._parentActor.set_child_below_sibling(this._text, null);
     }
 }
 
@@ -80,7 +80,7 @@ class MyWorkspace extends Workspace.Workspace {
         this._tip.x = area.x;
         this._tip.y = area.y;
         this._tip.show();
-        this._tip.raise_top();
+        this.set_child_below_sibling(this._tip, null);
     }
 
     hideTooltip() {
