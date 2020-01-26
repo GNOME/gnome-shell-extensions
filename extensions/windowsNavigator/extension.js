@@ -1,6 +1,6 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 /* exported init */
-const { Clutter, St } = imports.gi;
+const { Clutter, GObject, St } = imports.gi;
 
 const Main = imports.ui.main;
 const Workspace = imports.ui.workspace;
