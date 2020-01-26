@@ -69,7 +69,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     _eject() {
         let unmountArgs = [
             Gio.MountUnmountFlags.NONE,
-            (new ShellMountOperation.ShellMountOperation(this.mount)).mountOp,
+            new ShellMountOperation.ShellMountOperation(this.mount).mountOp,
             null, // Gio.Cancellable
         ];
 

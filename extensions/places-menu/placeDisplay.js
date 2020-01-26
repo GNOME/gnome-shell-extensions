@@ -200,7 +200,7 @@ class PlaceDeviceInfo extends PlaceInfo {
     eject() {
         let unmountArgs = [
             Gio.MountUnmountFlags.NONE,
-            (new ShellMountOperation.ShellMountOperation(this._mount)).mountOp,
+            new ShellMountOperation.ShellMountOperation(this._mount).mountOp,
             null, // Gio.Cancellable
         ];
 
