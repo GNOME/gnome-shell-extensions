@@ -6,10 +6,9 @@ const Main = imports.ui.main;
 const Workspace = imports.ui.workspace;
 const WorkspacesView = imports.ui.workspacesView;
 
-var MyWindowOverlay = GObject.registerClass(
 class MyWindowOverlay extends Workspace.WindowOverlay {
-    _init(windowClone, parentActor) {
-        super._init(windowClone, parentActor);
+    constructor(windowClone, parentActor) {
+        super(windowClone, parentActor);
 
         this._id = null;
         this._text = new St.Label({
@@ -40,7 +39,7 @@ class MyWindowOverlay extends Workspace.WindowOverlay {
         this._text.set_position(Math.floor(textX) + 5, Math.floor(textY) + 5);
         this._text.raise_top();
     }
-});
+}
 
 var MyWorkspace = GObject.registerClass(
 class MyWorkspace extends Workspace.Workspace {
