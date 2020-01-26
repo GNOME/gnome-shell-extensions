@@ -83,7 +83,7 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
         this._workareasChangedId = 0;
 
         if (this._nWorkspacesChangedId)
-            global.workspace_manager.disconnect(this._nWorkspacesNotifyId),
+            global.workspace_manager.disconnect(this._nWorkspacesNotifyId);
         this._nWorkspacesNotifyId = 0;
 
         super._onDestroy();
