@@ -1,3 +1,15 @@
+3.35.90
+=======
+* Adjust to gnome-shell changes [Florian; !100, !101, !102]
+* Force single-line window titles in window list [Florian; #202]
+* Misc. bug fixes and cleanup [Florian; !104, !105]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  sicklylife [ja], Umarzuki Bin Mochlis Moktar [ms]
+
 3.35.3
 ======
 
