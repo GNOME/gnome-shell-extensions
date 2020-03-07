@@ -33,11 +33,11 @@ install_data (extension_schemas,
 )
 
 foreach js_source : js_sources
-  if (js60.found())
+  if (js68.found())
     path_array = '@0@'.format(js_source).split('/')
     name = join_paths(path_array[-2], path_array[-1])
 
-    test('Checking syntax of ' + name, js60,
+    test('Checking syntax of ' + name, js68,
       args: ['-s', '-c', js_source],
       workdir: meson.current_source_dir()
     )

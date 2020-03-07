@@ -20,7 +20,7 @@ schemadir = join_paths(datadir, 'glib-2.0', 'schemas')
 sessiondir = join_paths(datadir, 'gnome-session', 'sessions')
 xsessiondir = join_paths(datadir, 'xsessions')
 
-js60 = find_program('js60', required: false)
+js68 = find_program('js68', required: false)
 
 ver_arr = meson.project_version().split('.')
 if ver_arr[1].to_int().is_even()
