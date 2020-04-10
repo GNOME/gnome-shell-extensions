@@ -43,13 +43,6 @@ eslint:
       - ${LINT_LOG}
     when: on_failure
 
-build-shell-extensions:
-  stage: build
-  script:
-    - meson _build .
-    - ninja -C _build test install
-  <<: *only_default
-
 build-bundles:
   stage: build
   script:
