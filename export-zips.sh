@@ -22,15 +22,12 @@ for f in $extensiondir/*; do
   schema=$schemadir/org.gnome.shell.extensions.$name.gschema.xml
 
   cp $srcdir/NEWS $srcdir/COPYING $f
-  cp -r $localedir $f
+  sources=(NEWS COPYING $(cd $f; ls *.js))
 
-  if [ -f $schema ]; then
-    mkdir $f/schemas
-    cp $schema $f/schemas;
-    glib-compile-schemas $f/schemas
-  fi
+  [ -f $schema ] || unset schema
 
-  (cd $f && zip -rmq $srcdir/zip-files/$uuid.shell-extension.zip .)
+  gnome-extensions pack ${sources[@]/#/--extra-source=} --podir=$srcdir/po \
+    ${schema:+--schema=$schema} --out-dir=$srcdir/zip-files $f
 done
 
 rm -rf $builddir
