@@ -74,6 +74,18 @@ class UserThemePrefsWidget extends Gtk.ScrolledWindow {
                 }
             }
         }
+
+        for (const dirName of Util.getModeThemeDirs()) {
+            const dir = Gio.File.new_for_path(dirName);
+            for (const filename of await this._enumerateDir(dir)) {
+                if (!filename.endsWith('.css'))
+                    continue;
+
+                const name = filename.slice(0, -4);
+                if (!this._rows.has(name))
+                    this._addTheme(name);
+            }
+        }
     }
 
     _addTheme(name) {

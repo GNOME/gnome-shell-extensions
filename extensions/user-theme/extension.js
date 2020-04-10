@@ -40,6 +40,9 @@ class ThemeManager {
             const stylesheetPaths = Util.getThemeDirs()
                 .map(dir => `${dir}/${themeName}/gnome-shell/gnome-shell.css`);
 
+            stylesheetPaths.push(...Util.getModeThemeDirs()
+                .map(dir => `${dir}/${themeName}.css`));
+
             stylesheet = stylesheetPaths.find(path => {
                 let file = Gio.file_new_for_path(path);
                 return file.query_exists(null);
