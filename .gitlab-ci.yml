@@ -38,3 +38,15 @@ build-shell-extensions:
     - meson _build .
     - ninja -C _build test install
   <<: *only_default
+
+build-bundles:
+  image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v1
+  stage: build
+  script:
+    - ./export-zips.sh
+  <<: *only_default
+  artifacts:
+    name: 'Extension bundles'
+    expose_as: 'Get Extension bundles here'
+    paths:
+      - zip-files/
