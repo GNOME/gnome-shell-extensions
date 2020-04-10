@@ -1,1 +1,7 @@
-/* This extensions requires no custom styling */
+.drive-menu-item { spacing: 12px; }
+
+.drive-menu-item .button {
+  border-radius: 99px;
+  padding: 3px;
+  min-height: auto;
+}

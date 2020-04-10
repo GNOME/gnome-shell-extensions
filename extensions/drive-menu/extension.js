@@ -1,6 +1,6 @@
 /* exported init enable disable */
 // Drive menu extension
-const { Gio, GObject, Shell, St } = imports.gi;
+const { Clutter, Gio, GObject, Shell, St } = imports.gi;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
@@ -14,9 +14,15 @@ const ShellMountOperation = imports.ui.shellMountOperation;
 var MountMenuItem = GObject.registerClass(
 class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     _init(mount) {
-        super._init();
+        super._init({
+            style_class: 'drive-menu-item',
+        });
 
-        this.label = new St.Label({ text: mount.get_name() });
+        this.label = new St.Label({
+            text: mount.get_name(),
+            x_expand: true,
+            y_align: Clutter.ActorAlign.CENTER,
+        });
         this.add_child(this.label);
         this.label_actor = this.label;
 
@@ -28,7 +34,10 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
             icon_name: 'media-eject-symbolic',
             style_class: 'popup-menu-icon',
         });
-        let ejectButton = new St.Button({ child: ejectIcon });
+        let ejectButton = new St.Button({
+            child: ejectIcon,
+            style_class: 'button',
+        });
         ejectButton.connect('clicked', this._eject.bind(this));
         this.add(ejectButton);
 
