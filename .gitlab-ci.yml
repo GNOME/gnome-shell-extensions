@@ -1,4 +1,4 @@
-image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v1
+image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v2
 
 stages:
  - review
@@ -6,6 +6,7 @@ stages:
 
 variables:
  LINT_LOG: "eslint-report.txt"
+ JS_LOG: "js-report.txt"
 
 .only_default: &only_default
     only:
@@ -20,6 +21,17 @@ check_commit_log:
         - ./.gitlab-ci/check-commit-log.sh
     only:
         - merge_requests
+
+js_check:
+  stage: review
+  script:
+    - find extensions -name '*.js' -exec js68 -c -s '{}' ';' 2>&1 | tee $JS_LOG
+    - (! grep -q . $JS_LOG)
+  <<: *only_default
+  artifacts:
+    paths:
+      - ${JS_LOG}
+    when: on_failure
 
 eslint:
   stage: review
