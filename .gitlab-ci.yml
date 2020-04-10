@@ -1,8 +1,7 @@
 image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v1
 
 stages:
- - commit_check
- - source_check
+ - review
  - build
 
 variables:
@@ -16,14 +15,14 @@ variables:
 
 check_commit_log:
     image: registry.gitlab.gnome.org/gnome/gjs:fedora.static-analysis
-    stage: commit_check
+    stage: review
     script:
         - ./.gitlab-ci/check-commit-log.sh
     only:
         - merge_requests
 
 eslint:
-  stage: source_check
+  stage: review
   script:
     - eslint -o $LINT_LOG extensions --no-color || { cat $LINT_LOG; false; }
   <<: *only_default
