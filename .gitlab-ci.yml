@@ -1,3 +1,5 @@
+image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v1
+
 stages:
  - commit_check
  - source_check
@@ -21,7 +23,6 @@ check_commit_log:
         - merge_requests
 
 eslint:
-  image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v1
   stage: source_check
   script:
     - eslint -o $LINT_LOG extensions --no-color || { cat $LINT_LOG; false; }
@@ -32,7 +33,6 @@ eslint:
     when: on_failure
 
 build-shell-extensions:
-  image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v1
   stage: build
   script:
     - meson _build .
@@ -40,7 +40,6 @@ build-shell-extensions:
   <<: *only_default
 
 build-bundles:
-  image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v1
   stage: build
   script:
     - ./export-zips.sh
