@@ -21,12 +21,22 @@ for f in $extensiondir/*; do
   uuid=$name@gnome-shell-extensions.gcampax.github.com
   schema=$schemadir/org.gnome.shell.extensions.$name.gschema.xml
 
+  xgettext --from-code=UTF-8 --output-dir=$builddir --output=$name.pot $f/*.js
+
+  if [ -f $builddir/$name.pot ]; then
+    mkdir $f/po
+    for l in $(<$srcdir/po/LINGUAS); do
+      msgmerge --quiet --output-file=$f/po/$l.po \
+        $srcdir/po/$l.po $builddir/$name.pot
+    done
+  fi
+
   cp $srcdir/NEWS $srcdir/COPYING $f
   sources=(NEWS COPYING $(cd $f; ls *.js))
 
   [ -f $schema ] || unset schema
 
-  gnome-extensions pack ${sources[@]/#/--extra-source=} --podir=$srcdir/po \
+  gnome-extensions pack ${sources[@]/#/--extra-source=} \
     ${schema:+--schema=$schema} --out-dir=$srcdir/zip-files $f
 done
 
