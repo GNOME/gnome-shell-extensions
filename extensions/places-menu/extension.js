@@ -20,7 +20,9 @@ const PLACE_ICON_SIZE = 16;
 var PlaceMenuItem = GObject.registerClass(
 class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
     _init(info) {
-        super._init();
+        super._init({
+            style_class: 'place-menu-item',
+        });
         this._info = info;
 
         this._icon = new St.Icon({
@@ -29,7 +31,11 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
         });
         this.add_child(this._icon);
 
-        this._label = new St.Label({ text: info.name, x_expand: true });
+        this._label = new St.Label({
+            text: info.name,
+            x_expand: true,
+            y_align: Clutter.ActorAlign.CENTER,
+        });
         this.add_child(this._label);
 
         if (info.isRemovable()) {
@@ -37,7 +43,10 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
                 icon_name: 'media-eject-symbolic',
                 style_class: 'popup-menu-icon',
             });
-            this._ejectButton = new St.Button({ child: this._ejectIcon });
+            this._ejectButton = new St.Button({
+                child: this._ejectIcon,
+                style_class: 'button',
+            });
             this._ejectButton.connect('clicked', info.eject.bind(info));
             this.add_child(this._ejectButton);
         }
