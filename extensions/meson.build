@@ -3,7 +3,7 @@ js_sources = []
 
 metadata_name = 'metadata.json'
 
-foreach e : all_extensions
+foreach e : enabled_extensions
   uuid = e + uuid_suffix
 
   metadata_conf = configuration_data()
@@ -19,27 +19,11 @@ foreach e : all_extensions
 
   subdir(e)
 
-  js_sources += extension_sources
-
-  if (enabled_extensions.contains(e))
-    install_data (extension_sources + extension_data,
-      install_dir: join_paths(extensiondir, uuid)
-    )
-  endif
+  install_data (extension_sources + extension_data,
+    install_dir: join_paths(extensiondir, uuid)
+  )
 endforeach
 
 install_data (extension_schemas,
   install_dir: schemadir
 )
-
-foreach js_source : js_sources
-  if (js68.found())
-    path_array = '@0@'.format(js_source).split('/')
-    name = join_paths(path_array[-2], path_array[-1])
-
-    test('Checking syntax of ' + name, js68,
-      args: ['-s', '-c', js_source],
-      workdir: meson.current_source_dir()
-    )
-  endif
-endforeach
