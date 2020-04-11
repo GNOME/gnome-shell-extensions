@@ -2,10 +2,13 @@
 // Load shell theme from ~/.local/share/themes/name/gnome-shell
 /* exported init */
 
-const { Gio, GLib } = imports.gi;
+const { Gio } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
+
+const Me = ExtensionUtils.getCurrentExtension();
+const Util = Me.imports.util;
 
 const SETTINGS_KEY = 'name';
 
@@ -34,13 +37,8 @@ class ThemeManager {
         let themeName = this._settings.get_string(SETTINGS_KEY);
 
         if (themeName) {
-            let stylesheetPaths = [
-                [GLib.get_home_dir(), '.themes'],
-                [GLib.get_user_data_dir(), 'themes'],
-                ...GLib.get_system_data_dirs().map(dir => [dir, 'themes']),
-            ].map(themeDir => GLib.build_filenamev([
-                ...themeDir, themeName, 'gnome-shell', 'gnome-shell.css',
-            ]));
+            const stylesheetPaths = Util.getThemeDirs()
+                .map(dir => `${dir}/${themeName}/gnome-shell/gnome-shell.css`);
 
             stylesheet = stylesheetPaths.find(path => {
                 let file = Gio.file_new_for_path(path);
