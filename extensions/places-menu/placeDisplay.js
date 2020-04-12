@@ -7,10 +7,7 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 const ShellMountOperation = imports.ui.shellMountOperation;
 
-const Me = ExtensionUtils.getCurrentExtension();
-
-const Gettext = imports.gettext.domain(Me.metadata['gettext-domain']);
-const _ = Gettext.gettext;
+const _ = ExtensionUtils.gettext;
 const N_ = x => x;
 
 const BACKGROUND_SCHEMA = 'org.gnome.desktop.background';

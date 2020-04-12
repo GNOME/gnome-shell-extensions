@@ -9,12 +9,10 @@ const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
 const Me = ExtensionUtils.getCurrentExtension();
-
-const Gettext = imports.gettext.domain(Me.metadata['gettext-domain']);
-const _ = Gettext.gettext;
-const N_ = x => x;
-
 const PlaceDisplay = Me.imports.placeDisplay;
+
+const _ = ExtensionUtils.gettext;
+const N_ = x => x;
 
 const PLACE_ICON_SIZE = 16;
 
