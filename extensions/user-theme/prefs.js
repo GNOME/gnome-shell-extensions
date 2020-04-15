@@ -33,7 +33,10 @@ class UserThemePrefsWidget extends Gtk.ScrolledWindow {
             halign: Gtk.Align.CENTER,
             valign: Gtk.Align.START,
             hexpand: true,
-            margin: 60,
+            margin_start: 60,
+            margin_end: 60,
+            margin_top: 60,
+            margin_bottom: 60,
         });
         this._list.get_style_context().add_class('frame');
         this._list.set_header_func(this._updateHeader.bind(this));
@@ -141,7 +144,10 @@ class ThemeRow extends Gtk.ListBoxRow {
 
         const box = new Gtk.Box({
             spacing: 12,
-            margin: 12,
+            margin_start: 12,
+            margin_end: 12,
+            margin_top: 12,
+            margin_bottom: 12,
         });
         this.add(box);
 
