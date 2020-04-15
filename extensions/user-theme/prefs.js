@@ -93,7 +93,7 @@ class UserThemePrefsWidget extends Gtk.ScrolledWindow {
     }
 
     _addTheme(name) {
-        const row = new ThemeRow(name);
+        const row = new ThemeRow(name, this._settings);
         this._rows.set(name, row);
 
         this._list.add(row);
@@ -134,12 +134,13 @@ class UserThemePrefsWidget extends Gtk.ScrolledWindow {
 
 const ThemeRow = GObject.registerClass(
 class ThemeRow extends Gtk.ListBoxRow {
-    _init(name) {
-        this._name = new GLib.Variant('s', name);
+    _init(name, settings) {
+        this._name = name;
+        this._settings = settings;
 
         super._init({
             action_name: 'theme.name',
-            action_target: this._name,
+            action_target: new GLib.Variant('s', name),
         });
 
         const box = new Gtk.Box({
@@ -167,20 +168,19 @@ class ThemeRow extends Gtk.ListBoxRow {
 
         box.show_all();
 
-        const id = this.connect('parent-set', () => {
-            this.disconnect(id);
+        const id = this._settings.connect('changed::name',
+            this._syncCheckmark.bind(this));
+        this._syncCheckmark();
 
-            const actionGroup = this.get_action_group('theme');
-            actionGroup.connect('action-state-changed::name',
-                this._syncCheckmark.bind(this));
-            this._syncCheckmark();
+        this.connect('destroy', () => {
+            this._settings.disconnect(id);
+            this._settings = null;
         });
     }
 
     _syncCheckmark() {
-        const actionGroup = this.get_action_group('theme');
-        const state = actionGroup.get_action_state('name');
-        this._checkmark.opacity = this._name.equal(state);
+        const visible = this._name === this._settings.get_string('name');
+        this._checkmark.opacity = visible ? 1. : 0;
     }
 });
 
