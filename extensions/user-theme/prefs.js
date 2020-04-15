@@ -26,7 +26,7 @@ class UserThemePrefsWidget extends Gtk.ScrolledWindow {
         });
 
         const box = new Gtk.Box();
-        this.add(box);
+        this.set_child(box);
 
         this._list = new Gtk.ListBox({
             selection_mode: Gtk.SelectionMode.NONE,
@@ -40,7 +40,7 @@ class UserThemePrefsWidget extends Gtk.ScrolledWindow {
         });
         this._list.get_style_context().add_class('frame');
         this._list.set_header_func(this._updateHeader.bind(this));
-        box.add(this._list);
+        box.append(this._list);
 
         this._actionGroup = new Gio.SimpleActionGroup();
         this._list.insert_action_group('theme', this._actionGroup);
@@ -96,8 +96,7 @@ class UserThemePrefsWidget extends Gtk.ScrolledWindow {
         const row = new ThemeRow(name, this._settings);
         this._rows.set(name, row);
 
-        this._list.add(row);
-        row.show_all();
+        this._list.append(row);
     }
 
     async _enumerateDir(dir) {
@@ -138,11 +137,6 @@ class ThemeRow extends Gtk.ListBoxRow {
         this._name = name;
         this._settings = settings;
 
-        super._init({
-            action_name: 'theme.name',
-            action_target: new GLib.Variant('s', name),
-        });
-
         const box = new Gtk.Box({
             spacing: 12,
             margin_start: 12,
@@ -150,9 +144,13 @@ class ThemeRow extends Gtk.ListBoxRow {
             margin_top: 12,
             margin_bottom: 12,
         });
-        this.add(box);
+        super._init({
+            action_name: 'theme.name',
+            action_target: new GLib.Variant('s', name),
+            child: box,
+        });
 
-        box.add(new Gtk.Label({
+        box.append(new Gtk.Label({
             label: name || 'Default',
             hexpand: true,
             xalign: 0,
@@ -164,9 +162,7 @@ class ThemeRow extends Gtk.ListBoxRow {
             icon_name: 'emblem-ok-symbolic',
             pixel_size: 16,
         });
-        box.add(this._checkmark);
-
-        box.show_all();
+        box.append(this._checkmark);
 
         const id = this._settings.connect('changed::name',
             this._syncCheckmark.bind(this));
@@ -188,8 +184,5 @@ function init() {
 }
 
 function buildPrefsWidget() {
-    let widget = new UserThemePrefsWidget();
-    widget.show_all();
-
-    return widget;
+    return new UserThemePrefsWidget();
 }
