@@ -30,6 +30,7 @@ class UserThemePrefsWidget extends Gtk.ScrolledWindow {
 
         this._list = new Gtk.ListBox({
             selection_mode: Gtk.SelectionMode.NONE,
+            show_separators: true,
             halign: Gtk.Align.CENTER,
             valign: Gtk.Align.START,
             hexpand: true,
@@ -39,7 +40,6 @@ class UserThemePrefsWidget extends Gtk.ScrolledWindow {
             margin_bottom: 60,
         });
         this._list.get_style_context().add_class('frame');
-        this._list.set_header_func(this._updateHeader.bind(this));
         box.append(this._list);
 
         this._actionGroup = new Gio.SimpleActionGroup();
@@ -122,12 +122,6 @@ class UserThemePrefsWidget extends Gtk.ScrolledWindow {
         } while (infos.length > 0);
 
         return fileInfos.map(info => info.get_name());
-    }
-
-    _updateHeader(row, before) {
-        if (!before || row.get_header())
-            return;
-        row.set_header(new Gtk.Separator());
     }
 });
 
