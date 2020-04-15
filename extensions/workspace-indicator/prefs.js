@@ -1,7 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported init buildPrefsWidget */
 
-const { Gdk, Gio, GLib, GObject, Gtk, Pango } = imports.gi;
+const { Gio, GLib, GObject, Gtk, Pango } = imports.gi;
 
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
@@ -28,9 +28,9 @@ class WorkspaceSettingsWidget extends Gtk.ScrolledWindow {
             margin_start: 36,
             margin_end: 36,
         });
-        this.add(box);
+        this.set_child(box);
 
-        box.add(new Gtk.Label({
+        box.append(new Gtk.Label({
             label: '<b>%s</b>'.format(_('Workspace Names')),
             use_markup: true,
             halign: Gtk.Align.START,
@@ -42,7 +42,7 @@ class WorkspaceSettingsWidget extends Gtk.ScrolledWindow {
         });
         this._list.set_header_func(this._updateHeader.bind(this));
         this._list.connect('row-activated', (l, row) => row.edit());
-        box.add(this._list);
+        box.append(this._list);
 
         const context = this._list.get_style_context();
         const cssProvider = new Gtk.CssProvider();
@@ -53,7 +53,7 @@ class WorkspaceSettingsWidget extends Gtk.ScrolledWindow {
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         context.add_class('frame');
 
-        this._list.add(new NewWorkspaceRow());
+        this._list.append(new NewWorkspaceRow());
 
         this._actionGroup = new Gio.SimpleActionGroup();
         this._list.insert_action_group('workspaces', this._actionGroup);
@@ -94,12 +94,10 @@ class WorkspaceSettingsWidget extends Gtk.ScrolledWindow {
         this._settings.connect(`changed::${WORKSPACE_KEY}`,
             this._sync.bind(this));
         this._sync();
-
-        this.show_all();
     }
 
     _getWorkspaceRows() {
-        return this._list.get_children().filter(row => row.name);
+        return [...this._list].filter(row => row.name);
     }
 
     _sync() {
@@ -111,7 +109,7 @@ class WorkspaceSettingsWidget extends Gtk.ScrolledWindow {
         const removed = oldNames.filter(n => !newNames.includes(n));
         const added = newNames.filter(n => !oldNames.includes(n));
 
-        removed.forEach(n => rows.find(r => r.name === n).destroy());
+        removed.forEach(n => this._list.remove(rows.find(r => r.name === n)));
         added.forEach(n => {
             this._list.insert(new WorkspaceRow(n), newNames.indexOf(n));
         });
@@ -129,6 +127,13 @@ class WorkspaceRow extends Gtk.ListBoxRow {
     _init(name) {
         super._init({ name });
 
+        const controller = new Gtk.ShortcutController();
+        controller.add_shortcut(new Gtk.Shortcut({
+            trigger: Gtk.ShortcutTrigger.parse_string('Escape'),
+            action: Gtk.CallbackAction.new(this._stopEdit.bind(this)),
+        }));
+        this.add_controller(controller);
+
         const box = new Gtk.Box({
             spacing: 12,
             margin_top: 6,
@@ -145,7 +150,7 @@ class WorkspaceRow extends Gtk.ListBoxRow {
         });
         this.bind_property('name', label, 'label',
             GObject.BindingFlags.SYNC_CREATE);
-        box.add(label);
+        box.append(label);
 
         const image = new Gtk.Image({
             icon_name: 'edit-delete-symbolic',
@@ -154,9 +159,9 @@ class WorkspaceRow extends Gtk.ListBoxRow {
         const button = new Gtk.Button({
             action_name: 'workspaces.remove',
             action_target: new GLib.Variant('s', name),
-            image,
+            child: image,
         });
-        box.add(button);
+        box.append(button);
 
         this._entry = new Gtk.Entry({
             max_width_chars: 25,
@@ -165,7 +170,7 @@ class WorkspaceRow extends Gtk.ListBoxRow {
         this._stack = new Gtk.Stack();
         this._stack.add_named(box, 'display');
         this._stack.add_named(this._entry, 'edit');
-        this.add(this._stack);
+        this.child = this._stack;
 
         this._entry.connect('activate', () => {
             this.name = this._entry.text;
@@ -176,17 +181,11 @@ class WorkspaceRow extends Gtk.ListBoxRow {
                 return;
             this._stopEdit();
         });
-        this._entry.connect('key-press-event',
-            this._onEntryKeyPress.bind(this));
 
         this.connect('notify::name', () => {
             button.action_target = new GLib.Variant('s', this.name);
-
-            const actionGroup = this.get_action_group('workspaces');
-            actionGroup.activate_action('update', null);
+            this.activate_action('workspaces.update', null);
         });
-
-        this.show_all();
     }
 
     edit() {
@@ -199,14 +198,6 @@ class WorkspaceRow extends Gtk.ListBoxRow {
         this.grab_focus();
         this._stack.visible_child_name = 'display';
     }
-
-    _onEntryKeyPress(entry, event) {
-        const [, keyval] = event.get_keyval();
-        if (keyval !== Gdk.KEY_Escape)
-            return Gdk.EVENT_PROPAGATE;
-        this._stopEdit();
-        return Gdk.EVENT_STOP;
-    }
 });
 
 const NewWorkspaceRow = GObject.registerClass(
@@ -214,19 +205,17 @@ class NewWorkspaceRow extends Gtk.ListBoxRow {
     _init() {
         super._init({
             action_name: 'workspaces.add',
+            child: new Gtk.Image({
+                icon_name: 'list-add-symbolic',
+                pixel_size: 16,
+                margin_top: 12,
+                margin_bottom: 12,
+                margin_start: 12,
+                margin_end: 12,
+            }),
         });
-        this.get_accessible().set_name(_('Add Workspace'));
-
-        this.add(new Gtk.Image({
-            icon_name: 'list-add-symbolic',
-            pixel_size: 16,
-            margin_top: 12,
-            margin_bottom: 12,
-            margin_start: 12,
-            margin_end: 12,
-        }));
-
-        this.show_all();
+        this.update_property(
+            [Gtk.AccessibleProperty.LABEL], [_('Add Workspace')]);
     }
 });
 
