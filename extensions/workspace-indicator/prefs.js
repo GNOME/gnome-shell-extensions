@@ -39,8 +39,8 @@ class WorkspaceSettingsWidget extends Gtk.ScrolledWindow {
         this._list = new Gtk.ListBox({
             selection_mode: Gtk.SelectionMode.NONE,
             valign: Gtk.Align.START,
+            show_separators: true,
         });
-        this._list.set_header_func(this._updateHeader.bind(this));
         this._list.connect('row-activated', (l, row) => row.edit());
         box.append(this._list);
 
@@ -113,12 +113,6 @@ class WorkspaceSettingsWidget extends Gtk.ScrolledWindow {
         added.forEach(n => {
             this._list.insert(new WorkspaceRow(n), newNames.indexOf(n));
         });
-    }
-
-    _updateHeader(row, before) {
-        if (!before || row.get_header())
-            return;
-        row.set_header(new Gtk.Separator());
     }
 });
 
