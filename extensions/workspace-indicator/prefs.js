@@ -146,14 +146,10 @@ class WorkspaceRow extends Gtk.ListBoxRow {
             GObject.BindingFlags.SYNC_CREATE);
         box.append(label);
 
-        const image = new Gtk.Image({
-            icon_name: 'edit-delete-symbolic',
-            pixel_size: 16,
-        });
         const button = new Gtk.Button({
             action_name: 'workspaces.remove',
             action_target: new GLib.Variant('s', name),
-            child: image,
+            icon_name: 'edit-delete-symbolic',
         });
         box.append(button);
 
