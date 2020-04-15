@@ -40,8 +40,8 @@ class AutoMoveSettingsWidget extends Gtk.ScrolledWindow {
         this._list = new Gtk.ListBox({
             selection_mode: Gtk.SelectionMode.NONE,
             valign: Gtk.Align.START,
+            show_separators: true,
         });
-        this._list.set_header_func(this._updateHeader.bind(this));
         box.append(this._list);
 
         const context = this._list.get_style_context();
@@ -142,12 +142,6 @@ class AutoMoveSettingsWidget extends Gtk.ScrolledWindow {
 
         this._settings.unblock_signal_handler(this._changedId);
         this._updateAction.enabled = true;
-    }
-
-    _updateHeader(row, before) {
-        if (!before || row.get_header())
-            return;
-        row.set_header(new Gtk.Separator());
     }
 });
 
