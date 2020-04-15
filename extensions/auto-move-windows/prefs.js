@@ -206,10 +206,7 @@ const RuleRow = GObject.registerClass({
         const button = new Gtk.Button({
             action_name: 'rules.remove',
             action_target: new GLib.Variant('s', this.id),
-            child: new Gtk.Image({
-                icon_name: 'edit-delete-symbolic',
-                pixel_size: 16,
-            }),
+            icon_name: 'edit-delete-symbolic',
         });
         box.append(button);
 
