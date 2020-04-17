@@ -50,6 +50,7 @@ class WindowListPrefsWidget extends Gtk.Grid {
         };
 
         let radio = null;
+        let currentRadio = null;
         for (let i = 0; i < modes.length; i++) {
             let mode = modes[i];
             let label = modeLabels[mode];
@@ -59,17 +60,23 @@ class WindowListPrefsWidget extends Gtk.Grid {
             }
 
             radio = new Gtk.RadioButton({
-                active: currentMode === mode,
+                active: !i,
                 label,
                 group: radio,
             });
             grid.add(radio);
+
+            if (currentMode === mode)
+                currentRadio = radio;
 
             radio.connect('toggled', button => {
                 if (button.active)
                     this._settings.set_string('grouping-mode', mode);
             });
         }
+
+        if (currentRadio)
+            currentRadio.active = true;
 
         let check = new Gtk.CheckButton({
             label: _('Show on all monitors'),
