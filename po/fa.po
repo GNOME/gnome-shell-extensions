@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-08-09 22:24+0000\n"
-"PO-Revision-Date: 2019-08-14 11:48+0430\n"
+"POT-Creation-Date: 2020-04-17 16:03+0000\n"
+"PO-Revision-Date: 2020-04-24 20:12+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <>\n"
 "Language: fa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -32,7 +32,7 @@ msgstr "این نشست شما را به گنوم کلاسیک وارد می‌�
 msgid "Favorites"
 msgstr "علاقه‌مندی‌ها"
 
-#: extensions/apps-menu/extension.js:368
+#: extensions/apps-menu/extension.js:369
 msgid "Applications"
 msgstr "برنامه‌ها"
 
@@ -48,39 +48,39 @@ msgstr ""
 "فهرستی از رشته‌ها، هرکدام حاوی شناسه‌ی یک برنامه (نام پرونده رومیزی)، در ادامه‌ی یک "
 "ویرگول و شماره‌ی فضای کاری"
 
-#: extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:59
 msgid "Application"
 msgstr "برنامه"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
+#: extensions/auto-move-windows/prefs.js:70
+#: extensions/auto-move-windows/prefs.js:133
 msgid "Workspace"
 msgstr "فضای‌کاری"
 
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:88
 msgid "Add Rule"
 msgstr "افزودن قاعده"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:110
 msgid "Create new matching rule"
 msgstr "افزودن یک قاعده‌ی منطبق جدید"
 
-#: extensions/auto-move-windows/prefs.js:117
+#: extensions/auto-move-windows/prefs.js:116
 msgid "Add"
 msgstr "اضافه"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:102
-#: extensions/places-menu/placeDisplay.js:232
+#: extensions/drive-menu/extension.js:112
+#: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "بیرون دادن دیسک‌گردان «%s» شکست خورد:"
 
-#: extensions/drive-menu/extension.js:118
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "دستگاه‌های جداشدنی"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "گشودن پرونده‌ها"
 
@@ -112,7 +112,7 @@ msgstr ""
 "شل در پایین را تغییر می‌دهد. تغییر این گزینه، نیاز به راه‌اندازی مجدد شل دارد تا "
 "تاثیر بگذارد."
 
-#: extensions/places-menu/extension.js:80 extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89 extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "مکان‌ها"
 
@@ -131,11 +131,11 @@ msgstr "شکست در سوار کردن حجم برای «%s»"
 msgid "Computer"
 msgstr "رایانه"
 
-#: extensions/places-menu/placeDisplay.js:358
+#: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
 msgstr "خانه"
 
-#: extensions/places-menu/placeDisplay.js:403
+#: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
 msgstr "مرور شبکه"
 
@@ -155,47 +155,47 @@ msgstr "نام تم"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "نام تم، جهت بارگیری از شاخه themes/name/gnome-shell./~"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "خروج"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Unminimize"
 msgstr "ناکمینه"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Minimize"
 msgstr "کمینه"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Unmaximize"
 msgstr "نابیشینه"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Maximize"
 msgstr "بیشنه"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:429
 msgid "Minimize all"
 msgstr "کمینهٔ همه"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:435
 msgid "Unminimize all"
 msgstr "ناکمینهٔ همه"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:441
 msgid "Maximize all"
 msgstr "بیشینهٔ همه"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:449
 msgid "Unmaximize all"
 msgstr "نابیشینهٔ همه"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:457
 msgid "Close all"
 msgstr "بستن همه"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:737
 msgid "Window List"
 msgstr "فهرست پنجره"
 
@@ -212,7 +212,7 @@ msgstr ""
 "ممکن عبارتند از «never»، «auto» و «always»."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:89
 msgid "Show windows from all workspaces"
 msgstr "نمایش پنجره‌ها از تمام فضاهای کاری"
 
@@ -248,27 +248,30 @@ msgstr "پنجره‌ها زمانی که فضا محدود است گروه شو
 msgid "Always group windows"
 msgstr "همیشه پنجره‌ها گروه شوند"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:82
 msgid "Show on all monitors"
 msgstr "نمایش در تمام نمایشگرها"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:209
+#: extensions/workspace-indicator/extension.js:215
 msgid "Workspace Indicator"
 msgstr "نشانگر فضای‌کاری"
 
-#: extensions/workspace-indicator/prefs.js:131
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "نام‌های فضای کاری"
 
-#: extensions/workspace-indicator/prefs.js:151
-msgid "Name"
-msgstr "نام"
-
-#: extensions/workspace-indicator/prefs.js:191
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "فضای کاری %Id"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "افزودن فضای‌کاری"
+
+#~ msgid "Name"
+#~ msgstr "نام"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "اتصال محاوره modal به پنجره والد"
