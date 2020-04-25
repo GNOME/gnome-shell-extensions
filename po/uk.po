@@ -4,22 +4,23 @@
 # Alexandr Toorchyn <ilex@mail.ua>, 2011.
 # Daniel Korostil <ted.korostiled@gmail.com>, 2013, 2014, 2015, 2017.
 # vikaig <vikaig99@gmail.com>, 2019.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
-"issues\n"
-"POT-Creation-Date: 2019-10-13 18:56+0000\n"
-"PO-Revision-Date: 2019-10-18 18:01+0300\n"
-"Last-Translator: vikaig <vikaig99@gmail.com>\n"
-"Language-Team: linux.org.ua\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/is"
+"sues\n"
+"POT-Creation-Date: 2020-04-17 16:03+0000\n"
+"PO-Revision-Date: 2020-04-25 10:58+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.2.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.07.70\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -50,39 +51,39 @@ msgstr ""
 "Список рядків, що містять ідентифікатор програми (назва файла стільниці),"
 "двокрапка і номер робочого простору"
 
-#: extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:59
 msgid "Application"
 msgstr "Програма"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
+#: extensions/auto-move-windows/prefs.js:70
+#: extensions/auto-move-windows/prefs.js:133
 msgid "Workspace"
 msgstr "Робочий простір"
 
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:88
 msgid "Add Rule"
 msgstr "Додати правило"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:110
 msgid "Create new matching rule"
 msgstr "Створити нове відповідне правило"
 
-#: extensions/auto-move-windows/prefs.js:117
+#: extensions/auto-move-windows/prefs.js:116
 msgid "Add"
 msgstr "Додати"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:103
+#: extensions/drive-menu/extension.js:112
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Не вдалося витягнути пристрій «%s»:"
 
-#: extensions/drive-menu/extension.js:119
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Змінні пристрої"
 
-#: extensions/drive-menu/extension.js:146
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Відкрити файли"
 
@@ -115,8 +116,8 @@ msgstr ""
 "в нижній, як це робиться типово. Зміна цього параметра вимагає перезапуску "
 "оболонки, щоб зміна вступила в силу."
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Місця"
 
@@ -179,27 +180,27 @@ msgstr "Відновити розгорнуте"
 msgid "Maximize"
 msgstr "Розгорнути"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:429
 msgid "Minimize all"
 msgstr "Згорнути все"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:435
 msgid "Unminimize all"
 msgstr "Відновити все згорнуте"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:441
 msgid "Maximize all"
 msgstr "Розгорнути все"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:449
 msgid "Unmaximize all"
 msgstr "Відновити все розгорнуте"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:457
 msgid "Close all"
 msgstr "Закрити все"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:737
 msgid "Window List"
 msgstr "Перелік вікон"
 
@@ -216,7 +217,7 @@ msgstr ""
 "значеннями є «never», «auto» і «always»."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:89
 msgid "Show windows from all workspaces"
 msgstr "Показувати вікна з усіх робочих просторів"
 
@@ -252,27 +253,31 @@ msgstr "Групувати вікна коли простір обмежено"
 msgid "Always group windows"
 msgstr "Завжди групувати вікна"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:82
 msgid "Show on all monitors"
 msgstr "Показувати на всіх моніторах"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:209
+#: extensions/workspace-indicator/extension.js:215
 msgid "Workspace Indicator"
 msgstr "Покажчик робочого простору"
 
-#: extensions/workspace-indicator/prefs.js:129
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Назви робочих просторів"
 
-#: extensions/workspace-indicator/prefs.js:149
-msgid "Name"
-msgstr "Назва"
-
-#: extensions/workspace-indicator/prefs.js:189
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Робочий простір %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+#| msgid "Workspace"
+msgid "Add Workspace"
+msgstr "Додати робочий простір"
+
+#~ msgid "Name"
+#~ msgstr "Назва"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "Приєднати модальне вікно до батьківського вікна"
