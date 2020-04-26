@@ -1,24 +1,24 @@
 # Swedish translation for gnome-shell-extensions.
-# Copyright © 2011, 2012, 2014, 2015, 2017, 2019 Free Software Foundation, Inc.
+# Copyright © 2011, 2012, 2014, 2015, 2017, 2019, 2020 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Daniel Nylander <po@danielnylander.se>, 2011, 2012.
 # Mattias Eriksson <snaggen@gmail.com>, 2014.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2017, 2019.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2017, 2019, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-08-09 22:24+0000\n"
-"PO-Revision-Date: 2019-08-12 21:30+0200\n"
+"POT-Creation-Date: 2020-04-17 16:03+0000\n"
+"PO-Revision-Date: 2020-04-26 20:51+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -32,7 +32,7 @@ msgstr "Denna session loggar in dig till GNOME Klassisk"
 msgid "Favorites"
 msgstr "Favoriter"
 
-#: extensions/apps-menu/extension.js:368
+#: extensions/apps-menu/extension.js:369
 msgid "Applications"
 msgstr "Program"
 
@@ -48,39 +48,39 @@ msgstr ""
 "En lista över strängar, var och en innehållande ett program-id "
 "(skrivbordsfilnamn), följt av ett kolontecken och arbetsytans nummer"
 
-#: extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:59
 msgid "Application"
 msgstr "Program"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
+#: extensions/auto-move-windows/prefs.js:70
+#: extensions/auto-move-windows/prefs.js:133
 msgid "Workspace"
 msgstr "Arbetsyta"
 
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:88
 msgid "Add Rule"
 msgstr "Lägg till regel"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:110
 msgid "Create new matching rule"
 msgstr "Skapa ny matchande regel"
 
-#: extensions/auto-move-windows/prefs.js:117
+#: extensions/auto-move-windows/prefs.js:116
 msgid "Add"
 msgstr "Lägg till"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:102
-#: extensions/places-menu/placeDisplay.js:232
+#: extensions/drive-menu/extension.js:112
+#: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Utmatning av disk ”%s” misslyckades:"
 
-#: extensions/drive-menu/extension.js:118
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Flyttbara enheter"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Öppna filer"
 
@@ -113,8 +113,8 @@ msgstr ""
 "skalets standardplacering under miniatyrbilden. För att ändra denna "
 "inställning krävs att skalet startas om för att den ska få effekt."
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Platser"
 
@@ -133,11 +133,11 @@ msgstr "Misslyckades med att montera volym för ”%s”"
 msgid "Computer"
 msgstr "Dator"
 
-#: extensions/places-menu/placeDisplay.js:358
+#: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
 msgstr "Hem"
 
-#: extensions/places-menu/placeDisplay.js:403
+#: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
 msgstr "Bläddra i nätverket"
 
@@ -157,47 +157,47 @@ msgstr "Temanamn"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Namnet på temat, kommer att läsas in från ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Stäng"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Unminimize"
 msgstr "Avminimera"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Minimize"
 msgstr "Minimera"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Unmaximize"
 msgstr "Avmaximera"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Maximize"
 msgstr "Maximera"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:429
 msgid "Minimize all"
 msgstr "Minimera alla"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:435
 msgid "Unminimize all"
 msgstr "Avminimera alla"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:441
 msgid "Maximize all"
 msgstr "Maximera alla"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:449
 msgid "Unmaximize all"
 msgstr "Avmaximera alla"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:457
 msgid "Close all"
 msgstr "Stäng alla"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:737
 msgid "Window List"
 msgstr "Fönsterlista"
 
@@ -214,7 +214,7 @@ msgstr ""
 "värden är ”never” (aldrig), ”auto” och ”always” (alltid)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:89
 msgid "Show windows from all workspaces"
 msgstr "Visa fönster från alla arbetsytor"
 
@@ -251,27 +251,30 @@ msgstr "Gruppera fönster när utrymmet är begränsat"
 msgid "Always group windows"
 msgstr "Gruppera alltid fönster"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:82
 msgid "Show on all monitors"
 msgstr "Visa på alla skärmar"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:209
+#: extensions/workspace-indicator/extension.js:215
 msgid "Workspace Indicator"
 msgstr "Arbetsyteindikator"
 
-#: extensions/workspace-indicator/prefs.js:131
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Namn på arbetsytor"
 
-#: extensions/workspace-indicator/prefs.js:151
-msgid "Name"
-msgstr "Namn"
-
-#: extensions/workspace-indicator/prefs.js:191
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Arbetsyta %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "Lägg till arbetsyta"
+
+#~ msgid "Name"
+#~ msgstr "Namn"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "Koppla samman modal dialog till föräldrafönstret"
