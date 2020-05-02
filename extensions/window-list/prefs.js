@@ -1,7 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported init buildPrefsWidget */
 
-const { Gio, GObject, Gtk } = imports.gi;
+const { Gio, GLib, GObject, Gtk } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
@@ -27,6 +27,17 @@ class WindowListPrefsWidget extends Gtk.Box {
             halign: Gtk.Align.CENTER,
         });
 
+        this._actionGroup = new Gio.SimpleActionGroup();
+        this.insert_action_group('window-list', this._actionGroup);
+
+        this._settings = ExtensionUtils.getSettings();
+        this._actionGroup.add_action(
+            this._settings.create_action('grouping-mode'));
+        this._actionGroup.add_action(
+            this._settings.create_action('show-on-all-monitors'));
+        this._actionGroup.add_action(
+            this._settings.create_action('display-all-workspaces'));
+
         let groupingLabel = '<b>%s</b>'.format(_('Window Grouping'));
         this.append(new Gtk.Label({
             label: groupingLabel, use_markup: true,
@@ -50,58 +61,33 @@ class WindowListPrefsWidget extends Gtk.Box {
         context.add_class('frame');
         context.add_class('view');
 
-        this._settings = ExtensionUtils.getSettings();
-        let currentMode = this._settings.get_string('grouping-mode');
-        let range = this._settings.get_range('grouping-mode');
-        let modes = range.deep_unpack()[1].deep_unpack();
-
-        let modeLabels = {
-            'never': _('Never group windows'),
-            'auto': _('Group windows when space is limited'),
-            'always': _('Always group windows'),
-        };
-
-        let radio = null;
-        let currentRadio = null;
-        for (let i = 0; i < modes.length; i++) {
-            let mode = modes[i];
-            let label = modeLabels[mode];
-            if (!label) {
-                log('Unhandled option "%s" for grouping-mode'.format(mode));
-                continue;
-            }
-
-            radio = new Gtk.CheckButton({
-                active: !i,
+        const modes = [
+            { mode: 'never', label: _('Never group windows') },
+            { mode: 'auto', label: _('Group windows when space is limited') },
+            { mode: 'always', label: _('Always group windows') },
+        ];
+        let group = null;
+        for (const { mode, label } of modes) {
+            const check = new Gtk.CheckButton({
+                action_name: 'window-list.grouping-mode',
+                action_target: new GLib.Variant('s', mode),
                 label,
-                group: radio,
+                group,
                 margin_end: 12,
             });
-            box.append(radio);
-
-            if (currentMode === mode)
-                currentRadio = radio;
-
-            radio.connect('toggled', button => {
-                if (button.active)
-                    this._settings.set_string('grouping-mode', mode);
-            });
+            group = check;
+            box.append(check);
         }
 
-        if (currentRadio)
-            currentRadio.active = true;
-
-        let check = new Gtk.CheckButton({
+        this.append(new Gtk.CheckButton({
             label: _('Show on all monitors'),
-        });
-        this._settings.bind('show-on-all-monitors', check, 'active', Gio.SettingsBindFlags.DEFAULT);
-        this.append(check);
+            action_name: 'window-list.show-on-all-monitors',
+        }));
 
-        check = new Gtk.CheckButton({
+        this.append(new Gtk.CheckButton({
             label: _('Show windows from all workspaces'),
-        });
-        this._settings.bind('display-all-workspaces', check, 'active', Gio.SettingsBindFlags.DEFAULT);
-        this.append(check);
+            action_name: 'window-list.display-all-workspaces',
+        }));
     }
 });
 
