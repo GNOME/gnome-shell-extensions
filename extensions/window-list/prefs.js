@@ -14,13 +14,17 @@ function init() {
 }
 
 const WindowListPrefsWidget = GObject.registerClass(
-class WindowListPrefsWidget extends Gtk.Grid {
-    _init(params) {
-        super._init(params);
-
-        this.margin = 24;
-        this.row_spacing = 6;
-        this.orientation = Gtk.Orientation.VERTICAL;
+class WindowListPrefsWidget extends Gtk.Box {
+    _init() {
+        super._init({
+            orientation: Gtk.Orientation.VERTICAL,
+            spacing: 6,
+            margin_top: 36,
+            margin_bottom: 36,
+            margin_start: 36,
+            margin_end: 36,
+            halign: Gtk.Align.CENTER,
+        });
 
         let groupingLabel = '<b>%s</b>'.format(_('Window Grouping'));
         this.add(new Gtk.Label({
@@ -28,15 +32,22 @@ class WindowListPrefsWidget extends Gtk.Grid {
             halign: Gtk.Align.START,
         }));
 
-        let align = new Gtk.Alignment({ left_padding: 12 });
-        this.add(align);
-
-        let grid = new Gtk.Grid({
+        const box = new Gtk.Box({
             orientation: Gtk.Orientation.VERTICAL,
-            row_spacing: 6,
-            column_spacing: 6,
+            spacing: 12,
+            margin_bottom: 12,
         });
-        align.add(grid);
+        this.add(box);
+
+        const context = box.get_style_context();
+        const cssProvider = new Gtk.CssProvider();
+        cssProvider.load_from_data(
+            'box { padding: 12px; }');
+
+        context.add_provider(cssProvider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        context.add_class('frame');
+        context.add_class('view');
 
         this._settings = ExtensionUtils.getSettings();
         let currentMode = this._settings.get_string('grouping-mode');
@@ -63,8 +74,9 @@ class WindowListPrefsWidget extends Gtk.Grid {
                 active: !i,
                 label,
                 group: radio,
+                margin_end: 12,
             });
-            grid.add(radio);
+            box.add(radio);
 
             if (currentMode === mode)
                 currentRadio = radio;
@@ -80,23 +92,20 @@ class WindowListPrefsWidget extends Gtk.Grid {
 
         let check = new Gtk.CheckButton({
             label: _('Show on all monitors'),
-            margin_top: 6,
         });
         this._settings.bind('show-on-all-monitors', check, 'active', Gio.SettingsBindFlags.DEFAULT);
         this.add(check);
 
         check = new Gtk.CheckButton({
             label: _('Show windows from all workspaces'),
-            margin_top: 6,
         });
         this._settings.bind('display-all-workspaces', check, 'active', Gio.SettingsBindFlags.DEFAULT);
         this.add(check);
+
+        this.show_all();
     }
 });
 
 function buildPrefsWidget() {
-    let widget = new WindowListPrefsWidget();
-    widget.show_all();
-
-    return widget;
+    return new WindowListPrefsWidget();
 }
