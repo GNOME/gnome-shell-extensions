@@ -7,17 +7,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/is"
-"sues\n"
-"POT-Creation-Date: 2019-09-17 08:27+0000\n"
-"PO-Revision-Date: 2019-10-08 18:58+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2020-04-17 16:03+0000\n"
+"PO-Revision-Date: 2020-05-02 16:06+0800\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.08.1\n"
+"X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -48,39 +48,39 @@ msgstr ""
 "字串的列表，每個都包含一個應用程式 id (桌面檔名稱)，後面接著半形分號 \";\" 與"
 "工作區號碼"
 
-#: extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:59
 msgid "Application"
 msgstr "應用程式"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
+#: extensions/auto-move-windows/prefs.js:70
+#: extensions/auto-move-windows/prefs.js:133
 msgid "Workspace"
 msgstr "工作區"
 
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:88
 msgid "Add Rule"
 msgstr "加入規則"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:110
 msgid "Create new matching rule"
 msgstr "建立新的比對規則"
 
-#: extensions/auto-move-windows/prefs.js:117
+#: extensions/auto-move-windows/prefs.js:116
 msgid "Add"
 msgstr "加入"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:103
+#: extensions/drive-menu/extension.js:112
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "裝置「%s」退出失敗："
 
-#: extensions/drive-menu/extension.js:119
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "可移除式裝置"
 
-#: extensions/drive-menu/extension.js:146
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "開啟檔案"
 
@@ -110,8 +110,8 @@ msgstr ""
 "如果為真，在對映的縮圖頂端放置視窗說明標題，凌駕 Shell 將它放置在底部的預設"
 "值。變更這個設定值需要重新啟動 Shell 來套用效果。"
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "位置"
 
@@ -174,27 +174,27 @@ msgstr "取消最大化"
 msgid "Maximize"
 msgstr "最大化"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:429
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:435
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:441
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:449
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:457
 msgid "Close all"
 msgstr "全部關閉"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:737
 msgid "Window List"
 msgstr "視窗列表"
 
@@ -206,18 +206,15 @@ msgstr "何時群組視窗"
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
-msgstr "決定在視窗列表中何時群組視窗。可能的數值有「never」、「auto」、「always」。"
+msgstr ""
+"決定在視窗列表中何時群組視窗。可能的數值有「never」、「auto」、「always」。"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
-#| msgid "Show only windows in the current workspace"
+#: extensions/window-list/prefs.js:89
 msgid "Show windows from all workspaces"
 msgstr "顯示所有工作區的視窗"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
-#| msgid ""
-#| "Whether to show the window list on all connected monitors or only on the "
-#| "primary one."
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr "是否顯示所有工作區，還是僅顯示目前工作區的視窗。"
 
@@ -247,27 +244,30 @@ msgstr "當空間受限時群組視窗"
 msgid "Always group windows"
 msgstr "永遠群組視窗"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:82
 msgid "Show on all monitors"
 msgstr "顯示於所有螢幕"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:209
+#: extensions/workspace-indicator/extension.js:215
 msgid "Workspace Indicator"
 msgstr "工作區指示器"
 
-#: extensions/workspace-indicator/prefs.js:129
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "工作區名稱"
 
-#: extensions/workspace-indicator/prefs.js:149
-msgid "Name"
-msgstr "名稱"
-
-#: extensions/workspace-indicator/prefs.js:189
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "工作區 %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "新增工作區"
+
+#~ msgid "Name"
+#~ msgstr "名稱"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "附加強制對話盒到上層視窗"
