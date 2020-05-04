@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-04-17 16:03+0000\n"
-"PO-Revision-Date: 2020-04-28 12:37+0200\n"
+"POT-Creation-Date: 2020-05-03 17:53+0000\n"
+"PO-Revision-Date: 2020-05-04 14:06+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
@@ -50,26 +50,14 @@ msgstr ""
 "Una lista de cadenas, conteniendo cada una un ID de aplicación (nombre de "
 "archivo de escritorio), seguido de dos puntos y el número del área de trabajo"
 
-#: extensions/auto-move-windows/prefs.js:59
-msgid "Application"
-msgstr "Aplicación"
+#: extensions/auto-move-windows/prefs.js:35
+#| msgid "Workspace Names"
+msgid "Workspace Rules"
+msgstr "Reglas de las áreas de trabajo"
 
-#: extensions/auto-move-windows/prefs.js:70
-#: extensions/auto-move-windows/prefs.js:133
-msgid "Workspace"
-msgstr "Área de trabajo"
-
-#: extensions/auto-move-windows/prefs.js:88
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "Añadir regla"
-
-#: extensions/auto-move-windows/prefs.js:110
-msgid "Create new matching rule"
-msgstr "Crear regla de coincidencia nueva"
-
-#: extensions/auto-move-windows/prefs.js:116
-msgid "Add"
-msgstr "Añadir"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:112
@@ -216,7 +204,7 @@ msgstr ""
 "ventanas. Los valores posibles son «never», «auto» y «always»."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:89
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "Mostrar ventanas de todas las áreas de trabajo"
 
@@ -238,23 +226,23 @@ msgstr ""
 "Indica si se debe mostrar la lista de ventanas en todas las pantallas "
 "conectadas o sólo en la primaria."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "Agrupación de ventanas"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "Nunca agrupar las ventanas"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "Agrupar las ventanas cuando el espacio esté limitado"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "Siempre agrupar las ventanas"
 
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "Mostrar en todas las pantallas"
 
@@ -273,9 +261,20 @@ msgid "Workspace %d"
 msgstr "Área de trabajo %d"
 
 #: extensions/workspace-indicator/prefs.js:218
-#| msgid "Workspace"
 msgid "Add Workspace"
 msgstr "Añadir área de trabajo"
+
+#~ msgid "Application"
+#~ msgstr "Aplicación"
+
+#~ msgid "Workspace"
+#~ msgstr "Área de trabajo"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "Crear regla de coincidencia nueva"
+
+#~ msgid "Add"
+#~ msgstr "Añadir"
 
 #~ msgid "Name"
 #~ msgstr "Nombre"
