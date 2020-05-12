@@ -1,15 +1,16 @@
 # Persian translation for gnome-shell-extensions.
 # Copyright (C) 2011 Iranian Free Software Users Group (IFSUG.org) translation team.
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2011, 2013, 2014, 2015, 2016, 2017.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2011-2017.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2018-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-04-17 16:03+0000\n"
-"PO-Revision-Date: 2020-04-24 20:12+0000\n"
+"POT-Creation-Date: 2020-05-03 17:53+0000\n"
+"PO-Revision-Date: 2020-05-12 14:25+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <>\n"
 "Language: fa\n"
@@ -30,7 +31,7 @@ msgstr "این نشست شما را به گنوم کلاسیک وارد می‌�
 
 #: extensions/apps-menu/extension.js:113
 msgid "Favorites"
-msgstr "علاقه‌مندی‌ها"
+msgstr "برگزیده‌ها"
 
 #: extensions/apps-menu/extension.js:369
 msgid "Applications"
@@ -48,26 +49,13 @@ msgstr ""
 "فهرستی از رشته‌ها، هرکدام حاوی شناسه‌ی یک برنامه (نام پرونده رومیزی)، در ادامه‌ی یک "
 "ویرگول و شماره‌ی فضای کاری"
 
-#: extensions/auto-move-windows/prefs.js:59
-msgid "Application"
-msgstr "برنامه"
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "قواعد فضای کاری"
 
-#: extensions/auto-move-windows/prefs.js:70
-#: extensions/auto-move-windows/prefs.js:133
-msgid "Workspace"
-msgstr "فضای‌کاری"
-
-#: extensions/auto-move-windows/prefs.js:88
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "افزودن قاعده"
-
-#: extensions/auto-move-windows/prefs.js:110
-msgid "Create new matching rule"
-msgstr "افزودن یک قاعده‌ی منطبق جدید"
-
-#: extensions/auto-move-windows/prefs.js:116
-msgid "Add"
-msgstr "اضافه"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:112
@@ -212,7 +200,7 @@ msgstr ""
 "ممکن عبارتند از «never»، «auto» و «always»."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:89
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "نمایش پنجره‌ها از تمام فضاهای کاری"
 
@@ -232,23 +220,23 @@ msgstr ""
 "اینکه آیا فهرست پنجره‌ها در تمام نمایشگرهای متصل نمایش داده شود یا فقط در نمایشگر "
 "اصلی."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "گروه‌سازی پنجره‌ها"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "هیچ‌گاه پنجره‌ها گروه نشوند"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "پنجره‌ها زمانی که فضا محدود است گروه شوند"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "همیشه پنجره‌ها گروه شوند"
 
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "نمایش در تمام نمایشگرها"
 
@@ -269,6 +257,18 @@ msgstr "فضای کاری %Id"
 #: extensions/workspace-indicator/prefs.js:218
 msgid "Add Workspace"
 msgstr "افزودن فضای‌کاری"
+
+#~ msgid "Application"
+#~ msgstr "برنامه"
+
+#~ msgid "Workspace"
+#~ msgstr "فضای‌کاری"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "افزودن یک قاعده‌ی منطبق جدید"
+
+#~ msgid "Add"
+#~ msgstr "اضافه"
 
 #~ msgid "Name"
 #~ msgstr "نام"
