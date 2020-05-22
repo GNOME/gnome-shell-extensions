@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-08-09 22:24+0000\n"
-"PO-Revision-Date: 2019-08-18 14:22+0300\n"
+"POT-Creation-Date: 2020-05-03 17:53+0000\n"
+"PO-Revision-Date: 2020-05-22 11:12+0200\n"
 "Last-Translator: Florentina Mușat <florentina.musat.28 [at] gmail [dot] "
 "com>\n"
 "Language-Team: Gnome Romanian Translation Team\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.3\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -34,7 +34,7 @@ msgstr "Această sesiune vă autentifică în GNOME Clasic"
 msgid "Favorites"
 msgstr "Favorite"
 
-#: extensions/apps-menu/extension.js:368
+#: extensions/apps-menu/extension.js:369
 msgid "Applications"
 msgstr "Aplicații"
 
@@ -51,39 +51,26 @@ msgstr ""
 "fișierului de birou) urmat de simbolul „două puncte” și un număr al "
 "spațiului de lucru"
 
-#: extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "Aplicație"
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "Regulile spațiilor de lucru"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
-msgid "Workspace"
-msgstr "Spațiu de lucru"
-
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "Adaugă o regulă"
 
-#: extensions/auto-move-windows/prefs.js:111
-msgid "Create new matching rule"
-msgstr "Creează o regulă nouă de potrivire"
-
-#: extensions/auto-move-windows/prefs.js:117
-msgid "Add"
-msgstr "Adaugă"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:102
-#: extensions/places-menu/placeDisplay.js:232
+#: extensions/drive-menu/extension.js:112
+#: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Scoaterea unității „%s” a eșuat:"
 
-#: extensions/drive-menu/extension.js:118
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Dispozitive detașabile"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Deschide fișiere"
 
@@ -117,8 +104,8 @@ msgstr ""
 "Schimbând această configurare necesită repornire shell-ului pentru a avea "
 "efect."
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Locații"
 
@@ -137,11 +124,11 @@ msgstr "Eșec la montarea volumului pentru „%s”"
 msgid "Computer"
 msgstr "Calculator"
 
-#: extensions/places-menu/placeDisplay.js:358
+#: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
 msgstr "Acasă"
 
-#: extensions/places-menu/placeDisplay.js:403
+#: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
 msgstr "Navighează rețeaua"
 
@@ -161,47 +148,47 @@ msgstr "Numele temei"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Numele temei, ce va fi încărcată din ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Închide"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Unminimize"
 msgstr "Deminimizează"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Minimize"
 msgstr "Minimizează"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Unmaximize"
 msgstr "Demaximizează"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Maximize"
 msgstr "Maximizează"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:429
 msgid "Minimize all"
 msgstr "Minimizează tot"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:435
 msgid "Unminimize all"
 msgstr "Deminimizează tot"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:441
 msgid "Maximize all"
 msgstr "Maximizează tot"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:449
 msgid "Unmaximize all"
 msgstr "Demaximizează tot"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:457
 msgid "Close all"
 msgstr "Închide tot"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:737
 msgid "Window List"
 msgstr "Lista ferestrelor"
 
@@ -218,7 +205,7 @@ msgstr ""
 "ferestrei. Valorile posibile sunt „niciodată”, „auto” și „întotdeauna”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "Arată ferestrele din toate spațiile de lucru"
 
@@ -240,43 +227,58 @@ msgstr ""
 "Dacă să se arate lista ferestrelor pe toate monitoarele conectate sau doar "
 "pe cel primar."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "Gruparea ferestrelor"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "Nu grupa ferestrele niciodată"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "Grupează ferestrele când spațiul e limitat"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "Grupează ferestrele întotdeauna"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "Arată pe toate monitoarele"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:209
+#: extensions/workspace-indicator/extension.js:215
 msgid "Workspace Indicator"
 msgstr "Indicator al spațiului de lucru"
 
-#: extensions/workspace-indicator/prefs.js:131
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Numele spațiilor de lucru"
 
-#: extensions/workspace-indicator/prefs.js:151
-msgid "Name"
-msgstr "Nume"
-
-#: extensions/workspace-indicator/prefs.js:191
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Spațiu de lucru %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "Adaugă un spațiu de lucru"
+
+#~ msgid "Application"
+#~ msgstr "Aplicație"
+
+#~ msgid "Workspace"
+#~ msgstr "Spațiu de lucru"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "Creează o regulă nouă de potrivire"
+
+#~ msgid "Add"
+#~ msgstr "Adaugă"
+
+#~ msgid "Name"
+#~ msgstr "Nume"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "Atașează dialogul modal la fereastra părinte"
