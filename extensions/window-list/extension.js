@@ -221,6 +221,7 @@ const BaseButton = GObject.registerClass({
         super._init({
             style_class: 'window-button',
             can_focus: true,
+            x_expand: true,
             button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE,
         });
 
@@ -936,10 +937,7 @@ class WindowList extends St.Widget {
         let button = new AppButton(app, this._perMonitor, this._monitor.index);
         this._settings.bind('display-all-workspaces',
             button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
-        this._windowList.layout_manager.pack(button,
-            true, true, true,
-            Clutter.BoxAlignment.START,
-            Clutter.BoxAlignment.START);
+        this._windowList.add_child(button);
     }
 
     _removeApp(app) {
@@ -966,10 +964,7 @@ class WindowList extends St.Widget {
         let button = new WindowButton(win, this._perMonitor, this._monitor.index);
         this._settings.bind('display-all-workspaces',
             button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
-        this._windowList.layout_manager.pack(button,
-            true, true, true,
-            Clutter.BoxAlignment.START,
-            Clutter.BoxAlignment.START);
+        this._windowList.add_child(button);
     }
 
     _onWindowRemoved(ws, win) {
