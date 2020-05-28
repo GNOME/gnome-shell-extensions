@@ -224,7 +224,7 @@ const BaseButton = GObject.registerClass({
             button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE,
         });
 
-        this.connect('allocation-changed',
+        this.connect('notify::allocation',
             this._updateIconGeometry.bind(this));
         this.connect('clicked', this._onClicked.bind(this));
         this.connect('destroy', this._onDestroy.bind(this));
