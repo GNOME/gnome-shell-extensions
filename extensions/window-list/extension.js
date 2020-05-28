@@ -220,8 +220,6 @@ const BaseButton = GObject.registerClass({
 
         super._init({
             style_class: 'window-button',
-            x_fill: true,
-            y_fill: true,
             can_focus: true,
             button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE,
         });
@@ -491,8 +489,6 @@ class AppButton extends BaseButton {
 
         this._singleWindowTitle = new St.Bin({
             x_expand: true,
-            y_fill: true,
-            x_align: St.Align.START,
         });
         stack.add_actor(this._singleWindowTitle);
 

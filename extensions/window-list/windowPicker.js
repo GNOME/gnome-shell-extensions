@@ -286,8 +286,6 @@ class WindowPickerToggle extends St.Button {
             style_class: 'window-picker-toggle',
             child: iconBin,
             visible: !Main.sessionMode.hasOverview,
-            x_fill: true,
-            y_fill: true,
             toggle_mode: true,
         });
 
