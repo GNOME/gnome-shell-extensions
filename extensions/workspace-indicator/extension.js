@@ -112,8 +112,6 @@ class WorkspaceThumbnail extends St.Button {
                 layout_manager: new Clutter.BinLayout(),
                 clip_to_allocation: true,
             }),
-            x_fill: true,
-            y_fill: true,
         });
 
         this.connect('destroy', this._onDestroy.bind(this));
