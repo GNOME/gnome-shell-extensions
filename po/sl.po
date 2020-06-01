@@ -2,15 +2,15 @@
 # Copyright (C) YEAR Jens Lody
 # This file is distributed under the same license as the gnome-shell-extension-openweather package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2018–2019.
+# Matej Urbančič <mateju@svn.gnome.org>, 2018–2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extension-openweather 1.1\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-08-24 14:33+0000\n"
-"PO-Revision-Date: 2019-08-24 19:08+0200\n"
+"POT-Creation-Date: 2020-05-28 00:55+0000\n"
+"PO-Revision-Date: 2020-06-01 15:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
 "%100<=4 ? 2 : 3);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -49,39 +49,26 @@ msgstr ""
 "Seznam nizov z določilom ID programa (ime programa), ki mu sledi dvopičje in "
 "nato številka delovne površine."
 
-#: extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "Program "
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "Pravila delovnih površin"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
-msgid "Workspace"
-msgstr "Delovna površina"
-
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "Dodaj pravilo"
 
-#: extensions/auto-move-windows/prefs.js:111
-msgid "Create new matching rule"
-msgstr "Ustvari novo skladno pravilo"
-
-#: extensions/auto-move-windows/prefs.js:117
-msgid "Add"
-msgstr "Dodaj"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:103
+#: extensions/drive-menu/extension.js:112
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Izmetavanje pogona »%s« je spodletelo:"
 
-#: extensions/drive-menu/extension.js:119
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Odstranljive naprave"
 
-#: extensions/drive-menu/extension.js:146
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Odpri datoteke"
 
@@ -113,8 +100,8 @@ msgstr ""
 "tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba "
 "lupino ponovno zagnati."
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Mesta"
 
@@ -177,27 +164,27 @@ msgstr "Pomanjšaj"
 msgid "Maximize"
 msgstr "Razpni"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:428
 msgid "Minimize all"
 msgstr "Skrči vse"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:434
 msgid "Unminimize all"
 msgstr "Pomanjšaj vse"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:440
 msgid "Maximize all"
 msgstr "Razpni vse"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:448
 msgid "Unmaximize all"
 msgstr "Pomanjšaj vse"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:456
 msgid "Close all"
 msgstr "Zapri vse"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "Seznam oken"
 
@@ -214,7 +201,7 @@ msgstr ""
 "Veljavne vrednosti so »nikoli«, »samodejno« in »vedno«."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "Pokaži okna vseh delovnih površin"
 
@@ -234,43 +221,55 @@ msgid ""
 msgstr ""
 "Ali naj bo prikazan seznam oken na vseh povezanih zasloni ali le na osnovnem."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "Združevanje oken"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "Nikoli ne združuj oken"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "Združi okna, ko je prostor omejen"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "Okna vedno združi"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "Pokaži na vseh zaslonih"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "Kazalnik delovnih površin"
 
-#: extensions/workspace-indicator/prefs.js:129
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Imena delovnih površin"
 
-#: extensions/workspace-indicator/prefs.js:149
-msgid "Name"
-msgstr "Ime"
-
-#: extensions/workspace-indicator/prefs.js:189
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Delovna površina %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "Dodaj delovno površino"
+
+#~ msgid "Application"
+#~ msgstr "Program "
+
+#~ msgid "Create new matching rule"
+#~ msgstr "Ustvari novo skladno pravilo"
+
+#~ msgid "Add"
+#~ msgstr "Dodaj"
+
+#~ msgid "Name"
+#~ msgstr "Ime"
 
 #~ msgid "..."
 #~ msgstr "..."
