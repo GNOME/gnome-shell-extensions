@@ -1,3 +1,16 @@
+3.37.2
+======
+* window-list, auto-move: Modernize preference dialogs [Florian; !121]
+* Adjust to gnome-shell changes [Florian; !122]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Cheng-Chia Tseng [zh_TW], Yuri Chornoivan [uk], Daniel Mustieles [es],
+  Emin Tufan Çetin [tr], Danial Behzadi [fa], Daniel Șerbănescu [ro],
+  Matej Urbančič [sl]
+
 3.37.1
 ======
 * drive-menu: Emphasize eject buttons [Florian; #223]
