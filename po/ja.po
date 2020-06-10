@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-12-11 18:09+0000\n"
+"POT-Creation-Date: 2020-05-28 00:55+0000\n"
 "PO-Revision-Date: 2020-01-20 00:00+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -51,39 +51,28 @@ msgstr ""
 "アプリケーションの識別子 (.desktop ファイル名) とコロンの後にワークスペース番"
 "号を付与した文字列を要素とするリストです"
 
-#: extensions/auto-move-windows/prefs.js:59
-msgid "Application"
-msgstr "アプリケーション"
+#: extensions/auto-move-windows/prefs.js:35
+#, fuzzy
+#| msgid "Workspace Names"
+msgid "Workspace Rules"
+msgstr "ワークスペース名"
 
-#: extensions/auto-move-windows/prefs.js:70
-#: extensions/auto-move-windows/prefs.js:133
-msgid "Workspace"
-msgstr "ワークスペース"
-
-#: extensions/auto-move-windows/prefs.js:88
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "ルールを追加"
 
-#: extensions/auto-move-windows/prefs.js:110
-msgid "Create new matching rule"
-msgstr "新規ルールの作成"
-
-#: extensions/auto-move-windows/prefs.js:116
-msgid "Add"
-msgstr "追加"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:103
+#: extensions/drive-menu/extension.js:112
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "ドライブ“%s”の取り出しに失敗しました:"
 
-#: extensions/drive-menu/extension.js:119
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "リムーバブルデバイス"
 
-#: extensions/drive-menu/extension.js:146
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "ファイルを開く"
 
@@ -113,12 +102,12 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr ""
 "TRUE にすると、ウィンドウのサムネイルの上端にそのウィンドウのタイトルバーを表"
-"示します (これは、サムネイルの下端にタイトルバーを表示する GNOME shellのデフ"
-"ォルト値よりも優先されます)。この設定を適用する際は GNOME shellを再起動してく"
-"ださい。"
+"示します (これは、サムネイルの下端にタイトルバーを表示する GNOME shellのデ"
+"フォルト値よりも優先されます)。この設定を適用する際は GNOME shellを再起動して"
+"ください。"
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "場所"
 
@@ -201,7 +190,7 @@ msgstr "すべて最大化解除"
 msgid "Close all"
 msgstr "すべて閉じる"
 
-#: extensions/window-list/extension.js:736
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "ウィンドウのリスト"
 
@@ -218,7 +207,7 @@ msgstr ""
 "定可能な値は、“never”, “auto”, “always”です。"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "すべてのワークスペースのウィンドウを表示する"
 
@@ -240,43 +229,57 @@ msgstr ""
 "ウィンドウリストをすべての接続モニターに表示するかプライマリーモニターにのみ"
 "表示するかの設定です。"
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "ウィンドウのグループ化"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "ウィンドウをグループ化しない"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "ウィンドウ一覧の幅が制限される時にグループ化する"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "ウィンドウをグループ化する"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "すべてのモニターに表示する"
 
-#: extensions/window-list/workspaceIndicator.js:209
-#: extensions/workspace-indicator/extension.js:215
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "ワークスペースインジケーター"
 
-#: extensions/workspace-indicator/prefs.js:129
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "ワークスペース名"
 
-#: extensions/workspace-indicator/prefs.js:149
-msgid "Name"
-msgstr "名前"
-
-#: extensions/workspace-indicator/prefs.js:189
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "ワークスペース %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+#, fuzzy
+#| msgid "Workspace"
+msgid "Add Workspace"
+msgstr "ワークスペース"
+
+#~ msgid "Application"
+#~ msgstr "アプリケーション"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "新規ルールの作成"
+
+#~ msgid "Add"
+#~ msgstr "追加"
+
+#~ msgid "Name"
+#~ msgstr "名前"
 
 #~ msgid "Activities Overview"
 #~ msgstr "アクティビティ"
