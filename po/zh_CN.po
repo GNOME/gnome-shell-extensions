@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-08-09 22:24+0000\n"
-"PO-Revision-Date: 2019-09-10 02:34+0800\n"
-"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
+"POT-Creation-Date: 2020-05-28 00:55+0000\n"
+"PO-Revision-Date: 2020-06-23 17:14-0400\n"
+"Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 3.32.1\n"
+"X-Generator: Poedit 2.3.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
@@ -36,7 +36,7 @@ msgstr "该会话将登录到“GNOME 经典模式”"
 msgid "Favorites"
 msgstr "收藏"
 
-#: extensions/apps-menu/extension.js:368
+#: extensions/apps-menu/extension.js:369
 msgid "Applications"
 msgstr "应用程序"
 
@@ -51,39 +51,26 @@ msgid ""
 msgstr ""
 "一系列字符串，每个字符串包含一个应用程序标识（桌面文件名称）、冒号加工作区号"
 
-#: extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "应用程序"
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "工作区规则"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
-msgid "Workspace"
-msgstr "工作区"
-
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "添加规则"
 
-#: extensions/auto-move-windows/prefs.js:111
-msgid "Create new matching rule"
-msgstr "创建新的匹配规则"
-
-#: extensions/auto-move-windows/prefs.js:117
-msgid "Add"
-msgstr "添加"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:102
-#: extensions/places-menu/placeDisplay.js:232
+#: extensions/drive-menu/extension.js:112
+#: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "弹出驱动器“%s”失败："
 
-#: extensions/drive-menu/extension.js:118
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "可移动设备"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "打开文件"
 
@@ -113,8 +100,8 @@ msgstr ""
 "如果设置为 true，则将窗口说明文字放置在对应窗口的缩略图上方，而不是默认的下"
 "方。修改此设置需要重启 GNOME Shell 以使设置生效。"
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "位置"
 
@@ -133,11 +120,11 @@ msgstr "无法为“%s”挂载卷"
 msgid "Computer"
 msgstr "计算机"
 
-#: extensions/places-menu/placeDisplay.js:358
+#: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
 msgstr "主文件夹"
 
-#: extensions/places-menu/placeDisplay.js:403
+#: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
 msgstr "浏览网络"
 
@@ -157,47 +144,47 @@ msgstr "主题名称"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "从 ~/.themes/name/gnome-shell 加载的主题名称"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "关闭"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Unminimize"
 msgstr "取消最小化"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Minimize"
 msgstr "最小化"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Unmaximize"
 msgstr "取消最大化"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Maximize"
 msgstr "最大化"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:428
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:434
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:440
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:448
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:456
 msgid "Close all"
 msgstr "全部关闭"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "窗口列表"
 
@@ -214,7 +201,7 @@ msgstr ""
 "不）、“auto”（自动）和“always”（总是）。"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "显示所有工作区中的窗口"
 
@@ -232,43 +219,55 @@ msgid ""
 "primary one."
 msgstr "是否在所有连接的显示器上显示窗口列表或仅在主显示器上显示。"
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "窗口分组"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "从不将窗口分组"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "当空间有限时将窗口分组"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "总是对窗口分组"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "在所有显示器上显示"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "工作区指示器"
 
-#: extensions/workspace-indicator/prefs.js:131
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "工作区名称"
 
-#: extensions/workspace-indicator/prefs.js:151
-msgid "Name"
-msgstr "名称"
-
-#: extensions/workspace-indicator/prefs.js:191
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "工作区 %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "添加工作区"
+
+#~ msgid "Application"
+#~ msgstr "应用程序"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "创建新的匹配规则"
+
+#~ msgid "Add"
+#~ msgstr "添加"
+
+#~ msgid "Name"
+#~ msgstr "名称"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "将模式对话框附着到父窗口"
