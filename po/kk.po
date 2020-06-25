@@ -1,22 +1,22 @@
 # Kazakh translation for gnome-shell-extensions.
 # Copyright (C) 2013 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2013-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-07-20 23:40+0000\n"
-"PO-Revision-Date: 2017-07-27 17:09+0500\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2020-03-31 07:16+0000\n"
+"PO-Revision-Date: 2020-06-25 10:17+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -26,74 +26,11 @@ msgstr "Классикалық GNOME"
 msgid "This session logs you into GNOME Classic"
 msgstr "Бұл сессия арқылы классикалық GNOME ішіне кіресіз"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "Модальді сұхбаттарды аталық терезесіне жалғау"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"Бұл кілт GNOME Shell орындау кезінде org.gnome.mutter кілтін үстінен басады."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "Атау жолағындағы батырмалар орналасуы"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"Бұл кілт GNOME Shell орындау кезінде org.gnome.desktop.wm.preferences кілтін "
-"үстінен жазады."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr ""
-"Терезелерді экран шеттеріне апарған кезде олардың өлшемдерін өзгертуді іске "
-"қосу"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "Жұмыс орындары тек біріншілік мониторда"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr "Тышқан режиміндегі фокусты ауыстыру курсор тоқтағанша дейін кідірту"
-
-#: extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "Тек үлгі"
-
-#: extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "Тек қолданба таңбашасы"
-
-#: extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "Үлгі және қолданба таңбашасы"
-
-#: extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "Терезелерді қалайша ұсыну"
-
-#: extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "Тек ағымдағы жұмыс орнынан терезелерді көрсету"
-
-#: extensions/apps-menu/extension.js:41
-msgid "Activities Overview"
-msgstr "Шолу көрінісі"
-
-#: extensions/apps-menu/extension.js:141
+#: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Таңдамалылар"
 
-#: extensions/apps-menu/extension.js:436
+#: extensions/apps-menu/extension.js:369
 msgid "Applications"
 msgstr "Қолданбалар"
 
@@ -109,69 +46,41 @@ msgstr ""
 "Жолдар тізімі, әрқайсысы қолданба анықтағышын сақтайды (desktop файлының "
 "аты), соңында үтір және жұмыс орнының нөмірі тұрады"
 
-#: extensions/auto-move-windows/prefs.js:60
+#: extensions/auto-move-windows/prefs.js:59
 msgid "Application"
 msgstr "Қолданба"
 
-#: extensions/auto-move-windows/prefs.js:69
-#: extensions/auto-move-windows/prefs.js:127
+#: extensions/auto-move-windows/prefs.js:70
+#: extensions/auto-move-windows/prefs.js:133
 msgid "Workspace"
 msgstr "Жұмыс орны"
 
-#: extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:88
 msgid "Add Rule"
 msgstr "Ережені қосу"
 
-#: extensions/auto-move-windows/prefs.js:106
+#: extensions/auto-move-windows/prefs.js:110
 msgid "Create new matching rule"
 msgstr "Жаңа сәйкес келетін ережені жасау"
 
-#: extensions/auto-move-windows/prefs.js:111
+#: extensions/auto-move-windows/prefs.js:116
 msgid "Add"
 msgstr "Қосу"
 
-#: extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:103
+#: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "\"%s\" жетегін шығару сәтсіз аяқталды:"
 
-#: extensions/drive-menu/extension.js:124
+#: extensions/drive-menu/extension.js:119
 msgid "Removable devices"
 msgstr "Алынатын құрылғылар"
 
-#: extensions/drive-menu/extension.js:149
+#: extensions/drive-menu/extension.js:146
 msgid "Open Files"
 msgstr "Файлдарды ашу"
-
-#: extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "Сәлем, әлем!"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
-msgid "Alternative greeting text."
-msgstr "Альтернативті сәлемдесу мәтіні."
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr "Бос болмаса, панельге шерту кезінде көрсетілетін мәтінді сақтайды."
-
-#: extensions/example/prefs.js:30
-msgid "Message"
-msgstr "Хабарлама"
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it’s possible to customize the greeting message."
-msgstr ""
-"Бұл мысал Shell үшін тиянақты жұмыс жасайтын кеңейтулерді қалай жасау керек "
-"екенін көрсетуге тырысады, сондықтан оның өз мүмкіндіктері аз.\n"
-"Сонда да сәлемдесу хабарламасын өзгертуге болады."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
@@ -202,31 +111,31 @@ msgstr ""
 "үнсіз келісім бойынша астына орналастырудың орнына. Бұл баптау іске асыру "
 "үшін қоршамды қайта іске қосу керек."
 
-#: extensions/places-menu/extension.js:78
-#: extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:80
+#: extensions/places-menu/extension.js:84
 msgid "Places"
 msgstr "Орындар"
 
-#: extensions/places-menu/placeDisplay.js:65
-#, javascript-format
-msgid "Failed to mount volume for “%s”"
-msgstr "\"%s\" үшін томды тіркеу сәтсіз аяқталды"
-
-#: extensions/places-menu/placeDisplay.js:78
+#: extensions/places-menu/placeDisplay.js:46
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "\"%s\" жөнелту сәтсіз аяқталды"
 
-#: extensions/places-menu/placeDisplay.js:137
-#: extensions/places-menu/placeDisplay.js:160
+#: extensions/places-menu/placeDisplay.js:61
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "\"%s\" үшін томды тіркеу сәтсіз аяқталды"
+
+#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Компьютер"
 
-#: extensions/places-menu/placeDisplay.js:303
+#: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
 msgstr "Үй бумасы"
 
-#: extensions/places-menu/placeDisplay.js:347
+#: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
 msgstr "Желіні шолу"
 
@@ -246,52 +155,47 @@ msgstr "Тема атауы"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Тема атауы, ~/.themes/name/gnome-shell ішінен алынады"
 
-#: extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Жабу"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:118
 msgid "Unminimize"
 msgstr "Қайырылған емес қылу"
 
-#: extensions/window-list/extension.js:130
+#: extensions/window-list/extension.js:118
 msgid "Minimize"
 msgstr "Қайыру"
 
-#: extensions/window-list/extension.js:136
+#: extensions/window-list/extension.js:125
 msgid "Unmaximize"
 msgstr "Жазық емес қылу"
 
-#: extensions/window-list/extension.js:137
+#: extensions/window-list/extension.js:125
 msgid "Maximize"
 msgstr "Жазық қылу"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:429
 msgid "Minimize all"
 msgstr "Барлығын қайыру"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:435
 msgid "Unminimize all"
 msgstr "Барлығын қайырылған емес қылу"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:441
 msgid "Maximize all"
 msgstr "Барлығын жазық қылу"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:449
 msgid "Unmaximize all"
 msgstr "Барлығын жазық емес қылу"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:457
 msgid "Close all"
 msgstr "Барлығын жабу"
 
-#: extensions/window-list/extension.js:678
-#: extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "Жұмыс орын индикаторы"
-
-#: extensions/window-list/extension.js:842
+#: extensions/window-list/extension.js:737
 msgid "Window List"
 msgstr "Терезелер тізімі"
 
@@ -308,10 +212,21 @@ msgstr ""
 "сипаттайды. Мүмкін мәндері: \"never\", \"auto\" және \"always\"."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:82
+msgid "Show windows from all workspaces"
+msgstr "Барлық жұмыс орнындарынан терезелерді көрсету"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr ""
+"Ашық терезелерді тек барлық жұмыс орындарынан ба, әлде тек ағымдағысынан ба "
+"көрсету керек."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "Терезелер тізімін барлық мониторларда көрсету"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -319,19 +234,19 @@ msgstr ""
 "Терезелер тізімін барлық жалғанған мониторларда, немесе тек біріншілік "
 "мониторда көрсету керек пе."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:25
 msgid "Window Grouping"
 msgstr "Терезелерді топтау"
 
-#: extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "Терезелерді ешқашан топтамау"
 
-#: extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Терезелерді орын шектелген кезде топтау"
 
-#: extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Терезелерді әрқашан топтау"
 
@@ -339,18 +254,91 @@ msgstr "Терезелерді әрқашан топтау"
 msgid "Show on all monitors"
 msgstr "Барлық мониторларда көрсету"
 
-#: extensions/workspace-indicator/prefs.js:141
+#: extensions/window-list/workspaceIndicator.js:209
+#: extensions/workspace-indicator/extension.js:215
+msgid "Workspace Indicator"
+msgstr "Жұмыс орын индикаторы"
+
+#: extensions/workspace-indicator/prefs.js:129
 msgid "Workspace Names"
 msgstr "Жұмыс орын атаулары"
 
-#: extensions/workspace-indicator/prefs.js:157
+#: extensions/workspace-indicator/prefs.js:149
 msgid "Name"
 msgstr "Атауы"
 
-#: extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:189
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Жұмыс орны %d"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "Модальді сұхбаттарды аталық терезесіне жалғау"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "Бұл кілт GNOME Shell орындау кезінде org.gnome.mutter кілтін үстінен "
+#~ "басады."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "Атау жолағындағы батырмалар орналасуы"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
+#~ "running GNOME Shell."
+#~ msgstr ""
+#~ "Бұл кілт GNOME Shell орындау кезінде org.gnome.desktop.wm.preferences "
+#~ "кілтін үстінен жазады."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr ""
+#~ "Терезелерді экран шеттеріне апарған кезде олардың өлшемдерін өзгертуді "
+#~ "іске қосу"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "Жұмыс орындары тек біріншілік мониторда"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr "Тышқан режиміндегі фокусты ауыстыру курсор тоқтағанша дейін кідірту"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "Тек үлгі"
+
+#~ msgid "Application icon only"
+#~ msgstr "Тек қолданба таңбашасы"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "Үлгі және қолданба таңбашасы"
+
+#~ msgid "Present windows as"
+#~ msgstr "Терезелерді қалайша ұсыну"
+
+#~ msgid "Activities Overview"
+#~ msgstr "Шолу көрінісі"
+
+#~ msgid "Hello, world!"
+#~ msgstr "Сәлем, әлем!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "Альтернативті сәлемдесу мәтіні."
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on "
+#~ "the panel."
+#~ msgstr "Бос болмаса, панельге шерту кезінде көрсетілетін мәтінді сақтайды."
+
+#~ msgid "Message"
+#~ msgstr "Хабарлама"
+
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell "
+#~ "and as such it has little functionality on its own.\n"
+#~ "Nevertheless it’s possible to customize the greeting message."
+#~ msgstr ""
+#~ "Бұл мысал Shell үшін тиянақты жұмыс жасайтын кеңейтулерді қалай жасау "
+#~ "керек екенін көрсетуге тырысады, сондықтан оның өз мүмкіндіктері аз.\n"
+#~ "Сонда да сәлемдесу хабарламасын өзгертуге болады."
 
 #~ msgid "CPU"
 #~ msgstr "Процессор"
