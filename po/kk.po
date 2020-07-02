@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-03-31 07:16+0000\n"
-"PO-Revision-Date: 2020-06-25 10:17+0500\n"
+"POT-Creation-Date: 2020-06-25 05:19+0000\n"
+"PO-Revision-Date: 2020-07-02 11:39+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "Language: kk\n"
@@ -46,39 +46,26 @@ msgstr ""
 "Жолдар тізімі, әрқайсысы қолданба анықтағышын сақтайды (desktop файлының "
 "аты), соңында үтір және жұмыс орнының нөмірі тұрады"
 
-#: extensions/auto-move-windows/prefs.js:59
-msgid "Application"
-msgstr "Қолданба"
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "Жұмыс орын ережелері"
 
-#: extensions/auto-move-windows/prefs.js:70
-#: extensions/auto-move-windows/prefs.js:133
-msgid "Workspace"
-msgstr "Жұмыс орны"
-
-#: extensions/auto-move-windows/prefs.js:88
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "Ережені қосу"
 
-#: extensions/auto-move-windows/prefs.js:110
-msgid "Create new matching rule"
-msgstr "Жаңа сәйкес келетін ережені жасау"
-
-#: extensions/auto-move-windows/prefs.js:116
-msgid "Add"
-msgstr "Қосу"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:103
+#: extensions/drive-menu/extension.js:112
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "\"%s\" жетегін шығару сәтсіз аяқталды:"
 
-#: extensions/drive-menu/extension.js:119
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Алынатын құрылғылар"
 
-#: extensions/drive-menu/extension.js:146
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Файлдарды ашу"
 
@@ -111,8 +98,8 @@ msgstr ""
 "үнсіз келісім бойынша астына орналастырудың орнына. Бұл баптау іске асыру "
 "үшін қоршамды қайта іске қосу керек."
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Орындар"
 
@@ -175,27 +162,27 @@ msgstr "Жазық емес қылу"
 msgid "Maximize"
 msgstr "Жазық қылу"
 
-#: extensions/window-list/extension.js:429
+#: extensions/window-list/extension.js:428
 msgid "Minimize all"
 msgstr "Барлығын қайыру"
 
-#: extensions/window-list/extension.js:435
+#: extensions/window-list/extension.js:434
 msgid "Unminimize all"
 msgstr "Барлығын қайырылған емес қылу"
 
-#: extensions/window-list/extension.js:441
+#: extensions/window-list/extension.js:440
 msgid "Maximize all"
 msgstr "Барлығын жазық қылу"
 
-#: extensions/window-list/extension.js:449
+#: extensions/window-list/extension.js:448
 msgid "Unmaximize all"
 msgstr "Барлығын жазық емес қылу"
 
-#: extensions/window-list/extension.js:457
+#: extensions/window-list/extension.js:456
 msgid "Close all"
 msgstr "Барлығын жабу"
 
-#: extensions/window-list/extension.js:737
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "Терезелер тізімі"
 
@@ -212,7 +199,7 @@ msgstr ""
 "сипаттайды. Мүмкін мәндері: \"never\", \"auto\" және \"always\"."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "Барлық жұмыс орнындарынан терезелерді көрсету"
 
@@ -234,43 +221,55 @@ msgstr ""
 "Терезелер тізімін барлық жалғанған мониторларда, немесе тек біріншілік "
 "мониторда көрсету керек пе."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "Терезелерді топтау"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "Терезелерді ешқашан топтамау"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "Терезелерді орын шектелген кезде топтау"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "Терезелерді әрқашан топтау"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "Барлық мониторларда көрсету"
 
-#: extensions/window-list/workspaceIndicator.js:209
-#: extensions/workspace-indicator/extension.js:215
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "Жұмыс орын индикаторы"
 
-#: extensions/workspace-indicator/prefs.js:129
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Жұмыс орын атаулары"
 
-#: extensions/workspace-indicator/prefs.js:149
-msgid "Name"
-msgstr "Атауы"
-
-#: extensions/workspace-indicator/prefs.js:189
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Жұмыс орны %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "Жұмыс орнын қосу"
+
+#~ msgid "Application"
+#~ msgstr "Қолданба"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "Жаңа сәйкес келетін ережені жасау"
+
+#~ msgid "Add"
+#~ msgstr "Қосу"
+
+#~ msgid "Name"
+#~ msgstr "Атауы"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "Модальді сұхбаттарды аталық терезесіне жалғау"
