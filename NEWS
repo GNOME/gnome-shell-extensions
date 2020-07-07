@@ -1,3 +1,14 @@
+3.37.3
+======
+* window-list, native-window-placement: Adjust to shell changes [Florian; !124]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Jordi Mas [ca], sicklylife [ja], Boyuan Yang [zh_CN],
+  Baurzhan Muftakhidinov [kk]
+
 3.37.2
 ======
 * window-list, auto-move: Modernize preference dialogs [Florian; !121]
