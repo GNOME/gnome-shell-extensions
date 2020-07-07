@@ -26,6 +26,8 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
 
         super._init(this._workspaceAdjustment);
 
+        this._workspaceAdjustment.actor = this;
+
         this.add_constraint(
             new Layout.MonitorConstraint({
                 primary: true,
@@ -37,27 +39,28 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
         this._onWorkAreasChanged();
     }
 
-    show(...args) {
+    animateToOverview(...args) {
         if (!this._scrollEventId) {
             this._scrollEventId = Main.windowPicker.connect('scroll-event',
                 this._onScrollEvent.bind(this));
         }
 
-        super.show(...args);
+        super.animateToOverview(...args);
     }
 
-    hide(...args) {
+    vfunc_hide(...args) {
         if (this._scrollEventId > 0)
             Main.windowPicker.disconnect(this._scrollEventId);
         this._scrollEventId = 0;
 
-        super.hide(...args);
+        super.vfunc_hide(...args);
     }
 
     _onWorkAreasChanged() {
         let { primaryIndex } = Main.layoutManager;
-        let workarea = Main.layoutManager.getWorkAreaForMonitor(primaryIndex);
-        this.setWorkspacesFullGeometry(workarea);
+        this._actualGeometry =
+            Main.layoutManager.getWorkAreaForMonitor(primaryIndex);
+        this._syncWorkspacesActualGeometry();
     }
 
     _updateAdjustment() {
@@ -163,7 +166,7 @@ var WindowPicker = GObject.registerClass({
         this._fakeOverviewVisible(true);
         this._shadeBackgrounds();
         this._fakeOverviewAnimation();
-        this._workspacesDisplay.show(false);
+        this._workspacesDisplay.animateToOverview(false);
 
         this._stageKeyPressId = global.stage.connect('key-press-event',
             (a, event) => {
