@@ -388,10 +388,5 @@ class WorkspaceIndicator extends PanelMenu.Button {
         let newIndex = this._currentWorkspace + diff;
         this._activate(newIndex);
     }
-
-    _allocate(actor, box, flags) {
-        if (actor.get_n_children() > 0)
-            actor.get_first_child().allocate(box, flags);
-    }
 });
 
