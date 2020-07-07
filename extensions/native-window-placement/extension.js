@@ -1,6 +1,9 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported enable disable */
+const { Clutter } = imports.gi;
+
 const ExtensionUtils = imports.misc.extensionUtils;
+const { WindowPreview } = imports.ui.windowPreview;
 const Workspace = imports.ui.workspace;
 
 // testing settings for natural window placement strategy:
@@ -221,8 +224,10 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
         for (let i = 0; i < rects.length; i++) {
             rects[i].x = rects[i].x * scale + areaRect.x;
             rects[i].y = rects[i].y * scale + areaRect.y;
+            rects[i].width *= scale;
+            rects[i].height *= scale;
 
-            slots.push([rects[i].x, rects[i].y, scale, clones[i]]);
+            slots.push([rects[i].x, rects[i].y, rects[i].width, rects[i].height, clones[i]]);
         }
 
         return slots;
@@ -241,24 +246,24 @@ function enable() {
 
     let settings = ExtensionUtils.getSettings();
 
-    workspaceInjections['_getBestLayout'] = Workspace.Workspace.prototype._getBestLayout;
-    Workspace.Workspace.prototype._getBestLayout = function (windows) {
+    workspaceInjections['_createBestLayout'] = Workspace.WorkspaceLayout.prototype._createBestLayout;
+    Workspace.WorkspaceLayout.prototype._createBestLayout = function (area) {
         let strategy = new NaturalLayoutStrategy(settings);
-        let layout = { strategy };
-        strategy.computeLayout(windows, layout);
+        let layout = { area, strategy };
+        strategy.computeLayout(this._sortedWindows, layout);
 
         return layout;
     };
 
     // position window titles on top of windows in overlay
-    winInjections['relayout'] = Workspace.WindowOverlay.prototype.relayout;
-    Workspace.WindowOverlay.prototype.relayout = function (animate) {
-        if (settings.get_boolean('window-captions-on-top')) {
-            let [, , , cloneHeight] = this._windowClone.slot;
-            this.title.translation_y = -cloneHeight;
-        }
+    winInjections['_init'] = WindowPreview.prototype._init;
+    WindowPreview.prototype._init = function (metaWindow, workspace) {
+        winInjections['_init'].call(this, metaWindow, workspace);
 
-        winInjections['relayout'].call(this, animate);
+        const constraint = this._title.get_constraints().find(
+            c => c.align_axis && c.align_axis === Clutter.AlignAxis.Y_AXIS);
+        constraint.factor = settings.get_boolean('window-captions-on-top')
+            ? 0 : 1;
     };
 }
 
@@ -273,9 +278,9 @@ function disable() {
     var i;
 
     for (i in workspaceInjections)
-        removeInjection(Workspace.Workspace.prototype, workspaceInjections, i);
+        removeInjection(Workspace.WorkspaceLayout.prototype, workspaceInjections, i);
     for (i in winInjections)
-        removeInjection(Workspace.WindowOverlay.prototype, winInjections, i);
+        removeInjection(WindowPreview.prototype, winInjections, i);
 
     global.stage.queue_relayout();
     resetState();
