@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-08-09 22:24+0000\n"
-"PO-Revision-Date: 2019-08-28 09:34+0200\n"
+"POT-Creation-Date: 2020-05-28 00:55+0000\n"
+"PO-Revision-Date: 2020-07-12 18:10+0200\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -30,7 +30,7 @@ msgstr "Cheste session a si invie cun GNOME classic"
 msgid "Favorites"
 msgstr "Preferîts"
 
-#: extensions/apps-menu/extension.js:368
+#: extensions/apps-menu/extension.js:369
 msgid "Applications"
 msgstr "Aplicazions"
 
@@ -46,39 +46,26 @@ msgstr ""
 "Une liste di stringhis, ogniune a ten il ID di une aplicazion (non dal file ."
 "desktop), seguît di doi ponts e il numar dal spazi di lavôr"
 
-#: extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "Aplicazion"
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "Regulis dai spazis di lavôr"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
-msgid "Workspace"
-msgstr "Spazi di lavôr"
-
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "Zonte regule"
 
-#: extensions/auto-move-windows/prefs.js:111
-msgid "Create new matching rule"
-msgstr "Cree une gnove regule di corispondence"
-
-#: extensions/auto-move-windows/prefs.js:117
-msgid "Add"
-msgstr "Zonte"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:102
-#: extensions/places-menu/placeDisplay.js:232
+#: extensions/drive-menu/extension.js:112
+#: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "No si è rivâts a parâ fûr la unitât “%s”»:"
 
-#: extensions/drive-menu/extension.js:118
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Argagn rimovibil"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Vierç i file"
 
@@ -111,8 +98,8 @@ msgstr ""
 "volte al compuartament normâl de shell, che lis place in bas.Cambiant cheste "
 "impostazion a si scugne tornâ a inviâ la shell."
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Puescj"
 
@@ -131,11 +118,11 @@ msgstr "No si è rivâts a montâ il volum par “%s”"
 msgid "Computer"
 msgstr "Computer"
 
-#: extensions/places-menu/placeDisplay.js:358
+#: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
 msgstr "Cjase"
 
-#: extensions/places-menu/placeDisplay.js:403
+#: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
 msgstr "Esplore rêt"
 
@@ -155,47 +142,47 @@ msgstr "Non dal teme"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Il non dal teme, che si cjame da ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Siere"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Unminimize"
 msgstr "Gjave minimizazion"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Minimize"
 msgstr "Minimize"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Unmaximize"
 msgstr "Gjave massimizazion"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Maximize"
 msgstr "Massimize"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:428
 msgid "Minimize all"
 msgstr "Minimize ducj"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:434
 msgid "Unminimize all"
 msgstr "Gjave a ducj la minimizazion"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:440
 msgid "Maximize all"
 msgstr "Massimize ducj"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:448
 msgid "Unmaximize all"
 msgstr "Gjave a ducj la massimizazion"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:456
 msgid "Close all"
 msgstr "Siere ducj"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "Liste balcons"
 
@@ -212,7 +199,7 @@ msgstr ""
 "balcons. I pussibii valôrs a son “never”, “auto” e “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "Mostre i barcons di ducj i spazis di lavôr"
 
@@ -233,43 +220,55 @@ msgstr ""
 "Indiche se mostrâ la liste dai barcons su ducj i visôrs tacâts o nome sul "
 "principâl."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "Ingrumament balcons"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "No ingrumâ i balcons"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "Ingrume i balcons quanche al'è pôc puest"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "Ingrume simpri i balcons"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "Mostre su ducj i visôrs"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "Indicadôr spazi di lavôr"
 
-#: extensions/workspace-indicator/prefs.js:131
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Nons dai spazis di lavôr"
 
-#: extensions/workspace-indicator/prefs.js:151
-msgid "Name"
-msgstr "Non"
-
-#: extensions/workspace-indicator/prefs.js:191
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Spazi di lavôr %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "Zonte spazi di lavôr"
+
+#~ msgid "Application"
+#~ msgstr "Aplicazion"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "Cree une gnove regule di corispondence"
+
+#~ msgid "Add"
+#~ msgstr "Zonte"
+
+#~ msgid "Name"
+#~ msgstr "Non"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "Tache il balcon modâl al balcon gjenitôr"
