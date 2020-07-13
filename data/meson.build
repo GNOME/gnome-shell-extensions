@@ -1,18 +1,12 @@
-sessions = [
-  ['gnome-classic.session.desktop.in', sessiondir],
-  ['gnome-classic.desktop.in', xsessiondir]
-]
-foreach s : sessions
-  name_array = s[0].split('.')
-  i18n.merge_file('',
-    input:  s[0],
-    output: '.'.join([name_array[0], name_array[1]]),
-    po_dir: '../po',
-    install: true,
-    install_dir: s[1],
-    type: 'desktop'
-  )
-endforeach
+session_desktop = 'gnome-classic.desktop'
+i18n.merge_file('',
+  input:  session_desktop + '.in',
+  output: session_desktop,
+  po_dir: '../po',
+  install: true,
+  install_dir: xsessiondir,
+  type: 'desktop'
+)
 
 classic_uuids = []
 foreach e : classic_extensions
