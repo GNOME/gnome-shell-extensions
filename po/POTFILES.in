@@ -1,5 +1,4 @@
 data/gnome-classic.desktop.in
-data/gnome-classic.session.desktop.in
 extensions/apps-menu/extension.js
 extensions/auto-move-windows/extension.js
 extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml
