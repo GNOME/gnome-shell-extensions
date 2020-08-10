@@ -5,14 +5,14 @@
 # assar <asiersar@yahoo.com>, 2011.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2013, 2015, 2017.
 # Edurne Labaka <elabaka@uzei.com>, 2015.
-# Asier Sarasua Garmendia  <asier.sarasua@gmail.com>, 2019.
+# Asier Sarasua Garmendia  <asiersarasua@ni.eus>, 2019, 2020.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
-"POT-Creation-Date: 2019-08-11 13:48+0000\n"
-"PO-Revision-Date: 2019-08-12 00:42+0200\n"
-"Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
+"POT-Creation-Date: 2020-05-28 00:55+0000\n"
+"PO-Revision-Date: 2020-08-10 00:42+0200\n"
+"Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr "Saio honek GNOME Klasikoa hasten du"
 msgid "Favorites"
 msgstr "Gogokoak"
 
-#: extensions/apps-menu/extension.js:368
+#: extensions/apps-menu/extension.js:369
 msgid "Applications"
 msgstr "Aplikazioak"
 
@@ -48,39 +48,26 @@ msgid ""
 "followed by a colon and the workspace number"
 msgstr "Kateen zerrenda bat, bakoitzak aplikazio-ID bat duena (mahaigainaren fitxategi-izena) eta jarraian bi puntu eta laneko arearen zenbakia dituena"
 
-#: extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "Aplikazioa"
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "Laneko areen arauak"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
-msgid "Workspace"
-msgstr "Laneko area"
-
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "Gehitu araua"
 
-#: extensions/auto-move-windows/prefs.js:111
-msgid "Create new matching rule"
-msgstr "Sortu bat datorren arau berria"
-
-#: extensions/auto-move-windows/prefs.js:117
-msgid "Add"
-msgstr "Gehitu"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:102
-#: extensions/places-menu/placeDisplay.js:232
+#: extensions/drive-menu/extension.js:112
+#: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Huts egin du “%s“ unitatea egoztean:"
 
-#: extensions/drive-menu/extension.js:118
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Gailu aldagarriak"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Ireki fitxategiak"
 
@@ -106,8 +93,8 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr "TRUE (egia) bada, leihoen epigrafeak dagokien koadro txikien gainean jarriko ditu, Shell-aren lehenespena (behean jartzearena) gainidatziz. Ezarpen hau aldatzeko eta aplikatzeko Shell berrabiarazi behar da."
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Lekuak"
 
@@ -126,11 +113,11 @@ msgstr "Huts egin du “%s“(r)en bolumena muntatzean"
 msgid "Computer"
 msgstr "Ordenagailua"
 
-#: extensions/places-menu/placeDisplay.js:358
+#: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
 msgstr "Karpeta nagusia"
 
-#: extensions/places-menu/placeDisplay.js:403
+#: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
 msgstr "Arakatu sarea"
 
@@ -170,27 +157,27 @@ msgstr "Desmaximizatu"
 msgid "Maximize"
 msgstr "Maximizatu"
 
-#: extensions/window-list/extension.js:430
+#: extensions/window-list/extension.js:428
 msgid "Minimize all"
 msgstr "Minimizatu denak"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:434
 msgid "Unminimize all"
 msgstr "Leheneratu denak"
 
-#: extensions/window-list/extension.js:442
+#: extensions/window-list/extension.js:440
 msgid "Maximize all"
 msgstr "Maximizatu denak"
 
-#: extensions/window-list/extension.js:450
+#: extensions/window-list/extension.js:448
 msgid "Unmaximize all"
 msgstr "Desmaximizatu denak"
 
-#: extensions/window-list/extension.js:458
+#: extensions/window-list/extension.js:456
 msgid "Close all"
 msgstr "Itxi denak"
 
-#: extensions/window-list/extension.js:740
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "Leiho-zerrenda"
 
@@ -205,7 +192,7 @@ msgid ""
 msgstr "Aplikazio bereko leihoak leihoen zerrendan noiz elkartuko diren erabakitzen du. Balio erabilgarriak: “never“ (inoiz ere ez), “auto“ (automatikoa) eta “always“ (beti)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "Erakutsi laneko area guztietako leihoak"
 
@@ -223,43 +210,55 @@ msgid ""
 "primary one."
 msgstr "Leihoen zerrenda konektatutako pantaila guztietan edo soilik pantaila nagusian erakutsiko den."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "Leiho-elkartzea"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "Leihoak inoiz ez elkartu"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "Elkartu leihoak lekua mugatuta dagoenean"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "Elkartu beti leihoak"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "Erakutsi pantaila guztietan"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "Lan arearen adierazlea"
 
-#: extensions/workspace-indicator/prefs.js:131
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Laneko areen izenak"
 
-#: extensions/workspace-indicator/prefs.js:151
-msgid "Name"
-msgstr "Izena"
-
-#: extensions/workspace-indicator/prefs.js:191
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "%d. laneko area"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "Gehitu laneko area"
+
+#~ msgid "Application"
+#~ msgstr "Aplikazioa"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "Sortu bat datorren arau berria"
+
+#~ msgid "Add"
+#~ msgstr "Gehitu"
+
+#~ msgid "Name"
+#~ msgstr "Izena"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "Erantsi elkarrizketa-koadro modala leiho gurasoari"
