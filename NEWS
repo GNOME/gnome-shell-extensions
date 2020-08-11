@@ -1,3 +1,14 @@
+3.37.90
+=======
+* Misc. bug fixes and cleanups [Florian, Piotr; !126, !128]
+
+Contributors:
+  Piotr Drąg, Florian Müllner
+
+Translators:
+  Fabio Tomat [fur], Efstathios Iosifidis [el], Anders Jonsson [sv],
+  Asier Sarasua Garmendia [eu], Alexandre Franke [fr]
+
 3.37.3
 ======
 * window-list, native-window-placement: Adjust to shell changes [Florian; !124]
