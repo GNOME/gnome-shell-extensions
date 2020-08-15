@@ -1,16 +1,16 @@
 # Polish translation for gnome-shell-extensions.
-# Copyright © 2011-2019 the gnome-shell-extensions authors.
+# Copyright © 2011-2020 the gnome-shell-extensions authors.
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Piotr Drąg <piotrdrag@gmail.com>, 2011-2019.
-# Aviary.pl <community-poland@mozilla.org>, 2011-2019.
+# Piotr Drąg <piotrdrag@gmail.com>, 2011-2020.
+# Aviary.pl <community-poland@mozilla.org>, 2011-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-08-09 22:24+0000\n"
-"PO-Revision-Date: 2019-08-20 19:23+0200\n"
+"POT-Creation-Date: 2020-05-28 00:55+0000\n"
+"PO-Revision-Date: 2020-08-15 11:39+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -32,7 +32,7 @@ msgstr "Ta sesja loguje do klasycznego środowiska GNOME"
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: extensions/apps-menu/extension.js:368
+#: extensions/apps-menu/extension.js:369
 msgid "Applications"
 msgstr "Programy"
 
@@ -48,39 +48,26 @@ msgstr ""
 "Lista ciągów, każdy zawierający identyfikator programu (nazwę pliku ."
 "desktop) z przecinkiem i numerem obszaru roboczego"
 
-#: extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "Program"
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "Reguły obszarów roboczych"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
-msgid "Workspace"
-msgstr "Obszar roboczy"
-
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "Dodaj regułę"
 
-#: extensions/auto-move-windows/prefs.js:111
-msgid "Create new matching rule"
-msgstr "Utwórz nową pasującą regułę"
-
-#: extensions/auto-move-windows/prefs.js:117
-msgid "Add"
-msgstr "Dodaj"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:102
-#: extensions/places-menu/placeDisplay.js:232
+#: extensions/drive-menu/extension.js:112
+#: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Wysunięcie napędu „%s” się nie powiodło:"
 
-#: extensions/drive-menu/extension.js:118
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Urządzenia wymienne"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Otwórz menedżer plików"
 
@@ -113,8 +100,8 @@ msgstr ""
 "powłokę. Zmiana tego ustawienia wymaga ponownego uruchomienia powłoki, aby "
 "uwzględnić zmiany."
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Miejsca"
 
@@ -133,11 +120,11 @@ msgstr "Zamontowanie woluminu dla „%s” się nie powiodło"
 msgid "Computer"
 msgstr "Komputer"
 
-#: extensions/places-menu/placeDisplay.js:358
+#: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
 msgstr "Katalog domowy"
 
-#: extensions/places-menu/placeDisplay.js:403
+#: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
 msgstr "Przeglądaj sieć"
 
@@ -157,47 +144,47 @@ msgstr "Nazwa motywu"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Nazwa motywu do wczytania z katalogu ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Zamknij"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Unminimize"
 msgstr "Cofnij minimalizację"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Minimize"
 msgstr "Zminimalizuj"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Unmaximize"
 msgstr "Cofnij maksymalizację"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Maximize"
 msgstr "Zmaksymalizuj"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:428
 msgid "Minimize all"
 msgstr "Zminimalizuj wszystkie"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:434
 msgid "Unminimize all"
 msgstr "Cofnij minimalizację wszystkich"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:440
 msgid "Maximize all"
 msgstr "Zmaksymalizuj wszystkie"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:448
 msgid "Unmaximize all"
 msgstr "Cofnij maksymalizację wszystkich"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:456
 msgid "Close all"
 msgstr "Zamknij wszystkie"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "Lista okien"
 
@@ -214,7 +201,7 @@ msgstr ""
 "wartości to „never” (nigdy), „auto” (automatycznie) i „always” (zawsze)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "Wyświetlanie okien ze wszystkich obszarów roboczych"
 
@@ -235,40 +222,40 @@ msgstr ""
 "Czy wyświetlać listę okien na wszystkich podłączonych monitorach, czy tylko "
 "na głównym."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "Grupowanie okien"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "Bez grupowania okien"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "Grupowanie okien, kiedy miejsce jest ograniczone"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "Stałe grupowanie okien"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "Wyświetlanie na wszystkich monitorach"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "Wskaźnik obszaru roboczego"
 
-#: extensions/workspace-indicator/prefs.js:131
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Nazwy obszarów roboczych"
 
-#: extensions/workspace-indicator/prefs.js:151
-msgid "Name"
-msgstr "Nazwa"
-
-#: extensions/workspace-indicator/prefs.js:191
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "%d. obszar roboczy"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "Dodaj obszar roboczy"
