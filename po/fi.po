@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-08-09 22:24+0000\n"
-"PO-Revision-Date: 2019-08-17 16:00+0300\n"
+"POT-Creation-Date: 2020-05-28 00:55+0000\n"
+"PO-Revision-Date: 2020-08-16 18:17+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Project-Style: gnome\n"
 "X-POT-Import-Date: 2012-03-05 15:06:12+0000\n"
 
@@ -37,7 +37,7 @@ msgstr "Tämä istunto kirjaa sinut perinteiseen Gnomeen"
 msgid "Favorites"
 msgstr "Suosikit"
 
-#: extensions/apps-menu/extension.js:368
+#: extensions/apps-menu/extension.js:369
 msgid "Applications"
 msgstr "Sovellukset"
 
@@ -51,39 +51,26 @@ msgid ""
 "followed by a colon and the workspace number"
 msgstr ""
 
-#: extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "Sovellus"
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "Työtilojen säännöt"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
-msgid "Workspace"
-msgstr "Työtila"
-
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "Lisää sääntö"
 
-#: extensions/auto-move-windows/prefs.js:111
-msgid "Create new matching rule"
-msgstr "Luo uusi vastaava sääntö"
-
-#: extensions/auto-move-windows/prefs.js:117
-msgid "Add"
-msgstr "Lisää"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:102
-#: extensions/places-menu/placeDisplay.js:232
+#: extensions/drive-menu/extension.js:112
+#: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Aseman “%s” irrottaminen epäonnistui:"
 
-#: extensions/drive-menu/extension.js:118
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Erilliset tallennusvälineet"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Avaa tiedostonhallinta"
 
@@ -112,8 +99,8 @@ msgstr ""
 "Tämä syrjäyttää oletusasetuksen, eli otsikkotekstin asettamisen pienoiskuvan "
 "alle. Tämän asetuksen muutos vaatii Gnomen uudelleenkäynnistyksen."
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Sijainnit"
 
@@ -132,11 +119,11 @@ msgstr "Taltion “%s” liittäminen epäonnistui"
 msgid "Computer"
 msgstr "Tietokone"
 
-#: extensions/places-menu/placeDisplay.js:358
+#: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
 msgstr "Koti"
 
-#: extensions/places-menu/placeDisplay.js:403
+#: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
 msgstr "Selaa verkkoa"
 
@@ -158,47 +145,47 @@ msgstr "Teeman nimi"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Teeman nimi, ladataan sijainnista ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Sulje"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Unminimize"
 msgstr "Palauta pienennys"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Minimize"
 msgstr "Pienennä"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Unmaximize"
 msgstr "Palauta suurennus"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Maximize"
 msgstr "Suurenna"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:428
 msgid "Minimize all"
 msgstr "Pienennä kaikki"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:434
 msgid "Unminimize all"
 msgstr "Palauta kaikkien koko"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:440
 msgid "Maximize all"
 msgstr "Suurenna kaikki"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:448
 msgid "Unmaximize all"
 msgstr "Palauta kaikkien koko"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:456
 msgid "Close all"
 msgstr "Sulje kaikki"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "Ikkunaluettelo"
 
@@ -215,7 +202,7 @@ msgstr ""
 "Mahdolliset arvot ovat “never”, “auto” ja “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "Näytä ikkunat kaikista työtiloista"
 
@@ -237,43 +224,55 @@ msgstr ""
 "Näytetäänkö ikkunaluettelo kaikilla liitetyillä näytöillä vai ainoastaan "
 "ensisijaisella näytöllä."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "Ikkunoiden ryhmitys"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "Älä ryhmitä ikkunoita koskaan"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "Ryhmitä ikkunat tilan ollessa rajallinen"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "Ryhmitä ikkunat aina"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "Näytä kaikilla näytöillä"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "Työtilan ilmaisin"
 
-#: extensions/workspace-indicator/prefs.js:131
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Työtilojen nimet"
 
-#: extensions/workspace-indicator/prefs.js:151
-msgid "Name"
-msgstr "Nimi"
-
-#: extensions/workspace-indicator/prefs.js:191
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Työtila %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "Lisää työtila"
+
+#~ msgid "Application"
+#~ msgstr "Sovellus"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "Luo uusi vastaava sääntö"
+
+#~ msgid "Add"
+#~ msgstr "Lisää"
+
+#~ msgid "Name"
+#~ msgstr "Nimi"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "Liitä modaali-ikkuna ylätason ikkunaan"
