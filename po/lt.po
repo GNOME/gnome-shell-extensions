@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2013-2019.
+# Aurimas Černius <aurisc4@gmail.com>, 2013-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-08-09 22:24+0000\n"
-"PO-Revision-Date: 2019-08-18 22:06+0300\n"
+"POT-Creation-Date: 2020-05-28 00:55+0000\n"
+"PO-Revision-Date: 2020-08-26 22:34+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 3.32.1\n"
+"X-Generator: Gtranslator 3.36.0\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -33,7 +33,7 @@ msgstr "Šis seansas prijungs jus prie klasikinio GNOME"
 msgid "Favorites"
 msgstr "Mėgiamiausi"
 
-#: extensions/apps-menu/extension.js:368
+#: extensions/apps-menu/extension.js:369
 msgid "Applications"
 msgstr "Programos"
 
@@ -49,39 +49,27 @@ msgstr ""
 "Eilučių sąrašas, kur kiekviena eilutė turi programos id (darbalaukio failo "
 "vardą), po jo dvitaškis ir darbo srities numeris"
 
-#: extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "Programa"
+#: extensions/auto-move-windows/prefs.js:35
+#| msgid "Workspace Names"
+msgid "Workspace Rules"
+msgstr "Darbo sričių taisyklės"
 
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
-msgid "Workspace"
-msgstr "Darbo sritis"
-
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "Pridėti taisyklę"
 
-#: extensions/auto-move-windows/prefs.js:111
-msgid "Create new matching rule"
-msgstr "Sukurti naują atitikimo taisyklę"
-
-#: extensions/auto-move-windows/prefs.js:117
-msgid "Add"
-msgstr "Pridėti"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:102
-#: extensions/places-menu/placeDisplay.js:232
+#: extensions/drive-menu/extension.js:112
+#: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Laikmenos „%s“ išstūmimas nepavyko:"
 
-#: extensions/drive-menu/extension.js:118
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Išimami įrenginiai"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Atverti failai"
 
@@ -113,8 +101,8 @@ msgstr ""
 "nepaisant numatyto talpinimo apačioje. Pakeitus šiuos nustatymus, reikės "
 "paleisti apvalkalą iš naujo."
 
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Vietos"
 
@@ -133,11 +121,11 @@ msgstr "Nepavyko prijungti tomo „%s“"
 msgid "Computer"
 msgstr "Kompiuteris"
 
-#: extensions/places-menu/placeDisplay.js:358
+#: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
 msgstr "Namų aplankas"
 
-#: extensions/places-menu/placeDisplay.js:403
+#: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
 msgstr "Naršyti tinklą"
 
@@ -157,47 +145,47 @@ msgstr "Temos pavadinimas"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Temos pavadinimas, kuri bus įkrauta iš ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Užverti"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Unminimize"
 msgstr "Grąžinti iš sumažinimo"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:118
 msgid "Minimize"
 msgstr "Sumažinti"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Unmaximize"
 msgstr "Grąžinti iš išdidinimo"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:125
 msgid "Maximize"
 msgstr "Išdidinti"
 
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:428
 msgid "Minimize all"
 msgstr "Sumažinti visus"
 
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:434
 msgid "Unminimize all"
 msgstr "Grąžinti visus iš sumažinimo"
 
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:440
 msgid "Maximize all"
 msgstr "Išdidinti visus"
 
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:448
 msgid "Unmaximize all"
 msgstr "Grąžinti visus iš išdidinimo"
 
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:456
 msgid "Close all"
 msgstr "Užverti visus"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "Langų sąrašas"
 
@@ -214,15 +202,11 @@ msgstr ""
 "vertės yra „never“, „auto“ ir „always“."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
-#| msgid "Show only windows in the current workspace"
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "Rodyti visų darbo sričių langus"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
-#| msgid ""
-#| "Whether to show the window list on all connected monitors or only on the "
-#| "primary one."
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr "Ar rodyti langus iš visų darbo sričių, ar tik dabartinės."
 
@@ -238,43 +222,56 @@ msgstr ""
 "Ar rodyti langų sąrašą visuose prijungtuose monitoriuose, ar tik "
 "pagrindiniame."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "Langų grupavimas"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "Niekada negrupuoti langų"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "Grupuoti langus, kai yra ribotai vietos"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "Visada grupuoti langus"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "Rodyti visuose monitoriuose"
 
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "Darbo srities indikatorius"
 
-#: extensions/workspace-indicator/prefs.js:131
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Darbo sričių pavadinimai"
 
-#: extensions/workspace-indicator/prefs.js:151
-msgid "Name"
-msgstr "Pavadinimas"
-
-#: extensions/workspace-indicator/prefs.js:191
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Darbo sritis %d"
+
+#: extensions/workspace-indicator/prefs.js:218
+#| msgid "Workspace"
+msgid "Add Workspace"
+msgstr "Pridėti darbo sritį"
+
+#~ msgid "Application"
+#~ msgstr "Programa"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "Sukurti naują atitikimo taisyklę"
+
+#~ msgid "Add"
+#~ msgstr "Pridėti"
+
+#~ msgid "Name"
+#~ msgstr "Pavadinimas"
 
 #~ msgid "Attach modal dialog to the parent window"
 #~ msgstr "Prikabinti modalinį dialogą prie tėvinio lango"
