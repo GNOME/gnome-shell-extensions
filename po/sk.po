@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2019-09-17 08:27+0000\n"
-"PO-Revision-Date: 2019-09-26 09:15+0200\n"
+"POT-Creation-Date: 2020-05-28 00:55+0000\n"
+"PO-Revision-Date: 2020-09-02 14:02+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
 msgid "GNOME Classic"
@@ -51,47 +51,31 @@ msgstr ""
 "Zoznam reťazcov, z ktorých každý obsahuje identifikátor aplikácie (názov "
 "súboru .desktop), nasledovaný čiarkou a číslom pracovného priestoru"
 
-# TreeViewColumn
-#: extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "Aplikácia"
-
-# TreeViewColumn; Label
-#: extensions/auto-move-windows/prefs.js:71
-#: extensions/auto-move-windows/prefs.js:134
-msgid "Workspace"
-msgstr "Pracovný priestor"
+# Label
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "Pravidlá pracovného priestoru"
 
 # ToolButton label
-#: extensions/auto-move-windows/prefs.js:89
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "Pridať pravidlo"
 
-# Dialog title
-#: extensions/auto-move-windows/prefs.js:111
-msgid "Create new matching rule"
-msgstr "Vytvorenie nového odpovedajúceho pravidla"
-
-# button label
-#: extensions/auto-move-windows/prefs.js:117
-msgid "Add"
-msgstr "Pridať"
-
 # https://bugzilla.gnome.org/show_bug.cgi?id=687590
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:103
+#: extensions/drive-menu/extension.js:112
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Zlyhalo vysúvanie jednotky „%s“:"
 
 #  Menu
-#: extensions/drive-menu/extension.js:119
+#: extensions/drive-menu/extension.js:128
 msgid "Removable devices"
 msgstr "Vymeniteľné zariadenia"
 
 # Menu Action
-#: extensions/drive-menu/extension.js:146
+#: extensions/drive-menu/extension.js:155
 msgid "Open Files"
 msgstr "Otvoriť aplikáciu Súbory"
 
@@ -128,8 +112,8 @@ msgstr ""
 "nadol. Aby sa prejavila zmena, je potrebné reštartovať shell."
 
 #  menu item
-#: extensions/places-menu/extension.js:80
-#: extensions/places-menu/extension.js:84
+#: extensions/places-menu/extension.js:89
+#: extensions/places-menu/extension.js:93
 msgid "Places"
 msgstr "Miesta"
 
@@ -201,31 +185,31 @@ msgid "Maximize"
 msgstr "Maximalizovať"
 
 # PopupMenuItem
-#: extensions/window-list/extension.js:431
+#: extensions/window-list/extension.js:428
 msgid "Minimize all"
 msgstr "Minimalizovať všetko"
 
 # PopupMenuItem
-#: extensions/window-list/extension.js:437
+#: extensions/window-list/extension.js:434
 msgid "Unminimize all"
 msgstr "Odminimalizovať všetko"
 
 # PopupMenuItem
-#: extensions/window-list/extension.js:443
+#: extensions/window-list/extension.js:440
 msgid "Maximize all"
 msgstr "Maximalizovať všetko"
 
 # PopupMenuItem
-#: extensions/window-list/extension.js:451
+#: extensions/window-list/extension.js:448
 msgid "Unmaximize all"
 msgstr "Odmaximalizovať všetko"
 
 # PopupMenuItem
-#: extensions/window-list/extension.js:459
+#: extensions/window-list/extension.js:456
 msgid "Close all"
 msgstr "Zavrieť všetko"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "Zoznam okien"
 
@@ -243,7 +227,7 @@ msgstr ""
 
 # CheckButton
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "Zobraziť okná zo všetkých pracovných priestorov"
 
@@ -265,47 +249,63 @@ msgstr ""
 "Určuje, či sa má zobraziť zoznam okien na všetkých pripojených monitoroch, "
 "alebo iba na hlavnom."
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "Zoskupenie okien"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "Nikdy nezoskupovať okná"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "Zoskupovať okna ak je obmedzený priestor"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "Vždy zoskupovať okná"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "Zobraziť na všetkých monitoroch"
 
 # Label
-#: extensions/window-list/workspaceIndicator.js:211
-#: extensions/workspace-indicator/extension.js:216
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "Indikátor pracovného priestoru"
 
 # Label
-#: extensions/workspace-indicator/prefs.js:129
+#: extensions/workspace-indicator/prefs.js:34
 msgid "Workspace Names"
 msgstr "Názvy pracovných priestorov"
 
-# TreeViewColumn
-#: extensions/workspace-indicator/prefs.js:149
-msgid "Name"
-msgstr "Názov"
-
 # store label
-#: extensions/workspace-indicator/prefs.js:189
+#: extensions/workspace-indicator/prefs.js:67
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Pracovný priestor č. %d"
+
+# TreeViewColumn; Label
+#: extensions/workspace-indicator/prefs.js:218
+msgid "Add Workspace"
+msgstr "Pridať pracovný priestor"
+
+# TreeViewColumn
+#~ msgid "Application"
+#~ msgstr "Aplikácia"
+
+# Dialog title
+#~ msgid "Create new matching rule"
+#~ msgstr "Vytvorenie nového odpovedajúceho pravidla"
+
+# button label
+#~ msgid "Add"
+#~ msgstr "Pridať"
+
+# TreeViewColumn
+#~ msgid "Name"
+#~ msgstr "Názov"
 
 # summary
 #~ msgid "Attach modal dialog to the parent window"
