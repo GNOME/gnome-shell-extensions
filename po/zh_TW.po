@@ -9,18 +9,18 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-04-17 16:03+0000\n"
-"PO-Revision-Date: 2020-05-02 16:06+0800\n"
+"POT-Creation-Date: 2020-08-12 23:03+0000\n"
+"PO-Revision-Date: 2020-09-22 23:06+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Classic"
 
@@ -48,26 +48,13 @@ msgstr ""
 "字串的列表，每個都包含一個應用程式 id (桌面檔名稱)，後面接著半形分號 \";\" 與"
 "工作區號碼"
 
-#: extensions/auto-move-windows/prefs.js:59
-msgid "Application"
-msgstr "應用程式"
+#: extensions/auto-move-windows/prefs.js:35
+msgid "Workspace Rules"
+msgstr "工作區規則"
 
-#: extensions/auto-move-windows/prefs.js:70
-#: extensions/auto-move-windows/prefs.js:133
-msgid "Workspace"
-msgstr "工作區"
-
-#: extensions/auto-move-windows/prefs.js:88
+#: extensions/auto-move-windows/prefs.js:243
 msgid "Add Rule"
 msgstr "加入規則"
-
-#: extensions/auto-move-windows/prefs.js:110
-msgid "Create new matching rule"
-msgstr "建立新的比對規則"
-
-#: extensions/auto-move-windows/prefs.js:116
-msgid "Add"
-msgstr "加入"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:112
@@ -174,27 +161,27 @@ msgstr "取消最大化"
 msgid "Maximize"
 msgstr "最大化"
 
-#: extensions/window-list/extension.js:429
+#: extensions/window-list/extension.js:428
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: extensions/window-list/extension.js:435
+#: extensions/window-list/extension.js:434
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: extensions/window-list/extension.js:441
+#: extensions/window-list/extension.js:440
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: extensions/window-list/extension.js:449
+#: extensions/window-list/extension.js:448
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: extensions/window-list/extension.js:457
+#: extensions/window-list/extension.js:456
 msgid "Close all"
 msgstr "全部關閉"
 
-#: extensions/window-list/extension.js:737
+#: extensions/window-list/extension.js:734
 msgid "Window List"
 msgstr "視窗列表"
 
@@ -210,7 +197,7 @@ msgstr ""
 "決定在視窗列表中何時群組視窗。可能的數值有「never」、「auto」、「always」。"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:89
+#: extensions/window-list/prefs.js:100
 msgid "Show windows from all workspaces"
 msgstr "顯示所有工作區的視窗"
 
@@ -228,28 +215,28 @@ msgid ""
 "primary one."
 msgstr "是否在所有連接的螢幕顯示視窗列表或是只出現在主要螢幕上。"
 
-#: extensions/window-list/prefs.js:25
+#: extensions/window-list/prefs.js:29
 msgid "Window Grouping"
 msgstr "視窗群組"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:58
 msgid "Never group windows"
 msgstr "永不群組視窗"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:59
 msgid "Group windows when space is limited"
 msgstr "當空間受限時群組視窗"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:60
 msgid "Always group windows"
 msgstr "永遠群組視窗"
 
-#: extensions/window-list/prefs.js:82
+#: extensions/window-list/prefs.js:94
 msgid "Show on all monitors"
 msgstr "顯示於所有螢幕"
 
-#: extensions/window-list/workspaceIndicator.js:209
-#: extensions/workspace-indicator/extension.js:215
+#: extensions/window-list/workspaceIndicator.js:207
+#: extensions/workspace-indicator/extension.js:213
 msgid "Workspace Indicator"
 msgstr "工作區指示器"
 
@@ -265,6 +252,18 @@ msgstr "工作區 %d"
 #: extensions/workspace-indicator/prefs.js:218
 msgid "Add Workspace"
 msgstr "新增工作區"
+
+#~ msgid "Application"
+#~ msgstr "應用程式"
+
+#~ msgid "Workspace"
+#~ msgstr "工作區"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "建立新的比對規則"
+
+#~ msgid "Add"
+#~ msgstr "加入"
 
 #~ msgid "Name"
 #~ msgstr "名稱"
