@@ -353,6 +353,9 @@ class WindowButton extends BaseButton {
         super._init(perMonitor, monitorIndex);
 
         this.metaWindow = metaWindow;
+        this._skipTaskbarId = metaWindow.connect('notify::skip-taskbar', () => {
+            this._updateVisibility();
+        });
         this._updateVisibility();
 
         this._windowTitle = new WindowTitle(this.metaWindow);
@@ -413,6 +416,7 @@ class WindowButton extends BaseButton {
 
     _onDestroy() {
         super._onDestroy();
+        this.metaWindow.disconnect(this._skipTaskbarId);
         this.metaWindow.disconnect(this._workspaceChangedId);
         global.display.disconnect(this._notifyFocusId);
         this._contextMenu.destroy();
@@ -954,9 +958,6 @@ class WindowList extends St.Widget {
     }
 
     _onWindowAdded(ws, win) {
-        if (win.skip_taskbar)
-            return;
-
         if (!this._grouped)
             this._checkGrouping();
 
