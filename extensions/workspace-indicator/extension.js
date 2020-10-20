@@ -58,8 +58,8 @@ class WindowPreview extends St.Button {
     }
 
     // needed for DND
-    get realWindow() {
-        return this._window.get_compositor_private();
+    get metaWindow() {
+        return this._window;
     }
 
     _onDestroy() {
@@ -140,16 +140,15 @@ class WorkspaceThumbnail extends St.Button {
     }
 
     acceptDrop(source) {
-        if (!source.realWindow)
+        if (!source.metaWindow)
             return false;
 
-        let window = source.realWindow.get_meta_window();
-        this._moveWindow(window);
+        this._moveWindow(source.metaWindow);
         return true;
     }
 
     handleDragOver(source) {
-        if (source.realWindow)
+        if (source.metaWindow)
             return DND.DragMotionResult.MOVE_DROP;
         else
             return DND.DragMotionResult.CONTINUE;
