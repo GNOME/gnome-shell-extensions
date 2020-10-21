@@ -97,8 +97,8 @@ class WorkspaceLayout extends Clutter.LayoutManager {
                 Math.round(Math.min(frameRect.width, workArea.width) * hscale),
                 Math.round(Math.min(frameRect.height, workArea.height) * vscale));
             childBox.set_origin(
-                Math.round(frameRect.x * hscale),
-                Math.round(frameRect.y * vscale));
+                Math.round((frameRect.x - workArea.x) * hscale),
+                Math.round((frameRect.y - workArea.y) * vscale));
             child.allocate(childBox);
         }
     }
