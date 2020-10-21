@@ -32,12 +32,11 @@ class WindowPreview extends St.Button {
         this._sizeChangedId = this._window.connect('size-changed',
             () => this.queue_relayout());
         this._positionChangedId = this._window.connect('position-changed',
-            () => this.queue_relayout());
+            () => {
+                this._updateVisible();
+                this.queue_relayout();
+            });
         this._minimizedChangedId = this._window.connect('notify::minimized',
-            this._updateVisible.bind(this));
-        this._monitorEnteredId = global.display.connect('window-entered-monitor',
-            this._updateVisible.bind(this));
-        this._monitorLeftId = global.display.connect('window-left-monitor',
             this._updateVisible.bind(this));
 
         this._focusChangedId = global.display.connect('notify::focus-window',
@@ -54,8 +53,6 @@ class WindowPreview extends St.Button {
         this._window.disconnect(this._sizeChangedId);
         this._window.disconnect(this._positionChangedId);
         this._window.disconnect(this._minimizedChangedId);
-        global.display.disconnect(this._monitorEnteredId);
-        global.display.disconnect(this._monitorLeftId);
         global.display.disconnect(this._focusChangedId);
     }
 
@@ -67,8 +64,9 @@ class WindowPreview extends St.Button {
     }
 
     _updateVisible() {
-        let monitor = Main.layoutManager.findIndexForActor(this);
-        this.visible = monitor === this._window.get_monitor() &&
+        const monitor = Main.layoutManager.findIndexForActor(this);
+        const workArea = Main.layoutManager.getWorkAreaForMonitor(monitor);
+        this.visible = this._window.get_frame_rect().overlap(workArea) &&
             this._window.window_type !== Meta.WindowType.DESKTOP &&
             this._window.showing_on_its_workspace();
     }
