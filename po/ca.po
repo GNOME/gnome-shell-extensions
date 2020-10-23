@@ -83,7 +83,7 @@ msgid ""
 msgstr ""
 "Intenta utilitzar més espai de la pantalla per a posicionar les miniatures de "
 "les finestres adaptant-les a la ràtio d'aspecte de la pantalla, consolidant-"
-"les més per a reduir la capsa que les envolta. Aquest paràmetre de "
+"les més per a reduir la caixa que les envolta. Aquest paràmetre de "
 "configuració només s'aplica a l'estratègia de posicionament de finestres "
 "natural."
 
