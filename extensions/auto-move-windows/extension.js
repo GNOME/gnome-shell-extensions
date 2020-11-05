@@ -116,10 +116,12 @@ function myCheckWorkspaces() {
     let keepAliveWorkspaces = [];
     let foundNonEmpty = false;
     for (let i = this._workspaces.length - 1; i >= 0; i--) {
-        if (!foundNonEmpty)
-            foundNonEmpty = this._workspaces[i].list_windows().length > 0;
-        else if (!this._workspaces[i]._keepAliveId)
+        if (!foundNonEmpty) {
+            foundNonEmpty = this._workspaces[i].list_windows().some(
+                w => !w.is_on_all_workspaces());
+        } else if (!this._workspaces[i]._keepAliveId) {
             keepAliveWorkspaces.push(this._workspaces[i]);
+        }
     }
 
     // make sure the original method only removes empty workspaces at the end
