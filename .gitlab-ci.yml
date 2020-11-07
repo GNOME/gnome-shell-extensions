@@ -5,7 +5,7 @@ stages:
  - build
 
 variables:
- LINT_LOG: "eslint-report.txt"
+ LINT_LOG: "eslint-report.xml"
  JS_LOG: "js-report.txt"
 
 .only_default: &only_default
@@ -36,12 +36,13 @@ js_check:
 eslint:
   stage: review
   script:
-    - eslint -o $LINT_LOG extensions --no-color || { cat $LINT_LOG; false; }
+    - eslint -o $LINT_LOG -f junit extensions
   <<: *only_default
   artifacts:
     paths:
       - ${LINT_LOG}
-    when: on_failure
+    reports:
+      junit: ${LINT_LOG}
 
 build-bundles:
   stage: build
