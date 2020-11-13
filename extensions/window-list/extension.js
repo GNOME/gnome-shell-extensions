@@ -612,7 +612,6 @@ class AppButton extends BaseButton {
             this._contextMenuManager.addMenu(this._appContextMenu);
             this.label_actor = this._multiWindowTitle.label_actor;
         }
-
     }
 
     _onClicked(actor, button) {

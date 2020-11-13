@@ -486,7 +486,6 @@ var PlacesManager = class {
     }
 
     _reloadBookmarks() {
-
         this._bookmarks = [];
 
         let content = Shell.get_file_contents_utf8_sync(this._bookmarksFile.get_path());

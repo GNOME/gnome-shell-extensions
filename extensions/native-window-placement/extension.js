@@ -103,7 +103,6 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             direction++;
             if (direction === 4)
                 direction = 0;
-
         }
 
         let loopCounter = 0;
