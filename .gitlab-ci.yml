@@ -1,4 +1,4 @@
-image: registry.gitlab.gnome.org/gnome/gnome-shell/extension-ci:v2
+image: registry.gitlab.gnome.org/gnome/gnome-shell/fedora/33:2020-11-17.0
 
 stages:
  - review
@@ -25,7 +25,7 @@ check_commit_log:
 js_check:
   stage: review
   script:
-    - find extensions -name '*.js' -exec js68 -c -s '{}' ';' 2>&1 | tee $JS_LOG
+    - find extensions -name '*.js' -exec js78 -c '{}' ';' 2>&1 | tee $JS_LOG
     - (! grep -q . $JS_LOG)
   <<: *only_default
   artifacts:
