@@ -1,45 +1,12 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 /* exported init */
-const { Clutter, GObject, St } = imports.gi;
+const { Clutter, Graphene, GObject, St } = imports.gi;
 
 const Main = imports.ui.main;
 const Workspace = imports.ui.workspace;
 const WorkspacesView = imports.ui.workspacesView;
 
-class MyWindowOverlay extends Workspace.WindowOverlay {
-    constructor(windowClone, parentActor) {
-        super(windowClone, parentActor);
-
-        this._id = null;
-        this._text = new St.Label({
-            style_class: 'extension-windowsNavigator-window-tooltip',
-            visible: false,
-        });
-        parentActor.add_actor(this._text);
-    }
-
-    showTooltip() {
-        this._parentActor.set_child_below_sibling(this._text, null);
-        this._text.show();
-        this._text.text = (this._windowClone.slotId + 1).toString();
-    }
-
-    hideTooltip() {
-        if (this._text && this._text.visible)
-            this._text.hide();
-    }
-
-    relayout(animate) {
-        super.relayout(animate);
-
-        let [cloneX, cloneY, cloneWidth_, cloneHeight_] = this._windowClone.slot;
-
-        let textX = cloneX - 2;
-        let textY = cloneY - 2;
-        this._text.set_position(Math.floor(textX) + 5, Math.floor(textY) + 5);
-        this._parentActor.set_child_below_sibling(this._text, null);
-    }
-}
+const WINDOW_SLOT = 4;
 
 var MyWorkspace = GObject.registerClass(
 class MyWorkspace extends Workspace.Workspace {
@@ -61,56 +28,88 @@ class MyWorkspace extends Workspace.Workspace {
         }
     }
 
+    vfunc_allocate(box) {
+        super.vfunc_allocate(box);
+
+        if (this._tip)
+            this._tip.allocate_preferred_size(0, 0);
+    }
+
     showTooltip() {
-        if (!this._tip || !this._actualGeometry)
+        if (!this._tip)
             return;
         this._tip.text = (this.metaWorkspace.index() + 1).toString();
-
-        // Hand code this instead of using _getSpacingAndPadding
-        // because that fails on empty workspaces
-        let node = this.get_theme_node();
-        let padding = {
-            left: node.get_padding(St.Side.LEFT),
-            top: node.get_padding(St.Side.TOP),
-            bottom: node.get_padding(St.Side.BOTTOM),
-            right: node.get_padding(St.Side.RIGHT),
-        };
-
-        let area = Workspace.padArea(this._actualGeometry, padding);
-        this._tip.x = area.x;
-        this._tip.y = area.y;
         this._tip.show();
         this.set_child_below_sibling(this._tip, null);
     }
 
     hideTooltip() {
-        if (!this._tip)
-            return;
-        if (!this._tip.get_parent())
-            return;
-        this._tip.hide();
+        if (this._tip)
+            this._tip.hide();
     }
 
     getWindowWithTooltip(id) {
-        for (let i = 0; i < this._windows.length; i++) {
-            if (this._windows[i].slotId + 1 === id)
-                return this._windows[i].metaWindow;
-        }
-        return null;
+        const slot = this.layout_manager._windowSlots[id - 1];
+        return slot ? slot[WINDOW_SLOT].metaWindow : null;
     }
 
     showWindowsTooltips() {
-        for (let i in this._windowOverlays) {
-            if (this._windowOverlays[i])
-                this._windowOverlays[i].showTooltip();
+        for (let i = 0; i < this.layout_manager._windowSlots.length; i++) {
+            if (this.layout_manager._windowSlots[i])
+                this.layout_manager._windowSlots[i][WINDOW_SLOT].showTooltip(`${i + 1}`);
         }
     }
 
     hideWindowsTooltips() {
-        for (let i in this._windowOverlays) {
-            if (this._windowOverlays[i])
-                this._windowOverlays[i].hideTooltip();
+        for (let i in this.layout_manager._windowSlots) {
+            if (this.layout_manager._windowSlots[i])
+                this.layout_manager._windowSlots[i][WINDOW_SLOT].hideTooltip();
         }
+    }
+
+    // overriding _addWindowClone to apply the tooltip patch on the cloned
+    // windowPreview
+    _addWindowClone(metaWindow) {
+        const clone = super._addWindowClone(metaWindow);
+
+        // appling the tooltip patch
+        (function patchPreview() {
+            this._text = new St.Label({
+                style_class: 'extension-windowsNavigator-window-tooltip',
+                visible: false,
+            });
+
+            this._text.add_constraint(new Clutter.BindConstraint({
+                source: this._borderCenter,
+                coordinate: Clutter.BindCoordinate.POSITION,
+            }));
+            this._text.add_constraint(new Clutter.AlignConstraint({
+                source: this._borderCenter,
+                align_axis: Clutter.AlignAxis.X_AXIS,
+                pivot_point: new Graphene.Point({ x: 0.5, y: -1 }),
+                factor: this._closeButtonSide === St.Side.LEFT ? 1 : 0,
+            }));
+            this._text.add_constraint(new Clutter.AlignConstraint({
+                source: this._borderCenter,
+                align_axis: Clutter.AlignAxis.Y_AXIS,
+                pivot_point: new Graphene.Point({ x: -1, y: 0.5 }),
+                factor: 0,
+            }));
+
+            this.add_child(this._text);
+        }).call(clone);
+
+        clone.showTooltip = function (text) {
+            this._text.set({ text });
+            this._text.show();
+        };
+
+        clone.hideTooltip = function () {
+            if (this._text && this._text.visible)
+                this._text.hide();
+        };
+
+        return clone;
     }
 });
 
@@ -244,19 +243,16 @@ class MyWorkspacesView extends WorkspacesView.WorkspacesView {
 
 class Extension {
     constructor() {
-        this._origWindowOverlay = Workspace.WindowOverlay;
         this._origWorkspace = Workspace.Workspace;
         this._origWorkspacesView = WorkspacesView.WorkspacesView;
     }
 
     enable() {
-        Workspace.WindowOverlay = MyWindowOverlay;
         Workspace.Workspace = MyWorkspace;
         WorkspacesView.WorkspacesView = MyWorkspacesView;
     }
 
     disable() {
-        Workspace.WindowOverlay = this._origWindowOverlay;
         Workspace.Workspace = this._origWorkspace;
         WorkspacesView.WorkspacesView = this._origWorkspacesView;
     }
