@@ -24,11 +24,19 @@ variables:
  LINT_LOG: "eslint-report.xml"
  JS_LOG: "js-report.txt"
 
-.only_default: &only_default
-    only:
-        - branches
-        - tags
-        - merge_requests
+workflow:
+    rules:
+        - if: '$CI_MERGE_REQUEST_IID'
+        - if: '$CI_COMMIT_TAG'
+        - if: '$CI_COMMIT_BRANCH'
+
+.pipeline_guard: &pipeline_guard
+    rules:
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+        - if: '$CI_COMMIT_TAG'
+        - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+        - if: '$CI_COMMIT_BRANCH =~ /^gnome-[0-9-]+$/'
+        - when: 'manual'
 
 check_commit_log:
     extends:
@@ -36,7 +44,7 @@ check_commit_log:
     stage: pre_review
     script:
         - ./.gitlab-ci/check-commit-log.sh
-    <<: *only_default
+    <<: *pipeline_guard
     artifacts:
         expire_in: 1 week
         paths:
@@ -55,7 +63,7 @@ check-merge-request:
           else
             echo "Not a merge request" ;
           fi
-    <<: *only_default
+    <<: *pipeline_guard
     artifacts:
         expire_in: 1 week
         paths:
@@ -68,7 +76,6 @@ js_check:
   script:
     - find extensions -name '*.js' -exec js78 -c '{}' ';' 2>&1 | tee $JS_LOG
     - (! grep -q . $JS_LOG)
-  <<: *only_default
   artifacts:
     paths:
       - ${JS_LOG}
@@ -78,7 +85,6 @@ eslint:
   stage: review
   script:
     - eslint -o $LINT_LOG -f junit extensions
-  <<: *only_default
   artifacts:
     paths:
       - ${LINT_LOG}
@@ -90,7 +96,6 @@ build-bundles:
   needs: ["check_commit_log"]
   script:
     - ./export-zips.sh
-  <<: *only_default
   artifacts:
     name: 'Extension bundles'
     expose_as: 'Get Extension bundles here'
