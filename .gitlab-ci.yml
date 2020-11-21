@@ -1,6 +1,10 @@
+include:
+ - remote: "https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/7ea696055e322cc7aa4bcbe5422b56a198c4bdff/templates/ci-fairy.yml"
+
 image: registry.gitlab.gnome.org/gnome/gnome-shell/fedora/33:2020-11-17.0
 
 stages:
+ - pre_review
  - review
  - build
 
@@ -15,8 +19,9 @@ variables:
         - merge_requests
 
 check_commit_log:
-    image: registry.gitlab.gnome.org/gnome/gjs:fedora.static-analysis
-    stage: review
+    extends:
+        - .fdo.ci-fairy
+    stage: pre_review
     script:
         - ./.gitlab-ci/check-commit-log.sh
     <<: *only_default
