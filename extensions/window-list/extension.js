@@ -786,9 +786,9 @@ class WindowList extends St.Widget {
             });
 
         this._dragBeginId = Main.xdndHandler.connect('drag-begin',
-            this._onDragBegin.bind(this));
+            this._monitorDrag.bind(this));
         this._dragEndId = Main.xdndHandler.connect('drag-end',
-            this._onDragEnd.bind(this));
+            this._stopMonitoringDrag.bind(this));
         this._dragMonitor = {
             dragMotion: this._onDragMotion.bind(this),
         };
@@ -1016,11 +1016,11 @@ class WindowList extends St.Widget {
         }
     }
 
-    _onDragBegin() {
+    _monitorDrag() {
         DND.addDragMonitor(this._dragMonitor);
     }
 
-    _onDragEnd() {
+    _stopMonitoringDrag() {
         DND.removeDragMonitor(this._dragMonitor);
         this._removeActivateTimeout();
     }
@@ -1094,6 +1094,7 @@ class WindowList extends St.Widget {
 
         global.display.disconnect(this._fullscreenChangedId);
 
+        this._stopMonitoringDrag();
         Main.xdndHandler.disconnect(this._dragBeginId);
         Main.xdndHandler.disconnect(this._dragEndId);
 
