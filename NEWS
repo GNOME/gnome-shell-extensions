@@ -1,3 +1,16 @@
+3.38.2
+======
+* window-list: Honor changes in skip-taskbar property [Sergio; !130]
+* window-list, workspace-indicator: Improve previews in workspace thumbs
+  [Florian; #260, !142]
+* window-list, workspace-indicator: Adjust to 3.38 changes [Florian; !133]
+* auto-move: Improve behavior on multi-monitor setups [Florian; !135]
+* windowNavigator: Adjust to 3.38 changes [Thun; #259]
+* Misc. bug fixes [Ray; !145]
+
+Contributors:
+  Sergio Costas, Florian Müllner, Thun Pin, Ray Strode
+
 3.38.1
 ======
 
