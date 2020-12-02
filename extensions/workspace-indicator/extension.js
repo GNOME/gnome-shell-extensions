@@ -94,8 +94,8 @@ class WorkspaceLayout extends Clutter.LayoutManager {
             const childBox = new Clutter.ActorBox();
             const frameRect = child.metaWindow.get_frame_rect();
             childBox.set_size(
-                Math.min(frameRect.width, workArea.width) * hscale,
-                Math.min(frameRect.height, workArea.height) * vscale);
+                Math.round(Math.min(frameRect.width, workArea.width) * hscale),
+                Math.round(Math.min(frameRect.height, workArea.height) * vscale));
             childBox.set_origin(
                 Math.round(frameRect.x * hscale),
                 Math.round(frameRect.y * vscale));
