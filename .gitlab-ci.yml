@@ -1,5 +1,5 @@
 include:
- - remote: "https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/8445ff7af2a68795afb98f486251f2ef8f90621c/templates/ci-fairy.yml"
+ - remote: "https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/18194044f0f984c8815bc9a1a146582f6bf15d41/templates/ci-fairy.yml"
 
 image: registry.gitlab.gnome.org/gnome/gnome-shell/fedora/33:2020-11-17.0
 
@@ -43,7 +43,12 @@ check_commit_log:
         - .fdo.ci-fairy
     stage: pre_review
     script:
-        - ./.gitlab-ci/check-commit-log.sh
+        - if [[ x"$CI_MERGE_REQUEST_TARGET_BRANCH_NAME" != "x" ]] ;
+          then
+            ci-fairy check-commits --junit-xml=commit-message-junit-report.xml ;
+          else
+            echo "Not a merge request" ;
+          fi
     <<: *pipeline_guard
     artifacts:
         expire_in: 1 week
