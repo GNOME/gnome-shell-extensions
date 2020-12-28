@@ -6,6 +6,7 @@ project('gnome-shell-extensions',
 
 gettext_domain = meson.project_name()
 
+fs = import('fs')
 gnome = import('gnome')
 i18n = import('i18n')
 
@@ -86,9 +87,10 @@ foreach e : enabled_extensions
 endforeach
 
 if classic_mode_enabled
-  sassc = find_program('sassc', required: true)
   subdir('data')
 endif
 
 subdir('extensions')
 subdir('po')
+
+meson.add_dist_script('meson/generate-stylesheets.py')

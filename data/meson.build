@@ -76,15 +76,20 @@ theme_data = [
   'gnome-classic-high-contrast.css'
 ]
 
-style = 'gnome-classic'
-custom_target(style + '.css',
-  input: style + '.scss',
-  output: style + '.css',
-  depend_files: theme_sources,
-  command: [sassc, '-a', '@INPUT@', '@OUTPUT@'],
-  install: true,
-  install_dir: themedir
-)
+stylesheet = 'gnome-classic.css'
+if fs.exists(stylesheet)
+  install_data(stylesheet, install_dir: themedir)
+else
+  sassc = find_program('sassc', required: true)
+  custom_target(stylesheet,
+    input: fs.replace_suffix(stylesheet, '.scss'),
+    output: stylesheet,
+    depend_files: theme_sources,
+    command: [sassc, '-a', '@INPUT@', '@OUTPUT@'],
+    install: true,
+    install_dir: themedir
+  )
+endif
 
 install_data(theme_data, install_dir: themedir)
 
