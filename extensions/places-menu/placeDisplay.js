@@ -194,7 +194,7 @@ class PlaceDeviceInfo extends PlaceInfo {
     }
 
     isRemovable() {
-        return this._mount.can_eject();
+        return this._mount.can_eject() || this._mount.can_unmount();
     }
 
     eject() {
