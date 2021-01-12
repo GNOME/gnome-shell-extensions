@@ -33,6 +33,18 @@ $variant: 'light';
     font-weight: normal;
     color: $fg_color;
     text-shadow: none;
+    transition-duration: 0ms;
+    border: 0;
+    border-radius: 0px;
+
+    &.clock-display {
+      .clock {
+        transition-duration: 0ms;
+        border: 0;
+        border-radius: 0px;
+      }
+    }
+
     &:hover {
       color: lighten($fg_color,10%);
       text-shadow: none;
