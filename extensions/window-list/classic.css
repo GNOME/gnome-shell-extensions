@@ -50,11 +50,12 @@
 
 /* workspace switcher */
 .window-list-workspace-indicator .workspace {
-  background-color: #ddd;
+  border: 2px solid #f6f5f4;
+  background-color: #ccc;
 }
 
 .window-list-workspace-indicator .workspace.active {
-  background-color: #ccc;
+  border-color: #888;
 }
 
 .window-list-window-preview {
@@ -64,5 +65,4 @@
 
 .window-list-window-preview.active {
   background-color: #f6f5f4;
-  border: 2px solid #888;
 }

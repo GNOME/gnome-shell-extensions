@@ -23,7 +23,7 @@
 .window-picker-toggle > StWidget {
   color: #bbb;
   background-color: black;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: 3px 6px 1px;
   box-shadow: inset 1px 1px 4px rgba(255,255,255,0.5);
   text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
@@ -91,37 +91,23 @@
 }
 
 .window-list-workspace-indicator .workspace {
-  border: 1px solid #cccccc;
+  border: 2px solid #000;
   width: 52px;
-}
-
-.window-list-workspace-indicator .workspace:first-child:last-child:ltr,
-.window-list-workspace-indicator .workspace:first-child:last-child:rtl {
   border-radius: 4px;
-}
-
-.window-list-workspace-indicator .workspace:first-child:ltr,
-.window-list-workspace-indicator .workspace:last-child:rtl {
-  border-radius: 4px 0 0 4px;
-}
-
-.window-list-workspace-indicator .workspace:first-child:rtl,
-.window-list-workspace-indicator .workspace:last-child:ltr {
-  border-radius: 0 4px 4px 0;
+  background-color: #595959;
 }
 
 .window-list-workspace-indicator .workspace.active {
-  background-color: rgba(200, 200, 200, .3);
+  border-color: #fff;
 }
 
 .window-list-window-preview {
-  background-color: #252525;
-  border: 1px solid #ccc;
+  background-color: #bebebe;
+  border: 1px solid #828282;
 }
 
 .window-list-window-preview.active {
-  background-color: #353535;
-  border: 2px solid #ccc;
+  background-color: #d4d4d4;
 }
 
 .notification {
