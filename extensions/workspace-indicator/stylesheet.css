@@ -3,38 +3,26 @@
 }
 
 .panel-workspace-indicator-box {
-  padding: 2px 0;
+  padding: 4px 0;
+  spacing: 4px;
 }
 
 .panel-workspace-indicator-box .workspace {
   width: 40px;
+  border: 2px solid #000;
+  border-radius: 2px;
+  background-color: #595959;
 }
 
-.panel-workspace-indicator,
-.panel-workspace-indicator-box .workspace {
-  border: 1px solid #cccccc;
-}
-
-.panel-workspace-indicator,
 .panel-workspace-indicator-box .workspace.active {
-  background-color: rgba(200, 200, 200, .5);
-}
-
-.panel-workspace-indicator-box .workspace {
-  background-color: rgba(200, 200, 200, .3);
-  border-left-width: 0;
-}
-
-.panel-workspace-indicator-box .workspace:first-child {
-  border-left-width: 1px;
+  border-color: #fff;
 }
 
 .workspace-indicator-window-preview {
-  background-color: #252525;
-  border: 1px solid #ccc;
+  background-color: #bebebe;
+  border: 1px solid #828282;
 }
 
 .workspace-indicator-window-preview.active {
-  background-color: #353535;
-  border: 2px solid #ccc;
+  background-color: #d4d4d4;
 }
