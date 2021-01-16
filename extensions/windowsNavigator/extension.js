@@ -132,17 +132,10 @@ class MyWorkspacesView extends WorkspacesView.WorkspacesView {
 
         this._pickWorkspace = false;
         this._pickWindow = false;
-        this._keyPressEventId =
-            global.stage.connect('key-press-event', this._onKeyPress.bind(this));
-        this._keyReleaseEventId =
-            global.stage.connect('key-release-event', this._onKeyRelease.bind(this));
-    }
-
-    _onDestroy() {
-        super._onDestroy();
-
-        global.stage.disconnect(this._keyPressEventId);
-        global.stage.disconnect(this._keyReleaseEventId);
+        global.stage.connect(
+            'key-press-event', this._onKeyPress.bind(this),
+            'key-release-event', this._onKeyRelease.bind(this),
+            this);
     }
 
     _hideTooltips() {

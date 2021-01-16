@@ -13,9 +13,8 @@ class WindowMover {
         this._appConfigs = new Map();
         this._appData = new Map();
 
-        this._appsChangedId =
-            this._appSystem.connect('installed-changed',
-                this._updateAppData.bind(this));
+        this._appSystem.connectObject('installed-changed',
+            () => this._updateAppData(), this);
 
         this._settings.connect('changed', this._updateAppConfigs.bind(this));
         this._updateAppConfigs();
@@ -37,7 +36,7 @@ class WindowMover {
         let removedApps = [...this._appData.keys()]
             .filter(a => !ids.includes(a.id));
         removedApps.forEach(app => {
-            app.disconnect(this._appData.get(app).windowsChangedId);
+            app.disconnectObject(this);
             this._appData.delete(app);
         });
 
@@ -45,21 +44,14 @@ class WindowMover {
             .map(id => this._appSystem.lookup_app(id))
             .filter(app => app && !this._appData.has(app));
         addedApps.forEach(app => {
-            let data = {
-                windowsChangedId: app.connect('windows-changed',
-                    this._appWindowsChanged.bind(this)),
-                moveWindowsId: 0,
-                windows: app.get_windows(),
-            };
-            this._appData.set(app, data);
+            app.connectObject('window-changed',
+                this._appWindowsChanged.bind(this), this);
+            this._appData.set(app, {windows: app.get_windows()});
         });
     }
 
     destroy() {
-        if (this._appsChangedId) {
-            this._appSystem.disconnect(this._appsChangedId);
-            this._appsChangedId = 0;
-        }
+        this._appSystem.disconnectObject(this);
 
         if (this._settings) {
             this._settings.run_dispose();

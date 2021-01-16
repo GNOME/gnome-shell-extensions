@@ -57,10 +57,6 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
         });
         this.addMenuItem(this._minimizeItem);
 
-        this._notifyMinimizedId = this._metaWindow.connect(
-            'notify::minimized', this._updateMinimizeItem.bind(this));
-        this._updateMinimizeItem();
-
         this._maximizeItem = new PopupMenu.PopupMenuItem('');
         this._maximizeItem.connect('activate', () => {
             if (this._metaWindow.get_maximized() === Meta.MaximizeFlags.BOTH)
@@ -70,21 +66,20 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
         });
         this.addMenuItem(this._maximizeItem);
 
-        this._notifyMaximizedHId = this._metaWindow.connect(
-            'notify::maximized-horizontally',
-            this._updateMaximizeItem.bind(this));
-        this._notifyMaximizedVId = this._metaWindow.connect(
-            'notify::maximized-vertically',
-            this._updateMaximizeItem.bind(this));
-        this._updateMaximizeItem();
-
         this._closeItem = new PopupMenu.PopupMenuItem(_('Close'));
         this._closeItem.connect('activate', () => {
             this._metaWindow.delete(global.get_current_time());
         });
         this.addMenuItem(this._closeItem);
 
-        this.actor.connect('destroy', this._onDestroy.bind(this));
+        this._metaWindow.connectObject(
+            'notify::minimized', this._updateMinimizeItem.bind(this),
+            'notify::maximized-horizontally', this._updateMaximizeItem.bind(this),
+            'notify::maximized-vertically', this._updateMaximizeItem.bind(this),
+            this);
+
+        this._updateMinimizeItem();
+        this._updateMaximizeItem();
 
         this.connect('open-state-changed', () => {
             if (!this.isOpen)
@@ -106,12 +101,6 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
                         this._metaWindow.maximized_horizontally;
         this._maximizeItem.label.text = maximized
             ? _('Unmaximize') : _('Maximize');
-    }
-
-    _onDestroy() {
-        this._metaWindow.disconnect(this._notifyMinimizedId);
-        this._metaWindow.disconnect(this._notifyMaximizedHId);
-        this._metaWindow.disconnect(this._notifyMaximizedVId);
     }
 }
 
@@ -136,20 +125,19 @@ class WindowTitle extends St.BoxLayout {
         this.add(this.label_actor);
 
         this._textureCache = St.TextureCache.get_default();
-        this._iconThemeChangedId = this._textureCache.connect(
-            'icon-theme-changed', this._updateIcon.bind(this));
-        this._notifyWmClass = this._metaWindow.connect_after(
-            'notify::wm-class', this._updateIcon.bind(this));
-        this._notifyAppId = this._metaWindow.connect_after(
-            'notify::gtk-application-id', this._updateIcon.bind(this));
+        this._textureCache.connectObject('icon-theme-changed',
+            () => this._updateIcon(), this);
+
+        this._metaWindow.connectObject(
+            'notify::wm-class',
+            () => this._updateIcon(), GObject.ConnectFlags.AFTER,
+            'notify::gtk-application-id',
+            () => this._updateIcon(), GObject.ConnectFlags.AFTER,
+            'notify::title', () => this._updateTitle(),
+            'notify::minimized', () => this._minimizedChanged(),
+            this);
+
         this._updateIcon();
-
-        this.connect('destroy', this._onDestroy.bind(this));
-
-        this._notifyTitleId = this._metaWindow.connect(
-            'notify::title', this._updateTitle.bind(this));
-        this._notifyMinimizedId = this._metaWindow.connect(
-            'notify::minimized', this._minimizedChanged.bind(this));
         this._minimizedChanged();
     }
 
@@ -178,14 +166,6 @@ class WindowTitle extends St.BoxLayout {
                 icon_size: ICON_TEXTURE_SIZE,
             });
         }
-    }
-
-    _onDestroy() {
-        this._textureCache.disconnect(this._iconThemeChangedId);
-        this._metaWindow.disconnect(this._notifyTitleId);
-        this._metaWindow.disconnect(this._notifyMinimizedId);
-        this._metaWindow.disconnect(this._notifyWmClass);
-        this._metaWindow.disconnect(this._notifyAppId);
     }
 }
 
@@ -222,16 +202,16 @@ class BaseButton extends St.Button {
 
         this._contextMenuManager = new PopupMenu.PopupMenuManager(this);
 
-        this._switchWorkspaceId = global.window_manager.connect(
-            'switch-workspace', this._updateVisibility.bind(this));
+        global.window_manager.connectObject('switch-workspace',
+            () => this._updateVisibility(), this);
 
         if (this._perMonitor) {
-            this._windowEnteredMonitorId = global.display.connect(
+            global.display.connectObject(
                 'window-entered-monitor',
-                this._windowEnteredOrLeftMonitor.bind(this));
-            this._windowLeftMonitorId = global.display.connect(
+                this._windowEnteredOrLeftMonitor.bind(this),
                 'window-left-monitor',
-                this._windowEnteredOrLeftMonitor.bind(this));
+                this._windowEnteredOrLeftMonitor.bind(this),
+                this);
         }
 
         this._tooltip = new Tooltip(this, {
@@ -397,16 +377,6 @@ class BaseButton extends St.Button {
     }
 
     _onDestroy() {
-        global.window_manager.disconnect(this._switchWorkspaceId);
-
-        if (this._windowEnteredMonitorId)
-            global.display.disconnect(this._windowEnteredMonitorId);
-        this._windowEnteredMonitorId = 0;
-
-        if (this._windowLeftMonitorId)
-            global.display.disconnect(this._windowLeftMonitorId);
-        this._windowLeftMonitorId = 0;
-
         this._tooltip.destroy();
     }
 }
@@ -420,9 +390,11 @@ class WindowButton extends BaseButton {
         super(perMonitor, monitorIndex);
 
         this.metaWindow = metaWindow;
-        this._skipTaskbarId = metaWindow.connect('notify::skip-taskbar', () => {
-            this._updateVisibility();
-        });
+        metaWindow.connectObject(
+            'notify::skip-taskbar', () => this._updateVisibility(),
+            'workspace-changed', () => this._updateVisibility(),
+            this);
+
         this._updateVisibility();
 
         this._windowTitle = new WindowTitle(this.metaWindow);
@@ -436,11 +408,8 @@ class WindowButton extends BaseButton {
         this._contextMenuManager.addMenu(this._contextMenu);
         Main.uiGroup.add_actor(this._contextMenu.actor);
 
-        this._workspaceChangedId = this.metaWindow.connect(
-            'workspace-changed', this._updateVisibility.bind(this));
-
-        this._notifyFocusId = global.display.connect(
-            'notify::focus-window', this._updateStyle.bind(this));
+        global.display.connectObject('notify::focus-window',
+            () => this._updateStyle(), this);
         this._updateStyle();
     }
 
@@ -484,9 +453,6 @@ class WindowButton extends BaseButton {
 
     _onDestroy() {
         super._onDestroy();
-        this.metaWindow.disconnect(this._skipTaskbarId);
-        this.metaWindow.disconnect(this._workspaceChangedId);
-        global.display.disconnect(this._notifyFocusId);
         this._contextMenu.destroy();
     }
 }
@@ -603,18 +569,17 @@ class AppButton extends BaseButton {
         Main.uiGroup.add_actor(this._appContextMenu.actor);
 
         this._textureCache = St.TextureCache.get_default();
-        this._iconThemeChangedId =
-            this._textureCache.connect('icon-theme-changed', () => {
-                this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
-            });
+        this._textureCache.connectObject('icon-theme-changed', () => {
+            this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
+        }, this);
 
-        this._windowsChangedId = this.app.connect(
-            'windows-changed', this._windowsChanged.bind(this));
+        this.app.connectObject('windows-changed',
+            () => this._windowsChanged(), this);
         this._windowsChanged();
 
         this._windowTracker = Shell.WindowTracker.get_default();
-        this._notifyFocusId = this._windowTracker.connect(
-            'notify::focus-app', this._updateStyle.bind(this));
+        this._windowTracker.connectObject('notify::focus-app',
+            () => this._updateStyle(), this);
         this._updateStyle();
     }
 
@@ -734,9 +699,6 @@ class AppButton extends BaseButton {
 
     _onDestroy() {
         super._onDestroy();
-        this._textureCache.disconnect(this._iconThemeChangedId);
-        this._windowTracker.disconnect(this._notifyFocusId);
-        this.app.disconnect(this._windowsChangedId);
         this._menu.destroy();
     }
 }
@@ -793,12 +755,12 @@ class WindowList extends St.Widget {
         indicatorsBox.add_child(this._workspaceIndicator.container);
 
         this._mutterSettings = new Gio.Settings({schema_id: 'org.gnome.mutter'});
-        this._workspacesOnlyOnPrimaryChangedId = this._mutterSettings.connect(
+        this._mutterSettings.connectObject(
             'changed::workspaces-only-on-primary',
-            this._updateWorkspaceIndicatorVisibility.bind(this));
-        this._dynamicWorkspacesChangedId = this._mutterSettings.connect(
+            () => this._updateWorkspaceIndicatorVisibility(),
             'changed::dynamic-workspaces',
-            this._updateWorkspaceIndicatorVisibility.bind(this));
+            () => this._updateWorkspaceIndicatorVisibility(),
+            this);
         this._updateWorkspaceIndicatorVisibility();
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
@@ -816,59 +778,58 @@ class WindowList extends St.Widget {
         this._updatePosition();
 
         this._appSystem = Shell.AppSystem.get_default();
-        this._appStateChangedId = this._appSystem.connect(
-            'app-state-changed', this._onAppStateChanged.bind(this));
+        this._appSystem.connectObject('app-state-changed',
+            this._onAppStateChanged.bind(this), this);
 
         // Hack: OSK gesture is tied to visibility, piggy-back on that
-        this._keyboardVisiblechangedId =
-            Main.keyboard._bottomDragAction.connect('notify::enabled',
-                action => {
-                    const visible = !action.enabled;
-                    if (visible) {
-                        Main.uiGroup.set_child_above_sibling(
-                            this, Main.layoutManager.keyboardBox);
-                    } else {
-                        Main.uiGroup.set_child_above_sibling(
-                            this, Main.layoutManager.panelBox);
-                    }
-                    this._updateKeyboardAnchor();
-                });
+        Main.keyboard._bottomDragAction.connectObject('notify::enabled',
+            action => {
+                const visible = !action.enabled;
+                if (visible) {
+                    Main.uiGroup.set_child_above_sibling(
+                        this, Main.layoutManager.keyboardBox);
+                } else {
+                    Main.uiGroup.set_child_above_sibling(
+                        this, Main.layoutManager.panelBox);
+                }
+                this._updateKeyboardAnchor();
+            }, this);
 
         let workspaceManager = global.workspace_manager;
 
-        this._nWorkspacesChangedId = workspaceManager.connect(
-            'notify::n-workspaces', this._updateWorkspaceIndicatorVisibility.bind(this));
+        workspaceManager.connectObject('notify::n-workspaces',
+            () => this._updateWorkspaceIndicatorVisibility(), this);
         this._updateWorkspaceIndicatorVisibility();
 
-        this._switchWorkspaceId = global.window_manager.connect(
-            'switch-workspace', this._checkGrouping.bind(this));
+        global.window_manager.connectObject('switch-workspace',
+            () => this._checkGrouping(), this);
 
-        this._overviewShowingId = Main.overview.connect('showing', () => {
-            this.hide();
-            this._updateKeyboardAnchor();
-        });
-
-        this._overviewHidingId = Main.overview.connect('hidden', () => {
-            this.visible = !this._monitor.inFullscreen;
-            this._updateKeyboardAnchor();
-        });
-
-        this._fullscreenChangedId =
-            global.display.connect('in-fullscreen-changed', () => {
-                // Work-around for initial change from unknown to !fullscreen
-                if (Main.overview.visible)
-                    this.hide();
+        Main.overview.connectObject(
+            'showing', () => {
+                this.hide();
                 this._updateKeyboardAnchor();
-            });
+            },
+            'hidden', () => {
+                this.visible = !this._monitor.inFullscreen;
+                this._updateKeyboardAnchor();
+            }, this);
+
+        global.display.connectObject('in-fullscreen-changed', () => {
+            // Work-around for initial change from unknown to !fullscreen
+            if (Main.overview.visible)
+                this.hide();
+            this._updateKeyboardAnchor();
+        }, this);
 
         this._windowSignals = new Map();
         this._windowCreatedId = global.display.connect(
             'window-created', (dsp, win) => this._addWindow(win));
 
-        this._dragBeginId = Main.xdndHandler.connect('drag-begin',
-            this._monitorDrag.bind(this));
-        this._dragEndId = Main.xdndHandler.connect('drag-end',
-            this._stopMonitoringDrag.bind(this));
+        Main.xdndHandler.connectObject(
+            'drag-begin', () => this._monitorDrag(),
+            'drag-end', () => this._stopMonitoringDrag(),
+            this);
+
         this._dragMonitor = {
             dragMotion: this._onDragMotion.bind(this),
         };
@@ -1115,37 +1076,14 @@ class WindowList extends St.Widget {
     }
 
     _onDestroy() {
-        this._mutterSettings.disconnect(this._workspacesOnlyOnPrimaryChangedId);
-        this._mutterSettings.disconnect(this._dynamicWorkspacesChangedId);
-
         this._workspaceIndicator.destroy();
 
         Main.ctrlAltTabManager.removeGroup(this);
 
-        this._appSystem.disconnect(this._appStateChangedId);
-        this._appStateChangedId = 0;
-
-        Main.keyboard._bottomDragAction.disconnect(this._keyboardVisiblechangedId);
-        this._keyboardVisiblechangedId = 0;
-
-        global.workspace_manager.disconnect(this._nWorkspacesChangedId);
-        this._nWorkspacesChangedId = 0;
-
-        global.window_manager.disconnect(this._switchWorkspaceId);
-        this._switchWorkspaceId = 0;
-
         this._windowSignals.forEach((id, win) => win.disconnect(id));
         this._windowSignals.clear();
 
-        Main.overview.disconnect(this._overviewShowingId);
-        Main.overview.disconnect(this._overviewHidingId);
-
-        global.display.disconnect(this._fullscreenChangedId);
-        global.display.disconnect(this._windowCreatedId);
-
         this._stopMonitoringDrag();
-        Main.xdndHandler.disconnect(this._dragBeginId);
-        Main.xdndHandler.disconnect(this._dragEndId);
 
         this._settings.run_dispose();
 
@@ -1167,11 +1105,11 @@ export default class Extension {
         this._windowLists = [];
 
         this._settings = ExtensionUtils.getSettings();
-        this._showOnAllMonitorsChangedId = this._settings.connect(
-            'changed::show-on-all-monitors', this._buildWindowLists.bind(this));
+        this._settings.connectObject('changed::show-on-all-monitors',
+            () => this._buildWindowLists(), this);
 
-        this._monitorsChangedId = Main.layoutManager.connect(
-            'monitors-changed', this._buildWindowLists.bind(this));
+        Main.layoutManager.connectObject('monitors-changed',
+            () => this._buildWindowLists(), this);
 
         Main.windowPicker = new WindowPicker();
 
@@ -1199,11 +1137,8 @@ export default class Extension {
         if (!this._windowLists)
             return;
 
-        this._settings.disconnect(this._showOnAllMonitorsChangedId);
-        this._showOnAllMonitorsChangedId = 0;
-
-        Main.layoutManager.disconnect(this._monitorsChangedId);
-        this._monitorsChangedId = 0;
+        this._settings.disconnectObject(this);
+        Main.layoutManager.disconnectObject(this);
 
         this._windowLists.forEach(windowList => {
             windowList.hide();

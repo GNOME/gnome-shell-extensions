@@ -32,33 +32,23 @@ class WindowPreview extends St.Button {
 
         this._window = window;
 
-        this.connect('destroy', this._onDestroy.bind(this));
-
-        this._sizeChangedId = this._window.connect('size-changed',
-            () => this.queue_relayout());
-        this._positionChangedId = this._window.connect('position-changed',
-            () => {
+        this._window.connectObject(
+            'size-changed', () => this.queue_relayout(),
+            'position-changed', () => {
                 this._updateVisible();
                 this.queue_relayout();
-            });
-        this._minimizedChangedId = this._window.connect('notify::minimized',
-            this._updateVisible.bind(this));
+            },
+            'notify::minimized', this._updateVisible.bind(this),
+            this);
 
-        this._focusChangedId = global.display.connect('notify::focus-window',
-            this._onFocusChanged.bind(this));
+        global.display.connectObject('notify::focus-window',
+            this._onFocusChanged.bind(this), this);
         this._onFocusChanged();
     }
 
     // needed for DND
     get metaWindow() {
         return this._window;
-    }
-
-    _onDestroy() {
-        this._window.disconnect(this._sizeChangedId);
-        this._window.disconnect(this._positionChangedId);
-        this._window.disconnect(this._minimizedChangedId);
-        global.display.disconnect(this._focusChangedId);
     }
 
     _onFocusChanged() {
@@ -141,16 +131,13 @@ class WorkspaceThumbnail extends St.Button {
         let workspaceManager = global.workspace_manager;
         this._workspace = workspaceManager.get_workspace_by_index(index);
 
-        this._windowAddedId = this._workspace.connect('window-added',
-            (ws, window) => {
-                this._addWindow(window);
-            });
-        this._windowRemovedId = this._workspace.connect('window-removed',
-            (ws, window) => {
-                this._removeWindow(window);
-            });
-        this._restackedId = global.display.connect('restacked',
-            this._onRestacked.bind(this));
+        this._workspace.connectObject(
+            'window-added', (ws, window) => this._addWindow(window),
+            'window-removed', (ws, window) => this._removeWindow(window),
+            this);
+
+        global.display.connectObject('restacked',
+            this._onRestacked.bind(this), this);
 
         this._workspace.list_windows().forEach(w => this._addWindow(w));
         this._onRestacked();
@@ -248,10 +235,6 @@ class WorkspaceThumbnail extends St.Button {
 
     _onDestroy() {
         this._tooltip.destroy();
-
-        this._workspace.disconnect(this._windowAddedId);
-        this._workspace.disconnect(this._windowRemovedId);
-        global.display.disconnect(this._restackedId);
     }
 }
 
@@ -298,14 +281,11 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         this._workspacesItems = [];
 
-        this._workspaceManagerSignals = [
-            workspaceManager.connect('notify::n-workspaces',
-                this._nWorkspacesChanged.bind(this)),
-            workspaceManager.connect_after('workspace-switched',
-                this._onWorkspaceSwitched.bind(this)),
-            workspaceManager.connect('notify::layout-rows',
-                this._updateThumbnailVisibility.bind(this)),
-        ];
+        workspaceManager.connectObject(
+            'notify::n-workspaces', this._nWorkspacesChanged.bind(this), GObject.ConnectFlags.AFTER,
+            'workspace-switched', this._onWorkspaceSwitched.bind(this), GObject.ConnectFlags.AFTER,
+            'notify::layout-rows', this._updateThumbnailVisibility.bind(this),
+            this);
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._updateMenu();
@@ -313,20 +293,8 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._updateThumbnailVisibility();
 
         this._settings = new Gio.Settings({schema_id: 'org.gnome.desktop.wm.preferences'});
-        this._settingsChangedId = this._settings.connect(
-            'changed::workspace-names', this._updateMenuLabels.bind(this));
-    }
-
-    _onDestroy() {
-        for (let i = 0; i < this._workspaceManagerSignals.length; i++)
-            global.workspace_manager.disconnect(this._workspaceManagerSignals[i]);
-
-        if (this._settingsChangedId) {
-            this._settings.disconnect(this._settingsChangedId);
-            this._settingsChangedId = 0;
-        }
-
-        super._onDestroy();
+        this._settings.connectObject('changed::workspace-names',
+            () => this._updateMenuLabels(), this);
     }
 
     _updateThumbnailVisibility() {

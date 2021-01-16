@@ -260,15 +260,25 @@ export class PlacesManager extends EventEmitter {
         };
 
         this._settings = new Gio.Settings({schema_id: BACKGROUND_SCHEMA});
-        this._showDesktopIconsChangedId = this._settings.connect(
-            'changed::show-desktop-icons', this._updateSpecials.bind(this));
+        this._settings.connectObject('changed::show-desktop-icons',
+            () => this._updateSpecials(), this);
         this._updateSpecials();
 
         /*
         * Show devices, code more or less ported from nautilus-places-sidebar.c
         */
         this._volumeMonitor = Gio.VolumeMonitor.get();
-        this._connectVolumeMonitorSignals();
+        this._volumeMonitor.connectObject(
+            'volume-added', () => this._updateMounts(),
+            'volume-removed', () => this._updateMounts(),
+            'volume-changed', () => this._updateMounts(),
+            'mount-added', () => this._updateMounts(),
+            'mount-removed', () => this._updateMounts(),
+            'mount-changed', () => this._updateMounts(),
+            'drive-connected', () => this._updateMounts(),
+            'drive-disconnected', () => this._updateMounts(),
+            'drive-changed', () => this._updateMounts(),
+            this);
         this._updateMounts();
 
         this._bookmarksFile = this._findBookmarksFile();
@@ -293,34 +303,11 @@ export class PlacesManager extends EventEmitter {
         }
     }
 
-    _connectVolumeMonitorSignals() {
-        const signals = [
-            'volume-added',
-            'volume-removed',
-            'volume-changed',
-            'mount-added',
-            'mount-removed',
-            'mount-changed',
-            'drive-connected',
-            'drive-disconnected',
-            'drive-changed',
-        ];
-
-        this._volumeMonitorSignals = [];
-        let func = this._updateMounts.bind(this);
-        for (let i = 0; i < signals.length; i++) {
-            let id = this._volumeMonitor.connect(signals[i], func);
-            this._volumeMonitorSignals.push(id);
-        }
-    }
-
     destroy() {
-        if (this._settings)
-            this._settings.disconnect(this._showDesktopIconsChangedId);
+        this._settings?.disconnectObject(this);
         this._settings = null;
 
-        for (let i = 0; i < this._volumeMonitorSignals.length; i++)
-            this._volumeMonitor.disconnect(this._volumeMonitorSignals[i]);
+        this._volumeMonitor.disconnectObject(this);
 
         if (this._monitor)
             this._monitor.cancel();

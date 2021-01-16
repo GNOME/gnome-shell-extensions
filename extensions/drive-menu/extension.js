@@ -50,17 +50,9 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         this.hide();
 
-        this._changedId = mount.connect('changed', this._syncVisibility.bind(this));
+        mount.connectObject('changed',
+            () => this._syncVisibility(), this);
         this._syncVisibility();
-    }
-
-    _onDestroy() {
-        if (this._changedId) {
-            this.mount.disconnect(this._changedId);
-            this._changedId = 0;
-        }
-
-        super.destroy();
     }
 
     async _isInteresting() {
@@ -155,12 +147,12 @@ class DriveMenu extends PanelMenu.Button {
         this.add_child(icon);
 
         this._monitor = Gio.VolumeMonitor.get();
-        this._addedId = this._monitor.connect('mount-added',
-            (monitor, mount) => this._addMount(mount));
-        this._removedId = this._monitor.connect('mount-removed', (monitor, mount) => {
-            this._removeMount(mount);
-            this._updateMenuVisibility();
-        });
+        this._monitor.connectObject(
+            'mount-added', (monitor, mount) => this._addMount(mount),
+            'mount-removed', (monitor, mount) => {
+                this._removeMount(mount);
+                this._updateMenuVisibility();
+            }, this);
 
         this._mounts = [];
 
@@ -201,17 +193,6 @@ class DriveMenu extends PanelMenu.Button {
             }
         }
         log('Removing a mount that was never added to the menu');
-    }
-
-    _onDestroy() {
-        if (this._addedId) {
-            this._monitor.disconnect(this._addedId);
-            this._monitor.disconnect(this._removedId);
-            this._addedId = 0;
-            this._removedId = 0;
-        }
-
-        super._onDestroy();
     }
 }
 

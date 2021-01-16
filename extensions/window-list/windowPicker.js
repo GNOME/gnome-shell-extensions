@@ -37,9 +37,8 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
         this._workspaceAdjustment = workspaceAdjustment;
         this._workspaceAdjustment.actor = this;
 
-        this._nWorkspacesChangedId =
-            workspaceManager.connect('notify::n-workspaces',
-                this._updateAdjustment.bind(this));
+        workspaceManager.connectObject('notify::n-workspaces',
+            () => this._updateAdjustment(), this);
 
         this.add_constraint(
             new Layout.MonitorConstraint({
@@ -72,14 +71,6 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
             value: workspaceManager.get_active_workspace_index(),
         });
     }
-
-    _onDestroy() {
-        if (this._nWorkspacesChangedId)
-            global.workspace_manager.disconnect(this._nWorkspacesChangedId);
-        this._nWorkspacesChangedId = 0;
-
-        super._onDestroy();
-    }
 }
 
 class MyWorkspace extends Workspace.Workspace {
@@ -90,25 +81,16 @@ class MyWorkspace extends Workspace.Workspace {
     constructor(...args) {
         super(...args);
 
-        this._adjChangedId =
-            this._overviewAdjustment.connect('notify::value', () => {
-                const {value: progress} = this._overviewAdjustment;
-                const brightness = 1 - (1 - VIGNETTE_BRIGHTNESS) * progress;
-                for (const bg of this._background?._backgroundGroup ?? []) {
-                    bg.content.set({
-                        vignette: true,
-                        brightness,
-                    });
-                }
-            });
-    }
-
-    _onDestroy() {
-        super._onDestroy();
-
-        if (this._adjChangedId)
-            this._overviewAdjustment.disconnect(this._adjChangedId);
-        this._adjChangedId = 0;
+        this._overviewAdjustment.connectObject('notify::value', () => {
+            const {value: progress} = this._overviewAdjustment;
+            const brightness = 1 - (1 - VIGNETTE_BRIGHTNESS) * progress;
+            for (const bg of this._background?._backgroundGroup ?? []) {
+                bg.content.set({
+                    vignette: true,
+                    brightness,
+                });
+            }
+        }, this);
     }
 }
 
@@ -166,7 +148,6 @@ export class WindowPicker extends Clutter.Actor {
         this._visible = false;
         this._modal = false;
 
-        this._overlayKeyId = 0;
         this._stageKeyPressId = 0;
 
         this._adjustment = new OverviewAdjustment(this);
@@ -188,12 +169,12 @@ export class WindowPicker extends Clutter.Actor {
         if (!Main.sessionMode.hasOverview) {
             this._injectBackgroundShade();
 
-            this._overlayKeyId = global.display.connect('overlay-key', () => {
+            global.display.connectObject('overlay-key', () => {
                 if (!this._visible)
                     this.open();
                 else
                     this.close();
-            });
+            }, this);
         }
     }
 
@@ -313,10 +294,6 @@ export class WindowPicker extends Clutter.Actor {
 
         if (this._origWorkspaceBackground)
             Workspace.WorkspaceBackground = this._origWorkspaceBackground;
-
-        if (this._overlayKeyId)
-            global.display.disconnect(this._overlayKeyId);
-        this._overlayKeyId = 0;
 
         if (this._stageKeyPressId)
             global.stage.disconnect(this._stageKeyPressId);

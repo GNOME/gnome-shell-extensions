@@ -52,17 +52,8 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
             this.add_child(this._ejectButton);
         }
 
-        this._changedId = info.connect('changed',
-            this._propertiesChanged.bind(this));
-    }
-
-    destroy() {
-        if (this._changedId) {
-            this._info.disconnect(this._changedId);
-            this._changedId = 0;
-        }
-
-        super.destroy();
+        info.connectObject('changed',
+            this._propertiesChanged.bind(this), this);
     }
 
     activate(event) {

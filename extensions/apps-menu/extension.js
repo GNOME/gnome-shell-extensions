@@ -51,11 +51,8 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         this.label_actor = appLabel;
 
         let textureCache = St.TextureCache.get_default();
-        let iconThemeChangedId = textureCache.connect('icon-theme-changed',
-            this._updateIcon.bind(this));
-        this.connect('destroy', () => {
-            textureCache.disconnect(iconThemeChangedId);
-        });
+        textureCache.connectObject('icon-theme-changed',
+            () => this._updateIcon(), this);
         this._updateIcon();
 
         this._delegate = this;
@@ -274,9 +271,7 @@ class DesktopTarget extends EventEmitter {
 
     _setDesktop(desktop) {
         if (this._desktop) {
-            this._desktop.disconnect(this._desktopDestroyedId);
-            this._desktopDestroyedId = 0;
-
+            this._desktop.disconnectObject(this);
             delete this._desktop._delegate;
         }
 
@@ -284,9 +279,9 @@ class DesktopTarget extends EventEmitter {
         this.emit('desktop-changed');
 
         if (this._desktop) {
-            this._desktopDestroyedId = this._desktop.connect('destroy', () => {
+            this._desktop.connectObject('destroy', () => {
                 this._setDesktop(null);
-            });
+            }, this);
             this._desktop._delegate = this;
         }
     }
@@ -326,10 +321,7 @@ class DesktopTarget extends EventEmitter {
     }
 
     destroy() {
-        if (this._windowAddedId)
-            global.window_group.disconnect(this._windowAddedId);
-        this._windowAddedId = 0;
-
+        global.window_group.disconnectObject(this);
         this._setDesktop(null);
     }
 
@@ -391,12 +383,11 @@ class ApplicationsButton extends PanelMenu.Button {
         this.name = 'panelApplications';
         this.label_actor = this._label;
 
-        this._showingId = Main.overview.connect('showing', () => {
-            this.add_accessible_state(Atk.StateType.CHECKED);
-        });
-        this._hidingId = Main.overview.connect('hiding', () => {
-            this.remove_accessible_state(Atk.StateType.CHECKED);
-        });
+        Main.overview.connect(
+            'showing', () => this.add_accessible_state(Atk.StateType.CHECKED),
+            'hiding', () => this.remove_accessible_state(Atk.StateType.CHECKED),
+            this);
+
         Main.wm.addKeybinding(
             'apps-menu-toggle-menu',
             ExtensionUtils.getSettings(),
@@ -415,15 +406,15 @@ class ApplicationsButton extends PanelMenu.Button {
         });
 
         this._tree = new GMenu.Tree({menu_basename: 'applications.menu'});
-        this._treeChangedId = this._tree.connect('changed',
-            this._onTreeChanged.bind(this));
+        this._tree.connectObject('changed',
+            () => this._onTreeChanged(), this);
 
         this._applicationsButtons = new Map();
         this.reloadFlag = false;
         this._createLayout();
         this._display();
-        this._installedChangedId = appSys.connect('installed-changed',
-            this._onTreeChanged.bind(this));
+        appSys.connectObject('installed-changed',
+            () => this._onTreeChanged(), this);
     }
 
     _onTreeChanged() {
@@ -447,11 +438,7 @@ class ApplicationsButton extends PanelMenu.Button {
     _onDestroy() {
         super._onDestroy();
 
-        Main.overview.disconnect(this._showingId);
-        Main.overview.disconnect(this._hidingId);
-        appSys.disconnect(this._installedChangedId);
-        this._tree.disconnect(this._treeChangedId);
-        this._tree = null;
+        delete this._tree;
 
         Main.wm.removeKeybinding('apps-menu-toggle-menu');
 
