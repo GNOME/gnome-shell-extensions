@@ -9,6 +9,9 @@ const PopupMenu = imports.ui.popupMenu;
 const Gettext = imports.gettext.domain('gnome-shell-extensions');
 const _ = Gettext.gettext;
 
+const TOOLTIP_OFFSET = 6;
+const TOOLTIP_ANIMATION_TIME = 150;
+
 let WindowPreview = GObject.registerClass(
 class WindowPreview extends St.Button {
     _init(window) {
@@ -107,7 +110,14 @@ class WorkspaceThumbnail extends St.Button {
             }),
         });
 
+        this._tooltip = new St.Label({
+            style_class: 'dash-label',
+            visible: false,
+        });
+        Main.uiGroup.add_child(this._tooltip);
+
         this.connect('destroy', this._onDestroy.bind(this));
+        this.connect('notify::hover', this._syncTooltip.bind(this));
 
         this._index = index;
         this._delegate = this; // needed for DND
@@ -192,7 +202,39 @@ class WorkspaceThumbnail extends St.Button {
             ws.activate(global.get_current_time());
     }
 
+    _syncTooltip() {
+        if (this.hover) {
+            this._tooltip.set({
+                text: Meta.prefs_get_workspace_name(this._index),
+                visible: true,
+                opacity: 0,
+            });
+
+            const [stageX, stageY] = this.get_transformed_position();
+            const thumbWidth = this.allocation.get_width();
+            const tipWidth = this._tooltip.width;
+            const tipHeight = this._tooltip.height;
+            const xOffset = Math.floor((thumbWidth - tipWidth) / 2);
+            const monitor = Main.layoutManager.findMonitorForActor(this);
+            const x = Math.clamp(
+                stageX + xOffset,
+                monitor.x,
+                monitor.x + monitor.width - tipWidth);
+            const y = stageY - tipHeight - TOOLTIP_OFFSET;
+            this._tooltip.set_position(x, y);
+        }
+
+        this._tooltip.ease({
+            opacity: this.hover ? 255 : 0,
+            duration: TOOLTIP_ANIMATION_TIME,
+            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
+            onComplete: () => (this._tooltip.visible = this.hover),
+        });
+    }
+
     _onDestroy() {
+        this._tooltip.destroy();
+
         this._workspace.disconnect(this._windowAddedId);
         this._workspace.disconnect(this._windowRemovedId);
         global.display.disconnect(this._restackedId);
