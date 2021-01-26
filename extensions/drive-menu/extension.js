@@ -127,15 +127,12 @@ class DriveMenu extends PanelMenu.Button {
     _init() {
         super._init(0.0, _('Removable devices'));
 
-        let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
         let icon = new St.Icon({
             icon_name: 'media-eject-symbolic',
-            style_class: 'system-status-icon',
+            style_class: 'system-status-icon single-indicator',
         });
 
-        hbox.add_child(icon);
-        hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
-        this.add_child(hbox);
+        this.add_child(icon);
 
         this._monitor = Gio.VolumeMonitor.get();
         this._addedId = this._monitor.connect('mount-added', (monitor, mount) => {

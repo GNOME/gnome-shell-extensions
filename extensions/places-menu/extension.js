@@ -88,15 +88,12 @@ class PlacesMenu extends PanelMenu.Button {
     _init() {
         super._init(0.0, _('Places'));
 
-        let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
         let label = new St.Label({
             text: _('Places'),
             y_expand: true,
             y_align: Clutter.ActorAlign.CENTER,
         });
-        hbox.add_child(label);
-        hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
-        this.add_actor(hbox);
+        this.add_actor(label);
 
         this.placesManager = new PlaceDisplay.PlacesManager();
 

@@ -363,17 +363,13 @@ class ApplicationsButton extends PanelMenu.Button {
         // role ATK_ROLE_MENU like other elements of the panel.
         this.accessible_role = Atk.Role.LABEL;
 
-        let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
-
         this._label = new St.Label({
             text: _('Applications'),
             y_expand: true,
             y_align: Clutter.ActorAlign.CENTER,
         });
-        hbox.add_child(this._label);
-        hbox.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
 
-        this.add_actor(hbox);
+        this.add_actor(this._label);
         this.name = 'panelApplications';
         this.label_actor = this._label;
 
