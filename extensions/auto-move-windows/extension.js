@@ -72,7 +72,7 @@ class WindowMover {
     }
 
     _moveWindow(window, workspaceNum) {
-        if (window.skip_taskbar)
+        if (window.skip_taskbar || window.is_on_all_workspaces())
             return;
 
         // ensure we have the required number of workspaces
