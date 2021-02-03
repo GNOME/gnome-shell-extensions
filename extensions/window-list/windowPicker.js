@@ -1,16 +1,24 @@
 /* exported WindowPicker, WindowPickerToggle */
-const { Clutter, GLib, GObject, Meta, Shell, St } = imports.gi;
+const { Clutter, GObject, Shell, St } = imports.gi;
 
 const Layout = imports.ui.layout;
 const Main = imports.ui.main;
-const Overview = imports.ui.overview;
 const { WorkspacesDisplay } = imports.ui.workspacesView;
+const { Workspace } = imports.ui.workspace;
+
+const { VIGNETTE_BRIGHTNESS } = imports.ui.lightbox;
+const {
+    SIDE_CONTROLS_ANIMATION_TIME,
+    OverviewAdjustment,
+    ControlsState,
+} = imports.ui.overviewControls;
 
 let MyWorkspacesDisplay = GObject.registerClass(
 class MyWorkspacesDisplay extends WorkspacesDisplay {
-    _init() {
+    _init(controls, overviewAdjustment) {
         let workspaceManager = global.workspace_manager;
 
+        this._overviewAdjustment = overviewAdjustment;
         this._workspaceAdjustment = new St.Adjustment({
             value: workspaceManager.get_active_workspace_index(),
             lower: 0,
@@ -24,7 +32,7 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
             workspaceManager.connect('notify::n-workspaces',
                 this._updateAdjustment.bind(this));
 
-        super._init(this._workspaceAdjustment);
+        super._init(controls, this._workspaceAdjustment, this._overviewAdjustment);
 
         this._workspaceAdjustment.actor = this;
 
@@ -33,19 +41,15 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
                 primary: true,
                 work_area: true,
             }));
-
-        this._workareasChangedId = global.display.connect('workareas-changed',
-            this._onWorkAreasChanged.bind(this));
-        this._onWorkAreasChanged();
     }
 
-    animateToOverview(...args) {
+    prepareToEnterOverview(...args) {
         if (!this._scrollEventId) {
             this._scrollEventId = Main.windowPicker.connect('scroll-event',
                 this._onScrollEvent.bind(this));
         }
 
-        super.animateToOverview(...args);
+        super.prepareToEnterOverview(...args);
     }
 
     vfunc_hide(...args) {
@@ -56,13 +60,6 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
         super.vfunc_hide(...args);
     }
 
-    _onWorkAreasChanged() {
-        let { primaryIndex } = Main.layoutManager;
-        this._actualGeometry =
-            Main.layoutManager.getWorkAreaForMonitor(primaryIndex);
-        this._syncWorkspacesActualGeometry();
-    }
-
     _updateAdjustment() {
         let workspaceManager = global.workspace_manager;
         this._workspaceAdjustment.set({
@@ -71,20 +68,7 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
         });
     }
 
-    _updateWorkspacesViews() {
-        super._updateWorkspacesViews();
-
-        this._workspacesViews.forEach(v => {
-            Main.layoutManager.overviewGroup.remove_actor(v);
-            Main.windowPicker.add_actor(v);
-        });
-    }
-
     _onDestroy() {
-        if (this._workareasChangedId)
-            global.display.disconnect(this._workareasChangedId);
-        this._workareasChangedId = 0;
-
         if (this._nWorkspacesChangedId)
             global.workspace_manager.disconnect(this._nWorkspacesChangedId);
         this._nWorkspacesChangedId = 0;
@@ -105,7 +89,9 @@ var WindowPicker = GObject.registerClass({
         this._overlayKeyId = 0;
         this._stageKeyPressId = 0;
 
-        super._init();
+        super._init({ reactive: true });
+
+        this._adjustment = new OverviewAdjustment(this);
 
         this.connect('destroy', this._onDestroy.bind(this));
 
@@ -116,31 +102,14 @@ var WindowPicker = GObject.registerClass({
             this, 'height',
             GObject.BindingFlags.SYNC_CREATE);
 
-        this._backgroundGroup = new Meta.BackgroundGroup({ reactive: true });
-        this.add_child(this._backgroundGroup);
-
-        this._backgroundGroup.connect('scroll-event', (a, ev) => {
-            this.emit('scroll-event', ev);
-        });
-
-        // Trick WorkspacesDisplay constructor into adding actions here
-        let addActionOrig = Main.overview.addAction;
-        Main.overview.addAction = a => this._backgroundGroup.add_action(a);
-
-        this._workspacesDisplay = new MyWorkspacesDisplay();
+        this._workspacesDisplay = new MyWorkspacesDisplay(this, this._adjustment);
         this.add_child(this._workspacesDisplay);
-
-        Main.overview.addAction = addActionOrig;
-
-        this._bgManagers = [];
-
-        this._monitorsChangedId = Main.layoutManager.connect('monitors-changed',
-            this._updateBackgrounds.bind(this));
-        this._updateBackgrounds();
 
         Main.uiGroup.insert_child_below(this, global.window_group);
 
         if (!Main.sessionMode.hasOverview) {
+            this._injectBackgroundShade();
+
             this._overlayKeyId = global.display.connect('overlay-key', () => {
                 if (!this._visible)
                     this.open();
@@ -148,6 +117,36 @@ var WindowPicker = GObject.registerClass({
                     this.close();
             });
         }
+    }
+
+    _injectBackgroundShade() {
+        const adjustment = this._adjustment;
+        const { _init, _onDestroy } = Workspace.prototype;
+
+        Workspace.prototype._init = function (...args) {
+            _init.call(this, ...args);
+
+            this._adjChangedId = adjustment.connect('notify::value', () => {
+                const { value: progress } = adjustment;
+                const brightness = 1 - (1 - VIGNETTE_BRIGHTNESS) * progress;
+                for (const bg of this._background?._backgroundGroup ?? []) {
+                    bg.content.set({
+                        vignette: true,
+                        brightness,
+                    });
+                }
+            });
+        };
+        Workspace.prototype._onDestroy = function () {
+            _onDestroy.call(this);
+
+            if (this._adjChangedId)
+                adjustment.disconnect(this._adjChangedId);
+            this._adjChangedId = 0;
+        };
+
+        this._wsInit = _init;
+        this._wsDestroy = _onDestroy;
     }
 
     get visible() {
@@ -164,9 +163,15 @@ var WindowPicker = GObject.registerClass({
             return;
 
         this._fakeOverviewVisible(true);
-        this._shadeBackgrounds();
-        this._fakeOverviewAnimation();
-        this._workspacesDisplay.animateToOverview(false);
+        this._workspacesDisplay.prepareToEnterOverview();
+        Main.overview._animationInProgress = true;
+
+        this._adjustment.value = ControlsState.HIDDEN;
+        this._adjustment.ease(ControlsState.WINDOW_PICKER, {
+            duration: SIDE_CONTROLS_ANIMATION_TIME,
+            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
+            onComplete: () => (Main.overview._animationInProgress = false),
+        });
 
         this._stageKeyPressId = global.stage.connect('key-press-event',
             (a, event) => {
@@ -190,11 +195,17 @@ var WindowPicker = GObject.registerClass({
         if (!this._syncGrab())
             return;
 
-        this._workspacesDisplay.animateFromOverview(false);
-        this._unshadeBackgrounds();
-        this._fakeOverviewAnimation(() => {
-            this._workspacesDisplay.hide();
-            this._fakeOverviewVisible(false);
+        this._workspacesDisplay.prepareToLeaveOverview();
+
+        Main.overview._animationInProgress = true;
+        this._adjustment.ease(ControlsState.HIDDEN, {
+            duration: SIDE_CONTROLS_ANIMATION_TIME,
+            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
+            onComplete: () => {
+                Main.overview._animationInProgress = false;
+                this._workspacesDisplay.hide();
+                this._fakeOverviewVisible(false);
+            },
         });
 
         global.stage.disconnect(this._stageKeyPressId);
@@ -203,16 +214,8 @@ var WindowPicker = GObject.registerClass({
         this.emit('open-state-changed', this._visible);
     }
 
-    _fakeOverviewAnimation(onComplete) {
-        Main.overview._animationInProgress = true;
-        GLib.timeout_add(
-            GLib.PRIORITY_DEFAULT,
-            Overview.ANIMATION_TIME,
-            () => {
-                Main.overview._animationInProgress = false;
-                if (onComplete)
-                    onComplete();
-            });
+    getWorkspacesBoxForState() {
+        return this.allocation;
     }
 
     _fakeOverviewVisible(visible) {
@@ -245,6 +248,11 @@ var WindowPicker = GObject.registerClass({
     }
 
     _onDestroy() {
+        if (this._wsInit)
+            Workspace.prototype._init = this._wsInit;
+        if (this._wsDestroy)
+            Workspace.prototype._onDestroy = this._wsDestroy;
+
         if (this._monitorsChangedId)
             Main.layoutManager.disconnect(this._monitorsChangedId);
         this._monitorsChangedId = 0;
@@ -256,18 +264,6 @@ var WindowPicker = GObject.registerClass({
         if (this._stageKeyPressId)
             global.stage.disconnect(this._stageKeyPressId);
         this._stageKeyPressId = 0;
-    }
-
-    _updateBackgrounds() {
-        Main.overview._updateBackgrounds.call(this);
-    }
-
-    _shadeBackgrounds() {
-        Main.overview._shadeBackgrounds.call(this);
-    }
-
-    _unshadeBackgrounds() {
-        Main.overview._unshadeBackgrounds.call(this);
     }
 });
 
