@@ -744,21 +744,20 @@ class WindowList extends St.Widget {
         this._appStateChangedId = this._appSystem.connect(
             'app-state-changed', this._onAppStateChanged.bind(this));
 
-        this._keyboardVisiblechangedId = Main.layoutManager.connect(
-            'keyboard-visible-changed',
-            (o, state) => {
-                Main.layoutManager.keyboardBox.visible = state;
-                let { keyboardBox } = Main.layoutManager;
-                keyboardBox.visible = state;
-                if (state) {
-                    Main.uiGroup.set_child_above_sibling(
-                        this, keyboardBox);
-                } else {
-                    Main.uiGroup.set_child_above_sibling(
-                        this, Main.layoutManager.panelBox);
-                }
-                this._updateKeyboardAnchor();
-            });
+        // Hack: OSK gesture is tied to visibility, piggy-back on that
+        this._keyboardVisiblechangedId =
+            Main.keyboard._bottomDragAction.connect('notify::enabled',
+                action => {
+                    const visible = !action.enabled;
+                    if (visible) {
+                        Main.uiGroup.set_child_above_sibling(
+                            this, Main.layoutManager.keyboardBox);
+                    } else {
+                        Main.uiGroup.set_child_above_sibling(
+                            this, Main.layoutManager.panelBox);
+                    }
+                    this._updateKeyboardAnchor();
+                });
 
         let workspaceManager = global.workspace_manager;
 
@@ -1076,10 +1075,8 @@ class WindowList extends St.Widget {
         this._appSystem.disconnect(this._appStateChangedId);
         this._appStateChangedId = 0;
 
-        Main.layoutManager.disconnect(this._keyboardVisiblechangedId);
+        Main.keyboard._bottomDragAction.disconnect(this._keyboardVisiblechangedId);
         this._keyboardVisiblechangedId = 0;
-
-        Main.layoutManager.hideKeyboard();
 
         this._disconnectWorkspaceSignals();
         global.workspace_manager.disconnect(this._nWorkspacesChangedId);
