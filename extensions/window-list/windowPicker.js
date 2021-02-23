@@ -4,7 +4,7 @@ const { Clutter, GObject, Shell, St } = imports.gi;
 const Layout = imports.ui.layout;
 const Main = imports.ui.main;
 const { WorkspacesDisplay } = imports.ui.workspacesView;
-const { Workspace } = imports.ui.workspace;
+const Workspace = imports.ui.workspace;
 
 const { VIGNETTE_BRIGHTNESS } = imports.ui.lightbox;
 const {
@@ -77,6 +77,33 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
     }
 });
 
+const MyWorkspace = GObject.registerClass(
+class MyWorkspace extends Workspace.Workspace {
+    _init(...args) {
+        super._init(...args);
+
+        this._adjChangedId =
+            this._overviewAdjustment.connect('notify::value', () => {
+                const { value: progress } = this._overviewAdjustment;
+                const brightness = 1 - (1 - VIGNETTE_BRIGHTNESS) * progress;
+                for (const bg of this._background?._backgroundGroup ?? []) {
+                    bg.content.set({
+                        vignette: true,
+                        brightness,
+                    });
+                }
+            });
+    }
+
+    _onDestroy() {
+        super._onDestroy();
+
+        if (this._adjChangedId)
+            this._overviewAdjustment.disconnect(this._adjChangedId);
+        this._adjChangedId = 0;
+    }
+});
+
 var WindowPicker = GObject.registerClass({
     Signals: {
         'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] },
@@ -120,33 +147,9 @@ var WindowPicker = GObject.registerClass({
     }
 
     _injectBackgroundShade() {
-        const adjustment = this._adjustment;
-        const { _init, _onDestroy } = Workspace.prototype;
+        this._origWorkspace = Workspace.Workspace;
 
-        Workspace.prototype._init = function (...args) {
-            _init.call(this, ...args);
-
-            this._adjChangedId = adjustment.connect('notify::value', () => {
-                const { value: progress } = adjustment;
-                const brightness = 1 - (1 - VIGNETTE_BRIGHTNESS) * progress;
-                for (const bg of this._background?._backgroundGroup ?? []) {
-                    bg.content.set({
-                        vignette: true,
-                        brightness,
-                    });
-                }
-            });
-        };
-        Workspace.prototype._onDestroy = function () {
-            _onDestroy.call(this);
-
-            if (this._adjChangedId)
-                adjustment.disconnect(this._adjChangedId);
-            this._adjChangedId = 0;
-        };
-
-        this._wsInit = _init;
-        this._wsDestroy = _onDestroy;
+        Workspace.Workspace = MyWorkspace;
     }
 
     get visible() {
@@ -248,10 +251,8 @@ var WindowPicker = GObject.registerClass({
     }
 
     _onDestroy() {
-        if (this._wsInit)
-            Workspace.prototype._init = this._wsInit;
-        if (this._wsDestroy)
-            Workspace.prototype._onDestroy = this._wsDestroy;
+        if (this._origWorkspace)
+            Workspace.Workspace = this._origWorkspace;
 
         if (this._monitorsChangedId)
             Main.layoutManager.disconnect(this._monitorsChangedId);
