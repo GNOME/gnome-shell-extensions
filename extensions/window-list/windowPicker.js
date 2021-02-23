@@ -104,6 +104,42 @@ class MyWorkspace extends Workspace.Workspace {
     }
 });
 
+const MyWorkspaceBackground = GObject.registerClass(
+class MyWorkspaceBackground extends Workspace.WorkspaceBackground {
+    _updateBorderRadius() {
+    }
+
+    vfunc_allocate(box) {
+        this.set_allocation(box);
+
+        const themeNode = this.get_theme_node();
+        const contentBox = themeNode.get_content_box(box);
+
+        this._bin.allocate(contentBox);
+
+        const [contentWidth, contentHeight] = contentBox.get_size();
+        const monitor = Main.layoutManager.monitors[this._monitorIndex];
+        const xRatio = contentWidth / this._workarea.width;
+        const yRatio = contentHeight / this._workarea.height;
+
+        const right = area => area.x + area.width;
+        const bottom = area => area.y + area.height;
+
+        const offsets = {
+            left: xRatio * (this._workarea.x - monitor.x),
+            right: xRatio * (right(monitor) - right(this._workarea)),
+            top: yRatio * (this._workarea.y - monitor.y),
+            bottom: yRatio * (bottom(monitor) - bottom(this._workarea)),
+        };
+
+        contentBox.set_origin(-offsets.left, -offsets.top);
+        contentBox.set_size(
+            offsets.left + contentWidth + offsets.right,
+            offsets.top + contentHeight + offsets.bottom);
+        this._backgroundGroup.allocate(contentBox);
+    }
+});
+
 var WindowPicker = GObject.registerClass({
     Signals: {
         'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] },
@@ -148,8 +184,10 @@ var WindowPicker = GObject.registerClass({
 
     _injectBackgroundShade() {
         this._origWorkspace = Workspace.Workspace;
+        this._origWorkspaceBackground = Workspace.WorkspaceBackground;
 
         Workspace.Workspace = MyWorkspace;
+        Workspace.WorkspaceBackground = MyWorkspaceBackground;
     }
 
     get visible() {
@@ -253,6 +291,9 @@ var WindowPicker = GObject.registerClass({
     _onDestroy() {
         if (this._origWorkspace)
             Workspace.Workspace = this._origWorkspace;
+
+        if (this._origWorkspaceBackground)
+            Workspace.WorkspaceBackground = this._origWorkspaceBackground;
 
         if (this._monitorsChangedId)
             Main.layoutManager.disconnect(this._monitorsChangedId);
