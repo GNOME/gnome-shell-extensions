@@ -1,3 +1,19 @@
+40.beta
+=======
+* Add tooltips to workspace thumbnails [Florian; !155]
+* Drop arrows from top bar menus [Florian; !156]
+* drive-menu: Mark mounts that can be unmounted as removable [Michael; !152]
+* Remove horizontal-workspaces extension [Florian; !158]
+* Adjust to shell overview changes [Florian; !159, !160]
+* Fix crashes [Daniel; !157]
+* Misc. bug fixes and cleanups [Florian; !154, !161]
+
+Contributors:
+  Michael Lawton, Florian Müllner, Daniel van Vugt
+
+Translators:
+  Аляксей [be], A S Alam [pa]
+
 40.alpha.1
 ==========
 * Don't depend on sassc when building from tarball [Florian; !150]
