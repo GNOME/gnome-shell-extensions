@@ -1,29 +1,29 @@
 # Galician translation for gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Fran Diéguez <frandieguez@gnome.org>, 2011.
-# Fran Dieguez <frandieguez@gnome.org>, 2011-2020.
 #
+# Fran Diéguez <frandieguez@gnome.org>, 2011.
+# Fran Dieguez <frandieguez@gnome.org>, 2011-2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
-"issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2020-08-13 01:02+0200\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/is"
+"sues\n"
+"POT-Creation-Date: 2020-10-17 20:14+0000\n"
+"PO-Revision-Date: 2021-02-24 20:41+0100\n"
+"Last-Translator: Fran Diéguez <frandieguez@gnome.org>\n"
+"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 "X-Project-Style: gnome\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
-msgstr "GNOME clasico"
+msgstr "GNOME clásico"
 
 #: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
@@ -50,7 +50,6 @@ msgstr ""
 "de ficheiro desktop), seguido por unha coma e o número do espazo de traballo"
 
 #: extensions/auto-move-windows/prefs.js:35
-#| msgid "Workspace Names"
 msgid "Workspace Rules"
 msgstr "Regras da área de traballo"
 
@@ -75,7 +74,7 @@ msgstr "Abrir ficheiros"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
-msgstr "Usar máis pantalla para as xanelas"
+msgstr "Usar mais pantalla para as xanelas"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
@@ -83,13 +82,14 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"Tente usar máis pantalla para dispor as miniaturas das xanelas adaptándose á "
-"taxa de aspecto da pantalla e consolidalas para reducir a caixa saltante. "
-"Esta configuración aplícase só para a estratexia de disposición natural."
+"Tente usar mais pantalla para dispor as miniaturas das xanelas adaptándose"
+" á "
+"taxa de aspecto da pantalla e consolidalas para reducir a caixa envolvente. "
+"Esta configuración aplícase só para a estratexia de disposición natural."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
-msgstr "Pór a xanela sempre na parte superior"
+msgstr "Por a xanela sempre na parte superior"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
@@ -165,27 +165,27 @@ msgstr "Restaurar"
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:432
 msgid "Minimize all"
 msgstr "Minimizar todo"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:438
 msgid "Unminimize all"
 msgstr "Restaurar todo"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:444
 msgid "Maximize all"
 msgstr "Maximizar todo"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:452
 msgid "Unmaximize all"
 msgstr "Restaurar todo"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:460
 msgid "Close all"
 msgstr "Pechar todo"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:738
 msgid "Window List"
 msgstr "Lista de xanelas"
 
@@ -259,7 +259,6 @@ msgid "Workspace %d"
 msgstr "Espazos de traballo %d"
 
 #: extensions/workspace-indicator/prefs.js:218
-#| msgid "Workspace"
 msgid "Add Workspace"
 msgstr "Engadir área de traballo"
 
