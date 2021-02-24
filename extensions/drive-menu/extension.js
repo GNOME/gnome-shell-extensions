@@ -129,7 +129,7 @@ class DriveMenu extends PanelMenu.Button {
 
         let icon = new St.Icon({
             icon_name: 'media-eject-symbolic',
-            style_class: 'system-status-icon single-indicator',
+            style_class: 'system-status-icon',
         });
 
         this.add_child(icon);
