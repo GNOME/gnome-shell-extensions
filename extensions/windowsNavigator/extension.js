@@ -3,6 +3,7 @@
 const { Clutter, Graphene, GObject, St } = imports.gi;
 
 const Main = imports.ui.main;
+const OverviewControls = imports.ui.overviewControls;
 const Workspace = imports.ui.workspace;
 const WorkspacesView = imports.ui.workspacesView;
 
@@ -10,10 +11,10 @@ const WINDOW_SLOT = 4;
 
 var MyWorkspace = GObject.registerClass(
 class MyWorkspace extends Workspace.Workspace {
-    _init(metaWorkspace, monitorIndex) {
-        super._init(metaWorkspace, monitorIndex);
+    _init(...args) {
+        super._init(...args);
 
-        if (metaWorkspace && metaWorkspace.index() < 9) {
+        if (this.metaWorkspace && this.metaWorkspace.index() < 9) {
             this._tip = new St.Label({
                 style_class: 'extension-windowsNavigator-window-tooltip',
                 visible: false,
@@ -49,21 +50,24 @@ class MyWorkspace extends Workspace.Workspace {
     }
 
     getWindowWithTooltip(id) {
-        const slot = this.layout_manager._windowSlots[id - 1];
+        const { layoutManager } = this._container;
+        const slot = layoutManager._windowSlots[id - 1];
         return slot ? slot[WINDOW_SLOT].metaWindow : null;
     }
 
     showWindowsTooltips() {
-        for (let i = 0; i < this.layout_manager._windowSlots.length; i++) {
-            if (this.layout_manager._windowSlots[i])
-                this.layout_manager._windowSlots[i][WINDOW_SLOT].showTooltip(`${i + 1}`);
+        const { layoutManager } = this._container;
+        for (let i = 0; i < layoutManager._windowSlots.length; i++) {
+            if (layoutManager._windowSlots[i])
+                layoutManager._windowSlots[i][WINDOW_SLOT].showTooltip(`${i + 1}`);
         }
     }
 
     hideWindowsTooltips() {
-        for (let i in this.layout_manager._windowSlots) {
-            if (this.layout_manager._windowSlots[i])
-                this.layout_manager._windowSlots[i][WINDOW_SLOT].hideTooltip();
+        const { layoutManager } = this._container;
+        for (let i in layoutManager._windowSlots) {
+            if (layoutManager._windowSlots[i])
+                layoutManager._windowSlots[i][WINDOW_SLOT].hideTooltip();
         }
     }
 
@@ -80,17 +84,17 @@ class MyWorkspace extends Workspace.Workspace {
             });
 
             this._text.add_constraint(new Clutter.BindConstraint({
-                source: this._borderCenter,
+                source: this._windowContainer,
                 coordinate: Clutter.BindCoordinate.POSITION,
             }));
             this._text.add_constraint(new Clutter.AlignConstraint({
-                source: this._borderCenter,
+                source: this._windowContainer,
                 align_axis: Clutter.AlignAxis.X_AXIS,
                 pivot_point: new Graphene.Point({ x: 0.5, y: -1 }),
                 factor: this._closeButtonSide === St.Side.LEFT ? 1 : 0,
             }));
             this._text.add_constraint(new Clutter.AlignConstraint({
-                source: this._borderCenter,
+                source: this._windowContainer,
                 align_axis: Clutter.AlignAxis.Y_AXIS,
                 pivot_point: new Graphene.Point({ x: -1, y: 0.5 }),
                 factor: 0,
@@ -115,8 +119,8 @@ class MyWorkspace extends Workspace.Workspace {
 
 var MyWorkspacesView = GObject.registerClass(
 class MyWorkspacesView extends WorkspacesView.WorkspacesView {
-    _init(width, height, x, y, workspaces) {
-        super._init(width, height, x, y, workspaces);
+    _init(...args) {
+        super._init(...args);
 
         this._pickWorkspace = false;
         this._pickWindow = false;
@@ -160,8 +164,8 @@ class MyWorkspacesView extends WorkspacesView.WorkspacesView {
     }
 
     _onKeyPress(s, o) {
-        let { viewSelector } = Main.overview;
-        if (viewSelector._activePage !== viewSelector._workspacesPage)
+        const { ControlsState } = OverviewControls;
+        if (this._overviewAdjustment.value !== ControlsState.WINDOW_PICKER)
             return false;
 
         let workspaceManager = global.workspace_manager;
