@@ -3,6 +3,7 @@
 const { Clutter } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
+const Main = imports.ui.main;
 const { WindowPreview } = imports.ui.windowPreview;
 const Workspace = imports.ui.workspace;
 
@@ -66,13 +67,15 @@ class Rect {
 }
 
 class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
-    constructor(settings) {
-        super();
+    constructor(params, settings) {
+        super(params);
         this._settings = settings;
     }
 
-    computeLayout(windows, layout) {
-        layout.windows = windows;
+    computeLayout(windows, _params) {
+        return {
+            windows,
+        };
     }
 
     /*
@@ -246,23 +249,36 @@ function enable() {
     let settings = ExtensionUtils.getSettings();
 
     workspaceInjections['_createBestLayout'] = Workspace.WorkspaceLayout.prototype._createBestLayout;
-    Workspace.WorkspaceLayout.prototype._createBestLayout = function (area) {
-        let strategy = new NaturalLayoutStrategy(settings);
-        let layout = { area, strategy };
-        strategy.computeLayout(this._sortedWindows, layout);
-
-        return layout;
+    Workspace.WorkspaceLayout.prototype._createBestLayout = function (_area) {
+        this._layoutStrategy = new NaturalLayoutStrategy({
+            monitor: Main.layoutManager.monitors[this._monitorIndex],
+        }, settings);
+        return this._layoutStrategy.computeLayout(this._sortedWindows);
     };
 
     // position window titles on top of windows in overlay
     winInjections['_init'] = WindowPreview.prototype._init;
-    WindowPreview.prototype._init = function (metaWindow, workspace) {
-        winInjections['_init'].call(this, metaWindow, workspace);
+    WindowPreview.prototype._init = function (...args) {
+        winInjections['_init'].call(this, ...args);
 
-        const constraint = this._title.get_constraints().find(
+        if (!settings.get_boolean('window-captions-on-top'))
+            return;
+
+        const alignConstraint = this._title.get_constraints().find(
             c => c.align_axis && c.align_axis === Clutter.AlignAxis.Y_AXIS);
-        constraint.factor = settings.get_boolean('window-captions-on-top')
-            ? 0 : 1;
+        alignConstraint.factor = 0;
+
+        const bindConstraint = this._title.get_constraints().find(
+            c => c.coordinate && c.coordinate === Clutter.BindCoordinate.Y);
+        bindConstraint.offset = 0;
+    };
+    winInjections['_adjustOverlayOffsets'] =
+        WindowPreview.prototype._adjustOverlayOffsets;
+    WindowPreview.prototype._adjustOverlayOffsets = function (...args) {
+        winInjections['_adjustOverlayOffsets'].call(this, ...args);
+
+        if (settings.get_boolean('window-captions-on-top'))
+            this._title.translation_y = -this._title.translation_y;
     };
 }
 
