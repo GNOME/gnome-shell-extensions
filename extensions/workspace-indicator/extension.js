@@ -18,6 +18,8 @@ const WORKSPACE_KEY = 'workspace-names';
 const TOOLTIP_OFFSET = 6;
 const TOOLTIP_ANIMATION_TIME = 150;
 
+const MAX_THUMBNAILS = 6;
+
 let WindowPreview = GObject.registerClass(
 class WindowPreview extends St.Button {
     _init(window) {
@@ -288,14 +290,14 @@ class WorkspaceIndicator extends PanelMenu.Button {
             workspaceManager.connect_after('workspace-switched',
                 this._onWorkspaceSwitched.bind(this)),
             workspaceManager.connect('notify::layout-rows',
-                this._onWorkspaceOrientationChanged.bind(this)),
+                this._updateThumbnailVisibility.bind(this)),
         ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._thumbnailsBox.connect('scroll-event', this._onScrollEvent.bind(this));
         this._createWorkspacesSection();
         this._updateThumbnails();
-        this._onWorkspaceOrientationChanged();
+        this._updateThumbnailVisibility();
 
         this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
         this._settingsChangedId = this._settings.connect(
@@ -317,16 +319,19 @@ class WorkspaceIndicator extends PanelMenu.Button {
         super._onDestroy();
     }
 
-    _onWorkspaceOrientationChanged() {
-        let vertical = global.workspace_manager.layout_rows === -1;
-        this.reactive = vertical;
+    _updateThumbnailVisibility() {
+        const { workspaceManager } = global;
+        const vertical = workspaceManager.layout_rows === -1;
+        const useMenu =
+            vertical || workspaceManager.n_workspaces > MAX_THUMBNAILS;
+        this.reactive = useMenu;
 
-        this._statusLabel.visible = vertical;
-        this._thumbnailsBox.visible = !vertical;
+        this._statusLabel.visible = useMenu;
+        this._thumbnailsBox.visible = !useMenu;
 
         // Disable offscreen-redirect when showing the workspace switcher
         // so that clip-to-allocation works
-        Main.panel.set_offscreen_redirect(vertical
+        Main.panel.set_offscreen_redirect(useMenu
             ? Clutter.OffscreenRedirect.ALWAYS
             : Clutter.OffscreenRedirect.AUTOMATIC_FOR_OPACITY);
     }
@@ -343,6 +348,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _nWorkspacesChanged() {
         this._createWorkspacesSection();
         this._updateThumbnails();
+        this._updateThumbnailVisibility();
     }
 
     _updateMenuOrnament() {
