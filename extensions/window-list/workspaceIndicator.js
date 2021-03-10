@@ -12,6 +12,8 @@ const _ = Gettext.gettext;
 const TOOLTIP_OFFSET = 6;
 const TOOLTIP_ANIMATION_TIME = 150;
 
+const MAX_THUMBNAILS = 6;
+
 let WindowPreview = GObject.registerClass(
 class WindowPreview extends St.Button {
     _init(window) {
@@ -286,13 +288,13 @@ class WorkspaceIndicator extends PanelMenu.Button {
             workspaceManager.connect_after('workspace-switched',
                 this._onWorkspaceSwitched.bind(this)),
             workspaceManager.connect('notify::layout-rows',
-                this._onWorkspaceOrientationChanged.bind(this)),
+                this._updateThumbnailVisibility.bind(this)),
         ];
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._updateMenu();
         this._updateThumbnails();
-        this._onWorkspaceOrientationChanged();
+        this._updateThumbnailVisibility();
 
         this._settings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.preferences' });
         this._settingsChangedId = this._settings.connect(
@@ -311,12 +313,15 @@ class WorkspaceIndicator extends PanelMenu.Button {
         super._onDestroy();
     }
 
-    _onWorkspaceOrientationChanged() {
-        let vertical = global.workspace_manager.layout_rows === -1;
-        this.reactive = vertical;
+    _updateThumbnailVisibility() {
+        const { workspaceManager } = global;
+        const vertical = workspaceManager.layout_rows === -1;
+        const useMenu =
+            vertical || workspaceManager.n_workspaces > MAX_THUMBNAILS;
+        this.reactive = useMenu;
 
-        this._statusBin.visible = vertical;
-        this._thumbnailsBox.visible = !vertical;
+        this._statusBin.visible = useMenu;
+        this._thumbnailsBox.visible = !useMenu;
     }
 
     _onWorkspaceSwitched() {
@@ -332,6 +337,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     _nWorkspacesChanged() {
         this._updateMenu();
         this._updateThumbnails();
+        this._updateThumbnailVisibility();
     }
 
     _updateMenuOrnament() {
