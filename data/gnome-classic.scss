@@ -84,8 +84,8 @@ $variant: 'light';
 }
 
 #appMenu { 
-  padding: 0 8px 0 8px; 
   spinner-image: url("classic-process-working.svg"); 
+  .panel-status-menu-box { padding: 0; }
 }
 .tile-preview-left.on-primary,
 .tile-preview-right.on-primary,
