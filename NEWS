@@ -1,3 +1,18 @@
+40.rc
+=====
+* native-window-placement: Adjust to gnome-shell changes [Florian; !164]
+* windows-navigator: Adjust to gnome-shell changes [Florian; !163]
+* window-list, workspace-indicator: Only show previews for up to six workspaces
+  [Florian; !165]
+* window-list, workspace-indicator: Improve workspace preview appearance
+  [Florian; !166]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Fran Dieguez [gl]
+
 40.beta
 =======
 * Add tooltips to workspace thumbnails [Florian; !155]
