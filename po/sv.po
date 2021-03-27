@@ -1,26 +1,26 @@
 # Swedish translation for gnome-shell-extensions.
-# Copyright © 2011, 2012, 2014, 2015, 2017, 2019, 2020 Free Software Foundation, Inc.
+# Copyright © 2011-2021 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Daniel Nylander <po@danielnylander.se>, 2011, 2012.
 # Mattias Eriksson <snaggen@gmail.com>, 2014.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2017, 2019, 2020.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2017, 2019, 2020, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-06-25 05:19+0000\n"
-"PO-Revision-Date: 2020-07-31 16:32+0200\n"
+"POT-Creation-Date: 2020-10-17 20:14+0000\n"
+"PO-Revision-Date: 2021-03-27 21:12+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Klassisk"
 
@@ -96,7 +96,7 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"Om sant, placera fönster titlar över respektive miniatyrbild, överskuggar "
+"Om sant, placera fönster titlar över respektive miniatyrbild, åsidosätter "
 "skalets standardplacering under miniatyrbilden. För att ändra denna "
 "inställning krävs att skalet startas om för att den ska få effekt."
 
@@ -164,27 +164,27 @@ msgstr "Avmaximera"
 msgid "Maximize"
 msgstr "Maximera"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:432
 msgid "Minimize all"
 msgstr "Minimera alla"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:438
 msgid "Unminimize all"
 msgstr "Avminimera alla"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:444
 msgid "Maximize all"
 msgstr "Maximera alla"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:452
 msgid "Unmaximize all"
 msgstr "Avmaximera alla"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:460
 msgid "Close all"
 msgstr "Stäng alla"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:738
 msgid "Window List"
 msgstr "Fönsterlista"
 
@@ -259,91 +259,3 @@ msgstr "Arbetsyta %d"
 #: extensions/workspace-indicator/prefs.js:218
 msgid "Add Workspace"
 msgstr "Lägg till arbetsyta"
-
-#~ msgid "Application"
-#~ msgstr "Program"
-
-#~ msgid "Workspace"
-#~ msgstr "Arbetsyta"
-
-#~ msgid "Create new matching rule"
-#~ msgstr "Skapa ny matchande regel"
-
-#~ msgid "Add"
-#~ msgstr "Lägg till"
-
-#~ msgid "Name"
-#~ msgstr "Namn"
-
-#~ msgid "Attach modal dialog to the parent window"
-#~ msgstr "Koppla samman modal dialog till föräldrafönstret"
-
-#~ msgid ""
-#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-#~ msgstr ""
-#~ "Denna nyckel överskuggar nyckeln i org.gnome.mutter när GNOME-skalet körs."
-
-#~ msgid "Arrangement of buttons on the titlebar"
-#~ msgstr "Arrangemang för knappar i namnlisten"
-
-#~ msgid ""
-#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
-#~ "running GNOME Shell."
-#~ msgstr ""
-#~ "Denna nyckel överskuggar nyckeln i org.gnome.desktop.wm.preferences när "
-#~ "GNOME-skalet körs."
-
-#~ msgid "Enable edge tiling when dropping windows on screen edges"
-#~ msgstr "Slå på kantdockning när fönster släpps på skärmkanter"
-
-#~ msgid "Workspaces only on primary monitor"
-#~ msgstr "Arbetsytor endast på primär skärm"
-
-#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
-#~ msgstr "Fördröj fokusändringar i musläge tills pekare slutar röra sig"
-
-#~ msgid "Thumbnail only"
-#~ msgstr "Endast miniatyrbild"
-
-#~ msgid "Application icon only"
-#~ msgstr "Endast programikon"
-
-#~ msgid "Thumbnail and application icon"
-#~ msgstr "Miniatyrbild och programikon"
-
-#~ msgid "Present windows as"
-#~ msgstr "Presentera fönster som"
-
-#~ msgid "Activities Overview"
-#~ msgstr "Aktivitetsöversikt"
-
-#~ msgid "Hello, world!"
-#~ msgstr "Hej, världen!"
-
-#~ msgid "Alternative greeting text."
-#~ msgstr "Alternativ hälsningstext."
-
-#~ msgid ""
-#~ "If not empty, it contains the text that will be shown when clicking on "
-#~ "the panel."
-#~ msgstr ""
-#~ "Om inte tom, innehåller den text som kommer att visas när man klickar på "
-#~ "panelen."
-
-#~ msgid "Message"
-#~ msgstr "Meddelande"
-
-#~ msgid ""
-#~ "Example aims to show how to build well behaved extensions for the Shell "
-#~ "and as such it has little functionality on its own.\n"
-#~ "Nevertheless it’s possible to customize the greeting message."
-#~ msgstr ""
-#~ "Exemplet ämnar visa hur man bygger ett väluppfostrat tillägg för skalet "
-#~ "och som sådant har det lite funktionalitet i sig självt.\n"
-#~ "Hur som helst är det i alla fall möjligt att anpassa välkomstmeddelandet."
-
-#~ msgid "CPU"
-#~ msgstr "CPU"
-
-#~ msgid "Memory"
-#~ msgstr "Minne"
