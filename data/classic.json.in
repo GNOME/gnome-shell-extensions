@@ -2,6 +2,7 @@
     "parentMode": "user",
     "stylesheetName": "gnome-classic.css",
     "hasOverview": false,
+    "showWelcomeDialog": false,
     "enabledExtensions": [@CLASSIC_EXTENSIONS@],
     "panel": { "left": ["appMenu"],
                "center": [],
