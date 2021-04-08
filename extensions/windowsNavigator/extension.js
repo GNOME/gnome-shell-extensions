@@ -84,17 +84,17 @@ class MyWorkspace extends Workspace.Workspace {
             });
 
             this._text.add_constraint(new Clutter.BindConstraint({
-                source: this._windowContainer,
+                source: this.windowContainer,
                 coordinate: Clutter.BindCoordinate.POSITION,
             }));
             this._text.add_constraint(new Clutter.AlignConstraint({
-                source: this._windowContainer,
+                source: this.windowContainer,
                 align_axis: Clutter.AlignAxis.X_AXIS,
                 pivot_point: new Graphene.Point({ x: 0.5, y: -1 }),
                 factor: this._closeButtonSide === St.Side.LEFT ? 1 : 0,
             }));
             this._text.add_constraint(new Clutter.AlignConstraint({
-                source: this._windowContainer,
+                source: this.windowContainer,
                 align_axis: Clutter.AlignAxis.Y_AXIS,
                 pivot_point: new Graphene.Point({ x: -1, y: 0.5 }),
                 factor: 0,
