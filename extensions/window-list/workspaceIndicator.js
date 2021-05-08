@@ -249,6 +249,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         super._init(0.0, _('Workspace Indicator'), true);
         this.setMenu(new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM));
         this.add_style_class_name('window-list-workspace-indicator');
+        this.remove_style_class_name('panel-button');
         this.menu.actor.remove_style_class_name('panel-menu');
 
         let container = new St.Widget({
