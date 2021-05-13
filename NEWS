@@ -1,3 +1,15 @@
+40.1
+====
+* Disable welcome dialog in classic session [Florian; !169]
+* windowsNavigator: Adjust to a late gnome-shell change [Florian; !170]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Ngọc Quân Trần [vi], Anders Jonsson [sv], Carmen Bianca BAKKER [eo],
+  Pawan Chitrakar [ne], Quentin PAGÈS [oc]
+
 40.0
 ====
 
