@@ -22,7 +22,7 @@ sessiondir = join_paths(datadir, 'gnome-session', 'sessions')
 xsessiondir = join_paths(datadir, 'xsessions')
 
 ver_arr = meson.project_version().split('.')
-shell_version = '@0@.0'.format(ver_arr[0])
+shell_version = ver_arr[0]
 
 uuid_suffix = '@gnome-shell-extensions.gcampax.github.com'
 
