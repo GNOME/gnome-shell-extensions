@@ -6,38 +6,39 @@
 # António Lima <amrlima@gmail.com>, 2013.
 # Pedro Albuquerque <palbuquerque73@gmail.com>, 2014.
 # Bruno Ramalhete <bram.512@gmail.com>, 2015.
-# José Vieira <jvieira33@sapo.pt>, 2020.
+# José Vieira <jvieira33@sapo.pt>, 2020-2021.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.14\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2020-09-05 00:47+0100\n"
-"Last-Translator: José Vieira <jvieira33@sapo.pt>\n"
-"Language-Team: Portuguese <>\n"
+"POT-Creation-Date: 2021-05-14 16:21+0000\n"
+"PO-Revision-Date: 2021-06-02 17:07+0100\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: Português <@>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.3\n"
 "X-Project-Style: gnome\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME clássico"
 
 #: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
-msgstr "Esta sessão entra no GNOME clássico"
+msgstr "Esta sessão vai usar o GNOME clássico"
 
 #: extensions/apps-menu/extension.js:113
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:367
 msgid "Applications"
 msgstr "Aplicações"
 
@@ -54,11 +55,10 @@ msgstr ""
 "ficheiro desktop), seguido de dois pontos e o número da área de trabalho"
 
 #: extensions/auto-move-windows/prefs.js:35
-#| msgid "Workspace Names"
 msgid "Workspace Rules"
 msgstr "Regras das áreas de trabalho"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:237
 msgid "Add Rule"
 msgstr "Adicionar regra"
 
@@ -66,7 +66,6 @@ msgstr "Adicionar regra"
 #: extensions/drive-menu/extension.js:112
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
-#| msgid "Ejecting drive '%s' failed:"
 msgid "Ejecting drive “%s” failed:"
 msgstr "Falha ao ejetar a unidade '%s':"
 
@@ -74,8 +73,7 @@ msgstr "Falha ao ejetar a unidade '%s':"
 msgid "Removable devices"
 msgstr "Dispositivos removíveis"
 
-#: extensions/drive-menu/extension.js:155
-#| msgid "Open File"
+#: extensions/drive-menu/extension.js:152
 msgid "Open Files"
 msgstr "Ficheiros abertos"
 
@@ -96,7 +94,7 @@ msgstr ""
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
-msgstr "Colocar título de janelas em cima"
+msgstr "Colocar título de janela em cima"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
@@ -104,18 +102,17 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"Se verdadeiro, coloca títulos de janelas em cima da respectiva miniatura, "
+"Se verdadeiro, coloca títulos de janelas em cima das respectivas miniaturas, "
 "substituindo a predefinição, que as coloca no fundo. Alterar esta "
 "configuração requer reinicializar a interface para ter efeito."
 
 #: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:92
 msgid "Places"
 msgstr "Locais"
 
 #: extensions/places-menu/placeDisplay.js:46
 #, javascript-format
-#| msgid "Failed to launch \"%s\""
 msgid "Failed to launch “%s”"
 msgstr "Falha ao iniciar \"%s\""
 
@@ -142,7 +139,6 @@ msgid "Cycle Screenshot Sizes"
 msgstr "Percorrer os tamanhos de captura de ecrã"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
-#| msgid "Cycle Screenshot Sizes"
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Percorrer para trás os tamanhos de captura de ecrã"
 
@@ -174,27 +170,27 @@ msgstr "Desmaximizar"
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:432
 msgid "Minimize all"
 msgstr "Minimizar todas"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:438
 msgid "Unminimize all"
 msgstr "Desminimizar todas"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:444
 msgid "Maximize all"
 msgstr "Maximizar todas"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:452
 msgid "Unmaximize all"
 msgstr "Desmaximizar todas"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:460
 msgid "Close all"
 msgstr "Fechar todas"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:737
 msgid "Window List"
 msgstr "Lista de janelas"
 
@@ -203,26 +199,19 @@ msgid "When to group windows"
 msgstr "Quando agrupar janelas"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
-#| msgid ""
-#| "Decides when to group windows from the same application on the window "
-#| "list. Possible values are \"never\", \"auto\" and \"always\"."
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
-"Decide quando agrupar janelas da mesma aplicação na lista de janelas. "
-"Valores válidos são \"nunca\", \"auto\" e \"sempre\"."
+"Decide quando agrupar janelas da mesma aplicação na lista de janelas. Os "
+"valores válidos são \"nunca\", \"auto\" e \"sempre\"."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
 #: extensions/window-list/prefs.js:100
-#| msgid "Show only windows in the current workspace"
 msgid "Show windows from all workspaces"
 msgstr "Mostrar janelas de todas as área de trabalho"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
-#| msgid ""
-#| "Whether to show the window list on all connected monitors or only on the "
-#| "primary one."
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr ""
 "Se deve mostrar janelas de todas as áreas de trabalho ou apenas da atual."
@@ -259,8 +248,8 @@ msgstr "Agrupar sempre as janelas"
 msgid "Show on all monitors"
 msgstr "Mostrar em todos os monitores"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:249
+#: extensions/workspace-indicator/extension.js:255
 msgid "Workspace Indicator"
 msgstr "Indicador de área de trabalho"
 
@@ -273,8 +262,7 @@ msgstr "Nomes das áreas de trabalho"
 msgid "Workspace %d"
 msgstr "Área de trabalho %d"
 
-#: extensions/workspace-indicator/prefs.js:218
-#| msgid "Workspace"
+#: extensions/workspace-indicator/prefs.js:208
 msgid "Add Workspace"
 msgstr "Adicionar área de trabalho"
 
