@@ -1,6 +1,7 @@
 {
 "extension-id": "@extension_id@",
 "uuid": "@uuid@",
+"settings-schema": "@gschemaname@",
 "gettext-domain": "@gettext_domain@",
 "name": "Applications Menu",
 "description": "Add a category-based menu for applications.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME's GitLab instance instead.",

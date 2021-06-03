@@ -378,9 +378,12 @@ class ApplicationsButton extends PanelMenu.Button {
         this._hidingId = Main.overview.connect('hiding', () => {
             this.remove_accessible_state(Atk.StateType.CHECKED);
         });
-        Main.layoutManager.connect('startup-complete',
-            this._setKeybinding.bind(this));
-        this._setKeybinding();
+        Main.wm.addKeybinding(
+            'apps-menu-toggle-menu',
+            ExtensionUtils.getSettings(),
+            Meta.KeyBindingFlags.IGNORE_AUTOREPEAT,
+            Shell.ActionMode.NORMAL | Shell.ActionMode.OVERVIEW,
+            () => this.menu.toggle());
 
         this._desktopTarget = new DesktopTarget();
         this._desktopTarget.connect('app-dropped', () => {
@@ -431,11 +434,7 @@ class ApplicationsButton extends PanelMenu.Button {
         this._tree.disconnect(this._treeChangedId);
         this._tree = null;
 
-        Main.wm.setCustomKeybindingHandler('panel-main-menu',
-            Shell.ActionMode.NORMAL | Shell.ActionMode.OVERVIEW,
-            Main.sessionMode.hasOverview
-                ? Main.overview.toggle.bind(Main.overview)
-                : null);
+        Main.wm.removeKeybinding('apps-menu-toggle-menu');
 
         this._desktopTarget.destroy();
     }
@@ -475,12 +474,6 @@ class ApplicationsButton extends PanelMenu.Button {
             this.mainBox.show();
         }
         super._onOpenStateChanged(menu, open);
-    }
-
-    _setKeybinding() {
-        Main.wm.setCustomKeybindingHandler('panel-main-menu',
-            Shell.ActionMode.NORMAL | Shell.ActionMode.OVERVIEW,
-            () => this.menu.toggle());
     }
 
     _redisplay() {
