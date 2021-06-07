@@ -8,23 +8,29 @@
 # Bruno Ramalhete <bram.512@gmail.com>, 2015.
 # José Vieira <jvieira33@sapo.pt>, 2020-2021.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+# Juliano de Souza Camargo <julianosc@protonmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.14\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2021-05-14 16:21+0000\n"
-"PO-Revision-Date: 2021-06-02 17:07+0100\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Português <@>\n"
+"POT-Creation-Date: 2021-06-02 16:10+0000\n"
+"PO-Revision-Date: 2021-06-07 07:21-0300\n"
+"Last-Translator: Juliano de Souza Camargo <julianosc@protonmail.com>\n"
+"Language-Team: Portuguese < >\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 40.0\n"
 "X-Project-Style: gnome\n"
+"X-DL-Team: pt\n"
+"X-DL-Module: gnome-shell-extensions\n"
+"X-DL-Branch: gnome-40\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -75,7 +81,7 @@ msgstr "Dispositivos removíveis"
 
 #: extensions/drive-menu/extension.js:152
 msgid "Open Files"
-msgstr "Ficheiros abertos"
+msgstr "Abrir ficheiros"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
