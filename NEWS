@@ -1,3 +1,14 @@
+40.2
+====
+* window-list: Extend reactive area of minimap to screen edges [Adam; !171]
+* Misc. bug fixes [Florian; !172]
+
+Contributors:
+  Adam Goode, Florian Müllner
+
+Translators:
+  Hugo Carvalho [pt], Juliano de Souza Camargo [pt]
+
 40.1
 ====
 * Disable welcome dialog in classic session [Florian; !169]
