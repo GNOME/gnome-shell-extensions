@@ -1105,6 +1105,8 @@ class WindowList extends St.Widget {
 
 class Extension {
     constructor() {
+        ExtensionUtils.initTranslations();
+
         this._windowLists = null;
         this._hideOverviewOrig = Main.overview.hide;
     }
