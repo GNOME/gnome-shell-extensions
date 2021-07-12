@@ -1,3 +1,11 @@
+40.3
+====
+* drive-menu: Improve detection of network mounts [Florian; !27]
+* Misc. bug fixes [Florian; #340]
+
+Contributors:
+  Florian Müllner
+
 40.2
 ====
 * window-list: Extend reactive area of minimap to screen edges [Adam; !171]
