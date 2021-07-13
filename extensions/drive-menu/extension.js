@@ -41,6 +41,8 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
         ejectButton.connect('clicked', this._eject.bind(this));
         this.add(ejectButton);
 
+        this.hide();
+
         this._changedId = mount.connect('changed', this._syncVisibility.bind(this));
         this._syncVisibility();
     }
@@ -155,10 +157,8 @@ class DriveMenu extends PanelMenu.Button {
         this.add_child(icon);
 
         this._monitor = Gio.VolumeMonitor.get();
-        this._addedId = this._monitor.connect('mount-added', (monitor, mount) => {
-            this._addMount(mount);
-            this._updateMenuVisibility();
-        });
+        this._addedId = this._monitor.connect('mount-added',
+            (monitor, mount) => this._addMount(mount));
         this._removedId = this._monitor.connect('mount-removed', (monitor, mount) => {
             this._removeMount(mount);
             this._updateMenuVisibility();
