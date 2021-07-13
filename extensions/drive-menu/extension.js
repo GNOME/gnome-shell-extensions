@@ -189,6 +189,8 @@ class DriveMenu extends PanelMenu.Button {
         let item = new MountMenuItem(mount);
         this._mounts.unshift(item);
         this.menu.addMenuItem(item, 0);
+
+        item.connect('notify::visible', () => this._updateMenuVisibility());
     }
 
     _removeMount(mount) {
