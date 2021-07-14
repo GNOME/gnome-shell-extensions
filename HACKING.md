@@ -28,4 +28,4 @@ imports (like imports.lang or imports.dbus) and introspection,
 the other for Shell API. Within the same group, put everything
 in alphabetic order.
 
-[coding-style]: https://gitlab.gnome.org/GNOME/gjs/blob/master/doc/Style_Guide.md
+[coding-style]: https://gitlab.gnome.org/GNOME/gjs/blob/HEAD/doc/Style_Guide.md
