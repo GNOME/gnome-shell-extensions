@@ -69,6 +69,19 @@ GSettings key.
 
      Adds a simple workspace switcher to the top bar.
 
+## Default branch
+
+The default development branch is `main`. If you still have a local
+checkout under the old name, use:
+```sh
+git checkout matser
+git branch -m master main
+git fetch
+git branch --unset-upstream
+git branch -u origin/master
+git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
+```
+
 ## License
 
 GNOME Shell Extensions are distributed under the terms of the GNU General
