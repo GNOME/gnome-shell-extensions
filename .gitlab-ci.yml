@@ -21,6 +21,7 @@ default:
             - 'api_failure'
 
 variables:
+ FDO_UPSTREAM_REPO: GNOME/gnome-shell-extensions
  LINT_LOG: "eslint-report.xml"
  JS_LOG: "js-report.txt"
 
