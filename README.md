@@ -74,7 +74,7 @@ GSettings key.
 The default development branch is `main`. If you still have a local
 checkout under the old name, use:
 ```sh
-git checkout matser
+git checkout master
 git branch -m master main
 git fetch
 git branch --unset-upstream
