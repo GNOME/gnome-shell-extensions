@@ -1,7 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported init buildPrefsWidget */
 
-const { Gio, GLib, GObject, Gtk, Pango } = imports.gi;
+const { Adw, Gio, GLib, GObject, Gtk, Pango } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -12,45 +12,18 @@ const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
 
 const WorkspaceSettingsWidget = GObject.registerClass(
-class WorkspaceSettingsWidget extends Gtk.ScrolledWindow {
+class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
     _init() {
         super._init({
-            hscrollbar_policy: Gtk.PolicyType.NEVER,
+            title: _('Workspace Names'),
         });
-
-        const box = new Gtk.Box({
-            orientation: Gtk.Orientation.VERTICAL,
-            halign: Gtk.Align.CENTER,
-            spacing: 12,
-            margin_top: 36,
-            margin_bottom: 36,
-            margin_start: 36,
-            margin_end: 36,
-        });
-        this.set_child(box);
-
-        box.append(new Gtk.Label({
-            label: '<b>%s</b>'.format(_('Workspace Names')),
-            use_markup: true,
-            halign: Gtk.Align.START,
-        }));
 
         this._list = new Gtk.ListBox({
             selection_mode: Gtk.SelectionMode.NONE,
-            valign: Gtk.Align.START,
-            show_separators: true,
+            css_classes: ['content'],
         });
         this._list.connect('row-activated', (l, row) => row.edit());
-        box.append(this._list);
-
-        const context = this._list.get_style_context();
-        const cssProvider = new Gtk.CssProvider();
-        cssProvider.load_from_data(
-            'list { min-width: 25em; }');
-
-        context.add_provider(cssProvider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        context.add_class('frame');
+        this.add(this._list);
 
         this._list.append(new NewWorkspaceRow());
 
@@ -116,7 +89,7 @@ class WorkspaceSettingsWidget extends Gtk.ScrolledWindow {
 });
 
 const WorkspaceRow = GObject.registerClass(
-class WorkspaceRow extends Gtk.ListBoxRow {
+class WorkspaceRow extends Adw.PreferencesRow {
     _init(name) {
         super._init({ name });
 
@@ -142,6 +115,7 @@ class WorkspaceRow extends Gtk.ListBoxRow {
             action_name: 'workspaces.remove',
             action_target: new GLib.Variant('s', name),
             icon_name: 'edit-delete-symbolic',
+            has_frame: false,
         });
         box.append(button);
 
@@ -193,7 +167,7 @@ class WorkspaceRow extends Gtk.ListBoxRow {
 });
 
 const NewWorkspaceRow = GObject.registerClass(
-class NewWorkspaceRow extends Gtk.ListBoxRow {
+class NewWorkspaceRow extends Adw.PreferencesRow {
     _init() {
         super._init({
             action_name: 'workspaces.add',
