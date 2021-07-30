@@ -1,7 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported init buildPrefsWidget */
 
-const { Gio, GLib, GObject, Gtk } = imports.gi;
+const { Adw, Gio, GLib, GObject, Gtk } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -13,17 +13,9 @@ function init() {
 }
 
 const WindowListPrefsWidget = GObject.registerClass(
-class WindowListPrefsWidget extends Gtk.Box {
+class WindowListPrefsWidget extends Adw.PreferencesPage {
     _init() {
-        super._init({
-            orientation: Gtk.Orientation.VERTICAL,
-            spacing: 6,
-            margin_top: 36,
-            margin_bottom: 36,
-            margin_start: 36,
-            margin_end: 36,
-            halign: Gtk.Align.CENTER,
-        });
+        super._init();
 
         this._actionGroup = new Gio.SimpleActionGroup();
         this.insert_action_group('window-list', this._actionGroup);
@@ -36,56 +28,56 @@ class WindowListPrefsWidget extends Gtk.Box {
         this._actionGroup.add_action(
             this._settings.create_action('display-all-workspaces'));
 
-        let groupingLabel = '<b>%s</b>'.format(_('Window Grouping'));
-        this.append(new Gtk.Label({
-            label: groupingLabel, use_markup: true,
-            halign: Gtk.Align.START,
-        }));
-
-        const box = new Gtk.Box({
-            orientation: Gtk.Orientation.VERTICAL,
-            spacing: 12,
-            margin_bottom: 12,
+        const groupingGroup = new Adw.PreferencesGroup({
+            title: _('Window Grouping'),
         });
-        this.append(box);
-
-        const context = box.get_style_context();
-        const cssProvider = new Gtk.CssProvider();
-        cssProvider.load_from_data(
-            'box { padding: 12px; }');
-
-        context.add_provider(cssProvider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        context.add_class('frame');
-        context.add_class('view');
+        this.add(groupingGroup);
 
         const modes = [
-            { mode: 'never', label: _('Never group windows') },
-            { mode: 'auto', label: _('Group windows when space is limited') },
-            { mode: 'always', label: _('Always group windows') },
+            { mode: 'never', title: _('Never group windows') },
+            { mode: 'auto', title: _('Group windows when space is limited') },
+            { mode: 'always', title: _('Always group windows') },
         ];
-        let group = null;
-        for (const { mode, label } of modes) {
+
+        for (const { mode, title } of modes) {
             const check = new Gtk.CheckButton({
                 action_name: 'window-list.grouping-mode',
                 action_target: new GLib.Variant('s', mode),
-                label,
-                group,
-                margin_end: 12,
             });
-            group = check;
-            box.append(check);
+            const row = new Adw.ActionRow({
+                activatable_widget: check,
+                title,
+            });
+            row.add_prefix(check);
+            groupingGroup.add(row);
         }
 
-        this.append(new Gtk.CheckButton({
-            label: _('Show on all monitors'),
-            action_name: 'window-list.show-on-all-monitors',
-        }));
+        const miscGroup = new Adw.PreferencesGroup();
+        this.add(miscGroup);
 
-        this.append(new Gtk.CheckButton({
-            label: _('Show windows from all workspaces'),
+        let toggle = new Gtk.Switch({
+            action_name: 'window-list.show-on-all-monitors',
+            valign: Gtk.Align.CENTER,
+        });
+        let row = new Adw.ActionRow({
+            title: _('Show on all monitors'),
+            activatable_widget: toggle,
+        });
+        row.add_suffix(toggle);
+        miscGroup.add(row);
+
+        toggle = new Gtk.Switch({
             action_name: 'window-list.display-all-workspaces',
-        }));
+            valign: Gtk.Align.CENTER,
+        });
+        this._settings.bind('display-all-workspaces',
+            toggle, 'active', Gio.SettingsBindFlags.DEFAULT);
+        row = new Adw.ActionRow({
+            title: _('Show windows from all workspaces'),
+            activatable_widget: toggle,
+        });
+        row.add_suffix(toggle);
+        miscGroup.add(row);
     }
 });
 
