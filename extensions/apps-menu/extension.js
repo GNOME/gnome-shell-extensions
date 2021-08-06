@@ -12,7 +12,8 @@ const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
-const Gettext = imports.gettext.domain('gnome-shell-extensions');
+const Me = ExtensionUtils.getCurrentExtension();
+const Gettext = imports.gettext.domain(Me.metadata['gettext-domain']);
 const _ = Gettext.gettext;
 
 const appSys = Shell.AppSystem.get_default();

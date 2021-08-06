@@ -2,11 +2,14 @@
 const { Clutter, Gio, GObject, Meta, St } = imports.gi;
 
 const DND = imports.ui.dnd;
+const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
-const Gettext = imports.gettext.domain('gnome-shell-extensions');
+const Me = ExtensionUtils.getCurrentExtension();
+
+const Gettext = imports.gettext.domain(Me.metadata['gettext-domain']);
 const _ = Gettext.gettext;
 
 const TOOLTIP_OFFSET = 6;
