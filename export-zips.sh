@@ -14,7 +14,6 @@ mkdir $srcdir/zip-files
 
 extensiondir=$installdir/share/gnome-shell/extensions
 schemadir=$installdir/share/glib-2.0/schemas
-localedir=$installdir/share/locale
 
 for f in $extensiondir/*; do
   name=`basename ${f%%@*}`
