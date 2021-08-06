@@ -7,7 +7,7 @@ builddir=`mktemp -p $srcdir -d _build.XXXXXX` || exit 1
 installdir=`mktemp -p $srcdir -d _install.XXXXXX` || exit 1
 
 meson setup --prefix=$installdir -Dextension_set=all $srcdir $builddir
-ninja -C$builddir install
+meson install -C $builddir
 
 rm -rf $srcdir/zip-files
 mkdir $srcdir/zip-files
