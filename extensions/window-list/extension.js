@@ -11,7 +11,7 @@ const Me = ExtensionUtils.getCurrentExtension();
 const { WindowPicker, WindowPickerToggle } = Me.imports.windowPicker;
 const { WorkspaceIndicator } = Me.imports.workspaceIndicator;
 
-const Gettext = imports.gettext.domain('gnome-shell-extensions');
+const Gettext = imports.gettext.domain(Me.metadata['gettext-domain']);
 const _ = Gettext.gettext;
 
 const ICON_TEXTURE_SIZE = 24;

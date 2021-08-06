@@ -3,10 +3,13 @@
 const { Gio, GLib, Shell } = imports.gi;
 const Signals = imports.signals;
 
+const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 const ShellMountOperation = imports.ui.shellMountOperation;
 
-const Gettext = imports.gettext.domain('gnome-shell-extensions');
+const Me = ExtensionUtils.getCurrentExtension();
+
+const Gettext = imports.gettext.domain(Me.metadata['gettext-domain']);
 const _ = Gettext.gettext;
 const N_ = x => x;
 

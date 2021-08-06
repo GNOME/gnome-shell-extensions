@@ -3,11 +3,12 @@
 
 const { Gio, GLib, GObject, Gtk, Pango } = imports.gi;
 
-const Gettext = imports.gettext.domain('gnome-shell-extensions');
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+
+const Gettext = imports.gettext.domain(Me.metadata['gettext-domain']);
 const _ = Gettext.gettext;
 const N_ = e => e;
-
-const ExtensionUtils = imports.misc.extensionUtils;
 
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
