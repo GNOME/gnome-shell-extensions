@@ -20,6 +20,10 @@ for f in $extensiondir/*; do
   uuid=$name@gnome-shell-extensions.gcampax.github.com
   schema=$schemadir/org.gnome.shell.extensions.$name.gschema.xml
 
+  olddomain=gnome-shell-extensions
+  newdomain=gnome-shell-extension-$name
+  sed -i "/gettext-domain/ s:$olddomain:$newdomain:" $f/metadata.json
+
   xgettext --from-code=UTF-8 --output-dir=$builddir --output=$name.pot $f/*.js
 
   if [ -f $builddir/$name.pot ]; then
