@@ -108,10 +108,14 @@ class WindowMover {
 let prevCheckWorkspaces;
 let winMover;
 
+/** */
 function init() {
     ExtensionUtils.initTranslations();
 }
 
+/**
+ * @returns {bool} - false (used as MetaLater handler)
+ */
 function myCheckWorkspaces() {
     let keepAliveWorkspaces = [];
     let foundNonEmpty = false;
@@ -132,6 +136,7 @@ function myCheckWorkspaces() {
     return false;
 }
 
+/** */
 function enable() {
     prevCheckWorkspaces = Main.wm._workspaceTracker._checkWorkspaces;
     Main.wm._workspaceTracker._checkWorkspaces = myCheckWorkspaces;
@@ -139,6 +144,7 @@ function enable() {
     winMover = new WindowMover();
 }
 
+/** */
 function disable() {
     Main.wm._workspaceTracker._checkWorkspaces = prevCheckWorkspaces;
     winMover.destroy();

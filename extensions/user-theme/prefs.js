@@ -174,9 +174,13 @@ class ThemeRow extends Gtk.ListBoxRow {
     }
 });
 
+/** */
 function init() {
 }
 
+/**
+ * @returns {Gtk.Widget} - the prefs widget
+ */
 function buildPrefsWidget() {
     return new UserThemePrefsWidget();
 }

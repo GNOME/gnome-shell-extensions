@@ -28,11 +28,15 @@ const MESSAGE_FADE_TIME = 2000;
 
 let text;
 
+/** */
 function hideMessage() {
     text.destroy();
     text = null;
 }
 
+/**
+ * @param {string} message - the message to flash
+ */
 function flashMessage(message) {
     if (!text) {
         text = new St.Label({ style_class: 'screenshot-sizer-message' });
@@ -67,6 +71,11 @@ let SIZES = [
     [720, 360], // Phone landscape fullscreen
 ];
 
+/**
+ * @param {Meta.Display} display - the display
+ * @param {Meta.Window=} window - for per-window bindings, the window
+ * @param {Meta.KeyBinding} binding - the key binding
+ */
 function cycleScreenshotSizes(display, window, binding) {
     // Probably this isn't useful with 5 sizes, but you can decrease instead
     // of increase by holding down shift.
@@ -133,6 +142,7 @@ function cycleScreenshotSizes(display, window, binding) {
     flashMessage(message);
 }
 
+/** */
 function enable() {
     Main.wm.addKeybinding(
         'cycle-screenshot-sizes',
@@ -148,6 +158,7 @@ function enable() {
         cycleScreenshotSizes);
 }
 
+/** */
 function disable() {
     Main.wm.removeKeybinding('cycle-screenshot-sizes');
     Main.wm.removeKeybinding('cycle-screenshot-sizes-backward');

@@ -267,10 +267,14 @@ class NewRuleDialog extends Gtk.AppChooserDialog {
     }
 });
 
+/** */
 function init() {
     ExtensionUtils.initTranslations();
 }
 
+/**
+ * @returns {Gtk.Widget} - the prefs widget
+ */
 function buildPrefsWidget() {
     return new AutoMoveSettingsWidget();
 }

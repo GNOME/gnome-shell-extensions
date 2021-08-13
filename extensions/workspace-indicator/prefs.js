@@ -210,10 +210,14 @@ class NewWorkspaceRow extends Gtk.ListBoxRow {
     }
 });
 
+/** */
 function init() {
     ExtensionUtils.initTranslations();
 }
 
+/**
+ * @returns {Gtk.Widget} - the prefs widget
+ */
 function buildPrefsWidget() {
     return new WorkspaceSettingsWidget();
 }

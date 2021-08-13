@@ -23,13 +23,16 @@ const GroupingMode = {
     ALWAYS: 2,
 };
 
+/**
+ * @param {Shell.App} app - an app
+ * @returns {number} - the smallest stable sequence of the app's windows
+ */
 function _getAppStableSequence(app) {
     let windows = app.get_windows().filter(w => !w.skip_taskbar);
     return windows.reduce((prev, cur) => {
         return Math.min(prev, cur.get_stable_sequence());
     }, Infinity);
 }
-
 
 class WindowContextMenu extends PopupMenu.PopupMenu {
     constructor(source, metaWindow) {
@@ -1172,6 +1175,9 @@ class Extension {
     }
 }
 
+/**
+ * @returns {Extension} - the extension's state object
+ */
 function init() {
     return new Extension();
 }

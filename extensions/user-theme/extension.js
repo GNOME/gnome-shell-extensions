@@ -58,6 +58,9 @@ class ThemeManager {
     }
 }
 
+/**
+ * @returns {ThemeManager} - the extension state object
+ */
 function init() {
     return new ThemeManager();
 }

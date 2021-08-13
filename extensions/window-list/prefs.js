@@ -9,7 +9,7 @@ const Me = ExtensionUtils.getCurrentExtension();
 const Gettext = imports.gettext.domain(Me.metadata['gettext-domain']);
 const _ = Gettext.gettext;
 
-
+/** */
 function init() {
     ExtensionUtils.initTranslations();
 }
@@ -105,6 +105,9 @@ class WindowListPrefsWidget extends Gtk.Box {
     }
 });
 
+/**
+ * @returns {Gtk.Widget} - the prefs widget
+ */
 function buildPrefsWidget() {
     return new WindowListPrefsWidget();
 }

@@ -238,11 +238,13 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
 
 let winInjections, workspaceInjections;
 
+/** */
 function resetState() {
     winInjections = { };
     workspaceInjections = { };
 }
 
+/** */
 function enable() {
     resetState();
 
@@ -282,6 +284,11 @@ function enable() {
     };
 }
 
+/**
+ * @param {Object} object - object that was modified
+ * @param {Object} injection - the map of previous injections
+ * @param {string} name - the @injection key that should be removed
+ */
 function removeInjection(object, injection, name) {
     if (injection[name] === undefined)
         delete object[name];
@@ -289,6 +296,7 @@ function removeInjection(object, injection, name) {
         object[name] = injection[name];
 }
 
+/** */
 function disable() {
     var i;
 

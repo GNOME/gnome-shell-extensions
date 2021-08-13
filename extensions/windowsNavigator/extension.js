@@ -262,6 +262,9 @@ class Extension {
     }
 }
 
+/**
+ * @returns {Extension} - the extension's state object
+ */
 function init() {
     return new Extension();
 }

@@ -134,12 +134,14 @@ class PlacesMenu extends PanelMenu.Button {
     }
 });
 
+/** */
 function init() {
     ExtensionUtils.initTranslations();
 }
 
 let _indicator;
 
+/** */
 function enable() {
     _indicator = new PlacesMenu();
 
@@ -149,6 +151,7 @@ function enable() {
     Main.panel.addToStatusArea('places-menu', _indicator, pos, 'left');
 }
 
+/** */
 function disable() {
     _indicator.destroy();
 }

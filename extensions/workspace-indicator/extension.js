@@ -445,17 +445,20 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 });
 
+/** */
 function init() {
     ExtensionUtils.initTranslations();
 }
 
 let _indicator;
 
+/** */
 function enable() {
     _indicator = new WorkspaceIndicator();
     Main.panel.addToStatusArea('workspace-indicator', _indicator);
 }
 
+/** */
 function disable() {
     _indicator.destroy();
 }

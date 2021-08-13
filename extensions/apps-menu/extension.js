@@ -674,17 +674,20 @@ class ApplicationsButton extends PanelMenu.Button {
 
 let appsMenuButton;
 
+/** */
 function enable() {
     appsMenuButton = new ApplicationsButton();
     let index = Main.sessionMode.panel.left.indexOf('activities') + 1;
     Main.panel.addToStatusArea('apps-menu', appsMenuButton, index, 'left');
 }
 
+/** */
 function disable() {
     Main.panel.menuManager.removeMenu(appsMenuButton.menu);
     appsMenuButton.destroy();
 }
 
+/** */
 function init() {
     ExtensionUtils.initTranslations();
 }
