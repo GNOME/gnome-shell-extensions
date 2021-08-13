@@ -23,34 +23,6 @@ const GroupingMode = {
     ALWAYS: 2,
 };
 
-
-function _minimizeOrActivateWindow(window) {
-    let focusWindow = global.display.focus_window;
-    if (focusWindow === window ||
-        focusWindow && focusWindow.get_transient_for() === window)
-        window.minimize();
-    else
-        window.activate(global.get_current_time());
-}
-
-function _openMenu(menu) {
-    menu.open();
-
-    let event = Clutter.get_current_event();
-    if (event && event.type() === Clutter.EventType.KEY_RELEASE)
-        menu.actor.navigate_focus(null, Gtk.DirectionType.TAB_FORWARD, false);
-}
-
-function _onMenuStateChanged(menu, isOpen) {
-    if (isOpen)
-        return;
-
-    let [x, y] = global.get_pointer();
-    let actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
-    if (Me.stateObj.someWindowListContains(actor))
-        actor.sync_hover();
-}
-
 function _getAppStableSequence(app) {
     let windows = app.get_windows().filter(w => !w.skip_taskbar);
     return windows.reduce((prev, cur) => {
@@ -282,10 +254,37 @@ const BaseButton = GObject.registerClass({
         return true;
     }
 
+    _openMenu(menu) {
+        menu.open();
+
+        let event = Clutter.get_current_event();
+        if (event && event.type() === Clutter.EventType.KEY_RELEASE)
+            menu.actor.navigate_focus(null, Gtk.DirectionType.TAB_FORWARD, false);
+    }
+
+    _minimizeOrActivateWindow(window) {
+        let focusWindow = global.display.focus_window;
+        if (focusWindow === window ||
+            focusWindow && focusWindow.get_transient_for() === window)
+            window.minimize();
+        else
+            window.activate(global.get_current_time());
+    }
+
+    _onMenuStateChanged(menu, isOpen) {
+        if (isOpen)
+            return;
+
+        let [x, y] = global.get_pointer();
+        let actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
+        if (Me.stateObj.someWindowListContains(actor))
+            actor.sync_hover();
+    }
+
     _onPopupMenu(_actor) {
         if (!this._canOpenPopupMenu() || this._contextMenu.isOpen)
             return;
-        _openMenu(this._contextMenu);
+        this._openMenu(this._contextMenu);
     }
 
     _isFocused() {
@@ -362,7 +361,8 @@ class WindowButton extends BaseButton {
         this.label_actor = this._windowTitle.label_actor;
 
         this._contextMenu = new WindowContextMenu(this, this.metaWindow);
-        this._contextMenu.connect('open-state-changed', _onMenuStateChanged);
+        this._contextMenu.connect('open-state-changed',
+            this._onMenuStateChanged.bind(this));
         this._contextMenu.actor.hide();
         this._contextMenuManager.addMenu(this._contextMenu);
         Main.uiGroup.add_actor(this._contextMenu.actor);
@@ -382,9 +382,9 @@ class WindowButton extends BaseButton {
         }
 
         if (button === 1)
-            _minimizeOrActivateWindow(this.metaWindow);
+            this._minimizeOrActivateWindow(this.metaWindow);
         else
-            _openMenu(this._contextMenu);
+            this._openMenu(this._contextMenu);
     }
 
     _isFocused() {
@@ -518,14 +518,16 @@ class AppButton extends BaseButton {
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menu = new PopupMenu.PopupMenu(this, 0.5, St.Side.BOTTOM);
-        this._menu.connect('open-state-changed', _onMenuStateChanged);
+        this._menu.connect('open-state-changed',
+            this._onMenuStateChanged.bind(this));
         this._menu.actor.hide();
         this._menu.connect('activate', this._onMenuActivate.bind(this));
         this._menuManager.addMenu(this._menu);
         Main.uiGroup.add_actor(this._menu.actor);
 
         this._appContextMenu = new AppContextMenu(this);
-        this._appContextMenu.connect('open-state-changed', _onMenuStateChanged);
+        this._appContextMenu.connect('open-state-changed',
+            this._onMenuStateChanged.bind(this));
         this._appContextMenu.actor.hide();
         Main.uiGroup.add_actor(this._appContextMenu.actor);
 
@@ -592,7 +594,7 @@ class AppButton extends BaseButton {
                 this._singleWindowTitle.child = this._windowTitle;
                 this._windowContextMenu = new WindowContextMenu(this, this.metaWindow);
                 this._windowContextMenu.connect(
-                    'open-state-changed', _onMenuStateChanged);
+                    'open-state-changed', this._onMenuStateChanged.bind(this));
                 Main.uiGroup.add_actor(this._windowContextMenu.actor);
                 this._windowContextMenu.actor.hide();
                 this._contextMenuManager.addMenu(this._windowContextMenu);
@@ -631,7 +633,7 @@ class AppButton extends BaseButton {
             if (windows.length === 1) {
                 if (contextMenuWasOpen)
                     return;
-                _minimizeOrActivateWindow(windows[0]);
+                this._minimizeOrActivateWindow(windows[0]);
             } else {
                 this._menu.removeAll();
 
@@ -642,12 +644,12 @@ class AppButton extends BaseButton {
                     item._window = windows[i];
                     this._menu.addMenuItem(item);
                 }
-                _openMenu(this._menu);
+                this._openMenu(this._menu);
             }
         } else {
             if (contextMenuWasOpen)
                 return;
-            _openMenu(this._contextMenu);
+            this._openMenu(this._contextMenu);
         }
     }
 
