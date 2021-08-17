@@ -1,3 +1,17 @@
+41.beta
+=======
+* window-list: Extend reactive area of minimap to screen edges [Adam; !171]
+* drive-menu: Improve detection of network mounts [Florian; !27, !176]
+* Use distinct gettext domain for e.g.o uploads [Florian; #335]
+* Misc. bug fixes and cleanups [Florian; !172, !174, !177, !167, !178, !180,
+  !181, !182, !183]
+
+Contributors:
+  Marco Trevisan (Treviño), Adam Goode, Florian Müllner
+
+Translators:
+  Hugo Carvalho [pt], Juliano de Souza Camargo [pt], Alexander Shopov [bg]
+
 40.1
 ====
 * Disable welcome dialog in classic session [Florian; !169]
