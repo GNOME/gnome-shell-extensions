@@ -1,3 +1,12 @@
+40.4
+====
+* drive-menu: Fix indicator visibility [Florian; !176]
+* Use distinct gettext domain for e.g.o uploads [Florian; #335]
+
+Contributors:
+  Florian Müllner
+
+
 40.3
 ====
 * drive-menu: Improve detection of network mounts [Florian; !27]
