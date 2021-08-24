@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2021 Ray Strode <rstrode@redhat.com>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+extension_data += configure_file(
+  input: metadata_name + '.in',
+  output: metadata_name,
+  configuration: metadata_conf
+)
+
+extension_data += files('stylesheet.css')
+extension_sources += files('headsUpMessage.js', 'prefs.js')
+extension_schemas += files(metadata_conf.get('gschemaname') + '.gschema.xml')

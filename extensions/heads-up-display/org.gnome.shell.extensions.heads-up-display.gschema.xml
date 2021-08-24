@@ -1,0 +1,60 @@
+<!--
+SPDX-FileCopyrightText: 2021 Ray Strode <rstrode@redhat.com>
+
+SPDX-License-Identifier: GPL-2.0-or-later
+-->
+
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema id="org.gnome.shell.extensions.heads-up-display"
+          path="/org/gnome/shell/extensions/heads-up-display/">
+    <key name="idle-timeout" type="u">
+      <default>30</default>
+      <summary>Idle Timeout</summary>
+      <description>
+        Number of seconds until message is reshown after user goes idle.
+      </description>
+    </key>
+    <key name="message-heading" type="s">
+      <default>""</default>
+      <summary>Message to show at top of display</summary>
+      <description>
+        The top line of the heads up display message.
+      </description>
+    </key>
+    <key name="message-body" type="s">
+      <default>""</default>
+      <summary>Banner message</summary>
+      <description>
+        A message to always show at the top of the screen.
+      </description>
+    </key>
+    <key name="show-on-login-screen" type="b">
+      <default>true</default>
+      <summary>Show on login screen</summary>
+      <description>
+        Whether or not the message should display on the login screen
+      </description>
+    </key>
+    <key name="show-when-locked" type="b">
+      <default>false</default>
+      <summary>Show on screen shield</summary>
+      <description>
+        Whether or not the message should display when the screen is locked
+      </description>
+    </key>
+    <key name="show-when-unlocking" type="b">
+      <default>false</default>
+      <summary>Show on unlock screen</summary>
+      <description>
+        Whether or not the message should display on the unlock screen.
+      </description>
+    </key>
+    <key name="show-when-unlocked" type="b">
+      <default>false</default>
+      <summary>Show in user session</summary>
+      <description>
+        Whether or not the message should display when the screen is unlocked.
+      </description>
+    </key>
+  </schema>
+</schemalist>

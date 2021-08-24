@@ -6,6 +6,7 @@ extensions/auto-move-windows/extension.js
 extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml
 extensions/auto-move-windows/prefs.js
 extensions/drive-menu/extension.js
+extensions/heads-up-display/prefs.js
 extensions/native-window-placement/extension.js
 extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml
 extensions/places-menu/extension.js

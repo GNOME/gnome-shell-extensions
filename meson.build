@@ -40,6 +40,7 @@ classic_extensions = [
 default_extensions = classic_extensions
 default_extensions += [
   'drive-menu',
+  'heads-up-display',
   'light-style',
   'screenshot-window-sizer',
   'system-monitor',

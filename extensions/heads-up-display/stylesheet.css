@@ -1,0 +1,38 @@
+/*
+ * SPDX-FileCopyrightText: 2021 Ray Strode <rstrode@redhat.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+.heads-up-display-message {
+    background-color: rgba(0.24, 0.24, 0.24, 0.80);
+    border: 1px solid black;
+    border-radius: 6px;
+    color: #eeeeec;
+    font-size: 11pt;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.9em;
+}
+
+.heads-up-display-message:insensitive {
+    background-color: rgba(0.24, 0.24, 0.24, 0.33);
+}
+
+.heads-up-display-message:hover {
+    background-color: rgba(0.24, 0.24, 0.24, 0.2);
+    border: 1px solid rgba(0.0, 0.0, 0.0, 0.5);
+    color: #4d4d4d;
+    transition-duration: 250ms;
+}
+
+.heads-up-message-heading {
+    height: 1.75em;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.heads-up-message-body {
+    text-align: center;
+}
