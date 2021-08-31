@@ -89,3 +89,6 @@ subdir('extensions')
 subdir('po')
 
 meson.add_dist_script('meson/generate-stylesheets.py')
+meson.add_dist_script('meson/check-version.py',
+  meson.project_version(),
+  'NEWS')
