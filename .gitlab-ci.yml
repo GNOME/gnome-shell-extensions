@@ -130,3 +130,16 @@ build-bundles:
     expose_as: 'Get Extension bundles here'
     paths:
       - zip-files/
+
+fedora-build:
+  extends:
+    - .fdo.distribution-image@fedora
+    - .gnome-shell-extensions.fedora:34
+  stage: build
+  needs:
+    - build-fedora-container
+  script:
+    - meson setup build --werror -Dextension_set=all -Dclassic=true
+    - meson compile -C build
+    - meson test -C build
+    - meson install -C build
