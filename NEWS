@@ -1,3 +1,12 @@
+41.rc
+=====
+* window-list: Adapt to overview-on-startup [Florian; !185]
+* apps-menu: Use a custom 'toggle-menu' shortcut [Florian; !173]
+* Misc. bug fixes and cleanups [Florian; !186]
+
+Contributors:
+  Florian Müllner
+
 41.beta
 =======
 * window-list: Extend reactive area of minimap to screen edges [Adam; !171]
