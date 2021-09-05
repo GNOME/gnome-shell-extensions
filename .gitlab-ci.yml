@@ -139,6 +139,8 @@ fedora-build:
   stage: build
   needs:
     - build-fedora-container
+  before_script:
+    - git submodule update --init
   script:
     - meson setup build --werror -Dextension_set=all -Dclassic=true
     - meson compile -C build
@@ -155,6 +157,8 @@ fedora-dist:
   stage: deploy
   needs:
     - fedora-build
+  before_script:
+    - git submodule update --init
   script:
     - meson dist -C build
   rules:
