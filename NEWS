@@ -1,3 +1,10 @@
+41.rc.1
+=======
+* Fix pre-generating stylesheets in tarball [Florian; !190]
+
+Contributors:
+  Florian Müllner
+
 41.rc
 =====
 * window-list: Adapt to overview-on-startup [Florian; !185]
