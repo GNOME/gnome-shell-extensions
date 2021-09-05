@@ -142,7 +142,7 @@ fedora-build:
   before_script:
     - git submodule update --init
   script:
-    - meson setup build --werror -Dextension_set=all -Dclassic=true
+    - meson setup build --werror -Dextension_set=all -Dclassic_mode=true
     - meson compile -C build
     - meson test -C build
     - meson install -C build
