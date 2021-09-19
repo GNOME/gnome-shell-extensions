@@ -1,3 +1,7 @@
+41.0
+====
+* Bump version
+
 41.rc.1
 =======
 * Fix pre-generating stylesheets in tarball [Florian; !190]
