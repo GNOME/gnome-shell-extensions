@@ -5,3 +5,4 @@ Exec=env GNOME_SHELL_SESSION_MODE=classic gnome-session
 TryExec=gnome-session
 Type=Application
 DesktopNames=GNOME-Classic;GNOME;
+X-GDM-SessionRegisters=true
