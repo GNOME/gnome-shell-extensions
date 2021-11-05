@@ -13,20 +13,15 @@ const Util = Me.imports.util;
 const SETTINGS_KEY = 'name';
 
 class ThemeManager {
-    constructor() {
-        this._settings = ExtensionUtils.getSettings();
-    }
-
     enable() {
-        this._changedId = this._settings.connect(`changed::${SETTINGS_KEY}`, this._changeTheme.bind(this));
+        this._settings = ExtensionUtils.getSettings();
+        this._settings.connect(`changed::${SETTINGS_KEY}`, this._changeTheme.bind(this));
         this._changeTheme();
     }
 
     disable() {
-        if (this._changedId) {
-            this._settings.disconnect(this._changedId);
-            this._changedId = 0;
-        }
+        this._settings?.run_dispose();
+        this._settings = null;
 
         Main.setThemeStylesheet(null);
         Main.loadTheme();
