@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2021-07-19 15:59+0000\n"
-"PO-Revision-Date: 2021-09-23 16:37+0200\n"
-"Last-Translator: gogo <linux.hr@protonmail.com>\n"
+"POT-Creation-Date: 2021-11-06 14:08+0000\n"
+"PO-Revision-Date: 2021-11-12 12:24+0100\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -18,21 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME klasičan"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Ova sesija vas prijavljuje u klasičan GNOME"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME klasičan na Waylandu"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME klasičan na Xorgu"
+
+#: extensions/apps-menu/extension.js:112
 msgid "Favorites"
 msgstr "Omiljeni"
 
-#: extensions/apps-menu/extension.js:367
+#: extensions/apps-menu/extension.js:366
 msgid "Applications"
 msgstr "Aplikacije"
 
@@ -48,26 +57,26 @@ msgstr ""
 "Popis nizova, svaki sadrži aplikaciju (naziv datoteke prečaca), slijedeći "
 "stupac i broj radnog prostora"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:34
 msgid "Workspace Rules"
 msgstr "Pravila radnog prostora"
 
-#: extensions/auto-move-windows/prefs.js:237
+#: extensions/auto-move-windows/prefs.js:236
 msgid "Add Rule"
 msgstr "Dodaj pravilo"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:134
+#: extensions/drive-menu/extension.js:133
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Izbacivanje uređaja “%s” neuspjelo:"
 
-#: extensions/drive-menu/extension.js:150
+#: extensions/drive-menu/extension.js:149
 msgid "Removable devices"
 msgstr "Prijenosni uređaji"
 
-#: extensions/drive-menu/extension.js:172
+#: extensions/drive-menu/extension.js:171
 msgid "Open Files"
 msgstr "Otvori datoteku"
 
@@ -100,8 +109,8 @@ msgstr ""
 "zaobilazeći zadano smještanje ljuske na dnu. Promjena ove postavke zahtijeva "
 "ponovno pokretanje ljuske kako bi se primijenila."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:92
+#: extensions/places-menu/extension.js:88
+#: extensions/places-menu/extension.js:91
 msgid "Places"
 msgstr "Lokacije"
 
@@ -144,47 +153,47 @@ msgstr "Naziv teme"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Naziv teme, mora se učitati iz ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Zatvori"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Vrati"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Smanji"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Prikaži u prozoru"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Uvećaj"
 
-#: extensions/window-list/extension.js:432
+#: extensions/window-list/extension.js:434
 msgid "Minimize all"
 msgstr "Smanji sve"
 
-#: extensions/window-list/extension.js:438
+#: extensions/window-list/extension.js:440
 msgid "Unminimize all"
 msgstr "Vrati sve"
 
-#: extensions/window-list/extension.js:444
+#: extensions/window-list/extension.js:446
 msgid "Maximize all"
 msgstr "Uvećaj sve"
 
-#: extensions/window-list/extension.js:452
+#: extensions/window-list/extension.js:454
 msgid "Unmaximize all"
 msgstr "Prikaži u prozoru sve"
 
-#: extensions/window-list/extension.js:460
+#: extensions/window-list/extension.js:462
 msgid "Close all"
 msgstr "Zatvori sve"
 
-#: extensions/window-list/extension.js:737
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Popis prozora"
 
@@ -201,7 +210,7 @@ msgstr ""
 "vrijednosti su:  “never”, “auto” i “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:86
 msgid "Show windows from all workspaces"
 msgstr "Prikaži prozore sa svih radnih prostora"
 
@@ -222,41 +231,41 @@ msgstr ""
 "Treba li prikazati popis prozora na svim povezanim zaslonima ili smo na "
 "glavnom."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:39
 msgid "Window Grouping"
 msgstr "Grupiranje prozora"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:63
 msgid "Never group windows"
 msgstr "Ne grupiraj prozore"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:64
 msgid "Group windows when space is limited"
 msgstr "Grupiraj prozore kada je prostor ograničen"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:65
 msgid "Always group windows"
 msgstr "Uvijek grupiraj prozore"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:81
 msgid "Show on all monitors"
 msgstr "Prikaži na svim zaslonima"
 
 #: extensions/window-list/workspaceIndicator.js:249
-#: extensions/workspace-indicator/extension.js:255
+#: extensions/workspace-indicator/extension.js:254
 msgid "Workspace Indicator"
 msgstr "Indikator radnog prostora"
 
-#: extensions/workspace-indicator/prefs.js:34
+#: extensions/workspace-indicator/prefs.js:33
 msgid "Workspace Names"
 msgstr "Nazivi radnih prostora"
 
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:66
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Radni prostor %d"
 
-#: extensions/workspace-indicator/prefs.js:208
+#: extensions/workspace-indicator/prefs.js:207
 msgid "Add Workspace"
 msgstr "Dodaj radni prostor"
 
