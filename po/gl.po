@@ -3,37 +3,54 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
 # Fran Diéguez <frandieguez@gnome.org>, 2011.
-# Fran Dieguez <frandieguez@gnome.org>, 2011-2020, 2021.
+# Fran Dieguez <fran.dieguez@gnome.org>, 2011-2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/is"
-"sues\n"
-"POT-Creation-Date: 2020-10-17 20:14+0000\n"
-"PO-Revision-Date: 2021-02-24 20:41+0100\n"
-"Last-Translator: Fran Diéguez <frandieguez@gnome.org>\n"
-"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2021-11-06 14:08+0000\n"
+"PO-Revision-Date: 2021-11-19 22:50+0100\n"
+"Last-Translator: Fran Dieguez <fran.dieguez@gnome.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 40.0\n"
 "X-Project-Style: gnome\n"
+"X-DL-Team: gl\n"
+"X-DL-Module: gnome-shell-extensions\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME clásico"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Esta sesión iniciarao en GNOME clásico"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME clásico en Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME clásico en Xorg"
+
+#: extensions/apps-menu/extension.js:112
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:366
 msgid "Applications"
 msgstr "Aplicacións"
 
@@ -49,26 +66,26 @@ msgstr ""
 "Unha lista de cadeas, cada unha das cales contén un id de aplicación (nome "
 "de ficheiro desktop), seguido por unha coma e o número do espazo de traballo"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:34
 msgid "Workspace Rules"
 msgstr "Regras da área de traballo"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:236
 msgid "Add Rule"
 msgstr "Engadir regra"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
+#: extensions/drive-menu/extension.js:133
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Fallo ao extraer a unidade «%s»:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:149
 msgid "Removable devices"
 msgstr "Dispositivos extraíbeis"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:171
 msgid "Open Files"
 msgstr "Abrir ficheiros"
 
@@ -82,8 +99,7 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"Tente usar mais pantalla para dispor as miniaturas das xanelas adaptándose"
-" á "
+"Tente usar mais pantalla para dispor as miniaturas das xanelas adaptándose á "
 "taxa de aspecto da pantalla e consolidalas para reducir a caixa envolvente. "
 "Esta configuración aplícase só para a estratexia de disposición natural."
 
@@ -101,8 +117,8 @@ msgstr ""
 "respectiva, omitindo a disposición inferior por omisión do shell. Se cambia "
 "esta configuración deberá reiniciar o shell para que se apliquen os cambios."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:88
+#: extensions/places-menu/extension.js:91
 msgid "Places"
 msgstr "Lugares"
 
@@ -145,47 +161,47 @@ msgstr "Nome do tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "O nome do tema, a cargar desde ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Pechar"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Restabelecer"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Minimizar"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Restaurar"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: extensions/window-list/extension.js:432
+#: extensions/window-list/extension.js:434
 msgid "Minimize all"
 msgstr "Minimizar todo"
 
-#: extensions/window-list/extension.js:438
+#: extensions/window-list/extension.js:440
 msgid "Unminimize all"
 msgstr "Restaurar todo"
 
-#: extensions/window-list/extension.js:444
+#: extensions/window-list/extension.js:446
 msgid "Maximize all"
 msgstr "Maximizar todo"
 
-#: extensions/window-list/extension.js:452
+#: extensions/window-list/extension.js:454
 msgid "Unmaximize all"
 msgstr "Restaurar todo"
 
-#: extensions/window-list/extension.js:460
+#: extensions/window-list/extension.js:462
 msgid "Close all"
 msgstr "Pechar todo"
 
-#: extensions/window-list/extension.js:738
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Lista de xanelas"
 
@@ -203,7 +219,7 @@ msgstr ""
 "«always» (sempre)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:86
 msgid "Show windows from all workspaces"
 msgstr "Mostrar as xanelas de todos os espazos de traballo"
 
@@ -224,41 +240,41 @@ msgstr ""
 "Indica se mostrar a lista de xanelas en todos os monitores conectados ou só "
 "no primario."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:39
 msgid "Window Grouping"
 msgstr "Agrupación de xanelas"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:63
 msgid "Never group windows"
 msgstr "Non agrupar nunca as xanelas"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:64
 msgid "Group windows when space is limited"
 msgstr "Agrupar as xanelas cando o espazo é limitado"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:65
 msgid "Always group windows"
 msgstr "Agrupar sempre as xanelas"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:81
 msgid "Show on all monitors"
 msgstr "Mostrar en todos os monitores"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:249
+#: extensions/workspace-indicator/extension.js:254
 msgid "Workspace Indicator"
 msgstr "Indicador de espazo de traballo"
 
-#: extensions/workspace-indicator/prefs.js:34
+#: extensions/workspace-indicator/prefs.js:33
 msgid "Workspace Names"
 msgstr "Nomes dos espazos de traballo"
 
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:66
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Espazos de traballo %d"
 
-#: extensions/workspace-indicator/prefs.js:218
+#: extensions/workspace-indicator/prefs.js:207
 msgid "Add Workspace"
 msgstr "Engadir área de traballo"
 
