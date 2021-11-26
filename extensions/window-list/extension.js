@@ -925,11 +925,8 @@ class WindowList extends St.Widget {
     }
 
     _updateKeyboardAnchor() {
-        if (!Main.keyboard.keyboardActor)
-            return;
-
-        let translationY = Main.overview.visible ? 0 : this.height;
-        Main.keyboard.keyboardActor.translation_y = -translationY;
+        const translationY = Main.overview.visible ? 0 : this.height;
+        Main.layoutManager.keyboardBox.translation_y = -translationY;
     }
 
     _onAppStateChanged(appSys, app) {
