@@ -1,3 +1,12 @@
+40.5
+====
+* native-window-placement: Fix distorted layout in app grid [Sebastian; !189]
+* window-list: Fix on-screen keyboard [Florian; !199]
+* Misc. bug fixes [Neal; !195]
+
+Contributors:
+  Neal Gompa, Sebastian Keller, Florian Müllner
+
 40.4
 ====
 * drive-menu: Fix indicator visibility [Florian; !176]
