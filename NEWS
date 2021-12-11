@@ -1,3 +1,15 @@
+41.1
+====
+* native-window-placement: Fix distorted layout in app grid [Sebastian; !189]
+* window-list: Fix on-screen keyboard [Florian; !199]
+* Misc. bug fixes [Neal; !195]
+
+Contributors:
+  Neal Gompa, Sebastian Keller, Florian Müllner
+
+Translators:
+  Goran Vidović [hr], Sveinn í Felli [is]
+
 41.0
 ====
 * Bump version
