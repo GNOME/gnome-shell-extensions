@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2020-09-21 16:55+0300\n"
-"Last-Translator: Alexey Rubtsov <rushills@gmail.com>\n"
+"POT-Creation-Date: 2021-11-06 14:08+0000\n"
+"PO-Revision-Date: 2021-12-11 15:12+0300\n"
+"Last-Translator: Aleksandr Melman <Alexmelman88@gmail.com>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -19,21 +19,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.0\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "Классический GNOME"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Данный сеанс использует классический рабочий стол GNOME"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "Классический GNOME на Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "Классический GNOME на Xorg"
+
+#: extensions/apps-menu/extension.js:112
 msgid "Favorites"
 msgstr "Избранное"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:366
 msgid "Applications"
 msgstr "Приложения"
 
@@ -49,26 +58,26 @@ msgstr ""
 "Список строк, содержащих идентификатор приложения (имя desktop-файла), за "
 "которым следует двоеточие и номер рабочего места"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:34
 msgid "Workspace Rules"
 msgstr "Правила для рабочей области"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:236
 msgid "Add Rule"
 msgstr "Добавить правило"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
+#: extensions/drive-menu/extension.js:133
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Не удалось извлечь диск «%s»:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:149
 msgid "Removable devices"
 msgstr "Съёмные устройства"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:171
 msgid "Open Files"
 msgstr "Открыть файлы"
 
@@ -101,8 +110,8 @@ msgstr ""
 "умолчанию заголовки располагаются снизу). При изменении этого параметра, "
 "чтобы оно вступило в силу, необходимо перезапустить Shell."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:88
+#: extensions/places-menu/extension.js:91
 msgid "Places"
 msgstr "Места"
 
@@ -145,49 +154,49 @@ msgstr "Название темы"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Название темы, загружаемой из ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Закрыть"
 
 # ну или "восстановить", правда тогда появляется неоднозначный повтор (unmaximize)
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Вернуть"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Свернуть"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Восстановить"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Развернуть"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:434
 msgid "Minimize all"
 msgstr "Свернуть все"
 
 # ну или "восстановить", правда тогда появляется неоднозначный повтор (unmaximize)
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:440
 msgid "Unminimize all"
 msgstr "Вернуть все"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:446
 msgid "Maximize all"
 msgstr "Развернуть все"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:454
 msgid "Unmaximize all"
 msgstr "Восстановить все"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:462
 msgid "Close all"
 msgstr "Закрыть все"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Список окон"
 
@@ -205,7 +214,7 @@ msgstr ""
 "«always» — всегда."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:86
 msgid "Show windows from all workspaces"
 msgstr "Отображать окна со всех рабочих областей"
 
@@ -226,132 +235,41 @@ msgstr ""
 "Показывать ли список окон на всех подключенных мониторах или только на "
 "основном."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:39
 msgid "Window Grouping"
 msgstr "Группировка окон"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:63
 msgid "Never group windows"
 msgstr "Никогда не группировать окна"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:64
 msgid "Group windows when space is limited"
 msgstr "Группировать окна, если место ограничено"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:65
 msgid "Always group windows"
 msgstr "Всегда группировать окна"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:81
 msgid "Show on all monitors"
 msgstr "Показывать на всех мониторах"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:249
+#: extensions/workspace-indicator/extension.js:254
 msgid "Workspace Indicator"
 msgstr "Индикатор рабочей области"
 
-#: extensions/workspace-indicator/prefs.js:34
+#: extensions/workspace-indicator/prefs.js:33
 msgid "Workspace Names"
 msgstr "Названия рабочих областей"
 
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:66
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Рабочая область %d"
 
-#: extensions/workspace-indicator/prefs.js:218
+#: extensions/workspace-indicator/prefs.js:207
 msgid "Add Workspace"
 msgstr "Добавить рабочую область"
 
-#~ msgid "Attach modal dialog to the parent window"
-#~ msgstr "Прикреплять модальное диалоговое окно к родительскому окну"
-
-#~ msgid ""
-#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-#~ msgstr ""
-#~ "Этот ключ переопределяет ключ в org.gnome.mutter при запуске GNOME Shell."
-
-#~ msgid "Arrangement of buttons on the titlebar"
-#~ msgstr "Расположение кнопок в заголовке"
-
-#~ msgid ""
-#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
-#~ "running GNOME Shell."
-#~ msgstr ""
-#~ "Этот ключ переопределяет ключ в org.gnome.desktop.wm.preferences при "
-#~ "запуске GNOME Shell."
-
-#~ msgid "Enable edge tiling when dropping windows on screen edges"
-#~ msgstr ""
-#~ "Автоматически изменять размеры окна при перемещении окна к краям экрана"
-
-#~ msgid "Workspaces only on primary monitor"
-#~ msgstr "Рабочие места только на основном мониторе"
-
-#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
-#~ msgstr "Задержка изменения фокуса в режиме мыши после остановки указателя"
-
-#~ msgid "Thumbnail only"
-#~ msgstr "Только миниатюры"
-
-#~ msgid "Application icon only"
-#~ msgstr "Только значок приложения"
-
-#~ msgid "Thumbnail and application icon"
-#~ msgstr "Миниатюра и значок приложения"
-
-#~ msgid "Present windows as"
-#~ msgstr "Отображать окна как"
-
-#~ msgid "Activities Overview"
-#~ msgstr "Обзор"
-
-#~ msgid "Application"
-#~ msgstr "Приложение"
-
-#~ msgid "Create new matching rule"
-#~ msgstr "Создать новое правило соответствия"
-
-#~ msgid "Add"
-#~ msgstr "Добавить"
-
-#~ msgid "Hello, world!"
-#~ msgstr "Привет, мир!"
-
-#~ msgid "Alternative greeting text."
-#~ msgstr "Альтернативный текст приветствия."
-
-#~ msgid ""
-#~ "If not empty, it contains the text that will be shown when clicking on "
-#~ "the panel."
-#~ msgstr ""
-#~ "Если строка не пуста, то содержащийся в ней текст будет показан при "
-#~ "нажатии на панель."
-
-#~ msgid "Message"
-#~ msgstr "Сообщение"
-
-#~ msgid ""
-#~ "Example aims to show how to build well behaved extensions for the Shell "
-#~ "and as such it has little functionality on its own.\n"
-#~ "Nevertheless it’s possible to customize the greeting message."
-#~ msgstr ""
-#~ "Цель расширения Example — показать, как создавать расширения для Shell, "
-#~ "само по себе оно имеет малую функциональность.\n"
-#~ "Тем не менее, можно настроить приветственное сообщение."
-
-#~ msgid "Name"
-#~ msgstr "Название"
-
-#~ msgid "CPU"
-#~ msgstr "ЦП"
-
-#~ msgid "Memory"
-#~ msgstr "Память"
-
-#~ msgid "GNOME Shell Classic"
-#~ msgstr "Классический GNOME Shell"
-
-#~ msgid "Window management and application launching"
-#~ msgstr "Управление окнами и запуск приложений"
