@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/is"
 "sues\n"
-"POT-Creation-Date: 2021-07-19 15:59+0000\n"
-"PO-Revision-Date: 2021-09-29 07:48+0000\n"
+"POT-Creation-Date: 2021-11-06 14:08+0000\n"
+"PO-Revision-Date: 2021-12-13 09:07+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,17 +20,28 @@ msgstr ""
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
-msgstr "GNOME Klassík"
+msgstr "Hefðbundið GNOME"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Þessi seta skráir þig inn í klassískt GNOME"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Wayland"
+msgstr "Hefðbundið GNOME á Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Xorg"
+msgstr "Hefðbundið GNOME á Xorg"
+
+#: extensions/apps-menu/extension.js:112
 msgid "Favorites"
 msgstr "Eftirlæti"
 
-#: extensions/apps-menu/extension.js:367
+#: extensions/apps-menu/extension.js:366
 msgid "Applications"
 msgstr "Forrit"
 
@@ -46,27 +57,26 @@ msgstr ""
 "Listi yfir textastrengi, þar sem hver þeirra inniheldur forritsauðkenni "
 "(heiti skjáborðsskrár) að viðbættum tvípunkti og svo númeri vinnusvæðis"
 
-#: extensions/auto-move-windows/prefs.js:35
-#| msgid "Workspace Names"
+#: extensions/auto-move-windows/prefs.js:34
 msgid "Workspace Rules"
 msgstr "Vinnusvæðareglur"
 
-#: extensions/auto-move-windows/prefs.js:237
+#: extensions/auto-move-windows/prefs.js:236
 msgid "Add Rule"
 msgstr "Bæta við reglu"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:134
+#: extensions/drive-menu/extension.js:133
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Útspýting drifsins '%s' mistókst:"
 
-#: extensions/drive-menu/extension.js:150
+#: extensions/drive-menu/extension.js:149
 msgid "Removable devices"
 msgstr "Útskiptanleg tæki"
 
-#: extensions/drive-menu/extension.js:172
+#: extensions/drive-menu/extension.js:171
 msgid "Open Files"
 msgstr "Opna skrár"
 
@@ -99,8 +109,8 @@ msgstr ""
 "öfugt við það sem sjálfgefið er í skelinni sem setur þær neðst. Breytingar á "
 "þessum stillingum krefjast þess að skelin sé endurræst svo að þær taki gildi."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:92
+#: extensions/places-menu/extension.js:88
+#: extensions/places-menu/extension.js:91
 msgid "Places"
 msgstr "Staðir"
 
@@ -143,47 +153,47 @@ msgstr "Heiti þema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Heiti á þema, hlaðið inn frá ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Loka"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Endurheimta"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Lágmarka"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Minnka glugga"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Hámarka"
 
-#: extensions/window-list/extension.js:432
+#: extensions/window-list/extension.js:434
 msgid "Minimize all"
 msgstr "Lágmarka allt"
 
-#: extensions/window-list/extension.js:438
+#: extensions/window-list/extension.js:440
 msgid "Unminimize all"
 msgstr "Endurheimta allt"
 
-#: extensions/window-list/extension.js:444
+#: extensions/window-list/extension.js:446
 msgid "Maximize all"
 msgstr "Hámarka allt"
 
-#: extensions/window-list/extension.js:452
+#: extensions/window-list/extension.js:454
 msgid "Unmaximize all"
 msgstr "Minnka allt"
 
-#: extensions/window-list/extension.js:460
+#: extensions/window-list/extension.js:462
 msgid "Close all"
 msgstr "Loka öllu"
 
-#: extensions/window-list/extension.js:737
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Gluggalisti"
 
@@ -200,15 +210,11 @@ msgstr ""
 "Möguleg gildi eru „aldrei‟, „sjálfvirkt‟ og „alltaf‟."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
-#| msgid "Show only windows in the current workspace"
+#: extensions/window-list/prefs.js:86
 msgid "Show windows from all workspaces"
 msgstr "Birta glugga frá öllum vinnusvæðum"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
-#| msgid ""
-#| "Whether to show the window list on all connected monitors or only on the "
-#| "primary one."
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr ""
 "Hvort birta eigi glugga frá öllum vinnusvæðum eða einungis því sem er virkt."
@@ -224,42 +230,41 @@ msgid ""
 msgstr ""
 "Hvort birta eigi gluggalistann á öllum tengdum skjám eða einungis á aðalskjá."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:39
 msgid "Window Grouping"
 msgstr "Hópun glugga"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:63
 msgid "Never group windows"
 msgstr "Aldrei hópa glugga"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:64
 msgid "Group windows when space is limited"
 msgstr "Hópa glugga þegar pláss er takmarkað"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:65
 msgid "Always group windows"
 msgstr "Alltaf hópa glugga"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:81
 msgid "Show on all monitors"
 msgstr "Birta á öllum skjám"
 
 #: extensions/window-list/workspaceIndicator.js:249
-#: extensions/workspace-indicator/extension.js:255
+#: extensions/workspace-indicator/extension.js:254
 msgid "Workspace Indicator"
 msgstr "Vinnusvæðavísir"
 
-#: extensions/workspace-indicator/prefs.js:34
+#: extensions/workspace-indicator/prefs.js:33
 msgid "Workspace Names"
 msgstr "Vinnusvæðaheiti"
 
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:66
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Vinnusvæði %d"
 
-#: extensions/workspace-indicator/prefs.js:208
-#| msgid "Workspace"
+#: extensions/workspace-indicator/prefs.js:207
 msgid "Add Workspace"
 msgstr "Bæta við vinnusvæði"
 
