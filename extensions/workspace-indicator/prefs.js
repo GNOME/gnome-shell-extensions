@@ -120,13 +120,6 @@ class WorkspaceRow extends Gtk.ListBoxRow {
     _init(name) {
         super._init({ name });
 
-        const controller = new Gtk.ShortcutController();
-        controller.add_shortcut(new Gtk.Shortcut({
-            trigger: Gtk.ShortcutTrigger.parse_string('Escape'),
-            action: Gtk.CallbackAction.new(this._stopEdit.bind(this)),
-        }));
-        this.add_controller(controller);
-
         const box = new Gtk.Box({
             spacing: 12,
             margin_top: 6,
@@ -155,6 +148,16 @@ class WorkspaceRow extends Gtk.ListBoxRow {
         this._entry = new Gtk.Entry({
             max_width_chars: 25,
         });
+
+        const controller = new Gtk.ShortcutController();
+        controller.add_shortcut(new Gtk.Shortcut({
+            trigger: Gtk.ShortcutTrigger.parse_string('Escape'),
+            action: Gtk.CallbackAction.new(() => {
+                this._stopEdit();
+                return true;
+            }),
+        }));
+        this._entry.add_controller(controller);
 
         this._stack = new Gtk.Stack();
         this._stack.add_named(box, 'display');
