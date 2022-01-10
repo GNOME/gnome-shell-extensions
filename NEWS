@@ -1,3 +1,20 @@
+42.alpha
+========
+* native-window-placement: Fix distorted layout in app grid [Sebastian; !189]
+* window-list: Fix on-screen keyboard [Florian; !199]
+* Misc. bug fixes and cleanups [Neal; Just; !195, !197]
+
+Contributors:
+  Piotr Drąg, Neal Gompa, Sebastian Keller, Florian Müllner, Just Perfection
+
+Translators:
+  Goran Vidović [hr], Sveinn í Felli [is], Yuri Chornoivan [uk],
+  Fabio Tomat [fur], Quentin PAGÈS [oc], Hugo Carvalho [pt],
+  Yaron Shahrabani [he], Jordi Mas i Hernandez [ca], MohammadSaleh Kamyab [fa],
+  Fran Dieguez [gl], Daniel Mustieles [es], Aleksandr Melman [ru],
+  Aurimas Černius [lt], Asier Sarasua Garmendia [eu], Kukuh Syafaat [id],
+  Rafael Fontenelle [pt_BR]
+
 41.0
 ====
 * Bump version
