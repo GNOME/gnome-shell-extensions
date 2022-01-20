@@ -761,10 +761,9 @@ class WindowList extends St.Widget {
 
         let workspaceManager = global.workspace_manager;
 
-        this._workspaceSignals = new Map();
         this._nWorkspacesChangedId = workspaceManager.connect(
-            'notify::n-workspaces', this._onWorkspacesChanged.bind(this));
-        this._onWorkspacesChanged();
+            'notify::n-workspaces', this._updateWorkspaceIndicatorVisibility.bind(this));
+        this._updateWorkspaceIndicatorVisibility();
 
         this._switchWorkspaceId = global.window_manager.connect(
             'switch-workspace', this._checkGrouping.bind(this));
@@ -783,6 +782,10 @@ class WindowList extends St.Widget {
             global.display.connect('in-fullscreen-changed', () => {
                 this._updateKeyboardAnchor();
             });
+
+        this._windowSignals = new Map();
+        this._windowCreatedId = global.display.connect(
+            'window-created', (dsp, win) => this._addWindow(win));
 
         this._dragBeginId = Main.xdndHandler.connect('drag-begin',
             this._monitorDrag.bind(this));
@@ -906,7 +909,7 @@ class WindowList extends St.Widget {
                        w2.metaWindow.get_stable_sequence();
             });
             for (let i = 0; i < windows.length; i++)
-                this._onWindowAdded(null, windows[i].metaWindow);
+                this._addWindow(windows[i].metaWindow);
         } else {
             let apps = this._appSystem.get_running().sort((a1, a2) => {
                 return _getAppStableSequence(a1) -
@@ -946,7 +949,7 @@ class WindowList extends St.Widget {
             child.destroy();
     }
 
-    _onWindowAdded(ws, win) {
+    _addWindow(win) {
         if (!this._grouped)
             this._checkGrouping();
 
@@ -957,59 +960,31 @@ class WindowList extends St.Widget {
         if (children.find(c => c.metaWindow === win))
             return;
 
+        this._windowSignals.set(
+            win, win.connect('unmanaged', () => this._removeWindow(win)));
+
         let button = new WindowButton(win, this._perMonitor, this._monitor.index);
         this._settings.bind('display-all-workspaces',
             button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
         this._windowList.add_child(button);
     }
 
-    _onWindowRemoved(ws, win) {
+    _removeWindow(win) {
         if (this._grouped)
             this._checkGrouping();
 
         if (this._grouped)
             return;
 
-        if (win.get_compositor_private())
-            return; // not actually removed, just moved to another workspace
+        const id = this._windowSignals.get(win);
+        if (id)
+            win.disconnect(id);
+        this._windowSignals.delete(id);
 
         let children = this._windowList.get_children();
         let child = children.find(c => c.metaWindow === win);
         if (child)
             child.destroy();
-    }
-
-    _onWorkspacesChanged() {
-        let workspaceManager = global.workspace_manager;
-        let numWorkspaces = workspaceManager.n_workspaces;
-
-        for (let i = 0; i < numWorkspaces; i++) {
-            let workspace = workspaceManager.get_workspace_by_index(i);
-            if (this._workspaceSignals.has(workspace))
-                continue;
-
-            let signals = { windowAddedId: 0, windowRemovedId: 0 };
-            signals._windowAddedId = workspace.connect_after(
-                'window-added', this._onWindowAdded.bind(this));
-            signals._windowRemovedId = workspace.connect(
-                'window-removed', this._onWindowRemoved.bind(this));
-            this._workspaceSignals.set(workspace, signals);
-        }
-
-        this._updateWorkspaceIndicatorVisibility();
-    }
-
-    _disconnectWorkspaceSignals() {
-        let workspaceManager = global.workspace_manager;
-        let numWorkspaces = workspaceManager.n_workspaces;
-
-        for (let i = 0; i < numWorkspaces; i++) {
-            let workspace = workspaceManager.get_workspace_by_index(i);
-            let signals = this._workspaceSignals.get(workspace);
-            this._workspaceSignals.delete(workspace);
-            workspace.disconnect(signals._windowAddedId);
-            workspace.disconnect(signals._windowRemovedId);
-        }
     }
 
     _monitorDrag() {
@@ -1075,18 +1050,20 @@ class WindowList extends St.Widget {
         Main.keyboard._bottomDragAction.disconnect(this._keyboardVisiblechangedId);
         this._keyboardVisiblechangedId = 0;
 
-        this._disconnectWorkspaceSignals();
         global.workspace_manager.disconnect(this._nWorkspacesChangedId);
         this._nWorkspacesChangedId = 0;
 
         global.window_manager.disconnect(this._switchWorkspaceId);
         this._switchWorkspaceId = 0;
 
+        this._windowSignals.forEach((id, win) => win.disconnect(id));
+        this._windowSignals.clear();
 
         Main.overview.disconnect(this._overviewShowingId);
         Main.overview.disconnect(this._overviewHidingId);
 
         global.display.disconnect(this._fullscreenChangedId);
+        global.display.disconnect(this._windowCreatedId);
 
         this._stopMonitoringDrag();
         Main.xdndHandler.disconnect(this._dragBeginId);
