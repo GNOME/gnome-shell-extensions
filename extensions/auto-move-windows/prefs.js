@@ -2,7 +2,7 @@
 // Start apps on custom workspaces
 /* exported init buildPrefsWidget */
 
-const { Gio, GLib, GObject, Gtk, Pango } = imports.gi;
+const { Adw, Gio, GLib, GObject, Gtk, Pango } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -13,44 +13,17 @@ const SETTINGS_KEY = 'application-list';
 const WORKSPACE_MAX = 36; // compiled in limit of mutter
 
 const AutoMoveSettingsWidget = GObject.registerClass(
-class AutoMoveSettingsWidget extends Gtk.ScrolledWindow {
+class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
     _init() {
         super._init({
-            hscrollbar_policy: Gtk.PolicyType.NEVER,
+            title: _('Workspace Rules'),
         });
-
-        const box = new Gtk.Box({
-            orientation: Gtk.Orientation.VERTICAL,
-            halign: Gtk.Align.CENTER,
-            spacing: 12,
-            margin_top: 36,
-            margin_bottom: 36,
-            margin_start: 36,
-            margin_end: 36,
-        });
-        this.set_child(box);
-
-        box.append(new Gtk.Label({
-            label: '<b>%s</b>'.format(_('Workspace Rules')),
-            use_markup: true,
-            halign: Gtk.Align.START,
-        }));
 
         this._list = new Gtk.ListBox({
             selection_mode: Gtk.SelectionMode.NONE,
-            valign: Gtk.Align.START,
-            show_separators: true,
+            css_classes: ['content'],
         });
-        box.append(this._list);
-
-        const context = this._list.get_style_context();
-        const cssProvider = new Gtk.CssProvider();
-        cssProvider.load_from_data(
-            'list { min-width: 30em; }');
-
-        context.add_provider(cssProvider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        context.add_class('frame');
+        this.add(this._list);
 
         this._list.append(new NewRuleRow());
 
@@ -206,6 +179,7 @@ const RuleRow = GObject.registerClass({
             action_name: 'rules.remove',
             action_target: new GLib.Variant('s', this.id),
             icon_name: 'edit-delete-symbolic',
+            has_frame: false,
         });
         box.append(button);
 
