@@ -20,7 +20,7 @@ foreach name: session_desktops
         session_instdir = xsessiondir
         #session_instdir = [ xesssiondir, wlsessiondir ]
     endif
-    i18n.merge_file('',
+    i18n.merge_file(
       input:  session_desktop + '.in',
       output: session_desktop,
       po_dir: '../po',
