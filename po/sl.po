@@ -1,39 +1,48 @@
-# Slovenian translation for gnome-shell-extension-openweather.
+# Slovenian translation for gnome-shell-extensions.
 # Copyright (C) YEAR Jens Lody
-# This file is distributed under the same license as the gnome-shell-extension-openweather package.
+# This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2018–2020.
+# Matej Urbančič <mateju@svn.gnome.org>, 2018–2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-shell-extension-openweather 1.1\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
-"issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2020-06-01 15:34+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: sl\n"
+"Project-Id-Version: gnome-shell-extensions\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
+"POT-Creation-Date: 2022-01-26 12:35+0000\n"
+"PO-Revision-Date: 2022-01-26 21:55+0100\n"
+"Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
+"Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
-"%100<=4 ? 2 : 3);\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.0\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
-msgstr "Običajno namizje GNOME"
+msgstr "Klasično namizje GNOME"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
-msgstr "Seja omogoča prijavo v običajno namizje GNOME."
+msgstr "Seja omogoča prijavo v klasično namizje GNOME."
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Wayland"
+msgstr "Klasično namizje GNOME na sistemu Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "Klasično namizje GNOME na sistemu Xorg"
+
+#: extensions/apps-menu/extension.js:112
 msgid "Favorites"
-msgstr "Priljubljeni stiki"
+msgstr "Priljubljeno"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:366
 msgid "Applications"
 msgstr "Programi"
 
@@ -43,32 +52,30 @@ msgstr "Seznam programov in delovnih površin"
 
 #: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
 msgid ""
-"A list of strings, each containing an application id (desktop file name), "
-"followed by a colon and the workspace number"
+"A list of strings, each containing an application id (desktop file name), followed by a colon and the "
+"workspace number"
 msgstr ""
-"Seznam nizov z določilom ID programa (ime programa), ki mu sledi dvopičje in "
-"nato številka delovne površine."
+"Seznam nizov z določilom ID programa (ime programa), ki mu sledi dvopičje in nato številka delovne površine."
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:34
 msgid "Workspace Rules"
 msgstr "Pravila delovnih površin"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:236
 msgid "Add Rule"
 msgstr "Dodaj pravilo"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:133 extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Izmetavanje pogona »%s« je spodletelo:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:149
 msgid "Removable devices"
 msgstr "Odstranljive naprave"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:171
 msgid "Open Files"
 msgstr "Odpri datoteke"
 
@@ -78,13 +85,11 @@ msgstr "Uporabi več zaslona za okna"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
 msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. "
-"This setting applies only with the natural placement strategy."
+"Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and consolidating "
+"them further to reduce the bounding box. This setting applies only with the natural placement strategy."
 msgstr ""
-"Poskusi uporabiti več zaslona za postavitev sličic oken s prilagajanjem "
-"razmerja velikosti zaslona in prilagajanjem postavitve okvirja. Nastavitev "
-"je mogoče uporabiti le z naravnim načinom postavitve."
+"Poskusi uporabiti več zaslona za postavitev sličic oken s prilagajanjem razmerja velikosti zaslona in "
+"prilagajanjem postavitve okvirja. Nastavitev je mogoče uporabiti le z naravnim načinom postavitve."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
@@ -92,16 +97,13 @@ msgstr "Postavi nazive oken na vrh "
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
+"If true, place window captions on top the respective thumbnail, overriding shell default of placing it at "
+"the bottom. Changing this setting requires restarting the shell to have any effect."
 msgstr ""
-"Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice in s "
-"tem prepiše privzeti izpis pod sličico. Za uveljavitev sprememb je treba "
-"lupino ponovno zagnati."
+"Izbrana možnost določi postavitev nazivov oken na vrh posamezne sličice in s tem prepiše privzeti izpis pod "
+"sličico. Za uveljavitev sprememb je treba lupino ponovno zagnati."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:88 extensions/places-menu/extension.js:91
 msgid "Places"
 msgstr "Mesta"
 
@@ -115,14 +117,13 @@ msgstr "Zaganjanje »%s« je spodletelo."
 msgid "Failed to mount volume for “%s”"
 msgstr "Priklapljanje nosilca za »%s« je spodletelo"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
+#: extensions/places-menu/placeDisplay.js:148 extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Računalnik"
 
 #: extensions/places-menu/placeDisplay.js:359
 msgid "Home"
-msgstr "Home"
+msgstr "Osebna mapa"
 
 #: extensions/places-menu/placeDisplay.js:404
 msgid "Browse Network"
@@ -130,11 +131,11 @@ msgstr "Prebrskaj omrežje"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
 msgid "Cycle Screenshot Sizes"
-msgstr "Preklapljaj velikost zaslonske slike"
+msgstr "Preklapljaj velikosti zaslonske slike"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
 msgid "Cycle Screenshot Sizes Backward"
-msgstr "Preklapljaj velikost zaslonske slike"
+msgstr "Preklapljaj velikosti zaslonske slike vzvratno"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
 msgid "Theme name"
@@ -144,47 +145,47 @@ msgstr "Ime teme"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Ime teme, ki bo naložena iz ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Zapri"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Povečaj"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Skrči"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Pomanjšaj"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Razpni"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:434
 msgid "Minimize all"
 msgstr "Skrči vse"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:440
 msgid "Unminimize all"
 msgstr "Pomanjšaj vse"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:446
 msgid "Maximize all"
 msgstr "Razpni vse"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:454
 msgid "Unmaximize all"
 msgstr "Pomanjšaj vse"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:462
 msgid "Close all"
 msgstr "Zapri vse"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Seznam oken"
 
@@ -194,68 +195,63 @@ msgstr "Kdaj naj se okna združujejo skupine?"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
-"Decides when to group windows from the same application on the window list. "
-"Possible values are “never”, “auto” and “always”."
+"Decides when to group windows from the same application on the window list. Possible values are “never”, "
+"“auto” and “always”."
 msgstr ""
-"Določi, kdaj se okna istega programa v seznamu programov združujejo. "
-"Veljavne vrednosti so »nikoli«, »samodejno« in »vedno«."
+"Določi, kdaj se okna istega programa v seznamu programov združujejo. Veljavne vrednosti so »nikoli«, "
+"»samodejno« in »vedno«."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:86
 msgid "Show windows from all workspaces"
 msgstr "Pokaži okna vseh delovnih površin"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
 msgid "Whether to show windows from all workspaces or only the current one."
-msgstr ""
-"Ali naj bo okno prikazano na vseh delovnih površinah ali le na trenutni."
+msgstr "Ali naj bo okno prikazano na vseh delovnih površinah ali le na trenutni."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
 msgstr "Pokaži seznam okna na vseh zaslonih"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
-msgid ""
-"Whether to show the window list on all connected monitors or only on the "
-"primary one."
-msgstr ""
-"Ali naj bo prikazan seznam oken na vseh povezanih zasloni ali le na osnovnem."
+msgid "Whether to show the window list on all connected monitors or only on the primary one."
+msgstr "Ali naj bo prikazan seznam oken na vseh povezanih zasloni ali le na osnovnem."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:39
 msgid "Window Grouping"
 msgstr "Združevanje oken"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:63
 msgid "Never group windows"
 msgstr "Nikoli ne združuj oken"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:64
 msgid "Group windows when space is limited"
 msgstr "Združi okna, ko je prostor omejen"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:65
 msgid "Always group windows"
-msgstr "Okna vedno združi"
+msgstr "Okna vedno združuj"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:81
 msgid "Show on all monitors"
 msgstr "Pokaži na vseh zaslonih"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:249 extensions/workspace-indicator/extension.js:254
 msgid "Workspace Indicator"
 msgstr "Kazalnik delovnih površin"
 
-#: extensions/workspace-indicator/prefs.js:34
+#: extensions/workspace-indicator/prefs.js:33
 msgid "Workspace Names"
 msgstr "Imena delovnih površin"
 
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:66
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Delovna površina %d"
 
-#: extensions/workspace-indicator/prefs.js:218
+#: extensions/workspace-indicator/prefs.js:207
 msgid "Add Workspace"
 msgstr "Dodaj delovno površino"
 
@@ -276,23 +272,20 @@ msgstr "Dodaj delovno površino"
 
 #~ msgid ""
 #~ "Openweathermap.org does not work without an api-key.\n"
-#~ "Either set the switch to use the extensions default key in the "
-#~ "preferences dialog to on or register at https://openweathermap.org/appid "
-#~ "and paste your personal key into the preferences dialog."
+#~ "Either set the switch to use the extensions default key in the preferences dialog to on or register at "
+#~ "https://openweathermap.org/appid and paste your personal key into the preferences dialog."
 #~ msgstr ""
 #~ "Povezava s spletiščem Openweathermap.org brez ključa API ne deluje.\n"
-#~ "Med nastavitvami lahko uporabite privzet ključ razširitve ali pa "
-#~ "osebnega, ki ga ustvarite na povezavi https://openweathermap.org/appid in "
-#~ "ga nato kopirate v ustrezno polje nastavitev."
+#~ "Med nastavitvami lahko uporabite privzet ključ razširitve ali pa osebnega, ki ga ustvarite na povezavi "
+#~ "https://openweathermap.org/appid in ga nato kopirate v ustrezno polje nastavitev."
 
 #~ msgid ""
 #~ "Dark Sky does not work without an api-key.\n"
-#~ "Please register at https://darksky.net/dev/register and paste your "
-#~ "personal key into the preferences dialog."
+#~ "Please register at https://darksky.net/dev/register and paste your personal key into the preferences "
+#~ "dialog."
 #~ msgstr ""
 #~ "Prikaz nočnega neba brez ključa API ne deluje.\n"
-#~ "Ustvarite osebni ključ na https://darksky.net/dev/register in ga "
-#~ "prilepite v ustrezno polje nastavitev."
+#~ "Ustvarite osebni ključ na https://darksky.net/dev/register in ga prilepite v ustrezno polje nastavitev."
 
 #~ msgid "Can not connect to %s"
 #~ msgstr "Povezava z %s ni mogoča."
@@ -738,21 +731,17 @@ msgstr "Dodaj delovno površino"
 #~ msgstr "Osvežitev napovedi vremena [min]"
 
 #~ msgid ""
-#~ "Note: the forecast-timout is not used for Dark Sky, because they do not "
-#~ "provide seperate downloads for current weather and forecasts."
+#~ "Note: the forecast-timout is not used for Dark Sky, because they do not provide seperate downloads for "
+#~ "current weather and forecasts."
 #~ msgstr ""
-#~ "Opomba: časovni zamik napovedi pri uporabi podatkov Dark Sky ni na voljo, "
-#~ "saj sistem ne ponuja ločenih podatkov za trenutno vreme in napoved."
+#~ "Opomba: časovni zamik napovedi pri uporabi podatkov Dark Sky ni na voljo, saj sistem ne ponuja ločenih "
+#~ "podatkov za trenutno vreme in napoved."
 
 #~ msgid "Use extensions api-key for openweathermap.org"
 #~ msgstr "Uporabi ključ API za razširitev openweathermap.org"
 
-#~ msgid ""
-#~ "Switch off, if you have your own api-key for openweathermap.org and put "
-#~ "it into the text-box below."
-#~ msgstr ""
-#~ "Možnost je izklopljena, če je v spodnjem polju vpisan osebni ključ API za "
-#~ "openweathermap.org."
+#~ msgid "Switch off, if you have your own api-key for openweathermap.org and put it into the text-box below."
+#~ msgstr "Možnost je izklopljena, če je v spodnjem polju vpisan osebni ključ API za openweathermap.org."
 
 #~ msgid "Weather provider"
 #~ msgstr "Vremenski podatki"
@@ -836,14 +825,13 @@ msgstr "Dodaj delovno površino"
 #~ msgstr "neznano (krajevna izgradnja ?"
 
 #~ msgid ""
-#~ "<span>Weather extension to display weather information from <a href="
-#~ "\"https://openweathermap.org/\">Openweathermap</a> or <a href=\"https://"
-#~ "darksky.net\">Dark Sky</a> for almost all locations in the world.</span>"
+#~ "<span>Weather extension to display weather information from <a href=\"https://openweathermap.org/"
+#~ "\">Openweathermap</a> or <a href=\"https://darksky.net\">Dark Sky</a> for almost all locations in the "
+#~ "world.</span>"
 #~ msgstr ""
 #~ "<span>Razširitev Vreme omogoča prikaz podatkov o vremenu s spletišča \n"
-#~ "<a href=\"https://openweathermap.org/\">Openweathermap</a> oziroma <a "
-#~ "href=\"https://darksky.net\">Dark Sky</a> za skoraj vse kraje na svetu.</"
-#~ "span>"
+#~ "<a href=\"https://openweathermap.org/\">Openweathermap</a> oziroma <a href=\"https://darksky.net\">Dark "
+#~ "Sky</a> za skoraj vse kraje na svetu.</span>"
 
 #~ msgid "Maintained by"
 #~ msgstr "Razširitev vzdržuje"
@@ -853,13 +841,12 @@ msgstr "Dodaj delovno površino"
 
 #~ msgid ""
 #~ "<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
-#~ "See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
-#~ "\">GNU General Public License, version 2 or later</a> for details.</span>"
+#~ "See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, "
+#~ "version 2 or later</a> for details.</span>"
 #~ msgstr ""
 #~ "<span size=\"small\">Program je objavljen brez VSAKRŠNE GARANCIJE.\n"
-#~ "Za več podrobnosti si oglejte <a href=\"https://www.gnu.org/licenses/old-"
-#~ "licenses/gpl-2.0.html\">Splošno Javno Dovoljenje GNU GPL, različice 2 ali "
-#~ "kasnejše</a>.</span>"
+#~ "Za več podrobnosti si oglejte <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">Splošno "
+#~ "Javno Dovoljenje GNU GPL, različice 2 ali kasnejše</a>.</span>"
 
 #~ msgid "About"
 #~ msgstr "O programu"
@@ -874,11 +861,10 @@ msgstr "Dodaj delovno površino"
 #~ msgstr "Enota hitrosti vetra"
 
 #~ msgid ""
-#~ "Choose the units used for wind speed. Allowed values are 'kph', 'mph', 'm/"
-#~ "s', 'knots', 'ft/s' or 'Beaufort'."
+#~ "Choose the units used for wind speed. Allowed values are 'kph', 'mph', 'm/s', 'knots', 'ft/s' or "
+#~ "'Beaufort'."
 #~ msgstr ""
-#~ "Prikaz enote hitrosti vetra, ki je lahko »kph«, »mph«, »m/s«, »vozli«, "
-#~ "»čevlji/s« oziroma  »Beaufort«."
+#~ "Prikaz enote hitrosti vetra, ki je lahko »kph«, »mph«, »m/s«, »vozli«, »čevlji/s« oziroma  »Beaufort«."
 
 #~ msgid "Choose whether to display wind direction through arrows or letters."
 #~ msgstr "Prikaz smeri vetra s puščicami ali s črkovnimi oznakami smeri neba."
