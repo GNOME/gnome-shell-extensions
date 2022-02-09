@@ -17,8 +17,8 @@ Gio._promisify(Gio.FileEnumerator.prototype, 'next_files_async');
 
 const UserThemePrefsWidget = GObject.registerClass(
 class UserThemePrefsWidget extends Adw.PreferencesGroup {
-    _init() {
-        super._init({ title: 'Themes' });
+    constructor() {
+        super({ title: 'Themes' });
 
         this._actionGroup = new Gio.SimpleActionGroup();
         this.insert_action_group('theme', this._actionGroup);
@@ -105,13 +105,13 @@ class UserThemePrefsWidget extends Adw.PreferencesGroup {
 
 const ThemeRow = GObject.registerClass(
 class ThemeRow extends Adw.ActionRow {
-    _init(name) {
+    constructor(name) {
         const check = new Gtk.CheckButton({
             action_name: 'theme.name',
             action_target: new GLib.Variant('s', name),
         });
 
-        super._init({
+        super({
             title: name || 'Default',
             activatable_widget: check,
         });

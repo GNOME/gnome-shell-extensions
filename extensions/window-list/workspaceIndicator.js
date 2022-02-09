@@ -16,8 +16,8 @@ const MAX_THUMBNAILS = 6;
 
 let WindowPreview = GObject.registerClass(
 class WindowPreview extends St.Button {
-    _init(window) {
-        super._init({
+    constructor(window) {
+        super({
             style_class: 'window-list-window-preview',
         });
 
@@ -103,8 +103,8 @@ class WorkspaceLayout extends Clutter.LayoutManager {
 
 let WorkspaceThumbnail = GObject.registerClass(
 class WorkspaceThumbnail extends St.Button {
-    _init(index) {
-        super._init({
+    constructor(index) {
+        super({
             style_class: 'workspace',
             child: new Clutter.Actor({
                 layout_manager: new WorkspaceLayout(),
@@ -245,8 +245,8 @@ class WorkspaceThumbnail extends St.Button {
 
 var WorkspaceIndicator = GObject.registerClass(
 class WorkspaceIndicator extends PanelMenu.Button {
-    _init() {
-        super._init(0.0, _('Workspace Indicator'), true);
+    constructor() {
+        super(0.0, _('Workspace Indicator'), true);
         this.setMenu(new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM));
         this.add_style_class_name('window-list-workspace-indicator');
         this.remove_style_class_name('panel-button');

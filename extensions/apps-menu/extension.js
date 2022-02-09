@@ -26,8 +26,8 @@ Gio._promisify(Gio._LocalFilePrototype, 'set_attributes_async', 'set_attributes_
 
 var ApplicationMenuItem = GObject.registerClass(
 class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
-    _init(button, app) {
-        super._init();
+    constructor(button, app) {
+        super();
         this._app = app;
         this._button = button;
 
@@ -97,8 +97,8 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
 
 var CategoryMenuItem = GObject.registerClass(
 class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
-    _init(button, category) {
-        super._init();
+    constructor(button, category) {
+        super();
         this._category = category;
         this._button = button;
 
@@ -355,8 +355,8 @@ Signals.addSignalMethods(DesktopTarget.prototype);
 
 let ApplicationsButton = GObject.registerClass(
 class ApplicationsButton extends PanelMenu.Button {
-    _init() {
-        super._init(1.0, null, false);
+    constructor() {
+        super(1.0, null, false);
 
         this.setMenu(new ApplicationsMenu(this, 1.0, St.Side.TOP, this));
         Main.panel.menuManager.addMenu(this.menu);

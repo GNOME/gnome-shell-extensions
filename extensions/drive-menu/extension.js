@@ -14,8 +14,8 @@ Gio._promisify(Gio.File.prototype, 'query_filesystem_info_async');
 
 var MountMenuItem = GObject.registerClass(
 class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
-    _init(mount) {
-        super._init({
+    constructor(mount) {
+        super({
             style_class: 'drive-menu-item',
         });
 
@@ -135,8 +135,8 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
 let DriveMenu = GObject.registerClass(
 class DriveMenu extends PanelMenu.Button {
-    _init() {
-        super._init(0.0, _('Removable devices'));
+    constructor() {
+        super(0.0, _('Removable devices'));
 
         let icon = new St.Icon({
             icon_name: 'media-eject-symbolic',

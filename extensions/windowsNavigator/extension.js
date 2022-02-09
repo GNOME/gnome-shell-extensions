@@ -11,8 +11,8 @@ const WINDOW_SLOT = 4;
 
 var MyWorkspace = GObject.registerClass(
 class MyWorkspace extends Workspace.Workspace {
-    _init(...args) {
-        super._init(...args);
+    constructor(...args) {
+        super(...args);
 
         if (this.metaWorkspace && this.metaWorkspace.index() < 9) {
             this._tip = new St.Label({
@@ -119,8 +119,8 @@ class MyWorkspace extends Workspace.Workspace {
 
 var MyWorkspacesView = GObject.registerClass(
 class MyWorkspacesView extends WorkspacesView.WorkspacesView {
-    _init(...args) {
-        super._init(...args);
+    constructor(...args) {
+        super(...args);
 
         this._pickWorkspace = false;
         this._pickWindow = false;

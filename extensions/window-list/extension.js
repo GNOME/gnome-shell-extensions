@@ -108,14 +108,14 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
 
 const WindowTitle = GObject.registerClass(
 class WindowTitle extends St.BoxLayout {
-    _init(metaWindow) {
-        this._metaWindow = metaWindow;
-
-        super._init({
+    constructor(metaWindow) {
+        super({
             style_class: 'window-button-box',
             x_expand: true,
             y_expand: true,
         });
+
+        this._metaWindow = metaWindow;
 
         this._icon = new St.Bin({ style_class: 'window-button-icon' });
         this.add(this._icon);
@@ -187,17 +187,17 @@ const BaseButton = GObject.registerClass({
             false),
     },
 }, class BaseButton extends St.Button {
-    _init(perMonitor, monitorIndex) {
-        this._perMonitor = perMonitor;
-        this._monitorIndex = monitorIndex;
-        this._ignoreWorkspace = false;
-
-        super._init({
+    constructor(perMonitor, monitorIndex) {
+        super({
             style_class: 'window-button',
             can_focus: true,
             x_expand: true,
             button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE,
         });
+
+        this._perMonitor = perMonitor;
+        this._monitorIndex = monitorIndex;
+        this._ignoreWorkspace = false;
 
         this.connect('notify::allocation',
             this._updateIconGeometry.bind(this));
@@ -349,8 +349,8 @@ const BaseButton = GObject.registerClass({
 
 const WindowButton = GObject.registerClass(
 class WindowButton extends BaseButton {
-    _init(metaWindow, perMonitor, monitorIndex) {
-        super._init(perMonitor, monitorIndex);
+    constructor(metaWindow, perMonitor, monitorIndex) {
+        super(perMonitor, monitorIndex);
 
         this.metaWindow = metaWindow;
         this._skipTaskbarId = metaWindow.connect('notify::skip-taskbar', () => {
@@ -485,8 +485,8 @@ class AppContextMenu extends PopupMenu.PopupMenu {
 
 const AppButton = GObject.registerClass(
 class AppButton extends BaseButton {
-    _init(app, perMonitor, monitorIndex) {
-        super._init(perMonitor, monitorIndex);
+    constructor(app, perMonitor, monitorIndex) {
+        super(perMonitor, monitorIndex);
 
         this.app = app;
         this._updateVisibility();
@@ -675,11 +675,8 @@ class AppButton extends BaseButton {
 
 const WindowList = GObject.registerClass(
 class WindowList extends St.Widget {
-    _init(perMonitor, monitor) {
-        this._perMonitor = perMonitor;
-        this._monitor = monitor;
-
-        super._init({
+    constructor(perMonitor, monitor) {
+        super({
             name: 'panel',
             style_class: 'bottom-panel solid',
             reactive: true,
@@ -687,6 +684,9 @@ class WindowList extends St.Widget {
             layout_manager: new Clutter.BinLayout(),
         });
         this.connect('destroy', this._onDestroy.bind(this));
+
+        this._perMonitor = perMonitor;
+        this._monitor = monitor;
 
         let box = new St.BoxLayout({ x_expand: true, y_expand: true });
         this.add_actor(box);

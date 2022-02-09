@@ -14,8 +14,8 @@ function init() {
 
 const WindowListPrefsWidget = GObject.registerClass(
 class WindowListPrefsWidget extends Adw.PreferencesPage {
-    _init() {
-        super._init();
+    constructor() {
+        super();
 
         this._actionGroup = new Gio.SimpleActionGroup();
         this.insert_action_group('window-list', this._actionGroup);

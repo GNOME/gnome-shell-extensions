@@ -26,8 +26,8 @@ class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
         return klass;
     }
 
-    _init() {
-        super._init({
+    constructor() {
+        super({
             title: _('Workspace Names'),
         });
 
@@ -89,8 +89,8 @@ class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
 
 const WorkspaceRow = GObject.registerClass(
 class WorkspaceRow extends Adw.PreferencesRow {
-    _init(name) {
-        super._init({ name });
+    constructor(name) {
+        super({ name });
 
         const box = new Gtk.Box({
             spacing: 12,
@@ -167,8 +167,8 @@ class WorkspaceRow extends Adw.PreferencesRow {
 
 const NewWorkspaceRow = GObject.registerClass(
 class NewWorkspaceRow extends Adw.PreferencesRow {
-    _init() {
-        super._init({
+    constructor() {
+        super({
             action_name: 'workspaces.add',
             child: new Gtk.Image({
                 icon_name: 'list-add-symbolic',

@@ -15,11 +15,10 @@ const {
 
 let MyWorkspacesDisplay = GObject.registerClass(
 class MyWorkspacesDisplay extends WorkspacesDisplay {
-    _init(controls, overviewAdjustment) {
+    constructor(controls, overviewAdjustment) {
         let workspaceManager = global.workspace_manager;
 
-        this._overviewAdjustment = overviewAdjustment;
-        this._workspaceAdjustment = new St.Adjustment({
+        const workspaceAdjustment = new St.Adjustment({
             value: workspaceManager.get_active_workspace_index(),
             lower: 0,
             page_increment: 1,
@@ -28,13 +27,14 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
             upper: workspaceManager.n_workspaces,
         });
 
+        super(controls, workspaceAdjustment, overviewAdjustment);
+
+        this._workspaceAdjustment = workspaceAdjustment;
+        this._workspaceAdjustment.actor = this;
+
         this._nWorkspacesChangedId =
             workspaceManager.connect('notify::n-workspaces',
                 this._updateAdjustment.bind(this));
-
-        super._init(controls, this._workspaceAdjustment, this._overviewAdjustment);
-
-        this._workspaceAdjustment.actor = this;
 
         this.add_constraint(
             new Layout.MonitorConstraint({
@@ -79,8 +79,8 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
 
 const MyWorkspace = GObject.registerClass(
 class MyWorkspace extends Workspace.Workspace {
-    _init(...args) {
-        super._init(...args);
+    constructor(...args) {
+        super(...args);
 
         this._adjChangedId =
             this._overviewAdjustment.connect('notify::value', () => {
@@ -145,14 +145,14 @@ var WindowPicker = GObject.registerClass({
         'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] },
     },
 }, class extends Clutter.Actor {
-    _init() {
+    constructor() {
+        super({ reactive: true });
+
         this._visible = false;
         this._modal = false;
 
         this._overlayKeyId = 0;
         this._stageKeyPressId = 0;
-
-        super._init({ reactive: true });
 
         this._adjustment = new OverviewAdjustment(this);
 
@@ -315,7 +315,7 @@ var WindowPicker = GObject.registerClass({
 
 var WindowPickerToggle = GObject.registerClass(
 class WindowPickerToggle extends St.Button {
-    _init() {
+    constructor() {
         let iconBin = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
         });
@@ -327,7 +327,7 @@ class WindowPickerToggle extends St.Button {
             x_align: Clutter.ActorAlign.CENTER,
             y_align: Clutter.ActorAlign.CENTER,
         }));
-        super._init({
+        super({
             style_class: 'window-picker-toggle',
             child: iconBin,
             visible: !Main.sessionMode.hasOverview,

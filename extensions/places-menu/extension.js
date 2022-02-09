@@ -18,8 +18,8 @@ const PLACE_ICON_SIZE = 16;
 
 var PlaceMenuItem = GObject.registerClass(
 class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
-    _init(info) {
-        super._init({
+    constructor(info) {
+        super({
             style_class: 'place-menu-item',
         });
         this._info = info;
@@ -84,8 +84,8 @@ const SECTIONS = [
 
 let PlacesMenu = GObject.registerClass(
 class PlacesMenu extends PanelMenu.Button {
-    _init() {
-        super._init(0.0, _('Places'));
+    constructor() {
+        super(0.0, _('Places'));
 
         let label = new St.Label({
             text: _('Places'),

@@ -15,7 +15,7 @@ const WORKSPACE_MAX = 36; // compiled in limit of mutter
 const AutoMoveSettingsWidget = GObject.registerClass(
 class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
     static _classInit(klass) {
-        super._classInit(klass);
+        klass = super._classInit(klass);
 
         klass.install_action('rules.add', null, self => self._addNewRule());
         klass.install_action('rules.remove', 's',
@@ -25,8 +25,8 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
         return klass;
     }
 
-    _init() {
-        super._init({
+    constructor() {
+        super({
             title: _('Workspace Rules'),
         });
 
@@ -125,8 +125,8 @@ const WorkspaceSelector = GObject.registerClass({
         return klass;
     }
 
-    _init() {
-        super._init();
+    constructor() {
+        super();
 
         this.layout_manager.spacing = 6;
 
@@ -180,8 +180,8 @@ const RuleRow = GObject.registerClass({
             1, WORKSPACE_MAX, 1),
     },
 }, class RuleRow extends Adw.ActionRow {
-    _init(appInfo, value) {
-        super._init({
+    constructor(appInfo, value) {
+        super({
             activatable: false,
             title: appInfo.get_display_name(),
             value,
@@ -221,8 +221,8 @@ const RuleRow = GObject.registerClass({
 
 const NewRuleRow = GObject.registerClass(
 class NewRuleRow extends Gtk.ListBoxRow {
-    _init() {
-        super._init({
+    constructor() {
+        super({
             action_name: 'rules.add',
             child: new Gtk.Image({
                 icon_name: 'list-add-symbolic',
@@ -240,8 +240,8 @@ class NewRuleRow extends Gtk.ListBoxRow {
 
 const NewRuleDialog = GObject.registerClass(
 class NewRuleDialog extends Gtk.AppChooserDialog {
-    _init(parent) {
-        super._init({
+    constructor(parent) {
+        super({
             transient_for: parent,
             modal: true,
         });
