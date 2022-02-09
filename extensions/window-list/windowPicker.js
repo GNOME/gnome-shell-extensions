@@ -273,17 +273,21 @@ var WindowPicker = GObject.registerClass({
             if (this._modal)
                 return true;
 
-            this._modal = Main.pushModal(this, {
+            const grab = Main.pushModal(global.stage, {
                 actionMode: Shell.ActionMode.OVERVIEW,
             });
-
-            if (!this._modal) {
+            if (grab.get_seat_state() !== Clutter.GrabState.NONE) {
+                this._grab = grab;
+                this._modal = true;
+            } else {
+                Main.popModal(grab);
                 this.hide();
                 return false;
             }
         } else if (this._modal) {
-            Main.popModal(this);
+            Main.popModal(this._grab);
             this._modal = false;
+            this._grab = null;
         }
         return true;
     }
