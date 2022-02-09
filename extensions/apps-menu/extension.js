@@ -180,11 +180,14 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _onMotionEvent(actor, event) {
-        let device = event.get_device();
-        if (!device.get_grabbed_actor()) {
+        if (!this._grab) {
             this._oldX = -1;
             this._oldY = -1;
-            device.grab(this);
+            const grab = global.stage.grab(this);
+            if (grab.get_seat_state() !== Clutter.GrabState.NONE)
+                this._grab = grab;
+            else
+                grab.dismiss();
         }
         this.hover = true;
 
@@ -194,7 +197,8 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._oldX = -1;
         this._oldY = -1;
         this.hover = false;
-        device.ungrab();
+        this._grab?.dismiss();
+        delete this._grab;
 
         let source = event.get_source();
         if (source instanceof St.Widget)
