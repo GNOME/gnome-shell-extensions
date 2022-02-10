@@ -14,8 +14,11 @@ const TOOLTIP_ANIMATION_TIME = 150;
 
 const MAX_THUMBNAILS = 6;
 
-let WindowPreview = GObject.registerClass(
 class WindowPreview extends St.Button {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(window) {
         super({
             style_class: 'window-list-window-preview',
@@ -69,10 +72,13 @@ class WindowPreview extends St.Button {
             this._window.window_type !== Meta.WindowType.DESKTOP &&
             this._window.showing_on_its_workspace();
     }
-});
+}
 
-let WorkspaceLayout = GObject.registerClass(
 class WorkspaceLayout extends Clutter.LayoutManager {
+    static {
+        GObject.registerClass(this);
+    }
+
     vfunc_get_preferred_width() {
         return [0, 0];
     }
@@ -99,10 +105,13 @@ class WorkspaceLayout extends Clutter.LayoutManager {
             child.allocate(childBox);
         }
     }
-});
+}
 
-let WorkspaceThumbnail = GObject.registerClass(
 class WorkspaceThumbnail extends St.Button {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(index) {
         super({
             style_class: 'workspace',
@@ -241,10 +250,13 @@ class WorkspaceThumbnail extends St.Button {
         this._workspace.disconnect(this._windowRemovedId);
         global.display.disconnect(this._restackedId);
     }
-});
+}
 
-var WorkspaceIndicator = GObject.registerClass(
-class WorkspaceIndicator extends PanelMenu.Button {
+var WorkspaceIndicator = class WorkspaceIndicator extends PanelMenu.Button {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         super(0.0, _('Workspace Indicator'), true);
         this.setMenu(new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM));
@@ -435,5 +447,4 @@ class WorkspaceIndicator extends PanelMenu.Button {
         let newIndex = this._currentWorkspace + diff;
         this._activate(newIndex);
     }
-});
-
+};

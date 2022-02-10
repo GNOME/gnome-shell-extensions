@@ -16,8 +16,11 @@ const N_ = x => x;
 
 const PLACE_ICON_SIZE = 16;
 
-var PlaceMenuItem = GObject.registerClass(
 class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(info) {
         super({
             style_class: 'place-menu-item',
@@ -73,7 +76,7 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._icon.gicon = info.icon;
         this._label.text = info.name;
     }
-});
+}
 
 const SECTIONS = [
     'special',
@@ -82,8 +85,11 @@ const SECTIONS = [
     'network',
 ];
 
-let PlacesMenu = GObject.registerClass(
 class PlacesMenu extends PanelMenu.Button {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         super(0.0, _('Places'));
 
@@ -130,7 +136,7 @@ class PlacesMenu extends PanelMenu.Button {
 
         this._sections[id].actor.visible = places.length > 0;
     }
-});
+}
 
 /** */
 function init() {

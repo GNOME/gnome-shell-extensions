@@ -15,8 +15,11 @@ Gio._promisify(Gio.File.prototype, 'enumerate_children_async');
 Gio._promisify(Gio.File.prototype, 'query_info_async');
 Gio._promisify(Gio.FileEnumerator.prototype, 'next_files_async');
 
-const UserThemePrefsWidget = GObject.registerClass(
 class UserThemePrefsWidget extends Adw.PreferencesGroup {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         super({ title: 'Themes' });
 
@@ -101,10 +104,13 @@ class UserThemePrefsWidget extends Adw.PreferencesGroup {
 
         return fileInfos.map(info => info.get_name());
     }
-});
+}
 
-const ThemeRow = GObject.registerClass(
 class ThemeRow extends Adw.ActionRow {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(name) {
         const check = new Gtk.CheckButton({
             action_name: 'theme.name',
@@ -117,7 +123,7 @@ class ThemeRow extends Adw.ActionRow {
         });
         this.add_prefix(check);
     }
-});
+}
 
 /** */
 function init() {

@@ -13,8 +13,11 @@ const {
     ControlsState,
 } = imports.ui.overviewControls;
 
-let MyWorkspacesDisplay = GObject.registerClass(
 class MyWorkspacesDisplay extends WorkspacesDisplay {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(controls, overviewAdjustment) {
         let workspaceManager = global.workspace_manager;
 
@@ -75,10 +78,13 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
 
         super._onDestroy();
     }
-});
+}
 
-const MyWorkspace = GObject.registerClass(
 class MyWorkspace extends Workspace.Workspace {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(...args) {
         super(...args);
 
@@ -102,10 +108,13 @@ class MyWorkspace extends Workspace.Workspace {
             this._overviewAdjustment.disconnect(this._adjChangedId);
         this._adjChangedId = 0;
     }
-});
+}
 
-const MyWorkspaceBackground = GObject.registerClass(
 class MyWorkspaceBackground extends Workspace.WorkspaceBackground {
+    static {
+        GObject.registerClass(this);
+    }
+
     _updateBorderRadius() {
     }
 
@@ -138,13 +147,17 @@ class MyWorkspaceBackground extends Workspace.WorkspaceBackground {
             offsets.top + contentHeight + offsets.bottom);
         this._backgroundGroup.allocate(contentBox);
     }
-});
+}
 
-var WindowPicker = GObject.registerClass({
-    Signals: {
+var WindowPicker = class WindowPicker extends Clutter.Actor {
+    static [GObject.signals] = {
         'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] },
-    },
-}, class extends Clutter.Actor {
+    };
+
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         super({ reactive: true });
 
@@ -311,10 +324,13 @@ var WindowPicker = GObject.registerClass({
             global.stage.disconnect(this._stageKeyPressId);
         this._stageKeyPressId = 0;
     }
-});
+};
 
-var WindowPickerToggle = GObject.registerClass(
-class WindowPickerToggle extends St.Button {
+var WindowPickerToggle = class WindowPickerToggle extends St.Button {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         let iconBin = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
@@ -345,4 +361,4 @@ class WindowPickerToggle extends St.Button {
             this.checked = Main.windowPicker.visible;
         });
     }
-});
+};

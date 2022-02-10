@@ -12,17 +12,14 @@ const SETTINGS_KEY = 'application-list';
 
 const WORKSPACE_MAX = 36; // compiled in limit of mutter
 
-const AutoMoveSettingsWidget = GObject.registerClass(
 class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
-    static _classInit(klass) {
-        klass = super._classInit(klass);
+    static {
+        GObject.registerClass(this);
 
-        klass.install_action('rules.add', null, self => self._addNewRule());
-        klass.install_action('rules.remove', 's',
+        this.install_action('rules.add', null, self => self._addNewRule());
+        this.install_action('rules.remove', 's',
             (self, name, param) => self._removeRule(param.unpack()));
-        klass.install_action('rules.update', null, self => self._saveRules());
-
-        return klass;
+        this.install_action('rules.update', null, self => self._saveRules());
     }
 
     constructor() {
@@ -107,22 +104,20 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
         this._settings.unblock_signal_handler(this._changedId);
         this.action_set_enabled('rules.update', true);
     }
-});
+}
 
-const WorkspaceSelector = GObject.registerClass({
-    Properties: {
+class WorkspaceSelector extends Gtk.Widget {
+    static [GObject.properties] = {
         'number': GObject.ParamSpec.uint(
             'number', 'number', 'number',
             GObject.ParamFlags.READWRITE,
             1, WORKSPACE_MAX, 1),
-    },
-}, class WorkspaceSelector extends Gtk.Widget {
-    static _classInit(klass) {
-        super._classInit(klass);
+    };
 
-        klass.set_layout_manager_type(Gtk.BoxLayout);
+    static {
+        GObject.registerClass(this);
 
-        return klass;
+        this.set_layout_manager_type(Gtk.BoxLayout);
     }
 
     constructor() {
@@ -166,10 +161,10 @@ const WorkspaceSelector = GObject.registerClass({
         this._decButton.sensitive = this.number > 1;
         this._incButton.sensitive = this.number < WORKSPACE_MAX;
     }
-});
+}
 
-const RuleRow = GObject.registerClass({
-    Properties: {
+class RuleRow extends Adw.ActionRow {
+    static [GObject.properties] = {
         'id': GObject.ParamSpec.string(
             'id', 'id', 'id',
             GObject.ParamFlags.READABLE,
@@ -178,8 +173,12 @@ const RuleRow = GObject.registerClass({
             'value', 'value', 'value',
             GObject.ParamFlags.READWRITE,
             1, WORKSPACE_MAX, 1),
-    },
-}, class RuleRow extends Adw.ActionRow {
+    };
+
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(appInfo, value) {
         super({
             activatable: false,
@@ -217,10 +216,13 @@ const RuleRow = GObject.registerClass({
     get id() {
         return this._appInfo.get_id();
     }
-});
+}
 
-const NewRuleRow = GObject.registerClass(
 class NewRuleRow extends Gtk.ListBoxRow {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         super({
             action_name: 'rules.add',
@@ -236,10 +238,13 @@ class NewRuleRow extends Gtk.ListBoxRow {
         this.update_property(
             [Gtk.AccessibleProperty.LABEL], [_('Add Rule')]);
     }
-});
+}
 
-const NewRuleDialog = GObject.registerClass(
 class NewRuleDialog extends Gtk.AppChooserDialog {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(parent) {
         super({
             transient_for: parent,
@@ -264,7 +269,7 @@ class NewRuleDialog extends Gtk.AppChooserDialog {
         this.set_response_sensitive(Gtk.ResponseType.OK,
             appInfo && !rules.some(i => i.startsWith(appInfo.get_id())));
     }
-});
+}
 
 /** */
 function init() {

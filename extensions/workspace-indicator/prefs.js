@@ -11,19 +11,16 @@ const N_ = e => e;
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
 
-const WorkspaceSettingsWidget = GObject.registerClass(
 class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
-    static _classInit(klass) {
-        klass = super._classInit(klass);
+    static {
+        GObject.registerClass(this);
 
-        klass.install_action('workspaces.add', null,
+        this.install_action('workspaces.add', null,
             self => self._addNewName());
-        klass.install_action('workspaces.remove', 's',
+        this.install_action('workspaces.remove', 's',
             (self, name, param) => self._removeName(param.unpack()));
-        klass.install_action('workspaces.update', null,
+        this.install_action('workspaces.update', null,
             self => self._saveNames());
-
-        return klass;
     }
 
     constructor() {
@@ -85,10 +82,13 @@ class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
             this._list.insert(new WorkspaceRow(n), newNames.indexOf(n));
         });
     }
-});
+}
 
-const WorkspaceRow = GObject.registerClass(
 class WorkspaceRow extends Adw.PreferencesRow {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(name) {
         super({ name });
 
@@ -163,10 +163,13 @@ class WorkspaceRow extends Adw.PreferencesRow {
         this.grab_focus();
         this._stack.visible_child_name = 'display';
     }
-});
+}
 
-const NewWorkspaceRow = GObject.registerClass(
 class NewWorkspaceRow extends Adw.PreferencesRow {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         super({
             action_name: 'workspaces.add',
@@ -182,7 +185,7 @@ class NewWorkspaceRow extends Adw.PreferencesRow {
         this.update_property(
             [Gtk.AccessibleProperty.LABEL], [_('Add Workspace')]);
     }
-});
+}
 
 /** */
 function init() {

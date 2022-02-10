@@ -9,8 +9,11 @@ const WorkspacesView = imports.ui.workspacesView;
 
 const WINDOW_SLOT = 4;
 
-var MyWorkspace = GObject.registerClass(
 class MyWorkspace extends Workspace.Workspace {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(...args) {
         super(...args);
 
@@ -115,10 +118,13 @@ class MyWorkspace extends Workspace.Workspace {
 
         return clone;
     }
-});
+}
 
-var MyWorkspacesView = GObject.registerClass(
 class MyWorkspacesView extends WorkspacesView.WorkspacesView {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(...args) {
         super(...args);
 
@@ -243,7 +249,7 @@ class MyWorkspacesView extends WorkspacesView.WorkspacesView {
         }
         return false;
     }
-});
+}
 
 class Extension {
     constructor() {

@@ -12,8 +12,11 @@ function init() {
     ExtensionUtils.initTranslations();
 }
 
-const WindowListPrefsWidget = GObject.registerClass(
 class WindowListPrefsWidget extends Adw.PreferencesPage {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         super();
 
@@ -79,7 +82,7 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
         row.add_suffix(toggle);
         miscGroup.add(row);
     }
-});
+}
 
 /**
  * @returns {Gtk.Widget} - the prefs widget

@@ -24,8 +24,11 @@ const NAVIGATION_REGION_OVERSHOOT = 50;
 Gio._promisify(Gio._LocalFilePrototype, 'query_info_async', 'query_info_finish');
 Gio._promisify(Gio._LocalFilePrototype, 'set_attributes_async', 'set_attributes_finish');
 
-var ApplicationMenuItem = GObject.registerClass(
 class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(button, app) {
         super();
         this._app = app;
@@ -93,10 +96,13 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         icon.style_class = 'icon-dropshadow';
         this._iconBin.set_child(icon);
     }
-});
+}
 
-var CategoryMenuItem = GObject.registerClass(
 class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(button, category) {
         super();
         this._category = category;
@@ -214,7 +220,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._button.selectCategory(this._category);
         this._button.scrollToCatButton(this);
     }
-});
+}
 
 class ApplicationsMenu extends PopupMenu.PopupMenu {
     constructor(sourceActor, arrowAlignment, arrowSide, button) {
@@ -353,8 +359,11 @@ class DesktopTarget {
 }
 Signals.addSignalMethods(DesktopTarget.prototype);
 
-let ApplicationsButton = GObject.registerClass(
 class ApplicationsButton extends PanelMenu.Button {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         super(1.0, null, false);
 
@@ -665,7 +674,7 @@ class ApplicationsButton extends PanelMenu.Button {
 
         return applist;
     }
-});
+}
 
 let appsMenuButton;
 

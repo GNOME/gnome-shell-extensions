@@ -106,8 +106,11 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
     }
 }
 
-const WindowTitle = GObject.registerClass(
 class WindowTitle extends St.BoxLayout {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(metaWindow) {
         super({
             style_class: 'window-button-box',
@@ -175,18 +178,21 @@ class WindowTitle extends St.BoxLayout {
         this._metaWindow.disconnect(this._notifyWmClass);
         this._metaWindow.disconnect(this._notifyAppId);
     }
-});
+}
 
+class BaseButton extends St.Button {
+    static {
+        GObject.registerClass({
+            GTypeFlags: GObject.TypeFlags.ABSTRACT,
+            Properties: {
+                'ignore-workspace': GObject.ParamSpec.boolean(
+                    'ignore-workspace', 'ignore-workspace', 'ignore-workspace',
+                    GObject.ParamFlags.READWRITE,
+                    false),
+            },
+        }, this);
+    }
 
-const BaseButton = GObject.registerClass({
-    GTypeFlags: GObject.TypeFlags.ABSTRACT,
-    Properties: {
-        'ignore-workspace': GObject.ParamSpec.boolean(
-            'ignore-workspace', 'ignore-workspace', 'ignore-workspace',
-            GObject.ParamFlags.READWRITE,
-            false),
-    },
-}, class BaseButton extends St.Button {
     constructor(perMonitor, monitorIndex) {
         super({
             style_class: 'window-button',
@@ -344,11 +350,13 @@ const BaseButton = GObject.registerClass({
             global.display.disconnect(this._windowLeftMonitorId);
         this._windowLeftMonitorId = 0;
     }
-});
+}
 
-
-const WindowButton = GObject.registerClass(
 class WindowButton extends BaseButton {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(metaWindow, perMonitor, monitorIndex) {
         super(perMonitor, monitorIndex);
 
@@ -422,8 +430,7 @@ class WindowButton extends BaseButton {
         global.display.disconnect(this._notifyFocusId);
         this._contextMenu.destroy();
     }
-});
-
+}
 
 class AppContextMenu extends PopupMenu.PopupMenu {
     constructor(source) {
@@ -483,8 +490,11 @@ class AppContextMenu extends PopupMenu.PopupMenu {
     }
 }
 
-const AppButton = GObject.registerClass(
 class AppButton extends BaseButton {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(app, perMonitor, monitorIndex) {
         super(perMonitor, monitorIndex);
 
@@ -670,11 +680,13 @@ class AppButton extends BaseButton {
         this.app.disconnect(this._windowsChangedId);
         this._menu.destroy();
     }
-});
+}
 
-
-const WindowList = GObject.registerClass(
 class WindowList extends St.Widget {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(perMonitor, monitor) {
         super({
             name: 'panel',
@@ -1082,7 +1094,7 @@ class WindowList extends St.Widget {
         for (let i = 0; i < windows.length; i++)
             windows[i].metaWindow.set_icon_geometry(null);
     }
-});
+}
 
 class Extension {
     constructor() {

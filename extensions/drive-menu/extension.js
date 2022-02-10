@@ -12,8 +12,11 @@ const _ = ExtensionUtils.gettext;
 
 Gio._promisify(Gio.File.prototype, 'query_filesystem_info_async');
 
-var MountMenuItem = GObject.registerClass(
 class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor(mount) {
         super({
             style_class: 'drive-menu-item',
@@ -131,10 +134,13 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         super.activate(event);
     }
-});
+}
 
-let DriveMenu = GObject.registerClass(
 class DriveMenu extends PanelMenu.Button {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         super(0.0, _('Removable devices'));
 
@@ -204,7 +210,7 @@ class DriveMenu extends PanelMenu.Button {
 
         super._onDestroy();
     }
-});
+}
 
 /** */
 function init() {
