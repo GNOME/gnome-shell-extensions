@@ -2,7 +2,7 @@
 // Start apps on custom workspaces
 /* exported init buildPrefsWidget */
 
-const { Adw, Gio, GLib, GObject, Gtk, Pango } = imports.gi;
+const { Adw, Gio, GLib, GObject, Gtk } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -117,6 +117,65 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
     }
 });
 
+const WorkspaceSelector = GObject.registerClass({
+    Properties: {
+        'number': GObject.ParamSpec.uint(
+            'number', 'number', 'number',
+            GObject.ParamFlags.READWRITE,
+            1, WORKSPACE_MAX, 1),
+    },
+}, class WorkspaceSelector extends Gtk.Widget {
+    static _classInit(klass) {
+        super._classInit(klass);
+
+        klass.set_layout_manager_type(Gtk.BoxLayout);
+
+        return klass;
+    }
+
+    _init() {
+        super._init();
+
+        this.layout_manager.spacing = 6;
+
+        const label = new Gtk.Label({
+            xalign: 1,
+            margin_end: 6,
+        });
+        this.bind_property('number',
+            label, 'label',
+            GObject.BindingFlags.SYNC_CREATE);
+        label.set_parent(this);
+
+        const buttonProps = {
+            css_classes: ['circular'],
+            valign: Gtk.Align.CENTER,
+        };
+
+        this._decButton = new Gtk.Button({
+            icon_name: 'list-remove-symbolic',
+            ...buttonProps,
+        });
+        this._decButton.set_parent(this);
+        this._decButton.connect('clicked', () => this.number--);
+
+        this._incButton = new Gtk.Button({
+            icon_name: 'list-add-symbolic',
+            ...buttonProps,
+        });
+        this._incButton.set_parent(this);
+        this._incButton.connect('clicked', () => this.number++);
+
+        this.connect('notify::number', () => this._syncButtons());
+        this._syncButtons();
+    }
+
+    _syncButtons() {
+        this._decButton.sensitive = this.number > 1;
+        this._incButton.sensitive = this.number < WORKSPACE_MAX;
+    }
+});
+
 const RuleRow = GObject.registerClass({
     Properties: {
         'id': GObject.ParamSpec.string(
@@ -130,14 +189,6 @@ const RuleRow = GObject.registerClass({
     },
 }, class RuleRow extends Adw.ActionRow {
     _init(appInfo, value) {
-        const box = new Gtk.Box({
-            spacing: 6,
-            margin_top: 6,
-            margin_bottom: 6,
-            margin_start: 6,
-            margin_end: 6,
-        });
-
         super._init({
             activatable: false,
             title: appInfo.get_display_name(),
@@ -152,20 +203,11 @@ const RuleRow = GObject.registerClass({
         });
         this.add_prefix(icon);
 
-        const spinButton = new Gtk.SpinButton({
-            adjustment: new Gtk.Adjustment({
-                lower: 1,
-                upper: WORKSPACE_MAX,
-                step_increment: 1,
-            }),
-            snap_to_ticks: true,
-            margin_end: 6,
-            valign: Gtk.Align.CENTER,
-        });
+        const wsButton = new WorkspaceSelector();
         this.bind_property('value',
-            spinButton, 'value',
+            wsButton, 'number',
             GObject.BindingFlags.SYNC_CREATE | GObject.BindingFlags.BIDIRECTIONAL);
-        this.add_suffix(spinButton);
+        this.add_suffix(wsButton);
 
         const button = new Gtk.Button({
             action_name: 'rules.remove',
