@@ -128,7 +128,7 @@ const RuleRow = GObject.registerClass({
             GObject.ParamFlags.READWRITE,
             1, WORKSPACE_MAX, 1),
     },
-}, class RuleRow extends Gtk.ListBoxRow {
+}, class RuleRow extends Adw.ActionRow {
     _init(appInfo, value) {
         const box = new Gtk.Box({
             spacing: 6,
@@ -140,26 +140,17 @@ const RuleRow = GObject.registerClass({
 
         super._init({
             activatable: false,
+            title: appInfo.get_display_name(),
             value,
-            child: box,
         });
         this._appInfo = appInfo;
 
         const icon = new Gtk.Image({
+            css_classes: ['icon-dropshadow'],
             gicon: appInfo.get_icon(),
             pixel_size: 32,
         });
-        icon.get_style_context().add_class('icon-dropshadow');
-        box.append(icon);
-
-        const label = new Gtk.Label({
-            label: appInfo.get_display_name(),
-            halign: Gtk.Align.START,
-            hexpand: true,
-            max_width_chars: 20,
-            ellipsize: Pango.EllipsizeMode.END,
-        });
-        box.append(label);
+        this.add_prefix(icon);
 
         const spinButton = new Gtk.SpinButton({
             adjustment: new Gtk.Adjustment({
@@ -169,19 +160,21 @@ const RuleRow = GObject.registerClass({
             }),
             snap_to_ticks: true,
             margin_end: 6,
+            valign: Gtk.Align.CENTER,
         });
         this.bind_property('value',
             spinButton, 'value',
             GObject.BindingFlags.SYNC_CREATE | GObject.BindingFlags.BIDIRECTIONAL);
-        box.append(spinButton);
+        this.add_suffix(spinButton);
 
         const button = new Gtk.Button({
             action_name: 'rules.remove',
             action_target: new GLib.Variant('s', this.id),
             icon_name: 'edit-delete-symbolic',
             has_frame: false,
+            valign: Gtk.Align.CENTER,
         });
-        box.append(button);
+        this.add_suffix(button);
 
         this.connect('notify::value',
             () => this.activate_action('rules.update', null));
