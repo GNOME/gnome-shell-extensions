@@ -10,8 +10,7 @@ const ShellMountOperation = imports.ui.shellMountOperation;
 
 const _ = ExtensionUtils.gettext;
 
-Gio._promisify(Gio.File.prototype,
-  'query_filesystem_info_async', 'query_filesystem_info_finish');
+Gio._promisify(Gio.File.prototype, 'query_filesystem_info_async');
 
 var MountMenuItem = GObject.registerClass(
 class MountMenuItem extends PopupMenu.PopupBaseMenuItem {

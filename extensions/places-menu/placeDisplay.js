@@ -10,8 +10,8 @@ const ShellMountOperation = imports.ui.shellMountOperation;
 const _ = ExtensionUtils.gettext;
 const N_ = x => x;
 
-Gio._promisify(Gio.AppInfo, 'launch_default_for_uri_async', 'launch_default_for_uri_finish');
-Gio._promisify(Gio.File.prototype, 'mount_enclosing_volume', 'mount_enclosing_volume_finish');
+Gio._promisify(Gio.AppInfo, 'launch_default_for_uri_async');
+Gio._promisify(Gio.File.prototype, 'mount_enclosing_volume');
 
 const BACKGROUND_SCHEMA = 'org.gnome.desktop.background';
 
