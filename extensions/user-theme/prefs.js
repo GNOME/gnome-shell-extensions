@@ -11,9 +11,9 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Util = Me.imports.util;
 
-Gio._promisify(Gio._LocalFilePrototype,
+Gio._promisify(Gio.File.prototype,
     'enumerate_children_async', 'enumerate_children_finish');
-Gio._promisify(Gio._LocalFilePrototype,
+Gio._promisify(Gio.File.prototype,
     'query_info_async', 'query_info_finish');
 Gio._promisify(Gio.FileEnumerator.prototype,
     'next_files_async', 'next_files_finish');
