@@ -21,7 +21,7 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
 
         this._list = new Gtk.ListBox({
             selection_mode: Gtk.SelectionMode.NONE,
-            css_classes: ['content'],
+            css_classes: ['boxed-list'],
         });
         this.add(this._list);
 

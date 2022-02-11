@@ -20,7 +20,7 @@ class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
 
         this._list = new Gtk.ListBox({
             selection_mode: Gtk.SelectionMode.NONE,
-            css_classes: ['content'],
+            css_classes: ['boxed-list'],
         });
         this._list.connect('row-activated', (l, row) => row.edit());
         this.add(this._list);
