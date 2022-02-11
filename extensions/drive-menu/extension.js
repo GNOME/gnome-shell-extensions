@@ -10,6 +10,9 @@ const ShellMountOperation = imports.ui.shellMountOperation;
 
 const _ = ExtensionUtils.gettext;
 
+Gio._promisify(Gio.File.prototype,
+  'query_filesystem_info_async', 'query_filesystem_info_finish');
+
 var MountMenuItem = GObject.registerClass(
 class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     _init(mount) {
@@ -55,20 +58,6 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
         super.destroy();
     }
 
-    _fsIsRemote(root) {
-        return new Promise((resolve, reject) => {
-            const attr = Gio.FILE_ATTRIBUTE_FILESYSTEM_REMOTE;
-            root.query_filesystem_info_async(attr, null, (o, res) => {
-                try {
-                    const info = root.query_filesystem_info_finish(res);
-                    resolve(!info.get_attribute_boolean(attr));
-                } catch (e) {
-                    reject(e);
-                }
-            });
-        });
-    }
-
     async _isInteresting() {
         if (!this.mount.can_eject() && !this.mount.can_unmount())
             return false;
@@ -83,7 +72,9 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
         const root = this.mount.get_root();
 
         try {
-            return await this._fsIsRemote(root);
+            const attr = Gio.FILE_ATTRIBUTE_FILESYSTEM_REMOTE;
+            const info = await root.query_filesystem_info_async(attr, null);
+            return !info.get_attribute_boolean(attr);
         } catch (e) {
             log(`Failed to query filesystem: ${e.message}`);
         }

@@ -10,6 +10,9 @@ const ShellMountOperation = imports.ui.shellMountOperation;
 const _ = ExtensionUtils.gettext;
 const N_ = x => x;
 
+Gio._promisify(Gio.AppInfo, 'launch_default_for_uri_async', 'launch_default_for_uri_finish');
+Gio._promisify(Gio.File.prototype, 'mount_enclosing_volume', 'mount_enclosing_volume_finish');
+
 const BACKGROUND_SCHEMA = 'org.gnome.desktop.background';
 
 const Hostname1Iface = '<node> \
@@ -40,7 +43,7 @@ class PlaceInfo {
 
     async _ensureMountAndLaunch(context, tryMount) {
         try {
-            await this._launchDefaultForUri(this.file.get_uri(), context, null);
+            await Gio.AppInfo.launch_default_for_uri_async(this.file.get_uri(), context, null);
         } catch (err) {
             if (!err.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_MOUNTED)) {
                 Main.notifyError(_('Failed to launch “%s”').format(this.name), err.message);
@@ -52,7 +55,7 @@ class PlaceInfo {
             };
             let op = new ShellMountOperation.ShellMountOperation(source);
             try {
-                await this._mountEnclosingVolume(0, op.mountOp, null);
+                await this.file.mount_enclosing_volume(0, op.mountOp, null);
 
                 if (tryMount)
                     this._ensureMountAndLaunch(context, false);
@@ -113,32 +116,6 @@ class PlaceInfo {
                 return this.file.get_basename();
             throw e;
         }
-    }
-
-    _launchDefaultForUri(uri, context, cancel) {
-        return new Promise((resolve, reject) => {
-            Gio.AppInfo.launch_default_for_uri_async(uri, context, cancel, (o, res) => {
-                try {
-                    Gio.AppInfo.launch_default_for_uri_finish(res);
-                    resolve();
-                } catch (e) {
-                    reject(e);
-                }
-            });
-        });
-    }
-
-    _mountEnclosingVolume(flags, mountOp, cancel) {
-        return new Promise((resolve, reject) => {
-            this.file.mount_enclosing_volume(flags, mountOp, cancel, (o, res) => {
-                try {
-                    this.file.mount_enclosing_volume_finish(res);
-                    resolve();
-                } catch (e) {
-                    reject(e);
-                }
-            });
-        });
     }
 }
 Signals.addSignalMethods(PlaceInfo.prototype);
