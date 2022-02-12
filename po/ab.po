@@ -50,8 +50,8 @@ msgstr "Аԥшьи аусуратә ҵакырақәа рыхьӡынҵеи"
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
-msgstr "Ацәаҳәақәа рхыԥхьаӡара аиԥшрагәаҭага аԥшьы (desktop-фаил ахьӡ )"
-"змоу, зашьҭахь тгылоу ҩ-кәаԥки аусуратә ҭыԥ аномер "
+msgstr "Ацәаҳәақәа рыхьӡынҵа аиԥшрагәаҭага аԥшьы (desktop-фаил ахьӡ )"
+"змоу, зашьҭахь ҩ-кәаԥки аусуратә ҭыԥ аномери гылоу "
 
 #: extensions/auto-move-windows/prefs.js:19
 msgid "Workspace Rules"
@@ -66,7 +66,7 @@ msgstr "Аԥҟара ацҵара"
 #: extensions/places-menu/placeDisplay.js:210
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
-msgstr "Адиск «%s» аҭыгара залымшеит:"
+msgstr "Адиск «%s» аҭыгара залымшахеит:"
 
 #: extensions/drive-menu/extension.js:139
 msgid "Removable devices"
@@ -85,9 +85,9 @@ msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
-msgstr "Изыцҵоу аекран аҵакыра  ахархәара  аминиатиура атыԥаркразы"
-"аизышәара   иԥсахуа аекран аганқәа  аржәпара, анаҩс адаԥа ҳәаақәызҵо ашәагаа архәыҷразы"
-"Ари ахышәара ахархәара аиуоит аминиатиура «natural» аҭыԥыркра алгоритм  ахархәараан"
+msgstr "Шәхы иашәырхәа изыцҵоу аекран аҵакыра аминиатиура атыԥаркразы"
+"аекран аганқәа реизышәара ԥсахуа аҭыԥыркра шәыржәпала, анаҩс адаԥа ҳәаақәызҵо ашәагаа архәыҷразы"
+"ари ахышәара ахархәара аиуоит аминиатиура «natural» аҭыԥыркра алгоритм  ахархәараан"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
@@ -188,17 +188,17 @@ msgstr "Зегьы рыркра"
 
 #: extensions/window-list/extension.js:741
 msgid "Window List"
-msgstr "Аԥенҵџьырқәа рыхьӡынҵа"
+msgstr "Аԥенџьырқәа рыхьӡынҵа"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
 msgid "When to group windows"
-msgstr "Аԥенҵџьырқәа аидыргәыԥлара анаҭаху"
+msgstr "Аԥенџьырқәа аидыргәыԥлара анаҭаху"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
-msgstr "Иҳәаақәнаҵоит, ианбаҭаху аидыргәыԥлара ԥшьык иаҵанакуа аԥенџьырқәа, аԥенџьырқәа рыхьӡынҵаҟны"
+msgstr "Иҳәаақәнаҵоит, ианаҭаху  ԥшьык иаҵанакуа аԥенџьырқәа реидыргәыԥлара, аԥенџьырқәа рыхьӡынҵаҟны"
 " Иҟалар зылшо аҵакқәа : «never» — ахаан; «auto» — автоматла; «always» — есқьынгьы"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
@@ -209,7 +209,7 @@ msgstr "Аҵакырақәа зегьы рҟынтә аԥенџьырқәа ра
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr 
-"Аԥенџьырқәа рыхьӡынҵа аусуратә ҵакырақәа зегь рҟынтә акәу,мамзар уажәти аҟынтә аку ишаарԥшлатәу"
+"Аԥенџьырқәа рыхьӡынҵа аусуратә ҵакырақәа зегь рҟынтә акәу,мамзар уажәтәи аҟынтә акәу ишаарԥшлатәу"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
@@ -236,7 +236,7 @@ msgstr "Аҭыԥ маҷхазар, аԥенџьырқәа еидшәыргәыԥ
 
 #: extensions/window-list/prefs.js:39
 msgid "Always group windows"
-msgstr "Еснагь аԥенџьырқәа аидыргәыԥлара"
+msgstr "Еснагь аԥенџьырқәа реидыргәыԥлара"
 
 #: extensions/window-list/prefs.js:63
 msgid "Show on all monitors"
