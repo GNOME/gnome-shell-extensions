@@ -1,7 +1,7 @@
 # Abkhazian translation for gnome-shell-extensions.
 # Copyright (C) 2022 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Нанба Наала <naala-nanba@rambler.ru>, 2022.
 #
 msgid ""
 msgstr ""
@@ -10,7 +10,7 @@ msgstr ""
 "issues\n"
 "POT-Creation-Date: 2022-02-12 02:08+0000\n"
 "PO-Revision-Date: 2022-02-12 02:08+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Нанба Наала <naala-nanba@rambler.ru>, 2022\n"
 "Language-Team: Abkhazian <ab@li.org>\n"
 "Language: ab\n"
 "MIME-Version: 1.0\n"
