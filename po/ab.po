@@ -1,0 +1,261 @@
+# Abkhazian translation for gnome-shell-extensions.
+# Copyright (C) 2022 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2022-02-12 02:08+0000\n"
+"PO-Revision-Date: 2022-02-12 02:08+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Abkhazian <ab@li.org>\n"
+"Language: ab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/gnome-classic.desktop.in:3
+msgid "GNOME Classic"
+msgstr "Аклассикатә GNOME"
+
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
+msgid "This session logs you into GNOME Classic"
+msgstr "Ари асеанс аклассикатә усуратә еишәа GNOME хархәагас иамоуп "
+
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "Аклассикатә GNOME Wayland аҟны"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "Аклассикатә GNOME Xorg аҟны"
+
+#: extensions/apps-menu/extension.js:112
+msgid "Favorites"
+msgstr "Иалкаау"
+
+#: extensions/apps-menu/extension.js:370
+msgid "Applications"
+msgstr "Аԥшьқәа"
+
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+msgid "Application and workspace list"
+msgstr "Аԥшьи аусуратә ҵакырақәа рыхьӡынҵеи"
+
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr "Ацәаҳәақәа рхыԥхьаӡара аиԥшрагәаҭага аԥшьы (desktop-фаил ахьӡ )"
+"змоу, зашьҭахь тгылоу ҩ-кәаԥки аусуратә ҭыԥ аномер "
+
+#: extensions/auto-move-windows/prefs.js:19
+msgid "Workspace Rules"
+msgstr "Аусуратә ҵакыра аԥҟаррақәа"
+
+#: extensions/auto-move-windows/prefs.js:245
+msgid "Add Rule"
+msgstr "Аԥҟара ацҵара"
+
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:210
+#, javascript-format
+msgid "Ejecting drive “%s” failed:"
+msgstr "Адиск «%s» аҭыгара залымшеит:"
+
+#: extensions/drive-menu/extension.js:139
+msgid "Removable devices"
+msgstr "Иаҿыҵуа аиҿартәырақәа"
+
+#: extensions/drive-menu/extension.js:161
+msgid "Open Files"
+msgstr "Афаил аартра"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+msgid "Use more screen for windows"
+msgstr "Изыцҵоу аекран аҵакыра аԥенџьырқәа рзы ахархәара"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr "Изыцҵоу аекран аҵакыра  ахархәара  аминиатиура атыԥаркразы"
+"аизышәара   иԥсахуа аекран аганқәа  аржәпара, анаҩс адаԥа ҳәаақәызҵо ашәагаа архәыҷразы"
+"Ари ахышәара ахархәара аиуоит аминиатиура «natural» аҭыԥыркра алгоритм  ахархәараан"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+msgid "Place window captions on top"
+msgstr " Аԥенџьырқәа рыхқәа хыхь рҭыԥыркра"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr "Иалхзар, ахқәа аминиатиура хыхьтәи ахәҭаҟны аҭыԥ ааныркылалоит"
+"(ишыҟоу еиԥш ахқәа ҵаҟатәи аҭыԥ ааныркылоит).Ари ахышәара аԥсахраан,"
+"уи аус аура иалагарцазы, иаҭахуп Shell аиҭарура."
+
+#: extensions/places-menu/extension.js:88
+#: extensions/places-menu/extension.js:91
+msgid "Places"
+msgstr "Аҭыԥқәа"
+
+#: extensions/places-menu/placeDisplay.js:49
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr " «%s» аус арура залшом"
+
+#: extensions/places-menu/placeDisplay.js:64
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Иамоуӡит атом аибыҭара «%s» азы"
+
+#: extensions/places-menu/placeDisplay.js:125
+#: extensions/places-menu/placeDisplay.js:148
+msgid "Computer"
+msgstr "Акомпиутер"
+
+#: extensions/places-menu/placeDisplay.js:336
+msgid "Home"
+msgstr "Аҩнытәи аҭаӡ"
+
+#: extensions/places-menu/placeDisplay.js:381
+msgid "Browse Network"
+msgstr "Аҳа алаԥшхагара"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+msgid "Cycle Screenshot Sizes"
+msgstr "Аекран аҭыхымҭа ашәагаақәа рыԥсахра"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "Аекран аҭыхымҭа ашәагаақәа  шьҭахьҟатәи ахырхарҭала рыԥсахра"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+msgid "Theme name"
+msgstr "Атема ахьӡ"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "~/.themes/name/gnome-shell аҟынтә иҭагалоу атема ахьӡ "
+
+#: extensions/window-list/extension.js:72
+msgid "Close"
+msgstr "Аркра"
+
+#: extensions/window-list/extension.js:92
+msgid "Unminimize"
+msgstr "Архынҳәра"
+
+#: extensions/window-list/extension.js:92
+msgid "Minimize"
+msgstr "Аиҟәырҳәра"
+
+#: extensions/window-list/extension.js:99
+msgid "Unmaximize"
+msgstr "Аиҭашьақәыргылара"
+
+#: extensions/window-list/extension.js:99
+msgid "Maximize"
+msgstr "Аиҵыхра"
+
+#: extensions/window-list/extension.js:434
+msgid "Minimize all"
+msgstr "Зегьы реиҟәырҳәра"
+
+#: extensions/window-list/extension.js:440
+msgid "Unminimize all"
+msgstr "Зегьы рырхынҳәра"
+
+#: extensions/window-list/extension.js:446
+msgid "Maximize all"
+msgstr "Зегьы реиҵыхра"
+
+#: extensions/window-list/extension.js:454
+msgid "Unmaximize all"
+msgstr "Зегьы реиҭашьақәыргылара"
+
+#: extensions/window-list/extension.js:462
+msgid "Close all"
+msgstr "Зегьы рыркра"
+
+#: extensions/window-list/extension.js:741
+msgid "Window List"
+msgstr "Аԥенҵџьырқәа рыхьӡынҵа"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+msgid "When to group windows"
+msgstr "Аԥенҵџьырқәа аидыргәыԥлара анаҭаху"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are “never”, “auto” and “always”."
+msgstr "Иҳәаақәнаҵоит, ианбаҭаху аидыргәыԥлара ԥшьык иаҵанакуа аԥенџьырқәа, аԥенџьырқәа рыхьӡынҵаҟны"
+" Иҟалар зылшо аҵакқәа : «never» — ахаан; «auto» — автоматла; «always» — есқьынгьы"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:76
+msgid "Show windows from all workspaces"
+msgstr "Аҵакырақәа зегьы рҟынтә аԥенџьырқәа раарԥшра"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr 
+"Аԥенџьырқәа рыхьӡынҵа аусуратә ҵакырақәа зегь рҟынтә акәу,мамзар уажәти аҟынтә аку ишаарԥшлатәу"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+msgid "Show the window list on all monitors"
+msgstr "Аԥенџьырқәа рыхьӡынҵа амониторқәа зегьы рҟны рырбара"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr 
+"Аԥенџьырқәа рыхьӡынҵа иаҿаку амониторқәа зегьы рыҟноума иахьаарԥшлатәу , мамзар ихадоу аҟны акәу."
+
+#: extensions/window-list/prefs.js:32
+msgid "Window Grouping"
+msgstr "Аԥенџьырқәа  реидыргәыԥлара"
+
+#: extensions/window-list/prefs.js:37
+msgid "Never group windows"
+msgstr "Ахаангьы аԥенџьырқәа реидмыргәыԥлара"
+
+#: extensions/window-list/prefs.js:38
+msgid "Group windows when space is limited"
+msgstr "Аҭыԥ маҷхазар, аԥенџьырқәа еидшәыргәыԥла"
+
+#: extensions/window-list/prefs.js:39
+msgid "Always group windows"
+msgstr "Еснагь аԥенџьырқәа аидыргәыԥлара"
+
+#: extensions/window-list/prefs.js:63
+msgid "Show on all monitors"
+msgstr "Амониторқәа зегьы рҟны рырбара"
+
+#: extensions/window-list/workspaceIndicator.js:249
+#: extensions/workspace-indicator/extension.js:254
+msgid "Workspace Indicator"
+msgstr "Аусуратә ҵакыра аиндикатор"
+
+#: extensions/workspace-indicator/prefs.js:18
+msgid "Workspace Names"
+msgstr "Аусуратә ҵакырақәа рыхьӡқәа"
+
+#: extensions/workspace-indicator/prefs.js:39
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Аусуратә ҵакыра %d"
+
+#: extensions/workspace-indicator/prefs.js:184
+msgid "Add Workspace"
+msgstr "Аусуратә ҵакыра ацҵара"
