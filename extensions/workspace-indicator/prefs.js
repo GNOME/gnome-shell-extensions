@@ -11,22 +11,130 @@ const N_ = e => e;
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
 
+class NewItem extends GObject.Object {}
+GObject.registerClass(NewItem);
+
+class NewItemModel extends GObject.Object {
+    static [GObject.interfaces] = [Gio.ListModel];
+    static {
+        GObject.registerClass(this);
+    }
+
+    #item = new NewItem();
+
+    vfunc_get_item_type() {
+        return NewItem;
+    }
+
+    vfunc_get_n_items() {
+        return 1;
+    }
+
+    vfunc_get_item(_pos) {
+        return this.#item;
+    }
+}
+
+class WorkspacesList extends GObject.Object {
+    static [GObject.interfaces] = [Gio.ListModel];
+    static {
+        GObject.registerClass(this);
+    }
+
+    #settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
+    #names = this.#settings.get_strv(WORKSPACE_KEY);
+    #items = Gtk.StringList.new(this.#names);
+    #changedId;
+
+    constructor() {
+        super();
+
+        this.#changedId =
+            this.#settings.connect(`changed::${WORKSPACE_KEY}`, () => {
+                const removed = this.#names.length;
+                this.#names = this.#settings.get_strv(WORKSPACE_KEY);
+                this.#items.splice(0, removed, this.#names);
+                this.items_changed(0, removed, this.#names.length);
+            });
+    }
+
+    append() {
+        const name = _('Workspace %d').format(this.#names.length + 1);
+
+        this.#names.push(name);
+        this.#settings.block_signal_handler(this.#changedId);
+        this.#settings.set_strv(WORKSPACE_KEY, this.#names);
+        this.#settings.unblock_signal_handler(this.#changedId);
+
+        const pos = this.#items.get_n_items();
+        this.#items.append(name);
+        this.items_changed(pos, 0, 1);
+    }
+
+    remove(name) {
+        const pos = this.#names.indexOf(name);
+        if (pos < 0)
+            return;
+
+        this.#names.splice(pos, 1);
+
+        this.#settings.block_signal_handler(this.#changedId);
+        this.#settings.set_strv(WORKSPACE_KEY, this.#names);
+        this.#settings.unblock_signal_handler(this.#changedId);
+
+        this.#items.remove(pos);
+        this.items_changed(pos, 1, 0);
+    }
+
+    rename(oldName, newName) {
+        const pos = this.#names.indexOf(oldName);
+        if (pos < 0)
+            return;
+
+        this.#names.splice(pos, 1, newName);
+        this.#items.splice(pos, 1, [newName]);
+
+        this.#settings.block_signal_handler(this.#changedId);
+        this.#settings.set_strv(WORKSPACE_KEY, this.#names);
+        this.#settings.unblock_signal_handler(this.#changedId);
+    }
+
+    vfunc_get_item_type() {
+        return Gtk.StringObject;
+    }
+
+    vfunc_get_n_items() {
+        return this.#items.get_n_items();
+    }
+
+    vfunc_get_item(pos) {
+        return this.#items.get_item(pos);
+    }
+}
+
 class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
     static {
         GObject.registerClass(this);
 
         this.install_action('workspaces.add', null,
-            self => self._addNewName());
+            self => self._workspaces.append());
         this.install_action('workspaces.remove', 's',
-            (self, name, param) => self._removeName(param.unpack()));
+            (self, name, param) => self._workspaces.remove(param.unpack()));
         this.install_action('workspaces.rename', '(ss)',
-            (self, name, param) => self._changeName(...param.deepUnpack()));
+            (self, name, param) => self._workspaces.rename(...param.deepUnpack()));
     }
 
     constructor() {
         super({
             title: _('Workspace Names'),
         });
+
+        this._workspaces = new WorkspacesList();
+
+        const store = new Gio.ListStore({ item_type: Gio.ListModel });
+        const listModel = new Gtk.FlattenListModel({ model: store });
+        store.append(this._workspaces);
+        store.append(new NewItemModel());
 
         this._list = new Gtk.ListBox({
             selection_mode: Gtk.SelectionMode.NONE,
@@ -35,56 +143,10 @@ class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
         this._list.connect('row-activated', (l, row) => row.edit());
         this.add(this._list);
 
-        this._list.append(new NewWorkspaceRow());
-
-        this._settings = new Gio.Settings({
-            schema_id: WORKSPACE_SCHEMA,
-        });
-        this._settings.connect(`changed::${WORKSPACE_KEY}`,
-            this._sync.bind(this));
-        this._sync();
-    }
-
-    _addNewName() {
-        const names = this._settings.get_strv(WORKSPACE_KEY);
-        this._settings.set_strv(WORKSPACE_KEY, [
-            ...names,
-            _('Workspace %d').format(names.length + 1),
-        ]);
-    }
-
-    _removeName(removedName) {
-        this._settings.set_strv(WORKSPACE_KEY,
-            this._settings.get_strv(WORKSPACE_KEY)
-                .filter(name => name !== removedName));
-    }
-
-    _changeName(oldName, newName) {
-        const names = this._settings.get_strv(WORKSPACE_KEY);
-        const pos = names.indexOf(oldName);
-        if (pos < 0)
-            return;
-
-        names.splice(pos, 1, newName);
-        this._settings.set_strv(WORKSPACE_KEY, names);
-    }
-
-    _getWorkspaceRows() {
-        return [...this._list].filter(row => row.name);
-    }
-
-    _sync() {
-        const rows = this._getWorkspaceRows();
-
-        const oldNames = rows.map(row => row.name);
-        const newNames = this._settings.get_strv(WORKSPACE_KEY);
-
-        const removed = oldNames.filter(n => !newNames.includes(n));
-        const added = newNames.filter(n => !oldNames.includes(n));
-
-        removed.forEach(n => this._list.remove(rows.find(r => r.name === n)));
-        added.forEach(n => {
-            this._list.insert(new WorkspaceRow(n), newNames.indexOf(n));
+        this._list.bind_model(listModel, item => {
+            return item instanceof NewItem
+                ? new NewWorkspaceRow()
+                : new WorkspaceRow(item.string);
         });
     }
 }
