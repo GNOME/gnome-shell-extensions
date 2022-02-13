@@ -19,8 +19,8 @@ class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
             self => self._addNewName());
         this.install_action('workspaces.remove', 's',
             (self, name, param) => self._removeName(param.unpack()));
-        this.install_action('workspaces.update', null,
-            self => self._saveNames());
+        this.install_action('workspaces.rename', '(ss)',
+            (self, name, param) => self._changeName(...param.deepUnpack()));
     }
 
     constructor() {
@@ -59,8 +59,13 @@ class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
                 .filter(name => name !== removedName));
     }
 
-    _saveNames() {
-        const names = this._getWorkspaceRows().map(row => row.name);
+    _changeName(oldName, newName) {
+        const names = this._settings.get_strv(WORKSPACE_KEY);
+        const pos = names.indexOf(oldName);
+        if (pos < 0)
+            return;
+
+        names.splice(pos, 1, newName);
         this._settings.set_strv(WORKSPACE_KEY, names);
     }
 
@@ -143,6 +148,8 @@ class WorkspaceRow extends Adw.PreferencesRow {
         this.child = this._stack;
 
         this._entry.connect('activate', () => {
+            this.activate_action('workspaces.rename',
+                new GLib.Variant('(ss)', [this.name, this._entry.text]));
             this.name = this._entry.text;
             this._stopEdit();
         });
@@ -151,9 +158,6 @@ class WorkspaceRow extends Adw.PreferencesRow {
                 return;
             this._stopEdit();
         });
-
-        this.connect('notify::name',
-            () => this.activate_action('workspaces.update', null);
     }
 
     edit() {
