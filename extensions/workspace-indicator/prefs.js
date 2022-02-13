@@ -112,11 +112,16 @@ class WorkspaceRow extends Adw.PreferencesRow {
 
         const button = new Gtk.Button({
             action_name: 'workspaces.remove',
-            action_target: new GLib.Variant('s', name),
             icon_name: 'edit-delete-symbolic',
             has_frame: false,
         });
         box.append(button);
+
+        this.bind_property_full('name',
+            button, 'action-target',
+            GObject.BindingFlags.SYNC_CREATE,
+            (bind, target) => [true, new GLib.Variant('s', target)],
+            null);
 
         this._entry = new Gtk.Entry({
             max_width_chars: 25,
@@ -147,10 +152,8 @@ class WorkspaceRow extends Adw.PreferencesRow {
             this._stopEdit();
         });
 
-        this.connect('notify::name', () => {
-            button.action_target = new GLib.Variant('s', this.name);
-            this.activate_action('workspaces.update', null);
-        });
+        this.connect('notify::name',
+            () => this.activate_action('workspaces.update', null);
     }
 
     edit() {
