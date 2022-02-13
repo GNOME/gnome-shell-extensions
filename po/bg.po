@@ -1,17 +1,17 @@
 # Bulgarian translation for gnome-shell-extensions po-file.
 # Copyright (C) 2014, 2015, 2017 Free Software Foundation, Inc.
-# Copyright (C) 2021 Alexander Shopov <ash@kambanaria.org>.
+# Copyright (C) 2021, 2022 Alexander Shopov <ash@kambanaria.org>.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Ivaylo Valkov <ivaylo@e-valkov.org>, 2014.
-# Alexander Shopov <ash@kambanaria.org>, 2014, 2015, 2021.
+# Alexander Shopov <ash@kambanaria.org>, 2014, 2015, 2021, 2022.
 # Lyubomir Vasilev <lyubomirv@abv.bg>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2021-07-05 17:13+0000\n"
-"PO-Revision-Date: 2021-07-11 10:19+0200\n"
+"POT-Creation-Date: 2022-02-12 20:25+0000\n"
+"PO-Revision-Date: 2022-02-13 11:40+0100\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -24,15 +24,24 @@ msgstr ""
 msgid "GNOME Classic"
 msgstr "Класически GNOME"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Работната среда изглежда като класическия GNOME (2.x)"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "Класически GNOME в Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "Класически GNOME в Xorg"
+
+#: extensions/apps-menu/extension.js:112
 msgid "Favorites"
 msgstr "Любими"
 
-#: extensions/apps-menu/extension.js:367
+#: extensions/apps-menu/extension.js:370
 msgid "Applications"
 msgstr "Програми"
 
@@ -48,26 +57,26 @@ msgstr ""
 "Списък от низове. Всеки съдържа идентификатор на програма (име на файл „."
 "desktop“), следван от знака „:“ и номер на работен плот"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:19
 msgid "Workspace Rules"
 msgstr "Правила за работните плотове"
 
-#: extensions/auto-move-windows/prefs.js:237
+#: extensions/auto-move-windows/prefs.js:245
 msgid "Add Rule"
 msgstr "Добавяне на правило"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:132
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:210
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Неуспешно изваждане на устройство „%s“:"
 
-#: extensions/drive-menu/extension.js:148
+#: extensions/drive-menu/extension.js:139
 msgid "Removable devices"
 msgstr "Преносими медии"
 
-#: extensions/drive-menu/extension.js:172
+#: extensions/drive-menu/extension.js:161
 msgid "Open Files"
 msgstr "Отваряне на файлове"
 
@@ -100,31 +109,31 @@ msgstr ""
 "им, а не както е стандартно — отдолу. За прилагане на промяната на "
 "настройката трябва да рестартирате обвивката на GNOME."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:92
+#: extensions/places-menu/extension.js:88
+#: extensions/places-menu/extension.js:91
 msgid "Places"
 msgstr "Места"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:49
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Неуспешно стартиране на „%s“"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:64
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Неуспешно монтиране на тома „%s“"
 
+#: extensions/places-menu/placeDisplay.js:125
 #: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Компютър"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:336
 msgid "Home"
 msgstr "Домашна папка"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:381
 msgid "Browse Network"
 msgstr "Мрежа"
 
@@ -145,47 +154,47 @@ msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr ""
 "Името на темата, която да бъде заредена от „~/.themes/name/gnome-shell“"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Затваряне"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Деминимизиране"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Минимизиране"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Демаксимизиране"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Максимизиране"
 
-#: extensions/window-list/extension.js:432
+#: extensions/window-list/extension.js:434
 msgid "Minimize all"
 msgstr "Минимизиране на всички"
 
-#: extensions/window-list/extension.js:438
+#: extensions/window-list/extension.js:440
 msgid "Unminimize all"
 msgstr "Деминимизиране на всички"
 
-#: extensions/window-list/extension.js:444
+#: extensions/window-list/extension.js:446
 msgid "Maximize all"
 msgstr "Максимизиране на всички"
 
-#: extensions/window-list/extension.js:452
+#: extensions/window-list/extension.js:454
 msgid "Unmaximize all"
 msgstr "Демаксимизиране на всички"
 
-#: extensions/window-list/extension.js:460
+#: extensions/window-list/extension.js:462
 msgid "Close all"
 msgstr "Затваряне на всички"
 
-#: extensions/window-list/extension.js:737
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Списък на прозорците"
 
@@ -203,7 +212,7 @@ msgstr ""
 "„always“ (винаги)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:76
 msgid "Show windows from all workspaces"
 msgstr "Да се показват прозорците от всички работни плотове"
 
@@ -224,40 +233,40 @@ msgstr ""
 "Дали списъкът с прозорци да се извежда на всички монитори или само на "
 "основния"
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Групиране на прозорци"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:37
 msgid "Never group windows"
 msgstr "Никога да не се групират"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:38
 msgid "Group windows when space is limited"
 msgstr "Групиране при ограничено място"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:39
 msgid "Always group windows"
 msgstr "Винаги да се групират"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:63
 msgid "Show on all monitors"
 msgstr "На всички монитори"
 
 #: extensions/window-list/workspaceIndicator.js:249
-#: extensions/workspace-indicator/extension.js:255
+#: extensions/workspace-indicator/extension.js:254
 msgid "Workspace Indicator"
 msgstr "Индикатор на работните плотове"
 
-#: extensions/workspace-indicator/prefs.js:34
+#: extensions/workspace-indicator/prefs.js:18
 msgid "Workspace Names"
 msgstr "Имена на работните плотове"
 
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:39
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Работен плот %d"
 
-#: extensions/workspace-indicator/prefs.js:208
+#: extensions/workspace-indicator/prefs.js:184
 msgid "Add Workspace"
 msgstr "Добавяне на работен плот"
