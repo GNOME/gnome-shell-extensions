@@ -19,7 +19,8 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
         this.install_action('rules.add', null, self => self._addNewRule());
         this.install_action('rules.remove', 's',
             (self, name, param) => self._removeRule(param.unpack()));
-        this.install_action('rules.update', null, self => self._saveRules());
+        this.install_action('rules.change-workspace', '(si)',
+            (self, name, param) => self._changeWorkspace(...param.deepUnpack()));
     }
 
     constructor() {
@@ -67,24 +68,28 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
             }));
     }
 
-    _saveRules() {
-        this._settings.set_strv(SETTINGS_KEY,
-            this._getRuleRows().map(row => `${row.id}:${row.value}`));
-    }
+    _changeWorkspace(id, workspace) {
+        const rules = this._settings.get_strv(SETTINGS_KEY);
+        const pos = rules.findIndex(r => r.startsWith(`${id}:`));
+        if (pos < 0)
+            return;
 
-    _getRuleRows() {
-        return [...this._list].filter(row => !!row.id);
+        rules.splice(pos, 1, `${id}:${workspace}`);
+
+        this._settings.block_signal_handler(this._changedId);
+        this._settings.set_strv(SETTINGS_KEY, rules);
+        this._settings.unblock_signal_handler(this._changedId);
     }
 
     _sync() {
-        const oldRules = this._getRuleRows();
+        const oldRules = [...this._list].filter(row => !!row.id);
         const newRules = this._settings.get_strv(SETTINGS_KEY).map(entry => {
             const [id, value] = entry.split(':');
             return { id, value };
         });
 
         this._settings.block_signal_handler(this._changedId);
-        this.action_set_enabled('rules.update', false);
+        this.action_set_enabled('rules.change-workspace', false);
 
         newRules.forEach(({ id, value }, index) => {
             const row = oldRules.find(r => r.id === id);
@@ -102,7 +107,7 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
         removed.forEach(r => this._list.remove(r));
 
         this._settings.unblock_signal_handler(this._changedId);
-        this.action_set_enabled('rules.update', true);
+        this.action_set_enabled('rules.change-workspace', true);
     }
 }
 
@@ -209,8 +214,10 @@ class RuleRow extends Adw.ActionRow {
         });
         this.add_suffix(button);
 
-        this.connect('notify::value',
-            () => this.activate_action('rules.update', null));
+        this.connect('notify::value', () => {
+            this.activate_action('rules.change-workspace',
+                new GLib.Variant('(si)', [this.id, this.value]));
+        });
     }
 
     get id() {
