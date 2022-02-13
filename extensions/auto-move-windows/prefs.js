@@ -12,15 +12,139 @@ const SETTINGS_KEY = 'application-list';
 
 const WORKSPACE_MAX = 36; // compiled in limit of mutter
 
+class NewItem extends GObject.Object {}
+GObject.registerClass(NewItem);
+
+class NewItemModel extends GObject.Object {
+    static [GObject.interfaces] = [Gio.ListModel];
+    static {
+        GObject.registerClass(this);
+    }
+
+    #item = new NewItem();
+
+    vfunc_get_item_type() {
+        return NewItem;
+    }
+
+    vfunc_get_n_items() {
+        return 1;
+    }
+
+    vfunc_get_item(_pos) {
+        return this.#item;
+    }
+}
+
+class Rule extends GObject.Object {
+    static [GObject.properties] = {
+        'app-info': GObject.ParamSpec.object(
+            'app-info', 'app-info', 'app-info',
+            GObject.ParamFlags.READWRITE,
+            Gio.DesktopAppInfo),
+        'workspace': GObject.ParamSpec.uint(
+            'workspace', 'workspace', 'workspace',
+            GObject.ParamFlags.READWRITE,
+            1, WORKSPACE_MAX, 1),
+    };
+
+    static {
+        GObject.registerClass(this);
+    }
+}
+
+class RulesList extends GObject.Object {
+    static [GObject.interfaces] = [Gio.ListModel];
+    static {
+        GObject.registerClass(this);
+    }
+
+    #settings = ExtensionUtils.getSettings();
+    #rules = [];
+    #changedId;
+
+    constructor() {
+        super();
+
+        this.#changedId =
+            this.#settings.connect(`changed::${SETTINGS_KEY}`,
+                () => this.#sync());
+        this.#sync();
+    }
+
+    append(appInfo) {
+        const pos = this.#rules.length;
+
+        this.#rules.push(new Rule({ appInfo }));
+        this.#saveRules();
+
+        this.items_changed(pos, 0, 1);
+    }
+
+    remove(id) {
+        const pos = this.#rules.findIndex(r => r.appInfo.get_id() === id);
+        if (pos < 0)
+            return;
+
+        this.#rules.splice(pos, 1);
+        this.#saveRules();
+
+        this.items_changed(pos, 1, 0);
+    }
+
+    changeWorkspace(id, workspace) {
+        const pos = this.#rules.findIndex(r => r.appInfo.get_id() === id);
+        if (pos < 0)
+            return;
+
+        this.#rules[pos].set({ workspace });
+        this.#saveRules();
+    }
+
+    #saveRules() {
+        this.#settings.block_signal_handler(this.#changedId);
+        this.#settings.set_strv(SETTINGS_KEY,
+            this.#rules.map(r => `${r.app_info.get_id()}:${r.workspace}`));
+        this.#settings.unblock_signal_handler(this.#changedId);
+    }
+
+    #sync() {
+        const removed = this.#rules.length;
+
+        this.#rules = [];
+        for (const stringRule of this.#settings.get_strv(SETTINGS_KEY)) {
+            const [id, workspace] = stringRule.split(':');
+            const appInfo = Gio.DesktopAppInfo.new(id);
+            if (appInfo)
+                this.#rules.push(new Rule({ appInfo, workspace }));
+            else
+                log(`Invalid ID ${id}`);
+        }
+        this.items_changed(0, removed, this.#rules.length);
+    }
+
+    vfunc_get_item_type() {
+        return Rule;
+    }
+
+    vfunc_get_n_items() {
+        return this.#rules.length;
+    }
+
+    vfunc_get_item(pos) {
+        return this.#rules[pos] ?? null;
+    }
+}
+
 class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
     static {
         GObject.registerClass(this);
 
         this.install_action('rules.add', null, self => self._addNewRule());
         this.install_action('rules.remove', 's',
-            (self, name, param) => self._removeRule(param.unpack()));
+            (self, name, param) => self._rules.remove(param.unpack()));
         this.install_action('rules.change-workspace', '(si)',
-            (self, name, param) => self._changeWorkspace(...param.deepUnpack()));
+            (self, name, param) => self._rules.changeWorkspace(...param.deepUnpack()));
     }
 
     constructor() {
@@ -28,20 +152,24 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
             title: _('Workspace Rules'),
         });
 
+        this._rules = new RulesList();
+
+        const store = new Gio.ListStore({ item_type: Gio.ListModel });
+        const listModel = new Gtk.FlattenListModel({ model: store });
+        store.append(this._rules);
+        store.append(new NewItemModel());
+
         this._list = new Gtk.ListBox({
             selection_mode: Gtk.SelectionMode.NONE,
             css_classes: ['boxed-list'],
         });
         this.add(this._list);
 
-        this._list.append(new NewRuleRow());
-
-        this._settings = ExtensionUtils.getSettings();
-        this._changedId = this._settings.connect('changed',
-            this._sync.bind(this));
-        this._sync();
-
-        this.connect('destroy', () => this._settings.run_dispose());
+        this._list.bind_model(listModel, item => {
+            return item instanceof NewItem
+                ? new NewRuleRow()
+                : new RuleRow(item);
+        });
     }
 
     _addNewRule() {
@@ -49,65 +177,11 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
         dialog.connect('response', (dlg, id) => {
             const appInfo = id === Gtk.ResponseType.OK
                 ? dialog.get_widget().get_app_info() : null;
-            if (appInfo) {
-                this._settings.set_strv(SETTINGS_KEY, [
-                    ...this._settings.get_strv(SETTINGS_KEY),
-                    `${appInfo.get_id()}:1`,
-                ]);
-            }
+            if (appInfo)
+                this._rules.append(appInfo);
             dialog.destroy();
         });
         dialog.show();
-    }
-
-    _removeRule(removedId) {
-        this._settings.set_strv(SETTINGS_KEY,
-            this._settings.get_strv(SETTINGS_KEY).filter(entry => {
-                const [id] = entry.split(':');
-                return id !== removedId;
-            }));
-    }
-
-    _changeWorkspace(id, workspace) {
-        const rules = this._settings.get_strv(SETTINGS_KEY);
-        const pos = rules.findIndex(r => r.startsWith(`${id}:`));
-        if (pos < 0)
-            return;
-
-        rules.splice(pos, 1, `${id}:${workspace}`);
-
-        this._settings.block_signal_handler(this._changedId);
-        this._settings.set_strv(SETTINGS_KEY, rules);
-        this._settings.unblock_signal_handler(this._changedId);
-    }
-
-    _sync() {
-        const oldRules = [...this._list].filter(row => !!row.id);
-        const newRules = this._settings.get_strv(SETTINGS_KEY).map(entry => {
-            const [id, value] = entry.split(':');
-            return { id, value };
-        });
-
-        this._settings.block_signal_handler(this._changedId);
-        this.action_set_enabled('rules.change-workspace', false);
-
-        newRules.forEach(({ id, value }, index) => {
-            const row = oldRules.find(r => r.id === id);
-            const appInfo = row
-                ? null : Gio.DesktopAppInfo.new(id);
-
-            if (row)
-                row.set({ value });
-            else if (appInfo)
-                this._list.insert(new RuleRow(appInfo, value), index);
-        });
-
-        const removed = oldRules.filter(
-            ({ id }) => !newRules.find(r => r.id === id));
-        removed.forEach(r => this._list.remove(r));
-
-        this._settings.unblock_signal_handler(this._changedId);
-        this.action_set_enabled('rules.change-workspace', true);
     }
 }
 
@@ -169,28 +243,18 @@ class WorkspaceSelector extends Gtk.Widget {
 }
 
 class RuleRow extends Adw.ActionRow {
-    static [GObject.properties] = {
-        'id': GObject.ParamSpec.string(
-            'id', 'id', 'id',
-            GObject.ParamFlags.READABLE,
-            ''),
-        'value': GObject.ParamSpec.uint(
-            'value', 'value', 'value',
-            GObject.ParamFlags.READWRITE,
-            1, WORKSPACE_MAX, 1),
-    };
-
     static {
         GObject.registerClass(this);
     }
 
-    constructor(appInfo, value) {
+    constructor(rule) {
+        const { appInfo } = rule;
+        const id = appInfo.get_id();
+
         super({
             activatable: false,
-            title: appInfo.get_display_name(),
-            value,
+            title: rule.appInfo.get_display_name(),
         });
-        this._appInfo = appInfo;
 
         const icon = new Gtk.Image({
             css_classes: ['icon-dropshadow'],
@@ -200,28 +264,24 @@ class RuleRow extends Adw.ActionRow {
         this.add_prefix(icon);
 
         const wsButton = new WorkspaceSelector();
-        this.bind_property('value',
+        rule.bind_property('workspace',
             wsButton, 'number',
-            GObject.BindingFlags.SYNC_CREATE | GObject.BindingFlags.BIDIRECTIONAL);
+            GObject.BindingFlags.SYNC_CREATE);
         this.add_suffix(wsButton);
+
+        wsButton.connect('notify::number', () => {
+            this.activate_action('rules.change-workspace',
+                new GLib.Variant('(si)', [id, wsButton.number]));
+        });
 
         const button = new Gtk.Button({
             action_name: 'rules.remove',
-            action_target: new GLib.Variant('s', this.id),
+            action_target: new GLib.Variant('s', id),
             icon_name: 'edit-delete-symbolic',
             has_frame: false,
             valign: Gtk.Align.CENTER,
         });
         this.add_suffix(button);
-
-        this.connect('notify::value', () => {
-            this.activate_action('rules.change-workspace',
-                new GLib.Variant('(si)', [this.id, this.value]));
-        });
-    }
-
-    get id() {
-        return this._appInfo.get_id();
     }
 }
 
