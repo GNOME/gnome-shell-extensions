@@ -13,6 +13,19 @@ const WORKSPACE_KEY = 'workspace-names';
 
 const WorkspaceSettingsWidget = GObject.registerClass(
 class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
+    static _classInit(klass) {
+        klass = super._classInit(klass);
+
+        klass.install_action('workspaces.add', null,
+            self => self._addNewName());
+        klass.install_action('workspaces.remove', 's',
+            (self, name, param) => self._removeName(param.unpack()));
+        klass.install_action('workspaces.update', null,
+            self => self._saveNames());
+
+        return klass;
+    }
+
     _init() {
         super._init({
             title: _('Workspace Names'),
@@ -27,45 +40,31 @@ class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
 
         this._list.append(new NewWorkspaceRow());
 
-        this._actionGroup = new Gio.SimpleActionGroup();
-        this._list.insert_action_group('workspaces', this._actionGroup);
-
-        let action;
-        action = new Gio.SimpleAction({ name: 'add' });
-        action.connect('activate', () => {
-            const names = this._settings.get_strv(WORKSPACE_KEY);
-            this._settings.set_strv(WORKSPACE_KEY, [
-                ...names,
-                _('Workspace %d').format(names.length + 1),
-            ]);
-        });
-        this._actionGroup.add_action(action);
-
-        action = new Gio.SimpleAction({
-            name: 'remove',
-            parameter_type: new GLib.VariantType('s'),
-        });
-        action.connect('activate', (a, param) => {
-            const removed = param.deepUnpack();
-            this._settings.set_strv(WORKSPACE_KEY,
-                this._settings.get_strv(WORKSPACE_KEY)
-                    .filter(name => name !== removed));
-        });
-        this._actionGroup.add_action(action);
-
-        action = new Gio.SimpleAction({ name: 'update' });
-        action.connect('activate', () => {
-            const names = this._getWorkspaceRows().map(row => row.name);
-            this._settings.set_strv(WORKSPACE_KEY, names);
-        });
-        this._actionGroup.add_action(action);
-
         this._settings = new Gio.Settings({
             schema_id: WORKSPACE_SCHEMA,
         });
         this._settings.connect(`changed::${WORKSPACE_KEY}`,
             this._sync.bind(this));
         this._sync();
+    }
+
+    _addNewName() {
+        const names = this._settings.get_strv(WORKSPACE_KEY);
+        this._settings.set_strv(WORKSPACE_KEY, [
+            ...names,
+            _('Workspace %d').format(names.length + 1),
+        ]);
+    }
+
+    _removeName(removedName) {
+        this._settings.set_strv(WORKSPACE_KEY,
+            this._settings.get_strv(WORKSPACE_KEY)
+                .filter(name => name !== removedName));
+    }
+
+    _saveNames() {
+        const names = this._getWorkspaceRows().map(row => row.name);
+        this._settings.set_strv(WORKSPACE_KEY, names);
     }
 
     _getWorkspaceRows() {

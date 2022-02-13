@@ -14,6 +14,17 @@ const WORKSPACE_MAX = 36; // compiled in limit of mutter
 
 const AutoMoveSettingsWidget = GObject.registerClass(
 class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
+    static _classInit(klass) {
+        super._classInit(klass);
+
+        klass.install_action('rules.add', null, self => self._addNewRule());
+        klass.install_action('rules.remove', 's',
+            (self, name, param) => self._removeRule(param.unpack()));
+        klass.install_action('rules.update', null, self => self._saveRules());
+
+        return klass;
+    }
+
     _init() {
         super._init({
             title: _('Workspace Rules'),
@@ -27,29 +38,6 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
 
         this._list.append(new NewRuleRow());
 
-        this._actionGroup = new Gio.SimpleActionGroup();
-        this._list.insert_action_group('rules', this._actionGroup);
-
-        let action;
-        action = new Gio.SimpleAction({ name: 'add' });
-        action.connect('activate', this._onAddActivated.bind(this));
-        this._actionGroup.add_action(action);
-
-        action = new Gio.SimpleAction({
-            name: 'remove',
-            parameter_type: new GLib.VariantType('s'),
-        });
-        action.connect('activate', this._onRemoveActivated.bind(this));
-        this._actionGroup.add_action(action);
-
-        action = new Gio.SimpleAction({ name: 'update' });
-        action.connect('activate', () => {
-            this._settings.set_strv(SETTINGS_KEY,
-                this._getRuleRows().map(row => `${row.id}:${row.value}`));
-        });
-        this._actionGroup.add_action(action);
-        this._updateAction = action;
-
         this._settings = ExtensionUtils.getSettings();
         this._changedId = this._settings.connect('changed',
             this._sync.bind(this));
@@ -58,7 +46,7 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
         this.connect('destroy', () => this._settings.run_dispose());
     }
 
-    _onAddActivated() {
+    _addNewRule() {
         const dialog = new NewRuleDialog(this.get_root());
         dialog.connect('response', (dlg, id) => {
             const appInfo = id === Gtk.ResponseType.OK
@@ -74,13 +62,17 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
         dialog.show();
     }
 
-    _onRemoveActivated(action, param) {
-        const removed = param.deepUnpack();
+    _removeRule(removedId) {
         this._settings.set_strv(SETTINGS_KEY,
             this._settings.get_strv(SETTINGS_KEY).filter(entry => {
                 const [id] = entry.split(':');
-                return id !== removed;
+                return id !== removedId;
             }));
+    }
+
+    _saveRules() {
+        this._settings.set_strv(SETTINGS_KEY,
+            this._getRuleRows().map(row => `${row.id}:${row.value}`));
     }
 
     _getRuleRows() {
@@ -95,7 +87,7 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
         });
 
         this._settings.block_signal_handler(this._changedId);
-        this._updateAction.enabled = false;
+        this.action_set_enabled('rules.update', false);
 
         newRules.forEach(({ id, value }, index) => {
             const row = oldRules.find(r => r.id === id);
@@ -113,7 +105,7 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
         removed.forEach(r => this._list.remove(r));
 
         this._settings.unblock_signal_handler(this._changedId);
-        this._updateAction.enabled = true;
+        this.action_set_enabled('rules.update', true);
     }
 });
 
