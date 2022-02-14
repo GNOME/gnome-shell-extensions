@@ -1,3 +1,18 @@
+42.beta
+=======
+* workspace-indicator: Fix cancelling editing with Esc [Florian; !208]
+* window-list: Update window tracking to avoid missing icons [Florian; !207]
+* Use libadwaita for preferences [Florian; !209, !213]
+* Adapt to Clutter grab API changes [Florian; !212]
+* Misc. bug fixes and cleanups [Jan, Florian; !210, !214]
+
+Contributors:
+  Jan Beich, Florian Müllner, Naala Nanba
+
+Translators:
+  Boyuan Yang [zh_CN], Matej Urbančič [sl], Naala Nanba [ab],
+  Alexander Shopov [bg], Emin Tufan Çetin [tr]
+
 42.alpha
 ========
 * native-window-placement: Fix distorted layout in app grid [Sebastian; !189]
