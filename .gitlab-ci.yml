@@ -26,7 +26,6 @@ default:
 variables:
   FDO_UPSTREAM_REPO: GNOME/gnome-shell-extensions
   LINT_LOG: "eslint-report.xml"
-  JS_LOG: "js-report.txt"
 
 workflow:
   rules:
@@ -103,12 +102,7 @@ js_check:
   stage: review
   <<: *prereview_req
   script:
-    - find extensions -name '*.js' -exec js78 -c '{}' ';' 2>&1 | tee $JS_LOG
-    - (! grep -q . $JS_LOG)
-  artifacts:
-    paths:
-      - ${JS_LOG}
-    when: on_failure
+    - gjs-check-syntax
 
 eslint:
   stage: review
