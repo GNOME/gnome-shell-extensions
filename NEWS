@@ -1,3 +1,10 @@
+40.6
+====
+* window-list: Update window tracking to avoid missing icons [Florian; #372]
+
+Contributors:
+  Florian Müllner
+
 40.5
 ====
 * native-window-placement: Fix distorted layout in app grid [Sebastian; !189]
