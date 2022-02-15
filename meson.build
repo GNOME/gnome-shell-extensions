@@ -1,5 +1,5 @@
 project('gnome-shell-extensions',
-  version: '41.1',
+  version: '41.2',
   meson_version: '>= 0.53.0',
   license: 'GPL2+'
 )
