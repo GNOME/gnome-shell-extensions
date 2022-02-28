@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2020-09-07 18:36+0200\n"
+"POT-Creation-Date: 2021-11-06 14:08+0000\n"
+"PO-Revision-Date: 2022-02-27 13:21+0100\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -22,19 +22,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.3\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Classic"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Denne session logger dig ind i GNOME Classic"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME Classic på Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME Classic på Xorg"
+
+#: extensions/apps-menu/extension.js:112
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:366
 msgid "Applications"
 msgstr "Programmer"
 
@@ -50,26 +59,26 @@ msgstr ""
 "En liste over strenge, som hver indeholder et program-id "
 "(skrivebordsfilnavn), efterfulgt af et kolon og arbejdsområdets nummer"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:34
 msgid "Workspace Rules"
 msgstr "Regler for arbejdsområde"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:236
 msgid "Add Rule"
 msgstr "Tilføj regel"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
+#: extensions/drive-menu/extension.js:133
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Udskubning af drevet “%s” mislykkedes:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:149
 msgid "Removable devices"
 msgstr "Flytbare enheder"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:171
 msgid "Open Files"
 msgstr "Åbn filer"
 
@@ -103,8 +112,8 @@ msgstr ""
 "Ændring af denne indstilling kræver at shell'en genstartes for at træde i "
 "kraft."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:88
+#: extensions/places-menu/extension.js:91
 msgid "Places"
 msgstr "Steder"
 
@@ -147,47 +156,47 @@ msgstr "Temanavn"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Navnet på temaet, som indlæses fra ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Luk"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Afminimér"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Minimér"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Afmaksimér"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Maksimér"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:434
 msgid "Minimize all"
 msgstr "Minimér"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:440
 msgid "Unminimize all"
 msgstr "Afminimér alle"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:446
 msgid "Maximize all"
 msgstr "Maksimér alle"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:454
 msgid "Unmaximize all"
 msgstr "Afmaksimér alle"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:462
 msgid "Close all"
 msgstr "Luk alle"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Vinduesliste"
 
@@ -204,7 +213,7 @@ msgstr ""
 "Mulige værdier er “never” (aldrig), “auto” (automatisk) og “always” (altid)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:86
 msgid "Show windows from all workspaces"
 msgstr "Vis vinduer fra alle arbejdsområder"
 
@@ -225,41 +234,41 @@ msgstr ""
 "Om vindueslisten skal vise på alle tilsluttede skærme, eller kun på den "
 "primære."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:39
 msgid "Window Grouping"
 msgstr "Vinduesgruppering"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:63
 msgid "Never group windows"
 msgstr "Gruppér aldrig vinduer"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:64
 msgid "Group windows when space is limited"
 msgstr "Gruppér vinduer når pladsen er begrænset"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:65
 msgid "Always group windows"
 msgstr "Gruppér altid vinduer"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:81
 msgid "Show on all monitors"
 msgstr "Vis på alle skærme"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:249
+#: extensions/workspace-indicator/extension.js:254
 msgid "Workspace Indicator"
 msgstr "Arbejdsområdeindikator"
 
-#: extensions/workspace-indicator/prefs.js:34
+#: extensions/workspace-indicator/prefs.js:33
 msgid "Workspace Names"
 msgstr "Navne på arbejdsområder"
 
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:66
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Arbejdsområde %d"
 
-#: extensions/workspace-indicator/prefs.js:218
+#: extensions/workspace-indicator/prefs.js:207
 msgid "Add Workspace"
 msgstr "Tilføj arbejdsområde"
 
