@@ -3,36 +3,48 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Claude Paroz <claude@2xlibre.net>, 2011.
 # Alain Lojewski <allomervan@gmail.com>, 2012-2013.
-# Charles Monzat <charles.monzat@numericable.fr>, 2018.
+# Charles Monzat <charles.monzat@free.fr>, 2018-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2020-08-10 12:50+0200\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2021-11-06 14:08+0000\n"
+"PO-Revision-Date: 2022-03-01 21:04+0100\n"
+"Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 40.0\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Classique"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Cette session vous connecte à GNOME Classique"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME Classique sur Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME Classique sur Xorg"
+
+#: extensions/apps-menu/extension.js:112
 msgid "Favorites"
 msgstr "Favoris"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:366
 msgid "Applications"
 msgstr "Applications"
 
@@ -49,26 +61,26 @@ msgstr ""
 "d’application (nom de fichier desktop), suivi par un deux-points et le "
 "numéro de l’espace de travail"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:34
 msgid "Workspace Rules"
 msgstr "Règles des espaces de travail"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:236
 msgid "Add Rule"
 msgstr "Ajouter une règle"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
+#: extensions/drive-menu/extension.js:133
 #: extensions/places-menu/placeDisplay.js:233
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "L’éjection du disque « %s » a échoué :"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:149
 msgid "Removable devices"
 msgstr "Périphériques amovibles"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:171
 msgid "Open Files"
 msgstr "Ouvrir Fichiers"
 
@@ -102,8 +114,8 @@ msgstr ""
 "dessous. Pour que ce paramètre soit pris en compte, il faut redémarrer le "
 "Shell."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:88
+#: extensions/places-menu/extension.js:91
 msgid "Places"
 msgstr "Emplacements"
 
@@ -146,47 +158,47 @@ msgstr "Nom du thème"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Le nom du thème, à charger à partir de ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Fermer"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Restaurer"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Réduire"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Restaurer"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Maximiser"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:434
 msgid "Minimize all"
 msgstr "Tout réduire"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:440
 msgid "Unminimize all"
 msgstr "Tout restaurer"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:446
 msgid "Maximize all"
 msgstr "Tout maximiser"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:454
 msgid "Unmaximize all"
 msgstr "Tout restaurer"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:462
 msgid "Close all"
 msgstr "Tout fermer"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:741
 msgid "Window List"
 msgstr "Liste de fenêtres"
 
@@ -204,7 +216,7 @@ msgstr ""
 "« always » (toujours)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:86
 msgid "Show windows from all workspaces"
 msgstr "Afficher les fenêtres de tous les espaces de travail"
 
@@ -226,41 +238,41 @@ msgstr ""
 "Indique s’il faut afficher la liste des fenêtres sur tous les écrans "
 "connectés ou seulement l’écran principal."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:39
 msgid "Window Grouping"
 msgstr "Regroupement de fenêtres"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:63
 msgid "Never group windows"
 msgstr "Ne jamais regrouper les fenêtres"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:64
 msgid "Group windows when space is limited"
 msgstr "Regrouper les fenêtres quand l’espace est limité"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:65
 msgid "Always group windows"
 msgstr "Toujours regrouper les fenêtres"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:81
 msgid "Show on all monitors"
 msgstr "Afficher sur tous les écrans"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:249
+#: extensions/workspace-indicator/extension.js:254
 msgid "Workspace Indicator"
 msgstr "Indicateur d’espace de travail"
 
-#: extensions/workspace-indicator/prefs.js:34
+#: extensions/workspace-indicator/prefs.js:33
 msgid "Workspace Names"
 msgstr "Noms des espaces de travail"
 
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:66
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Espace de travail %d"
 
-#: extensions/workspace-indicator/prefs.js:218
+#: extensions/workspace-indicator/prefs.js:207
 msgid "Add Workspace"
 msgstr "Ajouter un espace de travail"
 
