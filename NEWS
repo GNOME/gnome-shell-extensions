@@ -1,3 +1,15 @@
+42.rc
+=====
+* Misc. bug fixes and cleanups [Florian; !215, !218]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Marek Černocký [cs], Dušan Kazik [sk], Piotr Drąg [pl], Jiri Grönroos [fi],
+  Luna Jernberg [sv], Alan Mortensen [da], Charles Monzat [fr],
+  Changwoo Ryu [ko]
+
 42.beta
 =======
 * workspace-indicator: Fix cancelling editing with Esc [Florian; !208]
