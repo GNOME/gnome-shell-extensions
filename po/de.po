@@ -2,41 +2,51 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2011-2013, 2017.
-# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2011, 2012.
+# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2011, 2012, 2022.
 # Benjamin Steinwender <b@stbe.at>, 2013.
 # Wolfgang Stöggl <c72578@yahoo.de>, 2014.
 # Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>, 2017.
 # Tim Sabsch <tim@sabsch.com>, 2019-2020.
+# Philipp Kiemle <philipp.kiemle@gmail.com>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2020-09-08 20:20+0200\n"
-"Last-Translator: Tim Sabsch <tim@sabsch.com>\n"
+"POT-Creation-Date: 2022-03-07 15:35+0000\n"
+"PO-Revision-Date: 2022-03-10 22:26+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Classic"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Diese Sitzung meldet Sie in GNOME Classic an"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME Classic unter Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME Classic unter Xorg"
+
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Favoriten"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:379
 msgid "Applications"
 msgstr "Anwendungen"
 
@@ -53,26 +63,26 @@ msgstr ""
 "Datei) enthält, gefolgt von einem Doppelpunkt und der Nummer der "
 "Arbeitsfläche"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:152
 msgid "Workspace Rules"
 msgstr "Arbeitsfläche-Regeln"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:306
 msgid "Add Rule"
 msgstr "Regel hinzufügen"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:126
+#: extensions/places-menu/placeDisplay.js:210
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Auswerfen von Laufwerk »%s« schlug fehl:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:145
 msgid "Removable devices"
 msgstr "Wechseldatenträger"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:167
 msgid "Open Files"
 msgstr "Dateien öffnen"
 
@@ -106,31 +116,31 @@ msgstr ""
 "Vorschaubild platziert und damit die Voreinstellung der Shell übergangen. "
 "Eine Änderungseinstellung tritt erst mit einem Neustart der Shell in Kraft."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:97
 msgid "Places"
 msgstr "Orte"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:49
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Starten von »%s« fehlgeschlagen"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:64
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Datenträger für »%s« konnte nicht eingebunden werden"
 
+#: extensions/places-menu/placeDisplay.js:125
 #: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Rechner"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:336
 msgid "Home"
 msgstr "Persönlicher Ordner"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:381
 msgid "Browse Network"
 msgstr "Netzwerk durchsuchen"
 
@@ -152,47 +162,47 @@ msgstr ""
 "Der Name des Themas, welches aus ~/.themes/name/gnome-shell geladen werden "
 "soll"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Schließen"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Minimieren rückgängig"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Minimieren"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Maximieren rückgängig"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Maximieren"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:441
 msgid "Minimize all"
 msgstr "Alle minimieren"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:447
 msgid "Unminimize all"
 msgstr "Alle minimieren rückgängig"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:453
 msgid "Maximize all"
 msgstr "Alle maximieren"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:461
 msgid "Unmaximize all"
 msgstr "Alle maximieren rückgängig"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:469
 msgid "Close all"
 msgstr "Alle schließen"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:753
 msgid "Window List"
 msgstr "Fensterliste"
 
@@ -210,7 +220,7 @@ msgstr ""
 "»always« (immer)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "Fenster von allen Arbeitsflächen anzeigen"
 
@@ -232,41 +242,41 @@ msgstr ""
 "Legt fest, ob die Fensterliste auf allen angeschlossenen Bildschirmen "
 "angezeigt wird oder nur auf dem Primären."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Fenstergruppierung"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "Fenster niemals gruppieren"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "Fenster bei Platzmangel gruppieren"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "Fenster immer gruppieren"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "Auf allen Bildschirmen anzeigen"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:261
+#: extensions/workspace-indicator/extension.js:266
 msgid "Workspace Indicator"
 msgstr "Arbeitsflächenindikator"
 
-#: extensions/workspace-indicator/prefs.js:34
-msgid "Workspace Names"
-msgstr "Namen der Arbeitsflächen"
-
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:62
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Arbeitsfläche %d"
 
-#: extensions/workspace-indicator/prefs.js:218
+#: extensions/workspace-indicator/prefs.js:129
+msgid "Workspace Names"
+msgstr "Namen der Arbeitsflächen"
+
+#: extensions/workspace-indicator/prefs.js:255
 msgid "Add Workspace"
 msgstr "Arbeitsfläche hinzufügen"
 
