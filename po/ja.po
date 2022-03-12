@@ -1,12 +1,12 @@
 # gnome-shell-extensions ja.po
-# Copyright (C) 2011-2015, 2019-2020 gnome-shell-extensions's COPYRIGHT HOLDER
+# Copyright (C) 2011, 2013-2015, 2019-2020, 2022 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2011.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2011, 2013, 2015
 # Nishio Futoshi <fut_nis@d3.dion.ne.jp>, 2013.
 # Ikuya Awashiro <ikuya@fruitsbasket.info>, 2014.
 # Hajime Taira <htaira@redhat.com>, 2014, 2015.
-# sicklylife <translation@sicklylife.jp>, 2019-2020.
+# sicklylife <translation@sicklylife.jp>, 2019-2020, 2022.
 #
 msgid ""
 msgstr ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
 "POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2020-06-10 18:45+0900\n"
+"PO-Revision-Date: 2022-03-12 19:00+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -30,6 +30,14 @@ msgstr "GNOME クラシック"
 #: data/gnome-classic.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "GNOME クラシックモードでログインします"
+
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME クラシック on Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME クラシック on Xorg"
 
 #: extensions/apps-menu/extension.js:113
 msgid "Favorites"
