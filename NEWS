@@ -1,3 +1,7 @@
+40.7
+====
+ * Bump version
+
 40.6
 ====
 * window-list: Update window tracking to avoid missing icons [Florian; #372]
