@@ -88,7 +88,6 @@ theme_sources = files(
 )
 
 theme_data = [
-  'calendar-today.svg',
   'classic-process-working.svg',
   'gnome-classic-high-contrast.css'
 ]
