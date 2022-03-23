@@ -94,6 +94,14 @@ check-merge-request:
     reports:
       junit: check-merge-request-report.xml
 
+check-reuse:
+  stage: pre_review
+  image:
+    name: fsfe/reuse:latest
+    entrypoint: [""]
+  script:
+    - reuse lint
+
 build-fedora-container:
   extends:
     - .fdo.container-build@fedora@x86_64
