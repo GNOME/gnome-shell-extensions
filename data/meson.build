@@ -90,10 +90,6 @@ theme_sources = files(
 theme_data = [
   'calendar-today.svg',
   'classic-process-working.svg',
-  'classic-toggle-off-intl.svg',
-  'classic-toggle-off-us.svg',
-  'classic-toggle-on-intl.svg',
-  'classic-toggle-on-us.svg',
   'gnome-classic-high-contrast.css'
 ]
 

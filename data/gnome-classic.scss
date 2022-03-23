@@ -94,13 +94,6 @@ $variant: 'light';
     border-radius: 0;
 }
 
-@each $v in us, intl {
-  .toggle-switch-#{$v} {
-    background-image: url("classic-toggle-off-#{$v}.svg");
-    &:checked { background-image: url("classic-toggle-on-#{$v}.svg"); }
-  }
-}
-
 .calendar-day-with-events {
   background-image: url("calendar-today.svg");
 }
