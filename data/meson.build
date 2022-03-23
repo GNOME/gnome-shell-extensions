@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2017 Florian Müllner <fmuellner@gnome.org>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 session_desktop_base = 'gnome-classic'
 
 session_desktops = [

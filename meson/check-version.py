@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# SPDX-FileCopyrightText: 2021 Florian Müllner <fmuellner@gnome.org>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 import os, sys
 from pathlib import Path
 import argparse, subprocess

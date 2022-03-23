@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2011 Maxim Ermilov <zaspire@rambler.ru>
+// SPDX-FileCopyrightText: 2011 Giovanni Campagna <gcampagna@src.gnome.org>
+// SPDX-FileCopyrightText: 2017 Florian Müllner <fmuellner@gnome.org>
+// SPDX-FileCopyrightText: 2019 Marco Trevisan (Treviño) <mail@3v1n0.net>
+// SPDX-FileCopyrightText: 2020 Thun Pin <thunpin@gmail.com>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 import Clutter from 'gi://Clutter';
 import Graphene from 'gi://Graphene';

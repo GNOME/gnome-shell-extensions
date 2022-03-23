@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 Florian Müllner <fmuellner@gnome.org>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 patterns:
   deny:
     - regex: '^$CI_MERGE_REQUEST_PROJECT_URL/(-/)?merge_requests/$CI_MERGE_REQUEST_IID$'

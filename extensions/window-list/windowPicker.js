@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019 Florian Müllner <fmuellner@gnome.org>
+// SPDX-FileCopyrightText: 2019 Marco Trevisan (Treviño) <mail@3v1n0.net>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 import Clutter from 'gi://Clutter';
 import GObject from 'gi://GObject';
 import Shell from 'gi://Shell';

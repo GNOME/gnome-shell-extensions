@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2013 Gabriel Rossetti <rossetti.gabriel@gmail.com>
+// SPDX-FileCopyrightText: 2013 Florian Müllner <fmuellner@gnome.org>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 import {AppIcon} from 'resource:///org/gnome/shell/ui/appDisplay.js';
 import {InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
 

@@ -1,22 +1,12 @@
-/* Screenshot Window Sizer for Gnome Shell
- *
- * Copyright (c) 2013 Owen Taylor <otaylor@redhat.com>
- * Copyright (c) 2013 Richard Hughes <richard@hughsie.com>
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- */
+// SPDX-FileCopyrightText: 2013 Owen Taylor <otaylor@redhat.com>
+// SPDX-FileCopyrightText: 2013 Richard Hughes <richard@hughsie.com>
+// SPDX-FileCopyrightText: 2014 Florian Müllner <fmuellner@gnome.org>
+// SPDX-FileCopyrightText: 2016 Will Thompson <will@willthompson.co.uk>
+// SPDX-FileCopyrightText: 2017 Florian Müllner <fmuellner@gnome.org>
+// SPDX-FileCopyrightText: 2019 Adrien Plazas <kekun.plazas@laposte.net>
+// SPDX-FileCopyrightText: 2019 Willy Stadnick <willy.stadnick@gmail.com>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
 
 import Clutter from 'gi://Clutter';
 import Meta from 'gi://Meta';

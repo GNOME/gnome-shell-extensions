@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2012 Giovanni Campagna <gcampagna@src.gnome.org>
+// SPDX-FileCopyrightText: 2013 Debarshi Ray <debarshir@gnome.org>
+// SPDX-FileCopyrightText: 2015 Florian Müllner <fmuellner@gnome.org>
+// SPDX-FileCopyrightText: 2016 Rémy Lefevre <lefevreremy@gmail.com>
+// SPDX-FileCopyrightText: 2017 Christian Kellner <christian@kellner.me>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 // -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';

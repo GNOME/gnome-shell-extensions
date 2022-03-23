@@ -1,0 +1,22 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: gnome-shell-extensions
+Upstream-Contact: Florian Müllner <fmuellner@gnome.org>
+Source: https://gitlab.gnome.org/GNOME/gnome-shell-extensions
+
+Files: NEWS README.md HACKING.md data/HACKING
+Copyright: No rights reserved
+License: CC0-1.0
+
+Files: *.json.in *.desktop.in *.gschema.override
+Copyright: Florian Müllner <fmuellner@gnome.org>
+License: GPL-2.0-or-later
+
+# managed by translation teams
+Files: po/*.po
+Copyright: GNOME Translation Teams <i18n@gnome.org>
+License: GPL-2.0-or-later
+
+# managed by translation teams
+Files: po/LINGUAS po/POTFILES.in
+Copyright: No rights reserved
+License: CC0-1.0

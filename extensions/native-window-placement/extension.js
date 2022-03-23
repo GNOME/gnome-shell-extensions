@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2011 Giovanni Campagna <gcampagna@src.gnome.org>
+// SPDX-FileCopyrightText: 2011 Stefano Facchini <stefano.facchini@gmail.com>
+// SPDX-FileCopyrightText: 2011 Wepmaschda <wepmaschda@gmx.de>
+// SPDX-FileCopyrightText: 2015 Florian Müllner <fmuellner@gnome.org>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 import Clutter from 'gi://Clutter';
 

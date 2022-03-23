@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2017 Florian Müllner <fmuellner@gnome.org>>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 project('gnome-shell-extensions',
   version: '45.beta',
   meson_version: '>= 0.58.0',

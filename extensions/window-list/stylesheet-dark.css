@@ -1,3 +1,10 @@
+/*
+ * SPDX-FileCopyrightText: 2012 Florian Müllner <fmuellner@gnome.org>
+ * SPDX-FileCopyrightText: 2013 Giovanni Campagna <gcampagna@src.gnome.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
 .window-list {
 	spacing: 2px;
 	font-size: 10pt;

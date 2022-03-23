@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2020 Florian Müllner <fmuellner@gnome.org>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 import GLib from 'gi://GLib';
 
 const fn = (...args) => GLib.build_filenamev(args);

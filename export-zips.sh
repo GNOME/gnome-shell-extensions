@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# SPDX-FileCopyrightText: 2017 Florian Müllner <fmuellner@gnome.org>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 srcdir=`dirname $0`
 srcdir=`(cd $srcdir && pwd)`
 

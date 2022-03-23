@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2016 Florian Müllner <fmuellner@gnome.org>
+
+SPDX-License-Identifier: GPL-2.0-or-later
+-->
+
 <schemalist gettext-domain="gnome-shell-extensions">
   <schema id="org.gnome.shell.extensions.auto-move-windows" path="/org/gnome/shell/extensions/auto-move-windows/">
     <key name="application-list" type="as">

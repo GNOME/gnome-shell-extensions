@@ -1,3 +1,10 @@
+/*
+ * SPDX-FileCopyrightText: 2011 Erick Pérez Castellanos <erick.red@gmail.com>
+ * SPDX-FileCopyrightText: 2019 Florian Müllner <fmuellner@gnome.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
 .panel-workspace-indicator {
   padding: 0 8px;
 }

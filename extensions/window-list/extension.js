@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2012 Florian Müllner <fmuellner@gnome.org>
+// SPDX-FileCopyrightText: 2013 Giovanni Campagna <gcampagna@src.gnome.org>
+// SPDX-FileCopyrightText: 2014 Sylvain Pasche <sylvain.pasche@gmail.com>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 import Clutter from 'gi://Clutter';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';

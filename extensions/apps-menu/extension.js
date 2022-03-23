@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2011 Vamsi Krishna Brahmajosyula <vamsikrishna.brahmajosyula@gmail.com>
+// SPDX-FileCopyrightText: 2011 Giovanni Campagna <gcampagna@src.gnome.org>
+// SPDX-FileCopyrightText: 2013 Debarshi Ray <debarshir@gnome.org>
+// SPDX-FileCopyrightText: 2013 Florian Müllner <fmuellner@gnome.org>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 import Atk from 'gi://Atk';
 import Clutter from 'gi://Clutter';

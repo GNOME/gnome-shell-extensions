@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2011 John Stowers <john.stowers@gmail.com>
+// SPDX-FileCopyrightText: 2011 Giovanni Campagna <gcampagna@src.gnome.org>
+// SPDX-FileCopyrightText: 2011 Elad Alfassa <el.il@doom.co.il>
+// SPDX-FileCopyrightText: 2014 Florian Müllner <fmuellner@gnome.org>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 // Load shell theme from ~/.local/share/themes/name/gnome-shell
 

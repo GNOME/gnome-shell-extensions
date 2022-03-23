@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# SPDX-FileCopyrightText: 2021 Neal Gompa <ngompa@fedoraproject.org>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 import os
 import shutil
 import sys

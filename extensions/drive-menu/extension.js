@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2011 Giovanni Campagna <gcampagna@src.gnome.org>
+// SPDX-FileCopyrightText: 2018 Florian Müllner <fmuellner@gnome.org>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 // Drive menu extension
 import Clutter from 'gi://Clutter';
 import Gio from 'gi://Gio';
