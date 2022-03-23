@@ -3,3 +3,4 @@ extension_data += configure_file(
   output: metadata_name,
   configuration: metadata_conf
 )
+extension_data += files('stylesheet.css')
