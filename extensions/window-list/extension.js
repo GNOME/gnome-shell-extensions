@@ -998,7 +998,7 @@ class WindowList extends St.Widget {
         const id = this._windowSignals.get(win);
         if (id)
             win.disconnect(id);
-        this._windowSignals.delete(id);
+        this._windowSignals.delete(win);
 
         let children = this._windowList.get_children();
         let child = children.find(c => c.metaWindow === win);
