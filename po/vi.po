@@ -2,15 +2,15 @@
 # Copyright © 2016 GNOME i18n Project for Vietnamese.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2011.
-# Trần Ngọc Quân <vnwildman@gmail.com>, 2014, 2016, 2017, 2021.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2014, 2016-2017, 2021-2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-shell-extensions master\n"
+"Project-Id-Version: gnome-shell-extensions main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2021-03-27 14:51+0700\n"
+"POT-Creation-Date: 2022-03-29 15:31+0000\n"
+"PO-Revision-Date: 2022-04-03 14:48+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
 "Language: vi\n"
@@ -18,21 +18,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME cổ điển"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
-msgstr "Phiên làm việc này đăng nhập bạn vào GNOME Cổ điển"
+msgstr "Phiên làm việc này đăng nhập bạn vào GNOME cổ điển"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME cổ điển trên Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME cổ điển trên Xorg"
+
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Ưa thích"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:379
 msgid "Applications"
 msgstr "Ứng dụng"
 
@@ -48,26 +57,26 @@ msgstr ""
 "Một danh sách chuỗi, mỗi chuỗi là một mã số của ứng dụng (tên tập tin ."
 "desktop), theo sau là dấu hai chấm và mã số không gian làm việc"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:152
 msgid "Workspace Rules"
 msgstr "Thước Không gian làm việc"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:306
 msgid "Add Rule"
 msgstr "Thêm quy tắc"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:126
+#: extensions/places-menu/placeDisplay.js:210
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Gặp lỗi khi đẩy hệ thống tập tin “%s” ra:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:145
 msgid "Removable devices"
 msgstr "Đĩa di động"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:167
 msgid "Open Files"
 msgstr "Mở tập tin"
 
@@ -99,31 +108,31 @@ msgstr ""
 "đè lên cách ứng xử mặc định của hệ vỏ là ở dưới đáy. Những thay đổi này cần "
 "khởi động lại hệ vỏ để có tác dụng."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:97
 msgid "Places"
 msgstr "Mở nhanh"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:49
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Gặp lỗi khi khởi chạy \"%s\""
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:64
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Gặp lỗi khi gắn đĩa cho “%s”"
 
+#: extensions/places-menu/placeDisplay.js:125
 #: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Máy tính"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:336
 msgid "Home"
 msgstr "Thư mục riêng"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:381
 msgid "Browse Network"
 msgstr "Duyệt mạng"
 
@@ -143,47 +152,47 @@ msgstr "Tên chủ đề"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Tên của chủ đề, được tải từ ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Đóng"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Thôi thu nhỏ"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Thu nhỏ"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Thôi phóng hết cỡ"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Phóng to hết cỡ"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:441
 msgid "Minimize all"
 msgstr "Thu nhỏ tất cả"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:447
 msgid "Unminimize all"
 msgstr "Thôi thu nhỏ tất cả"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:453
 msgid "Maximize all"
 msgstr "Phóng to tất cả"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:461
 msgid "Unmaximize all"
 msgstr "Thôi phóng to tất cả"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:469
 msgid "Close all"
 msgstr "Đóng tất cả"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:753
 msgid "Window List"
 msgstr "Danh sách cửa sổ"
 
@@ -200,7 +209,7 @@ msgstr ""
 "cửa số. Các giá trị có thể là “never”, “auto” và “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "Hiển thị các cửa sổ trong mọi không gian làm việc"
 
@@ -222,41 +231,41 @@ msgstr ""
 "Có hiển thị danh sách cửa sổ trên mọi màn hình đã kết nối hay chỉ trên màn "
 "hình chính mà thôi."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Nhóm cửa sổ lại"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "Không bao giờ nhóm các cửa sổ lại với nhau"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "Nhóm các cửa sổ lại với nhau khi không đủ chỗ"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "Luôn nhóm các cửa sổ lại với nhau"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "Hiển thị trên mọi màn hình"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:261
+#: extensions/workspace-indicator/extension.js:266
 msgid "Workspace Indicator"
-msgstr "Bộ chỉ thị không gian làm việc"
+msgstr "Ô chỉ thị không gian làm việc"
 
-#: extensions/workspace-indicator/prefs.js:34
-msgid "Workspace Names"
-msgstr "Tên không gian làm việc"
-
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:62
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Không gian làm việc %d"
 
-#: extensions/workspace-indicator/prefs.js:218
+#: extensions/workspace-indicator/prefs.js:129
+msgid "Workspace Names"
+msgstr "Tên không gian làm việc"
+
+#: extensions/workspace-indicator/prefs.js:255
 msgid "Add Workspace"
 msgstr "Thêm Không gian làm việc"
 
