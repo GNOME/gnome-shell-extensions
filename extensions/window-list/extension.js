@@ -391,7 +391,7 @@ class WindowButton extends BaseButton {
             return;
         }
 
-        if (button === 1)
+        if (!button || button === 1)
             this._minimizeOrActivateWindow(this.metaWindow);
         else
             this._openMenu(this._contextMenu);
@@ -637,7 +637,7 @@ class AppButton extends BaseButton {
         if (contextMenuWasOpen)
             this._contextMenu.close();
 
-        if (button === 1) {
+        if (!button || button === 1) {
             if (menuWasOpen)
                 return;
 
