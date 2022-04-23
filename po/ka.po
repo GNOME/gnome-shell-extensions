@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2022-02-13 10:42+0000\n"
+"PO-Revision-Date: 2022-02-13 14:35+0100\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: \n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: data/gnome-classic.desktop.in:3
+msgid "GNOME Classic"
+msgstr "GNOME Classic"
+
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
+msgid "This session logs you into GNOME Classic"
+msgstr "ეს სესია შეგიყვანთ GNOME Classic-ში"
+
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME CLassic Wayland-ზე"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME Classic Xorg"
+
+#: extensions/apps-menu/extension.js:112
+msgid "Favorites"
+msgstr "რჩეულები"
+
+#: extensions/apps-menu/extension.js:370
+msgid "Applications"
+msgstr "აპლიკაციები"
+
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+msgid "Application and workspace list"
+msgstr "აპლიკაციების და სამუშაო სივრცეების სია"
+
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+"სტრიქონების სია, რომლებიც შეიცავენ აპლიკაციის ID-ს(სამუშაო მაგიდის ფაილის "
+"სახელს), რომელსაც მოჰყვება მძიმე და სამუშაო სივრცის ნომერი"
+
+#: extensions/auto-move-windows/prefs.js:19
+msgid "Workspace Rules"
+msgstr "სამუშაო მაგიდის წესები"
+
+#: extensions/auto-move-windows/prefs.js:245
+msgid "Add Rule"
+msgstr "წესის დამატება"
+
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:210
+#, javascript-format
+msgid "Ejecting drive “%s” failed:"
+msgstr "დისკ %s-ის გამოგდების შეცდომა:"
+
+#: extensions/drive-menu/extension.js:139
+msgid "Removable devices"
+msgstr "გამოძრობადი მოწყობილობები"
+
+#: extensions/drive-menu/extension.js:161
+msgid "Open Files"
+msgstr "ღია ფაილები"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+msgid "Use more screen for windows"
+msgstr "ეკრანის მეტი ნაწილის გამოყენება ფანჯრებისთვის"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"შეეცადეთ გამოიყენოთ ეკრანის მეტი ადგილი ფანჯრის ესკიზების დასაყენებლად, "
+"ეკრანის ასპექტის თანაფარდობის ადაპტაციით და მათი შემდგომი კონსოლიდაციით, "
+"რათა შემცირდეს შემოსაზღვრული ველი. ეს პარამეტრი გამოიყენება მხოლოდ "
+"ბუნებრივი განთავსების სტრატეგიით."
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+msgid "Place window captions on top"
+msgstr "ფანჯრის მინაწერების ზემოთ ჩვენება"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+
+#: extensions/places-menu/extension.js:88
+#: extensions/places-menu/extension.js:91
+msgid "Places"
+msgstr "ადგილები"
+
+#: extensions/places-menu/placeDisplay.js:49
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr "%s-ის გაშვების შეცდომა"
+
+#: extensions/places-menu/placeDisplay.js:64
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "%s-თვის დისკის მიმაგრების შეცდომა"
+
+#: extensions/places-menu/placeDisplay.js:125
+#: extensions/places-menu/placeDisplay.js:148
+msgid "Computer"
+msgstr "კომპიუტერი"
+
+#: extensions/places-menu/placeDisplay.js:336
+msgid "Home"
+msgstr "საწყისი"
+
+#: extensions/places-menu/placeDisplay.js:381
+msgid "Browse Network"
+msgstr "ქსელის დათვალიერება"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+msgid "Cycle Screenshot Sizes"
+msgstr "ეკრანის ანაბეჭდების ზომებს შორის გადართვა"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "ეკრანის ანაბეჭდების ზომებს შორის უკუღმა გადართვა"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+msgid "Theme name"
+msgstr "თემის სახელი"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "თემის სახელი, ~/.themes/name/gnome-shell-დან ჩასატვირთად"
+
+#: extensions/window-list/extension.js:72
+msgid "Close"
+msgstr "დახურვა"
+
+#: extensions/window-list/extension.js:92
+msgid "Unminimize"
+msgstr "ამოკეცვა"
+
+#: extensions/window-list/extension.js:92
+msgid "Minimize"
+msgstr "ჩაკეცვა"
+
+#: extensions/window-list/extension.js:99
+msgid "Unmaximize"
+msgstr "საწყის ზომაზე დაბრუნება"
+
+#: extensions/window-list/extension.js:99
+msgid "Maximize"
+msgstr "მთელ ეკრანზე გაშლა"
+
+#: extensions/window-list/extension.js:434
+msgid "Minimize all"
+msgstr "ყველას ჩაკეცვა"
+
+#: extensions/window-list/extension.js:440
+msgid "Unminimize all"
+msgstr "ყველას ამოკეცვა"
+
+#: extensions/window-list/extension.js:446
+msgid "Maximize all"
+msgstr "ყველას მთელ ეკრანზე გაშლა"
+
+#: extensions/window-list/extension.js:454
+msgid "Unmaximize all"
+msgstr "ყველას საწყის ზომაზე დაბრუნება"
+
+#: extensions/window-list/extension.js:462
+msgid "Close all"
+msgstr "ყველას დახურვა"
+
+#: extensions/window-list/extension.js:741
+msgid "Window List"
+msgstr "ფანჯრების სია"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+msgid "When to group windows"
+msgstr "როდის შევაჯგუფო ფანჯრები"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are “never”, “auto” and “always”."
+msgstr ""
+"არჩევს, როდის შეაჯგუფოს ერთიდაიგივე აპლიკაციის ფანჯრების სია. შესაძლო "
+"ვარიანტებია \"არასოდეს\", \"ავტომატურად\" და \"ყოველთვის\"."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/prefs.js:76
+msgid "Show windows from all workspaces"
+msgstr "ფანჯრების ყველა სამუშაო სივრციდან ჩვენება"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr "ყველა სამუშაო სივრცის ფანჯრები ვაჩვენო თუ მხოლოდ მიმდინარის."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+msgid "Show the window list on all monitors"
+msgstr "ფანჯრების სიის ყველა ეკრანზე ჩვენება"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr "ფანჯრების სიის მხოლოდ მთავარ თუ ყველა მონიტორზე ჩვენება."
+
+#: extensions/window-list/prefs.js:32
+msgid "Window Grouping"
+msgstr "ფანჯრების შეჯგუფება"
+
+#: extensions/window-list/prefs.js:37
+msgid "Never group windows"
+msgstr "არასოდეს შეაჯგუფო ფანჯრები"
+
+#: extensions/window-list/prefs.js:38
+msgid "Group windows when space is limited"
+msgstr "შეაჯგუფე მხოლოდ მაშინ, როცა ადგილი არაა"
+
+#: extensions/window-list/prefs.js:39
+msgid "Always group windows"
+msgstr "ყოველთვის შეაჯგუფე ფანჯრები"
+
+#: extensions/window-list/prefs.js:63
+msgid "Show on all monitors"
+msgstr "ყველა ეკრანზე ჩვენება"
+
+#: extensions/window-list/workspaceIndicator.js:249
+#: extensions/workspace-indicator/extension.js:254
+msgid "Workspace Indicator"
+msgstr "სამუშაო სივრცის ინდიკატორი"
+
+#: extensions/workspace-indicator/prefs.js:18
+msgid "Workspace Names"
+msgstr "სამუშაო სივრცის სახელები"
+
+#: extensions/workspace-indicator/prefs.js:39
+#, javascript-format
+msgid "Workspace %d"
+msgstr "სამუშაო სივრცე %d"
+
+#: extensions/workspace-indicator/prefs.js:184
+msgid "Add Workspace"
+msgstr "სამუშაო სივრცის დამატება"
