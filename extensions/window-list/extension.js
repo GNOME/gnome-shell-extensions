@@ -246,6 +246,48 @@ class BaseButton extends St.Button {
         this._updateVisibility();
     }
 
+    _setLongPressTimeout() {
+        if (this._longPressTimeoutId)
+            return;
+
+        const { longPressDuration } = Clutter.Settings.get_default();
+        this._longPressTimeoutId =
+            GLib.timeout_add(GLib.PRIORITY_DEFAULT, longPressDuration, () => {
+                delete this._longPressTimeoutId;
+
+                if (this._canOpenPopupMenu() && !this._contextMenu.isOpen)
+                    this._openMenu(this._contextMenu);
+                return GLib.SOURCE_REMOVE;
+            });
+    }
+
+    _removeLongPressTimeout() {
+        if (!this._longPressTimeoutId)
+            return;
+        GLib.source_remove(this._longPressTimeoutId);
+        delete this._longPressTimeoutId;
+    }
+
+    vfunc_button_press_event(buttonEvent) {
+        if (buttonEvent.button === 1)
+            this._setLongPressTimeout();
+        return super.vfunc_button_press_event(buttonEvent);
+    }
+
+    vfunc_button_release_event(buttonEvent) {
+        this._removeLongPressTimeout();
+
+        return super.vfunc_button_release_event(buttonEvent);
+    }
+
+    vfunc_touch_event(touchEvent) {
+        if (touchEvent.type === Clutter.EventType.TOUCH_BEGIN)
+            this._setLongPressTimeout();
+        else if (touchEvent.type === Clutter.EventType.TOUCH_END)
+            this._removeLongPressTimeout();
+        return super.vfunc_touch_event(touchEvent);
+    }
+
     activate() {
         if (this.active)
             return;
