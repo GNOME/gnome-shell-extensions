@@ -97,7 +97,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
         let rects = [];
         for (let i = 0; i < clones.length; i++) {
             // save rectangles into 4-dimensional arrays representing two corners of the rectangular: [left_x, top_y, right_x, bottom_y]
-            let rect = clones[i].metaWindow.get_frame_rect();
+            let rect = clones[i].boundingBox;
             rects[i] = new Rect(rect.x, rect.y, rect.width, rect.height);
             bounds = bounds.union(rects[i]);
 
