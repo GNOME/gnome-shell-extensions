@@ -790,7 +790,7 @@ class WindowList extends St.Widget {
         });
 
         this._overviewHidingId = Main.overview.connect('hidden', () => {
-            this.visible = !Main.layoutManager.primaryMonitor.inFullscreen;
+            this.visible = !this._monitor.inFullscreen;
             this._updateKeyboardAnchor();
         });
 
