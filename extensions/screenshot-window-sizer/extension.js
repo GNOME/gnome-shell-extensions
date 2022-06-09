@@ -121,8 +121,18 @@ function cycleScreenshotSizes(display, window, binding) {
     if (newY + newHeight > workArea.y + workArea.height)
         newY = Math.max(workArea.y + workArea.height - newHeight);
 
+    const id = window.connect('size-changed', () => {
+        window.disconnect(id);
+        _notifySizeChange(window);
+    });
     window.move_resize_frame(true, newX, newY, newWidth, newHeight);
+}
 
+/**
+ * @param {Meta.Window} window - the window whose size changed
+ */
+function _notifySizeChange(window) {
+    const { scaleFactor } = St.ThemeContext.get_for_stage(global.stage);
     let newOuterRect = window.get_frame_rect();
     let message = '%d×%d'.format(
         newOuterRect.width / scaleFactor,
