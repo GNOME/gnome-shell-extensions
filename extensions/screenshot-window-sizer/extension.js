@@ -101,10 +101,6 @@ function cycleScreenshotSizes(display, window, binding) {
     for (let i = 0; i < scaledSizes.length; i++) {
         let [width, height] = scaledSizes[i];
 
-        // ignore sizes bigger than the workArea
-        if (width > workArea.width || height > workArea.height)
-            continue;
-
         // get the best initial window size
         let error = Math.abs(width - outerRect.width) + Math.abs(height - outerRect.height);
         if (nearestIndex === undefined || error < nearestError) {
