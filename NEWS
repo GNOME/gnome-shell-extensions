@@ -1,3 +1,11 @@
+42.3
+====
+* screenshot-window-sizer: Fix reported sizes on wayland [Florian; !232]
+* window-list: Improve touch support [Florian; !233]
+
+Contributors:
+  Florian Müllner
+
 42.2
 ====
 * native-window-placement: Adjust to gnome-shell 42 changes [Florian; !229]
