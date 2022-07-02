@@ -9,7 +9,6 @@ import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
-import Pango from 'gi://Pango';
 
 import {gettext as _} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
@@ -166,7 +165,6 @@ class WorkspacesGroup extends Adw.PreferencesGroup {
             selection_mode: Gtk.SelectionMode.NONE,
             css_classes: ['boxed-list'],
         });
-        this._list.connect('row-activated', (l, row) => row.edit());
         this.add(this._list);
 
         const newRowProps = {
@@ -183,38 +181,26 @@ class WorkspacesGroup extends Adw.PreferencesGroup {
     }
 }
 
-class WorkspaceRow extends Adw.PreferencesRow {
+class WorkspaceRow extends Adw.EntryRow {
     static {
         GObject.registerClass(this);
     }
 
     constructor(name) {
-        super({name});
-
-        const box = new Gtk.Box({
-            spacing: 12,
-            margin_top: 6,
-            margin_bottom: 6,
-            margin_start: 6,
-            margin_end: 6,
+        super({
+            name,
+            text: name,
         });
-
-        const label = new Gtk.Label({
-            hexpand: true,
-            xalign: 0,
-            max_width_chars: 25,
-            ellipsize: Pango.EllipsizeMode.END,
-        });
-        this.bind_property('name', label, 'label',
-            GObject.BindingFlags.SYNC_CREATE);
-        box.append(label);
 
         const button = new Gtk.Button({
+            tooltip_text: _('Remove'),
             action_name: 'workspaces.remove',
             icon_name: 'edit-delete-symbolic',
             has_frame: false,
+            halign: Gtk.Align.CENTER,
+            valign: Gtk.Align.CENTER,
         });
-        box.append(button);
+        this.add_suffix(button);
 
         this.bind_property_full('name',
             button, 'action-target',
@@ -222,47 +208,11 @@ class WorkspaceRow extends Adw.PreferencesRow {
             (bind, target) => [true, new GLib.Variant('s', target)],
             null);
 
-        this._entry = new Gtk.Entry({
-            max_width_chars: 25,
-        });
-
-        const controller = new Gtk.ShortcutController();
-        controller.add_shortcut(new Gtk.Shortcut({
-            trigger: Gtk.ShortcutTrigger.parse_string('Escape'),
-            action: Gtk.CallbackAction.new(() => {
-                this._stopEdit();
-                return true;
-            }),
-        }));
-        this._entry.add_controller(controller);
-
-        this._stack = new Gtk.Stack();
-        this._stack.add_named(box, 'display');
-        this._stack.add_named(this._entry, 'edit');
-        this.child = this._stack;
-
-        this._entry.connect('activate', () => {
+        this.connect('changed', () => {
             this.activate_action('workspaces.rename',
-                new GLib.Variant('(ss)', [this.name, this._entry.text]));
-            this.name = this._entry.text;
-            this._stopEdit();
+                new GLib.Variant('(ss)', [this.name, this.text]));
+            this.name = this.text;
         });
-        this._entry.connect('notify::has-focus', () => {
-            if (this._entry.has_focus)
-                return;
-            this._stopEdit();
-        });
-    }
-
-    edit() {
-        this._entry.text = this.name;
-        this._entry.grab_focus();
-        this._stack.visible_child_name = 'edit';
-    }
-
-    _stopEdit() {
-        this.grab_focus();
-        this._stack.visible_child_name = 'display';
     }
 }
 
