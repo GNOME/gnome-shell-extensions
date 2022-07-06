@@ -80,7 +80,7 @@ msgstr "Dispositivi rimovibili"
 
 #: extensions/drive-menu/extension.js:171
 msgid "Open Files"
-msgstr "Apri file"
+msgstr "Apri File"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
 msgid "Use more screen for windows"
