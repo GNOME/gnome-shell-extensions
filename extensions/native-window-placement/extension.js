@@ -285,8 +285,8 @@ function enable() {
 }
 
 /**
- * @param {Object} object - object that was modified
- * @param {Object} injection - the map of previous injections
+ * @param {object} object - object that was modified
+ * @param {object} injection - the map of previous injections
  * @param {string} name - the @injection key that should be removed
  */
 function removeInjection(object, injection, name) {
