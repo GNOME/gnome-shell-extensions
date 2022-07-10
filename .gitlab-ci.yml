@@ -2,8 +2,6 @@ include:
   - remote: 'https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/bbe5232986c9b98eb1efe62484e07216f7d1a4df/templates/fedora.yml'
   - remote: "https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/6f86b8bcb0cd5168c32779c4fea9a893c4a0c046/templates/ci-fairy.yml"
 
-image: registry.gitlab.gnome.org/gnome/gnome-shell/fedora/35:2022-02-18.0
-
 stages:
   - pre_review
   - prepare
@@ -12,6 +10,7 @@ stages:
   - deploy
 
 default:
+  image: registry.gitlab.gnome.org/gnome/gnome-shell/fedora/35:2022-02-18.0
   # Cancel jobs if newer commits are pushed to the branch
   interruptible: true
   # Auto-retry jobs in case of infra failures
