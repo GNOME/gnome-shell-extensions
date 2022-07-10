@@ -132,8 +132,8 @@ fedora-build:
   stage: build
   needs:
     - build-fedora-container
-  before_script:
-    - git submodule update --init
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
   script:
     - meson setup build --werror -Dextension_set=all -Dclassic_mode=true
     - meson compile -C build
@@ -150,8 +150,8 @@ fedora-dist:
   stage: deploy
   needs:
     - fedora-build
-  before_script:
-    - git submodule update --init
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
   script:
     - meson dist -C build
   rules:
