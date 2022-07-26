@@ -6,9 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions main\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
-"issues\n"
-"POT-Creation-Date: 2022-02-12 02:08+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
+"POT-Creation-Date: 2022-07-10 12:54+0000\n"
 "PO-Revision-Date: 2022-02-12 02:08+0000\n"
 "Last-Translator: Нанба Наала <naala-nanba@rambler.ru>, 2022\n"
 "Language-Team: Abkhazian <ab@li.org>\n"
@@ -34,11 +33,11 @@ msgstr "Аклассикатә GNOME Wayland аҟны"
 msgid "GNOME Classic on Xorg"
 msgstr "Аклассикатә GNOME Xorg аҟны"
 
-#: extensions/apps-menu/extension.js:112
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Иалкаау"
 
-#: extensions/apps-menu/extension.js:370
+#: extensions/apps-menu/extension.js:379
 msgid "Applications"
 msgstr "Аԥшьқәа"
 
@@ -50,29 +49,30 @@ msgstr "Аԥшьи аусуратә ҵакырақәа рыхьӡынҵеи"
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
-msgstr "Ацәаҳәақәа рыхьӡынҵа аиԥшрагәаҭага аԥшьы (desktop-фаил ахьӡ )"
-"змоу, зашьҭахь ҩ-кәаԥки аусуратә ҭыԥ аномери гылоу "
+msgstr ""
+"Ацәаҳәақәа рыхьӡынҵа аиԥшрагәаҭага аԥшьы (desktop-фаил ахьӡ )змоу, зашьҭахь "
+"ҩ-кәаԥки аусуратә ҭыԥ аномери гылоу "
 
-#: extensions/auto-move-windows/prefs.js:19
+#: extensions/auto-move-windows/prefs.js:152
 msgid "Workspace Rules"
 msgstr "Аусуратә ҵакыра аԥҟаррақәа"
 
-#: extensions/auto-move-windows/prefs.js:245
+#: extensions/auto-move-windows/prefs.js:306
 msgid "Add Rule"
 msgstr "Аԥҟара ацҵара"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:123
+#: extensions/drive-menu/extension.js:126
 #: extensions/places-menu/placeDisplay.js:210
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Адиск «%s» аҭыгара залымшахеит:"
 
-#: extensions/drive-menu/extension.js:139
+#: extensions/drive-menu/extension.js:145
 msgid "Removable devices"
 msgstr "Иаҿыҵуа аиҿартәырақәа"
 
-#: extensions/drive-menu/extension.js:161
+#: extensions/drive-menu/extension.js:167
 msgid "Open Files"
 msgstr "Афаил аартра"
 
@@ -85,9 +85,11 @@ msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
-msgstr "Шәхы иашәырхәа изыцҵоу аекран аҵакыра аминиатиура атыԥаркразы"
-"аекран аганқәа реизышәара ԥсахуа аҭыԥыркра шәыржәпала, анаҩс адаԥа ҳәаақәызҵо ашәагаа архәыҷразы"
-"ари ахышәара ахархәара аиуоит аминиатиура «natural» аҭыԥыркра алгоритм  ахархәараан"
+msgstr ""
+"Шәхы иашәырхәа изыцҵоу аекран аҵакыра аминиатиура атыԥаркразыаекран аганқәа "
+"реизышәара ԥсахуа аҭыԥыркра шәыржәпала, анаҩс адаԥа ҳәаақәызҵо ашәагаа "
+"архәыҷразыари ахышәара ахархәара аиуоит аминиатиура «natural» аҭыԥыркра "
+"алгоритм  ахархәараан"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Place window captions on top"
@@ -98,12 +100,13 @@ msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
-msgstr "Иалхзар, ахқәа аминиатиура хыхьтәи ахәҭаҟны аҭыԥ ааныркылалоит"
-"(ишыҟоу еиԥш ахқәа ҵаҟатәи аҭыԥ ааныркылоит).Ари ахышәара аԥсахраан,"
-"уи аус аура иалагарцазы, иаҭахуп Shell аиҭарура."
+msgstr ""
+"Иалхзар, ахқәа аминиатиура хыхьтәи ахәҭаҟны аҭыԥ ааныркылалоит(ишыҟоу еиԥш "
+"ахқәа ҵаҟатәи аҭыԥ ааныркылоит).Ари ахышәара аԥсахраан,уи аус аура "
+"иалагарцазы, иаҭахуп Shell аиҭарура."
 
-#: extensions/places-menu/extension.js:88
-#: extensions/places-menu/extension.js:91
+#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:97
 msgid "Places"
 msgstr "Аҭыԥқәа"
 
@@ -166,27 +169,27 @@ msgstr "Аиҭашьақәыргылара"
 msgid "Maximize"
 msgstr "Аиҵыхра"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:483
 msgid "Minimize all"
 msgstr "Зегьы реиҟәырҳәра"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:489
 msgid "Unminimize all"
 msgstr "Зегьы рырхынҳәра"
 
-#: extensions/window-list/extension.js:446
+#: extensions/window-list/extension.js:495
 msgid "Maximize all"
 msgstr "Зегьы реиҵыхра"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:503
 msgid "Unmaximize all"
 msgstr "Зегьы реиҭашьақәыргылара"
 
-#: extensions/window-list/extension.js:462
+#: extensions/window-list/extension.js:511
 msgid "Close all"
 msgstr "Зегьы рыркра"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:795
 msgid "Window List"
 msgstr "Аԥенџьырқәа рыхьӡынҵа"
 
@@ -198,18 +201,21 @@ msgstr "Аԥенџьырқәа аидыргәыԥлара анаҭаху"
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
-msgstr "Иҳәаақәнаҵоит, ианаҭаху  ԥшьык иаҵанакуа аԥенџьырқәа реидыргәыԥлара, аԥенџьырқәа рыхьӡынҵаҟны"
-" Иҟалар зылшо аҵакқәа : «never» — ахаан; «auto» — автоматла; «always» — есқьынгьы"
+msgstr ""
+"Иҳәаақәнаҵоит, ианаҭаху  ԥшьык иаҵанакуа аԥенџьырқәа реидыргәыԥлара, "
+"аԥенџьырқәа рыхьӡынҵаҟны Иҟалар зылшо аҵакқәа : «never» — ахаан; «auto» — "
+"автоматла; «always» — есқьынгьы"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:76
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "Аҵакырақәа зегьы рҟынтә аԥенџьырқәа раарԥшра"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
 msgid "Whether to show windows from all workspaces or only the current one."
-msgstr 
-"Аԥенџьырқәа рыхьӡынҵа аусуратә ҵакырақәа зегь рҟынтә акәу,мамзар уажәтәи аҟынтә акәу ишаарԥшлатәу"
+msgstr ""
+"Аԥенџьырқәа рыхьӡынҵа аусуратә ҵакырақәа зегь рҟынтә акәу,мамзар уажәтәи "
+"аҟынтә акәу ишаарԥшлатәу"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Show the window list on all monitors"
@@ -219,43 +225,44 @@ msgstr "Аԥенџьырқәа рыхьӡынҵа амониторқәа зег�
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
-msgstr 
-"Аԥенџьырқәа рыхьӡынҵа иаҿаку амониторқәа зегьы рыҟноума иахьаарԥшлатәу , мамзар ихадоу аҟны акәу."
+msgstr ""
+"Аԥенџьырқәа рыхьӡынҵа иаҿаку амониторқәа зегьы рыҟноума иахьаарԥшлатәу , "
+"мамзар ихадоу аҟны акәу."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Аԥенџьырқәа  реидыргәыԥлара"
 
-#: extensions/window-list/prefs.js:37
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "Ахаангьы аԥенџьырқәа реидмыргәыԥлара"
 
-#: extensions/window-list/prefs.js:38
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "Аҭыԥ маҷхазар, аԥенџьырқәа еидшәыргәыԥла"
 
-#: extensions/window-list/prefs.js:39
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "Еснагь аԥенџьырқәа реидыргәыԥлара"
 
-#: extensions/window-list/prefs.js:63
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "Амониторқәа зегьы рҟны рырбара"
 
-#: extensions/window-list/workspaceIndicator.js:249
-#: extensions/workspace-indicator/extension.js:254
+#: extensions/window-list/workspaceIndicator.js:261
+#: extensions/workspace-indicator/extension.js:266
 msgid "Workspace Indicator"
 msgstr "Аусуратә ҵакыра аиндикатор"
 
-#: extensions/workspace-indicator/prefs.js:18
-msgid "Workspace Names"
-msgstr "Аусуратә ҵакырақәа рыхьӡқәа"
-
-#: extensions/workspace-indicator/prefs.js:39
+#: extensions/workspace-indicator/prefs.js:62
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Аусуратә ҵакыра %d"
 
-#: extensions/workspace-indicator/prefs.js:184
+#: extensions/workspace-indicator/prefs.js:129
+msgid "Workspace Names"
+msgstr "Аусуратә ҵакырақәа рыхьӡқәа"
+
+#: extensions/workspace-indicator/prefs.js:255
 msgid "Add Workspace"
 msgstr "Аусуратә ҵакыра ацҵара"
