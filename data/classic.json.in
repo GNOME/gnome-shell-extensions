@@ -6,6 +6,6 @@
     "enabledExtensions": [@CLASSIC_EXTENSIONS@],
     "panel": { "left": ["appMenu"],
                "center": [],
-               "right": ["a11y", "keyboard", "dateMenu", "aggregateMenu"]
+               "right": ["a11y", "keyboard", "dateMenu", "quickSettings"]
              }
 }
