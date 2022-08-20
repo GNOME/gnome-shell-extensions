@@ -4,7 +4,7 @@
 const {
     Atk, Clutter, Gio, GLib, GMenu, GObject, Gtk, Meta, Shell, St,
 } = imports.gi;
-const Signals = imports.signals;
+const {EventEmitter} = imports.misc.signals;
 
 const DND = imports.ui.dnd;
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -239,8 +239,10 @@ class ApplicationsMenu extends PopupMenu.PopupMenu {
     }
 }
 
-class DesktopTarget {
+class DesktopTarget extends EventEmitter {
     constructor() {
+        super();
+
         this._desktop = null;
         this._desktopDestroyedId = 0;
 
@@ -357,7 +359,6 @@ class DesktopTarget {
         return true;
     }
 }
-Signals.addSignalMethods(DesktopTarget.prototype);
 
 class ApplicationsButton extends PanelMenu.Button {
     static {

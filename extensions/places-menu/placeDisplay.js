@@ -2,7 +2,7 @@
 /* exported PlacesManager */
 
 const {Gio, GLib, Shell} = imports.gi;
-const Signals = imports.signals;
+const {EventEmitter} = imports.misc.signals;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
@@ -23,8 +23,10 @@ const Hostname1Iface = '<node> \
 </node>';
 const Hostname1 = Gio.DBusProxy.makeProxyWrapper(Hostname1Iface);
 
-class PlaceInfo {
+class PlaceInfo extends EventEmitter {
     constructor(...params) {
+        super();
+
         this._init(...params);
     }
 
@@ -119,7 +121,6 @@ class PlaceInfo {
         }
     }
 }
-Signals.addSignalMethods(PlaceInfo.prototype);
 
 class RootInfo extends PlaceInfo {
     _init() {
@@ -247,8 +248,10 @@ const DEFAULT_DIRECTORIES = [
     GLib.UserDirectory.DIRECTORY_VIDEOS,
 ];
 
-var PlacesManager = class {
+var PlacesManager = class extends EventEmitter {
     constructor() {
+        super();
+
         this._places = {
             special: [],
             devices: [],
@@ -544,4 +547,3 @@ var PlacesManager = class {
         return this._places[kind];
     }
 };
-Signals.addSignalMethods(PlacesManager.prototype);
