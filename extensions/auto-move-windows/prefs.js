@@ -2,7 +2,7 @@
 // Start apps on custom workspaces
 /* exported init buildPrefsWidget */
 
-const { Adw, Gio, GLib, GObject, Gtk } = imports.gi;
+const {Adw, Gio, GLib, GObject, Gtk} = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -75,7 +75,7 @@ class RulesList extends GObject.Object {
     append(appInfo) {
         const pos = this.#rules.length;
 
-        this.#rules.push(new Rule({ appInfo }));
+        this.#rules.push(new Rule({appInfo}));
         this.#saveRules();
 
         this.items_changed(pos, 0, 1);
@@ -97,7 +97,7 @@ class RulesList extends GObject.Object {
         if (pos < 0)
             return;
 
-        this.#rules[pos].set({ workspace });
+        this.#rules[pos].set({workspace});
         this.#saveRules();
     }
 
@@ -116,7 +116,7 @@ class RulesList extends GObject.Object {
             const [id, workspace] = stringRule.split(':');
             const appInfo = Gio.DesktopAppInfo.new(id);
             if (appInfo)
-                this.#rules.push(new Rule({ appInfo, workspace }));
+                this.#rules.push(new Rule({appInfo, workspace}));
             else
                 log(`Invalid ID ${id}`);
         }
@@ -154,8 +154,8 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
 
         this._rules = new RulesList();
 
-        const store = new Gio.ListStore({ item_type: Gio.ListModel });
-        const listModel = new Gtk.FlattenListModel({ model: store });
+        const store = new Gio.ListStore({item_type: Gio.ListModel});
+        const listModel = new Gtk.FlattenListModel({model: store});
         store.append(this._rules);
         store.append(new NewItemModel());
 
@@ -248,7 +248,7 @@ class RuleRow extends Adw.ActionRow {
     }
 
     constructor(rule) {
-        const { appInfo } = rule;
+        const {appInfo} = rule;
         const id = appInfo.get_id();
 
         super({

@@ -1,6 +1,6 @@
 // -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
 
-const { Gio, GLib, Shell } = imports.gi;
+const {Gio, GLib, Shell} = imports.gi;
 const Signals = imports.signals;
 
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -31,7 +31,7 @@ class PlaceInfo {
         this.kind = kind;
         this.file = file;
         this.name = name || this._getFileName();
-        this.icon = icon ? new Gio.ThemedIcon({ name: icon }) : this.getIcon();
+        this.icon = icon ? new Gio.ThemedIcon({name: icon}) : this.getIcon();
     }
 
     destroy() {
@@ -94,16 +94,16 @@ class PlaceInfo {
         // icon from the query info above
         switch (this.kind) {
         case 'network':
-            return new Gio.ThemedIcon({ name: 'folder-remote-symbolic' });
+            return new Gio.ThemedIcon({name: 'folder-remote-symbolic'});
         case 'devices':
-            return new Gio.ThemedIcon({ name: 'drive-harddisk-symbolic' });
+            return new Gio.ThemedIcon({name: 'drive-harddisk-symbolic'});
         case 'special':
         case 'bookmarks':
         default:
             if (!this.file.is_native())
-                return new Gio.ThemedIcon({ name: 'folder-remote-symbolic' });
+                return new Gio.ThemedIcon({name: 'folder-remote-symbolic'});
             else
-                return new Gio.ThemedIcon({ name: 'folder-symbolic' });
+                return new Gio.ThemedIcon({name: 'folder-symbolic'});
         }
     }
 
@@ -138,7 +138,7 @@ class RootInfo extends PlaceInfo {
     }
 
     getIcon() {
-        return new Gio.ThemedIcon({ name: 'drive-harddisk-symbolic' });
+        return new Gio.ThemedIcon({name: 'drive-harddisk-symbolic'});
     }
 
     _propertiesChanged(proxy) {
@@ -255,7 +255,7 @@ var PlacesManager = class {
             network: [],
         };
 
-        this._settings = new Gio.Settings({ schema_id: BACKGROUND_SCHEMA });
+        this._settings = new Gio.Settings({schema_id: BACKGROUND_SCHEMA});
         this._showDesktopIconsChangedId = this._settings.connect(
             'changed::show-desktop-icons', this._updateSpecials.bind(this));
         this._updateSpecials();

@@ -1,6 +1,6 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 /* exported init */
-const { Clutter, Graphene, GObject, St } = imports.gi;
+const {Clutter, Graphene, GObject, St} = imports.gi;
 
 const Main = imports.ui.main;
 const OverviewControls = imports.ui.overviewControls;
@@ -53,13 +53,13 @@ class MyWorkspace extends Workspace.Workspace {
     }
 
     getWindowWithTooltip(id) {
-        const { layoutManager } = this._container;
+        const {layoutManager} = this._container;
         const slot = layoutManager._windowSlots[id - 1];
         return slot ? slot[WINDOW_SLOT].metaWindow : null;
     }
 
     showWindowsTooltips() {
-        const { layoutManager } = this._container;
+        const {layoutManager} = this._container;
         for (let i = 0; i < layoutManager._windowSlots.length; i++) {
             if (layoutManager._windowSlots[i])
                 layoutManager._windowSlots[i][WINDOW_SLOT].showTooltip(`${i + 1}`);
@@ -67,7 +67,7 @@ class MyWorkspace extends Workspace.Workspace {
     }
 
     hideWindowsTooltips() {
-        const { layoutManager } = this._container;
+        const {layoutManager} = this._container;
         for (let i in layoutManager._windowSlots) {
             if (layoutManager._windowSlots[i])
                 layoutManager._windowSlots[i][WINDOW_SLOT].hideTooltip();
@@ -93,13 +93,13 @@ class MyWorkspace extends Workspace.Workspace {
             this._text.add_constraint(new Clutter.AlignConstraint({
                 source: this.windowContainer,
                 align_axis: Clutter.AlignAxis.X_AXIS,
-                pivot_point: new Graphene.Point({ x: 0.5, y: -1 }),
+                pivot_point: new Graphene.Point({x: 0.5, y: -1}),
                 factor: this._closeButtonSide === St.Side.LEFT ? 1 : 0,
             }));
             this._text.add_constraint(new Clutter.AlignConstraint({
                 source: this.windowContainer,
                 align_axis: Clutter.AlignAxis.Y_AXIS,
-                pivot_point: new Graphene.Point({ x: -1, y: 0.5 }),
+                pivot_point: new Graphene.Point({x: -1, y: 0.5}),
                 factor: 0,
             }));
 
@@ -107,7 +107,7 @@ class MyWorkspace extends Workspace.Workspace {
         }).call(clone);
 
         clone.showTooltip = function (text) {
-            this._text.set({ text });
+            this._text.set({text});
             this._text.show();
         };
 
@@ -170,7 +170,7 @@ class MyWorkspacesView extends WorkspacesView.WorkspacesView {
     }
 
     _onKeyPress(s, o) {
-        const { ControlsState } = OverviewControls;
+        const {ControlsState} = OverviewControls;
         if (this._overviewAdjustment.value !== ControlsState.WINDOW_PICKER)
             return false;
 

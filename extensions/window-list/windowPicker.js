@@ -1,12 +1,12 @@
 /* exported WindowPicker, WindowPickerToggle */
-const { Clutter, GObject, Shell, St } = imports.gi;
+const {Clutter, GObject, Shell, St} = imports.gi;
 
 const Layout = imports.ui.layout;
 const Main = imports.ui.main;
-const { WorkspacesDisplay } = imports.ui.workspacesView;
+const {WorkspacesDisplay} = imports.ui.workspacesView;
 const Workspace = imports.ui.workspace;
 
-const { VIGNETTE_BRIGHTNESS } = imports.ui.lightbox;
+const {VIGNETTE_BRIGHTNESS} = imports.ui.lightbox;
 const {
     SIDE_CONTROLS_ANIMATION_TIME,
     OverviewAdjustment,
@@ -90,7 +90,7 @@ class MyWorkspace extends Workspace.Workspace {
 
         this._adjChangedId =
             this._overviewAdjustment.connect('notify::value', () => {
-                const { value: progress } = this._overviewAdjustment;
+                const {value: progress} = this._overviewAdjustment;
                 const brightness = 1 - (1 - VIGNETTE_BRIGHTNESS) * progress;
                 for (const bg of this._background?._backgroundGroup ?? []) {
                     bg.content.set({
@@ -151,7 +151,7 @@ class MyWorkspaceBackground extends Workspace.WorkspaceBackground {
 
 var WindowPicker = class WindowPicker extends Clutter.Actor {
     static [GObject.signals] = {
-        'open-state-changed': { param_types: [GObject.TYPE_BOOLEAN] },
+        'open-state-changed': {param_types: [GObject.TYPE_BOOLEAN]},
     };
 
     static {
@@ -159,7 +159,7 @@ var WindowPicker = class WindowPicker extends Clutter.Actor {
     }
 
     constructor() {
-        super({ reactive: true });
+        super({reactive: true});
 
         this._visible = false;
         this._modal = false;

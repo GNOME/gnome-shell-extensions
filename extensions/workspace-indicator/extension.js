@@ -1,7 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported init enable disable */
 
-const { Clutter, Gio, GObject, Meta, St } = imports.gi;
+const {Clutter, Gio, GObject, Meta, St} = imports.gi;
 
 const DND = imports.ui.dnd;
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -30,7 +30,7 @@ class WindowPreview extends St.Button {
         });
 
         this._delegate = this;
-        DND.makeDraggable(this, { restoreOnSuccess: true });
+        DND.makeDraggable(this, {restoreOnSuccess: true});
 
         this._window = window;
 
@@ -310,7 +310,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         this._updateThumbnails();
         this._updateThumbnailVisibility();
 
-        this._settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
+        this._settings = new Gio.Settings({schema_id: WORKSPACE_SCHEMA});
         this._settingsChangedId = this._settings.connect(
             `changed::${WORKSPACE_KEY}`,
             this._updateMenuLabels.bind(this));
@@ -331,7 +331,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _updateThumbnailVisibility() {
-        const { workspaceManager } = global;
+        const {workspaceManager} = global;
         const vertical = workspaceManager.layout_rows === -1;
         const useMenu =
             vertical || workspaceManager.n_workspaces > MAX_THUMBNAILS;

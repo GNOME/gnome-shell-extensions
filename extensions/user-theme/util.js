@@ -1,5 +1,5 @@
 /* exported getThemeDirs getModeThemeDirs */
-const { GLib } = imports.gi;
+const {GLib} = imports.gi;
 
 const fn = (...args) => GLib.build_filenamev(args);
 

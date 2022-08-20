@@ -1,7 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported init buildPrefsWidget */
 
-const { Adw, Gio, GLib, GObject, Gtk } = imports.gi;
+const {Adw, Gio, GLib, GObject, Gtk} = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -37,12 +37,12 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
         this.add(groupingGroup);
 
         const modes = [
-            { mode: 'never', title: _('Never group windows') },
-            { mode: 'auto', title: _('Group windows when space is limited') },
-            { mode: 'always', title: _('Always group windows') },
+            {mode: 'never', title: _('Never group windows')},
+            {mode: 'auto', title: _('Group windows when space is limited')},
+            {mode: 'always', title: _('Always group windows')},
         ];
 
-        for (const { mode, title } of modes) {
+        for (const {mode, title} of modes) {
             const check = new Gtk.CheckButton({
                 action_name: 'window-list.grouping-mode',
                 action_target: new GLib.Variant('s', mode),

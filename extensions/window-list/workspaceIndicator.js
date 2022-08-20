@@ -1,5 +1,5 @@
 /* exported WorkspaceIndicator */
-const { Clutter, Gio, GObject, Meta, St } = imports.gi;
+const {Clutter, Gio, GObject, Meta, St} = imports.gi;
 
 const DND = imports.ui.dnd;
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -25,7 +25,7 @@ class WindowPreview extends St.Button {
         });
 
         this._delegate = this;
-        DND.makeDraggable(this, { restoreOnSuccess: true });
+        DND.makeDraggable(this, {restoreOnSuccess: true});
 
         this._window = window;
 
@@ -274,7 +274,7 @@ var WorkspaceIndicator = class WorkspaceIndicator extends PanelMenu.Button {
         let workspaceManager = global.workspace_manager;
 
         this._currentWorkspace = workspaceManager.get_active_workspace_index();
-        this._statusLabel = new St.Label({ text: this._getStatusText() });
+        this._statusLabel = new St.Label({text: this._getStatusText()});
 
         this._statusBin = new St.Bin({
             style_class: 'status-label-bin',
@@ -309,7 +309,7 @@ var WorkspaceIndicator = class WorkspaceIndicator extends PanelMenu.Button {
         this._updateThumbnails();
         this._updateThumbnailVisibility();
 
-        this._settings = new Gio.Settings({ schema_id: 'org.gnome.desktop.wm.preferences' });
+        this._settings = new Gio.Settings({schema_id: 'org.gnome.desktop.wm.preferences'});
         this._settingsChangedId = this._settings.connect(
             'changed::workspace-names', this._updateMenuLabels.bind(this));
     }
@@ -327,7 +327,7 @@ var WorkspaceIndicator = class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _updateThumbnailVisibility() {
-        const { workspaceManager } = global;
+        const {workspaceManager} = global;
         const vertical = workspaceManager.layout_rows === -1;
         const useMenu =
             vertical || workspaceManager.n_workspaces > MAX_THUMBNAILS;

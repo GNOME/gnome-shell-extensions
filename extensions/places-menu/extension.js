@@ -1,7 +1,7 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 /* exported init enable disable */
 
-const { Clutter, GObject, St } = imports.gi;
+const {Clutter, GObject, St} = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;

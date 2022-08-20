@@ -1,6 +1,6 @@
 /* exported init enable disable */
 // Drive menu extension
-const { Clutter, Gio, GObject, Shell, St } = imports.gi;
+const {Clutter, Gio, GObject, Shell, St} = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;

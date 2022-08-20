@@ -117,7 +117,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         else
             name = _('Favorites');
 
-        this.add_child(new St.Label({ text: name }));
+        this.add_child(new St.Label({text: name}));
         this.connect('motion-event', this._onMotionEvent.bind(this));
         this.connect('notify::active', this._onActiveChanged.bind(this));
     }
@@ -408,7 +408,7 @@ class ApplicationsButton extends PanelMenu.Button {
             });
         });
 
-        this._tree = new GMenu.Tree({ menu_basename: 'applications.menu' });
+        this._tree = new GMenu.Tree({menu_basename: 'applications.menu'});
         this._treeChangedId = this._tree.connect('changed',
             this._onTreeChanged.bind(this));
 
@@ -509,7 +509,7 @@ class ApplicationsButton extends PanelMenu.Button {
                 }
                 let app = appSys.lookup_app(id);
                 if (!app)
-                    app = new Shell.App({ app_info: entry.get_app_info() });
+                    app = new Shell.App({app_info: entry.get_app_info()});
                 if (app.get_app_info().should_show())
                     this.applicationsByCategory[categoryId].push(app);
             } else if (nextType === GMenu.TreeItemType.SEPARATOR) {
@@ -555,8 +555,8 @@ class ApplicationsButton extends PanelMenu.Button {
     _createLayout() {
         let section = new PopupMenu.PopupMenuSection();
         this.menu.addMenuItem(section);
-        this.mainBox = new St.BoxLayout({ vertical: false });
-        this.leftBox = new St.BoxLayout({ vertical: true });
+        this.mainBox = new St.BoxLayout({vertical: false});
+        this.leftBox = new St.BoxLayout({vertical: true});
         this.applicationsScrollBox = new St.ScrollView({
             style_class: 'apps-menu vfade',
             x_expand: true,
@@ -578,9 +578,9 @@ class ApplicationsButton extends PanelMenu.Button {
         vscroll.connect('scroll-stop', () => (this.menu.passEvents = false));
         this.leftBox.add_child(this.categoriesScrollBox);
 
-        this.applicationsBox = new St.BoxLayout({ vertical: true });
+        this.applicationsBox = new St.BoxLayout({vertical: true});
         this.applicationsScrollBox.add_actor(this.applicationsBox);
-        this.categoriesBox = new St.BoxLayout({ vertical: true });
+        this.categoriesBox = new St.BoxLayout({vertical: true});
         this.categoriesScrollBox.add_actor(this.categoriesBox);
 
         this.mainBox.add(this.leftBox);

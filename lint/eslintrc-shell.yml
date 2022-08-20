@@ -3,9 +3,10 @@ rules:
     - error
     - properties: never
       allow: [^vfunc_, ^on_]
-  object-curly-spacing:
+  consistent-return: error
+  eqeqeq:
     - error
-    - always
+    - smart
   prefer-arrow-callback: error
 globals:
   global: readonly

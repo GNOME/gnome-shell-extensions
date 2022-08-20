@@ -2,7 +2,7 @@
 // Load shell theme from ~/.local/share/themes/name/gnome-shell
 /* exported init */
 
-const { Gio } = imports.gi;
+const {Gio} = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;

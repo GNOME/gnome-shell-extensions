@@ -1,10 +1,10 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported enable disable */
-const { Clutter } = imports.gi;
+const {Clutter} = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
-const { WindowPreview } = imports.ui.windowPreview;
+const {WindowPreview} = imports.ui.windowPreview;
 const Workspace = imports.ui.workspace;
 
 // testing settings for natural window placement strategy:

@@ -19,7 +19,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-const { Clutter, Meta, Shell, St } = imports.gi;
+const {Clutter, Meta, Shell, St} = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
@@ -39,7 +39,7 @@ function hideMessage() {
  */
 function flashMessage(message) {
     if (!text) {
-        text = new St.Label({ style_class: 'screenshot-sizer-message' });
+        text = new St.Label({style_class: 'screenshot-sizer-message'});
         Main.uiGroup.add_actor(text);
     }
 
@@ -132,7 +132,7 @@ function cycleScreenshotSizes(display, window, binding) {
  * @param {Meta.Window} window - the window whose size changed
  */
 function _notifySizeChange(window) {
-    const { scaleFactor } = St.ThemeContext.get_for_stage(global.stage);
+    const {scaleFactor} = St.ThemeContext.get_for_stage(global.stage);
     let newOuterRect = window.get_frame_rect();
     let message = '%d×%d'.format(
         newOuterRect.width / scaleFactor,

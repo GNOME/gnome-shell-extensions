@@ -4,7 +4,7 @@
 // we use async/await here to not block the mainloop, not to parallelize
 /* eslint-disable no-await-in-loop */
 
-const { Adw, Gio, GLib, GObject, Gtk } = imports.gi;
+const {Adw, Gio, GLib, GObject, Gtk} = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -21,7 +21,7 @@ class UserThemePrefsWidget extends Adw.PreferencesGroup {
     }
 
     constructor() {
-        super({ title: 'Themes' });
+        super({title: 'Themes'});
 
         this._actionGroup = new Gio.SimpleActionGroup();
         this.insert_action_group('theme', this._actionGroup);

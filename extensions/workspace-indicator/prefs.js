@@ -1,7 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 /* exported init buildPrefsWidget */
 
-const { Adw, Gio, GLib, GObject, Gtk, Pango } = imports.gi;
+const {Adw, Gio, GLib, GObject, Gtk, Pango} = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -41,7 +41,7 @@ class WorkspacesList extends GObject.Object {
         GObject.registerClass(this);
     }
 
-    #settings = new Gio.Settings({ schema_id: WORKSPACE_SCHEMA });
+    #settings = new Gio.Settings({schema_id: WORKSPACE_SCHEMA});
     #names = this.#settings.get_strv(WORKSPACE_KEY);
     #items = Gtk.StringList.new(this.#names);
     #changedId;
@@ -131,8 +131,8 @@ class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
 
         this._workspaces = new WorkspacesList();
 
-        const store = new Gio.ListStore({ item_type: Gio.ListModel });
-        const listModel = new Gtk.FlattenListModel({ model: store });
+        const store = new Gio.ListStore({item_type: Gio.ListModel});
+        const listModel = new Gtk.FlattenListModel({model: store});
         store.append(this._workspaces);
         store.append(new NewItemModel());
 
@@ -157,7 +157,7 @@ class WorkspaceRow extends Adw.PreferencesRow {
     }
 
     constructor(name) {
-        super({ name });
+        super({name});
 
         const box = new Gtk.Box({
             spacing: 12,

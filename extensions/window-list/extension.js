@@ -1,5 +1,5 @@
 /* exported init */
-const { Clutter, Gio, GLib, GObject, Gtk, Meta, Shell, St } = imports.gi;
+const {Clutter, Gio, GLib, GObject, Gtk, Meta, Shell, St} = imports.gi;
 
 const DND = imports.ui.dnd;
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -8,8 +8,8 @@ const Overview = imports.ui.overview;
 const PopupMenu = imports.ui.popupMenu;
 
 const Me = ExtensionUtils.getCurrentExtension();
-const { WindowPicker, WindowPickerToggle } = Me.imports.windowPicker;
-const { WorkspaceIndicator } = Me.imports.workspaceIndicator;
+const {WindowPicker, WindowPickerToggle} = Me.imports.windowPicker;
+const {WorkspaceIndicator} = Me.imports.workspaceIndicator;
 
 const _ = ExtensionUtils.gettext;
 
@@ -120,9 +120,9 @@ class WindowTitle extends St.BoxLayout {
 
         this._metaWindow = metaWindow;
 
-        this._icon = new St.Bin({ style_class: 'window-button-icon' });
+        this._icon = new St.Bin({style_class: 'window-button-icon'});
         this.add(this._icon);
-        this.label_actor = new St.Label({ y_align: Clutter.ActorAlign.CENTER });
+        this.label_actor = new St.Label({y_align: Clutter.ActorAlign.CENTER});
         this.label_actor.clutter_text.single_line_mode = true;
         this.add(this.label_actor);
 
@@ -250,7 +250,7 @@ class BaseButton extends St.Button {
         if (this._longPressTimeoutId)
             return;
 
-        const { longPressDuration } = Clutter.Settings.get_default();
+        const {longPressDuration} = Clutter.Settings.get_default();
         this._longPressTimeoutId =
             GLib.timeout_add(GLib.PRIORITY_DEFAULT, longPressDuration, () => {
                 delete this._longPressTimeoutId;
@@ -543,7 +543,7 @@ class AppButton extends BaseButton {
         this.app = app;
         this._updateVisibility();
 
-        let stack = new St.Widget({ layout_manager: new Clutter.BinLayout() });
+        let stack = new St.Widget({layout_manager: new Clutter.BinLayout()});
         this.set_child(stack);
 
         this._singleWindowTitle = new St.Bin({
@@ -742,7 +742,7 @@ class WindowList extends St.Widget {
         this._perMonitor = perMonitor;
         this._monitor = monitor;
 
-        let box = new St.BoxLayout({ x_expand: true, y_expand: true });
+        let box = new St.BoxLayout({x_expand: true, y_expand: true});
         this.add_actor(box);
 
         let toggle = new WindowPickerToggle();
@@ -751,7 +751,7 @@ class WindowList extends St.Widget {
         toggle.connect('notify::checked',
             this._updateWindowListVisibility.bind(this));
 
-        let layout = new Clutter.BoxLayout({ homogeneous: true });
+        let layout = new Clutter.BoxLayout({homogeneous: true});
         this._windowList = new St.Widget({
             style_class: 'window-list',
             reactive: true,
@@ -769,13 +769,13 @@ class WindowList extends St.Widget {
         });
         this._windowList.connect('scroll-event', this._onScrollEvent.bind(this));
 
-        let indicatorsBox = new St.BoxLayout({ x_align: Clutter.ActorAlign.END });
+        let indicatorsBox = new St.BoxLayout({x_align: Clutter.ActorAlign.END});
         box.add(indicatorsBox);
 
         this._workspaceIndicator = new WorkspaceIndicator();
         indicatorsBox.add_child(this._workspaceIndicator.container);
 
-        this._mutterSettings = new Gio.Settings({ schema_id: 'org.gnome.mutter' });
+        this._mutterSettings = new Gio.Settings({schema_id: 'org.gnome.mutter'});
         this._workspacesOnlyOnPrimaryChangedId = this._mutterSettings.connect(
             'changed::workspaces-only-on-primary',
             this._updateWorkspaceIndicatorVisibility.bind(this));
@@ -918,7 +918,7 @@ class WindowList extends St.Widget {
 
         let children = this._windowList.get_children();
         let [, childWidth] = children[0].get_preferred_width(-1);
-        let { spacing } = this._windowList.layout_manager;
+        let {spacing} = this._windowList.layout_manager;
 
         let workspace = global.workspace_manager.get_active_workspace();
         let windows = global.display.get_tab_list(Meta.TabList.NORMAL, workspace);
