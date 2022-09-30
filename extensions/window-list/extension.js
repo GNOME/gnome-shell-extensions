@@ -860,8 +860,8 @@ class WindowList extends St.Widget {
         this._dndWindow = null;
 
         this._settings = ExtensionUtils.getSettings();
-        this._groupingModeChangedId = this._settings.connect(
-            'changed::grouping-mode', this._groupingModeChanged.bind(this));
+        this._settings.connect('changed::grouping-mode',
+            () => this._groupingModeChanged());
         this._grouped = undefined;
         this._groupingModeChanged();
     }
@@ -1130,7 +1130,7 @@ class WindowList extends St.Widget {
         Main.xdndHandler.disconnect(this._dragBeginId);
         Main.xdndHandler.disconnect(this._dragEndId);
 
-        this._settings.disconnect(this._groupingModeChangedId);
+        this._settings.run_dispose();
 
         let windows = global.get_window_actors();
         for (let i = 0; i < windows.length; i++)
