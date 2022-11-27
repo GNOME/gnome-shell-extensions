@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2021-01-20 23:03+0000\n"
-"PO-Revision-Date: 2021-01-24 15:33+0300\n"
+"POT-Creation-Date: 2022-07-10 12:54+0000\n"
+"PO-Revision-Date: 2022-10-19 15:20+0300\n"
 "Last-Translator: Launchpad translators\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
@@ -18,21 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "Класічны GNOME"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Гэты сеанс выкарыстоўвае класічны GNOME"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "Класічны GNOME на Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "Класічны GNOME на Xorg"
+
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Абраныя"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:379
 msgid "Applications"
 msgstr "Праграмы"
 
@@ -48,43 +57,41 @@ msgstr ""
 "Спіс радкоў, кожны з якіх змяшчае ідэнтыфікатар праграмы (імя файла *."
 "desktop), затым двукроп'е і нумар працоўнай прасторы"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:152
 msgid "Workspace Rules"
 msgstr "Правілы для працоўнай прасторы"
 
-#: extensions/auto-move-windows/prefs.js:237
+#: extensions/auto-move-windows/prefs.js:306
 msgid "Add Rule"
 msgstr "Дадаць правіла"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:126
+#: extensions/places-menu/placeDisplay.js:210
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Не ўдалося выняць дыск «%s»:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:145
 msgid "Removable devices"
 msgstr "Здымныя прылады"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:167
 msgid "Open Files"
 msgstr "Адкрыць файлы"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
-#, fuzzy
 msgid "Use more screen for windows"
 msgstr "Выкарыстоўваць большую плошчу экрана для вокнаў"
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
-#, fuzzy
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
 "Спрабаваць выкарыстаць большую плошчу экрана для размяшчэння мініяцюр праз "
-"змяненне суадносінаў бакоў экрана, ўшчыльняючы іх, каб зменшыць памеры "
+"змяненне суадносін бакоў экрана, ўшчыльняючы іх, каб зменшыць памеры "
 "абмежавальнай рамкі. Гэты параметр ужываецца толькі з натуральным "
 "размяшчэннем мініяцюр."
 
@@ -102,31 +109,31 @@ msgstr ""
 "перадвызначана). Каб змена налады ўступіла ў сілу, трэба перазапусціць "
 "абалонку."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:97
 msgid "Places"
 msgstr "Месцы"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:49
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Не ўдалося запусціць «%s»"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:64
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Не ўдалося прымацаваць том для «%s»."
 
+#: extensions/places-menu/placeDisplay.js:125
 #: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
 msgid "Computer"
 msgstr "Камп'ютар"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:336
 msgid "Home"
 msgstr "Хатняя папка"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:381
 msgid "Browse Network"
 msgstr "Агляд сеткі"
 
@@ -146,47 +153,47 @@ msgstr "Назва тэмы"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Назва тэмы, што загрузіцца з ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Закрыць"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Скасаваць згортванне"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Згарнуць"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Скасаваць разгортванне"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Разгарнуць"
 
-#: extensions/window-list/extension.js:432
+#: extensions/window-list/extension.js:483
 msgid "Minimize all"
 msgstr "Згарнуць усе"
 
-#: extensions/window-list/extension.js:438
+#: extensions/window-list/extension.js:489
 msgid "Unminimize all"
 msgstr "Скасаваць згортванне для ўсіх"
 
-#: extensions/window-list/extension.js:444
+#: extensions/window-list/extension.js:495
 msgid "Maximize all"
 msgstr "Разгарнуць усе"
 
-#: extensions/window-list/extension.js:452
+#: extensions/window-list/extension.js:503
 msgid "Unmaximize all"
 msgstr "Скасаваць разгортванне для ўсіх"
 
-#: extensions/window-list/extension.js:460
+#: extensions/window-list/extension.js:511
 msgid "Close all"
 msgstr "Закрыць усе"
 
-#: extensions/window-list/extension.js:737
+#: extensions/window-list/extension.js:795
 msgid "Window List"
 msgstr "Спіс вокнаў"
 
@@ -203,7 +210,7 @@ msgstr ""
 "значэнні: «never» (ніколі), «auto» (аўтаматычна), «always» (заўсёды)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "Паказваць вокны з усіх працоўных прастор"
 
@@ -222,41 +229,41 @@ msgid ""
 msgstr ""
 "Паказваць спіс вокнаў на ўсіх падлучаных маніторах ці толькі на асноўным."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Групаванне вокнаў"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "Ніколі не групаваць вокны"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "Групаваць вокны калі не хапае месца"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "Заўсёды групаваць вокны"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "Паказваць на ўсіх маніторах"
 
-#: extensions/window-list/workspaceIndicator.js:247
-#: extensions/workspace-indicator/extension.js:253
+#: extensions/window-list/workspaceIndicator.js:261
+#: extensions/workspace-indicator/extension.js:266
 msgid "Workspace Indicator"
 msgstr "Індыкатар працоўнай прасторы"
 
-#: extensions/workspace-indicator/prefs.js:34
-msgid "Workspace Names"
-msgstr "Назвы працоўных прастор"
-
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:62
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Працоўная прастора %d"
 
-#: extensions/workspace-indicator/prefs.js:208
+#: extensions/workspace-indicator/prefs.js:129
+msgid "Workspace Names"
+msgstr "Назвы працоўных прастор"
+
+#: extensions/workspace-indicator/prefs.js:255
 msgid "Add Workspace"
 msgstr "Дадаць працоўную прастору"
 
