@@ -142,7 +142,7 @@ class DriveMenu extends PanelMenu.Button {
     }
 
     constructor() {
-        super(0.0, _('Removable devices'));
+        super(0.5, _('Removable devices'));
 
         let icon = new St.Icon({
             icon_name: 'media-eject-symbolic',

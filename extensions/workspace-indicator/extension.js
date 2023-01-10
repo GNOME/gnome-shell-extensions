@@ -263,7 +263,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     constructor() {
-        super(0.0, _('Workspace Indicator'));
+        super(0.5, _('Workspace Indicator'));
 
         let container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),

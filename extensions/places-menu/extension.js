@@ -91,7 +91,7 @@ class PlacesMenu extends PanelMenu.Button {
     }
 
     constructor() {
-        super(0.0, _('Places'));
+        super(0.5, _('Places'));
 
         let label = new St.Label({
             text: _('Places'),

@@ -258,7 +258,7 @@ var WorkspaceIndicator = class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     constructor() {
-        super(0.0, _('Workspace Indicator'), true);
+        super(0.5, _('Workspace Indicator'), true);
         this.setMenu(new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM));
         this.add_style_class_name('window-list-workspace-indicator');
         this.remove_style_class_name('panel-button');
