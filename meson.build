@@ -101,3 +101,16 @@ meson.add_dist_script('meson/generate-stylesheets.py')
 meson.add_dist_script('meson/check-version.py',
   meson.project_version(),
   'NEWS')
+
+summary_options = {
+ 'extensions': enabled_extensions,
+ 'classic_mode': get_option('classic_mode'),
+}
+
+summary_dirs = {
+  'prefix': get_option('prefix'),
+  'datadir': get_option('datadir'),
+}
+
+summary(summary_dirs, section: 'Directories')
+summary(summary_options, section: 'Build Options')
