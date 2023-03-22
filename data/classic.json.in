@@ -1,6 +1,6 @@
 {
     "parentMode": "user",
-    "stylesheetName": "gnome-classic.css",
+    "colorScheme": "force-light",
     "hasOverview": false,
     "showWelcomeDialog": false,
     "enabledExtensions": [@CLASSIC_EXTENSIONS@],

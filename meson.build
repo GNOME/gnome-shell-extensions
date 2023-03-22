@@ -97,7 +97,6 @@ gnome.post_install(
   glib_compile_schemas: true,
 )
 
-meson.add_dist_script('meson/generate-stylesheets.py')
 meson.add_dist_script('meson/check-version.py',
   meson.project_version(),
   'NEWS')

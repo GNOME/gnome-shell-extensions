@@ -132,8 +132,6 @@ fedora-build:
   stage: build
   needs:
     - build-fedora-container
-  variables:
-    GIT_SUBMODULE_STRATEGY: normal
   script:
     - meson setup build --werror -Dextension_set=all -Dclassic_mode=true
     - meson compile -C build

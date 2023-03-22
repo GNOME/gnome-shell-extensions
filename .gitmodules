@@ -1,3 +1,0 @@
-[submodule "data/gnome-shell-sass"]
-	path = data/gnome-shell-sass
-	url = https://gitlab.gnome.org/GNOME/gnome-shell-sass.git
