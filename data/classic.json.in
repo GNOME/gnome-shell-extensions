@@ -4,7 +4,7 @@
     "hasOverview": false,
     "showWelcomeDialog": false,
     "enabledExtensions": [@CLASSIC_EXTENSIONS@],
-    "panel": { "left": ["appMenu"],
+    "panel": { "left": [],
                "center": [],
                "right": ["a11y", "keyboard", "dateMenu", "quickSettings"]
              }
