@@ -149,7 +149,7 @@ let _indicator;
 function enable() {
     _indicator = new PlacesMenu();
 
-    let pos = Main.sessionMode.panel.left.indexOf('appMenu');
+    let pos = Main.sessionMode.panel.left.length;
     if ('apps-menu' in Main.panel.statusArea)
         pos++;
     Main.panel.addToStatusArea('places-menu', _indicator, pos, 'left');
