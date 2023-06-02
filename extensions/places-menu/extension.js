@@ -138,24 +138,27 @@ class PlacesMenu extends PanelMenu.Button {
     }
 }
 
+class Extension {
+    constructor() {
+        ExtensionUtils.initTranslations();
+    }
+
+    enable() {
+        this._indicator = new PlacesMenu();
+
+        let pos = Main.sessionMode.panel.left.length;
+        if ('apps-menu' in Main.panel.statusArea)
+            pos++;
+        Main.panel.addToStatusArea('places-menu', this._indicator, pos, 'left');
+    }
+
+    disable() {
+        this._indicator.destroy();
+        delete this._indicator;
+    }
+}
+
 /** */
 function init() {
-    ExtensionUtils.initTranslations();
-}
-
-let _indicator;
-
-/** */
-function enable() {
-    _indicator = new PlacesMenu();
-
-    let pos = Main.sessionMode.panel.left.length;
-    if ('apps-menu' in Main.panel.statusArea)
-        pos++;
-    Main.panel.addToStatusArea('places-menu', _indicator, pos, 'left');
-}
-
-/** */
-function disable() {
-    _indicator.destroy();
+    return new Extension();
 }

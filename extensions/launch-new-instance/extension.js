@@ -1,17 +1,25 @@
-/* exported enable disable */
+/* exported init */
 const AppDisplay = imports.ui.appDisplay;
 
-let _activateOriginal = null;
+class Extension {
+    constructor() {
+        this._appIconProto = AppDisplay.AppIcon.prototype;
+        this._activateOriginal = this._appIconProto.activate;
+    }
 
-/** */
-function enable() {
-    _activateOriginal = AppDisplay.AppIcon.prototype.activate;
-    AppDisplay.AppIcon.prototype.activate = function () {
-        _activateOriginal.call(this, 2);
-    };
+    enable() {
+        const {_activateOriginal} = this;
+        this._appIconProto.activate = function () {
+            _activateOriginal.call(this, 2);
+        };
+    }
+
+    disable() {
+        this._appIconProto.activate = this._activateOriginal;
+    }
 }
 
 /** */
-function disable() {
-    AppDisplay.AppIcon.prototype.activate = _activateOriginal;
+function init() {
+    return new Extension();
 }

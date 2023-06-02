@@ -677,22 +677,26 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 }
 
-let appsMenuButton;
+class Extension {
+    constructor() {
+        ExtensionUtils.initTranslations();
+    }
 
-/** */
-function enable() {
-    appsMenuButton = new ApplicationsButton();
-    let index = Main.sessionMode.panel.left.indexOf('activities') + 1;
-    Main.panel.addToStatusArea('apps-menu', appsMenuButton, index, 'left');
-}
+    enable() {
+        this._appsMenuButton = new ApplicationsButton();
+        const index = Main.sessionMode.panel.left.indexOf('activities') + 1;
+        Main.panel.addToStatusArea(
+            'apps-menu', this._appsMenuButton, index, 'left');
+    }
 
-/** */
-function disable() {
-    Main.panel.menuManager.removeMenu(appsMenuButton.menu);
-    appsMenuButton.destroy();
+    disable() {
+        Main.panel.menuManager.removeMenu(this._appsMenuButton.menu);
+        this._appsMenuButton.destroy();
+        delete this._appsMenuButton;
+    }
 }
 
 /** */
 function init() {
-    ExtensionUtils.initTranslations();
+    return new Extension();
 }

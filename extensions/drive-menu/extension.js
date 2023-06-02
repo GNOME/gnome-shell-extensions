@@ -212,20 +212,23 @@ class DriveMenu extends PanelMenu.Button {
     }
 }
 
+class Extension {
+    constructor() {
+        ExtensionUtils.initTranslations();
+    }
+
+    enable() {
+        this._indicator = new DriveMenu();
+        Main.panel.addToStatusArea('drive-menu', this._indicator);
+    }
+
+    disable() {
+        this._indicator.destroy();
+        delete this._indicator;
+    }
+}
+
 /** */
 function init() {
-    ExtensionUtils.initTranslations();
-}
-
-let _indicator;
-
-/** */
-function enable() {
-    _indicator = new DriveMenu();
-    Main.panel.addToStatusArea('drive-menu', _indicator);
-}
-
-/** */
-function disable() {
-    _indicator.destroy();
+    return new Extension();
 }

@@ -236,75 +236,96 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
     }
 }
 
-let winInjections, workspaceInjections;
+class Extension {
+    constructor() {
+        this._savedMethods = new Map();
+    }
 
-/** */
-function resetState() {
-    winInjections = { };
-    workspaceInjections = { };
+    enable() {
+        const settings = ExtensionUtils.getSettings();
+
+        const layoutProto = Workspace.WorkspaceLayout.prototype;
+        const previewProto = WindowPreview.prototype;
+
+        this._overrideMethod(layoutProto, '_createBestLayout', () => {
+            /* eslint-disable no-invalid-this */
+            return function () {
+                this._layoutStrategy = new NaturalLayoutStrategy({
+                    monitor: Main.layoutManager.monitors[this._monitorIndex],
+                }, settings);
+                return this._layoutStrategy.computeLayout(this._sortedWindows);
+            };
+            /* eslint-enable no-invalid-this */
+        });
+
+        // position window titles on top of windows in overlay
+        this._overrideMethod(previewProto, '_init', originalMethod => {
+            /* eslint-disable no-invalid-this */
+            return function (...args) {
+                originalMethod.call(this, ...args);
+
+                if (!settings.get_boolean('window-captions-on-top'))
+                    return;
+
+                const alignConstraint = this._title.get_constraints().find(
+                    c => c.align_axis && c.align_axis === Clutter.AlignAxis.Y_AXIS);
+                alignConstraint.factor = 0;
+
+                const bindConstraint = this._title.get_constraints().find(
+                    c => c.coordinate && c.coordinate === Clutter.BindCoordinate.Y);
+                bindConstraint.offset = 0;
+            };
+            /* eslint-enable no-invalid-this */
+        });
+
+        this._overrideMethod(previewProto, '_adjustOverlayOffsets', originalMethod => {
+            /* eslint-disable no-invalid-this */
+            return function (...args) {
+                originalMethod.call(this, ...args);
+
+                if (settings.get_boolean('window-captions-on-top'))
+                    this._title.translation_y = -this._title.translation_y;
+            };
+            /* eslint-enable no-invalid-this */
+        });
+    }
+
+    disable() {
+        this._restoreMethods();
+        global.stage.queue_relayout();
+    }
+
+    _saveMethod(prototype, methodName) {
+        let map = this._savedMethods.get(prototype);
+        if (!map) {
+            map = new Map();
+            this._savedMethods.set(prototype, map);
+        }
+
+        const originalMethod = prototype[methodName];
+        map.set(methodName, originalMethod);
+        return originalMethod;
+    }
+
+    _overrideMethod(prototype, methodName, createOverrideFunc) {
+        const originalMethod = this._saveMethod(prototype, methodName);
+        prototype[methodName] = createOverrideFunc(originalMethod);
+    }
+
+    _restoreMethods() {
+        for (const [proto, map] of this._savedMethods) {
+            for (const [methodName, originalMethod] of map) {
+                if (originalMethod === undefined)
+                    delete proto[methodName];
+                else
+                    proto[methodName] = originalMethod;
+            }
+        }
+        this._savedMethods.clear();
+    }
 }
 
 /** */
-function enable() {
-    resetState();
-
-    let settings = ExtensionUtils.getSettings();
-
-    workspaceInjections['_createBestLayout'] = Workspace.WorkspaceLayout.prototype._createBestLayout;
-    Workspace.WorkspaceLayout.prototype._createBestLayout = function (_area) {
-        this._layoutStrategy = new NaturalLayoutStrategy({
-            monitor: Main.layoutManager.monitors[this._monitorIndex],
-        }, settings);
-        return this._layoutStrategy.computeLayout(this._sortedWindows);
-    };
-
-    // position window titles on top of windows in overlay
-    winInjections['_init'] = WindowPreview.prototype._init;
-    WindowPreview.prototype._init = function (...args) {
-        winInjections['_init'].call(this, ...args);
-
-        if (!settings.get_boolean('window-captions-on-top'))
-            return;
-
-        const alignConstraint = this._title.get_constraints().find(
-            c => c.align_axis && c.align_axis === Clutter.AlignAxis.Y_AXIS);
-        alignConstraint.factor = 0;
-
-        const bindConstraint = this._title.get_constraints().find(
-            c => c.coordinate && c.coordinate === Clutter.BindCoordinate.Y);
-        bindConstraint.offset = 0;
-    };
-    winInjections['_adjustOverlayOffsets'] =
-        WindowPreview.prototype._adjustOverlayOffsets;
-    WindowPreview.prototype._adjustOverlayOffsets = function (...args) {
-        winInjections['_adjustOverlayOffsets'].call(this, ...args);
-
-        if (settings.get_boolean('window-captions-on-top'))
-            this._title.translation_y = -this._title.translation_y;
-    };
-}
-
-/**
- * @param {object} object - object that was modified
- * @param {object} injection - the map of previous injections
- * @param {string} name - the @injection key that should be removed
- */
-function removeInjection(object, injection, name) {
-    if (injection[name] === undefined)
-        delete object[name];
-    else
-        object[name] = injection[name];
-}
-
-/** */
-function disable() {
-    var i;
-
-    for (i in workspaceInjections)
-        removeInjection(Workspace.WorkspaceLayout.prototype, workspaceInjections, i);
-    for (i in winInjections)
-        removeInjection(WindowPreview.prototype, winInjections, i);
-
-    global.stage.queue_relayout();
-    resetState();
+function init() {
+    return new Extension();
 }

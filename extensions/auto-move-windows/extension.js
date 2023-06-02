@@ -105,47 +105,46 @@ class WindowMover {
     }
 }
 
-let prevCheckWorkspaces;
-let winMover;
+class Extension {
+    enable() {
+        this._prevCheckWorkspaces = Main.wm._workspaceTracker._checkWorkspaces;
+        Main.wm._workspaceTracker._checkWorkspaces =
+            this._getCheckWorkspaceOverride(this._prevCheckWorkspaces);
+        this._windowMover = new WindowMover();
+    }
+
+    disable() {
+        Main.wm._workspaceTracker._checkWorkspaces = this._prevCheckWorkspaces;
+        this._windowMover.destroy();
+        delete this._windowMover;
+    }
+
+    _getCheckWorkspaceOverride(originalMethod) {
+        /* eslint-disable no-invalid-this */
+        return function () {
+            const keepAliveWorkspaces = [];
+            let foundNonEmpty = false;
+            for (let i = this._workspaces.length - 1; i >= 0; i--) {
+                if (!foundNonEmpty) {
+                    foundNonEmpty = this._workspaces[i].list_windows().some(
+                        w => !w.is_on_all_workspaces());
+                } else if (!this._workspaces[i]._keepAliveId) {
+                    keepAliveWorkspaces.push(this._workspaces[i]);
+                }
+            }
+
+            // make sure the original method only removes empty workspaces at the end
+            keepAliveWorkspaces.forEach(ws => (ws._keepAliveId = 1));
+            originalMethod.call(this);
+            keepAliveWorkspaces.forEach(ws => delete ws._keepAliveId);
+
+            return false;
+        };
+        /* eslint-enable no-invalid-this */
+    }
+}
 
 /** */
 function init() {
-    ExtensionUtils.initTranslations();
-}
-
-/**
- * @returns {bool} - false (used as MetaLater handler)
- */
-function myCheckWorkspaces() {
-    let keepAliveWorkspaces = [];
-    let foundNonEmpty = false;
-    for (let i = this._workspaces.length - 1; i >= 0; i--) {
-        if (!foundNonEmpty) {
-            foundNonEmpty = this._workspaces[i].list_windows().some(
-                w => !w.is_on_all_workspaces());
-        } else if (!this._workspaces[i]._keepAliveId) {
-            keepAliveWorkspaces.push(this._workspaces[i]);
-        }
-    }
-
-    // make sure the original method only removes empty workspaces at the end
-    keepAliveWorkspaces.forEach(ws => (ws._keepAliveId = 1));
-    prevCheckWorkspaces.call(this);
-    keepAliveWorkspaces.forEach(ws => delete ws._keepAliveId);
-
-    return false;
-}
-
-/** */
-function enable() {
-    prevCheckWorkspaces = Main.wm._workspaceTracker._checkWorkspaces;
-    Main.wm._workspaceTracker._checkWorkspaces = myCheckWorkspaces;
-
-    winMover = new WindowMover();
-}
-
-/** */
-function disable() {
-    Main.wm._workspaceTracker._checkWorkspaces = prevCheckWorkspaces;
-    winMover.destroy();
+    return new Extension();
 }
