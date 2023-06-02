@@ -1,6 +1,9 @@
-/* exported init enable disable */
 // Drive menu extension
-const {Clutter, Gio, GObject, Shell, St} = imports.gi;
+import Clutter from 'gi://Clutter';
+import Gio from 'gi://Gio';
+import GObject from 'gi://GObject';
+import Shell from 'gi://Shell';
+import St from 'gi://St';
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
@@ -212,7 +215,7 @@ class DriveMenu extends PanelMenu.Button {
     }
 }
 
-class Extension {
+export default class Extension {
     constructor() {
         ExtensionUtils.initTranslations();
     }
@@ -226,9 +229,4 @@ class Extension {
         this._indicator.destroy();
         delete this._indicator;
     }
-}
-
-/** */
-function init() {
-    return new Extension();
 }

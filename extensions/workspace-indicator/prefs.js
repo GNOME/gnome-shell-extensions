@@ -1,7 +1,10 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
-/* exported init buildPrefsWidget */
-
-const {Adw, Gio, GLib, GObject, Gtk, Pango} = imports.gi;
+import Adw from 'gi://Adw';
+import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
+import GObject from 'gi://GObject';
+import Gtk from 'gi://Gtk';
+import Pango from 'gi://Pango';
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -256,14 +259,16 @@ class NewWorkspaceRow extends Adw.PreferencesRow {
     }
 }
 
-/** */
-function init() {
-    ExtensionUtils.initTranslations();
-}
+export default class ExtensionPreferences {
+    constructor() {
+        ExtensionUtils.initTranslations();
+    }
 
-/**
- * @returns {Gtk.Widget} - the prefs widget
- */
-function buildPrefsWidget() {
-    return new WorkspaceSettingsWidget();
+    fillPreferencesWindow(window) {
+        const page = new Adw.PreferencesPage();
+        window.add(page);
+
+        const group = new WorkspaceSettingsWidget();
+        page.add(group);
+    }
 }

@@ -1,5 +1,11 @@
-/* exported init */
-const {Clutter, Gio, GLib, GObject, Gtk, Meta, Shell, St} = imports.gi;
+import Clutter from 'gi://Clutter';
+import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
+import GObject from 'gi://GObject';
+import Gtk from 'gi://Gtk';
+import Meta from 'gi://Meta';
+import Shell from 'gi://Shell';
+import St from 'gi://St';
 
 const DND = imports.ui.dnd;
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -8,8 +14,8 @@ const Overview = imports.ui.overview;
 const PopupMenu = imports.ui.popupMenu;
 
 const Me = ExtensionUtils.getCurrentExtension();
-const {WindowPicker, WindowPickerToggle} = Me.imports.windowPicker;
-const {WorkspaceIndicator} = Me.imports.workspaceIndicator;
+import {WindowPicker, WindowPickerToggle} from './windowPicker.js';
+import {WorkspaceIndicator} from './workspaceIndicator.js';
 
 const _ = ExtensionUtils.gettext;
 
@@ -1149,7 +1155,7 @@ class WindowList extends St.Widget {
     }
 }
 
-class Extension {
+export default class Extension {
     constructor() {
         ExtensionUtils.initTranslations();
 
@@ -1278,11 +1284,4 @@ class Tooltip extends St.Label {
             onComplete: () => (this.visible = this._widget.hover),
         });
     }
-}
-
-/**
- * @returns {Extension} - the extension's state object
- */
-function init() {
-    return new Extension();
 }

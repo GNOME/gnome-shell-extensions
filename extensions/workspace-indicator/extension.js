@@ -1,7 +1,9 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
-/* exported init enable disable */
-
-const {Clutter, Gio, GObject, Meta, St} = imports.gi;
+import Clutter from 'gi://Clutter';
+import Gio from 'gi://Gio';
+import GObject from 'gi://GObject';
+import Meta from 'gi://Meta';
+import St from 'gi://St';
 
 const DND = imports.ui.dnd;
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -454,7 +456,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 }
 
-class Extension {
+export default class Extension {
     constructor() {
         ExtensionUtils.initTranslations();
     }
@@ -468,9 +470,4 @@ class Extension {
         this._indicator.destroy();
         delete this._indicator;
     }
-}
-
-/** */
-function init() {
-    return new Extension();
 }

@@ -1,18 +1,16 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 // Load shell theme from ~/.local/share/themes/name/gnome-shell
-/* exported init */
 
-const {Gio} = imports.gi;
+import Gio from 'gi://Gio';
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 
-const Me = ExtensionUtils.getCurrentExtension();
-const Util = Me.imports.util;
+import {getThemeDirs, getModeThemeDirs} from './util.js';
 
 const SETTINGS_KEY = 'name';
 
-class ThemeManager {
+export default class ThemeManager {
     enable() {
         this._settings = ExtensionUtils.getSettings();
         this._settings.connect(`changed::${SETTINGS_KEY}`, this._changeTheme.bind(this));
@@ -32,10 +30,10 @@ class ThemeManager {
         let themeName = this._settings.get_string(SETTINGS_KEY);
 
         if (themeName) {
-            const stylesheetPaths = Util.getThemeDirs()
+            const stylesheetPaths = getThemeDirs()
                 .map(dir => `${dir}/${themeName}/gnome-shell/gnome-shell.css`);
 
-            stylesheetPaths.push(...Util.getModeThemeDirs()
+            stylesheetPaths.push(...getModeThemeDirs()
                 .map(dir => `${dir}/${themeName}.css`));
 
             stylesheet = stylesheetPaths.find(path => {
@@ -51,11 +49,4 @@ class ThemeManager {
         Main.setThemeStylesheet(stylesheet);
         Main.loadTheme();
     }
-}
-
-/**
- * @returns {ThemeManager} - the extension state object
- */
-function init() {
-    return new ThemeManager();
 }

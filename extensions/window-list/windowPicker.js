@@ -1,5 +1,7 @@
-/* exported WindowPicker, WindowPickerToggle */
-const {Clutter, GObject, Shell, St} = imports.gi;
+import Clutter from 'gi://Clutter';
+import GObject from 'gi://GObject';
+import Shell from 'gi://Shell';
+import St from 'gi://St';
 
 const Layout = imports.ui.layout;
 const Main = imports.ui.main;
@@ -149,7 +151,7 @@ class MyWorkspaceBackground extends Workspace.WorkspaceBackground {
     }
 }
 
-var WindowPicker = class WindowPicker extends Clutter.Actor {
+export class WindowPicker extends Clutter.Actor {
     static [GObject.signals] = {
         'open-state-changed': {param_types: [GObject.TYPE_BOOLEAN]},
     };
@@ -324,9 +326,9 @@ var WindowPicker = class WindowPicker extends Clutter.Actor {
             global.stage.disconnect(this._stageKeyPressId);
         this._stageKeyPressId = 0;
     }
-};
+}
 
-var WindowPickerToggle = class WindowPickerToggle extends St.Button {
+export class WindowPickerToggle extends St.Button {
     static {
         GObject.registerClass(this);
     }
@@ -361,4 +363,4 @@ var WindowPickerToggle = class WindowPickerToggle extends St.Button {
             this.checked = Main.windowPicker.visible;
         });
     }
-};
+}

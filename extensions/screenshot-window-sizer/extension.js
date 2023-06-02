@@ -1,4 +1,3 @@
-/* exported enable disable */
 /* Screenshot Window Sizer for Gnome Shell
  *
  * Copyright (c) 2013 Owen Taylor <otaylor@redhat.com>
@@ -19,14 +18,17 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-const {Clutter, Meta, Shell, St} = imports.gi;
+import Clutter from 'gi://Clutter';
+import Meta from 'gi://Meta';
+import Shell from 'gi://Shell';
+import St from 'gi://St';
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 
 const MESSAGE_FADE_TIME = 2000;
 
-class Extension {
+export default class Extension {
     SIZES = [
         [624, 351],
         [800, 450],
@@ -162,9 +164,4 @@ class Extension {
         Main.wm.removeKeybinding('cycle-screenshot-sizes');
         Main.wm.removeKeybinding('cycle-screenshot-sizes-backward');
     }
-}
-
-/** */
-function init() {
-    return new Extension();
 }

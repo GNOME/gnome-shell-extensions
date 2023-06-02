@@ -10,3 +10,5 @@ rules:
   prefer-arrow-callback: error
 globals:
   global: readonly
+parserOptions:
+  sourceType: module

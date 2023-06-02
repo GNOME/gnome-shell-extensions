@@ -1,7 +1,7 @@
 // -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
-/* exported PlacesManager */
-
-const {Gio, GLib, Shell} = imports.gi;
+import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
+import Shell from 'gi://Shell';
 const {EventEmitter} = imports.misc.signals;
 
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -248,7 +248,7 @@ const DEFAULT_DIRECTORIES = [
     GLib.UserDirectory.DIRECTORY_VIDEOS,
 ];
 
-var PlacesManager = class extends EventEmitter {
+export class PlacesManager extends EventEmitter {
     constructor() {
         super();
 
@@ -546,4 +546,4 @@ var PlacesManager = class extends EventEmitter {
     get(kind) {
         return this._places[kind];
     }
-};
+}

@@ -1,16 +1,13 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
-/* exported init buildPrefsWidget */
-
-const {Adw, Gio, GLib, GObject, Gtk} = imports.gi;
+import Adw from 'gi://Adw';
+import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
+import GObject from 'gi://GObject';
+import Gtk from 'gi://Gtk';
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
 const _ = ExtensionUtils.gettext;
-
-/** */
-function init() {
-    ExtensionUtils.initTranslations();
-}
 
 class WindowListPrefsWidget extends Adw.PreferencesPage {
     static {
@@ -84,9 +81,13 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
     }
 }
 
-/**
- * @returns {Gtk.Widget} - the prefs widget
- */
-function buildPrefsWidget() {
-    return new WindowListPrefsWidget();
+export default class ExtensionPreferences {
+    constructor() {
+        ExtensionUtils.initTranslations();
+    }
+
+    fillPreferencesWindow(window) {
+        const page = new WindowListPrefsWidget();
+        window.add(page);
+    }
 }

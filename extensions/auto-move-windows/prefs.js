@@ -1,8 +1,11 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 // Start apps on custom workspaces
-/* exported init buildPrefsWidget */
 
-const {Adw, Gio, GLib, GObject, Gtk} = imports.gi;
+import Adw from 'gi://Adw';
+import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
+import GObject from 'gi://GObject';
+import Gtk from 'gi://Gtk';
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -338,14 +341,16 @@ class NewRuleDialog extends Gtk.AppChooserDialog {
     }
 }
 
-/** */
-function init() {
-    ExtensionUtils.initTranslations();
-}
+export default class ExtensionPreferences {
+    constructor() {
+        ExtensionUtils.initTranslations();
+    }
 
-/**
- * @returns {Gtk.Widget} - the prefs widget
- */
-function buildPrefsWidget() {
-    return new AutoMoveSettingsWidget();
+    fillPreferencesWindow(window) {
+        const page = new Adw.PreferencesPage();
+        window.add(page);
+
+        const group = new AutoMoveSettingsWidget();
+        page.add(group);
+    }
 }

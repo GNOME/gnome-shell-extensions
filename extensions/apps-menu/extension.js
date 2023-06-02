@@ -1,9 +1,14 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
-/* exported init enable disable */
-
-const {
-    Atk, Clutter, Gio, GLib, GMenu, GObject, Gtk, Meta, Shell, St,
-} = imports.gi;
+import Atk from 'gi://Atk';
+import Clutter from 'gi://Clutter';
+import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
+import GMenu from 'gi://GMenu';
+import GObject from 'gi://GObject';
+import Gtk from 'gi://Gtk';
+import Meta from 'gi://Meta';
+import Shell from 'gi://Shell';
+import St from 'gi://St';
 const {EventEmitter} = imports.misc.signals;
 
 const DND = imports.ui.dnd;
@@ -677,7 +682,7 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 }
 
-class Extension {
+export default class Extension {
     constructor() {
         ExtensionUtils.initTranslations();
     }
@@ -694,9 +699,4 @@ class Extension {
         this._appsMenuButton.destroy();
         delete this._appsMenuButton;
     }
-}
-
-/** */
-function init() {
-    return new Extension();
 }

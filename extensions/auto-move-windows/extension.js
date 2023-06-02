@@ -1,8 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 // Start apps on custom workspaces
-/* exported init enable disable */
 
-const {Shell} = imports.gi;
+import Shell from 'gi://Shell';
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
@@ -105,7 +104,7 @@ class WindowMover {
     }
 }
 
-class Extension {
+export default class Extension {
     enable() {
         this._prevCheckWorkspaces = Main.wm._workspaceTracker._checkWorkspaces;
         Main.wm._workspaceTracker._checkWorkspaces =
@@ -142,9 +141,4 @@ class Extension {
         };
         /* eslint-enable no-invalid-this */
     }
-}
-
-/** */
-function init() {
-    return new Extension();
 }

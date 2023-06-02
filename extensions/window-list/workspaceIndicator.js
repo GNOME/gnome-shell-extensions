@@ -1,5 +1,8 @@
-/* exported WorkspaceIndicator */
-const {Clutter, Gio, GObject, Meta, St} = imports.gi;
+import Clutter from 'gi://Clutter';
+import Gio from 'gi://Gio';
+import GObject from 'gi://GObject';
+import Meta from 'gi://Meta';
+import St from 'gi://St';
 
 const DND = imports.ui.dnd;
 const ExtensionUtils = imports.misc.extensionUtils;
@@ -252,7 +255,7 @@ class WorkspaceThumbnail extends St.Button {
     }
 }
 
-var WorkspaceIndicator = class WorkspaceIndicator extends PanelMenu.Button {
+export class WorkspaceIndicator extends PanelMenu.Button {
     static {
         GObject.registerClass(this);
     }
@@ -447,4 +450,4 @@ var WorkspaceIndicator = class WorkspaceIndicator extends PanelMenu.Button {
         let newIndex = this._currentWorkspace + diff;
         this._activate(newIndex);
     }
-};
+}

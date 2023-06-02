@@ -1,6 +1,8 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
-/* exported init */
-const {Clutter, Graphene, GObject, St} = imports.gi;
+import Clutter from 'gi://Clutter';
+import Graphene from 'gi://Graphene';
+import GObject from 'gi://GObject';
+import St from 'gi://St';
 
 const Main = imports.ui.main;
 const OverviewControls = imports.ui.overviewControls;
@@ -251,7 +253,7 @@ class MyWorkspacesView extends WorkspacesView.WorkspacesView {
     }
 }
 
-class Extension {
+export default class Extension {
     constructor() {
         this._origWorkspace = Workspace.Workspace;
         this._origWorkspacesView = WorkspacesView.WorkspacesView;
@@ -266,11 +268,4 @@ class Extension {
         Workspace.Workspace = this._origWorkspace;
         WorkspacesView.WorkspacesView = this._origWorkspacesView;
     }
-}
-
-/**
- * @returns {Extension} - the extension's state object
- */
-function init() {
-    return new Extension();
 }

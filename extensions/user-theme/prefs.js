@@ -1,15 +1,17 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
-/* exported init buildPrefsWidget */
 
 // we use async/await here to not block the mainloop, not to parallelize
 /* eslint-disable no-await-in-loop */
 
-const {Adw, Gio, GLib, GObject, Gtk} = imports.gi;
+import Adw from 'gi://Adw';
+import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
+import GObject from 'gi://GObject';
+import Gtk from 'gi://Gtk';
 
 const ExtensionUtils = imports.misc.extensionUtils;
 
-const Me = ExtensionUtils.getCurrentExtension();
-const Util = Me.imports.util;
+import {getThemeDirs, getModeThemeDirs} from './util.js';
 
 Gio._promisify(Gio.File.prototype, 'enumerate_children_async');
 Gio._promisify(Gio.File.prototype, 'query_info_async');
@@ -39,7 +41,7 @@ class UserThemePrefsWidget extends Adw.PreferencesGroup {
     }
 
     async _collectThemes() {
-        for (const dirName of Util.getThemeDirs()) {
+        for (const dirName of getThemeDirs()) {
             const dir = Gio.File.new_for_path(dirName);
             for (const name of await this._enumerateDir(dir)) {
                 if (this._rows.has(name))
@@ -60,7 +62,7 @@ class UserThemePrefsWidget extends Adw.PreferencesGroup {
             }
         }
 
-        for (const dirName of Util.getModeThemeDirs()) {
+        for (const dirName of getModeThemeDirs()) {
             const dir = Gio.File.new_for_path(dirName);
             for (const filename of await this._enumerateDir(dir)) {
                 if (!filename.endsWith('.css'))
@@ -125,13 +127,12 @@ class ThemeRow extends Adw.ActionRow {
     }
 }
 
-/** */
-function init() {
-}
+export default class ExtensionPreferences {
+    fillPreferencesWindow(window) {
+        const page = new Adw.PreferencesPage();
+        window.add(page);
 
-/**
- * @returns {Gtk.Widget} - the prefs widget
- */
-function buildPrefsWidget() {
-    return new UserThemePrefsWidget();
+        const group = new UserThemePrefsWidget();
+        page.add(group);
+    }
 }

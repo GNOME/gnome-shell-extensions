@@ -1,7 +1,6 @@
-/* exported init */
 const AppDisplay = imports.ui.appDisplay;
 
-class Extension {
+export default class Extension {
     constructor() {
         this._appIconProto = AppDisplay.AppIcon.prototype;
         this._activateOriginal = this._appIconProto.activate;
@@ -17,9 +16,4 @@ class Extension {
     disable() {
         this._appIconProto.activate = this._activateOriginal;
     }
-}
-
-/** */
-function init() {
-    return new Extension();
 }

@@ -1,15 +1,14 @@
 /* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
-/* exported init enable disable */
-
-const {Clutter, GObject, St} = imports.gi;
+import Clutter from 'gi://Clutter';
+import GObject from 'gi://GObject';
+import St from 'gi://St';
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
-const Me = ExtensionUtils.getCurrentExtension();
-const PlaceDisplay = Me.imports.placeDisplay;
+import {PlacesManager} from './placeDisplay.js';
 
 const _ = ExtensionUtils.gettext;
 const N_ = x => x;
@@ -100,7 +99,7 @@ class PlacesMenu extends PanelMenu.Button {
         });
         this.add_actor(label);
 
-        this.placesManager = new PlaceDisplay.PlacesManager();
+        this.placesManager = new PlacesManager();
 
         this._sections = { };
 
@@ -138,7 +137,7 @@ class PlacesMenu extends PanelMenu.Button {
     }
 }
 
-class Extension {
+export default class Extension {
     constructor() {
         ExtensionUtils.initTranslations();
     }
@@ -156,9 +155,4 @@ class Extension {
         this._indicator.destroy();
         delete this._indicator;
     }
-}
-
-/** */
-function init() {
-    return new Extension();
 }

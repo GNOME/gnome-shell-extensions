@@ -1,4 +1,3 @@
-/* exported init */
 /*
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,11 +15,11 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-const {St} = imports.gi;
+import St from 'gi://St';
 
 const Main = imports.ui.main;
 
-class Extension {
+export default class Extension {
     _updateColorScheme(scheme) {
         Main.sessionMode.colorScheme = scheme;
         St.Settings.get().notify('color-scheme');
@@ -34,9 +33,4 @@ class Extension {
     disable() {
         this._updateColorScheme(this._savedColorScheme);
     }
-}
-
-/** */
-function init() {
-    return new Extension();
 }

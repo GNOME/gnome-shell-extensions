@@ -1,6 +1,5 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
-/* exported enable disable */
-const {Clutter} = imports.gi;
+import Clutter from 'gi://Clutter';
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
@@ -236,7 +235,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
     }
 }
 
-class Extension {
+export default class Extension {
     constructor() {
         this._savedMethods = new Map();
     }
@@ -323,9 +322,4 @@ class Extension {
         }
         this._savedMethods.clear();
     }
-}
-
-/** */
-function init() {
-    return new Extension();
 }
