@@ -1,0 +1,10 @@
+{
+"extension-id": "@extension_id@",
+"uuid": "@uuid@",
+"settings-schema": "@gschemaname@",
+"gettext-domain": "@gettext_domain@",
+"name": "Light Style",
+"description": "Switch default to light style",
+"shell-version": [ "@shell_current@" ],
+"url": "@url@"
+}
