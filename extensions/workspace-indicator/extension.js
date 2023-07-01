@@ -5,14 +5,12 @@ import GObject from 'gi://GObject';
 import Meta from 'gi://Meta';
 import St from 'gi://St';
 
-import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const DND = imports.ui.dnd;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
-
-const _ = ExtensionUtils.gettext;
 
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
@@ -428,11 +426,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
     }
 }
 
-export default class Extension {
-    constructor() {
-        ExtensionUtils.initTranslations();
-    }
-
+export default class WorkspaceIndicatorExtension extends Extension {
     enable() {
         this._indicator = new WorkspaceIndicator();
         Main.panel.addToStatusArea('workspace-indicator', this._indicator);

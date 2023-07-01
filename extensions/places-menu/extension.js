@@ -3,7 +3,7 @@ import Clutter from 'gi://Clutter';
 import GObject from 'gi://GObject';
 import St from 'gi://St';
 
-import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
@@ -11,7 +11,6 @@ const PopupMenu = imports.ui.popupMenu;
 
 import {PlacesManager} from './placeDisplay.js';
 
-const _ = ExtensionUtils.gettext;
 const N_ = x => x;
 
 const PLACE_ICON_SIZE = 16;
@@ -129,11 +128,7 @@ class PlacesMenu extends PanelMenu.Button {
     }
 }
 
-export default class Extension {
-    constructor() {
-        ExtensionUtils.initTranslations();
-    }
-
+export default class PlacesMenuExtension extends Extension {
     enable() {
         this._indicator = new PlacesMenu();
 

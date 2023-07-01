@@ -3,13 +3,13 @@
 
 import Shell from 'gi://Shell';
 
-import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const Main = imports.ui.main;
 
 class WindowMover {
-    constructor() {
-        this._settings = ExtensionUtils.getSettings();
+    constructor(settings) {
+        this._settings = settings;
         this._appSystem = Shell.AppSystem.get_default();
         this._appConfigs = new Map();
         this._appData = new Map();
@@ -97,12 +97,12 @@ class WindowMover {
     }
 }
 
-export default class Extension {
+export default class AutoMoveExtension extends Extension {
     enable() {
         this._prevCheckWorkspaces = Main.wm._workspaceTracker._checkWorkspaces;
         Main.wm._workspaceTracker._checkWorkspaces =
             this._getCheckWorkspaceOverride(this._prevCheckWorkspaces);
-        this._windowMover = new WindowMover();
+        this._windowMover = new WindowMover(this.getSettings());
     }
 
     disable() {

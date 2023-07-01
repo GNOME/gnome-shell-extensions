@@ -7,7 +7,7 @@ import Meta from 'gi://Meta';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
 
-import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const DND = imports.ui.dnd;
 const Main = imports.ui.main;
@@ -16,8 +16,6 @@ const PopupMenu = imports.ui.popupMenu;
 
 import {WindowPicker, WindowPickerToggle} from './windowPicker.js';
 import {WorkspaceIndicator} from './workspaceIndicator.js';
-
-const _ = ExtensionUtils.gettext;
 
 const ICON_TEXTURE_SIZE = 24;
 const DND_ACTIVATE_TIMEOUT = 500;
@@ -30,8 +28,6 @@ const GroupingMode = {
     AUTO: 1,
     ALWAYS: 2,
 };
-
-let Me = null;
 
 /**
  * @param {Shell.App} app - an app
@@ -322,9 +318,11 @@ class BaseButton extends St.Button {
         if (isOpen)
             return;
 
+        const extension = Extension.lookupByURL(import.meta.url);
+
         let [x, y] = global.get_pointer();
         let actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
-        if (Me.someWindowListContains(actor))
+        if (extension.someWindowListContains(actor))
             actor.sync_hover();
     }
 
@@ -710,7 +708,7 @@ class WindowList extends St.Widget {
         GObject.registerClass(this);
     }
 
-    constructor(perMonitor, monitor) {
+    constructor(perMonitor, monitor, settings) {
         super({
             name: 'panel',
             style_class: 'bottom-panel solid',
@@ -839,7 +837,7 @@ class WindowList extends St.Widget {
         this._dndTimeoutId = 0;
         this._dndWindow = null;
 
-        this._settings = ExtensionUtils.getSettings();
+        this._settings = settings;
         this._settings.connect('changed::grouping-mode',
             () => this._groupingModeChanged());
         this._grouped = undefined;
@@ -1095,11 +1093,9 @@ class WindowList extends St.Widget {
     }
 }
 
-export default class Extension {
-    constructor() {
-        ExtensionUtils.initTranslations();
-
-        Me = this;
+export default class WindowListExtension extends Extension {
+    constructor(metadata) {
+        super(metadata);
 
         this._windowLists = null;
         this._hideOverviewOrig = Main.overview.hide;
@@ -1108,7 +1104,7 @@ export default class Extension {
     enable() {
         this._windowLists = [];
 
-        this._settings = ExtensionUtils.getSettings();
+        this._settings = this.getSettings();
         this._settings.connectObject('changed::show-on-all-monitors',
             () => this._buildWindowLists(), this);
 
@@ -1133,7 +1129,7 @@ export default class Extension {
 
         Main.layoutManager.monitors.forEach(monitor => {
             if (showOnAllMonitors || monitor === Main.layoutManager.primaryMonitor)
-                this._windowLists.push(new WindowList(showOnAllMonitors, monitor));
+                this._windowLists.push(new WindowList(showOnAllMonitors, monitor, this.getSettings()));
         });
     }
 

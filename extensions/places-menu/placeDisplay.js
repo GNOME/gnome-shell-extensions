@@ -4,12 +4,11 @@ import GLib from 'gi://GLib';
 import Shell from 'gi://Shell';
 const {EventEmitter} = imports.misc.signals;
 
-import {gettext} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const Main = imports.ui.main;
 const ShellMountOperation = imports.ui.shellMountOperation;
 
-const _ = gettext;
 const N_ = x => x;
 
 Gio._promisify(Gio.AppInfo, 'launch_default_for_uri_async');

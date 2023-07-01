@@ -5,22 +5,20 @@ import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 
-import * as ExtensionUtils from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
-
-const _ = ExtensionUtils.gettext;
+import {ExtensionPreferences, gettext as _} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 class WindowListPrefsWidget extends Adw.PreferencesPage {
     static {
         GObject.registerClass(this);
     }
 
-    constructor() {
+    constructor(settings) {
         super();
 
         this._actionGroup = new Gio.SimpleActionGroup();
         this.insert_action_group('window-list', this._actionGroup);
 
-        this._settings = ExtensionUtils.getSettings();
+        this._settings = settings;
         this._actionGroup.add_action(
             this._settings.create_action('grouping-mode'));
         this._actionGroup.add_action(
@@ -81,13 +79,8 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
     }
 }
 
-export default class ExtensionPreferences {
-    constructor() {
-        ExtensionUtils.initTranslations();
-    }
-
-    fillPreferencesWindow(window) {
-        const page = new WindowListPrefsWidget();
-        window.add(page);
+export default class WindowListPrefs extends ExtensionPreferences {
+    getPreferencesWidget() {
+        return new WindowListPrefsWidget(this.getSettings());
     }
 }

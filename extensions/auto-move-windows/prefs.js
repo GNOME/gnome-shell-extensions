@@ -7,9 +7,7 @@ import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 
-import * as ExtensionUtils from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
-
-const _ = ExtensionUtils.gettext;
+import {ExtensionPreferences, gettext as _} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 const SETTINGS_KEY = 'application-list';
 
@@ -62,13 +60,14 @@ class RulesList extends GObject.Object {
         GObject.registerClass(this);
     }
 
-    #settings = ExtensionUtils.getSettings();
+    #settings;
     #rules = [];
     #changedId;
 
-    constructor() {
+    constructor(settings) {
         super();
 
+        this.#settings = settings;
         this.#changedId =
             this.#settings.connect(`changed::${SETTINGS_KEY}`,
                 () => this.#sync());
@@ -150,12 +149,13 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
             (self, name, param) => self._rules.changeWorkspace(...param.deepUnpack()));
     }
 
-    constructor() {
+    constructor(settings) {
         super({
             title: _('Workspace Rules'),
         });
 
-        this._rules = new RulesList();
+        this._settings = settings;
+        this._rules = new RulesList(this._settings);
 
         const store = new Gio.ListStore({item_type: Gio.ListModel});
         const listModel = new Gtk.FlattenListModel({model: store});
@@ -176,7 +176,7 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
     }
 
     _addNewRule() {
-        const dialog = new NewRuleDialog(this.get_root());
+        const dialog = new NewRuleDialog(this.get_root(), this._settings);
         dialog.connect('response', (dlg, id) => {
             const appInfo = id === Gtk.ResponseType.OK
                 ? dialog.get_widget().get_app_info() : null;
@@ -315,13 +315,13 @@ class NewRuleDialog extends Gtk.AppChooserDialog {
         GObject.registerClass(this);
     }
 
-    constructor(parent) {
+    constructor(parent, settings) {
         super({
             transient_for: parent,
             modal: true,
         });
 
-        this._settings = ExtensionUtils.getSettings();
+        this._settings = settings;
 
         this.get_widget().set({
             show_all: true,
@@ -341,16 +341,8 @@ class NewRuleDialog extends Gtk.AppChooserDialog {
     }
 }
 
-export default class ExtensionPreferences {
-    constructor() {
-        ExtensionUtils.initTranslations();
-    }
-
-    fillPreferencesWindow(window) {
-        const page = new Adw.PreferencesPage();
-        window.add(page);
-
-        const group = new AutoMoveSettingsWidget();
-        page.add(group);
+export default class AutoMovePrefs extends ExtensionPreferences {
+    getPreferencesWidget() {
+        return new AutoMoveSettingsWidget(this.getSettings());
     }
 }

@@ -1,7 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 import Clutter from 'gi://Clutter';
 
-import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const Main = imports.ui.main;
 const {WindowPreview} = imports.ui.windowPreview;
@@ -236,13 +236,15 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
     }
 }
 
-export default class Extension {
-    constructor() {
+export default class NativeWindowPlacementExtension extends Extension {
+    constructor(metadata) {
+        super(metadata);
+
         this._savedMethods = new Map();
     }
 
     enable() {
-        const settings = ExtensionUtils.getSettings();
+        const settings = this.getSettings();
 
         const layoutProto = Workspace.WorkspaceLayout.prototype;
         const previewProto = WindowPreview.prototype;

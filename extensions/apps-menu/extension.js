@@ -11,14 +11,12 @@ import Shell from 'gi://Shell';
 import St from 'gi://St';
 const {EventEmitter} = imports.misc.signals;
 
-import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const DND = imports.ui.dnd;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
-
-const _ = ExtensionUtils.gettext;
 
 const appSys = Shell.AppSystem.get_default();
 
@@ -391,7 +389,7 @@ class ApplicationsButton extends PanelMenu.Button {
 
         Main.wm.addKeybinding(
             'apps-menu-toggle-menu',
-            ExtensionUtils.getSettings(),
+            Extension.lookupByURL(import.meta.url).getSettings(),
             Meta.KeyBindingFlags.IGNORE_AUTOREPEAT,
             Shell.ActionMode.NORMAL | Shell.ActionMode.OVERVIEW,
             () => this.menu.toggle());
@@ -670,11 +668,7 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 }
 
-export default class Extension {
-    constructor() {
-        ExtensionUtils.initTranslations();
-    }
-
+export default class AppsMenuExtension extends Extension {
     enable() {
         this._appsMenuButton = new ApplicationsButton();
         const index = Main.sessionMode.panel.left.indexOf('activities') + 1;

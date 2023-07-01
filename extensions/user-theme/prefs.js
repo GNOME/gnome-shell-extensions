@@ -9,7 +9,7 @@ import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 
-import * as ExtensionUtils from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
+import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 import {getThemeDirs, getModeThemeDirs} from './util.js';
 
@@ -22,13 +22,13 @@ class UserThemePrefsWidget extends Adw.PreferencesGroup {
         GObject.registerClass(this);
     }
 
-    constructor() {
+    constructor(settings) {
         super({title: 'Themes'});
 
         this._actionGroup = new Gio.SimpleActionGroup();
         this.insert_action_group('theme', this._actionGroup);
 
-        this._settings = ExtensionUtils.getSettings();
+        this._settings = settings;
         this._actionGroup.add_action(
             this._settings.create_action('name'));
 
@@ -127,12 +127,8 @@ class ThemeRow extends Adw.ActionRow {
     }
 }
 
-export default class ExtensionPreferences {
-    fillPreferencesWindow(window) {
-        const page = new Adw.PreferencesPage();
-        window.add(page);
-
-        const group = new UserThemePrefsWidget();
-        page.add(group);
+export default class UserThemePrefs extends ExtensionPreferences {
+    getPreferencesWidget() {
+        return new UserThemePrefsWidget(this.getSettings());
     }
 }

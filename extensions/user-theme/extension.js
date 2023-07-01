@@ -3,7 +3,7 @@
 
 import Gio from 'gi://Gio';
 
-import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const Main = imports.ui.main;
 
@@ -11,9 +11,9 @@ import {getThemeDirs, getModeThemeDirs} from './util.js';
 
 const SETTINGS_KEY = 'name';
 
-export default class ThemeManager {
+export default class ThemeManager extends Extension {
     enable() {
-        this._settings = ExtensionUtils.getSettings();
+        this._settings = this.getSettings();
         this._settings.connect(`changed::${SETTINGS_KEY}`, this._changeTheme.bind(this));
         this._changeTheme();
     }

@@ -6,9 +6,8 @@ import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 import Pango from 'gi://Pango';
 
-import * as ExtensionUtils from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
+import {ExtensionPreferences, gettext as _} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
-const _ = ExtensionUtils.gettext;
 const N_ = e => e;
 
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
@@ -259,16 +258,8 @@ class NewWorkspaceRow extends Adw.PreferencesRow {
     }
 }
 
-export default class ExtensionPreferences {
-    constructor() {
-        ExtensionUtils.initTranslations();
-    }
-
-    fillPreferencesWindow(window) {
-        const page = new Adw.PreferencesPage();
-        window.add(page);
-
-        const group = new WorkspaceSettingsWidget();
-        page.add(group);
+export default class WorkspaceIndicatorPrefs extends ExtensionPreferences {
+    getPreferencesWidget() {
+        return new WorkspaceSettingsWidget();
     }
 }

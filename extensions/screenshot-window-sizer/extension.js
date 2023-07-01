@@ -23,13 +23,13 @@ import Meta from 'gi://Meta';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
 
-import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const Main = imports.ui.main;
 
 const MESSAGE_FADE_TIME = 2000;
 
-export default class Extension {
+export default class ScreenshotWindowSizerExtension extends Extension {
     SIZES = [
         [624, 351],
         [800, 450],
@@ -149,13 +149,13 @@ export default class Extension {
     enable() {
         Main.wm.addKeybinding(
             'cycle-screenshot-sizes',
-            ExtensionUtils.getSettings(),
+            this.getSettings(),
             Meta.KeyBindingFlags.PER_WINDOW,
             Shell.ActionMode.NORMAL,
             this._cycleScreenshotSizes.bind(this));
         Main.wm.addKeybinding(
             'cycle-screenshot-sizes-backward',
-            ExtensionUtils.getSettings(),
+            this.getSettings(),
             Meta.KeyBindingFlags.PER_WINDOW | Meta.KeyBindingFlags.IS_REVERSED,
             Shell.ActionMode.NORMAL,
             this._cycleScreenshotSizes.bind(this));

@@ -5,14 +5,12 @@ import GObject from 'gi://GObject';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
 
-import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 const ShellMountOperation = imports.ui.shellMountOperation;
-
-const _ = ExtensionUtils.gettext;
 
 Gio._promisify(Gio.File.prototype, 'query_filesystem_info_async');
 
@@ -197,11 +195,7 @@ class DriveMenu extends PanelMenu.Button {
     }
 }
 
-export default class Extension {
-    constructor() {
-        ExtensionUtils.initTranslations();
-    }
-
+export default class PlaceMenuExtension extends Extension {
     enable() {
         this._indicator = new DriveMenu();
         Main.panel.addToStatusArea('drive-menu', this._indicator);

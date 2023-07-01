@@ -4,14 +4,12 @@ import GObject from 'gi://GObject';
 import Meta from 'gi://Meta';
 import St from 'gi://St';
 
-import {gettext} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const DND = imports.ui.dnd;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
-
-const _ = gettext;
 
 const TOOLTIP_OFFSET = 6;
 const TOOLTIP_ANIMATION_TIME = 150;
