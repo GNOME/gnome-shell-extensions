@@ -21,16 +21,13 @@ const {St} = imports.gi;
 const Main = imports.ui.main;
 
 class Extension {
-    constructor() {
-        this._savedColorScheme = Main.sessionMode.colorScheme;
-    }
-
     _updateColorScheme(scheme) {
         Main.sessionMode.colorScheme = scheme;
         St.Settings.get().notify('color-scheme');
     }
 
     enable() {
+        this._savedColorScheme = Main.sessionMode.colorScheme;
         this._updateColorScheme('prefer-light');
     }
 
