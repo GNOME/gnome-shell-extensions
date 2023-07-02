@@ -15,7 +15,6 @@ datadir = get_option('datadir')
 shelldir = join_paths(datadir, 'gnome-shell')
 extensiondir = join_paths(shelldir, 'extensions')
 modedir = join_paths(shelldir, 'modes')
-themedir = join_paths(shelldir, 'theme')
 
 schemadir = join_paths(datadir, 'glib-2.0', 'schemas')
 sessiondir = join_paths(datadir, 'gnome-session', 'sessions')
