@@ -314,10 +314,6 @@ export class WindowPicker extends Clutter.Actor {
         if (this._origWorkspaceBackground)
             Workspace.WorkspaceBackground = this._origWorkspaceBackground;
 
-        if (this._monitorsChangedId)
-            Main.layoutManager.disconnect(this._monitorsChangedId);
-        this._monitorsChangedId = 0;
-
         if (this._overlayKeyId)
             global.display.disconnect(this._overlayKeyId);
         this._overlayKeyId = 0;
