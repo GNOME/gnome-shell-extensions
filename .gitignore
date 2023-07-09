@@ -1,3 +1,7 @@
 po/gnome-shell-extensions.pot
 zip-files/
 *~
+*.patch
+*.sw?
+.buildconfig
+.vscode
