@@ -107,7 +107,8 @@ eslint:
   stage: review
   <<: *prereview_req
   script:
-    - eslint -o $LINT_LOG -f junit --resolve-plugins-relative-to $(npm root -g) extensions
+    - export NODE_PATH=$(npm root -g)
+    - ./.gitlab-ci/run-eslint --output-file ${LINT_LOG} --format junit --stdout
   artifacts:
     paths:
       - ${LINT_LOG}
