@@ -212,7 +212,7 @@ class MyWorkspacesView extends WorkspacesView.WorkspacesView {
                 c = o.get_key_symbol() - Clutter.KEY_0;
                 if (c > 9 || c <= 0) {
                     this._hideTooltips();
-                    global.log(c);
+                    log(c);
                     return false;
                 }
             }

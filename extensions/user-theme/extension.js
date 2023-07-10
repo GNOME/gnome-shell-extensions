@@ -43,9 +43,9 @@ export default class ThemeManager {
         }
 
         if (stylesheet)
-            global.log(`loading user theme: ${stylesheet}`);
+            log(`loading user theme: ${stylesheet}`);
         else
-            global.log('loading default theme (Adwaita)');
+            log('loading default theme (Adwaita)');
         Main.setThemeStylesheet(stylesheet);
         Main.loadTheme();
     }
