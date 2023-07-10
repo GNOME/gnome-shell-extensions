@@ -132,7 +132,7 @@ class MyWorkspacesView extends WorkspacesView.WorkspacesView {
 
         this._pickWorkspace = false;
         this._pickWindow = false;
-        global.stage.connect(
+        global.stage.connectObject(
             'key-press-event', this._onKeyPress.bind(this),
             'key-release-event', this._onKeyRelease.bind(this),
             this);

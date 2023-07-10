@@ -383,7 +383,7 @@ class ApplicationsButton extends PanelMenu.Button {
         this.name = 'panelApplications';
         this.label_actor = this._label;
 
-        Main.overview.connect(
+        Main.overview.connectObject(
             'showing', () => this.add_accessible_state(Atk.StateType.CHECKED),
             'hiding', () => this.remove_accessible_state(Atk.StateType.CHECKED),
             this);
