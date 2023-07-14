@@ -9,10 +9,10 @@ import St from 'gi://St';
 
 import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-const DND = imports.ui.dnd;
-const Main = imports.ui.main;
-const Overview = imports.ui.overview;
-const PopupMenu = imports.ui.popupMenu;
+import * as DND from 'resource:///org/gnome/shell/ui/dnd.js';
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import * as Overview from 'resource:///org/gnome/shell/ui/overview.js';
+import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 import {WindowPicker, WindowPickerToggle} from './windowPicker.js';
 import {WorkspaceIndicator} from './workspaceIndicator.js';

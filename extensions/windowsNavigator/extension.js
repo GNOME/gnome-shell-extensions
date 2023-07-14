@@ -3,13 +3,12 @@ import Clutter from 'gi://Clutter';
 import Graphene from 'gi://Graphene';
 import St from 'gi://St';
 
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import * as OverviewControls from 'resource:///org/gnome/shell/ui/overviewControls.js';
 import {InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
-
-const Main = imports.ui.main;
-const OverviewControls = imports.ui.overviewControls;
-const {WindowPreview} = imports.ui.windowPreview;
-const {Workspace} = imports.ui.workspace;
-const {WorkspacesView} = imports.ui.workspacesView;
+import {WindowPreview} from 'resource:///org/gnome/shell/ui/windowPreview.js';
+import {Workspace} from 'resource:///org/gnome/shell/ui/workspace.js';
+import {WorkspacesView} from 'resource:///org/gnome/shell/ui/workspacesView.js';
 
 const WINDOW_SLOT = 4;
 

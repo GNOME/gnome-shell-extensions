@@ -2,12 +2,12 @@
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import Shell from 'gi://Shell';
-const {EventEmitter} = imports.misc.signals;
+import {EventEmitter} from 'resource:///org/gnome/shell/misc/signals.js';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-const Main = imports.ui.main;
-const ShellMountOperation = imports.ui.shellMountOperation;
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import * as ShellMountOperation from 'resource:///org/gnome/shell/ui/shellMountOperation.js';
 
 const N_ = x => x;
 

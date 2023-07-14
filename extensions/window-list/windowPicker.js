@@ -4,18 +4,17 @@ import Shell from 'gi://Shell';
 import St from 'gi://St';
 
 import {Extension, InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
+import * as Layout from 'resource:///org/gnome/shell/ui/layout.js';
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import {WorkspacesDisplay} from 'resource:///org/gnome/shell/ui/workspacesView.js';
+import * as Workspace from 'resource:///org/gnome/shell/ui/workspace.js';
 
-const Layout = imports.ui.layout;
-const Main = imports.ui.main;
-const {WorkspacesDisplay} = imports.ui.workspacesView;
-const Workspace = imports.ui.workspace;
-
-const {VIGNETTE_BRIGHTNESS} = imports.ui.lightbox;
-const {
+import {VIGNETTE_BRIGHTNESS} from 'resource:///org/gnome/shell/ui/lightbox.js';
+import {
     SIDE_CONTROLS_ANIMATION_TIME,
     OverviewAdjustment,
-    ControlsState,
-} = imports.ui.overviewControls;
+    ControlsState
+} from 'resource:///org/gnome/shell/ui/overviewControls.js';
 
 class MyWorkspacesDisplay extends WorkspacesDisplay {
     static {

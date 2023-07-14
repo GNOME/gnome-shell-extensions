@@ -3,9 +3,9 @@ import Clutter from 'gi://Clutter';
 
 import {Extension, InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-const Main = imports.ui.main;
-const {WindowPreview} = imports.ui.windowPreview;
-const Workspace = imports.ui.workspace;
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import {WindowPreview} from 'resource:///org/gnome/shell/ui/windowPreview.js';
+import * as Workspace from 'resource:///org/gnome/shell/ui/workspace.js';
 
 // testing settings for natural window placement strategy:
 const WINDOW_PLACEMENT_NATURAL_ACCURACY = 20;                       // accuracy of window translate moves  (KDE-default: 20)

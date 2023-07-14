@@ -1,6 +1,5 @@
+import {AppIcon} from 'resource:///org/gnome/shell/ui/appDisplay.js';
 import {InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
-
-const {AppIcon} = imports.ui.appDisplay;
 
 export default class Extension {
     constructor() {
