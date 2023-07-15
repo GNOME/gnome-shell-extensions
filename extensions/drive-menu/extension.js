@@ -5,7 +5,8 @@ import GObject from 'gi://GObject';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
 
-const ExtensionUtils = imports.misc.extensionUtils;
+import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;

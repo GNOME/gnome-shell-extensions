@@ -9,7 +9,7 @@ import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 
-const ExtensionUtils = imports.misc.extensionUtils;
+import * as ExtensionUtils from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 import {getThemeDirs, getModeThemeDirs} from './util.js';
 

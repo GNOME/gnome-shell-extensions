@@ -6,7 +6,7 @@ import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 import Pango from 'gi://Pango';
 
-const ExtensionUtils = imports.misc.extensionUtils;
+import * as ExtensionUtils from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 const _ = ExtensionUtils.gettext;
 const N_ = e => e;

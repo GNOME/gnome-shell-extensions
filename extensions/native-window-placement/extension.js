@@ -1,7 +1,8 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 import Clutter from 'gi://Clutter';
 
-const ExtensionUtils = imports.misc.extensionUtils;
+import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+
 const Main = imports.ui.main;
 const {WindowPreview} = imports.ui.windowPreview;
 const Workspace = imports.ui.workspace;

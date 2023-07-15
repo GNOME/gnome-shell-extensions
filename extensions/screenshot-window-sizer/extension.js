@@ -23,7 +23,8 @@ import Meta from 'gi://Meta';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
 
-const ExtensionUtils = imports.misc.extensionUtils;
+import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+
 const Main = imports.ui.main;
 
 const MESSAGE_FADE_TIME = 2000;

@@ -11,8 +11,9 @@ import Shell from 'gi://Shell';
 import St from 'gi://St';
 const {EventEmitter} = imports.misc.signals;
 
+import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+
 const DND = imports.ui.dnd;
-const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;

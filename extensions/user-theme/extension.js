@@ -3,7 +3,8 @@
 
 import Gio from 'gi://Gio';
 
-const ExtensionUtils = imports.misc.extensionUtils;
+import * as ExtensionUtils from 'resource:///org/gnome/shell/extensions/extension.js';
+
 const Main = imports.ui.main;
 
 import {getThemeDirs, getModeThemeDirs} from './util.js';
