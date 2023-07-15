@@ -3,6 +3,8 @@ import GObject from 'gi://GObject';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
 
+import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
+
 const Layout = imports.ui.layout;
 const Main = imports.ui.main;
 const {WorkspacesDisplay} = imports.ui.workspacesView;
@@ -34,6 +36,8 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
 
         super(controls, workspaceAdjustment, overviewAdjustment);
 
+        this._windowPicker = controls;
+
         this._workspaceAdjustment = workspaceAdjustment;
         this._workspaceAdjustment.actor = this;
 
@@ -49,7 +53,7 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
 
     prepareToEnterOverview(...args) {
         if (!this._scrollEventId) {
-            this._scrollEventId = Main.windowPicker.connect('scroll-event',
+            this._scrollEventId = this._windowPicker.connect('scroll-event',
                 this._onScrollEvent.bind(this));
         }
 
@@ -58,7 +62,7 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
 
     vfunc_hide(...args) {
         if (this._scrollEventId > 0)
-            Main.windowPicker.disconnect(this._scrollEventId);
+            this._windowPicker.disconnect(this._scrollEventId);
         this._scrollEventId = 0;
 
         super.vfunc_hide(...args);
@@ -325,15 +329,16 @@ export class WindowPickerToggle extends St.Button {
             toggle_mode: true,
         });
 
+        const {windowPicker} = Extension.lookupByURL(import.meta.url);
         this.connect('notify::checked', () => {
             if (this.checked)
-                Main.windowPicker.open();
+                windowPicker.open();
             else
-                Main.windowPicker.close();
+                windowPicker.close();
         });
 
-        Main.windowPicker.connect('open-state-changed', () => {
-            this.checked = Main.windowPicker.visible;
+        windowPicker.connect('open-state-changed', () => {
+            this.checked = windowPicker.visible;
         });
     }
 }

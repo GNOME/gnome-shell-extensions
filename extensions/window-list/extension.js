@@ -878,7 +878,8 @@ class WindowList extends St.Widget {
     }
 
     _updateWindowListVisibility() {
-        let visible = !Main.windowPicker.visible;
+        const {windowPicker} = Extension.lookupByURL(import.meta.url);
+        const visible = !windowPicker.visible;
 
         this._windowList.ease({
             opacity: visible ? 255 : 0,
@@ -1111,10 +1112,10 @@ export default class WindowListExtension extends Extension {
         Main.layoutManager.connectObject('monitors-changed',
             () => this._buildWindowLists(), this);
 
-        Main.windowPicker = new WindowPicker();
+        this.windowPicker = new WindowPicker();
 
         Main.overview.hide = () => {
-            Main.windowPicker.close();
+            this.windowPicker.close();
             this._hideOverviewOrig.call(Main.overview);
         };
 
@@ -1146,8 +1147,8 @@ export default class WindowListExtension extends Extension {
         });
         this._windowLists = null;
 
-        Main.windowPicker.destroy();
-        delete Main.windowPicker;
+        this.windowPicker.destroy();
+        delete this.windowPicker;
 
         Main.overview.hide = this._hideOverviewOrig;
     }
