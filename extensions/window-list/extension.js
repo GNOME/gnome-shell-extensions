@@ -13,7 +13,6 @@ const Main = imports.ui.main;
 const Overview = imports.ui.overview;
 const PopupMenu = imports.ui.popupMenu;
 
-const Me = ExtensionUtils.getCurrentExtension();
 import {WindowPicker, WindowPickerToggle} from './windowPicker.js';
 import {WorkspaceIndicator} from './workspaceIndicator.js';
 
@@ -30,6 +29,8 @@ const GroupingMode = {
     AUTO: 1,
     ALWAYS: 2,
 };
+
+let Me = null;
 
 /**
  * @param {Shell.App} app - an app
@@ -322,7 +323,7 @@ class BaseButton extends St.Button {
 
         let [x, y] = global.get_pointer();
         let actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
-        if (Me.stateObj.someWindowListContains(actor))
+        if (Me.someWindowListContains(actor))
             actor.sync_hover();
     }
 
@@ -1096,6 +1097,8 @@ class WindowList extends St.Widget {
 export default class Extension {
     constructor() {
         ExtensionUtils.initTranslations();
+
+        Me = this;
 
         this._windowLists = null;
         this._hideOverviewOrig = Main.overview.hide;
