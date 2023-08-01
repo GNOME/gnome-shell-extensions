@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2020-07-14 00:40+0300\n"
+"POT-Creation-Date: 2023-02-18 15:10+0000\n"
+"PO-Revision-Date: 2023-08-01 23:41+0300\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: Greek, Modern (1453-) <gnome-el-list@gnome.org>\n"
 "Language: el\n"
@@ -21,22 +21,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Project-Style: gnome\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Classic"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Αυτή η συνεδρία σας συνδέει στο GNOME Classic"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME Classic σε Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME Classic σε Xorg"
+
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Αγαπημένα"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:380
 msgid "Applications"
 msgstr "Εφαρμογές"
 
@@ -53,26 +62,26 @@ msgstr ""
 "(όνομα αρχείου επιφάνειας εργασίας), ακολουθούμενη από άνω-κάτω τελεία και "
 "τον αριθμό του χώρου εργασίας"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:152
 msgid "Workspace Rules"
 msgstr "Κανόνες χώρων εργασίας"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:306
 msgid "Add Rule"
 msgstr "Προσθήκη κανόνα"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:126
+#: extensions/places-menu/placeDisplay.js:212
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Αποτυχία εξαγωγής του δίσκου «%s»:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:145
 msgid "Removable devices"
 msgstr "Αφαιρούμενες συσκευές"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:167
 msgid "Open Files"
 msgstr "Άνοιγμα αρχείων"
 
@@ -106,31 +115,31 @@ msgstr ""
 "στο κάτω μέρος. Η αλλαγή αυτής της ρύθμισης απαιτεί επανεκκίνηση του "
 "κελύφους για να υπάρξει κάποιο αποτέλεσμα."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:97
 msgid "Places"
 msgstr "Τοποθεσίες"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Αποτυχία εκκίνησης «%s»"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Αποτυχία προσάρτησης τόμου για «%s»"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
+#: extensions/places-menu/placeDisplay.js:127
+#: extensions/places-menu/placeDisplay.js:150
 msgid "Computer"
 msgstr "Υπολογιστής"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:340
 msgid "Home"
 msgstr "Προσωπικός φάκελος"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:385
 msgid "Browse Network"
 msgstr "Περιήγηση δικτύου"
 
@@ -151,47 +160,47 @@ msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr ""
 "Το όνομα του θέματος που θα φορτωθεί από το ~ /.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Αποελαχιστοποίηση"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Ελαχιστοποίηση"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Απομεγιστοποίηση"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Μεγιστοποίηση"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:483
 msgid "Minimize all"
 msgstr "Ελαχιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:489
 msgid "Unminimize all"
 msgstr "Αποελαχιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:495
 msgid "Maximize all"
 msgstr "Μεγιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:503
 msgid "Unmaximize all"
 msgstr "Απομεγιστοποίηση όλων"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:511
 msgid "Close all"
 msgstr "Κλείσιμο όλων"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:795
 msgid "Window List"
 msgstr "Λίστα παραθύρου"
 
@@ -209,7 +218,7 @@ msgstr ""
 "«always» (πάντα)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "Εμφάνιση των παραθύρων από όλους τους χώρους εργασίας"
 
@@ -230,41 +239,41 @@ msgstr ""
 "Αν θα εμφανίζεται ο κατάλογος παραθύρων όλων των συνδεμένων οθονών ή μόνο "
 "της κύριας οθόνης."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Ομαδοποίηση παραθύρου"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "Να μη γίνεται ποτέ ομαδοποίηση παραθύρων"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "Ομαδοποίηση παραθύρων όταν ο χώρος είναι περιορισμένος"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "Να γίνεται πάντα ομαδοποίηση παραθύρων"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "Να εμφανίζεται σε όλες τις οθόνες"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:261
+#: extensions/workspace-indicator/extension.js:266
 msgid "Workspace Indicator"
 msgstr "Δείκτης χώρου εργασίας"
 
-#: extensions/workspace-indicator/prefs.js:34
-msgid "Workspace Names"
-msgstr "Ονόματα χώρων εργασίας:"
-
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:62
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Χώρος εργασίας %d"
 
-#: extensions/workspace-indicator/prefs.js:218
+#: extensions/workspace-indicator/prefs.js:129
+msgid "Workspace Names"
+msgstr "Ονόματα χώρων εργασίας"
+
+#: extensions/workspace-indicator/prefs.js:255
 msgid "Add Workspace"
 msgstr "Προσθήκη χώρου εργασίας"
 
