@@ -1,19 +1,23 @@
-const AppDisplay = imports.ui.appDisplay;
+import {InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
+
+const {AppIcon} = imports.ui.appDisplay;
 
 export default class Extension {
     constructor() {
-        this._appIconProto = AppDisplay.AppIcon.prototype;
-        this._activateOriginal = this._appIconProto.activate;
+        this._injectionManager = new InjectionManager();
     }
 
     enable() {
-        const {_activateOriginal} = this;
-        this._appIconProto.activate = function () {
-            _activateOriginal.call(this, 2);
-        };
+        this._injectionManager.overrideMethod(AppIcon.prototype, 'activate',
+            originalMethod => {
+                return function () {
+                    // eslint-disable-next-line no-invalid-this
+                    originalMethod.call(this, 2);
+                };
+            });
     }
 
     disable() {
-        this._appIconProto.activate = this._activateOriginal;
+        this._injectionManager.clear();
     }
 }
