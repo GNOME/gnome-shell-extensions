@@ -3,7 +3,7 @@ import GObject from 'gi://GObject';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
 
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const Layout = imports.ui.layout;
 const Main = imports.ui.main;
@@ -77,66 +77,6 @@ class MyWorkspacesDisplay extends WorkspacesDisplay {
     }
 }
 
-class MyWorkspace extends Workspace.Workspace {
-    static {
-        GObject.registerClass(this);
-    }
-
-    constructor(...args) {
-        super(...args);
-
-        this._overviewAdjustment.connectObject('notify::value', () => {
-            const {value: progress} = this._overviewAdjustment;
-            const brightness = 1 - (1 - VIGNETTE_BRIGHTNESS) * progress;
-            for (const bg of this._background?._backgroundGroup ?? []) {
-                bg.content.set({
-                    vignette: true,
-                    brightness,
-                });
-            }
-        }, this);
-    }
-}
-
-class MyWorkspaceBackground extends Workspace.WorkspaceBackground {
-    static {
-        GObject.registerClass(this);
-    }
-
-    _updateBorderRadius() {
-    }
-
-    vfunc_allocate(box) {
-        this.set_allocation(box);
-
-        const themeNode = this.get_theme_node();
-        const contentBox = themeNode.get_content_box(box);
-
-        this._bin.allocate(contentBox);
-
-        const [contentWidth, contentHeight] = contentBox.get_size();
-        const monitor = Main.layoutManager.monitors[this._monitorIndex];
-        const xRatio = contentWidth / this._workarea.width;
-        const yRatio = contentHeight / this._workarea.height;
-
-        const right = area => area.x + area.width;
-        const bottom = area => area.y + area.height;
-
-        const offsets = {
-            left: xRatio * (this._workarea.x - monitor.x),
-            right: xRatio * (right(monitor) - right(this._workarea)),
-            top: yRatio * (this._workarea.y - monitor.y),
-            bottom: yRatio * (bottom(monitor) - bottom(this._workarea)),
-        };
-
-        contentBox.set_origin(-offsets.left, -offsets.top);
-        contentBox.set_size(
-            offsets.left + contentWidth + offsets.right,
-            offsets.top + contentHeight + offsets.bottom);
-        this._backgroundGroup.allocate(contentBox);
-    }
-}
-
 export class WindowPicker extends Clutter.Actor {
     static [GObject.signals] = {
         'open-state-changed': {param_types: [GObject.TYPE_BOOLEAN]},
@@ -156,6 +96,7 @@ export class WindowPicker extends Clutter.Actor {
 
         this._adjustment = new OverviewAdjustment(this);
 
+        this._injectionManager = new InjectionManager();
         this.connect('destroy', this._onDestroy.bind(this));
 
         global.bind_property('screen-width',
@@ -183,11 +124,68 @@ export class WindowPicker extends Clutter.Actor {
     }
 
     _injectBackgroundShade() {
-        this._origWorkspace = Workspace.Workspace;
-        this._origWorkspaceBackground = Workspace.WorkspaceBackground;
+        const backgroundProto = Workspace.WorkspaceBackground.prototype;
+        this._injectionManager.overrideMethod(backgroundProto, '_updateBorderRadius',
+            () => {
+                return function () {};
+            });
+        this._injectionManager.overrideMethod(backgroundProto, 'vfunc_allocate',
+            () => {
+                /* eslint-disable no-invalid-this */
+                return function (box) {
+                    this.set_allocation(box);
 
-        Workspace.Workspace = MyWorkspace;
-        Workspace.WorkspaceBackground = MyWorkspaceBackground;
+                    const themeNode = this.get_theme_node();
+                    const contentBox = themeNode.get_content_box(box);
+
+                    this._bin.allocate(contentBox);
+
+                    const [contentWidth, contentHeight] = contentBox.get_size();
+                    const monitor = Main.layoutManager.monitors[this._monitorIndex];
+                    const xRatio = contentWidth / this._workarea.width;
+                    const yRatio = contentHeight / this._workarea.height;
+
+                    const right = area => area.x + area.width;
+                    const bottom = area => area.y + area.height;
+
+                    const offsets = {
+                        left: xRatio * (this._workarea.x - monitor.x),
+                        right: xRatio * (right(monitor) - right(this._workarea)),
+                        top: yRatio * (this._workarea.y - monitor.y),
+                        bottom: yRatio * (bottom(monitor) - bottom(this._workarea)),
+                    };
+
+                    contentBox.set_origin(-offsets.left, -offsets.top);
+                    contentBox.set_size(
+                        offsets.left + contentWidth + offsets.right,
+                        offsets.top + contentHeight + offsets.bottom);
+                    this._backgroundGroup.allocate(contentBox);
+                };
+                /* eslint-enable */
+            });
+        this._injectionManager.overrideMethod(backgroundProto, 'vfunc_parent_set',
+            () => {
+                /* eslint-disable no-invalid-this */
+                return function () {
+                    setTimeout(() => {
+                        const parent = this.get_parent();
+                        if (!parent)
+                            return;
+
+                        parent._overviewAdjustment.connectObject('notify::value', () => {
+                            const {value: progress} = parent._overviewAdjustment;
+                            const brightness = 1 - (1 - VIGNETTE_BRIGHTNESS) * progress;
+                            for (const bg of this._backgroundGroup ?? []) {
+                                bg.content.set({
+                                    vignette: true,
+                                    brightness,
+                                });
+                            }
+                        }, this);
+                    });
+                };
+                /* eslint-enable */
+            });
     }
 
     get visible() {
@@ -293,11 +291,7 @@ export class WindowPicker extends Clutter.Actor {
     }
 
     _onDestroy() {
-        if (this._origWorkspace)
-            Workspace.Workspace = this._origWorkspace;
-
-        if (this._origWorkspaceBackground)
-            Workspace.WorkspaceBackground = this._origWorkspaceBackground;
+        this._injectionManager.clear();
 
         if (this._stageKeyPressId)
             global.stage.disconnect(this._stageKeyPressId);
