@@ -1,7 +1,7 @@
 // -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 import Clutter from 'gi://Clutter';
 
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 const Main = imports.ui.main;
 const {WindowPreview} = imports.ui.windowPreview;
@@ -240,7 +240,7 @@ export default class NativeWindowPlacementExtension extends Extension {
     constructor(metadata) {
         super(metadata);
 
-        this._savedMethods = new Map();
+        this._injectionManager = new InjectionManager();
     }
 
     enable() {
@@ -249,7 +249,7 @@ export default class NativeWindowPlacementExtension extends Extension {
         const layoutProto = Workspace.WorkspaceLayout.prototype;
         const previewProto = WindowPreview.prototype;
 
-        this._overrideMethod(layoutProto, '_createBestLayout', () => {
+        this._injectionManager.overrideMethod(layoutProto, '_createBestLayout', () => {
             /* eslint-disable no-invalid-this */
             return function () {
                 this._layoutStrategy = new NaturalLayoutStrategy({
@@ -261,7 +261,7 @@ export default class NativeWindowPlacementExtension extends Extension {
         });
 
         // position window titles on top of windows in overlay
-        this._overrideMethod(previewProto, '_init', originalMethod => {
+        this._injectionManager.overrideMethod(previewProto, '_init', originalMethod => {
             /* eslint-disable no-invalid-this */
             return function (...args) {
                 originalMethod.call(this, ...args);
@@ -280,7 +280,7 @@ export default class NativeWindowPlacementExtension extends Extension {
             /* eslint-enable no-invalid-this */
         });
 
-        this._overrideMethod(previewProto, '_adjustOverlayOffsets', originalMethod => {
+        this._injectionManager.overrideMethod(previewProto, '_adjustOverlayOffsets', originalMethod => {
             /* eslint-disable no-invalid-this */
             return function (...args) {
                 originalMethod.call(this, ...args);
@@ -293,36 +293,7 @@ export default class NativeWindowPlacementExtension extends Extension {
     }
 
     disable() {
-        this._restoreMethods();
+        this._injectionManager.clear();
         global.stage.queue_relayout();
-    }
-
-    _saveMethod(prototype, methodName) {
-        let map = this._savedMethods.get(prototype);
-        if (!map) {
-            map = new Map();
-            this._savedMethods.set(prototype, map);
-        }
-
-        const originalMethod = prototype[methodName];
-        map.set(methodName, originalMethod);
-        return originalMethod;
-    }
-
-    _overrideMethod(prototype, methodName, createOverrideFunc) {
-        const originalMethod = this._saveMethod(prototype, methodName);
-        prototype[methodName] = createOverrideFunc(originalMethod);
-    }
-
-    _restoreMethods() {
-        for (const [proto, map] of this._savedMethods) {
-            for (const [methodName, originalMethod] of map) {
-                if (originalMethod === undefined)
-                    delete proto[methodName];
-                else
-                    proto[methodName] = originalMethod;
-            }
-        }
-        this._savedMethods.clear();
     }
 }
