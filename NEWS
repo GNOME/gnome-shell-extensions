@@ -1,3 +1,14 @@
+45.beta
+=======
+* Port extensions to ESM [Florian; !259, !266, !268, !269]
+* Misc. bug fixes and cleanups [Florian; !260, !261, !262, !263, !264]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Efstathios Iosifidis [el]
+
 45.alpha
 ========
 * window-list: Modernize default styling [Alexander; !253]
