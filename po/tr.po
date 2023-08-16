@@ -1,5 +1,5 @@
 # Turkish translation for gnome-shell-extensions.
-# Copyright (C) 2012-2022 gnome-shell-extensions's COPYRIGHT HOLDER
+# Copyright (C) 2012-2023 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
 # Osman Karagöz <osmank3@gmail.com>, 2012.
@@ -14,10 +14,10 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2022-07-10 12:54+0000\n"
+"POT-Creation-Date: 2023-08-05 15:58+0000\n"
 "PO-Revision-Date: 2022-02-14 01:35+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
-"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,11 +42,11 @@ msgstr "Wayland üstünde GNOME Klasik"
 msgid "GNOME Classic on Xorg"
 msgstr "Xorg üstünde GNOME Klasik"
 
-#: extensions/apps-menu/extension.js:118
+#: extensions/apps-menu/extension.js:121
 msgid "Favorites"
 msgstr "Gözdeler"
 
-#: extensions/apps-menu/extension.js:379
+#: extensions/apps-menu/extension.js:378
 msgid "Applications"
 msgstr "Uygulamalar"
 
@@ -62,26 +62,26 @@ msgstr ""
 "Her biri, bir uygulama kimliği (masaüstü dosya adı) ardından gelen iki nokta "
 "üst üste ve çalışma alanı numarasını içeren dizgeler listesi"
 
-#: extensions/auto-move-windows/prefs.js:152
+#: extensions/auto-move-windows/prefs.js:155
 msgid "Workspace Rules"
 msgstr "Çalışma Alanı Kuralları"
 
-#: extensions/auto-move-windows/prefs.js:306
+#: extensions/auto-move-windows/prefs.js:309
 msgid "Add Rule"
 msgstr "Kural Ekle"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:126
-#: extensions/places-menu/placeDisplay.js:210
+#: extensions/drive-menu/extension.js:122
+#: extensions/places-menu/placeDisplay.js:213
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "“%s” sürücüsü çıkarılamadı:"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:141
 msgid "Removable devices"
 msgstr "Çıkarılabilir aygıtlar"
 
-#: extensions/drive-menu/extension.js:167
+#: extensions/drive-menu/extension.js:163
 msgid "Open Files"
 msgstr "Dosyaları Aç"
 
@@ -115,31 +115,31 @@ msgstr ""
 "Yapılan değişikliklerin etkili olması için kabuğun yeniden başlatılması "
 "gerekir."
 
-#: extensions/places-menu/extension.js:94
-#: extensions/places-menu/extension.js:97
+#: extensions/places-menu/extension.js:85
+#: extensions/places-menu/extension.js:88
 msgid "Places"
 msgstr "Yerler"
 
-#: extensions/places-menu/placeDisplay.js:49
+#: extensions/places-menu/placeDisplay.js:53
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "“%s” başlatılamadı"
 
-#: extensions/places-menu/placeDisplay.js:64
+#: extensions/places-menu/placeDisplay.js:68
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "“%s” için birim bağlanamadı"
 
-#: extensions/places-menu/placeDisplay.js:125
-#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:128
+#: extensions/places-menu/placeDisplay.js:151
 msgid "Computer"
 msgstr "Bilgisayar"
 
-#: extensions/places-menu/placeDisplay.js:336
+#: extensions/places-menu/placeDisplay.js:328
 msgid "Home"
 msgstr "Ev"
 
-#: extensions/places-menu/placeDisplay.js:381
+#: extensions/places-menu/placeDisplay.js:373
 msgid "Browse Network"
 msgstr "Ağa Gözat"
 
@@ -159,47 +159,47 @@ msgstr "Tema adı"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "~/.themes/name/gnome-shell konumundan edinilen tema adı"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "Kapat"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr "Önceki duruma getir"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "Simge durumuna küçült"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr "Önceki duruma getir"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr "En büyük duruma getir"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:468
 msgid "Minimize all"
 msgstr "Tümünü simge durumuna küçült"
 
-#: extensions/window-list/extension.js:489
+#: extensions/window-list/extension.js:474
 msgid "Unminimize all"
 msgstr "Tümünü önceki duruma getir"
 
-#: extensions/window-list/extension.js:495
+#: extensions/window-list/extension.js:480
 msgid "Maximize all"
 msgstr "Tümünü en büyük duruma getir"
 
-#: extensions/window-list/extension.js:503
+#: extensions/window-list/extension.js:488
 msgid "Unmaximize all"
 msgstr "Tümünü önceki duruma getir"
 
-#: extensions/window-list/extension.js:511
+#: extensions/window-list/extension.js:496
 msgid "Close all"
 msgstr "Tümünü kapat"
 
-#: extensions/window-list/extension.js:795
+#: extensions/window-list/extension.js:776
 msgid "Window List"
 msgstr "Pencere Listesi"
 
@@ -217,7 +217,7 @@ msgstr ""
 "“always” (her zaman)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:76
 msgid "Show windows from all workspaces"
 msgstr "Tüm çalışma alanlarındaki pencereleri göster"
 
@@ -239,40 +239,40 @@ msgstr ""
 "Pencere listesinin tüm bağlı monitörlerde mi yoksa yalnızca birincil "
 "monitörde mi gösterileceğini belirtir."
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Pencere Kümeleme"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:37
 msgid "Never group windows"
 msgstr "Pencereleri asla kümeleme"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:38
 msgid "Group windows when space is limited"
 msgstr "Yer kısıtlıyken pencereleri kümele"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:39
 msgid "Always group windows"
 msgstr "Pencereleri her zaman kümele"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:63
 msgid "Show on all monitors"
 msgstr "Tüm monitörlerde göster"
 
-#: extensions/window-list/workspaceIndicator.js:261
-#: extensions/workspace-indicator/extension.js:266
+#: extensions/window-list/workspaceIndicator.js:248
+#: extensions/workspace-indicator/extension.js:252
 msgid "Workspace Indicator"
 msgstr "Çalışma Alanı Belirteci"
 
-#: extensions/workspace-indicator/prefs.js:62
+#: extensions/workspace-indicator/prefs.js:65
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Çalışma Alanı %d"
 
-#: extensions/workspace-indicator/prefs.js:129
+#: extensions/workspace-indicator/prefs.js:132
 msgid "Workspace Names"
 msgstr "Çalışma Alanı Adları"
 
-#: extensions/workspace-indicator/prefs.js:255
+#: extensions/workspace-indicator/prefs.js:258
 msgid "Add Workspace"
 msgstr "Çalışma Alanı Ekle"
