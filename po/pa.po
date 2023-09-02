@@ -2,36 +2,47 @@
 # Copyright (C) 2011 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# A S Alam <aalam@users.sf.net>, 2011, 2012, 2013, 2014, 2015, 2018, 2021.
+# A S Alam <aalam@users.sf.net>, 2011, 2012, 2013, 2014, 2015, 2018, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/is"
 "sues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2021-02-13 16:51-0800\n"
+"POT-Creation-Date: 2023-08-05 15:58+0000\n"
+"PO-Revision-Date: 2023-09-02 08:53-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-translation@googlegroups.com>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "ਗਨੋਮ ਕਲਾਸਿਕ"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "ਇਹ ਸ਼ੈਸ਼ਨ ਤੁਹਾਨੂੰ ਗਨੋਮ ਕਲਾਸਿਕ ਵਿੱਚ ਲਾਗ ਕਰਦਾ ਹੈ"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Wayland"
+msgstr "ਵੇਅਲੈਂਡ ਉੱਤੇ ਗਨੋਮ ਕਲਾਸਿਕ"
+
+#: data/gnome-classic-xorg.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Xorg"
+msgstr "Xorg ਉੱਤੇ ਗਨੋਮ ਕਲਾਸਿਕ"
+
+#: extensions/apps-menu/extension.js:121
 msgid "Favorites"
 msgstr "ਪਸੰਦੀਦਾ"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:378
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ"
 
@@ -48,27 +59,26 @@ msgstr ""
 " ਵਰਕਸਪੇਸ ਨੰਬਰ "
 "ਰੱਖਦਾ ਹੈ"
 
-#: extensions/auto-move-windows/prefs.js:35
-#| msgid "Workspace Names"
+#: extensions/auto-move-windows/prefs.js:155
 msgid "Workspace Rules"
 msgstr "ਵਰਕਸਪੇਸ ਨਿਯਮ"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:309
 msgid "Add Rule"
 msgstr "ਨਿਯਮ ਜੋੜੋ"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:122
+#: extensions/places-menu/placeDisplay.js:213
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "ਡਰਾਇਵ “%s“ ਬਾਹਰ ਕੱਢਣ ਲਈ ਫੇਲ੍ਹ:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:141
 msgid "Removable devices"
 msgstr "ਹਟਾਉਣਯੋਗ ਜੰਤਰ"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:163
 msgid "Open Files"
 msgstr "ਫਾਇਲਾਂ ਨੂੰ ਖੋਲ੍ਹੋ"
 
@@ -103,31 +113,31 @@ msgstr ""
 "ਨੂੰ ਅਣਡਿੱਠਾ ਕਰਦਾ ਹੈ। ਇਹ ਸੈਟਿੰਗ ਬਦਲਾਅ ਦੇ ਚਾਲੂ ਹੋਣ ਲਈ ਸ਼ੈਲ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ"
 " ਲੋੜ ਹੈ।"
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:85
+#: extensions/places-menu/extension.js:88
 msgid "Places"
 msgstr "ਥਾਵਾਂ"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:53
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "“%s“ ਚਲਾਉਣ ਲਈ ਫੇਲ੍ਹ ਹੈ"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:68
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "“%s” ਲਈ ਵਾਲੀਅਮ ਮਾਊਂਟ ਕਰਨ ਲਈ ਅਸਫ਼ਲ"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
+#: extensions/places-menu/placeDisplay.js:128
+#: extensions/places-menu/placeDisplay.js:151
 msgid "Computer"
 msgstr "ਕੰਪਿਊਟਰ"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:328
 msgid "Home"
 msgstr "ਘਰ"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:373
 msgid "Browse Network"
 msgstr "ਨੈੱਟਵਰਕ ਝਲਕ ਵੇਖੋ"
 
@@ -147,47 +157,47 @@ msgstr "ਥੀਮ ਨਾਂ"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "ਥੀਮ ਦਾ ਨਾਂ, ਜੋ ~/.themes/name/gnome-shell ਤੋਂ ਲੋਡ ਕੀਤਾ ਜਾਵੇਗਾ"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr "ਅਣ-ਨਿਊਨਤਮ"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "ਨਿਊਨਤਮ"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr "ਅਣ-ਵੱਧੋ-ਵੱਧ"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr "ਵੱਧੋ-ਵੱਧ"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:468
 msgid "Minimize all"
 msgstr "ਸਭ ਨਿਊਨਤਮ ਕਰੋ"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:474
 msgid "Unminimize all"
 msgstr "ਸਭ ਅਣ-ਨਿਊਨਤਮ ਕਰੋ"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:480
 msgid "Maximize all"
 msgstr "ਸਭ ਵੱਧ-ਵੱਧ ਕਰੋ"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:488
 msgid "Unmaximize all"
 msgstr "ਸਭ ਅਣ-ਵੱਧੋ-ਵੱਧ ਕਰੋ"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:496
 msgid "Close all"
 msgstr "ਸਭ ਬੰਦ ਕਰੋ"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:776
 msgid "Window List"
 msgstr "ਵਿੰਡੋਜ਼ ਸੂਚੀ"
 
@@ -205,15 +215,11 @@ msgstr ""
 "ਅਤੇ “ਹਮੇਸ਼ਾ“।"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
-#| msgid "Show only windows in the current workspace"
+#: extensions/window-list/prefs.js:76
 msgid "Show windows from all workspaces"
 msgstr "ਸਾਰੇ ਵਰਕਸਪੇਸਾਂ ਤੋਂ ਵਿੰਡੋਜ਼ ਵੇਖਾਓ"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
-#| msgid ""
-#| "Whether to show the window list on all connected monitors or only on the "
-#| "primary one."
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr "ਕੀ ਸਭ ਵਰਕਸਪੇਸਾਂ ਤੋਂ ਵਿੰਡੋ ਵੇਖਣੀਆਂ ਹਨ ਜਾਂ ਸਿਰਫ਼ ਇੱਕ ਤੋਂ ਹੀ।"
 
@@ -228,42 +234,41 @@ msgid ""
 msgstr ""
 "ਕੀ ਸਭ ਕਨੈਕਟ ਹੋਏ ਮਾਨੀਟਰਾਂ ਉੱਤੇ ਵਿੰਡੋ ਸੂਚੀ ਦੇਖਣੀ ਹੈ ਜਾਂ ਕੇਵਲ ਪ੍ਰਾਇਮਰੀ ਉੱਤੇ ਹੀ।"
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "ਵਿੰਡੋ ਗਰੁੱਪਿੰਗ"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:37
 msgid "Never group windows"
 msgstr "ਵਿੰਡੋ ਦਾ ਗਰੁੱਪ ਕਦੇ ਨਾ ਬਣਾਓ"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:38
 msgid "Group windows when space is limited"
 msgstr "ਜਦੋਂ ਥਾਂ ਥੋੜੀ ਹੋਵੇ ਤਾਂ ਵਿੰਡੋਜ਼ ਦਾ ਗਰੁੱਪ ਬਣਾਓ"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:39
 msgid "Always group windows"
 msgstr "ਵਿੰਡੋ ਦਾ ਗਰੁੱਪ ਹਮੇਸ਼ਾ ਬਣਾਓ"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:63
 msgid "Show on all monitors"
 msgstr "ਸਭ ਮਾਨੀਟਰਾਂ ਉੱਤੇ ਵੇਖਾਓ"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:248
+#: extensions/workspace-indicator/extension.js:252
 msgid "Workspace Indicator"
 msgstr "ਵਰਕਸਪੇਸ ਇੰਡੀਕੇਟਰ"
 
-#: extensions/workspace-indicator/prefs.js:34
-msgid "Workspace Names"
-msgstr "ਵਰਕਸਪੇਸ ਨਾਂ"
-
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:65
 #, javascript-format
 msgid "Workspace %d"
 msgstr "ਵਰਕਸਪੇਸ %d"
 
-#: extensions/workspace-indicator/prefs.js:218
-#| msgid "Workspace"
+#: extensions/workspace-indicator/prefs.js:132
+msgid "Workspace Names"
+msgstr "ਵਰਕਸਪੇਸ ਨਾਂ"
+
+#: extensions/workspace-indicator/prefs.js:258
 msgid "Add Workspace"
 msgstr "ਵਰਕਸਪੇਸ ਜੋੜੋ"
 
