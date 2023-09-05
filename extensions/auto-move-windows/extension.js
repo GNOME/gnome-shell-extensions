@@ -50,7 +50,7 @@ class WindowMover {
             .map(id => this._appSystem.lookup_app(id))
             .filter(app => app && !this._appData.has(app));
         addedApps.forEach(app => {
-            app.connectObject('window-changed',
+            app.connectObject('windows-changed',
                 this._appWindowsChanged.bind(this), this);
             this._appData.set(app, {windows: app.get_windows()});
         });
