@@ -1,7 +1,7 @@
 # British English translation of gnome-shell-extensions.
 # Copyright (C) 2011 gnome-shell-extensions'S COPYRIGHT HOLDER.
 # This file is distributed under the same license as the gnome-shell-extensions package.
-# Bruce Cowan <bruce@bcowan.eu>, 2011, 2018.
+# Bruce Cowan <bruce@bcowan.eu>, 2011-2023.
 # Chris Leonard <cjlhomeaddress@gmail.com>, 2012.
 # Philip Withnall <philip@tecnocode.co.uk>, 2014.
 # Zander Brown <zbrown@gnome.org>, 2019-2020.
@@ -11,31 +11,42 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2020-08-24 23:05+0100\n"
-"Last-Translator: Zander Brown <zbrown@gnome.org>\n"
+"POT-Creation-Date: 2023-08-05 15:59+0000\n"
+"PO-Revision-Date: 2023-09-06 12:13+0100\n"
+"Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
 "Language-Team: English - United Kingdom <en_GB@li.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Poedit 3.3.1\n"
 "X-Project-Style: gnome\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME Classic"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "This session logs you into GNOME Classic"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME Classic on Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME Classic on Xorg"
+
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Favourites"
 
-#: extensions/apps-menu/extension.js:369
+#: extensions/apps-menu/extension.js:380
 msgid "Applications"
 msgstr "Applications"
 
@@ -51,27 +62,26 @@ msgstr ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 
-#: extensions/auto-move-windows/prefs.js:35
-#| msgid "Workspace Names"
+#: extensions/auto-move-windows/prefs.js:152
 msgid "Workspace Rules"
 msgstr "Workspace Rules"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:306
 msgid "Add Rule"
 msgstr "Add Rule"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:126
+#: extensions/places-menu/placeDisplay.js:212
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Ejecting drive “%s” failed:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:145
 msgid "Removable devices"
 msgstr "Removable devices"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:167
 msgid "Open Files"
 msgstr "Open Files"
 
@@ -103,31 +113,31 @@ msgstr ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:97
 msgid "Places"
 msgstr "Places"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Failed to launch “%s”"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Failed to mount volume for “%s”"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
+#: extensions/places-menu/placeDisplay.js:127
+#: extensions/places-menu/placeDisplay.js:150
 msgid "Computer"
 msgstr "Computer"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:340
 msgid "Home"
 msgstr "Home"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:385
 msgid "Browse Network"
 msgstr "Browse Network"
 
@@ -147,47 +157,47 @@ msgstr "Theme name"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Close"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Unminimize"
 msgstr "Unminimise"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:92
 msgid "Minimize"
 msgstr "Minimise"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Unmaximize"
 msgstr "Unmaximise"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:99
 msgid "Maximize"
 msgstr "Maximise"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:483
 msgid "Minimize all"
 msgstr "Minimise all"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:489
 msgid "Unminimize all"
 msgstr "Unminimise all"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:495
 msgid "Maximize all"
 msgstr "Maximise all"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:503
 msgid "Unmaximize all"
 msgstr "Unmaximise all"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:511
 msgid "Close all"
 msgstr "Close all"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:795
 msgid "Window List"
 msgstr "Window List"
 
@@ -204,7 +214,7 @@ msgstr ""
 "Possible values are “never”, “auto” and “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "Show windows from all workspaces"
 
@@ -224,42 +234,41 @@ msgstr ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Window Grouping"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "Never group windows"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "Group windows when space is limited"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "Always group windows"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "Show on all monitors"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:261
+#: extensions/workspace-indicator/extension.js:266
 msgid "Workspace Indicator"
 msgstr "Workspace Indicator"
 
-#: extensions/workspace-indicator/prefs.js:34
-msgid "Workspace Names"
-msgstr "Workspace Names"
-
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:62
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Workspace %d"
 
-#: extensions/workspace-indicator/prefs.js:218
-#| msgid "Workspace"
+#: extensions/workspace-indicator/prefs.js:129
+msgid "Workspace Names"
+msgstr "Workspace Names"
+
+#: extensions/workspace-indicator/prefs.js:255
 msgid "Add Workspace"
 msgstr "Add Workspace"
 
