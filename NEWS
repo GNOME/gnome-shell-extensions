@@ -1,3 +1,13 @@
+45.rc
+=====
+* Misc. bug fixes and cleanups [Florian; !267, !224, !272]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Sabri Ünal [tr], Florentina Musat [ro], A S Alam [pa]
+
 45.beta
 =======
 * Port extensions to ESM [Florian; !259, !266, !268, !269]
