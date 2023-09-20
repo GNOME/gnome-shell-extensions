@@ -18,7 +18,6 @@ Most extensions can be installed by configuring --prefix=$HOME/.local,
 and will be picked automatically at next login.
   </description>
   <homepage rdf:resource="https://wiki.gnome.org/Projects/GnomeShell/Extensions" />
-  <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/gnome-shell-list" />
   <support-forum rdf:resource="https://discourse.gnome.org/tag/shell" />
   <download-page rdf:resource="https://download.gnome.org/sources/gnome-shell-extensions/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues" />
