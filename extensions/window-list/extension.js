@@ -844,8 +844,8 @@ class WindowList extends St.Widget {
         this._dndWindow = null;
 
         this._settings = settings;
-        this._settings.connect('changed::grouping-mode',
-            () => this._groupingModeChanged());
+        this._settings.connectObject('changed::grouping-mode',
+            () => this._groupingModeChanged(), this);
         this._grouped = undefined;
         this._groupingModeChanged();
     }
@@ -1092,7 +1092,8 @@ class WindowList extends St.Widget {
 
         this._stopMonitoringDrag();
 
-        this._settings.run_dispose();
+        this._settings.disconnectObject();
+        this._settings = null;
 
         let windows = global.get_window_actors();
         for (let i = 0; i < windows.length; i++)
@@ -1144,8 +1145,9 @@ export default class WindowListExtension extends Extension {
         if (!this._windowLists)
             return;
 
-        this._settings.disconnectObject(this);
         Main.layoutManager.disconnectObject(this);
+        this._settings.disconnectObject(this);
+        this._settings = null;
 
         this._windowLists.forEach(windowList => {
             windowList.hide();

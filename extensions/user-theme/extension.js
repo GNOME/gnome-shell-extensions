@@ -21,12 +21,13 @@ const SETTINGS_KEY = 'name';
 export default class ThemeManager extends Extension {
     enable() {
         this._settings = this.getSettings();
-        this._settings.connect(`changed::${SETTINGS_KEY}`, this._changeTheme.bind(this));
+        this._settings.connectObject(`changed::${SETTINGS_KEY}`,
+            this._changeTheme.bind(this), this);
         this._changeTheme();
     }
 
     disable() {
-        this._settings?.run_dispose();
+        this._settings?.disconnectObject();
         this._settings = null;
 
         Main.setThemeStylesheet(null);

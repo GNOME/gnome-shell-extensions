@@ -36,7 +36,7 @@ class UserThemePrefsWidget extends Adw.PreferencesGroup {
         this._actionGroup.add_action(
             this._settings.create_action('name'));
 
-        this.connect('destroy', () => this._settings.run_dispose());
+        this.connect('destroy', () => (this._settings = null));
 
         this._rows = new Map();
         this._addTheme(''); // default

@@ -22,7 +22,8 @@ class WindowMover {
         this._appSystem.connectObject('installed-changed',
             () => this._updateAppData(), this);
 
-        this._settings.connect('changed', this._updateAppConfigs.bind(this));
+        this._settings.connectObject('changed',
+            this._updateAppConfigs.bind(this), this);
         this._updateAppConfigs();
     }
 
@@ -58,11 +59,8 @@ class WindowMover {
 
     destroy() {
         this._appSystem.disconnectObject(this);
-
-        if (this._settings) {
-            this._settings.run_dispose();
-            this._settings = null;
-        }
+        this._settings.disconnectObject(this);
+        this._settings = null;
 
         this._appConfigs.clear();
         this._updateAppData();
