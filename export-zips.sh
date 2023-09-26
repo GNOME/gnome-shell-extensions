@@ -41,6 +41,8 @@ for f in $extensiondir/*; do
   cp $srcdir/NEWS $srcdir/COPYING $f
   sources=(NEWS COPYING $(cd $f; ls *.js))
 
+  [ -d $f/icons ] && sources+=(icons)
+
   [ -f $schema ] || unset schema
 
   gnome-extensions pack ${sources[@]/#/--extra-source=} \

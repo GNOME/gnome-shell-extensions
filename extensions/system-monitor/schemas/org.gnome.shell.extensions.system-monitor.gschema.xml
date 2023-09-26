@@ -1,0 +1,31 @@
+<!--
+SPDX-FileCopyrightText: 2023 Florian Müllner <fmuellner@gnome.org>
+
+SPDX-License-Identifier: GPL-2.0-or-later
+-->
+
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema id="org.gnome.shell.extensions.system-monitor"
+          path="/org/gnome/shell/extensions/system-monitor/">
+    <key name="show-cpu" type="b">
+      <default>true</default>
+      <summary>Show CPU usage</summary>
+    </key>
+    <key name="show-memory" type="b">
+      <default>true</default>
+      <summary>Show memory usage</summary>
+    </key>
+    <key name="show-swap" type="b">
+      <default>true</default>
+      <summary>Show swap usage</summary>
+    </key>
+    <key name="show-upload" type="b">
+      <default>true</default>
+      <summary>Show upload</summary>
+    </key>
+    <key name="show-download" type="b">
+      <default>true</default>
+      <summary>Show download</summary>
+    </key>
+  </schema>
+</schemalist>
