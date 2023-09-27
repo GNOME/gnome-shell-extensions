@@ -3,39 +3,48 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Ryan LORTIE <desrt@desrt.ca>, 2013.
 # Daniel PUENTES <blatberk@openmailbox.org>, 2015.
-# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2011-2019.
 # Carmen Bianca BAKKER <carmen@carmenbianca.eu>, 2021.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2011-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2021-03-27 20:14+0000\n"
-"PO-Revision-Date: 2021-03-29 17:24+0200\n"
-"Last-Translator: Carmen Bianca BAKKER <carmen@carmenbianca.eu>\n"
+"POT-Creation-Date: 2023-08-05 15:58+0000\n"
+"PO-Revision-Date: 2023-09-27 22:47+0200\n"
+"Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
 "Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 42.0\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME-klasika"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Ĉi tiu seanco ensalutas vin GNOME-klasiken"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME-klasika je Vajlando"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME-klasika je Xorg"
+
+#: extensions/apps-menu/extension.js:121
 msgid "Favorites"
 msgstr "Plej ŝatataj"
 
-#: extensions/apps-menu/extension.js:367
+#: extensions/apps-menu/extension.js:378
 msgid "Applications"
 msgstr "Aplikaĵoj"
 
@@ -51,26 +60,26 @@ msgstr ""
 "Listo de ĉenoj, ĉiu enhavas aplikaĵan identigilon ('desktop' dosiernomo), "
 "sevkita per dupunkto kaj la laborspaca numero"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:155
 msgid "Workspace Rules"
 msgstr "Laborspacaj reguloj"
 
-#: extensions/auto-move-windows/prefs.js:237
+#: extensions/auto-move-windows/prefs.js:309
 msgid "Add Rule"
 msgstr "Aldoni regulon"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:122
+#: extensions/places-menu/placeDisplay.js:213
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Elĵeto de volumo “%s” malsukcesis:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:141
 msgid "Removable devices"
 msgstr "Demeteblaj aparatoj"
 
-#: extensions/drive-menu/extension.js:152
+#: extensions/drive-menu/extension.js:163
 msgid "Open Files"
 msgstr "Malfermi dosierojn"
 
@@ -102,31 +111,31 @@ msgstr ""
 "estas meti ĝin malsupre). Si vi ŝanĝas ĉi agordon tiam vi devas restartigi "
 "la ŝelon."
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:92
+#: extensions/places-menu/extension.js:85
+#: extensions/places-menu/extension.js:88
 msgid "Places"
 msgstr "Lokoj"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:53
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Malsukcesis lanĉi “%s”"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:68
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Ne eblis munti datumportilon por “%s”"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
+#: extensions/places-menu/placeDisplay.js:128
+#: extensions/places-menu/placeDisplay.js:151
 msgid "Computer"
 msgstr "Komputilo"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:328
 msgid "Home"
 msgstr "Domo"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:373
 msgid "Browse Network"
 msgstr "Foliumi reton"
 
@@ -146,47 +155,47 @@ msgstr "Etosnomo"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "La nomo de la etoso, malfermigi de ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "Fermi"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr "Malminimumigi"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "Minimumigi"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr "Malmaksimumigi"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr "Maksimumigi"
 
-#: extensions/window-list/extension.js:432
+#: extensions/window-list/extension.js:468
 msgid "Minimize all"
 msgstr "Minimumigi ĉiujn"
 
-#: extensions/window-list/extension.js:438
+#: extensions/window-list/extension.js:474
 msgid "Unminimize all"
 msgstr "Malminimumigi ĉiujn"
 
-#: extensions/window-list/extension.js:444
+#: extensions/window-list/extension.js:480
 msgid "Maximize all"
 msgstr "Maksimumigi ĉiujn"
 
-#: extensions/window-list/extension.js:452
+#: extensions/window-list/extension.js:488
 msgid "Unmaximize all"
 msgstr "Malmaksimumigi ĉiujn"
 
-#: extensions/window-list/extension.js:460
+#: extensions/window-list/extension.js:496
 msgid "Close all"
 msgstr "Fermi ĉiujn"
 
-#: extensions/window-list/extension.js:737
+#: extensions/window-list/extension.js:776
 msgid "Window List"
 msgstr "Fenestra listo"
 
@@ -203,7 +212,7 @@ msgstr ""
 "Validaj valoroj estas “neniam”, “aŭtomate” kaj ĉiam”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/prefs.js:76
 msgid "Show windows from all workspaces"
 msgstr "Montri la fenestrojn de ĉiuj laborspacoj"
 
@@ -222,41 +231,41 @@ msgid ""
 msgstr ""
 "Ĉu montri la fenestroliston en ĉiuj konektitaj ekranoj aŭ nur en la ĉefa."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:32
 msgid "Window Grouping"
 msgstr "Fenestra grupigo"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:37
 msgid "Never group windows"
 msgstr "Neniam grupigi fenestrojn"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:38
 msgid "Group windows when space is limited"
 msgstr "Grupigi fenestrojn kiam spaco limitas"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:39
 msgid "Always group windows"
 msgstr "Ĉiam grupigi fenestrojn"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:63
 msgid "Show on all monitors"
 msgstr "Montri en ĉiuj ekranoj"
 
-#: extensions/window-list/workspaceIndicator.js:249
-#: extensions/workspace-indicator/extension.js:255
+#: extensions/window-list/workspaceIndicator.js:248
+#: extensions/workspace-indicator/extension.js:252
 msgid "Workspace Indicator"
 msgstr "Laborspaco Indikilo"
 
-#: extensions/workspace-indicator/prefs.js:34
-msgid "Workspace Names"
-msgstr "Laborspacaj nomoj"
-
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:65
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Laborspaco %d"
 
-#: extensions/workspace-indicator/prefs.js:208
+#: extensions/workspace-indicator/prefs.js:132
+msgid "Workspace Names"
+msgstr "Laborspacaj nomoj"
+
+#: extensions/workspace-indicator/prefs.js:258
 msgid "Add Workspace"
 msgstr "Aldoni laborspacon"
 
