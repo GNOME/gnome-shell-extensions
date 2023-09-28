@@ -39,8 +39,6 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         this.mount = mount;
 
-        this.connect('destroy', this._onDestroy.bind(this));
-
         let ejectIcon = new St.Icon({
             icon_name: 'media-eject-symbolic',
             style_class: 'popup-menu-icon',
