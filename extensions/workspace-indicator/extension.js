@@ -49,6 +49,7 @@ class WindowPreview extends St.Button {
             },
             'notify::minimized', this._updateVisible.bind(this),
             this);
+        this._updateVisible();
 
         global.display.connectObject('notify::focus-window',
             this._onFocusChanged.bind(this), this);
