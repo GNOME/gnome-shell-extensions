@@ -828,8 +828,8 @@ class WindowList extends St.Widget {
         }, this);
 
         this._windowSignals = new Map();
-        this._windowCreatedId = global.display.connect(
-            'window-created', (dsp, win) => this._addWindow(win));
+        global.display.connectObject(
+            'window-created', (dsp, win) => this._addWindow(win), this);
 
         Main.xdndHandler.connectObject(
             'drag-begin', () => this._monitorDrag(),
