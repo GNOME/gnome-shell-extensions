@@ -2,42 +2,16 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-have_x11 = get_option('x11')
+session_desktop = 'gnome-classic.desktop'
 
-session_desktop_base = 'gnome-classic'
-
-session_desktops = [
-  session_desktop_base,
-  session_desktop_base + '-wayland',
-]
-
-if have_x11
-  session_desktops += [session_desktop_base + '-xorg']
-endif
-
-foreach name : session_desktops
-  session_desktop = name + '.desktop'
-  if name.endswith('-xorg')
-    session_instdir = xsessiondir
-  elif name.endswith('-wayland')
-    session_instdir = wlsessiondir
-  else
-# FIXME: The same target can not be copied into two directories.
-    #        There is a workaround in build-aux/session-post-install.py until proper
-    #        solution arises:
-    #        https://github.com/mesonbuild/meson/issues/2416
-    session_instdir = wlsessiondir
-  #session_instdir = [ xesssiondir, wlsessiondir ]
-  endif
-  i18n.merge_file(
-    input: session_desktop + '.in',
-    output: session_desktop,
-    po_dir: '../po',
-    install: true,
-    install_dir: session_instdir,
-    type: 'desktop',
-  )
-endforeach
+i18n.merge_file(
+  input: session_desktop + '.in',
+  output: session_desktop,
+  po_dir: '../po',
+  install: true,
+  install_dir: wlsessiondir,
+  type: 'desktop',
+)
 
 classic_uuids = []
 foreach e : classic_extensions

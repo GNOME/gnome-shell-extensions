@@ -23,7 +23,6 @@ modedir = join_paths(shelldir, 'modes')
 
 schemadir = join_paths(datadir, 'glib-2.0', 'schemas')
 sessiondir = join_paths(datadir, 'gnome-session', 'sessions')
-xsessiondir = join_paths(datadir, 'xsessions')
 wlsessiondir = join_paths(datadir, 'wayland-sessions')
 
 ver_arr = meson.project_version().split('.')
@@ -88,12 +87,6 @@ endforeach
 
 if classic_mode_enabled
   subdir('data')
-  if have_x11
-    meson.add_install_script(
-      'build-aux/session-post-install.py',
-      join_paths(get_option('prefix'), datadir),
-    )
-  endif
 endif
 
 subdir('extensions')
