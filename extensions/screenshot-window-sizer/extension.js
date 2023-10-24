@@ -96,7 +96,7 @@ export default class ScreenshotWindowSizerExtension extends Extension {
 
         // get the next size up or down from ideal
         let newIndex = (nearestIndex + (backwards ? -1 : 1)) % scaledSizes.length;
-        let [newWidth, newHeight] = scaledSizes[newIndex];
+        let [newWidth, newHeight] = scaledSizes.at(newIndex);
 
         // Push the window onscreen if it would be resized offscreen
         let newX = outerRect.x;
