@@ -65,10 +65,7 @@ export default class ScreenshotWindowSizerExtension extends Extension {
      * @param {Meta.KeyBinding} binding - the key binding
      */
     _cycleScreenshotSizes(display, window, binding) {
-        // Probably this isn't useful with 5 sizes, but you can decrease instead
-        // of increase by holding down shift.
-        let modifiers = binding.get_modifiers();
-        let backwards = (modifiers & Meta.VirtualModifier.SHIFT_MASK) !== 0;
+        const backwards = binding.is_reversed();
 
         // Unmaximize first
         if (window.get_maximized() !== 0)
