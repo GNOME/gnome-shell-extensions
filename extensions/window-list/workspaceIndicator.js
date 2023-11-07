@@ -43,7 +43,6 @@ class WindowPreview extends St.Button {
             },
             'notify::minimized', this._updateVisible.bind(this),
             this);
-        this._updateVisible();
 
         global.display.connectObject('notify::focus-window',
             this._onFocusChanged.bind(this), this);
@@ -53,6 +52,12 @@ class WindowPreview extends St.Button {
     // needed for DND
     get metaWindow() {
         return this._window;
+    }
+
+    vfunc_map() {
+        super.vfunc_map();
+        // initialize visibility after being added to the stage
+        this._updateVisible();
     }
 
     _onFocusChanged() {
