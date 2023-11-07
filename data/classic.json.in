@@ -1,10 +1,9 @@
 {
     "parentMode": "user",
     "colorScheme": "force-light",
-    "hasOverview": false,
     "showWelcomeDialog": false,
     "enabledExtensions": [@CLASSIC_EXTENSIONS@],
-    "panel": { "left": [],
+    "panel": { "left": ["activities"],
                "center": [],
                "right": ["a11y", "keyboard", "dateMenu", "quickSettings"]
              }
