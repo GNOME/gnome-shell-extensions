@@ -17,10 +17,8 @@ import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/ex
 
 import * as DND from 'resource:///org/gnome/shell/ui/dnd.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
-import * as Overview from 'resource:///org/gnome/shell/ui/overview.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
-import {WindowPicker, WindowPickerToggle} from './windowPicker.js';
 import {WorkspaceIndicator} from './workspaceIndicator.js';
 
 const ICON_TEXTURE_SIZE = 24;
@@ -730,12 +728,6 @@ class WindowList extends St.Widget {
         let box = new St.BoxLayout({x_expand: true, y_expand: true});
         this.add_actor(box);
 
-        let toggle = new WindowPickerToggle();
-        box.add_actor(toggle);
-
-        toggle.connect('notify::checked',
-            this._updateWindowListVisibility.bind(this));
-
         let layout = new Clutter.BoxLayout({homogeneous: true});
         this._windowList = new St.Widget({
             style_class: 'window-list',
@@ -881,20 +873,6 @@ class WindowList extends St.Widget {
                                   !this._mutterSettings.get_boolean('workspaces-only-on-primary');
 
         this._workspaceIndicator.visible = hasWorkspaces && workspacesOnMonitor;
-    }
-
-    _updateWindowListVisibility() {
-        const {windowPicker} = Extension.lookupByURL(import.meta.url);
-        const visible = !windowPicker.visible;
-
-        this._windowList.ease({
-            opacity: visible ? 255 : 0,
-            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
-            duration: Overview.ANIMATION_TIME,
-        });
-
-        this._windowList.reactive = visible;
-        this._windowList.get_children().forEach(c => (c.reactive = visible));
     }
 
     _getPreferredUngroupedWindowListWidth() {
@@ -1106,7 +1084,6 @@ export default class WindowListExtension extends Extension {
         super(metadata);
 
         this._windowLists = null;
-        this._hideOverviewOrig = Main.overview.hide;
     }
 
     enable() {
@@ -1118,13 +1095,6 @@ export default class WindowListExtension extends Extension {
 
         Main.layoutManager.connectObject('monitors-changed',
             () => this._buildWindowLists(), this);
-
-        this.windowPicker = new WindowPicker();
-
-        Main.overview.hide = () => {
-            this.windowPicker.close();
-            this._hideOverviewOrig.call(Main.overview);
-        };
 
         this._buildWindowLists();
     }
@@ -1154,11 +1124,6 @@ export default class WindowListExtension extends Extension {
             windowList.destroy();
         });
         this._windowLists = null;
-
-        this.windowPicker.destroy();
-        delete this.windowPicker;
-
-        Main.overview.hide = this._hideOverviewOrig;
     }
 
     someWindowListContains(actor) {

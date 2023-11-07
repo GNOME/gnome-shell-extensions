@@ -32,8 +32,7 @@
 	spacing: 4px;
 }
 
-.window-button > StWidget,
-.window-picker-toggle > StWidget {
+.window-button > StWidget {
 	color: #bbb;
 	background-color: #1d1d1d;
 	border-radius: 4px;
@@ -46,8 +45,7 @@
 	max-width: 18.75em;
 }
 
-.window-button:hover > StWidget,
-.window-picker-toggle:hover > StWidget {
+.window-button:hover > StWidget {
 	color: #fff;
 	background-color: #303030;
 }
@@ -58,14 +56,12 @@
 	background-color: #3f3f3f;
 }
 
-.window-button.focused > StWidget,
-.window-picker-toggle:checked > StWidget {
+.window-button.focused > StWidget {
 	color: #fff;
 	background-color: #3f3f3f;
 }
 
-.window-button.focused:active > StWidget,
-.window-picker-toggle:checked:active > StWidget {
+.window-button.focused:active > StWidget {
 	color: #fff;
 	background-color: #3f3f3f;
 }
