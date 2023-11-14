@@ -385,7 +385,7 @@ class ApplicationsButton extends PanelMenu.Button {
             y_align: Clutter.ActorAlign.CENTER,
         });
 
-        this.add_actor(this._label);
+        this.add_child(this._label);
         this.name = 'panelApplications';
         this.label_actor = this._label;
 
@@ -578,14 +578,14 @@ class ApplicationsButton extends PanelMenu.Button {
         this.leftBox.add_child(this.categoriesScrollBox);
 
         this.applicationsBox = new St.BoxLayout({vertical: true});
-        this.applicationsScrollBox.add_actor(this.applicationsBox);
+        this.applicationsScrollBox.set_child(this.applicationsBox);
         this.categoriesBox = new St.BoxLayout({vertical: true});
-        this.categoriesScrollBox.add_actor(this.categoriesBox);
+        this.categoriesScrollBox.set_child(this.categoriesBox);
 
-        this.mainBox.add(this.leftBox);
+        this.mainBox.add_child(this.leftBox);
         this.mainBox.add_child(this._createVertSeparator());
         this.mainBox.add_child(this.applicationsScrollBox);
-        section.actor.add_actor(this.mainBox);
+        section.actor.add_child(this.mainBox);
     }
 
     _display() {
@@ -598,7 +598,7 @@ class ApplicationsButton extends PanelMenu.Button {
         this._tree.load_sync();
         let root = this._tree.get_root_directory();
         let categoryMenuItem = new CategoryMenuItem(this, null);
-        this.categoriesBox.add_actor(categoryMenuItem);
+        this.categoriesBox.add_child(categoryMenuItem);
         let iter = root.iter();
         let nextType;
         while ((nextType = iter.next()) !== GMenu.TreeItemType.INVALID) {
@@ -614,7 +614,7 @@ class ApplicationsButton extends PanelMenu.Button {
             this._loadCategory(categoryId, dir);
             if (this.applicationsByCategory[categoryId].length > 0) {
                 categoryMenuItem = new CategoryMenuItem(this, dir);
-                this.categoriesBox.add_actor(categoryMenuItem);
+                this.categoriesBox.add_child(categoryMenuItem);
             }
         }
 
@@ -633,7 +633,7 @@ class ApplicationsButton extends PanelMenu.Button {
             if (c._delegate instanceof PopupMenu.PopupSeparatorMenuItem)
                 c._delegate.destroy();
             else
-                this.applicationsBox.remove_actor(c);
+                this.applicationsBox.remove_child(c);
         });
 
         if (dir)
@@ -656,7 +656,7 @@ class ApplicationsButton extends PanelMenu.Button {
                 this._applicationsButtons.set(app, item);
             }
             if (!item.get_parent())
-                this.applicationsBox.add_actor(item);
+                this.applicationsBox.add_child(item);
         }
     }
 

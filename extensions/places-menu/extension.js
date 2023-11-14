@@ -95,7 +95,7 @@ class PlacesMenu extends PanelMenu.Button {
             y_expand: true,
             y_align: Clutter.ActorAlign.CENTER,
         });
-        this.add_actor(label);
+        this.add_child(label);
 
         this.placesManager = new PlacesManager();
 

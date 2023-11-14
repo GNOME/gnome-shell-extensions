@@ -48,7 +48,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
             style_class: 'button',
         });
         ejectButton.connect('clicked', this._eject.bind(this));
-        this.add(ejectButton);
+        this.add_child(ejectButton);
 
         this.hide();
 

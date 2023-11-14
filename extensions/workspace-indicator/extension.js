@@ -266,7 +266,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             x_expand: true,
             y_expand: true,
         });
-        this.add_actor(container);
+        this.add_child(container);
 
         let workspaceManager = global.workspace_manager;
 
@@ -277,7 +277,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             text: this._labelText(),
         });
 
-        container.add_actor(this._statusLabel);
+        container.add_child(this._statusLabel);
 
         this._thumbnailsBox = new St.BoxLayout({
             style_class: 'panel-workspace-indicator-box',
@@ -285,7 +285,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
             reactive: true,
         });
 
-        container.add_actor(this._thumbnailsBox);
+        container.add_child(this._thumbnailsBox);
 
         this._workspacesItems = [];
         this._workspaceSection = new PopupMenu.PopupMenuSection();
@@ -408,7 +408,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
 
         for (let i = 0; i < workspaceManager.n_workspaces; i++) {
             let thumb = new WorkspaceThumbnail(i);
-            this._thumbnailsBox.add_actor(thumb);
+            this._thumbnailsBox.add_child(thumb);
         }
         this._updateActiveThumbnail();
     }

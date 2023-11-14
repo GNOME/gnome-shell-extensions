@@ -121,10 +121,10 @@ class WindowTitle extends St.BoxLayout {
         this._metaWindow = metaWindow;
 
         this._icon = new St.Bin({style_class: 'window-button-icon'});
-        this.add(this._icon);
+        this.add_child(this._icon);
         this.label_actor = new St.Label({y_align: Clutter.ActorAlign.CENTER});
         this.label_actor.clutter_text.single_line_mode = true;
-        this.add(this.label_actor);
+        this.add_child(this.label_actor);
 
         this._textureCache = St.TextureCache.get_default();
         this._textureCache.connectObject('icon-theme-changed',
@@ -410,7 +410,7 @@ class WindowButton extends BaseButton {
             this._onMenuStateChanged.bind(this));
         this._contextMenu.actor.hide();
         this._contextMenuManager.addMenu(this._contextMenu);
-        Main.uiGroup.add_actor(this._contextMenu.actor);
+        Main.uiGroup.add_child(this._contextMenu.actor);
 
         global.display.connectObject('notify::focus-window',
             () => this._updateStyle(), this);
@@ -536,25 +536,25 @@ class AppButton extends BaseButton {
         this._singleWindowTitle = new St.Bin({
             x_expand: true,
         });
-        stack.add_actor(this._singleWindowTitle);
+        stack.add_child(this._singleWindowTitle);
 
         this._multiWindowTitle = new St.BoxLayout({
             style_class: 'window-button-box',
             x_expand: true,
         });
-        stack.add_actor(this._multiWindowTitle);
+        stack.add_child(this._multiWindowTitle);
 
         this._icon = new St.Bin({
             style_class: 'window-button-icon',
             child: app.create_icon_texture(ICON_TEXTURE_SIZE),
         });
-        this._multiWindowTitle.add(this._icon);
+        this._multiWindowTitle.add_child(this._icon);
 
         let label = new St.Label({
             text: app.get_name(),
             y_align: Clutter.ActorAlign.CENTER,
         });
-        this._multiWindowTitle.add(label);
+        this._multiWindowTitle.add_child(label);
         this._multiWindowTitle.label_actor = label;
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
@@ -564,13 +564,13 @@ class AppButton extends BaseButton {
         this._menu.actor.hide();
         this._menu.connect('activate', this._onMenuActivate.bind(this));
         this._menuManager.addMenu(this._menu);
-        Main.uiGroup.add_actor(this._menu.actor);
+        Main.uiGroup.add_child(this._menu.actor);
 
         this._appContextMenu = new AppContextMenu(this);
         this._appContextMenu.connect('open-state-changed',
             this._onMenuStateChanged.bind(this));
         this._appContextMenu.actor.hide();
-        Main.uiGroup.add_actor(this._appContextMenu.actor);
+        Main.uiGroup.add_child(this._appContextMenu.actor);
 
         this._textureCache = St.TextureCache.get_default();
         this._textureCache.connectObject('icon-theme-changed', () => {
@@ -635,7 +635,7 @@ class AppButton extends BaseButton {
                 this._windowContextMenu = new WindowContextMenu(this, this.metaWindow);
                 this._windowContextMenu.connect(
                     'open-state-changed', this._onMenuStateChanged.bind(this));
-                Main.uiGroup.add_actor(this._windowContextMenu.actor);
+                Main.uiGroup.add_child(this._windowContextMenu.actor);
                 this._windowContextMenu.actor.hide();
                 this._contextMenuManager.addMenu(this._windowContextMenu);
             }
@@ -680,7 +680,7 @@ class AppButton extends BaseButton {
                 for (let i = 0; i < windows.length; i++) {
                     let windowTitle = new WindowTitle(windows[i]);
                     let item = new PopupMenu.PopupBaseMenuItem();
-                    item.add_actor(windowTitle);
+                    item.add_child(windowTitle);
                     item._window = windows[i];
                     this._menu.addMenuItem(item);
                 }
@@ -726,7 +726,7 @@ class WindowList extends St.Widget {
         this._monitor = monitor;
 
         let box = new St.BoxLayout({x_expand: true, y_expand: true});
-        this.add_actor(box);
+        this.add_child(box);
 
         let layout = new Clutter.BoxLayout({homogeneous: true});
         this._windowList = new St.Widget({
@@ -747,7 +747,7 @@ class WindowList extends St.Widget {
         this._windowList.connect('scroll-event', this._onScrollEvent.bind(this));
 
         let indicatorsBox = new St.BoxLayout({x_align: Clutter.ActorAlign.END});
-        box.add(indicatorsBox);
+        box.add_child(indicatorsBox);
 
         this._workspaceIndicator = new WorkspaceIndicator();
         indicatorsBox.add_child(this._workspaceIndicator.container);

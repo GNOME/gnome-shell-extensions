@@ -86,7 +86,7 @@ export default class Extension {
                         style_class: 'extension-windowsNavigator-window-tooltip',
                         visible: false,
                     });
-                    this.add_actor(this._tip);
+                    this.add_child(this._tip);
 
                     this.connect('notify::scale-x', () => {
                         this._tip.set_scale(1 / this.scale_x, 1 / this.scale_x);

@@ -264,7 +264,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             x_expand: true,
             y_expand: true,
         });
-        this.add_actor(container);
+        this.add_child(container);
 
         let workspaceManager = global.workspace_manager;
 
@@ -277,7 +277,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             y_expand: true,
             child: this._statusLabel,
         });
-        container.add_actor(this._statusBin);
+        container.add_child(this._statusBin);
 
         this._thumbnailsBox = new St.BoxLayout({
             style_class: 'workspaces-box',
@@ -286,7 +286,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         });
         this._thumbnailsBox.connect('scroll-event',
             this._onScrollEvent.bind(this));
-        container.add_actor(this._thumbnailsBox);
+        container.add_child(this._thumbnailsBox);
 
         this._workspacesItems = [];
 
@@ -400,7 +400,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         for (let i = 0; i < workspaceManager.n_workspaces; i++) {
             let thumb = new WorkspaceThumbnail(i);
-            this._thumbnailsBox.add_actor(thumb);
+            this._thumbnailsBox.add_child(thumb);
         }
         this._updateActiveThumbnail();
     }
