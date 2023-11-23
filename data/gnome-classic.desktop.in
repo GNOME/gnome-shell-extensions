@@ -6,3 +6,4 @@ TryExec=gnome-session
 Type=Application
 DesktopNames=GNOME-Classic;GNOME;
 X-GDM-SessionRegisters=true
+X-GDM-CanRunHeadless=true
