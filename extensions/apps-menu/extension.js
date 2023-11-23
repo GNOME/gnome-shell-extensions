@@ -432,15 +432,6 @@ class ApplicationsButton extends PanelMenu.Button {
         }
     }
 
-    _createVertSeparator() {
-        let separator = new St.DrawingArea({
-            style_class: 'calendar-vertical-separator',
-            pseudo_class: 'highlighted',
-        });
-        separator.connect('repaint', this._onVertSepRepaint.bind(this));
-        return separator;
-    }
-
     _onDestroy() {
         super._onDestroy();
 
@@ -460,21 +451,6 @@ class ApplicationsButton extends PanelMenu.Button {
                 return true;
         }
         return super._onMenuKeyPress(actor, event);
-    }
-
-    _onVertSepRepaint(area) {
-        let cr = area.get_context();
-        let themeNode = area.get_theme_node();
-        let [width, height] = area.get_surface_size();
-        let stippleColor = themeNode.get_color('-stipple-color');
-        let stippleWidth = themeNode.get_length('-stipple-width');
-        let x = Math.floor(width / 2) + 0.5;
-        cr.moveTo(x, 0);
-        cr.lineTo(x, height);
-        Clutter.cairo_set_source_color(cr, stippleColor);
-        cr.setDash([1, 3], 1); // Hard-code for now
-        cr.setLineWidth(stippleWidth);
-        cr.stroke();
     }
 
     _onOpenStateChanged(menu, open) {
@@ -583,7 +559,6 @@ class ApplicationsButton extends PanelMenu.Button {
         this.categoriesScrollBox.set_child(this.categoriesBox);
 
         this.mainBox.add_child(this.leftBox);
-        this.mainBox.add_child(this._createVertSeparator());
         this.mainBox.add_child(this.applicationsScrollBox);
         section.actor.add_child(this.mainBox);
     }
