@@ -363,6 +363,20 @@ class DesktopTarget extends EventEmitter {
     }
 }
 
+class MainLayout extends Clutter.BoxLayout {
+    static {
+        GObject.registerClass(this);
+    }
+
+    vfunc_get_preferred_height(container, forWidth) {
+        const [mainChild] = container;
+        const [minHeight, natHeight] =
+            mainChild.get_preferred_height(forWidth);
+
+        return [minHeight, natHeight + MENU_HEIGHT_OFFSET];
+    }
+}
+
 class ApplicationsButton extends PanelMenu.Button {
     static {
         GObject.registerClass(this);
@@ -530,7 +544,7 @@ class ApplicationsButton extends PanelMenu.Button {
     _createLayout() {
         let section = new PopupMenu.PopupMenuSection();
         this.menu.addMenuItem(section);
-        this.mainBox = new St.BoxLayout({vertical: false});
+        this.mainBox = new St.BoxLayout({layoutManager: new MainLayout()});
         this.leftBox = new St.BoxLayout({vertical: true});
         this.applicationsScrollBox = new St.ScrollView({
             style_class: 'apps-menu vfade',
@@ -594,12 +608,6 @@ class ApplicationsButton extends PanelMenu.Button {
 
         // Load applications
         this._displayButtons(this._listApplications(null));
-
-        let themeContext = St.ThemeContext.get_for_stage(global.stage);
-        let scaleFactor = themeContext.scale_factor;
-        let categoriesHeight = this.categoriesBox.height / scaleFactor;
-        let height = Math.round(categoriesHeight) + MENU_HEIGHT_OFFSET;
-        this.mainBox.style += `height: ${height}px`;
     }
 
     selectCategory(dir) {
