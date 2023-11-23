@@ -214,9 +214,9 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._grab?.dismiss();
         delete this._grab;
 
-        let source = event.get_source();
-        if (source instanceof St.Widget)
-            source.sync_hover();
+        const targetActor = global.stage.get_event_actor(event);
+        if (targetActor instanceof St.Widget)
+            targetActor.sync_hover();
 
         return false;
     }
