@@ -13,11 +13,11 @@
 .bottom-panel {
   background-color: #000000;
   border-top-width: 0px;
-  padding: 2px;
+  height: 2.45em;
 }
 
 .window-button {
-  padding: 2px, 1px;
+  padding: 4px, 3px;
 }
 
 .window-button:first-child:ltr {
@@ -87,13 +87,13 @@
 
 .window-list-workspace-indicator .status-label-bin {
   background-color: rgba(200, 200, 200, 0.3);
-  padding: 0 3px;
+  padding: 5px;
   margin: 3px;
 }
 
 .window-list-workspace-indicator .workspaces-box {
   spacing: 3px;
-  padding: 3px;
+  padding: 5px;
 }
 
 .window-list-workspace-indicator .workspace {

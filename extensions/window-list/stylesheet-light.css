@@ -10,8 +10,7 @@
 #panel.bottom-panel {
     border-top-width: 1px;
     border-bottom-width: 0px;
-    height: 2.25em ;
-    padding: 2px;
+    height: 2.5em;
   }
 
   .bottom-panel .window-button > StWidget,
