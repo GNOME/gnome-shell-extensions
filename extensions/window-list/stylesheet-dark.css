@@ -6,111 +6,111 @@
  */
 
 .window-list {
-	spacing: 2px;
-	font-size: 10pt;
+  spacing: 2px;
+  font-size: 10pt;
 }
 
 .bottom-panel {
-	background-color: #000000;
-	border-top-width: 0px;
-	padding: 2px;
+  background-color: #000000;
+  border-top-width: 0px;
+  padding: 2px;
 }
 
 .window-button {
-	padding: 2px, 1px;
+  padding: 2px, 1px;
 }
 
 .window-button:first-child:ltr {
-	padding-left: 2px;
+  padding-left: 2px;
 }
 
 .window-button:last-child:rtl {
-	padding-right: 2px;
+  padding-right: 2px;
 }
 
 .window-button-box {
-	spacing: 4px;
+  spacing: 4px;
 }
 
 .window-button > StWidget {
-	color: #bbb;
-	background-color: #1d1d1d;
-	border-radius: 4px;
-	padding: 3px 6px 1px;
-    transition: 100ms ease;
+  color: #bbb;
+  background-color: #1d1d1d;
+  border-radius: 4px;
+  padding: 3px 6px 1px;
+  transition: 100ms ease;
 }
 
 .window-button > StWidget {
-	-st-natural-width: 18.75em;
-	max-width: 18.75em;
+  -st-natural-width: 18.75em;
+  max-width: 18.75em;
 }
 
 .window-button:hover > StWidget {
-	color: #fff;
-	background-color: #303030;
+  color: #fff;
+  background-color: #303030;
 }
 
 .window-button:active > StWidget,
 .window-button:focus > StWidget {
-	color: #fff;
-	background-color: #3f3f3f;
+  color: #fff;
+  background-color: #3f3f3f;
 }
 
 .window-button.focused > StWidget {
-	color: #fff;
-	background-color: #3f3f3f;
+  color: #fff;
+  background-color: #3f3f3f;
 }
 
 .window-button.focused:active > StWidget {
-	color: #fff;
-	background-color: #3f3f3f;
+  color: #fff;
+  background-color: #3f3f3f;
 }
 
 .window-button.minimized > StWidget {
-	color: #666;
-	background-color: #161616;
+  color: #666;
+  background-color: #161616;
 }
 
 .window-button.minimized:active > StWidget {
-	color: #666;
-	background-color: #161616;
+  color: #666;
+  background-color: #161616;
 }
 
 .window-button-icon {
-	width: 24px;
-	height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .window-list-workspace-indicator .status-label-bin {
-	background-color: rgba(200, 200, 200, 0.3);
-	padding: 0 3px;
-	margin: 3px;
+  background-color: rgba(200, 200, 200, 0.3);
+  padding: 0 3px;
+  margin: 3px;
 }
 
 .window-list-workspace-indicator .workspaces-box {
-	spacing: 3px;
-	padding: 3px;
+  spacing: 3px;
+  padding: 3px;
 }
 
 .window-list-workspace-indicator .workspace {
-	width: 52px;
-	border-radius: 4px;
-	background-color: #1e1e1e;
+  width: 52px;
+  border-radius: 4px;
+  background-color: #1e1e1e;
 }
 
 .window-list-workspace-indicator .workspace.active {
-	background-color: #3f3f3f;
+  background-color: #3f3f3f;
 }
 
 .window-list-window-preview {
-	background-color: #bebebe;
-	border-radius: 1px;
+  background-color: #bebebe;
+  border-radius: 1px;
 }
 
 .window-list-window-preview.active {
-	background-color: #d4d4d4;
+  background-color: #d4d4d4;
 }
 
 .notification {
-	font-weight: normal;
+  font-weight: normal;
 }
