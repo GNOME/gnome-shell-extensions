@@ -36,11 +36,8 @@ class WindowPreview extends St.Button {
         this._window = window;
 
         this._window.connectObject(
-            'size-changed', () => this.queue_relayout(),
-            'position-changed', () => {
-                this._updateVisible();
-                this.queue_relayout();
-            },
+            'size-changed', () => this._checkRelayout(),
+            'position-changed', () => this._checkRelayout(),
             'notify::minimized', this._updateVisible.bind(this),
             this);
         this._updateVisible();
@@ -62,11 +59,15 @@ class WindowPreview extends St.Button {
             this.remove_style_class_name('active');
     }
 
-    _updateVisible() {
+    _checkRelayout() {
         const monitor = Main.layoutManager.findIndexForActor(this);
         const workArea = Main.layoutManager.getWorkAreaForMonitor(monitor);
-        this.visible = this._window.get_frame_rect().overlap(workArea) &&
-            this._window.window_type !== Meta.WindowType.DESKTOP &&
+        if (this._window.get_frame_rect().overlap(workArea))
+            this.queue_relayout();
+    }
+
+    _updateVisible() {
+        this.visible = this._window.window_type !== Meta.WindowType.DESKTOP &&
             this._window.showing_on_its_workspace();
     }
 }
