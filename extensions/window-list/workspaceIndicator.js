@@ -39,6 +39,7 @@ class WindowPreview extends St.Button {
             'size-changed', () => this._checkRelayout(),
             'position-changed', () => this._checkRelayout(),
             'notify::minimized', this._updateVisible.bind(this),
+            'notify::window-type', this._updateVisible.bind(this),
             this);
         this._updateVisible();
 
