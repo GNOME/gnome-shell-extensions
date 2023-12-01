@@ -1,3 +1,14 @@
+45.2
+====
+* window-list: Fix buttons not being clickable at the screen edge
+  [Florian; !291]
+* window-list: Really fix initial preview visibility [Florian; !292]
+* workspace-indicator: Really fix initial preview visibility [Florian; !292]
+* Misc. bug fixes and cleanups [Florian; !290]
+
+Contributors:
+  Florian Müllner
+
 45.1
 ====
 * workspace-indicator: Fix initial preview visibility [Florian; !280]
