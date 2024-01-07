@@ -14,7 +14,7 @@ stages:
   - deploy
 
 default:
-  image: registry.gitlab.gnome.org/gnome/gnome-shell/fedora/35:2022-02-18.0
+  image: registry.gitlab.gnome.org/gnome/gnome-shell/fedora/39:2023-08-15.1
   # Cancel jobs if newer commits are pushed to the branch
   interruptible: true
   # Auto-retry jobs in case of infra failures
