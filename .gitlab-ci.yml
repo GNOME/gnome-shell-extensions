@@ -127,6 +127,15 @@ eslint:
     reports:
       junit: ${LINT_LOG}
 
+potfile_js_check:
+  stage: review
+  <<: *prereview_req
+  script:
+    - gjs-check-potfiles
+  artifacts:
+    reports:
+      junit: gjs-check-potfiles.junit.xml
+
 build-bundles:
   stage: build
   <<: *prereview_req
