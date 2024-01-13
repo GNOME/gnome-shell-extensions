@@ -12,7 +12,7 @@ extensions/places-menu/extension.js
 extensions/places-menu/placeDisplay.js
 extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml
 extensions/system-monitor/extension.js
-extensions/system-monitor/org.gnome.shell.extensions.system-monitor.gschema.xml
+extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml
 extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml
 extensions/window-list/extension.js
 extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml
