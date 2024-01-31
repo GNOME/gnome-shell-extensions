@@ -394,7 +394,7 @@ class ApplicationsButton extends PanelMenu.Button {
         this.accessible_role = Atk.Role.LABEL;
 
         this._label = new St.Label({
-            text: _('Applications'),
+            text: _('Apps'),
             y_expand: true,
             y_align: Clutter.ActorAlign.CENTER,
         });
