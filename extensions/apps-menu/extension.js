@@ -550,11 +550,9 @@ class ApplicationsButton extends PanelMenu.Button {
             style_class: 'apps-menu vfade',
             x_expand: true,
         });
-        this.applicationsScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         this.categoriesScrollBox = new St.ScrollView({
             style_class: 'vfade',
         });
-        this.categoriesScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         this.leftBox.add_child(this.categoriesScrollBox);
 
         this.applicationsBox = new St.BoxLayout({vertical: true});
