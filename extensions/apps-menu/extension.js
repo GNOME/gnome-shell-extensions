@@ -551,20 +551,10 @@ class ApplicationsButton extends PanelMenu.Button {
             x_expand: true,
         });
         this.applicationsScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
-        let vscroll = this.applicationsScrollBox.get_vscroll_bar();
-        vscroll.connect('scroll-start', () => {
-            this.menu.passEvents = true;
-        });
-        vscroll.connect('scroll-stop', () => {
-            this.menu.passEvents = false;
-        });
         this.categoriesScrollBox = new St.ScrollView({
             style_class: 'vfade',
         });
         this.categoriesScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
-        vscroll = this.categoriesScrollBox.get_vscroll_bar();
-        vscroll.connect('scroll-start', () => (this.menu.passEvents = true));
-        vscroll.connect('scroll-stop', () => (this.menu.passEvents = false));
         this.leftBox.add_child(this.categoriesScrollBox);
 
         this.applicationsBox = new St.BoxLayout({vertical: true});
