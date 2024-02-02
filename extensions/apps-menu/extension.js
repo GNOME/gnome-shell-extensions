@@ -512,7 +512,7 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     scrollToButton(button) {
-        let appsScrollBoxAdj = this.applicationsScrollBox.get_vscroll_bar().get_adjustment();
+        let appsScrollBoxAdj = this.applicationsScrollBox.get_vadjustment();
         let appsScrollBoxAlloc = this.applicationsScrollBox.get_allocation_box();
         let currentScrollValue = appsScrollBoxAdj.get_value();
         let boxHeight = appsScrollBoxAlloc.y2 - appsScrollBoxAlloc.y1;
@@ -527,7 +527,7 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     scrollToCatButton(button) {
-        let catsScrollBoxAdj = this.categoriesScrollBox.get_vscroll_bar().get_adjustment();
+        let catsScrollBoxAdj = this.categoriesScrollBox.get_vadjustment();
         let catsScrollBoxAlloc = this.categoriesScrollBox.get_allocation_box();
         let currentScrollValue = catsScrollBoxAdj.get_value();
         let boxHeight = catsScrollBoxAlloc.y2 - catsScrollBoxAlloc.y1;
