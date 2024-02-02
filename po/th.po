@@ -6,10 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2013-10-25 00:37+0000\n"
-"PO-Revision-Date: 2013-11-01 19:55+0700\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
+"POT-Creation-Date: 2024-01-19 22:15+0000\n"
+"PO-Revision-Date: 2024-02-02 15:49+0700\n"
 "Last-Translator: Kittiphong Meesawat <ktphong@elec.kku.ac.th>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -17,299 +16,371 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Poedit 3.4.2\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME คลาสสิก"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "วาระนี้จะนำคุณเข้าสู่ระบบ GNOME คลาสสิก"
 
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "เชลล์ GNOME แบบคลาสสิก"
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME คลาสสิกบน Wayland"
 
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "ตัวจัดการหน้าต่างและเรียกใช้โปรแกรม"
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME คลาสสิกบน Xorg"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
-msgid "Attach modal dialog to the parent window"
-msgstr "แนบกล่องโต้ตอบแบบโมดัลเข้ากับหน้าต่างแม่"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "คีย์นี้จะทับค่าคีย์ของ org.gnome.mutter เมื่อใช้งานเชลล์ GNOME"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "เปิดใช้การเรียงชนขอบเมื่อลากหน้าต่างไปวางที่ขอบจอ"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-msgid "Workspaces only on primary monitor"
-msgstr "ให้พื้นที่ทำงานอยู่บนหน้าจอหลักเท่านั้น"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr "หน่วงเวลาการโฟกัสในโหมดเมาส์จนกว่าตัวชี้จะหยุดเคลื่อนที่"
-
-#: ../extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "ภาพย่อเท่านั้น"
-
-#: ../extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "ไอคอนโปรแกรมเท่านั้น"
-
-#: ../extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "ภาพย่อและไอคอนโปรแกรม"
-
-#: ../extensions/alternate-tab/prefs.js:37
-msgid "Present windows as"
-msgstr "แสดงหน้าต่างเป็น"
-
-#: ../extensions/alternate-tab/prefs.js:62
-msgid "Show only windows in the current workspace"
-msgstr "แสดงเฉพาะหน้าต่างที่อยู่ในพื้นที่ทำงานปัจจุบัน"
-
-#: ../extensions/apps-menu/extension.js:39
-msgid "Activities Overview"
-msgstr "ภาพรวมกิจกรรม"
-
-#: ../extensions/apps-menu/extension.js:113
+#: extensions/apps-menu/extension.js:126
 msgid "Favorites"
 msgstr "รายการโปรด"
 
-#: ../extensions/apps-menu/extension.js:282
+#: extensions/apps-menu/extension.js:397
 msgid "Applications"
-msgstr "โปรแกรม"
+msgstr "แอปพลิเคชัน"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
-msgstr "รายชื่อโปรแกรมและพื้นที่ทำงาน"
+msgstr "รายชื่อแอปพลิเคชันและพื้นที่ทำงาน"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
-"A list of strings, each containing an application id (desktop file name), "
-"followed by a colon and the workspace number"
-msgstr ""
-"รายการของข้อความที่ประกอบด้วยชื่อโปรแกรม (ชื่อแฟ้มเดสก์ท็อป) ตามด้วยทวิภาค (:) "
-"และหมายเลขพื้นที่ทำงาน"
+"A list of strings, each containing an application id (desktop file name), followed by a colon "
+"and the workspace number"
+msgstr "รายการของข้อความที่ประกอบด้วยชื่อแอปพลิเคชัน (ชื่อไฟล์เดสก์ท็อป) ตามด้วยทวิภาค (:) และหมายเลขพื้นที่ทำงาน"
 
-#: ../extensions/auto-move-windows/prefs.js:55
-msgid "Application"
-msgstr "โปรแกรม"
+#: extensions/auto-move-windows/prefs.js:159
+msgid "Workspace Rules"
+msgstr "กฎสำหรับพื้นที่ทำงาน"
 
-#: ../extensions/auto-move-windows/prefs.js:64
-#: ../extensions/auto-move-windows/prefs.js:106
-msgid "Workspace"
-msgstr "พื้นที่ทำงาน"
-
-#: ../extensions/auto-move-windows/prefs.js:80
-msgid "Add rule"
+#: extensions/auto-move-windows/prefs.js:314
+msgid "Add Rule"
 msgstr "เพิ่มกฏ"
 
-#: ../extensions/auto-move-windows/prefs.js:94
-msgid "Create new matching rule"
-msgstr "สร้างกฏจับคู่ใหม่"
-
-#: ../extensions/auto-move-windows/prefs.js:98
-msgid "Add"
-msgstr "เพิ่ม"
-
-#: ../extensions/drive-menu/extension.js:73
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:123 extensions/places-menu/placeDisplay.js:218
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
-msgstr "ดันสื่อในไดรว์ '%s' ออกไม่สำเร็จ:"
+msgid "Ejecting drive “%s” failed:"
+msgstr "ดันสื่อในไดรฟ์ “%s” ออกไม่สำเร็จ:"
 
-#: ../extensions/drive-menu/extension.js:90
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
 msgstr "อุปกรณ์ถอดเสียบ"
 
-#: ../extensions/drive-menu/extension.js:117
-msgid "Open File"
-msgstr "เปิดแฟ้ม"
+#: extensions/drive-menu/extension.js:164
+msgid "Open Files"
+msgstr "เปิดไฟล์"
 
-#: ../extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr ""
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
-msgid "Alternative greeting text."
-msgstr "ข้อความทักทายอื่น"
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr "หากไม่ได้เว้นว้างไว้ ก็จะเป็นข้อความที่จะแสดงเมื่อคลิกบนพาเนล"
-
-#: ../extensions/example/prefs.js:30
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
-msgstr ""
-
-#: ../extensions/example/prefs.js:36
-msgid "Message:"
-msgstr "ข้อความ:"
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
-msgstr ""
+msgstr "ใช้หน้าจออื่นเพิ่มสำหรับหน้าต่าง"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen "
-"aspect ratio, and consolidating them further to reduce the bounding box. "
-"This setting applies only with the natural placement strategy."
+"Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and "
+"consolidating them further to reduce the bounding box. This setting applies only with the "
+"natural placement strategy."
 msgstr ""
+"พยายามใช้หน้าจออื่นเพิ่มสำหรับการจัดวางภาพย่อหน้าต่างโดยปรับให้เข้ากับอัตราส่วนของหน้าจอ "
+"และรวบรวมเพื่อลดพื้นที่ของกล่องรอบวัตถุ ค่าตั้งนี้ใช้กับเฉพาะกลยุทธ์การจัดวางแบบธรรมชาติเท่านั้น"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
 msgstr "วางป้ายชื่อหน้าต่างไว้ด้านบน"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
-"If true, place window captions on top the respective thumbnail, overriding "
-"shell default of placing it at the bottom. Changing this setting requires "
-"restarting the shell to have any effect."
+"If true, place window captions on top the respective thumbnail, overriding shell default of "
+"placing it at the bottom. Changing this setting requires restarting the shell to have any "
+"effect."
 msgstr ""
-"หากเป็นจริง จะวางป้ายชื่อหน้าต่างไว้ด้านบนของภาพย่อ "
-"ซึ่งจะทับค่าปริยายของเชลล์ที่จะวางป้ายชื่อไว้ใต้ภาพย่อ "
+"หากเป็นจริง จะวางป้ายชื่อหน้าต่างไว้ด้านบนของภาพย่อ ซึ่งจะทับค่าปริยายของเชลล์ที่จะวางป้ายชื่อไว้ใต้ภาพย่อ "
 "เมื่อเปลี่ยนค่าตั้งนี้จะต้องเริ่มเชลล์ใหม่เพื่อให้การเปลี่ยนแปลงมีผล"
 
-#: ../extensions/places-menu/extension.js:78
-#: ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:91 extensions/places-menu/extension.js:94
 msgid "Places"
 msgstr "ที่หลักๆ"
 
-#: ../extensions/places-menu/placeDisplay.js:58
+#: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
-msgid "Failed to launch \"%s\""
-msgstr "เรียกทำงาน \"%s\" ไม่สำเร็จ"
+msgid "Failed to launch “%s”"
+msgstr "เรียกทำงาน “%s” ไม่สำเร็จ"
 
-#: ../extensions/places-menu/placeDisplay.js:100
-#: ../extensions/places-menu/placeDisplay.js:123
+#: extensions/places-menu/placeDisplay.js:75
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "เมานท์โวลุมสำหรับ “%s” ไม่สำเร็จ"
+
+#: extensions/places-menu/placeDisplay.js:135 extensions/places-menu/placeDisplay.js:158
 msgid "Computer"
 msgstr "คอมพิวเตอร์"
 
-#: ../extensions/places-menu/placeDisplay.js:201
+#: extensions/places-menu/placeDisplay.js:333
 msgid "Home"
 msgstr "บ้าน"
 
-#: ../extensions/places-menu/placeDisplay.js:288
+#: extensions/places-menu/placeDisplay.js:378
 msgid "Browse Network"
 msgstr "ท่องดูเครือข่าย"
 
-#: ../extensions/systemMonitor/extension.js:214
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
+msgid "Cycle Screenshot Sizes"
+msgstr "เปลี่ยนขนาดภาพหน้าจอใหม่เป็นรอบ"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
+msgid "Cycle Screenshot Sizes Backward"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:159
+#, fuzzy
+#| msgid "Memory"
+msgid "Memory stats"
+msgstr "หน่วยความจำ"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:327
+msgid "Upload stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:341
+msgid "Download stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:355
+msgid "System stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:403
+msgid "Show"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:405
 msgid "CPU"
 msgstr "ซีพียู"
 
-#: ../extensions/systemMonitor/extension.js:267
+#: extensions/system-monitor/extension.js:407
 msgid "Memory"
 msgstr "หน่วยความจำ"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/system-monitor/extension.js:409
+msgid "Swap"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:411
+msgid "Upload"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:413
+msgid "Download"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:418
+msgid "Open System Monitor"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr ""
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "ชื่อชุดตกแต่ง"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "ชื่อของชุดตกแต่งที่จะโหลดจาก ~/.themes/name/gnome-shell"
 
-#: ../extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "ปิด"
 
-#: ../extensions/window-list/extension.js:102
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr "เลิกย่อเก็บ"
 
-#: ../extensions/window-list/extension.js:103
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "ย่อเก็บ"
 
-#: ../extensions/window-list/extension.js:109
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr "เลิกขยายแผ่"
 
-#: ../extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr "ขยายแผ่"
 
-#: ../extensions/window-list/extension.js:270
+#: extensions/window-list/extension.js:470
 msgid "Minimize all"
 msgstr "ย่อเก็บทั้งหมด"
 
-#: ../extensions/window-list/extension.js:278
+#: extensions/window-list/extension.js:476
 msgid "Unminimize all"
 msgstr "เลิกย่อเก็บทั้งหมด"
 
-#: ../extensions/window-list/extension.js:286
+#: extensions/window-list/extension.js:482
 msgid "Maximize all"
 msgstr "ขยายแผ่ทั้งหมด"
 
-#: ../extensions/window-list/extension.js:295
+#: extensions/window-list/extension.js:490
 msgid "Unmaximize all"
 msgstr "เลิกขยายแผ่ทั้งหมด"
 
-#: ../extensions/window-list/extension.js:304
+#: extensions/window-list/extension.js:498
 msgid "Close all"
 msgstr "ปิดทั้งหมด"
 
-#: ../extensions/window-list/extension.js:591
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "แสดงพื้นที่ทำงาน"
-
-#: ../extensions/window-list/extension.js:743
+#: extensions/window-list/extension.js:772
 msgid "Window List"
 msgstr "รายชื่อหน้าต่าง"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "เมื่อไรจะจัดกลุ่มหน้าต่าง"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
-"Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Decides when to group windows from the same application on the window list. Possible values are "
+"“never”, “auto” and “always”."
 msgstr ""
-"ตัดสินใจว่าเมื่อไรจะจัดกลุ่มหน้าต่างที่มาจากโปรแกรมเดียวกันในรายชื่อหน้าต่าง ค่าที่เป็นไปได้คือ "
-"\"never\" (ไม่ต้อง) \"auto\" (อัตโนมัติ) และ \"always\" (เสมอ)"
+"ตัดสินใจว่าเมื่อไรจะจัดกลุ่มหน้าต่างที่มาจากแอปพลิเคชันเดียวกันในรายชื่อหน้าต่าง ค่าที่เป็นไปได้คือ “never” (ไม่ต้อง) "
+"“auto” (อัตโนมัติ) และ “always” (เสมอ)"
 
-#: ../extensions/window-list/prefs.js:30
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:79
+msgid "Show windows from all workspaces"
+msgstr "แสดงหน้าต่างจากพื้นที่ทำงานทั้งหมด"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr "กำหนดว่าจะแสดงหน้าต่างจากพื้นที่ทำงานทั้งหมดหรือเฉพาะพื้นที่ทำงานปัจจุบัน"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
+msgid "Show the window list on all monitors"
+msgstr "แสดงรายชื่อหน้าต่างในจอภาพทั้งหมด"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
+msgid "Whether to show the window list on all connected monitors or only on the primary one."
+msgstr "กำหนดว่าจะแสดงรายชื่อหน้าต่างในจอภาพที่ต่อทั้งหมดหรือเฉพาะในจอภาพหลัก"
+
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "การจัดกลุ่มหน้าต่าง"
 
-#: ../extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "ไม่จัดกลุ่มหน้าต่าง"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "จัดกลุ่มหน้าต่างเมื่อพื้นที่จำกัด"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "จัดกลุ่มหน้าต่างเสมอ"
 
-#: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace names:"
-msgstr "ชื่อพื้นที่ทำงาน:"
+#: extensions/window-list/prefs.js:66
+msgid "Show on all monitors"
+msgstr "แสดงในจอภาพทั้งหมด"
 
-#: ../extensions/workspace-indicator/prefs.js:152
-msgid "Name"
-msgstr "ชื่อ"
+#: extensions/window-list/workspaceIndicator.js:253
+#: extensions/workspace-indicator/extension.js:259
+msgid "Workspace Indicator"
+msgstr "แสดงพื้นที่ทำงาน"
 
-#: ../extensions/workspace-indicator/prefs.js:186
+#: extensions/workspace-indicator/prefs.js:69
 #, javascript-format
 msgid "Workspace %d"
 msgstr "พื้นที่ทำงาน %d"
+
+#: extensions/workspace-indicator/prefs.js:136
+msgid "Workspace Names"
+msgstr "ชื่อพื้นที่ทำงาน"
+
+#: extensions/workspace-indicator/prefs.js:262
+msgid "Add Workspace"
+msgstr "เพิ่มพื้นที่ทำงาน"
+
+#~ msgid "GNOME Shell Classic"
+#~ msgstr "เชลล์ GNOME แบบคลาสสิก"
+
+#~ msgid "Window management and application launching"
+#~ msgstr "ตัวจัดการหน้าต่างและเรียกใช้โปรแกรม"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "แนบกล่องโต้ตอบแบบโมดัลเข้ากับหน้าต่างแม่"
+
+#~ msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr "คีย์นี้จะทับค่าคีย์ของ org.gnome.mutter เมื่อใช้งานเชลล์ GNOME"
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr "เปิดใช้การเรียงชนขอบเมื่อลากหน้าต่างไปวางที่ขอบจอ"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "ให้พื้นที่ทำงานอยู่บนหน้าจอหลักเท่านั้น"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr "หน่วงเวลาการโฟกัสในโหมดเมาส์จนกว่าตัวชี้จะหยุดเคลื่อนที่"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "ภาพย่อเท่านั้น"
+
+#~ msgid "Application icon only"
+#~ msgstr "ไอคอนโปรแกรมเท่านั้น"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "ภาพย่อและไอคอนโปรแกรม"
+
+#~ msgid "Present windows as"
+#~ msgstr "แสดงหน้าต่างเป็น"
+
+#~ msgid "Activities Overview"
+#~ msgstr "ภาพรวมกิจกรรม"
+
+#~ msgid "Application"
+#~ msgstr "โปรแกรม"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "สร้างกฏจับคู่ใหม่"
+
+#~ msgid "Add"
+#~ msgstr "เพิ่ม"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "ข้อความทักทายอื่น"
+
+#~ msgid "If not empty, it contains the text that will be shown when clicking on the panel."
+#~ msgstr "หากไม่ได้เว้นว้างไว้ ก็จะเป็นข้อความที่จะแสดงเมื่อคลิกบนพาเนล"
+
+#~ msgid "Message:"
+#~ msgstr "ข้อความ:"
+
+#~ msgid "Name"
+#~ msgstr "ชื่อ"
