@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2022-07-10 12:54+0000\n"
-"PO-Revision-Date: 2022-10-19 15:20+0300\n"
-"Last-Translator: Launchpad translators\n"
+"POT-Creation-Date: 2024-01-19 22:15+0000\n"
+"PO-Revision-Date: 2024-02-04 01:45+0300\n"
+"Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -37,19 +37,19 @@ msgstr "Класічны GNOME на Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "Класічны GNOME на Xorg"
 
-#: extensions/apps-menu/extension.js:118
+#: extensions/apps-menu/extension.js:126
 msgid "Favorites"
 msgstr "Абраныя"
 
-#: extensions/apps-menu/extension.js:379
+#: extensions/apps-menu/extension.js:397
 msgid "Applications"
 msgstr "Праграмы"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
 msgstr "Праграма і спіс працоўных прастор"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -57,34 +57,34 @@ msgstr ""
 "Спіс радкоў, кожны з якіх змяшчае ідэнтыфікатар праграмы (імя файла *."
 "desktop), затым двукроп'е і нумар працоўнай прасторы"
 
-#: extensions/auto-move-windows/prefs.js:152
+#: extensions/auto-move-windows/prefs.js:159
 msgid "Workspace Rules"
 msgstr "Правілы для працоўнай прасторы"
 
-#: extensions/auto-move-windows/prefs.js:306
+#: extensions/auto-move-windows/prefs.js:314
 msgid "Add Rule"
 msgstr "Дадаць правіла"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:126
-#: extensions/places-menu/placeDisplay.js:210
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:218
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Не ўдалося выняць дыск «%s»:"
 
-#: extensions/drive-menu/extension.js:145
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
 msgstr "Здымныя прылады"
 
-#: extensions/drive-menu/extension.js:167
+#: extensions/drive-menu/extension.js:164
 msgid "Open Files"
 msgstr "Адкрыць файлы"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
 msgstr "Выкарыстоўваць большую плошчу экрана для вокнаў"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -95,11 +95,11 @@ msgstr ""
 "абмежавальнай рамкі. Гэты параметр ужываецца толькі з натуральным "
 "размяшчэннем мініяцюр."
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
 msgstr "Размяшчаць подпіс акна зверху"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
@@ -109,99 +109,171 @@ msgstr ""
 "перадвызначана). Каб змена налады ўступіла ў сілу, трэба перазапусціць "
 "абалонку."
 
+#: extensions/places-menu/extension.js:91
 #: extensions/places-menu/extension.js:94
-#: extensions/places-menu/extension.js:97
 msgid "Places"
 msgstr "Месцы"
 
-#: extensions/places-menu/placeDisplay.js:49
+#: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Не ўдалося запусціць «%s»"
 
-#: extensions/places-menu/placeDisplay.js:64
+#: extensions/places-menu/placeDisplay.js:75
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Не ўдалося прымацаваць том для «%s»."
 
-#: extensions/places-menu/placeDisplay.js:125
-#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:135
+#: extensions/places-menu/placeDisplay.js:158
 msgid "Computer"
 msgstr "Камп'ютар"
 
-#: extensions/places-menu/placeDisplay.js:336
+#: extensions/places-menu/placeDisplay.js:333
 msgid "Home"
 msgstr "Хатняя папка"
 
-#: extensions/places-menu/placeDisplay.js:381
+#: extensions/places-menu/placeDisplay.js:378
 msgid "Browse Network"
 msgstr "Агляд сеткі"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
 msgstr "Паслядоўнасць змены памераў для здымка экрана"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Адваротная паслядоўнасць змены памераў для здымка экрана"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr "Статыстыка выкарыстання працэсара"
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr "Статыстыка выкарыстання памяці"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr "Статыстыка выкарыстання своп"
+
+#: extensions/system-monitor/extension.js:327
+msgid "Upload stats"
+msgstr "Статыстыка адпраўлення даных"
+
+#: extensions/system-monitor/extension.js:341
+msgid "Download stats"
+msgstr "Статыстыка атрымання даных"
+
+#: extensions/system-monitor/extension.js:355
+msgid "System stats"
+msgstr "Статыстыка сістэмы"
+
+#: extensions/system-monitor/extension.js:403
+msgid "Show"
+msgstr "Паказваць"
+
+#: extensions/system-monitor/extension.js:405
+msgid "CPU"
+msgstr "Працэсар"
+
+#: extensions/system-monitor/extension.js:407
+msgid "Memory"
+msgstr "Памяць"
+
+#: extensions/system-monitor/extension.js:409
+msgid "Swap"
+msgstr "Своп"
+
+#: extensions/system-monitor/extension.js:411
+msgid "Upload"
+msgstr "Атрыманне"
+
+#: extensions/system-monitor/extension.js:413
+msgid "Download"
+msgstr "Адпраўленне"
+
+#: extensions/system-monitor/extension.js:418
+msgid "Open System Monitor"
+msgstr "Адкрыць сістэмны манітор"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr "Паказваць выкарыстанне працэссара"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr "Паказваць выкарыстанне памяці"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr "Паказваць выкарыстанне своп"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr "Паказваць атрыманне даных"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr "Паказваць адпраўленне даных"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "Назва тэмы"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Назва тэмы, што загрузіцца з ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "Закрыць"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr "Скасаваць згортванне"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "Згарнуць"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr "Скасаваць разгортванне"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr "Разгарнуць"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:470
 msgid "Minimize all"
 msgstr "Згарнуць усе"
 
-#: extensions/window-list/extension.js:489
+#: extensions/window-list/extension.js:476
 msgid "Unminimize all"
 msgstr "Скасаваць згортванне для ўсіх"
 
-#: extensions/window-list/extension.js:495
+#: extensions/window-list/extension.js:482
 msgid "Maximize all"
 msgstr "Разгарнуць усе"
 
-#: extensions/window-list/extension.js:503
+#: extensions/window-list/extension.js:490
 msgid "Unmaximize all"
 msgstr "Скасаваць разгортванне для ўсіх"
 
-#: extensions/window-list/extension.js:511
+#: extensions/window-list/extension.js:498
 msgid "Close all"
 msgstr "Закрыць усе"
 
-#: extensions/window-list/extension.js:795
+#: extensions/window-list/extension.js:772
 msgid "Window List"
 msgstr "Спіс вокнаў"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "Умовы групавання вокнаў"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
@@ -209,20 +281,20 @@ msgstr ""
 "Вызначае калі групаваць вокны адной праграмы ў спісе вокнаў. Магчымыя "
 "значэнні: «never» (ніколі), «auto» (аўтаматычна), «always» (заўсёды)."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
 #: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "Паказваць вокны з усіх працоўных прастор"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr "Паказваць вокны з усіх працоўных прастор ці толькі з бягучай."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
 msgid "Show the window list on all monitors"
 msgstr "Паказваць спіс вокнаў на ўсіх маніторах"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -249,21 +321,21 @@ msgstr "Заўсёды групаваць вокны"
 msgid "Show on all monitors"
 msgstr "Паказваць на ўсіх маніторах"
 
-#: extensions/window-list/workspaceIndicator.js:261
-#: extensions/workspace-indicator/extension.js:266
+#: extensions/window-list/workspaceIndicator.js:253
+#: extensions/workspace-indicator/extension.js:259
 msgid "Workspace Indicator"
 msgstr "Індыкатар працоўнай прасторы"
 
-#: extensions/workspace-indicator/prefs.js:62
+#: extensions/workspace-indicator/prefs.js:69
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Працоўная прастора %d"
 
-#: extensions/workspace-indicator/prefs.js:129
+#: extensions/workspace-indicator/prefs.js:136
 msgid "Workspace Names"
 msgstr "Назвы працоўных прастор"
 
-#: extensions/workspace-indicator/prefs.js:255
+#: extensions/workspace-indicator/prefs.js:262
 msgid "Add Workspace"
 msgstr "Дадаць працоўную прастору"
 
