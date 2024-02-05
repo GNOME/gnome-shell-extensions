@@ -2,24 +2,24 @@
 # Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2011.
-# Yosef Or Boczko <yoseforb@gmail.com>, 2013-2020.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2013-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2021-11-06 14:08+0000\n"
-"PO-Revision-Date: 2021-11-12 00:53+0200\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"POT-Creation-Date: 2024-01-19 22:15+0000\n"
+"PO-Revision-Date: 2024-02-05 21:48+0200\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Gtranslator 45.3\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -38,19 +38,19 @@ msgstr "‏GNOME קלסי על גבי Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "‏GNOME קלסי על גבי Xorg"
 
-#: extensions/apps-menu/extension.js:112
+#: extensions/apps-menu/extension.js:126
 msgid "Favorites"
 msgstr "מועדפים"
 
-#: extensions/apps-menu/extension.js:366
+#: extensions/apps-menu/extension.js:397
 msgid "Applications"
 msgstr "יישומים"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
 msgstr "Application and workspace list"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -58,34 +58,34 @@ msgstr ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 
-#: extensions/auto-move-windows/prefs.js:34
+#: extensions/auto-move-windows/prefs.js:159
 msgid "Workspace Rules"
 msgstr "כללי מרחב העבודה"
 
-#: extensions/auto-move-windows/prefs.js:236
+#: extensions/auto-move-windows/prefs.js:314
 msgid "Add Rule"
 msgstr "הוספת כלל"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:133
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:218
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "שליפת הכונן „%s” נכשלה:"
 
-#: extensions/drive-menu/extension.js:149
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
 msgstr "התקנים נתיקים"
 
-#: extensions/drive-menu/extension.js:171
+#: extensions/drive-menu/extension.js:164
 msgid "Open Files"
 msgstr "פתיחת קבצים"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
 msgstr "Use more screen for windows"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -95,11 +95,11 @@ msgstr ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
 msgstr "Place window captions on top"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
@@ -109,99 +109,171 @@ msgstr ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 
-#: extensions/places-menu/extension.js:88
 #: extensions/places-menu/extension.js:91
+#: extensions/places-menu/extension.js:94
 msgid "Places"
 msgstr "מיקומים"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "שיגור „%s” נכשל"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:75
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "ארע כשל בעיגון כרך „%s”"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
+#: extensions/places-menu/placeDisplay.js:135
+#: extensions/places-menu/placeDisplay.js:158
 msgid "Computer"
 msgstr "מחשב"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:333
 msgid "Home"
 msgstr "בית"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:378
 msgid "Browse Network"
 msgstr "עיון ברשת"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
 msgstr "Cycle Screenshot Sizes"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Cycle Screenshot Sizes Backward"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr "סטטיסטיקת מעבד"
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr "סטטיסטיקת זיכרון"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr "סטטיסטיקת תחלופה"
+
+#: extensions/system-monitor/extension.js:327
+msgid "Upload stats"
+msgstr "סטטיסטיקת העלאה"
+
+#: extensions/system-monitor/extension.js:341
+msgid "Download stats"
+msgstr "סטטיסטיקת הורדה"
+
+#: extensions/system-monitor/extension.js:355
+msgid "System stats"
+msgstr "סטטיסטיקת מערכת"
+
+#: extensions/system-monitor/extension.js:403
+msgid "Show"
+msgstr "הצגה"
+
+#: extensions/system-monitor/extension.js:405
+msgid "CPU"
+msgstr "מעבד"
+
+#: extensions/system-monitor/extension.js:407
+msgid "Memory"
+msgstr "זיכרון"
+
+#: extensions/system-monitor/extension.js:409
+msgid "Swap"
+msgstr "תחלופה"
+
+#: extensions/system-monitor/extension.js:411
+msgid "Upload"
+msgstr "העלאה"
+
+#: extensions/system-monitor/extension.js:413
+msgid "Download"
+msgstr "הורדה"
+
+#: extensions/system-monitor/extension.js:418
+msgid "Open System Monitor"
+msgstr "פתיחת צג המערכת"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr "הצגת שימוש במעבד"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr "הצגת שימוש בזיכרון"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr "הצגת שימוש בזיכרון תחלופה"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr "הצגת העלאה"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr "הצגת הורדה"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "Theme name"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "סגירה"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr "ביטול המזעור"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "מזעור"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr "ביטול ההגדלה"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr "הגדלה"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:470
 msgid "Minimize all"
 msgstr "מזעור הכל"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:476
 msgid "Unminimize all"
 msgstr "ביטול מזעור הכל"
 
-#: extensions/window-list/extension.js:446
+#: extensions/window-list/extension.js:482
 msgid "Maximize all"
 msgstr "הגדלת הכל"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:490
 msgid "Unmaximize all"
 msgstr "ביטול הגדלת הכל"
 
-#: extensions/window-list/extension.js:462
+#: extensions/window-list/extension.js:498
 msgid "Close all"
 msgstr "סגירת הכל"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:772
 msgid "Window List"
 msgstr "רשימת חלונות"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "מתי לקבץ חלונות"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
@@ -209,20 +281,20 @@ msgstr ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:86
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "הצגת חלונות מכל מרחבי העבודה"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr "Whether to show windows from all workspaces or only the current one."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
 msgid "Show the window list on all monitors"
 msgstr "Show the window list on all monitors"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -230,41 +302,41 @@ msgstr ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 
-#: extensions/window-list/prefs.js:39
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "קיבוץ חלונות"
 
-#: extensions/window-list/prefs.js:63
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "לעולם לא לקבץ חלונות"
 
-#: extensions/window-list/prefs.js:64
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "קיבוץ חלונות כאשר המקום מוגבל"
 
-#: extensions/window-list/prefs.js:65
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "תמיד לקבץ חלונות"
 
-#: extensions/window-list/prefs.js:81
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "הצגה בכל הצגים"
 
-#: extensions/window-list/workspaceIndicator.js:249
-#: extensions/workspace-indicator/extension.js:254
+#: extensions/window-list/workspaceIndicator.js:253
+#: extensions/workspace-indicator/extension.js:259
 msgid "Workspace Indicator"
 msgstr "מחוון מרחבי עבודה"
 
-#: extensions/workspace-indicator/prefs.js:33
-msgid "Workspace Names"
-msgstr "שם מרחב העבודה"
-
-#: extensions/workspace-indicator/prefs.js:66
+#: extensions/workspace-indicator/prefs.js:69
 #, javascript-format
 msgid "Workspace %d"
 msgstr "מרחב עבודה %d"
 
-#: extensions/workspace-indicator/prefs.js:207
+#: extensions/workspace-indicator/prefs.js:136
+msgid "Workspace Names"
+msgstr "שם מרחב העבודה"
+
+#: extensions/workspace-indicator/prefs.js:262
 msgid "Add Workspace"
 msgstr "הוספת מרחב עבודה"
 
@@ -346,12 +418,6 @@ msgstr "הוספת מרחב עבודה"
 #~ "הדוגמה מנסה להציג כיצד לבנות הרחבות שמתנהלות כראוי לטובת המעטפת וככאלה "
 #~ "שיש להן תכונות קטנות משלהן.\n"
 #~ "עם זאת, ניתן להתאים את הודעת קבלת הפנים."
-
-#~ msgid "CPU"
-#~ msgstr "מעבד"
-
-#~ msgid "Memory"
-#~ msgstr "זיכרון"
 
 #~ msgid "GNOME Shell Classic"
 #~ msgstr "מעטפת GNOME קלסית"
