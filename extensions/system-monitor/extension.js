@@ -431,7 +431,7 @@ class Indicator extends PanelMenu.Button {
     _updateSystemMonitorApp() {
         const appSystem = Shell.AppSystem.get_default();
         this._systemMonitorApp =
-            appSystem.lookup_app('gnome-system-monitor.desktop');
+            appSystem.lookup_app('org.gnome.SystemMonitor.desktop');
         this._placeholder.gicon = this._systemMonitorApp?.icon ?? null;
         this.visible = this._systemMonitorApp != null;
     }
