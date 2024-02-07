@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-01-19 22:15+0000\n"
-"PO-Revision-Date: 2024-01-22 15:24+0100\n"
+"POT-Creation-Date: 2024-02-06 18:43+0000\n"
+"PO-Revision-Date: 2024-02-07 15:08+0100\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -42,7 +42,7 @@ msgid "Favorites"
 msgstr "Oblíbené"
 
 #: extensions/apps-menu/extension.js:397
-msgid "Applications"
+msgid "Apps"
 msgstr "Aplikace"
 
 #: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
@@ -338,3 +338,6 @@ msgstr "Názvy pracovních ploch"
 #: extensions/workspace-indicator/prefs.js:262
 msgid "Add Workspace"
 msgstr "Přidat pracovní plochu"
+
+#~ msgid "Applications"
+#~ msgstr "Aplikace"
