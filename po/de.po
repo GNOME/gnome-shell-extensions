@@ -13,9 +13,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions main\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/-/issues\n"
-"POT-Creation-Date: 2024-01-14 11:27+0100\n"
-"PO-Revision-Date: 2024-01-14 11:34+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2024-02-06 18:43+0000\n"
+"PO-Revision-Date: 2024-02-07 20:42+0100\n"
 "Last-Translator: Gabriel Brand <gabr.brand@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -47,7 +48,7 @@ msgid "Favorites"
 msgstr "Favoriten"
 
 #: extensions/apps-menu/extension.js:397
-msgid "Applications"
+msgid "Apps"
 msgstr "Anwendungen"
 
 #: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
@@ -351,3 +352,6 @@ msgstr "Namen der Arbeitsflächen"
 #: extensions/workspace-indicator/prefs.js:262
 msgid "Add Workspace"
 msgstr "Arbeitsfläche hinzufügen"
+
+#~ msgid "Applications"
+#~ msgstr "Anwendungen"
