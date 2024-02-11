@@ -1,3 +1,16 @@
+46.beta
+=======
+* apps-menu: Rename Applications to Apps [Allan; !299]
+* Misc. bug fixes and cleanups [Florian; !296, !297, !300, !301, !302]
+
+Contributors:
+  Allan Day, Florian Müllner
+
+Translators:
+  Gabriel Brand [de], Daniel Rusek [cs], Fran Dieguez [gl],
+  Aefgh Threenine [th], Vasil Pupkin [be], Artur S0 [ru], Yosef Or Boczko [he],
+  Sabri Ünal [tr]
+
 46.alpha
 ========
 * workspace-indicator: Fix initial preview visibility [Florian; !280, !292]
