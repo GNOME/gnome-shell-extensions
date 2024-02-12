@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
-"PO-Revision-Date: 2024-02-12 20:16+0330\n"
+"POT-Creation-Date: 2024-02-12 16:49+0000\n"
+"PO-Revision-Date: 2024-02-12 20:28+0330\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <>\n"
 "Language: fa\n"
@@ -196,6 +196,26 @@ msgstr "بارگیری"
 #: extensions/system-monitor/extension.js:418
 msgid "Open System Monitor"
 msgstr "گشودن پایشگر سامانه"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr "نمایش استفادهٔ پردازنده"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr "نمایش استفادهٔ حافظه"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr "نمایش استفادهٔ مبادله"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr "نمایش بارگذاری"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr "نمایش بارگیری"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
