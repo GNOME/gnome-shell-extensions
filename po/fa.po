@@ -2,24 +2,25 @@
 # Copyright (C) 2011 Iranian Free Software Users Group (IFSUG.org) translation team.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Arash Mousavi <mousavi.arash@gmail.com>, 2011-2017.
-# Danial Behzadi <dani.behzi@ubuntu.com>, 2018-2020.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2018-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2021-11-06 14:08+0000\n"
-"PO-Revision-Date: 2021-11-10 16:24+0330\n"
-"Last-Translator: MohammadSaleh Kamyab <mskf1383@protonmail.com>\n"
+"POT-Creation-Date: 2024-02-06 18:43+0000\n"
+"PO-Revision-Date: 2024-02-12 20:16+0330\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-DamnedLies-Scope: partial\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -28,7 +29,7 @@ msgstr "گنوم کلاسیک"
 #: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
 #: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
-msgstr "این نشست شما را به گنوم کلاسیک وارد می‌کند"
+msgstr "این نشست به گنوم کلاسیک واردتان می‌کند"
 
 #: data/gnome-classic-wayland.desktop.in:3
 msgid "GNOME Classic on Wayland"
@@ -38,19 +39,19 @@ msgstr "گنوم کلاسیک روی وی‌لند"
 msgid "GNOME Classic on Xorg"
 msgstr "گنوم کلاسیک روی زورگ"
 
-#: extensions/apps-menu/extension.js:112
+#: extensions/apps-menu/extension.js:126
 msgid "Favorites"
 msgstr "برگزیده‌ها"
 
-#: extensions/apps-menu/extension.js:366
-msgid "Applications"
-msgstr "برنامه‌ها"
+#: extensions/apps-menu/extension.js:397
+msgid "Apps"
+msgstr "کاره‌ها"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
 msgstr "فهرست برنامه و فضای‌کاری"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -58,34 +59,34 @@ msgstr ""
 "فهرستی از رشته‌ها، هرکدام حاوی شناسه‌ی یک برنامه (نام پرونده رومیزی)، در ادامه‌ی یک "
 "ویرگول و شماره‌ی فضای کاری"
 
-#: extensions/auto-move-windows/prefs.js:34
+#: extensions/auto-move-windows/prefs.js:159
 msgid "Workspace Rules"
 msgstr "قواعد فضای کاری"
 
-#: extensions/auto-move-windows/prefs.js:236
+#: extensions/auto-move-windows/prefs.js:314
 msgid "Add Rule"
 msgstr "افزودن قاعده"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:133
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:218
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "بیرون دادن دیسک‌گردان «%s» شکست خورد:"
 
-#: extensions/drive-menu/extension.js:149
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
 msgstr "دستگاه‌های جداشدنی"
 
-#: extensions/drive-menu/extension.js:171
+#: extensions/drive-menu/extension.js:164
 msgid "Open Files"
 msgstr "گشودن پرونده‌ها"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
 msgstr "استفاده از صفحه بیشتر برای پنجره"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. This "
@@ -95,11 +96,11 @@ msgstr ""
 "aspect ratio, and consolidating them further to reduce the bounding box. This "
 "setting applies only with the natural placement strategy."
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
 msgstr "قراردادن عنوان پنجره در بالا"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding shell "
 "default of placing it at the bottom. Changing this setting requires restarting "
@@ -109,98 +110,150 @@ msgstr ""
 "شل در پایین را تغییر می‌دهد. تغییر این گزینه، نیاز به راه‌اندازی مجدد شل دارد تا "
 "تاثیر بگذارد."
 
-#: extensions/places-menu/extension.js:88 extensions/places-menu/extension.js:91
+#: extensions/places-menu/extension.js:91 extensions/places-menu/extension.js:94
 msgid "Places"
 msgstr "مکان‌ها"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "شکست در اجرای «%s»"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:75
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "شکست در سوار کردن حجم برای «%s»"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
+#: extensions/places-menu/placeDisplay.js:135
+#: extensions/places-menu/placeDisplay.js:158
 msgid "Computer"
 msgstr "رایانه"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:333
 msgid "Home"
 msgstr "خانه"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:378
 msgid "Browse Network"
 msgstr "مرور شبکه"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
 msgstr "تغییر اندازه تصاویر صفحه‌نمایش"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "حرکت برعکس بین اندازه تصاویر صفحه‌نمایش"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr "آمار پردازنده"
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr "آمار حافظه"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr "آمار مبادله"
+
+#: extensions/system-monitor/extension.js:327
+msgid "Upload stats"
+msgstr "آمار بارگذاری"
+
+#: extensions/system-monitor/extension.js:341
+msgid "Download stats"
+msgstr "آمار بارگیری"
+
+#: extensions/system-monitor/extension.js:355
+msgid "System stats"
+msgstr "آمار سامانه"
+
+#: extensions/system-monitor/extension.js:403
+msgid "Show"
+msgstr "نمایش"
+
+#: extensions/system-monitor/extension.js:405
+msgid "CPU"
+msgstr "سی‌پی‌یو"
+
+#: extensions/system-monitor/extension.js:407
+msgid "Memory"
+msgstr "حافظه"
+
+#: extensions/system-monitor/extension.js:409
+msgid "Swap"
+msgstr "مبادله"
+
+#: extensions/system-monitor/extension.js:411
+msgid "Upload"
+msgstr "بارگذاری"
+
+#: extensions/system-monitor/extension.js:413
+msgid "Download"
+msgstr "بارگیری"
+
+#: extensions/system-monitor/extension.js:418
+msgid "Open System Monitor"
+msgstr "گشودن پایشگر سامانه"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "نام تم"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "نام تم، جهت بارگیری از شاخه themes/name/gnome-shell./~"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "خروج"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr "ناکمینه"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "کمینه"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr "نابیشینه"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr "بیشنه"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:470
 msgid "Minimize all"
 msgstr "کمینهٔ همه"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:476
 msgid "Unminimize all"
 msgstr "ناکمینهٔ همه"
 
-#: extensions/window-list/extension.js:446
+#: extensions/window-list/extension.js:482
 msgid "Maximize all"
 msgstr "بیشینهٔ همه"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:490
 msgid "Unmaximize all"
 msgstr "نابیشینهٔ همه"
 
-#: extensions/window-list/extension.js:462
+#: extensions/window-list/extension.js:498
 msgid "Close all"
 msgstr "بستن همه"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:772
 msgid "Window List"
 msgstr "فهرست پنجره"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "زمان گروه کردن پنجره‌ها"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
@@ -208,20 +261,20 @@ msgstr ""
 "تصمیم می‌گیرد چه زمانی پنجره‌های یک برنامه در فهرست پنجره‌ها گروه شوند. مقدارهای "
 "ممکن عبارتند از «never»، «auto» و «always»."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:86
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "نمایش پنجره‌ها از تمام فضاهای کاری"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr "این که پنجره‌ها از تمام فضاهای کاری نمایش داده شود یا فقط فضای کاری فعلی."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
 msgid "Show the window list on all monitors"
 msgstr "نمایش فهرست پنجره‌ها در تمام نمایشگرها"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
 msgid ""
 "Whether to show the window list on all connected monitors or only on the primary "
 "one."
@@ -229,43 +282,46 @@ msgstr ""
 "اینکه آیا فهرست پنجره‌ها در تمام نمایشگرهای متصل نمایش داده شود یا فقط در نمایشگر "
 "اصلی."
 
-#: extensions/window-list/prefs.js:39
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "گروه‌سازی پنجره‌ها"
 
-#: extensions/window-list/prefs.js:63
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "هیچ‌گاه پنجره‌ها گروه نشوند"
 
-#: extensions/window-list/prefs.js:64
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "پنجره‌ها زمانی که فضا محدود است گروه شوند"
 
-#: extensions/window-list/prefs.js:65
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "همیشه پنجره‌ها گروه شوند"
 
-#: extensions/window-list/prefs.js:81
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "نمایش در تمام نمایشگرها"
 
-#: extensions/window-list/workspaceIndicator.js:249
-#: extensions/workspace-indicator/extension.js:254
+#: extensions/window-list/workspaceIndicator.js:253
+#: extensions/workspace-indicator/extension.js:259
 msgid "Workspace Indicator"
 msgstr "نشانگر فضای‌کاری"
 
-#: extensions/workspace-indicator/prefs.js:33
-msgid "Workspace Names"
-msgstr "نام‌های فضای کاری"
-
-#: extensions/workspace-indicator/prefs.js:66
+#: extensions/workspace-indicator/prefs.js:69
 #, javascript-format
 msgid "Workspace %d"
 msgstr "فضای کاری %Id"
 
-#: extensions/workspace-indicator/prefs.js:207
+#: extensions/workspace-indicator/prefs.js:136
+msgid "Workspace Names"
+msgstr "نام‌های فضای کاری"
+
+#: extensions/workspace-indicator/prefs.js:262
 msgid "Add Workspace"
 msgstr "افزودن فضای‌کاری"
+
+#~ msgid "Applications"
+#~ msgstr "برنامه‌ها"
 
 #~ msgid "Application"
 #~ msgstr "برنامه"
@@ -355,12 +411,6 @@ msgstr "افزودن فضای‌کاری"
 
 #~ msgid "Window management and application launching"
 #~ msgstr "مدیریت پنجره‌ها و اجرا کننده برنامه‌ها"
-
-#~ msgid "CPU"
-#~ msgstr "سی‌پی‌یو"
-
-#~ msgid "Memory"
-#~ msgstr "حافظه"
 
 #~ msgid "The alt tab behaviour."
 #~ msgstr "رفتار alt tab."
@@ -459,9 +509,6 @@ msgstr "افزودن فضای‌کاری"
 
 #~ msgid "My Account"
 #~ msgstr "حساب من"
-
-#~ msgid "System Settings"
-#~ msgstr "تنظیمات سیستم"
 
 #~ msgid "Lock Screen"
 #~ msgstr "قفل‌کردن صفحه‌نمایش"
