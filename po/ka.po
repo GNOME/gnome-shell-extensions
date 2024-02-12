@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Ekaterine Papava <papava.e@gtu.ge>, 2023-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2022-02-13 10:42+0000\n"
-"PO-Revision-Date: 2022-09-14 16:37+0200\n"
-"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"POT-Creation-Date: 2024-02-06 18:43+0000\n"
+"PO-Revision-Date: 2024-02-12 18:37+0100\n"
+"Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: \n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -36,19 +36,19 @@ msgstr "GNOME CLassic Wayland-ზე"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME Classic Xorg"
 
-#: extensions/apps-menu/extension.js:112
+#: extensions/apps-menu/extension.js:126
 msgid "Favorites"
 msgstr "რჩეულები"
 
-#: extensions/apps-menu/extension.js:370
-msgid "Applications"
-msgstr "აპლიკაციები"
+#: extensions/apps-menu/extension.js:397
+msgid "Apps"
+msgstr "აპები"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
 msgstr "აპლიკაციების და სამუშაო სივრცეების სია"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -56,34 +56,34 @@ msgstr ""
 "სტრიქონების სია, რომლებიც შეიცავენ აპლიკაციის ID-ს(სამუშაო მაგიდის ფაილის "
 "სახელს), რომელსაც მოჰყვება მძიმე და სამუშაო სივრცის ნომერი"
 
-#: extensions/auto-move-windows/prefs.js:19
+#: extensions/auto-move-windows/prefs.js:159
 msgid "Workspace Rules"
 msgstr "სამუშაო მაგიდის წესები"
 
-#: extensions/auto-move-windows/prefs.js:245
+#: extensions/auto-move-windows/prefs.js:314
 msgid "Add Rule"
 msgstr "წესის დამატება"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:210
+#: extensions/places-menu/placeDisplay.js:218
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "დისკ %s-ის გამოგდების შეცდომა:"
 
-#: extensions/drive-menu/extension.js:139
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
 msgstr "გამოძრობადი მოწყობილობები"
 
-#: extensions/drive-menu/extension.js:161
+#: extensions/drive-menu/extension.js:164
 msgid "Open Files"
 msgstr "ღია ფაილები"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
 msgstr "ეკრანის მეტი ნაწილის გამოყენება ფანჯრებისთვის"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -91,116 +91,188 @@ msgid ""
 msgstr ""
 "შეეცადეთ გამოიყენოთ ეკრანის მეტი ადგილი ფანჯრის ესკიზების დასაყენებლად, "
 "ეკრანის ასპექტის თანაფარდობის ადაპტაციით და მათი შემდგომი კონსოლიდაციით, "
-"რათა შემცირდეს შემოსაზღვრული ველი. ეს პარამეტრი გამოიყენება მხოლოდ "
-"ბუნებრივი განთავსების სტრატეგიით."
+"რათა შემცირდეს შემოსაზღვრული ველი. ეს პარამეტრი გამოიყენება მხოლოდ ბუნებრივი "
+"განთავსების სტრატეგიით."
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
 msgstr "ფანჯრის მინაწერების ზემოთ ჩვენება"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
 "თუ ჩართულია, ფანჯრის სათაური შესაბამისი მინიატურის თავზე გამოჩნდება, რითიც "
-"გადაფარავს გარსის ნაგულისხმებ მნიშვნელობას, რომ ის ძირზე იყოს. ამ "
-"პარამეტრის ძალაში შესასვლელად საჭიროა გარსის გადატვირთვა."
+"გადაფარავს გარსის ნაგულისხმებ მნიშვნელობას, რომ ის ძირზე იყოს. ამ პარამეტრის "
+"ძალაში შესასვლელად საჭიროა გარსის გადატვირთვა."
 
-#: extensions/places-menu/extension.js:88
 #: extensions/places-menu/extension.js:91
+#: extensions/places-menu/extension.js:94
 msgid "Places"
 msgstr "ადგილები"
 
-#: extensions/places-menu/placeDisplay.js:49
+#: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "%s-ის გაშვების შეცდომა"
 
-#: extensions/places-menu/placeDisplay.js:64
+#: extensions/places-menu/placeDisplay.js:75
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "%s-თვის დისკის მიმაგრების შეცდომა"
 
-#: extensions/places-menu/placeDisplay.js:125
-#: extensions/places-menu/placeDisplay.js:148
+#: extensions/places-menu/placeDisplay.js:135
+#: extensions/places-menu/placeDisplay.js:158
 msgid "Computer"
 msgstr "კომპიუტერი"
 
-#: extensions/places-menu/placeDisplay.js:336
+#: extensions/places-menu/placeDisplay.js:333
 msgid "Home"
 msgstr "საწყისი"
 
-#: extensions/places-menu/placeDisplay.js:381
+#: extensions/places-menu/placeDisplay.js:378
 msgid "Browse Network"
 msgstr "ქსელის დათვალიერება"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
 msgstr "ეკრანის ანაბეჭდების ზომებს შორის გადართვა"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "ეკრანის ანაბეჭდების ზომებს შორის უკუღმა გადართვა"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr "CPU-ის სტატისტიკა"
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr "მეხსიერების სტატისტიკა"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr "სვოპის სტატისტიკა"
+
+#: extensions/system-monitor/extension.js:327
+msgid "Upload stats"
+msgstr "ატვირთვის სტატისტიკა"
+
+#: extensions/system-monitor/extension.js:341
+msgid "Download stats"
+msgstr "გადმოწერის სტატისტიკა"
+
+#: extensions/system-monitor/extension.js:355
+msgid "System stats"
+msgstr "სისტემის სტატისტიკა"
+
+#: extensions/system-monitor/extension.js:403
+msgid "Show"
+msgstr "ჩვენება"
+
+#: extensions/system-monitor/extension.js:405
+msgid "CPU"
+msgstr "CPU"
+
+#: extensions/system-monitor/extension.js:407
+msgid "Memory"
+msgstr "მეხსიერება"
+
+#: extensions/system-monitor/extension.js:409
+msgid "Swap"
+msgstr "სვოპი"
+
+#: extensions/system-monitor/extension.js:411
+msgid "Upload"
+msgstr "ატვირთვა"
+
+#: extensions/system-monitor/extension.js:413
+msgid "Download"
+msgstr "გადმოწერა"
+
+#: extensions/system-monitor/extension.js:418
+msgid "Open System Monitor"
+msgstr "სისტემური მონიტორის გახსნა"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr "CPU-ის გამოყენების ჩვენება"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr "მეხსიერების გამოყენების ჩვენება"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr "სვოპის გამოყენების ჩვენება"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr "ატვირთვის ჩვენება"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr "გადმოწერის ჩვენება"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "თემის სახელი"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "თემის სახელი, ~/.themes/name/gnome-shell-დან ჩასატვირთად"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "დახურვა"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr "ამოკეცვა"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "ჩაკეცვა"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr "საწყის ზომაზე დაბრუნება"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr "მთელ ეკრანზე გაშლა"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:470
 msgid "Minimize all"
 msgstr "ყველას ჩაკეცვა"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:476
 msgid "Unminimize all"
 msgstr "ყველას ამოკეცვა"
 
-#: extensions/window-list/extension.js:446
+#: extensions/window-list/extension.js:482
 msgid "Maximize all"
 msgstr "ყველას მთელ ეკრანზე გაშლა"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:490
 msgid "Unmaximize all"
 msgstr "ყველას საწყის ზომაზე დაბრუნება"
 
-#: extensions/window-list/extension.js:462
+#: extensions/window-list/extension.js:498
 msgid "Close all"
 msgstr "ყველას დახურვა"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:772
 msgid "Window List"
 msgstr "ფანჯრების სია"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "როდის შევაჯგუფო ფანჯრები"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
@@ -208,59 +280,62 @@ msgstr ""
 "არჩევს, როდის შეაჯგუფოს ერთიდაიგივე აპლიკაციის ფანჯრების სია. შესაძლო "
 "ვარიანტებია \"არასოდეს\", \"ავტომატურად\" და \"ყოველთვის\"."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:76
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "ფანჯრების ყველა სამუშაო სივრციდან ჩვენება"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr "ყველა სამუშაო სივრცის ფანჯრები ვაჩვენო თუ მხოლოდ მიმდინარის."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
 msgid "Show the window list on all monitors"
 msgstr "ფანჯრების სიის ყველა ეკრანზე ჩვენება"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr "ფანჯრების სიის მხოლოდ მთავარ თუ ყველა მონიტორზე ჩვენება."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "ფანჯრების შეჯგუფება"
 
-#: extensions/window-list/prefs.js:37
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "არასოდეს შეაჯგუფო ფანჯრები"
 
-#: extensions/window-list/prefs.js:38
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "შეაჯგუფე მხოლოდ მაშინ, როცა ადგილი არაა"
 
-#: extensions/window-list/prefs.js:39
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "ყოველთვის შეაჯგუფე ფანჯრები"
 
-#: extensions/window-list/prefs.js:63
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "ყველა ეკრანზე ჩვენება"
 
-#: extensions/window-list/workspaceIndicator.js:249
-#: extensions/workspace-indicator/extension.js:254
+#: extensions/window-list/workspaceIndicator.js:253
+#: extensions/workspace-indicator/extension.js:259
 msgid "Workspace Indicator"
 msgstr "სამუშაო სივრცის ინდიკატორი"
 
-#: extensions/workspace-indicator/prefs.js:18
-msgid "Workspace Names"
-msgstr "სამუშაო სივრცის სახელები"
-
-#: extensions/workspace-indicator/prefs.js:39
+#: extensions/workspace-indicator/prefs.js:69
 #, javascript-format
 msgid "Workspace %d"
 msgstr "სამუშაო სივრცე %d"
 
-#: extensions/workspace-indicator/prefs.js:184
+#: extensions/workspace-indicator/prefs.js:136
+msgid "Workspace Names"
+msgstr "სამუშაო სივრცის სახელები"
+
+#: extensions/workspace-indicator/prefs.js:262
 msgid "Add Workspace"
 msgstr "სამუშაო სივრცის დამატება"
+
+#~ msgid "Applications"
+#~ msgstr "აპლიკაციები"
