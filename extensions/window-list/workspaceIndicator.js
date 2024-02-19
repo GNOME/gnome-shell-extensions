@@ -117,6 +117,8 @@ class WorkspaceThumbnail extends St.Button {
             child: new Clutter.Actor({
                 layout_manager: new WorkspaceLayout(),
                 clip_to_allocation: true,
+                x_expand: true,
+                y_expand: true,
             }),
         });
 
