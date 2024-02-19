@@ -9,6 +9,10 @@
   padding: 0 8px;
 }
 
+.workspace-indicator .workspaces-view.hfade {
+  -st-hfade-offset: 20px;
+}
+
 .workspace-indicator .workspaces-box {
   padding: 5px;
   spacing: 3px;

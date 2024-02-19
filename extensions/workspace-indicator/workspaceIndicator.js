@@ -20,6 +20,8 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 const TOOLTIP_OFFSET = 6;
 const TOOLTIP_ANIMATION_TIME = 150;
 
+const SCROLL_TIME = 100;
+
 const MAX_THUMBNAILS = 6;
 
 let baseStyleClassName = '';
@@ -294,13 +296,29 @@ class WorkspacePreviews extends Clutter.Actor {
 
         workspaceManager.connectObject(
             'notify::n-workspaces', () => this._updateThumbnails(), GObject.ConnectFlags.AFTER,
+            'workspace-switched', () => this._updateScrollPosition(),
             this);
+
+        this.connect('notify::mapped', () => {
+            if (this.mapped)
+                this._updateScrollPosition();
+        });
 
         this._thumbnailsBox = new St.BoxLayout({
             style_class: 'workspaces-box',
             y_expand: true,
         });
-        this.add_child(this._thumbnailsBox);
+
+        this._scrollView = new St.ScrollView({
+            style_class: 'workspaces-view hfade',
+            enable_mouse_scrolling: false,
+            hscrollbar_policy: St.PolicyType.EXTERNAL,
+            vscrollbar_policy: St.PolicyType.NEVER,
+            y_expand: true,
+            child: this._thumbnailsBox,
+        });
+
+        this.add_child(this._scrollView);
 
         this._updateThumbnails();
     }
@@ -314,6 +332,50 @@ class WorkspacePreviews extends Clutter.Actor {
             const thumb = new WorkspaceThumbnail(i);
             this._thumbnailsBox.add_child(thumb);
         }
+
+        if (this.mapped)
+            this._updateScrollPosition();
+    }
+
+    _updateScrollPosition() {
+        const adjustment = this._scrollView.hadjustment;
+        const {upper, pageSize} = adjustment;
+        let {value} = adjustment;
+
+        const activeWorkspace =
+            [...this._thumbnailsBox].find(a => a.active);
+
+        if (!activeWorkspace)
+            return;
+
+        let offset = 0;
+        const hfade = this._scrollView.get_effect('fade');
+        if (hfade)
+            offset = hfade.fade_margins.left;
+
+        let {x1, x2} = activeWorkspace.get_allocation_box();
+        let parent = activeWorkspace.get_parent();
+        while (parent !== this._scrollView) {
+            if (!parent)
+                throw new Error('actor not in scroll view');
+
+            const box = parent.get_allocation_box();
+            x1 += box.x1;
+            x2 += box.x1;
+            parent = parent.get_parent();
+        }
+
+        if (x1 < value + offset)
+            value = Math.max(0, x1 - offset);
+        else if (x2 > value + pageSize - offset)
+            value = Math.min(upper, x2 + offset - pageSize);
+        else
+            return;
+
+        adjustment.ease(value, {
+            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
+            duration: SCROLL_TIME,
+        });
     }
 }
 
