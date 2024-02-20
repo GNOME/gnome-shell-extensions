@@ -349,7 +349,7 @@ class WorkspaceIndicator extends PanelMenu.Button {
         for (let i = 0; i < this._workspacesItems.length; i++) {
             this._workspacesItems[i].setOrnament(i === this._currentWorkspace
                 ? PopupMenu.Ornament.DOT
-                : PopupMenu.Ornament.NONE);
+                : PopupMenu.Ornament.NO_DOT);
         }
     }
 
@@ -393,8 +393,9 @@ class WorkspaceIndicator extends PanelMenu.Button {
                 this._activate(actor.workspaceId);
             });
 
-            if (i === this._currentWorkspace)
-                this._workspacesItems[i].setOrnament(PopupMenu.Ornament.DOT);
+            this._workspacesItems[i].setOrnament(i === this._currentWorkspace
+                ? PopupMenu.Ornament.DOT
+                : PopupMenu.Ornament.NO_DOT);
         }
 
         this._statusLabel.set_text(this._labelText());
