@@ -300,8 +300,10 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             'notify::layout-rows', this._updateThumbnailVisibility.bind(this),
             this);
 
-        this.connect('scroll-event', this._onScrollEvent.bind(this));
-        this._thumbnailsBox.connect('scroll-event', this._onScrollEvent.bind(this));
+        this.connect('scroll-event',
+            (a, event) => Main.wm.handleWorkspaceScroll(event));
+        this._thumbnailsBox.connect('scroll-event',
+            (a, event) => Main.wm.handleWorkspaceScroll(event));
 
         this._inTopBar = false;
         this.connect('notify::realized', () => {
@@ -444,20 +446,5 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             let metaWorkspace = workspaceManager.get_workspace_by_index(index);
             metaWorkspace.activate(global.get_current_time());
         }
-    }
-
-    _onScrollEvent(actor, event) {
-        let direction = event.get_scroll_direction();
-        let diff = 0;
-        if (direction === Clutter.ScrollDirection.DOWN)
-            diff = 1;
-        else if (direction === Clutter.ScrollDirection.UP)
-            diff = -1;
-        else
-            return;
-
-
-        const newIndex = this._currentWorkspace + diff;
-        this._activate(newIndex);
     }
 }
