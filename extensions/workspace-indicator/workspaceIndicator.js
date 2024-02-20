@@ -274,6 +274,49 @@ class WorkspaceThumbnail extends St.Button {
     }
 }
 
+class WorkspacePreviews extends Clutter.Actor {
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor(params) {
+        super({
+            ...params,
+            layout_manager: new Clutter.BinLayout(),
+            reactive: true,
+            y_expand: true,
+        });
+
+        this.connect('scroll-event',
+            (a, event) => Main.wm.handleWorkspaceScroll(event));
+
+        const {workspaceManager} = global;
+
+        workspaceManager.connectObject(
+            'notify::n-workspaces', () => this._updateThumbnails(), GObject.ConnectFlags.AFTER,
+            this);
+
+        this._thumbnailsBox = new St.BoxLayout({
+            style_class: 'workspaces-box',
+            y_expand: true,
+        });
+        this.add_child(this._thumbnailsBox);
+
+        this._updateThumbnails();
+    }
+
+    _updateThumbnails() {
+        const {nWorkspaces} = global.workspace_manager;
+
+        this._thumbnailsBox.destroy_all_children();
+
+        for (let i = 0; i < nWorkspaces; i++) {
+            const thumb = new WorkspaceThumbnail(i);
+            this._thumbnailsBox.add_child(thumb);
+        }
+    }
+}
+
 export class WorkspaceIndicator extends PanelMenu.Button {
     static {
         GObject.registerClass(this);
@@ -304,16 +347,10 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             y_align: Clutter.ActorAlign.CENTER,
             text: this._getStatusText(),
         });
-
         container.add_child(this._statusLabel);
 
-        this._thumbnailsBox = new St.BoxLayout({
-            style_class: 'workspaces-box',
-            y_expand: true,
-            reactive: true,
-        });
-
-        container.add_child(this._thumbnailsBox);
+        this._thumbnails = new WorkspacePreviews();
+        container.add_child(this._thumbnails);
 
         this._workspacesItems = [];
 
@@ -324,8 +361,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             this);
 
         this.connect('scroll-event',
-            (a, event) => Main.wm.handleWorkspaceScroll(event));
-        this._thumbnailsBox.connect('scroll-event',
             (a, event) => Main.wm.handleWorkspaceScroll(event));
 
         this._inTopBar = false;
@@ -338,7 +373,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         });
 
         this._updateMenu();
-        this._updateThumbnails();
         this._updateThumbnailVisibility();
 
         const desktopSettings =
@@ -363,7 +397,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this.reactive = useMenu;
 
         this._statusLabel.visible = useMenu;
-        this._thumbnailsBox.visible = !useMenu;
+        this._thumbnails.visible = !useMenu;
 
         this._updateTopBarRedirect();
     }
@@ -374,7 +408,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         // Disable offscreen-redirect when showing the workspace switcher
         // so that clip-to-allocation works
-        Main.panel.set_offscreen_redirect(this._thumbnailsBox.visible
+        Main.panel.set_offscreen_redirect(this._thumbnails.visible
             ? Clutter.OffscreenRedirect.ALWAYS
             : Clutter.OffscreenRedirect.AUTOMATIC_FOR_OPACITY);
     }
@@ -389,7 +423,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
     _nWorkspacesChanged() {
         this._updateMenu();
-        this._updateThumbnails();
         this._updateThumbnailVisibility();
     }
 
@@ -437,17 +470,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         }
 
         this._statusLabel.set_text(this._getStatusText());
-    }
-
-    _updateThumbnails() {
-        let workspaceManager = global.workspace_manager;
-
-        this._thumbnailsBox.destroy_all_children();
-
-        for (let i = 0; i < workspaceManager.n_workspaces; i++) {
-            let thumb = new WorkspaceThumbnail(i);
-            this._thumbnailsBox.add_child(thumb);
-        }
     }
 
     _activate(index) {
