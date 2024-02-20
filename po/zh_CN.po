@@ -14,16 +14,16 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2021-11-06 14:08+0000\n"
-"PO-Revision-Date: 2022-01-01 11:22+0800\n"
+"POT-Creation-Date: 2024-02-06 18:43+0000\n"
+"PO-Revision-Date: 2024-02-20 16:06+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 41.0\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -35,62 +35,60 @@ msgid "This session logs you into GNOME Classic"
 msgstr "该会话将登录到“GNOME 经典模式”"
 
 #: data/gnome-classic-wayland.desktop.in:3
-#| msgid "GNOME Classic"
 msgid "GNOME Classic on Wayland"
 msgstr "GNOME Wayland 经典模式"
 
 #: data/gnome-classic-xorg.desktop.in:3
-#| msgid "GNOME Classic"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME Xorg 经典模式"
 
-#: extensions/apps-menu/extension.js:112
+#: extensions/apps-menu/extension.js:126
 msgid "Favorites"
 msgstr "收藏"
 
-#: extensions/apps-menu/extension.js:366
-msgid "Applications"
-msgstr "应用程序"
+#: extensions/apps-menu/extension.js:397
+msgid "Apps"
+msgstr "应用"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
 msgstr "应用程序和工作区列表"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
 "一系列字符串，每个字符串包含一个应用程序标识（桌面文件名称）、冒号加工作区号"
 
-#: extensions/auto-move-windows/prefs.js:34
+#: extensions/auto-move-windows/prefs.js:159
 msgid "Workspace Rules"
 msgstr "工作区规则"
 
-#: extensions/auto-move-windows/prefs.js:236
+#: extensions/auto-move-windows/prefs.js:314
 msgid "Add Rule"
 msgstr "添加规则"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:133
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:218
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "弹出驱动器“%s”失败："
 
-#: extensions/drive-menu/extension.js:149
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
 msgstr "可移动设备"
 
-#: extensions/drive-menu/extension.js:171
+#: extensions/drive-menu/extension.js:164
 msgid "Open Files"
 msgstr "打开文件"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
 msgstr "展现窗口时利用更多屏幕空间"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -99,11 +97,11 @@ msgstr ""
 "尝试通过适应屏幕宽高比，以及相互组合以减少包围框，在摆放窗口缩略图时利用更多"
 "屏幕空间。此设置只应用于自然摆放策略。"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
 msgstr "窗口说明文字在上"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
@@ -112,99 +110,171 @@ msgstr ""
 "如果设置为 true，则将窗口说明文字放置在对应窗口的缩略图上方，而不是默认的下"
 "方。修改此设置需要重启 GNOME Shell 以使设置生效。"
 
-#: extensions/places-menu/extension.js:88
 #: extensions/places-menu/extension.js:91
+#: extensions/places-menu/extension.js:94
 msgid "Places"
 msgstr "位置"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "无法启动“%s”"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:75
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "无法为“%s”挂载卷"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
+#: extensions/places-menu/placeDisplay.js:135
+#: extensions/places-menu/placeDisplay.js:158
 msgid "Computer"
 msgstr "计算机"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:333
 msgid "Home"
 msgstr "主文件夹"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:378
 msgid "Browse Network"
 msgstr "浏览网络"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
 msgstr "循环调整截图大小"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "反向循环调整截图大小"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr "CPU 统计"
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr "内存统计"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr "交换空间统计"
+
+#: extensions/system-monitor/extension.js:327
+msgid "Upload stats"
+msgstr "上传统计"
+
+#: extensions/system-monitor/extension.js:341
+msgid "Download stats"
+msgstr "下载统计"
+
+#: extensions/system-monitor/extension.js:355
+msgid "System stats"
+msgstr "系统统计"
+
+#: extensions/system-monitor/extension.js:403
+msgid "Show"
+msgstr "显示"
+
+#: extensions/system-monitor/extension.js:405
+msgid "CPU"
+msgstr "CPU"
+
+#: extensions/system-monitor/extension.js:407
+msgid "Memory"
+msgstr "内存"
+
+#: extensions/system-monitor/extension.js:409
+msgid "Swap"
+msgstr "交换空间"
+
+#: extensions/system-monitor/extension.js:411
+msgid "Upload"
+msgstr "上传"
+
+#: extensions/system-monitor/extension.js:413
+msgid "Download"
+msgstr "下载"
+
+#: extensions/system-monitor/extension.js:418
+msgid "Open System Monitor"
+msgstr "打开系统监视器"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr "显示 CPU 使用情况"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr "显示内存使用情况"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr "显示交换空间使用情况"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr "显示上传"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr "显示下载"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "主题名称"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "从 ~/.themes/name/gnome-shell 加载的主题名称"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "关闭"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr "取消最小化"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "最小化"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr "取消最大化"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr "最大化"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:470
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:476
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: extensions/window-list/extension.js:446
+#: extensions/window-list/extension.js:482
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:490
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: extensions/window-list/extension.js:462
+#: extensions/window-list/extension.js:498
 msgid "Close all"
 msgstr "全部关闭"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:772
 msgid "Window List"
 msgstr "窗口列表"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "何时分组窗口"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
@@ -212,62 +282,65 @@ msgstr ""
 "决定何时对窗口列表上的同一应用的窗口进行分组。可用值有“never”（从"
 "不）、“auto”（自动）和“always”（总是）。"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:86
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "显示所有工作区中的窗口"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr "显示所有工作区中的窗口还是只显示当前工作区中的。"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
 msgid "Show the window list on all monitors"
 msgstr "在所有显示器上显示窗口列表"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr "是否在所有连接的显示器上显示窗口列表或仅在主显示器上显示。"
 
-#: extensions/window-list/prefs.js:39
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "窗口分组"
 
-#: extensions/window-list/prefs.js:63
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "从不将窗口分组"
 
-#: extensions/window-list/prefs.js:64
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "当空间有限时将窗口分组"
 
-#: extensions/window-list/prefs.js:65
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "总是对窗口分组"
 
-#: extensions/window-list/prefs.js:81
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "在所有显示器上显示"
 
-#: extensions/window-list/workspaceIndicator.js:249
-#: extensions/workspace-indicator/extension.js:254
+#: extensions/window-list/workspaceIndicator.js:253
+#: extensions/workspace-indicator/extension.js:259
 msgid "Workspace Indicator"
 msgstr "工作区指示器"
 
-#: extensions/workspace-indicator/prefs.js:33
-msgid "Workspace Names"
-msgstr "工作区名称"
-
-#: extensions/workspace-indicator/prefs.js:66
+#: extensions/workspace-indicator/prefs.js:69
 #, javascript-format
 msgid "Workspace %d"
 msgstr "工作区 %d"
 
-#: extensions/workspace-indicator/prefs.js:207
+#: extensions/workspace-indicator/prefs.js:136
+msgid "Workspace Names"
+msgstr "工作区名称"
+
+#: extensions/workspace-indicator/prefs.js:262
 msgid "Add Workspace"
 msgstr "添加工作区"
+
+#~ msgid "Applications"
+#~ msgstr "应用程序"
 
 #~ msgid "Application"
 #~ msgstr "应用程序"
@@ -348,12 +421,6 @@ msgstr "添加工作区"
 
 #~ msgid "Window management and application launching"
 #~ msgstr "窗口管理与应用启动"
-
-#~ msgid "CPU"
-#~ msgstr "CPU"
-
-#~ msgid "Memory"
-#~ msgstr "内存"
 
 #~ msgid "Suspend"
 #~ msgstr "挂起"
