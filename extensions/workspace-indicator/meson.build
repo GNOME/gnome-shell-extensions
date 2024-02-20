@@ -11,5 +11,6 @@ extension_data += files(
   'stylesheet-dark.css',
   'stylesheet-light.css',
 )
+extension_schemas += files('schemas/' + metadata_conf.get('gschemaname') + '.gschema.xml')
 
 extension_sources += files('prefs.js', 'workspaceIndicator.js')

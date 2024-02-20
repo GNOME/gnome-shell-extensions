@@ -22,8 +22,6 @@ const TOOLTIP_ANIMATION_TIME = 150;
 
 const SCROLL_TIME = 100;
 
-const MAX_THUMBNAILS = 6;
-
 let baseStyleClassName = '';
 
 class WindowPreview extends St.Button {
@@ -433,7 +431,10 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         const {
             baseStyleClass = 'workspace-indicator',
+            settings,
         } = params;
+
+        this._settings = settings;
 
         baseStyleClassName = baseStyleClass;
         this.add_style_class_name(baseStyleClassName);
@@ -461,7 +462,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._workspacesItems = [];
 
         workspaceManager.connectObject(
-            'notify::n-workspaces', this._updateThumbnailVisibility.bind(this), GObject.ConnectFlags.AFTER,
             'workspace-switched', this._onWorkspaceSwitched.bind(this), GObject.ConnectFlags.AFTER,
             this);
 
@@ -477,6 +477,8 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             this._updateTopBarRedirect();
         });
 
+        this._settings.connect('changed::embed-previews',
+            () => this._updateThumbnailVisibility());
         this._updateThumbnailVisibility();
     }
 
@@ -489,8 +491,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _updateThumbnailVisibility() {
-        const {workspaceManager} = global;
-        const useMenu = workspaceManager.n_workspaces > MAX_THUMBNAILS;
+        const useMenu = !this._settings.get_boolean('embed-previews');
         this.reactive = useMenu;
 
         this._statusLabel.visible = useMenu;

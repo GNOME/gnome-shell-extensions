@@ -18,6 +18,25 @@ const N_ = e => e;
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'workspace-names';
 
+class GeneralGroup extends Adw.PreferencesGroup {
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor(settings) {
+        super();
+
+        const row = new Adw.SwitchRow({
+            title: _('Show Previews In Top Bar'),
+        });
+        this.add(row);
+
+        settings.bind('embed-previews',
+            row, 'active',
+            Gio.SettingsBindFlags.DEFAULT);
+    }
+}
+
 class NewItem extends GObject.Object {}
 GObject.registerClass(NewItem);
 
@@ -119,7 +138,7 @@ class WorkspacesList extends GObject.Object {
     }
 }
 
-class WorkspaceSettingsWidget extends Adw.PreferencesGroup {
+class WorkspacesGroup extends Adw.PreferencesGroup {
     static {
         GObject.registerClass(this);
 
@@ -265,6 +284,9 @@ class NewWorkspaceRow extends Adw.PreferencesRow {
 
 export default class WorkspaceIndicatorPrefs extends ExtensionPreferences {
     getPreferencesWidget() {
-        return new WorkspaceSettingsWidget();
+        const page = new Adw.PreferencesPage();
+        page.add(new GeneralGroup(this.getSettings()));
+        page.add(new WorkspacesGroup());
+        return page;
     }
 }

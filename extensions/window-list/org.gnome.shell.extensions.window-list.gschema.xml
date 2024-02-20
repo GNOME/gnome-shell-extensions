@@ -36,5 +36,9 @@ SPDX-License-Identifier: GPL-2.0-or-later
         only on the primary one.
       </description>
     </key>
+    <key name="embed-previews" type="b">
+      <default>true</default>
+      <summary>Show workspace previews in window list</summary>
+    </key>
   </schema>
 </schemalist>

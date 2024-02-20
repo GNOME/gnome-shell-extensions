@@ -1,0 +1,15 @@
+<!--
+SPDX-FileCopyrightText: 2024 Florian Müllner <fmuellner@gnome.org>
+
+SPDX-License-Identifier: GPL-2.0-or-later
+-->
+
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema id="org.gnome.shell.extensions.workspace-indicator"
+          path="/org/gnome/shell/extensions/workspace-indicator/">
+    <key name="embed-previews" type="b">
+      <default>true</default>
+      <summary>Show workspace previews in top bar</summary>
+    </key>
+  </schema>
+</schemalist>
