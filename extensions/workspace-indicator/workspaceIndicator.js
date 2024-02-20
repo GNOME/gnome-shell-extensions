@@ -463,7 +463,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         workspaceManager.connectObject(
             'notify::n-workspaces', this._nWorkspacesChanged.bind(this), GObject.ConnectFlags.AFTER,
             'workspace-switched', this._onWorkspaceSwitched.bind(this), GObject.ConnectFlags.AFTER,
-            'notify::layout-rows', this._updateThumbnailVisibility.bind(this),
             this);
 
         this.connect('scroll-event',
@@ -497,9 +496,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
     _updateThumbnailVisibility() {
         const {workspaceManager} = global;
-        const vertical = workspaceManager.layout_rows === -1;
-        const useMenu =
-            vertical || workspaceManager.n_workspaces > MAX_THUMBNAILS;
+        const useMenu = workspaceManager.n_workspaces > MAX_THUMBNAILS;
         this.reactive = useMenu;
 
         this._statusLabel.visible = useMenu;
