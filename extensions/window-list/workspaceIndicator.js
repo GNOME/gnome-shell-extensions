@@ -336,7 +336,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         for (let i = 0; i < this._workspacesItems.length; i++) {
             this._workspacesItems[i].setOrnament(i === this._currentWorkspace
                 ? PopupMenu.Ornament.DOT
-                : PopupMenu.Ornament.NONE);
+                : PopupMenu.Ornament.NO_DOT);
         }
     }
 
@@ -382,8 +382,9 @@ export class WorkspaceIndicator extends PanelMenu.Button {
                 this._activate(item.workspaceId);
             });
 
-            if (i === this._currentWorkspace)
-                item.setOrnament(PopupMenu.Ornament.DOT);
+            item.setOrnament(i === this._currentWorkspace
+                ? PopupMenu.Ornament.DOT
+                : PopupMenu.Ornament.NO_DOT);
 
             this.menu.addMenuItem(item);
             this._workspacesItems[i] = item;
