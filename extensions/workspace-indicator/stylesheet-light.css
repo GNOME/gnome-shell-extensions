@@ -1,0 +1,25 @@
+/*
+ * SPDX-FileCopyrightText: 2013 Florian Müllner <fmuellner@gnome.org>
+ * SPDX-FileCopyrightText: 2015 Jakub Steiner <jimmac@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+@import url("stylesheet-dark.css");
+
+.workspace-indicator .workspace {
+  background-color: #ccc;
+}
+
+.workspace-indicator .workspace.active {
+  border-color: #888;
+}
+
+.workspace-indicator-window-preview {
+  background-color: #ededed;
+  border: 1px solid #ccc;
+}
+
+.workspace-indicator-window-preview.active {
+  background-color: #f6f5f4;
+}
