@@ -1,20 +1,20 @@
 # Turkish translation for gnome-shell-extensions.
-# Copyright (C) 2012-2023 gnome-shell-extensions's COPYRIGHT HOLDER
+# Copyright (C) 2012-2024 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
-# Osman Karagöz <osmank3@gmail.com>, 2012.
+# Osman Karagöz <osmank3@gmail.com>, 2012, 2013.
 # Gökhan Gurbetoğlu <ggurbet@gmail.com>, 2014.
-# Muhammet Kara <muhammetk@gmail.com>, 2013, 2014, 2015.
+# Muhammet Kara <muhammetk@gmail.com>, 2013-2015.
 # Furkan Tokaç <developmentft@gmail.com>, 2017.
-# Sabri Ünal <libreajans@gmail.com>, 2014, 2019.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2019, 2020, 2022.
+# Sabri Ünal <libreajans@gmail.com>, 2014, 2019, 2022-2024.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017, 2019, 2020, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
+"POT-Creation-Date: 2024-02-13 13:35+0000\n"
 "PO-Revision-Date: 2024-02-12 18:45+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -348,6 +348,3 @@ msgstr "Çalışma Alanı Adları"
 #: extensions/workspace-indicator/prefs.js:262
 msgid "Add Workspace"
 msgstr "Çalışma Alanı Ekle"
-
-#~ msgid "Applications"
-#~ msgstr "Uygulamalar"
