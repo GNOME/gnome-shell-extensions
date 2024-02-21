@@ -224,16 +224,17 @@ class WorkspaceThumbnail extends St.Button {
             });
 
             const [stageX, stageY] = this.get_transformed_position();
-            const thumbWidth = this.allocation.get_width();
-            const thumbHeight = this.allocation.get_height();
-            const tipWidth = this._tooltip.width;
+            const [thumbWidth, thumbHeight] = this.allocation.get_size();
+            const [tipWidth, tipHeight] = this._tooltip.get_size();
             const xOffset = Math.floor((thumbWidth - tipWidth) / 2);
             const monitor = Main.layoutManager.findMonitorForActor(this);
             const x = Math.clamp(
                 stageX + xOffset,
                 monitor.x,
                 monitor.x + monitor.width - tipWidth);
-            const y = stageY + thumbHeight + TOOLTIP_OFFSET;
+            const y = stageY - monitor.y > thumbHeight + TOOLTIP_OFFSET
+                ? stageY - tipHeight - TOOLTIP_OFFSET // show above
+                : stageY + thumbHeight + TOOLTIP_OFFSET; // show below
             this._tooltip.set_position(x, y);
         }
 
