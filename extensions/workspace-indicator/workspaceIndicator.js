@@ -407,19 +407,18 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._workspacesItems = [];
         this._currentWorkspace = workspaceManager.get_active_workspace_index();
 
-        let i = 0;
-        for (; i < workspaceManager.n_workspaces; i++) {
-            this._workspacesItems[i] = new PopupMenu.PopupMenuItem(this._labelText(i));
-            this.menu.addMenuItem(this._workspacesItems[i]);
-            this._workspacesItems[i].workspaceId = i;
-            this._workspacesItems[i].label_actor = this._statusLabel;
-            this._workspacesItems[i].connect('activate', (actor, _event) => {
-                this._activate(actor.workspaceId);
-            });
+        for (let i = 0; i < workspaceManager.n_workspaces; i++) {
+            const item = new PopupMenu.PopupMenuItem(this._labelText(i));
 
-            this._workspacesItems[i].setOrnament(i === this._currentWorkspace
+            item.connect('activate',
+                () => this._activate(i));
+
+            item.setOrnament(i === this._currentWorkspace
                 ? PopupMenu.Ornament.DOT
                 : PopupMenu.Ornament.NO_DOT);
+
+            this.menu.addMenuItem(item);
+            this._workspacesItems[i] = item;
         }
 
         this._statusLabel.set_text(this._labelText());
