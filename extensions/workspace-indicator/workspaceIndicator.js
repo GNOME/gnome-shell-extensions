@@ -439,7 +439,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             return;
 
 
-        let newIndex = global.workspace_manager.get_active_workspace_index() + diff;
+        const newIndex = this._currentWorkspace + diff;
         this._activate(newIndex);
     }
 }
