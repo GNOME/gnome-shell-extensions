@@ -254,7 +254,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     constructor(params = {}) {
-        super(0.5, _('Workspace Indicator'), true);
+        super(0.5, _('Workspace Indicator'));
 
         const {
             baseStyleClass = 'workspace-indicator',
@@ -262,10 +262,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         baseStyleClassName = baseStyleClass;
         this.add_style_class_name(baseStyleClassName);
-
-        this.setMenu(new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM));
-        this.remove_style_class_name('panel-button');
-        this.menu.actor.remove_style_class_name('panel-menu');
 
         let container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),

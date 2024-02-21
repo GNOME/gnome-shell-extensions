@@ -750,10 +750,9 @@ class WindowList extends St.Widget {
         let indicatorsBox = new St.BoxLayout({x_align: Clutter.ActorAlign.END});
         box.add_child(indicatorsBox);
 
-        this._workspaceIndicator = new WorkspaceIndicator({
+        this._workspaceIndicator = new BottomWorkspaceIndicator({
             baseStyleClass: 'window-list-workspace-indicator',
         });
-
         indicatorsBox.add_child(this._workspaceIndicator.container);
 
         this._mutterSettings = new Gio.Settings({schema_id: 'org.gnome.mutter'});
@@ -1080,6 +1079,28 @@ class WindowList extends St.Widget {
         let windows = global.get_window_actors();
         for (let i = 0; i < windows.length; i++)
             windows[i].metaWindow.set_icon_geometry(null);
+    }
+}
+
+class BottomWorkspaceIndicator extends WorkspaceIndicator {
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor(params) {
+        super(params);
+
+        this.remove_style_class_name('panel-button');
+    }
+
+    setMenu(menu) {
+        super.setMenu(menu);
+
+        if (!menu)
+            return;
+
+        this.menu.actor.updateArrowSide(St.Side.BOTTOM);
+        this.menu.actor.remove_style_class_name('panel-menu');
     }
 }
 
