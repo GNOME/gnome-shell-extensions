@@ -302,6 +302,16 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._thumbnailsBox.connect('scroll-event', this._onScrollEvent.bind(this));
+
+        this._inTopBar = false;
+        this.connect('notify::realized', () => {
+            if (!this.realized)
+                return;
+
+            this._inTopBar = Main.panel.contains(this);
+            this._updateTopBarRedirect();
+        });
+
         this._updateMenu();
         this._updateThumbnails();
         this._updateThumbnailVisibility();
@@ -313,7 +323,9 @@ export class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _onDestroy() {
-        Main.panel.set_offscreen_redirect(Clutter.OffscreenRedirect.ALWAYS);
+        if (this._inTopBar)
+            Main.panel.set_offscreen_redirect(Clutter.OffscreenRedirect.ALWAYS);
+        this._inTopBar = false;
 
         super._onDestroy();
     }
@@ -328,9 +340,16 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._statusLabel.visible = useMenu;
         this._thumbnailsBox.visible = !useMenu;
 
+        this._updateTopBarRedirect();
+    }
+
+    _updateTopBarRedirect() {
+        if (!this._inTopBar)
+            return;
+
         // Disable offscreen-redirect when showing the workspace switcher
         // so that clip-to-allocation works
-        Main.panel.set_offscreen_redirect(useMenu
+        Main.panel.set_offscreen_redirect(this._thumbnailsBox.visible
             ? Clutter.OffscreenRedirect.ALWAYS
             : Clutter.OffscreenRedirect.AUTOMATIC_FOR_OPACITY);
     }
