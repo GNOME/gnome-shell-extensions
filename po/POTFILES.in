@@ -19,5 +19,5 @@ extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml
 extensions/window-list/prefs.js
 extensions/window-list/workspaceIndicator.js
 extensions/windowsNavigator/extension.js
-extensions/workspace-indicator/extension.js
 extensions/workspace-indicator/prefs.js
+extensions/workspace-indicator/workspaceIndicator.js

@@ -9,4 +9,4 @@ extension_data += configure_file(
 )
 extension_data += files('stylesheet.css')
 
-extension_sources += files('prefs.js')
+extension_sources += files('prefs.js', 'workspaceIndicator.js')
