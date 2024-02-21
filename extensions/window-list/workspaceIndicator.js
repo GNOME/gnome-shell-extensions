@@ -27,7 +27,7 @@ class WindowPreview extends St.Button {
 
     constructor(window) {
         super({
-            style_class: 'window-list-window-preview',
+            style_class: 'window-list-workspace-indicator-window-preview',
         });
 
         this._delegate = this;

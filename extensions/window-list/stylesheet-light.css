@@ -61,11 +61,11 @@
   border-color: #888;
 }
 
-.window-list-window-preview {
+.window-list-workspace-indicator-window-preview {
   background-color: #ededed;
   border: 1px solid #ccc;
 }
 
-.window-list-window-preview.active {
+.window-list-workspace-indicator-window-preview.active {
   background-color: #f6f5f4;
 }
