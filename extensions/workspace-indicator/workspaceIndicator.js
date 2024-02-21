@@ -279,7 +279,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._statusLabel = new St.Label({
             style_class: 'status-label',
             y_align: Clutter.ActorAlign.CENTER,
-            text: this._labelText(),
+            text: this._getStatusText(),
         });
 
         container.add_child(this._statusLabel);
@@ -360,7 +360,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._updateMenuOrnament();
         this._updateActiveThumbnail();
 
-        this._statusLabel.set_text(this._labelText());
+        this._statusLabel.set_text(this._getStatusText());
     }
 
     _nWorkspacesChanged() {
@@ -387,17 +387,16 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         }
     }
 
-    _labelText(workspaceIndex) {
-        if (workspaceIndex === undefined) {
-            workspaceIndex = this._currentWorkspace;
-            return (workspaceIndex + 1).toString();
-        }
-        return Meta.prefs_get_workspace_name(workspaceIndex);
+    _getStatusText() {
+        const current = this._currentWorkspace + 1;
+        return `${current}`;
     }
 
     _updateMenuLabels() {
-        for (let i = 0; i < this._workspacesItems.length; i++)
-            this._workspacesItems[i].label.text = this._labelText(i);
+        for (let i = 0; i < this._workspacesItems.length; i++) {
+            const item = this._workspacesItems[i];
+            item.label.text = Meta.prefs_get_workspace_name(i);
+        }
     }
 
     _updateMenu() {
@@ -408,7 +407,8 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._currentWorkspace = workspaceManager.get_active_workspace_index();
 
         for (let i = 0; i < workspaceManager.n_workspaces; i++) {
-            const item = new PopupMenu.PopupMenuItem(this._labelText(i));
+            const name = Meta.prefs_get_workspace_name(i);
+            const item = new PopupMenu.PopupMenuItem(name);
 
             item.connect('activate',
                 () => this._activate(i));
@@ -421,7 +421,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             this._workspacesItems[i] = item;
         }
 
-        this._statusLabel.set_text(this._labelText());
+        this._statusLabel.set_text(this._getStatusText());
     }
 
     _updateThumbnails() {
