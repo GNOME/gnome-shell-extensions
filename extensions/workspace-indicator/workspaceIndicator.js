@@ -292,8 +292,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         container.add_child(this._thumbnailsBox);
 
         this._workspacesItems = [];
-        this._workspaceSection = new PopupMenu.PopupMenuSection();
-        this.menu.addMenuItem(this._workspaceSection);
 
         workspaceManager.connectObject(
             'notify::n-workspaces', this._nWorkspacesChanged.bind(this), GObject.ConnectFlags.AFTER,
@@ -303,7 +301,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         this.connect('scroll-event', this._onScrollEvent.bind(this));
         this._thumbnailsBox.connect('scroll-event', this._onScrollEvent.bind(this));
-        this._createWorkspacesSection();
+        this._updateMenu();
         this._updateThumbnails();
         this._updateThumbnailVisibility();
 
@@ -346,7 +344,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _nWorkspacesChanged() {
-        this._createWorkspacesSection();
+        this._updateMenu();
         this._updateThumbnails();
         this._updateThumbnailVisibility();
     }
@@ -382,17 +380,17 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             this._workspacesItems[i].label.text = this._labelText(i);
     }
 
-    _createWorkspacesSection() {
+    _updateMenu() {
         let workspaceManager = global.workspace_manager;
 
-        this._workspaceSection.removeAll();
+        this.menu.removeAll();
         this._workspacesItems = [];
         this._currentWorkspace = workspaceManager.get_active_workspace_index();
 
         let i = 0;
         for (; i < workspaceManager.n_workspaces; i++) {
             this._workspacesItems[i] = new PopupMenu.PopupMenuItem(this._labelText(i));
-            this._workspaceSection.addMenuItem(this._workspacesItems[i]);
+            this.menu.addMenuItem(this._workspacesItems[i]);
             this._workspacesItems[i].workspaceId = i;
             this._workspacesItems[i].label_actor = this._statusLabel;
             this._workspacesItems[i].connect('activate', (actor, _event) => {
