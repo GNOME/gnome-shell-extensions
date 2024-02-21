@@ -5,23 +5,23 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-.panel-workspace-indicator {
+.workspace-indicator .status-label {
   padding: 0 8px;
 }
 
-.panel-workspace-indicator-box {
+.workspace-indicator .workspaces-box {
   padding: 4px 0;
   spacing: 4px;
 }
 
-.panel-workspace-indicator-box .workspace {
+.workspace-indicator .workspace {
   width: 40px;
   border: 2px solid #000;
   border-radius: 2px;
   background-color: #595959;
 }
 
-.panel-workspace-indicator-box .workspace.active {
+.workspace-indicator .workspace.active {
   border-color: #fff;
 }
 

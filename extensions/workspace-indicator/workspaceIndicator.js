@@ -259,6 +259,8 @@ export class WorkspaceIndicator extends PanelMenu.Button {
     constructor() {
         super(0.5, _('Workspace Indicator'));
 
+        this.add_style_class_name('workspace-indicator');
+
         let container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
             x_expand: true,
@@ -270,7 +272,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         this._currentWorkspace = workspaceManager.get_active_workspace_index();
         this._statusLabel = new St.Label({
-            style_class: 'panel-workspace-indicator',
+            style_class: 'status-label',
             y_align: Clutter.ActorAlign.CENTER,
             text: this._labelText(),
         });
@@ -278,7 +280,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         container.add_child(this._statusLabel);
 
         this._thumbnailsBox = new St.BoxLayout({
-            style_class: 'panel-workspace-indicator-box',
+            style_class: 'workspaces-box',
             y_expand: true,
             reactive: true,
         });
