@@ -388,8 +388,9 @@ export class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _getStatusText() {
+        const {nWorkspaces} = global.workspace_manager;
         const current = this._currentWorkspace + 1;
-        return `${current}`;
+        return `${current} / ${nWorkspaces}`;
     }
 
     _updateMenuLabels() {
