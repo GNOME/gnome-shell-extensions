@@ -17,9 +17,6 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
-const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
-const WORKSPACE_KEY = 'workspace-names';
-
 const TOOLTIP_OFFSET = 6;
 const TOOLTIP_ANIMATION_TIME = 150;
 
@@ -310,9 +307,10 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._updateThumbnails();
         this._updateThumbnailVisibility();
 
-        this._settings = new Gio.Settings({schema_id: WORKSPACE_SCHEMA});
-        this._settings.connectObject(`changed::${WORKSPACE_KEY}`,
-            this._updateMenuLabels.bind(this), this);
+        const desktopSettings =
+            new Gio.Settings({schema_id: 'org.gnome.desktop.wm.preferences'});
+        desktopSettings.connectObject('changed::workspace-names',
+            () => this._updateMenuLabels(), this);
     }
 
     _onDestroy() {
