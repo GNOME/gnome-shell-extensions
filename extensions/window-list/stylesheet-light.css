@@ -6,6 +6,7 @@
  */
 
 @import url("stylesheet-dark.css");
+@import url("stylesheet-workspace-switcher-light.css");
 
 #panel.bottom-panel {
     border-top-width: 1px;
@@ -50,22 +51,3 @@
     color: #888;
     box-shadow: none;
   }
-
-/* workspace switcher */
-.window-list-workspace-indicator .workspace {
-  border: 2px solid #f6f5f4;
-  background-color: #ccc;
-}
-
-.window-list-workspace-indicator .workspace.active {
-  border-color: #888;
-}
-
-.window-list-workspace-indicator-window-preview {
-  background-color: #ededed;
-  border: 1px solid #ccc;
-}
-
-.window-list-workspace-indicator-window-preview.active {
-  background-color: #f6f5f4;
-}

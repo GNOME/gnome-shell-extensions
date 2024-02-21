@@ -4,6 +4,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
+@import url("stylesheet-workspace-switcher-dark.css");
 
 .window-list {
   spacing: 2px;
@@ -79,36 +80,6 @@
 .window-button-icon {
   width: 24px;
   height: 24px;
-}
-
-.window-list-workspace-indicator .status-label-bin {
-  background-color: rgba(200, 200, 200, 0.3);
-  padding: 5px;
-  margin: 3px;
-}
-
-.window-list-workspace-indicator .workspaces-box {
-  spacing: 3px;
-  padding: 5px;
-}
-
-.window-list-workspace-indicator .workspace {
-  width: 52px;
-  border-radius: 4px;
-  background-color: #1e1e1e;
-}
-
-.window-list-workspace-indicator .workspace.active {
-  background-color: #3f3f3f;
-}
-
-.window-list-workspace-indicator-window-preview {
-  background-color: #bebebe;
-  border-radius: 1px;
-}
-
-.window-list-workspace-indicator-window-preview.active {
-  background-color: #d4d4d4;
 }
 
 .notification {
