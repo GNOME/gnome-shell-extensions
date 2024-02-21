@@ -10,6 +10,7 @@ import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 import Meta from 'gi://Meta';
+import Mtk from 'gi://Mtk';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
 
@@ -367,7 +368,7 @@ class BaseButton extends St.Button {
     }
 
     _getIconGeometry() {
-        let rect = new Meta.Rectangle();
+        const rect = new Mtk.Rectangle();
 
         [rect.x, rect.y] = this.get_transformed_position();
         [rect.width, rect.height] = this.get_transformed_size();
