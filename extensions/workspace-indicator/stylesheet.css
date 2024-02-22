@@ -10,24 +10,25 @@
 }
 
 .workspace-indicator .workspaces-box {
-  padding: 4px 0;
-  spacing: 4px;
+  padding: 5px;
+  spacing: 3px;
 }
 
 .workspace-indicator .workspace {
-  width: 40px;
-  border: 2px solid #000;
-  border-radius: 2px;
-  background-color: #595959;
+  width: 52px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-color: #3f3f3f;
 }
 
 .workspace-indicator .workspace.active {
-  border-color: #fff;
+  border-color: #9f9f9f;
 }
 
 .workspace-indicator-window-preview {
   background-color: #bebebe;
   border: 1px solid #828282;
+  border-radius: 1px;
 }
 
 .workspace-indicator-window-preview.active {
