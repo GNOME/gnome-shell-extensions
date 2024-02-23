@@ -20,6 +20,8 @@ const TOOLTIP_ANIMATION_TIME = 150;
 
 const MAX_THUMBNAILS = 6;
 
+let baseStyleClassName = '';
+
 class WindowPreview extends St.Button {
     static {
         GObject.registerClass(this);
@@ -27,7 +29,7 @@ class WindowPreview extends St.Button {
 
     constructor(window) {
         super({
-            style_class: 'window-list-workspace-indicator-window-preview',
+            style_class: `${baseStyleClassName}-window-preview`,
         });
 
         this._delegate = this;
@@ -251,10 +253,17 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         GObject.registerClass(this);
     }
 
-    constructor() {
+    constructor(params = {}) {
         super(0.5, _('Workspace Indicator'), true);
+
+        const {
+            baseStyleClass = 'workspace-indicator',
+        } = params;
+
+        baseStyleClassName = baseStyleClass;
+        this.add_style_class_name(baseStyleClassName);
+
         this.setMenu(new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM));
-        this.add_style_class_name('window-list-workspace-indicator');
         this.remove_style_class_name('panel-button');
         this.menu.actor.remove_style_class_name('panel-menu');
 
