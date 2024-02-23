@@ -25,6 +25,8 @@ const TOOLTIP_ANIMATION_TIME = 150;
 
 const MAX_THUMBNAILS = 6;
 
+let baseStyleClassName = '';
+
 class WindowPreview extends St.Button {
     static {
         GObject.registerClass(this);
@@ -32,7 +34,7 @@ class WindowPreview extends St.Button {
 
     constructor(window) {
         super({
-            style_class: 'workspace-indicator-window-preview',
+            style_class: `${baseStyleClassName}-window-preview`,
         });
 
         this._delegate = this;
@@ -256,10 +258,15 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         GObject.registerClass(this);
     }
 
-    constructor() {
+    constructor(params = {}) {
         super(0.5, _('Workspace Indicator'));
 
-        this.add_style_class_name('workspace-indicator');
+        const {
+            baseStyleClass = 'workspace-indicator',
+        } = params;
+
+        baseStyleClassName = baseStyleClass;
+        this.add_style_class_name(baseStyleClassName);
 
         let container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
