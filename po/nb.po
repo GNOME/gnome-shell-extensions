@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions 3.26.x\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
-"PO-Revision-Date: 2024-02-17 22:45+0100\n"
-"Last-Translator: Brage <bragefuglseth@gnome.org>\n"
+"POT-Creation-Date: 2024-02-17 21:46+0000\n"
+"PO-Revision-Date: 2024-02-24 14:39+0100\n"
+"Last-Translator: Brage Fuglseth <bragefuglseth@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
@@ -25,15 +25,15 @@ msgstr "Klassisk GNOME"
 #: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
 #: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
-msgstr "Denne økten logger inn i klassisk GNOME"
+msgstr "Denne økten logger deg inn i klassisk GNOME"
 
 #: data/gnome-classic-wayland.desktop.in:3
 msgid "GNOME Classic on Wayland"
-msgstr "Klassisk GNOME med Wayland"
+msgstr "Klassisk GNOME på Wayland"
 
 #: data/gnome-classic-xorg.desktop.in:3
 msgid "GNOME Classic on Xorg"
-msgstr "Klassisk GNOME med Xorg"
+msgstr "Klassisk GNOME på Xorg"
 
 #: extensions/apps-menu/extension.js:126
 msgid "Favorites"
@@ -68,11 +68,11 @@ msgstr "Legg til regel"
 #: extensions/places-menu/placeDisplay.js:218
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
-msgstr "Løsning av lagringsenheten “%s” mislyktes:"
+msgstr "Utløsning av lagringsenheten «%s» mislyktes:"
 
 #: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
-msgstr "Flyttbare enheter"
+msgstr "Eksterne enheter"
 
 #: extensions/drive-menu/extension.js:164
 msgid "Open Files"
@@ -115,12 +115,12 @@ msgstr "Steder"
 #: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
 msgid "Failed to launch “%s”"
-msgstr "Oppstart av “%s” mislyktes"
+msgstr "Oppstart av «%s» mislyktes"
 
 #: extensions/places-menu/placeDisplay.js:75
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
-msgstr "Klarte ikke å montere dataområde for “%s”"
+msgstr "Klarte ikke å montere lagringsområde for «%s»"
 
 #: extensions/places-menu/placeDisplay.js:135
 #: extensions/places-menu/placeDisplay.js:158
@@ -277,7 +277,7 @@ msgid ""
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Avgjør når vinduer som tilhører samme app skal grupperes i vindulista. "
-"Mulige verdier er “never” (aldri), “auto” og “always” (alltid)."
+"Mulige verdier er «never» (aldri), «auto» og «always» (alltid)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
 #: extensions/window-list/prefs.js:79
