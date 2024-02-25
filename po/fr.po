@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2021-11-06 14:08+0000\n"
-"PO-Revision-Date: 2022-03-01 21:04+0100\n"
-"Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
+"POT-Creation-Date: 2024-02-06 18:43+0000\n"
+"PO-Revision-Date: 2024-02-24 21:13+0100\n"
+"Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 40.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -31,28 +31,26 @@ msgid "This session logs you into GNOME Classic"
 msgstr "Cette session vous connecte à GNOME Classique"
 
 #: data/gnome-classic-wayland.desktop.in:3
-#| msgid "GNOME Classic"
 msgid "GNOME Classic on Wayland"
 msgstr "GNOME Classique sur Wayland"
 
 #: data/gnome-classic-xorg.desktop.in:3
-#| msgid "GNOME Classic"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME Classique sur Xorg"
 
-#: extensions/apps-menu/extension.js:112
+#: extensions/apps-menu/extension.js:126
 msgid "Favorites"
 msgstr "Favoris"
 
-#: extensions/apps-menu/extension.js:366
-msgid "Applications"
+#: extensions/apps-menu/extension.js:397
+msgid "Apps"
 msgstr "Applications"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
 msgstr "Liste d’applications et d’espaces de travail"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -61,34 +59,34 @@ msgstr ""
 "d’application (nom de fichier desktop), suivi par un deux-points et le "
 "numéro de l’espace de travail"
 
-#: extensions/auto-move-windows/prefs.js:34
+#: extensions/auto-move-windows/prefs.js:159
 msgid "Workspace Rules"
 msgstr "Règles des espaces de travail"
 
-#: extensions/auto-move-windows/prefs.js:236
+#: extensions/auto-move-windows/prefs.js:314
 msgid "Add Rule"
 msgstr "Ajouter une règle"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:133
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:218
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "L’éjection du disque « %s » a échoué :"
 
-#: extensions/drive-menu/extension.js:149
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
 msgstr "Périphériques amovibles"
 
-#: extensions/drive-menu/extension.js:171
+#: extensions/drive-menu/extension.js:164
 msgid "Open Files"
 msgstr "Ouvrir Fichiers"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
 msgstr "Utiliser plus d’écran pour les fenêtres"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
@@ -99,11 +97,11 @@ msgstr ""
 "pour réduire la zone englobante. Ce paramètre ne s’applique qu’en utilisant "
 "la stratégie de placement « natural »."
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
 msgstr "Placer les titres des fenêtres au-dessus"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
@@ -114,99 +112,171 @@ msgstr ""
 "dessous. Pour que ce paramètre soit pris en compte, il faut redémarrer le "
 "Shell."
 
-#: extensions/places-menu/extension.js:88
 #: extensions/places-menu/extension.js:91
+#: extensions/places-menu/extension.js:94
 msgid "Places"
 msgstr "Emplacements"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Impossible de lancer « %s »"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:75
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Impossible de monter le volume « %s »"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
+#: extensions/places-menu/placeDisplay.js:135
+#: extensions/places-menu/placeDisplay.js:158
 msgid "Computer"
 msgstr "Ordinateur"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:333
 msgid "Home"
 msgstr "Dossier personnel"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:378
 msgid "Browse Network"
 msgstr "Parcourir le réseau"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
 msgstr "Passer à la taille de capture suivante"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Passer à la taille de capture précédente"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr "Statistiques du CPU"
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr "Statistiques de la mémoire"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr "Statistiques de l’espace d’échange"
+
+#: extensions/system-monitor/extension.js:327
+msgid "Upload stats"
+msgstr "Statistiques de téléversement"
+
+#: extensions/system-monitor/extension.js:341
+msgid "Download stats"
+msgstr "Statistiques de téléchargement"
+
+#: extensions/system-monitor/extension.js:355
+msgid "System stats"
+msgstr "Statistiques du système"
+
+#: extensions/system-monitor/extension.js:403
+msgid "Show"
+msgstr "Afficher"
+
+#: extensions/system-monitor/extension.js:405
+msgid "CPU"
+msgstr "CPU"
+
+#: extensions/system-monitor/extension.js:407
+msgid "Memory"
+msgstr "Mémoire"
+
+#: extensions/system-monitor/extension.js:409
+msgid "Swap"
+msgstr "Espace d’échange"
+
+#: extensions/system-monitor/extension.js:411
+msgid "Upload"
+msgstr "Téléversement"
+
+#: extensions/system-monitor/extension.js:413
+msgid "Download"
+msgstr "Téléchargement"
+
+#: extensions/system-monitor/extension.js:418
+msgid "Open System Monitor"
+msgstr "Ouvrir Moniteur système"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr "Afficher l’utilisation du CPU"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr "Afficher l’utilisation de la mémoire"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr "Afficher l’utilisation de l’espace d’échange"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr "Afficher le téléversement"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr "Afficher le téléchargement"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "Nom du thème"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Le nom du thème, à charger à partir de ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "Fermer"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr "Restaurer"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "Réduire"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr "Restaurer"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr "Maximiser"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:470
 msgid "Minimize all"
 msgstr "Tout réduire"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:476
 msgid "Unminimize all"
 msgstr "Tout restaurer"
 
-#: extensions/window-list/extension.js:446
+#: extensions/window-list/extension.js:482
 msgid "Maximize all"
 msgstr "Tout maximiser"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:490
 msgid "Unmaximize all"
 msgstr "Tout restaurer"
 
-#: extensions/window-list/extension.js:462
+#: extensions/window-list/extension.js:498
 msgid "Close all"
 msgstr "Tout fermer"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:772
 msgid "Window List"
 msgstr "Liste de fenêtres"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "Quand regrouper les fenêtres"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
@@ -215,22 +285,22 @@ msgstr ""
 "fenêtres. Les valeurs possibles sont « never » (jamais), « auto » et "
 "« always » (toujours)."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:86
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "Afficher les fenêtres de tous les espaces de travail"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr ""
 "Indique s’il faut afficher les fenêtres de tous les espaces de travail ou "
 "seulement de l’espace actuel."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
 msgid "Show the window list on all monitors"
 msgstr "Afficher la liste des fenêtres sur tous les écrans"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -238,43 +308,46 @@ msgstr ""
 "Indique s’il faut afficher la liste des fenêtres sur tous les écrans "
 "connectés ou seulement l’écran principal."
 
-#: extensions/window-list/prefs.js:39
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Regroupement de fenêtres"
 
-#: extensions/window-list/prefs.js:63
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "Ne jamais regrouper les fenêtres"
 
-#: extensions/window-list/prefs.js:64
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "Regrouper les fenêtres quand l’espace est limité"
 
-#: extensions/window-list/prefs.js:65
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "Toujours regrouper les fenêtres"
 
-#: extensions/window-list/prefs.js:81
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "Afficher sur tous les écrans"
 
-#: extensions/window-list/workspaceIndicator.js:249
-#: extensions/workspace-indicator/extension.js:254
+#: extensions/window-list/workspaceIndicator.js:253
+#: extensions/workspace-indicator/extension.js:259
 msgid "Workspace Indicator"
 msgstr "Indicateur d’espace de travail"
 
-#: extensions/workspace-indicator/prefs.js:33
-msgid "Workspace Names"
-msgstr "Noms des espaces de travail"
-
-#: extensions/workspace-indicator/prefs.js:66
+#: extensions/workspace-indicator/prefs.js:69
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Espace de travail %d"
 
-#: extensions/workspace-indicator/prefs.js:207
+#: extensions/workspace-indicator/prefs.js:136
+msgid "Workspace Names"
+msgstr "Noms des espaces de travail"
+
+#: extensions/workspace-indicator/prefs.js:262
 msgid "Add Workspace"
 msgstr "Ajouter un espace de travail"
+
+#~ msgid "Applications"
+#~ msgstr "Applications"
 
 #~ msgid "Create new matching rule"
 #~ msgstr "Créer une nouvelle règle de concordance"
