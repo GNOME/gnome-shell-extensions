@@ -111,6 +111,13 @@ class WorkspaceLayout extends Clutter.LayoutManager {
 }
 
 class WorkspaceThumbnail extends St.Button {
+    static [GObject.properties] = {
+        'active': GObject.ParamSpec.boolean(
+            'active', '', '',
+            GObject.ParamFlags.READWRITE,
+            false),
+    };
+
     static {
         GObject.registerClass(this);
     }
@@ -143,6 +150,10 @@ class WorkspaceThumbnail extends St.Button {
         let workspaceManager = global.workspace_manager;
         this._workspace = workspaceManager.get_workspace_by_index(index);
 
+        this._workspace.bind_property('active',
+            this, 'active',
+            GObject.BindingFlags.SYNC_CREATE);
+
         this._workspace.connectObject(
             'window-added', (ws, window) => this._addWindow(window),
             'window-removed', (ws, window) => this._removeWindow(window),
@@ -153,6 +164,18 @@ class WorkspaceThumbnail extends St.Button {
 
         this._workspace.list_windows().forEach(w => this._addWindow(w));
         this._onRestacked();
+    }
+
+    get active() {
+        return this.has_style_class_name('active');
+    }
+
+    set active(active) {
+        if (active)
+            this.add_style_class_name('active');
+        else
+            this.remove_style_class_name('active');
+        this.notify('active');
     }
 
     acceptDrop(source) {
@@ -360,7 +383,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._currentWorkspace = global.workspace_manager.get_active_workspace_index();
 
         this._updateMenuOrnament();
-        this._updateActiveThumbnail();
 
         this._statusLabel.set_text(this._getStatusText());
     }
@@ -376,16 +398,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             this._workspacesItems[i].setOrnament(i === this._currentWorkspace
                 ? PopupMenu.Ornament.DOT
                 : PopupMenu.Ornament.NO_DOT);
-        }
-    }
-
-    _updateActiveThumbnail() {
-        let thumbs = this._thumbnailsBox.get_children();
-        for (let i = 0; i < thumbs.length; i++) {
-            if (i === this._currentWorkspace)
-                thumbs[i].add_style_class_name('active');
-            else
-                thumbs[i].remove_style_class_name('active');
         }
     }
 
@@ -436,7 +448,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             let thumb = new WorkspaceThumbnail(i);
             this._thumbnailsBox.add_child(thumb);
         }
-        this._updateActiveThumbnail();
     }
 
     _activate(index) {
