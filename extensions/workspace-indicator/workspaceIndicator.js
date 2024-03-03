@@ -118,6 +118,10 @@ class WorkspaceThumbnail extends St.Button {
             'active', '', '',
             GObject.ParamFlags.READWRITE,
             false),
+        'show-label': GObject.ParamSpec.boolean(
+            'show-label', '', '',
+            GObject.ParamFlags.READWRITE,
+            false),
     };
 
     static {
@@ -125,7 +129,16 @@ class WorkspaceThumbnail extends St.Button {
     }
 
     constructor(index) {
-        super({
+        super();
+
+        const box = new St.BoxLayout({
+            style_class: 'workspace-box',
+            y_expand: true,
+            vertical: true,
+        });
+        this.set_child(box);
+
+        this._preview = new St.Bin({
             style_class: 'workspace',
             child: new Clutter.Actor({
                 layout_manager: new WorkspaceLayout(),
@@ -133,7 +146,15 @@ class WorkspaceThumbnail extends St.Button {
                 x_expand: true,
                 y_expand: true,
             }),
+            y_expand: true,
         });
+        box.add_child(this._preview);
+
+        this._label = new St.Label({
+            x_align: Clutter.ActorAlign.CENTER,
+            text: Meta.prefs_get_workspace_name(index),
+        });
+        box.add_child(this._label);
 
         this._tooltip = new St.Label({
             style_class: 'dash-label',
@@ -141,8 +162,18 @@ class WorkspaceThumbnail extends St.Button {
         });
         Main.uiGroup.add_child(this._tooltip);
 
+        this.bind_property('show-label',
+            this._label, 'visible',
+            GObject.BindingFlags.SYNC_CREATE);
+
         this.connect('destroy', this._onDestroy.bind(this));
         this.connect('notify::hover', this._syncTooltip.bind(this));
+
+        const desktopSettings =
+            new Gio.Settings({schema_id: 'org.gnome.desktop.wm.preferences'});
+        desktopSettings.connectObject('changed::workspace-names', () => {
+            this._label.text = Meta.prefs_get_workspace_name(index);
+        }, this);
 
         this._index = index;
         this._delegate = this; // needed for DND
@@ -169,14 +200,14 @@ class WorkspaceThumbnail extends St.Button {
     }
 
     get active() {
-        return this.has_style_class_name('active');
+        return this._preview.has_style_class_name('active');
     }
 
     set active(active) {
         if (active)
-            this.add_style_class_name('active');
+            this._preview.add_style_class_name('active');
         else
-            this.remove_style_class_name('active');
+            this._preview.remove_style_class_name('active');
         this.notify('active');
     }
 
@@ -202,7 +233,7 @@ class WorkspaceThumbnail extends St.Button {
         let preview = new WindowPreview(window);
         preview.connect('clicked', (a, btn) => this.emit('clicked', btn));
         this._windowPreviews.set(window, preview);
-        this.child.add_child(preview);
+        this._preview.child.add_child(preview);
     }
 
     _removeWindow(window) {
@@ -222,7 +253,7 @@ class WorkspaceThumbnail extends St.Button {
             if (!preview)
                 continue;
 
-            this.child.set_child_above_sibling(preview, lastPreview);
+            this._preview.child.set_child_above_sibling(preview, lastPreview);
             lastPreview = preview;
         }
     }
@@ -241,6 +272,9 @@ class WorkspaceThumbnail extends St.Button {
     }
 
     _syncTooltip() {
+        if (this.showLabel)
+            return;
+
         if (this.hover) {
             this._tooltip.set({
                 text: Meta.prefs_get_workspace_name(this._index),
@@ -277,6 +311,13 @@ class WorkspaceThumbnail extends St.Button {
 }
 
 class WorkspacePreviews extends Clutter.Actor {
+    static [GObject.properties] = {
+        'show-labels': GObject.ParamSpec.boolean(
+            'show-labels', '', '',
+            GObject.ParamFlags.READWRITE | GObject.ParamFlags.CONSTRUCT_ONLY,
+            false),
+    };
+
     static {
         GObject.registerClass(this);
     }
@@ -330,6 +371,9 @@ class WorkspacePreviews extends Clutter.Actor {
 
         for (let i = 0; i < nWorkspaces; i++) {
             const thumb = new WorkspaceThumbnail(i);
+            this.bind_property('show-labels',
+                thumb, 'show-label',
+                GObject.BindingFlags.SYNC_CREATE);
             this._thumbnailsBox.add_child(thumb);
         }
 
