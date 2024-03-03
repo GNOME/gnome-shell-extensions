@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 project('gnome-shell-extensions',
-  version: '46.beta',
+  version: '46.rc',
   meson_version: '>= 0.58.0',
   license: 'GPL2+'
 )

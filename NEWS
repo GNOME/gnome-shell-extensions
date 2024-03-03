@@ -1,3 +1,21 @@
+46.rc
+=====
+* Fix window previews in workspace indicator [Florian; !304]
+* Fix menu ornament in workspace indicator [Florian; !305]
+* Misc. bug fixes and cleanups [Florian; !306, !309]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Danial Behzadi [fa], Ekaterine Papava [ka], Sabri Ünal [tr], Artur S0 [ru],
+  Yuri Chornoivan [uk], Vasil Pupkin [be], Asier Sarasua Garmendia [eu],
+  Yaron Shahrabani [he], Brage Fuglseth [nb], Nathan Follens [nl],
+  Aurimas Černius [lt], Matej Urbančič [sl], Boyuan Yang [zh_CN],
+  Kukuh Syafaat [id], Fran Dieguez [gl], Andi Chandler [en_GB],
+  Baurzhan Muftakhidinov [kk], Rūdolfs Mazurs [lv], Guillaume Bernard [fr],
+  Daniel Mustieles [es], Jiri Grönroos [fi]
+
 46.beta
 =======
 * apps-menu: Rename Applications to Apps [Allan; !299]
