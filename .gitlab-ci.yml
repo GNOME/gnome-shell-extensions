@@ -46,13 +46,6 @@ workflow:
     - if: '$CI_COMMIT_BRANCH =~ /^gnome-[0-9-]+$/'
     - when: 'manual'
 
-.gnome-shell-extensions.fedora:34:
-  variables:
-    FDO_DISTRIBUTION_VERSION: 34
-    FDO_DISTRIBUTION_TAG: '2021-08-31.0'
-    FDO_DISTRIBUTION_PACKAGES: >
-      meson git gettext sassc
-
 .prereview_req: &prereview_req
   needs:
     - check_commit_log
@@ -104,13 +97,6 @@ check-reuse:
   script:
     - reuse lint
 
-build-fedora-container:
-  extends:
-    - .fdo.container-build@fedora@x86_64
-    - .gnome-shell-extensions.fedora:34
-  stage: prepare
-  <<: *prereview_req
-
 js_check:
   stage: review
   <<: *prereview_req
@@ -150,12 +136,8 @@ build-bundles:
       - zip-files/
 
 fedora-build:
-  extends:
-    - .fdo.distribution-image@fedora
-    - .gnome-shell-extensions.fedora:34
   stage: build
-  needs:
-    - build-fedora-container
+  <<: *prereview_req
   script:
     - meson setup build --werror -Dextension_set=all -Dclassic_mode=true
     - meson compile -C build
@@ -166,9 +148,6 @@ fedora-build:
       - build
 
 fedora-dist:
-  extends:
-    - .fdo.distribution-image@fedora
-    - .gnome-shell-extensions.fedora:34
   stage: deploy
   needs:
     - fedora-build
