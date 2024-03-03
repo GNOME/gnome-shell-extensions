@@ -429,7 +429,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     constructor(params = {}) {
-        super(0.5, _('Workspace Indicator'));
+        super(0.5, _('Workspace Indicator'), true);
 
         const {
             baseStyleClass = 'workspace-indicator',
@@ -461,7 +461,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._workspacesItems = [];
 
         workspaceManager.connectObject(
-            'notify::n-workspaces', this._nWorkspacesChanged.bind(this), GObject.ConnectFlags.AFTER,
+            'notify::n-workspaces', this._updateThumbnailVisibility.bind(this), GObject.ConnectFlags.AFTER,
             'workspace-switched', this._onWorkspaceSwitched.bind(this), GObject.ConnectFlags.AFTER,
             this);
 
@@ -477,13 +477,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             this._updateTopBarRedirect();
         });
 
-        this._updateMenu();
         this._updateThumbnailVisibility();
-
-        const desktopSettings =
-            new Gio.Settings({schema_id: 'org.gnome.desktop.wm.preferences'});
-        desktopSettings.connectObject('changed::workspace-names',
-            () => this._updateMenuLabels(), this);
     }
 
     _onDestroy() {
@@ -502,6 +496,10 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._statusLabel.visible = useMenu;
         this._thumbnails.visible = !useMenu;
 
+        this.setMenu(useMenu
+            ? this._createPreviewMenu()
+            : null);
+
         this._updateTopBarRedirect();
     }
 
@@ -518,23 +516,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
     _onWorkspaceSwitched() {
         this._currentWorkspace = global.workspace_manager.get_active_workspace_index();
-
-        this._updateMenuOrnament();
-
         this._statusLabel.set_text(this._getStatusText());
-    }
-
-    _nWorkspacesChanged() {
-        this._updateMenu();
-        this._updateThumbnailVisibility();
-    }
-
-    _updateMenuOrnament() {
-        for (let i = 0; i < this._workspacesItems.length; i++) {
-            this._workspacesItems[i].setOrnament(i === this._currentWorkspace
-                ? PopupMenu.Ornament.DOT
-                : PopupMenu.Ornament.NO_DOT);
-        }
     }
 
     _getStatusText() {
@@ -543,44 +525,12 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         return `${current} / ${nWorkspaces}`;
     }
 
-    _updateMenuLabels() {
-        for (let i = 0; i < this._workspacesItems.length; i++) {
-            const item = this._workspacesItems[i];
-            item.label.text = Meta.prefs_get_workspace_name(i);
-        }
-    }
+    _createPreviewMenu() {
+        const menu = new PopupMenu.PopupMenu(this, 0.5, St.Side.TOP);
 
-    _updateMenu() {
-        let workspaceManager = global.workspace_manager;
-
-        this.menu.removeAll();
-        this._workspacesItems = [];
-        this._currentWorkspace = workspaceManager.get_active_workspace_index();
-
-        for (let i = 0; i < workspaceManager.n_workspaces; i++) {
-            const name = Meta.prefs_get_workspace_name(i);
-            const item = new PopupMenu.PopupMenuItem(name);
-
-            item.connect('activate',
-                () => this._activate(i));
-
-            item.setOrnament(i === this._currentWorkspace
-                ? PopupMenu.Ornament.DOT
-                : PopupMenu.Ornament.NO_DOT);
-
-            this.menu.addMenuItem(item);
-            this._workspacesItems[i] = item;
-        }
-
-        this._statusLabel.set_text(this._getStatusText());
-    }
-
-    _activate(index) {
-        let workspaceManager = global.workspace_manager;
-
-        if (index >= 0 && index < workspaceManager.n_workspaces) {
-            let metaWorkspace = workspaceManager.get_workspace_by_index(index);
-            metaWorkspace.activate(global.get_current_time());
-        }
+        const previews = new WorkspacePreviews({show_labels: true});
+        menu.box.add_child(previews);
+        menu.actor.add_style_class_name(`${baseStyleClassName}-menu`);
+        return menu;
     }
 }

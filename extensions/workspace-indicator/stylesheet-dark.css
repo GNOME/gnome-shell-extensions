@@ -13,18 +13,41 @@
   -st-hfade-offset: 20px;
 }
 
+.workspace-indicator-menu .workspaces-view {
+  max-width: 480px;
+}
+
 .workspace-indicator .workspaces-box {
   padding: 5px;
   spacing: 3px;
 }
 
+.workspace-indicator-menu .workspaces-box {
+  padding: 5px;
+  spacing: 6px;
+}
+
+.workspace-indicator-menu .workspace-box {
+  spacing: 6px;
+}
+
+.workspace-indicator-menu .workspace,
 .workspace-indicator .workspace {
-  width: 52px;
   border: 2px solid transparent;
   border-radius: 4px;
   background-color: #3f3f3f;
 }
 
+.workspace-indicator .workspace {
+  width: 52px;
+}
+
+.workspace-indicator-menu .workspace {
+  height: 80px;
+  width: 160px;
+}
+
+.workspace-indicator-menu .workspace.active,
 .workspace-indicator .workspace.active {
   border-color: #9f9f9f;
 }
