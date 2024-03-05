@@ -51,7 +51,7 @@ GSettings key.
 
  * screenshot-window-sizer
 
-     Adds a shortcut for resizing the focus window to a size that is suitable for GNOME Software screenshots
+     Adds a shortcut for resizing the focus window to a size that is suitable for GNOME Software screenshots. Ctrl + Alt + s cycles forwards through the available sizes and Ctrl + Alt + Shift + s cycles backwards.
 
  * user-theme
 
