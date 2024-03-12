@@ -2,44 +2,61 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# ButterflyOfFire <ButterflyOfFire@protonmail.com>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-09-14 20:54+0000\n"
-"PO-Revision-Date: 2020-09-19 12:50+0100\n"
-"Language: kab_DZ\n"
+"POT-Creation-Date: 2024-02-06 18:43+0000\n"
+"PO-Revision-Date: 2024-03-12 12:26+0100\n"
+"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
+"Language-Team: Kabyle <>\n"
+"Language: kab\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Last-Translator: Yacine Bouklif <yacinebouklif@gmail.com>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=2; plural=n>1\n"
+"X-Generator: Gtranslator 41.0\n"
+"X-DL-Team: kab\n"
+"X-DL-Module: gnome-shell-extensions\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME aklasiki"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "Tiɣimit-agi ak-teqqen ɣer GNOME aklasiki"
 
-#: extensions/apps-menu/extension.js:113
+#: data/gnome-classic-wayland.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME aklasiki ɣef Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+#| msgid "GNOME Classic"
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME aklasiki ɣef Xorg"
+
+#: extensions/apps-menu/extension.js:126
 msgid "Favorites"
 msgstr "Inurifen"
 
-#: extensions/apps-menu/extension.js:369
-msgid "Applications"
+#: extensions/apps-menu/extension.js:397
+msgid "Apps"
 msgstr "Isnasen"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
 msgstr "Tabdart n yisnasen akked tallunt n umahil"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
@@ -47,144 +64,216 @@ msgstr ""
 "Tabdart n yiɣewwaren, yal yiwet tesɛa id n usnas (isem n ufaylu n desktop), "
 "ad ḍefrent snat n tenqiḍin akked wuḍḍun n tallunt n umahil"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:159
 msgid "Workspace Rules"
 msgstr "Ilugan n tallunt n umahil"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:314
 msgid "Add Rule"
 msgstr "Rnu alugen"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:218
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Aḍeqqer n uḍebsi “%s” ur yeddi ara:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
 msgstr "Ibenkan izirazen"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:164
 msgid "Open Files"
 msgstr "Ldi ifuyla"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
 msgstr "Seqdec ugar n yigdilen i yisfuyla"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
 msgstr "Sers tawaṭṭfa n usfaylu uksawen"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:91
+#: extensions/places-menu/extension.js:94
 msgid "Places"
 msgstr "Imeḍqan"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Asekker n “%s” ur yeddi ara"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:75
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Aserkeb n ubleɣ “%s” ur yeddi ara"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
+#: extensions/places-menu/placeDisplay.js:135
+#: extensions/places-menu/placeDisplay.js:158
 msgid "Computer"
 msgstr "Aselkim"
 
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:333
 msgid "Home"
-msgstr "Asebter agejdan"
+msgstr "Agejdan"
 
-#: extensions/places-menu/placeDisplay.js:404
+#: extensions/places-menu/placeDisplay.js:378
 msgid "Browse Network"
 msgstr "Snirem azeḍḍa"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
 msgstr ""
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
 msgstr ""
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:327
+msgid "Upload stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:341
+msgid "Download stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:355
+msgid "System stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:403
+msgid "Show"
+msgstr "Sken"
+
+#: extensions/system-monitor/extension.js:405
+msgid "CPU"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:407
+msgid "Memory"
+msgstr "Takatut"
+
+#: extensions/system-monitor/extension.js:409
+msgid "Swap"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:411
+msgid "Upload"
+msgstr "Asali"
+
+#: extensions/system-monitor/extension.js:413
+msgid "Download"
+msgstr "Asider"
+
+#: extensions/system-monitor/extension.js:418
+msgid "Open System Monitor"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr ""
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "Isem n usentel"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Isem n usentel ara yettusidren si ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:71
 msgid "Close"
 msgstr "Mdel"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:98
 msgid "Unminimize"
 msgstr ""
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:98
 msgid "Minimize"
 msgstr "Semẓi"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:105
 msgid "Unmaximize"
 msgstr ""
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:105
 msgid "Maximize"
 msgstr ""
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:470
 msgid "Minimize all"
-msgstr "Semẓi akk"
+msgstr "Semẓi-ten akk"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:476
 msgid "Unminimize all"
 msgstr ""
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:482
 msgid "Maximize all"
-msgstr "Semɣer akk"
+msgstr "Semɣer-iten akk"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:490
 msgid "Unmaximize all"
 msgstr ""
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:498
 msgid "Close all"
-msgstr "Mdel akk"
+msgstr "Mdel-iten akk"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:772
 msgid "Window List"
 msgstr "Tabdart n yisfuyla"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "Melmi ara ttusgerwen yisfuyla"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
@@ -192,22 +281,22 @@ msgstr ""
 "Ad iwali ma ad isegrew isfuyla seg yiwen n usnas di tebdart n yisfuyla. "
 "Azalen yellan: “never”, “auto” akked “always”."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:79
 msgid "Show windows from all workspaces"
 msgstr "Sken isfuyla si meṛṛa tallunin n umahil"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr ""
 "Ma yella ad ttwaseknen yisfuyla si meṛṛa tallunin n umahil neɣ ala seg win "
 "iremden."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
 msgid "Show the window list on all monitors"
 msgstr "Sken tabdart n yisfuyla ɣef yigdilen meṛṛa"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
@@ -215,40 +304,43 @@ msgstr ""
 "Ma yella ad ttwaseknen yisfuyla si meṛṛa tallunin n umahil neɣ ala ɣef "
 "uzwaran."
 
-#: extensions/window-list/prefs.js:29
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Asegrew n yisfuyla"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "Werǧin ad tesgerweḍ isfuyla"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "Segrew isfuyla ticki tallunt txuṣ"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "Yalas ssegraw isfuyla"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:66
 msgid "Show on all monitors"
 msgstr "Sken ɣef yigdilen meṛṛa"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/window-list/workspaceIndicator.js:253
+#: extensions/workspace-indicator/extension.js:259
 msgid "Workspace Indicator"
 msgstr ""
 
-#: extensions/workspace-indicator/prefs.js:34
-msgid "Workspace Names"
-msgstr "Ismawen n tallunin n umahil"
-
-#: extensions/workspace-indicator/prefs.js:67
+#: extensions/workspace-indicator/prefs.js:69
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Tallunt n umahil %d"
 
-#: extensions/workspace-indicator/prefs.js:218
+#: extensions/workspace-indicator/prefs.js:136
+msgid "Workspace Names"
+msgstr "Ismawen n tallunin n umahil"
+
+#: extensions/workspace-indicator/prefs.js:262
 msgid "Add Workspace"
 msgstr "Rnu tallunt n umahil"
+
+#~ msgid "Applications"
+#~ msgstr "Isnasen"
