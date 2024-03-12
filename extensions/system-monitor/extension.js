@@ -193,6 +193,7 @@ class NetStatSection extends StatSection {
 
     #formats = [{
         factor: 1000,
+        unitFactor: 1000,
         formatter: new Intl.NumberFormat(undefined, {
             style: 'unit',
             unit: 'kilobyte',
@@ -201,6 +202,7 @@ class NetStatSection extends StatSection {
         }),
     }, {
         factor: 1000 * 10,
+        unitFactor: 1000,
         formatter: new Intl.NumberFormat(undefined, {
             style: 'unit',
             unit: 'kilobyte',
@@ -208,6 +210,7 @@ class NetStatSection extends StatSection {
         }),
     }, {
         factor: 1000 * 1000,
+        unitFactor: 1000 * 1000,
         formatter: new Intl.NumberFormat(undefined, {
             style: 'unit',
             unit: 'megabyte',
@@ -216,6 +219,7 @@ class NetStatSection extends StatSection {
         }),
     }, {
         factor: 1000 * 1000 * 10,
+        unitFactor: 1000 * 1000,
         formatter: new Intl.NumberFormat(undefined, {
             style: 'unit',
             unit: 'megabyte',
@@ -223,6 +227,7 @@ class NetStatSection extends StatSection {
         }),
     }, {
         factor: 1000 * 1000 * 1000,
+        unitFactor: 1000 * 1000 * 1000,
         formatter: new Intl.NumberFormat(undefined, {
             style: 'unit',
             unit: 'gigabyte',
@@ -231,6 +236,7 @@ class NetStatSection extends StatSection {
         }),
     }, {
         factor: 1000 * 1000 * 1000 * 10,
+        unitFactor: 1000 * 1000 * 1000,
         formatter: new Intl.NumberFormat(undefined, {
             style: 'unit',
             unit: 'gigabyte',
@@ -238,6 +244,7 @@ class NetStatSection extends StatSection {
         }),
     }, {
         factor: 1000 * 1000 * 1000 * 1000,
+        unitFactor: 1000 * 1000 * 1000 * 1000,
         formatter: new Intl.NumberFormat(undefined, {
             style: 'unit',
             unit: 'terabyte',
@@ -246,6 +253,7 @@ class NetStatSection extends StatSection {
         }),
     }, {
         factor: 1000 * 1000 * 1000 * 1000 * 10,
+        unitFactor: 1000 * 1000 * 1000 * 1000,
         formatter: new Intl.NumberFormat(undefined, {
             style: 'unit',
             unit: 'terabyte',
@@ -253,6 +261,7 @@ class NetStatSection extends StatSection {
         }),
     }, {
         factor: 1000 * 1000 * 1000 * 1000 * 1000,
+        unitFactor: 1000 * 1000 * 1000 * 1000 * 1000,
         formatter: new Intl.NumberFormat(undefined, {
             style: 'unit',
             unit: 'petabyte',
@@ -313,8 +322,8 @@ class NetStatSection extends StatSection {
         this.#lastTime = time;
         this.#lastHash = hash;
 
-        const {factor, formatter} = this._getFormat(dbytes);
-        this.label.text = formatter.format(dbytes / factor);
+        const {unitFactor, formatter} = this._getFormat(dbytes);
+        this.label.text = formatter.format(dbytes / unitFactor);
     }
 }
 
