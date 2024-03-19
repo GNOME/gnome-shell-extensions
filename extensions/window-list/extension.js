@@ -165,7 +165,7 @@ class WindowTitle extends St.BoxLayout {
             this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
         } else {
             this._icon.child = new St.Icon({
-                icon_name: 'icon-missing',
+                icon_name: 'application-x-executable',
                 icon_size: ICON_TEXTURE_SIZE,
             });
         }
