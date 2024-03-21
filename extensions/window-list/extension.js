@@ -765,7 +765,9 @@ class WindowList extends St.Widget {
         this._updateWorkspaceIndicatorVisibility();
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
-        this._menuManager.addMenu(this._workspaceIndicator.menu);
+        this._workspaceIndicator.connectObject('menu-set',
+            () => this._onWorkspaceMenuSet(), this);
+        this._onWorkspaceMenuSet();
 
         Main.layoutManager.addChrome(this, {
             affectsStruts: true,
@@ -860,6 +862,11 @@ class WindowList extends St.Widget {
         let active = children.findIndex(c => c.active);
         let newActive = Math.max(0, Math.min(active + diff, children.length - 1));
         children[newActive].activate();
+    }
+
+    _onWorkspaceMenuSet() {
+        if (this._workspaceIndicator.menu)
+            this._menuManager.addMenu(this._workspaceIndicator.menu);
     }
 
     _updatePosition() {
