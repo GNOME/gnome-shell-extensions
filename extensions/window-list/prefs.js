@@ -81,6 +81,19 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
         });
         row.add_suffix(toggle);
         miscGroup.add(row);
+
+        toggle = new Gtk.Switch({
+            action_name: 'window-list.embed-previews',
+            valign: Gtk.Align.CENTER,
+        });
+        this._settings.bind('embed-previews',
+            toggle, 'active', Gio.SettingsBindFlags.DEFAULT);
+        row = new Adw.ActionRow({
+            title: _('Show workspace previews'),
+            activatable_widget: toggle,
+        });
+        row.add_suffix(toggle);
+        miscGroup.add(row);
     }
 }
 
