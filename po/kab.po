@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
-"PO-Revision-Date: 2024-03-12 12:26+0100\n"
-"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
+"POT-Creation-Date: 2024-03-12 11:27+0000\n"
+"PO-Revision-Date: 2024-03-23 07:16+0100\n"
+"Last-Translator: sa\n"
 "Language-Team: Kabyle <>\n"
 "Language: kab\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n>1\n"
-"X-Generator: Gtranslator 41.0\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-DL-Team: kab\n"
 "X-DL-Module: gnome-shell-extensions\n"
 "X-DL-Branch: main\n"
@@ -35,12 +35,10 @@ msgid "This session logs you into GNOME Classic"
 msgstr "Tiɣimit-agi ak-teqqen ɣer GNOME aklasiki"
 
 #: data/gnome-classic-wayland.desktop.in:3
-#| msgid "GNOME Classic"
 msgid "GNOME Classic on Wayland"
 msgstr "GNOME aklasiki ɣef Wayland"
 
 #: data/gnome-classic-xorg.desktop.in:3
-#| msgid "GNOME Classic"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME aklasiki ɣef Xorg"
 
@@ -97,6 +95,9 @@ msgid ""
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
+"Ԑreḍ seqdec ugar n n ugdil i trusi n tenfulin s usezg n uneqqis teɣzi/tehri "
+"n ugdil, akked usentem-nsent ugar i usenzes n ukatar n ujemmeq. Aɣewwar-a "
+"yesnas ala akked testratiǧit n wadig amagan."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
@@ -108,6 +109,9 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
+"Ma yella d tidet, semselsi tineffusin n usfaylu nnig n tenfult tusdidt, s "
+"usenfel n shel s wudem amezwer s usemselsi-s ukessar. Asenfel n uɣewwar-a "
+"yesra allus n usenker n shel i wakken ad yeḍru."
 
 #: extensions/places-menu/extension.js:91
 #: extensions/places-menu/extension.js:94
@@ -139,35 +143,35 @@ msgstr "Snirem azeḍḍa"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
-msgstr ""
+msgstr "Teɣzi n tuṭṭfa n ugdil n wallus"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
-msgstr ""
+msgstr "Ales zzi teɣzi n tuṭṭfiwin n ugdil ɣer deffir"
 
 #: extensions/system-monitor/extension.js:135
 msgid "CPU stats"
-msgstr ""
+msgstr "Addaden n CPU"
 
 #: extensions/system-monitor/extension.js:159
 msgid "Memory stats"
-msgstr ""
+msgstr "Addaden n tkatut"
 
 #: extensions/system-monitor/extension.js:177
 msgid "Swap stats"
-msgstr ""
+msgstr "Addaden n Swap"
 
 #: extensions/system-monitor/extension.js:327
 msgid "Upload stats"
-msgstr ""
+msgstr "Addaden n usali"
 
 #: extensions/system-monitor/extension.js:341
 msgid "Download stats"
-msgstr ""
+msgstr "Addaden n usadar"
 
 #: extensions/system-monitor/extension.js:355
 msgid "System stats"
-msgstr ""
+msgstr "Addaden n unagraw"
 
 #: extensions/system-monitor/extension.js:403
 msgid "Show"
@@ -175,7 +179,7 @@ msgstr "Sken"
 
 #: extensions/system-monitor/extension.js:405
 msgid "CPU"
-msgstr ""
+msgstr "CPU"
 
 #: extensions/system-monitor/extension.js:407
 msgid "Memory"
@@ -183,7 +187,7 @@ msgstr "Takatut"
 
 #: extensions/system-monitor/extension.js:409
 msgid "Swap"
-msgstr ""
+msgstr "Aemmeskel"
 
 #: extensions/system-monitor/extension.js:411
 msgid "Upload"
@@ -195,27 +199,27 @@ msgstr "Asider"
 
 #: extensions/system-monitor/extension.js:418
 msgid "Open System Monitor"
-msgstr ""
+msgstr "Ldi asefrak n unagraw"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
 msgid "Show CPU usage"
-msgstr ""
+msgstr "Sken aseqdec n CPU"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
 msgid "Show memory usage"
-msgstr ""
+msgstr "Sken aseqdec n tkatut"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
 msgid "Show swap usage"
-msgstr ""
+msgstr "Sken aseqdec n swap"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
 msgid "Show upload"
-msgstr ""
+msgstr "Sken isalayen"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
 msgid "Show download"
-msgstr ""
+msgstr "Sken isadaren"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
@@ -225,47 +229,47 @@ msgstr "Isem n usentel"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Isem n usentel ara yettusidren si ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:71
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Mdel"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Unminimize"
-msgstr ""
+msgstr "Ur simẓẓiy ara"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Minimize"
 msgstr "Semẓi"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Unmaximize"
-msgstr ""
+msgstr "Ur ssemɣer ara"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Maximize"
-msgstr ""
+msgstr "Semɣer"
 
-#: extensions/window-list/extension.js:470
+#: extensions/window-list/extension.js:471
 msgid "Minimize all"
 msgstr "Semẓi-ten akk"
 
-#: extensions/window-list/extension.js:476
+#: extensions/window-list/extension.js:477
 msgid "Unminimize all"
-msgstr ""
+msgstr "Ur simẓẓiy ara kullec"
 
-#: extensions/window-list/extension.js:482
+#: extensions/window-list/extension.js:483
 msgid "Maximize all"
 msgstr "Semɣer-iten akk"
 
-#: extensions/window-list/extension.js:490
+#: extensions/window-list/extension.js:491
 msgid "Unmaximize all"
-msgstr ""
+msgstr "Ur ssemɣer ara kullec"
 
-#: extensions/window-list/extension.js:498
+#: extensions/window-list/extension.js:499
 msgid "Close all"
 msgstr "Mdel-iten akk"
 
-#: extensions/window-list/extension.js:772
+#: extensions/window-list/extension.js:773
 msgid "Window List"
 msgstr "Tabdart n yisfuyla"
 
@@ -324,10 +328,10 @@ msgstr "Yalas ssegraw isfuyla"
 msgid "Show on all monitors"
 msgstr "Sken ɣef yigdilen meṛṛa"
 
-#: extensions/window-list/workspaceIndicator.js:253
-#: extensions/workspace-indicator/extension.js:259
+#: extensions/window-list/workspaceIndicator.js:255
+#: extensions/workspace-indicator/extension.js:261
 msgid "Workspace Indicator"
-msgstr ""
+msgstr "Anamal n wadeg n umahil"
 
 #: extensions/workspace-indicator/prefs.js:69
 #, javascript-format
