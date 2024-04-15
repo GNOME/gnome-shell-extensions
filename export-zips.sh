@@ -39,7 +39,7 @@ for f in $extensiondir/*; do
   fi
 
   cp $srcdir/NEWS $srcdir/COPYING $f
-  sources=(NEWS COPYING $(cd $f; ls *.js))
+  sources=(NEWS COPYING $(cd $f; ls *.js *.css 2>/dev/null))
 
   [ -d $f/icons ] && sources+=(icons)
 
