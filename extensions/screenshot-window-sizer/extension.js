@@ -24,6 +24,7 @@ export default class ScreenshotWindowSizerExtension extends Extension {
         [624, 351],
         [800, 450],
         [1024, 576],
+        [1000, 700],
         [1200, 675],
         [1600, 900],
         [360, 654], // Phone portrait maximized
