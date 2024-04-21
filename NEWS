@@ -1,3 +1,13 @@
+46.1
+====
+* screenshot-window-sizer: Add flathub-recommended size [Florian; !317]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Rachida SACI [kab], Matheus Polkorny [pt_BR], Fabio Tomat [fur]
+
 46.0
 ====
 * system-monitor: Fix net speed [Florian; !313]
