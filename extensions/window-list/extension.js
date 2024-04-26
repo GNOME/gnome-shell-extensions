@@ -266,24 +266,24 @@ class BaseButton extends St.Button {
         delete this._longPressTimeoutId;
     }
 
-    vfunc_button_press_event(buttonEvent) {
-        if (buttonEvent.button === 1)
+    vfunc_button_press_event(event) {
+        if (event.get_button() === 1)
             this._setLongPressTimeout();
-        return super.vfunc_button_press_event(buttonEvent);
+        return super.vfunc_button_press_event(event);
     }
 
-    vfunc_button_release_event(buttonEvent) {
+    vfunc_button_release_event(event) {
         this._removeLongPressTimeout();
 
-        return super.vfunc_button_release_event(buttonEvent);
+        return super.vfunc_button_release_event(event);
     }
 
-    vfunc_touch_event(touchEvent) {
-        if (touchEvent.type === Clutter.EventType.TOUCH_BEGIN)
+    vfunc_touch_event(event) {
+        if (event.type() === Clutter.EventType.TOUCH_BEGIN)
             this._setLongPressTimeout();
-        else if (touchEvent.type === Clutter.EventType.TOUCH_END)
+        else if (event.type() === Clutter.EventType.TOUCH_END)
             this._removeLongPressTimeout();
-        return super.vfunc_touch_event(touchEvent);
+        return super.vfunc_touch_event(event);
     }
 
     activate() {
