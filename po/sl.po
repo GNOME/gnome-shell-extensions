@@ -9,18 +9,18 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-02-15 05:28+0000\n"
-"PO-Revision-Date: 2024-02-19 11:07+0100\n"
-"Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
+"POT-Creation-Date: 2024-04-29 15:27+0000\n"
+"PO-Revision-Date: 2024-05-02 00:11+0200\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
-"n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -43,7 +43,7 @@ msgstr "Klasično namizje GNOME na sistemu Xorg"
 msgid "Favorites"
 msgstr "Priljubljeno"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:400
 msgid "Apps"
 msgstr "Programi"
 
@@ -158,43 +158,43 @@ msgstr "Delovanje pomnilnika"
 msgid "Swap stats"
 msgstr "Podatki izmenjevalnega prostora"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "Podatki pošiljanja"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "Podatki prejema"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:364
 msgid "System stats"
 msgstr "Podrobnosti sistema"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:412
 msgid "Show"
 msgstr "Pokaži"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
 msgstr "CPE"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "Pomnilnik"
 
-#: extensions/system-monitor/extension.js:409
+#: extensions/system-monitor/extension.js:418
 msgid "Swap"
 msgstr "Izmenjevalni razdelek"
 
-#: extensions/system-monitor/extension.js:411
+#: extensions/system-monitor/extension.js:420
 msgid "Upload"
 msgstr "Poslano"
 
-#: extensions/system-monitor/extension.js:413
+#: extensions/system-monitor/extension.js:422
 msgid "Download"
 msgstr "Prejeto"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:427
 msgid "Open System Monitor"
 msgstr "_Odpri nadzornika sistema"
 
@@ -226,47 +226,47 @@ msgstr "Ime teme"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Ime teme, ki bo naložena iz ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:71
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Zapri"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Unminimize"
 msgstr "Povečaj"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Minimize"
 msgstr "Skrči"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Unmaximize"
 msgstr "Pomanjšaj"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Maximize"
 msgstr "Razpni"
 
-#: extensions/window-list/extension.js:470
+#: extensions/window-list/extension.js:471
 msgid "Minimize all"
 msgstr "Skrči vse"
 
-#: extensions/window-list/extension.js:476
+#: extensions/window-list/extension.js:477
 msgid "Unminimize all"
 msgstr "Pomanjšaj vse"
 
-#: extensions/window-list/extension.js:482
+#: extensions/window-list/extension.js:483
 msgid "Maximize all"
 msgstr "Razpni vse"
 
-#: extensions/window-list/extension.js:490
+#: extensions/window-list/extension.js:491
 msgid "Unmaximize all"
 msgstr "Pomanjšaj vse"
 
-#: extensions/window-list/extension.js:498
+#: extensions/window-list/extension.js:499
 msgid "Close all"
 msgstr "Zapri vse"
 
-#: extensions/window-list/extension.js:772
+#: extensions/window-list/extension.js:778
 msgid "Window List"
 msgstr "Seznam oken"
 
@@ -303,6 +303,10 @@ msgid ""
 msgstr ""
 "Ali naj bo prikazan seznam oken na vseh povezanih zasloni ali le na osnovnem."
 
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "Pokaži predoglede delovne površine na seznamu oken"
+
 #: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Združevanje oken"
@@ -323,289 +327,31 @@ msgstr "Okna vedno združuj"
 msgid "Show on all monitors"
 msgstr "Pokaži na vseh zaslonih"
 
-#: extensions/window-list/workspaceIndicator.js:253
-#: extensions/workspace-indicator/extension.js:259
-msgid "Workspace Indicator"
-msgstr "Kazalnik delovnih površin"
+#: extensions/window-list/prefs.js:92
+msgid "Show workspace previews"
+msgstr "Pokaži predoglede delovne površine"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "Pokaži predoglede v zgornji vrstici"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Delovna površina %d"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "Imena delovnih površin"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "Dodaj delovno površino"
 
-#~ msgid "Applications"
-#~ msgstr "Programi"
-
-#~ msgid "Username or email"
-#~ msgstr "Uporabniško ime ali elektronski naslov"
-
-#~ msgid "Username"
-#~ msgstr "Uporabniško ime"
-
-#~ msgid ""
-#~ "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
-#~ msgstr ""
-#~ "Zahtevan je vpis do 30 znakov, uporabiti pa je mogoče le črke, številke "
-#~ "in znake @/./+/-/_."
-
-#~ msgid ""
-#~ "This value may contain only letters, numbers and @/./+/-/_ characters."
-#~ msgstr "Vrednost lahko vsebuje le črke, številke, vezaj in znake @/./+/-/_."
-
-#~ msgid "Email"
-#~ msgstr "Elektronski naslov"
-
-#~ msgid "You should not use email as username"
-#~ msgstr "Za uporabniško ime ni priporočljivo uporabiti elektronskega naslova"
-
-#~ msgid "Forgot your password?"
-#~ msgstr "Ali ste pozabili geslo?"
-
-#~ msgid "Log in"
-#~ msgstr "Prijava"
-
-#~ msgid "Don't have an account?"
-#~ msgstr "Še nimate računa za dostop?"
-
-#~ msgid "Register"
-#~ msgstr "Vpisnik"
-
-#~ msgid "User Login"
-#~ msgstr "Prijava uporabnika"
-
-#~ msgid "Reset your password"
-#~ msgstr "Ponastavi geslo"
-
-#~ msgid ""
-#~ "The token for the password reset is incorrect. Please check your link and "
-#~ "try again."
-#~ msgstr ""
-#~ "Žeton za ponastavitev gesla ni pravi. Preverite povezavo in poskusite "
-#~ "znova."
-
-#~ msgid "Password reset"
-#~ msgstr "Ponovna nastavitev gesla"
-
-#~ msgid ""
-#~ "Forgot your password? Enter your e-mail address below, and we’ll e-mail "
-#~ "instructions for setting a new one."
-#~ msgstr ""
-#~ "Ali ste pozabili geslo? Vpišite elektronski naslov in poslali vam bomo "
-#~ "navodila za nastavitev novega."
-
-#~ msgid "Installed extensions"
-#~ msgstr "Nameščene razširitve"
-
-#~ msgid "About"
-#~ msgstr "O programu"
-
-#~ msgid "Extensions"
-#~ msgstr "Razširitve"
-
-#, python-format
-#~ msgid ""
-#~ "Unfortunately, to help prevent spam, we require that you <a "
-#~ "href=\"%(login_url)s\">log in to GNOME Shell Extensions</a> in order to "
-#~ "post a comment or report an error. You understand, right?"
-#~ msgstr ""
-#~ "Za preprečevanje neželenih objav se je treba najprej <a "
-#~ "href=\"%(login_url)s\">prijaviti na spletno stran</a>. Prijava omogoča "
-#~ "poročanje o napakah in objavljanje ocen in mnenj."
-
-#~ msgid "User Reviews"
-#~ msgstr "Mnenja uporabnikov"
-
-#~ msgid "Loading reviews…"
-#~ msgstr "Poteka nalaganje mnenj uporabnikov …"
-
-#~ msgid "Your opinion"
-#~ msgstr "Vaše mnenje"
-
-#~ msgid "Leave a…"
-#~ msgstr "Objavite …"
-
-#~ msgid "Comment"
-#~ msgstr "Opombo"
-
-#~ msgid "Rating"
-#~ msgstr "Oceno"
-
-#~ msgid "Bug report"
-#~ msgstr "Poročilo o hrošču"
-
-#~ msgid "Upgrade this extension"
-#~ msgstr "Posodobi razširitev"
-
-#~ msgid "Configure this extension"
-#~ msgstr "Nastavi razširitev"
-
-#~ msgid "Uninstall this extension"
-#~ msgstr "Odstrani razširitev"
-
-#~ msgid "Extension Homepage"
-#~ msgstr "Spletna stran razširitev"
-
-#~ msgid "Shell version…"
-#~ msgstr "različica lupine …"
-
-#~ msgid "Extension version…"
-#~ msgstr "Različica razširitve …"
-
-#~ msgid ""
-#~ "A reviewer will review the extension you submitted to make sure there's "
-#~ "nothing too dangerous. You'll be emailed the result of the review."
-#~ msgstr ""
-#~ "Pregledovalec bo preveril objavljeno razširitev za morebitno neželeno "
-#~ "delovanje. Odziv boste prejeli na elektronski naslov."
-
-#~ msgid "Search for extensions…"
-#~ msgstr "Poišči razširitve …"
-
-#~ msgid "Installed Extensions"
-#~ msgstr "Nameščene razširitve"
-
-#~ msgid "Shell settings"
-#~ msgstr "Nastavitve lupine"
-
-#~ msgid "Content"
-#~ msgstr "Vsebina"
-
-#~ msgid "Metadata"
-#~ msgstr "Metapodatki"
-
-#~ msgid "Post"
-#~ msgstr "Po"
-
-#~ msgid "Preview"
-#~ msgstr "Predogled"
-
-#~ msgid "What do you think about this GNOME extension?"
-#~ msgstr "Kakšno je vaše mnenje o tej razširitvi GNOME?"
-
-#~ msgid "Please correct the error below"
-#~ msgid_plural "Please correct the errors below"
-#~ msgstr[0] "Razrešiti je treba spodnje napake"
-#~ msgstr[1] "Razrešiti je treba spodnjo napako"
-#~ msgstr[2] "Razrešiti je treba spodnji napaki"
-#~ msgstr[3] "Razrešiti je treba spodnje napake"
-
-#~ msgid "Preview your comment"
-#~ msgstr "Predogled opombe"
-
-#~ msgid "Post Comment"
-#~ msgstr "Objavi mnenje"
-
-#~ msgid "Edit your comment"
-#~ msgstr "Uredi mnenje"
-
-#~ msgid "Latest extensions in GNOME Shell Extensions"
-#~ msgstr "Najnovejše razširitve Lupine GNOME"
-
-#~ msgid "GNOME Shell Extensions"
-#~ msgstr "Razširitve Lupine Gnome"
-
-#~ msgid "User Profile"
-#~ msgstr "Uporabniški profil"
-
-#~ msgid "User Settings"
-#~ msgstr "Uporabniške nastavitve"
-
-#~ msgid "Log out"
-#~ msgstr "Odjava"
-
-#~ msgid ""
-#~ "To control GNOME Shell extensions using this site you must install GNOME "
-#~ "Shell integration that consists of two parts: browser extension and "
-#~ "native host messaging application"
-#~ msgstr ""
-#~ "Za nadzor razširitev Lupine GNOME prek te spletne strani je treba "
-#~ "namestiti program, ki vključuje dva dela: razširitev za brskalnik in "
-#~ "gostiteljski program za sporočanje."
-
-#~ msgid "Install GNOME Shell integration browser extension"
-#~ msgstr "Namesti razširitev Lupine GNOM za spletni brskalnik"
-
-#~ msgid "Click here to install browser extension"
-#~ msgstr "Kliknite za namestitev razširitve za brskalnik"
-
-#, javascript-format
-#~ msgid ""
-#~ "See %swiki page%s for native host connector installation instructions"
-#~ msgstr ""
-#~ "Oglejte si %sstrani Wiki%s za nastavitev povezovalnega gostiteljskega "
-#~ "namiznega programa."
-
-#~ msgid ""
-#~ "We cannot detect a running copy of GNOME on this system, so some parts of "
-#~ "the interface may be disabled. See <a href=\"/about/#no-detection\">our "
-#~ "troubleshooting entry</a> for more information."
-#~ msgstr ""
-#~ "Ni mogoče zaznati zagnane različice namizja GNOME na tem sistemu, zato so "
-#~ "nekateri deli vmesnika morda onemogočeni. Za več podrobnosti si oglejte "
-#~ "možnosti <a href=\"/about/#no-detection\">odpravljanja napak</a>."
-
-#~ msgid "GNOME Shell Extensions cannot list your installed extensions."
-#~ msgstr "Ni mogoče izpisati nameščenih razširitev Lupine GNOME."
-
-#~ msgid "Compatible with"
-#~ msgstr "Skladno z"
-
-#~ msgid "Name"
-#~ msgstr "Ime"
-
-#~ msgid "Recent"
-#~ msgstr "Nedavno"
-
-#~ msgid "Popularity"
-#~ msgstr "Priljubljenost"
-
-#~ msgid "Sort by"
-#~ msgstr "Razvrsti po"
-
-#~ msgid "Show more reviews"
-#~ msgstr "Pokaži več ocen"
-
-#~ msgid "There are no comments. Be the first!"
-#~ msgstr "Ni še vpisane nobene opombe. Bodite prvi!"
-
-#~ msgid "Author"
-#~ msgstr "Avtor"
-
-#~ msgid "What's wrong?"
-#~ msgstr "Kaj ne narobe?"
-
-#~ msgid ""
-#~ "GNOME Shell Extensions did not detect any errors with this extension."
-#~ msgstr "Ni zaznanih napak pri tej razširitvi Lupine GNOME."
-
-#~ msgid "Version information"
-#~ msgstr "Podrobnosti različice"
-
-#~ msgid "Shell version"
-#~ msgstr "Različica lupine"
-
-#~ msgid "Extension version"
-#~ msgstr "Različica razširitve"
-
-#~ msgid "Unknown"
-#~ msgstr "Neznano"
-
-#~ msgid "What have you tried?"
-#~ msgstr "Kaj ste že poskusili?"
-
-#~ msgid "Automatically detected errors"
-#~ msgstr "Samodejno zaznaj napake"
-
-#~ msgid "You uninstalled"
-#~ msgstr "Odstranili ste"
-
-#~ msgid "Password"
-#~ msgstr "Geslo"
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "Pokaži predoglede delovne površine v zgornji vrstici"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "Kazalnik delovnih površin"
