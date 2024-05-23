@@ -5,6 +5,8 @@
 include:
   - remote: 'https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/bbe5232986c9b98eb1efe62484e07216f7d1a4df/templates/fedora.yml'
   - remote: "https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/6f86b8bcb0cd5168c32779c4fea9a893c4a0c046/templates/ci-fairy.yml"
+  - project: 'Infrastructure/openshift-images/gnome-release-service'
+    file: '/ci-templates/release-module.yml'
 
 stages:
   - pre_review
@@ -186,5 +188,13 @@ fedora-dist-tarball:
       - $TARBALL_ARTIFACT_PATH
     reports:
       dotenv: dist.env
+  rules:
+    - if: '$CI_COMMIT_TAG'
+
+release-module:
+  stage: deploy
+  needs:
+    - fedora-dist-tarball
+  extends: .release-module
   rules:
     - if: '$CI_COMMIT_TAG'
