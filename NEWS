@@ -1,3 +1,16 @@
+46.2
+====
+* apps-menu: Fix a11y of category labels [Florian; !319]
+* window-list: Fix long-press support [Florian; !320]
+* Misc. bug fixes and cleanups [Florian; !324]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Hugo Carvalho [pt], Jose Riha [sk], Jordi Mas i Hernandez [ca],
+  Scrambled 777 [hi]
+
 46.1
 ====
 * screenshot-window-sizer: Add flathub-recommended size [Florian; !317]
