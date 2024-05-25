@@ -3,338 +3,337 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
 # Rajesh Ranjan <rajeshkajha@yahoo.com>, 2014.
+# Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"shell&keywords=I18N+L10N&component=extensions\n"
-"POT-Creation-Date: 2014-09-19 19:42+0000\n"
-"PO-Revision-Date: 2014-09-21 10:59+0630\n"
-"Last-Translator: rajesh <rajesh>\n"
-"Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2024-04-29 14:28+0000\n"
+"PO-Revision-Date: 2024-05-14 15:40+0530\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 46.1\n"
 
-#: ../data/gnome-classic.desktop.in.h:1
-#: ../data/gnome-classic.session.desktop.in.in.h:1
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME क्लासिक"
 
-#: ../data/gnome-classic.desktop.in.h:2
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "यह सत्र गनोम क्लासिक में आपको लॉगइन करेगा"
 
-#: ../data/gnome-shell-classic.desktop.in.in.h:1
-msgid "GNOME Shell Classic"
-msgstr "गनोम शैल क्लासिक"
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "Wayland पर GNOME क्लासिक"
 
-#: ../data/gnome-shell-classic.desktop.in.in.h:2
-msgid "Window management and application launching"
-msgstr "विंडो प्रबंधन और अनुप्रयोग लॉन्चिंग"
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "Xorg पर GNOME क्लासिक"
 
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:1
-msgid "Attach modal dialog to the parent window"
-msgstr "जनक विंडो में मोडल संवाद संलग्न करें"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:2
-msgid ""
-"This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr ""
-"यह कुँजी org.gnome.mutter में कुँजी को अधिरोहित करता है जब गनोम शेल को चला "
-"रहा हो."
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:3
-msgid "Arrangement of buttons on the titlebar"
-msgstr "शीर्षक-पट्टी में बटनों का विन्यास"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:4
-msgid ""
-"This key overrides the key in org.gnome.desktop.wm.preferences when running "
-"GNOME Shell."
-msgstr ""
-"यह कुँजी org.gnome.desktop.wm.preferences में कुँजी को अधिरोहित करता है जब "
-"गनोम शेल को चला रहा हो."
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:5
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "जब स्क्रीन किनारे पर विंडोज़ को छोड़ने बढ़त टाइलिंग सक्षम करें"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:6
-msgid "Workspaces only on primary monitor"
-msgstr "केवल प्राथमिक मॉनिटर पर कार्यस्थान"
-
-#: ../data/org.gnome.shell.extensions.classic-overrides.gschema.xml.in.h:7
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr ""
-"माउस अवस्था में पॉइंटर के चलने के रूकने तक फोकस परिवर्तन को विलंबित करें"
-
-#: ../extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "केवल लघुचित्र"
-
-#: ../extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "केवल अनुप्रयोग चिह्न"
-
-#: ../extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "लघुचित्र और अनुप्रयोग चिह्न"
-
-#: ../extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "विंडोज बतौर ऐसे प्रस्तुत करता है"
-
-#: ../extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "मौजूदा कार्यस्थान में केवल विंडोज दिखाता है"
-
-#: ../extensions/apps-menu/extension.js:39
-msgid "Activities Overview"
-msgstr "गतिविधि सारांश"
-
-#: ../extensions/apps-menu/extension.js:113
+#: extensions/apps-menu/extension.js:126
 msgid "Favorites"
 msgstr "पसंदीदा"
 
-#: ../extensions/apps-menu/extension.js:282
-msgid "Applications"
-msgstr "अनुप्रयोग"
+#: extensions/apps-menu/extension.js:397
+msgid "Apps"
+msgstr "ऐप्स"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:1
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
 msgstr "अनुप्रयोग और कार्यस्थान सूची"
 
-#: ../extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml.in.h:2
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"स्ट्रिंग की सूची जिसमें से हर कोई किसी अनुप्रयोग आईडी (desktop file name) को "
-"समाहित करता है, कॉलन और कार्यस्थान संख्या के द्वारा अनुसरित"
+"स्ट्रिंग की सूची जिसमें से हर कोई किसी अनुप्रयोग ID (डेस्कटॉप फाइल नाम) को समाहित करता "
+"है, अपूर्ण विराम और कार्यस्थान संख्या के द्वारा अनुसरित"
 
-#: ../extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "अनुप्रयोग"
+#: extensions/auto-move-windows/prefs.js:159
+msgid "Workspace Rules"
+msgstr "कार्यस्थान नियम"
 
-#: ../extensions/auto-move-windows/prefs.js:69
-#: ../extensions/auto-move-windows/prefs.js:127
-msgid "Workspace"
-msgstr "कार्यस्थान"
-
-#: ../extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:314
 msgid "Add Rule"
 msgstr "नियम जोड़ें"
 
-#: ../extensions/auto-move-windows/prefs.js:106
-msgid "Create new matching rule"
-msgstr "नया मिलानयुक्त नियम बनाएं"
-
-#: ../extensions/auto-move-windows/prefs.js:111
-msgid "Add"
-msgstr "जोड़ें"
-
-#: ../extensions/drive-menu/extension.js:106
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:218
 #, javascript-format
-msgid "Ejecting drive '%s' failed:"
-msgstr "'%s' को निकालना विफल:"
+msgid "Ejecting drive “%s” failed:"
+msgstr "ड्राइव “%s” को बाहर निकालना विफल रहा:"
 
-#: ../extensions/drive-menu/extension.js:123
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
-msgstr "हटाने योग्य युक्तियाँ"
+msgstr "हटाने-योग्य उपकरण"
 
-#: ../extensions/drive-menu/extension.js:150
-msgid "Open File"
-msgstr "फ़ाइल खोलें"
+#: extensions/drive-menu/extension.js:164
+msgid "Open Files"
+msgstr "फाइल खोलें"
 
-#: ../extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "हेलो, दुनिया!"
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:1
-msgid "Alternative greeting text."
-msgstr "वैकल्पिक आरंभिक पाठ."
-
-#: ../extensions/example/org.gnome.shell.extensions.example.gschema.xml.in.h:2
-msgid ""
-"If not empty, it contains the text that will be shown when clicking on the "
-"panel."
-msgstr ""
-"यदि रिक्त नहीं है, यह उस पाठ को समाहित करता है जो पटल पर क्लिक किए जाने के "
-"कारण दिखाया जाएगा."
-
-#: ../extensions/example/prefs.js:30
-msgid "Message"
-msgstr "संदेश"
-
-#: ../extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and "
-"as such it has little functionality on its own.\n"
-"Nevertheless it's possible to customize the greeting message."
-msgstr ""
-"उदाहरण दिखाने के लिए लक्षित है शेल के लिए सुविचारित विस्तार निर्मित करने के "
-"लिए और इसका काफी कम काम है स्वयं के लिए.\n"
-"हालाँकि, शुभकामना संदेश को पसंदीदा बनाना संभव है."
-
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:1
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
 msgstr "विंडोज के लिए अधिक स्क्रीन का उपयोग करें"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:2
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"विंडोज लघुचित्र रखने के लिए अधिक स्क्रीन के उपयोग की कोशिश करें स्क्रीन पहलू "
-"अनुपात से अनुकूलित करते हुए, और उन्हें बाउंडिंग बॉक्स में आगे कम करते हुए "
-"एकत्रित करते हुए. यह सेटिंग स्वभावित प्लेसमेंट रणनीति के साथ केवल लागू होता "
-"है."
+"विंडोज लघुचित्र रखने के लिए अधिक स्क्रीन के उपयोग की कोशिश करें स्क्रीन पहलू अनुपात से "
+"अनुकूलित करते हुए, और उन्हें बाउंडिंग बॉक्स में आगे कम करते हुए एकत्रित करते हुए। यह सेटिंग "
+"स्वभावित प्लेसमेंट रणनीति के साथ केवल लागू होता है।"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:3
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
 msgstr "शीर्ष पर विंडो अनुशीर्षक रखें"
 
-#: ../extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml.in.h:4
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"यदि सही है, संबंधित लघुचित्रों पर विंडो अनुशीर्षक रखें, शेल तयशुदा को इसके "
-"तल पर रखते हुए. इस सेटिंग को बदलने के लिए किसी प्रभाव के लिए शेल को फिर से "
-"आरंभ करना जरूरी है."
+"यदि सही है, संबंधित लघुचित्रों पर विंडो अनुशीर्षक रखें, शेल तयशुदा को इसके तल पर रखते हुए। "
+"इस सेटिंग को बदलने के लिए किसी प्रभाव के लिए शेल को फिर से आरंभ करना जरूरी है।"
 
-#: ../extensions/places-menu/extension.js:78
-#: ../extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:91
+#: extensions/places-menu/extension.js:94
 msgid "Places"
 msgstr "स्थान"
 
-#: ../extensions/places-menu/placeDisplay.js:57
+#: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
-msgid "Failed to launch \"%s\""
-msgstr "\"%s\" लॉन्च करने में विफल"
+msgid "Failed to launch “%s”"
+msgstr "“%s” लॉन्च करने में विफल"
 
-#: ../extensions/places-menu/placeDisplay.js:99
-#: ../extensions/places-menu/placeDisplay.js:122
+#: extensions/places-menu/placeDisplay.js:75
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "“%s” के लिए वॉल्यूम आरोह करने में विफल"
+
+#: extensions/places-menu/placeDisplay.js:135
+#: extensions/places-menu/placeDisplay.js:158
 msgid "Computer"
 msgstr "कम्प्यूटर"
 
-#: ../extensions/places-menu/placeDisplay.js:200
+#: extensions/places-menu/placeDisplay.js:333
 msgid "Home"
 msgstr "घर"
 
-#: ../extensions/places-menu/placeDisplay.js:287
+#: extensions/places-menu/placeDisplay.js:378
 msgid "Browse Network"
 msgstr "संजाल ब्राउज़ करें"
 
-#: ../extensions/systemMonitor/extension.js:214
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
+msgid "Cycle Screenshot Sizes"
+msgstr "स्क्रीनशॉट आकारों को चक्रित करें"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
+msgid "Cycle Screenshot Sizes Backward"
+msgstr "स्क्रीनशॉट आकारों को पीछे की ओर चक्रित करें"
+
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr "CPU आंकड़े"
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr "मेमोरी आंकड़े"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr "स्वैप आंकड़े"
+
+#: extensions/system-monitor/extension.js:336
+msgid "Upload stats"
+msgstr "अपलोड आंकड़े"
+
+#: extensions/system-monitor/extension.js:350
+msgid "Download stats"
+msgstr "डाउनलोड आंकड़े"
+
+#: extensions/system-monitor/extension.js:364
+msgid "System stats"
+msgstr "सिस्टम आंकड़े"
+
+#: extensions/system-monitor/extension.js:412
+msgid "Show"
+msgstr "दिखाएं"
+
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
 msgstr "CPU"
 
-#: ../extensions/systemMonitor/extension.js:267
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "मेमोरी"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:1
+#: extensions/system-monitor/extension.js:418
+msgid "Swap"
+msgstr "स्वैप"
+
+#: extensions/system-monitor/extension.js:420
+msgid "Upload"
+msgstr "अपलोड"
+
+#: extensions/system-monitor/extension.js:422
+msgid "Download"
+msgstr "डाउनलोड"
+
+#: extensions/system-monitor/extension.js:427
+msgid "Open System Monitor"
+msgstr "सिस्टम मॉनिटर खोलें"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr "CPU उपयोग दिखाएं"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr "मेमोरी उपयोग दिखाएं"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr "स्वैप उपयोग दिखाएं"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr "अपलोड दिखाएं"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr "डाउनलोड दिखाएं"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "प्रसंग नाम"
 
-#: ../extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml.in.h:2
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "प्रसंग का नाम, ~/.themes/name/gnome-shell से लोड किया गया"
+msgstr "प्रसंग का नाम, ~/.themes/name/gnome-shell से लोड किया जायेगा"
 
-#: ../extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "बंद करें"
 
-#: ../extensions/window-list/extension.js:120
+#: extensions/window-list/extension.js:99
 msgid "Unminimize"
-msgstr "गैर न्यूनतम करें"
+msgstr "बड़ा करें"
 
-#: ../extensions/window-list/extension.js:121
+#: extensions/window-list/extension.js:99
 msgid "Minimize"
 msgstr "न्यूनतम करें"
 
-#: ../extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:106
 msgid "Unmaximize"
 msgstr "गैर अधिकतम करें"
 
-#: ../extensions/window-list/extension.js:128
+#: extensions/window-list/extension.js:106
 msgid "Maximize"
 msgstr "अधिकतम"
 
-#: ../extensions/window-list/extension.js:300
+#: extensions/window-list/extension.js:471
 msgid "Minimize all"
 msgstr "सभी छोटा करें"
 
-#: ../extensions/window-list/extension.js:308
+#: extensions/window-list/extension.js:477
 msgid "Unminimize all"
 msgstr "गैर न्यूनतम करें"
 
-#: ../extensions/window-list/extension.js:316
+#: extensions/window-list/extension.js:483
 msgid "Maximize all"
 msgstr "सभी अधिकतम करें"
 
-#: ../extensions/window-list/extension.js:325
+#: extensions/window-list/extension.js:491
 msgid "Unmaximize all"
 msgstr "अधिकतम खत्म करें"
 
-#: ../extensions/window-list/extension.js:334
+#: extensions/window-list/extension.js:499
 msgid "Close all"
 msgstr "सभी बंद करें"
 
-#: ../extensions/window-list/extension.js:644
-#: ../extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "कार्यस्थान सूचक"
-
-#: ../extensions/window-list/extension.js:808
+#: extensions/window-list/extension.js:773
 msgid "Window List"
 msgstr "विंडो सूची"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:1
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "विंडोज़ को कब समूहबद्ध करें"
 
-#: ../extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml.in.h:2
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
 "Decides when to group windows from the same application on the window list. "
-"Possible values are \"never\", \"auto\" and \"always\"."
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
-"तय करता है कि विंडो को कब समूह बद्ध करें विंडो सूची के एक ही प्रकार के "
-"अनुप्रयोगों में से. सही मूल्य हैं \"कभी नहीं\", \"स्वचालित\" तथा \"हमेशा\"."
+"यह तय करता है कि विंडो सूची में एक ही अनुप्रयोग से विंडोज़ को कब समूहित करना है। संभावित "
+"मान “कभी नहीं”, “स्वचालित” और “हमेशा” हैं।"
 
-#: ../extensions/window-list/prefs.js:30
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:79
+msgid "Show windows from all workspaces"
+msgstr "सभी कार्यस्थानों से विंडो दिखाएं"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr "क्या सभी कार्यस्थानों से विंडो दिखानी है या केवल वर्तमान पर।"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
+msgid "Show the window list on all monitors"
+msgstr "सभी मॉनिटरों पर विंडो सूची दिखाएं"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"क्या विंडो सूची को सभी जुड़े हुए मॉनिटरों पर दिखाना है या केवल प्राथमिक मॉनिटर पर।"
+
+#: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "विंडो समूहबद्धता"
 
-#: ../extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:40
 msgid "Never group windows"
 msgstr "विंडोज को कभी समूहित मत करें"
 
-#: ../extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
 msgstr "विंडोज समूहित करें जब स्थान सीमित है"
 
-#: ../extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:42
 msgid "Always group windows"
 msgstr "हमेशा विंडोज समूहित करें"
 
-#: ../extensions/workspace-indicator/prefs.js:141
-msgid "Workspace Names"
-msgstr "कार्यस्थान नाम"
+#: extensions/window-list/prefs.js:66
+msgid "Show on all monitors"
+msgstr "सभी मॉनिटरों पर दिखाएं"
 
-#: ../extensions/workspace-indicator/prefs.js:157
-msgid "Name"
-msgstr "नाम"
+#: extensions/window-list/workspaceIndicator.js:255
+#: extensions/workspace-indicator/extension.js:261
+msgid "Workspace Indicator"
+msgstr "कार्यस्थान सूचक"
 
-#: ../extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/prefs.js:69
 #, javascript-format
 msgid "Workspace %d"
 msgstr "कार्यस्थान %d"
 
+#: extensions/workspace-indicator/prefs.js:136
+msgid "Workspace Names"
+msgstr "कार्यस्थान नाम"
+
+#: extensions/workspace-indicator/prefs.js:262
+msgid "Add Workspace"
+msgstr "कार्यस्थान जोड़ें"
