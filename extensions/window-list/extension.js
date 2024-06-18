@@ -395,9 +395,11 @@ class WindowButton extends BaseButton {
         super(perMonitor, monitorIndex);
 
         this.metaWindow = metaWindow;
+        this._unmanaging = false;
         metaWindow.connectObject(
             'notify::skip-taskbar', () => this._updateVisibility(),
             'workspace-changed', () => this._updateVisibility(),
+            'unmanaging', () => (this._unmanaging = true),
             this);
 
         this._updateVisibility();
@@ -449,6 +451,9 @@ class WindowButton extends BaseButton {
     }
 
     _updateVisibility() {
+        if (this._unmanaging)
+            return;
+
         this.visible = this._isWindowVisible(this.metaWindow);
     }
 
