@@ -26,9 +26,6 @@ import {WorkspaceIndicator} from './workspaceIndicator.js';
 const ICON_TEXTURE_SIZE = 24;
 const DND_ACTIVATE_TIMEOUT = 500;
 
-const TOOLTIP_OFFSET = 6;
-const TOOLTIP_ANIMATION_TIME = 150;
-
 const GroupingMode = {
     NEVER: 0,
     AUTO: 1,
@@ -197,6 +194,13 @@ class BaseButton extends DashItemContainer {
         });
         this.setChild(this._button);
 
+        this._button.connect('notify::hover', () => {
+            if (this._button.hover)
+                this.showLabel();
+            else
+                this.hideLabel();
+        });
+
         this._perMonitor = perMonitor;
         this._monitorIndex = monitorIndex;
         this._ignoreWorkspace = false;
@@ -220,12 +224,6 @@ class BaseButton extends DashItemContainer {
                 this._windowEnteredOrLeftMonitor.bind(this),
                 this);
         }
-
-        this._tooltip = new Tooltip(this, {
-            style_class: 'dash-label',
-            visible: false,
-        });
-        Main.uiGroup.add_child(this._tooltip);
     }
 
     get active() {
@@ -246,6 +244,18 @@ class BaseButton extends DashItemContainer {
         this.notify('ignore-workspace');
 
         this._updateVisibility();
+    }
+
+    showLabel() {
+        const [, , preferredTitleWidth] = this.label_actor.get_preferred_size();
+        const maxTitleWidth = this.label_actor.allocation.get_width();
+        const isTitleFullyShown = preferredTitleWidth <= maxTitleWidth;
+
+        const labelText = isTitleFullyShown
+            ? '' : this.label_actor.text;
+
+        this.setLabelText(labelText);
+        super.showLabel();
     }
 
     _setLongPressTimeout() {
@@ -386,7 +396,6 @@ class BaseButton extends DashItemContainer {
     }
 
     _onDestroy() {
-        this._tooltip.destroy();
     }
 }
 
@@ -1163,69 +1172,5 @@ export default class WindowListExtension extends Extension {
 
     someWindowListContains(actor) {
         return this._windowLists.some(list => list.contains(actor));
-    }
-}
-
-class Tooltip extends St.Label {
-    static {
-        GObject.registerClass(this);
-    }
-
-    constructor(widget, params) {
-        super(params);
-
-        this._widget = widget;
-
-        this._widget.connect('notify::hover', () => {
-            if (this._widget.hover)
-                this.open();
-            else
-                this.close();
-        });
-    }
-
-    open() {
-        const buttonTitleWidget = this._widget.label_actor;
-        const [, , preferredTitleWidth] = buttonTitleWidget.get_preferred_size();
-        const maxTitleWidth = buttonTitleWidget.allocation.get_width();
-        const isTitleFullyShown = preferredTitleWidth <= maxTitleWidth;
-
-        if (isTitleFullyShown)
-            return;
-
-        this.set({
-            text: this._widget.label_actor.get_text(),
-            visible: true,
-            opacity: 0,
-        });
-
-        const [stageX, stageY] = this._widget.get_transformed_position();
-        const thumbWidth = this._widget.allocation.get_width();
-        const tipWidth = this.width;
-        const tipHeight = this.height;
-        const xOffset = Math.floor((thumbWidth - tipWidth) / 2);
-        const monitor = Main.layoutManager.findMonitorForActor(this);
-        const x = Math.clamp(
-            stageX + xOffset,
-            monitor.x,
-            monitor.x + monitor.width - tipWidth);
-        const y = stageY - tipHeight - TOOLTIP_OFFSET;
-        this.set_position(x, y);
-
-        this.ease({
-            opacity: 255,
-            duration: TOOLTIP_ANIMATION_TIME,
-            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
-            onComplete: () => (this.visible = this._widget.hover),
-        });
-    }
-
-    close() {
-        this.ease({
-            opacity: 0,
-            duration: TOOLTIP_ANIMATION_TIME,
-            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
-            onComplete: () => (this.visible = this._widget.hover),
-        });
     }
 }
