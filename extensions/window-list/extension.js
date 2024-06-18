@@ -19,6 +19,7 @@ import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/ex
 import * as DND from 'resource:///org/gnome/shell/ui/dnd.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
+import {DashItemContainer} from 'resource:///org/gnome/shell/ui/dash.js';
 
 import {WorkspaceIndicator} from './workspaceIndicator.js';
 
@@ -172,7 +173,7 @@ class WindowTitle extends St.BoxLayout {
     }
 }
 
-class BaseButton extends St.Button {
+class BaseButton extends DashItemContainer {
     static {
         GObject.registerClass({
             GTypeFlags: GObject.TypeFlags.ABSTRACT,
@@ -186,12 +187,15 @@ class BaseButton extends St.Button {
     }
 
     constructor(perMonitor, monitorIndex) {
-        super({
+        super();
+
+        this._button = new St.Button({
             style_class: 'window-button',
             can_focus: true,
             x_expand: true,
             button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE,
         });
+        this.setChild(this._button);
 
         this._perMonitor = perMonitor;
         this._monitorIndex = monitorIndex;
@@ -199,7 +203,7 @@ class BaseButton extends St.Button {
 
         this.connect('notify::allocation',
             this._updateIconGeometry.bind(this));
-        this.connect('clicked', this._onClicked.bind(this));
+        this._button.connect('clicked', this._onClicked.bind(this));
         this.connect('destroy', this._onDestroy.bind(this));
         this.connect('popup-menu', this._onPopupMenu.bind(this));
 
@@ -405,7 +409,7 @@ class WindowButton extends BaseButton {
         this._updateVisibility();
 
         this._windowTitle = new WindowTitle(this.metaWindow);
-        this.set_child(this._windowTitle);
+        this._button.set_child(this._windowTitle);
         this.label_actor = this._windowTitle.label_actor;
 
         this._contextMenu = new WindowContextMenu(this, this.metaWindow);
@@ -537,7 +541,7 @@ class AppButton extends BaseButton {
         this._updateVisibility();
 
         let stack = new St.Widget({layout_manager: new Clutter.BinLayout()});
-        this.set_child(stack);
+        this._button.set_child(stack);
 
         this._singleWindowTitle = new St.Bin({
             x_expand: true,
@@ -825,7 +829,7 @@ class WindowList extends St.Widget {
 
         this._windowSignals = new Map();
         global.display.connectObject(
-            'window-created', (dsp, win) => this._addWindow(win), this);
+            'window-created', (dsp, win) => this._addWindow(win, true), this);
 
         Main.xdndHandler.connectObject(
             'drag-begin', () => this._monitorDrag(),
@@ -942,14 +946,14 @@ class WindowList extends St.Widget {
                        w2.metaWindow.get_stable_sequence();
             });
             for (let i = 0; i < windows.length; i++)
-                this._addWindow(windows[i].metaWindow);
+                this._addWindow(windows[i].metaWindow, false);
         } else {
             let apps = this._appSystem.get_running().sort((a1, a2) => {
                 return _getAppStableSequence(a1) -
                        _getAppStableSequence(a2);
             });
             for (let i = 0; i < apps.length; i++)
-                this._addApp(apps[i]);
+                this._addApp(apps[i], false);
         }
     }
 
@@ -963,26 +967,26 @@ class WindowList extends St.Widget {
             return;
 
         if (app.state === Shell.AppState.RUNNING)
-            this._addApp(app);
+            this._addApp(app, true);
         else if (app.state === Shell.AppState.STOPPED)
             this._removeApp(app);
     }
 
-    _addApp(app) {
+    _addApp(app, animate) {
         let button = new AppButton(app, this._perMonitor, this._monitor.index);
         this._settings.bind('display-all-workspaces',
             button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
         this._windowList.add_child(button);
+        button.show(animate);
     }
 
     _removeApp(app) {
         let children = this._windowList.get_children();
         let child = children.find(c => c.app === app);
-        if (child)
-            child.destroy();
+        child?.animateOutAndDestroy();
     }
 
-    _addWindow(win) {
+    _addWindow(win, animate) {
         if (!this._grouped)
             this._checkGrouping();
 
@@ -1000,6 +1004,7 @@ class WindowList extends St.Widget {
         this._settings.bind('display-all-workspaces',
             button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
         this._windowList.add_child(button);
+        button.show(animate);
     }
 
     _removeWindow(win) {
@@ -1016,8 +1021,7 @@ class WindowList extends St.Widget {
 
         let children = this._windowList.get_children();
         let child = children.find(c => c.metaWindow === win);
-        if (child)
-            child.destroy();
+        child?.animateOutAndDestroy();
     }
 
     _monitorDrag() {
