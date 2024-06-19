@@ -866,12 +866,12 @@ class WindowList extends St.Widget {
             'window-created', (dsp, win) => this._addWindow(win, true), this);
 
         Main.xdndHandler.connectObject(
-            'drag-begin', () => this._monitorDrag(),
-            'drag-end', () => this._stopMonitoringDrag(),
+            'drag-begin', () => this._monitorXdndDrag(),
+            'drag-end', () => this._stopMonitoringXdndDrag(),
             this);
 
-        this._dragMonitor = {
-            dragMotion: this._onDragMotion.bind(this),
+        this._xdndDragMonitor = {
+            dragMotion: this._onXdndDragMotion.bind(this),
         };
 
         this._dndTimeoutId = 0;
@@ -1059,16 +1059,16 @@ class WindowList extends St.Widget {
         child?.animateOutAndDestroy();
     }
 
-    _monitorDrag() {
-        DND.addDragMonitor(this._dragMonitor);
+    _monitorXdndDrag() {
+        DND.addDragMonitor(this._xdndDragMonitor);
     }
 
-    _stopMonitoringDrag() {
-        DND.removeDragMonitor(this._dragMonitor);
+    _stopMonitoringXdndDrag() {
+        DND.removeDragMonitor(this._xdndDragMonitor);
         this._removeActivateTimeout();
     }
 
-    _onDragMotion(dragEvent) {
+    _onXdndDragMotion(dragEvent) {
         if (Main.overview.visible ||
             !this.contains(dragEvent.targetActor)) {
             this._removeActivateTimeout();
@@ -1116,7 +1116,7 @@ class WindowList extends St.Widget {
         this._windowSignals.forEach((id, win) => win.disconnect(id));
         this._windowSignals.clear();
 
-        this._stopMonitoringDrag();
+        this._stopMonitoringXdndDrag();
 
         this._settings.disconnectObject();
         this._settings = null;
