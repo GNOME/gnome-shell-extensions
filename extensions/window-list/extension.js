@@ -575,6 +575,10 @@ class WindowButton extends BaseButton {
         this._updateStyle();
     }
 
+    get id() {
+        return `window:${this.metaWindow.get_id()}`;
+    }
+
     _createTitleActor() {
         return new WindowTitle(this.metaWindow);
     }
@@ -712,6 +716,10 @@ class AppButton extends BaseButton {
         this._windowTracker.connectObject('notify::focus-app',
             () => this._updateStyle(), this);
         this._updateStyle();
+    }
+
+    get id() {
+        return `app:${this.app.get_id()}`;
     }
 
     _windowEnteredOrLeftMonitor(metaDisplay, monitorIndex, metaWindow) {
