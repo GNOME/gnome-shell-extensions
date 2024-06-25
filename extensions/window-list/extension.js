@@ -729,22 +729,15 @@ class WindowList extends St.Widget {
         let box = new St.BoxLayout({x_expand: true, y_expand: true});
         this.add_child(box);
 
-        let layout = new Clutter.BoxLayout({homogeneous: true});
-        this._windowList = new St.Widget({
+        this._windowList = new St.BoxLayout({
             style_class: 'window-list',
             reactive: true,
-            layout_manager: layout,
             x_align: Clutter.ActorAlign.START,
             x_expand: true,
             y_expand: true,
         });
         box.add_child(this._windowList);
 
-        this._windowList.connect('style-changed', () => {
-            let node = this._windowList.get_theme_node();
-            let spacing = node.get_length('spacing');
-            this._windowList.layout_manager.spacing = spacing;
-        });
         this._windowList.connect('scroll-event', this._onScrollEvent.bind(this));
 
         let indicatorsBox = new St.BoxLayout({x_align: Clutter.ActorAlign.END});
