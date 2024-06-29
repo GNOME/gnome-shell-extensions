@@ -1,3 +1,20 @@
+47.alpha
+========
+* Improve workspace previews in window-list and workspace-indicator
+  [Florian; !307, !316]
+* apps-menu: Fix a11y of category labels [Florian; !319]
+* window-list: Fix long-press support [Florian; !320]
+* window-list: Animate transitions [Florian; !325]
+* Misc. bug fixes and cleanups [Florian; !315, !321, !324]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Jordi Mas i Hernandez [ca], Martin [sl], Hugo Carvalho [pt], Jose Riha [sk],
+  Scrambled 777 [hi], Artur S0 [ru], Милош Поповић [sr], Yosef Or Boczko [he],
+  Balázs Úr [hu]
+
 46.1
 ====
 * screenshot-window-sizer: Add flathub-recommended size [Florian; !317]
