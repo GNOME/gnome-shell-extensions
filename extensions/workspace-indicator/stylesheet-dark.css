@@ -18,13 +18,26 @@
 }
 
 .workspace-indicator .workspaces-box {
-  padding: 5px;
   spacing: 3px;
 }
 
 .workspace-indicator-menu .workspaces-box {
   padding: 5px;
   spacing: 6px;
+}
+
+.workspace-indicator .workspace-box {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.workspace-indicator StButton:first-child:ltr > .workspace-box,
+.workspace-indicator StButton:last-child:rtl > .workspace-box {
+  padding-left: 5px;
+}
+.workspace-indicator StButton:last-child:ltr > .workspace-box,
+.workspace-indicator StButton:first-child:rtl > .workspace-box {
+  padding-right: 5px;
 }
 
 .workspace-indicator-menu .workspace-box {
