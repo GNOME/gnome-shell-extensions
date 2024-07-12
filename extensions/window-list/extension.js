@@ -358,9 +358,9 @@ class BaseButton extends DashItemContainer {
 
     _updateStyle() {
         if (this._isFocused())
-            this.add_style_class_name('focused');
+            this._button.add_style_class_name('focused');
         else
-            this.remove_style_class_name('focused');
+            this._button.remove_style_class_name('focused');
     }
 
     _windowEnteredOrLeftMonitor(_metaDisplay, _monitorIndex, _metaWindow) {
