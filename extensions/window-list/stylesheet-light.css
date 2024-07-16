@@ -15,13 +15,10 @@
   }
 
   .bottom-panel .window-button > StWidget {
-    color: #2e3436;
-    background-color: #eee;
     border-radius: 3px;
     padding: 3px 6px 1px;
     box-shadow: none;
     text-shadow: none;
-    border: 1px solid rgba(0,0,0,0.2);
   }
 
   .bottom-panel .window-button > StWidget {
@@ -29,25 +26,43 @@
     max-width: 18.75em;
   }
 
-  .bottom-panel .window-button:hover > StWidget {
-    background-color: #f9f9f9;
+ .window-button > StWidget {
+  color: #000;
+  background-color: transparent;
+}
+
+.window-button > StWidget {
+  -st-natural-width: 18.75em;
+  max-width: 18.75em;
+}
+
+.window-button:hover > StWidget {
+  background-color: st-darken(#eee,5%);
+}
+
+.window-button:active > StWidget,
+.window-button:focus > StWidget {
+  background-color: st-darken(#eee, 10%);
+}
+
+.window-button.focused > StWidget {
+  background-color: st-darken(#eee,15%);
+}
+
+  .window-button.focused:hover > StWidget {
+    background-color: st-darken(#eee, 20%);
   }
 
-  .bottom-panel .window-button:active > StWidget,
-  .bottom-panel .window-button:focus > StWidget {
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  .window-button.focused:active > StWidget {
+    background-color: st-darken(#eee, 25%);
   }
 
-  .bottom-panel .window-button.focused > StWidget {
-    background-color: #ccc;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-  }
+.window-button.minimized > StWidget {
+  color: #aaa;
+  background-color: #f9f9f9;
+}
 
-  .bottom-panel .window-button.focused:hover > StWidget {
-    background-color: #e9e9e9;
-  }
-
-  .bottom-panel .window-button.minimized > StWidget {
-    color: #888;
-    box-shadow: none;
-  }
+.window-button.minimized:active > StWidget {
+  color: #aaa;
+  background-color: #f9f9f9;
+}

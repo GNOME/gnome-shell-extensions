@@ -34,8 +34,8 @@
 }
 
 .window-button > StWidget {
-  color: #bbb;
-  background-color: #1d1d1d;
+  color: #fff;
+  background-color: transparent;
   border-radius: 4px;
   padding: 3px 6px 1px;
   transition: 100ms ease;
@@ -47,25 +47,25 @@
 }
 
 .window-button:hover > StWidget {
-  color: #fff;
   background-color: #303030;
 }
 
 .window-button:active > StWidget,
 .window-button:focus > StWidget {
-  color: #fff;
-  background-color: #3f3f3f;
+  background-color: st-lighten(#303030, 5%);
 }
 
 .window-button.focused > StWidget {
-  color: #fff;
-  background-color: #3f3f3f;
+  background-color: #5b5b5b;
 }
 
-.window-button.focused:active > StWidget {
-  color: #fff;
-  background-color: #3f3f3f;
-}
+  .window-button.focused:hover > StWidget {
+    background-color: st-lighten(#5b5b5b, 5%);
+  }
+
+  .window-button.focused:active > StWidget {
+    background-color: st-lighten(#5b5b5b, 10%);
+  }
 
 .window-button.minimized > StWidget {
   color: #666;
