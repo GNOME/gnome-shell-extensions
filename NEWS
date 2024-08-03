@@ -1,3 +1,15 @@
+47.beta
+=======
+* window-list: Modernize styling [Jakub; !330]
+* Include "status-icons" extension [Florian; !194]
+* Misc. bug fixes and cleanups [Florian; !328, !331, !327]
+
+Contributors:
+  Florian Müllner, Jakub Steiner
+
+Translators:
+  Sabri Ünal [tr], Chao-Hsiung Liao [zh_TW]
+
 47.alpha
 ========
 * Improve workspace previews in window-list and workspace-indicator
