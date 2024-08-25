@@ -10,8 +10,8 @@
 msgid ""
 msgstr "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
-"PO-Revision-Date: 2024-02-15 00:42+0200\n"
+"POT-Creation-Date: 2024-04-29 15:27+0000\n"
+"PO-Revision-Date: 2024-08-25 00:42+0200\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -42,7 +42,7 @@ msgstr "GNOME klasikoa Xorg gainean"
 msgid "Favorites"
 msgstr "Gogokoak"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:400
 msgid "Apps"
 msgstr "Aplikazioak"
 
@@ -109,7 +109,7 @@ msgstr "Lekuak"
 #: extensions/places-menu/placeDisplay.js:60
 #, javascript-format
 msgid "Failed to launch “%s”"
-msgstr "Huts egin du '%s' abiaraztean"
+msgstr "Huts egin du '%s' abiarazteak"
 
 #: extensions/places-menu/placeDisplay.js:75
 #, javascript-format
@@ -149,43 +149,43 @@ msgstr "Memoriaren estatistikak"
 msgid "Swap stats"
 msgstr "Trukatze-espazioaren estatistikak"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "Kargaren estatistikak"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "Deskargaren estatistikak"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:364
 msgid "System stats"
 msgstr "Sistemaren estatistikak"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:412
 msgid "Show"
 msgstr "Erakutsi"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
-msgstr "PUZ"
+msgstr "PUZa"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "Memoria"
 
-#: extensions/system-monitor/extension.js:409
+#: extensions/system-monitor/extension.js:418
 msgid "Swap"
-msgstr "Trukatu"
+msgstr "Trukatze-espazioa"
 
-#: extensions/system-monitor/extension.js:411
+#: extensions/system-monitor/extension.js:420
 msgid "Upload"
 msgstr "Kargatu"
 
-#: extensions/system-monitor/extension.js:413
+#: extensions/system-monitor/extension.js:422
 msgid "Download"
 msgstr "Deskargatu"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:427
 msgid "Open System Monitor"
 msgstr "Ireki sistema-monitorea"
 
@@ -217,47 +217,47 @@ msgstr "Gaiaren izena"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Gaiaren izena, ~/.themes/izena/gnome-shell direktoriotik kargatzeko"
 
-#: extensions/window-list/extension.js:71
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Itxi"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Unminimize"
 msgstr "Leheneratu"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Minimize"
 msgstr "Minimizatu"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Unmaximize"
 msgstr "Desmaximizatu"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Maximize"
 msgstr "Maximizatu"
 
-#: extensions/window-list/extension.js:470
+#: extensions/window-list/extension.js:471
 msgid "Minimize all"
 msgstr "Minimizatu denak"
 
-#: extensions/window-list/extension.js:476
+#: extensions/window-list/extension.js:477
 msgid "Unminimize all"
 msgstr "Leheneratu denak"
 
-#: extensions/window-list/extension.js:482
+#: extensions/window-list/extension.js:483
 msgid "Maximize all"
 msgstr "Maximizatu denak"
 
-#: extensions/window-list/extension.js:490
+#: extensions/window-list/extension.js:491
 msgid "Unmaximize all"
 msgstr "Desmaximizatu denak"
 
-#: extensions/window-list/extension.js:498
+#: extensions/window-list/extension.js:499
 msgid "Close all"
 msgstr "Itxi denak"
 
-#: extensions/window-list/extension.js:772
+#: extensions/window-list/extension.js:778
 msgid "Window List"
 msgstr "Leiho-zerrenda"
 
@@ -290,13 +290,17 @@ msgid ""
 "primary one."
 msgstr "Leihoen zerrenda konektatutako pantaila guztietan edo soilik pantaila nagusian erakutsiko den."
 
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "Erakutsi laneko areen aurrebistak leihoen zerrendan"
+
 #: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
-msgstr "Leiho-elkartzea"
+msgstr "Leihoak elkartzea"
 
 #: extensions/window-list/prefs.js:40
 msgid "Never group windows"
-msgstr "Leihoak inoiz ez elkartu"
+msgstr "Ez elkartu leihoak inoiz"
 
 #: extensions/window-list/prefs.js:41
 msgid "Group windows when space is limited"
@@ -310,23 +314,34 @@ msgstr "Elkartu beti leihoak"
 msgid "Show on all monitors"
 msgstr "Erakutsi pantaila guztietan"
 
-#: extensions/window-list/workspaceIndicator.js:253
-#: extensions/workspace-indicator/extension.js:259
-msgid "Workspace Indicator"
-msgstr "Lan arearen adierazlea"
+#: extensions/window-list/prefs.js:92
+msgid "Show workspace previews"
+msgstr "Erakutsi laneko areen aurrebistak"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "Erakutsi aurrebistak goiko barran"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "%d. laneko area"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "Laneko areen izenak"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "Gehitu laneko area"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "Erakutsi laneko areen aurrebistak goiko barran"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "Laneko arearen adierazlea"
 
 #~ msgid "Applications"
 #~ msgstr "Aplikazioak"
