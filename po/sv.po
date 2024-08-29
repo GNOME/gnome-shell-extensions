@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-02-22 00:06+0000\n"
-"PO-Revision-Date: 2024-03-03 16:55+0100\n"
+"POT-Creation-Date: 2024-04-29 15:27+0000\n"
+"PO-Revision-Date: 2024-05-13 22:17+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -42,7 +42,7 @@ msgstr "GNOME Klassisk på Xorg"
 msgid "Favorites"
 msgstr "Favoriter"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:400
 msgid "Apps"
 msgstr "Program"
 
@@ -158,43 +158,43 @@ msgstr "Minnesstatistik"
 msgid "Swap stats"
 msgstr "Växlingsstatistik"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "Sändningsstatistik"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "Hämtningsstatistik"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:364
 msgid "System stats"
 msgstr "Systemstatistik"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:412
 msgid "Show"
 msgstr "Visa"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
 msgstr "Processor"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "Minne"
 
-#: extensions/system-monitor/extension.js:409
+#: extensions/system-monitor/extension.js:418
 msgid "Swap"
 msgstr "Växlingsutrymme"
 
-#: extensions/system-monitor/extension.js:411
+#: extensions/system-monitor/extension.js:420
 msgid "Upload"
 msgstr "Sändning"
 
-#: extensions/system-monitor/extension.js:413
+#: extensions/system-monitor/extension.js:422
 msgid "Download"
 msgstr "Hämtning"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:427
 msgid "Open System Monitor"
 msgstr "Öppna systemövervakare"
 
@@ -266,7 +266,7 @@ msgstr "Avmaximera alla"
 msgid "Close all"
 msgstr "Stäng alla"
 
-#: extensions/window-list/extension.js:773
+#: extensions/window-list/extension.js:778
 msgid "Window List"
 msgstr "Fönsterlista"
 
@@ -304,6 +304,10 @@ msgstr ""
 "Huruvida fönsterlistan ska visas på alla anslutna skärmar eller bara på den "
 "primära."
 
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "Visa förhandsgranskningar av arbetsytor i fönsterlistan"
+
 #: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Fönstergruppering"
@@ -324,23 +328,34 @@ msgstr "Gruppera alltid fönster"
 msgid "Show on all monitors"
 msgstr "Visa på alla skärmar"
 
-#: extensions/window-list/workspaceIndicator.js:255
-#: extensions/workspace-indicator/extension.js:261
-msgid "Workspace Indicator"
-msgstr "Arbetsyteindikator"
+#: extensions/window-list/prefs.js:92
+msgid "Show workspace previews"
+msgstr "Visa förhandsgranskningar av arbetsytor"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "Visa förhandsgranskningar i systemraden"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Arbetsyta %d"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "Namn på arbetsytor"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "Lägg till arbetsyta"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "Visa förhandsgranskningar av arbetsytor i systemraden"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "Arbetsyteindikator"
 
 #~ msgid "Applications"
 #~ msgstr "Program"
