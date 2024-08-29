@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
-"PO-Revision-Date: 2024-03-10 21:36+0900\n"
+"POT-Creation-Date: 2024-08-29 11:18+0000\n"
+"PO-Revision-Date: 2024-08-29 22:37+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -41,7 +41,7 @@ msgstr "그놈 클래식 (Xorg)"
 msgid "Favorites"
 msgstr "즐겨찾기"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:400
 msgid "Apps"
 msgstr "앱"
 
@@ -156,43 +156,43 @@ msgstr "메모리 통계"
 msgid "Swap stats"
 msgstr "스왑 통계"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "업로드 통계"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "다운로드 통계"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:364
 msgid "System stats"
 msgstr "시스템 통계"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:412
 msgid "Show"
 msgstr "보이기"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
 msgstr "CPU"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "메모리"
 
-#: extensions/system-monitor/extension.js:409
+#: extensions/system-monitor/extension.js:418
 msgid "Swap"
 msgstr "스왑"
 
-#: extensions/system-monitor/extension.js:411
+#: extensions/system-monitor/extension.js:420
 msgid "Upload"
 msgstr "업로드"
 
-#: extensions/system-monitor/extension.js:413
+#: extensions/system-monitor/extension.js:422
 msgid "Download"
 msgstr "다운로드"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:427
 msgid "Open System Monitor"
 msgstr "시스템 감시 보이기"
 
@@ -224,47 +224,47 @@ msgstr "테마 이름"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "테마 이름, ~/.themes/name/gnome-shell 아래에서 읽어들입니다."
 
-#: extensions/window-list/extension.js:71
+#: extensions/window-list/extension.js:70
 msgid "Close"
 msgstr "닫기"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:97
 msgid "Unminimize"
 msgstr "최소화 취소"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:97
 msgid "Minimize"
 msgstr "최소화"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:104
 msgid "Unmaximize"
 msgstr "최대화 취소"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:104
 msgid "Maximize"
 msgstr "최대화"
 
-#: extensions/window-list/extension.js:470
+#: extensions/window-list/extension.js:489
 msgid "Minimize all"
 msgstr "모두 최소화"
 
-#: extensions/window-list/extension.js:476
+#: extensions/window-list/extension.js:495
 msgid "Unminimize all"
 msgstr "모두 최소화 취소"
 
-#: extensions/window-list/extension.js:482
+#: extensions/window-list/extension.js:501
 msgid "Maximize all"
 msgstr "모두 최대화"
 
-#: extensions/window-list/extension.js:490
+#: extensions/window-list/extension.js:509
 msgid "Unmaximize all"
 msgstr "모두 최대화 취소"
 
-#: extensions/window-list/extension.js:498
+#: extensions/window-list/extension.js:517
 msgid "Close all"
 msgstr "모두 닫기"
 
-#: extensions/window-list/extension.js:772
+#: extensions/window-list/extension.js:789
 msgid "Window List"
 msgstr "창 목록"
 
@@ -287,7 +287,7 @@ msgstr "모든 작업 공간의 창을 표시합니다"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Whether to show windows from all workspaces or only the current one."
-msgstr "모든 작업 공간의 창을 표시할지, 아니면 현재 작업공간의 창만 표시할지."
+msgstr "모든 작업 공간의 창을 표시할지, 아니면 현재 작업 공간의 창만 표시할지."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
 msgid "Show the window list on all monitors"
@@ -300,6 +300,10 @@ msgid ""
 msgstr ""
 "연결된 모든 모니터에 있는 창 목록을 표시할지, 아니면 주 모니터에 있는 창 목록"
 "만 표시할지."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "창 목록에 작업 공간 미리 보기 표시"
 
 #: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
@@ -321,23 +325,34 @@ msgstr "항상 창 모으기"
 msgid "Show on all monitors"
 msgstr "모든 모니터 보이기"
 
-#: extensions/window-list/workspaceIndicator.js:253
-#: extensions/workspace-indicator/extension.js:259
-msgid "Workspace Indicator"
-msgstr "작업 공간 표시"
+#: extensions/window-list/prefs.js:92
+msgid "Show workspace previews"
+msgstr "작업 공간 미리 보기 표시"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "위 표시줄에 미리 보기 표시"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "작업 공간 %d"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "작업 공간 이름"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "작업 공간 추가"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "위 표시줄에 작업 공간 미리 보기 표시"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "작업 공간 표시"
 
 #~ msgid "Applications"
 #~ msgstr "프로그램"
