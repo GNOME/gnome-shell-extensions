@@ -4,7 +4,6 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
-@import url("stylesheet-workspace-switcher-dark.css");
 
 .window-list {
   spacing: 2px;
@@ -30,56 +29,95 @@
 }
 
 .window-button-box {
-  spacing: 4px;
+  spacing: 4px;border-radius:15px;
 }
 
 .window-button > StWidget {
-  color: #fff;
-  background-color: transparent;
+  color: #10131c;
+  background-color: #1d1d1d;
   border-radius: 4px;
+  text-shadow: #fff 3px 0 15px;
   padding: 3px 6px 1px;
-  transition: 100ms ease;
+  transition: 500ms ease-in;
 }
 
 .window-button > StWidget {
   -st-natural-width: 18.75em;
   max-width: 18.75em;
+  transition: 500ms ease-in;
 }
 
 .window-button:hover > StWidget {
+  color: #000;
   background-color: #303030;
+  transition: 500ms ease-in;
+    text-shadow: #3584E4 3px 0 15px;
 }
 
 .window-button:active > StWidget,
 .window-button:focus > StWidget {
-  background-color: st-lighten(#303030, 5%);
+  color: #fff;
+  background-color: #3f3f3f;
+  transition: 500ms ease-in;
 }
 
 .window-button.focused > StWidget {
-  background-color: #5b5b5b;
+  color: #fff;
+  background-color: #3f3f3f;
+  transition: 500ms ease-in;
 }
 
-  .window-button.focused:hover > StWidget {
-    background-color: st-lighten(#5b5b5b, 5%);
-  }
-
-  .window-button.focused:active > StWidget {
-    background-color: st-lighten(#5b5b5b, 10%);
-  }
+.window-button.focused:active > StWidget {
+  color: #fff;
+  background-color: #3f3f3f;
+  transition: 500ms ease-in;
+}
 
 .window-button.minimized > StWidget {
-  color: #666;
+  color: #000;
   background-color: #161616;
+  transition: 500ms ease-in;
 }
 
 .window-button.minimized:active > StWidget {
-  color: #666;
+  color:  #10131c;
   background-color: #161616;
+  transition: 500ms ease-in;
 }
 
 .window-button-icon {
   width: 24px;
   height: 24px;
+}
+
+.window-list-workspace-indicator .status-label-bin {
+  background-color: rgba(200, 200, 200, 0.3);
+  padding: 5px;
+  margin: 3px;
+}
+
+.window-list-workspace-indicator .workspaces-box {
+  spacing: 3px;
+  padding: 5px;
+}
+
+.window-list-workspace-indicator .workspace {
+  width: 52px;
+  border-radius: 4px;
+  background-color: #1e1e1e;
+}
+
+.window-list-workspace-indicator .workspace.active {
+  background-color: #3f3f3f;
+}
+
+.window-list-window-preview {
+  background-color: #bebebe;
+  border-radius: 1px;
+}
+
+.window-list-window-preview.active {
+  background-color: #d4d4d4;
 }
 
 .notification {
