@@ -4,7 +4,7 @@
 
 include:
   - remote: 'https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/bbe5232986c9b98eb1efe62484e07216f7d1a4df/templates/fedora.yml'
-  - remote: "https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/6f86b8bcb0cd5168c32779c4fea9a893c4a0c046/templates/ci-fairy.yml"
+  - remote: "https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/bc70242ffb8402243e934659ecc1a2d1c89eca2b/templates/ci-fairy.yml"
   - project: 'Infrastructure/openshift-images/gnome-release-service'
     file: '/ci-templates/release-module.yml'
 
