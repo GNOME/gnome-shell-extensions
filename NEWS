@@ -1,3 +1,18 @@
+47.rc
+=====
+* Misc. bug fixes and cleanups [Sophie; !333]
+
+Contributors:
+  Sophie Herold
+
+Translators:
+  Daniel Șerbănescu [ro], Giannis Antypas [el], Ekaterine Papava [ka],
+  Jordi Mas i Hernandez [ca], Yuri Chornoivan [uk], Jiri Grönroos [fi],
+  Daniel Rusek [cs], Vasil Pupkin [be], Luming Zh [zh_CN], Brage Fuglseth [nb],
+  Asier Sarasua Garmendia [eu], Danial Behzadi [fa], Rafael Fontenelle [pt_BR],
+  Quentin PAGÈS [oc], Anders Jonsson [sv], Jürgen Benvenuti [de],
+  Changwoo Ryu [ko], Hugo Carvalho [pt], Piotr Drąg [pl], Sabri Ünal [tr]
+
 47.beta
 =======
 * window-list: Modernize styling [Jakub; !330]
