@@ -6,15 +6,15 @@
 # Gökhan Gurbetoğlu <ggurbet@gmail.com>, 2014.
 # Muhammet Kara <muhammetk@gmail.com>, 2013-2015.
 # Furkan Tokaç <developmentft@gmail.com>, 2017.
-# Sabri Ünal <libreajans@gmail.com>, 2014, 2019, 2022-2024.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2017, 2019, 2020, 2022.
+# Sabri Ünal <yakushabb@gmail.com>, 2014, 2019, 2022-2024.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017, 2019, 2020, 2022, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-04-29 15:27+0000\n"
+"POT-Creation-Date: 2024-08-12 20:31+0000\n"
 "PO-Revision-Date: 2024-05-06 05:17+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -231,47 +231,47 @@ msgstr "Tema adı"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "~/.themes/name/gnome-shell konumundan edinilen tema adı"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:70
 msgid "Close"
 msgstr "Kapat"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:97
 msgid "Unminimize"
 msgstr "Önceki duruma getir"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:97
 msgid "Minimize"
 msgstr "Simge durumuna küçült"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:104
 msgid "Unmaximize"
 msgstr "Önceki duruma getir"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:104
 msgid "Maximize"
 msgstr "En büyük duruma getir"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:489
 msgid "Minimize all"
 msgstr "Tümünü simge durumuna küçült"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:495
 msgid "Unminimize all"
 msgstr "Tümünü önceki duruma getir"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:501
 msgid "Maximize all"
 msgstr "Tümünü en büyük duruma getir"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:509
 msgid "Unmaximize all"
 msgstr "Tümünü önceki duruma getir"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:517
 msgid "Close all"
 msgstr "Tümünü kapat"
 
-#: extensions/window-list/extension.js:778
+#: extensions/window-list/extension.js:789
 msgid "Window List"
 msgstr "Pencere Listesi"
 
@@ -285,8 +285,8 @@ msgid ""
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Pencere listesinde aynı uygulamaların ne zaman kümeleneceğine karar verir. "
-"Olası değerler: “never” (hiçbir zaman), “auto” (kendiliğinden) ve "
-"“always” (her zaman)."
+"Olası değerler: “never” (hiçbir zaman), “auto” (kendiliğinden) ve “always” "
+"(her zaman)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
 #: extensions/window-list/prefs.js:79
