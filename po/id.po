@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
-"PO-Revision-Date: 2024-02-22 20:20+0700\n"
-"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
+"POT-Creation-Date: 2024-04-29 15:27+0000\n"
+"PO-Revision-Date: 2024-09-04 06:36+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -43,7 +43,7 @@ msgstr "GNOME Klasik di Xorg"
 msgid "Favorites"
 msgstr "Favorit"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:400
 msgid "Apps"
 msgstr "Aplikasi"
 
@@ -159,43 +159,43 @@ msgstr "Statistik Memori"
 msgid "Swap stats"
 msgstr "Statistik Swap"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "Statistik Unggah"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "Statistik Unduh"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:364
 msgid "System stats"
 msgstr "Statistik Sistem"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:412
 msgid "Show"
 msgstr "Tampilkan"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
 msgstr "CPU"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "Memori"
 
-#: extensions/system-monitor/extension.js:409
+#: extensions/system-monitor/extension.js:418
 msgid "Swap"
 msgstr "Swap"
 
-#: extensions/system-monitor/extension.js:411
+#: extensions/system-monitor/extension.js:420
 msgid "Upload"
 msgstr "Unggah"
 
-#: extensions/system-monitor/extension.js:413
+#: extensions/system-monitor/extension.js:422
 msgid "Download"
 msgstr "Unduh"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:427
 msgid "Open System Monitor"
 msgstr "Buka Monitor Sistem"
 
@@ -227,47 +227,47 @@ msgstr "Nama tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Nama tema, untuk dimuat dari ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:71
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Tutup"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Unminimize"
 msgstr "Tak minimalkan"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Minimize"
 msgstr "Minimalkan"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Unmaximize"
 msgstr "Tak maksimalkan"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Maximize"
 msgstr "Maksimalkan"
 
-#: extensions/window-list/extension.js:470
+#: extensions/window-list/extension.js:471
 msgid "Minimize all"
 msgstr "Minimalkan semua"
 
-#: extensions/window-list/extension.js:476
+#: extensions/window-list/extension.js:477
 msgid "Unminimize all"
 msgstr "Tak minimalkan semua"
 
-#: extensions/window-list/extension.js:482
+#: extensions/window-list/extension.js:483
 msgid "Maximize all"
 msgstr "Maksimalkan semua"
 
-#: extensions/window-list/extension.js:490
+#: extensions/window-list/extension.js:491
 msgid "Unmaximize all"
 msgstr "Tak maksimalkan semua"
 
-#: extensions/window-list/extension.js:498
+#: extensions/window-list/extension.js:499
 msgid "Close all"
 msgstr "Tutup semua"
 
-#: extensions/window-list/extension.js:772
+#: extensions/window-list/extension.js:778
 msgid "Window List"
 msgstr "Daftar Jendela"
 
@@ -281,8 +281,8 @@ msgid ""
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Menentukan kapan mengelompokkan jendela dari aplikasi yang sama pada daftar "
-"jendela. Nilai-nilai yang mungkin adalah \"never\" (tak pernah), "
-"\"auto\" (otomatis), atau \"always\" (selalu)."
+"jendela. Nilai-nilai yang mungkin adalah \"never\" (tak pernah), \"auto\" "
+"(otomatis), atau \"always\" (selalu)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
 #: extensions/window-list/prefs.js:79
@@ -306,6 +306,10 @@ msgstr ""
 "Apakah menampilkan daftar jendela pada semua monitor yang tersambung atau "
 "hanya pada yang utama."
 
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "Tampilkan pratinjau ruang kerja dalam daftar jendela"
+
 #: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Pengelompokan Jendela"
@@ -326,105 +330,31 @@ msgstr "Selalu kelompokkan jendela"
 msgid "Show on all monitors"
 msgstr "Tampilkan pada semua monitor"
 
-#: extensions/window-list/workspaceIndicator.js:253
-#: extensions/workspace-indicator/extension.js:259
-msgid "Workspace Indicator"
-msgstr "Indikator Ruang Kerja"
+#: extensions/window-list/prefs.js:92
+msgid "Show workspace previews"
+msgstr "Tampilkan pratinjau ruang kerja"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "Tampilkan Pratinjau Di Bilah Puncak"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Ruang Kerja %d"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "Nama Ruang Kerja"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "Tambah Ruang Kerja"
 
-#~ msgid "Applications"
-#~ msgstr "Aplikasi"
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "Menampilkan pratinjau ruang kerja di bilah puncak"
 
-#~ msgid "Application"
-#~ msgstr "Aplikasi"
-
-#~ msgid "Create new matching rule"
-#~ msgstr "Buat aturan pencocokan baru"
-
-#~ msgid "Add"
-#~ msgstr "Tambah"
-
-#~ msgid "Name"
-#~ msgstr "Nama"
-
-#~ msgid "Attach modal dialog to the parent window"
-#~ msgstr "Cantolkan dialog modal ke jendela induk"
-
-#~ msgid ""
-#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-#~ msgstr ""
-#~ "Kunci ini menimpa kunci dalam org.gnome.mutter ketika menjalankan GNOME "
-#~ "Shell."
-
-#~ msgid "Arrangement of buttons on the titlebar"
-#~ msgstr "Pengaturan tombol-tombol pada bilah judul"
-
-#~ msgid ""
-#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
-#~ "running GNOME Shell."
-#~ msgstr ""
-#~ "Kunci ini menimpa kunci dalam org.gnome.desktop.wm.preferences ketika "
-#~ "menjalankan GNOME Shell."
-
-#~ msgid "Enable edge tiling when dropping windows on screen edges"
-#~ msgstr "Aktifkan pengubinan tepi ketika menjatuhkan jendela ke tepi layar"
-
-#~ msgid "Workspaces only on primary monitor"
-#~ msgstr "Ruang kerja hanya pada monitor primer"
-
-#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
-#~ msgstr ""
-#~ "Tunda perubahan fokus dalam mode tetikus sampai penunjuk berhenti bergerak"
-
-#~ msgid "Thumbnail only"
-#~ msgstr "Hanya gambar mini"
-
-#~ msgid "Application icon only"
-#~ msgstr "Hanya ikon aplikasi"
-
-#~ msgid "Thumbnail and application icon"
-#~ msgstr "Gambar mini dan ikon aplikasi"
-
-#~ msgid "Present windows as"
-#~ msgstr "Sajikan jendela sebagai"
-
-#~ msgid "Activities Overview"
-#~ msgstr "Ringkasan Aktivitas"
-
-#~ msgid "Hello, world!"
-#~ msgstr "Hai, dunia!"
-
-#~ msgid "Alternative greeting text."
-#~ msgstr "Teks penyapa alternatif."
-
-#~ msgid ""
-#~ "If not empty, it contains the text that will be shown when clicking on "
-#~ "the panel."
-#~ msgstr ""
-#~ "Bila tak kosong, ini memuat teks yang akan ditampilkan ketika klik pada "
-#~ "panel."
-
-#~ msgid "Message"
-#~ msgstr "Pesan"
-
-#~ msgid ""
-#~ "Example aims to show how to build well behaved extensions for the Shell "
-#~ "and as such it has little functionality on its own.\n"
-#~ "Nevertheless it’s possible to customize the greeting message."
-#~ msgstr ""
-#~ "Example bertujuan menampilkan bagaimana membangun ekstensi yang "
-#~ "berkelakuan baik bagi Shell dan karena itu hanya memiliki sedikit "
-#~ "fungsi.\n"
-#~ "Namun, tetap mungkin untuk mengatur pesan sapaan."
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "Indikator Ruang Kerja"
