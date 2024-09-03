@@ -5,22 +5,23 @@
 # Nicolás Satragno <nsatragno@gmail.com>, 2011.
 # 
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2024.
+# Daniel Mustieles García <daniel.mustieles@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
-"PO-Revision-Date: 2024-02-26 14:05+0100\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+"POT-Creation-Date: 2024-04-29 15:27+0000\n"
+"PO-Revision-Date: 2024-09-03 11:21+0200\n"
+"Last-Translator: Daniel Mustieles García <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 45.3\n"
+"X-Generator: Gtranslator 46.1\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -43,7 +44,7 @@ msgstr "GNOME clásicoen Xorg"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:400
 msgid "Apps"
 msgstr "Aplicaciones"
 
@@ -159,43 +160,43 @@ msgstr "Estadísticas de la memoria"
 msgid "Swap stats"
 msgstr "Estadísticas del área de intercambio"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "Actualizar estadísticas"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "Descargar estadísticas"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:364
 msgid "System stats"
 msgstr "Estadísticas del sistema"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:412
 msgid "Show"
 msgstr "Mostrar"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
 msgstr "CPU"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "Memoria"
 
-#: extensions/system-monitor/extension.js:409
+#: extensions/system-monitor/extension.js:418
 msgid "Swap"
 msgstr "Área de intercambio"
 
-#: extensions/system-monitor/extension.js:411
+#: extensions/system-monitor/extension.js:420
 msgid "Upload"
 msgstr "Subir"
 
-#: extensions/system-monitor/extension.js:413
+#: extensions/system-monitor/extension.js:422
 msgid "Download"
 msgstr "Descargar"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:427
 msgid "Open System Monitor"
 msgstr "Abrir el monitor del sistema"
 
@@ -227,47 +228,47 @@ msgstr "Nombre del tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "El nombre del tema, que se carga desde ~/.themes/nombre/gnome-shell"
 
-#: extensions/window-list/extension.js:71
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Cerrar"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Unminimize"
 msgstr "Desminimizar"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Minimize"
 msgstr "Minimizar"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Unmaximize"
 msgstr "Desmaximizar"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: extensions/window-list/extension.js:470
+#: extensions/window-list/extension.js:471
 msgid "Minimize all"
 msgstr "Minimizar todo"
 
-#: extensions/window-list/extension.js:476
+#: extensions/window-list/extension.js:477
 msgid "Unminimize all"
 msgstr "Desminimizar todo"
 
-#: extensions/window-list/extension.js:482
+#: extensions/window-list/extension.js:483
 msgid "Maximize all"
 msgstr "Maximizar todo"
 
-#: extensions/window-list/extension.js:490
+#: extensions/window-list/extension.js:491
 msgid "Unmaximize all"
 msgstr "Desmaximizar todo"
 
-#: extensions/window-list/extension.js:498
+#: extensions/window-list/extension.js:499
 msgid "Close all"
 msgstr "Cerrar todo"
 
-#: extensions/window-list/extension.js:772
+#: extensions/window-list/extension.js:778
 msgid "Window List"
 msgstr "Lista de ventanas"
 
@@ -306,6 +307,10 @@ msgstr ""
 "Indica si se debe mostrar la lista de ventanas en todas las pantallas "
 "conectadas o sólo en la primaria."
 
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "Mostrar vistas previas de las áreas de trabajo en la lista de ventanas"
+
 #: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Agrupación de ventanas"
@@ -326,23 +331,34 @@ msgstr "Siempre agrupar las ventanas"
 msgid "Show on all monitors"
 msgstr "Mostrar en todas las pantallas"
 
-#: extensions/window-list/workspaceIndicator.js:253
-#: extensions/workspace-indicator/extension.js:259
-msgid "Workspace Indicator"
-msgstr "Indicador de área de trabajo"
+#: extensions/window-list/prefs.js:92
+msgid "Show workspace previews"
+msgstr "Mostrar vistas previas de las áreas de trabajo"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "Mostrar vistas previas en la barra superior"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Área de trabajo %d"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "Nombres de los áreas de trabajo"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "Añadir área de trabajo"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "Mostrar áreas de trabajo en la barra superior"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "Indicador de área de trabajo"
 
 #~ msgid "Applications"
 #~ msgstr "Aplicaciones"
