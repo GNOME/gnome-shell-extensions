@@ -9,9 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
-"PO-Revision-Date: 2024-03-12 19:56+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2024-04-29 15:27+0000\n"
+"PO-Revision-Date: 2024-09-07 23:22+0200\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -42,7 +43,7 @@ msgstr "GNOME Classic på Xorg"
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:400
 msgid "Apps"
 msgstr "Programmer"
 
@@ -159,43 +160,43 @@ msgstr "Hukommelsesstatistik"
 msgid "Swap stats"
 msgstr "Swapstatistik"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "Uploadstatistik"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "Downloadstatistik"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:364
 msgid "System stats"
 msgstr "Systemstatistik"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:412
 msgid "Show"
 msgstr "Vis"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
 msgstr "CPU"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "Hukommelse"
 
-#: extensions/system-monitor/extension.js:409
+#: extensions/system-monitor/extension.js:418
 msgid "Swap"
 msgstr "Swap"
 
-#: extensions/system-monitor/extension.js:411
+#: extensions/system-monitor/extension.js:420
 msgid "Upload"
 msgstr "Upload"
 
-#: extensions/system-monitor/extension.js:413
+#: extensions/system-monitor/extension.js:422
 msgid "Download"
 msgstr "Download"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:427
 msgid "Open System Monitor"
 msgstr "Åbn Systemovervågning"
 
@@ -227,47 +228,47 @@ msgstr "Temanavn"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Navnet på temaet, som indlæses fra ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:71
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "Luk"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Unminimize"
 msgstr "Afminimér"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Minimize"
 msgstr "Minimér"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Unmaximize"
 msgstr "Afmaksimér"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Maximize"
 msgstr "Maksimér"
 
-#: extensions/window-list/extension.js:470
+#: extensions/window-list/extension.js:471
 msgid "Minimize all"
 msgstr "Minimér"
 
-#: extensions/window-list/extension.js:476
+#: extensions/window-list/extension.js:477
 msgid "Unminimize all"
 msgstr "Afminimér alle"
 
-#: extensions/window-list/extension.js:482
+#: extensions/window-list/extension.js:483
 msgid "Maximize all"
 msgstr "Maksimér alle"
 
-#: extensions/window-list/extension.js:490
+#: extensions/window-list/extension.js:491
 msgid "Unmaximize all"
 msgstr "Afmaksimér alle"
 
-#: extensions/window-list/extension.js:498
+#: extensions/window-list/extension.js:499
 msgid "Close all"
 msgstr "Luk alle"
 
-#: extensions/window-list/extension.js:772
+#: extensions/window-list/extension.js:778
 msgid "Window List"
 msgstr "Vinduesliste"
 
@@ -305,6 +306,10 @@ msgstr ""
 "Om vindueslisten skal vise på alle tilsluttede skærme, eller kun på den "
 "primære."
 
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "Forhåndsvis arbejdsområder i vinduesliste"
+
 #: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Vinduesgruppering"
@@ -325,23 +330,34 @@ msgstr "Gruppér altid vinduer"
 msgid "Show on all monitors"
 msgstr "Vis på alle skærme"
 
-#: extensions/window-list/workspaceIndicator.js:253
-#: extensions/workspace-indicator/extension.js:259
-msgid "Workspace Indicator"
-msgstr "Arbejdsområdeindikator"
+#: extensions/window-list/prefs.js:92
+msgid "Show workspace previews"
+msgstr "Forhåndsvis arbejdsområder"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "Inkludér forhåndsvisninger i topbjælken"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Arbejdsområde %d"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "Navne på arbejdsområder"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "Tilføj arbejdsområde"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "Inkludér forhåndsvisninger af arbejdsområder i topbjælken"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "Arbejdsområdeindikator"
 
 #~ msgid "Applications"
 #~ msgstr "Programmer"
