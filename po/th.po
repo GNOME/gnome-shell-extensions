@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
-"POT-Creation-Date: 2024-01-19 22:15+0000\n"
-"PO-Revision-Date: 2024-02-02 15:49+0700\n"
+"POT-Creation-Date: 2024-04-29 15:27+0000\n"
+"PO-Revision-Date: 2024-09-10 16:18+0700\n"
 "Last-Translator: Kittiphong Meesawat <ktphong@elec.kku.ac.th>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -39,9 +39,9 @@ msgstr "GNOME คลาสสิกบน Xorg"
 msgid "Favorites"
 msgstr "รายการโปรด"
 
-#: extensions/apps-menu/extension.js:397
-msgid "Applications"
-msgstr "แอปพลิเคชัน"
+#: extensions/apps-menu/extension.js:400
+msgid "Apps"
+msgstr "แอป"
 
 #: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
@@ -49,8 +49,8 @@ msgstr "รายชื่อแอปพลิเคชันและพื้
 
 #: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
-"A list of strings, each containing an application id (desktop file name), followed by a colon "
-"and the workspace number"
+"A list of strings, each containing an application id (desktop file name), followed by a colon and "
+"the workspace number"
 msgstr "รายการของข้อความที่ประกอบด้วยชื่อแอปพลิเคชัน (ชื่อไฟล์เดสก์ท็อป) ตามด้วยทวิภาค (:) และหมายเลขพื้นที่ทำงาน"
 
 #: extensions/auto-move-windows/prefs.js:159
@@ -82,8 +82,8 @@ msgstr "ใช้หน้าจออื่นเพิ่มสำหรับ
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and "
-"consolidating them further to reduce the bounding box. This setting applies only with the "
-"natural placement strategy."
+"consolidating them further to reduce the bounding box. This setting applies only with the natural "
+"placement strategy."
 msgstr ""
 "พยายามใช้หน้าจออื่นเพิ่มสำหรับการจัดวางภาพย่อหน้าต่างโดยปรับให้เข้ากับอัตราส่วนของหน้าจอ "
 "และรวบรวมเพื่อลดพื้นที่ของกล่องรอบวัตถุ ค่าตั้งนี้ใช้กับเฉพาะกลยุทธ์การจัดวางแบบธรรมชาติเท่านั้น"
@@ -94,9 +94,8 @@ msgstr "วางป้ายชื่อหน้าต่างไว้ด้
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
-"If true, place window captions on top the respective thumbnail, overriding shell default of "
-"placing it at the bottom. Changing this setting requires restarting the shell to have any "
-"effect."
+"If true, place window captions on top the respective thumbnail, overriding shell default of placing "
+"it at the bottom. Changing this setting requires restarting the shell to have any effect."
 msgstr ""
 "หากเป็นจริง จะวางป้ายชื่อหน้าต่างไว้ด้านบนของภาพย่อ ซึ่งจะทับค่าปริยายของเชลล์ที่จะวางป้ายชื่อไว้ใต้ภาพย่อ "
 "เมื่อเปลี่ยนค่าตั้งนี้จะต้องเริ่มเชลล์ใหม่เพื่อให้การเปลี่ยนแปลงมีผล"
@@ -133,81 +132,79 @@ msgstr "เปลี่ยนขนาดภาพหน้าจอใหม่
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
-msgstr ""
+msgstr "เปลี่ยนขนาดภาพหน้าจอใหม่เป็นรอบแบบย้อนกลับ"
 
 #: extensions/system-monitor/extension.js:135
 msgid "CPU stats"
-msgstr ""
+msgstr "สถิติซีพียู"
 
 #: extensions/system-monitor/extension.js:159
-#, fuzzy
-#| msgid "Memory"
 msgid "Memory stats"
-msgstr "หน่วยความจำ"
+msgstr "สถิติหน่วยความจำ"
 
 #: extensions/system-monitor/extension.js:177
 msgid "Swap stats"
-msgstr ""
+msgstr "สถิติพื้นที่สลับ"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
-msgstr ""
+msgstr "สถิติอัปโหลด"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
-msgstr ""
+msgstr "สถิติดาวน์โหลด"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:364
 msgid "System stats"
-msgstr ""
+msgstr "สถิติระบบ"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:412
 msgid "Show"
-msgstr ""
+msgstr "แสดง"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
 msgstr "ซีพียู"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "หน่วยความจำ"
 
-#: extensions/system-monitor/extension.js:409
-msgid "Swap"
-msgstr ""
-
-#: extensions/system-monitor/extension.js:411
-msgid "Upload"
-msgstr ""
-
-#: extensions/system-monitor/extension.js:413
-msgid "Download"
-msgstr ""
-
 #: extensions/system-monitor/extension.js:418
+msgid "Swap"
+msgstr "พื้นที่สลับ"
+
+#: extensions/system-monitor/extension.js:420
+msgid "Upload"
+msgstr "อัปโหลด"
+
+#: extensions/system-monitor/extension.js:422
+msgid "Download"
+msgstr "ดาวน์โหลด"
+
+#: extensions/system-monitor/extension.js:427
 msgid "Open System Monitor"
-msgstr ""
+msgstr "เปิด “เครื่องมือเฝ้าสังเกตระบบ”"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
 msgid "Show CPU usage"
-msgstr ""
+msgstr "แสดงการใช้ซีพียู"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
 msgid "Show memory usage"
-msgstr ""
+msgstr "แสดงการใช้หน่วยความจำ"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
 msgid "Show swap usage"
-msgstr ""
+msgstr "แสดงการใช้พื้นที่สลับ"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
 msgid "Show upload"
-msgstr ""
+msgstr "แสดงการอัปโหลด"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
 msgid "Show download"
-msgstr ""
+msgstr "แสดงการดาวน์โหลด"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
@@ -217,47 +214,47 @@ msgstr "ชื่อชุดตกแต่ง"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "ชื่อของชุดตกแต่งที่จะโหลดจาก ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:71
+#: extensions/window-list/extension.js:72
 msgid "Close"
 msgstr "ปิด"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Unminimize"
 msgstr "เลิกย่อเก็บ"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:99
 msgid "Minimize"
 msgstr "ย่อเก็บ"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Unmaximize"
 msgstr "เลิกขยายแผ่"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:106
 msgid "Maximize"
 msgstr "ขยายแผ่"
 
-#: extensions/window-list/extension.js:470
+#: extensions/window-list/extension.js:471
 msgid "Minimize all"
 msgstr "ย่อเก็บทั้งหมด"
 
-#: extensions/window-list/extension.js:476
+#: extensions/window-list/extension.js:477
 msgid "Unminimize all"
 msgstr "เลิกย่อเก็บทั้งหมด"
 
-#: extensions/window-list/extension.js:482
+#: extensions/window-list/extension.js:483
 msgid "Maximize all"
 msgstr "ขยายแผ่ทั้งหมด"
 
-#: extensions/window-list/extension.js:490
+#: extensions/window-list/extension.js:491
 msgid "Unmaximize all"
 msgstr "เลิกขยายแผ่ทั้งหมด"
 
-#: extensions/window-list/extension.js:498
+#: extensions/window-list/extension.js:499
 msgid "Close all"
 msgstr "ปิดทั้งหมด"
 
-#: extensions/window-list/extension.js:772
+#: extensions/window-list/extension.js:778
 msgid "Window List"
 msgstr "รายชื่อหน้าต่าง"
 
@@ -270,8 +267,8 @@ msgid ""
 "Decides when to group windows from the same application on the window list. Possible values are "
 "“never”, “auto” and “always”."
 msgstr ""
-"ตัดสินใจว่าเมื่อไรจะจัดกลุ่มหน้าต่างที่มาจากแอปพลิเคชันเดียวกันในรายชื่อหน้าต่าง ค่าที่เป็นไปได้คือ “never” (ไม่ต้อง) "
-"“auto” (อัตโนมัติ) และ “always” (เสมอ)"
+"ตัดสินใจว่าเมื่อไรจะจัดกลุ่มหน้าต่างที่มาจากแอปพลิเคชันเดียวกันในรายชื่อหน้าต่าง ค่าที่เป็นไปได้คือ “never” (ไม่ต้อง) “auto” "
+"(อัตโนมัติ) และ “always” (เสมอ)"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
 #: extensions/window-list/prefs.js:79
@@ -289,6 +286,10 @@ msgstr "แสดงรายชื่อหน้าต่างในจอภ
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
 msgid "Whether to show the window list on all connected monitors or only on the primary one."
 msgstr "กำหนดว่าจะแสดงรายชื่อหน้าต่างในจอภาพที่ต่อทั้งหมดหรือเฉพาะในจอภาพหลัก"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "แสดงภาพตัวอย่างของพื้นที่ทำงานในหน้ารายชื่อหน้าต่าง"
 
 #: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
@@ -310,23 +311,37 @@ msgstr "จัดกลุ่มหน้าต่างเสมอ"
 msgid "Show on all monitors"
 msgstr "แสดงในจอภาพทั้งหมด"
 
-#: extensions/window-list/workspaceIndicator.js:253
-#: extensions/workspace-indicator/extension.js:259
-msgid "Workspace Indicator"
-msgstr "แสดงพื้นที่ทำงาน"
+#: extensions/window-list/prefs.js:92
+msgid "Show workspace previews"
+msgstr "แสดงภาพตัวอย่างของพื้นที่ทำงาน"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "แสดงภาพตัวอย่างในแถบด้านบน"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "พื้นที่ทำงาน %d"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "ชื่อพื้นที่ทำงาน"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "เพิ่มพื้นที่ทำงาน"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "แสดงภาพตัวอย่างของพื้นที่ทำงานในแถบด้านบน"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "แสดงพื้นที่ทำงาน"
+
+#~ msgid "Applications"
+#~ msgstr "แอปพลิเคชัน"
 
 #~ msgid "GNOME Shell Classic"
 #~ msgstr "เชลล์ GNOME แบบคลาสสิก"
