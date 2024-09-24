@@ -35,6 +35,8 @@ const DRAG_RESIZE_DURATION = 400;
 
 const DRAG_PROXIMITY_THRESHOLD = 30;
 
+const SAVED_POSITIONS_KEY = 'window-list-positions';
+
 const GroupingMode = {
     NEVER: 0,
     AUTO: 1,
@@ -1095,6 +1097,8 @@ class WindowList extends St.Widget {
             for (let i = 0; i < apps.length; i++)
                 this._addApp(apps[i], false);
         }
+
+        this._restorePositions();
     }
 
     _updateKeyboardAnchor() {
@@ -1243,7 +1247,31 @@ class WindowList extends St.Widget {
 
         this._clearDragPlaceholder();
 
+        this._savePositions();
+
         return true;
+    }
+
+    _getPositionStateKey() {
+        return `${SAVED_POSITIONS_KEY}:${this._monitor.index}`;
+    }
+
+    _savePositions() {
+        const buttons = this._windowList.get_children()
+            .filter(b => b instanceof BaseButton);
+        global.set_runtime_state(this._getPositionStateKey(),
+            new GLib.Variant('as', buttons.map(b => b.id)));
+    }
+
+    _restorePositions() {
+        const positions = global.get_runtime_state('as',
+            this._getPositionStateKey())?.deepUnpack() ?? [];
+
+        for (const button of this._windowList.get_children()) {
+            const pos = positions.indexOf(button.id);
+            if (pos > -1)
+                this._windowList.set_child_at_index(button, pos);
+        }
     }
 
     _monitorItemDrag() {
