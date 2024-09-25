@@ -166,6 +166,35 @@ class WindowTitle extends St.BoxLayout {
     }
 }
 
+class AppTitle extends St.BoxLayout {
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor(app) {
+        super({
+            style_class: 'window-button-box',
+            x_expand: true,
+            y_expand: true,
+        });
+
+        this._app = app;
+
+        const icon = new St.Bin({
+            style_class: 'window-button-icon',
+            child: app.create_icon_texture(ICON_TEXTURE_SIZE),
+        });
+        this.add_child(icon);
+
+        let label = new St.Label({
+            text: app.get_name(),
+            y_align: Clutter.ActorAlign.CENTER,
+        });
+        this.add_child(label);
+        this.label_actor = label;
+    }
+}
+
 class BaseButton extends DashItemContainer {
     static {
         GObject.registerClass({
@@ -553,24 +582,8 @@ class AppButton extends BaseButton {
         });
         stack.add_child(this._singleWindowTitle);
 
-        this._multiWindowTitle = new St.BoxLayout({
-            style_class: 'window-button-box',
-            x_expand: true,
-        });
+        this._multiWindowTitle = new AppTitle(app);
         stack.add_child(this._multiWindowTitle);
-
-        this._icon = new St.Bin({
-            style_class: 'window-button-icon',
-            child: app.create_icon_texture(ICON_TEXTURE_SIZE),
-        });
-        this._multiWindowTitle.add_child(this._icon);
-
-        let label = new St.Label({
-            text: app.get_name(),
-            y_align: Clutter.ActorAlign.CENTER,
-        });
-        this._multiWindowTitle.add_child(label);
-        this._multiWindowTitle.label_actor = label;
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menu = new PopupMenu.PopupMenu(this, 0.5, St.Side.BOTTOM);
