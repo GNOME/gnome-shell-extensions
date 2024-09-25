@@ -21,19 +21,9 @@
     text-shadow: none;
   }
 
-  .bottom-panel .window-button > StWidget {
-    -st-natural-width: 18.7em;
-    max-width: 18.75em;
-  }
-
  .window-button > StWidget {
   color: #000;
   background-color: transparent;
-}
-
-.window-button > StWidget {
-  -st-natural-width: 18.75em;
-  max-width: 18.75em;
 }
 
 .window-button:hover > StWidget {
