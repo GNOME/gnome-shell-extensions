@@ -574,17 +574,6 @@ class AppButton extends BaseButton {
         this.app = app;
         this._updateVisibility();
 
-        let stack = new St.Widget({layout_manager: new Clutter.BinLayout()});
-        this._button.set_child(stack);
-
-        this._singleWindowTitle = new St.Bin({
-            x_expand: true,
-        });
-        stack.add_child(this._singleWindowTitle);
-
-        this._multiWindowTitle = new AppTitle(app);
-        stack.add_child(this._multiWindowTitle);
-
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menu = new PopupMenu.PopupMenu(this, 0.5, St.Side.BOTTOM);
         this._menu.connect('open-state-changed',
@@ -593,12 +582,6 @@ class AppButton extends BaseButton {
         this._menu.connect('activate', this._onMenuActivate.bind(this));
         this._menuManager.addMenu(this._menu);
         Main.uiGroup.add_child(this._menu.actor);
-
-        this._appContextMenu = new AppContextMenu(this);
-        this._appContextMenu.connect('open-state-changed',
-            this._onMenuStateChanged.bind(this));
-        this._appContextMenu.actor.hide();
-        Main.uiGroup.add_child(this._appContextMenu.actor);
 
         this.app.connectObject('windows-changed',
             () => this._windowsChanged(), this);
@@ -646,37 +629,33 @@ class AppButton extends BaseButton {
     }
 
     _windowsChanged() {
-        let windows = this.getWindowList();
-        this._singleWindowTitle.visible = windows.length === 1;
-        this._multiWindowTitle.visible = !this._singleWindowTitle.visible;
+        const windows = this.getWindowList();
+        const singleWindowMode = windows.length === 1;
 
-        if (this._singleWindowTitle.visible) {
-            if (!this._windowTitle) {
-                this.metaWindow = windows[0];
-                this._windowTitle = new WindowTitle(this.metaWindow);
-                this._singleWindowTitle.child = this._windowTitle;
-                this._windowContextMenu = new WindowContextMenu(this, this.metaWindow);
-                this._windowContextMenu.connect(
-                    'open-state-changed', this._onMenuStateChanged.bind(this));
-                Main.uiGroup.add_child(this._windowContextMenu.actor);
-                this._windowContextMenu.actor.hide();
-                this._contextMenuManager.addMenu(this._windowContextMenu);
-            }
-            this._contextMenuManager.removeMenu(this._appContextMenu);
-            this._contextMenu = this._windowContextMenu;
-            this.label_actor = this._windowTitle.label_actor;
+        if (this._singleWindowMode === singleWindowMode)
+            return;
+
+        this._singleWindowMode = singleWindowMode;
+
+        this._button.child?.destroy();
+        this._contextMenu?.destroy();
+
+        if (this._singleWindowMode) {
+            const [window] = windows;
+            this._button.child = new WindowTitle(window);
+            this._contextMenu = new WindowContextMenu(this, window);
         } else {
-            if (this._windowTitle) {
-                this.metaWindow = null;
-                this._singleWindowTitle.child = null;
-                this._windowTitle = null;
-                this._windowContextMenu.destroy();
-                this._windowContextMenu = null;
-            }
-            this._contextMenu = this._appContextMenu;
-            this._contextMenuManager.addMenu(this._appContextMenu);
-            this.label_actor = this._multiWindowTitle.label_actor;
+            this._button.child = new AppTitle(this.app);
+            this._contextMenu = new AppContextMenu(this);
         }
+
+        this.label_actor = this._button.child.label_actor;
+
+        this._contextMenu.connect(
+            'open-state-changed', this._onMenuStateChanged.bind(this));
+        Main.uiGroup.add_child(this._contextMenu.actor);
+        this._contextMenu.actor.hide();
+        this._contextMenuManager.addMenu(this._contextMenu);
     }
 
     _onClicked(actor, button) {
