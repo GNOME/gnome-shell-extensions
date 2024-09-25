@@ -125,10 +125,6 @@ class WindowTitle extends St.BoxLayout {
         this.label_actor.clutter_text.single_line_mode = true;
         this.add_child(this.label_actor);
 
-        this._textureCache = St.TextureCache.get_default();
-        this._textureCache.connectObject('icon-theme-changed',
-            () => this._updateIcon(), this);
-
         this._metaWindow.connectObject(
             'notify::wm-class',
             () => this._updateIcon(), GObject.ConnectFlags.AFTER,
@@ -590,11 +586,6 @@ class AppButton extends BaseButton {
             this._onMenuStateChanged.bind(this));
         this._appContextMenu.actor.hide();
         Main.uiGroup.add_child(this._appContextMenu.actor);
-
-        this._textureCache = St.TextureCache.get_default();
-        this._textureCache.connectObject('icon-theme-changed', () => {
-            this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
-        }, this);
 
         this.app.connectObject('windows-changed',
             () => this._windowsChanged(), this);
