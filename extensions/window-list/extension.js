@@ -357,6 +357,11 @@ class BaseButton extends DashItemContainer {
         this._onClicked(this, 1);
     }
 
+    _createTitleActor() {
+        throw new GObject.NotImplementedError(
+            `_createTitleActor in ${this.constructor.name}`);
+    }
+
     _onClicked(_actor, _button) {
         throw new GObject.NotImplementedError(
             `_onClicked in ${this.constructor.name}`);
@@ -467,7 +472,7 @@ class WindowButton extends BaseButton {
 
         this._updateVisibility();
 
-        this._windowTitle = new WindowTitle(this.metaWindow);
+        this._windowTitle = this._createTitleActor();
         this._button.set_child(this._windowTitle);
         this.label_actor = this._windowTitle.label_actor;
 
@@ -481,6 +486,10 @@ class WindowButton extends BaseButton {
         global.display.connectObject('notify::focus-window',
             () => this._updateStyle(), this);
         this._updateStyle();
+    }
+
+    _createTitleActor() {
+        return new WindowTitle(this.metaWindow);
     }
 
     _onClicked(actor, button) {
@@ -667,13 +676,12 @@ class AppButton extends BaseButton {
 
         if (this._singleWindowMode) {
             const [window] = windows;
-            this._button.child = new WindowTitle(window);
             this._contextMenu = new WindowContextMenu(this, window);
         } else {
-            this._button.child = new AppTitle(this.app);
             this._contextMenu = new AppContextMenu(this);
         }
 
+        this._button.child = this._createTitleActor();
         this.label_actor = this._button.child.label_actor;
 
         this._contextMenu.connect(
@@ -681,6 +689,15 @@ class AppButton extends BaseButton {
         Main.uiGroup.add_child(this._contextMenu.actor);
         this._contextMenu.actor.hide();
         this._contextMenuManager.addMenu(this._contextMenu);
+    }
+
+    _createTitleActor() {
+        if (this._singleWindowMode) {
+            const [window] = this.getWindowList();
+            return new WindowTitle(window);
+        } else {
+            return new AppTitle(this.app);
+        }
     }
 
     _onClicked(actor, button) {
