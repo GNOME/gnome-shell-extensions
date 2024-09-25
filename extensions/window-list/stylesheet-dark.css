@@ -17,8 +17,17 @@
   height: 2.45em;
 }
 
-.window-button {
+.window-button,
+.window-button-drag-actor {
   padding: 4px, 3px;
+}
+
+.window-button-drag-actor {
+  background-color: #444;
+  border-radius: 7px;
+  border-width: 2px;
+  border-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .window-button:first-child:ltr {
@@ -41,7 +50,8 @@
   transition: 100ms ease;
 }
 
-.window-button > StWidget {
+.window-button > StWidget,
+.window-list .placeholder {
   -st-natural-width: 18.75em;
   max-width: 18.75em;
 }

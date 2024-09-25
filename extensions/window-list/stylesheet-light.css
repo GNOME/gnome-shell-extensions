@@ -56,3 +56,8 @@
   color: #aaa;
   background-color: #f9f9f9;
 }
+
+.window-button-drag-actor {
+  background-color: #ddd;
+    border-color: #888;
+}

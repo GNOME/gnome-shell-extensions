@@ -26,11 +26,24 @@ import {WorkspaceIndicator} from './workspaceIndicator.js';
 const ICON_TEXTURE_SIZE = 24;
 const DND_ACTIVATE_TIMEOUT = 500;
 
+const MIN_DRAG_UPDATE_INTERVAL = 500 * GLib.TIME_SPAN_MILLISECOND;
+
 const GroupingMode = {
     NEVER: 0,
     AUTO: 1,
     ALWAYS: 2,
 };
+
+class DragPlaceholderItem extends DashItemContainer {
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor() {
+        super();
+        this.setChild(new St.Bin({style_class: 'placeholder'}));
+    }
+}
 
 /**
  * @param {Shell.App} app - an app
@@ -220,6 +233,22 @@ class AppTitle extends TitleWidget {
     }
 }
 
+class DragActor extends St.Bin {
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor(source, titleActor) {
+        super({
+            style_class: 'window-button-drag-actor',
+            child: titleActor,
+            width: source.width,
+        });
+
+        this.source = source;
+    }
+}
+
 class BaseButton extends DashItemContainer {
     static {
         GObject.registerClass({
@@ -229,6 +258,10 @@ class BaseButton extends DashItemContainer {
                     'ignore-workspace', 'ignore-workspace', 'ignore-workspace',
                     GObject.ParamFlags.READWRITE,
                     false),
+            },
+            Signals: {
+                'drag-begin': {},
+                'drag-end': {},
             },
         }, this);
     }
@@ -274,6 +307,15 @@ class BaseButton extends DashItemContainer {
                 this._windowEnteredOrLeftMonitor.bind(this),
                 this);
         }
+
+        this._button._delegate = this;
+        this._draggable = DND.makeDraggable(this._button);
+        this._draggable.connect('drag-begin', () => {
+            this._removeLongPressTimeout();
+            this.emit('drag-begin');
+        });
+        this._draggable.connect('drag-cancelled', () => this.emit('drag-end'));
+        this._draggable.connect('drag-end', () => this.emit('drag-end'));
     }
 
     get active() {
@@ -355,6 +397,17 @@ class BaseButton extends DashItemContainer {
             return;
 
         this._onClicked(this, 1);
+    }
+
+    getDragActor() {
+        const titleActor = this._createTitleActor();
+        titleActor.set({abstractLabel: true});
+
+        return new DragActor(this, titleActor);
+    }
+
+    getDragActorSource() {
+        return this;
     }
 
     _createTitleActor() {
@@ -874,8 +927,18 @@ class WindowList extends St.Widget {
             dragMotion: this._onXdndDragMotion.bind(this),
         };
 
+        this._itemDragMonitor = {
+            dragMotion: this._onItemDragMotion.bind(this),
+        };
+
         this._dndTimeoutId = 0;
         this._dndWindow = null;
+
+        this._dragPlaceholder = null;
+        this._dragPlaceholderPos = -1;
+        this._lastPlaceholderUpdate = 0;
+
+        this._delegate = this;
 
         this._settings = settings;
         this._settings.connectObject('changed::grouping-mode',
@@ -1009,6 +1072,14 @@ class WindowList extends St.Widget {
     _addButton(button, animate) {
         this._settings.bind('display-all-workspaces',
             button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
+
+        button.connect('drag-begin',
+            () => this._monitorItemDrag());
+        button.connect('drag-end', () => {
+            this._stopMonitoringItemDrag();
+            this._clearDragPlaceholder();
+        });
+
         this._windowList.add_child(button);
         button.show(animate);
     }
@@ -1057,6 +1128,82 @@ class WindowList extends St.Widget {
         let children = this._windowList.get_children();
         let child = children.find(c => c.metaWindow === win);
         child?.animateOutAndDestroy();
+    }
+
+    _clearDragPlaceholder() {
+        this._dragPlaceholder?.animateOutAndDestroy();
+        this._dragPlaceholder = null;
+        this._dragPlaceholderPos = -1;
+    }
+
+    handleDragOver(source, _actor, x, _y, _time) {
+        if (!(source instanceof BaseButton))
+            return DND.DragMotionResult.NO_DROP;
+
+        const buttons = this._windowList.get_children().filter(c => c instanceof BaseButton);
+        const buttonPos = buttons.indexOf(source);
+        const numButtons = buttons.length;
+        let boxWidth = this._windowList.width;
+
+        // Transform to window list coordinates for index calculation
+        // (mostly relevant for RTL to discard workspace indicator etc.)
+        x -= this._windowList.x;
+
+        const rtl = this.text_direction === Clutter.TextDirection.RTL;
+        let pos = rtl
+            ? numButtons - Math.round(x * numButtons / boxWidth)
+            : Math.round(x * numButtons / boxWidth);
+
+        pos = Math.clamp(pos, 0, numButtons);
+
+        const timeDelta =
+            GLib.get_monotonic_time() - this._lastPlaceholderUpdate;
+
+        if (pos !== this._dragPlaceholderPos && timeDelta >= MIN_DRAG_UPDATE_INTERVAL) {
+            this._clearDragPlaceholder();
+            this._dragPlaceholderPos = pos;
+
+            this._lastPlaceholderUpdate = GLib.get_monotonic_time();
+
+            // Don't allow positioning before or after self
+            if (pos === buttonPos || pos === buttonPos + 1)
+                return DND.DragMotionResult.CONTINUE;
+
+            this._dragPlaceholder = new DragPlaceholderItem();
+            const sibling = buttons[pos] ?? null;
+            if (sibling)
+                this._windowList.insert_child_below(this._dragPlaceholder, sibling);
+            else
+                this._windowList.insert_child_above(this._dragPlaceholder, null);
+            this._dragPlaceholder.show(true);
+        }
+
+        return this._dragPlaceholder
+            ? DND.DragMotionResult.MOVE_DROP
+            : DND.DragMotionResult.NO_DROP;
+    }
+
+    acceptDrop(source, _actor, _x, _y, _time) {
+        if (this._dragPlaceholderPos >= 0)
+            this._windowList.set_child_at_index(source, this._dragPlaceholderPos);
+
+        this._clearDragPlaceholder();
+
+        return true;
+    }
+
+    _monitorItemDrag() {
+        DND.addDragMonitor(this._itemDragMonitor);
+    }
+
+    _stopMonitoringItemDrag() {
+        DND.removeDragMonitor(this._itemDragMonitor);
+    }
+
+    _onItemDragMotion(dragEvent) {
+        if (!this._windowList.contains(dragEvent.targetActor))
+            this._clearDragPlaceholder();
+        return DND.DragMotionResult.CONTINUE;
     }
 
     _monitorXdndDrag() {
