@@ -964,12 +964,16 @@ class WindowList extends St.Widget {
             this._removeApp(app);
     }
 
-    _addApp(app, animate) {
-        let button = new AppButton(app, this._perMonitor, this._monitor.index);
+    _addButton(button, animate) {
         this._settings.bind('display-all-workspaces',
             button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
         this._windowList.add_child(button);
         button.show(animate);
+    }
+
+    _addApp(app, animate) {
+        const button = new AppButton(app, this._perMonitor, this._monitor.index);
+        this._addButton(button, animate);
     }
 
     _removeApp(app) {
@@ -992,11 +996,8 @@ class WindowList extends St.Widget {
         this._windowSignals.set(
             win, win.connect('unmanaged', () => this._removeWindow(win)));
 
-        let button = new WindowButton(win, this._perMonitor, this._monitor.index);
-        this._settings.bind('display-all-workspaces',
-            button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
-        this._windowList.add_child(button);
-        button.show(animate);
+        const button = new WindowButton(win, this._perMonitor, this._monitor.index);
+        this._addButton(button, animate);
     }
 
     _removeWindow(win) {
