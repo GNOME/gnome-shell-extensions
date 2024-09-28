@@ -325,11 +325,11 @@ export class PlacesManager extends EventEmitter {
         this._places.special.forEach(p => p.destroy());
         this._places.special = [];
 
-        let homePath = GLib.get_home_dir();
+        const homeFile = Gio.File.new_for_path(GLib.get_home_dir());
 
         this._places.special.push(new PlaceInfo(
             'special',
-            Gio.File.new_for_path(homePath),
+            homeFile,
             _('Home')));
 
         let specials = [];
@@ -340,11 +340,12 @@ export class PlacesManager extends EventEmitter {
 
         for (let i = 0; i < dirs.length; i++) {
             let specialPath = GLib.get_user_special_dir(dirs[i]);
-            if (!specialPath || specialPath === homePath)
-                continue;
+            const specialFile = specialPath
+                ? Gio.File.new_for_path(specialPath)
+                : null;
 
-            const file = Gio.File.new_for_path(specialPath);
-            specials.push(new PlaceInfo('special', file));
+            if (specialFile && !specialFile.equal(homeFile))
+                specials.push(new PlaceInfo('special', file));
         }
 
         specials.sort((a, b) => GLib.utf8_collate(a.name, b.name));
