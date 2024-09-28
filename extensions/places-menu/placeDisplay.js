@@ -123,6 +123,20 @@ class PlaceInfo extends EventEmitter {
     }
 }
 
+class NautilusSpecialInfo extends PlaceInfo {
+    constructor(file, name, icon) {
+        super('special', file, name, icon);
+
+        const appSystem = Shell.AppSystem.get_default();
+        this._app = appSystem.lookup_app('org.gnome.Nautilus.desktop');
+    }
+
+    launch(timestamp) {
+        const launchContext = global.create_app_launch_context(timestamp, -1);
+        this._app.appInfo.launch([this.file], launchContext);
+    }
+}
+
 class PlaceDeviceInfo extends PlaceInfo {
     _init(kind, mount) {
         this._mount = mount;
@@ -288,6 +302,12 @@ export class PlacesManager extends EventEmitter {
         this._places.special.forEach(p => p.destroy());
         this._places.special = [];
 
+        const appSystem = Shell.AppSystem.get_default();
+        const nautilusApp = appSystem.lookup_app('org.gnome.Nautilus.desktop');
+        const defaultFm = Gio.AppInfo.get_default_for_type('inode/directory', true);
+        const showNautilusSpecials =
+            nautilusApp && defaultFm && nautilusApp.appInfo.equal(defaultFm);
+
         const homeFile = Gio.File.new_for_path(GLib.get_home_dir());
 
         this._places.special.push(new PlaceInfo(
@@ -302,6 +322,13 @@ export class PlacesManager extends EventEmitter {
                 _('Recent')));
         }
 
+        if (showNautilusSpecials) {
+            this._places.special.push(new NautilusSpecialInfo(
+                Gio.File.new_for_uri('starred:///'),
+                _('Starred'),
+                'starred-symbolic'));
+        }
+
         if (this._settings.get_boolean('show-desktop-icons')) {
             const desktopPath = GLib.get_user_special_dir(
                 GLib.UserDirectory.DIRECTORY_DESKTOP);
@@ -313,6 +340,13 @@ export class PlacesManager extends EventEmitter {
                 this._places.special.push(
                     new PlaceInfo('special', desktopFile));
             }
+        }
+
+        if (showNautilusSpecials) {
+            this._places.special.push(new NautilusSpecialInfo(
+                Gio.File.new_for_uri('x-network-view:///'),
+                _('Network'),
+                'network-workgroup-symbolic'));
         }
 
         this._places.special.push(new PlaceInfo(
