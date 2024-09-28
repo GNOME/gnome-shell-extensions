@@ -24,13 +24,6 @@ Gio._promisify(Gio.File.prototype, 'mount_enclosing_volume');
 
 const BACKGROUND_SCHEMA = 'org.gnome.desktop.background';
 
-const Hostname1Iface = '<node> \
-<interface name="org.freedesktop.hostname1"> \
-<property name="PrettyHostname" type="s" access="read" /> \
-</interface> \
-</node>';
-const Hostname1 = Gio.DBusProxy.makeProxyWrapper(Hostname1Iface);
-
 class PlaceInfo extends EventEmitter {
     constructor(...params) {
         super();
@@ -129,44 +122,6 @@ class PlaceInfo extends EventEmitter {
         }
     }
 }
-
-class RootInfo extends PlaceInfo {
-    _init() {
-        super._init('devices', Gio.File.new_for_path('/'), _('Computer'));
-
-        let busName = 'org.freedesktop.hostname1';
-        let objPath = '/org/freedesktop/hostname1';
-        new Hostname1(Gio.DBus.system, busName, objPath, (obj, error) => {
-            if (error)
-                return;
-
-            this._proxy = obj;
-            this._proxy.connectObject('g-properties-changed',
-                this._propertiesChanged.bind(this), this);
-            this._propertiesChanged(obj);
-        });
-    }
-
-    getIcon() {
-        return new Gio.ThemedIcon({name: 'drive-harddisk-symbolic'});
-    }
-
-    _propertiesChanged(proxy) {
-        // GDBusProxy will emit a g-properties-changed when hostname1 goes down
-        // ignore it
-        if (proxy.g_name_owner) {
-            this.name = proxy.PrettyHostname || _('Computer');
-            this.emit('changed');
-        }
-    }
-
-    destroy() {
-        this._proxy?.disconnectObject(this);
-        this._proxy = null;
-        super.destroy();
-    }
-}
-
 
 class PlaceDeviceInfo extends PlaceInfo {
     _init(kind, mount) {
@@ -362,9 +317,6 @@ export class PlacesManager extends EventEmitter {
         this._places.devices = [];
         this._places.network.forEach(p => p.destroy());
         this._places.network = [];
-
-        /* Add standard places */
-        this._places.devices.push(new RootInfo());
 
         /* first go through all connected drives */
         let drives = this._volumeMonitor.get_connected_drives();
