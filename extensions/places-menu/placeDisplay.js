@@ -215,6 +215,12 @@ export class PlacesManager extends EventEmitter {
         this._settings = new Gio.Settings({schema_id: BACKGROUND_SCHEMA});
         this._settings.connectObject('changed::show-desktop-icons',
             () => this._updateSpecials(), this);
+
+        this._privacySettings = new Gio.Settings({
+            schema_id: 'org.gnome.desktop.privacy',
+        });
+        this._privacySettings.connectObject('changed::remember-recent-files',
+            () => this._updateSpecials(), this);
         this._updateSpecials();
 
         /*
@@ -260,12 +266,22 @@ export class PlacesManager extends EventEmitter {
         this._settings?.disconnectObject(this);
         this._settings = null;
 
+        this._privacySettings.disconnectObject(this);
+        this._privacySettings = null;
+
         this._volumeMonitor.disconnectObject(this);
 
         if (this._monitor)
             this._monitor.cancel();
         if (this._bookmarkTimeoutId)
             GLib.source_remove(this._bookmarkTimeoutId);
+    }
+
+    _shouldShowRecent() {
+        const vfs = Gio.Vfs.get_default();
+        const schemes = vfs.get_supported_uri_schemes();
+        return this._privacySettings.get_boolean('remember-recent-files') &&
+            schemes.includes('recent');
     }
 
     _updateSpecials() {
@@ -278,6 +294,13 @@ export class PlacesManager extends EventEmitter {
             'special',
             homeFile,
             _('Home')));
+
+        if (this._shouldShowRecent()) {
+            this._places.special.push(new PlaceInfo(
+                'special',
+                Gio.File.new_for_uri('recent:///'),
+                _('Recent')));
+        }
 
         if (this._settings.get_boolean('show-desktop-icons')) {
             const desktopPath = GLib.get_user_special_dir(
