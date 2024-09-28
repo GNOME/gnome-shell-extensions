@@ -315,6 +315,11 @@ export class PlacesManager extends EventEmitter {
             }
         }
 
+        this._places.special.push(new PlaceInfo(
+            'special',
+            Gio.File.new_for_uri('trash:///'),
+            _('Trash')));
+
         this.emit('special-updated');
     }
 
