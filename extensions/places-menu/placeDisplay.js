@@ -365,11 +365,6 @@ export class PlacesManager extends EventEmitter {
 
         /* Add standard places */
         this._places.devices.push(new RootInfo());
-        this._places.network.push(new PlaceInfo(
-            'network',
-            Gio.File.new_for_uri('network:///'),
-            _('Browse Network'),
-            'network-workgroup-symbolic'));
 
         /* first go through all connected drives */
         let drives = this._volumeMonitor.get_connected_drives();
