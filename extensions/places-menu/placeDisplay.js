@@ -201,14 +201,6 @@ class PlaceVolumeInfo extends PlaceInfo {
     }
 }
 
-const DEFAULT_DIRECTORIES = [
-    GLib.UserDirectory.DIRECTORY_DOCUMENTS,
-    GLib.UserDirectory.DIRECTORY_PICTURES,
-    GLib.UserDirectory.DIRECTORY_MUSIC,
-    GLib.UserDirectory.DIRECTORY_DOWNLOAD,
-    GLib.UserDirectory.DIRECTORY_VIDEOS,
-];
-
 export class PlacesManager extends EventEmitter {
     constructor() {
         super();
@@ -288,19 +280,16 @@ export class PlacesManager extends EventEmitter {
             _('Home')));
 
         let specials = [];
-        let dirs = DEFAULT_DIRECTORIES.slice();
 
-        if (this._settings.get_boolean('show-desktop-icons'))
-            dirs.push(GLib.UserDirectory.DIRECTORY_DESKTOP);
-
-        for (let i = 0; i < dirs.length; i++) {
-            let specialPath = GLib.get_user_special_dir(dirs[i]);
-            const specialFile = specialPath
-                ? Gio.File.new_for_path(specialPath)
+        if (this._settings.get_boolean('show-desktop-icons')) {
+            const desktopPath = GLib.get_user_special_dir(
+                GLib.UserDirectory.DIRECTORY_DESKTOP);
+            const desktopFile = desktopPath
+                ? Gio.File.new_for_path(desktopPath)
                 : null;
 
-            if (specialFile && !specialFile.equal(homeFile))
-                specials.push(new PlaceInfo('special', file));
+            if (desktopFile && !desktopFile.equal(homeFile)) {
+                specials.push(new PlaceInfo('special', desktopFile));
         }
 
         specials.sort((a, b) => GLib.utf8_collate(a.name, b.name));
