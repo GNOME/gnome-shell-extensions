@@ -279,8 +279,6 @@ export class PlacesManager extends EventEmitter {
             homeFile,
             _('Home')));
 
-        let specials = [];
-
         if (this._settings.get_boolean('show-desktop-icons')) {
             const desktopPath = GLib.get_user_special_dir(
                 GLib.UserDirectory.DIRECTORY_DESKTOP);
@@ -289,11 +287,10 @@ export class PlacesManager extends EventEmitter {
                 : null;
 
             if (desktopFile && !desktopFile.equal(homeFile)) {
-                specials.push(new PlaceInfo('special', desktopFile));
+                this._places.special.push(
+                    new PlaceInfo('special', desktopFile));
+            }
         }
-
-        specials.sort((a, b) => GLib.utf8_collate(a.name, b.name));
-        this._places.special = this._places.special.concat(specials);
 
         this.emit('special-updated');
     }
