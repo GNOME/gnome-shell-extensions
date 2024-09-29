@@ -343,16 +343,8 @@ export class PlacesManager extends EventEmitter {
             if (!specialPath || specialPath === homePath)
                 continue;
 
-            let file = Gio.File.new_for_path(specialPath), info;
-            try {
-                info = new PlaceInfo('special', file);
-            } catch (e) {
-                if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND))
-                    continue;
-                throw e;
-            }
-
-            specials.push(info);
+            const file = Gio.File.new_for_path(specialPath);
+            specials.push(new PlaceInfo('special', file));
         }
 
         specials.sort((a, b) => GLib.utf8_collate(a.name, b.name));
@@ -509,30 +501,12 @@ export class PlacesManager extends EventEmitter {
     }
 
     _addMount(kind, mount) {
-        let devItem;
-
-        try {
-            devItem = new PlaceDeviceInfo(kind, mount);
-        } catch (e) {
-            if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND))
-                return;
-            throw e;
-        }
-
+        const devItem = new PlaceDeviceInfo(kind, mount);
         this._places[kind].push(devItem);
     }
 
     _addVolume(kind, volume) {
-        let volItem;
-
-        try {
-            volItem = new PlaceVolumeInfo(kind, volume);
-        } catch (e) {
-            if (e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND))
-                return;
-            throw e;
-        }
-
+        const volItem = new PlaceVolumeInfo(kind, volume);
         this._places[kind].push(volItem);
     }
 
