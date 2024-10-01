@@ -60,37 +60,22 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
         const miscGroup = new Adw.PreferencesGroup();
         this.add(miscGroup);
 
-        let toggle = new Gtk.Switch({
-            action_name: 'window-list.show-on-all-monitors',
-            valign: Gtk.Align.CENTER,
-        });
-        let row = new Adw.ActionRow({
+        let row = new Adw.SwitchRow({
             title: _('Show on all monitors'),
-            activatable_widget: toggle,
+            action_name: 'window-list.show-on-all-monitors',
         });
-        row.add_suffix(toggle);
         miscGroup.add(row);
 
-        toggle = new Gtk.Switch({
-            action_name: 'window-list.display-all-workspaces',
-            valign: Gtk.Align.CENTER,
-        });
-        row = new Adw.ActionRow({
+        row = new Adw.SwitchRow({
             title: _('Show windows from all workspaces'),
-            activatable_widget: toggle,
+            action_name: 'window-list.display-all-workspaces',
         });
-        row.add_suffix(toggle);
         miscGroup.add(row);
 
-        toggle = new Gtk.Switch({
-            action_name: 'window-list.embed-previews',
-            valign: Gtk.Align.CENTER,
-        });
-        row = new Adw.ActionRow({
+        row = new Adw.SwitchRow({
             title: _('Show workspace previews'),
-            activatable_widget: toggle,
+            action_name: 'window-list.embed-previews',
         });
-        row.add_suffix(toggle);
         miscGroup.add(row);
     }
 }
