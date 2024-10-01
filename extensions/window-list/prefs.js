@@ -75,8 +75,6 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
             action_name: 'window-list.display-all-workspaces',
             valign: Gtk.Align.CENTER,
         });
-        this._settings.bind('display-all-workspaces',
-            toggle, 'active', Gio.SettingsBindFlags.DEFAULT);
         row = new Adw.ActionRow({
             title: _('Show windows from all workspaces'),
             activatable_widget: toggle,
@@ -88,8 +86,6 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
             action_name: 'window-list.embed-previews',
             valign: Gtk.Align.CENTER,
         });
-        this._settings.bind('embed-previews',
-            toggle, 'active', Gio.SettingsBindFlags.DEFAULT);
         row = new Adw.ActionRow({
             title: _('Show workspace previews'),
             activatable_widget: toggle,
