@@ -30,6 +30,8 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
             this._settings.create_action('show-on-all-monitors'));
         this._actionGroup.add_action(
             this._settings.create_action('display-all-workspaces'));
+        this._actionGroup.add_action(
+            this._settings.create_action('embed-previews'));
 
         const groupingGroup = new Adw.PreferencesGroup({
             title: _('Window Grouping'),
