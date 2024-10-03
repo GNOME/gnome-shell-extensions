@@ -109,6 +109,12 @@ class TitleWidget extends St.BoxLayout {
     static {
         GObject.registerClass({
             GTypeFlags: GObject.TypeFlags.ABSTRACT,
+            Properties: {
+                'abstract-label': GObject.ParamSpec.boolean(
+                    'abstract-label', null, null,
+                    GObject.ParamFlags.READWRITE,
+                    false),
+            },
         }, this);
     }
 
@@ -129,6 +135,22 @@ class TitleWidget extends St.BoxLayout {
         });
         this.add_child(this._label);
         this.label_actor = this._label;
+
+        this.bind_property('abstract-label',
+            this._label, 'visible',
+            GObject.BindingFlags.SYNC_CREATE |
+            GObject.BindingFlags.INVERT_BOOLEAN);
+
+        this._abstractLabel = new St.Widget({
+            style_class: 'window-button-abstract-label',
+            x_expand: true,
+            y_expand: true,
+        });
+        this.add_child(this._abstractLabel);
+
+        this.bind_property('abstract-label',
+            this._abstractLabel, 'visible',
+            GObject.BindingFlags.SYNC_CREATE);
     }
 }
 

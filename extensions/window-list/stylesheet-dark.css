@@ -81,3 +81,9 @@
   width: 24px;
   height: 24px;
 }
+
+.window-button-abstract-label {
+  background-color: #888;
+  border-radius: 99px;
+  margin: 6px;
+}
