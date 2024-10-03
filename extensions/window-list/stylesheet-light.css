@@ -23,7 +23,6 @@
 
  .window-button > StWidget {
   color: #000;
-  background-color: transparent;
 }
 
 .window-button:hover > StWidget {
@@ -60,4 +59,8 @@
 .window-button-drag-actor {
   background-color: #ddd;
     border-color: #888;
+}
+
+.window-list .placeholder {
+  border-color: rgba(0,0,0,0.5);
 }

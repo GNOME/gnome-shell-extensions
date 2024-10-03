@@ -56,6 +56,12 @@
   max-width: 18.75em;
 }
 
+.window-list .placeholder {
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 7px;
+  margin: 4px;
+}
+
 .window-button:hover > StWidget {
   background-color: #303030;
 }
