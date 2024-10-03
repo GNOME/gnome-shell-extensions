@@ -28,6 +28,9 @@ const DND_ACTIVATE_TIMEOUT = 500;
 
 const MIN_DRAG_UPDATE_INTERVAL = 500 * GLib.TIME_SPAN_MILLISECOND;
 
+const DRAG_OPACITY = 0.3;
+const DRAG_FADE_DURATION = 200;
+
 const GroupingMode = {
     NEVER: 0,
     AUTO: 1,
@@ -1073,9 +1076,20 @@ class WindowList extends St.Widget {
         this._settings.bind('display-all-workspaces',
             button, 'ignore-workspace', Gio.SettingsBindFlags.GET);
 
-        button.connect('drag-begin',
-            () => this._monitorItemDrag());
+        button.connect('drag-begin', () => {
+            button.ease({
+                opacity: 255 * DRAG_OPACITY,
+                duration: DRAG_FADE_DURATION,
+            });
+
+            this._monitorItemDrag();
+        });
         button.connect('drag-end', () => {
+            button.ease({
+                opacity: 255,
+                duration: DRAG_FADE_DURATION,
+            });
+
             this._stopMonitoringItemDrag();
             this._clearDragPlaceholder();
         });
