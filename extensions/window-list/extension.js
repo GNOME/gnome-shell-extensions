@@ -105,25 +105,42 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
     }
 }
 
-class WindowTitle extends St.BoxLayout {
+class TitleWidget extends St.BoxLayout {
     static {
-        GObject.registerClass(this);
+        GObject.registerClass({
+            GTypeFlags: GObject.TypeFlags.ABSTRACT,
+        }, this);
     }
 
-    constructor(metaWindow) {
+    constructor() {
         super({
             style_class: 'window-button-box',
             x_expand: true,
             y_expand: true,
         });
 
-        this._metaWindow = metaWindow;
-
-        this._icon = new St.Bin({style_class: 'window-button-icon'});
+        this._icon = new St.Bin({
+            style_class: 'window-button-icon',
+        });
         this.add_child(this._icon);
-        this.label_actor = new St.Label({y_align: Clutter.ActorAlign.CENTER});
-        this.label_actor.clutter_text.single_line_mode = true;
-        this.add_child(this.label_actor);
+
+        this._label = new St.Label({
+            y_align: Clutter.ActorAlign.CENTER,
+        });
+        this.add_child(this._label);
+        this.label_actor = this._label;
+    }
+}
+
+class WindowTitle extends TitleWidget {
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor(metaWindow) {
+        super();
+
+        this._metaWindow = metaWindow;
 
         this._metaWindow.connectObject(
             'notify::wm-class',
@@ -148,9 +165,9 @@ class WindowTitle extends St.BoxLayout {
             return;
 
         if (this._metaWindow.minimized)
-            this.label_actor.text = '[%s]'.format(this._metaWindow.title);
+            this._label.text = '[%s]'.format(this._metaWindow.title);
         else
-            this.label_actor.text = this._metaWindow.title;
+            this._label.text = this._metaWindow.title;
     }
 
     _updateIcon() {
@@ -166,32 +183,18 @@ class WindowTitle extends St.BoxLayout {
     }
 }
 
-class AppTitle extends St.BoxLayout {
+class AppTitle extends TitleWidget {
     static {
         GObject.registerClass(this);
     }
 
     constructor(app) {
-        super({
-            style_class: 'window-button-box',
-            x_expand: true,
-            y_expand: true,
-        });
+        super();
 
         this._app = app;
 
-        const icon = new St.Bin({
-            style_class: 'window-button-icon',
-            child: app.create_icon_texture(ICON_TEXTURE_SIZE),
-        });
-        this.add_child(icon);
-
-        let label = new St.Label({
-            text: app.get_name(),
-            y_align: Clutter.ActorAlign.CENTER,
-        });
-        this.add_child(label);
-        this.label_actor = label;
+        this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
+        this._label.text = app.get_name();
     }
 }
 
