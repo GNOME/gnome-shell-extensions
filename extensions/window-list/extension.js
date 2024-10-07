@@ -223,7 +223,7 @@ class BaseButton extends DashItemContainer {
     }
 
     get active() {
-        return this.has_style_class_name('focused');
+        return this._button.has_style_class_name('focused');
     }
 
     // eslint-disable-next-line camelcase
