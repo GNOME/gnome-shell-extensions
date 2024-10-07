@@ -478,9 +478,9 @@ class WindowButton extends BaseButton {
         super._updateStyle();
 
         if (this.metaWindow.minimized)
-            this.add_style_class_name('minimized');
+            this._button.add_style_class_name('minimized');
         else
-            this.remove_style_class_name('minimized');
+            this._button.remove_style_class_name('minimized');
     }
 
     _windowEnteredOrLeftMonitor(metaDisplay, monitorIndex, metaWindow) {
