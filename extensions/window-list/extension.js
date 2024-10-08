@@ -33,6 +33,8 @@ const DRAG_FADE_DURATION = 200;
 
 const DRAG_RESIZE_DURATION = 400;
 
+const DRAG_PROXIMITY_THRESHOLD = 30;
+
 const GroupingMode = {
     NEVER: 0,
     AUTO: 1,
@@ -961,6 +963,7 @@ class WindowList extends St.Widget {
 
         this._itemDragMonitor = {
             dragMotion: this._onItemDragMotion.bind(this),
+            dragDrop: this._onItemDragDrop.bind(this),
         };
 
         this._dndTimeoutId = 0;
@@ -1244,9 +1247,28 @@ class WindowList extends St.Widget {
     }
 
     _onItemDragMotion(dragEvent) {
-        if (!this._windowList.contains(dragEvent.targetActor))
-            this._clearDragPlaceholder();
+        const {source, targetActor, dragActor, x, y} = dragEvent;
+
+        const hasTarget = this._windowList.contains(targetActor);
+        const isNear = Math.abs(y - this.y) < DRAG_PROXIMITY_THRESHOLD;
+
+        if (hasTarget || isNear)
+            return this.handleDragOver(source, dragActor, x, y);
+
+        this._clearDragPlaceholder();
         return DND.DragMotionResult.CONTINUE;
+    }
+
+    _onItemDragDrop(dropEvent) {
+        if (this._dragPlaceholderPos < 0)
+            return DND.DragDropResult.CONTINUE;
+
+        const {source} = dropEvent.dropActor;
+        this.acceptDrop(source);
+        dropEvent.dropActor.destroy();
+        // HACK: SUCESS would make more sense, but results in gnome-shell
+        // skipping all drag-end code
+        return DND.DragDropResult.CONTINUE;
     }
 
     _monitorXdndDrag() {
