@@ -31,6 +31,8 @@ const MIN_DRAG_UPDATE_INTERVAL = 500 * GLib.TIME_SPAN_MILLISECOND;
 const DRAG_OPACITY = 0.3;
 const DRAG_FADE_DURATION = 200;
 
+const DRAG_RESIZE_DURATION = 400;
+
 const GroupingMode = {
     NEVER: 0,
     AUTO: 1,
@@ -250,6 +252,24 @@ class DragActor extends St.Bin {
 
         this.source = source;
     }
+
+    setTargetWidth(width) {
+        const currentWidth = this.width;
+
+        // set width immediately so shell's DND code uses correct values
+        this.set({width});
+
+        // then transition from the original to the new width
+        const laters = global.compositor.get_laters();
+        laters.add(Meta.LaterType.BEFORE_REDRAW, () => {
+            this.set({width: currentWidth});
+            this.ease({
+                width,
+                duration: DRAG_RESIZE_DURATION,
+            });
+            return GLib.SOURCE_REMOVE;
+        });
+    }
 }
 
 class BaseButton extends DashItemContainer {
@@ -317,7 +337,10 @@ class BaseButton extends DashItemContainer {
             this._removeLongPressTimeout();
             this.emit('drag-begin');
         });
-        this._draggable.connect('drag-cancelled', () => this.emit('drag-end'));
+        this._draggable.connect('drag-cancelled', () => {
+            this._draggable._dragActor?.setTargetWidth(this.width);
+            this.emit('drag-end');
+        });
         this._draggable.connect('drag-end', () => this.emit('drag-end'));
     }
 
@@ -406,7 +429,13 @@ class BaseButton extends DashItemContainer {
         const titleActor = this._createTitleActor();
         titleActor.set({abstractLabel: true});
 
-        return new DragActor(this, titleActor);
+        const dragActor = new DragActor(this, titleActor);
+
+        const [, natWidth] = this.get_preferred_width(-1);
+        const targetWidth = Math.min(natWidth / 2, this.width);
+        dragActor.setTargetWidth(targetWidth);
+
+        return dragActor;
     }
 
     getDragActorSource() {
