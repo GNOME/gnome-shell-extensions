@@ -74,12 +74,6 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
             action_name: 'window-list.display-all-workspaces',
         });
         miscGroup.add(row);
-
-        row = new Adw.SwitchRow({
-            title: _('Show workspace previews'),
-            action_name: 'window-list.embed-previews',
-        });
-        miscGroup.add(row);
     }
 }
 
