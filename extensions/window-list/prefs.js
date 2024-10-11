@@ -12,7 +12,9 @@ import Gtk from 'gi://Gtk';
 
 import {ExtensionPreferences, gettext as _} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
-class WindowListPrefsWidget extends Adw.PreferencesPage {
+import {WorkspacesPage} from './workspacePrefs.js';
+
+class WindowListPage extends Adw.PreferencesPage {
     static {
         GObject.registerClass(this);
     }
@@ -78,7 +80,9 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
 }
 
 export default class WindowListPrefs extends ExtensionPreferences {
-    getPreferencesWidget() {
-        return new WindowListPrefsWidget(this.getSettings());
+    fillPreferencesWindow(window) {
+        const settings = this.getSettings();
+        window.add(new WindowListPage(settings));
+        window.add(new WorkspacesPage(settings));
     }
 }

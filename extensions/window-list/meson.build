@@ -37,6 +37,7 @@ workspaceIndicatorSources = [
    command: transform_stylesheet,
    capture: true,
  ),
+ files('../workspace-indicator/workspacePrefs.js'),
 ]
 
 extension_sources += files('prefs.js') + workspaceIndicatorSources
