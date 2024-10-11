@@ -222,7 +222,10 @@ export class WorkspacesPage extends Adw.PreferencesPage {
     }
 
     constructor(settings) {
-        super();
+        super({
+            title: _('Workspaces'),
+            icon_name: 'view-grid-symbolic',
+        });
 
         this.add(new GeneralGroup(settings));
         this.add(new WorkspacesGroup());
