@@ -26,7 +26,7 @@ class GeneralGroup extends Adw.PreferencesGroup {
         super();
 
         const row = new Adw.SwitchRow({
-            title: _('Show Previews In Top Bar'),
+            title: _('Show Previews'),
         });
         this.add(row);
 
