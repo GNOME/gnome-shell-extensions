@@ -18,7 +18,10 @@ class WindowListPrefsWidget extends Adw.PreferencesPage {
     }
 
     constructor(settings) {
-        super();
+        super({
+            title: _('Window List'),
+            icon_name: 'focus-windows-symbolic',
+        });
 
         this._actionGroup = new Gio.SimpleActionGroup();
         this.insert_action_group('window-list', this._actionGroup);
