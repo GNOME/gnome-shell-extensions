@@ -13,4 +13,4 @@ extension_data += files(
 )
 extension_schemas += files('schemas/' + metadata_conf.get('gschemaname') + '.gschema.xml')
 
-extension_sources += files('prefs.js', 'workspaceIndicator.js')
+extension_sources += files('prefs.js', 'workspaceIndicator.js', 'workspacePrefs.js')

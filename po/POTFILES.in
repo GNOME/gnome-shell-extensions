@@ -18,6 +18,6 @@ extensions/window-list/extension.js
 extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml
 extensions/window-list/prefs.js
 extensions/windowsNavigator/extension.js
-extensions/workspace-indicator/prefs.js
 extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml
 extensions/workspace-indicator/workspaceIndicator.js
+extensions/workspace-indicator/workspacePrefs.js
