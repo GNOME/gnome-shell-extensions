@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: 2024 Florian Müllner <fmuellner@gnome.org>
+# SPDX-License-Identifier: CC0-1.0
+
+version = 1
+SPDX-PackageName = "gnome-shell-extensions"
+SPDX-PackageSupplier = "Florian Müllner <fmuellner@gnome.org>"
+SPDX-PackageDownloadLocation = "https://gitlab.gnome.org/GNOME/gnome-shell-extensions"
+
+[[annotations]]
+path = ["NEWS", "README.md", "HACKING.md", "data/HACKING"]
+SPDX-FileCopyrightText = "No rights reserved"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["**.json.in", "**.desktop.in", "**.gschema.override"]
+SPDX-FileCopyrightText = "Florian Müllner <fmuellner@gnome.org>"
+SPDX-License-Identifier = "GPL-2.0-or-later"
+
+[[annotations]]
+# managed by translation teams
+path = "po/**.po"
+SPDX-FileCopyrightText = "GNOME Translation Teams <i18n@gnome.org>"
+SPDX-License-Identifier = "GPL-2.0-or-later"
+
+[[annotations]]
+# managed by translation teams
+path = ["po/LINGUAS", "po/POTFILES.in"]
+SPDX-FileCopyrightText = "No rights reserved"
+SPDX-License-Identifier = "CC0-1.0"
