@@ -169,9 +169,15 @@ class WorkspacesGroup extends Adw.PreferencesGroup {
         this._list.connect('row-activated', (l, row) => row.edit());
         this.add(this._list);
 
+        const newRowProps = {
+            title: _('Add Workspace'),
+            action_name: 'workspaces.add',
+            start_icon_name: 'list-add-symbolic',
+        };
+
         this._list.bind_model(listModel, item => {
             return item instanceof NewItem
-                ? new NewWorkspaceRow()
+                ? new Adw.ButtonRow({...newRowProps})
                 : new WorkspaceRow(item.string);
         });
     }
@@ -257,28 +263,6 @@ class WorkspaceRow extends Adw.PreferencesRow {
     _stopEdit() {
         this.grab_focus();
         this._stack.visible_child_name = 'display';
-    }
-}
-
-class NewWorkspaceRow extends Adw.PreferencesRow {
-    static {
-        GObject.registerClass(this);
-    }
-
-    constructor() {
-        super({
-            action_name: 'workspaces.add',
-            child: new Gtk.Image({
-                icon_name: 'list-add-symbolic',
-                pixel_size: 16,
-                margin_top: 12,
-                margin_bottom: 12,
-                margin_start: 12,
-                margin_end: 12,
-            }),
-        });
-        this.update_property(
-            [Gtk.AccessibleProperty.LABEL], [_('Add Workspace')]);
     }
 }
 
