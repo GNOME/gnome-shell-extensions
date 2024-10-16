@@ -8,16 +8,16 @@ srcdir=`dirname $0`
 srcdir=`(cd $srcdir && pwd)`
 
 builddir=`mktemp -p $srcdir -d _build.XXXXXX` || exit 1
-installdir=`mktemp -p $srcdir -d _install.XXXXXX` || exit 1
+destdir=`mktemp -p $srcdir -d _dest.XXXXXX` || exit 1
 
-meson setup --prefix=$installdir -Dextension_set=all $srcdir $builddir
-meson install -C $builddir
+meson setup --prefix=/usr -Dextension_set=all $srcdir $builddir
+meson install --destdir $destdir -C $builddir
 
 rm -rf $srcdir/zip-files
 mkdir $srcdir/zip-files
 
-extensiondir=$installdir/share/gnome-shell/extensions
-schemadir=$installdir/share/glib-2.0/schemas
+extensiondir=$destdir/usr/share/gnome-shell/extensions
+schemadir=$destdir/usr/share/glib-2.0/schemas
 
 for f in $extensiondir/*; do
   name=`basename ${f%%@*}`
@@ -50,4 +50,4 @@ for f in $extensiondir/*; do
 done
 
 rm -rf $builddir
-rm -rf $installdir
+rm -rf $destdir
