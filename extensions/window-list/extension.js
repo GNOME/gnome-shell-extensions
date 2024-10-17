@@ -282,7 +282,7 @@ class BaseButton extends DashItemContainer {
             GTypeFlags: GObject.TypeFlags.ABSTRACT,
             Properties: {
                 'ignore-workspace': GObject.ParamSpec.boolean(
-                    'ignore-workspace', 'ignore-workspace', 'ignore-workspace',
+                    'ignore-workspace', null, null,
                     GObject.ParamFlags.READWRITE,
                     false),
             },

@@ -45,11 +45,11 @@ class NewItemModel extends GObject.Object {
 class Rule extends GObject.Object {
     static [GObject.properties] = {
         'app-info': GObject.ParamSpec.object(
-            'app-info', 'app-info', 'app-info',
+            'app-info', null, null,
             GObject.ParamFlags.READWRITE,
             Gio.DesktopAppInfo),
         'workspace': GObject.ParamSpec.uint(
-            'workspace', 'workspace', 'workspace',
+            'workspace', null, null,
             GObject.ParamFlags.READWRITE,
             1, WORKSPACE_MAX, 1),
     };
@@ -196,7 +196,7 @@ class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
 class WorkspaceSelector extends Gtk.Widget {
     static [GObject.properties] = {
         'number': GObject.ParamSpec.uint(
-            'number', 'number', 'number',
+            'number', null, null,
             GObject.ParamFlags.READWRITE,
             1, WORKSPACE_MAX, 1),
     };

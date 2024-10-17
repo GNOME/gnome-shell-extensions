@@ -113,11 +113,11 @@ class WorkspaceLayout extends Clutter.LayoutManager {
 class WorkspaceThumbnail extends St.Button {
     static [GObject.properties] = {
         'active': GObject.ParamSpec.boolean(
-            'active', '', '',
+            'active', null, null,
             GObject.ParamFlags.READWRITE,
             false),
         'show-label': GObject.ParamSpec.boolean(
-            'show-label', '', '',
+            'show-label', null, null,
             GObject.ParamFlags.READWRITE,
             false),
     };
@@ -311,7 +311,7 @@ class WorkspaceThumbnail extends St.Button {
 class WorkspacePreviews extends Clutter.Actor {
     static [GObject.properties] = {
         'show-labels': GObject.ParamSpec.boolean(
-            'show-labels', '', '',
+            'show-labels', null, null,
             GObject.ParamFlags.READWRITE | GObject.ParamFlags.CONSTRUCT_ONLY,
             false),
     };
