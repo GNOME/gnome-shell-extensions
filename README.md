@@ -54,6 +54,11 @@ GSettings key.
 
      Changes application icons to always launch a new instance when activated.
 
+ * light-style
+
+    Changes the default shell style to "light", while still following the
+    system-wide "dark" preference.
+
  * native-window-placement
 
      An alternative algorithm for layouting the thumbnails in the windows overview, that
@@ -66,6 +71,14 @@ GSettings key.
  * screenshot-window-sizer
 
      Adds a shortcut for resizing the focus window to a size that is suitable for GNOME Software screenshots. Ctrl + Alt + s cycles forwards through the available sizes and Ctrl + Alt + Shift + s cycles backwards.
+
+ * status-icons
+
+    Show (XEmbed) status icons in the top bar.
+
+ * system-monitor
+
+    Shows system usage information in the top bar.
 
  * user-theme
 
