@@ -14,12 +14,18 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 GNOME Shell Extensions is a collection of extensions providing additional
 and optional functionality to GNOME Shell.
 
-Since GNOME Shell is not API stable, extensions work only against a very
-specific version of the shell, usually the same as this package (see
-"configure --version"). The extensions in this package are supported by GNOME
-and will be updated to reflect future API changes in GNOME Shell.
+The extensions in this package are supported by GNOME and will be updated
+to reflect future API changes in GNOME Shell.
+
+Both the most recent stable release and the previous stable release of
+GNOME Shell are actively supported, as well as the current development
+branch.
+
+Please refer to the [schedule] to see when a new version will be released.
 
 Bugs should be reported to the GNOME [bug tracking system][bug-tracker].
+
+[schedule]: https://release.gnome.org/calendar
 
 ## Extensions
 
