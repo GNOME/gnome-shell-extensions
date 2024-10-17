@@ -29,12 +29,6 @@ Bugs should be reported to the GNOME [bug tracking system][bug-tracker].
 
 ## Extensions
 
- * alternate-tab (**OBSOLETE**)
- 
-     Lets you use classic Alt+Tab (window-based instead of app-based) in GNOME Shell.
-     This extension is obsolete since GNOME 3.30, see [this blogpost][alternatetab-post]
-     for further details.
-
  * apps-menu
 
      Lets you reach an application using gnome 2.x style menu on the panel.
@@ -95,6 +89,23 @@ Bugs should be reported to the GNOME [bug tracking system][bug-tracker].
 
      Adds a simple workspace switcher to the top bar.
 
+### Ex-Extensions
+
+  Occasionally over the years, some extensions were removed.
+
+  The following list is not complete, but limited to cases that
+  are notable for some reason; either the removal happened
+  relatively recently, or the extension used to be particularly
+  popular in the past.
+
+ * alternate-tab
+
+     Lets you use classic Alt+Tab (window-based instead of app-based) in GNOME Shell.
+     This extension is obsolete since GNOME 3.30, see [this blogpost][alternatetab-post]
+     for further details.
+
+[alternatetab-post]: https://blogs.gnome.org/fmuellner/2018/10/11/the-future-of-alternatetab-and-why-you-need-not-worry/
+
 ## License
 
 GNOME Shell Extensions are distributed under the terms of the GNU General
@@ -104,4 +115,3 @@ file for details.
 
 [bug-tracker]: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues
 [license]: COPYING
-[alternatetab-post]: https://blogs.gnome.org/fmuellner/2018/10/11/the-future-of-alternatetab-and-why-you-need-not-worry/
