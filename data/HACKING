@@ -1,2 +1,0 @@
-To update the gnome-shell-sass submodule to latest upstream commit:
-git submodule update --rebase

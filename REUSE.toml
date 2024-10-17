@@ -7,7 +7,7 @@ SPDX-PackageSupplier = "Florian Müllner <fmuellner@gnome.org>"
 SPDX-PackageDownloadLocation = "https://gitlab.gnome.org/GNOME/gnome-shell-extensions"
 
 [[annotations]]
-path = ["NEWS", "README.md", "HACKING.md", "data/HACKING"]
+path = ["NEWS", "README.md", "HACKING.md"]
 SPDX-FileCopyrightText = "No rights reserved"
 SPDX-License-Identifier = "CC0-1.0"
 
