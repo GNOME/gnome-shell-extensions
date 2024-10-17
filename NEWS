@@ -1,3 +1,13 @@
+47.1
+====
+* classic: Add missing top-bar indicators [Florian; !339]
+* window-list: Fix window state styling [Florian; !342]
+* window-list: Fix "ignore-workspace" setting getting reset [Florian; !341]
+* Misc. bug fixes and cleanups [Florian; !337, !338, !345, !347, !349]
+
+Contributors:
+  Florian Müllner
+
 47.0
 ====
 
