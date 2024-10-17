@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2011 Giovanni Campagna <gcampagna@src.gnome.org>
+SPDX-FileCopyrightText: 2017 Florian Müllner <fmuellner@gnome.org>"""
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 ## Creating a New Extension
 
 To create a new extension, add a subdirectory in extensions. Then create

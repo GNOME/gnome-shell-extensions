@@ -1,3 +1,14 @@
+<!--
+SPDX-FileCopyrightText: 2011 Giovanni Campagna <gcampagna@src.gnome.org>
+SPDX-FileCopyrightText: 2011 Adam Dingle <adam@yorba.org>
+SPDX-FileCopyrightText: 2011 Vamsi Krishna Brahmajosyula <vamsikrishna.brahmajosyula@gmail.com>
+SPDX-FileCopyrightText: 2014 Michael Catanzaro <mcatanzaro@gnome.org>
+SPDX-FileCopyrightText: 2015 Florian Müllner <fmuellner@gnome.org>
+SPDX-FileCopyrightText: 2019 Fabian P. Schmidt <kerel-fs@gmx.de>
+SPDX-FileCopyrightText: 2024 Aral Balkan <aral@aralbalkan.com>"""
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # GNOME Shell Extensions
 
 GNOME Shell Extensions is a collection of extensions providing additional
