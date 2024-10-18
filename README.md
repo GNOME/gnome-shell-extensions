@@ -19,9 +19,6 @@ specific version of the shell, usually the same as this package (see
 "configure --version"). The extensions in this package are supported by GNOME
 and will be updated to reflect future API changes in GNOME Shell.
 
-The GNOME wiki has more information about [GNOME Shell Extensions][project-page],
-as well as some general information about [GNOME Shell][shell-page].
-
 Bugs should be reported to the GNOME [bug tracking system][bug-tracker].
 
 ## Extensions
@@ -87,8 +84,6 @@ Public License, version 2 or later. See the [COPYING file][license] for details.
 Individual extensions may be licensed under different terms, see each source
 file for details.
 
-[project-page]: https://wiki.gnome.org/Projects/GnomeShell/Extensions
-[shell-page]: https://wiki.gnome.org/Projects/GnomeShell
 [bug-tracker]: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues
 [license]: COPYING
 [alternatetab-post]: https://blogs.gnome.org/fmuellner/2018/10/11/the-future-of-alternatetab-and-why-you-need-not-worry/
