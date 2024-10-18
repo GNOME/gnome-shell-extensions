@@ -23,8 +23,6 @@ branch.
 
 Please refer to the [schedule] to see when a new version will be released.
 
-Bugs should be reported to the GNOME [bug tracking system][bug-tracker].
-
 [schedule]: https://release.gnome.org/calendar
 
 ## Extensions
@@ -109,6 +107,27 @@ project.
 
 [alternatetab-post]: https://blogs.gnome.org/fmuellner/2018/10/11/the-future-of-alternatetab-and-why-you-need-not-worry/
 
+## Reporting bugs
+
+Bugs should be reported to the [issue tracking system][bug-tracker].
+
+The [GNOME handbook][bug-handbook] has useful information for creating
+effective issue reports.
+
+Please note that the issue tracker is meant to be used for
+actionable issues only.
+
+For support questions, feedback on changes or general discussions,
+you can use:
+
+ - the [#gnome-shell matrix room][matrix-room]
+ - the `Desktop` category or `extensions` and `shell` tags on [GNOME Discourse][discourse]
+
+[bug-tracker]: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues
+[bug-handbook]: https://handbook.gnome.org/issues/reporting.html
+[matrix-room]: https://matrix.to/#/#gnome-shell:gnome.org
+[discourse]: https://discourse.gnome.org
+
 ## License
 
 GNOME Shell Extensions are distributed under the terms of the GNU General
@@ -116,5 +135,4 @@ Public License, version 2 or later. See the [COPYING file][license] for details.
 Individual extensions may be licensed under different terms, see each source
 file for details.
 
-[bug-tracker]: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues
 [license]: COPYING
