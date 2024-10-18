@@ -128,6 +128,12 @@ you can use:
 [matrix-room]: https://matrix.to/#/#gnome-shell:gnome.org
 [discourse]: https://discourse.gnome.org
 
+## Code of Conduct
+
+All interactions with the project should follow the [Code of Conduct][conduct].
+
+[conduct]: https://conduct.gnome.org/
+
 ## License
 
 GNOME Shell Extensions are distributed under the terms of the GNU General
