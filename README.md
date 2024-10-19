@@ -82,7 +82,7 @@ GSettings key.
 
  * user-theme
 
-     Loads a shell theme from ~/.themes/<name>/gnome-shell.
+     Loads a shell theme from `$XDG_DATA_HOME/themes/<name>/gnome-shell`.
 
  * window-list
 
