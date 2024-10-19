@@ -42,8 +42,7 @@ Bugs should be reported to the GNOME [bug tracking system][bug-tracker].
  * auto-move-windows
 
      Lets you manage your workspaces more easily, assigning a specific workspace to
-each application as soon as it creates a window, in a manner configurable with a
-GSettings key.
+     each application as soon as it creates a window.
 
  * drive-menu
  
