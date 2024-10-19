@@ -29,6 +29,9 @@ Bugs should be reported to the GNOME [bug tracking system][bug-tracker].
 
 ## Extensions
 
+The following is a complete list of extensions that are provided by this
+project.
+
  * apps-menu
 
      Lets you reach an application using gnome 2.x style menu on the panel.
