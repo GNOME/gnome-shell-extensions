@@ -3,7 +3,6 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-// -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 import {WorkspacesPage} from './workspacePrefs.js';

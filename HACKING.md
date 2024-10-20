@@ -26,9 +26,6 @@ need in gnome-shell.
 Generally, we follow [GJS coding style][coding-style], which in short is:
 indent 4 spaces, no tabs, space after comma, no space after function call.
 
-The Emacs mode line for this
-/* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
-
 Imports should be at the top, in two groups, one for standard
 imports (like imports.lang or imports.dbus) and introspection,
 the other for Shell API. Within the same group, put everything

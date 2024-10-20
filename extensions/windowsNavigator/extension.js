@@ -6,7 +6,6 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-/* -*- mode: js2; js2-basic-offset: 4; indent-tabs-mode: nil -*- */
 import Clutter from 'gi://Clutter';
 import Graphene from 'gi://Graphene';
 import St from 'gi://St';
