@@ -16,18 +16,20 @@ foreach e : enabled_extensions
   metadata_conf.set('gschemaname', 'org.gnome.shell.extensions.' + e)
   metadata_conf.set('gettext_domain', gettext_domain)
   metadata_conf.set('shell_current', shell_version)
-  metadata_conf.set('url', 'https://gitlab.gnome.org/GNOME/gnome-shell-extensions')
+  metadata_conf.set(
+    'url',
+    'https://gitlab.gnome.org/GNOME/gnome-shell-extensions',
+  )
 
   extension_sources = files(e + '/extension.js')
   extension_data = []
 
   subdir(e)
 
-  install_data (extension_sources + extension_data,
-    install_dir: join_paths(extensiondir, uuid)
+  install_data(
+    extension_sources + extension_data,
+    install_dir: join_paths(extensiondir, uuid),
   )
 endforeach
 
-install_data (extension_schemas,
-  install_dir: schemadir
-)
+install_data(extension_schemas, install_dir: schemadir)
