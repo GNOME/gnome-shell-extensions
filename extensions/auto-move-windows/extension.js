@@ -4,9 +4,6 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-// -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
-// Start apps on custom workspaces
-
 import Shell from 'gi://Shell';
 
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';

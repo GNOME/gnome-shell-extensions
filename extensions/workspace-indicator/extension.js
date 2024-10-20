@@ -4,7 +4,6 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-// -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
 import Clutter from 'gi://Clutter';
 import Gio from 'gi://Gio';
 import GObject from 'gi://GObject';

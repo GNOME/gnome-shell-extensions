@@ -3,9 +3,6 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-// -*- mode: js2; indent-tabs-mode: nil; js2-basic-offset: 4 -*-
-// Start apps on custom workspaces
-
 import Adw from 'gi://Adw';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
