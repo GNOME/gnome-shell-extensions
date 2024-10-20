@@ -74,8 +74,7 @@ if classic_mode_enabled
   # Sanity check: Make sure all classic extensions are enabled
   foreach e : classic_extensions
     if not enabled_extensions.contains(e)
-      error('Classic mode is enabled, ' +
-            'but the required extension @0@ is not.'.format(e))
+      error(f'Classic mode is enabled, but the required extension @e@ is not')
     endif
   endforeach
 endif
@@ -83,7 +82,7 @@ endif
 # Sanity check: Make sure enabled extensions are valid
 foreach e : enabled_extensions
   if not all_extensions.contains(e)
-    error('Invalid extension @0@.'.format(e))
+    error(f'Invalid extension @e@.')
   endif
 endforeach
 
