@@ -5,7 +5,7 @@
 project('gnome-shell-extensions',
   version: '46.2',
   meson_version: '>= 0.58.0',
-  license: 'GPL2+'
+  license: 'GPL-2.0-or-later'
 )
 
 gettext_domain = meson.project_name()
