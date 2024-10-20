@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
-"POT-Creation-Date: 2024-04-29 15:27+0000\n"
-"PO-Revision-Date: 2024-10-07 15:05+0000\n"
-"Last-Translator: Fabio T. <f.t.public@gmail.com>\n"
+"POT-Creation-Date: 2024-10-19 02:53+0000\n"
+"PO-Revision-Date: 2024-10-20 20:04+0000\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <f.t.public@gmail.com>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Editor: HaiPO 2.0 beta\n"
+"X-Editor: HaiPO 2.1 beta\n"
 "X-Generator: Poedit 3.4.2\n"
 
 #: data/gnome-classic.desktop.in:3
@@ -65,7 +65,7 @@ msgstr "Zonte regule"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:218
+#: extensions/places-menu/placeDisplay.js:187
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "No si è rivâts a parâ fûr la unitât “%s”»:"
@@ -112,28 +112,35 @@ msgstr ""
 msgid "Places"
 msgstr "Puescj"
 
-#: extensions/places-menu/placeDisplay.js:60
+#: extensions/places-menu/placeDisplay.js:53
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "No si è rivâts a inviâ “%s”"
 
-#: extensions/places-menu/placeDisplay.js:75
+#: extensions/places-menu/placeDisplay.js:68
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "No si è rivâts a montâ il volum par “%s”"
 
-#: extensions/places-menu/placeDisplay.js:135
-#: extensions/places-menu/placeDisplay.js:158
-msgid "Computer"
-msgstr "Computer"
-
-#: extensions/places-menu/placeDisplay.js:333
+#: extensions/places-menu/placeDisplay.js:316
 msgid "Home"
 msgstr "Home"
 
-#: extensions/places-menu/placeDisplay.js:378
-msgid "Browse Network"
-msgstr "Esplore rêt"
+#: extensions/places-menu/placeDisplay.js:322
+msgid "Recent"
+msgstr "Resint"
+
+#: extensions/places-menu/placeDisplay.js:328
+msgid "Starred"
+msgstr "Preferît"
+
+#: extensions/places-menu/placeDisplay.js:348
+msgid "Network"
+msgstr "Rêt"
+
+#: extensions/places-menu/placeDisplay.js:355
+msgid "Trash"
+msgstr "Scovacere"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
@@ -223,47 +230,47 @@ msgstr "Non dal teme"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Il non dal teme, che si cjame da ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:92
 msgid "Close"
 msgstr "Siere"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "Gjave minimizazion"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "Minimize"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "Gjave massimizazion"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "Massimize"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:641
 msgid "Minimize all"
 msgstr "Minimize ducj"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:647
 msgid "Unminimize all"
 msgstr "Gjave a ducj la minimizazion"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:653
 msgid "Maximize all"
 msgstr "Massimize ducj"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:661
 msgid "Unmaximize all"
 msgstr "Gjave a ducj la massimizazion"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:669
 msgid "Close all"
 msgstr "Siere ducj"
 
-#: extensions/window-list/extension.js:778
+#: extensions/window-list/extension.js:911 extensions/window-list/prefs.js:24
 msgid "Window List"
 msgstr "Liste barcons"
 
@@ -280,7 +287,7 @@ msgstr ""
 "barcons. I valôrs pussibii a son “never”, “auto” e “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:75
 msgid "Show windows from all workspaces"
 msgstr "Mostre i barcons di ducj i spazis di lavôr"
 
@@ -305,46 +312,25 @@ msgstr ""
 msgid "Show workspace previews in window list"
 msgstr "Mostre lis anteprimis dai spazis di lavôr te liste dai barcons"
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/prefs.js:42
 msgid "Window Grouping"
 msgstr "Intropament di barcons"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "No sta meti mai in grup i barcons"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "Met dongje i barcons cuant che il spazi al è limitât"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "Met simpri in grup i barcons"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:69
 msgid "Show on all monitors"
 msgstr "Mostre su ducj i visôrs"
-
-#: extensions/window-list/prefs.js:92
-msgid "Show workspace previews"
-msgstr "Mostre anteprimis dai spazis di lavôr"
-
-#: extensions/workspace-indicator/prefs.js:30
-msgid "Show Previews In Top Bar"
-msgstr "Mostre anteprimis te sbare superiôr"
-
-#: extensions/workspace-indicator/prefs.js:88
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Spazi di lavôr %d"
-
-#: extensions/workspace-indicator/prefs.js:155
-msgid "Workspace Names"
-msgstr "Nons dai spazis di lavôr"
-
-#: extensions/workspace-indicator/prefs.js:281
-msgid "Add Workspace"
-msgstr "Zonte spazi di lavôr"
 
 #: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
 msgid "Show workspace previews in top bar"
@@ -353,6 +339,37 @@ msgstr "Mostre anteprimis dai spazis di lavôr te sbare superiôr"
 #: extensions/workspace-indicator/workspaceIndicator.js:430
 msgid "Workspace Indicator"
 msgstr "Indicadôr spazi di lavôr"
+
+#: extensions/workspace-indicator/workspacePrefs.js:29
+msgid "Show Previews"
+msgstr "Mostre anteprimis"
+
+#: extensions/workspace-indicator/workspacePrefs.js:87
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Spazi di lavôr %d"
+
+#: extensions/workspace-indicator/workspacePrefs.js:154
+msgid "Workspace Names"
+msgstr "Nons dai spazis di lavôr"
+
+#: extensions/workspace-indicator/workspacePrefs.js:171
+msgid "Add Workspace"
+msgstr "Zonte spazi di lavôr"
+
+#: extensions/workspace-indicator/workspacePrefs.js:196
+msgid "Remove"
+msgstr "Gjave"
+
+#: extensions/workspace-indicator/workspacePrefs.js:226
+msgid "Workspaces"
+msgstr "Spazis di lavôr"
+
+#~ msgid "Computer"
+#~ msgstr "Computer"
+
+#~ msgid "Show workspace previews"
+#~ msgstr "Mostre anteprimis dai spazis di lavôr"
 
 #~ msgid "Applications"
 #~ msgstr "Aplicazions"
