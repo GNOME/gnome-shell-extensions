@@ -2,7 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-project('gnome-shell-extensions',
+project(
+  'gnome-shell-extensions',
   version: '47.0',
   meson_version: '>= 1.1.0',
   license: 'GPL-2.0-or-later',
@@ -49,11 +50,7 @@ default_extensions += [
 ]
 
 all_extensions = default_extensions
-all_extensions += [
-  'auto-move-windows',
-  'native-window-placement',
-  'user-theme',
-]
+all_extensions += ['auto-move-windows', 'native-window-placement', 'user-theme']
 
 enabled_extensions = get_option('enable_extensions')
 
