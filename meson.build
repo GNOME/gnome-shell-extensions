@@ -72,7 +72,7 @@ endif
 classic_mode_enabled = get_option('classic_mode')
 
 if classic_mode_enabled
-  # Sanity check: Make sure all classic extensions are enabled
+# Sanity check: Make sure all classic extensions are enabled
   foreach e : classic_extensions
     if not enabled_extensions.contains(e)
       error(f'Classic mode is enabled, but the required extension @e@ is not')
@@ -98,17 +98,13 @@ endif
 subdir('extensions')
 subdir('po')
 
-gnome.post_install(
-  glib_compile_schemas: true,
-)
+gnome.post_install(glib_compile_schemas: true)
 
-meson.add_dist_script('meson/check-version.py',
-  meson.project_version(),
-  'NEWS')
+meson.add_dist_script('meson/check-version.py', meson.project_version(), 'NEWS')
 
 summary_options = {
- 'extensions': enabled_extensions,
- 'classic_mode': get_option('classic_mode'),
+  'extensions': enabled_extensions,
+  'classic_mode': get_option('classic_mode'),
 }
 
 summary_dirs = {
