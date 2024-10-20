@@ -6,16 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
-"issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
-"PO-Revision-Date: 2024-04-16 21:02+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
+"POT-Creation-Date: 2024-10-18 19:45+0000\n"
+"PO-Revision-Date: 2024-10-20 20:01+0000\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
-"Language-Team: Friulian <fur@li.org>\n"
+"Language-Team: Friulian <f.t.public@gmail.com>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Editor: HaiPO 2.1 beta\n"
 "X-Generator: Poedit 3.4.2\n"
 
 #: data/gnome-classic.desktop.in:3
@@ -39,7 +39,7 @@ msgstr "GNOME Classic su Xorg"
 msgid "Favorites"
 msgstr "Preferîts"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:400
 msgid "Apps"
 msgstr "Aplicazions"
 
@@ -52,8 +52,8 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"Une liste di stringhis, ogniune e ten il ID di une aplicazion (non dal file ."
-"desktop), cun daûr doi ponts e il numar dal spazi di lavôr"
+"Une liste di stringhis, ogniune e ten il ID di une aplicazion (non dal file "
+".desktop), cun daûr doi ponts e il numar dal spazi di lavôr"
 
 #: extensions/auto-move-windows/prefs.js:159
 msgid "Workspace Rules"
@@ -89,8 +89,8 @@ msgid ""
 "This setting applies only with the natural placement strategy."
 msgstr ""
 "Cîr di doprâ plui schermi par plaçâ lis miniaturis dai barcons, adatant il "
-"rapuart di aspiet dal visôr e consolidant ancjemo di plui lis miniaturis par "
-"ridusi il spazi complessîf. Cheste impostazion si apliche dome se "
+"rapuart di aspiet dal visôr e consolidant ancjemo di plui lis miniaturis par"
+" ridusi il spazi complessîf. Cheste impostazion si apliche dome se "
 "l'algoritmi di plaçament al è naturâl."
 
 #: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
@@ -155,43 +155,43 @@ msgstr "Statistichis memorie"
 msgid "Swap stats"
 msgstr "Statistichis memorie di scambi"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "Statistichis cjariament in rêt"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "Statistichis discjariaments"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:364
 msgid "System stats"
 msgstr "Statistichis di sisteme"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:412
 msgid "Show"
 msgstr "Mostre"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
 msgstr "CPU"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "Memorie"
 
-#: extensions/system-monitor/extension.js:409
+#: extensions/system-monitor/extension.js:418
 msgid "Swap"
 msgstr "Memorie di scambi"
 
-#: extensions/system-monitor/extension.js:411
+#: extensions/system-monitor/extension.js:420
 msgid "Upload"
 msgstr "Cjariaments in rêt"
 
-#: extensions/system-monitor/extension.js:413
+#: extensions/system-monitor/extension.js:422
 msgid "Download"
 msgstr "Discjariaments"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:427
 msgid "Open System Monitor"
 msgstr "Vierç monitor di sisteme"
 
@@ -223,47 +223,47 @@ msgstr "Non dal teme"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Il non dal teme, che si cjame da ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:71
+#: extensions/window-list/extension.js:70
 msgid "Close"
 msgstr "Siere"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:97
 msgid "Unminimize"
 msgstr "Gjave minimizazion"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:97
 msgid "Minimize"
 msgstr "Minimize"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:104
 msgid "Unmaximize"
 msgstr "Gjave massimizazion"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:104
 msgid "Maximize"
 msgstr "Massimize"
 
-#: extensions/window-list/extension.js:470
+#: extensions/window-list/extension.js:485
 msgid "Minimize all"
 msgstr "Minimize ducj"
 
-#: extensions/window-list/extension.js:476
+#: extensions/window-list/extension.js:491
 msgid "Unminimize all"
 msgstr "Gjave a ducj la minimizazion"
 
-#: extensions/window-list/extension.js:482
+#: extensions/window-list/extension.js:497
 msgid "Maximize all"
 msgstr "Massimize ducj"
 
-#: extensions/window-list/extension.js:490
+#: extensions/window-list/extension.js:505
 msgid "Unmaximize all"
 msgstr "Gjave a ducj la massimizazion"
 
-#: extensions/window-list/extension.js:498
+#: extensions/window-list/extension.js:513
 msgid "Close all"
 msgstr "Siere ducj"
 
-#: extensions/window-list/extension.js:772
+#: extensions/window-list/extension.js:780
 msgid "Window List"
 msgstr "Liste barcons"
 
@@ -280,7 +280,7 @@ msgstr ""
 "barcons. I valôrs pussibii a son “never”, “auto” e “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:70
 msgid "Show windows from all workspaces"
 msgstr "Mostre i barcons di ducj i spazis di lavôr"
 
@@ -301,43 +301,58 @@ msgstr ""
 "Indiche se mostrâ la liste dai barcons su ducj i visôrs tacâts o nome sul "
 "chel principâl."
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "Mostre lis anteprimis dai spazis di lavôr te liste dai barcons"
+
+#: extensions/window-list/prefs.js:37
 msgid "Window Grouping"
 msgstr "Intropament di barcons"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:42
 msgid "Never group windows"
 msgstr "No sta meti mai in grup i barcons"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:43
 msgid "Group windows when space is limited"
 msgstr "Met dongje i barcons cuant che il spazi al è limitât"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:44
 msgid "Always group windows"
 msgstr "Met simpri in grup i barcons"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:64
 msgid "Show on all monitors"
 msgstr "Mostre su ducj i visôrs"
 
-#: extensions/window-list/workspaceIndicator.js:253
-#: extensions/workspace-indicator/extension.js:259
-msgid "Workspace Indicator"
-msgstr "Indicadôr spazi di lavôr"
+#: extensions/window-list/prefs.js:76
+msgid "Show workspace previews"
+msgstr "Mostre anteprimis dai spazis di lavôr"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "Mostre anteprimis te sbare superiôr"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Spazi di lavôr %d"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "Nons dai spazis di lavôr"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "Zonte spazi di lavôr"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "Mostre anteprimis dai spazis di lavôr te sbare superiôr"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "Indicadôr spazi di lavôr"
 
 #~ msgid "Applications"
 #~ msgstr "Aplicazions"
@@ -367,24 +382,24 @@ msgstr "Zonte spazi di lavôr"
 #~ msgstr "Disposizion dai botons te sbare dal titul"
 
 #~ msgid ""
-#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
-#~ "running GNOME Shell."
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when running "
+#~ "GNOME Shell."
 #~ msgstr ""
-#~ "Cheste clâf a sorplante chê in org.gnome.desktop.wm.preferences cuant che "
-#~ "al è in esecuzion GNOME Shell."
+#~ "Cheste clâf a sorplante chê in org.gnome.desktop.wm.preferences cuant che al"
+#~ " è in esecuzion GNOME Shell."
 
 #~ msgid "Enable edge tiling when dropping windows on screen edges"
 #~ msgstr ""
-#~ "Abilite la tasseladure sul ôr cuant che i balcons a vegnin molâts sul ôr "
-#~ "dal visôr"
+#~ "Abilite la tasseladure sul ôr cuant che i balcons a vegnin molâts sul ôr dal"
+#~ " visôr"
 
 #~ msgid "Workspaces only on primary monitor"
 #~ msgstr "Spazis di lavôr dome sul visôr principâl"
 
 #~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
 #~ msgstr ""
-#~ "Tarde la mude dal focus te modalitât mouse fintremai che il pontadôr no "
-#~ "si ferme"
+#~ "Tarde la mude dal focus te modalitât mouse fintremai che il pontadôr no si "
+#~ "ferme"
 
 #~ msgid "Thumbnail only"
 #~ msgstr "Dome miniaturis"
@@ -408,8 +423,8 @@ msgstr "Zonte spazi di lavôr"
 #~ msgstr "Test di benvignût alternatîf"
 
 #~ msgid ""
-#~ "If not empty, it contains the text that will be shown when clicking on "
-#~ "the panel."
+#~ "If not empty, it contains the text that will be shown when clicking on the "
+#~ "panel."
 #~ msgstr ""
 #~ "Se no vueit, al ten il test che al vegnarà mostrât scliçant sul panel."
 
@@ -417,12 +432,10 @@ msgstr "Zonte spazi di lavôr"
 #~ msgstr "Messaç"
 
 #~ msgid ""
-#~ "Example aims to show how to build well behaved extensions for the Shell "
-#~ "and as such it has little functionality on its own.\n"
+#~ "Example aims to show how to build well behaved extensions for the Shell and as such it has little functionality on its own.\n"
 #~ "Nevertheless it’s possible to customize the greeting message."
 #~ msgstr ""
-#~ "Example al ponte a mostrâ cemût imbastî estensions de Shell che si "
-#~ "compuartedin ben e par chest no 'ndi à tantis funzions.\n"
+#~ "Example al ponte a mostrâ cemût imbastî estensions de Shell che si compuartedin ben e par chest no 'ndi à tantis funzions.\n"
 #~ "Ad ogni mût al è pussibil personalizâ il messaç di benvignût."
 
 #~ msgid "GNOME Shell Classic"
