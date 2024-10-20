@@ -5,7 +5,7 @@
 project('gnome-shell-extensions',
   version: '47.0',
   meson_version: '>= 1.1.0',
-  license: 'GPL-2.0-or-later'
+  license: 'GPL-2.0-or-later',
 )
 
 gettext_domain = meson.project_name()
@@ -34,7 +34,7 @@ classic_extensions = [
   'apps-menu',
   'places-menu',
   'launch-new-instance',
-  'window-list'
+  'window-list',
 ]
 
 default_extensions = classic_extensions
@@ -45,14 +45,14 @@ default_extensions += [
   'status-icons',
   'system-monitor',
   'windowsNavigator',
-  'workspace-indicator'
+  'workspace-indicator',
 ]
 
 all_extensions = default_extensions
 all_extensions += [
   'auto-move-windows',
   'native-window-placement',
-  'user-theme'
+  'user-theme',
 ]
 
 enabled_extensions = get_option('enable_extensions')
@@ -91,7 +91,7 @@ if classic_mode_enabled
   subdir('data')
   meson.add_install_script(
     'meson/session-post-install.py',
-    join_paths(get_option('prefix'), datadir)
+    join_paths(get_option('prefix'), datadir),
   )
 endif
 
