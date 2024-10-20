@@ -30,7 +30,7 @@ foreach name: session_desktops
       po_dir: '../po',
       install: true,
       install_dir: session_instdir,
-      type: 'desktop'
+      type: 'desktop',
     )
 endforeach
 
@@ -47,7 +47,7 @@ configure_file(
   input: mode_file + '.in',
   output: mode_file,
   configuration: mode_conf,
-  install_dir: modedir
+  install_dir: modedir,
 )
 
 classic_override = '00_org.gnome.shell.extensions.classic.gschema.override'
