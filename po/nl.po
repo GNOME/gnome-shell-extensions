@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-02-06 18:43+0000\n"
-"PO-Revision-Date: 2024-02-18 17:17+0100\n"
+"POT-Creation-Date: 2024-10-15 16:32+0000\n"
+"PO-Revision-Date: 2024-10-27 23:36+0100\n"
 "Last-Translator: Nathan Follens <nfollens@gnome.org>\n"
 "Language-Team: GNOME-NL https://matrix.to/#/#nl:gnome.org\n"
 "Language: nl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-classic.desktop.in:3
@@ -42,7 +42,7 @@ msgstr "GNOME klassiek op Xorg"
 msgid "Favorites"
 msgstr "Favorieten"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:400
 msgid "Apps"
 msgstr "Toepassingen"
 
@@ -159,43 +159,43 @@ msgstr "Geheugenstatistieken"
 msgid "Swap stats"
 msgstr "Wisselgeheugenstatistieken"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "Uploadstatistieken"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "Downloadstatistieken"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:364
 msgid "System stats"
 msgstr "Systeemstatistieken"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:412
 msgid "Show"
 msgstr "Tonen"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:414
 msgid "CPU"
 msgstr "CPU"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:416
 msgid "Memory"
 msgstr "Geheugen"
 
-#: extensions/system-monitor/extension.js:409
+#: extensions/system-monitor/extension.js:418
 msgid "Swap"
 msgstr "Wisselgeheugen"
 
-#: extensions/system-monitor/extension.js:411
+#: extensions/system-monitor/extension.js:420
 msgid "Upload"
 msgstr "Upload"
 
-#: extensions/system-monitor/extension.js:413
+#: extensions/system-monitor/extension.js:422
 msgid "Download"
 msgstr "Download"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:427
 msgid "Open System Monitor"
 msgstr "Systeemmonitor openen"
 
@@ -227,47 +227,47 @@ msgstr "Themanaam"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "De naam van het thema, te laden vanuit ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:71
+#: extensions/window-list/extension.js:70
 msgid "Close"
 msgstr "Sluiten"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:97
 msgid "Unminimize"
 msgstr "Zichtbaar maken"
 
-#: extensions/window-list/extension.js:98
+#: extensions/window-list/extension.js:97
 msgid "Minimize"
 msgstr "Minimaliseren"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:104
 msgid "Unmaximize"
 msgstr "Herstellen"
 
-#: extensions/window-list/extension.js:105
+#: extensions/window-list/extension.js:104
 msgid "Maximize"
 msgstr "Maximaliseren"
 
-#: extensions/window-list/extension.js:470
+#: extensions/window-list/extension.js:489
 msgid "Minimize all"
 msgstr "Alles minimaliseren"
 
-#: extensions/window-list/extension.js:476
+#: extensions/window-list/extension.js:495
 msgid "Unminimize all"
 msgstr "Alles zichtbaar maken"
 
-#: extensions/window-list/extension.js:482
+#: extensions/window-list/extension.js:501
 msgid "Maximize all"
 msgstr "Alles maximaliseren"
 
-#: extensions/window-list/extension.js:490
+#: extensions/window-list/extension.js:509
 msgid "Unmaximize all"
 msgstr "Alles herstellen"
 
-#: extensions/window-list/extension.js:498
+#: extensions/window-list/extension.js:517
 msgid "Close all"
 msgstr "Alles sluiten"
 
-#: extensions/window-list/extension.js:772
+#: extensions/window-list/extension.js:789
 msgid "Window List"
 msgstr "Vensterlijst"
 
@@ -281,8 +281,8 @@ msgid ""
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Beslist wanneer vensters van dezelfde toepassing in de vensterlijst te "
-"groeperen. Mogelijke waarden zijn ‘never’ (nooit), ‘auto’ en "
-"‘always’ (altijd)."
+"groeperen. Mogelijke waarden zijn ‘never’ (nooit), ‘auto’ en ‘always’ "
+"(altijd)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
 #: extensions/window-list/prefs.js:79
@@ -307,6 +307,10 @@ msgstr ""
 "Bepaalt of de vensterlijst op alle verbonden beeldschermen of enkel op het "
 "primaire beeldscherm wordt weergegeven."
 
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "Voorbeelden van werkbladen tonen in vensterlijst"
+
 #: extensions/window-list/prefs.js:35
 msgid "Window Grouping"
 msgstr "Venstergroepering"
@@ -327,23 +331,34 @@ msgstr "Vensters altijd groeperen"
 msgid "Show on all monitors"
 msgstr "Tonen op alle beeldschermen"
 
-#: extensions/window-list/workspaceIndicator.js:253
-#: extensions/workspace-indicator/extension.js:259
-msgid "Workspace Indicator"
-msgstr "Werkbladindicator"
+#: extensions/window-list/prefs.js:92
+msgid "Show workspace previews"
+msgstr "Voorbeelden van werkbladen tonen"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "Voorbeelden tonen in bovenste balk"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "Werkblad %d"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "Werkbladnamen"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "Werkblad toevoegen"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "Voorbeelden van werkbladen tonen in bovenste balk"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "Werkbladindicator"
 
 #~ msgid "Applications"
 #~ msgstr "Toepassingen"
