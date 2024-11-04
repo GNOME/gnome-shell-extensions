@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-04-29 14:28+0000\n"
-"PO-Revision-Date: 2024-06-20 01:27+0200\n"
+"POT-Creation-Date: 2024-10-27 22:37+0000\n"
+"PO-Revision-Date: 2024-11-04 08:14+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
-"X-Generator: Gtranslator 45.3\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -44,7 +44,7 @@ msgstr "Класичан Гном на Икс серверу"
 msgid "Favorites"
 msgstr "Омиљено"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:400
 msgid "Apps"
 msgstr "Апликације"
 
@@ -227,47 +227,47 @@ msgstr "Назив теме"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Назив теме који се учитава из датотеке „~/.themes/name/gnome-shell“"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:70
 msgid "Close"
 msgstr "Затвори"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:97
 msgid "Unminimize"
 msgstr "Поништи умањење"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:97
 msgid "Minimize"
 msgstr "Умањи"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:104
 msgid "Unmaximize"
 msgstr "Поништи увећање"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:104
 msgid "Maximize"
 msgstr "Увећај"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:485
 msgid "Minimize all"
 msgstr "Умањи све"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:491
 msgid "Unminimize all"
 msgstr "Поништи умањење свега"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:497
 msgid "Maximize all"
 msgstr "Увећај све"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:505
 msgid "Unmaximize all"
 msgstr "Поништи увећање свега"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:513
 msgid "Close all"
 msgstr "Затвори све"
 
-#: extensions/window-list/extension.js:773
+#: extensions/window-list/extension.js:780
 msgid "Window List"
 msgstr "Списак прозора"
 
@@ -281,11 +281,11 @@ msgid ""
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Одређује када ће бити груписани прозори истог програма у списку прозора. "
-"Дозвољене вредности су „never“ (никад), „auto“ (аутоматски) и "
-"„always“ (увек)."
+"Дозвољене вредности су „never“ (никад), „auto“ (аутоматски) и „always“ "
+"(увек)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:70
 msgid "Show windows from all workspaces"
 msgstr "Прикажи прозоре свих радних простора"
 
@@ -305,43 +305,58 @@ msgstr ""
 "Да ли да прикаже списак прозора на свим прикљученим мониторима или само на "
 "главном."
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "Прикажи прегледе радних простора у списку прозора"
+
+#: extensions/window-list/prefs.js:37
 msgid "Window Grouping"
 msgstr "Груписање прозора"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:42
 msgid "Never group windows"
 msgstr "Никад не групиши прозоре"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:43
 msgid "Group windows when space is limited"
 msgstr "Групиши прозоре када је простор ограничен"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:44
 msgid "Always group windows"
 msgstr "Увек групиши прозоре"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:64
 msgid "Show on all monitors"
 msgstr "Прикажи на свим мониторима"
 
-#: extensions/window-list/workspaceIndicator.js:255
-#: extensions/workspace-indicator/extension.js:261
-msgid "Workspace Indicator"
-msgstr "Показатељ радних простора"
+#: extensions/window-list/prefs.js:76
+msgid "Show workspace previews"
+msgstr "Прикажи прегледе радних простора"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:30
+msgid "Show Previews In Top Bar"
+msgstr "Прикажи прегледе у горњој траци"
+
+#: extensions/workspace-indicator/prefs.js:88
 #, javascript-format
 msgid "Workspace %d"
 msgstr "%d. радни простор"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:155
 msgid "Workspace Names"
 msgstr "Називи радних простора"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:281
 msgid "Add Workspace"
 msgstr "Додај радни простор"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "Прикажи прегледе радних простора у горњој траци"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "Показатељ радних простора"
 
 #~ msgid "Applications"
 #~ msgstr "Програми"
