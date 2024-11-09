@@ -361,6 +361,7 @@ class Indicator extends PanelMenu.Button {
     }
 
     constructor(settings) {
+        GTop.glibtop_init();
         super(0.5, _('System stats'));
 
         this._settings = settings;
