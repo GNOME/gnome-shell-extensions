@@ -19,31 +19,16 @@ import {PlacesManager} from './placeDisplay.js';
 
 const N_ = x => x;
 
-const PLACE_ICON_SIZE = 16;
-
-class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
+class PlaceMenuItem extends PopupMenu.PopupImageMenuItem {
     static {
         GObject.registerClass(this);
     }
 
     constructor(info) {
-        super({
+        super(info.name, info.icon, {
             style_class: 'place-menu-item',
         });
         this._info = info;
-
-        this._icon = new St.Icon({
-            gicon: info.icon,
-            icon_size: PLACE_ICON_SIZE,
-        });
-        this.add_child(this._icon);
-
-        this._label = new St.Label({
-            text: info.name,
-            x_expand: true,
-            y_align: Clutter.ActorAlign.CENTER,
-        });
-        this.add_child(this._label);
 
         if (info.isRemovable()) {
             this._ejectIcon = new St.Icon({
@@ -69,8 +54,8 @@ class PlaceMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _propertiesChanged(info) {
-        this._icon.gicon = info.icon;
-        this._label.text = info.name;
+        this.setIcon(info.icon);
+        this.label.text = info.name;
     }
 }
 
