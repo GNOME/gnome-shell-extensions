@@ -4,7 +4,7 @@
 "settings-schema": "@gschemaname@",
 "gettext-domain": "@gettext_domain@",
 "name": "Screenshot Window Sizer",
-"description": "Resize windows for GNOME Software screenshots",
+"description": "Resize windows for GNOME Software screenshots with Ctrl+Alt+s shortcut",
 "shell-version": [ "@shell_current@" ],
 "url": "@url@"
 }
