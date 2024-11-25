@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-04-29 15:27+0000\n"
-"PO-Revision-Date: 2024-06-28 10:34+0300\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"POT-Creation-Date: 2024-10-16 14:41+0000\n"
+"PO-Revision-Date: 2024-11-25 10:45+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Gtranslator 46.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -68,7 +68,7 @@ msgstr "הוספת כלל"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:218
+#: extensions/places-menu/placeDisplay.js:187
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "שליפת הכונן „%s” נכשלה:"
@@ -114,28 +114,35 @@ msgstr ""
 msgid "Places"
 msgstr "מקומות"
 
-#: extensions/places-menu/placeDisplay.js:60
+#: extensions/places-menu/placeDisplay.js:53
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "הרצת „%s” נכשלה"
 
-#: extensions/places-menu/placeDisplay.js:75
+#: extensions/places-menu/placeDisplay.js:68
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "עיגון הכרך „%s” נכשל"
 
-#: extensions/places-menu/placeDisplay.js:135
-#: extensions/places-menu/placeDisplay.js:158
-msgid "Computer"
-msgstr "מחשב"
-
-#: extensions/places-menu/placeDisplay.js:333
+#: extensions/places-menu/placeDisplay.js:316
 msgid "Home"
 msgstr "בית"
 
-#: extensions/places-menu/placeDisplay.js:378
-msgid "Browse Network"
-msgstr "עיון ברשת"
+#: extensions/places-menu/placeDisplay.js:322
+msgid "Recent"
+msgstr "אחרונים"
+
+#: extensions/places-menu/placeDisplay.js:328
+msgid "Starred"
+msgstr "מסומנים בכוכב"
+
+#: extensions/places-menu/placeDisplay.js:348
+msgid "Network"
+msgstr "רשת"
+
+#: extensions/places-menu/placeDisplay.js:355
+msgid "Trash"
+msgstr "אשפה"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
@@ -225,47 +232,47 @@ msgstr "Theme name"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:92
 msgid "Close"
 msgstr "סגירה"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:119
 msgid "Unminimize"
 msgstr "ביטול המזעור"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:119
 msgid "Minimize"
 msgstr "מזעור"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:126
 msgid "Unmaximize"
 msgstr "ביטול ההגדלה"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:126
 msgid "Maximize"
 msgstr "הגדלה"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:641
 msgid "Minimize all"
 msgstr "מזעור הכל"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:647
 msgid "Unminimize all"
 msgstr "ביטול מזעור הכל"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:653
 msgid "Maximize all"
 msgstr "הגדלת הכל"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:661
 msgid "Unmaximize all"
 msgstr "ביטול הגדלת הכל"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:669
 msgid "Close all"
 msgstr "סגירת הכל"
 
-#: extensions/window-list/extension.js:778
+#: extensions/window-list/extension.js:911 extensions/window-list/prefs.js:24
 msgid "Window List"
 msgstr "רשימת חלונות"
 
@@ -282,7 +289,7 @@ msgstr ""
 "Possible values are “never”, “auto” and “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:75
 msgid "Show windows from all workspaces"
 msgstr "הצגת חלונות מכל מרחבי העבודה"
 
@@ -306,46 +313,25 @@ msgstr ""
 msgid "Show workspace previews in window list"
 msgstr "הצגת תצוגה מקדימה של מרחבי העבודה ברשימת החלונות"
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/prefs.js:42
 msgid "Window Grouping"
 msgstr "קיבוץ חלונות"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:47
 msgid "Never group windows"
 msgstr "לעולם לא לקבץ חלונות"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:48
 msgid "Group windows when space is limited"
 msgstr "קיבוץ חלונות כאשר המקום מוגבל"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:49
 msgid "Always group windows"
 msgstr "תמיד לקבץ חלונות"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:69
 msgid "Show on all monitors"
 msgstr "הצגה בכל הצגים"
-
-#: extensions/window-list/prefs.js:92
-msgid "Show workspace previews"
-msgstr "הצגת תצוגה מקדימה של מרחבי העבודה"
-
-#: extensions/workspace-indicator/prefs.js:30
-msgid "Show Previews In Top Bar"
-msgstr "הצגת תצוגה מקדימה בלוח העליון"
-
-#: extensions/workspace-indicator/prefs.js:88
-#, javascript-format
-msgid "Workspace %d"
-msgstr "מרחב עבודה %d"
-
-#: extensions/workspace-indicator/prefs.js:155
-msgid "Workspace Names"
-msgstr "שם מרחב העבודה"
-
-#: extensions/workspace-indicator/prefs.js:281
-msgid "Add Workspace"
-msgstr "הוספת מרחב עבודה"
 
 #: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
 msgid "Show workspace previews in top bar"
@@ -354,6 +340,37 @@ msgstr "הצגת תצוגה מקדימה של מרחבי העבודה בלוח �
 #: extensions/workspace-indicator/workspaceIndicator.js:430
 msgid "Workspace Indicator"
 msgstr "מחוון מרחבי עבודה"
+
+#: extensions/workspace-indicator/workspacePrefs.js:29
+msgid "Show Previews"
+msgstr "הצגת תצוגות מקדימות"
+
+#: extensions/workspace-indicator/workspacePrefs.js:87
+#, javascript-format
+msgid "Workspace %d"
+msgstr "מרחב עבודה %d"
+
+#: extensions/workspace-indicator/workspacePrefs.js:154
+msgid "Workspace Names"
+msgstr "שם מרחב העבודה"
+
+#: extensions/workspace-indicator/workspacePrefs.js:171
+msgid "Add Workspace"
+msgstr "הוספת מרחב עבודה"
+
+#: extensions/workspace-indicator/workspacePrefs.js:196
+msgid "Remove"
+msgstr "הסרה"
+
+#: extensions/workspace-indicator/workspacePrefs.js:226
+msgid "Workspaces"
+msgstr "מרחבי עבודה"
+
+#~ msgid "Computer"
+#~ msgstr "מחשב"
+
+#~ msgid "Show workspace previews"
+#~ msgstr "הצגת תצוגה מקדימה של מרחבי העבודה"
 
 #~ msgid "Applications"
 #~ msgstr "יישומים"
