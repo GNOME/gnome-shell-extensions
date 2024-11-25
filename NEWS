@@ -1,3 +1,15 @@
+47.2
+====
+* places-menu: Fix a11y labelling [Florian; #542]
+* screenshot-window-sizer: Mention shortcut in description [Florian; !358]
+* Misc. bug fixes and cleanups [Florian; !353, !354]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Fabio Tomat [fur], Nathan Follens [nl], Марко Костић [sr]
+
 47.1
 ====
 * classic: Add missing top-bar indicators [Florian; !339]
