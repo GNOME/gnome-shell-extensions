@@ -62,7 +62,7 @@ class PlaceInfo extends EventEmitter {
                 await this.file.mount_enclosing_volume(0, op.mountOp, null);
 
                 if (tryMount)
-                    this._ensureMountAndLaunch(context, false);
+                    this._ensureMountAndLaunch(context, false).catch(logError);
             } catch (e) {
                 if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.FAILED_HANDLED))
                     Main.notifyError(_('Failed to mount volume for “%s”').format(this.name), e.message);
@@ -74,7 +74,7 @@ class PlaceInfo extends EventEmitter {
 
     launch(timestamp) {
         let launchContext = global.create_app_launch_context(timestamp, -1);
-        this._ensureMountAndLaunch(launchContext, true);
+        this._ensureMountAndLaunch(launchContext, true).catch(logError);
     }
 
     getIcon() {
