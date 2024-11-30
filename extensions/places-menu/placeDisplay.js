@@ -61,8 +61,8 @@ class PlaceInfo extends EventEmitter {
                 return;
             }
 
-            let source = {
-                get_icon: () => this.icon,
+            const source = {
+                get_drive: () => null,
             };
             let op = new ShellMountOperation.ShellMountOperation(source);
             try {
