@@ -43,7 +43,7 @@ class WindowPreview extends St.Button {
             'size-changed', () => this._checkRelayout(),
             'position-changed', () => this._checkRelayout(),
             'notify::minimized', this._updateVisible.bind(this),
-            'notify::window-type', this._updateVisible.bind(this),
+            'notify::skip-taskbar', this._updateVisible.bind(this),
             this);
         this._updateVisible();
 
@@ -72,7 +72,7 @@ class WindowPreview extends St.Button {
     }
 
     _updateVisible() {
-        this.visible = this._window.window_type !== Meta.WindowType.DESKTOP &&
+        this.visible = !this._window.skip_taskbar &&
             this._window.showing_on_its_workspace();
     }
 }
