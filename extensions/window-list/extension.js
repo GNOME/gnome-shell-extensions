@@ -79,7 +79,7 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
             'notify::minimized', this._updateMinimizeItem.bind(this),
             'notify::maximized-horizontally', this._updateMaximizeItem.bind(this),
             'notify::maximized-vertically', this._updateMaximizeItem.bind(this),
-            this);
+            this.actor);
 
         this._updateMinimizeItem();
         this._updateMaximizeItem();
