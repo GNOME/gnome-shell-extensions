@@ -772,10 +772,11 @@ class WindowList extends St.Widget {
             () => this._onWorkspaceMenuSet(), this);
         this._onWorkspaceMenuSet();
 
-        Main.layoutManager.addChrome(this, {
+        const chromeOptions = {
             affectsStruts: true,
             trackFullscreen: true,
-        });
+        };
+        Main.layoutManager.addChrome(this, chromeOptions);
         Main.uiGroup.set_child_above_sibling(this, Main.layoutManager.panelBox);
         Main.ctrlAltTabManager.addGroup(this, _('Window List'), 'start-here-symbolic');
 
@@ -812,10 +813,12 @@ class WindowList extends St.Widget {
 
         Main.overview.connectObject(
             'showing', () => {
+                Main.layoutManager.untrackChrome(this);
                 this.hide();
                 this._updateKeyboardAnchor();
             },
             'hidden', () => {
+                Main.layoutManager.trackChrome(this);
                 this.visible = !this._monitor.inFullscreen;
                 this._updateKeyboardAnchor();
             }, this);
