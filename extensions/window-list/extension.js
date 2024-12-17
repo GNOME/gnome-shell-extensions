@@ -37,6 +37,9 @@ const DRAG_PROXIMITY_THRESHOLD = 30;
 
 const SAVED_POSITIONS_KEY = 'window-list-positions';
 
+const ATTENTION_INDICATOR_MAX_SCALE = 0.4;
+const ATTENTION_INDICATOR_TRANSITION_DURATION = 300;
+
 const GroupingMode = {
     NEVER: 0,
     AUTO: 1,
@@ -127,7 +130,7 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
     }
 }
 
-class TitleWidget extends St.BoxLayout {
+class TitleWidget extends St.Widget {
     static {
         GObject.registerClass({
             GTypeFlags: GObject.TypeFlags.ABSTRACT,
@@ -142,20 +145,27 @@ class TitleWidget extends St.BoxLayout {
 
     constructor() {
         super({
-            style_class: 'window-button-box',
+            layout_manager: new Clutter.BinLayout(),
             x_expand: true,
             y_expand: true,
         });
 
+        const hbox = new St.BoxLayout({
+            style_class: 'window-button-box',
+            x_expand: true,
+            y_expand: true,
+        });
+        this.add_child(hbox);
+
         this._icon = new St.Bin({
             style_class: 'window-button-icon',
         });
-        this.add_child(this._icon);
+        hbox.add_child(this._icon);
 
         this._label = new St.Label({
             y_align: Clutter.ActorAlign.CENTER,
         });
-        this.add_child(this._label);
+        hbox.add_child(this._label);
         this.label_actor = this._label;
 
         this.bind_property('abstract-label',
@@ -168,11 +178,28 @@ class TitleWidget extends St.BoxLayout {
             x_expand: true,
             y_expand: true,
         });
-        this.add_child(this._abstractLabel);
+        hbox.add_child(this._abstractLabel);
 
         this.bind_property('abstract-label',
             this._abstractLabel, 'visible',
             GObject.BindingFlags.SYNC_CREATE);
+
+        this._attentionIndicator = new St.Widget({
+            style_class: 'window-button-attention-indicator',
+            x_expand: true,
+            y_expand: true,
+            y_align: Clutter.ActorAlign.END,
+            scale_x: 0,
+        });
+        this._attentionIndicator.set_pivot_point(0.5, 0.5);
+        this.add_child(this._attentionIndicator);
+    }
+
+    setNeedsAttention(enable) {
+        this._attentionIndicator.ease({
+            scaleX: enable ? ATTENTION_INDICATOR_MAX_SCALE : 0,
+            duration: ATTENTION_INDICATOR_TRANSITION_DURATION,
+        });
     }
 }
 
@@ -193,15 +220,23 @@ class WindowTitle extends TitleWidget {
             () => this._updateIcon(), GObject.ConnectFlags.AFTER,
             'notify::title', () => this._updateTitle(),
             'notify::minimized', () => this._minimizedChanged(),
+            'notify::demands-attention', () => this._updateNeedsAttention(),
+            'notify::urgent', () => this._updateNeedsAttention(),
             this);
 
         this._updateIcon();
         this._minimizedChanged();
+        this._updateNeedsAttention();
     }
 
     _minimizedChanged() {
         this._icon.opacity = this._metaWindow.minimized ? 128 : 255;
         this._updateTitle();
+    }
+
+    _updateNeedsAttention() {
+        const {urgent, demandsAttention} = this._metaWindow;
+        this.setNeedsAttention(urgent || demandsAttention);
     }
 
     _updateTitle() {
@@ -236,9 +271,54 @@ class AppTitle extends TitleWidget {
         super();
 
         this._app = app;
+        this._windows = new Set();
 
         this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
         this._label.text = app.get_name();
+
+        this._app.connectObject(
+            'windows-changed', () => this._onWindowsChanged(),
+            this);
+        this._onWindowsChanged();
+
+        this.connect('destroy', () => {
+            console.debug(`Clearing windows of app ${this._app.id}`);
+            this._windows.clear();
+        });
+    }
+
+    _onWindowsChanged() {
+        const windows = this._app.get_windows();
+        const removed = [...this._windows].filter(w => !windows.includes(w));
+        removed.forEach(w => this._untrackWindow(w));
+        windows.forEach(w => this._trackWindow(w));
+        this._updateNeedsAttention();
+    }
+
+    _trackWindow(window) {
+        if (this._windows.has(window))
+            return;
+
+        console.debug(`Tracking window ${window} for app ${this._app.id}`);
+        window.connectObject(
+            'notify::urgent', () => this._updateNeedsAttention(),
+            'notify::demands-attention', () => this._updateNeedsAttention(),
+            this);
+        this._windows.add(window);
+    }
+
+    _untrackWindow(window) {
+        if (!this._windows.delete(window))
+            return;
+
+        console.debug(`Untracking window ${window} for app ${this._app.id}`);
+        window.disconnectObject(this);
+    }
+
+    _updateNeedsAttention() {
+        const needsAttention =
+            [...this._windows].some(w => w.urgent || w.demandsAttention);
+        this.setNeedsAttention(needsAttention);
     }
 }
 

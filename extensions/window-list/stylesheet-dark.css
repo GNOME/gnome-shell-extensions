@@ -103,3 +103,12 @@
   border-radius: 99px;
   margin: 6px;
 }
+
+.window-button-attention-indicator {
+  background-color: -st-accent-color;
+  height: 2px;
+}
+
+.window-button.minimized .window-button-attention-indicator {
+  background-color: st-transparentize(-st-accent-color, 0.4);
+}
