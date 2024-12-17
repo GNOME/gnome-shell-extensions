@@ -30,6 +30,7 @@ default:
 
 variables:
   FDO_UPSTREAM_REPO: GNOME/gnome-shell-extensions
+  MESON_BUILD_DIR: build
   LINT_LOG: "eslint-report.xml"
 
 workflow:
@@ -141,13 +142,13 @@ fedora-build:
   stage: build
   <<: *prereview_req
   script:
-    - meson setup build --werror -Dextension_set=all -Dclassic_mode=true
-    - meson compile -C build
-    - meson test -C build
-    - meson install -C build
+    - meson setup "$MESON_BUILD_DIR" --werror -Dextension_set=all -Dclassic_mode=true
+    - meson compile -C "$MESON_BUILD_DIR"
+    - meson test -C "$MESON_BUILD_DIR"
+    - meson install -C "$MESON_BUILD_DIR"
   artifacts:
     paths:
-      - build
+      - "$MESON_BUILD_DIR"
 
 fedora-dist:
   stage: deploy
@@ -156,7 +157,7 @@ fedora-dist:
   variables:
     GIT_SUBMODULE_STRATEGY: normal
   script:
-    - meson dist -C build
+    - meson dist -C "$MESON_BUILD_DIR"
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
       changes:
@@ -168,7 +169,7 @@ fedora-dist-tarball:
   artifacts:
     expose_as: 'Get tarball here'
     paths:
-      - build/meson-dist/$CI_PROJECT_NAME-$CI_COMMIT_TAG.tar.xz
+      - "${MESON_BUILD_DIR}/meson-dist/${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tar.xz"
   rules:
     - if: '$CI_COMMIT_TAG'
 
