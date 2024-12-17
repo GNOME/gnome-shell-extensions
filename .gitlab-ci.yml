@@ -31,7 +31,6 @@ default:
 variables:
   FDO_UPSTREAM_REPO: GNOME/gnome-shell-extensions
   MESON_BUILD_DIR: build
-  LINT_LOG: "eslint-report.xml"
 
 workflow:
   rules:
@@ -109,14 +108,16 @@ js_check:
 eslint:
   stage: review
   <<: *prereview_req
+  variables:
+    LINT_LOG: "eslint-report.xml"
   script:
     - export NODE_PATH=$(npm root -g)
-    - ./.gitlab-ci/run-eslint --output-file ${LINT_LOG} --format junit --stdout
+    - ./.gitlab-ci/run-eslint --output-file "$LINT_LOG" --format junit --stdout
   artifacts:
     paths:
-      - ${LINT_LOG}
+      - "$LINT_LOG"
     reports:
-      junit: ${LINT_LOG}
+      junit: "$LINT_LOG"
 
 potfile_js_check:
   stage: review
