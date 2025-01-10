@@ -6,7 +6,6 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-// -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import Shell from 'gi://Shell';
