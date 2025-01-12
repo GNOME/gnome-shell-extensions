@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-04-29 14:28+0000\n"
-"PO-Revision-Date: 2024-07-24 10:25+0000\n"
-"Last-Translator: Chao-Hsiung Liao <pesder@mail.edu.tw>\n"
+"POT-Creation-Date: 2024-11-25 15:07+0000\n"
+"PO-Revision-Date: 2025-01-12 23:57+0800\n"
+"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://darkbear.mercusysddns.com/"
 "projects/gnome-45/gnome-shell-extensions-po-ui-gnome-46-zh_tw/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -38,11 +38,11 @@ msgstr "GNOME Classic 採行 Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME Classic 採行 Xorg"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:125
 msgid "Favorites"
 msgstr "喜愛"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:399
 msgid "Apps"
 msgstr "程式"
 
@@ -58,11 +58,11 @@ msgstr ""
 "字串的列表，每個都包含一個應用程式 id (桌面檔名稱)，後面接著半形分號 \";\" 與"
 "工作區號碼"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "工作區規則"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "加入規則"
 
@@ -107,8 +107,8 @@ msgstr ""
 "如果為真，在對映的縮圖頂端放置視窗說明標題，凌駕 Shell 將它放置在底部的預設"
 "值。變更這個設定值需要重新啟動 Shell 來套用效果。"
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "位置"
 
@@ -223,47 +223,47 @@ msgstr "主題名稱"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "主題的名稱，要從 ~/.themes/name/gnome-shell 載入"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:70
 msgid "Close"
 msgstr "關閉"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:97
 msgid "Unminimize"
 msgstr "取消最小化"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:97
 msgid "Minimize"
 msgstr "最小化"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:104
 msgid "Unmaximize"
 msgstr "取消最大化"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:104
 msgid "Maximize"
 msgstr "最大化"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:485
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:491
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:497
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:505
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:513
 msgid "Close all"
 msgstr "全部關閉"
 
-#: extensions/window-list/extension.js:773
+#: extensions/window-list/extension.js:780
 msgid "Window List"
 msgstr "視窗列表"
 
@@ -279,7 +279,7 @@ msgstr ""
 "決定在視窗列表中何時群組視窗。可能的數值有「never」、「auto」、「always」。"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:69
 msgid "Show windows from all workspaces"
 msgstr "顯示所有工作區的視窗"
 
@@ -297,43 +297,58 @@ msgid ""
 "primary one."
 msgstr "是否在所有連接的螢幕顯示視窗列表或是只出現在主要螢幕上。"
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "在視窗清單顯示工作區預覽"
+
+#: extensions/window-list/prefs.js:36
 msgid "Window Grouping"
 msgstr "視窗群組"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:41
 msgid "Never group windows"
 msgstr "永不群組視窗"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:42
 msgid "Group windows when space is limited"
 msgstr "當空間受限時群組視窗"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:43
 msgid "Always group windows"
 msgstr "永遠群組視窗"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:63
 msgid "Show on all monitors"
 msgstr "顯示於所有螢幕"
 
-#: extensions/window-list/workspaceIndicator.js:255
-#: extensions/workspace-indicator/extension.js:261
-msgid "Workspace Indicator"
-msgstr "工作區指示器"
+#: extensions/window-list/prefs.js:75
+msgid "Show workspace previews"
+msgstr "顯示工作區預覽"
 
-#: extensions/workspace-indicator/prefs.js:69
+#: extensions/workspace-indicator/prefs.js:29
+msgid "Show Previews In Top Bar"
+msgstr "在頂端列顯示預覽"
+
+#: extensions/workspace-indicator/prefs.js:87
 #, javascript-format
 msgid "Workspace %d"
 msgstr "工作區 %d"
 
-#: extensions/workspace-indicator/prefs.js:136
+#: extensions/workspace-indicator/prefs.js:154
 msgid "Workspace Names"
 msgstr "工作區名稱"
 
-#: extensions/workspace-indicator/prefs.js:262
+#: extensions/workspace-indicator/prefs.js:280
 msgid "Add Workspace"
 msgstr "新增工作區"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "在頂端列顯示工作區預覽"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "工作區指示器"
 
 #~ msgid "Applications"
 #~ msgstr "應用程式"
@@ -468,8 +483,8 @@ msgstr "新增工作區"
 
 #~ msgid ""
 #~ "Configures how the windows are shown in the switcher. Valid possibilities "
-#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-#~ "only' (shows only the application icon) or 'both'."
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-only' "
+#~ "(shows only the application icon) or 'both'."
 #~ msgstr ""
 #~ "設定視窗在切換器中顯示的方式。有效的選項為「thumbnail-only」(顯示視窗的縮"
 #~ "圖)、「app-icon-only」(僅顯示應用程式圖示)，或「both」(兩者)"
