@@ -1,3 +1,10 @@
+46.4
+====
+* Update template CI images to fix release pipeline [Florian; !377]
+
+Contributors:
+  Florian Müllner
+
 46.3
 ====
 * places-menu: Fix a11y labelling [Florian; #542]
