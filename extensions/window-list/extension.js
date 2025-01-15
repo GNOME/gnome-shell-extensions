@@ -818,7 +818,7 @@ class WindowList extends St.Widget {
                 this._updateKeyboardAnchor();
             },
             'hidden', () => {
-                Main.layoutManager.trackChrome(this);
+                Main.layoutManager.trackChrome(this, chromeOptions);
                 this.visible = !this._monitor.inFullscreen;
                 this._updateKeyboardAnchor();
             }, this);
