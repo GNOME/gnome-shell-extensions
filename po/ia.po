@@ -1,0 +1,365 @@
+# Interlingua translation for gnome-shell-extensions.
+# Copyright (C) 2025 gnome-shell-extensions's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-shell-extensions package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Emilio Sepúlveda <emism.translations@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extensions main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2025-01-20 00:13+0000\n"
+"PO-Revision-Date: 2025-01-20 18:36-0300\n"
+"Last-Translator: Emilio Sepúlveda <emism.translations@gmail.com>\n"
+"Language-Team: Interlingua\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-DL-Lang: ia\n"
+"X-DL-Module: gnome-shell-extensions\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 47.1\n"
+
+#: data/gnome-classic.desktop.in:3
+msgid "GNOME Classic"
+msgstr "GNOME Classic"
+
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
+msgid "This session logs you into GNOME Classic"
+msgstr "Iste session es initiate in GNOME Classic"
+
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "GNOME Classic sur Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "GNOME Classic sur Xorg"
+
+#: extensions/apps-menu/extension.js:125
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: extensions/apps-menu/extension.js:399
+msgid "Apps"
+msgstr "Applicationes"
+
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
+msgid "Application and workspace list"
+msgstr "Lista de applicationes e spatios de travalio"
+
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
+msgid ""
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
+msgstr ""
+
+#: extensions/auto-move-windows/prefs.js:156
+msgid "Workspace Rules"
+msgstr "Regulas de spatio de travalio"
+
+#: extensions/auto-move-windows/prefs.js:311
+msgid "Add Rule"
+msgstr "Adder regula"
+
+#. TRANSLATORS: %s is the filesystem name
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:186
+#, javascript-format
+msgid "Ejecting drive “%s” failed:"
+msgstr "Falleva le ejection del unitate “%s”:"
+
+#: extensions/drive-menu/extension.js:142
+msgid "Removable devices"
+msgstr "Dispositivos removibile"
+
+#: extensions/drive-menu/extension.js:164
+msgid "Open Files"
+msgstr "Aperir files"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+msgid "Use more screen for windows"
+msgstr "Usar plus schermo pro fenestras"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+msgid ""
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
+msgstr ""
+"Tenta de usar plus schermo pro localisar miniaturas de fenestra con le "
+"adaptation al ration de aspecto del schermo, e consolidar lo ulteriormente "
+"pro reducer le area occupate. Iste configuration applica solmente con le "
+"strategia de placiamento natural."
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
+msgid "Place window captions on top"
+msgstr "Localisar le subtitulos del fenestras in alto"
+
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
+msgid ""
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
+msgstr ""
+
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
+msgid "Places"
+msgstr "Locos"
+
+#: extensions/places-menu/placeDisplay.js:52
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr "Falleva le lanceamento de “%s”"
+
+#: extensions/places-menu/placeDisplay.js:67
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Falleva le montage de volumine “%s”"
+
+#: extensions/places-menu/placeDisplay.js:315
+msgid "Home"
+msgstr "Initio"
+
+#: extensions/places-menu/placeDisplay.js:321
+msgid "Recent"
+msgstr "Recente"
+
+#: extensions/places-menu/placeDisplay.js:327
+msgid "Starred"
+msgstr ""
+
+#: extensions/places-menu/placeDisplay.js:347
+msgid "Network"
+msgstr "Rete"
+
+#: extensions/places-menu/placeDisplay.js:354
+msgid "Trash"
+msgstr "Immunditia"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
+msgid "Cycle Screenshot Sizes"
+msgstr ""
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
+msgid "Cycle Screenshot Sizes Backward"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr "Statos de CPU "
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr "Statisticas de memoria"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:336
+msgid "Upload stats"
+msgstr "Statisticas de carga"
+
+#: extensions/system-monitor/extension.js:350
+msgid "Download stats"
+msgstr "Statisticas de discarga"
+
+#: extensions/system-monitor/extension.js:364
+msgid "System stats"
+msgstr "Statisticas de systema"
+
+#: extensions/system-monitor/extension.js:412
+msgid "Show"
+msgstr "Monstrar"
+
+#: extensions/system-monitor/extension.js:414
+msgid "CPU"
+msgstr "CPU"
+
+#: extensions/system-monitor/extension.js:416
+msgid "Memory"
+msgstr "Memoria"
+
+#: extensions/system-monitor/extension.js:418
+msgid "Swap"
+msgstr ""
+
+#: extensions/system-monitor/extension.js:420
+msgid "Upload"
+msgstr "Carga"
+
+#: extensions/system-monitor/extension.js:422
+msgid "Download"
+msgstr "Discarga"
+
+#: extensions/system-monitor/extension.js:427
+msgid "Open System Monitor"
+msgstr "Aperir monitor de systema"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr "Monstrar uso de CPU"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr "Monstrar uso de memoria"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr ""
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr "Monstrar carga"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr "Monstrar discarga"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
+msgid "Theme name"
+msgstr "Nomine de thema"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
+msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
+msgstr "Le nomine del thema a cargar desde ~/.themes/nomine/gnome-shell"
+
+#: extensions/window-list/extension.js:95
+msgid "Close"
+msgstr "Clauder"
+
+#: extensions/window-list/extension.js:122
+msgid "Unminimize"
+msgstr "Disminimisar"
+
+#: extensions/window-list/extension.js:122
+msgid "Minimize"
+msgstr "Minimisar"
+
+#: extensions/window-list/extension.js:129
+msgid "Unmaximize"
+msgstr "Dismaximisar"
+
+#: extensions/window-list/extension.js:129
+msgid "Maximize"
+msgstr "Maximisar"
+
+#: extensions/window-list/extension.js:721
+msgid "Minimize all"
+msgstr "Minimisar toto"
+
+#: extensions/window-list/extension.js:727
+msgid "Unminimize all"
+msgstr "Disminimisar toto"
+
+#: extensions/window-list/extension.js:733
+msgid "Maximize all"
+msgstr "Maximisar toto"
+
+#: extensions/window-list/extension.js:741
+msgid "Unmaximize all"
+msgstr "Dismaximisar toto"
+
+#: extensions/window-list/extension.js:749
+msgid "Close all"
+msgstr "Clauder toto"
+
+#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
+msgid "Window List"
+msgstr "Lista de fenestras"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
+msgid "When to group windows"
+msgstr "Quando gruppar le fenestras"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
+msgid ""
+"Decides when to group windows from the same application on the window list. "
+"Possible values are “never”, “auto” and “always”."
+msgstr ""
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:74
+msgid "Show windows from all workspaces"
+msgstr "Monstrar fenestras de tote le spatios de travalio"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr ""
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
+msgid "Show the window list on all monitors"
+msgstr "Monstrar le lista de fenestras sur tote le monitores"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr ""
+"Monstrar previsualisationes de spatios de travalio in le lista de fenestras"
+
+#: extensions/window-list/prefs.js:41
+msgid "Window Grouping"
+msgstr "Gruppamento de fenestras"
+
+#: extensions/window-list/prefs.js:46
+msgid "Never group windows"
+msgstr "Nunquam gruppar fenestras"
+
+#: extensions/window-list/prefs.js:47
+msgid "Group windows when space is limited"
+msgstr "Gruppar fenestras quando le spatio es limitate"
+
+#: extensions/window-list/prefs.js:48
+msgid "Always group windows"
+msgstr "Sempre gruppar fenestras"
+
+#: extensions/window-list/prefs.js:68
+msgid "Show on all monitors"
+msgstr "Monstrar sur tote le monitores"
+
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr ""
+"Monstra le previsualisationes de spatios de travalio in le barra superior"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "Indicator de spatios de travalio"
+
+#: extensions/workspace-indicator/workspacePrefs.js:28
+msgid "Show Previews"
+msgstr "Monstrar previsualisationes"
+
+#: extensions/workspace-indicator/workspacePrefs.js:86
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Spatio de travalio %d"
+
+#: extensions/workspace-indicator/workspacePrefs.js:153
+msgid "Workspace Names"
+msgstr "Nomines de spatio de travalio"
+
+#: extensions/workspace-indicator/workspacePrefs.js:170
+msgid "Add Workspace"
+msgstr "Adder spatio de travalio"
+
+#: extensions/workspace-indicator/workspacePrefs.js:195
+msgid "Remove"
+msgstr "Remover"
+
+#: extensions/workspace-indicator/workspacePrefs.js:225
+msgid "Workspaces"
+msgstr "Spatios de travalio"
