@@ -132,7 +132,7 @@ class WorkspaceThumbnail extends St.Button {
         const box = new St.BoxLayout({
             style_class: 'workspace-box',
             y_expand: true,
-            vertical: true,
+            orientation: Clutter.Orientation.VERTICAL,
         });
         this.set_child(box);
 
