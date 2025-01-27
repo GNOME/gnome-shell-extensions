@@ -547,7 +547,9 @@ class ApplicationsButton extends PanelMenu.Button {
         let section = new PopupMenu.PopupMenuSection();
         this.menu.addMenuItem(section);
         this.mainBox = new St.BoxLayout({layoutManager: new MainLayout()});
-        this.leftBox = new St.BoxLayout({vertical: true});
+        this.leftBox = new St.BoxLayout({
+            orientation: Clutter.Orientation.VERTICAL,
+        });
         this.applicationsScrollBox = new St.ScrollView({
             style_class: 'apps-menu vfade',
             x_expand: true,
@@ -557,9 +559,13 @@ class ApplicationsButton extends PanelMenu.Button {
         });
         this.leftBox.add_child(this.categoriesScrollBox);
 
-        this.applicationsBox = new St.BoxLayout({vertical: true});
+        this.applicationsBox = new St.BoxLayout({
+            orientation: Clutter.Orientation.VERTICAL,
+        });
         this.applicationsScrollBox.set_child(this.applicationsBox);
-        this.categoriesBox = new St.BoxLayout({vertical: true});
+        this.categoriesBox = new St.BoxLayout({
+            orientation: Clutter.Orientation.VERTICAL,
+        });
         this.categoriesScrollBox.set_child(this.categoriesBox);
 
         this.mainBox.add_child(this.leftBox);
