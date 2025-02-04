@@ -1,3 +1,14 @@
+48.beta
+=======
+* window-list: Fix regression in chrome tracking [Florian; !379]
+* Misc. bug fixes and cleanups [Florian; !380]
+
+Contributors:
+  Florian Müllner, Emilio Sepúlveda
+
+Translators:
+  Rafael Fontenelle [pt_BR], Emilio Sepúlveda [ia]
+
 48.alpha
 ========
 * classic: Add missing top-bar indicators [Florian; !339]
