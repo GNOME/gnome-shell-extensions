@@ -1,3 +1,10 @@
+46.5
+====
+* window-list: Fix regression in chrome tracking [Florian; !379]
+
+Contributors:
+  Florian Müllner
+
 46.4
 ====
 * Update template CI images to fix release pipeline [Florian; !377]
