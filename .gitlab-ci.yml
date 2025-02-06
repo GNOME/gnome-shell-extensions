@@ -7,6 +7,8 @@ include:
     file: templates/fedora.yml
   - project: Infrastructure/freedesktop-ci-templates
     file: templates/ci-fairy.yml
+  - project: GNOME/citemplates
+    file: templates/default-rules.yml
   - component: gitlab.gnome.org/GNOME/citemplates/release-service@master
     inputs:
       job-stage: deploy
@@ -22,29 +24,11 @@ stages:
 
 default:
   image: registry.gitlab.gnome.org/gnome/gnome-shell/fedora/41:2024-10-18.0
-  # Cancel jobs if newer commits are pushed to the branch
-  interruptible: true
-  # Auto-retry jobs in case of infra failures
-  retry:
-    max: 1
-    when:
-      - 'runner_system_failure'
-      - 'stuck_or_timeout_failure'
-      - 'scheduler_failure'
-      - 'api_failure'
 
 variables:
   FDO_UPSTREAM_REPO: GNOME/gnome-shell-extensions
   MESON_BUILD_DIR: build
   TARBALL_ARTIFACT_PATH: "${MESON_BUILD_DIR}/meson-dist/${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tar.xz"
-
-workflow:
-  rules:
-    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS && $CI_PIPELINE_SOURCE == "push"'
-      when: never
-    - if: '$CI_MERGE_REQUEST_IID'
-    - if: '$CI_COMMIT_TAG'
-    - if: '$CI_COMMIT_BRANCH'
 
 .pipeline_guard: &pipeline_guard
   rules:
