@@ -3,8 +3,10 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 include:
-  - remote: 'https://gitlab.gnome.org/Infrastructure/freedesktop-ci-templates/-/raw/master/templates/fedora.yml'
-  - remote: "https://gitlab.gnome.org/Infrastructure/freedesktop-ci-templates/-/raw/master/templates/ci-fairy.yml"
+  - project: Infrastructure/freedesktop-ci-templates
+    file: templates/fedora.yml
+  - project: Infrastructure/freedesktop-ci-templates
+    file: templates/ci-fairy.yml
   - component: gitlab.gnome.org/GNOME/citemplates/release-service@master
     inputs:
       job-stage: deploy
