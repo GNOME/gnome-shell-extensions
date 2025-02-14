@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2025-01-20 00:13+0000\n"
-"PO-Revision-Date: 2025-01-20 18:36-0300\n"
+"POT-Creation-Date: 2025-02-13 00:15+0000\n"
+"PO-Revision-Date: 2025-02-14 10:36-0300\n"
 "Last-Translator: Emilio Sepúlveda <emism.translations@gmail.com>\n"
 "Language-Team: Interlingua\n"
 "Language: ia\n"
@@ -59,6 +59,8 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
+"Un lista de catenas, cata un contine un ID de application (nomine de file "
+"desktop) sequite per duo punctos e le numero del spatio de travalio"
 
 #: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
@@ -108,6 +110,10 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
+"Si es ver, localisa le titulos de fenestra in alto del miniaturas "
+"correspondente, reimplaciante le configuration predefinite del interfacie de "
+"localisar lo in basso. Cambiar iste configuration require le reinitio del "
+"interfacie pro haber effecto."
 
 #: extensions/places-menu/extension.js:75
 #: extensions/places-menu/extension.js:78
@@ -134,7 +140,7 @@ msgstr "Recente"
 
 #: extensions/places-menu/placeDisplay.js:327
 msgid "Starred"
-msgstr ""
+msgstr "Stellate"
 
 #: extensions/places-menu/placeDisplay.js:347
 msgid "Network"
@@ -146,11 +152,11 @@ msgstr "Immunditia"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
-msgstr ""
+msgstr "Cyclar le dimensiones del captura de schermo"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
-msgstr ""
+msgstr "Cyclar retro le dimensiones del captura de schermo"
 
 #: extensions/system-monitor/extension.js:135
 msgid "CPU stats"
@@ -162,7 +168,7 @@ msgstr "Statisticas de memoria"
 
 #: extensions/system-monitor/extension.js:177
 msgid "Swap stats"
-msgstr ""
+msgstr "Statos del intercambio"
 
 #: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
@@ -190,7 +196,7 @@ msgstr "Memoria"
 
 #: extensions/system-monitor/extension.js:418
 msgid "Swap"
-msgstr ""
+msgstr "Intercambio"
 
 #: extensions/system-monitor/extension.js:420
 msgid "Upload"
@@ -214,7 +220,7 @@ msgstr "Monstrar uso de memoria"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
 msgid "Show swap usage"
-msgstr ""
+msgstr "Monstrar usage del intercambio"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
 msgid "Show upload"
@@ -285,6 +291,8 @@ msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
+"Decide quando gruppar fenestras del mesme application sur le lista de "
+"fenestras. Le valores possibile son “never”, “auto” e “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
 #: extensions/window-list/prefs.js:74
@@ -294,6 +302,7 @@ msgstr "Monstrar fenestras de tote le spatios de travalio"
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
 msgid "Whether to show windows from all workspaces or only the current one."
 msgstr ""
+"Si monstrar le fenestras de tote le spatios de travalio o solmente le actual."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
 msgid "Show the window list on all monitors"
@@ -304,6 +313,8 @@ msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr ""
+"Si monstrar le lista de fenestras sur tote le monitores connectite o "
+"solmente sur le primari."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
 msgid "Show workspace previews in window list"
