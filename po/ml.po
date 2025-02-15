@@ -3,335 +3,462 @@
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Joshina Ramakrishnan <joshinaa@gmail.com>, 2013.
 # joshina Ramakrishnan <joshinaa@gmail.com>, 2013.
+# Mathews M <matthew17773@gmail.com>, 2025.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-shell&keywords=I18N"
-"+L10N&component=extensions\n"
-"POT-Creation-Date: 2017-08-11 01:33+0000\n"
-"PO-Revision-Date: 2017-08-26 19:22+0530\n"
-"Last-Translator: ബാലശങ്കർ സി <balasankarc@autistici.org>\n"
-"Language-Team: സ്വതന്ത്രമലയാളം കമ്പ്യൂട്ടിങ്ങ് <l10n@smc.org.in>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
+"issues\n"
+"POT-Creation-Date: 2025-01-12 22:20+0000\n"
+"PO-Revision-Date: 2025-02-11 23:05+0530\n"
+"Last-Translator: Mathews M <matthew17773@gmail.com>\n"
+"Language-Team: Malayalam <l10n@lists.smc.org.in>\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Gtranslator 47.1\n"
 "X-Project-Style: gnome\n"
+"X-DL-Lang: ml\n"
+"X-DL-Module: gnome-shell-extensions\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "ഗ്നോം ക്ലാസ്സിക്‍"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "ഈ പ്രവര്‍ത്തനവേള നിങ്ങളെ ഗ്നോം ക്ലാസ്സിക്കിലേക്കു് കയറ്റുന്നു"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:7
-msgid "Attach modal dialog to the parent window"
-msgstr "മോഡൽ ഡയലോഗ് പാരന്റ് ജാലകത്തിൽ കൂട്ടിച്ചേർക്കുക"
+#: data/gnome-classic-wayland.desktop.in:3
+msgid "GNOME Classic on Wayland"
+msgstr "വേയ്‌ലാൻഡിൽ ഗ്നോം ക്ലാസിക്"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:8
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:25
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:33
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:41
-msgid "This key overrides the key in org.gnome.mutter when running GNOME Shell."
-msgstr "ഗ്നോം ഷെൽ പ്രവർത്തിപ്പിക്കുമ്പോൾ org.gnome.mutter എന്ന സൂചികയെ ഈ സൂചിക നിഷ്ഫലമാക്കുന്നു."
+#: data/gnome-classic-xorg.desktop.in:3
+msgid "GNOME Classic on Xorg"
+msgstr "എക്സ് ഓർഗിൽ ഗ്നോം ക്ലാസിക്"
 
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:16
-msgid "Arrangement of buttons on the titlebar"
-msgstr "തലക്കെട്ട് പട്ടയിൽ ബട്ടണുകളുടെ ക്രമീകരണം"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:17
-msgid "This key overrides the key in org.gnome.desktop.wm.preferences when running GNOME Shell."
-msgstr "ഗ്നോം ഷെൽ പ്രവർത്തിപ്പിക്കുമ്പോൾ org.gnome.desktop.wm.preferences എന്ന സൂചികയെ ഈ സൂചിക നിഷ്ഫലമാക്കുന്നു."
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:24
-msgid "Enable edge tiling when dropping windows on screen edges"
-msgstr "ജാലകങ്ങളെ സ്ക്രീന്റെ അതിരുകളിലേക്ക് ഇടുമ്പോൾ അതിന്റെ അതിരുകൾ ചേർത്തുവയ്ക്കുന്നത് സജ്ജമാക്കുക"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:32
-msgid "Workspaces only on primary monitor"
-msgstr "പണിയറകൾ പ്രധാന മോണിറ്ററിൽ മാത്രം"
-
-#: data/org.gnome.shell.extensions.classic-overrides.gschema.xml:40
-msgid "Delay focus changes in mouse mode until the pointer stops moving"
-msgstr "പോയന്റർ നിശ്ചലമാകുന്നത് വരെ മൗസ് രീതിയിലുള്ള ശ്രദ്ധാ മാറ്റങ്ങൾ വൈകിപ്പിക്കുക"
-
-#: extensions/alternate-tab/prefs.js:20
-msgid "Thumbnail only"
-msgstr "നഖചിത്രങ്ങള്‍ മാത്രം"
-
-#: extensions/alternate-tab/prefs.js:21
-msgid "Application icon only"
-msgstr "പ്രയോഗചിഹ്നങ്ങള്‍ മാത്രം"
-
-#: extensions/alternate-tab/prefs.js:22
-msgid "Thumbnail and application icon"
-msgstr "നഖചിത്രവും പ്രയോഗചിഹ്നവും"
-
-#: extensions/alternate-tab/prefs.js:38
-msgid "Present windows as"
-msgstr "നിലവിലുള്ള ജാലകങ്ങളെ ഇങ്ങനെ"
-
-#: extensions/alternate-tab/prefs.js:69
-msgid "Show only windows in the current workspace"
-msgstr "നിലവിലുളള പണിയറയിലെ ജാലകങ്ങളെ മാത്രം കാണിയ്ക്കുക"
-
-#: extensions/apps-menu/extension.js:41
-msgid "Activities Overview"
-msgstr "പ്രവര്‍ത്തനങ്ങളുടെ അവലോകനം"
-
-#: extensions/apps-menu/extension.js:141
+#: extensions/apps-menu/extension.js:125
 msgid "Favorites"
 msgstr "ഇഷ്ടമുളളവ"
 
-#: extensions/apps-menu/extension.js:436
-msgid "Applications"
-msgstr "പ്രയോഗങ്ങള്‍"
+#: extensions/apps-menu/extension.js:399
+msgid "Apps"
+msgstr "ആപ്പുകൾ"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
 msgstr "പ്രയോഗങ്ങളുടെയും പണിയറകളുടെയും പട്ടിക"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
-"A list of strings, each containing an application id (desktop file name), followed by a colon and "
-"the workspace number"
+"A list of strings, each containing an application id (desktop file name), "
+"followed by a colon and the workspace number"
 msgstr ""
-"പ്രയോഗത്തിന്റെ ഐഡി (പണിയിട ഫയലിന്റെ പേര്) പുറകേ കോളനും പണിയറയുടെ എണ്ണവും എന്ന രീതിയിലുള്ള വാക്യങ്ങളുടെ പട്ടിക"
+"പ്രയോഗത്തിന്റെ ഐഡി (പണിയിട ഫയലിന്റെ പേര്) പുറകേ കോളനും പണിയറയുടെ എണ്ണവും എന്ന രീതിയിലുള്ള "
+"വാക്യങ്ങളുടെ പട്ടിക"
 
-#: extensions/auto-move-windows/prefs.js:60
-msgid "Application"
-msgstr "പ്രയോഗം"
+#: extensions/auto-move-windows/prefs.js:156
+msgid "Workspace Rules"
+msgstr "പണിയറയുടെ നിയമങ്ങൾ"
 
-#: extensions/auto-move-windows/prefs.js:69 extensions/auto-move-windows/prefs.js:127
-msgid "Workspace"
-msgstr "പണിയറ"
-
-#: extensions/auto-move-windows/prefs.js:85
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "നിയമം ചേര്‍ക്കുക"
 
-#: extensions/auto-move-windows/prefs.js:106
-msgid "Create new matching rule"
-msgstr "പുതിയ ചേർച്ചാ നിയമം നിർമ്മിക്കുക"
-
-#: extensions/auto-move-windows/prefs.js:111
-msgid "Add"
-msgstr "ചേര്‍ക്കുക"
-
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:107
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "\"%s\" ഡ്രൈവ് പുറത്തെടുക്കുന്നതില്‍ പരാജയപ്പെട്ടു:"
 
-#: extensions/drive-menu/extension.js:125
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
 msgstr "നീക്കം ചെയ്യാവുന്ന ഉപകരണങ്ങള്‍"
 
-#: extensions/drive-menu/extension.js:150
+#: extensions/drive-menu/extension.js:164
 msgid "Open Files"
 msgstr "ഫയലുകൾ തുറക്കുക"
 
-#: extensions/example/extension.js:17
-msgid "Hello, world!"
-msgstr "ലോകമേ, നമസ്കാരം!"
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:5
-msgid "Alternative greeting text."
-msgstr "ബദല്‍ ആശംസാ സന്ദേശം."
-
-#: extensions/example/org.gnome.shell.extensions.example.gschema.xml:6
-msgid "If not empty, it contains the text that will be shown when clicking on the panel."
-msgstr "ശൂന്യമല്ലെങ്കിൽ, പാളിയിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ കാണിക്കേണ്ട വാക്യങ്ങൾ ഇതിൽ ലഭ്യമാണ്."
-
-#: extensions/example/prefs.js:30
-msgid "Message"
-msgstr "സന്ദേശം"
-
-#. TRANSLATORS: Example is the name of the extension, should not be
-#. translated
-#: extensions/example/prefs.js:43
-msgid ""
-"Example aims to show how to build well behaved extensions for the Shell and as such it has little "
-"functionality on its own.\n"
-"Nevertheless it’s possible to customize the greeting message."
-msgstr ""
-"സ്വന്തം നിലയിൽ കുറച്ച് പ്രവർത്തനങ്ങൾ മാത്രമുള്ള നല്ല രീതിയിൽ പ്രവർത്തിക്കുന്ന ഷെല്ലിനുള്ള കൂട്ടിച്ചേർക്കലുകൾ എങ്ങനെ "
-"നിർമ്മിക്കാം എന്നതാണ് ഈ ഉദാഹരണത്തിന്റെ ലക്ഷ്യം.\n"
-"എന്നിരുന്നാലും ആശംസാ സന്ദേശം ഇഷ്ടാനുസൃതമാക്കാൻ സാധിക്കുന്നതാണ്."
-
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
 msgstr "ജാലകങ്ങൾക്കായി സ്ക്രീനിൽ കൂടൂതൽ സ്ഥലം ഉപയോഗിക്കുക"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
-"Try to use more screen for placing window thumbnails by adapting to screen aspect ratio, and "
-"consolidating them further to reduce the bounding box. This setting applies only with the natural "
-"placement strategy."
+"Try to use more screen for placing window thumbnails by adapting to screen "
+"aspect ratio, and consolidating them further to reduce the bounding box. "
+"This setting applies only with the natural placement strategy."
 msgstr ""
-"സ്ക്രീനിന്റെ ആസ്പെക്ട് റേഷ്യോയ്ക്ക് ഒത്തുപോയിക്കൊണ്ടും, അവയെ കൂട്ടിച്ചേർത്തുകൊണ്ട് അവയുടെ അതിർ രേഖകൾ ചെറുതാക്കിയും "
-"ജാലകത്തിന്റെ നഖചിത്രങ്ങൾ വയ്ക്കാൻ സ്ക്രീനിൽ കൂടുതൽ സ്ഥലം ഉപയോഗിക്കുക. ഈ ക്രമീകരണം സാധാരണയുള്ള സ്ഥാനക്രമീകരണരിതിയിലേ "
-"ഉപയോഗിക്കാൻ പറ്റൂ."
+"സ്ക്രീനിന്റെ ആസ്പെക്ട് റേഷ്യോയ്ക്ക് ഒത്തുപോയിക്കൊണ്ടും, അവയെ കൂട്ടിച്ചേർത്തുകൊണ്ട് അവയുടെ അതിർ "
+"രേഖകൾ ചെറുതാക്കിയും ജാലകത്തിന്റെ നഖചിത്രങ്ങൾ വയ്ക്കാൻ സ്ക്രീനിൽ കൂടുതൽ സ്ഥലം ഉപയോഗിക്കുക. ഈ "
+"ക്രമീകരണം സാധാരണയുള്ള സ്ഥാനക്രമീകരണരിതിയിലേ ഉപയോഗിക്കാൻ പറ്റൂ."
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
 msgstr "ജാലകത്തിന്റെ തലക്കെട്ടുകൾ മുകളിൽ വയ്ക്കുക"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
-"If true, place window captions on top the respective thumbnail, overriding shell default of "
-"placing it at the bottom. Changing this setting requires restarting the shell to have any effect."
+"If true, place window captions on top the respective thumbnail, overriding "
+"shell default of placing it at the bottom. Changing this setting requires "
+"restarting the shell to have any effect."
 msgstr ""
-"ശരി എന്നാണെങ്കിൽ, ജാലകത്തിന്റെ തലക്കെട്ടുകൾ ഷെല്ലിന്റെ സ്വതേ രീതിയായ താഴെ വയ്ക്കാതെ അതാതിന്റെ നഖചിത്രത്തിന്റെ "
-"മുകളിൽ വയ്ക്കുക. ഈ ക്രമീകരണം മാറ്റുന്നത് നടപ്പിലാവണമെങ്കിൽ ഷെൽ പുനരാരംഭിക്കണം."
+"ശരി എന്നാണെങ്കിൽ, ജാലകത്തിന്റെ തലക്കെട്ടുകൾ ഷെല്ലിന്റെ സ്വതേ രീതിയായ താഴെ വയ്ക്കാതെ "
+"അതാതിന്റെ നഖചിത്രത്തിന്റെ മുകളിൽ വയ്ക്കുക. ഈ ക്രമീകരണം മാറ്റുന്നത് നടപ്പിലാവണമെങ്കിൽ ഷെൽ "
+"പുനരാരംഭിക്കണം."
 
-#: extensions/places-menu/extension.js:78 extensions/places-menu/extension.js:81
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "സ്ഥലങ്ങള്‍"
 
-#: extensions/places-menu/placeDisplay.js:65
-#, javascript-format
-msgid "Failed to mount volume for “%s”"
-msgstr "\"%s\" എന്നതിനു് വോള്യം ലഭ്യമാക്കുന്നതിൽ പരാജയം"
-
-#: extensions/places-menu/placeDisplay.js:78
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "\"%s\" ലഭ്യമാക്കുന്നതില്‍ പരാജയം"
 
-#: extensions/places-menu/placeDisplay.js:137 extensions/places-menu/placeDisplay.js:160
-msgid "Computer"
-msgstr "കമ്പ്യൂട്ടര്‍"
+#: extensions/places-menu/placeDisplay.js:67
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "\"%s\" എന്നതിനു് വോള്യം ലഭ്യമാക്കുന്നതിൽ പരാജയം"
 
-#: extensions/places-menu/placeDisplay.js:303
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "പൂമുഖം"
 
-#: extensions/places-menu/placeDisplay.js:347
-msgid "Browse Network"
-msgstr "ശൃംഖല പരതുക"
+#: extensions/places-menu/placeDisplay.js:321
+msgid "Recent"
+msgstr "ഏറ്റവും പുതിയ"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+#: extensions/places-menu/placeDisplay.js:327
+msgid "Starred"
+msgstr "സ്റ്റാർ ചെയ്യ്തവ"
+
+#: extensions/places-menu/placeDisplay.js:347
+msgid "Network"
+msgstr "നെറ്റ്‌വർക്ക്"
+
+#: extensions/places-menu/placeDisplay.js:354
+msgid "Trash"
+msgstr "ചവറ്റുകുട്ട"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
 msgstr "സ്ക്രീൻഷോട്ടിന്റെ വലിപ്പങ്ങൾ ആവർത്തിക്കുക"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "സ്ക്രീൻഷോട്ടിന്റെ വലിപ്പങ്ങൾ പുറകിലേക്ക് ആവർത്തിക്കുക"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr "സി.പി.യു സ്ഥിതിവിവരണക്കണക്ക്"
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr "മെമ്മറി സ്ഥിതിവിവരണക്കണക്ക്"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr "സ്വാപ്പ് സ്ഥിതിവിവരണക്കണക്ക്"
+
+#: extensions/system-monitor/extension.js:336
+msgid "Upload stats"
+msgstr "അപ്‌ലോഡ് സ്ഥിതിവിവരണക്കണക്ക്"
+
+#: extensions/system-monitor/extension.js:350
+msgid "Download stats"
+msgstr "ഡൗൺലോഡ് സ്ഥിതിവിവരണക്കണക്ക്"
+
+#: extensions/system-monitor/extension.js:364
+msgid "System stats"
+msgstr "സിസ്റ്റം സ്ഥിതിവിവരക്കണക്കുകൾ"
+
+#: extensions/system-monitor/extension.js:412
+msgid "Show"
+msgstr "കാണിക്കുക"
+
+#: extensions/system-monitor/extension.js:414
+msgid "CPU"
+msgstr "സി.പി.യു"
+
+#: extensions/system-monitor/extension.js:416
+msgid "Memory"
+msgstr "മെമ്മറി"
+
+#: extensions/system-monitor/extension.js:418
+msgid "Swap"
+msgstr "സ്വാപ്പ്"
+
+#: extensions/system-monitor/extension.js:420
+msgid "Upload"
+msgstr "അപ്‌ലോഡ്"
+
+#: extensions/system-monitor/extension.js:422
+msgid "Download"
+msgstr "ഡൗൺലോഡ്"
+
+#: extensions/system-monitor/extension.js:427
+msgid "Open System Monitor"
+msgstr "സിസ്റ്റം മോണിറ്റർ തുറക്കുക"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr "സി.പി.യു ഉപയോഗം കാണിക്കുക"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr "മെമ്മറി ഉപയോഗം കാണിക്കുക"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr "സ്വാപ്പ് ഉപയോഗം കാണിക്കുക"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr "അപ്‌ലോഡ് കാണിക്കുക"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr "ഡൗൺലോഡ് കാണിക്കുക"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "രംഗവിതാനത്തിന്റെ പേരു്"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "~/.themes/name/gnome-shell ല്‍ നിന്നു എടുക്കേണ്ട രംഗവിതാനത്തിന്റെ പേരു്"
+msgstr "~/.themes/name/gnome-shell ല്‍ നിന്നു എടുക്കേണ്ട തീമിന്റെ "
 
-#: extensions/window-list/extension.js:110
+#: extensions/window-list/extension.js:95
 msgid "Close"
 msgstr "അടയ്ക്കുക"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:122
 msgid "Unminimize"
 msgstr "തുറക്കുക"
 
-#: extensions/window-list/extension.js:130
+#: extensions/window-list/extension.js:122
 msgid "Minimize"
 msgstr "താൽക്കാലികമായി അടയ്ക്കുക"
 
-#: extensions/window-list/extension.js:136
+#: extensions/window-list/extension.js:129
 msgid "Unmaximize"
 msgstr "ചെറുതാക്കുക"
 
-#: extensions/window-list/extension.js:137
+#: extensions/window-list/extension.js:129
 msgid "Maximize"
 msgstr "വലുതാക്കുക"
 
-#: extensions/window-list/extension.js:420
+#: extensions/window-list/extension.js:721
 msgid "Minimize all"
 msgstr "എല്ലാം താൽക്കാലികമായി അടയ്ക്കുക"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:727
 msgid "Unminimize all"
 msgstr "എല്ലാം തുറക്കുക"
 
-#: extensions/window-list/extension.js:436
+#: extensions/window-list/extension.js:733
 msgid "Maximize all"
 msgstr "എല്ലാം വലുതാക്കുക"
 
-#: extensions/window-list/extension.js:445
+#: extensions/window-list/extension.js:741
 msgid "Unmaximize all"
 msgstr "എല്ലാം ചെറുതാക്കുക"
 
-#: extensions/window-list/extension.js:454
+#: extensions/window-list/extension.js:749
 msgid "Close all"
 msgstr "എല്ലാം അടയ്ക്കുക"
 
-#: extensions/window-list/extension.js:678 extensions/workspace-indicator/extension.js:30
-msgid "Workspace Indicator"
-msgstr "പണിയറ സൂചകം"
-
-#: extensions/window-list/extension.js:842
+#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "ജാലകപ്പട്ടിക"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "ജാലകങ്ങളെ എപ്പോള്‍ കൂട്ടമാക്കണം"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
-"Decides when to group windows from the same application on the window list. Possible values are "
-"“never”, “auto” and “always”."
+"Decides when to group windows from the same application on the window list. "
+"Possible values are “never”, “auto” and “always”."
 msgstr ""
-"ജാലകപ്പട്ടികയില്‍ ഒരേ പ്രയോഗത്തില്‍ നിന്നുമുള്ള ജാലകങ്ങൾ എപ്പോൾ കൂട്ടമാക്കണമെന്നു് തീരുമാനിക്കുന്നു. സാധ്യമായ മൂല്യങ്ങള്‍ "
-"\"ഒരിക്കലുമില്ല\", \"തനിയേ\", \"എപ്പോഴും\" എന്നിവയാണു്."
+"ജാലകപ്പട്ടികയില്‍ ഒരേ പ്രയോഗത്തില്‍ നിന്നുമുള്ള ജാലകങ്ങൾ എപ്പോൾ കൂട്ടമാക്കണമെന്നു് തീരുമാനിക്കുന്നു. "
+"സാധ്യമായ മൂല്യങ്ങള്‍ \"ഒരിക്കലുമില്ല\", \"തനിയേ\", \"എപ്പോഴും\" എന്നിവയാണു്."
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:74
+msgid "Show windows from all workspaces"
+msgstr "എല്ലാ പണിയറകളിൽ നിന്നുമുള്ള ജാലകങ്ങളെ കാണിക്കുക"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
+#, fuzzy
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr ""
+"ജാലകപ്പട്ടിക ബന്ധിപ്പിച്ചിട്ടുള്ള എല്ലാ മോണിറ്ററുകളും കാണിക്കണോ അതോ പ്രധാനപെട്ടതിൽ മാത്രം "
+"മതിയോ എന്ന്."
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
 msgid "Show the window list on all monitors"
 msgstr "ജാലകപ്പട്ടിക എല്ലാ മോണിറ്ററിലും കാണിക്കുക"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
-msgid "Whether to show the window list on all connected monitors or only on the primary one."
-msgstr "ജാലകപ്പട്ടിക ബന്ധിപ്പിച്ചിട്ടുള്ള എല്ലാ മോണിറ്ററുകളും കാണിക്കണോ അതോ പ്രധാനപെട്ടതിൽ മാത്രം മതിയോ എന്ന്."
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
+msgid ""
+"Whether to show the window list on all connected monitors or only on the "
+"primary one."
+msgstr ""
+"ജാലകപ്പട്ടിക ബന്ധിപ്പിച്ചിട്ടുള്ള എല്ലാ മോണിറ്ററുകളും കാണിക്കണോ അതോ പ്രധാനപെട്ടതിൽ മാത്രം "
+"മതിയോ എന്ന്."
 
-#: extensions/window-list/prefs.js:32
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+#, fuzzy
+msgid "Show workspace previews in window list"
+msgstr "ജാലകപ്പട്ടിക പണിയറ സ്ക്രീനില്‍ കാണുക"
+
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "ജാലകങ്ങളുടെ കൂട്ടം"
 
-#: extensions/window-list/prefs.js:50
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "ഒരിയ്ക്കലും ജാലകങ്ങളെ കൂട്ടം തിരിയ്ക്കാതിരിയ്ക്കുക"
 
-#: extensions/window-list/prefs.js:51
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "സ്ഥലം കുറവാകുമ്പോള്‍ ജാലകങ്ങള്‍ കൂട്ടമായി കാണിയ്ക്കുക"
 
-#: extensions/window-list/prefs.js:52
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "എല്ലായ്പ്പോഴും ജാലകങ്ങളെ കൂട്ടം തിരിയ്ക്കുക"
 
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "എല്ലാ മോണിറ്ററുകളിലും കാണിക്കുക"
 
-#: extensions/workspace-indicator/prefs.js:141
-msgid "Workspace Names"
-msgstr "പണിയറയുടെ പേരുകൾ"
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "മുകളിലെ ബാറിൽ പണിയറ കാണിക്കുക"
 
-#: extensions/workspace-indicator/prefs.js:157
-msgid "Name"
-msgstr "പേരു്"
+#: extensions/workspace-indicator/workspaceIndicator.js:430
+msgid "Workspace Indicator"
+msgstr "പണിയറ സൂചകം"
 
-#: extensions/workspace-indicator/prefs.js:198
+#: extensions/workspace-indicator/workspacePrefs.js:28
+msgid "Show Previews"
+msgstr "സ്ക്രീനില്‍ കാണുക"
+
+#: extensions/workspace-indicator/workspacePrefs.js:86
 #, javascript-format
 msgid "Workspace %d"
 msgstr "പണിയറ %d"
+
+#: extensions/workspace-indicator/workspacePrefs.js:153
+msgid "Workspace Names"
+msgstr "പണിയറയുടെ പേരുകൾ"
+
+#: extensions/workspace-indicator/workspacePrefs.js:170
+msgid "Add Workspace"
+msgstr "പണിയറ ചേർക്കുക"
+
+#: extensions/workspace-indicator/workspacePrefs.js:195
+msgid "Remove"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: extensions/workspace-indicator/workspacePrefs.js:225
+msgid "Workspaces"
+msgstr "പണിയറകള്‍"
+
+#~ msgid "Attach modal dialog to the parent window"
+#~ msgstr "മോഡൽ ഡയലോഗ് പാരന്റ് ജാലകത്തിൽ കൂട്ടിച്ചേർക്കുക"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.mutter when running GNOME Shell."
+#~ msgstr ""
+#~ "ഗ്നോം ഷെൽ പ്രവർത്തിപ്പിക്കുമ്പോൾ org.gnome.mutter എന്ന സൂചികയെ ഈ സൂചിക നിഷ്ഫലമാക്കുന്നു."
+
+#~ msgid "Arrangement of buttons on the titlebar"
+#~ msgstr "തലക്കെട്ട് പട്ടയിൽ ബട്ടണുകളുടെ ക്രമീകരണം"
+
+#~ msgid ""
+#~ "This key overrides the key in org.gnome.desktop.wm.preferences when "
+#~ "running GNOME Shell."
+#~ msgstr ""
+#~ "ഗ്നോം ഷെൽ പ്രവർത്തിപ്പിക്കുമ്പോൾ org.gnome.desktop.wm.preferences എന്ന സൂചികയെ ഈ "
+#~ "സൂചിക നിഷ്ഫലമാക്കുന്നു."
+
+#~ msgid "Enable edge tiling when dropping windows on screen edges"
+#~ msgstr ""
+#~ "ജാലകങ്ങളെ സ്ക്രീന്റെ അതിരുകളിലേക്ക് ഇടുമ്പോൾ അതിന്റെ അതിരുകൾ ചേർത്തുവയ്ക്കുന്നത് സജ്ജമാക്കുക"
+
+#~ msgid "Workspaces only on primary monitor"
+#~ msgstr "പണിയറകൾ പ്രധാന മോണിറ്ററിൽ മാത്രം"
+
+#~ msgid "Delay focus changes in mouse mode until the pointer stops moving"
+#~ msgstr "പോയന്റർ നിശ്ചലമാകുന്നത് വരെ മൗസ് രീതിയിലുള്ള ശ്രദ്ധാ മാറ്റങ്ങൾ വൈകിപ്പിക്കുക"
+
+#~ msgid "Thumbnail only"
+#~ msgstr "നഖചിത്രങ്ങള്‍ മാത്രം"
+
+#~ msgid "Application icon only"
+#~ msgstr "പ്രയോഗചിഹ്നങ്ങള്‍ മാത്രം"
+
+#~ msgid "Thumbnail and application icon"
+#~ msgstr "നഖചിത്രവും പ്രയോഗചിഹ്നവും"
+
+#~ msgid "Present windows as"
+#~ msgstr "നിലവിലുള്ള ജാലകങ്ങളെ ഇങ്ങനെ"
+
+#~ msgid "Activities Overview"
+#~ msgstr "പ്രവര്‍ത്തനങ്ങളുടെ അവലോകനം"
+
+#~ msgid "Applications"
+#~ msgstr "പ്രയോഗങ്ങള്‍"
+
+#~ msgid "Application"
+#~ msgstr "പ്രയോഗം"
+
+#~ msgid "Create new matching rule"
+#~ msgstr "പുതിയ ചേർച്ചാ നിയമം നിർമ്മിക്കുക"
+
+#~ msgid "Add"
+#~ msgstr "ചേര്‍ക്കുക"
+
+#~ msgid "Hello, world!"
+#~ msgstr "ലോകമേ, നമസ്കാരം!"
+
+#~ msgid "Alternative greeting text."
+#~ msgstr "ബദല്‍ ആശംസാ സന്ദേശം."
+
+#~ msgid ""
+#~ "If not empty, it contains the text that will be shown when clicking on "
+#~ "the panel."
+#~ msgstr "ശൂന്യമല്ലെങ്കിൽ, പാളിയിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ കാണിക്കേണ്ട വാക്യങ്ങൾ ഇതിൽ ലഭ്യമാണ്."
+
+#~ msgid "Message"
+#~ msgstr "സന്ദേശം"
+
+#~ msgid ""
+#~ "Example aims to show how to build well behaved extensions for the Shell "
+#~ "and as such it has little functionality on its own.\n"
+#~ "Nevertheless it’s possible to customize the greeting message."
+#~ msgstr ""
+#~ "സ്വന്തം നിലയിൽ കുറച്ച് പ്രവർത്തനങ്ങൾ മാത്രമുള്ള നല്ല രീതിയിൽ പ്രവർത്തിക്കുന്ന ഷെല്ലിനുള്ള "
+#~ "കൂട്ടിച്ചേർക്കലുകൾ എങ്ങനെ നിർമ്മിക്കാം എന്നതാണ് ഈ ഉദാഹരണത്തിന്റെ ലക്ഷ്യം.\n"
+#~ "എന്നിരുന്നാലും ആശംസാ സന്ദേശം ഇഷ്ടാനുസൃതമാക്കാൻ സാധിക്കുന്നതാണ്."
+
+#~ msgid "Computer"
+#~ msgstr "കമ്പ്യൂട്ടര്‍"
+
+#~ msgid "Name"
+#~ msgstr "പേരു്"
 
 #~ msgid "GNOME Shell Classic"
 #~ msgstr "ഗ്നോം ഷെല്‍ ക്ലാസ്സിക്‍"
@@ -359,12 +486,6 @@ msgstr "പണിയറ %d"
 
 #~ msgid "Control the visibility of the Hibernate menu item"
 #~ msgstr "ശിശിരനിദ്ര മെനുവിന്റെ ദൃശ്യത നിയന്ത്രിക്കുക"
-
-#~ msgid "CPU"
-#~ msgstr "സി.പി.യു"
-
-#~ msgid "Memory"
-#~ msgstr "മെമ്മറി"
 
 #~ msgid "Normal"
 #~ msgstr "സാധാരണ"
