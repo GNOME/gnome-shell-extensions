@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Ekaterine Papava <papava.e@gtu.ge>, 2023-2024.
+# Ekaterine Papava <papava.e@gtu.ge>, 2023-2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-04-29 15:27+0000\n"
-"PO-Revision-Date: 2024-08-17 07:18+0200\n"
+"POT-Creation-Date: 2025-02-13 00:15+0000\n"
+"PO-Revision-Date: 2025-02-23 06:57+0100\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: \n"
 "Language: ka\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -36,11 +36,11 @@ msgstr "GNOME CLassic Wayland-ზე"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME Classic Xorg"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:125
 msgid "Favorites"
 msgstr "რჩეულები"
 
-#: extensions/apps-menu/extension.js:400
+#: extensions/apps-menu/extension.js:399
 msgid "Apps"
 msgstr "აპები"
 
@@ -56,17 +56,17 @@ msgstr ""
 "სტრიქონების სია, რომლებიც შეიცავენ აპლიკაციის ID-ს(სამუშაო მაგიდის ფაილის "
 "სახელს), რომელსაც მოჰყვება მძიმე და სამუშაო სივრცის ნომერი"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "სამუშაო მაგიდის წესები"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "წესის დამატება"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:218
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "დისკ %s-ის გამოგდების შეცდომა:"
@@ -108,33 +108,40 @@ msgstr ""
 "გადაფარავს გარსის ნაგულისხმებ მნიშვნელობას, რომ ის ძირზე იყოს. ამ პარამეტრის "
 "ძალაში შესასვლელად საჭიროა გარსის გადატვირთვა."
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "ადგილები"
 
-#: extensions/places-menu/placeDisplay.js:60
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "%s-ის გაშვების შეცდომა"
 
-#: extensions/places-menu/placeDisplay.js:75
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "%s-თვის დისკის მიმაგრების შეცდომა"
 
-#: extensions/places-menu/placeDisplay.js:135
-#: extensions/places-menu/placeDisplay.js:158
-msgid "Computer"
-msgstr "კომპიუტერი"
-
-#: extensions/places-menu/placeDisplay.js:333
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "საწყისი"
 
-#: extensions/places-menu/placeDisplay.js:378
-msgid "Browse Network"
-msgstr "ქსელის დათვალიერება"
+#: extensions/places-menu/placeDisplay.js:321
+msgid "Recent"
+msgstr "უახლესი"
+
+#: extensions/places-menu/placeDisplay.js:327
+msgid "Starred"
+msgstr "ვარსკვლავდასმული"
+
+#: extensions/places-menu/placeDisplay.js:347
+msgid "Network"
+msgstr "ქსელი"
+
+#: extensions/places-menu/placeDisplay.js:354
+msgid "Trash"
+msgstr "ნაგვის ყუთში"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
@@ -224,47 +231,47 @@ msgstr "თემის სახელი"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "თემის სახელი, ~/.themes/name/gnome-shell-დან ჩასატვირთად"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:95
 msgid "Close"
 msgstr "დახურვა"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:122
 msgid "Unminimize"
 msgstr "ამოკეცვა"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:122
 msgid "Minimize"
 msgstr "ჩაკეცვა"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:129
 msgid "Unmaximize"
 msgstr "საწყის ზომაზე დაბრუნება"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:129
 msgid "Maximize"
 msgstr "მთელ ეკრანზე გაშლა"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:721
 msgid "Minimize all"
 msgstr "ყველას ჩაკეცვა"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:727
 msgid "Unminimize all"
 msgstr "ყველას ამოკეცვა"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:733
 msgid "Maximize all"
 msgstr "ყველას მთელ ეკრანზე გაშლა"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:741
 msgid "Unmaximize all"
 msgstr "ყველას საწყის ზომაზე დაბრუნება"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:749
 msgid "Close all"
 msgstr "ყველას დახურვა"
 
-#: extensions/window-list/extension.js:778
+#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "ფანჯრების სია"
 
@@ -281,7 +288,7 @@ msgstr ""
 "ვარიანტებია \"არასოდეს\", \"ავტომატურად\" და \"ყოველთვის\"."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "ფანჯრების ყველა სამუშაო სივრციდან ჩვენება"
 
@@ -303,46 +310,25 @@ msgstr "ფანჯრების სიის მხოლოდ მთავ
 msgid "Show workspace previews in window list"
 msgstr "სამუშაო სივრცის მინიატურების ჩვენება ფანჯრების სიაში"
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "ფანჯრების შეჯგუფება"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "არასოდეს შეაჯგუფო ფანჯრები"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "შეაჯგუფე მხოლოდ მაშინ, როცა ადგილი არაა"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "ყოველთვის შეაჯგუფე ფანჯრები"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "ყველა ეკრანზე ჩვენება"
-
-#: extensions/window-list/prefs.js:92
-msgid "Show workspace previews"
-msgstr "სამუშაო სივრცის მინიატურების ჩვენება"
-
-#: extensions/workspace-indicator/prefs.js:30
-msgid "Show Previews In Top Bar"
-msgstr "მინიატურების ჩვენება ზედა პანელზე"
-
-#: extensions/workspace-indicator/prefs.js:88
-#, javascript-format
-msgid "Workspace %d"
-msgstr "სამუშაო სივრცე %d"
-
-#: extensions/workspace-indicator/prefs.js:155
-msgid "Workspace Names"
-msgstr "სამუშაო სივრცის სახელები"
-
-#: extensions/workspace-indicator/prefs.js:281
-msgid "Add Workspace"
-msgstr "სამუშაო სივრცის დამატება"
 
 #: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
 msgid "Show workspace previews in top bar"
@@ -351,6 +337,37 @@ msgstr "სამუშაო სივრცის მინიატურე�
 #: extensions/workspace-indicator/workspaceIndicator.js:430
 msgid "Workspace Indicator"
 msgstr "სამუშაო სივრცის ინდიკატორი"
+
+#: extensions/workspace-indicator/workspacePrefs.js:28
+msgid "Show Previews"
+msgstr "მინიატურების ჩვენება"
+
+#: extensions/workspace-indicator/workspacePrefs.js:86
+#, javascript-format
+msgid "Workspace %d"
+msgstr "სამუშაო სივრცე %d"
+
+#: extensions/workspace-indicator/workspacePrefs.js:153
+msgid "Workspace Names"
+msgstr "სამუშაო სივრცის სახელები"
+
+#: extensions/workspace-indicator/workspacePrefs.js:170
+msgid "Add Workspace"
+msgstr "სამუშაო სივრცის დამატება"
+
+#: extensions/workspace-indicator/workspacePrefs.js:195
+msgid "Remove"
+msgstr "წაშლა"
+
+#: extensions/workspace-indicator/workspacePrefs.js:225
+msgid "Workspaces"
+msgstr "სამუშაო სივრცეები"
+
+#~ msgid "Computer"
+#~ msgstr "კომპიუტერი"
+
+#~ msgid "Show workspace previews"
+#~ msgstr "სამუშაო სივრცის მინიატურების ჩვენება"
 
 #~ msgid "Applications"
 #~ msgstr "აპლიკაციები"
