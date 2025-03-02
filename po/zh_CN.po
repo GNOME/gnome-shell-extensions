@@ -7,15 +7,15 @@
 # 甘露(Gan Lu) <rhythm.gan@gmail.com>, 2013.
 # Mingcong Bai <jeffbai@aosc.xyz>, 2017.
 # Dingzhong Chen <wsxy162@gmail.com>, 2019.
-# lumingzh <lumingzh@qq.com>, 2022-2024.
+# lumingzh <lumingzh@qq.com>, 2022-2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-04-29 15:27+0000\n"
-"PO-Revision-Date: 2024-08-24 13:31+0800\n"
+"POT-Creation-Date: 2025-02-13 00:15+0000\n"
+"PO-Revision-Date: 2025-03-02 14:19+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 46.1\n"
+"X-Generator: Gtranslator 47.1\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -42,11 +42,11 @@ msgstr "GNOME Wayland 经典模式"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME Xorg 经典模式"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:125
 msgid "Favorites"
 msgstr "收藏"
 
-#: extensions/apps-menu/extension.js:400
+#: extensions/apps-menu/extension.js:399
 msgid "Apps"
 msgstr "应用"
 
@@ -61,17 +61,17 @@ msgid ""
 msgstr ""
 "一系列字符串，每个字符串包含一个应用程序标识（桌面文件名称）、冒号加工作区号"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "工作区规则"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "添加规则"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:218
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "弹出驱动器“%s”失败："
@@ -110,33 +110,40 @@ msgstr ""
 "如果设置为 true，则将窗口说明文字放置在对应窗口的缩略图上方，而不是默认的下"
 "方。修改此设置需要重启 GNOME Shell 以使设置生效。"
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "位置"
 
-#: extensions/places-menu/placeDisplay.js:60
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "无法启动“%s”"
 
-#: extensions/places-menu/placeDisplay.js:75
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "无法为“%s”挂载卷"
 
-#: extensions/places-menu/placeDisplay.js:135
-#: extensions/places-menu/placeDisplay.js:158
-msgid "Computer"
-msgstr "计算机"
-
-#: extensions/places-menu/placeDisplay.js:333
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "主文件夹"
 
-#: extensions/places-menu/placeDisplay.js:378
-msgid "Browse Network"
-msgstr "浏览网络"
+#: extensions/places-menu/placeDisplay.js:321
+msgid "Recent"
+msgstr "最近"
+
+#: extensions/places-menu/placeDisplay.js:327
+msgid "Starred"
+msgstr "收藏"
+
+#: extensions/places-menu/placeDisplay.js:347
+msgid "Network"
+msgstr "网络"
+
+#: extensions/places-menu/placeDisplay.js:354
+msgid "Trash"
+msgstr "回收站"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
@@ -226,47 +233,47 @@ msgstr "主题名称"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "从 ~/.themes/name/gnome-shell 加载的主题名称"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:95
 msgid "Close"
 msgstr "关闭"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:122
 msgid "Unminimize"
 msgstr "取消最小化"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:122
 msgid "Minimize"
 msgstr "最小化"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:129
 msgid "Unmaximize"
 msgstr "取消最大化"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:129
 msgid "Maximize"
 msgstr "最大化"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:721
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:727
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:733
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:741
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:749
 msgid "Close all"
 msgstr "全部关闭"
 
-#: extensions/window-list/extension.js:778
+#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "窗口列表"
 
@@ -283,7 +290,7 @@ msgstr ""
 "不）、“auto”（自动）和“always”（总是）。"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "显示所有工作区中的窗口"
 
@@ -305,46 +312,25 @@ msgstr "是否在所有连接的显示器上显示窗口列表或仅在主显示
 msgid "Show workspace previews in window list"
 msgstr "在窗口列表中显示工作区预览"
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "窗口分组"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "从不将窗口分组"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "当空间有限时将窗口分组"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "总是对窗口分组"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "在所有显示器上显示"
-
-#: extensions/window-list/prefs.js:92
-msgid "Show workspace previews"
-msgstr "显示工作区预览"
-
-#: extensions/workspace-indicator/prefs.js:30
-msgid "Show Previews In Top Bar"
-msgstr "在顶栏显示预览"
-
-#: extensions/workspace-indicator/prefs.js:88
-#, javascript-format
-msgid "Workspace %d"
-msgstr "工作区 %d"
-
-#: extensions/workspace-indicator/prefs.js:155
-msgid "Workspace Names"
-msgstr "工作区名称"
-
-#: extensions/workspace-indicator/prefs.js:281
-msgid "Add Workspace"
-msgstr "添加工作区"
 
 #: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
 msgid "Show workspace previews in top bar"
@@ -353,6 +339,40 @@ msgstr "在顶栏显示工作区预览"
 #: extensions/workspace-indicator/workspaceIndicator.js:430
 msgid "Workspace Indicator"
 msgstr "工作区指示器"
+
+#: extensions/workspace-indicator/workspacePrefs.js:28
+msgid "Show Previews"
+msgstr "显示预览"
+
+#: extensions/workspace-indicator/workspacePrefs.js:86
+#, javascript-format
+msgid "Workspace %d"
+msgstr "工作区 %d"
+
+#: extensions/workspace-indicator/workspacePrefs.js:153
+msgid "Workspace Names"
+msgstr "工作区名称"
+
+#: extensions/workspace-indicator/workspacePrefs.js:170
+msgid "Add Workspace"
+msgstr "添加工作区"
+
+#: extensions/workspace-indicator/workspacePrefs.js:195
+msgid "Remove"
+msgstr "移除"
+
+#: extensions/workspace-indicator/workspacePrefs.js:225
+msgid "Workspaces"
+msgstr "工作区"
+
+#~ msgid "Computer"
+#~ msgstr "计算机"
+
+#~ msgid "Browse Network"
+#~ msgstr "浏览网络"
+
+#~ msgid "Show workspace previews"
+#~ msgstr "显示工作区预览"
 
 #~ msgid "Applications"
 #~ msgstr "应用程序"
@@ -481,8 +501,8 @@ msgstr "工作区指示器"
 
 #~ msgid ""
 #~ "Configures how the windows are shown in the switcher. Valid possibilities "
-#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-"
-#~ "only' (shows only the application icon) or 'both'."
+#~ "are 'thumbnail-only' (shows a thumbnail of the window), 'app-icon-only' "
+#~ "(shows only the application icon) or 'both'."
 #~ msgstr ""
 #~ "配置窗口在切换器中的显示方式。有效值包括“仅缩略图”(显示窗口的缩略图)、“仅"
 #~ "应用程序图标”(仅显示应用程序图标)或“全部”。"
@@ -555,9 +575,6 @@ msgstr "工作区指示器"
 
 #~ msgid "Bookmarks"
 #~ msgstr "书签"
-
-#~ msgid "Network"
-#~ msgstr "网络"
 
 #~ msgid "File System"
 #~ msgstr "文件系统"
