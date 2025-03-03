@@ -63,9 +63,10 @@ export default class ScreenshotWindowSizerExtension extends Extension {
     /**
      * @param {Meta.Display} display - the display
      * @param {Meta.Window=} window - for per-window bindings, the window
+     * @param {Clutter.Event} event - the triggering event
      * @param {Meta.KeyBinding} binding - the key binding
      */
-    _cycleScreenshotSizes(display, window, binding) {
+    _cycleScreenshotSizes(display, window, event, binding) {
         const backwards = binding.is_reversed();
 
         // Unmaximize first
