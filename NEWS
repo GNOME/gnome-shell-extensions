@@ -1,3 +1,15 @@
+48.rc
+=====
+* Misc. bug fixes and cleanups [Florian; !385, !388]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Emilio Sepúlveda [ia], Mathews M [ml], Daniel Rusek [cs], Piotr Drąg [pl],
+  Anders Jonsson [sv], Ekaterine Papava [ka], Yuri Chornoivan [uk],
+  Aurimas Černius [lt], Luming Zh [zh_CN], Jiri Grönroos [fi]
+
 48.beta
 =======
 * window-list: Fix regression in chrome tracking [Florian; !379]
