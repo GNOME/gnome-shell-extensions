@@ -65,6 +65,8 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
                 return maybeStartDrag.call(draggable, event);
             return false;
         };
+
+        this.connect('notify::active', this._onActiveChanged.bind(this));
     }
 
     activate(event) {
@@ -76,10 +78,11 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         Main.overview.hide();
     }
 
-    setActive(active, params) {
-        if (active)
-            this._button.scrollToButton(this);
-        super.setActive(active, params);
+    _onActiveChanged() {
+        if (!this.active)
+            return;
+
+        this._button.scrollToButton(this);
     }
 
     setDragEnabled(enabled) {
