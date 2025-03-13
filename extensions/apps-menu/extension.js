@@ -44,8 +44,9 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._app = app;
         this._button = button;
 
-        this._iconBin = new St.Bin();
-        this.add_child(this._iconBin);
+        this._icon = this.getDragActor();
+        this._icon.style_class = 'icon-dropshadow';
+        this.add_child(this._icon);
 
         let appLabel = new St.Label({
             text: app.get_name(),
@@ -54,11 +55,6 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         });
         this.add_child(appLabel);
         this.label_actor = appLabel;
-
-        let textureCache = St.TextureCache.get_default();
-        textureCache.connectObject('icon-theme-changed',
-            () => this._updateIcon(), this);
-        this._updateIcon();
 
         this._delegate = this;
         let draggable = DND.makeDraggable(this);
@@ -95,13 +91,7 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     getDragActorSource() {
-        return this._iconBin;
-    }
-
-    _updateIcon() {
-        let icon = this.getDragActor();
-        icon.style_class = 'icon-dropshadow';
-        this._iconBin.set_child(icon);
+        return this._icon;
     }
 }
 
