@@ -1,3 +1,11 @@
+48.0
+====
+* apps-menu: Fix scrolling items into view on keynav [Victor; !391]
+* Misc. bug fixes and cleanups [Florian, Stuart; !390, !392]
+
+Contributors:
+  Stuart Hayhurst, Victor Kareh, Florian Müllner
+
 48.rc
 =====
 * Misc. bug fixes and cleanups [Florian; !385, !388]
