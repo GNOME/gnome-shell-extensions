@@ -1,5 +1,5 @@
 # gnome-shell-extensions' Portuguese translation.
-# Copyright © 2011 - 2024 gnome-shell-extensions
+# Copyright © 2011 - 2025 gnome-shell-extensions
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2011, 2014.
 # Fernando Carvalho <phaetonkde@gmail.com>, 2013.
@@ -7,7 +7,7 @@
 # Pedro Albuquerque <palbuquerque73@gmail.com>, 2014.
 # Bruno Ramalhete <bram.512@gmail.com>, 2015.
 # José Vieira <jvieira33@sapo.pt>, 2020-2021.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021, 2022, 2023, 2024.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021, 2022, 2023, 2024, 2025.
 # Juliano de Souza Camargo <julianosc@protonmail.com>, 2021.
 # João Carvalhinho <joao.carvalhinho@gmail.com>, 2024.
 #
@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: 3.14\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-05-04 23:22+0000\n"
-"PO-Revision-Date: 2024-08-30 10:26+0100\n"
+"POT-Creation-Date: 2025-03-14 00:48+0000\n"
+"PO-Revision-Date: 2025-03-29 14:52+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese (https://l10n.gnome.org/teams/pt/)\n"
 "Language: pt\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Project-Style: gnome\n"
 "X-DL-Team: pt\n"
 "X-DL-Module: gnome-shell-extensions\n"
@@ -50,11 +50,11 @@ msgstr "GNOME clássico em Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME clássico em Xorg"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: extensions/apps-menu/extension.js:400
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Aplicações"
 
@@ -70,20 +70,20 @@ msgstr ""
 "Uma lista de cadeias, cada uma contendo uma id de aplicação (nome do "
 "ficheiro desktop), seguido de dois pontos e o número da área de trabalho"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "Regras das áreas de trabalho"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "Adicionar regra"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:218
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
-msgstr "Falha ao ejetar a unidade '%s':"
+msgstr "Falha ao ejetar a unidade “%s”:"
 
 #: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
@@ -118,37 +118,44 @@ msgid ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"Se verdadeiro, coloca títulos de janelas em cima das respectivas miniaturas, "
+"Se verdadeiro, coloca títulos de janelas em cima das respetivas miniaturas, "
 "substituindo a predefinição, que as coloca no fundo. Alterar esta "
 "configuração requer reinicializar a interface para ter efeito."
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "Locais"
 
-#: extensions/places-menu/placeDisplay.js:60
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Falha ao iniciar \"%s\""
 
-#: extensions/places-menu/placeDisplay.js:75
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Falha ao montar unidade para “%s”"
 
-#: extensions/places-menu/placeDisplay.js:135
-#: extensions/places-menu/placeDisplay.js:158
-msgid "Computer"
-msgstr "Computador"
-
-#: extensions/places-menu/placeDisplay.js:333
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "Pasta pessoal"
 
-#: extensions/places-menu/placeDisplay.js:378
-msgid "Browse Network"
-msgstr "Explorar a rede"
+#: extensions/places-menu/placeDisplay.js:321
+msgid "Recent"
+msgstr "Recentes"
+
+#: extensions/places-menu/placeDisplay.js:327
+msgid "Starred"
+msgstr "Favoritos"
+
+#: extensions/places-menu/placeDisplay.js:347
+msgid "Network"
+msgstr "Rede"
+
+#: extensions/places-menu/placeDisplay.js:354
+msgid "Trash"
+msgstr "Lixo"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
@@ -238,47 +245,47 @@ msgstr "Nome do tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "O nome do tema, a ser carregado de ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:95
 msgid "Close"
 msgstr "Fechar"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:122
 msgid "Unminimize"
 msgstr "Repor"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:122
 msgid "Minimize"
 msgstr "Minimizar"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:129
 msgid "Unmaximize"
 msgstr "Diminuir"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:129
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:721
 msgid "Minimize all"
 msgstr "Minimizar tudo"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:727
 msgid "Unminimize all"
 msgstr "Repor tudo"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:733
 msgid "Maximize all"
 msgstr "Maximizar tudo"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:741
 msgid "Unmaximize all"
 msgstr "Diminuir tudo"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:749
 msgid "Close all"
 msgstr "Fechar tudo"
 
-#: extensions/window-list/extension.js:778
+#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Lista de janelas"
 
@@ -295,7 +302,7 @@ msgstr ""
 "valores válidos são \"nunca\", \"auto\" e \"sempre\"."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "Mostrar janelas de todas as áreas de trabalho"
 
@@ -320,46 +327,25 @@ msgstr ""
 msgid "Show workspace previews in window list"
 msgstr "Mostrar pré-visualizações de áreas de trabalho na lista de janelas"
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "Agrupar janelas"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "Nunca agrupar janelas"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "Agrupar janelas quando o espaço é limitado"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "Agrupar sempre as janelas"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "Mostrar em todos os monitores"
-
-#: extensions/window-list/prefs.js:92
-msgid "Show workspace previews"
-msgstr "Mostrar pré-visualizações de áreas de trabalho"
-
-#: extensions/workspace-indicator/prefs.js:30
-msgid "Show Previews In Top Bar"
-msgstr "Mostrar pré-visualizações na barra superior"
-
-#: extensions/workspace-indicator/prefs.js:88
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Área de trabalho %d"
-
-#: extensions/workspace-indicator/prefs.js:155
-msgid "Workspace Names"
-msgstr "Nomes das áreas de trabalho"
-
-#: extensions/workspace-indicator/prefs.js:281
-msgid "Add Workspace"
-msgstr "Adicionar área de trabalho"
 
 #: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
 msgid "Show workspace previews in top bar"
@@ -368,6 +354,37 @@ msgstr "Mostrar pré-visualizações de áreas de trabalho na barra superior"
 #: extensions/workspace-indicator/workspaceIndicator.js:430
 msgid "Workspace Indicator"
 msgstr "Indicador de área de trabalho"
+
+#: extensions/workspace-indicator/workspacePrefs.js:28
+msgid "Show Previews"
+msgstr "Mostrar pré-visualizações"
+
+#: extensions/workspace-indicator/workspacePrefs.js:86
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Área de trabalho %d"
+
+#: extensions/workspace-indicator/workspacePrefs.js:153
+msgid "Workspace Names"
+msgstr "Nomes das áreas de trabalho"
+
+#: extensions/workspace-indicator/workspacePrefs.js:170
+msgid "Add Workspace"
+msgstr "Adicionar área de trabalho"
+
+#: extensions/workspace-indicator/workspacePrefs.js:195
+msgid "Remove"
+msgstr "Remover"
+
+#: extensions/workspace-indicator/workspacePrefs.js:225
+msgid "Workspaces"
+msgstr "Áreas de trabalho"
+
+#~ msgid "Computer"
+#~ msgstr "Computador"
+
+#~ msgid "Show workspace previews"
+#~ msgstr "Mostrar pré-visualizações de áreas de trabalho"
 
 #~ msgid "Applications"
 #~ msgstr "Aplicações"
