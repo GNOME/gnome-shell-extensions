@@ -173,7 +173,7 @@ export default class Extension {
         this._injectionManager.overrideMethod(viewProto, '_hideTooltips', () => {
             /* eslint-disable no-invalid-this */
             return function () {
-                if (global.stage.get_key_focus() === global.stage)
+                if (global.stage.get_key_focus() === null)
                     global.stage.set_key_focus(this._prevFocusActor);
                 this._pickWindow = false;
                 for (let i = 0; i < this._workspaces.length; i++)
@@ -235,7 +235,7 @@ export default class Extension {
                     return true;
                 }
 
-                if (global.stage.get_key_focus() !== global.stage)
+                if (global.stage.get_key_focus() !== null)
                     return false;
 
                 // ignore shift presses, they're required to get numerals in azerty keyboards
