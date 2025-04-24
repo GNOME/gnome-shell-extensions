@@ -20,3 +20,9 @@ option('classic_mode',
   value: false,
   description: 'Enable installing data files for classic mode.'
 )
+
+option('x11',
+  type: 'boolean',
+  value: true,
+  description: 'Enable X11 session support.'
+)

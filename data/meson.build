@@ -2,13 +2,18 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
+have_x11 = get_option('x11')
+
 session_desktop_base = 'gnome-classic'
 
 session_desktops = [
   session_desktop_base,
-  session_desktop_base + '-xorg',
   session_desktop_base + '-wayland',
 ]
+
+if have_x11
+  session_desktops += [session_desktop_base + '-xorg']
+endif
 
 foreach name : session_desktops
   session_desktop = name + '.desktop'
