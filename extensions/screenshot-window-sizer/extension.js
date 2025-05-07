@@ -70,8 +70,8 @@ export default class ScreenshotWindowSizerExtension extends Extension {
         const backwards = binding.is_reversed();
 
         // Unmaximize first
-        if (window.get_maximized() !== 0)
-            window.unmaximize(Meta.MaximizeFlags.BOTH);
+        if (window.is_maximized())
+            window.unmaximize();
 
         let workArea = window.get_work_area_current_monitor();
         let outerRect = window.get_frame_rect();
