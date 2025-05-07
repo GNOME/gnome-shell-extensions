@@ -85,10 +85,10 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
 
         this._maximizeItem = new PopupMenu.PopupMenuItem('');
         this._maximizeItem.connect('activate', () => {
-            if (this._metaWindow.get_maximized() === Meta.MaximizeFlags.BOTH)
-                this._metaWindow.unmaximize(Meta.MaximizeFlags.BOTH);
+            if (this._metaWindow.is_maximized())
+                this._metaWindow.unmaximize();
             else
-                this._metaWindow.maximize(Meta.MaximizeFlags.BOTH);
+                this._metaWindow.maximize();
         });
         this.addMenuItem(this._maximizeItem);
 
@@ -123,9 +123,7 @@ class WindowContextMenu extends PopupMenu.PopupMenu {
     }
 
     _updateMaximizeItem() {
-        let maximized = this._metaWindow.maximized_vertically &&
-                        this._metaWindow.maximized_horizontally;
-        this._maximizeItem.label.text = maximized
+        this._maximizeItem.label.text = this._metaWindow.is_maximized()
             ? _('Unmaximize') : _('Maximize');
     }
 }
@@ -733,7 +731,7 @@ class AppContextMenu extends PopupMenu.PopupMenu {
         this._maximizeItem = new PopupMenu.PopupMenuItem(_('Maximize all'));
         this._maximizeItem.connect('activate', () => {
             this._appButton.getWindowList().forEach(w => {
-                w.maximize(Meta.MaximizeFlags.BOTH);
+                w.maximize();
             });
         });
         this.addMenuItem(this._maximizeItem);
@@ -741,7 +739,7 @@ class AppContextMenu extends PopupMenu.PopupMenu {
         this._unmaximizeItem = new PopupMenu.PopupMenuItem(_('Unmaximize all'));
         this._unmaximizeItem.connect('activate', () => {
             this._appButton.getWindowList().forEach(w => {
-                w.unmaximize(Meta.MaximizeFlags.BOTH);
+                w.unmaximize();
             });
         });
         this.addMenuItem(this._unmaximizeItem);
@@ -760,10 +758,10 @@ class AppContextMenu extends PopupMenu.PopupMenu {
         this._minimizeItem.visible = windows.some(w => !w.minimized);
         this._unminimizeItem.visible = windows.some(w => w.minimized);
         this._maximizeItem.visible = windows.some(w => {
-            return w.get_maximized() !== Meta.MaximizeFlags.BOTH;
+            return !w.is_maximized();
         });
         this._unmaximizeItem.visible = windows.some(w => {
-            return w.get_maximized() === Meta.MaximizeFlags.BOTH;
+            return w.is_maximized();
         });
 
         super.open(animate);
