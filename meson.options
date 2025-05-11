@@ -23,6 +23,6 @@ option('classic_mode',
 
 option('x11',
   type: 'boolean',
-  value: true,
+  value: false,
   description: 'Enable X11 session support.'
 )
