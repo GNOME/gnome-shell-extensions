@@ -26,7 +26,7 @@ foreach name : session_desktops
     #        There is a workaround in meson/session-post-install.py until proper
     #        solution arises:
     #        https://github.com/mesonbuild/meson/issues/2416
-    session_instdir = xsessiondir
+    session_instdir = wlsessiondir
   #session_instdir = [ xesssiondir, wlsessiondir ]
   endif
   i18n.merge_file(
