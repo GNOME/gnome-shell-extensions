@@ -15,10 +15,10 @@ else:
 
 # FIXME: Meson is unable to copy a generated target file:
 #        https://groups.google.com/forum/#!topic/mesonbuild/3iIoYPrN4P0
-dst_dir = os.path.join(install_root, 'wayland-sessions')
+dst_dir = os.path.join(install_root, 'xsessions')
 if not os.path.exists(dst_dir):
   os.makedirs(dst_dir)
 
-src = os.path.join(install_root, 'xsessions', 'gnome-classic.desktop')
+src = os.path.join(install_root, 'wayland-sessions', 'gnome-classic.desktop')
 dst = os.path.join(dst_dir, 'gnome-classic.desktop')
 shutil.copyfile(src, dst)

@@ -31,6 +31,8 @@ shell_version = ver_arr[0]
 
 uuid_suffix = '@gnome-shell-extensions.gcampax.github.com'
 
+have_x11 = get_option('x11')
+
 classic_extensions = [
   'apps-menu',
   'places-menu',
@@ -86,10 +88,12 @@ endforeach
 
 if classic_mode_enabled
   subdir('data')
-  meson.add_install_script(
-    'meson/session-post-install.py',
-    join_paths(get_option('prefix'), datadir),
-  )
+  if have_x11
+    meson.add_install_script(
+      'meson/session-post-install.py',
+      join_paths(get_option('prefix'), datadir),
+    )
+  endif
 endif
 
 subdir('extensions')
