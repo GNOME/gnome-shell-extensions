@@ -421,6 +421,16 @@ class WorkspacePreviews extends Clutter.Actor {
     }
 }
 
+class WorkspacesMenu extends PopupMenu.PopupMenu {
+    constructor(sourceActor) {
+        super(sourceActor, 0.5, St.Side.TOP);
+
+        const previews = new WorkspacePreviews({show_labels: true});
+        this.box.add_child(previews);
+        this.actor.add_style_class_name(`${baseStyleClassName}-menu`);
+    }
+}
+
 export class WorkspaceIndicator extends PanelMenu.Button {
     static {
         GObject.registerClass(this);
@@ -496,7 +506,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._thumbnails.visible = !useMenu;
 
         this.setMenu(useMenu
-            ? this._createPreviewMenu()
+            ? new WorkspacesMenu(this)
             : null);
 
         this._updateTopBarRedirect();
@@ -522,14 +532,5 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         const {nWorkspaces} = global.workspace_manager;
         const current = this._currentWorkspace + 1;
         return `${current} / ${nWorkspaces}`;
-    }
-
-    _createPreviewMenu() {
-        const menu = new PopupMenu.PopupMenu(this, 0.5, St.Side.TOP);
-
-        const previews = new WorkspacePreviews({show_labels: true});
-        menu.box.add_child(previews);
-        menu.actor.add_style_class_name(`${baseStyleClassName}-menu`);
-        return menu;
     }
 }
