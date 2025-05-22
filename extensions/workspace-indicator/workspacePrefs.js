@@ -22,15 +22,35 @@ class GeneralGroup extends Adw.PreferencesGroup {
     }
 
     constructor(settings) {
-        super();
-
-        const row = new Adw.SwitchRow({
-            title: _('Show Previews'),
+        super({
+            title: _('Indicator'),
         });
-        this.add(row);
+
+        const previewCheck = new Gtk.CheckButton();
+        const previewRow = new Adw.ActionRow({
+            title: _('Previews'),
+            activatable_widget: previewCheck,
+        });
+        previewRow.add_prefix(previewCheck);
+        this.add(previewRow);
+
+        const nameCheck = new Gtk.CheckButton({
+            group: previewCheck,
+        });
+        const nameRow = new Adw.ActionRow({
+            title: _('Workspace Name'),
+            activatable_widget: nameCheck,
+        });
+        nameRow.add_prefix(nameCheck);
+        this.add(nameRow);
+
+        if (settings.get_boolean('embed-previews'))
+            previewCheck.active = true;
+        else
+            nameCheck.active = true;
 
         settings.bind('embed-previews',
-            row, 'active',
+            previewCheck, 'active',
             Gio.SettingsBindFlags.DEFAULT);
     }
 }
