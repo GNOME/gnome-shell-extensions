@@ -11,7 +11,15 @@
 }
 
 .workspace-indicator .status-label {
+  width: 8em;
   padding: 0 8px;
+}
+.workspace-indicator .status-label:ltr { padding-right: 4px; }
+.workspace-indicator .status-label:rtl { padding-left: 4px; }
+
+.workspace-indicator .system-status-icon {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .workspace-indicator .workspaces-view.hfade {

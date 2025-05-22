@@ -491,15 +491,23 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         });
         this.add_child(container);
 
-        let workspaceManager = global.workspace_manager;
+        this._statusBox = new St.BoxLayout();
+        container.add_child(this._statusBox);
 
-        this._currentWorkspace = workspaceManager.get_active_workspace_index();
         this._statusLabel = new St.Label({
             style_class: 'status-label',
+            x_expand: true,
             y_align: Clutter.ActorAlign.CENTER,
-            text: this._getStatusText(),
+            text: this.menu.activeName,
         });
-        container.add_child(this._statusLabel);
+        this._statusBox.add_child(this._statusLabel);
+        this._statusBox.add_child(new St.Icon({
+            icon_name: 'pan-down-symbolic',
+            style_class: 'system-status-icon',
+        }));
+
+        this.menu.connect('active-name-changed',
+            () => this._statusLabel.set_text(this.menu.activeName));
 
         this._thumbnails = new WorkspacePreviews();
         container.add_child(this._thumbnails);
@@ -511,10 +519,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
             this.menu.toggle();
             return Clutter.EVENT_STOP;
         });
-
-        workspaceManager.connectObject(
-            'workspace-switched', this._onWorkspaceSwitched.bind(this), GObject.ConnectFlags.AFTER,
-            this);
 
         this.connect('scroll-event',
             (a, event) => Main.wm.handleWorkspaceScroll(event));
@@ -546,7 +550,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this.reactive = !usePreviews;
 
         this._thumbnails.visible = usePreviews;
-        this._statusLabel.visible = !usePreviews;
+        this._statusBox.visible = !usePreviews;
 
         if (usePreviews)
             this.add_style_class_name('previews');
@@ -565,16 +569,5 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         Main.panel.set_offscreen_redirect(this._thumbnails.visible
             ? Clutter.OffscreenRedirect.ALWAYS
             : Clutter.OffscreenRedirect.AUTOMATIC_FOR_OPACITY);
-    }
-
-    _onWorkspaceSwitched() {
-        this._currentWorkspace = global.workspace_manager.get_active_workspace_index();
-        this._statusLabel.set_text(this._getStatusText());
-    }
-
-    _getStatusText() {
-        const {nWorkspaces} = global.workspace_manager;
-        const current = this._currentWorkspace + 1;
-        return `${current} / ${nWorkspaces}`;
     }
 }
