@@ -13,17 +13,8 @@
   -st-hfade-offset: 20px;
 }
 
-.workspace-indicator-menu .workspaces-view {
-  max-width: 480px;
-}
-
 .workspace-indicator .workspaces-box {
   spacing: 3px;
-}
-
-.workspace-indicator-menu .workspaces-box {
-  padding: 5px;
-  spacing: 6px;
 }
 
 .workspace-indicator .workspace-box {
@@ -40,11 +31,6 @@
   padding-right: 5px;
 }
 
-.workspace-indicator-menu .workspace-box {
-  spacing: 6px;
-}
-
-.workspace-indicator-menu .workspace,
 .workspace-indicator .workspace {
   border: 1px solid transparent;
   border-radius: 4px;
@@ -55,12 +41,6 @@
   width: 52px;
 }
 
-.workspace-indicator-menu .workspace {
-  height: 80px;
-  width: 160px;
-}
-
-.workspace-indicator-menu .workspace.active,
 .workspace-indicator .workspace.active {
   border-color: #fff;
 }

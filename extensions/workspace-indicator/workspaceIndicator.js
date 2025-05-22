@@ -10,7 +10,7 @@ import GObject from 'gi://GObject';
 import Meta from 'gi://Meta';
 import St from 'gi://St';
 
-import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import * as DND from 'resource:///org/gnome/shell/ui/dnd.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
@@ -425,9 +425,68 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
     constructor(sourceActor) {
         super(sourceActor, 0.5, St.Side.TOP);
 
-        const previews = new WorkspacePreviews({show_labels: true});
-        this.box.add_child(previews);
         this.actor.add_style_class_name(`${baseStyleClassName}-menu`);
+
+        this._workspacesSection = new PopupMenu.PopupMenuSection();
+        this.addMenuItem(this._workspacesSection);
+
+        this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+
+        this.addAction(_('Settings'), () => {
+            const extension = Extension.lookupByURL(import.meta.url);
+            extension.openPreferences();
+        });
+
+        this._desktopSettings =
+            new Gio.Settings({schema_id: 'org.gnome.desktop.wm.preferences'});
+        this._desktopSettings.connectObject('changed::workspace-names',
+            () => this._updateWorkspaceLabels(), this);
+
+        const {workspaceManager} = global;
+        workspaceManager.connectObject(
+            'notify::n-workspaces', () => this._updateWorkspaceItems(),
+            'workspace-switched', () => this._updateActiveIndicator(),
+            this.actor);
+        this._updateWorkspaceItems();
+    }
+
+    _updateWorkspaceItems() {
+        const {workspaceManager} = global;
+        const {nWorkspaces} = workspaceManager;
+
+        const section = this._workspacesSection.actor;
+        while (section.get_n_children() < nWorkspaces) {
+            const item = new PopupMenu.PopupMenuItem('');
+            item.connect('activate', (o, event) => {
+                const index = [...section].indexOf(item);
+                const workspace = workspaceManager.get_workspace_by_index(index);
+                workspace?.activate(event.get_time());
+            });
+            this._workspacesSection.addMenuItem(item);
+        }
+
+        [...section].splice(nWorkspaces).forEach(item => item.destroy());
+
+        this._updateWorkspaceLabels();
+        this._updateActiveIndicator();
+    }
+
+    _updateWorkspaceLabels() {
+        const items = [...this._workspacesSection.actor];
+        items.forEach(
+            (item, i) => (item.label.text = Meta.prefs_get_workspace_name(i)));
+    }
+
+    _updateActiveIndicator() {
+        const {workspaceManager} = global;
+        const active = workspaceManager.get_active_workspace_index();
+
+        const items = [...this._workspacesSection.actor];
+        items.forEach((item, i) => {
+            item.setOrnament(i === active
+                ? PopupMenu.Ornament.CHECK
+                : PopupMenu.Ornament.NONE);
+        });
     }
 }
 
