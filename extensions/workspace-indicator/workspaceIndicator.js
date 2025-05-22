@@ -459,8 +459,6 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._thumbnails = new WorkspacePreviews();
         container.add_child(this._thumbnails);
 
-        this._workspacesItems = [];
-
         workspaceManager.connectObject(
             'workspace-switched', this._onWorkspaceSwitched.bind(this), GObject.ConnectFlags.AFTER,
             this);
