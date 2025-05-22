@@ -116,10 +116,6 @@ class WorkspaceThumbnail extends St.Button {
             'active', null, null,
             GObject.ParamFlags.READWRITE,
             false),
-        'show-label': GObject.ParamSpec.boolean(
-            'show-label', null, null,
-            GObject.ParamFlags.READWRITE,
-            false),
     };
 
     static {
@@ -148,30 +144,14 @@ class WorkspaceThumbnail extends St.Button {
         });
         box.add_child(this._preview);
 
-        this._label = new St.Label({
-            x_align: Clutter.ActorAlign.CENTER,
-            text: Meta.prefs_get_workspace_name(index),
-        });
-        box.add_child(this._label);
-
         this._tooltip = new St.Label({
             style_class: 'dash-label',
             visible: false,
         });
         Main.uiGroup.add_child(this._tooltip);
 
-        this.bind_property('show-label',
-            this._label, 'visible',
-            GObject.BindingFlags.SYNC_CREATE);
-
         this.connect('destroy', this._onDestroy.bind(this));
         this.connect('notify::hover', this._syncTooltip.bind(this));
-
-        const desktopSettings =
-            new Gio.Settings({schema_id: 'org.gnome.desktop.wm.preferences'});
-        desktopSettings.connectObject('changed::workspace-names', () => {
-            this._label.text = Meta.prefs_get_workspace_name(index);
-        }, this);
 
         this._index = index;
         this._delegate = this; // needed for DND
@@ -270,9 +250,6 @@ class WorkspaceThumbnail extends St.Button {
     }
 
     _syncTooltip() {
-        if (this.showLabel)
-            return;
-
         if (this.hover) {
             this._tooltip.set({
                 text: Meta.prefs_get_workspace_name(this._index),
@@ -309,13 +286,6 @@ class WorkspaceThumbnail extends St.Button {
 }
 
 class WorkspacePreviews extends Clutter.Actor {
-    static [GObject.properties] = {
-        'show-labels': GObject.ParamSpec.boolean(
-            'show-labels', null, null,
-            GObject.ParamFlags.READWRITE | GObject.ParamFlags.CONSTRUCT_ONLY,
-            false),
-    };
-
     static {
         GObject.registerClass(this);
     }
@@ -367,13 +337,8 @@ class WorkspacePreviews extends Clutter.Actor {
 
         this._thumbnailsBox.destroy_all_children();
 
-        for (let i = 0; i < nWorkspaces; i++) {
-            const thumb = new WorkspaceThumbnail(i);
-            this.bind_property('show-labels',
-                thumb, 'show-label',
-                GObject.BindingFlags.SYNC_CREATE);
-            this._thumbnailsBox.add_child(thumb);
-        }
+        for (let i = 0; i < nWorkspaces; i++)
+            this._thumbnailsBox.add_child(new WorkspaceThumbnail(i));
 
         if (this.mapped)
             this._updateScrollPosition();
