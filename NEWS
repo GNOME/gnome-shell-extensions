@@ -1,3 +1,11 @@
+48.2
+====
+* windowsNavigator: Fix handling keyboard shortcuts [Daniel; !395]
+* build: Allow disabling the X11 session [Neal; !396, !400]
+
+Contributors:
+  Daniel Buch Hansen, Neal Gompa
+
 48.1
 ====
 
