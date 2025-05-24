@@ -1,3 +1,10 @@
+47.5
+====
+* Allow disabling the X11 session [Neal; !396, !400]
+
+Contributors:
+  Neal Gompa
+
 47.4
 ====
 * window-list: Fix regression in chrome tracking [Florian; !379]
