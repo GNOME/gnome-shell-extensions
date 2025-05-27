@@ -9,10 +9,10 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2025-02-13 00:15+0000\n"
-"PO-Revision-Date: 2025-02-14 10:36-0300\n"
+"POT-Creation-Date: 2025-05-15 14:23+0000\n"
+"PO-Revision-Date: 2025-05-26 20:20-0400\n"
 "Last-Translator: Emilio Sepúlveda <emism.translations@gmail.com>\n"
-"Language-Team: Interlingua\n"
+"Language-Team: Interlingua <softinterlingua@gmail.com>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 "X-DL-Domain: po\n"
 "X-DL-State: Translating\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 47.1\n"
+"X-Generator: Gtranslator 48.0\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -42,11 +42,11 @@ msgstr "GNOME Classic sur Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME Classic sur Xorg"
 
-#: extensions/apps-menu/extension.js:125
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: extensions/apps-menu/extension.js:399
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Applicationes"
 
@@ -172,7 +172,7 @@ msgstr "Statos del intercambio"
 
 #: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
-msgstr "Statisticas de carga"
+msgstr "Statisticas de incarga"
 
 #: extensions/system-monitor/extension.js:350
 msgid "Download stats"
@@ -200,7 +200,7 @@ msgstr "Intercambio"
 
 #: extensions/system-monitor/extension.js:420
 msgid "Upload"
-msgstr "Carga"
+msgstr "Incarga"
 
 #: extensions/system-monitor/extension.js:422
 msgid "Download"
@@ -224,7 +224,7 @@ msgstr "Monstrar usage del intercambio"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
 msgid "Show upload"
-msgstr "Monstrar carga"
+msgstr "Monstrar incarga"
 
 #: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
 msgid "Show download"
@@ -236,7 +236,7 @@ msgstr "Nomine de thema"
 
 #: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "Le nomine del thema a cargar desde ~/.themes/nomine/gnome-shell"
+msgstr "Le nomine del thema a cargar ab ~/.themes/nomine/gnome-shell"
 
 #: extensions/window-list/extension.js:95
 msgid "Close"
@@ -250,35 +250,35 @@ msgstr "Disminimisar"
 msgid "Minimize"
 msgstr "Minimisar"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Dismaximisar"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "Maximisar"
 
-#: extensions/window-list/extension.js:721
+#: extensions/window-list/extension.js:719
 msgid "Minimize all"
 msgstr "Minimisar toto"
 
-#: extensions/window-list/extension.js:727
+#: extensions/window-list/extension.js:725
 msgid "Unminimize all"
 msgstr "Disminimisar toto"
 
-#: extensions/window-list/extension.js:733
+#: extensions/window-list/extension.js:731
 msgid "Maximize all"
 msgstr "Maximisar toto"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:739
 msgid "Unmaximize all"
 msgstr "Dismaximisar toto"
 
-#: extensions/window-list/extension.js:749
+#: extensions/window-list/extension.js:747
 msgid "Close all"
 msgstr "Clauder toto"
 
-#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
+#: extensions/window-list/extension.js:990 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Lista de fenestras"
 
