@@ -81,3 +81,50 @@
 .workspace-indicator-window-preview.active {
   background-color: #d4d4d4;
 }
+
+.workspace-indicator-menu {
+  min-width: 17em;
+}
+
+.workspace-indicator-menu .editable-menu-item.popup-menu-item {
+  padding: 3px 12px;
+}
+
+.workspace-indicator-menu .editable-menu-item .icon-button {
+  padding: 6px;
+}
+
+.workspace-indicator-menu .editable-menu-item .icon-button.flat {
+  background-color: transparent;
+}
+
+.workspace-indicator-menu .editable-menu-item .icon-button.flat:hover {
+  background-color: st-transparentize(white, 90%);
+}
+
+.workspace-indicator-menu .editable-menu-item .icon-button.flat:active {
+  background-color: st-transparentize(white, 85%);
+}
+
+.workspace-indicator-menu .editable-menu-item .icon-button.flat:checked {
+  color: -st-accent-fg-color;
+  background-color: -st-accent-color;
+}
+
+.workspace-indicator-menu .editable-menu-item .icon-button.flat:checked:hover {
+  background-color: st-lighten(-st-accent-color, 10%);
+}
+
+.workspace-indicator-menu .editable-menu-item .icon-button.flat:checked:active {
+  background-color: st-lighten(-st-accent-color, 15%);
+}
+
+.workspace-indicator-menu .editable-menu-item StLabel {
+  padding: 0 11px;
+  width: 6.5em;
+}
+
+.workspace-indicator-menu .editable-menu-item StEntry {
+  padding: 9px 9px;
+  width: 6.5em;
+}

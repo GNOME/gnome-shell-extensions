@@ -8,6 +8,7 @@ import Clutter from 'gi://Clutter';
 import Gio from 'gi://Gio';
 import GObject from 'gi://GObject';
 import Meta from 'gi://Meta';
+import Shell from 'gi://Shell';
 import St from 'gi://St';
 
 import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
@@ -386,6 +387,117 @@ class WorkspacePreviews extends Clutter.Actor {
     }
 }
 
+class EditableMenuItem extends PopupMenu.PopupBaseMenuItem {
+    static [GObject.signals] = {
+        'edited': {},
+    };
+
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor() {
+        super({
+            style_class: 'editable-menu-item',
+        });
+        this.get_accessible()?.set_description(
+            _('Press %s to edit').format('e'));
+
+        const stack = new Shell.Stack({
+            x_expand: true,
+            x_align: Clutter.ActorAlign.START,
+        });
+        this.add_child(stack);
+
+        this.label = new St.Label({
+            y_align: Clutter.ActorAlign.CENTER,
+        });
+        stack.add_child(this.label);
+        this.label_actor = this.label;
+
+        this._entry = new St.Entry({
+            opacity: 0,
+            reactive: false,
+        });
+        stack.add_child(this._entry);
+
+        this.label.bind_property('text',
+            this._entry, 'text',
+            GObject.BindingFlags.DEFAULT);
+
+        this._entry.clutter_text.connect('activate',
+            () => this._stopEditing());
+
+        this._editButton = new St.Button({
+            style_class: 'icon-button flat',
+            icon_name: 'document-edit-symbolic',
+            button_mask: St.ButtonMask.ONE,
+            toggle_mode: true,
+            x_align: Clutter.ActorAlign.END,
+            y_align: Clutter.ActorAlign.CENTER,
+        });
+        this.add_child(this._editButton);
+
+        this._editButton.connect('notify::checked', () => {
+            if (this._editButton.checked) {
+                this._editButton.icon_name = 'ornament-check-symbolic';
+                this._startEditing();
+            } else {
+                this._editButton.icon_name = 'document-edit-symbolic';
+                this._stopEditing();
+            }
+        });
+        this.connect('key-release-event', (o, event) => {
+            if (event.get_key_symbol() === Clutter.KEY_e)
+                this._editButton.checked = true;
+        });
+
+        global.stage.connectObject('notify::key-focus', () => {
+            const {keyFocus} = global.stage;
+            if (!keyFocus || !this.contains(keyFocus))
+                this._stopEditing();
+        }, this);
+    }
+
+    _switchActor(from, to) {
+        to.reactive = true;
+        to.ease({
+            opacity: 255,
+            duration: 300,
+            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
+        });
+
+        from.ease({
+            opacity: 0,
+            duration: 300,
+            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
+            onComplete: () => {
+                from.reactive = false;
+            },
+        });
+    }
+
+    _startEditing() {
+        this._switchActor(this.label, this._entry);
+
+        this._entry.clutter_text.set_selection(0, -1);
+        this._entry.clutter_text.grab_key_focus();
+    }
+
+    _stopEditing() {
+        if (this.label.text !== this._entry.text) {
+            this.label.text = this._entry.text;
+            this.emit('edited');
+        }
+
+        if (this._editButton.checked)
+            this._editButton.checked = false;
+
+        this._switchActor(this._entry, this.label);
+        this.navigate_focus(this, St.DirectionType.TAB_FORWARD, false);
+    }
+}
+
 class WorkspacesMenu extends PopupMenu.PopupMenu {
     constructor(sourceActor) {
         super(sourceActor, 0.5, St.Side.TOP);
@@ -429,11 +541,18 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
 
         const section = this._workspacesSection.actor;
         while (section.get_n_children() < nWorkspaces) {
-            const item = new PopupMenu.PopupMenuItem('');
+            const item = new EditableMenuItem();
             item.connect('activate', (o, event) => {
                 const index = [...section].indexOf(item);
                 const workspace = workspaceManager.get_workspace_by_index(index);
                 workspace?.activate(event.get_time());
+            });
+            item.connect('edited', () => {
+                const nLabels = section.get_n_children();
+                const oldNames = this._desktopSettings.get_strv('workspace-names');
+                const newNames = [...section].map(c => c.label.text);
+                this._desktopSettings.set_strv('workspace-names',
+                    [...newNames, ...oldNames.slice(nLabels)]);
             });
             this._workspacesSection.addMenuItem(item);
         }

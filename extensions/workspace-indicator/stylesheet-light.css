@@ -37,3 +37,19 @@
 .workspace-indicator-window-preview.active {
   background-color: #f6f5f4;
 }
+
+.workspace-indicator-menu .editable-menu-item .icon-button.flat:hover {
+  background-color: st-transparentize(black, 90%);
+}
+
+.workspace-indicator-menu .editable-menu-item .icon-button.flat:active {
+  background-color: st-transparentize(black, 85%);
+}
+
+.workspace-indicator-menu .editable-menu-item .icon-button.flat:checked:hover {
+  background-color: st-darken(-st-accent-color, 10%);
+}
+
+.workspace-indicator-menu .editable-menu-item .icon-button.flat:checked:active {
+  background-color: st-darken(-st-accent-color, 15%);
+}
