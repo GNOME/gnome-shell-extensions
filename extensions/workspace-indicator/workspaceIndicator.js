@@ -473,6 +473,8 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         baseStyleClassName = baseStyleClass;
         this.add_style_class_name(baseStyleClassName);
 
+        this.setMenu(new WorkspacesMenu(this));
+
         let container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
             x_expand: true,
@@ -492,6 +494,14 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         this._thumbnails = new WorkspacePreviews();
         container.add_child(this._thumbnails);
+
+        this._thumbnails.connect('button-press-event', (a, event) => {
+            if (event.get_button() !== Clutter.BUTTON_SECONDARY)
+                return Clutter.EVENT_PROPAGATE;
+
+            this.menu.toggle();
+            return Clutter.EVENT_STOP;
+        });
 
         workspaceManager.connectObject(
             'workspace-switched', this._onWorkspaceSwitched.bind(this), GObject.ConnectFlags.AFTER,
@@ -523,15 +533,16 @@ export class WorkspaceIndicator extends PanelMenu.Button {
     }
 
     _updateThumbnailVisibility() {
-        const useMenu = !this._settings.get_boolean('embed-previews');
-        this.reactive = useMenu;
+        const usePreviews = this._settings.get_boolean('embed-previews');
+        this.reactive = !usePreviews;
 
-        this._statusLabel.visible = useMenu;
-        this._thumbnails.visible = !useMenu;
+        this._thumbnails.visible = usePreviews;
+        this._statusLabel.visible = !usePreviews;
 
-        this.setMenu(useMenu
-            ? new WorkspacesMenu(this)
-            : null);
+        if (usePreviews)
+            this.add_style_class_name('previews');
+        else
+            this.remove_style_class_name('previews');
 
         this._updateTopBarRedirect();
     }
