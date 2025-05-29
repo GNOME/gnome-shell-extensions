@@ -404,8 +404,10 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
 
         this._desktopSettings =
             new Gio.Settings({schema_id: 'org.gnome.desktop.wm.preferences'});
-        this._desktopSettings.connectObject('changed::workspace-names',
-            () => this._updateWorkspaceLabels(), this);
+        this._desktopSettings.connectObject('changed::workspace-names', () => {
+            this._updateWorkspaceLabels();
+            this.emit('active-name-changed');
+        }, this);
 
         const {workspaceManager} = global;
         workspaceManager.connectObject(
@@ -413,6 +415,12 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
             'workspace-switched', () => this._updateActiveIndicator(),
             this.actor);
         this._updateWorkspaceItems();
+    }
+
+    get activeName() {
+        const {workspaceManager} = global;
+        const active = workspaceManager.get_active_workspace_index();
+        return Meta.prefs_get_workspace_name(active);
     }
 
     _updateWorkspaceItems() {
@@ -452,6 +460,7 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
                 ? PopupMenu.Ornament.CHECK
                 : PopupMenu.Ornament.NONE);
         });
+        this.emit('active-name-changed');
     }
 }
 
