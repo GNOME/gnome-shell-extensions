@@ -1472,12 +1472,6 @@ class BottomWorkspaceIndicator extends WorkspaceIndicator {
         GObject.registerClass(this);
     }
 
-    constructor(params) {
-        super(params);
-
-        this.remove_style_class_name('panel-button');
-    }
-
     setMenu(menu) {
         super.setMenu(menu);
 

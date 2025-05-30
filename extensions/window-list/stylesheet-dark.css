@@ -6,6 +6,11 @@
  */
 @import url("stylesheet-workspace-switcher-dark.css");
 
+.window-list-workspace-indicator.previews {
+  -natural-hpadding: 0 !important;
+  -minimum-hpadding: 0 !important;
+}
+
 .window-list {
   spacing: 2px;
   font-size: 10pt;
