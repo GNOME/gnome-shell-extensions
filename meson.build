@@ -90,7 +90,7 @@ if classic_mode_enabled
   subdir('data')
   if have_x11
     meson.add_install_script(
-      'meson/session-post-install.py',
+      'build-aux/session-post-install.py',
       join_paths(get_option('prefix'), datadir),
     )
   endif
@@ -101,7 +101,7 @@ subdir('po')
 
 gnome.post_install(glib_compile_schemas: true)
 
-meson.add_dist_script('meson/check-version.py', meson.project_version(), 'NEWS')
+meson.add_dist_script('build-aux/check-version.py', meson.project_version(), 'NEWS')
 
 summary_options = {
   'extensions': enabled_extensions,

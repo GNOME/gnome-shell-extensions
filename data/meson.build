@@ -23,7 +23,7 @@ foreach name : session_desktops
     session_instdir = wlsessiondir
   else
 # FIXME: The same target can not be copied into two directories.
-    #        There is a workaround in meson/session-post-install.py until proper
+    #        There is a workaround in build-aux/session-post-install.py until proper
     #        solution arises:
     #        https://github.com/mesonbuild/meson/issues/2416
     session_instdir = wlsessiondir
