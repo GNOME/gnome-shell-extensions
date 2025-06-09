@@ -552,10 +552,13 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._thumbnails.visible = usePreviews;
         this._statusBox.visible = !usePreviews;
 
-        if (usePreviews)
+        if (usePreviews) {
             this.add_style_class_name('previews');
-        else
+            this.remove_style_class_name('name-label');
+        } else {
             this.remove_style_class_name('previews');
+            this.add_style_class_name('name-label');
+        }
 
         this._updateTopBarRedirect();
     }
