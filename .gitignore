@@ -9,4 +9,6 @@ zip-files/
 *.patch
 *.sw?
 .buildconfig
+.eslintcache
 .vscode
+node_modules
