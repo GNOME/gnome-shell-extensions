@@ -20,6 +20,9 @@ import * as DND from 'resource:///org/gnome/shell/ui/dnd.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {DashItemContainer} from 'resource:///org/gnome/shell/ui/dash.js';
+import {
+    ANIMATION_TIME as SLIDE_ANIMATION_TIME,
+} from 'resource:///org/gnome/shell/ui/overview.js';
 
 import {WorkspaceIndicator} from './workspaceIndicator.js';
 
@@ -998,6 +1001,8 @@ class WindowList extends St.Widget {
         Main.uiGroup.set_child_above_sibling(this, Main.layoutManager.panelBox);
         Main.ctrlAltTabManager.addGroup(this, _('Window List'), 'start-here-symbolic');
 
+        this.visible = !inOverview;
+
         this.width = this._monitor.width;
         this.connect('notify::height', this._updatePosition.bind(this));
         this._updatePosition();
@@ -1032,12 +1037,15 @@ class WindowList extends St.Widget {
         Main.overview.connectObject(
             'showing', () => {
                 this._retrackChrome(overviewChromeOptions);
-                this.hide();
+                this._slideOut();
                 this._updateKeyboardAnchor();
+            },
+            'hiding', () => {
+                if (!this._monitor.inFullscreen)
+                    this._slideIn();
             },
             'hidden', () => {
                 this._retrackChrome(chromeOptions);
-                this.visible = !this._monitor.inFullscreen;
                 this._updateKeyboardAnchor();
             }, this);
 
@@ -1079,6 +1087,13 @@ class WindowList extends St.Widget {
         this._groupingModeChanged();
     }
 
+    get_transformed_position() {
+        // HACK: Remove translation we use for animations
+        //       to keep struts stable
+        const [x, y] = super.get_transformed_position();
+        return [x, y - this.translation_y];
+    }
+
     _onScrollEvent(actor, event) {
         let direction = event.get_scroll_direction();
         let diff = 0;
@@ -1110,6 +1125,24 @@ class WindowList extends St.Widget {
     _retrackChrome(options) {
         Main.layoutManager.untrackChrome(this);
         Main.layoutManager.trackChrome(this, options);
+    }
+
+    _slideIn() {
+        this.show();
+        this.ease({
+            translation_y: 0,
+            duration: SLIDE_ANIMATION_TIME,
+            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
+        });
+    }
+
+    _slideOut() {
+        this.ease({
+            translation_y: this.height,
+            duration: SLIDE_ANIMATION_TIME,
+            mode: Clutter.AnimationMode.EASE_OUT_QUAD,
+            onComplete: () => this.hide(),
+        });
     }
 
     _updateWorkspaceIndicatorVisibility() {
