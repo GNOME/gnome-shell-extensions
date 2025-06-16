@@ -1035,9 +1035,6 @@ class WindowList extends St.Widget {
             }, this);
 
         global.display.connectObject('in-fullscreen-changed', () => {
-            // Work-around for initial change from unknown to !fullscreen
-            if (Main.overview.visible)
-                this.hide();
             this._updateKeyboardAnchor();
         }, this);
 
