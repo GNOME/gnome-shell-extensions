@@ -981,11 +981,20 @@ class WindowList extends St.Widget {
             () => this._onWorkspaceMenuSet(), this);
         this._onWorkspaceMenuSet();
 
-        const chromeOptions = {
+        const inOverview = Main.overview.visible ||
+            (Main.layoutManager._startingUp && Main.sessionMode.hasOverview);
+
+        const overviewChromeOptions = {
             affectsStruts: true,
+        };
+        const chromeOptions = {
+            ...overviewChromeOptions,
             trackFullscreen: true,
         };
-        Main.layoutManager.addChrome(this, chromeOptions);
+        Main.layoutManager.addChrome(this, inOverview
+            ? overviewChromeOptions
+            : chromeOptions);
+
         Main.uiGroup.set_child_above_sibling(this, Main.layoutManager.panelBox);
         Main.ctrlAltTabManager.addGroup(this, _('Window List'), 'start-here-symbolic');
 
@@ -1022,12 +1031,12 @@ class WindowList extends St.Widget {
 
         Main.overview.connectObject(
             'showing', () => {
-                Main.layoutManager.untrackChrome(this);
+                this._retrackChrome(overviewChromeOptions);
                 this.hide();
                 this._updateKeyboardAnchor();
             },
             'hidden', () => {
-                Main.layoutManager.trackChrome(this, chromeOptions);
+                this._retrackChrome(chromeOptions);
                 this.visible = !this._monitor.inFullscreen;
                 this._updateKeyboardAnchor();
             }, this);
@@ -1096,6 +1105,11 @@ class WindowList extends St.Widget {
         this.set_position(
             this._monitor.x,
             this._monitor.y + this._monitor.height - this.height);
+    }
+
+    _retrackChrome(options) {
+        Main.layoutManager.untrackChrome(this);
+        Main.layoutManager.trackChrome(this, options);
     }
 
     _updateWorkspaceIndicatorVisibility() {
