@@ -7,16 +7,16 @@
 # Muhammet Kara <muhammetk@gmail.com>, 2013-2015.
 # Furkan Tokaç <developmentft@gmail.com>, 2017.
 # Sabri Ünal <yakushabb@gmail.com>, 2014, 2019, 2022-2024.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2017, 2019, 2020, 2022, 2024.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017, 2019, 2020, 2022, 2024, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-11-25 08:47+0000\n"
-"PO-Revision-Date: 2024-11-30 23:58+0300\n"
-"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"POT-Creation-Date: 2025-06-17 15:04+0000\n"
+"PO-Revision-Date: 2025-06-17 08:00+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -42,11 +42,11 @@ msgstr "Wayland üstünde GNOME Klasik"
 msgid "GNOME Classic on Xorg"
 msgstr "Xorg üstünde GNOME Klasik"
 
-#: extensions/apps-menu/extension.js:125
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Gözdeler"
 
-#: extensions/apps-menu/extension.js:399
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Uygulamalar"
 
@@ -72,7 +72,7 @@ msgstr "Kural Ekle"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:187
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "“%s” sürücüsü çıkarılamadı:"
@@ -120,33 +120,33 @@ msgstr ""
 msgid "Places"
 msgstr "Yerler"
 
-#: extensions/places-menu/placeDisplay.js:53
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "“%s” başlatılamadı"
 
-#: extensions/places-menu/placeDisplay.js:68
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "“%s” için birim bağlanamadı"
 
-#: extensions/places-menu/placeDisplay.js:316
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "Ev"
 
-#: extensions/places-menu/placeDisplay.js:322
+#: extensions/places-menu/placeDisplay.js:321
 msgid "Recent"
 msgstr "Son"
 
-#: extensions/places-menu/placeDisplay.js:328
+#: extensions/places-menu/placeDisplay.js:327
 msgid "Starred"
 msgstr "Yıldızlı"
 
-#: extensions/places-menu/placeDisplay.js:348
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Network"
 msgstr "Ağ"
 
-#: extensions/places-menu/placeDisplay.js:355
+#: extensions/places-menu/placeDisplay.js:354
 msgid "Trash"
 msgstr "Çöp"
 
@@ -238,47 +238,47 @@ msgstr "Tema adı"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "~/.themes/name/gnome-shell konumundan edinilen tema adı"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:95
 msgid "Close"
 msgstr "Kapat"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:122
 msgid "Unminimize"
 msgstr "Önceki duruma getir"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:122
 msgid "Minimize"
 msgstr "Simge durumuna küçült"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:127
 msgid "Unmaximize"
 msgstr "Önceki duruma getir"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:127
 msgid "Maximize"
 msgstr "En büyük duruma getir"
 
-#: extensions/window-list/extension.js:641
+#: extensions/window-list/extension.js:719
 msgid "Minimize all"
 msgstr "Tümünü simge durumuna küçült"
 
-#: extensions/window-list/extension.js:647
+#: extensions/window-list/extension.js:725
 msgid "Unminimize all"
 msgstr "Tümünü önceki duruma getir"
 
-#: extensions/window-list/extension.js:653
+#: extensions/window-list/extension.js:731
 msgid "Maximize all"
 msgstr "Tümünü en büyük duruma getir"
 
-#: extensions/window-list/extension.js:661
+#: extensions/window-list/extension.js:739
 msgid "Unmaximize all"
 msgstr "Tümünü önceki duruma getir"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:747
 msgid "Close all"
 msgstr "Tümünü kapat"
 
-#: extensions/window-list/extension.js:911 extensions/window-list/prefs.js:23
+#: extensions/window-list/extension.js:999 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Pencere Listesi"
 
@@ -292,8 +292,8 @@ msgid ""
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
 "Pencere listesinde aynı uygulamaların ne zaman kümeleneceğine karar verir. "
-"Olası değerler: “never” (hiçbir zaman), “auto” (kendiliğinden) ve "
-"“always” (her zaman)."
+"Olası değerler: “never” (hiçbir zaman), “auto” (kendiliğinden) ve “always” "
+"(her zaman)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
 #: extensions/window-list/prefs.js:74
@@ -346,31 +346,55 @@ msgstr "Tüm monitörlerde göster"
 msgid "Show workspace previews in top bar"
 msgstr "Çalışma alanı ön izlemelerini üst çubukta göster"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Düzenlemek için şuna bas: %s"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "Çalışma Alanı Belirteci"
 
-#: extensions/workspace-indicator/workspacePrefs.js:28
-msgid "Show Previews"
-msgstr "Ön İzlemeleri Göster"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "Belirteç"
 
-#: extensions/workspace-indicator/workspacePrefs.js:86
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Çalışma Alanı %d"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "Ön İzlemeler"
 
-#: extensions/workspace-indicator/workspacePrefs.js:153
-msgid "Workspace Names"
-msgstr "Çalışma Alanı Adları"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
+msgstr "Çalışma Alanı Adı"
 
-#: extensions/workspace-indicator/workspacePrefs.js:170
-msgid "Add Workspace"
-msgstr "Çalışma Alanı Ekle"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Davranış"
 
-#: extensions/workspace-indicator/workspacePrefs.js:195
-msgid "Remove"
-msgstr "Kaldır"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Devimsel"
 
-#: extensions/workspace-indicator/workspacePrefs.js:225
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Boş çalışma alanlarını kendiliğinden kaldırır."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Ayarlı Sayı"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Kalıcı çalışma alanı sayısı belirle."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "Çalışma Alanı Sayısı"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "Çalışma Alanları"
