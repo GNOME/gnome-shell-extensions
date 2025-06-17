@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/i"
 "ssues\n"
-"POT-Creation-Date: 2025-02-13 00:15+0000\n"
-"PO-Revision-Date: 2025-02-23 22:16+0200\n"
+"POT-Creation-Date: 2025-06-17 15:45+0000\n"
+"PO-Revision-Date: 2025-06-17 19:14+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -40,11 +40,11 @@ msgstr "Класичний GNOME на Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "Класичний GNOME на Xorg"
 
-#: extensions/apps-menu/extension.js:125
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Улюблене"
 
-#: extensions/apps-menu/extension.js:399
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Програми"
 
@@ -140,7 +140,6 @@ msgid "Starred"
 msgstr "З зірочками"
 
 #: extensions/places-menu/placeDisplay.js:347
-#| msgid "Browse Network"
 msgid "Network"
 msgstr "Мережа"
 
@@ -236,47 +235,47 @@ msgstr "Назва теми"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Назва теми, що завантажується з ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:95
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Закрити"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Відновити згорнуте"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Згорнути"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Відновити розгорнуте"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Розгорнути"
 
-#: extensions/window-list/extension.js:721
+#: extensions/window-list/extension.js:722
 msgid "Minimize all"
 msgstr "Згорнути все"
 
-#: extensions/window-list/extension.js:727
+#: extensions/window-list/extension.js:728
 msgid "Unminimize all"
 msgstr "Відновити все згорнуте"
 
-#: extensions/window-list/extension.js:733
+#: extensions/window-list/extension.js:734
 msgid "Maximize all"
 msgstr "Розгорнути все"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:742
 msgid "Unmaximize all"
 msgstr "Відновити все розгорнуте"
 
-#: extensions/window-list/extension.js:749
+#: extensions/window-list/extension.js:750
 msgid "Close all"
 msgstr "Закрити все"
 
-#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
+#: extensions/window-list/extension.js:1002 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Перелік вікон"
 
@@ -341,36 +340,73 @@ msgstr "Показувати на всіх моніторах"
 msgid "Show workspace previews in top bar"
 msgstr "Показувати мініатюри робочого простору на верхній панелі"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Натисніть %s для редагування"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "Параметри"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "Покажчик робочого простору"
 
-#: extensions/workspace-indicator/workspacePrefs.js:28
-#| msgid "Show Previews In Top Bar"
-msgid "Show Previews"
-msgstr "Показувати мініатюри"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+#| msgid "Workspace Indicator"
+msgid "Indicator"
+msgstr "Індикатор"
 
-#: extensions/workspace-indicator/workspacePrefs.js:86
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Робочий простір %d"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+#| msgid "Show Previews"
+msgid "Previews"
+msgstr "Попередній перегляд"
 
-#: extensions/workspace-indicator/workspacePrefs.js:153
-msgid "Workspace Names"
-msgstr "Назви робочих просторів"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+#| msgid "Workspace Names"
+msgid "Workspace Name"
+msgstr "Назва робочої області"
 
-#: extensions/workspace-indicator/workspacePrefs.js:170
-msgid "Add Workspace"
-msgstr "Додати робочий простір"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+#| msgid "Alt Tab Behaviour"
+msgid "Behavior"
+msgstr "Поведінка"
 
-#: extensions/workspace-indicator/workspacePrefs.js:195
-msgid "Remove"
-msgstr "Вилучити"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Динамічний"
 
-#: extensions/workspace-indicator/workspacePrefs.js:225
-#| msgid "Workspace"
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Автоматично вилучає порожні робочі простори."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Фіксована кількість"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Вкажіть кількість сталих робочих просторів."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+#| msgid "Workspaces"
+msgid "Number of Workspaces"
+msgstr "Кількість робочих просторів"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "Робочі простори"
+
+#, javascript-format
+#~ msgid "Workspace %d"
+#~ msgstr "Робочий простір %d"
+
+#~ msgid "Add Workspace"
+#~ msgstr "Додати робочий простір"
+
+#~ msgid "Remove"
+#~ msgstr "Вилучити"
 
 #~ msgid "Computer"
 #~ msgstr "Комп'ютер"
@@ -538,9 +574,6 @@ msgstr "Робочі простори"
 #~ "Якщо бажаєте повернутися до типових налаштувань для Alt-Tab перемикача, "
 #~ "просто\n"
 #~ "вимкнути розширення з extensions.gnome.org або в додаткових параметрах ."
-
-#~ msgid "Alt Tab Behaviour"
-#~ msgstr "Режим Alt Tab"
 
 #~ msgid "Cancel"
 #~ msgstr "Скасувати"
