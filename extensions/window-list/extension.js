@@ -226,12 +226,10 @@ class BaseButton extends DashItemContainer {
         return this._button.has_style_class_name('focused');
     }
 
-    // eslint-disable-next-line camelcase
     get ignore_workspace() {
         return this._ignoreWorkspace;
     }
 
-    // eslint-disable-next-line camelcase
     set ignore_workspace(ignore) {
         if (this._ignoreWorkspace === ignore)
             return;
