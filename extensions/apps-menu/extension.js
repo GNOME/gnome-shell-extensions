@@ -488,7 +488,7 @@ class ApplicationsButton extends PanelMenu.Button {
                 let id;
                 try {
                     id = entry.get_desktop_file_id(); // catch non-UTF8 filenames
-                } catch (e) {
+                } catch {
                     continue;
                 }
                 let app = appSys.lookup_app(id);
