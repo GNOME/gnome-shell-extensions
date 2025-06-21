@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-10-16 14:41+0000\n"
-"PO-Revision-Date: 2024-10-22 16:27+0300\n"
+"POT-Creation-Date: 2025-06-18 23:32+0000\n"
+"PO-Revision-Date: 2025-06-21 15:51+0300\n"
 "Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
@@ -37,11 +37,11 @@ msgstr "Класічны GNOME на Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "Класічны GNOME на Xorg"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Абраныя"
 
-#: extensions/apps-menu/extension.js:400
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Праграмы"
 
@@ -57,17 +57,17 @@ msgstr ""
 "Спіс радкоў, кожны з якіх змяшчае ідэнтыфікатар праграмы (імя файла *."
 "desktop), затым двукроп'е і нумар працоўнай прасторы"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "Правілы для працоўнай прасторы"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "Дадаць правіла"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:187
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Не ўдалося выняць дыск «%s»:"
@@ -109,38 +109,38 @@ msgstr ""
 "перадвызначана). Каб змена налады ўступіла ў сілу, трэба перазапусціць "
 "абалонку."
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "Месцы"
 
-#: extensions/places-menu/placeDisplay.js:53
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Не ўдалося запусціць «%s»"
 
-#: extensions/places-menu/placeDisplay.js:68
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Не ўдалося прымацаваць том для «%s»."
 
-#: extensions/places-menu/placeDisplay.js:316
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "Хатняя папка"
 
-#: extensions/places-menu/placeDisplay.js:322
+#: extensions/places-menu/placeDisplay.js:321
 msgid "Recent"
 msgstr "Нядаўнія"
 
-#: extensions/places-menu/placeDisplay.js:328
+#: extensions/places-menu/placeDisplay.js:327
 msgid "Starred"
 msgstr "Абраныя"
 
-#: extensions/places-menu/placeDisplay.js:348
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Network"
 msgstr "Сетка"
 
-#: extensions/places-menu/placeDisplay.js:355
+#: extensions/places-menu/placeDisplay.js:354
 msgid "Trash"
 msgstr "Сметніца"
 
@@ -232,47 +232,47 @@ msgstr "Назва тэмы"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Назва тэмы, што загрузіцца з ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Закрыць"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Скасаваць згортванне"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Згарнуць"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Скасаваць разгортванне"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Разгарнуць"
 
-#: extensions/window-list/extension.js:641
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Згарнуць усе"
 
-#: extensions/window-list/extension.js:647
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Скасаваць згортванне для ўсіх"
 
-#: extensions/window-list/extension.js:653
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Разгарнуць усе"
 
-#: extensions/window-list/extension.js:661
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Скасаваць разгортванне для ўсіх"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Закрыць усе"
 
-#: extensions/window-list/extension.js:911 extensions/window-list/prefs.js:24
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Спіс вокнаў"
 
@@ -289,7 +289,7 @@ msgstr ""
 "значэнні: «never» (ніколі), «auto» (аўтаматычна), «always» (заўсёды)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "Паказваць вокны з усіх працоўных прастор"
 
@@ -312,23 +312,23 @@ msgstr ""
 msgid "Show workspace previews in window list"
 msgstr "Паказваць папярэдні прагляд працоўных прастор у спісе акон"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "Групаванне вокнаў"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "Ніколі не групаваць вокны"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "Групаваць вокны калі не хапае месца"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "Заўсёды групаваць вокны"
 
-#: extensions/window-list/prefs.js:69
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "Паказваць на ўсіх маніторах"
 
@@ -336,34 +336,68 @@ msgstr "Паказваць на ўсіх маніторах"
 msgid "Show workspace previews in top bar"
 msgstr "Паказваць папярэдні прагляд працоўных прастор у верхняй панэлі"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Націсніце %s, каб змяніць"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "Налады"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "Індыкатар працоўнай прасторы"
 
-#: extensions/workspace-indicator/workspacePrefs.js:29
-msgid "Show Previews"
-msgstr "Паказваць папярэдні прагляд"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "Індыкатар"
 
-#: extensions/workspace-indicator/workspacePrefs.js:87
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Працоўная прастора %d"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "Перадпрагляд"
 
-#: extensions/workspace-indicator/workspacePrefs.js:154
-msgid "Workspace Names"
-msgstr "Назвы працоўных прастор"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
+msgstr "Назва працоўнай прасторы"
 
-#: extensions/workspace-indicator/workspacePrefs.js:171
-msgid "Add Workspace"
-msgstr "Дадаць працоўную прастору"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Паводзіны"
 
-#: extensions/workspace-indicator/workspacePrefs.js:196
-msgid "Remove"
-msgstr "Выдаліць"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Дынамічная"
 
-#: extensions/workspace-indicator/workspacePrefs.js:226
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Пустыя працоўныя прасторы выдаляюцца аўтаматычна."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Фіксаваная колькасць'"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Вызначыце колькасць пастаянных працоўных прастор."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "Колькасць працоўных прастор"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "Працоўныя прасторы"
+
+#, javascript-format
+#~ msgid "Workspace %d"
+#~ msgstr "Працоўная прастора %d"
+
+#~ msgid "Add Workspace"
+#~ msgstr "Дадаць працоўную прастору"
+
+#~ msgid "Remove"
+#~ msgstr "Выдаліць"
 
 #~ msgid "Computer"
 #~ msgstr "Камп'ютар"
