@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2025-02-13 00:15+0000\n"
-"PO-Revision-Date: 2025-02-23 06:57+0100\n"
+"POT-Creation-Date: 2025-06-18 23:32+0000\n"
+"PO-Revision-Date: 2025-06-21 06:43+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: \n"
 "Language: ka\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -36,11 +36,11 @@ msgstr "GNOME CLassic Wayland-ზე"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME Classic Xorg"
 
-#: extensions/apps-menu/extension.js:125
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "რჩეულები"
 
-#: extensions/apps-menu/extension.js:399
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "აპები"
 
@@ -231,47 +231,47 @@ msgstr "თემის სახელი"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "თემის სახელი, ~/.themes/name/gnome-shell-დან ჩასატვირთად"
 
-#: extensions/window-list/extension.js:95
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "დახურვა"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "ამოკეცვა"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "ჩაკეცვა"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "საწყის ზომაზე დაბრუნება"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "მთელ ეკრანზე გაშლა"
 
-#: extensions/window-list/extension.js:721
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "ყველას ჩაკეცვა"
 
-#: extensions/window-list/extension.js:727
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "ყველას ამოკეცვა"
 
-#: extensions/window-list/extension.js:733
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "ყველას მთელ ეკრანზე გაშლა"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "ყველას საწყის ზომაზე დაბრუნება"
 
-#: extensions/window-list/extension.js:749
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "ყველას დახურვა"
 
-#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "ფანჯრების სია"
 
@@ -334,34 +334,68 @@ msgstr "ყველა ეკრანზე ჩვენება"
 msgid "Show workspace previews in top bar"
 msgstr "სამუშაო სივრცის მინიატურების ჩვენება ზედა პანელზე"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "ჩასწორებისთვის დააჭირეთ ღილაკს %s"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "მორგება"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "სამუშაო სივრცის ინდიკატორი"
 
-#: extensions/workspace-indicator/workspacePrefs.js:28
-msgid "Show Previews"
-msgstr "მინიატურების ჩვენება"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "მაჩვენებელი"
 
-#: extensions/workspace-indicator/workspacePrefs.js:86
-#, javascript-format
-msgid "Workspace %d"
-msgstr "სამუშაო სივრცე %d"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "მინიატურები"
 
-#: extensions/workspace-indicator/workspacePrefs.js:153
-msgid "Workspace Names"
-msgstr "სამუშაო სივრცის სახელები"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
+msgstr "სამუშაო სივრცის სახელი"
 
-#: extensions/workspace-indicator/workspacePrefs.js:170
-msgid "Add Workspace"
-msgstr "სამუშაო სივრცის დამატება"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "ქცევა"
 
-#: extensions/workspace-indicator/workspacePrefs.js:195
-msgid "Remove"
-msgstr "წაშლა"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "დინამიკური"
 
-#: extensions/workspace-indicator/workspacePrefs.js:225
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "ცარიელი სამუშაო სივრცეების ავტომატური წაშლა."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "ფიქსირებული ნომერი"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "მიუთითეთ სამუშაო სივრცეების ფიქსირებული რაოდენობა."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "სამუშაო სივრცეების რაოდენობა"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "სამუშაო სივრცეები"
+
+#, javascript-format
+#~ msgid "Workspace %d"
+#~ msgstr "სამუშაო სივრცე %d"
+
+#~ msgid "Add Workspace"
+#~ msgstr "სამუშაო სივრცის დამატება"
+
+#~ msgid "Remove"
+#~ msgstr "წაშლა"
 
 #~ msgid "Computer"
 #~ msgstr "კომპიუტერი"
