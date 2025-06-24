@@ -10,22 +10,23 @@
 # Enrico Nicoletto <liverig@gmail.com>, 2013, 2014.
 # Matheus Polkorny <mpolkorny@ipt.br>, 2024.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2013-2025.
+# Álvaro Burns <>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2025-01-13 16:23+0000\n"
-"PO-Revision-Date: 2025-01-19 21:11-0300\n"
-"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
-"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
+"POT-Creation-Date: 2025-06-18 23:32+0000\n"
+"PO-Revision-Date: 2025-06-24 11:27-0300\n"
+"Last-Translator: Álvaro Burns <>\n"
+"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 47.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 48.0\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-classic.desktop.in:3
@@ -45,11 +46,11 @@ msgstr "GNOME Clássico no Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME Clássico no Xorg"
 
-#: extensions/apps-menu/extension.js:125
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: extensions/apps-menu/extension.js:399
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Aplicativos"
 
@@ -240,47 +241,47 @@ msgstr "Nome do tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "O nome do tema, para ser carregado de ~/.themes/nome/gnome-shell"
 
-#: extensions/window-list/extension.js:95
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Fechar"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Desfazer janelas minimizadas"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Minimizar"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Desfazer janelas maximizadas"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: extensions/window-list/extension.js:721
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Minimizar todas"
 
-#: extensions/window-list/extension.js:727
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Desfazer todas as janelas minimizadas"
 
-#: extensions/window-list/extension.js:733
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Maximizar todas"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Desfazer todas as janelas maximizadas"
 
-#: extensions/window-list/extension.js:749
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Fechar todas"
 
-#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Lista de janelas"
 
@@ -347,34 +348,68 @@ msgstr "Mostrar em todos os monitores"
 msgid "Show workspace previews in top bar"
 msgstr "Mostra prévias do espaço de trabalho na barra superior"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Clique em %s para editar"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "Configurações"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "Indicador de espaços de trabalho"
 
-#: extensions/workspace-indicator/workspacePrefs.js:28
-msgid "Show Previews"
-msgstr "Mostrar prévias"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "Indicador"
 
-#: extensions/workspace-indicator/workspacePrefs.js:86
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Espaço de trabalho %d"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "Prévias"
 
-#: extensions/workspace-indicator/workspacePrefs.js:153
-msgid "Workspace Names"
-msgstr "Nomes de espaços de trabalho"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
+msgstr "Nome do espaço de trabalho"
 
-#: extensions/workspace-indicator/workspacePrefs.js:170
-msgid "Add Workspace"
-msgstr "Adicionar espaço de trabalho"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Comportamento"
 
-#: extensions/workspace-indicator/workspacePrefs.js:195
-msgid "Remove"
-msgstr "Remove"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Dinâmica"
 
-#: extensions/workspace-indicator/workspacePrefs.js:225
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Remover espaços de trabalho automaticamente."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Número fixo"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Especifique um número permanente de espaços de trabalho."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "Número de espaços de trabalho"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "Espaços de trabalho"
+
+#, javascript-format
+#~ msgid "Workspace %d"
+#~ msgstr "Espaço de trabalho %d"
+
+#~ msgid "Add Workspace"
+#~ msgstr "Adicionar espaço de trabalho"
+
+#~ msgid "Remove"
+#~ msgstr "Remove"
 
 #~ msgid "Computer"
 #~ msgstr "Computador"
@@ -512,9 +547,6 @@ msgstr "Espaços de trabalho"
 
 #~ msgid "Display"
 #~ msgstr "Tela"
-
-#~ msgid "Display Settings"
-#~ msgstr "Configurações de tela"
 
 #~ msgid "The application icon mode."
 #~ msgstr "O modo de ícone do aplicativo."
@@ -705,9 +737,6 @@ msgstr "Espaços de trabalho"
 #~ "Se você deseja reverter para o comportamento padrão a partir do "
 #~ "alternador de Alt-Tab, apenas desative a extensão de extensions.gnome.org "
 #~ "ou nas configurações avançadas do aplicativo."
-
-#~ msgid "Alt Tab Behaviour"
-#~ msgstr "Comportamento do Alt Tab"
 
 #~ msgid "Cancel"
 #~ msgstr "Cancelar"
