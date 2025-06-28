@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-10-16 14:41+0000\n"
-"PO-Revision-Date: 2024-10-27 14:01+0300\n"
-"Last-Translator: Artur So <arturios2005@mail.ru>\n"
+"POT-Creation-Date: 2025-06-18 23:32+0000\n"
+"PO-Revision-Date: 2025-06-20 09:30+1000\n"
+"Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -38,11 +38,11 @@ msgstr "Классический GNOME на Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "Классический GNOME на Xorg"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Избранное"
 
-#: extensions/apps-menu/extension.js:400
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Приложения"
 
@@ -55,20 +55,20 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"Список строк, содержащих идентификатор приложения (имя desktop-файла), за "
-"которым следует двоеточие и номер рабочего стола"
+"Список строк, содержащих идентификатор приложения (название desktop-файла), "
+"за которым следует двоеточие и номер рабочего стола"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "Правила для рабочих столов"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "Добавить правило"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:187
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Не удалось извлечь диск «%s»:"
@@ -110,38 +110,38 @@ msgstr ""
 "умолчанию заголовки располагаются снизу). При изменении этого параметра, "
 "чтобы оно вступило в силу, необходимо перезапустить Shell."
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "Места"
 
-#: extensions/places-menu/placeDisplay.js:53
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Не удалось запустить «%s»"
 
-#: extensions/places-menu/placeDisplay.js:68
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Не удалось смонтировать том для «%s»"
 
-#: extensions/places-menu/placeDisplay.js:316
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "Домашняя папка"
 
-#: extensions/places-menu/placeDisplay.js:322
+#: extensions/places-menu/placeDisplay.js:321
 msgid "Recent"
 msgstr "Недавние"
 
-#: extensions/places-menu/placeDisplay.js:328
+#: extensions/places-menu/placeDisplay.js:327
 msgid "Starred"
 msgstr "Избранные"
 
-#: extensions/places-menu/placeDisplay.js:348
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Network"
 msgstr "Сеть"
 
-#: extensions/places-menu/placeDisplay.js:355
+#: extensions/places-menu/placeDisplay.js:354
 msgid "Trash"
 msgstr "Корзина"
 
@@ -233,49 +233,49 @@ msgstr "Название темы"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Название темы, загружаемой из ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Закрыть"
 
 # ну или "восстановить", правда тогда появляется неоднозначный повтор (unmaximize)
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Вернуть"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Свернуть"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Восстановить"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Развернуть"
 
-#: extensions/window-list/extension.js:641
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Свернуть все"
 
 # ну или "восстановить", правда тогда появляется неоднозначный повтор (unmaximize)
-#: extensions/window-list/extension.js:647
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Вернуть все"
 
-#: extensions/window-list/extension.js:653
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Развернуть все"
 
-#: extensions/window-list/extension.js:661
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Восстановить все"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Закрыть все"
 
-#: extensions/window-list/extension.js:911 extensions/window-list/prefs.js:24
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Список окон"
 
@@ -293,7 +293,7 @@ msgstr ""
 "«always» — всегда."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "Показывать окна со всех рабочих столов"
 
@@ -316,60 +316,94 @@ msgstr ""
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
 msgid "Show workspace previews in window list"
-msgstr "Показывать предпросмотры рабочих столов в списке окон"
+msgstr "Показывать предварительный просмотр рабочих столов в списке окон"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "Группировка окон"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "Никогда не группировать окна"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "Группировать окна, если место ограничено"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "Всегда группировать окна"
 
-#: extensions/window-list/prefs.js:69
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "Показывать на всех мониторах"
 
 #: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
 msgid "Show workspace previews in top bar"
-msgstr "Показывать предпросмотры рабочих столов в верхней панели"
+msgstr "Показывать предварительный просмотр рабочих столов в верхней панели"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Нажмите %s для редактирования"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "Настройки"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "Индикатор рабочих столов"
 
-#: extensions/workspace-indicator/workspacePrefs.js:29
-msgid "Show Previews"
-msgstr "Показывать предпросмотры"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "Индикатор"
 
-#: extensions/workspace-indicator/workspacePrefs.js:87
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Рабочий стол %d"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "Предварительный просмотр"
 
-#: extensions/workspace-indicator/workspacePrefs.js:154
-msgid "Workspace Names"
-msgstr "Названия рабочих столов"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
+msgstr "Название рабочего стола"
 
-#: extensions/workspace-indicator/workspacePrefs.js:171
-msgid "Add Workspace"
-msgstr "Добавить рабочий стол"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Поведение"
 
-#: extensions/workspace-indicator/workspacePrefs.js:196
-msgid "Remove"
-msgstr "Удалить"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Динамичный"
 
-#: extensions/workspace-indicator/workspacePrefs.js:226
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Автоматически удалять пустые рабочие столы."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Фиксированное количество"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Укажите количество постоянных рабочих столов."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "Количество рабочих столов"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "Рабочие столы"
+
+#, javascript-format
+#~ msgid "Workspace %d"
+#~ msgstr "Рабочий стол %d"
+
+#~ msgid "Add Workspace"
+#~ msgstr "Добавить рабочий стол"
+
+#~ msgid "Remove"
+#~ msgstr "Удалить"
 
 #~ msgid "Computer"
 #~ msgstr "Компьютер"
