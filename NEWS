@@ -1,3 +1,10 @@
+48.3
+====
+* Misc. bug fixes and cleanups [Florian; !409, !411, !405, !413]
+
+Contributors:
+  Florian Müllner
+
 48.2
 ====
 * windowsNavigator: Fix handling keyboard shortcuts [Daniel; !395]
