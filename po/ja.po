@@ -1,5 +1,5 @@
 # gnome-shell-extensions ja.po
-# Copyright (C) 2011, 2013-2015, 2019-2020, 2022 gnome-shell-extensions's COPYRIGHT HOLDER
+# Copyright (C) 2011, 2013-2015, 2019-2020, 2022, 2025 gnome-shell-extensions's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extensions package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2011.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2011, 2013, 2015
@@ -7,27 +7,30 @@
 # Ikuya Awashiro <ikuya@fruitsbasket.info>, 2014.
 # Hajime Taira <htaira@redhat.com>, 2014, 2015.
 # sicklylife <translation@sicklylife.jp>, 2019-2020, 2022.
+# Makoto Sakaguchi <ycco34vx@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-shell-extensions master\n"
+"Project-Id-Version: gnome-shell-extensions main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2020-05-28 00:55+0000\n"
-"PO-Revision-Date: 2022-03-12 19:00+0900\n"
-"Last-Translator: sicklylife <translation@sicklylife.jp>\n"
+"POT-Creation-Date: 2025-06-17 16:15+0000\n"
+"PO-Revision-Date: 2025-06-18 10:00+0900\n"
+"Last-Translator: Makoto Sakaguchi <ycco34vx@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.6\n"
 
-#: data/gnome-classic.desktop.in:3 data/gnome-classic.session.desktop.in:3
+#: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
 msgstr "GNOME クラシック"
 
-#: data/gnome-classic.desktop.in:4
+#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
+#: data/gnome-classic-xorg.desktop.in:4
 msgid "This session logs you into GNOME Classic"
 msgstr "GNOME クラシックモードでログインします"
 
@@ -39,239 +42,368 @@ msgstr "GNOME クラシック on Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME クラシック on Xorg"
 
-#: extensions/apps-menu/extension.js:113
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "お気に入り"
 
-#: extensions/apps-menu/extension.js:369
-msgid "Applications"
-msgstr "アプリケーション"
+#: extensions/apps-menu/extension.js:392
+msgid "Apps"
+msgstr "アプリ"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:6
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
 msgstr "アプリケーションとワークスペースのリスト"
 
-#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:7
+#: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"アプリケーションの識別子 (.desktop ファイル名) とコロンの後にワークスペース番"
-"号を付与した文字列を要素とするリストです"
+"アプリケーション ID (.desktop ファイル名) とコロンの後にワークスペース番号を"
+"付与した文字列のリストです"
 
-#: extensions/auto-move-windows/prefs.js:35
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "ワークスペースのルール"
 
-#: extensions/auto-move-windows/prefs.js:243
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "ルールを追加"
 
 #. TRANSLATORS: %s is the filesystem name
-#: extensions/drive-menu/extension.js:112
-#: extensions/places-menu/placeDisplay.js:233
+#: extensions/drive-menu/extension.js:123
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "ドライブ“%s”の取り出しに失敗しました:"
 
-#: extensions/drive-menu/extension.js:128
+#: extensions/drive-menu/extension.js:142
 msgid "Removable devices"
 msgstr "リムーバブルデバイス"
 
-#: extensions/drive-menu/extension.js:155
+#: extensions/drive-menu/extension.js:164
 msgid "Open Files"
 msgstr "ファイルを開く"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:5
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
 msgid "Use more screen for windows"
-msgstr "ウィンドウにたくさんの画面を使うかどうか"
+msgstr "ウィンドウ表示により多くの画面を使用"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:6
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
 msgid ""
 "Try to use more screen for placing window thumbnails by adapting to screen "
 "aspect ratio, and consolidating them further to reduce the bounding box. "
 "This setting applies only with the natural placement strategy."
 msgstr ""
-"ウィンドウのサムネイルを複数配置する際に、画面のアスペクト比に合わせて、境界"
-"部分を減らすことにより、ウィンドウを統合することで、さらにたくさんの画面を使"
-"用できるようにするかどうかです。この設定は 'natural' の配置アルゴリズムを採用"
-"している場合にのみ適用されます。"
+"ウィンドウサムネイルの配置時に、画面のアスペクト比に合わせて配置を最適化し、"
+"表示領域を効率的に使用します。この設定は 'natural' 配置アルゴリズムを採用して"
+"いる場合にのみ適用されます。"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:11
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:17
 msgid "Place window captions on top"
-msgstr "ウィンドウのタイトルバーを上端に表示するかどうか"
+msgstr "ウィンドウタイトルを上部に配置"
 
-#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:12
+#: extensions/native-window-placement/org.gnome.shell.extensions.native-window-placement.gschema.xml:18
 msgid ""
 "If true, place window captions on top the respective thumbnail, overriding "
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 msgstr ""
-"TRUE にすると、ウィンドウのサムネイルの上端にそのウィンドウのタイトルバーを表"
-"示します (これは、サムネイルの下端にタイトルバーを表示する GNOME shellのデ"
-"フォルト値よりも優先されます)。この設定を適用する際は GNOME shellを再起動して"
-"ください。"
+"true にすると、ウィンドウタイトルを対応するサムネイルの上部に配置します "
+"(GNOME Shell のデフォルト設定である下部配置よりも優先されます)。この設定を変"
+"更した場合、効果を反映するために GNOME Shell の再起動が必要です。"
 
-#: extensions/places-menu/extension.js:89
-#: extensions/places-menu/extension.js:93
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "場所"
 
-#: extensions/places-menu/placeDisplay.js:46
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "“%s”の起動に失敗しました"
 
-#: extensions/places-menu/placeDisplay.js:61
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "“%s”のマウントに失敗しました"
 
-#: extensions/places-menu/placeDisplay.js:148
-#: extensions/places-menu/placeDisplay.js:171
-msgid "Computer"
-msgstr "コンピューター"
-
-#: extensions/places-menu/placeDisplay.js:359
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "ホーム"
 
-#: extensions/places-menu/placeDisplay.js:404
-msgid "Browse Network"
-msgstr "ネットワークを表示"
+#: extensions/places-menu/placeDisplay.js:321
+msgid "Recent"
+msgstr "最近"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:7
+#: extensions/places-menu/placeDisplay.js:327
+msgid "Starred"
+msgstr "お気に入り"
+
+#: extensions/places-menu/placeDisplay.js:347
+msgid "Network"
+msgstr "ネットワーク"
+
+#: extensions/places-menu/placeDisplay.js:354
+msgid "Trash"
+msgstr "ゴミ箱"
+
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
-msgstr "スクリーンショットのサイズを変更する"
+msgstr "スクリーンショットサイズの切り替え"
 
-#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:11
+#: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:18
 msgid "Cycle Screenshot Sizes Backward"
-msgstr ""
+msgstr "スクリーンショットサイズの逆順切り替え"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:5
+#: extensions/system-monitor/extension.js:135
+msgid "CPU stats"
+msgstr "CPU 統計"
+
+#: extensions/system-monitor/extension.js:159
+msgid "Memory stats"
+msgstr "メモリ統計"
+
+#: extensions/system-monitor/extension.js:177
+msgid "Swap stats"
+msgstr "スワップ統計"
+
+#: extensions/system-monitor/extension.js:336
+msgid "Upload stats"
+msgstr "アップロード統計"
+
+#: extensions/system-monitor/extension.js:350
+msgid "Download stats"
+msgstr "ダウンロード統計"
+
+#: extensions/system-monitor/extension.js:364
+msgid "System stats"
+msgstr "システム統計"
+
+#: extensions/system-monitor/extension.js:412
+msgid "Show"
+msgstr "表示"
+
+#: extensions/system-monitor/extension.js:414
+msgid "CPU"
+msgstr "CPU"
+
+#: extensions/system-monitor/extension.js:416
+msgid "Memory"
+msgstr "メモリ"
+
+#: extensions/system-monitor/extension.js:418
+msgid "Swap"
+msgstr "スワップ"
+
+#: extensions/system-monitor/extension.js:420
+msgid "Upload"
+msgstr "アップロード"
+
+#: extensions/system-monitor/extension.js:422
+msgid "Download"
+msgstr "ダウンロード"
+
+#: extensions/system-monitor/extension.js:427
+msgid "Open System Monitor"
+msgstr "システムモニターを開く"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:12
+msgid "Show CPU usage"
+msgstr "CPU 使用率を表示"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:16
+msgid "Show memory usage"
+msgstr "メモリ使用率を表示"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:20
+msgid "Show swap usage"
+msgstr "スワップ使用率を表示"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:24
+msgid "Show upload"
+msgstr "アップロード速度を表示"
+
+#: extensions/system-monitor/schemas/org.gnome.shell.extensions.system-monitor.gschema.xml:28
+msgid "Show download"
+msgstr "ダウンロード速度を表示"
+
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:11
 msgid "Theme name"
 msgstr "テーマの名前"
 
-#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:6
+#: extensions/user-theme/org.gnome.shell.extensions.user-theme.gschema.xml:12
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
-msgstr "テーマの名前です (~/.themes/name/gnome-shell 配下に格納します)"
+msgstr ""
+"~/.themes/[テーマ名]/gnome-shell ディレクトリから読み込まれるテーマの名前"
 
 #: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "閉じる"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
-msgstr "最小化解除"
+msgstr "最小化を元に戻す"
 
-#: extensions/window-list/extension.js:118
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "最小化"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
-msgstr "最大化解除"
+msgstr "最大化を元に戻す"
 
-#: extensions/window-list/extension.js:125
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "最大化"
 
-#: extensions/window-list/extension.js:428
+#: extensions/window-list/extension.js:722
 msgid "Minimize all"
 msgstr "すべて最小化"
 
-#: extensions/window-list/extension.js:434
+#: extensions/window-list/extension.js:728
 msgid "Unminimize all"
-msgstr "すべて最小化解除"
+msgstr "すべて最小化を元に戻す"
 
-#: extensions/window-list/extension.js:440
+#: extensions/window-list/extension.js:734
 msgid "Maximize all"
 msgstr "すべて最大化"
 
-#: extensions/window-list/extension.js:448
+#: extensions/window-list/extension.js:742
 msgid "Unmaximize all"
-msgstr "すべて最大化解除"
+msgstr "すべて最大化を元に戻す"
 
-#: extensions/window-list/extension.js:456
+#: extensions/window-list/extension.js:750
 msgid "Close all"
 msgstr "すべて閉じる"
 
-#: extensions/window-list/extension.js:734
+#: extensions/window-list/extension.js:1002 extensions/window-list/prefs.js:23
 msgid "Window List"
-msgstr "ウィンドウのリスト"
+msgstr "ウィンドウ一覧"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:12
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:18
 msgid "When to group windows"
 msgstr "ウインドウをグループ化する条件"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:13
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:19
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
 msgstr ""
-"ウィンドウ一覧にある同じアプリケーションをグループ化する条件を指定します。指"
-"定可能な値は、“never”, “auto”, “always”です。"
+"ウィンドウ一覧で同じアプリケーションをグループ化する条件を指定します。設定可"
+"能な値は \"never\"（しない）、\"auto\"（自動）、\"always\"（常に）です。"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:20
-#: extensions/window-list/prefs.js:100
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
-msgstr "すべてのワークスペースのウィンドウを表示する"
-
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:21
-msgid "Whether to show windows from all workspaces or only the current one."
-msgstr ""
-"ウィンドウをすべてのワークスペースから表示するか現在のワークスペースにある"
-"ウィンドウのみ表示するかの設定です。"
+msgstr "すべてのワークスペースのウィンドウを表示"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:27
-msgid "Show the window list on all monitors"
-msgstr "すべてのモニターにウィンドウリストを表示する"
+msgid "Whether to show windows from all workspaces or only the current one."
+msgstr ""
+"すべてのワークスペースのウィンドウを表示するか、現在のワークスペースのみを表"
+"示するかを設定します。"
 
-#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:28
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:33
+msgid "Show the window list on all monitors"
+msgstr "すべてのモニターにウィンドウリストを表示"
+
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:34
 msgid ""
 "Whether to show the window list on all connected monitors or only on the "
 "primary one."
 msgstr ""
-"ウィンドウリストをすべての接続モニターに表示するかプライマリーモニターにのみ"
-"表示するかの設定です。"
+"ウィンドウ一覧を接続されているすべてのモニターに表示するか、プライマリモニ"
+"ターのみに表示するかを設定します。"
 
-#: extensions/window-list/prefs.js:29
+# 設定項目であるため、「表示する」ではなく「表示」を採用
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "ウィンドウ一覧でワークスペースプレビューを表示"
+
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "ウィンドウのグループ化"
 
-#: extensions/window-list/prefs.js:58
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "ウィンドウをグループ化しない"
 
-#: extensions/window-list/prefs.js:59
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
-msgstr "ウィンドウ一覧の幅が制限される時にグループ化する"
+msgstr "スペースが限られている場合にウィンドウをグループ化する"
 
-#: extensions/window-list/prefs.js:60
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
-msgstr "ウィンドウをグループ化する"
+msgstr "常にウィンドウをグループ化する"
 
-#: extensions/window-list/prefs.js:94
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "すべてのモニターに表示する"
 
-#: extensions/window-list/workspaceIndicator.js:207
-#: extensions/workspace-indicator/extension.js:213
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "トップバーでワークスペースプレビューを表示"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "%s キーを押すと編集モードに入ります"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "設定"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "ワークスペースインジケーター"
 
-#: extensions/workspace-indicator/prefs.js:34
-msgid "Workspace Names"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "インジケーター"
+
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "プレビュー"
+
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
 msgstr "ワークスペース名"
 
-#: extensions/workspace-indicator/prefs.js:67
-#, javascript-format
-msgid "Workspace %d"
-msgstr "ワークスペース %d"
+# もしくは「振る舞い」
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "動作"
 
-#: extensions/workspace-indicator/prefs.js:218
-msgid "Add Workspace"
-msgstr "ワークスペースを追加"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "動的"
+
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "空のワークスペースを自動的に削除します。"
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "固定数"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "固定ワークスペースの数を指定します。"
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "ワークスペース数"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
+msgid "Workspaces"
+msgstr "ワークスペース"
+
+#~ msgid "Applications"
+#~ msgstr "アプリケーション"
+
+#~ msgid "Computer"
+#~ msgstr "コンピューター"
 
 #~ msgid "Application"
 #~ msgstr "アプリケーション"
@@ -359,12 +491,6 @@ msgstr "ワークスペースを追加"
 #~ msgid "Window management and application launching"
 #~ msgstr "ウィンドウ管理とアプリケーション起動"
 
-#~ msgid "CPU"
-#~ msgstr "CPU"
-
-#~ msgid "Memory"
-#~ msgstr "メモリ"
-
 #~ msgid "Normal"
 #~ msgstr "標準"
 
@@ -379,9 +505,6 @@ msgstr "ワークスペースを追加"
 
 #~ msgid "Display"
 #~ msgstr "ディスプレイ"
-
-#~ msgid "Display Settings"
-#~ msgstr "ディスプレイ設定"
 
 #~ msgid "Suspend"
 #~ msgstr "サスペンド"
