@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-10-16 14:41+0000\n"
-"PO-Revision-Date: 2024-10-20 21:54+0200\n"
+"POT-Creation-Date: 2025-06-18 23:32+0000\n"
+"PO-Revision-Date: 2025-06-29 09:56+0200\n"
 "Last-Translator: Jordi Mas <jmas@softcatala.org>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-DamnedLies-Scope: partial\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/gnome-classic.desktop.in:3
 msgid "GNOME Classic"
@@ -38,11 +38,11 @@ msgstr "GNOME clàssic amb Wayland"
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME clàssic amb Xorg"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Preferides"
 
-#: extensions/apps-menu/extension.js:400
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Aplicacions"
 
@@ -59,17 +59,17 @@ msgstr ""
 "d'aplicació (nom del fitxer de l'escriptori), seguit de dos punts i el "
 "número de l'espai de treball"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "Regles dels espais de treball"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "Afegeix una regla"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:187
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Ha fallat l'expulsió de la unitat «%s»:"
@@ -113,38 +113,38 @@ msgstr ""
 "posicionar-lo a baix. Cal reiniciar el Shell per tal que aquest canvi tingui "
 "efecte."
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "Llocs"
 
-#: extensions/places-menu/placeDisplay.js:53
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "No s'ha pogut iniciar «%s»"
 
-#: extensions/places-menu/placeDisplay.js:68
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "No s'ha pogut muntar el volum «%s»"
 
-#: extensions/places-menu/placeDisplay.js:316
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "Inici"
 
-#: extensions/places-menu/placeDisplay.js:322
+#: extensions/places-menu/placeDisplay.js:321
 msgid "Recent"
 msgstr "Recent"
 
-#: extensions/places-menu/placeDisplay.js:328
+#: extensions/places-menu/placeDisplay.js:327
 msgid "Starred"
 msgstr "Destacat"
 
-#: extensions/places-menu/placeDisplay.js:348
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Network"
 msgstr "Xarxa"
 
-#: extensions/places-menu/placeDisplay.js:355
+#: extensions/places-menu/placeDisplay.js:354
 msgid "Trash"
 msgstr "Paperera"
 
@@ -236,47 +236,47 @@ msgstr "Nom del tema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "El nom del tema que es carregarà des de ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Tanca"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Desminimitza"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Minimitza"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Desmaximitza"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Maximitza"
 
-#: extensions/window-list/extension.js:641
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Minimitza-ho tot"
 
-#: extensions/window-list/extension.js:647
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Desminimitza-ho tot"
 
-#: extensions/window-list/extension.js:653
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Maximitza-ho tot"
 
-#: extensions/window-list/extension.js:661
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Desmaximitza-ho tot"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Tanca-ho tot"
 
-#: extensions/window-list/extension.js:911 extensions/window-list/prefs.js:24
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Llista de finestres"
 
@@ -294,7 +294,7 @@ msgstr ""
 "«auto» (automàticament) i «always» (sempre)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "Mostra les finestres de tots els espais de treball"
 
@@ -321,23 +321,23 @@ msgid "Show workspace previews in window list"
 msgstr ""
 "Mostra les previsualitzacions dels espais de treball a la llista de finestres"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "Agrupació de finestres"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "Mai agrupis les finestres"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "Agrupa les finestres quan l'espai estigui limitat"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "Agrupa les finestres sempre"
 
-#: extensions/window-list/prefs.js:69
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "Mostra a tots els monitors"
 
@@ -346,34 +346,68 @@ msgid "Show workspace previews in top bar"
 msgstr ""
 "Mostra les previsualitzacions dels espais de treball a la barra superior"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Premeu %s per editar"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "Paràmetres"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "Indicador de l'espai de treball"
 
-#: extensions/workspace-indicator/workspacePrefs.js:29
-msgid "Show Previews"
-msgstr "Mostra previsualitzacions"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "Indicador"
 
-#: extensions/workspace-indicator/workspacePrefs.js:87
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Espai de treball %d"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "Previsualitzacions"
 
-#: extensions/workspace-indicator/workspacePrefs.js:154
-msgid "Workspace Names"
-msgstr "Noms dels espais de treball"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
+msgstr "Nom de l'espai de treball"
 
-#: extensions/workspace-indicator/workspacePrefs.js:171
-msgid "Add Workspace"
-msgstr "Afegeix un espai de treball"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Comportament"
 
-#: extensions/workspace-indicator/workspacePrefs.js:196
-msgid "Remove"
-msgstr "Suprimeix"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Dinàmica"
 
-#: extensions/workspace-indicator/workspacePrefs.js:226
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Suprimeix automàticament els espais de treball buits."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Nombre fix"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Especifiqueu un nombre d'espais de treball permanents."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "Nombre d'espais de treball"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "Espais de treball"
+
+#, javascript-format
+#~ msgid "Workspace %d"
+#~ msgstr "Espai de treball %d"
+
+#~ msgid "Add Workspace"
+#~ msgstr "Afegeix un espai de treball"
+
+#~ msgid "Remove"
+#~ msgstr "Suprimeix"
 
 #~ msgid "Computer"
 #~ msgstr "Ordinador"
