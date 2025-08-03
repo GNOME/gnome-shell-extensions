@@ -1,3 +1,14 @@
+49.beta
+=======
+* Misc. bug fixes and cleanups [Florian; !408]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Anders Jonsson [sv], Makoto Sakaguchi [ja], Danial Behzadi [fa],
+  Jordi Mas i Hernandez [ca]
+
 49.alpha.1
 ==========
 * workspaces-indicator, window-list: Better expose workspace names
