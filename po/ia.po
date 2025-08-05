@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2025-05-15 14:23+0000\n"
-"PO-Revision-Date: 2025-05-26 20:20-0400\n"
+"POT-Creation-Date: 2025-08-03 18:55+0000\n"
+"PO-Revision-Date: 2025-08-04 22:57-0400\n"
 "Last-Translator: Emilio Sepúlveda <emism.translations@gmail.com>\n"
 "Language-Team: Interlingua <softinterlingua@gmail.com>\n"
 "Language: ia\n"
@@ -21,24 +21,24 @@ msgstr ""
 "X-DL-Module: gnome-shell-extensions\n"
 "X-DL-Branch: main\n"
 "X-DL-Domain: po\n"
-"X-DL-State: Translating\n"
+"X-DL-State: None\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Gtranslator 48.0\n"
 
-#: data/gnome-classic.desktop.in:3
+#: data/gnome-classic.desktop.in:2
 msgid "GNOME Classic"
 msgstr "GNOME Classic"
 
-#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
-#: data/gnome-classic-xorg.desktop.in:4
+#: data/gnome-classic.desktop.in:3 data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:3
 msgid "This session logs you into GNOME Classic"
 msgstr "Iste session es initiate in GNOME Classic"
 
-#: data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-wayland.desktop.in:2
 msgid "GNOME Classic on Wayland"
 msgstr "GNOME Classic sur Wayland"
 
-#: data/gnome-classic-xorg.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:2
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME Classic sur Xorg"
 
@@ -238,47 +238,47 @@ msgstr "Nomine de thema"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Le nomine del thema a cargar ab ~/.themes/nomine/gnome-shell"
 
-#: extensions/window-list/extension.js:95
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Clauder"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Disminimisar"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Minimisar"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Dismaximisar"
 
-#: extensions/window-list/extension.js:127
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Maximisar"
 
-#: extensions/window-list/extension.js:719
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Minimisar toto"
 
-#: extensions/window-list/extension.js:725
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Disminimisar toto"
 
-#: extensions/window-list/extension.js:731
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Maximisar toto"
 
-#: extensions/window-list/extension.js:739
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Dismaximisar toto"
 
-#: extensions/window-list/extension.js:747
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Clauder toto"
 
-#: extensions/window-list/extension.js:990 extensions/window-list/prefs.js:23
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Lista de fenestras"
 
@@ -346,31 +346,65 @@ msgid "Show workspace previews in top bar"
 msgstr ""
 "Monstra le previsualisationes de spatios de travalio in le barra superior"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Preme %s pro modificar"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "Parametros"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "Indicator de spatios de travalio"
 
-#: extensions/workspace-indicator/workspacePrefs.js:28
-msgid "Show Previews"
-msgstr "Monstrar previsualisationes"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "Indicator"
 
-#: extensions/workspace-indicator/workspacePrefs.js:86
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Spatio de travalio %d"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "Previsualisationes"
 
-#: extensions/workspace-indicator/workspacePrefs.js:153
-msgid "Workspace Names"
-msgstr "Nomines de spatio de travalio"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
+msgstr "Nomine de spatio de travalio"
 
-#: extensions/workspace-indicator/workspacePrefs.js:170
-msgid "Add Workspace"
-msgstr "Adder spatio de travalio"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Comportamento"
 
-#: extensions/workspace-indicator/workspacePrefs.js:195
-msgid "Remove"
-msgstr "Remover"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Dynamic"
 
-#: extensions/workspace-indicator/workspacePrefs.js:225
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Remove automaticamente le spatios de travalio vacue."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Numero fixate"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Specifica un numero de spatios de travalio permanente."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "Numero de spatios de travalio"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "Spatios de travalio"
+
+#, javascript-format
+#~ msgid "Workspace %d"
+#~ msgstr "Spatio de travalio %d"
+
+#~ msgid "Add Workspace"
+#~ msgstr "Adder spatio de travalio"
+
+#~ msgid "Remove"
+#~ msgstr "Remover"
