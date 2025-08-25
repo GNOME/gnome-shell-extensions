@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2025-02-13 00:15+0000\n"
-"PO-Revision-Date: 2025-02-22 12:54+0100\n"
+"POT-Creation-Date: 2025-08-19 21:51+0000\n"
+"PO-Revision-Date: 2025-08-25 14:57+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -20,28 +20,28 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: data/gnome-classic.desktop.in:3
+#: data/gnome-classic.desktop.in:2
 msgid "GNOME Classic"
 msgstr "Klasyczne GNOME"
 
-#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
-#: data/gnome-classic-xorg.desktop.in:4
+#: data/gnome-classic.desktop.in:3 data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:3
 msgid "This session logs you into GNOME Classic"
 msgstr "Ta sesja loguje do klasycznego środowiska GNOME"
 
-#: data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-wayland.desktop.in:2
 msgid "GNOME Classic on Wayland"
 msgstr "Klasyczne GNOME (Wayland)"
 
-#: data/gnome-classic-xorg.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:2
 msgid "GNOME Classic on Xorg"
 msgstr "Klasyczne GNOME (Xorg)"
 
-#: extensions/apps-menu/extension.js:125
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: extensions/apps-menu/extension.js:399
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Programy"
 
@@ -54,8 +54,8 @@ msgid ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 msgstr ""
-"Lista ciągów, każdy zawierający identyfikator programu (nazwę pliku ."
-"desktop) z przecinkiem i numerem obszaru roboczego"
+"Lista ciągów, każdy zawierający identyfikator programu (nazwę "
+"pliku .desktop) z przecinkiem i numerem obszaru roboczego"
 
 #: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
@@ -232,47 +232,47 @@ msgstr "Nazwa motywu"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Nazwa motywu do wczytania z katalogu ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:95
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Zamknij"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Cofnij minimalizację"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Zminimalizuj"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Cofnij maksymalizację"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Zmaksymalizuj"
 
-#: extensions/window-list/extension.js:721
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Zminimalizuj wszystkie"
 
-#: extensions/window-list/extension.js:727
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Cofnij minimalizację wszystkich"
 
-#: extensions/window-list/extension.js:733
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Zmaksymalizuj wszystkie"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Cofnij maksymalizację wszystkich"
 
-#: extensions/window-list/extension.js:749
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Zamknij wszystkie"
 
-#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Lista okien"
 
@@ -338,31 +338,55 @@ msgstr "Wyświetlanie na wszystkich monitorach"
 msgid "Show workspace previews in top bar"
 msgstr "Wyświetlanie podglądów obszarów roboczych na górnym pasku"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Naciśnięcie %s modyfikuje"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "Wskaźnik obszaru roboczego"
 
-#: extensions/workspace-indicator/workspacePrefs.js:28
-msgid "Show Previews"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "Wskaźnik"
+
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
 msgstr "Podglądy"
 
-#: extensions/workspace-indicator/workspacePrefs.js:86
-#, javascript-format
-msgid "Workspace %d"
-msgstr "%d. obszar roboczy"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
+msgstr "Nazwa obszaru roboczego"
 
-#: extensions/workspace-indicator/workspacePrefs.js:153
-msgid "Workspace Names"
-msgstr "Nazwy obszarów roboczych"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Zachowanie"
 
-#: extensions/workspace-indicator/workspacePrefs.js:170
-msgid "Add Workspace"
-msgstr "Dodaj obszar roboczy"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Dynamiczne"
 
-#: extensions/workspace-indicator/workspacePrefs.js:195
-msgid "Remove"
-msgstr "Usuwa"
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Automatycznie usuwa puste obszary robocze."
 
-#: extensions/workspace-indicator/workspacePrefs.js:225
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Stała liczba"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Określona liczba trwałych obszarów roboczych."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "Liczba obszarów roboczych"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "Obszary robocze"
