@@ -1,49 +1,49 @@
 # Hungarian translation for gnome-shell-extensions.
-# Copyright (C) 2011, 2012, 2013, 2014, 2017, 2019, 2022, 2024 Free Software Foundation, Inc.
+# Copyright (C) 2011, 2012, 2013, 2014, 2017, 2019, 2022, 2024, 2025 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-shell-extensions package.
 #
 # Biró Balázs <arch.scar at gmail dot com>, 2011.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012, 2013.
-# Balázs Úr <ur.balazs at fsf dot hu>, 2013, 2014, 2017, 2019, 2022, 2024.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2013, 2014, 2017, 2019, 2022, 2024, 2025.
 # Balázs Meskó <mesko.balazs at fsf dot hu>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/is"
 "sues\n"
-"POT-Creation-Date: 2024-04-29 15:27+0000\n"
-"PO-Revision-Date: 2024-06-28 16:24+0200\n"
+"POT-Creation-Date: 2025-08-25 16:01+0000\n"
+"PO-Revision-Date: 2025-08-27 23:08+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/gnome-classic.desktop.in:3
+#: data/gnome-classic.desktop.in:2
 msgid "GNOME Classic"
 msgstr "Klasszikus GNOME"
 
-#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
-#: data/gnome-classic-xorg.desktop.in:4
+#: data/gnome-classic.desktop.in:3 data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:3
 msgid "This session logs you into GNOME Classic"
 msgstr "Bejelentkezés a klasszikus GNOME környezetbe"
 
-#: data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-wayland.desktop.in:2
 msgid "GNOME Classic on Wayland"
 msgstr "Klasszikus GNOME Waylanden"
 
-#: data/gnome-classic-xorg.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:2
 msgid "GNOME Classic on Xorg"
 msgstr "Klasszikus GNOME Xorgon"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Kedvencek"
 
-#: extensions/apps-menu/extension.js:400
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Alkalmazások"
 
@@ -59,17 +59,17 @@ msgstr ""
 "Alkalmazásazonosítókat (.desktop fájl neve), majd kettősponttal elválasztva "
 "a munkaterület számát tartalmazó karakterláncok sorozata"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "Munkaterület-szabályok"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "Szabály hozzáadása"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:218
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "A(z) „%s” meghajtó kiadása nem sikerült:"
@@ -111,33 +111,41 @@ msgstr ""
 "tetejére helyezi el, az alapértelmezett alja helyett. Ezen beállítás "
 "módosítása a Shell újraindítását igényli."
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "Helyek"
 
-#: extensions/places-menu/placeDisplay.js:60
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Nem sikerült a(z) „%s” indítása"
 
-#: extensions/places-menu/placeDisplay.js:75
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Nem sikerült a kötet csatolása ennél: „%s”"
 
-#: extensions/places-menu/placeDisplay.js:135
-#: extensions/places-menu/placeDisplay.js:158
-msgid "Computer"
-msgstr "Számítógép"
-
-#: extensions/places-menu/placeDisplay.js:333
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "Saját mappa"
 
-#: extensions/places-menu/placeDisplay.js:378
-msgid "Browse Network"
-msgstr "Hálózat tallózása"
+#: extensions/places-menu/placeDisplay.js:321
+msgid "Recent"
+msgstr "Legutóbbi"
+
+#: extensions/places-menu/placeDisplay.js:327
+msgid "Starred"
+msgstr "Csillagozott"
+
+#: extensions/places-menu/placeDisplay.js:347
+#| msgid "Browse Network"
+msgid "Network"
+msgstr "Hálózat"
+
+#: extensions/places-menu/placeDisplay.js:354
+msgid "Trash"
+msgstr "Kuka"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
@@ -227,47 +235,47 @@ msgstr "Témanév"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "A ~/.themes/név/gnome-shell alól betöltendő téma neve"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Bezárás"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Minimalizálás megszüntetése"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Minimalizálás"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Maximalizálás megszüntetése"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Maximalizálás"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Minden minimalizálása"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Minden minimalizálásának megszüntetése"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Minden maximalizálása"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Minden maximalizálásának megszüntetése"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Minden bezárása"
 
-#: extensions/window-list/extension.js:778
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Ablaklista"
 
@@ -285,7 +293,7 @@ msgstr ""
 "„always” (mindig)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "Ablakok megjelenítése az összes munkaterületről"
 
@@ -311,52 +319,83 @@ msgstr ""
 msgid "Show workspace previews in window list"
 msgstr "Munkaterület-előnézetek megjelenítése az ablaklistában"
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "Ablakcsoportosítás"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "Soha ne csoportosítsa az ablakokat"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "Ablakok csoportosítása, ha kevés a hely"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "Mindig csoportosítsa az ablakokat"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "Megjelenítés minden monitoron"
-
-#: extensions/window-list/prefs.js:92
-msgid "Show workspace previews"
-msgstr "Munkaterület-előnézetek megjelenítése"
-
-#: extensions/workspace-indicator/prefs.js:30
-msgid "Show Previews In Top Bar"
-msgstr "Előnézetek megjelenítése a felső sávon"
-
-#: extensions/workspace-indicator/prefs.js:88
-#, javascript-format
-msgid "Workspace %d"
-msgstr "%d. munkaterület"
-
-#: extensions/workspace-indicator/prefs.js:155
-msgid "Workspace Names"
-msgstr "Munkaterületnevek"
-
-#: extensions/workspace-indicator/prefs.js:281
-msgid "Add Workspace"
-msgstr "Munkaterület hozzáadása"
 
 #: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
 msgid "Show workspace previews in top bar"
 msgstr "Munkaterület-előnézetek megjelenítése a felső sávon"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
-msgid "Workspace Indicator"
-msgstr "Munkaterület-indikátor"
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Nyomja meg a(z) %s billentyűt a szerkesztéshez"
 
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "Beállítások"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
+msgid "Workspace Indicator"
+msgstr "Munkaterület-jelző"
+
+#: extensions/workspace-indicator/workspacePrefs.js:20
+#| msgid "Workspace Indicator"
+msgid "Indicator"
+msgstr "Jelző"
+
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "Előnézetek"
+
+#: extensions/workspace-indicator/workspacePrefs.js:35
+#| msgid "Workspace Names"
+msgid "Workspace Name"
+msgstr "Munkaterület neve"
+
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Viselkedés"
+
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Dinamikus"
+
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Automatikusan eltávolítja az üres munkaterületeket."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Rögzített szám"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Adja meg az állandó munkaterületek számát."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+#| msgid "Add Workspace"
+msgid "Number of Workspaces"
+msgstr "Munkaterületek száma"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
+#| msgid "Workspace %d"
+msgid "Workspaces"
+msgstr "Munkaterületek"
