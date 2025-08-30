@@ -2,47 +2,47 @@
 # Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2011.
-# Yosef Or Boczko <yoseforb@gmail.com>, 2013-2024.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2013-2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-10-16 14:41+0000\n"
-"PO-Revision-Date: 2024-11-25 10:45+0200\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"POT-Creation-Date: 2025-08-27 21:10+0000\n"
+"PO-Revision-Date: 2025-08-30 23:36+0300\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Gtranslator 48.0\n"
 
-#: data/gnome-classic.desktop.in:3
+#: data/gnome-classic.desktop.in:2
 msgid "GNOME Classic"
 msgstr "‏GNOME קלסי"
 
-#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
-#: data/gnome-classic-xorg.desktop.in:4
+#: data/gnome-classic.desktop.in:3 data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:3
 msgid "This session logs you into GNOME Classic"
 msgstr "הפעלה זו מכניסה אותך למצב הקלסי של GNOME"
 
-#: data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-wayland.desktop.in:2
 msgid "GNOME Classic on Wayland"
 msgstr "‏GNOME קלסי על גבי Wayland"
 
-#: data/gnome-classic-xorg.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:2
 msgid "GNOME Classic on Xorg"
 msgstr "‏GNOME קלסי על גבי Xorg"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "מועדפים"
 
-#: extensions/apps-menu/extension.js:400
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "יישומים"
 
@@ -58,17 +58,17 @@ msgstr ""
 "A list of strings, each containing an application id (desktop file name), "
 "followed by a colon and the workspace number"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "כללי מרחב העבודה"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "הוספת כלל"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:187
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "שליפת הכונן „%s” נכשלה:"
@@ -109,38 +109,38 @@ msgstr ""
 "shell default of placing it at the bottom. Changing this setting requires "
 "restarting the shell to have any effect."
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "מקומות"
 
-#: extensions/places-menu/placeDisplay.js:53
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "הרצת „%s” נכשלה"
 
-#: extensions/places-menu/placeDisplay.js:68
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "עיגון הכרך „%s” נכשל"
 
-#: extensions/places-menu/placeDisplay.js:316
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "בית"
 
-#: extensions/places-menu/placeDisplay.js:322
+#: extensions/places-menu/placeDisplay.js:321
 msgid "Recent"
 msgstr "אחרונים"
 
-#: extensions/places-menu/placeDisplay.js:328
+#: extensions/places-menu/placeDisplay.js:327
 msgid "Starred"
 msgstr "מסומנים בכוכב"
 
-#: extensions/places-menu/placeDisplay.js:348
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Network"
 msgstr "רשת"
 
-#: extensions/places-menu/placeDisplay.js:355
+#: extensions/places-menu/placeDisplay.js:354
 msgid "Trash"
 msgstr "אשפה"
 
@@ -232,47 +232,47 @@ msgstr "Theme name"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:92
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "סגירה"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "ביטול המזעור"
 
-#: extensions/window-list/extension.js:119
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "מזעור"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "ביטול ההגדלה"
 
-#: extensions/window-list/extension.js:126
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "הגדלה"
 
-#: extensions/window-list/extension.js:641
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "מזעור הכל"
 
-#: extensions/window-list/extension.js:647
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "ביטול מזעור הכל"
 
-#: extensions/window-list/extension.js:653
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "הגדלת הכל"
 
-#: extensions/window-list/extension.js:661
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "ביטול הגדלת הכל"
 
-#: extensions/window-list/extension.js:669
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "סגירת הכל"
 
-#: extensions/window-list/extension.js:911 extensions/window-list/prefs.js:24
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "רשימת חלונות"
 
@@ -289,7 +289,7 @@ msgstr ""
 "Possible values are “never”, “auto” and “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:75
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "הצגת חלונות מכל מרחבי העבודה"
 
@@ -313,23 +313,23 @@ msgstr ""
 msgid "Show workspace previews in window list"
 msgstr "הצגת תצוגה מקדימה של מרחבי העבודה ברשימת החלונות"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "קיבוץ חלונות"
 
-#: extensions/window-list/prefs.js:47
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "לעולם לא לקבץ חלונות"
 
-#: extensions/window-list/prefs.js:48
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "קיבוץ חלונות כאשר המקום מוגבל"
 
-#: extensions/window-list/prefs.js:49
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "תמיד לקבץ חלונות"
 
-#: extensions/window-list/prefs.js:69
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "הצגה בכל הצגים"
 
@@ -337,34 +337,68 @@ msgstr "הצגה בכל הצגים"
 msgid "Show workspace previews in top bar"
 msgstr "הצגת תצוגה מקדימה של מרחבי העבודה בלוח העליון"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "יש ללחוץ על %s לעריכה"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:512
+msgid "Settings"
+msgstr "הגדרות"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:592
 msgid "Workspace Indicator"
 msgstr "מחוון מרחבי עבודה"
 
-#: extensions/workspace-indicator/workspacePrefs.js:29
-msgid "Show Previews"
-msgstr "הצגת תצוגות מקדימות"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "מכוון"
 
-#: extensions/workspace-indicator/workspacePrefs.js:87
-#, javascript-format
-msgid "Workspace %d"
-msgstr "מרחב עבודה %d"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "תצוגות מקדימות"
 
-#: extensions/workspace-indicator/workspacePrefs.js:154
-msgid "Workspace Names"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
 msgstr "שם מרחב העבודה"
 
-#: extensions/workspace-indicator/workspacePrefs.js:171
-msgid "Add Workspace"
-msgstr "הוספת מרחב עבודה"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "התנהגות"
 
-#: extensions/workspace-indicator/workspacePrefs.js:196
-msgid "Remove"
-msgstr "הסרה"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "מרחבי עבודה גמישים"
 
-#: extensions/workspace-indicator/workspacePrefs.js:226
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "מסיר מרחבי עבודה ריקים אוטומטית."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "מספר קבוע של מרחבי עבודה"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "נא לציין מספר של מרחבי עבודה קבועים."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "מספר מרחבי עבודה"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "מרחבי עבודה"
+
+#, javascript-format
+#~ msgid "Workspace %d"
+#~ msgstr "מרחב עבודה %d"
+
+#~ msgid "Add Workspace"
+#~ msgstr "הוספת מרחב עבודה"
+
+#~ msgid "Remove"
+#~ msgstr "הסרה"
 
 #~ msgid "Computer"
 #~ msgstr "מחשב"
@@ -474,9 +508,6 @@ msgstr "מרחבי עבודה"
 
 #~ msgid "Display"
 #~ msgstr "תצוגה"
-
-#~ msgid "Display Settings"
-#~ msgstr "הגדרות תצוגה"
 
 #~ msgid "Available"
 #~ msgstr "פנוי"
