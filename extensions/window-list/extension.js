@@ -1010,7 +1010,7 @@ class WindowList extends St.Widget {
             this._onAppStateChanged.bind(this), this);
 
         // Hack: OSK gesture is tied to visibility, piggy-back on that
-        Main.keyboard._bottomDragAction.connectObject('notify::enabled',
+        Main.keyboard._bottomDragGesture.connectObject('notify::enabled',
             action => {
                 const visible = !action.enabled;
                 if (visible) {
