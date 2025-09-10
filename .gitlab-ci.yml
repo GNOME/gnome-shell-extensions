@@ -23,7 +23,7 @@ stages:
   - deploy
 
 default:
-  image: registry.gitlab.gnome.org/gnome/gnome-shell/fedora/41:2024-10-18.0
+  image: registry.gitlab.gnome.org/gnome/gnome-shell/fedora/43:2025-09-10.1
 
 variables:
   FDO_UPSTREAM_REPO: GNOME/gnome-shell-extensions
