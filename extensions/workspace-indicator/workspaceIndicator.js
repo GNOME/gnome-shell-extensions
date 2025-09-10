@@ -451,6 +451,9 @@ class EditableMenuItem extends PopupMenu.PopupBaseMenuItem {
             if (event.get_key_symbol() !== Clutter.KEY_e)
                 return Clutter.EVENT_PROPAGATE;
 
+            if (this._editButton.checked)
+                return Clutter.EVENT_PROPAGATE;
+
             this._editButton.checked = true;
             return Clutter.EVENT_STOP;
         });
