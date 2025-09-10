@@ -448,8 +448,11 @@ class EditableMenuItem extends PopupMenu.PopupBaseMenuItem {
             }
         });
         this.connect('key-release-event', (o, event) => {
-            if (event.get_key_symbol() === Clutter.KEY_e)
-                this._editButton.checked = true;
+            if (event.get_key_symbol() !== Clutter.KEY_e)
+                return Clutter.EVENT_PROPAGATE;
+
+            this._editButton.checked = true;
+            return Clutter.EVENT_STOP;
         });
 
         global.stage.connectObject('notify::key-focus', () => {
