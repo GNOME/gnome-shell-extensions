@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2025-02-13 00:15+0000\n"
-"PO-Revision-Date: 2025-02-24 22:25+0200\n"
-"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
+"POT-Creation-Date: 2025-09-11 16:55+0000\n"
+"PO-Revision-Date: 2025-09-13 21:22+0300\n"
+"Last-Translator: Aurimas Černius <aurimas.cernius@mailo.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -19,30 +19,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.7\n"
 
-#: data/gnome-classic.desktop.in:3
+#: data/gnome-classic.desktop.in:2
 msgid "GNOME Classic"
 msgstr "Klasikinis GNOME"
 
-#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
-#: data/gnome-classic-xorg.desktop.in:4
+#: data/gnome-classic.desktop.in:3 data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:3
 msgid "This session logs you into GNOME Classic"
 msgstr "Šis seansas prijungs jus prie klasikinio GNOME"
 
-#: data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-wayland.desktop.in:2
 msgid "GNOME Classic on Wayland"
 msgstr "Klasikinis GNOME Wayland aplinkoje"
 
-#: data/gnome-classic-xorg.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:2
 msgid "GNOME Classic on Xorg"
 msgstr "Klasikinis GNOME Xorg aplinkoje"
 
-#: extensions/apps-menu/extension.js:125
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Mėgiamiausi"
 
-#: extensions/apps-menu/extension.js:399
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Programos"
 
@@ -232,47 +232,47 @@ msgstr "Temos pavadinimas"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Temos pavadinimas, kuri bus įkrauta iš ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:95
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Užverti"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Grąžinti iš sumažinimo"
 
-#: extensions/window-list/extension.js:122
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Sumažinti"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Grąžinti iš išdidinimo"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Išdidinti"
 
-#: extensions/window-list/extension.js:721
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Sumažinti visus"
 
-#: extensions/window-list/extension.js:727
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Grąžinti visus iš sumažinimo"
 
-#: extensions/window-list/extension.js:733
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Išdidinti visus"
 
-#: extensions/window-list/extension.js:741
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Grąžinti visus iš išdidinimo"
 
-#: extensions/window-list/extension.js:749
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Užverti visus"
 
-#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Langų sąrašas"
 
@@ -337,34 +337,68 @@ msgstr "Rodyti visuose monitoriuose"
 msgid "Show workspace previews in top bar"
 msgstr "Rodo darbo sričių peržiūras viršutinėje juostoje"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Spauskite %s keitimui"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:518
+msgid "Settings"
+msgstr "Nuostatos"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:598
 msgid "Workspace Indicator"
 msgstr "Darbo srities indikatorius"
 
-#: extensions/workspace-indicator/workspacePrefs.js:28
-msgid "Show Previews"
-msgstr "Rodyti peržiūras"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "Indikatorius"
 
-#: extensions/workspace-indicator/workspacePrefs.js:86
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Darbo sritis %d"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "Peržiūros"
 
-#: extensions/workspace-indicator/workspacePrefs.js:153
-msgid "Workspace Names"
-msgstr "Darbo sričių pavadinimai"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
+msgstr "Darbo srities pavadinimas"
 
-#: extensions/workspace-indicator/workspacePrefs.js:170
-msgid "Add Workspace"
-msgstr "Pridėti darbo sritį"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Elgesys"
 
-#: extensions/workspace-indicator/workspacePrefs.js:195
-msgid "Remove"
-msgstr "Pašalinti"
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Dinaminis"
 
-#: extensions/workspace-indicator/workspacePrefs.js:225
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Automatiškai pašalina tuščias darbo sritis."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Fiksuotas skaičius"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Nurodyti nuolatinį darbo sričių skaičių."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "Darbo sričių skaičius"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "Darbo sritys"
+
+#, javascript-format
+#~ msgid "Workspace %d"
+#~ msgstr "Darbo sritis %d"
+
+#~ msgid "Add Workspace"
+#~ msgstr "Pridėti darbo sritį"
+
+#~ msgid "Remove"
+#~ msgstr "Pašalinti"
 
 #~ msgid "Computer"
 #~ msgstr "Kompiuteris"
