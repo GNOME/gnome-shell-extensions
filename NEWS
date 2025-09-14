@@ -1,3 +1,15 @@
+49.0
+====
+* window-list: Adjust to gnome-shell changes [Florian; !421]
+* system-monitor: Unbreak on BSD [Antoine; !356]
+* Misc. bug fixes and cleanups [Florian; !422, !423]
+
+Contributors:
+  Antoine Jacoutot, Florian Müllner
+
+Translators:
+  Jiri Grönroos [fi], Aurimas Aurimas Černius [lt]
+
 49.rc
 =====
 
