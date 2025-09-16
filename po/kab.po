@@ -2,51 +2,52 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# ButterflyOfFire <ButterflyOfFire@protonmail.com>, 2024.
+# ButterflyOfFire <butterflyoffire@protonmail.com>, 2024-2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2024-03-12 11:27+0000\n"
-"PO-Revision-Date: 2024-03-23 07:16+0100\n"
-"Last-Translator: sa\n"
-"Language-Team: Kabyle <>\n"
+"POT-Creation-Date: 2025-09-14 20:09+0000\n"
+"PO-Revision-Date: 2025-09-16 18:51+0100\n"
+"Last-Translator: ButterflyOfFire <butterflyoffire@protonmail.com>\n"
+"Language-Team: Kabyle\n"
 "Language: kab\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Gtranslator 48.0\n"
 "X-DL-Team: kab\n"
 "X-DL-Module: gnome-shell-extensions\n"
 "X-DL-Branch: main\n"
 "X-DL-Domain: po\n"
 "X-DL-State: Translating\n"
+"X-DL-Lang: kab\n"
 
-#: data/gnome-classic.desktop.in:3
+#: data/gnome-classic.desktop.in:2
 msgid "GNOME Classic"
 msgstr "GNOME aklasiki"
 
-#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
-#: data/gnome-classic-xorg.desktop.in:4
+#: data/gnome-classic.desktop.in:3 data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:3
 msgid "This session logs you into GNOME Classic"
 msgstr "Tiɣimit-agi ak-teqqen ɣer GNOME aklasiki"
 
-#: data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-wayland.desktop.in:2
 msgid "GNOME Classic on Wayland"
 msgstr "GNOME aklasiki ɣef Wayland"
 
-#: data/gnome-classic-xorg.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:2
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME aklasiki ɣef Xorg"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Inurifen"
 
-#: extensions/apps-menu/extension.js:397
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Isnasen"
 
@@ -62,17 +63,17 @@ msgstr ""
 "Tabdart n yiɣewwaren, yal yiwet tesɛa id n usnas (isem n ufaylu n desktop), "
 "ad ḍefrent snat n tenqiḍin akked wuḍḍun n tallunt n umahil"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "Ilugan n tallunt n umahil"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "Rnu alugen"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:218
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Aḍeqqer n uḍebsi “%s” ur yeddi ara:"
@@ -113,33 +114,40 @@ msgstr ""
 "usenfel n shel s wudem amezwer s usemselsi-s ukessar. Asenfel n uɣewwar-a "
 "yesra allus n usenker n shel i wakken ad yeḍru."
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "Imeḍqan"
 
-#: extensions/places-menu/placeDisplay.js:60
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Asekker n “%s” ur yeddi ara"
 
-#: extensions/places-menu/placeDisplay.js:75
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Aserkeb n ubleɣ “%s” ur yeddi ara"
 
-#: extensions/places-menu/placeDisplay.js:135
-#: extensions/places-menu/placeDisplay.js:158
-msgid "Computer"
-msgstr "Aselkim"
-
-#: extensions/places-menu/placeDisplay.js:333
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "Agejdan"
 
-#: extensions/places-menu/placeDisplay.js:378
-msgid "Browse Network"
-msgstr "Snirem azeḍḍa"
+#: extensions/places-menu/placeDisplay.js:321
+msgid "Recent"
+msgstr "Melmi kan"
+
+#: extensions/places-menu/placeDisplay.js:327
+msgid "Starred"
+msgstr "S yitran"
+
+#: extensions/places-menu/placeDisplay.js:347
+msgid "Network"
+msgstr "Azeṭṭa"
+
+#: extensions/places-menu/placeDisplay.js:354
+msgid "Trash"
+msgstr "Taqecwalt"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
@@ -161,43 +169,43 @@ msgstr "Addaden n tkatut"
 msgid "Swap stats"
 msgstr "Addaden n Swap"
 
-#: extensions/system-monitor/extension.js:327
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "Addaden n usali"
 
-#: extensions/system-monitor/extension.js:341
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "Addaden n usadar"
 
-#: extensions/system-monitor/extension.js:355
+#: extensions/system-monitor/extension.js:365
 msgid "System stats"
 msgstr "Addaden n unagraw"
 
-#: extensions/system-monitor/extension.js:403
+#: extensions/system-monitor/extension.js:413
 msgid "Show"
 msgstr "Sken"
 
-#: extensions/system-monitor/extension.js:405
+#: extensions/system-monitor/extension.js:415
 msgid "CPU"
 msgstr "CPU"
 
-#: extensions/system-monitor/extension.js:407
+#: extensions/system-monitor/extension.js:417
 msgid "Memory"
 msgstr "Takatut"
 
-#: extensions/system-monitor/extension.js:409
+#: extensions/system-monitor/extension.js:419
 msgid "Swap"
-msgstr "Aemmeskel"
+msgstr "Asemmeskel"
 
-#: extensions/system-monitor/extension.js:411
+#: extensions/system-monitor/extension.js:421
 msgid "Upload"
 msgstr "Asali"
 
-#: extensions/system-monitor/extension.js:413
+#: extensions/system-monitor/extension.js:423
 msgid "Download"
 msgstr "Asider"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:428
 msgid "Open System Monitor"
 msgstr "Ldi asefrak n unagraw"
 
@@ -229,47 +237,47 @@ msgstr "Isem n usentel"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Isem n usentel ara yettusidren si ~/.themes/name/gnome-shell"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Mdel"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Ur simẓẓiy ara"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Semẓi"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Ur ssemɣer ara"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Semɣer"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Semẓi-ten akk"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Ur simẓẓiy ara kullec"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Semɣer-iten akk"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Ur ssemɣer ara kullec"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Mdel-iten akk"
 
-#: extensions/window-list/extension.js:773
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Tabdart n yisfuyla"
 
@@ -286,7 +294,7 @@ msgstr ""
 "Azalen yellan: “never”, “auto” akked “always”."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "Sken isfuyla si meṛṛa tallunin n umahil"
 
@@ -308,43 +316,83 @@ msgstr ""
 "Ma yella ad ttwaseknen yisfuyla si meṛṛa tallunin n umahil neɣ ala ɣef "
 "uzwaran."
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:41
+msgid "Show workspace previews in window list"
+msgstr "Sken-d tiskanin n tallunin n umahil deg yiwet n tebdart n usfalu"
+
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "Asegrew n yisfuyla"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "Werǧin ad tesgerweḍ isfuyla"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "Segrew isfuyla ticki tallunt txuṣ"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "Yalas ssegraw isfuyla"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "Sken ɣef yigdilen meṛṛa"
 
-#: extensions/window-list/workspaceIndicator.js:255
-#: extensions/workspace-indicator/extension.js:261
+#: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
+msgid "Show workspace previews in top bar"
+msgstr "Sken-d tiskanin n tallunin n umahil deg ufeggag n ufella"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Sit ɣef %s iwakken ad tesnifleḍṭ"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:518
+msgid "Settings"
+msgstr "Iɣewwaren"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:598
 msgid "Workspace Indicator"
 msgstr "Anamal n wadeg n umahil"
 
-#: extensions/workspace-indicator/prefs.js:69
-#, javascript-format
-msgid "Workspace %d"
-msgstr "Tallunt n umahil %d"
+#: extensions/workspace-indicator/workspacePrefs.js:20
+msgid "Indicator"
+msgstr "Anamal"
 
-#: extensions/workspace-indicator/prefs.js:136
-msgid "Workspace Names"
-msgstr "Ismawen n tallunin n umahil"
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "Tiskanin"
 
-#: extensions/workspace-indicator/prefs.js:262
-msgid "Add Workspace"
-msgstr "Rnu tallunt n umahil"
+#: extensions/workspace-indicator/workspacePrefs.js:35
+msgid "Workspace Name"
+msgstr "Isem n tallunt n umahil"
 
-#~ msgid "Applications"
-#~ msgstr "Isnasen"
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Tiddin"
+
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Asmussan"
+
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Ad ikkes s wudem awurman tallunin n umahil"
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Amḍan usbiḍ"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr ""
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+msgid "Number of Workspaces"
+msgstr "Alḍan n tallunin n umahil"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
+msgid "Workspaces"
+msgstr "Tallunt n umahil"
