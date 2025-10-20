@@ -417,7 +417,7 @@ class EditableMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         this._entry = new St.Entry({
             opacity: 0,
-            reactive: false,
+            visible: false,
         });
         stack.add_child(this._entry);
 
@@ -466,7 +466,7 @@ class EditableMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _switchActor(from, to) {
-        to.reactive = true;
+        to.visible = from.visible = true;
         to.ease({
             opacity: 255,
             duration: 300,
@@ -478,7 +478,7 @@ class EditableMenuItem extends PopupMenu.PopupBaseMenuItem {
             duration: 300,
             mode: Clutter.AnimationMode.EASE_OUT_QUAD,
             onComplete: () => {
-                from.reactive = false;
+                from.visible = false;
             },
         });
     }
