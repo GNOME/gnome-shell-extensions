@@ -41,7 +41,6 @@ variables:
 .prereview-req:
   needs:
     - check-commit-log
-    - check-merge-request
 
 check-commit-log:
   extends:
@@ -62,26 +61,6 @@ check-commit-log:
       - commit-message-junit-report.xml
     reports:
       junit: commit-message-junit-report.xml
-
-check-merge-request:
-  extends:
-    - .fdo.ci-fairy
-  stage: pre-review
-  script:
-    - if [[ x"$CI_MERGE_REQUEST_TARGET_BRANCH_NAME" != "x" ]] ;
-      then
-        ci-fairy check-merge-request --require-allow-collaboration --junit-xml=check-merge-request-report.xml ;
-      else
-        echo "Not a merge request" ;
-      fi
-  rules:
-    - !reference [.pipeline-guard, rules]
-  artifacts:
-    expire_in: 1 week
-    paths:
-      - check-merge-request-report.xml
-    reports:
-      junit: check-merge-request-report.xml
 
 check-reuse:
   stage: pre-review
