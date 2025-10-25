@@ -30,7 +30,7 @@ variables:
   MESON_BUILD_DIR: build
   TARBALL_ARTIFACT_PATH: "${MESON_BUILD_DIR}/meson-dist/${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tar.xz"
 
-.pipeline-guard: &pipeline_guard
+.pipeline-guard:
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_COMMIT_TAG'
@@ -38,7 +38,7 @@ variables:
     - if: '$CI_COMMIT_BRANCH =~ /^gnome-[0-9-]+$/'
     - when: 'manual'
 
-.prereview-req: &prereview_req
+.prereview-req:
   needs:
     - check-commit-log
     - check-merge-request
@@ -54,7 +54,8 @@ check-commit-log:
       else
         echo "Not a merge request" ;
       fi
-  <<: *pipeline_guard
+  rules:
+    - !reference [.pipeline-guard, rules]
   artifacts:
     expire_in: 1 week
     paths:
@@ -73,7 +74,8 @@ check-merge-request:
       else
         echo "Not a merge request" ;
       fi
-  <<: *pipeline_guard
+  rules:
+    - !reference [.pipeline-guard, rules]
   artifacts:
     expire_in: 1 week
     paths:
@@ -91,13 +93,15 @@ check-reuse:
 
 js-check:
   stage: review
-  <<: *prereview_req
+  needs:
+    - !reference [.prereview-req, needs]
   script:
     - gjs-check-syntax
 
 eslint:
   stage: review
-  <<: *prereview_req
+  needs:
+    - !reference [.prereview-req, needs]
   variables:
     LINT_LOG: "eslint-report.xml"
   script:
@@ -108,7 +112,8 @@ eslint:
 
 potfile-js-check:
   stage: review
-  <<: *prereview_req
+  needs:
+    - !reference [.prereview-req, needs]
   script:
     - gjs-check-potfiles
   artifacts:
@@ -117,7 +122,8 @@ potfile-js-check:
 
 build-bundles:
   stage: build
-  <<: *prereview_req
+  needs:
+    - !reference [.prereview-req, needs]
   script:
     - ./export-zips.sh
   artifacts:
@@ -137,7 +143,8 @@ dist-bundles:
 
 fedora-build:
   stage: build
-  <<: *prereview_req
+  needs:
+    - !reference [.prereview-req, needs]
   script:
     - meson setup "$MESON_BUILD_DIR" --werror -Dextension_set=all -Dclassic_mode=true
     - meson compile -C "$MESON_BUILD_DIR"
