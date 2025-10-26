@@ -29,7 +29,7 @@ class Rect {
     }
 
     union(rect2) {
-        let dest = this.copy();
+        const dest = this.copy();
         if (rect2.x < dest.x) {
             dest.width += dest.x - rect2.x;
             dest.x = rect2.x;
@@ -47,7 +47,7 @@ class Rect {
     }
 
     adjusted(dx, dy, dx2, dy2) {
-        let dest = this.copy();
+        const dest = this.copy();
         dest.x += dx;
         dest.y += dy;
         dest.width += -dx + dx2;
@@ -94,16 +94,16 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
         // As we are using pseudo-random movement (See "slot") we need to make sure the list
         // is always sorted the same way no matter which window is currently active.
 
-        let areaRect = new Rect(area.x, area.y, area.width, area.height);
+        const areaRect = new Rect(area.x, area.y, area.width, area.height);
         let bounds = areaRect.copy();
-        let clones = layout.windows;
+        const clones = layout.windows;
 
         let direction = 0;
-        let directions = [];
-        let rects = [];
+        const directions = [];
+        const rects = [];
         for (let i = 0; i < clones.length; i++) {
             // save rectangles into 4-dimensional arrays representing two corners of the rectangular: [left_x, top_y, right_x, bottom_y]
-            let rect = clones[i].boundingBox;
+            const rect = clones[i].boundingBox;
             rects[i] = new Rect(rect.x, rect.y, rect.width, rect.height);
             bounds = bounds.union(rects[i]);
 
@@ -120,10 +120,10 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
             overlap = false;
             for (let i = 0; i < rects.length; i++) {
                 for (let j = 0; j < rects.length; j++) {
-                    let adjustments = [-1, -1, 1, 1]
+                    const adjustments = [-1, -1, 1, 1]
                         .map(v => (v *= WINDOW_PLACEMENT_NATURAL_GAPS));
-                    let iAdjusted = rects[i].adjusted(...adjustments);
-                    let jAdjusted = rects[j].adjusted(...adjustments);
+                    const iAdjusted = rects[i].adjusted(...adjustments);
+                    const jAdjusted = rects[j].adjusted(...adjustments);
                     if (i !== j && iAdjusted.overlap(jAdjusted)) {
                         loopCounter++;
                         overlap = true;
@@ -132,8 +132,8 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
 
                         // Determine pushing direction
                         let iCenter = rects[i].center();
-                        let jCenter = rects[j].center();
-                        let diff = [jCenter[0] - iCenter[0], jCenter[1] - iCenter[1]];
+                        const jCenter = rects[j].center();
+                        const diff = [jCenter[0] - iCenter[0], jCenter[1] - iCenter[1]];
 
                         // Prevent dividing by zero and non-movement
                         if (diff[0] === 0 && diff[1] === 0)
@@ -210,8 +210,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
         } while (overlap && loopCounter < WINDOW_PLACEMENT_NATURAL_MAX_TRANSLATIONS);
 
         // Work out scaling by getting the most top-left and most bottom-right window coords.
-        let scale;
-        scale = Math.min(
+        const scale = Math.min(
             areaRect.width / bounds.width,
             areaRect.height / bounds.height,
             1.0);
@@ -228,7 +227,7 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
 
 
         // rescale to workspace
-        let slots = [];
+        const slots = [];
         for (let i = 0; i < rects.length; i++) {
             rects[i].x = rects[i].x * scale + areaRect.x;
             rects[i].y = rects[i].y * scale + areaRect.y;

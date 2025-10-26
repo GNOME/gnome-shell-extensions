@@ -33,7 +33,7 @@ export default class ThemeManager extends Extension {
 
     _changeTheme() {
         let stylesheet = null;
-        let themeName = this._settings.get_string(SETTINGS_KEY);
+        const themeName = this._settings.get_string(SETTINGS_KEY);
 
         if (themeName) {
             const stylesheetPaths = getThemeDirs()
@@ -43,7 +43,7 @@ export default class ThemeManager extends Extension {
                 .map(dir => `${dir}/${themeName}.css`));
 
             stylesheet = stylesheetPaths.find(path => {
-                let file = Gio.file_new_for_path(path);
+                const file = Gio.file_new_for_path(path);
                 return file.query_exists(null);
             });
         }

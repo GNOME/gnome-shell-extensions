@@ -73,12 +73,12 @@ export default class ScreenshotWindowSizerExtension extends Extension {
         if (window.is_maximized())
             window.unmaximize();
 
-        let workArea = window.get_work_area_current_monitor();
-        let outerRect = window.get_frame_rect();
+        const workArea = window.get_work_area_current_monitor();
+        const outerRect = window.get_frame_rect();
 
         // Double both axes if on a hidpi display
-        let scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
-        let scaledSizes = this.SIZES.map(size => size.map(wh => wh * scaleFactor))
+        const scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
+        const scaledSizes = this.SIZES.map(size => size.map(wh => wh * scaleFactor))
             .filter(([w, h]) => w <= workArea.width && h <= workArea.height);
 
         // Find the nearest 16:9 size for the current window size
@@ -86,10 +86,10 @@ export default class ScreenshotWindowSizerExtension extends Extension {
         let nearestError;
 
         for (let i = 0; i < scaledSizes.length; i++) {
-            let [width, height] = scaledSizes[i];
+            const [width, height] = scaledSizes[i];
 
             // get the best initial window size
-            let error = Math.abs(width - outerRect.width) + Math.abs(height - outerRect.height);
+            const error = Math.abs(width - outerRect.width) + Math.abs(height - outerRect.height);
             if (nearestIndex === undefined || error < nearestError) {
                 nearestIndex = i;
                 nearestError = error;
@@ -97,8 +97,8 @@ export default class ScreenshotWindowSizerExtension extends Extension {
         }
 
         // get the next size up or down from ideal
-        let newIndex = (nearestIndex + (backwards ? -1 : 1)) % scaledSizes.length;
-        let [newWidth, newHeight] = scaledSizes.at(newIndex);
+        const newIndex = (nearestIndex + (backwards ? -1 : 1)) % scaledSizes.length;
+        const [newWidth, newHeight] = scaledSizes.at(newIndex);
 
         // Push the window onscreen if it would be resized offscreen
         let newX = outerRect.x;
@@ -120,7 +120,7 @@ export default class ScreenshotWindowSizerExtension extends Extension {
      */
     _notifySizeChange(window) {
         const {scaleFactor} = St.ThemeContext.get_for_stage(global.stage);
-        let newOuterRect = window.get_frame_rect();
+        const newOuterRect = window.get_frame_rect();
         let message = '%d×%d'.format(
             newOuterRect.width / scaleFactor,
             newOuterRect.height / scaleFactor);
@@ -128,7 +128,7 @@ export default class ScreenshotWindowSizerExtension extends Extension {
         // The new size might have been constrained by geometry hints (e.g. for
         // a terminal) - in that case, include the actual ratio to the message
         // we flash
-        let actualNumerator = 9 * newOuterRect.width / newOuterRect.height;
+        const actualNumerator = 9 * newOuterRect.width / newOuterRect.height;
         if (Math.abs(actualNumerator - 16) > 0.01)
             message += ' (%.2f:9)'.format(actualNumerator);
 

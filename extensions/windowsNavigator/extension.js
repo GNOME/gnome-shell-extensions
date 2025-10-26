@@ -147,7 +147,7 @@ export default class Extension {
             /* eslint-disable no-invalid-this */
             return function () {
                 const {layoutManager} = this._container;
-                for (let i in layoutManager._windowSlots) {
+                for (const i in layoutManager._windowSlots) {
                     if (layoutManager._windowSlots[i])
                         layoutManager._windowSlots[i][WINDOW_SLOT].hideTooltip();
                 }
@@ -212,7 +212,7 @@ export default class Extension {
                 if (this._overviewAdjustment.value !== ControlsState.WINDOW_PICKER)
                     return false;
 
-                let workspaceManager = global.workspace_manager;
+                const workspaceManager = global.workspace_manager;
 
                 if ((event.get_key_symbol() === Clutter.KEY_Alt_L ||
                      event.get_key_symbol() === Clutter.KEY_Alt_R) &&
@@ -260,7 +260,7 @@ export default class Extension {
                         }
                     }
 
-                    let win = this._workspaces[this._active].getWindowWithTooltip(c);
+                    const win = this._workspaces[this._active].getWindowWithTooltip(c);
                     this._hideTooltips();
 
                     if (win)
@@ -278,7 +278,7 @@ export default class Extension {
                         }
                     }
 
-                    let workspace = this._workspaces[c - 1];
+                    const workspace = this._workspaces[c - 1];
                     if (workspace !== undefined)
                         workspace.metaWorkspace.activate(global.get_current_time());
 

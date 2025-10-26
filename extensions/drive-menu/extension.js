@@ -39,11 +39,11 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         this.mount = mount;
 
-        let ejectIcon = new St.Icon({
+        const ejectIcon = new St.Icon({
             icon_name: 'media-eject-symbolic',
             style_class: 'popup-menu-icon',
         });
-        let ejectButton = new St.Button({
+        const ejectButton = new St.Button({
             child: ejectIcon,
             style_class: 'button',
         });
@@ -63,7 +63,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
         if (this.mount.is_shadowed())
             return false;
 
-        let volume = this.mount.get_volume();
+        const volume = this.mount.get_volume();
 
         if (volume)
             return volume.get_identifier('class') !== 'network';
@@ -87,7 +87,7 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _eject() {
-        let unmountArgs = [
+        const unmountArgs = [
             Gio.MountUnmountFlags.NONE,
             new ShellMountOperation.ShellMountOperation(this.mount).mountOp,
             null, // Gio.Cancellable
@@ -120,13 +120,13 @@ class MountMenuItem extends PopupMenu.PopupBaseMenuItem {
 
     _reportFailure(exception) {
         // TRANSLATORS: %s is the filesystem name
-        let msg = _('Ejecting drive “%s” failed:').format(this.mount.get_name());
+        const msg = _('Ejecting drive “%s” failed:').format(this.mount.get_name());
         Main.notifyError(msg, exception.message);
     }
 
     activate(event) {
-        let uri = this.mount.get_root().get_uri();
-        let context = global.create_app_launch_context(event.get_time(), -1);
+        const uri = this.mount.get_root().get_uri();
+        const context = global.create_app_launch_context(event.get_time(), -1);
         Gio.AppInfo.launch_default_for_uri(uri, context);
 
         super.activate(event);
@@ -141,7 +141,7 @@ class DriveMenu extends PanelMenu.Button {
     constructor() {
         super(0.5, _('Removable devices'));
 
-        let icon = new St.Icon({
+        const icon = new St.Icon({
             icon_name: 'media-eject-symbolic',
             style_class: 'system-status-icon',
         });
@@ -162,8 +162,8 @@ class DriveMenu extends PanelMenu.Button {
 
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
         this.menu.addAction(_('Open Files'), event => {
-            let appSystem = Shell.AppSystem.get_default();
-            let app = appSystem.lookup_app('org.gnome.Nautilus.desktop');
+            const appSystem = Shell.AppSystem.get_default();
+            const app = appSystem.lookup_app('org.gnome.Nautilus.desktop');
             app.activate_full(-1, event.get_time());
         });
 
@@ -178,7 +178,7 @@ class DriveMenu extends PanelMenu.Button {
     }
 
     _addMount(mount) {
-        let item = new MountMenuItem(mount);
+        const item = new MountMenuItem(mount);
         this._mounts.unshift(item);
         this.menu.addMenuItem(item, 0);
 
@@ -187,7 +187,7 @@ class DriveMenu extends PanelMenu.Button {
 
     _removeMount(mount) {
         for (let i = 0; i < this._mounts.length; i++) {
-            let item = this._mounts[i];
+            const item = this._mounts[i];
             if (item.mount === mount) {
                 item.destroy();
                 this._mounts.splice(i, 1);

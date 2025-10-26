@@ -32,14 +32,14 @@ export default class SysTray {
     }
 
     _onTrayIconAdded(o, icon) {
-        let wmClass = icon.wm_class ? icon.wm_class.toLowerCase() : '';
+        const wmClass = icon.wm_class ? icon.wm_class.toLowerCase() : '';
         if (STANDARD_TRAY_ICON_IMPLEMENTATIONS.includes(wmClass))
             return;
 
-        let button = new PanelButton(0.5, null, true);
+        const button = new PanelButton(0.5, null, true);
 
-        let scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
-        let iconSize = PANEL_ICON_SIZE * scaleFactor;
+        const scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
+        const iconSize = PANEL_ICON_SIZE * scaleFactor;
 
         icon.set({
             width: iconSize,
@@ -48,7 +48,7 @@ export default class SysTray {
             y_align: Clutter.ActorAlign.CENTER,
         });
 
-        let iconBin = new St.Widget({
+        const iconBin = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
             style_class: 'system-status-icon',
         });

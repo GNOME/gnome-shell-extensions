@@ -48,7 +48,7 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._icon.style_class = 'icon-dropshadow';
         this.add_child(this._icon);
 
-        let appLabel = new St.Label({
+        const appLabel = new St.Label({
             text: app.get_name(),
             y_expand: true,
             y_align: Clutter.ActorAlign.CENTER,
@@ -57,9 +57,9 @@ class ApplicationMenuItem extends PopupMenu.PopupBaseMenuItem {
         this.label_actor = appLabel;
 
         this._delegate = this;
-        let draggable = DND.makeDraggable(this);
+        const draggable = DND.makeDraggable(this);
 
-        let maybeStartDrag = draggable._maybeStartDrag;
+        const maybeStartDrag = draggable._maybeStartDrag;
         draggable._maybeStartDrag = event => {
             if (this._dragEnabled)
                 return maybeStartDrag.call(draggable, event);
@@ -132,7 +132,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _isNavigatingSubmenu([x, y]) {
-        let [posX, posY] = this.get_transformed_position();
+        const [posX, posY] = this.get_transformed_position();
 
         if (this._oldX === -1) {
             this._oldX = x;
@@ -140,8 +140,8 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
             return true;
         }
 
-        let deltaX = Math.abs(x - this._oldX);
-        let deltaY = Math.abs(y - this._oldY);
+        const deltaX = Math.abs(x - this._oldX);
+        const deltaY = Math.abs(y - this._oldY);
 
         this._oldX = x;
         this._oldY = y;
@@ -171,7 +171,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         // Ensure that the point P always lies below line AC so that we can
         // only check for triangle ABC.
         if (posY > y) {
-            let offset = posY - y;
+            const offset = posY - y;
             y = posY + this.height + offset;
         }
 
@@ -294,15 +294,15 @@ class DesktopTarget extends EventEmitter {
     }
 
     async _markTrusted(file) {
-        let modeAttr = Gio.FILE_ATTRIBUTE_UNIX_MODE;
-        let trustedAttr = 'metadata::trusted';
-        let queryFlags = Gio.FileQueryInfoFlags.NONE;
-        let ioPriority = GLib.PRIORITY_DEFAULT;
+        const modeAttr = Gio.FILE_ATTRIBUTE_UNIX_MODE;
+        const trustedAttr = 'metadata::trusted';
+        const queryFlags = Gio.FileQueryInfoFlags.NONE;
+        const ioPriority = GLib.PRIORITY_DEFAULT;
 
         try {
             let info = await file.query_info_async(modeAttr, queryFlags, ioPriority, null);
 
-            let mode = info.get_attribute_uint32(modeAttr) | 0o100;
+            const mode = info.get_attribute_uint32(modeAttr) | 0o100;
             info.set_attribute_uint32(modeAttr, mode);
             info.set_attribute_string(trustedAttr, 'yes');
             await file.set_attributes_async(info, queryFlags, ioPriority, null);
@@ -327,7 +327,7 @@ class DesktopTarget extends EventEmitter {
     }
 
     handleDragOver(source, _actor, _x, _y, _time) {
-        let appInfo = this._getSourceAppInfo(source);
+        const appInfo = this._getSourceAppInfo(source);
         if (!appInfo)
             return DND.DragMotionResult.CONTINUE;
 
@@ -335,16 +335,16 @@ class DesktopTarget extends EventEmitter {
     }
 
     acceptDrop(source, _actor, _x, _y, _time) {
-        let appInfo = this._getSourceAppInfo(source);
+        const appInfo = this._getSourceAppInfo(source);
         if (!appInfo)
             return false;
 
         this.emit('app-dropped');
 
-        let desktop = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DESKTOP);
+        const desktop = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DESKTOP);
 
-        let src = Gio.File.new_for_path(appInfo.get_filename());
-        let dst = Gio.File.new_for_path(GLib.build_filenamev([desktop, src.get_basename()]));
+        const src = Gio.File.new_for_path(appInfo.get_filename());
+        const dst = Gio.File.new_for_path(GLib.build_filenamev([desktop, src.get_basename()]));
 
         try {
             // copy_async() isn't introspectable :-(
@@ -452,9 +452,9 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     _onMenuKeyPress(actor, event) {
-        let symbol = event.get_key_symbol();
+        const symbol = event.get_key_symbol();
         if (symbol === Clutter.KEY_Left || symbol === Clutter.KEY_Right) {
-            let direction = symbol === Clutter.KEY_Left
+            const direction = symbol === Clutter.KEY_Left
                 ? Gtk.DirectionType.LEFT : Gtk.DirectionType.RIGHT;
             if (this.menu.actor.navigate_focus(global.stage.key_focus, direction, false))
                 return true;
@@ -480,11 +480,11 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     _loadCategory(categoryId, dir) {
-        let iter = dir.iter();
+        const iter = dir.iter();
         let nextType;
         while ((nextType = iter.next()) !== GMenu.TreeItemType.INVALID) {
             if (nextType === GMenu.TreeItemType.ENTRY) {
-                let entry = iter.get_entry();
+                const entry = iter.get_entry();
                 let id;
                 try {
                     id = entry.get_desktop_file_id(); // catch non-UTF8 filenames
@@ -499,7 +499,7 @@ class ApplicationsButton extends PanelMenu.Button {
             } else if (nextType === GMenu.TreeItemType.SEPARATOR) {
                 this.applicationsByCategory[categoryId].push('separator');
             } else if (nextType === GMenu.TreeItemType.DIRECTORY) {
-                let subdir = iter.get_directory();
+                const subdir = iter.get_directory();
                 if (!subdir.get_is_nodisplay())
                     this._loadCategory(categoryId, subdir);
             }
@@ -507,11 +507,11 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     scrollToButton(button) {
-        let appsScrollBoxAdj = this.applicationsScrollBox.get_vadjustment();
-        let appsScrollBoxAlloc = this.applicationsScrollBox.get_allocation_box();
-        let currentScrollValue = appsScrollBoxAdj.get_value();
-        let boxHeight = appsScrollBoxAlloc.y2 - appsScrollBoxAlloc.y1;
-        let buttonAlloc = button.get_allocation_box();
+        const appsScrollBoxAdj = this.applicationsScrollBox.get_vadjustment();
+        const appsScrollBoxAlloc = this.applicationsScrollBox.get_allocation_box();
+        const currentScrollValue = appsScrollBoxAdj.get_value();
+        const boxHeight = appsScrollBoxAlloc.y2 - appsScrollBoxAlloc.y1;
+        const buttonAlloc = button.get_allocation_box();
         let newScrollValue = currentScrollValue;
         if (currentScrollValue > buttonAlloc.y1 - 10)
             newScrollValue = buttonAlloc.y1 - 10;
@@ -522,11 +522,11 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     scrollToCatButton(button) {
-        let catsScrollBoxAdj = this.categoriesScrollBox.get_vadjustment();
-        let catsScrollBoxAlloc = this.categoriesScrollBox.get_allocation_box();
-        let currentScrollValue = catsScrollBoxAdj.get_value();
-        let boxHeight = catsScrollBoxAlloc.y2 - catsScrollBoxAlloc.y1;
-        let buttonAlloc = button.get_allocation_box();
+        const catsScrollBoxAdj = this.categoriesScrollBox.get_vadjustment();
+        const catsScrollBoxAlloc = this.categoriesScrollBox.get_allocation_box();
+        const currentScrollValue = catsScrollBoxAdj.get_value();
+        const boxHeight = catsScrollBoxAlloc.y2 - catsScrollBoxAlloc.y1;
+        const buttonAlloc = button.get_allocation_box();
         let newScrollValue = currentScrollValue;
         if (currentScrollValue > buttonAlloc.y1 - 10)
             newScrollValue = buttonAlloc.y1 - 10;
@@ -537,7 +537,7 @@ class ApplicationsButton extends PanelMenu.Button {
     }
 
     _createLayout() {
-        let section = new PopupMenu.PopupMenuSection();
+        const section = new PopupMenu.PopupMenuSection();
         this.menu.addMenuItem(section);
         this.mainBox = new St.BoxLayout({layoutManager: new MainLayout()});
         this.leftBox = new St.BoxLayout({
@@ -573,20 +573,20 @@ class ApplicationsButton extends PanelMenu.Button {
         // Load categories
         this.applicationsByCategory = {};
         this._tree.load_sync();
-        let root = this._tree.get_root_directory();
+        const root = this._tree.get_root_directory();
         let categoryMenuItem = new CategoryMenuItem(this, null);
         this.categoriesBox.add_child(categoryMenuItem);
-        let iter = root.iter();
+        const iter = root.iter();
         let nextType;
         while ((nextType = iter.next()) !== GMenu.TreeItemType.INVALID) {
             if (nextType !== GMenu.TreeItemType.DIRECTORY)
                 continue;
 
-            let dir = iter.get_directory();
+            const dir = iter.get_directory();
             if (dir.get_is_nodisplay())
                 continue;
 
-            let categoryId = dir.get_menu_id();
+            const categoryId = dir.get_menu_id();
             this.applicationsByCategory[categoryId] = [];
             this._loadCategory(categoryId, dir);
             if (this.applicationsByCategory[categoryId].length > 0) {
@@ -615,7 +615,7 @@ class ApplicationsButton extends PanelMenu.Button {
 
     _displayButtons(apps) {
         for (let i = 0; i < apps.length; i++) {
-            let app = apps[i];
+            const app = apps[i];
             let item;
             if (app instanceof Shell.App)
                 item = this._applicationsButtons.get(app);

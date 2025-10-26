@@ -65,7 +65,7 @@ class DragPlaceholderItem extends DashItemContainer {
  * @returns {number} - the smallest stable sequence of the app's windows
  */
 function _getAppStableSequence(app) {
-    let windows = app.get_windows().filter(w => !w.skip_taskbar);
+    const windows = app.get_windows().filter(w => !w.skip_taskbar);
     return windows.reduce((prev, cur) => {
         return Math.min(prev, cur.get_stable_sequence());
     }, Infinity);
@@ -251,7 +251,7 @@ class WindowTitle extends TitleWidget {
     }
 
     _updateIcon() {
-        let app = Shell.WindowTracker.get_default().get_window_app(this._metaWindow);
+        const app = Shell.WindowTracker.get_default().get_window_app(this._metaWindow);
         if (app) {
             this._icon.child = app.create_icon_texture(ICON_TEXTURE_SIZE);
         } else {
@@ -542,13 +542,13 @@ class BaseButton extends DashItemContainer {
     _openMenu(menu) {
         menu.open();
 
-        let event = Clutter.get_current_event();
+        const event = Clutter.get_current_event();
         if (event && event.type() === Clutter.EventType.KEY_RELEASE)
             menu.actor.navigate_focus(null, Gtk.DirectionType.TAB_FORWARD, false);
     }
 
     _minimizeOrActivateWindow(window) {
-        let focusWindow = global.display.focus_window;
+        const focusWindow = global.display.focus_window;
         if (focusWindow === window ||
             focusWindow && focusWindow.get_transient_for() === window)
             window.minimize();
@@ -562,8 +562,8 @@ class BaseButton extends DashItemContainer {
 
         const extension = Extension.lookupByURL(import.meta.url);
 
-        let [x, y] = global.get_pointer();
-        let actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
+        const [x, y] = global.get_pointer();
+        const actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
         if (extension.someWindowListContains(actor))
             actor.sync_hover();
     }
@@ -592,7 +592,7 @@ class BaseButton extends DashItemContainer {
     }
 
     _isWindowVisible(window) {
-        let workspace = global.workspace_manager.get_active_workspace();
+        const workspace = global.workspace_manager.get_active_workspace();
 
         return !window.skip_taskbar &&
                (this._ignoreWorkspace || window.located_on_workspace(workspace)) &&
@@ -745,7 +745,7 @@ class AppContextMenu extends PopupMenu.PopupMenu {
         });
         this.addMenuItem(this._unmaximizeItem);
 
-        let item = new PopupMenu.PopupMenuItem(_('Close all'));
+        const item = new PopupMenu.PopupMenuItem(_('Close all'));
         item.connect('activate', () => {
             this._appButton.getWindowList().forEach(w => {
                 w.delete(global.get_current_time());
@@ -755,7 +755,7 @@ class AppContextMenu extends PopupMenu.PopupMenu {
     }
 
     open(animate) {
-        let windows = this._appButton.getWindowList();
+        const windows = this._appButton.getWindowList();
         this._minimizeItem.visible = windows.some(w => !w.minimized);
         this._unminimizeItem.visible = windows.some(w => w.minimized);
         this._maximizeItem.visible = windows.some(w => {
@@ -816,7 +816,7 @@ class AppButton extends BaseButton {
             this.visible = true;
         } else if (!this._perMonitor) {
             // fast path: use ShellApp API to avoid iterating over all windows.
-            let workspace = global.workspace_manager.get_active_workspace();
+            const workspace = global.workspace_manager.get_active_workspace();
             this.visible = this.app.is_on_workspace(workspace);
         } else {
             this.visible = this.getWindowList().length >= 1;
@@ -828,9 +828,9 @@ class AppButton extends BaseButton {
     }
 
     _updateIconGeometry() {
-        let rect = this._getIconGeometry();
+        const rect = this._getIconGeometry();
 
-        let windows = this.app.get_windows();
+        const windows = this.app.get_windows();
         windows.forEach(w => w.set_icon_geometry(rect));
     }
 
@@ -877,11 +877,11 @@ class AppButton extends BaseButton {
     }
 
     _onClicked(actor, button) {
-        let menuWasOpen = this._menu.isOpen;
+        const menuWasOpen = this._menu.isOpen;
         if (menuWasOpen)
             this._menu.close();
 
-        let contextMenuWasOpen = this._contextMenu.isOpen;
+        const contextMenuWasOpen = this._contextMenu.isOpen;
         if (contextMenuWasOpen)
             this._contextMenu.close();
 
@@ -889,7 +889,7 @@ class AppButton extends BaseButton {
             if (menuWasOpen)
                 return;
 
-            let windows = this.getWindowList();
+            const windows = this.getWindowList();
             if (windows.length === 1) {
                 if (contextMenuWasOpen)
                     return;
@@ -898,8 +898,8 @@ class AppButton extends BaseButton {
                 this._menu.removeAll();
 
                 for (let i = 0; i < windows.length; i++) {
-                    let windowTitle = new WindowTitle(windows[i]);
-                    let item = new PopupMenu.PopupBaseMenuItem();
+                    const windowTitle = new WindowTitle(windows[i]);
+                    const item = new PopupMenu.PopupBaseMenuItem();
                     item.add_child(windowTitle);
                     item._window = windows[i];
                     this._menu.addMenuItem(item);
@@ -945,7 +945,7 @@ class WindowList extends St.Widget {
         this._perMonitor = perMonitor;
         this._monitor = monitor;
 
-        let box = new St.BoxLayout({x_expand: true, y_expand: true});
+        const box = new St.BoxLayout({x_expand: true, y_expand: true});
         this.add_child(box);
 
         this._windowList = new St.BoxLayout({
@@ -959,7 +959,7 @@ class WindowList extends St.Widget {
 
         this._windowList.connect('scroll-event', this._onScrollEvent.bind(this));
 
-        let indicatorsBox = new St.BoxLayout({x_align: Clutter.ActorAlign.END});
+        const indicatorsBox = new St.BoxLayout({x_align: Clutter.ActorAlign.END});
         box.add_child(indicatorsBox);
 
         this._workspaceIndicator = new BottomWorkspaceIndicator({
@@ -1023,7 +1023,7 @@ class WindowList extends St.Widget {
                 this._updateKeyboardAnchor();
             }, this);
 
-        let workspaceManager = global.workspace_manager;
+        const workspaceManager = global.workspace_manager;
 
         workspaceManager.connectObject('notify::n-workspaces',
             () => this._updateWorkspaceIndicatorVisibility(), this);
@@ -1093,7 +1093,7 @@ class WindowList extends St.Widget {
     }
 
     _onScrollEvent(actor, event) {
-        let direction = event.get_scroll_direction();
+        const direction = event.get_scroll_direction();
         let diff = 0;
         if (direction === Clutter.ScrollDirection.DOWN)
             diff = 1;
@@ -1102,10 +1102,10 @@ class WindowList extends St.Widget {
         else
             return;
 
-        let children = this._windowList.get_children()
+        const children = this._windowList.get_children()
             .filter(c => c.visible);
-        let active = children.findIndex(c => c.active);
-        let newActive = Math.max(0, Math.min(active + diff, children.length - 1));
+        const active = children.findIndex(c => c.active);
+        const newActive = Math.max(0, Math.min(active + diff, children.length - 1));
         children[newActive].activate();
     }
 
@@ -1144,10 +1144,10 @@ class WindowList extends St.Widget {
     }
 
     _updateWorkspaceIndicatorVisibility() {
-        let workspaceManager = global.workspace_manager;
-        let hasWorkspaces = this._mutterSettings.get_boolean('dynamic-workspaces') ||
+        const workspaceManager = global.workspace_manager;
+        const hasWorkspaces = this._mutterSettings.get_boolean('dynamic-workspaces') ||
                             workspaceManager.n_workspaces > 1;
-        let workspacesOnMonitor = this._monitor === Main.layoutManager.primaryMonitor ||
+        const workspacesOnMonitor = this._monitor === Main.layoutManager.primaryMonitor ||
                                   !this._mutterSettings.get_boolean('workspaces-only-on-primary');
 
         this._workspaceIndicator.visible = hasWorkspaces && workspacesOnMonitor;
@@ -1157,15 +1157,15 @@ class WindowList extends St.Widget {
         if (this._windowList.get_n_children() === 0)
             return this._windowList.get_preferred_width(-1)[1];
 
-        let children = this._windowList.get_children();
-        let [, childWidth] = children[0].get_preferred_width(-1);
-        let {spacing} = this._windowList.layout_manager;
+        const children = this._windowList.get_children();
+        const [, childWidth] = children[0].get_preferred_width(-1);
+        const {spacing} = this._windowList.layout_manager;
 
-        let workspace = global.workspace_manager.get_active_workspace();
+        const workspace = global.workspace_manager.get_active_workspace();
         let windows = global.display.get_tab_list(Meta.TabList.NORMAL, workspace);
         if (this._perMonitor)
             windows = windows.filter(w => w.get_monitor() === this._monitor.index);
-        let nWindows = windows.length;
+        const nWindows = windows.length;
         if (nWindows === 0)
             return this._windowList.get_preferred_width(-1)[1];
 
@@ -1173,7 +1173,7 @@ class WindowList extends St.Widget {
     }
 
     _getMaxWindowListWidth() {
-        let indicatorsBox = this._workspaceIndicator.get_parent();
+        const indicatorsBox = this._workspaceIndicator.get_parent();
         return this.width - indicatorsBox.get_preferred_width(-1)[1];
     }
 
@@ -1192,10 +1192,10 @@ class WindowList extends St.Widget {
         if (this._groupingMode !== GroupingMode.AUTO)
             return;
 
-        let maxWidth = this._getMaxWindowListWidth();
-        let natWidth = this._getPreferredUngroupedWindowListWidth();
+        const maxWidth = this._getMaxWindowListWidth();
+        const natWidth = this._getPreferredUngroupedWindowListWidth();
 
-        let grouped = maxWidth < natWidth;
+        const grouped = maxWidth < natWidth;
         if (this._grouped !== grouped) {
             this._grouped = grouped;
             this._populateWindowList();
@@ -1206,14 +1206,14 @@ class WindowList extends St.Widget {
         this._windowList.destroy_all_children();
 
         if (!this._grouped) {
-            let windows = global.get_window_actors().sort((w1, w2) => {
+            const windows = global.get_window_actors().sort((w1, w2) => {
                 return w1.metaWindow.get_stable_sequence() -
                        w2.metaWindow.get_stable_sequence();
             });
             for (let i = 0; i < windows.length; i++)
                 this._addWindow(windows[i].metaWindow, false);
         } else {
-            let apps = this._appSystem.get_running().sort((a1, a2) => {
+            const apps = this._appSystem.get_running().sort((a1, a2) => {
                 return _getAppStableSequence(a1) -
                        _getAppStableSequence(a2);
             });
@@ -1271,8 +1271,8 @@ class WindowList extends St.Widget {
     }
 
     _removeApp(app) {
-        let children = this._windowList.get_children();
-        let child = children.find(c => c.app === app);
+        const children = this._windowList.get_children();
+        const child = children.find(c => c.app === app);
         child?.animateOutAndDestroy();
     }
 
@@ -1283,7 +1283,7 @@ class WindowList extends St.Widget {
         if (this._grouped)
             return;
 
-        let children = this._windowList.get_children();
+        const children = this._windowList.get_children();
         if (children.find(c => c.metaWindow === win))
             return;
 
@@ -1306,8 +1306,8 @@ class WindowList extends St.Widget {
             win.disconnect(id);
         this._windowSignals.delete(win);
 
-        let children = this._windowList.get_children();
-        let child = children.find(c => c.metaWindow === win);
+        const children = this._windowList.get_children();
+        const child = children.find(c => c.metaWindow === win);
         child?.animateOutAndDestroy();
     }
 
@@ -1324,7 +1324,7 @@ class WindowList extends St.Widget {
         const buttons = this._windowList.get_children().filter(c => c instanceof BaseButton);
         const buttonPos = buttons.indexOf(source);
         const numButtons = buttons.length;
-        let boxWidth = this._windowList.width;
+        const boxWidth = this._windowList.width;
 
         // Transform to window list coordinates for index calculation
         // (mostly relevant for RTL to discard workspace indicator etc.)
@@ -1446,7 +1446,7 @@ class WindowList extends St.Widget {
             return DND.DragMotionResult.CONTINUE;
         }
 
-        let hoveredWindow = dragEvent.targetActor.metaWindow;
+        const hoveredWindow = dragEvent.targetActor.metaWindow;
         if (!hoveredWindow ||
             this._dndWindow === hoveredWindow)
             return DND.DragMotionResult.CONTINUE;
@@ -1468,8 +1468,8 @@ class WindowList extends St.Widget {
     }
 
     _activateWindow() {
-        let [x, y] = global.get_pointer();
-        let pickedActor = global.stage.get_actor_at_pos(Clutter.PickMode.ALL, x, y);
+        const [x, y] = global.get_pointer();
+        const pickedActor = global.stage.get_actor_at_pos(Clutter.PickMode.ALL, x, y);
 
         if (this._dndWindow && this.contains(pickedActor))
             this._dndWindow.activate(global.get_current_time());
@@ -1492,7 +1492,7 @@ class WindowList extends St.Widget {
         this._settings.disconnectObject();
         this._settings = null;
 
-        let windows = global.get_window_actors();
+        const windows = global.get_window_actors();
         for (let i = 0; i < windows.length; i++)
             windows[i].metaWindow.set_icon_geometry(null);
     }
@@ -1538,7 +1538,7 @@ export default class WindowListExtension extends Extension {
         this._windowLists.forEach(list => list.destroy());
         this._windowLists = [];
 
-        let showOnAllMonitors = this._settings.get_boolean('show-on-all-monitors');
+        const showOnAllMonitors = this._settings.get_boolean('show-on-all-monitors');
 
         Main.layoutManager.monitors.forEach(monitor => {
             if (showOnAllMonitors || monitor === Main.layoutManager.primaryMonitor)

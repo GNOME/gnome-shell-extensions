@@ -56,7 +56,7 @@ class PlaceInfo extends EventEmitter {
             const source = {
                 get_drive: () => null,
             };
-            let op = new ShellMountOperation.ShellMountOperation(source);
+            const op = new ShellMountOperation.ShellMountOperation(source);
             try {
                 await this.file.mount_enclosing_volume(0, op.mountOp, null);
 
@@ -72,7 +72,7 @@ class PlaceInfo extends EventEmitter {
     }
 
     launch(timestamp) {
-        let launchContext = global.create_app_launch_context(timestamp, -1);
+        const launchContext = global.create_app_launch_context(timestamp, -1);
         this._ensureMountAndLaunch(launchContext, true).catch(logError);
     }
 
@@ -83,7 +83,7 @@ class PlaceInfo extends EventEmitter {
             null,
             (file, result) => {
                 try {
-                    let info = file.query_info_finish(result);
+                    const info = file.query_info_finish(result);
                     this.icon = info.get_symbolic_icon();
                     this.emit('changed');
                 } catch (e) {
@@ -112,7 +112,7 @@ class PlaceInfo extends EventEmitter {
 
     _getFileName() {
         try {
-            let info = this.file.query_info('standard::display-name', 0, null);
+            const info = this.file.query_info('standard::display-name', 0, null);
             return info.get_display_name();
         } catch (e) {
             if (e instanceof Gio.IOErrorEnum)
@@ -151,7 +151,7 @@ class PlaceDeviceInfo extends PlaceInfo {
     }
 
     eject() {
-        let unmountArgs = [
+        const unmountArgs = [
             Gio.MountUnmountFlags.NONE,
             new ShellMountOperation.ShellMountOperation(this._mount).mountOp,
             null, // Gio.Cancellable
@@ -183,7 +183,7 @@ class PlaceDeviceInfo extends PlaceInfo {
     }
 
     _reportFailure(exception) {
-        let msg = _('Ejecting drive “%s” failed:').format(this._mount.get_name());
+        const msg = _('Ejecting drive “%s” failed:').format(this._mount.get_name());
         Main.notifyError(msg, exception.message);
     }
 }
@@ -203,7 +203,7 @@ class PlaceVolumeInfo extends PlaceInfo {
         this._volume.mount(0, null, null, (volume, result) => {
             volume.mount_finish(result);
 
-            let mount = volume.get_mount();
+            const mount = volume.get_mount();
             this.file = mount.get_root();
             super.launch(timestamp);
         });
@@ -357,8 +357,8 @@ export class PlacesManager extends EventEmitter {
     }
 
     _updateMounts() {
-        let networkMounts = [];
-        let networkVolumes = [];
+        const networkMounts = [];
+        const networkVolumes = [];
 
         this._places.devices.forEach(p => p.destroy());
         this._places.devices = [];
@@ -366,16 +366,16 @@ export class PlacesManager extends EventEmitter {
         this._places.network = [];
 
         /* first go through all connected drives */
-        let drives = this._volumeMonitor.get_connected_drives();
+        const drives = this._volumeMonitor.get_connected_drives();
         for (let i = 0; i < drives.length; i++) {
-            let volumes = drives[i].get_volumes();
+            const volumes = drives[i].get_volumes();
 
             for (let j = 0; j < volumes.length; j++) {
-                let identifier = volumes[j].get_identifier('class');
+                const identifier = volumes[j].get_identifier('class');
                 if (identifier && identifier.includes('network')) {
                     networkVolumes.push(volumes[j]);
                 } else {
-                    let mount = volumes[j].get_mount();
+                    const mount = volumes[j].get_mount();
                     if (mount)
                         this._addMount('devices', mount);
                 }
@@ -383,23 +383,23 @@ export class PlacesManager extends EventEmitter {
         }
 
         /* add all volumes that is not associated with a drive */
-        let volumes = this._volumeMonitor.get_volumes();
+        const volumes = this._volumeMonitor.get_volumes();
         for (let i = 0; i < volumes.length; i++) {
             if (volumes[i].get_drive())
                 continue;
 
-            let identifier = volumes[i].get_identifier('class');
+            const identifier = volumes[i].get_identifier('class');
             if (identifier && identifier.includes('network')) {
                 networkVolumes.push(volumes[i]);
             } else {
-                let mount = volumes[i].get_mount();
+                const mount = volumes[i].get_mount();
                 if (mount)
                     this._addMount('devices', mount);
             }
         }
 
         /* add mounts that have no volume (/etc/mtab mounts, ftp, sftp,...) */
-        let mounts = this._volumeMonitor.get_mounts();
+        const mounts = this._volumeMonitor.get_mounts();
         for (let i = 0; i < mounts.length; i++) {
             if (mounts[i].is_shadowed())
                 continue;
@@ -407,7 +407,7 @@ export class PlacesManager extends EventEmitter {
             if (mounts[i].get_volume())
                 continue;
 
-            let root = mounts[i].get_default_location();
+            const root = mounts[i].get_default_location();
             if (!root.is_native()) {
                 networkMounts.push(mounts[i]);
                 continue;
@@ -416,7 +416,7 @@ export class PlacesManager extends EventEmitter {
         }
 
         for (let i = 0; i < networkVolumes.length; i++) {
-            let mount = networkVolumes[i].get_mount();
+            const mount = networkVolumes[i].get_mount();
             if (mount) {
                 networkMounts.push(mount);
                 continue;
@@ -433,7 +433,7 @@ export class PlacesManager extends EventEmitter {
     }
 
     _findBookmarksFile() {
-        let paths = [
+        const paths = [
             GLib.build_filenamev([GLib.get_user_config_dir(), 'gtk-3.0', 'bookmarks']),
             GLib.build_filenamev([GLib.get_home_dir(), '.gtk-bookmarks']),
         ];
@@ -449,19 +449,19 @@ export class PlacesManager extends EventEmitter {
     _reloadBookmarks() {
         this._bookmarks = [];
 
-        let content = Shell.get_file_contents_utf8_sync(this._bookmarksFile.get_path());
-        let lines = content.split('\n');
+        const content = Shell.get_file_contents_utf8_sync(this._bookmarksFile.get_path());
+        const lines = content.split('\n');
 
-        let bookmarks = [];
+        const bookmarks = [];
         for (let i = 0; i < lines.length; i++) {
-            let line = lines[i];
-            let components = line.split(' ');
-            let [bookmark] = components;
+            const line = lines[i];
+            const components = line.split(' ');
+            const [bookmark] = components;
 
             if (!bookmark)
                 continue;
 
-            let file = Gio.File.new_for_uri(bookmark);
+            const file = Gio.File.new_for_uri(bookmark);
             if (file.is_native() && !file.query_exists(null))
                 continue;
 

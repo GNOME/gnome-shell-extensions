@@ -159,7 +159,7 @@ class WorkspaceThumbnail extends St.Button {
 
         this._windowPreviews = new Map();
 
-        let workspaceManager = global.workspace_manager;
+        const workspaceManager = global.workspace_manager;
         this._workspace = workspaceManager.get_workspace_by_index(index);
 
         this._workspace.bind_property('active',
@@ -209,14 +209,14 @@ class WorkspaceThumbnail extends St.Button {
         if (this._windowPreviews.has(window))
             return;
 
-        let preview = new WindowPreview(window);
+        const preview = new WindowPreview(window);
         preview.connect('clicked', (a, btn) => this.emit('clicked', btn));
         this._windowPreviews.set(window, preview);
         this._preview.child.add_child(preview);
     }
 
     _removeWindow(window) {
-        let preview = this._windowPreviews.get(window);
+        const preview = this._windowPreviews.get(window);
         if (!preview)
             return;
 
@@ -226,9 +226,9 @@ class WorkspaceThumbnail extends St.Button {
 
     _onRestacked() {
         let lastPreview = null;
-        let windows = global.get_window_actors().map(a => a.meta_window);
+        const windows = global.get_window_actors().map(a => a.meta_window);
         for (let i = 0; i < windows.length; i++) {
-            let preview = this._windowPreviews.get(windows[i]);
+            const preview = this._windowPreviews.get(windows[i]);
             if (!preview)
                 continue;
 
@@ -238,14 +238,14 @@ class WorkspaceThumbnail extends St.Button {
     }
 
     _moveWindow(window) {
-        let monitorIndex = Main.layoutManager.findIndexForActor(this);
+        const monitorIndex = Main.layoutManager.findIndexForActor(this);
         if (monitorIndex !== window.get_monitor())
             window.move_to_monitor(monitorIndex);
         window.change_workspace_by_index(this._index, false);
     }
 
     on_clicked() {
-        let ws = global.workspace_manager.get_workspace_by_index(this._index);
+        const ws = global.workspace_manager.get_workspace_by_index(this._index);
         if (ws)
             ws.activate(global.get_current_time());
     }
@@ -609,7 +609,7 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         this.setMenu(new WorkspacesMenu(this));
 
-        let container = new St.Widget({
+        const container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),
             x_expand: true,
             y_expand: true,

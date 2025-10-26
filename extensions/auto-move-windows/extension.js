@@ -28,7 +28,7 @@ class WindowMover {
         this._appConfigs.clear();
 
         this._settings.get_strv('application-list').forEach(v => {
-            let [appId, num] = v.split(':');
+            const [appId, num] = v.split(':');
             this._appConfigs.set(appId, parseInt(num) - 1);
         });
 
@@ -36,15 +36,15 @@ class WindowMover {
     }
 
     _updateAppData() {
-        let ids = [...this._appConfigs.keys()];
-        let removedApps = [...this._appData.keys()]
+        const ids = [...this._appConfigs.keys()];
+        const removedApps = [...this._appData.keys()]
             .filter(a => !ids.includes(a.id));
         removedApps.forEach(app => {
             app.disconnectObject(this);
             this._appData.delete(app);
         });
 
-        let addedApps = ids
+        const addedApps = ids
             .map(id => this._appSystem.lookup_app(id))
             .filter(app => app && !this._appData.has(app));
         addedApps.forEach(app => {
@@ -68,7 +68,7 @@ class WindowMover {
             return;
 
         // ensure we have the required number of workspaces
-        let workspaceManager = global.workspace_manager;
+        const workspaceManager = global.workspace_manager;
         for (let i = workspaceManager.n_workspaces; i <= workspaceNum; i++) {
             window.change_workspace_by_index(i - 1, false);
             workspaceManager.append_new_workspace(false, 0);
@@ -78,8 +78,8 @@ class WindowMover {
     }
 
     _appWindowsChanged(app) {
-        let data = this._appData.get(app);
-        let windows = app.get_windows();
+        const data = this._appData.get(app);
+        const windows = app.get_windows();
 
         // If get_compositor_private() returns non-NULL on a removed windows,
         // the window still exists and is just moved to a different workspace
@@ -89,7 +89,7 @@ class WindowMover {
             return !windows.includes(w) && w.get_compositor_private() !== null;
         }));
 
-        let workspaceNum = this._appConfigs.get(app.id);
+        const workspaceNum = this._appConfigs.get(app.id);
         windows.filter(w => !data.windows.includes(w)).forEach(window => {
             this._moveWindow(window, workspaceNum);
         });
