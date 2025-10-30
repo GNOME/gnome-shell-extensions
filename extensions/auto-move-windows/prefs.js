@@ -5,6 +5,7 @@
 
 import Adw from 'gi://Adw';
 import Gio from 'gi://Gio';
+import GioUnix from 'gi://GioUnix';
 import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
@@ -44,7 +45,7 @@ class Rule extends GObject.Object {
         'app-info': GObject.ParamSpec.object(
             'app-info', null, null,
             GObject.ParamFlags.READWRITE,
-            Gio.DesktopAppInfo),
+            GioUnix.DesktopAppInfo),
         'workspace': GObject.ParamSpec.uint(
             'workspace', null, null,
             GObject.ParamFlags.READWRITE,
@@ -118,7 +119,7 @@ class RulesList extends GObject.Object {
         this.#rules = [];
         for (const stringRule of this.#settings.get_strv(SETTINGS_KEY)) {
             const [id, workspace] = stringRule.split(':');
-            const appInfo = Gio.DesktopAppInfo.new(id);
+            const appInfo = GioUnix.DesktopAppInfo.new(id);
             if (appInfo)
                 this.#rules.push(new Rule({appInfo, workspace}));
             else
