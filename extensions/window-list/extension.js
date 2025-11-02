@@ -465,12 +465,11 @@ class BaseButton extends DashItemContainer {
 
         const {longPressDuration} = Clutter.Settings.get_default();
         this._longPressTimeoutId =
-            GLib.timeout_add(GLib.PRIORITY_DEFAULT, longPressDuration, () => {
+            GLib.timeout_add_once(GLib.PRIORITY_DEFAULT, longPressDuration, () => {
                 delete this._longPressTimeoutId;
 
                 if (this._canOpenPopupMenu() && !this._contextMenu.isOpen)
                     this._openMenu(this._contextMenu);
-                return GLib.SOURCE_REMOVE;
             });
     }
 
@@ -1454,7 +1453,7 @@ class WindowList extends St.Widget {
         this._removeActivateTimeout();
 
         this._dndWindow = hoveredWindow;
-        this._dndTimeoutId = GLib.timeout_add(GLib.PRIORITY_DEFAULT,
+        this._dndTimeoutId = GLib.timeout_add_once(GLib.PRIORITY_DEFAULT,
             DND_ACTIVATE_TIMEOUT, this._activateWindow.bind(this));
 
         return DND.DragMotionResult.CONTINUE;
@@ -1475,8 +1474,6 @@ class WindowList extends St.Widget {
             this._dndWindow.activate(global.get_current_time());
         this._dndWindow = null;
         this._dndTimeoutId = 0;
-
-        return GLib.SOURCE_REMOVE;
     }
 
     _onDestroy() {

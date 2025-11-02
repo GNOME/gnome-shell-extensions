@@ -263,11 +263,10 @@ export class PlacesManager extends EventEmitter {
                 if (this._bookmarkTimeoutId > 0)
                     return;
                 /* Defensive event compression */
-                this._bookmarkTimeoutId = GLib.timeout_add(
+                this._bookmarkTimeoutId = GLib.timeout_add_once(
                     GLib.PRIORITY_DEFAULT, 100, () => {
                         this._bookmarkTimeoutId = 0;
                         this._reloadBookmarks();
-                        return GLib.SOURCE_REMOVE;
                     });
             });
 
