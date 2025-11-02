@@ -1476,7 +1476,7 @@ class WindowList extends St.Widget {
         this._dndWindow = null;
         this._dndTimeoutId = 0;
 
-        return false;
+        return GLib.SOURCE_REMOVE;
     }
 
     _onDestroy() {

@@ -267,7 +267,7 @@ export class PlacesManager extends EventEmitter {
                     GLib.PRIORITY_DEFAULT, 100, () => {
                         this._bookmarkTimeoutId = 0;
                         this._reloadBookmarks();
-                        return false;
+                        return GLib.SOURCE_REMOVE;
                     });
             });
 
