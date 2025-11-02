@@ -201,7 +201,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         this.hover = true;
 
         if (this._isNavigatingSubmenu(event.get_coords()))
-            return true;
+            return Clutter.EVENT_STOP;
 
         this._oldX = -1;
         this._oldY = -1;
@@ -213,7 +213,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         if (targetActor instanceof St.Widget)
             targetActor.sync_hover();
 
-        return false;
+        return Clutter.EVENT_PROPAGATE;
     }
 
     _onActiveChanged() {
@@ -457,7 +457,7 @@ class ApplicationsButton extends PanelMenu.Button {
             const direction = symbol === Clutter.KEY_Left
                 ? Gtk.DirectionType.LEFT : Gtk.DirectionType.RIGHT;
             if (this.menu.actor.navigate_focus(global.stage.key_focus, direction, false))
-                return true;
+                return Clutter.EVENT_STOP;
         }
         return super._onMenuKeyPress(actor, event);
     }

@@ -210,7 +210,7 @@ export default class Extension {
             return function (actor, event) {
                 const {ControlsState} = OverviewControls;
                 if (this._overviewAdjustment.value !== ControlsState.WINDOW_PICKER)
-                    return false;
+                    return Clutter.EVENT_PROPAGATE;
 
                 const workspaceManager = global.workspace_manager;
 
@@ -222,7 +222,7 @@ export default class Extension {
                     this._active = workspaceManager.get_active_workspace_index();
                     this._pickWindow = true;
                     this._workspaces[workspaceManager.get_active_workspace_index()].showWindowsTooltips();
-                    return true;
+                    return Clutter.EVENT_STOP;
                 }
                 if ((event.get_key_symbol() === Clutter.KEY_Control_L ||
                      event.get_key_symbol() === Clutter.KEY_Control_R) &&
@@ -232,22 +232,22 @@ export default class Extension {
                     this._pickWorkspace = true;
                     for (let i = 0; i < this._workspaces.length; i++)
                         this._workspaces[i].showTooltip();
-                    return true;
+                    return Clutter.EVENT_STOP;
                 }
 
                 if (global.stage.get_key_focus() !== null)
-                    return false;
+                    return Clutter.EVENT_PROPAGATE;
 
                 // ignore shift presses, they're required to get numerals in azerty keyboards
                 if ((this._pickWindow || this._pickWorkspace) &&
                     (event.get_key_symbol() === Clutter.KEY_Shift_L ||
                      event.get_key_symbol() === Clutter.KEY_Shift_R))
-                    return true;
+                    return Clutter.EVENT_STOP;
 
                 if (this._pickWindow) {
                     if (this._active !== workspaceManager.get_active_workspace_index()) {
                         this._hideTooltips();
-                        return false;
+                        return Clutter.EVENT_PROPAGATE;
                     }
 
                     let c = event.get_key_symbol() - Clutter.KEY_KP_0;
@@ -256,7 +256,7 @@ export default class Extension {
                         if (c > 9 || c <= 0) {
                             this._hideTooltips();
                             log(c);
-                            return false;
+                            return Clutter.EVENT_PROPAGATE;
                         }
                     }
 
@@ -266,7 +266,7 @@ export default class Extension {
                     if (win)
                         Main.activateWindow(win, global.get_current_time());
 
-                    return true;
+                    return Clutter.EVENT_STOP;
                 }
                 if (this._pickWorkspace) {
                     let c = event.get_key_symbol() - Clutter.KEY_KP_0;
@@ -274,7 +274,7 @@ export default class Extension {
                         c = event.get_key_symbol() - Clutter.KEY_0;
                         if (c > 9 || c <= 0) {
                             this._hideWorkspacesTooltips();
-                            return false;
+                            return Clutter.EVENT_PROPAGATE;
                         }
                     }
 
@@ -283,9 +283,9 @@ export default class Extension {
                         workspace.metaWorkspace.activate(global.get_current_time());
 
                     this._hideWorkspacesTooltips();
-                    return true;
+                    return Clutter.EVENT_STOP;
                 }
-                return false;
+                return Clutter.EVENT_PROPAGATE;
             };
             /* eslint-enable */
         });
