@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=GNOME Classic
 Comment=This session logs you into GNOME Classic
-Exec=env GNOME_SHELL_SESSION_MODE=classic gnome-session
+Exec=gnome-session --session gnome-classic
 TryExec=gnome-session
 Type=Application
 DesktopNames=GNOME-Classic;GNOME;

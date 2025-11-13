@@ -31,3 +31,13 @@ configure_file(
 
 classic_override = '00_org.gnome.shell.extensions.classic.gschema.override'
 install_data(classic_override, install_dir: schemadir)
+
+install_data(
+  'gnome-classic.session',
+  install_dir: sessiondir,
+)
+
+install_data(
+  'gnome-classic.session.conf',
+  install_dir: systemd_userunitdir / 'gnome-session@gnome-classic.target.d',
+)
