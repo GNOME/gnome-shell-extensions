@@ -15,7 +15,13 @@ SPDX-FileCopyrightText = [
 SPDX-License-Identifier = "CC-BY-SA-4.0"
 
 [[annotations]]
-path = ["**.json.in", "**.desktop.in", "**.gschema.override"]
+path = [
+  "**.json.in",
+  "**.desktop.in",
+  "**.gschema.override",
+  "**.session",
+  "**.session.conf",
+]
 SPDX-FileCopyrightText = "Florian Müllner <fmuellner@gnome.org>"
 SPDX-License-Identifier = "GPL-2.0-or-later"
 

@@ -25,6 +25,13 @@ schemadir = join_paths(datadir, 'glib-2.0', 'schemas')
 sessiondir = join_paths(datadir, 'gnome-session', 'sessions')
 wlsessiondir = join_paths(datadir, 'wayland-sessions')
 
+systemd_dep = dependency('systemd', required: false)
+systemd_userunitdir = systemd_dep.get_variable(
+    pkgconfig: 'systemduserunitdir',
+    pkgconfig_define: ['prefix', get_option('prefix')],
+    default_value: get_option('prefix') / 'lib' / 'systemd' / 'user',
+)
+
 ver_arr = meson.project_version().split('.')
 shell_version = ver_arr[0]
 
