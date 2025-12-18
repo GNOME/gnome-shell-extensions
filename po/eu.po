@@ -5,14 +5,14 @@
 # assar <asiersar@yahoo.com>, 2011.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2013, 2015, 2017.
 # Edurne Labaka <elabaka@uzei.com>, 2015.
-# Asier Sarasua Garmendia  <asiersarasua@ni.eus>, 2019, 2020, 2021, 2024.
+# Asier Saratsua Garmendia  <asiersarasua@ni.eus>, 2019, 2020, 2021, 2024, 2025.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-shell-extensions master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/issues\n"
-"POT-Creation-Date: 2024-04-29 15:27+0000\n"
-"PO-Revision-Date: 2024-08-25 00:42+0200\n"
-"Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
+"POT-Creation-Date: 2025-12-10 17:57+0000\n"
+"PO-Revision-Date: 2025-12-18 00:42+0200\n"
+"Last-Translator: Asier Saratsua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -21,28 +21,28 @@ msgstr "Project-Id-Version: gnome-shell-extensions master\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Project-Style: gnome\n"
 
-#: data/gnome-classic.desktop.in:3
+#: data/gnome-classic.desktop.in:2
 msgid "GNOME Classic"
 msgstr "GNOME Klasikoa"
 
-#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
-#: data/gnome-classic-xorg.desktop.in:4
+#: data/gnome-classic.desktop.in:3 data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:3
 msgid "This session logs you into GNOME Classic"
 msgstr "Saio honek GNOME Klasikoa hasten du"
 
-#: data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-wayland.desktop.in:2
 msgid "GNOME Classic on Wayland"
 msgstr "GNOME klasikoa Wayland gainean"
 
-#: data/gnome-classic-xorg.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:2
 msgid "GNOME Classic on Xorg"
 msgstr "GNOME klasikoa Xorg gainean"
 
-#: extensions/apps-menu/extension.js:126
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Gogokoak"
 
-#: extensions/apps-menu/extension.js:400
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Aplikazioak"
 
@@ -56,17 +56,17 @@ msgid ""
 "followed by a colon and the workspace number"
 msgstr "Kateen zerrenda bat, bakoitzak aplikazio-ID bat duena (mahaigainaren fitxategi-izena) eta jarraian bi puntu eta laneko arearen zenbakia dituena"
 
-#: extensions/auto-move-windows/prefs.js:159
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "Laneko areen arauak"
 
-#: extensions/auto-move-windows/prefs.js:314
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "Gehitu araua"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:218
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "Huts egin du “%s“ unitatea egoztean:"
@@ -101,33 +101,41 @@ msgid ""
 "restarting the shell to have any effect."
 msgstr "TRUE (egia) bada, leihoen epigrafeak dagokien koadro txikien gainean jarriko ditu, Shell-aren lehenespena (behean jartzearena) gainidatziz. Ezarpen hau aldatzeko eta aplikatzeko Shell berrabiarazi behar da."
 
-#: extensions/places-menu/extension.js:91
-#: extensions/places-menu/extension.js:94
+#: extensions/places-menu/extension.js:75
+#: extensions/places-menu/extension.js:78
 msgid "Places"
 msgstr "Lekuak"
 
-#: extensions/places-menu/placeDisplay.js:60
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "Huts egin du '%s' abiarazteak"
 
-#: extensions/places-menu/placeDisplay.js:75
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "Huts egin du “%s“(r)en bolumena muntatzean"
 
-#: extensions/places-menu/placeDisplay.js:135
-#: extensions/places-menu/placeDisplay.js:158
-msgid "Computer"
-msgstr "Ordenagailua"
-
-#: extensions/places-menu/placeDisplay.js:333
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "Karpeta nagusia"
 
-#: extensions/places-menu/placeDisplay.js:378
-msgid "Browse Network"
-msgstr "Arakatu sarea"
+#: extensions/places-menu/placeDisplay.js:321
+msgid "Recent"
+msgstr "Oraintsukoa"
+
+#: extensions/places-menu/placeDisplay.js:327
+msgid "Starred"
+msgstr "Izarduna"
+
+#: extensions/places-menu/placeDisplay.js:347
+#| msgid "Browse Network"
+msgid "Network"
+msgstr "Sarea"
+
+#: extensions/places-menu/placeDisplay.js:354
+msgid "Trash"
+msgstr "Zakarrontzia"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
@@ -157,35 +165,35 @@ msgstr "Kargaren estatistikak"
 msgid "Download stats"
 msgstr "Deskargaren estatistikak"
 
-#: extensions/system-monitor/extension.js:364
+#: extensions/system-monitor/extension.js:365
 msgid "System stats"
 msgstr "Sistemaren estatistikak"
 
-#: extensions/system-monitor/extension.js:412
+#: extensions/system-monitor/extension.js:413
 msgid "Show"
 msgstr "Erakutsi"
 
-#: extensions/system-monitor/extension.js:414
+#: extensions/system-monitor/extension.js:415
 msgid "CPU"
 msgstr "PUZa"
 
-#: extensions/system-monitor/extension.js:416
+#: extensions/system-monitor/extension.js:417
 msgid "Memory"
 msgstr "Memoria"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:419
 msgid "Swap"
 msgstr "Trukatze-espazioa"
 
-#: extensions/system-monitor/extension.js:420
+#: extensions/system-monitor/extension.js:421
 msgid "Upload"
 msgstr "Kargatu"
 
-#: extensions/system-monitor/extension.js:422
+#: extensions/system-monitor/extension.js:423
 msgid "Download"
 msgstr "Deskargatu"
 
-#: extensions/system-monitor/extension.js:427
+#: extensions/system-monitor/extension.js:428
 msgid "Open System Monitor"
 msgstr "Ireki sistema-monitorea"
 
@@ -217,47 +225,47 @@ msgstr "Gaiaren izena"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Gaiaren izena, ~/.themes/izena/gnome-shell direktoriotik kargatzeko"
 
-#: extensions/window-list/extension.js:72
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Itxi"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Leheneratu"
 
-#: extensions/window-list/extension.js:99
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Minimizatu"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Desmaximizatu"
 
-#: extensions/window-list/extension.js:106
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Maximizatu"
 
-#: extensions/window-list/extension.js:471
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Minimizatu denak"
 
-#: extensions/window-list/extension.js:477
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Leheneratu denak"
 
-#: extensions/window-list/extension.js:483
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Maximizatu denak"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Desmaximizatu denak"
 
-#: extensions/window-list/extension.js:499
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Itxi denak"
 
-#: extensions/window-list/extension.js:778
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Leiho-zerrenda"
 
@@ -272,7 +280,7 @@ msgid ""
 msgstr "Aplikazio bereko leihoak leihoen zerrendan noiz elkartuko diren erabakitzen du. Balio erabilgarriak: “never“ (inoiz ere ez), “auto“ (automatikoa) eta “always“ (beti)."
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:79
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "Erakutsi laneko area guztietako leihoak"
 
@@ -294,54 +302,95 @@ msgstr "Leihoen zerrenda konektatutako pantaila guztietan edo soilik pantaila na
 msgid "Show workspace previews in window list"
 msgstr "Erakutsi laneko areen aurrebistak leihoen zerrendan"
 
-#: extensions/window-list/prefs.js:35
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "Leihoak elkartzea"
 
-#: extensions/window-list/prefs.js:40
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "Ez elkartu leihoak inoiz"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "Elkartu leihoak lekua mugatuta dagoenean"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "Elkartu beti leihoak"
 
-#: extensions/window-list/prefs.js:66
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "Erakutsi pantaila guztietan"
-
-#: extensions/window-list/prefs.js:92
-msgid "Show workspace previews"
-msgstr "Erakutsi laneko areen aurrebistak"
-
-#: extensions/workspace-indicator/prefs.js:30
-msgid "Show Previews In Top Bar"
-msgstr "Erakutsi aurrebistak goiko barran"
-
-#: extensions/workspace-indicator/prefs.js:88
-#, javascript-format
-msgid "Workspace %d"
-msgstr "%d. laneko area"
-
-#: extensions/workspace-indicator/prefs.js:155
-msgid "Workspace Names"
-msgstr "Laneko areen izenak"
-
-#: extensions/workspace-indicator/prefs.js:281
-msgid "Add Workspace"
-msgstr "Gehitu laneko area"
 
 #: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
 msgid "Show workspace previews in top bar"
 msgstr "Erakutsi laneko areen aurrebistak goiko barran"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:404
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "Sakatu %s editatzeko"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:518
+msgid "Settings"
+msgstr "Ezarpenak"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:598
 msgid "Workspace Indicator"
 msgstr "Laneko arearen adierazlea"
+
+#: extensions/workspace-indicator/workspacePrefs.js:20
+#| msgid "Workspace Indicator"
+msgid "Indicator"
+msgstr "Adierazlea"
+
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "Aurrebistak"
+
+#: extensions/workspace-indicator/workspacePrefs.js:35
+#| msgid "Workspace Names"
+msgid "Workspace Name"
+msgstr "Laneko arearen izenak"
+
+#: extensions/workspace-indicator/workspacePrefs.js:59
+msgid "Behavior"
+msgstr "Portaera"
+
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "Dinamikoa"
+
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "Automatikoki kentzen ditu hutsik dauden laneko areak."
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "Zenbaki finkoa"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "Zehaztu laneko areen kopurua."
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+#| msgid "Add Workspace"
+msgid "Number of Workspaces"
+msgstr "Laneko areen kopurua"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
+#| msgid "Workspace %d"
+msgid "Workspaces"
+msgstr "Laneko areak"
+
+#~ msgid "Computer"
+#~ msgstr "Ordenagailua"
+
+#~ msgid "Show workspace previews"
+#~ msgstr "Erakutsi laneko areen aurrebistak"
+
+#~ msgid "Show Previews In Top Bar"
+#~ msgstr "Erakutsi aurrebistak goiko barran"
 
 #~ msgid "Applications"
 #~ msgstr "Aplikazioak"
