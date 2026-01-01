@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
 "POT-Creation-Date: 2025-11-05 13:44+0000\n"
-"PO-Revision-Date: 2026-01-01 18:28+0200\n"
+"PO-Revision-Date: 2026-01-01 18:41+0200\n"
 "Last-Translator: @pacu23\n"
 "Language-Team: Bulgarian <dict@ludost.net>\n"
 "Language: bg\n"
@@ -52,7 +52,7 @@ msgstr "Програми"
 
 #: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:12
 msgid "Application and workspace list"
-msgstr "Списък с програмите и работни пространства"
+msgstr "Списък с програмите и работните пространства"
 
 #: extensions/auto-move-windows/org.gnome.shell.extensions.auto-move-windows.gschema.xml:13
 msgid ""
