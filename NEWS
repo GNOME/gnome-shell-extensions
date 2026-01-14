@@ -1,3 +1,18 @@
+50.alpha
+========
+* classic: Drop xorg sessions [Jordan; !283]
+* classic: Deifne a gnome-session session [Adrian; !3960]
+* Misc. bug fixes and cleanups [Florian, Jordan; !425, !429, !430, !432, !431,
+  !433, !434, !435, !439]
+
+Contributors:
+  Florian Müllner, Jordan Petridis, Adrian Vovk
+
+Translators:
+  BoF ButterflyOfFire [kab], Giannis Antypas [el],
+  Asier Saratsua Garmendia [eu], Hugo Carvalho [pt], twlvnn kraftwerk [bg],
+  Baurzhan Muftakhidinov [kk], Ibai Oihanguren Sala [eu]
+
 49.0
 ====
 * window-list: Adjust to gnome-shell changes [Florian; !421]
