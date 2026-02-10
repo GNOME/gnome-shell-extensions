@@ -192,11 +192,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         if (!this._grab) {
             this._oldX = -1;
             this._oldY = -1;
-            const grab = global.stage.grab(this);
-            if (grab.get_seat_state() !== Clutter.GrabState.NONE)
-                this._grab = grab;
-            else
-                grab.dismiss();
+            this._grab = global.stage.grab(this);
         }
         this.hover = true;
 
