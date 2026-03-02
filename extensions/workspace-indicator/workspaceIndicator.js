@@ -17,6 +17,7 @@ import * as DND from 'resource:///org/gnome/shell/ui/dnd.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
+import {ensureActorVisibleInScrollView} from 'resource:///org/gnome/shell/misc/animationUtils.js';
 
 const TOOLTIP_OFFSET = 6;
 const TOOLTIP_ANIMATION_TIME = 150;
@@ -511,6 +512,15 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
         this.actor.add_style_class_name(`${baseStyleClassName}-menu`);
 
         this._workspacesSection = new PopupMenu.PopupMenuSection();
+
+        // make the section scrollable to avoid growing indefinitely
+        const scrollView = new St.ScrollView({
+            style_class: 'vfade',
+            child: this._workspacesSection.box,
+        });
+        scrollView._delegate = this._workspacesSection;
+        this._workspacesSection.actor = scrollView;
+
         this.addMenuItem(this._workspacesSection);
 
         this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
@@ -559,6 +569,11 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
                 const newNames = [...section].map(c => c.label.text);
                 this._desktopSettings.set_strv('workspace-names',
                     [...newNames, ...oldNames.slice(nLabels)]);
+            });
+            item.connect('notify::active', () => {
+                const view = this._workspacesSection.actor;
+                if (item.active)
+                    ensureActorVisibleInScrollView(view, item);
             });
             this._workspacesSection.addMenuItem(item);
         }
