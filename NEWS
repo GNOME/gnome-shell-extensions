@@ -1,3 +1,14 @@
+50.rc
+=====
+* workspace-indicator: Make workspace menu section scrollable [Florian; !445]
+* Misc. bug fixes and cleanups [Florian; !444, !446]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Lenny Angst [de], Changwoo Ryu [ko]
+
 50.alpha
 ========
 * classic: Drop xorg sessions [Jordan; !283]
