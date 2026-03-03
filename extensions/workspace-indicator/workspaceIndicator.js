@@ -545,7 +545,7 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
         const {workspaceManager} = global;
         const {nWorkspaces} = workspaceManager;
 
-        const section = this._workspacesSection.actor;
+        const section = this._workspacesSection.box;
         while (section.get_n_children() < nWorkspaces) {
             const item = new EditableMenuItem();
             item.connect('activate', (o, event) => {
@@ -570,7 +570,7 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
     }
 
     _updateWorkspaceLabels() {
-        const items = [...this._workspacesSection.actor];
+        const items = [...this._workspacesSection.box];
         items.forEach(
             (item, i) => (item.label.text = Meta.prefs_get_workspace_name(i)));
     }
@@ -579,7 +579,7 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
         const {workspaceManager} = global;
         const active = workspaceManager.get_active_workspace_index();
 
-        const items = [...this._workspacesSection.actor];
+        const items = [...this._workspacesSection.box];
         items.forEach((item, i) => {
             item.setOrnament(i === active
                 ? PopupMenu.Ornament.CHECK
