@@ -355,6 +355,60 @@ class DownloadSection extends NetStatSection {
     }
 }
 
+const TEMP_THRESHOLD_HIGH = 80;
+
+class TemperatureSection extends StatSection {
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor() {
+        super('temperature-symbolic', _('Temperature stats'));
+    }
+
+    _update() {
+        const temp = this._readTemperature();
+
+        if (temp === null) {
+            this.label.text = _('N/A');
+            this.remove_style_class_name('high-usage');
+            return;
+        }
+
+        this.label.text = `${temp}°C`;
+
+        if (temp >= TEMP_THRESHOLD_HIGH)
+            this.add_style_class_name('high-usage');
+        else
+            this.remove_style_class_name('high-usage');
+    }
+
+    _readTemperature() {
+        let maxTemp = null;
+
+        for (let i = 0; ; i++) {
+            const path = `/sys/class/thermal/thermal_zone${i}/temp`;
+            const file = Gio.File.new_for_path(path);
+
+            if (!file.query_exists(null))
+                break;
+
+            try {
+                const [ok, contents] = file.load_contents(null);
+                if (ok) {
+                    const temp = parseInt(new TextDecoder().decode(contents), 10) / 1000;
+                    if (maxTemp === null || temp > maxTemp)
+                        maxTemp = temp;
+                }
+            } catch {
+                continue;
+            }
+        }
+
+        return maxTemp !== null ? Math.round(maxTemp) : null;
+    }
+}
+
 class Indicator extends PanelMenu.Button {
     static {
         GObject.registerClass(this);
@@ -409,6 +463,12 @@ class Indicator extends PanelMenu.Button {
             Gio.SettingsBindFlags.GET);
         box.add_child(this._dlSection);
 
+        this._tempSection = new TemperatureSection();
+        this._settings.bind('show-temperature',
+            this._tempSection, 'visible',
+            Gio.SettingsBindFlags.GET);
+        box.add_child(this._tempSection);
+
         this.menu.addMenuItem(
             new PopupMenu.PopupSeparatorMenuItem(_('Show')));
 
@@ -422,6 +482,8 @@ class Indicator extends PanelMenu.Button {
             () => this._toggleSettings('show-upload'));
         this._dlItem = this.menu.addAction(_('Download'),
             () => this._toggleSettings('show-download'));
+        this._tempItem = this.menu.addAction(_('Temperature'),
+            () => this._toggleSettings('show-temperature'));
 
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
@@ -469,6 +531,9 @@ class Indicator extends PanelMenu.Button {
             ? PopupMenu.Ornament.CHECK
             : PopupMenu.Ornament.NONE);
         this._dlItem.setOrnament(this._settings.get_boolean('show-download')
+            ? PopupMenu.Ornament.CHECK
+            : PopupMenu.Ornament.NONE);
+        this._tempItem.setOrnament(this._settings.get_boolean('show-temperature')
             ? PopupMenu.Ornament.CHECK
             : PopupMenu.Ornament.NONE);
 
