@@ -242,18 +242,13 @@ class NaturalLayoutStrategy extends Workspace.LayoutStrategy {
 }
 
 export default class NativeWindowPlacementExtension extends Extension {
-    constructor(metadata) {
-        super(metadata);
-
-        this._injectionManager = new InjectionManager();
-    }
-
     enable() {
         const settings = this.getSettings();
 
         const layoutProto = Workspace.WorkspaceLayout.prototype;
         const previewProto = WindowPreview.prototype;
 
+        this._injectionManager = new InjectionManager();
         this._injectionManager.overrideMethod(layoutProto, '_createBestLayout', () => {
             /* eslint-disable no-invalid-this */
             return function () {
@@ -299,6 +294,8 @@ export default class NativeWindowPlacementExtension extends Extension {
 
     disable() {
         this._injectionManager.clear();
+        this._injectionManager = null;
+
         global.stage.queue_relayout();
     }
 }
