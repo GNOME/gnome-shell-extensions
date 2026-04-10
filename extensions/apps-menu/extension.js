@@ -244,9 +244,8 @@ class DesktopTarget extends EventEmitter {
         this._desktop = null;
         this._desktopDestroyedId = 0;
 
-        this._windowAddedId =
-            global.window_group.connect('child-added',
-                this._onWindowAdded.bind(this));
+        global.window_group.connectObject('child-added',
+            this._onWindowAdded.bind(this), this);
 
         global.get_window_actors().forEach(a => {
             this._onWindowAdded(a.get_parent(), a);
