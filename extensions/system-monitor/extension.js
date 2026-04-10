@@ -39,15 +39,13 @@ class StatSection extends St.BoxLayout {
         GObject.registerClass(this);
     }
 
-    constructor(iconName, accessibleName) {
+    constructor(iconDir, iconName, accessibleName) {
         super({
             style_class: 'system-monitor-stat-section',
             accessibleName,
         });
 
-        const ext = Extension.lookupByURL(import.meta.url);
-        const file =
-            ext.dir.resolve_relative_path(`icons/${iconName}.svg`);
+        const file = iconDir.get_child(`${iconName}.svg`);
 
         this._icon = new St.Icon({
             style_class: 'system-monitor-stat-section-icon',
@@ -131,8 +129,8 @@ class CpuSection extends LoadStatSection {
 
     #prevCpu = new GTop.glibtop_cpu();
 
-    constructor() {
-        super('processor-symbolic', _('CPU stats'));
+    constructor(iconDir) {
+        super(iconDir, 'processor-symbolic', _('CPU stats'));
     }
 
     _getLoadValue() {
@@ -155,8 +153,8 @@ class MemSection extends LoadStatSection {
         GObject.registerClass(this);
     }
 
-    constructor() {
-        super('memory-symbolic', _('Memory stats'));
+    constructor(iconDir) {
+        super(iconDir, 'memory-symbolic', _('Memory stats'));
     }
 
     _getLoadValue() {
@@ -173,8 +171,8 @@ class SwapSection extends LoadStatSection {
         GObject.registerClass(this);
     }
 
-    constructor() {
-        super('swap-symbolic', _('Swap stats'));
+    constructor(iconDir) {
+        super(iconDir, 'swap-symbolic', _('Swap stats'));
     }
 
     _getLoadValue() {
@@ -332,8 +330,8 @@ class UploadSection extends NetStatSection {
         GObject.registerClass(this);
     }
 
-    constructor() {
-        super('upload-symbolic', _('Upload stats'));
+    constructor(iconDir) {
+        super(iconDir, 'upload-symbolic', _('Upload stats'));
     }
 
     _getBytes(netload) {
@@ -346,8 +344,8 @@ class DownloadSection extends NetStatSection {
         GObject.registerClass(this);
     }
 
-    constructor() {
-        super('download-symbolic', _('Download stats'));
+    constructor(iconDir) {
+        super(iconDir, 'download-symbolic', _('Download stats'));
     }
 
     _getBytes(netload) {
@@ -360,11 +358,11 @@ class Indicator extends PanelMenu.Button {
         GObject.registerClass(this);
     }
 
-    constructor(settings) {
+    constructor(extension) {
         GTop.glibtop_init();
         super(0.5, _('System stats'));
 
-        this._settings = settings;
+        this._settings = extension.getSettings();
         this.connect('destroy',
             () => (this._settings = null));
 
@@ -379,31 +377,33 @@ class Indicator extends PanelMenu.Button {
         });
         box.add_child(this._placeholder);
 
-        this._cpuSection = new CpuSection();
+        const iconDir = extension.dir.resolve_relative_path('icons');
+
+        this._cpuSection = new CpuSection(iconDir);
         this._settings.bind('show-cpu',
             this._cpuSection, 'visible',
             Gio.SettingsBindFlags.GET);
         box.add_child(this._cpuSection);
 
-        this._memSection = new MemSection();
+        this._memSection = new MemSection(iconDir);
         this._settings.bind('show-memory',
             this._memSection, 'visible',
             Gio.SettingsBindFlags.GET);
         box.add_child(this._memSection);
 
-        this._swapSection = new SwapSection();
+        this._swapSection = new SwapSection(iconDir);
         this._settings.bind('show-swap',
             this._swapSection, 'visible',
             Gio.SettingsBindFlags.GET);
         box.add_child(this._swapSection);
 
-        this._ulSection = new UploadSection();
+        this._ulSection = new UploadSection(iconDir);
         this._settings.bind('show-upload',
             this._ulSection, 'visible',
             Gio.SettingsBindFlags.GET);
         box.add_child(this._ulSection);
 
-        this._dlSection = new DownloadSection();
+        this._dlSection = new DownloadSection(iconDir);
         this._settings.bind('show-download',
             this._dlSection, 'visible',
             Gio.SettingsBindFlags.GET);
@@ -479,7 +479,7 @@ class Indicator extends PanelMenu.Button {
 
 export default class SystemMonitorExtension extends Extension {
     enable() {
-        this._indicator = new Indicator(this.getSettings());
+        this._indicator = new Indicator(this);
         Main.panel.addToStatusArea(this.uuid, this._indicator);
     }
 
