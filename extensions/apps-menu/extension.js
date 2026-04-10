@@ -369,7 +369,7 @@ class ApplicationsButton extends PanelMenu.Button {
         GObject.registerClass(this);
     }
 
-    constructor() {
+    constructor(settings) {
         super(1.0, null, false);
 
         this.setMenu(new ApplicationsMenu(this, 1.0, St.Side.TOP, this));
@@ -399,7 +399,7 @@ class ApplicationsButton extends PanelMenu.Button {
 
         Main.wm.addKeybinding(
             'apps-menu-toggle-menu',
-            Extension.lookupByURL(import.meta.url).getSettings(),
+            settings,
             Meta.KeyBindingFlags.IGNORE_AUTOREPEAT,
             Shell.ActionMode.NORMAL | Shell.ActionMode.OVERVIEW,
             () => this.menu.toggle());
@@ -642,7 +642,7 @@ class ApplicationsButton extends PanelMenu.Button {
 
 export default class AppsMenuExtension extends Extension {
     enable() {
-        this._appsMenuButton = new ApplicationsButton();
+        this._appsMenuButton = new ApplicationsButton(this.getSettings());
         const index = Main.sessionMode.panel.left.indexOf('activities') + 1;
         Main.panel.addToStatusArea(
             'apps-menu', this._appsMenuButton, index, 'left');
