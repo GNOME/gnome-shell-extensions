@@ -20,6 +20,6 @@ export default class WorkspaceIndicatorExtension extends Extension {
 
     disable() {
         this._indicator.destroy();
-        delete this._indicator;
+        this._indicator = null;
     }
 }
