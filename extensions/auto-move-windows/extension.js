@@ -56,6 +56,8 @@ class WindowMover {
 
     destroy() {
         this._appSystem.disconnectObject(this);
+        this._appSystem = null;
+
         this._settings.disconnectObject(this);
         this._settings = null;
 
