@@ -20,13 +20,10 @@ import {WorkspacesView} from 'resource:///org/gnome/shell/ui/workspacesView.js';
 const WINDOW_SLOT = 4;
 
 export default class Extension {
-    constructor() {
-        this._injectionManager = new InjectionManager();
-    }
-
     enable() {
         const previewProto = WindowPreview.prototype;
 
+        this._injectionManager = new InjectionManager();
         this._injectionManager.overrideMethod(previewProto, '_init', originalMethod => {
             /* eslint-disable no-invalid-this */
             return function (...args) {
@@ -293,5 +290,6 @@ export default class Extension {
 
     disable() {
         this._injectionManager.clear();
+        this._injectionManager = null;
     }
 }
