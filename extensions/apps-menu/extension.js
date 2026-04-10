@@ -652,6 +652,6 @@ export default class AppsMenuExtension extends Extension {
     disable() {
         Main.panel.menuManager.removeMenu(this._appsMenuButton.menu);
         this._appsMenuButton.destroy();
-        delete this._appsMenuButton;
+        this._appsMenuButton = null;
     }
 }
