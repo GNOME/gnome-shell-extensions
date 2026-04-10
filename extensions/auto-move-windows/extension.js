@@ -6,7 +6,7 @@
 
 import Shell from 'gi://Shell';
 
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
 class WindowMover {
@@ -101,14 +101,17 @@ class WindowMover {
 
 export default class AutoMoveExtension extends Extension {
     enable() {
-        this._prevCheckWorkspaces = Main.wm._workspaceTracker._checkWorkspaces;
-        Main.wm._workspaceTracker._checkWorkspaces =
-            this._getCheckWorkspaceOverride(this._prevCheckWorkspaces);
+        this._injectionManager = new InjectionManager();
+        this._injectionManager.overrideMethod(Main.wm._workspaceTracker, '_checkWorkspaces',
+            originalMethod => this._getCheckWorkspaceOverride(originalMethod));
+
         this._windowMover = new WindowMover(this.getSettings());
     }
 
     disable() {
-        Main.wm._workspaceTracker._checkWorkspaces = this._prevCheckWorkspaces;
+        this._injectionManager.clear();
+        this._injectionManager = null;
+
         this._windowMover.destroy();
         this._windowMover = null;
     }
