@@ -206,6 +206,6 @@ export default class PlaceMenuExtension extends Extension {
 
     disable() {
         this._indicator.destroy();
-        delete this._indicator;
+        this._indicator = null;
     }
 }
