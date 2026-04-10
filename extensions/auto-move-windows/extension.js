@@ -108,7 +108,7 @@ export default class AutoMoveExtension extends Extension {
     disable() {
         Main.wm._workspaceTracker._checkWorkspaces = this._prevCheckWorkspaces;
         this._windowMover.destroy();
-        delete this._windowMover;
+        this._windowMover = null;
     }
 
     _getCheckWorkspaceOverride(originalMethod) {
