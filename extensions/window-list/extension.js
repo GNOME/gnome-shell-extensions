@@ -8,7 +8,6 @@ import Clutter from 'gi://Clutter';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
-import Gtk from 'gi://Gtk';
 import Meta from 'gi://Meta';
 import Mtk from 'gi://Mtk';
 import Shell from 'gi://Shell';
@@ -543,7 +542,7 @@ class BaseButton extends DashItemContainer {
 
         const event = Clutter.get_current_event();
         if (event && event.type() === Clutter.EventType.KEY_RELEASE)
-            menu.actor.navigate_focus(null, Gtk.DirectionType.TAB_FORWARD, false);
+            menu.actor.navigate_focus(null, St.DirectionType.TAB_FORWARD, false);
     }
 
     _minimizeOrActivateWindow(window) {
