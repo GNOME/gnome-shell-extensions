@@ -23,8 +23,6 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
-const appSys = Shell.AppSystem.get_default();
-
 const APPLICATION_ICON_SIZE = 32;
 const HORIZ_FACTOR = 5;
 const MENU_HEIGHT_OFFSET = 132;
@@ -382,6 +380,8 @@ class ApplicationsButton extends PanelMenu.Button {
         // role ATK_ROLE_MENU like other elements of the panel.
         this.accessible_role = Atk.Role.LABEL;
 
+        this._appSys = Shell.AppSystem.get_default();
+
         this._label = new St.Label({
             text: _('Apps'),
             y_expand: true,
@@ -422,7 +422,7 @@ class ApplicationsButton extends PanelMenu.Button {
         this.reloadFlag = false;
         this._createLayout();
         this._display();
-        appSys.connectObject('installed-changed',
+        this._appSys.connectObject('installed-changed',
             () => this._onTreeChanged(), this);
     }
 
@@ -485,7 +485,7 @@ class ApplicationsButton extends PanelMenu.Button {
                 } catch {
                     continue;
                 }
-                let app = appSys.lookup_app(id);
+                let app = this._appSys.lookup_app(id);
                 if (!app)
                     app = new Shell.App({app_info: entry.get_app_info()});
                 if (app.get_app_info().should_show())
@@ -632,7 +632,7 @@ class ApplicationsButton extends PanelMenu.Button {
             applist = this.applicationsByCategory[categoryMenuId];
         } else {
             applist = global.settings.get_strv('favorite-apps')
-               .map(id => appSys.lookup_app(id))
+               .map(id => this._appSys.lookup_app(id))
                .filter(app => app);
         }
 
