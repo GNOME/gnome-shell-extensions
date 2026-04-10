@@ -555,18 +555,6 @@ class BaseButton extends DashItemContainer {
             window.activate(global.get_current_time());
     }
 
-    _onMenuStateChanged(menu, isOpen) {
-        if (isOpen)
-            return;
-
-        const extension = Extension.lookupByURL(import.meta.url);
-
-        const [x, y] = global.get_pointer();
-        const actor = global.stage.get_actor_at_pos(Clutter.PickMode.REACTIVE, x, y);
-        if (extension.someWindowListContains(actor))
-            actor.sync_hover();
-    }
-
     _onPopupMenu(_actor) {
         if (!this._canOpenPopupMenu() || this._contextMenu.isOpen)
             return;
@@ -644,8 +632,6 @@ class WindowButton extends BaseButton {
         this.label_actor = this._windowTitle.label_actor;
 
         this._contextMenu = new WindowContextMenu(this, this.metaWindow);
-        this._contextMenu.connect('open-state-changed',
-            this._onMenuStateChanged.bind(this));
         this._contextMenu.actor.hide();
         this._contextMenuManager.addMenu(this._contextMenu);
         Main.uiGroup.add_child(this._contextMenu.actor);
@@ -781,8 +767,6 @@ class AppButton extends BaseButton {
 
         this._menuManager = new PopupMenu.PopupMenuManager(this);
         this._menu = new PopupMenu.PopupMenu(this, 0.5, St.Side.BOTTOM);
-        this._menu.connect('open-state-changed',
-            this._onMenuStateChanged.bind(this));
         this._menu.actor.hide();
         this._menu.connect('activate', this._onMenuActivate.bind(this));
         this._menuManager.addMenu(this._menu);
@@ -859,8 +843,6 @@ class AppButton extends BaseButton {
         this._button.child = this._createTitleActor();
         this.label_actor = this._button.child.label_actor;
 
-        this._contextMenu.connect(
-            'open-state-changed', this._onMenuStateChanged.bind(this));
         Main.uiGroup.add_child(this._contextMenu.actor);
         this._contextMenu.actor.hide();
         this._contextMenuManager.addMenu(this._contextMenu);
@@ -1556,9 +1538,5 @@ export default class WindowListExtension extends Extension {
             windowList.destroy();
         });
         this._windowLists = null;
-    }
-
-    someWindowListContains(actor) {
-        return this._windowLists.some(list => list.contains(actor));
     }
 }
