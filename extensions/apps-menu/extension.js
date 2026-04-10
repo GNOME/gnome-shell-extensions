@@ -11,7 +11,6 @@ import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import GMenu from 'gi://GMenu';
 import GObject from 'gi://GObject';
-import Gtk from 'gi://Gtk';
 import Meta from 'gi://Meta';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
@@ -451,7 +450,7 @@ class ApplicationsButton extends PanelMenu.Button {
         const symbol = event.get_key_symbol();
         if (symbol === Clutter.KEY_Left || symbol === Clutter.KEY_Right) {
             const direction = symbol === Clutter.KEY_Left
-                ? Gtk.DirectionType.LEFT : Gtk.DirectionType.RIGHT;
+                ? St.DirectionType.LEFT : St.DirectionType.RIGHT;
             if (this.menu.actor.navigate_focus(global.stage.key_focus, direction, false))
                 return Clutter.EVENT_STOP;
         }
