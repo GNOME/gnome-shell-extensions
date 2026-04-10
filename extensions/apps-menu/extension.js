@@ -405,14 +405,13 @@ class ApplicationsButton extends PanelMenu.Button {
             () => this.menu.toggle());
 
         this._desktopTarget = new DesktopTarget();
-        this._desktopTarget.connect('app-dropped', () => {
-            this.menu.close();
-        });
-        this._desktopTarget.connect('desktop-changed', () => {
-            this._applicationsButtons.forEach(item => {
-                item.setDragEnabled(this._desktopTarget.hasDesktop);
-            });
-        });
+        this._desktopTarget.connectObject(
+            'app-dropped', () => this.menu.close(),
+            'desktop-changed', () => {
+                this._applicationsButtons.forEach(item => {
+                    item.setDragEnabled(this._desktopTarget.hasDesktop);
+                });
+            }, this);
 
         this._tree = new GMenu.Tree({menu_basename: 'applications.menu'});
         this._tree.connectObject('changed',
@@ -442,6 +441,7 @@ class ApplicationsButton extends PanelMenu.Button {
 
         Main.wm.removeKeybinding('apps-menu-toggle-menu');
 
+        this._desktopTarget.disconnectObject(this);
         this._desktopTarget.destroy();
     }
 
