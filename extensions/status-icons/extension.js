@@ -74,10 +74,10 @@ export default class SysTray {
 
     enable() {
         this._tray = new Shell.TrayManager();
-        this._tray.connect('tray-icon-added',
-            this._onTrayIconAdded.bind(this));
-        this._tray.connect('tray-icon-removed',
-            this._onTrayIconRemoved.bind(this));
+        this._tray.connectObject(
+            'tray-icon-added', this._onTrayIconAdded.bind(this),
+            'tray-icon-removed', this._onTrayIconRemoved.bind(this),
+            this);
         this._tray.manage_screen(Main.panel);
     }
 
@@ -86,6 +86,7 @@ export default class SysTray {
         this._icons.clear();
 
         this._tray.unmanage_screen();
+        this._tray.disconnectObject(this);
         this._tray = null;
     }
 }
