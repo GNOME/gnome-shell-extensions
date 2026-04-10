@@ -88,9 +88,9 @@ class PlacesMenu extends PanelMenu.Button {
         for (let i = 0; i < SECTIONS.length; i++) {
             const id = SECTIONS[i];
             this._sections[id] = new PopupMenu.PopupMenuSection();
-            this.placesManager.connect(`${id}-updated`, () => {
-                this._redisplay(id);
-            });
+            this.placesManager.connectObject(
+                `${id}-updated`, () => this._redisplay(id),
+                this);
 
             this._create(id);
             this.menu.addMenuItem(this._sections[id]);
@@ -99,6 +99,7 @@ class PlacesMenu extends PanelMenu.Button {
     }
 
     _onDestroy() {
+        this.placesManager.disconnectObject(this);
         this.placesManager.destroy();
 
         super._onDestroy();
