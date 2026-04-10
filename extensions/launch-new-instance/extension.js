@@ -7,11 +7,8 @@ import {AppIcon} from 'resource:///org/gnome/shell/ui/appDisplay.js';
 import {InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 export default class Extension {
-    constructor() {
-        this._injectionManager = new InjectionManager();
-    }
-
     enable() {
+        this._injectionManager = new InjectionManager();
         this._injectionManager.overrideMethod(AppIcon.prototype, 'activate',
             originalMethod => {
                 return function () {
@@ -23,5 +20,6 @@ export default class Extension {
 
     disable() {
         this._injectionManager.clear();
+        this._injectionManager = null;
     }
 }
