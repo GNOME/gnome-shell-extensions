@@ -13,7 +13,7 @@ import {WorkspaceIndicator} from './workspaceIndicator.js';
 export default class WorkspaceIndicatorExtension extends Extension {
     enable() {
         this._indicator = new WorkspaceIndicator({
-            settings: this.getSettings(),
+            extension: this,
         });
         Main.panel.addToStatusArea('workspace-indicator', this._indicator);
     }

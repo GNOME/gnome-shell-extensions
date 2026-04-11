@@ -11,7 +11,7 @@ import Meta from 'gi://Meta';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
 
-import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import * as DND from 'resource:///org/gnome/shell/ui/dnd.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
@@ -506,7 +506,7 @@ class EditableMenuItem extends PopupMenu.PopupBaseMenuItem {
 }
 
 class WorkspacesMenu extends PopupMenu.PopupMenu {
-    constructor(sourceActor) {
+    constructor(sourceActor, extension) {
         super(sourceActor, 0.5, St.Side.TOP);
 
         this.actor.add_style_class_name(`${baseStyleClassName}-menu`);
@@ -526,7 +526,6 @@ class WorkspacesMenu extends PopupMenu.PopupMenu {
         this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
         this.addAction(_('Settings'), () => {
-            const extension = Extension.lookupByURL(import.meta.url);
             extension.openPreferences();
         });
 
@@ -614,15 +613,15 @@ export class WorkspaceIndicator extends PanelMenu.Button {
 
         const {
             baseStyleClass = 'workspace-indicator',
-            settings,
+            extension,
         } = params;
 
-        this._settings = settings;
+        this._settings = extension.getSettings();
 
         baseStyleClassName = baseStyleClass;
         this.add_style_class_name(baseStyleClassName);
 
-        this.setMenu(new WorkspacesMenu(this));
+        this.setMenu(new WorkspacesMenu(this, extension));
 
         const container = new St.Widget({
             layout_manager: new Clutter.BinLayout(),

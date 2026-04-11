@@ -944,7 +944,7 @@ class WindowList extends St.Widget {
 
         this._workspaceIndicator = new BottomWorkspaceIndicator({
             baseStyleClass: 'window-list-workspace-indicator',
-            settings: extension.getSettings(),
+            extension,
         });
         indicatorsBox.add_child(this._workspaceIndicator.container);
 
