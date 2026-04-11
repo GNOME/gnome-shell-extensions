@@ -912,7 +912,7 @@ class WindowList extends St.Widget {
         GObject.registerClass(this);
     }
 
-    constructor(perMonitor, monitor, settings) {
+    constructor(perMonitor, monitor, extension) {
         super({
             name: 'panel',
             style_class: 'bottom-panel solid',
@@ -944,7 +944,7 @@ class WindowList extends St.Widget {
 
         this._workspaceIndicator = new BottomWorkspaceIndicator({
             baseStyleClass: 'window-list-workspace-indicator',
-            settings,
+            settings: extension.getSettings(),
         });
         indicatorsBox.add_child(this._workspaceIndicator.container);
 
@@ -1058,7 +1058,7 @@ class WindowList extends St.Widget {
 
         this._delegate = this;
 
-        this._settings = settings;
+        this._settings = extension.getSettings();
         this._settings.connectObject('changed::grouping-mode',
             () => this._groupingModeChanged(), this);
         this._grouped = undefined;
@@ -1520,7 +1520,7 @@ export default class WindowListExtension extends Extension {
 
         Main.layoutManager.monitors.forEach(monitor => {
             if (showOnAllMonitors || monitor === Main.layoutManager.primaryMonitor)
-                this._windowLists.push(new WindowList(showOnAllMonitors, monitor, this.getSettings()));
+                this._windowLists.push(new WindowList(showOnAllMonitors, monitor, this));
         });
     }
 
