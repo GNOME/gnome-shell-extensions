@@ -10,5 +10,6 @@
   "shell-version": [
     "@shell_current@"
   ],
+  "version-name": "@version@",
   "url": "@url@"
 }

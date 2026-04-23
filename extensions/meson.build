@@ -15,6 +15,7 @@ foreach e : enabled_extensions
   metadata_conf.set('gschemaname', 'org.gnome.shell.extensions.' + e)
   metadata_conf.set('gettext_domain', gettext_domain)
   metadata_conf.set('shell_current', shell_version)
+  metadata_conf.set('version', meson.project_version())
   metadata_conf.set(
     'url',
     'https://gitlab.gnome.org/GNOME/gnome-shell-extensions',
