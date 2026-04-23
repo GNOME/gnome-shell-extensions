@@ -1,3 +1,10 @@
+50.2
+====
+* Include project version in metadata [Florian; !451]
+
+Contributors:
+  Florian Müllner
+
 50.1
 ====
 * Misc. cleanups and bug fixes [Florian; !449]
