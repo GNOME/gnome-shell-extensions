@@ -1,9 +1,11 @@
 {
-"uuid": "@uuid@",
-"settings-schema": "@gschemaname@",
-"gettext-domain": "@gettext_domain@",
-"name": "Screenshot Window Sizer",
-"description": "Resize windows for GNOME Software screenshots with Ctrl+Alt+s shortcut",
-"shell-version": [ "@shell_current@" ],
-"url": "@url@"
+  "name": "Screenshot Window Sizer",
+  "description": "Resize windows for GNOME Software screenshots with Ctrl+Alt+s shortcut",
+  "uuid": "@uuid@",
+  "gettext-domain": "@gettext_domain@",
+  "settings-schema": "@gschemaname@",
+  "shell-version": [
+    "@shell_current@"
+  ],
+  "url": "@url@"
 }

@@ -1,10 +1,14 @@
 {
- "uuid": "@uuid@",
- "settings-schema": "@gschemaname@",
- "gettext-domain": "@gettext_domain@",
- "name": "Native Window Placement",
- "description": "Arrange windows in overview in a more compact way.",
- "shell-version": [ "@shell_current@" ],
- "url": "@url@",
- "original-authors": [ "wepmaschda@gmx.de" ]
+  "name": "Native Window Placement",
+  "description": "Arrange windows in overview in a more compact way.",
+  "original-authors": [
+    "wepmaschda@gmx.de"
+  ],
+  "uuid": "@uuid@",
+  "settings-schema": "@gschemaname@",
+  "gettext-domain": "@gettext_domain@",
+  "shell-version": [
+    "@shell_current@"
+  ],
+  "url": "@url@"
 }

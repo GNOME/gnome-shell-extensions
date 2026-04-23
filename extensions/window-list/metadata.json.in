@@ -1,9 +1,11 @@
 {
-"uuid": "@uuid@",
-"settings-schema": "@gschemaname@",
-"gettext-domain": "@gettext_domain@",
-"name": "Window List",
-"description": "Display a window list at the bottom of the screen.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME's GitLab instance instead.",
-"shell-version": [ "@shell_current@" ],
-"url": "@url@"
+  "name": "Window List",
+  "description": "Display a window list at the bottom of the screen.\nThis extension is part of Classic Mode and is officially supported by GNOME. Please do not report bugs using the form below, use GNOME's GitLab instance instead.",
+  "uuid": "@uuid@",
+  "gettext-domain": "@gettext_domain@",
+  "settings-schema": "@gschemaname@",
+  "shell-version": [
+    "@shell_current@"
+  ],
+  "url": "@url@"
 }

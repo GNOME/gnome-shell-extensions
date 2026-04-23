@@ -1,10 +1,14 @@
 {
- "uuid": "@uuid@",
- "settings-schema": "@gschemaname@",
- "gettext-domain": "@gettext_domain@",
- "name": "User Themes",
- "description": "Load shell themes from user directory.",
- "shell-version": [ "@shell_current@" ],
- "original-authors": [ "john.stowers@gmail.com" ],
- "url": "@url@"
+  "name": "User Themes",
+  "description": "Load shell themes from user directory.",
+  "original-authors": [
+    "john.stowers@gmail.com"
+  ],
+  "uuid": "@uuid@",
+  "gettext-domain": "@gettext_domain@",
+  "settings-schema": "@gschemaname@",
+  "shell-version": [
+    "@shell_current@"
+  ],
+  "url": "@url@"
 }
