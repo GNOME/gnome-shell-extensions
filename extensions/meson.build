@@ -11,7 +11,6 @@ foreach e : enabled_extensions
   uuid = e + uuid_suffix
 
   metadata_conf = configuration_data()
-  metadata_conf.set('extension_id', e)
   metadata_conf.set('uuid', uuid)
   metadata_conf.set('gschemaname', 'org.gnome.shell.extensions.' + e)
   metadata_conf.set('gettext_domain', gettext_domain)

@@ -1,6 +1,5 @@
 {
     "shell-version": ["@shell_current@" ],
-    "extension-id": "@extension_id@",
     "uuid": "@uuid@",
     "settings-schema": "@gschemaname@",
     "gettext-domain": "@gettext_domain@",
