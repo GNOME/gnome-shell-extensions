@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extensions main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
 "issues\n"
-"POT-Creation-Date: 2026-04-11 01:03+0000\n"
+"POT-Creation-Date: 2025-09-14 19:43+0000\n"
 "PO-Revision-Date: 2026-01-01 18:41+0200\n"
 "Last-Translator: @pacu23\n"
 "Language-Team: Bulgarian <dict@ludost.net>\n"
@@ -29,15 +29,24 @@ msgstr ""
 msgid "GNOME Classic"
 msgstr "Класически GNOME"
 
-#: data/gnome-classic.desktop.in:3
+#: data/gnome-classic.desktop.in:3 data/gnome-classic-wayland.desktop.in:3
+#: data/gnome-classic-xorg.desktop.in:3
 msgid "This session logs you into GNOME Classic"
 msgstr "Тази сесия влизa в Класически GNOME"
 
-#: extensions/apps-menu/extension.js:115
+#: data/gnome-classic-wayland.desktop.in:2
+msgid "GNOME Classic on Wayland"
+msgstr "Класически GNOME в Wayland"
+
+#: data/gnome-classic-xorg.desktop.in:2
+msgid "GNOME Classic on Xorg"
+msgstr "Класически GNOME в Xorg"
+
+#: extensions/apps-menu/extension.js:118
 msgid "Favorites"
 msgstr "Любими"
 
-#: extensions/apps-menu/extension.js:386
+#: extensions/apps-menu/extension.js:392
 msgid "Apps"
 msgstr "Програми"
 
@@ -53,11 +62,11 @@ msgstr ""
 "Списък от низове, всеки съдържащ идентификатор на програма (име на desktop "
 "файла), последван от двоеточие и номер на работното пространство"
 
-#: extensions/auto-move-windows/prefs.js:157
+#: extensions/auto-move-windows/prefs.js:156
 msgid "Workspace Rules"
 msgstr "Правила за работните пространства"
 
-#: extensions/auto-move-windows/prefs.js:312
+#: extensions/auto-move-windows/prefs.js:311
 msgid "Add Rule"
 msgstr "Добавяне на правило"
 
@@ -120,23 +129,23 @@ msgstr "Неуспешно стартиране на „%s“"
 msgid "Failed to mount volume for “%s”"
 msgstr "Неуспешно монтиране на тома „%s“"
 
-#: extensions/places-menu/placeDisplay.js:314
+#: extensions/places-menu/placeDisplay.js:315
 msgid "Home"
 msgstr "Домашна папка"
 
-#: extensions/places-menu/placeDisplay.js:320
+#: extensions/places-menu/placeDisplay.js:321
 msgid "Recent"
 msgstr "Скорошни"
 
-#: extensions/places-menu/placeDisplay.js:326
+#: extensions/places-menu/placeDisplay.js:327
 msgid "Starred"
 msgstr "Отбелязани"
 
-#: extensions/places-menu/placeDisplay.js:346
+#: extensions/places-menu/placeDisplay.js:347
 msgid "Network"
 msgstr "Мрежа"
 
-#: extensions/places-menu/placeDisplay.js:353
+#: extensions/places-menu/placeDisplay.js:354
 msgid "Trash"
 msgstr "Кошче"
 
@@ -148,27 +157,27 @@ msgstr "Превключване между размерите на екранн
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "Обратно превключване на размерите на екранната снимка"
 
-#: extensions/system-monitor/extension.js:133
+#: extensions/system-monitor/extension.js:135
 msgid "CPU stats"
 msgstr "Статистика на процесора"
 
-#: extensions/system-monitor/extension.js:157
+#: extensions/system-monitor/extension.js:159
 msgid "Memory stats"
 msgstr "Статистика на паметта"
 
-#: extensions/system-monitor/extension.js:175
+#: extensions/system-monitor/extension.js:177
 msgid "Swap stats"
 msgstr "Статистика на виртуалната памет"
 
-#: extensions/system-monitor/extension.js:334
+#: extensions/system-monitor/extension.js:336
 msgid "Upload stats"
 msgstr "Статистика за качването"
 
-#: extensions/system-monitor/extension.js:348
+#: extensions/system-monitor/extension.js:350
 msgid "Download stats"
 msgstr "Статистика за изтеглянето"
 
-#: extensions/system-monitor/extension.js:363
+#: extensions/system-monitor/extension.js:365
 msgid "System stats"
 msgstr "Системна статистика"
 
@@ -228,47 +237,47 @@ msgstr "Име на темата"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "Името на темата, която да се зареди от „~/.themes/name/gnome-shell“"
 
-#: extensions/window-list/extension.js:97
+#: extensions/window-list/extension.js:98
 msgid "Close"
 msgstr "Затваряне"
 
-#: extensions/window-list/extension.js:124
+#: extensions/window-list/extension.js:125
 msgid "Unminimize"
 msgstr "Деминимизиране"
 
-#: extensions/window-list/extension.js:124
+#: extensions/window-list/extension.js:125
 msgid "Minimize"
 msgstr "Минимизиране"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Unmaximize"
 msgstr "Демаксимизиране"
 
-#: extensions/window-list/extension.js:129
+#: extensions/window-list/extension.js:130
 msgid "Maximize"
 msgstr "Максимизиране"
 
-#: extensions/window-list/extension.js:704
+#: extensions/window-list/extension.js:720
 msgid "Minimize all"
 msgstr "Минимизиране на всички"
 
-#: extensions/window-list/extension.js:710
+#: extensions/window-list/extension.js:726
 msgid "Unminimize all"
 msgstr "Деминимизиране на всички"
 
-#: extensions/window-list/extension.js:716
+#: extensions/window-list/extension.js:732
 msgid "Maximize all"
 msgstr "Максимизиране на всички"
 
-#: extensions/window-list/extension.js:724
+#: extensions/window-list/extension.js:740
 msgid "Unmaximize all"
 msgstr "Демаксимизиране на всички"
 
-#: extensions/window-list/extension.js:732
+#: extensions/window-list/extension.js:748
 msgid "Close all"
 msgstr "Затваряне на всички"
 
-#: extensions/window-list/extension.js:980 extensions/window-list/prefs.js:23
+#: extensions/window-list/extension.js:1000 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "Списък на прозорците"
 
@@ -335,16 +344,16 @@ msgstr "На всички монитори"
 msgid "Show workspace previews in top bar"
 msgstr "Визуализиране на работните пространства в горната лента"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:405
+#: extensions/workspace-indicator/workspaceIndicator.js:404
 #, javascript-format
 msgid "Press %s to edit"
 msgstr "Натиснете %s за редактирате"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:528
+#: extensions/workspace-indicator/workspaceIndicator.js:518
 msgid "Settings"
 msgstr "Настройки"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:612
+#: extensions/workspace-indicator/workspaceIndicator.js:598
 msgid "Workspace Indicator"
 msgstr "Индикатор на работните пространства"
 
@@ -387,12 +396,6 @@ msgstr "Брой работни пространства"
 #: extensions/workspace-indicator/workspacePrefs.js:128
 msgid "Workspaces"
 msgstr "Работни пространства"
-
-#~ msgid "GNOME Classic on Wayland"
-#~ msgstr "Класически GNOME в Wayland"
-
-#~ msgid "GNOME Classic on Xorg"
-#~ msgstr "Класически GNOME в Xorg"
 
 #~ msgid "Computer"
 #~ msgstr "Компютър"
