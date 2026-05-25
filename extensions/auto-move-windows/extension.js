@@ -132,10 +132,11 @@ export default class AutoMoveExtension extends Extension {
 
             // make sure the original method only removes empty workspaces at the end
             keepAliveWorkspaces.forEach(ws => (ws._keepAliveId = 1));
-            originalMethod.call(this);
-            keepAliveWorkspaces.forEach(ws => delete ws._keepAliveId);
-
-            return false;
+            try {
+                return originalMethod.call(this);
+            } finally {
+                keepAliveWorkspaces.forEach(ws => delete ws._keepAliveId);
+            }
         };
         /* eslint-enable no-invalid-this */
     }
