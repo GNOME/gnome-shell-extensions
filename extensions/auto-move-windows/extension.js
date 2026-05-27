@@ -4,10 +4,14 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+import GLib from 'gi://GLib';
 import Shell from 'gi://Shell';
 
 import {Extension, InjectionManager} from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+
+// time during which windows are moved on startup if startup-only is true
+const SESSION_AUTOSTART_TIMEOUT_MS = 20 * 1000;
 
 class WindowMover {
     constructor(settings) {
@@ -19,15 +23,48 @@ class WindowMover {
         this._appSystem.connectObject('installed-changed',
             () => this._updateAppData(), this);
 
-        this._settings.connectObject('changed',
+        this._settings.connectObject('changed::application-list',
             this._updateAppConfigs.bind(this), this);
+        this._settings.connectObject('changed::startup-only',
+            () => this._updateStartupOnly());
+        this._updateStartupOnly();
+    }
+
+    _updateStartupOnly() {
+        const startupOnly = this._settings.get_boolean('startup-only');
+        if (this._startupOnly === startupOnly)
+            return;
+
+        this._startupOnly = startupOnly;
+
+        if (startupOnly) {
+            this._movesEnabled = Main.layoutManager._startingUp;
+
+            if (this._movesEnabled) {
+                this._startupTimeoutId = GLib.timeout_add_once(
+                    GLib.PRIORITY_DEFAULT,
+                    SESSION_AUTOSTART_TIMEOUT_MS,
+                    () => {
+                        this._movesEnabled = false;
+                        this._updateAppConfigs();
+
+                        delete this._startupTimeoutId;
+                    });
+            }
+        } else {
+            this._movesEnabled = true;
+        }
+
         this._updateAppConfigs();
     }
 
     _updateAppConfigs() {
         this._appConfigs.clear();
 
-        this._settings.get_strv('application-list').forEach(v => {
+        const appList = this._movesEnabled
+            ? this._settings.get_strv('application-list')
+            : [];
+        appList.forEach(v => {
             const [appId, num] = v.split(':');
             this._appConfigs.set(appId, parseInt(num) - 1);
         });
@@ -63,6 +100,10 @@ class WindowMover {
 
         this._appConfigs.clear();
         this._updateAppData();
+
+        if (this._startupTimeoutId)
+            GLib.source_remove(this._startupTimeoutId);
+        delete this._startupTimeoutId;
     }
 
     _moveWindow(window, workspaceNum) {
@@ -81,7 +122,7 @@ class WindowMover {
 
     _appWindowsChanged(app) {
         const data = this._appData.get(app);
-        const windows = app.get_windows();
+        let windows = app.get_windows();
 
         // If get_compositor_private() returns non-NULL on a removed windows,
         // the window still exists and is just moved to a different workspace
@@ -90,6 +131,12 @@ class WindowMover {
         windows.push(...data.windows.filter(w => {
             return !windows.includes(w) && w.get_compositor_private() !== null;
         }));
+
+        // In startup-only mode, we only want to move auto-started apps;
+        // we can't filter for that, but at least we know that windows with
+        // a startup ID were launched by the user
+        if (this._startupOnly)
+            windows = windows.filter(w => w.get_startup_id() === null);
 
         const workspaceNum = this._appConfigs.get(app.id);
         windows.filter(w => !data.windows.includes(w)).forEach(window => {

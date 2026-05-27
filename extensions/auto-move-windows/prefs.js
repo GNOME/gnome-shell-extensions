@@ -141,7 +141,48 @@ class RulesList extends GObject.Object {
     }
 }
 
-class AutoMoveSettingsWidget extends Adw.PreferencesGroup {
+class AutoMoveSettingsWidget extends Adw.PreferencesPage {
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor(settings) {
+        super();
+
+        this._settings = settings;
+
+        const rulesGroup = new WorkspaceRulesGroup(settings);
+        this.add(rulesGroup);
+
+        const optionsGroup = new OptionsGroup(settings);
+        this.add(optionsGroup);
+    }
+}
+
+class OptionsGroup extends Adw.PreferencesGroup {
+    static {
+        GObject.registerClass(this);
+    }
+
+    constructor(settings) {
+        super();
+
+        this._settings = settings;
+
+        const actionGroup = new Gio.SimpleActionGroup();
+        actionGroup.add_action(settings.create_action('startup-only'));
+        this.insert_action_group('options', actionGroup);
+
+        const row = new Adw.SwitchRow({
+            title: _('Startup Only'),
+            subtitle: _('Only apply rules while the session is starting'),
+            action_name: 'options.startup-only',
+        });
+        this.add(row);
+    }
+}
+
+class WorkspaceRulesGroup extends Adw.PreferencesGroup {
     static {
         GObject.registerClass(this);
 

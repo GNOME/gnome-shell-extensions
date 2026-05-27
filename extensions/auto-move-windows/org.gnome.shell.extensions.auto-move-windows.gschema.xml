@@ -12,5 +12,9 @@ SPDX-License-Identifier: GPL-2.0-or-later
       <summary>Application and workspace list</summary>
       <description>A list of strings, each containing an application id (desktop file name), followed by a colon and the workspace number</description>
     </key>
+    <key name="startup-only" type="b">
+      <default>false</default>
+      <summary>Only move windows during startup</summary>
+    </key>
   </schema>
 </schemalist>
