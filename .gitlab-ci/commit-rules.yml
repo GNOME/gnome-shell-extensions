@@ -18,3 +18,5 @@ patterns:
     - regex: '([^.]\.|[:,;])\s*$'
       message: Commit message subject should not end with punctuation
       where: subject
+    - regex: '^[Cc]lose[sd]?:?\s*#[0-9]+'
+      message: Closes instructions must be a full link
