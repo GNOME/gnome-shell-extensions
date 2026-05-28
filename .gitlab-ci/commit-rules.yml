@@ -15,3 +15,6 @@ patterns:
     - regex: '^\S*\.js:'
       message: Commit message subject prefix should not include .js
       where: subject
+    - regex: '([^.]\.|[:,;])\s*$'
+      message: Commit message subject should not end with punctuation
+      where: subject
