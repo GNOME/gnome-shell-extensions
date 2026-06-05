@@ -546,11 +546,14 @@ class BaseButton extends DashItemContainer {
     }
 
     _minimizeOrActivateWindow(window) {
-        const focusWindow = global.display.focus_window;
-        if (focusWindow === window ||
-            focusWindow && focusWindow.get_transient_for() === window)
+        const {focusWindow} = global.display;
+        const useMinimize =
+            focusWindow === window ||
+            focusWindow?.get_transient_for() === window;
+
+        if (useMinimize && window.can_minimize())
             window.minimize();
-        else
+        else if (!useMinimize)
             window.activate(global.get_current_time());
     }
 
