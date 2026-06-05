@@ -380,7 +380,7 @@ class BaseButton extends DashItemContainer {
             style_class: 'window-button',
             can_focus: true,
             x_expand: true,
-            button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE,
+            button_mask: St.ButtonMask.PRIMARY | St.ButtonMask.SECONDARY,
         });
         this.setChild(this._button);
 
