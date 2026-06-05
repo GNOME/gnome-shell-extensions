@@ -703,53 +703,57 @@ class AppContextMenu extends PopupMenu.PopupMenu {
 
         this._minimizeItem = new PopupMenu.PopupMenuItem(_('Minimize all'));
         this._minimizeItem.connect('activate', () => {
-            this._appButton.getWindowList().forEach(w => w.minimize());
+            const windows = this._getWindows(w => w.can_minimize());
+            windows.forEach(w => w.minimize());
         });
         this.addMenuItem(this._minimizeItem);
 
         this._unminimizeItem = new PopupMenu.PopupMenuItem(_('Unminimize all'));
         this._unminimizeItem.connect('activate', () => {
-            this._appButton.getWindowList().forEach(w => w.unminimize());
+            const windows = this._getWindows(w => w.can_minimize());
+            windows.forEach(w => w.unminimize());
         });
         this.addMenuItem(this._unminimizeItem);
 
         this._maximizeItem = new PopupMenu.PopupMenuItem(_('Maximize all'));
         this._maximizeItem.connect('activate', () => {
-            this._appButton.getWindowList().forEach(w => {
-                w.maximize();
-            });
+            const windows = this._getWindows(w => w.can_maximize());
+            windows.forEach(w => w.maximize());
         });
         this.addMenuItem(this._maximizeItem);
 
         this._unmaximizeItem = new PopupMenu.PopupMenuItem(_('Unmaximize all'));
         this._unmaximizeItem.connect('activate', () => {
-            this._appButton.getWindowList().forEach(w => {
-                w.unmaximize();
-            });
+            const windows = this._getWindows(w => w.can_maximize());
+            windows.forEach(w => w.unmaximize());
         });
         this.addMenuItem(this._unmaximizeItem);
 
-        const item = new PopupMenu.PopupMenuItem(_('Close all'));
-        item.connect('activate', () => {
-            this._appButton.getWindowList().forEach(w => {
-                w.delete(global.get_current_time());
-            });
+        this._closeItem = new PopupMenu.PopupMenuItem(_('Close all'));
+        this._closeItem.connect('activate', () => {
+            const windows = this._getWindows(w => w.can_close());
+            windows.forEach(w => w.delete(global.get_current_time()));
         });
-        this.addMenuItem(item);
+        this.addMenuItem(this._closeItem);
+    }
+
+    _getWindows(filterFunc = () => true) {
+        return this._appButton.getWindowList().filter(filterFunc);
     }
 
     open(animate) {
         const windows = this._appButton.getWindowList();
-        this._minimizeItem.visible = windows.some(w => !w.minimized);
-        this._unminimizeItem.visible = windows.some(w => w.minimized);
-        this._maximizeItem.visible = windows.some(w => {
-            return !w.is_maximized();
-        });
-        this._unmaximizeItem.visible = windows.some(w => {
-            return w.is_maximized();
-        });
+        this._minimizeItem.visible =
+            windows.some(w => w.can_minimize() && !w.minimized);
+        this._unminimizeItem.visible =
+            windows.some(w => w.can_minimize() && w.minimized);
+        this._maximizeItem.visible =
+            windows.some(w => w.can_maximize() && !w.is_maximized());
+        this._unmaximizeItem.visible =
+            windows.some(w => w.can_maximize() && w.is_maximized());
 
         super.open(animate);
+        this._closeItem.setSensitive(windows.some(w => w.can_close()));
     }
 }
 
