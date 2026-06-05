@@ -432,7 +432,6 @@ class EditableMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._editButton = new St.Button({
             style_class: 'icon-button flat',
             icon_name: 'document-edit-symbolic',
-            button_mask: St.ButtonMask.ONE,
             toggle_mode: true,
             x_align: Clutter.ActorAlign.END,
             y_align: Clutter.ActorAlign.CENTER,
