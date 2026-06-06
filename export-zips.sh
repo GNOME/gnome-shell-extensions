@@ -41,7 +41,8 @@ for f in $extensiondir/*; do
   cp $srcdir/NEWS $srcdir/COPYING $f
   sources=(NEWS COPYING $(cd $f; ls *.js *.css 2>/dev/null))
 
-  [ -d $f/icons ] && sources+=(icons)
+  # add subdirs
+  sources+=( $(compgen -o dirnames $f/ | grep -v po ) )
 
   [ -f $schema ] || unset schema
 
