@@ -34,6 +34,87 @@ function strHash(str) {
     return hash;
 }
 
+const CPU_HWMON_NAMES = new Set([
+    'coretemp',
+    'cpu_thermal',
+    'k10temp',
+    'soc_thermal',
+    'zenpower',
+]);
+
+function readTextFile(path) {
+    try {
+        const file = Gio.File.new_for_path(path);
+        const [success, contents] = file.load_contents(null);
+
+        if (!success)
+            return null;
+
+        // Gio returns bytes, not a JavaScript string. Converting those bytes
+        // with String() does not yield the value stored in the sysfs file.
+        return new TextDecoder().decode(contents).trim();
+    } catch (e) {
+        return null;
+    }
+}
+
+function readTemperature(sensorPath) {
+    const millidegrees = Number.parseInt(readTextFile(sensorPath), 10);
+    return Number.isFinite(millidegrees) ? millidegrees / 1000 : null;
+}
+
+function readHwmonTemperature() {
+    const hwmonRoot = '/sys/class/hwmon';
+
+    if (!GLib.file_test(hwmonRoot, GLib.FileTest.IS_DIR))
+        return null;
+
+    try {
+        const hwmonDir = GLib.Dir.open(hwmonRoot, 0);
+        let entry;
+        let fallback = null;
+
+        while ((entry = hwmonDir.read_name()) !== null) {
+            if (entry === '.' || entry === '..')
+                continue;
+
+            const hwmonPath = `${hwmonRoot}/${entry}`;
+            if (!GLib.file_test(hwmonPath, GLib.FileTest.IS_DIR))
+                continue;
+
+            const name = readTextFile(`${hwmonPath}/name`);
+            const isCpuSensor = CPU_HWMON_NAMES.has(name);
+            const sensorDir = GLib.Dir.open(hwmonPath, 0);
+            let sensorEntry;
+
+            while ((sensorEntry = sensorDir.read_name()) !== null) {
+                if (sensorEntry === '.' || sensorEntry === '..')
+                    continue;
+
+                if (!/^temp\d+_input$/.test(sensorEntry) &&
+                    sensorEntry !== 'temp_input')
+                    continue;
+
+                const sensorPath = `${hwmonPath}/${sensorEntry}`;
+                const temperature = readTemperature(sensorPath);
+                if (temperature === null)
+                    continue;
+
+                if (isCpuSensor)
+                    return temperature;
+
+                fallback ??= temperature;
+            }
+        }
+
+        return fallback;
+    } catch (e) {
+        logError(e, 'Failed to read hwmon temperature');
+    }
+
+    return null;
+}
+
 class StatSection extends St.BoxLayout {
     static {
         GObject.registerClass(this);
@@ -49,7 +130,7 @@ class StatSection extends St.BoxLayout {
 
         this._icon = new St.Icon({
             style_class: 'system-monitor-stat-section-icon',
-            gicon: new Gio.FileIcon({file}),
+            gicon: new Gio.FileIcon({ file }),
         });
         this.add_child(this._icon);
 
@@ -148,6 +229,37 @@ class CpuSection extends LoadStatSection {
     }
 }
 
+class TemperatureSection extends StatSection {
+    static {
+        GObject.registerClass(this);
+    }
+
+    #formatter = new Intl.NumberFormat(undefined, {
+        maximumFractionDigits: 1,
+    });
+
+    constructor(iconDir) {
+        super(iconDir, 'temperature-symbolic', _('Temperature stats'));
+    }
+
+    _update() {
+        const temperature = readHwmonTemperature();
+
+        if (temperature === null) {
+            this.label.text = '—';
+            this.remove_style_class_name('high-temperature');
+            return;
+        }
+
+        this.label.text = `${this.#formatter.format(temperature)}°C`;
+
+        if (temperature >= 80)
+            this.add_style_class_name('high-temperature');
+        else
+            this.remove_style_class_name('high-temperature');
+    }
+}
+
 class MemSection extends LoadStatSection {
     static {
         GObject.registerClass(this);
@@ -189,84 +301,94 @@ class NetStatSection extends StatSection {
         GObject.registerClass(this);
     }
 
-    #formats = [{
-        factor: 1000,
-        unitFactor: 1000,
-        formatter: new Intl.NumberFormat(undefined, {
-            style: 'unit',
-            unit: 'kilobyte',
-            maximumFractionDigits: 1,
-            minimumFractionDigits: 1,
-        }),
-    }, {
-        factor: 1000 * 10,
-        unitFactor: 1000,
-        formatter: new Intl.NumberFormat(undefined, {
-            style: 'unit',
-            unit: 'kilobyte',
-            maximumFractionDigits: 0,
-        }),
-    }, {
-        factor: 1000 * 1000,
-        unitFactor: 1000 * 1000,
-        formatter: new Intl.NumberFormat(undefined, {
-            style: 'unit',
-            unit: 'megabyte',
-            maximumFractionDigits: 1,
-            minimumFractionDigits: 1,
-        }),
-    }, {
-        factor: 1000 * 1000 * 10,
-        unitFactor: 1000 * 1000,
-        formatter: new Intl.NumberFormat(undefined, {
-            style: 'unit',
-            unit: 'megabyte',
-            maximumFractionDigits: 0,
-        }),
-    }, {
-        factor: 1000 * 1000 * 1000,
-        unitFactor: 1000 * 1000 * 1000,
-        formatter: new Intl.NumberFormat(undefined, {
-            style: 'unit',
-            unit: 'gigabyte',
-            maximumFractionDigits: 1,
-            minimumFractionDigits: 1,
-        }),
-    }, {
-        factor: 1000 * 1000 * 1000 * 10,
-        unitFactor: 1000 * 1000 * 1000,
-        formatter: new Intl.NumberFormat(undefined, {
-            style: 'unit',
-            unit: 'gigabyte',
-            maximumFractionDigits: 0,
-        }),
-    }, {
-        factor: 1000 * 1000 * 1000 * 1000,
-        unitFactor: 1000 * 1000 * 1000 * 1000,
-        formatter: new Intl.NumberFormat(undefined, {
-            style: 'unit',
-            unit: 'terabyte',
-            maximumFractionDigits: 1,
-            minimumFractionDigits: 1,
-        }),
-    }, {
-        factor: 1000 * 1000 * 1000 * 1000 * 10,
-        unitFactor: 1000 * 1000 * 1000 * 1000,
-        formatter: new Intl.NumberFormat(undefined, {
-            style: 'unit',
-            unit: 'terabyte',
-            maximumFractionDigits: 0,
-        }),
-    }, {
-        factor: 1000 * 1000 * 1000 * 1000 * 1000,
-        unitFactor: 1000 * 1000 * 1000 * 1000 * 1000,
-        formatter: new Intl.NumberFormat(undefined, {
-            style: 'unit',
-            unit: 'petabyte',
-            maximumFractionDigits: 1,
-            minimumFractionDigits: 1,
-        }),
-    }];
+    #formats = [
+        {
+            factor: 1000,
+            unitFactor: 1000,
+            formatter: new Intl.NumberFormat(undefined, {
+                style: 'unit',
+                unit: 'kilobyte',
+                maximumFractionDigits: 1,
+                minimumFractionDigits: 1,
+            }),
+        },
+        {
+            factor: 1000 * 10,
+            unitFactor: 1000,
+            formatter: new Intl.NumberFormat(undefined, {
+                style: 'unit',
+                unit: 'kilobyte',
+                maximumFractionDigits: 0,
+            }),
+        },
+        {
+            factor: 1000 * 1000,
+            unitFactor: 1000 * 1000,
+            formatter: new Intl.NumberFormat(undefined, {
+                style: 'unit',
+                unit: 'megabyte',
+                maximumFractionDigits: 1,
+                minimumFractionDigits: 1,
+            }),
+        },
+        {
+            factor: 1000 * 1000 * 10,
+            unitFactor: 1000 * 1000,
+            formatter: new Intl.NumberFormat(undefined, {
+                style: 'unit',
+                unit: 'megabyte',
+                maximumFractionDigits: 0,
+            }),
+        },
+        {
+            factor: 1000 * 1000 * 1000,
+            unitFactor: 1000 * 1000 * 1000,
+            formatter: new Intl.NumberFormat(undefined, {
+                style: 'unit',
+                unit: 'gigabyte',
+                maximumFractionDigits: 1,
+                minimumFractionDigits: 1,
+            }),
+        },
+        {
+            factor: 1000 * 1000 * 1000 * 10,
+            unitFactor: 1000 * 1000 * 1000,
+            formatter: new Intl.NumberFormat(undefined, {
+                style: 'unit',
+                unit: 'gigabyte',
+                maximumFractionDigits: 0,
+            }),
+        },
+        {
+            factor: 1000 * 1000 * 1000 * 1000,
+            unitFactor: 1000 * 1000 * 1000 * 1000,
+            formatter: new Intl.NumberFormat(undefined, {
+                style: 'unit',
+                unit: 'terabyte',
+                maximumFractionDigits: 1,
+                minimumFractionDigits: 1,
+            }),
+        },
+        {
+            factor: 1000 * 1000 * 1000 * 1000 * 10,
+            unitFactor: 1000 * 1000 * 1000 * 1000,
+            formatter: new Intl.NumberFormat(undefined, {
+                style: 'unit',
+                unit: 'terabyte',
+                maximumFractionDigits: 0,
+            }),
+        },
+        {
+            factor: 1000 * 1000 * 1000 * 1000 * 1000,
+            unitFactor: 1000 * 1000 * 1000 * 1000 * 1000,
+            formatter: new Intl.NumberFormat(undefined, {
+                style: 'unit',
+                unit: 'petabyte',
+                maximumFractionDigits: 1,
+                minimumFractionDigits: 1,
+            }),
+        },
+    ];
 
     #lastBytes = 0;
     #lastHash = 0;
@@ -296,8 +418,7 @@ class NetStatSection extends StatSection {
             const netload = new GTop.glibtop_netload();
             GTop.glibtop_get_netload(netload, ifname);
 
-            if (netload.if_flags & FLAG_LOOPBACK)
-                continue;
+            if (netload.if_flags & FLAG_LOOPBACK) continue;
 
             bytes += this._getBytes(netload);
             hash += strHash(ifname);
@@ -309,9 +430,11 @@ class NetStatSection extends StatSection {
 
         // Skip calculation if new data is less than old (interface
         // removed, counters reset, ...) or if it is the first time
-        if (bytes >= this.#lastBytes &&
+        if (
+            bytes >= this.#lastBytes &&
             hash === this.#lastHash &&
-            this.#lastTime !== 0) {
+            this.#lastTime !== 0
+        ) {
             const dtime = (time - this.#lastTime) / GLib.USEC_PER_SEC;
             dbytes = (bytes - this.#lastBytes) / dtime;
         }
@@ -320,7 +443,7 @@ class NetStatSection extends StatSection {
         this.#lastTime = time;
         this.#lastHash = hash;
 
-        const {unitFactor, formatter} = this._getFormat(dbytes);
+        const { unitFactor, formatter } = this._getFormat(dbytes);
         this.label.text = formatter.format(dbytes / unitFactor);
     }
 }
@@ -363,8 +486,7 @@ class Indicator extends PanelMenu.Button {
         super(0.5, _('System stats'));
 
         this._settings = extension.getSettings();
-        this.connect('destroy',
-            () => (this._settings = null));
+        this.connect('destroy', () => (this._settings = null));
 
         const box = new St.BoxLayout({
             styleClass: 'system-monitor-stat-sections',
@@ -385,56 +507,87 @@ class Indicator extends PanelMenu.Button {
             Gio.SettingsBindFlags.GET);
         box.add_child(this._cpuSection);
 
+        this._tempSection = new TemperatureSection(iconDir);
+        this._settings.bind(
+            'show-temperature',
+            this._tempSection,
+            'visible',
+            Gio.SettingsBindFlags.GET,
+        );
+        box.add_child(this._tempSection);
+
         this._memSection = new MemSection(iconDir);
-        this._settings.bind('show-memory',
-            this._memSection, 'visible',
-            Gio.SettingsBindFlags.GET);
+        this._settings.bind(
+            'show-memory',
+            this._memSection,
+            'visible',
+            Gio.SettingsBindFlags.GET,
+        );
         box.add_child(this._memSection);
 
         this._swapSection = new SwapSection(iconDir);
-        this._settings.bind('show-swap',
-            this._swapSection, 'visible',
-            Gio.SettingsBindFlags.GET);
+        this._settings.bind(
+            'show-swap',
+            this._swapSection,
+            'visible',
+            Gio.SettingsBindFlags.GET,
+        );
         box.add_child(this._swapSection);
 
         this._ulSection = new UploadSection(iconDir);
-        this._settings.bind('show-upload',
-            this._ulSection, 'visible',
-            Gio.SettingsBindFlags.GET);
+        this._settings.bind(
+            'show-upload',
+            this._ulSection,
+            'visible',
+            Gio.SettingsBindFlags.GET,
+        );
         box.add_child(this._ulSection);
 
         this._dlSection = new DownloadSection(iconDir);
-        this._settings.bind('show-download',
-            this._dlSection, 'visible',
-            Gio.SettingsBindFlags.GET);
+        this._settings.bind(
+            'show-download',
+            this._dlSection,
+            'visible',
+            Gio.SettingsBindFlags.GET,
+        );
         box.add_child(this._dlSection);
 
-        this.menu.addMenuItem(
-            new PopupMenu.PopupSeparatorMenuItem(_('Show')));
+        this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem(_('Show')));
 
-        this._cpuItem = this.menu.addAction(_('CPU'),
-            () => this._toggleSettings('show-cpu'));
-        this._memItem = this.menu.addAction(_('Memory'),
-            () => this._toggleSettings('show-memory'));
-        this._swapItem = this.menu.addAction(_('Swap'),
-            () => this._toggleSettings('show-swap'));
-        this._ulItem = this.menu.addAction(_('Upload'),
-            () => this._toggleSettings('show-upload'));
-        this._dlItem = this.menu.addAction(_('Download'),
-            () => this._toggleSettings('show-download'));
+        this._cpuItem = this.menu.addAction(_('CPU'), () =>
+            this._toggleSettings('show-cpu'),
+        );
+        this._tempItem = this.menu.addAction(_('Temperature'), () =>
+            this._toggleSettings('show-temperature'),
+        );
+        this._memItem = this.menu.addAction(_('Memory'), () =>
+            this._toggleSettings('show-memory'),
+        );
+        this._swapItem = this.menu.addAction(_('Swap'), () =>
+            this._toggleSettings('show-swap'),
+        );
+        this._ulItem = this.menu.addAction(_('Upload'), () =>
+            this._toggleSettings('show-upload'),
+        );
+        this._dlItem = this.menu.addAction(_('Download'), () =>
+            this._toggleSettings('show-download'),
+        );
 
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
-        this._appMenuItem = this.menu.addAction(_('Open System Monitor'),
-            () => this._openSystemMonitor());
+        this._appMenuItem = this.menu.addAction(_('Open System Monitor'), () =>
+            this._openSystemMonitor(),
+        );
 
         const appSystem = Shell.AppSystem.get_default();
-        appSystem.connectObject('installed-changed',
-            () => this._updateSystemMonitorApp(), this);
+        appSystem.connectObject(
+            'installed-changed',
+            () => this._updateSystemMonitorApp(),
+            this,
+        );
         this._updateSystemMonitorApp();
 
-        this._settings.connectObject('changed',
-            () => this._sync(), this);
+        this._settings.connectObject('changed', () => this._sync(), this);
         this._sync();
     }
 
@@ -456,24 +609,40 @@ class Indicator extends PanelMenu.Button {
     }
 
     _sync() {
-        this._cpuItem.setOrnament(this._settings.get_boolean('show-cpu')
-            ? PopupMenu.Ornament.CHECK
-            : PopupMenu.Ornament.NONE);
-        this._memItem.setOrnament(this._settings.get_boolean('show-memory')
-            ? PopupMenu.Ornament.CHECK
-            : PopupMenu.Ornament.NONE);
-        this._swapItem.setOrnament(this._settings.get_boolean('show-swap')
-            ? PopupMenu.Ornament.CHECK
-            : PopupMenu.Ornament.NONE);
-        this._ulItem.setOrnament(this._settings.get_boolean('show-upload')
-            ? PopupMenu.Ornament.CHECK
-            : PopupMenu.Ornament.NONE);
-        this._dlItem.setOrnament(this._settings.get_boolean('show-download')
-            ? PopupMenu.Ornament.CHECK
-            : PopupMenu.Ornament.NONE);
+        this._cpuItem.setOrnament(
+            this._settings.get_boolean('show-cpu')
+                ? PopupMenu.Ornament.CHECK
+                : PopupMenu.Ornament.NONE,
+        );
+        this._tempItem.setOrnament(
+            this._settings.get_boolean('show-temperature')
+                ? PopupMenu.Ornament.CHECK
+                : PopupMenu.Ornament.NONE,
+        );
+        this._memItem.setOrnament(
+            this._settings.get_boolean('show-memory')
+                ? PopupMenu.Ornament.CHECK
+                : PopupMenu.Ornament.NONE,
+        );
+        this._swapItem.setOrnament(
+            this._settings.get_boolean('show-swap')
+                ? PopupMenu.Ornament.CHECK
+                : PopupMenu.Ornament.NONE,
+        );
+        this._ulItem.setOrnament(
+            this._settings.get_boolean('show-upload')
+                ? PopupMenu.Ornament.CHECK
+                : PopupMenu.Ornament.NONE,
+        );
+        this._dlItem.setOrnament(
+            this._settings.get_boolean('show-download')
+                ? PopupMenu.Ornament.CHECK
+                : PopupMenu.Ornament.NONE,
+        );
 
-        this._placeholder.visible =
-            this._settings.list_keys().every(key => !this._settings.get_boolean(key));
+        this._placeholder.visible = this._settings
+            .list_keys()
+            .every((key) => !this._settings.get_boolean(key));
     }
 }
 
