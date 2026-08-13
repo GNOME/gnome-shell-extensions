@@ -445,15 +445,15 @@ class ApplicationsButton extends PanelMenu.Button {
         this._desktopTarget.destroy();
     }
 
-    _onMenuKeyPress(actor, event) {
-        const symbol = event.get_key_symbol();
+    _onMenuKeyPress() {
+        const [, symbol] = this._keyController.get_key();
         if (symbol === Clutter.KEY_Left || symbol === Clutter.KEY_Right) {
             const direction = symbol === Clutter.KEY_Left
                 ? St.DirectionType.LEFT : St.DirectionType.RIGHT;
             if (this.menu.actor.navigate_focus(global.stage.key_focus, direction, false))
                 return Clutter.EVENT_STOP;
         }
-        return super._onMenuKeyPress(actor, event);
+        return super._onMenuKeyPress();
     }
 
     _onOpenStateChanged(menu, open) {
