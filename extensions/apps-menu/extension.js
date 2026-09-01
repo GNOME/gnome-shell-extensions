@@ -202,10 +202,6 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         this._grab?.dismiss();
         delete this._grab;
 
-        const targetActor = global.stage.get_event_actor(event);
-        if (targetActor instanceof St.Widget)
-            targetActor.sync_hover();
-
         return Clutter.EVENT_PROPAGATE;
     }
 
