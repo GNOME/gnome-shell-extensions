@@ -4,7 +4,7 @@
 
 project(
   'gnome-shell-extensions',
-  version: '51.alpha',
+  version: '51.rc',
   meson_version: '>= 1.1.0',
   license: 'GPL-2.0-or-later',
 )

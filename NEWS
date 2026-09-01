@@ -1,3 +1,13 @@
+51.rc
+=====
+* Port to event controllers [Florian; !467]
+
+Contributors:
+  Florian Müllner
+
+Translators:
+  Jordi Mas [ca]
+
 51.alpha
 ========
 * Include project version in metadata [Florian; !451]
