@@ -160,10 +160,16 @@ export default class Extension {
 
                 this._pickWorkspace = false;
                 this._pickWindow = false;
-                global.stage.connectObject(
-                    'key-press-event', this._onKeyPress.bind(this),
-                    'key-release-event', this._onKeyRelease.bind(this),
-                    this);
+
+                this._keyController = new Clutter.KeyController();
+                this._keyController.connect('key-press',
+                    this._onKeyPress.bind(this));
+                this._keyController.connect('key-release',
+                    this._onKeyRelease.bind(this));
+                global.stage.add_action(this._keyController);
+
+                this.connect('destroy',
+                    () => global.stage.remove_action(this._keyController));
             };
             /* eslint-enable */
         });
@@ -190,29 +196,31 @@ export default class Extension {
         });
         this._injectionManager.overrideMethod(viewProto, '_onKeyRelease', () => {
             /* eslint-disable no-invalid-this */
-            return function (actor, event) {
+            return function () {
+                const [, symbol] = this._keyController.get_key();
                 if (this._pickWindow &&
-                    (event.get_key_symbol() === Clutter.KEY_Alt_L ||
-                     event.get_key_symbol() === Clutter.KEY_Alt_R))
+                    (symbol === Clutter.KEY_Alt_L ||
+                     symbol === Clutter.KEY_Alt_R))
                     this._hideTooltips();
                 if (this._pickWorkspace &&
-                    (event.get_key_symbol() === Clutter.KEY_Control_L ||
-                     event.get_key_symbol() === Clutter.KEY_Control_R))
+                    (symbol === Clutter.KEY_Control_L ||
+                     symbol === Clutter.KEY_Control_R))
                     this._hideWorkspacesTooltips();
             };
             /* eslint-enable */
         });
         this._injectionManager.overrideMethod(viewProto, '_onKeyPress', () => {
             /* eslint-disable no-invalid-this */
-            return function (actor, event) {
+            return function () {
                 const {ControlsState} = OverviewControls;
                 if (this._overviewAdjustment.value !== ControlsState.WINDOW_PICKER)
                     return Clutter.EVENT_PROPAGATE;
 
                 const workspaceManager = global.workspace_manager;
 
-                if ((event.get_key_symbol() === Clutter.KEY_Alt_L ||
-                     event.get_key_symbol() === Clutter.KEY_Alt_R) &&
+                const [, symbol] = this._keyController.get_key();
+                if ((symbol === Clutter.KEY_Alt_L ||
+                     symbol === Clutter.KEY_Alt_R) &&
                     !this._pickWorkspace) {
                     this._prevFocusActor = global.stage.get_key_focus();
                     global.stage.set_key_focus(null);
@@ -221,8 +229,8 @@ export default class Extension {
                     this._workspaces[workspaceManager.get_active_workspace_index()].showWindowsTooltips();
                     return Clutter.EVENT_STOP;
                 }
-                if ((event.get_key_symbol() === Clutter.KEY_Control_L ||
-                     event.get_key_symbol() === Clutter.KEY_Control_R) &&
+                if ((symbol === Clutter.KEY_Control_L ||
+                     symbol === Clutter.KEY_Control_R) &&
                     !this._pickWindow) {
                     this._prevFocusActor = global.stage.get_key_focus();
                     global.stage.set_key_focus(null);
@@ -237,8 +245,8 @@ export default class Extension {
 
                 // ignore shift presses, they're required to get numerals in azerty keyboards
                 if ((this._pickWindow || this._pickWorkspace) &&
-                    (event.get_key_symbol() === Clutter.KEY_Shift_L ||
-                     event.get_key_symbol() === Clutter.KEY_Shift_R))
+                    (symbol === Clutter.KEY_Shift_L ||
+                     symbol === Clutter.KEY_Shift_R))
                     return Clutter.EVENT_STOP;
 
                 if (this._pickWindow) {
@@ -247,9 +255,9 @@ export default class Extension {
                         return Clutter.EVENT_PROPAGATE;
                     }
 
-                    let c = event.get_key_symbol() - Clutter.KEY_KP_0;
+                    let c = symbol - Clutter.KEY_KP_0;
                     if (c > 9 || c <= 0) {
-                        c = event.get_key_symbol() - Clutter.KEY_0;
+                        c = symbol - Clutter.KEY_0;
                         if (c > 9 || c <= 0) {
                             this._hideTooltips();
                             log(c);
@@ -266,9 +274,9 @@ export default class Extension {
                     return Clutter.EVENT_STOP;
                 }
                 if (this._pickWorkspace) {
-                    let c = event.get_key_symbol() - Clutter.KEY_KP_0;
+                    let c = symbol - Clutter.KEY_KP_0;
                     if (c > 9 || c <= 0) {
-                        c = event.get_key_symbol() - Clutter.KEY_0;
+                        c = symbol - Clutter.KEY_0;
                         if (c > 9 || c <= 0) {
                             this._hideWorkspacesTooltips();
                             return Clutter.EVENT_PROPAGATE;
