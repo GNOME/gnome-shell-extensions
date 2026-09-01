@@ -944,7 +944,12 @@ class WindowList extends St.Widget {
         });
         box.add_child(this._windowList);
 
-        this._windowList.connect('scroll-event', this._onScrollEvent.bind(this));
+        const scrollController = new Clutter.ScrollController({
+            flags: Clutter.ScrollControllerFlags.DISCRETE |
+                Clutter.ScrollControllerFlags.SCROLL_VERTICAL,
+        });
+        scrollController.connect('scroll', this._onScroll.bind(this));
+        this._windowList.add_action(scrollController);
 
         const indicatorsBox = new St.BoxLayout({x_align: Clutter.ActorAlign.END});
         box.add_child(indicatorsBox);
@@ -1079,13 +1084,12 @@ class WindowList extends St.Widget {
         return [x, y - this.translation_y];
     }
 
-    _onScrollEvent(actor, event) {
-        const direction = event.get_scroll_direction();
+    _onScroll(_controller, _sprite, _source, _dx, dy) {
         let diff = 0;
-        if (direction === Clutter.ScrollDirection.DOWN)
-            diff = 1;
-        else if (direction === Clutter.ScrollDirection.UP)
+        if (dy < 0)
             diff = -1;
+        else if (dy > 0)
+            diff = 1;
         else
             return;
 
