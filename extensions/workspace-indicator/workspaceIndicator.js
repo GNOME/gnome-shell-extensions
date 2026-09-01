@@ -395,6 +395,18 @@ class EditableMenuItem extends PopupMenu.PopupBaseMenuItem {
 
     static {
         GObject.registerClass(this);
+
+        const bindingPool = this.get_binding_pool();
+
+        bindingPool.install_closure(
+            '', Clutter.KEY_e, 0,
+            obj => {
+                if (obj._editButton.checked)
+                    return Clutter.EVENT_PROPAGATE;
+
+                obj._editButton.checked = true;
+                return Clutter.EVENT_STOP;
+            });
     }
 
     constructor() {
@@ -446,16 +458,6 @@ class EditableMenuItem extends PopupMenu.PopupBaseMenuItem {
                 this._editButton.icon_name = 'document-edit-symbolic';
                 this._stopEditing();
             }
-        });
-        this.connect('key-release-event', (o, event) => {
-            if (event.get_key_symbol() !== Clutter.KEY_e)
-                return Clutter.EVENT_PROPAGATE;
-
-            if (this._editButton.checked)
-                return Clutter.EVENT_PROPAGATE;
-
-            this._editButton.checked = true;
-            return Clutter.EVENT_STOP;
         });
 
         global.stage.connectObject('notify::key-focus', () => {
