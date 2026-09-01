@@ -118,7 +118,13 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         this.add_child(label);
         this.actor.label_actor = label;
 
-        this.connect('motion-event', this._onMotionEvent.bind(this));
+        const motionController = new Clutter.MotionController();
+        motionController.connect('motion', (controller, sprite) => {
+            const {x, y} = sprite.get_coords();
+            this._onMotion(x, y);
+        });
+        this.add_action(motionController);
+
         this.connect('notify::active', this._onActiveChanged.bind(this));
     }
 
@@ -128,7 +134,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         super.activate(event);
     }
 
-    _isNavigatingSubmenu([x, y]) {
+    _isNavigatingSubmenu(x, y) {
         const [posX, posY] = this.get_transformed_position();
 
         if (this._oldX === -1) {
@@ -185,7 +191,7 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         return false;
     }
 
-    _onMotionEvent(actor, event) {
+    _onMotion(x, y) {
         if (!this._grab) {
             this._oldX = -1;
             this._oldY = -1;
@@ -193,16 +199,13 @@ class CategoryMenuItem extends PopupMenu.PopupBaseMenuItem {
         }
         this.hover = true;
 
-        if (this._isNavigatingSubmenu(event.get_coords()))
-            return Clutter.EVENT_STOP;
-
-        this._oldX = -1;
-        this._oldY = -1;
-        this.hover = false;
-        this._grab?.dismiss();
-        delete this._grab;
-
-        return Clutter.EVENT_PROPAGATE;
+        if (!this._isNavigatingSubmenu(x, y)) {
+            this._oldX = -1;
+            this._oldY = -1;
+            this.hover = false;
+            this._grab?.dismiss();
+            delete this._grab;
+        }
     }
 
     _onActiveChanged() {
