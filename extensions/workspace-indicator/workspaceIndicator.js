@@ -652,13 +652,12 @@ export class WorkspaceIndicator extends PanelMenu.Button {
         this._thumbnails = new WorkspacePreviews();
         container.add_child(this._thumbnails);
 
-        this._thumbnails.connect('button-press-event', (a, event) => {
-            if (event.get_button() !== Clutter.BUTTON_SECONDARY)
-                return Clutter.EVENT_PROPAGATE;
-
-            this.menu.toggle();
-            return Clutter.EVENT_STOP;
+        const rightClickGesture = new Clutter.ClickGesture({
+            required_button: Clutter.BUTTON_SECONDARY,
+            recognize_on_press: true,
         });
+        rightClickGesture.connect('recognize', () => this.menu.toggle());
+        this._thumbnails.add_action(rightClickGesture);
 
         this.connect('scroll-event',
             (a, event) => Main.wm.handleWorkspaceScroll(event));
