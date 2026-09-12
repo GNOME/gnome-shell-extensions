@@ -1031,8 +1031,7 @@ class WindowList extends St.Widget {
                 this._updateKeyboardAnchor();
             },
             'hiding', () => {
-                if (!this._monitor.inFullscreen)
-                    this._slideIn();
+                this._slideIn();
             },
             'hidden', () => {
                 this._retrackChrome(chromeOptions);
@@ -1117,7 +1116,7 @@ class WindowList extends St.Widget {
     }
 
     _slideIn() {
-        this.show();
+        this.visible = !this._monitor.inFullscreen;
         this.ease({
             translation_y: 0,
             duration: SLIDE_ANIMATION_TIME,
@@ -1126,6 +1125,7 @@ class WindowList extends St.Widget {
     }
 
     _slideOut() {
+        this.visible = !this._monitor.inFullscreen;
         this.ease({
             translation_y: this.height,
             duration: SLIDE_ANIMATION_TIME,
