@@ -1,3 +1,13 @@
+51.0
+====
+* window-list: Fix reappearing after unfullscreening [Jing; !469]
+
+Contributors:
+  Jing Wang
+
+Translators:
+  Kjartan Maraas [nb]
+
 51.rc
 =====
 * Port to event controllers [Florian; !467]
