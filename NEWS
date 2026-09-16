@@ -1,3 +1,16 @@
+49.1
+====
+* window-list: Fix reappearing after unfullscreening [Jing; !469]
+* Misc. bug fixes and cleanups [Florian; !425]
+
+Contributors:
+  Florian Müllner, Jing Wang
+
+Translators:
+  BoF ButterflyOfFire [kab], Asier Saratsua Garmendia [eu],
+  Baurzhan Muftakhidinov [kk], Марко Костић [sr],
+  twlvnn kraftwerk [bg], Alexander Alexandrov Shopov [bg]
+
 49.0
 ====
 * window-list: Adjust to gnome-shell changes [Florian; !421]
