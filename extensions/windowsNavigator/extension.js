@@ -176,8 +176,6 @@ export default class Extension {
         this._injectionManager.overrideMethod(viewProto, '_hideTooltips', () => {
             /* eslint-disable no-invalid-this */
             return function () {
-                if (global.stage.get_key_focus() === null)
-                    global.stage.set_key_focus(this._prevFocusActor);
                 this._pickWindow = false;
                 for (let i = 0; i < this._workspaces.length; i++)
                     this._workspaces[i].hideWindowsTooltips();
@@ -187,7 +185,6 @@ export default class Extension {
         this._injectionManager.overrideMethod(viewProto, '_hideWorkspacesTooltips', () => {
             /* eslint-disable no-invalid-this */
             return function () {
-                global.stage.set_key_focus(this._prevFocusActor);
                 this._pickWorkspace = false;
                 for (let i = 0; i < this._workspaces.length; i++)
                     this._workspaces[i].hideTooltip();
@@ -222,31 +219,30 @@ export default class Extension {
                 if ((symbol === Clutter.KEY_Alt_L ||
                      symbol === Clutter.KEY_Alt_R) &&
                     !this._pickWorkspace) {
-                    this._prevFocusActor = global.stage.get_key_focus();
-                    global.stage.set_key_focus(null);
                     this._active = workspaceManager.get_active_workspace_index();
                     this._pickWindow = true;
                     this._workspaces[workspaceManager.get_active_workspace_index()].showWindowsTooltips();
-                    return Clutter.EVENT_STOP;
+                    return Clutter.EVENT_PROPAGATE;
                 }
                 if ((symbol === Clutter.KEY_Control_L ||
                      symbol === Clutter.KEY_Control_R) &&
                     !this._pickWindow) {
-                    this._prevFocusActor = global.stage.get_key_focus();
-                    global.stage.set_key_focus(null);
                     this._pickWorkspace = true;
                     for (let i = 0; i < this._workspaces.length; i++)
                         this._workspaces[i].showTooltip();
-                    return Clutter.EVENT_STOP;
+                    return Clutter.EVENT_PROPAGATE;
                 }
 
-                if (global.stage.get_key_focus() !== null)
+                // Only intercept further key presses while actively picking a
+                // window or workspace by number. Otherwise, let every other key
+                // -- including modifier combinations such as Ctrl+Enter -- reach
+                // its normal target untouched, instead of stealing keyboard focus
+                // on a hunch that a pick is starting.
+                if (!this._pickWindow && !this._pickWorkspace)
                     return Clutter.EVENT_PROPAGATE;
 
                 // ignore shift presses, they're required to get numerals in azerty keyboards
-                if ((this._pickWindow || this._pickWorkspace) &&
-                    (symbol === Clutter.KEY_Shift_L ||
-                     symbol === Clutter.KEY_Shift_R))
+                if (symbol === Clutter.KEY_Shift_L || symbol === Clutter.KEY_Shift_R)
                     return Clutter.EVENT_STOP;
 
                 if (this._pickWindow) {
