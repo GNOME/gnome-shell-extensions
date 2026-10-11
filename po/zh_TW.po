@@ -4,45 +4,36 @@
 #
 # Cheng-Chia Tseng <pswo10680@gmail.com>, 2011.
 # pan93412 <pan93412@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extensions gnome-3-0\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/"
-"issues\n"
-"POT-Creation-Date: 2024-11-25 15:07+0000\n"
-"PO-Revision-Date: 2025-01-12 23:57+0800\n"
-"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <http://darkbear.mercusysddns.com/"
-"projects/gnome-45/gnome-shell-extensions-po-ui-gnome-46-zh_tw/zh_Hant/>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell-extensions/is"
+"sues\n"
+"POT-Creation-Date: 2026-09-14 16:14+0000\n"
+"PO-Revision-Date: 2026-09-20 05:24+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Chinese (Traditional) <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Lokalize 26.11.70\n"
 
-#: data/gnome-classic.desktop.in:3
+#: data/gnome-classic.desktop.in:2
 msgid "GNOME Classic"
 msgstr "GNOME Classic"
 
-#: data/gnome-classic.desktop.in:4 data/gnome-classic-wayland.desktop.in:4
-#: data/gnome-classic-xorg.desktop.in:4
+#: data/gnome-classic.desktop.in:3
 msgid "This session logs you into GNOME Classic"
 msgstr "這個作業階段讓您登入 GNOME Classic"
 
-#: data/gnome-classic-wayland.desktop.in:3
-msgid "GNOME Classic on Wayland"
-msgstr "GNOME Classic 採行 Wayland"
-
-#: data/gnome-classic-xorg.desktop.in:3
-msgid "GNOME Classic on Xorg"
-msgstr "GNOME Classic 採行 Xorg"
-
-#: extensions/apps-menu/extension.js:125
+#: extensions/apps-menu/extension.js:115
 msgid "Favorites"
 msgstr "喜愛"
 
-#: extensions/apps-menu/extension.js:399
+#: extensions/apps-menu/extension.js:385
 msgid "Apps"
 msgstr "程式"
 
@@ -58,17 +49,17 @@ msgstr ""
 "字串的列表，每個都包含一個應用程式 id (桌面檔名稱)，後面接著半形分號 \";\" 與"
 "工作區號碼"
 
-#: extensions/auto-move-windows/prefs.js:156
+#: extensions/auto-move-windows/prefs.js:157
 msgid "Workspace Rules"
 msgstr "工作區規則"
 
-#: extensions/auto-move-windows/prefs.js:311
+#: extensions/auto-move-windows/prefs.js:312
 msgid "Add Rule"
 msgstr "加入規則"
 
 #. TRANSLATORS: %s is the filesystem name
 #: extensions/drive-menu/extension.js:123
-#: extensions/places-menu/placeDisplay.js:218
+#: extensions/places-menu/placeDisplay.js:186
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "裝置「%s」退出失敗："
@@ -112,28 +103,35 @@ msgstr ""
 msgid "Places"
 msgstr "位置"
 
-#: extensions/places-menu/placeDisplay.js:60
+#: extensions/places-menu/placeDisplay.js:52
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "無法啟動「%s」"
 
-#: extensions/places-menu/placeDisplay.js:75
+#: extensions/places-menu/placeDisplay.js:67
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "無法掛載儲存區「%s」"
 
-#: extensions/places-menu/placeDisplay.js:135
-#: extensions/places-menu/placeDisplay.js:158
-msgid "Computer"
-msgstr "電腦"
-
-#: extensions/places-menu/placeDisplay.js:333
+#: extensions/places-menu/placeDisplay.js:314
 msgid "Home"
 msgstr "家目錄"
 
-#: extensions/places-menu/placeDisplay.js:378
-msgid "Browse Network"
-msgstr "瀏覽網路"
+#: extensions/places-menu/placeDisplay.js:320
+msgid "Recent"
+msgstr "最近"
+
+#: extensions/places-menu/placeDisplay.js:326
+msgid "Starred"
+msgstr "星標"
+
+#: extensions/places-menu/placeDisplay.js:346
+msgid "Network"
+msgstr "網路"
+
+#: extensions/places-menu/placeDisplay.js:353
+msgid "Trash"
+msgstr "垃圾桶"
 
 #: extensions/screenshot-window-sizer/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml:14
 msgid "Cycle Screenshot Sizes"
@@ -143,55 +141,55 @@ msgstr "循環螢幕擷圖大小"
 msgid "Cycle Screenshot Sizes Backward"
 msgstr "往回循環螢幕擷圖大小"
 
-#: extensions/system-monitor/extension.js:135
+#: extensions/system-monitor/extension.js:133
 msgid "CPU stats"
 msgstr "CPU 狀態"
 
-#: extensions/system-monitor/extension.js:159
+#: extensions/system-monitor/extension.js:157
 msgid "Memory stats"
 msgstr "記憶體狀態"
 
-#: extensions/system-monitor/extension.js:177
+#: extensions/system-monitor/extension.js:175
 msgid "Swap stats"
 msgstr "置換區狀態"
 
-#: extensions/system-monitor/extension.js:336
+#: extensions/system-monitor/extension.js:334
 msgid "Upload stats"
 msgstr "上傳狀態"
 
-#: extensions/system-monitor/extension.js:350
+#: extensions/system-monitor/extension.js:348
 msgid "Download stats"
 msgstr "下載狀態"
 
-#: extensions/system-monitor/extension.js:364
+#: extensions/system-monitor/extension.js:363
 msgid "System stats"
 msgstr "系統狀態"
 
-#: extensions/system-monitor/extension.js:412
+#: extensions/system-monitor/extension.js:413
 msgid "Show"
 msgstr "顯示"
 
-#: extensions/system-monitor/extension.js:414
+#: extensions/system-monitor/extension.js:415
 msgid "CPU"
 msgstr "CPU"
 
-#: extensions/system-monitor/extension.js:416
+#: extensions/system-monitor/extension.js:417
 msgid "Memory"
 msgstr "記憶體"
 
-#: extensions/system-monitor/extension.js:418
+#: extensions/system-monitor/extension.js:419
 msgid "Swap"
 msgstr "置換區"
 
-#: extensions/system-monitor/extension.js:420
+#: extensions/system-monitor/extension.js:421
 msgid "Upload"
 msgstr "上傳"
 
-#: extensions/system-monitor/extension.js:422
+#: extensions/system-monitor/extension.js:423
 msgid "Download"
 msgstr "下載"
 
-#: extensions/system-monitor/extension.js:427
+#: extensions/system-monitor/extension.js:428
 msgid "Open System Monitor"
 msgstr "開啟系統監視器"
 
@@ -223,47 +221,47 @@ msgstr "主題名稱"
 msgid "The name of the theme, to be loaded from ~/.themes/name/gnome-shell"
 msgstr "主題的名稱，要從 ~/.themes/name/gnome-shell 載入"
 
-#: extensions/window-list/extension.js:70
+#: extensions/window-list/extension.js:97
 msgid "Close"
 msgstr "關閉"
 
-#: extensions/window-list/extension.js:97
+#: extensions/window-list/extension.js:124
 msgid "Unminimize"
 msgstr "取消最小化"
 
-#: extensions/window-list/extension.js:97
+#: extensions/window-list/extension.js:124
 msgid "Minimize"
 msgstr "最小化"
 
-#: extensions/window-list/extension.js:104
+#: extensions/window-list/extension.js:129
 msgid "Unmaximize"
 msgstr "取消最大化"
 
-#: extensions/window-list/extension.js:104
+#: extensions/window-list/extension.js:129
 msgid "Maximize"
 msgstr "最大化"
 
-#: extensions/window-list/extension.js:485
+#: extensions/window-list/extension.js:707
 msgid "Minimize all"
 msgstr "全部最小化"
 
-#: extensions/window-list/extension.js:491
+#: extensions/window-list/extension.js:714
 msgid "Unminimize all"
 msgstr "全部取消最小化"
 
-#: extensions/window-list/extension.js:497
+#: extensions/window-list/extension.js:721
 msgid "Maximize all"
 msgstr "全部最大化"
 
-#: extensions/window-list/extension.js:505
+#: extensions/window-list/extension.js:728
 msgid "Unmaximize all"
 msgstr "全部取消最大化"
 
-#: extensions/window-list/extension.js:513
+#: extensions/window-list/extension.js:735
 msgid "Close all"
 msgstr "全部關閉"
 
-#: extensions/window-list/extension.js:780
+#: extensions/window-list/extension.js:992 extensions/window-list/prefs.js:23
 msgid "Window List"
 msgstr "視窗列表"
 
@@ -275,11 +273,10 @@ msgstr "何時群組視窗"
 msgid ""
 "Decides when to group windows from the same application on the window list. "
 "Possible values are “never”, “auto” and “always”."
-msgstr ""
-"決定在視窗列表中何時群組視窗。可能的數值有「never」、「auto」、「always」。"
+msgstr "決定在視窗列表中何時群組視窗。可能的數值有「never」、「auto」、「always」。"
 
 #: extensions/window-list/org.gnome.shell.extensions.window-list.gschema.xml:26
-#: extensions/window-list/prefs.js:69
+#: extensions/window-list/prefs.js:74
 msgid "Show windows from all workspaces"
 msgstr "顯示所有工作區的視窗"
 
@@ -301,63 +298,119 @@ msgstr "是否在所有連接的螢幕顯示視窗列表或是只出現在主要
 msgid "Show workspace previews in window list"
 msgstr "在視窗清單顯示工作區預覽"
 
-#: extensions/window-list/prefs.js:36
+#: extensions/window-list/prefs.js:41
 msgid "Window Grouping"
 msgstr "視窗群組"
 
-#: extensions/window-list/prefs.js:41
+#: extensions/window-list/prefs.js:46
 msgid "Never group windows"
 msgstr "永不群組視窗"
 
-#: extensions/window-list/prefs.js:42
+#: extensions/window-list/prefs.js:47
 msgid "Group windows when space is limited"
 msgstr "當空間受限時群組視窗"
 
-#: extensions/window-list/prefs.js:43
+#: extensions/window-list/prefs.js:48
 msgid "Always group windows"
 msgstr "永遠群組視窗"
 
-#: extensions/window-list/prefs.js:63
+#: extensions/window-list/prefs.js:68
 msgid "Show on all monitors"
 msgstr "顯示於所有螢幕"
-
-#: extensions/window-list/prefs.js:75
-msgid "Show workspace previews"
-msgstr "顯示工作區預覽"
-
-#: extensions/workspace-indicator/prefs.js:29
-msgid "Show Previews In Top Bar"
-msgstr "在頂端列顯示預覽"
-
-#: extensions/workspace-indicator/prefs.js:87
-#, javascript-format
-msgid "Workspace %d"
-msgstr "工作區 %d"
-
-#: extensions/workspace-indicator/prefs.js:154
-msgid "Workspace Names"
-msgstr "工作區名稱"
-
-#: extensions/workspace-indicator/prefs.js:280
-msgid "Add Workspace"
-msgstr "新增工作區"
 
 #: extensions/workspace-indicator/schemas/org.gnome.shell.extensions.workspace-indicator.gschema.xml:12
 msgid "Show workspace previews in top bar"
 msgstr "在頂端列顯示工作區預覽"
 
-#: extensions/workspace-indicator/workspaceIndicator.js:430
+#: extensions/workspace-indicator/workspaceIndicator.js:417
+#, javascript-format
+msgid "Press %s to edit"
+msgstr "按下 %s 來編輯"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:529
+#| msgid "Display Settings"
+msgid "Settings"
+msgstr "設定"
+
+#: extensions/workspace-indicator/workspaceIndicator.js:613
 msgid "Workspace Indicator"
 msgstr "工作區指示器"
+
+#: extensions/workspace-indicator/workspacePrefs.js:20
+#| msgid "Workspace Indicator"
+msgid "Indicator"
+msgstr "指示器"
+
+#: extensions/workspace-indicator/workspacePrefs.js:25
+msgid "Previews"
+msgstr "預覽"
+
+#: extensions/workspace-indicator/workspacePrefs.js:35
+#| msgid "Workspace Names"
+msgid "Workspace Name"
+msgstr "工作區名稱"
+
+#: extensions/workspace-indicator/workspacePrefs.js:59
+#| msgid "Alt Tab Behaviour"
+msgid "Behavior"
+msgstr "行為"
+
+#: extensions/workspace-indicator/workspacePrefs.js:64
+msgid "Dynamic"
+msgstr "動態"
+
+#: extensions/workspace-indicator/workspacePrefs.js:65
+msgid "Automatically removes empty workspaces."
+msgstr "自動移除空的工作區。"
+
+#: extensions/workspace-indicator/workspacePrefs.js:75
+msgid "Fixed Number"
+msgstr "固定數量"
+
+#: extensions/workspace-indicator/workspacePrefs.js:76
+msgid "Specify a number of permanent workspaces."
+msgstr "指定常駐的工作區數目。"
+
+#: extensions/workspace-indicator/workspacePrefs.js:89
+#| msgid "Workspace"
+msgid "Number of Workspaces"
+msgstr "工作區數目"
+
+#: extensions/workspace-indicator/workspacePrefs.js:128
+#| msgid "Workspace"
+msgid "Workspaces"
+msgstr "工作區"
+
+#~ msgid "GNOME Classic on Wayland"
+#~ msgstr "GNOME Classic 採行 Wayland"
+
+#~ msgid "GNOME Classic on Xorg"
+#~ msgstr "GNOME Classic 採行 Xorg"
+
+#~ msgid "Computer"
+#~ msgstr "電腦"
+
+#~ msgid "Browse Network"
+#~ msgstr "瀏覽網路"
+
+#~ msgid "Show workspace previews"
+#~ msgstr "顯示工作區預覽"
+
+#~ msgid "Show Previews In Top Bar"
+#~ msgstr "在頂端列顯示預覽"
+
+#, javascript-format
+#~ msgid "Workspace %d"
+#~ msgstr "工作區 %d"
+
+#~ msgid "Add Workspace"
+#~ msgstr "新增工作區"
 
 #~ msgid "Applications"
 #~ msgstr "應用程式"
 
 #~ msgid "Application"
 #~ msgstr "應用程式"
-
-#~ msgid "Workspace"
-#~ msgstr "工作區"
 
 #~ msgid "Create new matching rule"
 #~ msgstr "建立新的比對規則"
@@ -454,9 +507,6 @@ msgstr "工作區指示器"
 #~ msgid "Display"
 #~ msgstr "顯示"
 
-#~ msgid "Display Settings"
-#~ msgstr "顯示設定值"
-
 #~ msgid "Suspend"
 #~ msgstr "暫停"
 
@@ -494,9 +544,6 @@ msgstr "工作區指示器"
 
 #~ msgid "Bookmarks"
 #~ msgstr "書籤"
-
-#~ msgid "Network"
-#~ msgstr "網路"
 
 #~ msgid "File System"
 #~ msgstr "檔案系統"
@@ -659,9 +706,6 @@ msgstr "工作區指示器"
 #~ "原生：\n"
 #~ "    這個模式是 GNOME 3 的原生行為，換句話說：按下原生\n"
 #~ "    會關閉 Alternate Tab 擴充套件。\n"
-
-#~ msgid "Alt Tab Behaviour"
-#~ msgstr "Alt Tab 行為"
 
 #~ msgid "Cancel"
 #~ msgstr "取消"
